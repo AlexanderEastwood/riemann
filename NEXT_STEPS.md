@@ -23,7 +23,7 @@ Status vocabulary: `open` · `claimed` · `in-progress` · `done (vN.NN)` ·
 | NS-10 | de Bruijn–Newman assessment + one Polymath15 reproduction | Claude | closed — no angle | `evidence/diag_routes/dbn/`: no bridge in either direction; barrier verification reproduced from scratch; arXiv id is 1904.12438 |
 | NS-11 | de Branges / Hermite–Biehler route | Claude | closed — no angle | dictionary recorded in `COMPARISON.md`; no positivity mechanism (Suzuki 2606.09096, Conrey–Li) |
 | NS-12 | Function-field / Hodge / F_1 route | Claude | closed — no angle | nothing finite transfers; the operator side gave NS-5 |
-| NS-14 | CCM step (b) at finite λ: compute the real zeros of `ξ̂_3` and `ξ̂_4` from the certified ground vectors (NS-5 makes them provably real) and compare with γ_1, γ_2, … = 14.13, 21.02, 25.01, …; also the zero spacing vs λ | open | open | a table of the first ~10 real zeros of `ξ̂_λ` at λ=3,4 against the zeta ordinates, with the discrepancy trend; either outcome is a finding (tracking validates CCM's shape; not tracking locates the difficulty in step (b)) |
+| NS-14 | CCM step (b) at finite λ: compute the real zeros of `ξ̂_3` and `ξ̂_4` from the certified ground vectors (NS-5 makes them provably real) and compare with γ_1, γ_2, … = 14.13, 21.02, 25.01, …; also the zero spacing vs λ | Claude | in-progress | a table of the first ~10 real zeros of `ξ̂_λ` at λ=3,4 against the zeta ordinates, with the discrepancy trend; either outcome is a finding (tracking validates CCM's shape; not tracking locates the difficulty in step (b)) |
 | NS-13 | Standing rule: do **not** compute λ = 10, 12 windows or floors past λ=8 | — | rule | `prop:v121-cofinal-rh`, `prop:v138-shifted-floor` |
 
 ## Lanes
