@@ -1,0 +1,47 @@
+% ---------------------------------------------------------------------------
+% INSERT FILE: determinacy_insert.tex   (NS-6, drafted 2026-09-21)
+% purpose: name the wall between a certified window and the cofinal estimate
+%          in classical language (Krein--Langer continuation / truncated
+%          moment problem / Toeplitz-plus-Hankel sections).  Source:
+%          COMPARISON.md, "In de Branges / Krein--Langer terms" and
+%          "The unification".
+% anchor:  manuscript/fixed_space_prime_action_v1.tex, Section
+%          \label{sec:goals}, immediately AFTER the paragraph that follows
+%          prop:v121-cofinal-rh, i.e. after the line
+%            strength of the missing estimate; it does not establish that estimate.
+%          and before the blank lines preceding
+%            Proposition~\ref{prop:v112-schur-angle} isolates an inverse-weighted
+% cites:   \cite{Suzuki2026} (present), \cite{KreinLanger2014} and
+%          \cite{BasorEhrhardt2002} (see bib_inserts.tex).
+% notation: $\lambda_a=\inf\sigma(A_a)$ and \eqref{eq:g2-monotone} are the
+%          manuscript's own (subsection "G2 calibration from the screw-function
+%          realization"); $g$ is Suzuki's Weil screw function.
+% status:  draft for integration; not yet in the manuscript
+% ---------------------------------------------------------------------------
+
+The gap that Proposition~\ref{prop:v121-cofinal-rh} isolates has a
+classical name. In the screw-function realization of
+Suzuki~\cite{Suzuki2026}, with $A_a$, $\lambda_a=\inf\sigma(A_a)$ and
+the monotonicity \eqref{eq:g2-monotone} as above, let $g$ be the Weil
+screw function and $a=\log\lambda$. A certified window
+$\mathsf W_\lambda\succeq0$ is the statement $\lambda_a\ge0$, that is,
+that the restriction of $g$ to $(-2a,2a)$ is a screw function on that
+interval; in the finite sections this is positivity of a truncated
+Hermitian moment problem whose parity sectors are the
+Toeplitz-plus-Hankel and Toeplitz-minus-Hankel pencils $T(\phi)\pm H(\phi)$
+of one symbol, in the sense of Basor--Ehrhardt~\cite{BasorEhrhardt2002}
+(the exact splitting of the certified $\lambda=4$ matrix is recorded, as
+a diagnostic, in \texttt{evidence/diag\_circle\_split/}). By the
+continuation theorem of Kre\u{\i}n and Langer~\cite{KreinLanger2014},
+$\mathsf W_4\succeq0$ says that the restriction of $g$ to
+$(-2\log4,2\log4)$ admits at least one screw extension to $\mathbb R$;
+RH says that $g$ itself is such an extension, so that the windowed data
+continue to $g$ and to nothing else. In that sense RH is the
+determinacy of the truncated moment problem, and determinacy at any
+certified window would already be a statement of RH strength.
+Positivity of finitely many sections never decides determinacy. This
+is the content of Proposition~\ref{prop:v121-cofinal-rh} in language
+that predates the present project: the cofinal estimate is the
+determinacy statement, and no finite list of certified windows, however
+long, approaches it. The paragraph names the wall; it does not move
+it, and no G2 gap or RH claim follows.
