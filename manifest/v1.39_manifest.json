@@ -1,0 +1,43 @@
+{
+ "manuscript_revision": "v1.39",
+ "base_commit": "5b65fc41547e98b933c8dacc137db40e17102afd",
+ "files": [
+  {
+   "path": "evidence/v139/REPRODUCE.md",
+   "size_bytes": 1340,
+   "sha256": "87c4f1e6d0b1f0876717d6cc9a5c32e4ac57a2345b2ad38435c4f26265e52caa"
+  },
+  {
+   "path": "evidence/v139/adversarial_review.md",
+   "size_bytes": 14906,
+   "sha256": "71ca445964a824e19f90e90290486200ce4704cc9164e9b80694f74c528dcbb4"
+  },
+  {
+   "path": "evidence/v139/build_report.json",
+   "size_bytes": 572,
+   "sha256": "ac4e4b24f2ae83b4e31d389025e7cf00d4560b1e66aff683a692816508fc9c1f"
+  },
+  {
+   "path": "evidence/v139/check_exact_models.py",
+   "size_bytes": 2494,
+   "sha256": "3e3ed311b4e6fbf23a2dfd6e3e2318e3778d65301911ac1404fb8c4d802bca92"
+  },
+  {
+   "path": "evidence/v139/exact_model_results.json",
+   "size_bytes": 2114,
+   "sha256": "9540c82b143c2e18f95cb99082213e8e87f03723c2b53527a14158eb97fed175"
+  },
+  {
+   "path": "evidence/v139/new_section.tex",
+   "size_bytes": 12611,
+   "sha256": "77616f0f82cbdeb26cb28a383da9438b8c2ed41d5dbb7faef5950e7bf2f669ce"
+  },
+  {
+   "path": "evidence/v139/research_report.md",
+   "size_bytes": 9642,
+   "sha256": "d71c462e2933476a1a0cdbc855c2538f308d0e5c5b51ccff61b8c3f8420d00d1"
+  }
+ ],
+ "file_count": 7,
+ "total_bytes": 43679
+}

@@ -1,0 +1,253 @@
+\subsection*{What an arithmetic-location-insensitive certificate can and cannot mean}
+
+There is no unrestricted theorem that every location-insensitive estimate
+fails. The relevant information loss must be specified. Two precise
+obstructions follow below: one concerns scalar density relaxations for
+the actual multiplier, and one concerns its orientation relative to the
+physical Fourier space. They do not identify all the earlier closures
+with one hypothesis.
+
+Put $a=\log\lambda$, $I_a=(-a,a)$, and let $\mathcal F_a$ be zero
+extension followed by the unitary Fourier transform. Retain the
+first-slot-linear convention and the exact $\beta_a$ in
+\eqref{eq:v135-full-symbol}. Its form domain is
+\[
+ \mathcal D_a=\left\{f\in L^2(I_a):
+ \int_{\mathbb R}\log(2+|\xi|)|\mathcal F_af(\xi)|^2d\xi<\infty\right\}.
+\]
+Indeed $\beta_a(\xi)=\log(2+|\xi|)+O_a(1)$; this is the same
+complete physical form domain, not a new source norm. There is no
+Fourier cutoff in this subsection. Either use the full space or use
+the actual source complement $Q_aL^2(I_a)$, where
+$Q_a=I-|u_a\rangle\langle u_a|$ and the established complete
+residual $\norm{\mathsf W_{e^a}u_a}\to0$ is retained. Both parities
+are included. No equality with $C_a^{\rm low}$ is asserted.
+
+For an ordinary unit vector $f$, set
+\[
+ p_f(\xi)=\tfrac12\bigl(|\mathcal F_af(\xi)|^2+
+                               |\mathcal F_af(-\xi)|^2\bigr).
+\]
+Evenness of $\beta_a$ gives $q_a[f]=\int\beta_ap_f$. The elementary
+physical constraints are
+\begin{equation}\label{eq:v139-density-constraints}
+ p_f\ge0,\qquad \int p_f=1,\qquad
+ \norm{p_f}_\infty\le\frac a\pi,\qquad
+ \operatorname{TV}(p_f)\le2a.
+\end{equation}
+The height bound is Cauchy--Schwarz on an interval of length $2a$.
+For $F=\mathcal F_af$, Plancherel gives
+$\norm{F'}_2=\norm{xf}_2\le a$, and
+$\norm{(|F|^2)'}_1\le2\norm{F'}_2\norm F_2\le2a$.
+Reflection averaging preserves these bounds.
+
+\begin{theorem}[Obstruction for relaxations admitting the cutoff probe]
+\label{thm:v139-probe-relaxation}
+Let $\mathcal R_a$ be a collection of even nonnegative probability
+densities containing every $p_f$ from the full physical space, or
+from its complete source complement as just specified. Assume that,
+for all sufficiently large $a$, it also contains
+\begin{equation}\label{eq:v139-probe-density}
+ p_a^\star(\xi)=\frac a{2\pi}
+ \left\{w\bigl(2a(\xi-\gamma_0)\bigr)
+       +w\bigl(2a(-\xi-\gamma_0)\bigr)\right\},
+\end{equation}
+where $w$ is the fixed probe of Lemma~\ref{lem:v137-probe} and
+$\gamma_0$ is any fixed critical-zero ordinate. If $B_a\ge0$ is a
+sound relaxed error, meaning
+\begin{equation}\label{eq:v139-relaxed-error}
+ \int\beta_a p\ge-B_a\qquad(p\in\mathcal R_a),
+\end{equation}
+then $B_a\to+\infty$. In particular such a relaxation cannot supply
+even a uniform finite lower floor along a cofinal family.
+
+One explicit eligible relaxation is the set of all even $p\in
+W^{1,1}(\mathbb R)$ satisfying \eqref{eq:v139-density-constraints}.
+Thus retaining mass, height and total variation, with their displayed
+physical constants, still loses information essential to this route.
+Under RH the sharper conclusion $B_a\ge a/(6\pi^2)$ holds eventually;
+that rate is not asserted unconditionally.
+\end{theorem}
+\begin{proof}
+The unsymmetrized density $(a/\pi)w(2a(\xi-\gamma_0))$ has mass one,
+height at most $a/\pi$, and variation $2a/\pi\le2a$.
+Symmetrization preserves those inequalities and gives
+\eqref{eq:v139-probe-density}. Compact smoothness makes its pairing
+with $\beta_a$ finite. By evenness and
+Proposition~\ref{prop:v137-conditional-mass}, under RH
+\[
+ \int\beta_ap_a^\star=\frac a\pi J_a
+       \le-\frac a{6\pi^2}
+\]
+for all sufficiently large $a$. This proves the conditional rate.
+If $B_{a_j}$ were bounded on any cofinal sequence, inclusion of all
+physical densities would give a complete uniform lower floor. In
+the source-complement case apply
+Corollary~\ref{cor:v136-complement-floor}; in the full-space case
+apply Proposition~\ref{prop:v136-bounded-floor}. Either implication
+gives RH, and hence contradicts the just proved conditional rate.
+The absence of a bounded cofinal subsequence proves the asserted
+unconditional divergence.
+\end{proof}
+
+The quantifier over both parities is essential to this proof.
+For separate parity errors it proves unconditional divergence of
+their maximum, not unconditional divergence of each merely from
+one sector's boundedness. The probe is not asserted to be a physical
+squared transform or to satisfy the sharper source-dependent
+pointwise evaluation bounds. In fact a nonzero compactly supported
+frequency density cannot be such a squared transform: the entire
+transform of a compact physical function cannot vanish on a real
+open interval. The obstruction is precisely an excess of tests
+in the relaxation, not a negative physical Weil test.
+
+There is a particularly explicit location-insensitivity property.
+For a real symbol $b$ bounded below with finite-measure sublevel sets,
+define $b^\uparrow(s)$ to be its increasing rearrangement with respect
+to Lebesgue measure. The strongest universal lower bound using only
+unit mass and the height bound $a/\pi$ is
+\begin{equation}\label{eq:v139-bathtub}
+ \ell_a^{\rm cap}(b):=
+ \inf_{\substack{p\ge0,\ \int p=1\\p\le a/\pi}}
+        \int bp
+ =\frac a\pi\int_0^{\pi/a} b^\uparrow(s)\,ds.
+\end{equation}
+This is unchanged by any measure-preserving rearrangement of $b$:
+it retains the full distribution of favorable and unfavorable values
+but discards their physical frequency positions. The formula is the
+classical bathtub principle~\cite[Section 1.14]{LiebLoss2001}.
+For clarity, choose a threshold $t$ whose lower sublevel has measure
+at most $\pi/a$ and whose closed sublevel has measure at least
+$\pi/a$, and fill that lowest region with density $a/\pi$, partially
+filling the level $t$ if needed. For every competitor,
+$(b-t)(p-p_*)\ge0$ pointwise; its integral and equal total masses
+prove minimality and \eqref{eq:v139-bathtub}.
+For even $b$, symmetrizing does not change the value.
+Theorem~\ref{thm:v139-probe-relaxation} implies
+\begin{equation}\label{eq:v139-cap-divergence}
+ \ell_a^{\rm cap}(\beta_a)\longrightarrow-\infty.
+\end{equation}
+Any lower-bound rule valid for \emph{every} mass-and-height-admissible
+density is at most \eqref{eq:v139-bathtub}. This is the exact scope of
+the distribution-only assertion; it does not prohibit every possible
+theorem whose input happens to include a histogram.
+
+The scalar primitive criterion is included by a different verified
+hypothesis: its decomposition $b=c+V'$, $c\ge0$,
+$\norm V_\infty=\Delta(b)/2$, is valid against every nonnegative
+unit density of variation at most $2a$. Thus its error $a\Delta(b)$
+satisfies \eqref{eq:v139-relaxed-error}. Notice that $\Delta(b)$
+itself is not rearrangement invariant. Calling it distribution-only
+would be incorrect.
+
+\begin{theorem}[Spectral-orientation obstruction with protected finite data]
+\label{thm:v139-protected-orbit}
+Fix $a$, let $M$ be multiplication by the exact $\beta_a$ on
+$L^2(\mathbb R)$ with its multiplication-operator domain, and let
+$S$ be any finite-dimensional frequency subspace. Let $\mathcal U_S$
+consist of unitaries which fix $S$ pointwise, differ from the identity
+by finite rank, and preserve $\mathcal D(M)$. Then
+\begin{equation}\label{eq:v139-orbit-edge}
+ \inf_{U\in\mathcal U_S}
+ \inf_{\substack{f\in C_c^\infty(I_a),\ \norm f=1\\
+                 \mathcal F_af\perp S}}
+ \ip{U^*MU\mathcal F_af}{\mathcal F_af}
+       =\operatorname*{ess\,inf}\beta_a.
+\end{equation}
+For any finite physical subspace $E$ with
+$\mathcal F_aE\subset\mathcal D(M)$, one can take
+$S\supset\mathcal F_aE+M\mathcal F_aE$. Every allowed unitary then
+preserves the complete operator action on the protected columns:
+\begin{equation}\label{eq:v139-protected-columns}
+ U^*MU\mathcal F_ae=M\mathcal F_ae\qquad(e\in E).
+\end{equation}
+Consequently a sound universal compression bound insensitive to all
+the allowed orientations, even after retaining these exact columns,
+cannot exceed $\operatorname*{ess\,inf}\beta_a$. Along the actual
+arithmetic family that upper limit tends to $-\infty$.
+The result holds in either parity, with parity-preserving unitaries
+and reflection-invariant protected data.
+\end{theorem}
+\begin{proof}
+Write $m=\operatorname*{ess\,inf}\beta_a$. The lower bound in
+\eqref{eq:v139-orbit-edge} is immediate from $M\succeq mI$.
+Fix $r>m$. The spectral subspace $1_{\{\beta_a<r\}}L^2$ is
+infinite dimensional because its support has positive Lebesgue measure;
+its vectors lie in $\mathcal D(M)$ since $m\le\beta_a<r$ there.
+Choose a unit vector $v$ in this subspace orthogonal to $S$.
+Choose a unit smooth physical $f$ satisfying the finitely many
+conditions $\mathcal F_af\perp S$, and put $h=\mathcal F_af$.
+Such $f$ exists because the smooth physical space is infinite
+dimensional. Its rapidly decreasing transform belongs to
+$\mathcal D(M)$. On the space $\operatorname{span}\{h,v\}\subset
+S^\perp$, choose a unitary carrying $h$ to $v$, and extend it by the
+identity. Then $U-I$ has finite rank with range in $\mathcal D(M)$;
+both $U$ and $U^*$ preserve that domain. Its Rayleigh value on $h$
+is $\ip{Mv}v<r$. Let $r\downarrow m$.
+
+If $S$ contains both protected columns and their images, $U$ fixes
+each of them, which proves \eqref{eq:v139-protected-columns}.
+For the constructed unitary, expansion of $U=I+K$ shows that
+$U^*MU-M=K^*M+MK+K^*MK$ extends to a bounded finite-rank
+self-adjoint perturbation: $MK$ is bounded and $K^*M$ is its
+adjoint on the original domain. Thus the compressed forms also
+keep their original domain. Evenness of $\beta_a$ leaves infinite
+dimensional negative spectral subspaces in each parity, so the same
+construction inside either sector proves the parity statement.
+Finally apply Corollary~\ref{cor:v137-scalar-no-go}.
+\end{proof}
+
+For the actual finite Fourier source proxy, the additional domain
+condition is automatic: its zero extension is piecewise smooth,
+its transform is $O_a((1+|\xi|)^{-1})$, and multiplication by
+$\beta_a=O_a(\log(2+|\xi|))$ remains square integrable. Protecting
+it therefore preserves its exact compressed source residual, not
+just the source norm or its Rayleigh value. Any finite number of
+other domain columns can also be protected, even if their number
+grows with $a$. This does not preserve the action on an infinite
+physical block.
+
+Spectral compression and orientation are classical concerns; see
+Fan--Pall~\cite{FanPall1957}. The project-specific extension here is
+the explicitly protected graph data and its application to the
+actual divergent symbol. Most importantly, $U^*MU$ generally is
+\emph{not} a multiplication operator. The theorem rules out bounds
+required to be valid on that larger operator class. It does not
+construct a rearranged prime sequence, a negative arithmetic Weil
+test, or a no-go for methods retaining the multiplier's physical
+support geometry. It is not a new finite-rank metric repair.
+
+\begin{proposition}[Why mere location independence is too broad]
+\label{prop:v139-location-counterexample}
+Let $D_a>0$, choose any measurable set $E_a$ of measure
+$\pi/(2a(D_a+1))$, and put
+$b_a=1-(D_a+1)1_{E_a}$. Then for every physical $f$,
+\[
+ \int b_a|\mathcal F_af|^2\ge\tfrac12\norm f^2,
+\]
+independently of the location or shape of $E_a$, even if
+$D_a\to\infty$ and hence $\operatorname*{ess\,inf}b_a\to-\infty$.
+\end{proposition}
+\begin{proof}
+Use $|\mathcal F_af|^2\le(a/\pi)\norm f^2$ and integrate over
+$E_a$. The subtracted contribution is at most
+$(D_a+1)(a/\pi)|E_a|\norm f^2=\norm f^2/2$.
+\end{proof}
+
+This example is not the arithmetic symbol. It proves that neither
+negative depth alone nor the informal phrase ``ignores arithmetic
+locations'' implies the requested universal conclusion. The actual
+symbol obstruction in Theorem~\ref{thm:v139-probe-relaxation} uses
+the signed cutoff-probe pairing, and not just its minimum.
+The proved scalar pointwise and primitive closures fall within the
+displayed classes. The Schatten, signed block-norm, noncommuting
+band, Cotlar, and flat-top results have additional geometric or
+structural hypotheses; their recorded closures are not corollaries
+of a single insensitivity assertion. Their precise coverage is
+tabulated in the new evidence report. The surviving joint signed
+concentration operator retains information excluded by both
+relaxations. Its cofinal finite-floor bound is still unproved.
+All endpoint, prime-cut, logarithmic-diagonal, Fourier normalization
+and sampler graph-defect conventions remain unchanged. No G2 sign
+gap is closed, and no worldwide novelty or publication readiness is
+asserted.
