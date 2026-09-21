@@ -20,3 +20,6 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Versioned cumulative bundles belong in release assets.
+fixed_space_prime_action_v*_bundle.zip

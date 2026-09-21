@@ -1,5 +1,764 @@
 # RH manuscript research log
 
+# Complete manuscript v1.34 — September 21, 2026
+
+## G2.6 candidate audit: Cotlar deduplication and optimal primitive transport
+
+This run tested two possible mechanisms for the signed source-compressed
+concentration target.  Direct Cotlar--Stein channel splitting is not new:
+it leaves the complete operator unchanged.  A genuinely distinct scalar
+signed-primitive/Bernstein estimate was proved and optimized exactly, but it
+failed the required falsification threshold and is therefore registered as
+rejected rather than live.  The existing signed weighted concentration
+criterion G2.6-CAP-01b remains the live conditional even-sector mechanism.
+
+### Exact disjoint-channel obstruction
+
+On the even Paley--Wiener range put
+
+\[
+ \Pi_{a,u}=\mathcal F_a\mathcal F_a^*
+ -|\widehat{\widetilde u_a}\rangle
+  \langle\widehat{\widetilde u_a}|.
+\]
+
+For
+
+\[
+ E_a=[-1/(10a),1/(10a)],\qquad
+ F_a=[-3/(10a),-1/(5a)]\cup[1/(5a),3/(10a)],
+\]
+
+the exact sinc-kernel test with normalized even indicators proves
+
+\[
+ \liminf_{a\to\infty}\|1_{E_a}\Pi_{a,u}1_{F_a}\|
+ \ge {73\over375\pi}>0.0619.
+\]
+
+The source correction tends to zero by the proved strong source limit and
+absolute continuity on the shrinking bands.  Thus even disjoint
+fixed-ratio reciprocal channels retain a cofinal cross interaction.  This
+does not rule out a Cotlar estimate with summable scale difference; it proves
+that adjacent interactions cannot be declared small.
+
+More decisively, for
+
+\[
+ Z_af=(\sqrt{w_{a,j}}1_{B_{a,j}}\mathcal F_af)_j,
+\]
+
+one has the exact identity
+
+\[
+ Z_a^*Z_a=P_a\mathcal F_a^*
+   \left(\sum_jw_{a,j}1_{B_{a,j}}\right)\mathcal F_aP_a.
+\]
+
+Splitting, merging or regrouping the channels does not change the target.
+Repeated-channel examples show that diagonal channel norms can tend to zero
+while the complete Gram is fixed.  Any Cotlar argument must retain the cross
+terms and prove the original signed margin; otherwise it is the v1.28 block
+norm comparison in different coordinates.
+
+### Candidate register entry G2.6-PT-01
+
+**Name:** signed primitive transport with the Paley--Wiener Bernstein bound.
+
+**Precise inequality:** for the exact even symbol let
+
+\[
+ \Delta_a=\sup_{x<y}\left(-\int_x^y\beta_a(\xi)d\xi\right)_+.
+\]
+
+Then every physical test supported in `[-a,a]` satisfies
+
+\[
+ \int\beta_a|\widehat f|^2\ge-a\Delta_a\|f\|^2.
+\]
+
+Therefore `a Delta_a -> 0` would prove the even v118 gap-free estimate on
+the whole physical space, hence on the actual source complement.
+
+**Exact optimization:** among all scalar decompositions
+`beta_a=b_a+W_a'`, `b_a>=0`, the least centered `L-infinity` norm of
+`W_a` is exactly `Delta_a/2`.  It is achieved by subtracting the running
+maximum of a primitive of `beta_a`.  Integration by parts and
+`||F'||_2=||xf||_2<=a||f||_2` then give the displayed bound.  The use of a
+primitive based at a finite point is essential; the prime cosine terms do
+not have an improper primitive from minus infinity.
+
+**Physical space and domain:** the inequality holds for all of
+`L^2(-a,a)` after zero extension, with no Fourier cut and the unitary Fourier
+normalization used in the manuscript.  It therefore applies to the actual
+normalized source complement.  Finite-rank source removal cannot improve the
+generic factor `a`: even endpoint strips contain an infinite-dimensional
+space after any finite number of constraints.
+
+**Essential new ingredient:** one-dimensional signed primitive transport
+and the physical derivative bound.  This retains positive shoulders around
+negative wells before taking an ordinary norm.
+
+**Nearest prior proposals and formula-level distinction:** unlike the signed
+Schur and structured-inverse routes it has no head/tail solve; unlike scalar
+prime norms it estimates the complete signed symbol; unlike finite-rank
+metrics, dyadic pair metrics and v1.28 common-Gram factorization it has no
+matrix metric or off-block factorization; unlike source-only residual bounds
+it is valid on the whole physical space; unlike CAP-01b it uses cumulative
+signed interval area rather than concentration operators.  It is a distinct
+sufficient estimate inside the continuum-symbol route, not a coordinate
+change.  The mathematical ingredients are classical; the exact arithmetic
+drawdown optimization is new within this project.  Worldwide novelty is not
+claimed.  The Bernstein--Nikolsky literature is the closest primary source.
+
+**Adversarial failure:** for the exact positive Dirichlet model already used
+in v1.32,
+
+\[
+ \beta_a^{\rm mod}(\xi)=a^2\xi^2-\pi^2/4,
+ \qquad \Delta_a^{\rm mod}=\pi^3/(6a).
+\]
+
+The form is nonnegative and its normalized cosine source is an exact null
+vector, yet the optimal primitive error is the fixed constant `pi^3/6`.
+Thus positivity plus a perfect source does not imply the proposed decay.
+
+A non-rigorous scan of the actual arithmetic symbol gave `a Delta_a`
+approximately `2.5448, 3.4002, 4.9148, 5.5052` at lambda `3,4,5,6`.
+These values are diagnostic, not interval certificates or a cofinal no-go.
+They show no evidence of the required decay.
+
+**Status:** rejected as a live candidate.  It did not survive the meaningful
+Dirichlet-model and arithmetic falsification tests.  It remains a valid exact
+sufficient criterion.
+
+### Surviving candidate and exact remaining lemma
+
+**Retained live candidate:** G2.6-CAP-01b, the signed source-compressed
+weighted concentration inequality
+
+\[
+ -D_aP_a+\sum_jw_{a,j}\mathcal C_{a,u}(G_{a,j})
+ \succeq-\eta_aP_a,\qquad\eta_a\to0.
+\]
+
+No formulaically distinct candidate survived this run.  Its exact remaining
+lemma is unchanged: prove the displayed inequality for an explicit arithmetic
+hierarchy along a cofinal family, retaining every cross-channel and the actual
+source.  The odd sector remains a separate obligation.  No G2 sign gap was
+closed and RH is not proved.
+
+### Reproducibility
+
+- `g2_primitive_transport/adversarial_cotlar_review.md`: independent exact
+  disjoint-channel proof and deduplication audit.
+- `g2_primitive_transport/adversarial_signed_primitive_review.md`: exact
+  primitive optimization, source-complement audit and Dirichlet obstruction.
+- `g2_primitive_transport/test_primitive_transport.py`: non-rigorous arithmetic
+  drawdown diagnostic; no lambda 8 run.
+
+# Complete manuscript v1.33 — September 21, 2026
+
+## Development of G2.6-CAP-01b: exact leakage algebra and a cofinal no-go
+
+This run tested a proposed simplification of the signed source-compressed concentration hierarchy: nested reciprocal-scale bands might become asymptotically commuting after removal of the repaired source. The proposal is false in that generality. No new candidate is registered; CAP-01b remains the live conditional even-sector mechanism.
+
+### Exact Toeplitz--leakage identities
+
+On the even physical space let (J=\mathcal F_a), (Pi=JJ^*),
+
+\[
+C_E=J^*1_EJ,\qquad H_E=(I-\Pi)1_EJ.
+\]
+
+Then
+
+\[
+C_EC_F=C_{E\cap F}-H_E^*H_F,
+\qquad [C_E,C_F]=H_F^*H_E-H_E^*H_F.
+\]
+
+For the actual normalized source (u_a), put (P_a=I-|u_a\rangle\langle u_a|), (A_E=P_aC_EP_a) on (u_a^\perp), and (v_E=P_aC_Eu_a). In the fixed first-slot-linear convention,
+
+\[
+[A_E,A_F]=P_a(H_F^*H_E-H_E^*H_F)P_a
++|v_F\rangle\langle v_E|-|v_E\rangle\langle v_F|.
+\]
+
+No source term has been dropped. With (L_Ef=(H_Ef,\langle f,v_E\rangle)),
+
+\[
+A_EA_F=A_{E\cap F}-L_E^*L_F,
+\quad [A_E,A_F]=L_F^*L_E-L_E^*L_F,
+\quad A_E-A_E^2=L_E^*L_E.
+\]
+
+This is the classical Toeplitz--Hankel product-defect algebra, derived directly in the present even-interval normalization.
+
+### Certified reciprocal-band obstruction for the actual source
+
+Scale (L^2_{\rm ev}(-a,a)) to (L^2_{\rm ev}(-1,1)) and take
+
+\[
+E_a=[-1/(10a),1/(10a)],\qquad
+F_a=[-1/(5a),1/(5a)].
+\]
+
+The uncompressed operators become fixed interval concentration operators (C_{1/10},C_{1/5}). Exact Taylor bounds, evaluated between the normalized Legendre modes (e_0=1/\sqrt2) and (e_2=\sqrt{5/8}(3x^2-1)), prove
+
+\[
+\|[C_{1/10},C_{1/5}]\|>9\times10^{-6}.
+\]
+
+This is an analytic rational certificate, not a numerical eigenvalue test. The separate degree-four verifier gives the stronger bound (>1.198\times10^{-5}).
+
+Lemma `lem:v115-source-mass` proves that the normalized repaired source converges strongly on the unscaled logarithmic line to a fixed nonzero vector. After interval dilation it converges weakly to zero. Fixed concentration operators are compact, so their action on the dilated source tends to zero and source compression changes them by (o(1)) in operator norm. Therefore
+
+\[
+\liminf_{a\to\infty}\|[A_{E_a},A_{F_a}]\|>9\times10^{-6}.
+\]
+
+This is a cofinal result for the actual source. It does not identify the chosen bands with the arithmetic superlevels of (eta_a), so it does not falsify CAP-01b. It proves that nesting, reciprocal scale and the known source limit do not imply approximate simultaneous diagonalization.
+
+### Candidate register and novelty screening
+
+**Retained candidate:** G2.6-CAP-01b, signed source-compressed weighted concentration.
+
+**Status:** live conditional even-sector mechanism; no G2 gap closed.
+
+**Proposed simplification tested:** asymptotic commutation of nested concentration operators.
+
+**Result:** rejected as a generic mechanism by the actual-source reciprocal-band theorem above. Even exact commutation would be insufficient without a separate weighted coverage lower bound.
+
+**Nearest literature:** Brown--Halmos Toeplitz product algebra and the Widom/Virtanen Toeplitz--Hankel product formula; Landau--Pollak concentration theory supplies the physical operators. These are known mechanisms. The explicit source-compressed identities are new bookkeeping within this project; the actual-source reciprocal-band obstruction is a new project result. Worldwide novelty is not claimed.
+
+**Deduplication:** the joint maps (L_E) form a common Gram only for concentration product defects. They do not factor the signed Weil off-blocks and therefore do not close or replace the v1.28 common-Gram proposal. Registering them as a new positive mechanism would be a relabeling. The result also differs from signed Schur/structured-inverse estimates, scalar prime norms, finite-rank repairs, source-only residual arguments and dyadic pair metrics because it is an exact physical Paley--Wiener product identity followed by a cofinal counterexample.
+
+### Exact surviving lemma
+
+For cofinite good sets (G_{a,j}), let (B_{a,j}=\mathbb R\setminus G_{a,j}) and
+
+\[
+Z_af=(\sqrt{w_{a,j}},1_{B_{a,j}}\mathcal F_af)_j,
+\qquad f\perp u_a.
+\]
+
+The complete joint-channel target is
+
+\[
+\|Z_a\|^2\le\sum_jw_{a,j}-D_a+\eta_a,
+\qquad \eta_a\to0.
+\]
+
+Its block Gram retains all channel overlaps and the actual source before taking a norm. It is algebraically equivalent to the existing signed weighted concentration inequality, not a new theorem. The exact remaining task is to prove it for an explicit arithmetic hierarchy or produce a different genuinely signed physical factorization. The odd sector remains separate. No G2 sign gap was closed and RH is not proved.
+
+### Files and reproducibility
+
+- `certify_scaled_commutator.py`: exact-rational derivation and certificate.
+- `scaled_commutator_certificate.json`: machine-readable bound.
+- `adversarial_nested_commutator_review.md`: independent derivation, scope audit and formula-level novelty comparison.
+
+# Complete manuscript v1.32 — September 21, 2026
+
+## Development of G2.6-CAP-01b: Schatten refinement and exact no-go tests
+
+This run retained the v1.31 signed weighted concentration mechanism and tested two possible simplifications. Neither is registered as a new candidate: the Hilbert--Schmidt estimate is a scalar continuation of CAP-01b, and positive flat-top smoothing is impossible except for the identity kernel.
+
+### Exact source-compressed second moment
+
+For (C_E=\mathcal F_a^*1_E\mathcal F_a), normalized source (u_a), and (P_a=I-|u_a\rangle\langle u_a|), cyclicity gives
+
+\[
+\operatorname{tr}(P_aC_EP_a)^2
+=\operatorname{tr}(C_E^2)-2\|C_Eu_a\|^2
++\langle C_Eu_a,u_a\rangle^2.
+\]
+
+Therefore the exact negative-level coefficient may use
+
+\[
+\|P_aC_EP_a\|\le
+\min\{1,\operatorname{tr}(P_aC_EP_a),
+\|P_aC_EP_a\|_{HS}\}.
+\]
+
+This is a valid strengthening of the v1.31 trace bound and includes the actual source before taking a scalar majorant.
+
+### Structural no-go for negative-only budgets
+
+The strengthening is not a uniform mechanism by itself. For the nonnegative Dirichlet model
+
+\[
+q_a[f]=a^2\|f'\|^2-\frac{\pi^2}{4}\|f\|^2,
+\qquad u_a(x)=a^{-1/2}\cos\frac{\pi x}{2a},
+\]
+
+(u_a) is an exact null source. Its negative multiplier levels scale by (a^{-1}), so dilation makes every source-compressed concentration operator independent of (a). The integrated Hilbert--Schmidt budget is consequently a fixed positive number. Complete positivity and a perfect source therefore do not imply vanishing of any negative-only layer-cake/Schatten coefficient.
+
+Min--max additionally proves
+
+\[
+\|P_aC_EP_a\|\ge\lambda_2(C_E),\qquad
+\|P_aC_EP_a\|_{HS}^2\ge\sum_{j\ge2}\lambda_j(C_E)^2.
+\]
+
+One source direction cannot remove a second concentration channel.
+
+### Exact global-index obstruction
+
+The exact-rational verifier `certify_beta4_negative.py` proves
+
+\[
+-0.64784909<\beta_{\log4}(1)<-0.6321938<-3/5.
+\]
+
+Continuity supplies an open negative interval. Arbitrarily many even Schwartz functions with disjoint Fourier supports in that interval give infinite negative index for the full-line multiplier, surviving every fixed finite number of constraints. This rules out a global finite-negative-index/conditional-positive-definite strengthening. It does not contradict the certified positive physical lambda-4 form, because the full-line tests are not supported in the physical window.
+
+### Exact flat-top obstruction
+
+If a positive probability measure has characteristic function equal to one near zero, positivity of (1-\cos(t\xi)) forces the measure to be a point mass at zero. Hence no nontrivial positive frequency smoothing can be exact on every physical difference (|x-y|\le2a). A signed flat-top kernel can be form-exact, but making its extension nonnegative is a separate sign problem.
+
+### Adversarial computations
+
+Binary64 finite cosine compressions were run only at lambda 3, 4 and 5. In the largest tested frequency windows/dimensions, the integrated second concentration eigenvalue was approximately 0.72, 1.12 and 1.25. These are non-certified lower diagnostics, not physical sign results. Canonical signed trapezoid flat-top kernels also left the located negative wells negative. The exact analytic no-go results do not depend on these computations.
+
+### Candidate register and novelty
+
+**Candidate:** G2.6-CAP-01b, signed source-compressed weighted concentration.
+
+**Status:** live conditional even-sector mechanism; no G2 gap closed.
+
+**Formula:** choose a pointwise step minorant
+
+\[
+-D_a+\sum_jw_{a,j}1_{G_{a,j}}\le\beta_a
+\]
+
+and prove
+
+\[
+-D_aP_a+\sum_jw_{a,j}\mathcal C_{a,u}(G_{a,j})
+\succeq-\eta_aP_a,\qquad \eta_a\to0.
+\]
+
+**Essential project-new ingredient:** favorable and unfavorable levels of the exact arithmetic symbol remain coupled in one Loewner-order operator sum after removing the actual source. The current run proves that replacing this by negative-only Schatten moments or positive form-exact smoothing loses the mechanism.
+
+**Nearest literature and classification:** Landau--Pollak concentration theory, Nazarov uncertainty estimates and Kovrijkine's Logvinenko--Sereda theorem remain the closest classical foundations. The general machinery is known; the arithmetic signed hierarchy is new within this project. Worldwide novelty is not claimed.
+
+**Deduplication:** formula comparison again distinguishes CAP-01b from the signed Schur/residual and structured-inverse routes, scalar prime norms, finite-rank metric repairs, source-only residual arguments, dyadic pair-norm metrics and the v1.28 common-Gram factorization. The Hilbert--Schmidt formula is explicitly classified as a continuation, not a new candidate.
+
+**Exact remaining lemma:** construct an explicit finite or convergent arithmetic hierarchy satisfying the signed weighted concentration inequality with ordinary error tending to zero along a cofinal family. The odd sector remains separate. No G2 sign gap was closed and RH is not proved.
+
+# Complete manuscript v1.31 — September 21, 2026
+
+## Development of G2.6-CAP-01: source-compressed weighted concentration
+
+This run developed the v1.30 continuum-symbol candidate rather than registering a renamed route. The essential new ingredient is a hierarchy of source-compressed Paley–Wiener concentration operators that retains favorable as well as unfavorable levels of the exact arithmetic symbol.
+
+### Exact operator criterion
+
+On the even physical space (H_a^ev=L²_ev(-a,a)), let (F_a) be zero extension followed by the unitary Fourier transform, let (u_a) be the normalized repaired source, and put (P_a=I-|u_a><u_a|). For symmetric measurable (E), define
+
+\[
+C_{a,u}(E)=P_aF_a^*1_EF_aP_a.
+\]
+
+This is a positive contraction on the actual source complement, with no Fourier cutoff. If (D_a=||(beta_a)_-||_infty) and (E_a(t)={beta_a<-t}), then the exact layer-cake argument proves
+
+\[
+q_W[f]\ge-\eta_a^{op}\|f\|²,
+\qquad
+\eta_a^{op}=\int_0^{D_a}\|C_{a,u}(E_a(t))\|dt.
+\]
+
+For finite-measure (E), the trace is exact:
+
+\[
+tr C_{a,u}(E)=\int_E\left[
+\frac{a+\sin(2a\xi)/(2\xi)}{2\pi}-|\widehat{\widetilde u_a}(\xi)|²
+\right]d\xi.
+\]
+
+The full symmetric-set convention contains both frequency signs; if only the positive half is integrated, the integrand must be doubled. Evenness and source removal are therefore included rather than appended heuristically.
+
+The sharper surviving criterion chooses symmetric sets (G_{a,j}) and positive weights (w_{a,j}) satisfying the pointwise step minorant
+
+\[
+-D_a+\sum_jw_{a,j}1_{G_{a,j}}\le\beta_a
+\]
+
+and proves
+
+\[
+-D_aP_a+\sum_jw_{a,j}C_{a,u}(G_{a,j})\succeq-\eta_aP_a,
+\qquad \eta_a\to0.
+\]
+
+This implies the even v118 gap-free estimate without a positive complement gap. It controls the complete even rank-one complement required there; it does not identify that space with the physical block (C_a^low).
+
+### Scalar route tested and rejected as presently inadequate
+
+The trace specialization is rigorous but discards all favorable symbol mass. On grids truncated at |xi|<=5000, its already accumulated values are approximately 2.1363, 3.2440 and 4.5622 for lambda 3, 4 and 5. These are diagnostic lower accumulations for the complete scalar upper bound, not certified enclosures.
+
+For the two-level good set (G_a(theta)={beta_a>=theta D_a}), a concentration lower bound (C(G)>=pP) gives exactly
+
+\[
+q_W[f]\ge D_a((1+\theta)p-1)\|f\|².
+\]
+
+Thus reciprocal-scale thickness alone is insufficient: the concentration constant must be near (1+theta)^(-1), while generic Logvinenko–Sereda constants are far smaller. This rules out claiming that a standard thick-set theorem closes the arithmetic estimate. It does not rule out the full weighted hierarchy.
+
+### Adversarial compact-support test
+
+Even packets proportional to cos(pi x/(2a))cos(omega x) were centred at the deepest located wells for lambda 3, 4 and 5 only. The symbol point values were approximately -2.37816, -3.41944 and -5.01788, but the complete packet Rayleigh quotients were +0.951081, +2.757308 and +3.683514. Independent physical archimedean/prime/pole quadrature agreed with Fourier integration to about 3e-10. This is numerical evidence only. It fails to falsify the weighted mechanism and illustrates why beta-plus cannot be discarded.
+
+### Novelty and prior-route comparison
+
+Classification: substantive project-new development of G2.6-CAP-01; no claim of worldwide novelty. Time-frequency concentration and Logvinenko–Sereda theory are classical. The formula is distinct from prior signed Schur/residual and structured-inverse estimates, scalar prime norms, finite-rank repairs, source-only residuals, dyadic tail metrics and the v1.28 common-Gram factorization: it uses the complete exact arithmetic Fourier symbol and compresses physical Paley–Wiener concentration off the actual source before taking any scalar comparison. It is also distinct from v1.30's scalar uncertainty suggestion because the essential surviving object is the signed weighted sum of concentration operators, not thickness or the trace of the negative set.
+
+Nearest literature: Landau–Pollak concentration theory, Nazarov's finite-measure uncertainty theorem, and Kovrijkine's quantitative Logvinenko–Sereda theorem. None proves the required signed arithmetic operator inequality with cofinal constants.
+
+### Exact remaining lemma
+
+Construct an explicit finite or convergent superlevel hierarchy satisfying the step minorant and prove its source-compressed weighted concentration operator is at least (-eta_a P_a) with eta_a->0 along a cofinal family. The constants must retain the full dependence on a, the source and all arithmetic levels. The odd sector remains separate.
+
+No G2 sign gap was closed and RH is not proved.
+
+# Complete manuscript v1.30 — September 21, 2026
+
+## Development of G2.6-CAP-01: continuum cancellation and a perturbative no-go
+
+This run developed the existing source-weighted capacity candidate rather than registering a renamed mechanism. The new essential ingredient is the exact PNT-continuum prime kernel
+
+\[
+K_a^+(x,y)=e^{|x-y|/2}.
+\]
+
+On the even sector the existing pole cancels its only harmful channel exactly:
+
+\[
+2|\cosh(\cdot/2)\rangle\langle\cosh(\cdot/2)|-K_a^+
+=K_a^-+2|\sinh(\cdot/2)\rangle\langle\sinh(\cdot/2)|,
+\quad K_a^-(x,y)=e^{-|x-y|/2}.
+\]
+
+The sinh term vanishes on even functions and (K_a^-\succ0), with Fourier multiplier ((\xi^2+1/4)^{-1}). It is compact on the physical interval and therefore supplies no positive uniform gap.
+
+### Exact arithmetic symbol
+
+For the exact prime correlation (C_a), put (R_a=C_a-K_a^+). Its full-line multiplier after zero extension is
+
+\[
+\mathfrak r_a(\xi)=2\sum_{1<m<e^{2a}}\frac{\Lambda(m)}{\sqrt m}\cos(\xi\log m)
+-2\int_0^{2a}e^{t/2}\cos(\xi t)dt.
+\]
+
+Combining the archimedean multiplier with (K_a^-) gives the exact even symbol
+
+\[
+\beta_a(\xi)=\Re\psi(5/4+i\xi/2)-\log\pi-\mathfrak r_a(\xi),
+\qquad
+q_W[f]=\int\beta_a(\xi)|\widehat{\widetilde f}(\xi)|^2d\xi.
+\]
+
+Thus the live lemma is the support- and source-constrained estimate
+
+\[
+\int\beta_a|\widehat{\widetilde f}|^2\ge-\eta_a\|f\|^2
+\quad(f\perp u_a,\ f\text{ even},\ \operatorname{supp}f\subset[-a,a]),
+\qquad \eta_a\to0.
+\]
+
+Together with the proved source residual this is sufficient for the even v118 gap-free conclusion. It controls the whole even rank-one complement, not merely (C_a^{low}); no unproved identification of those spaces is made.
+
+### Rigorous falsification of the vanishing-remainder shortcut
+
+The remainder (R_a) is not (o(1)) on the actual source complement. Let (\ell=\log2), (d=0.1), (0<\varepsilon<0.01), and choose an even bump (\phi\) supported in ((-\varepsilon,\varepsilon)). With (c_{\pm1}=1), (c_0=-2\cosh(d/2)), form six bumps centered at (\pm\ell/2+jd). Their total diameter is below (\log3), so only the prime-2 shift correlates. Both exponential moments vanish exactly. Hence
+
+\[
+\langle R_ag_\phi,g_\phi\rangle>
+\frac{\log2}{\sqrt2}\|g_\phi\|^2.
+\]
+
+The full bump family is infinite-dimensional, so the ordinary (o(1)) bound fails after removal of any finite-dimensional block at each window. A fixed two-complex-dimensional subfamily always contains a nonzero vector perpendicular to the rank-one source, while its fixed archimedean reference energies remain uniformly bounded. Therefore neither (R_a\preceq\eta_aI) with (\eta_a\to0), nor (R_a\preceq\alpha_aA_{ref}+\eta_aI) with both coefficients tending to zero, can hold on the source complement. This does not rule out absorption by the full archimedean energy with a fixed sharp coefficient.
+
+### Novelty and prior-route comparison
+
+This is a substantive development of CAP-01, not a separate candidate. The exact kernel cancellation and scalar discrepancy symbol were not present in the prior Schur/inverse, scalar prime-norm, finite-rank metric, source-only residual, dyadic pair-norm or common-Gram proposals. It differs from the withdrawn moving-Hardy continuum estimate: no translated test, endpoint ratio, absolute PNT gain or reflected-pole damping is used. The general Fourier/uncertainty framework is classical; no worldwide novelty is claimed.
+
+### Result and next lemma
+
+Established: exact continuum cancellation, exact even discrepancy symbol, and an exact no-go for treating the discrepancy as a vanishing perturbation. Numerically, the stronger pointwise condition (\beta_a\ge-o(1)) fails at already positive fixed windows; those values are diagnostics only. The remaining proof must exploit physical support uncertainty or concentration in the full signed symbol, not a norm estimate on the remainder. The odd sector remains separate.
+
+No G2 sign gap was closed and RH is not proved.
+
+# Complete manuscript v1.29 — September 21, 2026
+
+## Candidate register: G2.6-CAP-01
+
+**Name:** source-weighted nonlocal jump-capacity absorption.  
+**Classification:** new within this project; ground-state/Picone machinery is known in the literature; worldwide novelty is not claimed.  
+**Status:** live conditional even-sector mechanism. No G2 gap closed.
+
+### Exact fingerprint
+
+On the centered physical interval, retain the zero-extension killing terms and write the even Weil form as a nonnegative archimedean-plus-prime jump form, the exact scalar potential (c_{ar}-2P_\lambda), and the positive cosh pole. For any positive zero-free even (h), the exact Picone identity is
+
+\[
+q_W[hg]=E_{\lambda,h}[g]+\int (H_\lambda h/h)|g|^2h^2dx
+       +2|\int gh\cosh(x/2)dx|^2,
+\]
+
+where (H_\lambda=W_\lambda-2|c\rangle\langle c|). For the actual removed near-radical (u_\lambda), impose the exact constraint (\int gh\overline u_\lambda=0). The candidate lemma absorbs the negative part of (Hh/h) into the weighted jump energy and positive pole, up to ordinary error (\eta_\lambda\). Together with (\|Wu_\lambda\|\le\epsilon_\lambda), v118-gap-free gives lower error (\eta_\lambda+2\epsilon_\lambda/\sqrt3), with no complement spectral gap.
+
+### Essential new ingredient and deduplication
+
+The essential ingredient is a physical-space nonlocal ground-state transform followed by a source-constrained capacity inequality. It preserves joint prime/archimedean edge signs before any Fourier split. Formula comparison shows it is not the prior signed Schur/structured-inverse route, scalar prime-norm bound, finite-rank metric repair, source-only residual argument, dyadic pair-norm metric, or v1.28 shared-channel/common-Gram off-block factorization. The old generic Perron suggestion did not contain this exact killed-jump identity, favorable-pole term, source constraint or a capacity estimate. This is nevertheless an established mathematical technique, not a new general theorem.
+
+Primary literature screen: Frank–Seiringer, *Non-linear ground state representations and sharp Hardy inequalities*, JFA 255 (2008), arXiv:0803.0503v2; Chen–Wang, *Functional inequalities for nonlocal Dirichlet forms with finite range jumps or large jumps*, arXiv:1212.6100v2. These support the method class but do not provide the arithmetic inequality or cofinal constants.
+
+### Adversarial checks and falsification attempt
+
+- The exact diagonal constant is (\psi(1/4)-\log\pi=-\gamma-\log(8\pi)-\pi/2). Exterior killing must remain with the constant (-2P_\lambda).
+- Pointwise (Wh\ge0) is not sufficient: incorporating the positive pole into (Wh/h) creates a negative weighted variance term.
+- The saved lambda3, N64 compressed projected source ratio has numerical minimum about -0.413827 and is negative on 44.9503% of a dense grid, representing about 32.3325% of its source-weighted mass. This falsifies the stronger finite pointwise-supersolution shortcut.
+- The compressed ratio is not the complete physical ratio. A positive nonzero endpoint weight has positive logarithmic boundary growth under the killed continuous jump operator.
+- The finite transformed absorption ratio is one at binary64 resolution. It supplies no certified margin and warns that the mechanism can be tautological without an independent capacity argument.
+
+### Scope and exact next lemma
+
+The proposition controls the whole even rank-one complement, not automatically (C_a^{low}). A subspace inclusion must be proved or all remaining blocks and couplings accounted for. The odd sector is untouched because its sinh pole is negative.
+
+The exact next lemma is: choose an explicit zero-free (h_\lambda) and prove the full-domain source-constrained absorption inequality with (\eta_{\lambda_j}\to0) on a cofinal family. A generic Poincaré constant, ordinary residual estimate, another fixed-window certificate or an unjustified source-to-physical transfer is insufficient. Full G2 additionally requires the odd sector. Detailed formulas and classification are in `g2_capacity_candidate/g2_capacity_candidate_report.md`.
+
+The complete manuscript integrates the exact identity and conditional implication. No G2 sign gap was closed and RH is not proved.
+
+# Complete manuscript v1.28 — September 21, 2026
+
+## Tested target and result
+
+User requested a test of the new signed block-metric criterion. We froze lambda=5, N=lambda^2=25, literal dyadic blocks26..50,51..100,101..200,201..400, and maximal admissible metrics M_j=T_jj. This is a new construction, not unchanged transfer of the already false Q16 metric. No lambda8 calculation or alternate cutoff was run.
+
+**The proposed norm-row criterion fails on this partition in both parities, even for every smaller admissible positive block metric and every positive scalar row reweighting.** Each of the four signed diagonal blocks is certified positive, but the exact nonnegative coupling-lower matrices have largest eigenvalue at least1.539632 even and1.6014215 odd. Every infinite extension inherits this obstruction. No negative Weil vector or complete lambda5 sign was proved; its complete generalized certificate margin remains unavailable.
+
+## Computational evidence upgraded to proof
+
+The floating-point pilot proposed Cholesky congruences and pair singular vectors; it is not proof evidence. Exact dyadic witnesses are evaluated at320 and448 bits using96-term analytic coefficient enclosures. All eight congruence matrices pass C_j T_jj C_j* >0.99I, certifying actual diagonal-block positivity without assuming proposal accuracy. All twelve pair quotients have positive denominators and strictly exceed the rational entries of H with denominator1e6.
+
+Even entries01,02,03,12,13,23:999998,570610,337575,483821,196957,490303. Odd:999998,486261,324229,614752,289700,487903. The exact uniform-vector Rayleigh gates are6158528/4000000 and6405686/4000000. Already the leading three blocks give4108858/3000000>1 and4202022/3000000>1.
+
+Both precision replays retain identical pair/congruence hashes and rational matrices. The adversarial agent independently expanded all twelve pairings to signed Fourier indices at448 bits, bypassing the parity block assembler and all proposal solvers. It confirmed normalization, signs, positive energies, rational lower bounds and interval overlaps. This shares the audited analytic coefficient formulas and Arb, and is not external verification or an independent analytic kernel derivation.
+
+## Analytic extension of the failed gate
+
+For any M_j<=T_jj, the normalized coupling norm equals the supremum of |x*T_jk y| divided by sqrt((x*M_j x)(y*M_k y)). Thus the maximal metrics minimize every individual coupling norm. Any successful weighted row test would imply H w<=b w with positive w and b<1. Similarity by diag(w) would force the spectral radius of H below1, contradicting its certified Rayleigh bound. Omitted norm terms are nonnegative, so no remote upper enclosure is needed to prove this failure.
+
+A simple positive model T=I/4+3*11*/4 has pair-norm comparison radius3/2 despite positive eigenvalues1/4,1/4,5/2. This illustrates information lost by independent pair norms; it is not an identified model of the arithmetic operator. No claim about all polynomial cutoffs, all partitions or asymptotic impossibility is made.
+
+## Next concrete step
+
+Do not spend another run shrinking these metrics, rotating their coordinates or optimizing scalar row weights: the proved obstruction covers those modifications on this partition. Seek a genuinely signed joint estimate or a consistent shared-direction factorization of the normalized off-blocks, with a complete signed remainder. The review records the exact identity for a hypothetical common Gram channel E_jk=Z_jZ_k*+R_jk, but no such actual Weil factorization or uniform remainder estimate is asserted. Changing the cutoff or partition is a distinct experiment and must be identified as such.
+
+The complete176-page v1.28 manuscript compiles without warnings and has been visually checked throughout, with new proofs inspected individually. All523previous labels and72historical dispositions are preserved. It integrates the new obstruction, keeps the abstract criterion correct, and distinguishes comparison eigenvalues from generalized certificate and resolution margins. It retains weak G1, complete lambda4 positivity, the physical endpoint, diagonal, scale factors, first-slot-linear convention and explicit sampler graph defect. No growing-window G2 sign gap was closed and RH is not proved.
+
+# Complete manuscript v1.27 — September 21, 2026
+
+## Outcome, in requested order
+
+**The lambda5 construction does not transfer unchanged.** The frozen Q16 metric W5 >= 1e-8 D_arch is rigorously false in both parities. The necessary modification is to the outer head or the metric itself; no successful tuning rule was found. The full pipeline stopped before outer trials or inverse correction. Its complete generalized certificate margin is unavailable. No resolution margin or finite-prefix result substitutes for it, and no positive lambda5 metric or structured inverse factors were produced.
+
+Separate obstruction reports, exact dyadic witnesses, protocol, original replays and an independent signed-index verification are saved in g2_lambda5_transfer/. No lambda8 calculation was performed during this checkpoint.
+
+## Frozen protocol and attempted transfer
+
+The complete archived lambda4 scripts use literal support sizes, without a general window-dependent support rule. We froze those sizes rather than importing the different finite-resolution probe's lambda-squared head rule. The record includes scaling, preconditioner, CG depths, support, tau and moment orders before testing. Its SHA256 is 6de75f0e5121fb4a452de7f0518418820c2acb113b9c02915c450f42875dff1e.
+
+Fresh physical constants at lambda5 cause negative first far weights at the frozen N512 even and N1536 odd cuts: approximately -1.0764504091 and -1.5489108675. For the same scalar formula the first positive cuts are1502 and7224. We did not confuse this with falsity of the actual metric: we next tested that precise required inequality by negative shifted quadratic witnesses, as permitted in the stopped protocol.
+
+Exact frozen vectors on modes17..128 give W/D in (2.0806767455e-18,2.0806767456e-18) even and (6.7808574118e-17,6.7808574120e-17) odd. Both W values are positive and both W-1e-8D values negative. Outward320/448-bit replays and a separate448-bit signed-index assembly confirm them. The second assembly bypasses the parity block routine but shares the analytic coefficient enclosures and Arb. Finite support makes the complete quadratic exactly finite, so this is a counterexample to the complete shifted tail metric with no missing remote enclosure.
+
+Increasing remote cutoff, moment order or CG depth cannot fix this false inequality. Keeping Q16 and a common scalar cD forces c below2.0806767456e-18; this is necessary, not a sufficient certified replacement. No weaker metric or larger physical head was silently adopted. No negative Weil vector or RH counterexample was found.
+
+## New analytic route obstruction and surviving G2.6 definition
+
+For an arbitrary fixed even repair bump psi, with psi(0)=1, integral zero and actual support radius b<1, the windowed repaired map B_lambda(h-h(0)psi) is not closable in sourceL2 whenever lambda>1/b. The sequence psi(t/epsilon) tends to zero in sourceL2 and has identically zero uncorrected windowed image for epsilon b<1/lambda, while its repaired image is the same nonzero -B_lambda psi. This closes bounded global L2 transport through that repair. It does not invalidate fixed smooth sources, weakG1, finite repaired spans, or Connes–Consani's actual finite-image projection construction.
+
+G2.6 now uses exact source thresholds c=2pi lambda^2, explicit moment repairs, physical image matrices and their Grams. Source concentration counts alone prove neither physical rank nor stability. The growing removed-block residual is exactly ||Gamma^-1/2(AG)*(AG)Gamma^-1/2||. The signed ordinary-error complement target in reference D coordinates is Pi(K+eta D^-1)Pi>=0, where Pi projects off D^-1/2G, not off G. This is an exact reformulation, not a proved sign. The existing rank-one source residual remains usable with the gap-free proposition; a growing deep block requires its own normalized bound.
+
+## Non-scalar metrics: a proved limitation and a live candidate
+
+User asked whether matrix tail metrics could allow polynomial cutoffs. We proved that no invertible congruence or polynomial-rank correction can repair the old unsigned diagonal comparison at polynomial N: every n with N<n<L exp(kappa/(1-c)) is negative, and a rank-r correction leaves a negative direction whenever r is smaller than that subspace dimension. Since kappa>=||T_prime||~lambda, the negative dimension is exponential. This conclusion concerns the weakened comparison only, not the actual Weil form.
+
+Infinite signed-block metrics are not excluded. A sufficient theorem keeps T_jj>=M_j>0 within each block and controls sup_j sum_{k!=j} ||M_j^-1/2 T_jk M_k^-1/2|| by rho<1. It yields T>=(1-rho) directsum M_j on the actual common form core/closed extension. A finite block list is insufficient. Uniformly verifying this above N=C lambda^p is still an open arithmetic problem; no polynomial-cutoff theorem for Weil was claimed. Both analytic arguments and domain qualifications passed adversarial review.
+
+## Next concrete step and scope
+
+The unchanged lambda5 route is closed. Before launching a modified complete certificate, derive an independently positive signed block metric and control its complete inter-block couplings with explicit window dependence. In parallel, use the corrected physical Gram projection in any G2.6 estimate. Do not reuse source concentration counts as a physical sign or ignore the eta D^-1 factor. A finite far-block success would still leave the full head Schur correction and cofinal ordinary-error decay.
+
+The complete v1.27 manuscript is173pages with523unique labels, preserving all514prior labels and all72historical dispositions. It compiles without LaTeX warnings and is visually checked throughout. The previous complete lambda4 positivity, weakG1, first-slot-linear convention, physical endpoint, exact diagonal, scale factors and explicit sampler graph defect are retained. No G2 sign gap or RH proof is claimed.
+
+# Complete manuscript v1.26 — September 21, 2026
+
+## Established result and scope
+
+**The complete lambda = 4 sign problem is closed.** The odd sector is now strictly positive on the full closed form domain; combined with the previously proved even sector, the canonical full Weil form is positive and epsilon_4 = 0 exactly. This is an internal computer-assisted fixed-window proof, not independent external verification. No growing-window G2 gap was closed and no RH proof is claimed.
+
+The new proof preserves the exact original operator, first-slot-linear convention, physical head and endpoint, Fourier cut, logarithmic diagonal, all scale factors, and the sampler's explicit graph defect. It uses no zero locations or RH assumption. Weak G1 is unchanged.
+
+## Proof mechanism
+
+Let G_0 be the old frozen odd sixteen-column trial of support4096, V its invertible physical head, K = G_0* W G_0 > 0, r_0 = Q W G_0, and C = r_0* T^-1 r_0 >= 0 for the complete coercive odd tail. Thus S = K - C is the exact complete Schur matrix in the old head coordinates.
+
+An exact frozen dyadic direction v is suggested by the largest generalized eigenvector of a numerical upper bound; no eigenvector accuracy is assumed. The exact projection P = I - v(v* K)/(v* K v) is enclosed using interval arithmetic, without midpoint freezing. Removing its column12 spans the exact K-orthogonal complement. Outward LDL proves C <= 0.001 K on that entire fifteen-dimensional complement; its smallest coordinate pivot exceeds0.0004086079. This includes every omitted residual row.
+
+The successful new scalar trial f is supported through8192, preserves its physical head exactly as Vv, and was proposed by24 finite preconditioned steps. Its frozen physical head contains dyadic mantissas up to912bits, checked independently with Python Fraction. The verifier reconstructs the same fixed witness at1024 and1280bits. At J = 65536, with the existing odd inner factors and order64 remote moment, it proves:
+
+- old denominator a = v* K v is between1 and1.000000000000002;
+- QW(f,f) is between0.9016760830 and0.9016760831;
+- the complete correction upper is between0.4725352935 and0.4725352936;
+- (QW(f,f) - complete upper)/a is between0.4291407894 and0.4291407895.
+
+Choose the exact rational s = 429/1000 and sigma = 1/1000. PSD Cauchy--Schwarz for the SAME OLD correction C gives S >= (s - sigma) K = (107/250) K on the entire head. This is a simultaneous matrix inequality, not separately tested positive directions. The complete positive tail square, invertible physical head and old even-sector certificate give the full closed-form sign. The relative0.428 is not an ordinary spectral-gap constant, and exact positivity requires no congruence loss in epsilon_4 = 0.
+
+The combined verifier binds all witnesses and reports by SHA256, rechecks exact Fraction head equality, checks physical-head invertibility, and independently recomputes both outward directional inequalities. The complement896-bit replay reuses the old certified768-bit ingredients; it is not claimed as an independent reconstruction of them. New scalar residual rows are reconstructed at both stated precisions, with the same valid archived remote inner enclosure.
+
+## New analytic estimates
+
+The sharp direction/complement lemma is valid for any finite positive K and positive semidefinite complete correction C. For a subspace E and F = E^{perp_K}, hypotheses S|E >= s K|E and C|F <= sigma K|F, with s <= 1 and sigma >= 0, imply S >= (s - sigma) K. It extends to a whole unresolved block without multiplying by its dimension. The rank-one positive correction generated by (sqrt(1-s),sqrt(sigma)) shows sharpness.
+
+For 0 <= sigma < 1 there is a stronger localized negative-error form:
+
+    S >= -eta P_E* K P_E,
+    eta = max(sigma - s, 0)/(1 - sigma).
+
+It follows by completing the scalar cross-term square. With physical head V the full ordinary error is at most
+
+    eta ||K^(1/2) P_E V^-1||^2.
+
+This keeps the physical norm conversion only on the unresolved subspace. Cofinal convergence to zero, together with the manuscript's fixed-support identification and complete-tail prerequisites, would imply RH. No such convergence is asserted or inferred from this fixed window.
+
+## Attempts that did not close the sign
+
+1. Sixteen extra finite steps on a single direction at the old support4096 lowered recursive residuals but decreased trial energy by only about6.38e-5. Full recomputation of the sixteen-column matrix, including remote rows, remained inconclusive: the directional Young lower was about-0.42 in the old K normalization. The rounded update need not be exactly rank one; its energy change would be rank at most two before rounding. All verification uses reconstructed coefficients instead of proposal identities.
+2. Retaining one common remote Gram and its cross block at support4096 did not fix the problem. Its directional complete lower was about-0.44599516, with a negative lower-bound pivot. A negative lower-bound pivot is not a negative Weil vector.
+3. The old sixteen-step trial separately certified the ordinary full-form lower error1e-43 via K - U + 1e-43 V*V > 0. This was useful intermediate progress but is superseded by exact lambda4 positivity.
+4. A proposed scalar trial could not be reconstructed exactly at768bits because its physical-head mantissas reached912bits. Exact rational construction and1024/1280-bit reconstruction fix this. A strict equality test between differently rounded interval representations of mu was also corrected to enclosure containment; the unchanged inner certificate independently proves the chosen rational mu. These were verifier diagnostics, not failed mathematical inequalities.
+5. A low-precision suggested direction is sufficient for an exact positive gluing test but can be poor for converting a residual negative error to the physical norm. One direct projected-dual calculation gave an ordinary dual norm squared about0.0048118. The final negative-error route retains this factor explicitly rather than assuming a tiny factor from the direction's small trial energy.
+
+## Adversarial audit
+
+The adverse agent checked the exact physical-head identity using independent Fraction arithmetic, old versus new K normalization, unshifted residual versus shifted inner inverse factors, complete remote coverage, reuse of a remote upper on a smaller row subset, rank and exactness of the K-orthogonal projection, complex Hermitian extension under the first-slot-linear convention, and the closed-form square completion. The sharp gluing lemma and localized negative-error refinement passed. Detailed reasoning and both failures and success are retained in review_rank_one_trial.md.
+
+## Next concrete target
+
+Do not spend the next run improving the already positive lambda4 margin. Use the new subspace criterion to seek a **complete growing-window estimate**: identify an unresolved block E_lambda, independently bound the full correction on its K_lambda-orthogonal complement with sigma_lambda < 1, and prove either s_lambda >= sigma_lambda or decay of the localized ordinary error above. All inner factors, remote moments, dimension and physical normalization costs must be controlled at each window. The scalar far bound still imposes an exponential cutoff cost; a signed estimate that avoids that loss is a primary analytic target. The finite lambda8 scalar-head collapse from the previous checkpoint remains a warning that changing coordinates or reducing the head alone is insufficient. No finite list of windows settles this obligation.
+
+## Files and preservation
+
+The complete170-page v1.26 LaTeX/PDF compiles with no warnings and was visually checked throughout, with the new proof pages inspected individually. It integrates the new results in the abstract, status, Section20, future targets and reproduction appendix. All prior labels and72historical dispositions are retained. The cumulative bundle adds g2_odd_complement; its README identifies exact proof inputs and replay commands. The downloadable filenames explicitly identify v1.26 to avoid the earlier version ambiguity. Prior v1.25 snapshots and the full historical bundle content are preserved.
+
+---
+
+# Post-v1.25 window-resolution checkpoint — September 21, 2026
+
+The released full manuscript remains v1.25 (166 pages). This checkpoint continues its finite-window investigation; it does not add a complete lambda8 sign certificate or prove G2/RH.
+
+## Concrete question and result
+
+Does the very small lambda8 margin disappear upon modestly enlarging the cutoff or reducing the head? **No, in the tested finite configurations.** The loss persists both at the next cutoff and with only the physical constant Fourier mode retained. It cannot be attributed solely to conditioning of multi-dimensional head coordinates.
+
+All quantities below belong to the same unshifted physical lambda8 Weil form, the fixed normalized even Fourier basis and first-slot-linear convention. No operator, window or boundary functional is changed. Each eliminated finite tail and finite Schur head passes its own interval positivity gate. The arithmetic assembly was independently rederived in the adverse audit; the new computation increases the archimedean series from192 to256 terms and uses4096bits.
+
+| Retained/test cutoff | Head | Certified generalized margin range (conservatively rounded) |
+|---|---|---|
+|256/384|0..64|5.697e-101 < m < 5.755e-101|
+|384/512|0..64|1.349e-44 < m < 1.363e-44|
+|256/384|0..36|1.155e-93 < m < 1.168e-93|
+|256/384|physical constant mode0 only|9.5263e-42 < m < 9.5264e-42|
+|384/512|physical constant mode0 only|1.4535e-14 < m < 1.4536e-14|
+
+The first line reproduces the previous192-term coefficient calculation. The matrix brackets use a high-precision eigenvector only as a proposal. A verified invertible triangular congruence followed by interval LDL proves S_test−delta S_ret>0; an outward frozen-vector Rayleigh quotient proves the upper bound. Matrix witnesses and reports are saved. All modes above512 are absent from these experiments.
+
+The constant-head energies are 3.2907912176941e-278 atcut256, 3.1349152424855e-319 atcut384 and4.5566952718104e-333 atcut512. They are certified finite minima with the constant coefficient fixed to1, not ordinary unit-vector eigenvalues. The first two values independently agree when obtained by shorting either the37-dimensional or65-dimensional finite head. A scalar normalizing congruence has condition1; although its absolute scale is large, its generalized margin is unaffected by that rescaling. The remaining eliminated operator can still be badly conditioned.
+
+## Exact finite accounting
+
+Let W_M>0 be nested compressions of one fixed Hermitian form, H a fixed finite head, and S_M^H its Schur complement. The variational identity is
+
+    x* S_M^H x = min_y [x;y]* W_M [x;y].
+
+Thus S_M decreases with M. For a retained tail T and newly added rows, write the larger block as
+
+    [ F  B* C* ]
+    [ B  T  D* ]
+    [ C  D  U  ].
+
+After eliminating the retained tail,
+
+    R = C − D T^(-1)B,       A = U − D T^(-1)D* > 0,
+    S_new = S_old − R* A^(-1)R.
+
+The effective A is essential: replacing it by raw U discards the coupling. The generalized margin m(M1,M2)=min_{x!=0}(x*S_M2 x)/(x*S_M1 x) measures relative improvement/loss of positive finite trial energy. It is neither an absolute negative Weil error nor the complete residual correction.
+
+For nested heads Hsmall subset Hbig, Schur-complement associativity, homogeneity and order preservation imply m_small >= m_big. A recovered small-head margin alone can move the fragile direction into the eliminated tail: A=I2 and B=diag(1,epsilon) have full-head margin epsilon, whereas eliminating the second coordinate gives margin1 and leaves a tail scale epsilon.
+
+For fixed head and cuts M1<M2<M3, multiplying the inequalities gives
+
+    m12*m23 <= m13 <= min(m12,m23).
+
+These comparisons require a common window and common form. They cannot be used to order the lambda3,4,5,6,8 data across changing operators. A finite list of positive margins supplies no estimate for all subsequent cuts or a cofinal window family.
+
+The constant-head shortcut follows from Schur inversion:
+
+    S_M^{mode0} = 1 / [(S_M^{larger head})^(-1)]_{00}.
+
+The script checks the larger Schur sign and evaluates this inverse column outward. It avoids solving another large tail problem and makes the head comparison exact.
+
+## Source and adversarial checks
+
+Primary sources consulted: Connes–Consani, Spectral triples and zeta-cycles (2023), https://alainconnes.org/wp-content/uploads/Spectral-triples-and-zeta-cycles_2021.pdf, Section2.5–3; and Weil positivity and trace formula, the archimedean place (2020), https://arxiv.org/pdf/2006.13771. Their discussion of tiny semilocal eigenvalues and prolate near-radical constructions is relevant context. Neither paper supplies the omitted complete growing-window certificate used here. No numerical conclusion is imported from those papers, and their window parameter conventions are not silently identified with this manuscript's L=2log(lambda).
+
+The adverse review confirms the finite shorting identities, warns that head reduction can relocate inverse difficulty, and notes that probes expressed in different normalizing congruences cannot be compared directly. Future direction tracking must save their actual physical head vectors Vz. The main complete even lambda4 certificate from v1.25 is unchanged.
+
+## Next concrete step
+
+The newly tested cuts have not reached a stable relative finite energy. Before building a huge complete inner witness atlambda8, either extend the nested cutoff study with physical-direction tracking or construct source-adapted finite trials and compare their complete residuals. Any positive finite limit or apparent stabilization still needs a beyond-cutoff enclosure. The current scalar far method also retains its exponential cutoff cost. No G2 sign gap was closed by this checkpoint.
+
+
+---
+
+## Current research checkpoint: September 21, 2026 - full manuscript v1.25
+
+**Local obligation closed:** the COMPLETE even-parity Weil form at lambda=4 is strictly positive/coercive on its form domain. This covers the whole 17-dimensional outer head and every infinite tail mode. It extends v1.24's one-direction result; it does not establish the odd sector, full W4 positivity, G2, or RH.
+
+**Exact identity and certificate:** for the actual frozen trial matrix G, V=P16 G, E=Q16 W4 G and K=G* W4 G, V* S_infinity V=K-E* T^(-1)E. The actual V is interval-certified invertible. All trial columns are finite Fourier vectors in the operator domain; completing the coercive tail square is valid on the closed form domain. The complete tail floor and archimedean shift are the previously certified ones, with the shift used only to upper-bound the inverse; K and E remain unshifted.
+
+**Witness:** normalize the old even trial by its head energy BEFORE generating 16 finite preconditioned-CG corrections, support4096, candidate512bits. Freeze both the rounded base and corrections as exact dyadics. Rounding the base defines a nearby exact trial, not an assumed exact old congruence; the actual head is checked. Reconstruct the same frozen coefficients at768/896bits, retain all residual cross-Grams throughJ65536, and enclose every omitted row by the order64 moment theorem. With mu=.9999999999, rho<.165102333 and tau=.1, all17 pivots of K-U_tau are positive, the smallest >.7645944101. This is a coordinate pivot, not an ordinary spectral gap. Independently certify the exact rational gate U_tau < (1-62629/100000)K at both precisions. This gives complete generalized margin >.62629. Nine dense physical-row checks and provenance checks are retained.
+
+**Joint remote estimate proved:** one joint Gram Gamma >= [Y,y]*[Y,y], together with 0<=L_Y<=Y*Y and A0=mu I+L_Y-Gamma_YY>0, yields complete inverse upper V_J+Gamma_kk+(H-Gamma_Yk)* A0^(-1)(H-Gamma_Yk). Its proof applies the joint Gram to(-z,x) in a variational supremum. A shared cross block is essential. Adversarial review corrected the printed hypothesis to L_Y>=0, needed for the scalar inverse corollary. Implementations already used L_Y=0. An optional768bit joint-Gram check has smallest pivot >.7892519172 using the scalar denominator and >.7892519657 with the full denominator; these are additional checks, not prerequisites for the main two-precision even result.
+
+**Failed or inconclusive attempts:** independently corrected unscaled even columns did not give a positive whole-head gate; the energy-scaled-before-CG construction resolved that problem. Odd4step and16step trials atsupport4096 remain inconclusive (best gates fail around head indices4/5 and10/11 respectively). These are failures of majorants, not negative Weil vectors. The canonical even and odd4step trials give only ordinary negative-error bounds of1e-17 and1e-12, respectively. They do not prove exact signs. No whole-space epsilon4=0 is claimed. The odd witness has its own certified inner factors and remote rho about.041200151; even constants were not transplanted to it.
+
+**Growing-window work:** priority shifted per the user's request to lambda=3,4,5,6,8. Fresh scalar far thresholds give evenN44,283,1502,7488,124442 and oddN209,1360,7224,36021,598623. Both positive-at-N and negative-at-N-1 gates replay at320/384bits; monotonicity proves minimality for this formula. Analytically proved that the present scalar far bound forces exponential cutoff growth, using the previously established prime norm/lambda ->1. This restriction belongs to this majorant, not every possible G2 method.
+
+| Window | Head dimension | Finite relative margin | log10 cond(V) | Reference-column headroom | First admissible even N | First admissible odd N |
+|---:|---:|---:|---:|---:|---:|---:|
+| 3 | 10 | 0.781598 | 18.96343 | 521.339 | 44 | 209 |
+| 4 | 17 | 0.545521 | 37.51866 | 93.717 | 283 | 1360 |
+| 5 | 26 | 0.341968 | 61.60390 | 710.489 | 1502 | 7224 |
+| 6 | 37 | 0.191097 | 91.13502 | 1204.37 | 7488 | 36021 |
+| 8 | 65 | 5.75469e-101 | 139.45064 | 1.59185 | 124442 | 598623 |
+
+**Finite diagnostic scope:** the displayed Schur study uses heads throughlambda² and fixed cuts256/384, not the full4096/65536 pipeline. Every finite eliminated tail and resulting finite head is interval-positive. All omitted modes beyond384 remain absent from this probe; these finite correction matrices are not complete upper bounds. Complete growing-window witnesses, mu/rho/moment constants and ordinary error rates are still missing. Conditions and raw-energy logs are diagnostics, not lower eigenvalue certificates. The reference-column headroom in this table is not the old v1.24 direction. Healthy one-direction headroom alone does not distinguish conditioning from other bad directions. The simple diagonal counterexample in the manuscript makes these quantities independent.
+
+**Numerical reliability:** early2048bit scaling attempts and interval-LU lambda8 solves had broad interval metrics and were rejected. A verified preconditioned solve resolves finite lambda8 positivity; the double-precision subtraction1-theta cannot resolve its very small relative margin. A100-digit inverse-metric proposal, followed by a frozen-vector Rayleigh upper and an independent interval LDL lower, rigorously brackets the FINITE generalized margin between5.697e-101 and5.755e-101. The metric/probe witness is saved and replayed. Thus a substantial loss is present for these fixed cuts, but neither an infinite correction nor an asymptotic decline has been certified. An adverse review caught an unsafe floating maximum in the auxiliary trace bound; it was replaced by the analytic upper1+65e-20 from the certified normalized metric, and the saved trace bound was regenerated. Decimal serialization of the normalized metric widened intervals enough to defeat naive LDL; replay uses a certified triangular congruence before LDL and a separate frozen-vector Rayleigh upper, so the bracket survives reloading its witness. This did not affect the main lower gate or Rayleigh upper. The local python-flint generic power of a tiny zero-centred ball could return NaN; using x*x in the new LDL avoids false inconclusive gates. Prior positive gates could not have accepted NaN, so this was not a discovered false-positive certificate. Candidate floats select congruences only; every accepted proof gate is outward interval arithmetic.
+
+**Review and integration:** independent adverse review checked full operator/form-domain implication, dyadic actual-head rank, scale/parity/zero-mode factors, complete residual majorants and rational margin. The L_Y hypothesis correction was applied before final integration. Full v1.25 retains all496prior labels,72historical ledger dispositions and the explicit sampler graph defect. The complete166page PDF was compiled and all pages rendered, with new proofs/tables inspected at full size. No publication or external contact.
+
+**Next concrete target:** produce complete window-specific inner inverse certificates and a controlled residual-family estimate, or improve the signed far comparison to avoid the current exponential head cost. Do not extrapolate the five finite windows or reuse lambda4 mu/rho without proof. Finishing oddlambda4 remains a separate local milestone. The local even sign gap is closed; no global G2 sign gap or RH proof is closed.
+
+---
+
 ## Current research checkpoint: September 21, 2026 - full manuscript v1.24
 
 **Obligation selected and closed in its precise scope:** the saved single even head direction at lambda4 now has a complete positive Schur certificate, including the infinite residual tail. This is the same head vector v that defeated the previous first-order majorants. It is not positivity of the whole head or a G2/RH proof.

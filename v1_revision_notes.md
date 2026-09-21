@@ -1,3 +1,166 @@
+# Complete manuscript v1.34 revision notes
+
+## v1.34 — disjoint-channel persistence and optimal primitive transport
+
+- Proved that two disjoint reciprocal-scale Paley--Wiener channels retain
+  actual-source-compressed cross norm at least `73/(375*pi) > 0.0619`
+  cofinally.  Fixed-ratio separation does not make adjacent Cotlar terms
+  vanish.
+- Proved that channel atomization and regrouping leave `Z_a^* Z_a`
+  unchanged.  A direct Cotlar row sum is not a new mechanism unless its full
+  constant meets the original signed coverage budget.
+- Proved the signed-primitive/Bernstein lower bound
+  `q_a[f] >= -a Delta_a ||f||^2`, where `Delta_a` is the maximum negative
+  signed interval area of the exact symbol.
+- Proved this is the optimal scalar primitive budget: the least centered
+  bounded-primitive norm is exactly `Delta_a/2`.
+- Proved a structural obstruction in the nonnegative Dirichlet model with an
+  exact null source: `a Delta_a = pi^3/6`, so positivity and perfect source
+  alignment do not imply primitive decay.
+- Non-rigorous arithmetic diagnostics at lambda `3,4,5,6` show no decay;
+  they are not proof evidence.  The primitive candidate is therefore
+  registered as rejected, not live.
+- The existing signed weighted concentration inequality remains the live
+  conditional even-sector mechanism.  Its cofinal arithmetic estimate and
+  the odd sector remain open.  No G2 sign gap was closed and RH is not
+  proved.
+
+See `g2_primitive_transport/` and the persistent research log.
+
+---
+
+# Complete manuscript v1.33 revision notes
+
+## v1.33 — concentration-product algebra and reciprocal-band no-go
+
+- Derived the exact Toeplitz--leakage product and commutator identities for physical even concentration operators.
+- Retained both rank-one terms created by compression off the actual repaired source, using the fixed first-slot-linear convention.
+- Proved a cofinal obstruction for the manuscript's actual source: the source-compressed concentration operators for the nested reciprocal bands `[-1/(10a),1/(10a)]` and `[-1/(5a),1/(5a)]` have commutator norm with liminf greater than `9e-6`.
+- The nonzero bound is analytic and rational. A separate degree-four verifier certifies the stronger lower bound `1.198e-5`.
+- This rules out generic approximate simultaneous diagonalization from nesting, reciprocal scaling and source removal. It does not identify the test bands with the arithmetic superlevels and therefore does not refute the signed weighted mechanism.
+- Recast the surviving target as one complete joint-channel norm bound. This is algebraically the v1.31 signed concentration inequality, not a new candidate; the manuscript explicitly avoids relabeling the v1.28 common-Gram idea.
+- Primary-literature screening identifies the product algebra as classical Brown--Halmos/Widom theory. The actual-source cofinal obstruction is new within this project; worldwide novelty is not claimed.
+- No G2 sign gap was closed and RH is not proved. The odd sector remains separate.
+
+See `g2_nested_commutator/adversarial_nested_commutator_review.md`, `certify_scaled_commutator.py`, and the persistent research log.
+
+---
+
+# Complete manuscript v1.32 revision notes
+
+## v1.32 — source-compressed Schatten refinement and no-go tests
+
+- Proved the exact Hilbert--Schmidt identity for every source-compressed concentration operator and derived a sharper negative-level layer-cake bound.
+- Proved by a scale-invariant Dirichlet model that the integrated negative-only operator, trace and Hilbert--Schmidt budgets need not vanish even when the complete form is nonnegative and the removed source is an exact null vector.
+- Proved the interlacing obstruction showing that rank-one source removal cannot erase a second concentration channel.
+- Upgraded the failure of global pointwise positivity at lambda 4 from a numerical observation to an exact rational enclosure: beta_(log 4)(1)<-3/5. This implies infinite negative index for the full-line multiplier but does not contradict positivity on the compact physical window.
+- Proved that no nontrivial positive convolution kernel can be both a flat-top exact form-preserver and a genuine smoother. Any nontrivial form-exact flat-top kernel must change sign.
+- Kept the signed source-compressed weighted concentration inequality as the live project-new even-sector mechanism. Its cofinal arithmetic estimate and the odd sector remain open.
+- No G2 sign gap was closed and RH is not proved.
+
+See `g2_schatten_no_go/g2_schatten_no_go_report.md`, the adversarial review, exact rational certificate and diagnostic scripts in the cumulative bundle.
+
+---
+
+# Complete manuscript v1.31 revision notes
+
+## v1.31 — source-compressed weighted concentration
+
+- Added a rigorous source-compressed time–frequency concentration operator for the exact even arithmetic symbol.
+- Proved the negative-level layer-cake bound and the exact trace formula after even projection and source removal.
+- Added a sharper finite/convergent weighted-superlevel criterion that retains favorable symbol mass and would imply the even v118 gap-free estimate with ordinary error tending to zero.
+- Derived the exact two-level signed budget, showing why thickness of the merely nonnegative set and generic Logvinenko–Sereda constants do not suffice.
+- Recorded numerical falsification diagnostics at lambda 3, 4 and 5 only. Packets centred at the deepest located negative wells retain positive complete energy, with independent Fourier and physical-space calculations agreeing to about 3e-10.
+- Classified the mechanism as a project-new development of G2.6-CAP-01, not a new Schur, tail-metric or common-Gram construction. Classical concentration theory is credited; no worldwide novelty is claimed.
+- The cofinal weighted concentration inequality and the odd sector remain open. No G2 gap is closed and RH is not proved.
+
+---
+
+## v1.30 — continuum cancellation and perturbative no-go
+
+September 21, 2026 — complete working manuscript.
+
+- Developed G2.6-CAP-01 through the exact PNT continuum kernel (e^{|x-y|/2}).
+- Proved that the existing even cosh pole cancels the continuum kernel's harmful channel exactly; the positive remainder is the compact kernel (e^{-|x-y|/2}), so no spectral gap is imported.
+- Derived the exact even Fourier symbol (\beta_a(\xi)=\Re\psi(5/4+i\xi/2)-\log\pi-\mathfrak r_a(\xi)), with the discrete-minus-continuum prime discrepancy explicit.
+- Proved a six-bump prime-2 obstruction: the discrepancy is bounded below by (\log2/\sqrt2) on vectors orthogonal to any finite-dimensional removed block. It is not an (o(1)) ordinary perturbation.
+- The surviving lemma is a support- and source-constrained lower bound for the full signed symbol. It must use physical uncertainty/concentration; the stronger pointwise symbol bound is numerically false at known positive windows.
+- The odd sector and cofinal signed estimate remain open. No G2 gap was closed and RH is not proved.
+
+---
+
+# Complete manuscript v1.29 revision notes
+
+September 21, 2026 — complete working manuscript.
+
+- Added project-new candidate G2.6-CAP-01: an exact source-weighted nonlocal Picone transform for the inversion-even physical Weil form.
+- Proved the killed archimedean-plus-prime jump decomposition with the correct logarithmic diagonal and exterior killing, and reduced the rank-one complement estimate to an explicit source-constrained capacity inequality.
+- Screened the candidate by formula against all named prior mechanisms and primary literature. The transform is known mathematics; only the arithmetic target is new within this project. No worldwide novelty claim is made.
+- Adversarial review corrected a false pointwise-supersolution shortcut and confined the result to the even sector. A finite lambda3 diagnostic falsifies the stronger shortcut but does not evaluate the complete physical endpoint action.
+- The uniform capacity estimate, physical low-concentration block accounting, and odd sector remain open. No G2 gap was closed and RH is not proved.
+
+See `g2_capacity_candidate/g2_capacity_candidate_report.md` and the persistent research log for the exact formula, novelty register, falsification attempt and remaining lemma.
+
+---
+
+# Complete manuscript v1.28 revision notes
+
+September21,2026 — complete176-page working manuscript. New proofs:pages114–115; reproduction:page166.
+
+- Tested the actual lambda5 signed dyadic blocks at the preregistered N=lambda^2=25.
+- Certified positivity of all four diagonal blocks in each parity, but proved the norm-row comparison fails in both sectors. Exact comparison-eigenvalue lower bounds:1.539632 even and1.6014215 odd.
+- Proved the obstruction persists under every smaller admissible positive block metric and every positive scalar row reweighting; uncomputed blocks cannot decrease the comparison.
+- Replayed frozen witnesses at320/448 bits; all twelve coupling gates independently checked in signed Fourier coordinates.
+- No complete lambda5 positivity margin or negative Weil direction is asserted. Other partitions, cutoffs and signed joint estimates remain open. Weak G1 and complete lambda4 positivity are unchanged; no G2/RH closure.
+
+See g2_block_metric/block_metric_test_report.md and the persistent research log for the exact protocol, scope, reproduction and next target.
+
+---
+
+# Complete manuscript v1.27 revision notes
+
+September 21,2026 —173pages — all72historical dispositions preserved.
+
+- Rigid lambda5 transfer fails at the actual fixed tail metric in both parities. Finite-support interval counterwitnesses prove this on the complete tail; both unshifted Weil energies remain positive.
+- Head or metric must change. No successful tuning rule, positive lambda5 tail/factors, or complete certificate margin is asserted. The full run stops at that prerequisite; no lambda8 calculation.
+- New nonclosability proof rules out bounded sourceL2 transport through the fixed point-value repair. Physical G2.6 spaces are explicitly defined through finite image Grams; dimension and residual hypotheses are retained.
+- New finite-rank obstruction shows polynomial-rank repairs cannot make the old unsigned diagonal comparison positive at polynomial cutoffs. A signed infinite-block metric criterion is proved as a conditional alternative; its Weil-specific uniform hypotheses remain open.
+- Complete lambda4 positivity and weakG1 are retained. No G2 sign gap is closed; RH is not proved.
+
+New proofs and definitions: pages112–117. New reproduction details: page164. Frozen parameters, witnesses, reports, analytic reviews and scripts are in g2_lambda5_transfer/ in the cumulative bundle. Every prior manuscript label is preserved, and the release uses explicit v1_27 filenames to avoid confusion with earlier bundles.
+
+---
+
+# Revision notes - full manuscript v1.26
+
+September 21, 2026. Complete170-page working manuscript.
+
+- Closed the remaining complete odd-sector sign at lambda = 4. The full form is now positive and its exact fixed-window negative error is zero.
+- Proved a sharp subspace/complement inequality. Certified the entire fifteen-dimensional odd complement, then a same-head8192-support directional trial, giving the complete relative head bound107/250.
+- Replayed the exact frozen directional witness at1024 and1280bits; independently verified the physical head with exact rational arithmetic and checked the argument adversarially.
+- Derived a localized ordinary-error criterion for future windows, retaining the physical normalization cost on the unresolved block. Its cofinal decay is unproved.
+- Preserved the unsuccessful trials and intermediate1e-43 lower error in the research log, with no negative Weil vector or growing-window conclusion inferred from them.
+- Updated the complete paper throughout, retaining weak G1, all historical claims, the physical endpoint and explicit sampler graph defect.
+
+This closes a fixed-window obligation. G2 uniformity and RH remain open.
+
+---
+
+# Revision notes - full manuscript v1.25
+
+September21,2026. Complete166-page working manuscript.
+
+- Certified strict positivity of the entire even-parity Weil form at lambda4, including every infinite residual row, using a simultaneous17-column frozen trial. The odd sector remains open.
+- Certified complete generalized margin >0.62629 for the same witness at768/896bits. Coordinate LDL pivots are not identified with ordinary spectral gaps.
+- Proved a joint-remote-Gram estimate retaining correlated residual terms; stated its required positive lower-Gram hypothesis explicitly after adverse review.
+- Proved exponential cutoff cost for the current scalar far majorant and freshly certified its thresholds at lambda3,4,5,6,8.
+- Recorded a separate finite-only growth study, condition numbers and declining margins. It does not supply missing complete tail certificates or a cofinal error estimate.
+- Integrated abstract, status, proofs, next targets and reproduction appendix; preserved all496prior labels and72historical claim dispositions. Compiled and visually checked the full PDF.
+
+One local complete even-sector sign obligation is closed. Full lambda4 positivity, growing-window G2 and RH remain unproved. Weak G1, physical endpoint, Fourier cut, logarithmic diagonal, scale factors and explicit sampler graph defect are preserved.
+
+---
+
 # Revision notes - full manuscript v1.24
 
 September21,2026. Complete162-page working manuscript.

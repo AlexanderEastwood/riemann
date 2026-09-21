@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "manuscript_version": "v1.34",
+  "publication_authorized": true,
+  "date": "2026-09-21",
+  "repository": "AlexanderEastwood/riemann",
+  "base_commit": "07a78c0325986a4437431b392a3bee6b2a8d1e4d",
+  "files": [
+    {
+      "path": "fixed_space_prime_action_v1.tex",
+      "original_filename": "fixed_space_prime_action_v1_34.tex",
+      "saved_file_version": 35,
+      "bytes": 627471,
+      "sha256": "84999020e3a940925b2f3285c79061d4f3a87f1d216ceffbe2d1be9c57da3c2a",
+      "origin": "version-pinned saved text, complete line coverage and authoritative byte count verified"
+    },
+    {
+      "path": "v1_revision_notes.md",
+      "original_filename": "v1_34_revision_notes.md",
+      "saved_file_version": 35,
+      "bytes": 68093,
+      "sha256": "1db6fdf5842bf7fb64b979510aa167c1b2e3f9e2b391f79df728cc0d510c41cb",
+      "origin": "version-pinned saved text, complete line coverage and authoritative byte count verified"
+    },
+    {
+      "path": "RH_G1_G2_research_log.md",
+      "original_filename": "RH_G1_G2_research_log.md",
+      "saved_file_version": 39,
+      "bytes": 268276,
+      "sha256": "1f2427612c0cc55318225331fa00076aa752e8a1ef348f1c5ea2f490f3672a5c",
+      "origin": "version-pinned saved text, complete line coverage and authoritative byte count verified"
+    },
+    {
+      "path": "fixed_space_prime_action_v1.pdf",
+      "original_filename": "fixed_space_prime_action_v1_34.pdf",
+      "bytes": 1366886,
+      "sha256": "fc3c296e249b1b1133643847c315c26804469cb1064a71085856f1292b1490a7",
+      "origin": "locally rebuilt from the recovered unchanged v1.34 source; not a byte-for-byte copy of the saved signed PDF"
+    }
+  ],
+  "validation": {
+    "pdf_pages": 192,
+    "all_pages_nonempty": true,
+    "latexmk_exit_code": 0,
+    "final_latex_warnings": 0,
+    "visual_review": "overview renders of all 192 pages and selected full-size pages",
+    "source_modified": false,
+    "new_mathematical_results_claimed_by_sync": false
+  },
+  "reproduction_archive": {
+    "status": "pending_not_uploaded",
+    "filename": "fixed_space_prime_action_v1_34_bundle.zip",
+    "saved_file_version": 37,
+    "bytes": 207224098,
+    "reason": "saved binary download returned HTTP 502; no current release asset uploaded",
+    "existing_repository_artifacts": "preserved from v1.24; do not treat as the complete v1.34 reproduction archive"
+  },
+  "research_status": "G2 and RH remain open. This operation synchronizes existing research and adds no mathematical result."
+}
