@@ -1,0 +1,58 @@
+# `evidence/v124/`
+
+HISTORICAL SNAPSHOT — the extracted cumulative bundle for complete manuscript **v1.24** (`v1_validation.json` records manuscript_version 1.24, 162 pages). It was moved here from the original repository root via `archive/v1.24_snapshot/` (recorded in [manifest/relocation_manifest.json](../../manifest/relocation_manifest.json)).
+
+Root-level `check_*.py` / `*_checks.json` pairs are floating-point or rational-model convention checks; each docstring says it is not a certificate or RH experiment. The `g2_*` subdirectories are the per-checkpoint bundles of versions v1.11–v1.24; each has its own README stating what it certifies.
+
+Every file here except `v1_validation.json` is byte-identical to its counterpart under [`../v126/`](../v126/). No v1.24 version manifest exists; `v121_SHA256SUMS.json` covers the v1.21 artifacts.
+
+**Start here:** [`REPRODUCE_v121.md`](REPRODUCE_v121.md)
+
+## Subdirectories
+
+- [`audits/`](audits/) — historical audit documents
+- [`g2_certificate/`](g2_certificate/) — v1.12 finite Weil matrix certificate (lambda=3, N=64)
+- [`g2_deep_next/`](g2_deep_next/) — v1.14 endpoint / closed-operator continuation
+- [`g2_deep_research/`](g2_deep_research/) — G2 research assessment note
+- [`g2_ground_order/`](g2_ground_order/) — v1.17 complete ground ordering at lambda=3
+- [`g2_growing_sign/`](g2_growing_sign/) — v1.19 unsigned prime-norm obstruction (analytic)
+- [`g2_inverse_refinement/`](g2_inverse_refinement/) — v1.22 inverse refinement
+- [`g2_low_schur/`](g2_low_schur/) — v1.20 low-head Schur correction at lambda=4
+- [`g2_mixed_complete/`](g2_mixed_complete/) — v1.23 complete mixed correlations
+- [`g2_posterior_trial/`](g2_posterior_trial/) — v1.24 complete Schur-direction certificate
+- [`g2_schur_cancellation/`](g2_schur_cancellation/) — v1.21 finite K positivity and source-complement cancellation
+- [`g2_schur_directional/`](g2_schur_directional/) — v1.16 complete fixed-window positivity at lambda=3
+- [`g2_signed_tail/`](g2_signed_tail/) — v1.15 operator residual and sharp Fourier tail at lambda=3
+- [`g2_source_certificate/`](g2_source_certificate/) — v1.13 exact-source certificate (lambda=3, N=64)
+- [`g2_spectral_pilot/`](g2_spectral_pilot/) — v1.11 numerical spectral pilot (not a certificate)
+- [`g2_uniform_endpoint/`](g2_uniform_endpoint/) — v1.18 continuum endpoints and complement reduction (analytic)
+- [`g2_weighted_signed/`](g2_weighted_signed/) — v1.20 signed energy control on the complete lambda=4 tail
+- [`history/`](history/) — historical manuscript snapshots
+
+## Files
+
+- `REPRODUCE_v121.md` (1 KB) — Complete manuscript v1.21 reproduction
+- `band_cut_checks.json` (12 KB) — (no description in file)
+- `bv_radical_passage_checks.json` (3 KB) — (no description in file)
+- `check_band_cut.py` (4 KB) — Sharp-band transform checks; rational model only, no zeta/Weil claims.
+- `check_bv_radical_passage.py` (2 KB) — Convention check for the primitive-tail proof, not proof evidence for RH. The compact even test source h(x)=x^2-(5/3)x^4, |x|<=1, has h(0)=0, integral h=0 and a nonzero e…
+- `check_copoisson_adjoint.py` (4 KB) — Regularized co-Poisson adjoint checks; no zero or RH experiment. python3 check_copoisson_adjoint.py > copoisson_adjoint_checks.json The toy source is D phi, phi=(t-1)^3(2…
+- `check_fredholm_shell.py` (3 KB) — Floating-point Fredholm sign/scale checks, not an RH experiment. Usage: python3 check_fredholm_shell.py > fredholm_shell_checks.json Interval data are arbitrary complex p…
+- `check_full_projection.py` (4 KB) — Full Fourier projection: finite identities and holomorphic rational check. No zeta zeros or Weil matrix are used.
+- `check_prolate_source.py` (3 KB) — High-precision Legendre-Galerkin illustrations, not interval certificates. Even angular PSWFs solve -((1-x*x)y')' + c*c*x*x*y = theta*y on [-1,1], with L2 norm one.
+- `check_resolvent_endpoints.py` (3 KB) — Rational-model check of the corrected resolvent endpoint asymptotics. This model contains no zeta zeros and tests no RH or Weil-form assertion.
+- `check_sampler.py` (5 KB) — Finite CCM checks for the sampler compatibility note. Requires numpy, scipy, mpmath. Run: python3 check_sampler.py Outputs sampler_checks.json beside this file.
+- `check_section19_metric.py` (5 KB) — Finite first-slot-linear metric checks; rational model, not zeta zeros. The model has a length-two Jordan chain at mu and one further eigenvector.
+- `check_weil_action.py` (4 KB) — Actual finite Weil action at the first known critical-line zero. Uses the historical arithmetic matrix implementation, including its logarithmic diagonal.
+- `copoisson_adjoint_checks.json` (2 KB) — (no description in file)
+- `finite_identity_checks.json` (625 B) — description: Complex-vector algebra checks; floating point, not certified bounds.
+- `fredholm_shell_checks.json` (5 KB) — (no description in file)
+- `full_projection_checks.json` (6 KB) — (no description in file)
+- `prolate_source_checks.json` (3 KB) — (no description in file)
+- `resolvent_endpoint_checks.json` (2 KB) — (no description in file)
+- `sampler_checks.json` (6 KB) — description: Floating-point illustrations; not certified bounds.
+- `section19_metric_checks.json` (5 KB) — (no description in file)
+- `v121_SHA256SUMS.json` (3 KB) — (no description in file)
+- `v1_validation.json` (93 KB) — (no description in file)
+- `verify_finite_identities.py` (3 KB) — Check the v1 finite identities using complex vectors and a real CCM matrix. Run beside check_sampler.py: python verify_finite_identities.py These are reproducible floatin…
+- `weil_action_checks.json` (3 KB) — (no description in file)
