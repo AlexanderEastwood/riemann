@@ -252,10 +252,74 @@ pencil itself never uses that quadrature (`W` is exact from Arb), so the
    direction is still cancelled to 1e-30. This is the finite-dimensional
    face of `cor:v137-scalar-no-go` and of the meta-obstructions of v1.39:
    arithmetic-blind bounds fail on the whole deep block, not at one vector.
-3. **What this leaves.** The pencil vectors `v_k` are the natural test class
-   for the weighted concentration inequality: they order the head by
-   `q/q⁺`, and `1−μ_k` is exactly the relative surplus the criterion has to
-   certify direction by direction. A mechanism that certifies positivity on
-   the head must produce a surplus of relative size `ν_k`, i.e. down to
-   1e-100 at λ=8, in ~40 directions at once, out of ∓0.3 level energies.
-   Nothing here is a bound.
+3. **What this leaves — with a qualification (2026-09-21, after Astra's
+   translation of the criterion into these coordinates).** The pencil
+   vectors `v_k` order the head by `q/q⁺`, and for a source-admissible
+   direction the minorant of `eq:v131-step-minorant` may lose at most
+   `ν_k q⁺[v_k] + η_a ‖v_k‖²` there. At *zero* allowed error that is a
+   relative loss of at most `ν_k`, i.e. down to 1e-100 at λ=8 in ~40
+   directions at once — the exact-positivity reading. But the target is the
+   uniform finite floor of `prop:v136-bounded-floor`, which allows a finite
+   `η_a` uniformly bounded in `a`; a finite `η_a` swamps every `ν_k` above,
+   so the tiny values do **not** by themselves obstruct the weaker goal. Two
+   further qualifications: this pencil is on the uncompressed even head,
+   whereas the criterion acts on the source complement; and directional
+   checks do not control mixtures (the cross-term rule of
+   `prop:v126-direction-complement`). The directional test is a
+   finite-window statement; using it for the live criterion still needs the
+   full complement and uniform control along a cofinal family. Nothing here
+   is a bound.
+
+## 8. The layer-cake constant η_a^op on the even head (`layercake.py` → `layercake_output.txt`, `layercake_N256_output.txt`)
+
+Follow-up to §7's qualification: under the bounded-floor target
+(`prop:v136-bounded-floor`) the question is not the tiny `ν_k` but whether
+the concentration mechanism's loss `η_a` can be kept bounded in `a`. The
+first form of the mechanism is the layer-cake bound `eq:v131-layercake`,
+
+    q[f] ≥ −η_a^op ‖f‖²,   η_a^op = ∫_0^{D_a} ‖C_a(E_a(t))‖ dt,   E_a(t) = {β_a < −t},
+
+with `D_a = ‖β_a⁻‖_∞`. Here `‖C_a(E)‖` is the top eigenvalue of the
+concentration matrix `∫_E Fe_n Fe_m` on the even head (source term omitted,
+so this is the norm on the full head: an upper bound for the complement and a
+lower bound for the complete operator; 80 levels of `t`; grid to ξ=800, so
+the deepest lobes beyond 800 at λ=6, 8 are missed and `D_a` there is the
+grid value, 5.54 / 6.22 against 5.81 / 7.82 on [0, 4000]).
+
+| λ | a | D_a (grid) | η_a^op, head 48 | η_a^op, head 256 | η/D_a | trace bound | ‖C(E(0))‖ | \|E(0)\| |
+|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| 3 | 1.099 | 2.378 | 0.862 | 0.862 | 0.36 | 1.99 | 0.63 | 81 |
+| 4 | 1.386 | 3.419 | 1.200 | 1.206 | 0.35 | 3.11 | 0.81 | 146 |
+| 6 | 1.792 | 5.537 | 1.30 (cut off) | 1.886 | 0.34 | 4.58 | 0.72 | 251 |
+| 8 | 2.079 | 6.221 | 1.37 (cut off) | 2.128 | 0.34 | 5.45 | 0.80 | 331 |
+
+Head 48 only reaches ξ < 2πN/L (84 at λ=6), below the deep lobes, which is
+why its λ=6, 8 values are too small; head 256 covers ξ < 449 / 387 and is
+converged at λ=3, 4 (identical to head 48 there). The norm profile is close
+to linear in the level: `‖C(E(t))‖ ≈ 0.6–0.8 · (1 − t/D_a)`.
+
+**Reading.**
+
+1. **The layer-cake loss is a fixed fraction of the depth, ~0.35 D_a.**
+   Since `D_a → ∞` unconditionally (`cor:v137-scalar-no-go`,
+   `inf β_a → −∞`), `η_a^op → ∞` along with it: the unweighted layer-cake
+   form of the mechanism does not give a uniform finite floor either. This
+   is a statement about the bound, on the head; the true form is ≥ 0.
+2. **The concentration norm never approaches 1**, even for the whole
+   negative set (0.63–0.81 at `t = 0`, with `|E(0)|` in the hundreds). The
+   negative set is a comb at the window's own resolution (§5), and a comb of
+   half-cells has concentration eigenvalues bounded away from 1 no matter
+   how many teeth it has. That is the same fact as the pencil's 50/50 level
+   split, seen from the operator side. The trace bound
+   `eq:v131-trace-bound` (min{1, tr}) is far weaker than the norm
+   (1.99 vs 0.86 at λ=3) and is not the right tool here.
+3. **What a bounded floor would need.** A step minorant with finitely many
+   weighted sets recovers at most the layer-cake profile unless the sets
+   `G_{a,j}` follow the comb, i.e. unless the minorant tracks `β_a` at the
+   cell scale. As `J → ∞` the weighted form reproduces `q` exactly, so it
+   is not a closure; but any bounded-complexity minorant that ignores the
+   cell-scale structure loses `~0.35 D_a → ∞`. The remaining question for
+   the mechanism is therefore purely about that fine structure: whether a
+   minorant with `J` growing with `a` can hold the loss bounded, which is
+   the arithmetic-blind obstruction of v1.39 in operator form. Nothing here
+   is a bound.
