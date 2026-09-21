@@ -181,3 +181,81 @@ open question, and two more windows would not settle it
 ground's energy near the first zeta ordinate is a race between a lobe that
 deepens like `a` (`cor:v137-scalar-no-go`) and half a cell wide, and a ground
 whose mass there is currently 1e-6 and falling. Nothing here is a bound.
+
+## 7. The level pencil: is the cancellation one direction or a block? (`pencil.py` → `pencil_output.txt`, `pencil_N96_output.txt`)
+
+Question left by §3–6: the ground state cancels ∓0.09 (λ=3) / ∓0.23 (λ=4)
+of negative- and positive-level energy to 1e-38 / 1e-75. Is that a single
+critical direction, with the rest of the head comfortably positive, or is the
+whole deep block a cancellation? The weighted criterion
+(`eq:v131-weighted-concentration`) quantifies over every admissible `f`, so
+the answer decides whether G2 at a window is a one-dimensional problem.
+
+Method. `W = block()` (Arb, exact), `W⁻ = ∫ β_a⁻ |Fe|²` (negative level,
+float quadrature over the bounded negative set; the part beyond the grid is
+≤ 3e-4 relative, `wminus_tail.py`), `W⁺ = W + W⁻`. The pencil
+`W v = ν W⁺ v` gives `ν_k = q[v_k]/q⁺[v_k]`, the fraction of positive-level
+energy that survives in direction `k`; `ν ≥ 0` in every direction is
+positivity, and `1−ν_k = μ_k` is the negative-to-positive ratio. The
+numerator is exact and the denominator is accurate to ~1e-6 (the full-symbol
+quadrature reproduces `block()` to 7e-5 on every head entry with `|W| > 1e-2`,
+2e-6 on the low block), so each
+`ν_k` carries about six *relative* digits however small it is. Solved in
+mpmath at 120 digits.
+
+Even head N=48 (`e_k` = eigenvalues of `W` itself, for comparison):
+
+| λ | ν_0 | ν_1 | ν_2 | ν_3 | … | first ν > 1e-2 at k | e_k/ν_k over the deep block | #ν < 1e-8 | #ν < 1e-16 | #ν < 1e-30 |
+|--:|--:|--:|--:|--:|:-:|--:|--:|--:|--:|--:|
+| 3 | 4.7e-37 | 3.5e-30 | 4.7e-24 | 6.2e-19 | … | 7 (0.011) | 0.09 – 0.50 | 6 | 4 | 1 |
+| 4 | 2.9e-65 | 2.7e-58 | 5.2e-52 | 5.3e-46 | … | 14 | 0.23 – 0.69 | 12 | 10 | 7 |
+| 6 | 6.3e-92 | 5.5e-85 | 1.3e-78 | 9.7e-73 | … | >14 | 0.17 – 0.53 | 21 | 18 | 13 |
+| 8 | 1.5e-105 | 1.0e-98 | 1.6e-92 | 9.8e-87 | … | >14 | 0.04 – 0.41 | 26 | 22 | 17 |
+
+Cutoff dependence of the counts (`#ν < 1e-8 / 1e-16 / 1e-30`):
+
+| λ | N=24 | N=48 | N=96 |
+|--:|--:|--:|--:|
+| 3 | 6 / 4 / 1 | 6 / 4 / 1 | — |
+| 4 | 9 / 7 / 3 | 12 / 10 / 7 | 13 / 10 / 7 |
+| 6 | — | 21 / 18 / 13 | 30 / 26 / 22 |
+| 8 | — | 26 / 22 / 17 | 41 / 37 / 31 |
+
+So the block is converged in N at λ=3 and λ=4 (a head of ~2λ² modes
+suffices) and still growing with the cutoff at λ=6 and 8: there the count is
+a finite-section quantity and the numbers above are lower bounds on the deep
+block of the complete operator. At N=96 and λ ≥ 6 the smallest `ν_k` sit
+below the 120-digit working precision (values of order ±1e-116 are
+numerical zero, not negative eigenvalues; the complete operator is certified
+nonnegative in `evidence/v138/`), which does not affect the counts at the
+1e-30 threshold. The `e_k` are the compression's eigenvalues, not the
+certified complete values (`v138/`, `v140/`), and are quoted only for the
+ratio; at λ=4, N=96, `e_0 = 5.2e-75` sits above the certified complete
+`μ0 < 2.454e-75` as it must. The validation line in `pencil_N96_output.txt`
+predates the tail-factor fix in `pencil.py` and reads a few percent; the
+pencil itself never uses that quadrature (`W` is exact from Arb), so the
+`ν_k` are unaffected; `pencil_output.txt` carries the corrected line (≤ 7e-5).
+
+**Reading.**
+
+1. **It is a block, not a direction.** Every deep direction has `ν_k ≈ e_k / q⁺`
+   with `q⁺` between 0.05 and 0.7: in each of them a positive-level energy of
+   order 0.1–0.5 is cancelled by an equal negative-level energy down to `e_k`.
+   The ground is only the tightest of these. The number of directions cancelled
+   below 1e-8 grows with the window (6, 13, ≥30, ≥41 at λ = 3, 4, 6, 8),
+   of the order of the deep-block size `N ~ λ²` (AGENTS.md §8),
+   and the pencil spectrum decays super-exponentially with a step that shrinks
+   as `k` grows (λ=8: 7, 7, 6, 6, 5, 5, 4 decades per step).
+2. **What this rules out.** Any argument that treats the ground state as
+   the single delicate direction and bounds the rest of the head by a
+   comfortable margin is wrong in its premise: at λ=8 the thirty-first
+   direction is still cancelled to 1e-30. This is the finite-dimensional
+   face of `cor:v137-scalar-no-go` and of the meta-obstructions of v1.39:
+   arithmetic-blind bounds fail on the whole deep block, not at one vector.
+3. **What this leaves.** The pencil vectors `v_k` are the natural test class
+   for the weighted concentration inequality: they order the head by
+   `q/q⁺`, and `1−μ_k` is exactly the relative surplus the criterion has to
+   certify direction by direction. A mechanism that certifies positivity on
+   the head must produce a surplus of relative size `ν_k`, i.e. down to
+   1e-100 at λ=8, in ~40 directions at once, out of ∓0.3 level energies.
+   Nothing here is a bound.

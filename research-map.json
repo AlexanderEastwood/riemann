@@ -269,7 +269,7 @@
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_true_symbol",
-      "note": "Validated symbol beta_a (2e-7 vs block). Ground level split: lambda=3 -/+0.0898, lambda=4 -/+0.2257, cancelling to 1e-38 / 1e-75; ~50% mass on {beta<0}; all energy at xi<20. In lattice units u=xi L/2pi the symbol is a +/- train with crests on the lattice, amplitude set by psi(lambda^2)-lambda^2; the ground spreads outward in u with lambda while the first zeta ordinate sits at the edge of its support. Not self-similar."
+      "note": "Validated symbol beta_a (2e-7 vs block). Ground level split: lambda=3 -/+0.0898, lambda=4 -/+0.2257, cancelling to 1e-38 / 1e-75; ~50% mass on {beta<0}; all energy at xi<20. In lattice units the symbol is a +/- train with crests on the lattice; the ground spreads outward in u with lambda; not self-similar. Level pencil W v = nu (W+W^-) v: the cancellation is a whole deep block (6/12/21/26 directions below 1e-8 at lambda=3/4/6/8, N=48), each cancelling 0.1-0.5 of level energy; not a single critical direction."
     },
     {
       "id": "debranges",
