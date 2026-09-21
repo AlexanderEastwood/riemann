@@ -2,72 +2,221 @@
 
 Alexander Eastwood's complete working manuscript, **v1.38**.
 
-**G2 and the Riemann Hypothesis remain open.** This update tests a common finite lower floor; it does not prove the required cofinal bound.
+**G2 and the Riemann Hypothesis remain open.** Nothing in this repository
+claims otherwise.
+
+## Navigating this repository
+
+- **[RESEARCH_MAP.md](RESEARCH_MAP.md)** — the whole project as one diagram:
+  every idea, which sub-ideas were tried, and which passed or failed.
+- **[COMPARISON.md](COMPARISON.md)** — where the certified `lambda = 4`
+  window sits relative to published work, with the parameter translation.
+- **[REPO_LAYOUT.md](REPO_LAYOUT.md)** — directory layout, branch and tag
+  conventions, and how to add a new version.
+- **[evidence/MISSING.md](evidence/MISSING.md)** — artifacts the manuscript
+  cites that this repository does not yet contain. Read this before relying
+  on any computer-assisted claim.
+- **[AGENTS.md](AGENTS.md)** — instructions for AI agents contributing here.
+
+```sh
+./manuscript/build.sh                     # build the PDF (source validation is not a build)
+python3 tools/verify_manifest.py v126     # check a version's artifacts, or --all
+python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
+```
+
+## Status at a glance
+
+| | |
+|---|---|
+| Only positivity result | `W_4 >= 0`, both parity sectors — evidence restored and verified |
+| Finite floors | `W_λ >= -8·I` at λ = 5, 6, 8, both parities, full infinite tail (`prop:v138-three-floors`) |
+| Certified window | half-width `a = log 4 = 1.386`; 1.73× the published Zhu window, 4× the classical range |
+| Live mechanism | signed weighted concentration, even sector (`prop:v131-concentration`) |
+| Routes proved closed | 10 |
+| Evidence gaps | 2 of 4 tracked groups open — see the ledger |
+| G2 | open |
+| RH | open, and not claimed |
+
+## Research map
+
+Every idea, which sub-ideas were tried from it, and which passed or failed.
+Green = proved · blue = live · red = closed · orange = blocked · grey = open.
+Nodes with a folder icon link to the `evidence/` directory holding their
+certificates; the full version with a node-by-node list is
+[RESEARCH_MAP.md](RESEARCH_MAP.md).
+
+<!-- research-map:start -->
+```mermaid
+graph TD
+  rh["RH"]
+  g1["G1 (weak)<br/><small>thm:v14-radical</small><br/><small>&#128193; evidence/v124/g2_source_certificate</small>"]
+  fixedspace["Fixed-space / Burnol Sonine route"]
+  g2["G2: cofinal -o(1)<br/><small>prop:v121-cofinal-rh</small>"]
+  windows["Fixed-window certificates"]
+  w3["lambda=3<br/><small>prop:v116-window-positive</small><br/><small>&#128193; evidence/v124/g2_certificate</small>"]
+  w4e["lambda=4 even<br/><small>prop:v125-even-complete</small><br/><small>&#128193; evidence/v126</small>"]
+  w4o["lambda=4 odd<br/><small>prop:v126-odd-complement</small><br/><small>&#128193; evidence/v126</small>"]
+  w4["W_4 >= 0 both sectors<br/><small>prop:v126-full-window</small><br/><small>&#128193; evidence/v126</small>"]
+  w5["lambda=5"]
+  uniform["Uniform mechanism for G2"]
+  primenorm["unsigned prime-norm domination<br/><small>prop:v119-prime-essential</small><br/><small>&#128193; evidence/v124/g2_growing_sign</small>"]
+  normcontr["norm contraction<br/><small>prop:v120-norm-counterexample</small><br/><small>&#128193; evidence/v124/g2_weighted_signed</small>"]
+  schatten["Schatten / Hilbert-Schmidt<br/><small>prop:v132-schatten</small><br/><small>EVIDENCE MISSING</small>"]
+  sampling["basis / sampling dominance<br/><small>prop:v121-complement-cancellation</small><br/><small>&#128193; evidence/v124/g2_schur_cancellation</small>"]
+  farmaj["scalar far majorant<br/><small>prop:v125-cutoff-cost</small><br/><small>&#128193; evidence/v126/g2_window_resolution</small>"]
+  blockmetric["block metrics<br/><small>EVIDENCE MISSING</small>"]
+  flattop["flat-top smoothing<br/><small>prop:v132-flat-top</small><br/><small>EVIDENCE MISSING</small>"]
+  recipband["reciprocal-band commutation<br/><small>EVIDENCE MISSING</small>"]
+  cotlar["Cotlar cross terms / atomization<br/><small>EVIDENCE MISSING</small>"]
+  scalarprim["scalar signed primitive<br/><small>cor:v137-scalar-no-go</small><br/><small>&#128193; evidence/v137</small>"]
+  concentration["signed weighted concentration<br/><small>prop:v131-concentration</small><br/><small>EVIDENCE MISSING</small>"]
+  weaken["Target weakening"]
+  floor["uniform finite floor suffices<br/><small>prop:v136-bounded-floor</small><br/><small>&#128193; evidence/v136</small>"]
+  gapfree["no uniform positive gap exists<br/><small>prop:v135-growing-radical</small><br/><small>&#128193; evidence/v135</small>"]
+  floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small><br/><small>&#128193; evidence/v138</small>"]
+  shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small><br/><small>&#128193; evidence/v138</small>"]
+
+  rh --> g1
+  rh --> fixedspace
+  rh --> g2
+  g2 --> windows
+  windows --> w3
+  windows --> w4e
+  windows --> w4o
+  windows --> w4
+  windows --> w5
+  g2 --> uniform
+  uniform --> primenorm
+  uniform --> normcontr
+  uniform --> schatten
+  uniform --> sampling
+  uniform --> farmaj
+  uniform --> blockmetric
+  uniform --> flattop
+  uniform --> recipband
+  uniform --> cotlar
+  uniform --> scalarprim
+  uniform --> concentration
+  g2 --> weaken
+  weaken --> floor
+  weaken --> gapfree
+  floor --> floortest
+  floor --> shiftbarrier
+
+  click g1 "evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate"
+  click w3 "evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate"
+  click w4e "evidence/v126/" "evidence: evidence/v126"
+  click w4o "evidence/v126/" "evidence: evidence/v126"
+  click w4 "evidence/v126/" "evidence: evidence/v126"
+  click primenorm "evidence/v124/g2_growing_sign/" "evidence: evidence/v124/g2_growing_sign"
+  click normcontr "evidence/v124/g2_weighted_signed/" "evidence: evidence/v124/g2_weighted_signed"
+  click sampling "evidence/v124/g2_schur_cancellation/" "evidence: evidence/v124/g2_schur_cancellation"
+  click farmaj "evidence/v126/g2_window_resolution/" "evidence: evidence/v126/g2_window_resolution"
+  click scalarprim "evidence/v137/" "evidence: evidence/v137"
+  click floor "evidence/v136/" "evidence: evidence/v136"
+  click gapfree "evidence/v135/" "evidence: evidence/v135"
+  click floortest "evidence/v138/" "evidence: evidence/v138"
+  click shiftbarrier "evidence/v138/" "evidence: evidence/v138"
+
+  classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier proved;
+  classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
+  class concentration live;
+  classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim closed;
+  classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
+  class w5 blocked;
+  classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
+  class rh,fixedspace,g2,uniform open;
+```
+<!-- research-map:end -->
 
 ## Current manuscript
 
-- [Complete LaTeX](fixed_space_prime_action_v1.tex)
-- [Research log and candidate register](RH_G1_G2_research_log.md)
-- [Revision notes](v1_revision_notes.md)
-- [Checksums and provenance](github_sync/v1.38_manifest.json)
+- [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
+- [Research log and candidate register](log/RH_G1_G2_research_log.md)
+- [Revision notes](log/v1_revision_notes.md)
+- [Checksums and provenance](manifest/v1.38_manifest.json)
 
-One live manuscript remains at the root. Delivery is **LaTeX only**. Previous PDFs, superseded evidence and provenance are in the [archive](archive/README.md) and Git history.
+One live manuscript; delivery is **LaTeX only** at the author's request.
+Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
 
 ## New in v1.38
 
-Both complete parity forms at lambda = 5, 6, 8 satisfy **W>=-8I**. The same parameters work throughout: additive shift 8, head cutoff 256, explicit residual cutoff 4096, moment order 16, Young parameter 1/10 and zero solve. Each window's coefficients and tail constants are freshly evaluated. No disproved positive tail metric is used.
+v1.36 reduced G2 to a **uniform finite floor**: one constant `C_*` with
+`W_λ >= -C_*·I` along a cofinal family suffices, with no decay required.
+v1.38 tests that reduction directly instead of seeking another positivity
+certificate.
 
-The six certificates include the infinite tail and pass at 160 bits, then at 256 bits with the identical frozen dyadic witnesses. Each finite-support trial has a certified positive Rayleigh quotient below 1e-16. Therefore the true spectral edges lie between -8 and 1e-16; their signs are not determined.
+With a common shift `δ = 8`, head cutoff `N = 256`, remote cutoff
+`J = 4096`, moment order 16, and **no tail-metric prerequisite** (`Z = 0`),
+both complete parity forms are certified at λ = 5, 6, 8:
 
-| lambda | even generalized-margin lower | odd generalized-margin lower |
-|---|---:|---:|
-|5|0.8430|0.9190|
-|6|0.7166|0.7620|
-|8|0.2474|0.1022|
+    -8  <=  inf σ(W_λ^±)  <  1e-16
 
-These are lower bounds for `1-lambda_max(U,K)` of the shifted certificate, not resolution margins or whitening row margins. Their decline does not establish a falling physical spectral edge.
+The lower bound retains the complete infinite Fourier tail; the upper
+bound is a certified finite-support trial quotient. By support
+consistency the floor holds for every `1 < λ <= 8`. The same exact dyadic
+witnesses pass at 160 and 256 bits.
 
-A shift of 0.001 barely lowers the old cutoff cost. A shift of 8 makes the lambda = 8 remote gates pass already at N = 43 even and N = 204 odd. This is a substantial finite computational saving. The proved requirement `N+1>L exp(M_phi-delta)` still makes the same scalar comparison exponential in lambda for every bounded shift. No new arithmetic cancellation mechanism is claimed.
+The shift is what makes it affordable: the remote cutoff needs
+`N+1 > L·exp(M_φ − δ)`, so `δ = 8` buys a factor `e^8`. But
+`prop:v138-shifted-floor` proves any *bounded* shift keeps the exponential
+barrier of `prop:v125-cutoff-cost`; escaping it in this comparison would
+need `δ` to grow like `M_φ ~ λ`, which is uninformative. The certificate's
+generalized margin falls from 0.84 to 0.10 (odd) across the three windows.
+**That decrease measures enclosure headroom, not the sign of the physical
+edge** — no cofinal lower estimate is asserted, and no G2 gap is closed.
 
-- [Research report and exact remaining target](g2_finite_floor/research_report.md)
-- [Analytic proof](g2_finite_floor/new_section.tex)
-- [Higher-precision complete certificates](g2_finite_floor/replay_b256.json)
-- [Frozen dyadic witnesses](g2_finite_floor/dyadic_witnesses.npz)
-- [Adversarial review](g2_finite_floor/adversarial_review.md)
-- [Reproduction instructions](g2_finite_floor/REPRODUCE.md)
+- [certificates, 160 and 256 bits](evidence/v138/)
 
-The lambda = 8 lower floor transfers down to all 1 < lambda ≤ 8 by physical support consistency. A bounded interval is still not a cofinal family. **No G2 sign gap was closed.**
+## New in v1.37
 
-## Saved-copy and reproduction status
+v1.36 showed that one uniform finite ordinary lower floor on the complete
+small-residual complement would suffice. v1.37 tests whether the older
+scalar primitive estimate could meet this weaker target.
 
-Canonical ChatGPT file replacements for the current LaTeX, log and notes
-failed during transfer. Those saved copies remain v1.34; use this repository
-for v1.38. No stale saved-file link is labelled current.
+It cannot: for the exact arithmetic symbol, its optimal scalar error
+`a Delta(beta_a)` tends to infinity. The pointwise infimum of `beta_a`
+also tends to minus infinity. Both conclusions are unconditional.
 
-The original **v1.26 cumulative reproduction bundle has been recovered**.
-It includes both missing final λ=4 certificate directories:
+The proof uses a nonnegative frequency probe whose Fourier transform
+vanishes at the two physical cutoff endpoints. Under RH its pairing with
+the exact symbol retains a negative cutoff side lobe around a zero.
+Any bounded cofinal scalar certificate would itself imply RH via v1.36,
+then contradict that pairing. The linear rates are RH-conditional; no
+unconditional linear rate is asserted.
 
-- [Complete even-sector evidence (`g2_simultaneous`)](archive/v1.26_snapshot/g2_simultaneous/)
-- [Complete odd-sector evidence (`g2_odd_complement`)](archive/v1.26_snapshot/g2_odd_complement/)
-- [Original cumulative ZIP and checksum](https://github.com/AlexanderEastwood/riemann/releases/tag/v1.26-evidence)
-- [Recovery provenance and replay scope](github_sync/README_v126_evidence_recovery.md)
+The probe is not a physical squared Paley–Wiener transform, so these scalar
+obstructions do not refute positivity of the physical form. The signed
+concentration estimate, retaining favorable and unfavorable levels jointly,
+remains open in both parities. No G2 sign gap was closed.
 
-The extracted snapshot preserves every original file and its relative
-layout. Final saved-ingredient proof gates and the exact shared-head check
-were replayed successfully; this publication did not regenerate witnesses
-or rerun every residual assembly. The historical bundle is not the current
-manuscript.
+- [Proof and novelty report](evidence/v137/research_report.md)
+- [Proof excerpt](evidence/v137/new_section.tex)
+- [Independent adversarial review](evidence/v137/adversarial_review.md)
+- [Probe checks](evidence/v137/check_probe.py) · [results](evidence/v137/probe_results.json)
 
-The complete later v1.34 cumulative ZIP remains unavailable. Restoring the
-v1.25/v1.26 positivity evidence does not reconstruct that later archive or
-constitute a complete cumulative reproduction release for the current work.
+The ingredients are classical; worldwide novelty is not claimed. Numerical
+quadrature is diagnostic and not a proof.
 
-**Two of four tracked evidence gaps remain open:** the λ=5 disproof
-witnesses through v1.28 and the v1.31–v1.34 concentration evidence and
-diagnostics. See [the evidence availability ledger](evidence/MISSING.md)
-for the two restored groups and the two remaining open groups.
+## The `lambda = 4` evidence
 
+The original v1.26 reproduction bundle has been recovered and committed
+under [`evidence/v126/`](evidence/v126/): 468 files, byte-identical to the
+archived ZIP (SHA-256 `ccdb8eaa…82d8f`, independently re-verified). It
+includes both final certificate directories:
 
-## Validation
+- [complete even sector — `g2_simultaneous`](evidence/v126/g2_simultaneous/)
+- [complete odd sector — `g2_odd_complement`](evidence/v126/g2_odd_complement/)
 
-The mathematical setup was adversarially reviewed. Every complete floor and frozen trial was replayed with outward arithmetic at higher precision. Source validation uses LaTeX draft mode. **No PDF is generated or delivered.**
+Final proof gates using the saved ingredients, witness bindings and the
+exact shared-head equality were replayed successfully. This did not
+regenerate witnesses or rerun every residual assembly; RESTORED in the
+ledger records availability, not a fresh independent audit of every
+computation. Provenance and per-file checksums:
+[`manifest/README_v126_evidence_recovery.md`](manifest/README_v126_evidence_recovery.md).
+
+## License
+
+Apache-2.0 — see [LICENSE](LICENSE).

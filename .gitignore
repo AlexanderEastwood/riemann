@@ -23,3 +23,7 @@ venv/
 
 # Versioned cumulative bundles belong in release assets.
 fixed_space_prime_action_v*_bundle.zip
+
+# Built PDFs (delivery is LaTeX only)
+*.pdf
+!manuscript/snapshots/*.pdf
