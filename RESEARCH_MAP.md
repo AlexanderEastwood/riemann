@@ -34,7 +34,7 @@ graph LR
   shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small><br/><small>&#128193; evidence/v138</small>"]
   metablind["Scoped information-loss obstructions<br/><small>thm:v139-probe-relaxation; thm:v139-protected-orbit</small><br/><small>&#128193; evidence/v139</small>"]
   altroutes["Alternative criteria (all equivalent; same wall)"]
-  circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_circle_split</small>"]
+  circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_true_symbol</small>"]
   debranges["de Branges / Hermite-Biehler"]
   f1["function field / Hodge / F_1"]
   nb["Nyman-Beurling-Baez-Duarte<br/><small>&#128193; evidence/diag_routes/nb</small>"]
@@ -99,7 +99,7 @@ graph LR
   click floortest "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v138/" "evidence: evidence/v138" _blank
   click shiftbarrier "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v138/" "evidence: evidence/v138" _blank
   click metablind "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v139/" "evidence: evidence/v139" _blank
-  click circle "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_circle_split/" "evidence: evidence/diag_circle_split" _blank
+  click circle "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_true_symbol/" "evidence: evidence/diag_true_symbol" _blank
   click nb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/nb/" "evidence: evidence/diag_routes/nb" _blank
   click li "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/li/" "evidence: evidence/diag_routes/li" _blank
   click dbn "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn" _blank
@@ -110,9 +110,9 @@ graph LR
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
-  class concentration,stepb live;
+  class concentration,circle,stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,circle,debranges,f1,nb,li,dbn closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
@@ -124,8 +124,8 @@ graph LR
 | status | count | meaning |
 |---|---:|---|
 | `proved` | 15 | established result |
-| `live` | 2 | active candidate mechanism |
-| `closed` | 16 | proved insufficient or impossible |
+| `live` | 3 | active candidate mechanism |
+| `closed` | 15 | proved insufficient or impossible |
 | `blocked` | 1 | attempted; obstruction found |
 | `open` | 5 | target, not yet attacked |
 
@@ -135,7 +135,7 @@ graph LR
   - [ ] **Alternative criteria (all equivalent; same wall)** — each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21
     - [X] **Li / Keiper coefficients** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · Li class ∩ Paley-Wiener = {0}: no window certifies any lambda_n; W_4>=0 gives windowed lambda_n^[log16] >= 0 only
     - [X] **Nyman-Beurling-Baez-Duarte** — evidence: [`evidence/diag_routes/nb/`](evidence/diag_routes/nb/) · no finite NB statement equivalent to W_lambda>=0; d_N certified to N=600, oscillates around C/log N; Burnol Thm 3.1 is the semantic lock
-    - [X] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_circle_split/`](evidence/diag_circle_split/) · NS-7 (diagnostic): exact split D+T'+Hk; ground = lowest lattice modes, crest energy ~min d_n cancelled by the commutator couplings; prime-free form negative O(1). Earlier KMS/line-symbol claim RETRACTED (wrong object).
+    - [~] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_true_symbol/`](evidence/diag_true_symbol/) · Validated symbol beta_a (2e-7 vs block). lambda=3 ground: 49.9% mass on {beta<0}, level energies -/+0.0898 cancel to 1e-38, all at xi<10; deep high-frequency negativity untouched. The scale the live criterion must control.
     - [X] **de Branges / Hermite-Biehler** — HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)
     - [X] **de Bruijn-Newman (0 <= Lambda <= 0.22)** — evidence: [`evidence/diag_routes/dbn/`](evidence/diag_routes/dbn/) · no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s
     - [X] **function field / Hodge / F_1** — nothing finite transfers; window lambda has no intersection-theoretic meaning

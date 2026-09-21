@@ -265,11 +265,11 @@
     {
       "id": "circle",
       "title": "circle / Toeplitz-Hankel lens",
-      "status": "closed",
+      "status": "live",
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
-      "evidence": "evidence/diag_circle_split",
-      "note": "NS-7 (diagnostic): exact split D+T'+Hk; ground = lowest lattice modes, crest energy ~min d_n cancelled by the commutator couplings; prime-free form negative O(1). Earlier KMS/line-symbol claim RETRACTED (wrong object)."
+      "evidence": "evidence/diag_true_symbol",
+      "note": "Validated symbol beta_a (2e-7 vs block). lambda=3 ground: 49.9% mass on {beta<0}, level energies -/+0.0898 cancel to 1e-38, all at xi<10; deep high-frequency negativity untouched. The scale the live criterion must control."
     },
     {
       "id": "debranges",

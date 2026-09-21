@@ -209,11 +209,14 @@ commutator + Hankel reflection term. The reflection term alone makes the
 form negative by O(1); the Toeplitz commutator cancels it to 10^-75. The
 parity sectors are the pencils `T(φ) ± H(φ)` (Basor–Ehrhardt). A prime-free
 control of the assembled form is negative by O(1) at every window, so the sign
-is arithmetic (exact). An earlier version of this paragraph claimed a
-Kac–Murdock–Szegő prediction of 4 → 11 negative eigenvalues from a "line
-symbol"; that function was the analytic continuation of the diagonal, not the
-multiplier symbol, and the claim is withdrawn (`evidence/diag_circle_split/`,
-retraction section).
+is arithmetic (exact). On the manuscript's
+own symbol `β_a` (validated against the assembled matrix to 2e-7,
+`evidence/diag_true_symbol/`), the λ=3 ground state puts 49.9% of its Fourier
+mass on `{β_a < 0}`, with negative- and positive-level energies `∓0.0898`
+cancelling to `10^-38`, all below `ξ ≈ 10`; it never touches the deep
+negativity of `β_a` at high frequency. That is the scale the weighted
+concentration criterion has to control. (An earlier KMS claim here used the
+wrong object and is withdrawn.)
 
 ### de Bruijn–Newman (assessed; closed)
 

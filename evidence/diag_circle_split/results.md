@@ -181,5 +181,5 @@ normalization (`ψ(5/4+iξ/2)`, continuum kernel). No KMS statement was tested.
 ground-state energy budget (exact); the prime-free control (exact); positivity
 of the lattice diagonal (a fact about the assembled operator). What does not:
 every sentence about the "line symbol", its negative measure, its lobes, KMS,
-and sub-resolution. The correct version of the level-split experiment must use
-the manuscript's own `β_a`; it has not been done.
+and sub-resolution. The correct version of the level-split experiment, on the manuscript's own
+`β_a`, is in `evidence/diag_true_symbol/`.
