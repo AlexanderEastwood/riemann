@@ -80,26 +80,26 @@ graph LR
   w4 --> ccmmu
   w4 --> simpleeven4
 
-  click g1 "evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate"
-  click w3 "evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate"
-  click w4e "evidence/v126/" "evidence: evidence/v126"
-  click w4o "evidence/v126/" "evidence: evidence/v126"
-  click w4 "evidence/v126/" "evidence: evidence/v126"
-  click primenorm "evidence/v124/g2_growing_sign/" "evidence: evidence/v124/g2_growing_sign"
-  click normcontr "evidence/v124/g2_weighted_signed/" "evidence: evidence/v124/g2_weighted_signed"
-  click sampling "evidence/v124/g2_schur_cancellation/" "evidence: evidence/v124/g2_schur_cancellation"
-  click farmaj "evidence/v126/g2_window_resolution/" "evidence: evidence/v126/g2_window_resolution"
-  click scalarprim "evidence/v137/" "evidence: evidence/v137"
-  click floor "evidence/v136/" "evidence: evidence/v136"
-  click gapfree "evidence/v135/" "evidence: evidence/v135"
-  click floortest "evidence/v138/" "evidence: evidence/v138"
-  click shiftbarrier "evidence/v138/" "evidence: evidence/v138"
-  click metablind "evidence/v139/" "evidence: evidence/v139"
-  click circle "evidence/diag_circle_split/" "evidence: evidence/diag_circle_split"
-  click nb "evidence/diag_routes/nb/" "evidence: evidence/diag_routes/nb"
-  click li "evidence/diag_routes/li/" "evidence: evidence/diag_routes/li"
-  click dbn "evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn"
-  click simpleeven4 "evidence/v140/" "evidence: evidence/v140"
+  click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
+  click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
+  click w4e "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v126/" "evidence: evidence/v126" _blank
+  click w4o "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v126/" "evidence: evidence/v126" _blank
+  click w4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v126/" "evidence: evidence/v126" _blank
+  click primenorm "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_growing_sign/" "evidence: evidence/v124/g2_growing_sign" _blank
+  click normcontr "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_weighted_signed/" "evidence: evidence/v124/g2_weighted_signed" _blank
+  click sampling "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_schur_cancellation/" "evidence: evidence/v124/g2_schur_cancellation" _blank
+  click farmaj "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v126/g2_window_resolution/" "evidence: evidence/v126/g2_window_resolution" _blank
+  click scalarprim "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v137/" "evidence: evidence/v137" _blank
+  click floor "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v136/" "evidence: evidence/v136" _blank
+  click gapfree "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v135/" "evidence: evidence/v135" _blank
+  click floortest "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v138/" "evidence: evidence/v138" _blank
+  click shiftbarrier "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v138/" "evidence: evidence/v138" _blank
+  click metablind "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v139/" "evidence: evidence/v139" _blank
+  click circle "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_circle_split/" "evidence: evidence/diag_circle_split" _blank
+  click nb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/nb/" "evidence: evidence/diag_routes/nb" _blank
+  click li "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/li/" "evidence: evidence/diag_routes/li" _blank
+  click dbn "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn" _blank
+  click simpleeven4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v140/" "evidence: evidence/v140" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4 proved;

@@ -169,7 +169,9 @@ proposition are searchable together. Tag one `v1.NN` per manuscript version.
 
 Several agents push here concurrently. Use a worktree per lane rather than
 switching branches in place — a mid-run branch switch corrupts long interval
-computations:
+computations. **Sub-agents and scripts must never run `git checkout` in the
+shared checkout `~/riemann`** (on 2026-09-21 one did, and a coordinator's
+commit landed on the wrong branch); create a worktree first:
 
 ```sh
 git worktree add ../riemann-worktrees/<name> lane/<topic>
