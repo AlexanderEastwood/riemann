@@ -1,3 +1,29 @@
+## Delivery policy — September 21, 2026
+
+At the author’s explicit request, manuscript delivery is LaTeX only from this update forward. The previously generated v1.36 PDF is not published or included in the update package. The existing GitHub v1.35 PDF and evidence are archived; the root contains one live LaTeX manuscript. Future runs must not generate or deliver PDFs unless requested again. This changes delivery only, not the mathematical conclusions.
+
+# Version 1.36 — September 21, 2026
+
+The complete manuscript now proves a sharper sufficient G2 reduction:
+one finite lower bound uniform along a cofinal family on the complete
+small-residual complement suffices. Its error need not tend to zero.
+The uniform arithmetic estimate itself remains unproved.
+
+- Proved totality of all fixed real translates of the actual Gaussian radical in ordinary L2, with complete localized operator residuals tending to zero.
+- Proved unconditional strong-resolvent convergence to zero for the zero-extended complete Weil operators, also after deleting a block whose full residual tends to zero.
+- Proved negative amplification: any negative compact smooth Weil test forces lower spectral edges to diverge to minus infinity. This gives the finite-floor reduction and its source-complement version.
+- Proved that uniformly bounded positive comparisons with vanishing error must disappear strongly on the actual source complement; accounted separately for the odd subspace of physical C_a^low.
+- Added exact support-consistent positive/negative countermodels, an independent adversarial review, domain and parity checks, and a formula-level novelty audit. The result is a continuation of the radical route, not a newly claimed arithmetic sign mechanism.
+- Integrated the results into the abstract, current status, proofs, research goals and reproducibility appendix. Preserved the sampler's explicit graph defect, endpoints, Fourier scales, logarithmic diagonal and all earlier gap statements.
+
+No G2 sign gap was closed, and RH is not proved.
+
+The repository retains one live manuscript at its canonical root paths.
+Superseded supporting evidence and provenance are archived rather than
+presented as additional live versions.
+
+---
+
 # Complete manuscript v1.35 revision notes
 
 ## v1.35 — full parity symbol and growing physical radical blocks

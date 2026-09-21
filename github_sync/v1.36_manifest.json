@@ -1,0 +1,147 @@
+{
+  "manuscript_revision": "v1.36",
+  "delivery": "LaTeX only",
+  "base_commit": "e1bc36390babab4cb4e7502de13292f63fbe219e",
+  "base_tree": "6058bb6ab2c5a1ec4e00c6d268f5020a77481d2c",
+  "source_provenance": {
+    "complete_base_revision": "v1.35",
+    "verified_base_tex_git_blob": "a969301561ee0cbb67f3b35ef158209cdb528f43",
+    "method": "Complete v1.35 source plus reviewed v1.36 proof and integration; no omitted sections",
+    "fresh_library_versions": {
+      "latex": 35,
+      "research_log": 39,
+      "revision_notes": 35
+    },
+    "library_revision": "v1.34",
+    "v136_library_replacements": "All three failed with transfer_failed; no current version advanced"
+  },
+  "validation": {
+    "adversarial_review": "g2_radical_topology/adversarial_review.md",
+    "exact_checks": "g2_radical_topology/countermodel_results.json",
+    "scope": "Exact abstract countermodels, not Weil sign certificates",
+    "latex_compile": "Passed without warnings before LaTeX-only instruction",
+    "pdf": "Previously generated v1.36 PDF not published or included; future PDF generation stopped",
+    "open_gaps": "Uniform arithmetic lower floor in both parities unproved; no G2 sign gap closed; RH unproved"
+  },
+  "archive_status": {
+    "full_cumulative_zip": "unavailable; not committed or uploaded as a release asset",
+    "old_pdf": "Archived byte-for-byte; no PDF is presented as the current manuscript"
+  },
+  "files": [
+    {
+      "path": "fixed_space_prime_action_v1.tex",
+      "original_filename": "fixed_space_prime_action_v1_36.tex",
+      "size_bytes": 657323,
+      "sha256": "9ea457a8d77a00485b647a2dd207020ebff358b820a9b56c2808993b4442dcbc",
+      "git_blob_sha": "b52aa0c2a27d8649644aa535e24fb592b5f9ae3f"
+    },
+    {
+      "path": "RH_G1_G2_research_log.md",
+      "original_filename": "RH_G1_G2_research_log.md",
+      "size_bytes": 286318,
+      "sha256": "c420eff7e752fee1fe7c53dceeea8155fb9efc6c7cf6d68f10645f715b324dcb",
+      "git_blob_sha": "f7a6a00ddde1c27cfa23e8d4676ee4031ce6b97c"
+    },
+    {
+      "path": "v1_revision_notes.md",
+      "original_filename": "v1_36_revision_notes.md",
+      "size_bytes": 71981,
+      "sha256": "d98fcfef77ec857d108cb916208a42915ed044009553b95624d2ad1916500a2b",
+      "git_blob_sha": "3f1689b270f46437b390b86416c40c86f5a02dd4"
+    },
+    {
+      "path": "README.md",
+      "original_filename": "README.md",
+      "size_bytes": 3477,
+      "sha256": "eb8f38e7db744145b5c725dc67133bae3641418ead9cbbaa2aeb9377724d19eb",
+      "git_blob_sha": "316f4ae0d35357189fb43f5fe3178c9fa30f6c63"
+    },
+    {
+      "path": "archive/README.md",
+      "original_filename": "archive_README.md",
+      "size_bytes": 1567,
+      "sha256": "a8dbdacdaaec4cdea0971c73783b866cfdb9fcf917abd3a97b2a8df798da69a3",
+      "git_blob_sha": "6be26d355260cc50276f69bfdc7791eb6e77b67c"
+    },
+    {
+      "path": "g2_radical_topology/adversarial_review.md",
+      "original_filename": "adversarial_review.md",
+      "size_bytes": 15210,
+      "sha256": "2075651e73d84fc3b3c698853e96914ac29a2a301324f750c1aeba40230d2cbd",
+      "git_blob_sha": "dc7b8352e5c6dd03206bf33fab315244770f547e"
+    },
+    {
+      "path": "g2_radical_topology/check_topology_countermodels.py",
+      "original_filename": "check_topology_countermodels.py",
+      "size_bytes": 1754,
+      "sha256": "a8980de0add208a76907f20d841696bfb3ad46b81762738e12b7defcb667cfbf",
+      "git_blob_sha": "88330e674e424c1fc86079c30a0c3b75deb4580b"
+    },
+    {
+      "path": "g2_radical_topology/countermodel_results.json",
+      "original_filename": "countermodel_results.json",
+      "size_bytes": 1796,
+      "sha256": "4589ad0a60ac31f9199dae7eefcf28dff747b1dd1af4be75cd07fae9052d3f36",
+      "git_blob_sha": "519b671f11d91fe2d8984f2b118b9ee5d86d6cda"
+    },
+    {
+      "path": "g2_radical_topology/new_section.tex",
+      "original_filename": "new_section.tex",
+      "size_bytes": 12083,
+      "sha256": "78e5f6cb2fe60bff4b6edd41594e8499d815cf4cd20b9d96eb0dec7b628828a3",
+      "git_blob_sha": "8655bae9209d604e47057b38b2977179839b9283"
+    },
+    {
+      "path": "g2_radical_topology/research_report.md",
+      "original_filename": "research_report.md",
+      "size_bytes": 9586,
+      "sha256": "41cd82141527731b9c66500bb385cd04286d347004dc4af8a137fe82d91df9f9",
+      "git_blob_sha": "f2d1f595011c5c4561bd59f089b57403170549c7"
+    }
+  ],
+  "archived_unchanged": [
+    {
+      "from": "fixed_space_prime_action_v1.pdf",
+      "to": "archive/v1.35/fixed_space_prime_action_v1_35.pdf",
+      "git_blob_sha": "c63f8cc7ff9404c74d04e310f7c4e5f26beb9e55",
+      "size_bytes": 1388262
+    },
+    {
+      "from": "g2_growing_radical/adversarial_review.md",
+      "to": "archive/v1.35/g2_growing_radical/adversarial_review.md",
+      "git_blob_sha": "34e39e29834df42b5ecf587c5388e53dcbb4557b",
+      "size_bytes": 7608
+    },
+    {
+      "from": "g2_growing_radical/check_growing_radical.py",
+      "to": "archive/v1.35/g2_growing_radical/check_growing_radical.py",
+      "git_blob_sha": "125a9c287ef9a5f93fc536eb4f4a49a0fd10e641",
+      "size_bytes": 2841
+    },
+    {
+      "from": "g2_growing_radical/diagnostic_results.json",
+      "to": "archive/v1.35/g2_growing_radical/diagnostic_results.json",
+      "git_blob_sha": "74090ffd80edd204b5abfe7153e5eea8e36b2ee7",
+      "size_bytes": 831
+    },
+    {
+      "from": "g2_growing_radical/new_section.tex",
+      "to": "archive/v1.35/g2_growing_radical/new_section.tex",
+      "git_blob_sha": "db0719a8b99718cae174908ec1ec57df7251bb8e",
+      "size_bytes": 11265
+    },
+    {
+      "from": "g2_growing_radical/research_report.md",
+      "to": "archive/v1.35/g2_growing_radical/research_report.md",
+      "git_blob_sha": "d5fe53e0130c9152d81d5a817a57d33c9a39e403",
+      "size_bytes": 7174
+    },
+    {
+      "from": "github_sync/v1.35_manifest.json",
+      "to": "archive/provenance/v1.35_manifest.json",
+      "git_blob_sha": "e70028f8b7806a52c9c2431f3b39ff8c73382c5d",
+      "size_bytes": 2966
+    }
+  ],
+  "history_policy": "One live root LaTeX manuscript; retain old evidence and PDF in archive and preserve Git history"
+}

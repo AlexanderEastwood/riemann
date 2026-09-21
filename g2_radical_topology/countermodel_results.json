@@ -1,0 +1,58 @@
+{
+  "status": "all exact rational identities passed",
+  "scope": "abstract support-consistent rank-one countermodels; not Weil matrices",
+  "identities": [
+    {
+      "m": 2,
+      "radical_sum": "0",
+      "approximation_error_squared": "1/2",
+      "negative_form": "-1",
+      "negative_rayleigh": "-2",
+      "matrix_dimension": 3,
+      "lower_edge": -3,
+      "resolvent_error_on_e1_squared": "3/10"
+    },
+    {
+      "m": 4,
+      "radical_sum": "0",
+      "approximation_error_squared": "1/4",
+      "negative_form": "-1",
+      "negative_rayleigh": "-4",
+      "matrix_dimension": 5,
+      "lower_edge": -5,
+      "resolvent_error_on_e1_squared": "5/26"
+    },
+    {
+      "m": 16,
+      "radical_sum": "0",
+      "approximation_error_squared": "1/16",
+      "negative_form": "-1",
+      "negative_rayleigh": "-16",
+      "matrix_dimension": 17,
+      "lower_edge": -17,
+      "resolvent_error_on_e1_squared": "17/290"
+    },
+    {
+      "m": 64,
+      "radical_sum": "0",
+      "approximation_error_squared": "1/64",
+      "negative_form": "-1",
+      "negative_rayleigh": "-64",
+      "matrix_dimension": 65,
+      "lower_edge": -65,
+      "resolvent_error_on_e1_squared": "65/4226"
+    },
+    {
+      "m": 256,
+      "radical_sum": "0",
+      "approximation_error_squared": "1/256",
+      "negative_form": "-1",
+      "negative_rayleigh": "-256",
+      "matrix_dimension": 257,
+      "lower_edge": -257,
+      "resolvent_error_on_e1_squared": "257/66050"
+    }
+  ],
+  "positive_counterpart": "Replacing the minus sign by plus preserves the kernel and strong-resolvent limit, but makes every matrix nonnegative.",
+  "interpretation": "Dense radicals and strong-resolvent collapse alone do not determine sign. Uniform semiboundedness separates the two support-consistent families."
+}

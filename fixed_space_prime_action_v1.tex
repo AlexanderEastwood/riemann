@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.35},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.36},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.35\\
+\large Complete working manuscript, version 1.36\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 21, 2026}
@@ -140,6 +140,16 @@ with full operator residual at most $C\log\lambda\,e^{-\lambda/100}$.
 Its odd subblock lies in every complement formed from even image columns.
 Thus a uniform or polynomial positive gap on that complement is impossible;
 the signs of the crowded near-zero eigenvalues remain undetermined.
+The full translate span of the same radical is now shown to be dense
+in ordinary $L^2$. The complete zero-extended Weil operators consequently
+converge strong-resolvent to zero, a topology which does not control their
+lower spectral edges. More usefully, a negative compact test could be
+amplified to arbitrarily negative normalized tests. Therefore one uniform
+finite lower floor on a cofinal family already forces complete Weil
+positivity: the complementary error need only stay bounded, not tend to
+zero. This sharper reduction leaves its arithmetic hypothesis unproved.
+Uniformly bounded positive comparisons with vanishing error must themselves
+disappear strongly on the actual source complement.
 Strong cancellation persists in the exact
 source complement. Every complete eigenfunction has zero physical
 endpoint. A cofinal complete-Weil lower error tending to zero would
@@ -148,6 +158,20 @@ imply RH directly, but remains unproved.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.36 sharpens the remaining sufficient target. By
+Proposition~\ref{prop:v136-bounded-floor} and
+Corollary~\ref{cor:v136-complement-floor}, one finite ordinary lower bound
+on the complete small-residual complement, uniform along a cofinal family,
+already suffices for Weil positivity. The error need not be proved to
+vanish. The proof amplifies any hypothetical negative compact test by
+subtracting ordinary-close radical approximations. No such uniform
+arithmetic lower bound is established here. The same dense radical family
+proves ordinary strong-resolvent collapse to zero and rules out nonzero
+persistent bounded positive comparisons with vanishing error. These are
+reductions and obstructions, not a new positivity mechanism or an RH proof.
+Both parity sectors and all physical blocks remain required. No G2 sign
+gap is closed.
+
 Version 1.35 proves a quantitative growing-block obstruction, rather
 than another fixed-window positivity result.  Proposition~\ref{prop:v135-growing-radical}
 constructs $2\lfloor a/(2D)\rfloor+1$ independent physical columns with
@@ -9625,6 +9649,263 @@ The logarithmic diagonal, physical endpoints and graph defect remain
 as previously stated.  No G2 sign gap is closed.
 
 
+\subsection*{Dense radicals, ordinary resolvent collapse, and a bounded-error reduction}
+
+All operators in this subsection are the complete physical Weil operators,
+not the corrected logarithmic generators in a Weil-metric completion.
+Put $H=L^2(\mathbb R,dx)$, $I_a=(-a,a)$, $\lambda=e^a$, and let
+$J_a:L^2(I_a)\to H$ be zero extension. Inner products remain linear in
+the first slot. Write $q_a$ for the canonical closed form of
+$\mathsf W_{e^a}$. On compactly supported smooth tests it is the
+restriction of a single support-consistent geometric form $q$.
+The form domain and both pole signs are those of
+Propositions~\ref{prop:v118-log-dirichlet} and
+\ref{prop:v135-both-parities}. No Fourier cutoff is imposed.
+
+\begin{lemma}[A total family of localized ordinary near-radicals]
+\label{lem:v136-total-radicals}
+Use the normalized source $\phi$ and smooth physical cutoff $\chi_a$
+from Proposition~\ref{prop:v135-growing-radical}. Then
+\[
+ \mathcal R=\operatorname{span}\{\phi(\cdot-t):t\in\mathbb R\}
+ \quad\hbox{is dense in }H.
+\]
+For every fixed $h\in\mathcal R$, $g_a=\chi_a h$ belongs to
+$C_c^\infty(I_a)$ and satisfies
+\begin{equation}\label{eq:v136-dense-residual}
+ J_ag_a\longrightarrow h,\qquad
+ \norm{\mathsf W_{e^a}g_a}_2\longrightarrow0.
+\end{equation}
+The even and odd reflected translate spans are dense in their respective
+parity subspaces. These are ordinary-norm assertions; they assert neither
+uniform approximation coefficients nor density in a global form norm.
+\end{lemma}
+\begin{proof}
+The double-exponential estimate \eqref{eq:v135-gaussian-tail} makes
+$\widehat\phi$ entire. It is not identically zero, so its real zeros
+have measure zero. If $v\in H$ is orthogonal to every translate, the
+inverse Fourier transform of the $L^1$ function
+$\widehat v\,\overline{\widehat\phi}$ vanishes. Fourier uniqueness
+gives $\widehat v\,\overline{\widehat\phi}=0$ almost everywhere,
+and hence $v=0$. This is the elementary Hilbert-space version of the
+classical translation-density principle~\cite{Wiener1932}.
+Apply the bounded parity projections to obtain the two parity statements.
+
+Write $h=\sum_{j=1}^r c_j\phi(\cdot-t_j)$ with fixed real $t_j$.
+For sufficiently large $a$, every $|t_j|\le a/2$. The exterior-tail
+proof of Proposition~\ref{prop:v135-growing-radical} uses only that
+inequality, not membership in the spaced lattice. It therefore gives
+\[
+ \norm{\mathsf W_{e^a}(\chi_a\phi(\cdot-t_j))}_2
+ \le C\sqrt a\,e^{-e^a/100}.
+\]
+The triangle inequality proves the residual assertion with a constant
+depending on this fixed representation of $h$. Dominated convergence
+proves the ordinary limit. In particular all global prime rows in the
+exterior remainder, both poles and the logarithmic diagonal are retained.
+\end{proof}
+
+\begin{proposition}[Ordinary strong-resolvent collapse]
+\label{prop:v136-resolvent-collapse}
+Define the self-adjoint operator
+\[
+ A_a=\mathsf W_{e^a}\oplus0
+ \quad\hbox{on }H=L^2(I_a)\oplus L^2(I_a^c),
+ \qquad
+ \mathcal D(A_a)=\mathcal D(\mathsf W_{e^a})\oplus L^2(I_a^c).
+\]
+Then, without a uniform lower bound or a sign hypothesis,
+\begin{equation}\label{eq:v136-resolvent-collapse}
+ (A_a-z)^{-1}\longrightarrow-z^{-1}I
+ \quad\hbox{strongly for every }z\in\mathbb C\setminus\mathbb R.
+\end{equation}
+If $P_a$ is an orthogonal projection with range in $\mathcal D(A_a)$
+and $\norm{A_aP_a}\to0$, the same conclusion holds for the operator
+which deletes its block and assigns zero on its range. Precisely, define
+\[
+ A_a^{\perp}=A_a-A_aP_a-P_aA_a+P_aA_aP_a
+ \quad\hbox{on }\mathcal D(A_a).
+\]
+The terms involving $P_aA_a$ mean their bounded extensions.
+This applies to the actual repaired rank-one source and to the growing
+block of Proposition~\ref{prop:v135-growing-radical}.
+\end{proposition}
+\begin{proof}
+For $h\in\mathcal R$ use $g_a$ from Lemma~\ref{lem:v136-total-radicals},
+regarded as a vector in $H$. The resolvent bound for self-adjoint
+operators and the resolvent identity give
+\begin{align*}
+ \norm{(A_a-z)^{-1}h+z^{-1}h}
+ &\le\left(\frac1{|\Im z|}+\frac1{|z|}\right)\norm{h-g_a}
+       +\frac{\norm{A_ag_a}}{|z|\,|\Im z|}.
+\end{align*}
+This tends to zero. Uniform resolvent boundedness and density extend
+the conclusion to every $h\in H$. For the deleted block, the difference
+is a bounded self-adjoint perturbation of norm at most
+$3\norm{A_aP_a}$. The resolvent identity bounds the new resolvent
+difference by $3\norm{A_aP_a}/|\Im z|^2$.
+\end{proof}
+
+This concerns the ordinary $L^2$ realization of the Weil operator.
+It does not identify a limit of the logarithmic generators in the
+different Weil-metric spaces discussed, for example, in
+\cite[Section 7]{Suzuki2026}. Nor does it give convergence of
+$q_a[f]$ for fixed compactly supported $f$; those values are exactly
+support-consistent already. Strong-resolvent convergence alone does
+not control unbounded spectral moments or lower spectral edges.
+Indeed, on $\ell^2$, the operators
+$T_n=-n|e_n\rangle\langle e_n|$ converge to zero in this topology,
+while $\inf\sigma(T_n)=-n$. Even replacing $n$ by $1$ leaves a
+fixed negative edge. These are operator-topology countermodels,
+not arithmetic Weil tests.
+
+Even support consistency and a dense radical do not by themselves
+fix the sign. On $c_{00}\subset\ell^2$ take
+$q_\pm[x]=\pm|\sum_kx_k|^2$; its $n$-coordinate matrices are
+$\pm\mathbf1_n\mathbf1_n^*$. Their common limiting radical,
+the finite sequences of sum zero, is dense: for example
+$e_1-m^{-1}\sum_{k=2}^{m+1}e_k\to e_1$.
+Both zero-extended matrix families converge strong-resolvent to zero,
+since their unit nonzero-eigenvalue direction
+$n^{-1/2}\mathbf1_n$ tends weakly to zero. The positive family is
+nonnegative and the negative family has lower edge $-n$.
+The latter amplifies the form value $-1$ to Rayleigh value $-m$
+on $m^{-1}\sum_{k=2}^{m+1}e_k$.
+
+\begin{proposition}[A uniform finite lower floor suffices]
+\label{prop:v136-bounded-floor}
+Suppose that for a cofinal sequence $a_j\to\infty$ there is one
+finite constant $C_*$, independent of $j$, such that
+\begin{equation}\label{eq:v136-bounded-floor}
+ q_{a_j}[f]\ge-C_*\norm f_2^2
+ \quad\hbox{for all }f\in\mathcal D(q_{a_j}).
+\end{equation}
+Then $q[f]\ge0$ on every compact smooth test. Consequently every
+complete finite-window form is nonnegative, and the Weil criterion
+implies RH. Equivalently, if any compact smooth test has negative
+Weil form, then
+\begin{equation}\label{eq:v136-negative-divergence}
+ \inf\sigma(\mathsf W_{e^a})\longrightarrow-\infty
+ \qquad(a\longrightarrow\infty).
+\end{equation}
+This is a conditional reduction: no bound \eqref{eq:v136-bounded-floor}
+is established here.
+\end{proposition}
+\begin{proof}
+Suppose a compact smooth $f$ has $q[f]=-d<0$. Given $\varepsilon>0$,
+choose a fixed $h\in\mathcal R$ with $\norm{f-h}<\varepsilon/2$.
+Put $g_a=\chi_a h$ and $w_a=f-g_a$ for sufficiently large windows.
+By support consistency and self-adjointness,
+\[
+ |q_a[w_a]-q[f]|
+ \le (2\norm f+\norm{g_a})\norm{\mathsf W_{e^a}g_a}
+ \longrightarrow0,\qquad
+ \norm{w_a}\longrightarrow\norm{f-h}<\varepsilon/2.
+\]
+Thus eventually $q_a[w_a]<-d/2$ and $0<\norm{w_a}<\varepsilon$,
+so the variational principle gives
+\begin{equation}\label{eq:v136-negative-amplification}
+ \inf\sigma(\mathsf W_{e^a})
+ \le\frac{q_a[w_a]}{\norm{w_a}^2}
+ <-\frac{d}{2\varepsilon^2}.
+\end{equation}
+Since $\varepsilon$ is arbitrary, this proves
+\eqref{eq:v136-negative-divergence}, and contradicts every cofinal
+finite lower floor. Therefore \eqref{eq:v136-bounded-floor} forces
+$q[f]\ge0$ for every compact smooth $f$.
+Compact smooth tests are a form core at each fixed window by
+Proposition~\ref{prop:v118-log-dirichlet}, so complete local
+positivity follows. The fixed-support Weil implication is the same
+one used in Proposition~\ref{prop:v121-cofinal-rh}.
+The argument gives no effective window threshold for a prescribed
+$\varepsilon$: the finite translate coefficients and shifts can grow
+as its ordinary approximation is refined.
+\end{proof}
+
+\begin{corollary}[Bounded-error version of the gap-free target]
+\label{cor:v136-complement-floor}
+Let $P_a$ be either the actual repaired source projection or the
+growing radical projection, with its established
+$\norm{\mathsf W_{e^a}P_a}\to0$. It is sufficient to prove, on a
+cofinal family, the single uniform estimate
+\begin{equation}\label{eq:v136-complement-target}
+ q_a[f]\ge-C_*\norm f^2,
+ \qquad f\in\mathcal D(q_a)\cap\operatorname{Ran}(I-P_a),
+ \qquad C_*<\infty\text{ independent of }a.
+\end{equation}
+Both parity sectors must be included. In the signed concentration
+criterion \eqref{eq:v131-weighted-concentration}, bounded cofinal
+errors in both sectors therefore suffice; proving their decay to zero
+is a stronger sufficient objective. This corollary does not identify
+$C_a^{\rm low}$ with either displayed complement.
+\end{corollary}
+\begin{proof}
+Proposition~\ref{prop:v118-gap-free} gives a full lower floor
+$-C_*-(2/\sqrt3)\norm{\mathsf W_{e^a}P_a}$, which is uniformly
+bounded along the family. Apply Proposition~\ref{prop:v136-bounded-floor}.
+The even and odd blocks combine as in \eqref{eq:v135-full-error}.
+For the physical deep/plunge decomposition, any missing block and
+coupling still needs its own justified bound.
+\end{proof}
+
+\begin{proposition}[No persistent bounded positive comparison]
+\label{prop:v136-positive-comparison}
+Let $u_a$ be the actual ordinary-unit source, with $J_au_a\to\phi$
+and $\norm{\mathsf W_{e^a}u_a}\to0$, and let
+$Q_a=I-|u_a\rangle\langle u_a|$. Suppose
+\[
+ B_a=Q_aB_aQ_a\succeq0,\qquad\sup_a\norm{B_a}<\infty,
+ \qquad
+ q_a[f]\ge\ip{B_af}{f}-\eta_a\norm f^2\quad(f\perp u_a),
+ \qquad\eta_a\to0,
+\]
+on the complete form domain. Then
+$J_aB_aJ_a^*\to0$ strongly on $H$.
+In particular a fixed nonzero positive bounded comparison on
+$\phi^\perp$ cannot satisfy these assumptions.
+If instead the comparison is imposed on the actual $C_a^{\rm low}$
+and all its removed physical image columns are even, any uniformly
+bounded positive comparison must tend strongly to zero on every
+fixed odd vector. No identification of the two complements is used.
+\end{proposition}
+\begin{proof}
+For $h\in\mathcal R$ set $f_a=Q_a(\chi_a h)$. The source assumptions
+and Lemma~\ref{lem:v136-total-radicals} give
+\[
+ J_af_a\longrightarrow(I-|\phi\rangle\langle\phi|)h,
+ \qquad\norm{\mathsf W_{e^a}f_a}\longrightarrow0.
+\]
+Consequently $\ip{B_af_a}{f_a}\to0$. If $M$ bounds $\norm{B_a}$,
+positivity gives $\norm{B_af_a}^2\le M\ip{B_af_a}{f_a}\to0$.
+The limiting projected translates are dense in $\phi^\perp$;
+uniform boundedness extends the assertion to that subspace.
+Compression and $J_au_a\to\phi$ give convergence on $\phi$ too.
+For $C_a^{\rm low}$ use only odd reflected translates. Their odd
+cutoffs belong to that physical complement exactly, and their span
+is dense in the odd subspace. The same positive-square argument works
+even when the comparison operator itself does not preserve parity.
+\end{proof}
+
+Uniform boundedness and the chosen topology matter: escaping rank-one
+projections can have norm one and strong limit zero, while
+$n^2|e_n\rangle\langle e_n|$ shows why testing a dense family without
+a common norm bound is insufficient. A fixed closed nonnegative form
+has a related obstruction only when all the projected cutoff tests
+belong to its domain: lower semicontinuity then makes it vanish on
+$\phi^\perp$, not necessarily on the source direction. This assertion
+uses ordinary $L^2$ closedness and does not concern a Weil-metric
+quotient completion.
+
+The essential new project ingredient is totality of \emph{all fixed real
+translates}, rather than a single uniformly separated growing lattice.
+The classical translation-density and radical identities are not claimed
+as new. These results strengthen the reduction and exclude persistent
+positive comparisons; they do not supply an independent arithmetic
+lower bound. The live signed concentration construction remains open,
+now with the sufficient target \eqref{eq:v136-complement-target}.
+No G2 sign gap is closed. The finite sampler, its explicit graph defect,
+the physical endpoint and the existing Fourier scale factors are unchanged.
+
 \subsection*{Finite trial positivity and the exact omitted-tail correction}
 
 The trial-head term in Proposition~\ref{prop:v120-structured-uniform}
@@ -12351,6 +12632,18 @@ proves a growing complete near-radical block, and
 Corollary~\ref{cor:v135-coercivity-obstruction} excludes positive
 polynomial gaps on the specified complements.  Neither result fixes the
 sign of any near-zero eigenvalue.
+The sharper reduction in Corollary~\ref{cor:v136-complement-floor}
+now makes a uniform $O(1)$ signed lower error sufficient along a cofinal
+family; $o(1)$ remains sufficient but is not necessary for that proof.
+This applies only to a complete complementary form with the established
+small operator residual, including both parities. The arithmetic bound
+is still unproved. Ordinary strong-resolvent convergence cannot supply it:
+Proposition~\ref{prop:v136-resolvent-collapse} proves that convergence to
+zero unconditionally. Proposition~\ref{prop:v136-positive-comparison}
+also rules out a nonzero bounded positive comparison persisting strongly
+on the source complement with vanishing error. It does not exclude
+moving metrics, signed estimates, or other Hilbert-space realizations.
+
 The original even-sector reduction remains as follows.
 Propositions~\ref{prop:v130-continuum-cancellation} and
 \ref{prop:v130-remainder} reduce it to the exact arithmetic symbol
@@ -12412,6 +12705,20 @@ proved or its scope narrowed to the results that are already supported.
 
 \appendix
 \section{Reproducible finite checks}\label{app:numerics}
+
+\subsection*{Dense radicals and the finite-floor criterion (v1.36)}
+Lemma~\ref{lem:v136-total-radicals},
+Propositions~\ref{prop:v136-resolvent-collapse},
+\ref{prop:v136-bounded-floor}, \ref{prop:v136-positive-comparison}, and
+Corollary~\ref{cor:v136-complement-floor} are analytic results. The directory
+\texttt{g2\_radical\_topology/} contains their proof excerpt, candidate and
+literature audit, independent adversarial review, and exact countermodel
+checks. The exact-rational script in that directory checks the support-consistent forms
+$q_\pm[x]=\pm|\sum x_k|^2$. It verifies dense-radical approximation,
+negative Rayleigh amplification, and the exact resolvent-error formula.
+These models show why radical density and strong-resolvent convergence
+alone do not determine sign. They are not arithmetic Weil certificates.
+No finite-window numerical positivity result is added in this revision.
 
 \subsection*{Growing radical blocks and the full parity symbol (v1.35)}
 The analytic proofs are Propositions~\ref{prop:v135-both-parities} and
@@ -13648,6 +13955,11 @@ not external referee verification.
 \begin{thebibliography}{99}
 \small
 \setlength{\itemsep}{2pt}
+\bibitem{Wiener1932}
+N. Wiener,
+\emph{Tauberian Theorems},
+Annals of Mathematics, second series, 33 (1932), 1--100.
+
 \bibitem{Burnol2001}
 J.-F. Burnol,
 \emph{Sur certains espaces de Hilbert de fonctions entieres, lies a la transformation de Fourier et aux fonctions L de Dirichlet et de Riemann},

@@ -1,68 +1,70 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.35 (195 pages)**.
+Alexander Eastwood's complete working manuscript, **v1.36**.
 
-**G2 and the Riemann Hypothesis remain open.** No sign is inferred from the
-new near-zero spectral count.
+**G2 and the Riemann Hypothesis remain open.** The new result is a sharper
+conditional reduction; its uniform arithmetic hypothesis is unproved.
 
 ## Current manuscript
 
-This repository has **one live version**. The four canonical files below are
-replaced in place after each validated research update. Older manuscript
-copies, validation outputs and reproduction snapshots belong under
-[`archive/`](archive/README.md), not beside the current manuscript.
-Git history retains previous committed versions.
-
-
-- [Complete PDF](fixed_space_prime_action_v1.pdf)
 - [Complete LaTeX](fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](RH_G1_G2_research_log.md)
 - [Revision notes](v1_revision_notes.md)
-- [Checksums and provenance](github_sync/v1.35_manifest.json)
+- [Checksums and provenance](github_sync/v1.36_manifest.json)
 
-## New in v1.35
+There is one live manuscript at the root. Delivery is **LaTeX only** at the
+author's request. No new PDFs are generated or distributed going forward.
+The previous v1.35 PDF and superseded supporting files are retained only in
+the [archive](archive/README.md) and Git history.
 
-A uniformly conditioned physical lattice of translated radical sources gives
-an ordinary operator-residual bound `C log(lambda) exp(-lambda/100)` on a
-block of dimension proportional to `log(lambda)`. An odd subblock survives
-removal of any number of even image columns. This rules out positive
-uniform/polynomial gaps on the specified complements; it does not establish
-the asymptotic nonnegativity required by G2.
+## New in v1.36
 
-The exact continuum symbol now covers both complex parity sectors. Their
-signed concentration estimates remain unproved.
+A single finite constant `C`, independent of the growing window, in the
+complete ordinary-norm lower bound `q_a[f] >= -C ||f||^2` suffices for Weil
+positivity. The same is true on the complement of the actual source or the
+growing radical block when its complete operator residual tends to zero.
+Both parity sectors must be controlled; the physical low-concentration
+complement is not automatically this complement.
 
-- [Proof and novelty report](g2_growing_radical/research_report.md)
-- [Proof excerpt](g2_growing_radical/new_section.tex)
-- [Independent adversarial review](g2_growing_radical/adversarial_review.md)
-- [Diagnostic script](g2_growing_radical/check_growing_radical.py)
+The proof uses density of all real translates of the Gaussian radical. Any
+negative compact test would yield arbitrarily negative normalized tests by
+subtracting close ordinary-norm radical approximations. Thus the remaining
+signed arithmetic estimate may target a uniform **O(1)** negative error;
+proving an **o(1)** error is stronger than necessary.
 
-The radical construction is classical. This is a quantified continuation of
-the earlier fixed-rank obstruction, not a newly claimed positivity mechanism
-or a worldwide novelty claim. Diagnostics are not interval certificates.
+Also proved: the zero-extended complete Weil operators converge strongly in
+resolvent to zero, which does not determine their sign. Persistent bounded
+positive comparisons are ruled out under the stated domain and compression
+hypotheses. Exact positive and negative countermodels delimit these claims.
+
+- [Proof and novelty report](g2_radical_topology/research_report.md)
+- [Proof excerpt](g2_radical_topology/new_section.tex)
+- [Independent adversarial review](g2_radical_topology/adversarial_review.md)
+- [Exact countermodel checks](g2_radical_topology/check_topology_countermodels.py)
+- [Check results](g2_radical_topology/countermodel_results.json)
+
+This is a continuation of the radical route, not a new arithmetic positivity
+mechanism. Classical ingredients and nearby literature are distinguished in
+the report; worldwide novelty is not claimed. No G2 sign gap was closed.
 
 ## Saved-copy status
 
-The canonical ChatGPT file replacements for v1.35 failed during byte transfer.
-Those stable download links still identify v1.34; the validated v1.35 snapshot
-is available from this repository. No Library version number was advanced or
-invented, and the previous files were not overwritten by partial data.
+Canonical ChatGPT file replacements for the v1.36 LaTeX, log and notes failed
+during transfer. Those saved copies still represent v1.34; use this repository
+for the current v1.36 manuscript. No stale saved-file link is labelled v1.36.
 
 ## Reproduction archive status
 
-**The full v1.34 cumulative reproduction archive remains unavailable.** Its
-download returned a temporary server error. Older certificate directories
-from the repository's v1.24 snapshot are preserved under
-[`archive/v1.24_snapshot/`](archive/v1.24_snapshot/). The v1.35 proof materials
-above are complete for this update, but do not reconstruct the missing
-historical archive. This is not a complete cumulative reproduction release.
+The complete cumulative historical reproduction ZIP remains unavailable.
+Older certificate directories are preserved in `archive/v1.24_snapshot/`;
+v1.35 proof materials are in `archive/v1.35/`. Current proof materials above
+are complete for this update but do not reconstruct the missing archive.
+This repository snapshot is not a complete cumulative reproduction release.
 
-## Build
+## Validation
 
-```bash
-latexmk -pdf -interaction=nonstopmode -halt-on-error fixed_space_prime_action_v1.tex
-```
-
-The complete PDF was rebuilt, compiled without warnings and visually checked.
-PDF bytes may vary with build timestamps. Source and artifact hashes are
-recorded in the manifest.
+The new proofs received independent adversarial review. Countermodel
+identities were checked with exact rational arithmetic. The complete source
+compiled without warnings before the author changed delivery to LaTeX only.
+The already generated v1.36 PDF is not part of this published snapshot.
+No numerical computation is presented as a proof of an arithmetic sign.
