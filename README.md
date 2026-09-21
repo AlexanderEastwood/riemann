@@ -80,8 +80,8 @@ graph LR
   circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_circle_split</small>"]
   debranges["de Branges / Hermite-Biehler"]
   f1["function field / Hodge / F_1"]
-  nb["Nyman-Beurling-Baez-Duarte"]
-  li["Li / Keiper coefficients"]
+  nb["Nyman-Beurling-Baez-Duarte<br/><small>&#128193; evidence/diag_routes/nb</small>"]
+  li["Li / Keiper coefficients<br/><small>&#128193; evidence/diag_routes/li</small>"]
   dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)<br/><small>&#128193; evidence/diag_routes/dbn</small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
   simpleeven4["simple even ground of complete W_4 (proposed certificate)"]
@@ -139,6 +139,8 @@ graph LR
   click shiftbarrier "evidence/v138/" "evidence: evidence/v138"
   click metablind "evidence/v139/" "evidence: evidence/v139"
   click circle "evidence/diag_circle_split/" "evidence: evidence/diag_circle_split"
+  click nb "evidence/diag_routes/nb/" "evidence: evidence/diag_routes/nb"
+  click li "evidence/diag_routes/li/" "evidence: evidence/diag_routes/li"
   click dbn "evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn"
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
@@ -146,11 +148,11 @@ graph LR
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration,circle live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,dbn closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
-  class rh,fixedspace,g2,uniform,altroutes,nb,li,simpleeven4 open;
+  class rh,fixedspace,g2,uniform,altroutes,simpleeven4 open;
 ```
 <!-- research-map:end -->
 

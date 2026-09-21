@@ -269,7 +269,7 @@
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_circle_split",
-      "note": "certified positivity = Toeplitz kernel cancelling a Hankel kernel to 1e-75; parity sectors are T(phi)+-H(phi); Szego wrong-size not wrong-sign"
+      "note": "KMS predicts 4->11 negative eigenvalues from the line symbol; certified 0. Prime-free form is negative O(1): primes decide the sign by phase on the resolution lattice. Rate still open."
     },
     {
       "id": "debranges",
@@ -288,16 +288,18 @@
     {
       "id": "nb",
       "title": "Nyman-Beurling-Baez-Duarte",
-      "status": "open",
+      "status": "closed",
       "parent": "altroutes",
-      "note": "assessment + d_N table in progress"
+      "note": "no finite NB statement equivalent to W_lambda>=0; d_N certified to N=600, oscillates around C/log N; Burnol Thm 3.1 is the semantic lock",
+      "evidence": "evidence/diag_routes/nb"
     },
     {
       "id": "li",
       "title": "Li / Keiper coefficients",
-      "status": "open",
+      "status": "closed",
       "parent": "altroutes",
-      "note": "assessment + lambda_n table in progress"
+      "note": "Li class \u2229 Paley-Wiener = {0}: no window certifies any lambda_n; W_4>=0 gives windowed lambda_n^[log16] >= 0 only",
+      "evidence": "evidence/diag_routes/li"
     },
     {
       "id": "dbn",

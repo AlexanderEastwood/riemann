@@ -185,15 +185,33 @@ continuation, `W_4 >= 0` says the Weil screw function on
 extension to ℝ; RH says that extension is **unique and equals g**.
 Determinacy at any certified window would already be RH.
 
+### Li's criterion and Nyman–Beurling (assessed; closed)
+
+Li: the Bombieri–Lagarias test functions have Mellin transforms with a pole
+at 0, so the Li class meets the Paley–Wiener class of every finite window only
+in {0}; no window certificate constrains any `λ_n`. `W_4 >= 0` does give the
+windowed coefficients `λ_n^{[log 16]} >= 0` for all n. Nyman–Beurling: no
+finite statement is equivalent to `W_λ >= 0`; `d_N` was certified to N = 600
+and `d_N² log N` oscillates around `C = 2+γ−log 4π` with Burnol's bound making
+that rate sharp — no analogue of the v1.36 floor weakening exists there.
+Burnol's Thm 3.1 (co-Poisson complement = span of zero evaluators) is the one
+structural bridge, and it is a semantic lock, not a result.
+(`evidence/diag_routes/li/`, `evidence/diag_routes/nb/`)
+
 ### In Toeplitz–Hankel terms (`evidence/diag_circle_split/`)
 
 The certified matrix splits exactly as symbol + Toeplitz-structured
 commutator + Hankel reflection term. The reflection term alone makes the
 form negative by O(1); the Toeplitz commutator cancels it to 10^-75. The
-parity sectors are the pencils `T(φ) ± H(φ)` (Basor–Ehrhardt). A predicted
-wrong sign for the symbol-only (Szegő) estimate did **not** occur — the
-diagonal undersamples the negative lobes — and it is wrong by ~73 orders in
-size instead. Recorded as a failed prediction.
+parity sectors are the pencils `T(φ) ± H(φ)` (Basor–Ehrhardt). The symbol-only
+(Kac–Murdock–Szegő) estimate **is** wrong-signed once the line symbol is
+scanned properly: `β_λ` has a negative set of measure 12–16 at `t < 13`, so
+KMS predicts 4 → 11 negative eigenvalues at λ = 3 → 8 against a certified 0.
+The lobes recur with the lattice period `2π/L`, with the lattice on the
+crests and each deep lobe about 0.8 of a resolution cell wide. A prime-free
+control is negative by O(1): the primes decide the sign by phase on the
+window's resolution lattice. An earlier note here claiming the prediction
+failed sampled the circle symbol at the crests and was wrong.
 
 ### de Bruijn–Newman (assessed; closed)
 

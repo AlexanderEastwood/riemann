@@ -52,3 +52,49 @@ near a zero have width ~1/T ≈ 0.25, so the samples never land on them. The
 symbol-only estimate is wrong in SIZE by ~73 orders of magnitude, not in
 sign. For a floor/decay question that is the same failure — but it is not
 the one predicted, and it is recorded as such.
+
+---
+
+## Correction and two further diagnostics (later the same day)
+
+**The "failed prediction" above was itself wrong.** The diagonal `d_n` is the
+symbol sampled at the lattice `t_n = 2πn/L`, and those points sit on the
+positive *crests* of a symbol that is deeply negative between them. Scanning
+`β_λ(t)` on a fine grid (`symbol_scan.py`, `scan2.py`; validated against
+`sequences()` to `|β(t_n) − d_n| ≤ 1.5e-14`):
+
+| λ | L | min β | at t | negative measure (2-sided) | KMS count (L/2π)·\|neg\| | certified negative eigenvalues |
+|--:|--:|--:|--:|--:|--:|--:|
+| 3 | 2.197 | −4.86 | 0.55 | 11.88 | 4.15 | 0 |
+| 4 | 2.773 | −5.65 | 0.52 | 13.40 | 5.91 | 0 |
+| 6 | 3.584 | −6.54 | 0.47 | 14.18 | 8.09 | 0 |
+| 8 | 4.159 | −6.91 | 0.43 | 16.02 | 10.60 | 0 |
+
+Since `W_λ = P_a M_{β_a} P_a` (prop:v130-remainder), Kac–Murdock–Szegő
+predicts `(L/2π)·|{β<0}|` negative eigenvalues. **So the symbol-only estimate
+is wrong-signed, by 4 → 11 eigenvalues, growing ≈ 2.5 per unit L.** This is
+a numerical instance of the v1.39 information-loss obstruction.
+
+Lobe geometry: every negative lobe lies at `t < 13`, none near a zeta zero
+(nearest is 14.13); the lobes recur with period exactly `2π/L` — the lattice
+period — with the lattice points on the crests; the deep lobes have
+`width × L ≈ 4.5–5.4`, i.e. about 0.8 of one Fourier resolution cell `2π/L`
+of the window, at every λ tested. Depths fall geometrically along the train
+(λ=4: −5.65, −0.50, −0.15, −0.05, −0.01).
+
+**Prime-free control** (`noprime.py`; same matrix with the prime sum removed):
+
+| λ | lmin with primes (even) | lmin without primes (even) | (odd) |
+|--:|--:|--:|--:|
+| 3 | +3.6e-38 | −0.68 | −1.53 |
+| 4 | +3.7e-72 | −0.94 | −2.27 |
+| 6 | +1.8e-109 | −1.25 | −3.81 |
+| 8 | +6.3e-129 | −1.46 | −5.44 |
+
+Without primes the window form is negative by O(1), growing with λ. The
+primes *deepen* the low-frequency hole of the symbol (β(0.5): −3.6 → −6.8)
+and yet flip the operator's sign: they decide it by **phase on the window's
+resolution lattice**, not by depth. That is "arithmetic location" as a number.
+The super-exponential collapse of the positive `lmin` is therefore the residual
+of an O(1)-vs-O(1) cancellation, not a Landau–Widom property of a positive
+archimedean operator; the *rate* remains the open part of NS-7.
