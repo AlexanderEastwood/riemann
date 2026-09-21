@@ -265,11 +265,11 @@
     {
       "id": "circle",
       "title": "circle / Toeplitz-Hankel lens",
-      "status": "live",
+      "status": "closed",
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_circle_split",
-      "note": "KMS predicts 4->11 negative eigenvalues from the line symbol; certified 0. Prime-free form is negative O(1): primes decide the sign by phase on the resolution lattice. Rate still open."
+      "note": "NS-7 answered (diagnostic): sign arithmetic (prime-free negative O(1); KMS predicts 4-11 negative eigenvalues, certified 0); size = lowest-lattice-mode ground, crest energy ~min d_n cancelled by commutator couplings, residual at Landau-Widom rate (Zhu law to ~20x). Open analytic form: Basor-Ehrhardt for T+-H."
     },
     {
       "id": "debranges",

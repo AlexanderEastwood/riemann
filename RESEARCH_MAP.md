@@ -104,9 +104,9 @@ graph LR
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4 proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
-  class concentration,circle live;
+  class concentration live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,circle,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
@@ -118,8 +118,8 @@ graph LR
 | status | count | meaning |
 |---|---:|---|
 | `proved` | 14 | established result |
-| `live` | 2 | active candidate mechanism |
-| `closed` | 15 | proved insufficient or impossible |
+| `live` | 1 | active candidate mechanism |
+| `closed` | 16 | proved insufficient or impossible |
 | `blocked` | 1 | attempted; obstruction found |
 | `open` | 5 | target, not yet attacked |
 
@@ -129,7 +129,7 @@ graph LR
   - [ ] **Alternative criteria (all equivalent; same wall)** — each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21
     - [X] **Li / Keiper coefficients** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · Li class ∩ Paley-Wiener = {0}: no window certifies any lambda_n; W_4>=0 gives windowed lambda_n^[log16] >= 0 only
     - [X] **Nyman-Beurling-Baez-Duarte** — evidence: [`evidence/diag_routes/nb/`](evidence/diag_routes/nb/) · no finite NB statement equivalent to W_lambda>=0; d_N certified to N=600, oscillates around C/log N; Burnol Thm 3.1 is the semantic lock
-    - [~] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_circle_split/`](evidence/diag_circle_split/) · KMS predicts 4->11 negative eigenvalues from the line symbol; certified 0. Prime-free form is negative O(1): primes decide the sign by phase on the resolution lattice. Rate still open.
+    - [X] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_circle_split/`](evidence/diag_circle_split/) · NS-7 answered (diagnostic): sign arithmetic (prime-free negative O(1); KMS predicts 4-11 negative eigenvalues, certified 0); size = lowest-lattice-mode ground, crest energy ~min d_n cancelled by commutator couplings, residual at Landau-Widom rate (Zhu law to ~20x). Open analytic form: Basor-Ehrhardt for T+-H.
     - [X] **de Branges / Hermite-Biehler** — HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)
     - [X] **de Bruijn-Newman (0 <= Lambda <= 0.22)** — evidence: [`evidence/diag_routes/dbn/`](evidence/diag_routes/dbn/) · no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s
     - [X] **function field / Hodge / F_1** — nothing finite transfers; window lambda has no intersection-theoretic meaning

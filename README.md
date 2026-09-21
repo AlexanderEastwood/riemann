@@ -148,9 +148,9 @@ graph LR
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4 proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
-  class concentration,circle live;
+  class concentration live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,circle,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
