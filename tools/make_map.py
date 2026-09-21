@@ -13,6 +13,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC, OUT = ROOT / "research-map.json", ROOT / "RESEARCH_MAP.md"
 
+def _repo_url() -> str:
+    """Absolute web URL of the GitHub remote (for Mermaid click targets)."""
+    import subprocess, re
+    try:
+        u = subprocess.run(["git", "remote", "get-url", "origin"], cwd=ROOT,
+                           capture_output=True, text=True, check=True).stdout.strip()
+        m = re.search(r"github\.com[:/]([^/]+)/([^/.]+)", u)
+        if m:
+            return f"https://github.com/{m.group(1)}/{m.group(2)}"
+    except Exception:
+        pass
+    return "https://github.com/AlexanderEastwood/riemann"
+
+REPO_URL = _repo_url()
+
 STYLE = {
     "proved":  ("#1b5e20", "#a5d6a7", "proved"),
     "live":    ("#0d47a1", "#90caf9", "live"),
@@ -54,10 +69,13 @@ def main() -> int:
         if n.get("parent"):
             L.append(f'  {n["parent"]} --> {n["id"]}')
     L.append("")
+    # GitHub renders Mermaid in a sandboxed iframe (viewscreen.githubusercontent.com),
+    # so a RELATIVE click href resolves against that origin and 404s. Emit absolute
+    # repository URLs and open them in a new tab.
     for n in nodes:
         ev = n.get("evidence")
         if ev and ev != "MISSING":
-            L.append(f'  click {n["id"]} "{ev}/" "evidence: {ev}"')
+            L.append(f'  click {n["id"]} "{REPO_URL}/tree/main/{ev}/" "evidence: {ev}" _blank')
     L.append("")
     for status, (fg, bg, _) in STYLE.items():
         ids = [n["id"] for n in nodes if n["status"] == status]
