@@ -129,3 +129,78 @@ witnesses), so tone does not distinguish this project. Two things would:
   order for the truncated Weil quadratic form*, arXiv:2607.02828 (2026).
 - Connes, A., Consani, C., Moscovici, H., arXiv:2511.22755 (2025).
 - Yoshida; Connes–Consani — the classical `(log 2)/2` positivity range.
+
+---
+
+## Addendum, 2026-09-21: three more lenses on the same scalar
+
+Three independent route assessments (Connes–Consani–Moscovici's operator
+framework, de Branges / Hermite–Biehler theory, and a Toeplitz–Hankel
+decomposition of the certified matrix) all land on the same conclusion:
+the certified window statements are values of **one scalar**, and every
+classical theory names the remaining gap as the same thing.
+
+### In CCM's own notation (arXiv:2511.22755, Cor. 3.7–3.8)
+
+CCM define `μ_λ = inf spec A_λ` for exactly the form `QW_λ` this manuscript
+certifies, prove `μ_λ` is decreasing in λ, write *"we cannot assert that
+μ_λ ≥ 0"*, and prove `lim μ_λ = 0 ⇒ RH`. Hence, by monotonicity:
+
+    W_4 >= 0   ⟺   μ_λ >= 0  for every  λ <= 4,
+
+replacing "cannot assert" across a range 1.73× Zhu's certified window and
+beyond CCM's own λ = 3 numerics. The floors `W_λ >= −8·I` are lower bounds
+on `μ_5, μ_6, μ_8`. This is the cleanest positioning statement available and
+it is a target statement, not a shortcut: cofinal `μ_λ >= 0` is RH.
+
+A finite lemma this enables (proposed; see `NEXT_STEPS.md`): CCM Thm 5.10 and
+Connes–van Suijlekom Thm 6.1 (arXiv:2511.23257) need the ground state of
+`W_λ` to be **simple and even**. The manuscript proves this at λ = 3
+(`prop:v117-ground-order`) but not at λ = 4. Numerically it holds at λ = 4
+with an eight-order gap (even ground 3.7e-72, next even 1.4e-64, odd ground
+3.1e-68 — `evidence/diag_circle_split/`). Certifying it with the v117
+machinery would make CvS Thm 6.1 unconditional at λ = 4: the entire
+function `ξ̂_4` has only real zeros.
+
+### In de Branges / Krein–Langer terms (Suzuki, arXiv:2606.09096)
+
+Suzuki proves unconditionally that at every window, after shifting by any
+`μ < λ_a := inf σ(A_a)`, the windowed Weil space is a de Branges space with
+real-zero structure functions. The Hermite–Biehler structure therefore
+exists whether or not the form is positive; the sign is carried entirely by
+`λ_a`, which de Branges data cannot produce. Exact dictionary:
+
+    W_λ >= 0      ⟺  λ_a >= 0  ⟺  g|(−2a, 2a) is a screw function on the interval
+    W_λ >= −8·I   ⟺  shift 8 makes the windowed space a de Branges space
+
+with `g` the Weil screw function and `a = log λ`. Conrey–Li (IMRN 2000)
+refuted de Branges' own positivity conditions on ζ-built spaces numerically
+(34th zero; `ξ(1+282i)/ξ(2+282i) < 0`); nothing unconditional survives there.
+Lagarias / Suzuki give the RH-conditional identification `H_W ≅ K(Θ_ξ)` with
+no converse. **No de Branges tool supplies a positivity mechanism.**
+
+What the theory does supply is a name for the wall. By Krein–Langer
+continuation, `W_4 >= 0` says the Weil screw function on
+`(−2 log 4, 2 log 4) = (−2.77, 2.77)` has **at least one** positive-definite
+extension to ℝ; RH says that extension is **unique and equals g**.
+Determinacy at any certified window would already be RH.
+
+### In Toeplitz–Hankel terms (`evidence/diag_circle_split/`)
+
+The certified matrix splits exactly as symbol + Toeplitz-structured
+commutator + Hankel reflection term. The reflection term alone makes the
+form negative by O(1); the Toeplitz commutator cancels it to 10^-75. The
+parity sectors are the pencils `T(φ) ± H(φ)` (Basor–Ehrhardt). A predicted
+wrong sign for the symbol-only (Szegő) estimate did **not** occur — the
+diagonal undersamples the negative lobes — and it is wrong by ~73 orders in
+size instead. Recorded as a failed prediction.
+
+### The unification
+
+A certified window is **positivity of a truncated moment problem** whose
+sections are `T(φ) ± H(φ)`; RH is the **determinacy** of that moment
+problem. Positivity of finitely many sections never decides determinacy.
+That is why no finite list of windows can close G2, stated in language
+(Krein–Langer on one side, Szegő–Widom / Basor–Ehrhardt on the other) that
+predates this project. It does not move RH; it stops "one more window"
+arguments and it tells the next attempt what kind of statement it must be.

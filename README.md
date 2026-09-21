@@ -76,6 +76,15 @@ graph LR
   floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small><br/><small>&#128193; evidence/v138</small>"]
   shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small><br/><small>&#128193; evidence/v138</small>"]
   metablind["Scoped information-loss obstructions<br/><small>thm:v139-probe-relaxation; thm:v139-protected-orbit</small><br/><small>&#128193; evidence/v139</small>"]
+  altroutes["Alternative criteria (all equivalent; same wall)"]
+  circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_circle_split</small>"]
+  debranges["de Branges / Hermite-Biehler"]
+  f1["function field / Hodge / F_1"]
+  nb["Nyman-Beurling-Baez-Duarte"]
+  li["Li / Keiper coefficients"]
+  dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)"]
+  ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
+  simpleeven4["simple even ground of complete W_4 (proposed certificate)"]
 
   rh --> g1
   rh --> fixedspace
@@ -104,6 +113,15 @@ graph LR
   floor --> floortest
   floor --> shiftbarrier
   uniform --> metablind
+  rh --> altroutes
+  altroutes --> circle
+  altroutes --> debranges
+  altroutes --> f1
+  altroutes --> nb
+  altroutes --> li
+  altroutes --> dbn
+  w4 --> ccmmu
+  w4 --> simpleeven4
 
   click g1 "evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate"
   click w3 "evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate"
@@ -120,17 +138,18 @@ graph LR
   click floortest "evidence/v138/" "evidence: evidence/v138"
   click shiftbarrier "evidence/v138/" "evidence: evidence/v138"
   click metablind "evidence/v139/" "evidence: evidence/v139"
+  click circle "evidence/diag_circle_split/" "evidence: evidence/diag_circle_split"
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
-  class concentration live;
+  class concentration,circle live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1 closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
-  class rh,fixedspace,g2,uniform open;
+  class rh,fixedspace,g2,uniform,altroutes,nb,li,dbn,simpleeven4 open;
 ```
 <!-- research-map:end -->
 

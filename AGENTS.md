@@ -127,6 +127,16 @@ No file over 100 MB — GitHub rejects it.
 `evidence/MISSING.md`. Never let the manuscript imply an artifact is archived
 when it is not. This is currently an open audit finding (MAJOR M1).
 
+**Before starting any task, claim it in `NEXT_STEPS.md`** — write your name
+in the `owner` column in its own small commit, then work. Two agents push
+here concurrently; an unclaimed task gets done twice. Add a row for anything
+not listed; never delete rows; record the version that finished a task.
+
+**Diagnostics that are not certificates** go in `evidence/diag_<topic>/` with
+a `results.md` whose first line says so. They may use midpoint eigenvalues,
+float scans or uncertified solves — but only under that label, never under
+`evidence/vNNN/`, and never cited as a bound.
+
 After adding evidence:
 
 ```sh

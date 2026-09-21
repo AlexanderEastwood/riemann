@@ -254,6 +254,71 @@
       "branch": "result/v139-meta-obstruction",
       "evidence": "evidence/v139",
       "note": "Full-histogram cap/probe relaxation fails; protected finite-head spectral orientation fails. Does not subsume all ten closures."
+    },
+    {
+      "id": "altroutes",
+      "title": "Alternative criteria (all equivalent; same wall)",
+      "status": "open",
+      "parent": "rh",
+      "note": "each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21"
+    },
+    {
+      "id": "circle",
+      "title": "circle / Toeplitz-Hankel lens",
+      "status": "live",
+      "parent": "altroutes",
+      "branch": "lane/circle-toeplitz",
+      "evidence": "evidence/diag_circle_split",
+      "note": "certified positivity = Toeplitz kernel cancelling a Hankel kernel to 1e-75; parity sectors are T(phi)+-H(phi); Szego wrong-size not wrong-sign"
+    },
+    {
+      "id": "debranges",
+      "title": "de Branges / Hermite-Biehler",
+      "status": "closed",
+      "parent": "altroutes",
+      "note": "HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)"
+    },
+    {
+      "id": "f1",
+      "title": "function field / Hodge / F_1",
+      "status": "closed",
+      "parent": "altroutes",
+      "note": "nothing finite transfers; window lambda has no intersection-theoretic meaning"
+    },
+    {
+      "id": "nb",
+      "title": "Nyman-Beurling-Baez-Duarte",
+      "status": "open",
+      "parent": "altroutes",
+      "note": "assessment + d_N table in progress"
+    },
+    {
+      "id": "li",
+      "title": "Li / Keiper coefficients",
+      "status": "open",
+      "parent": "altroutes",
+      "note": "assessment + lambda_n table in progress"
+    },
+    {
+      "id": "dbn",
+      "title": "de Bruijn-Newman (0 <= Lambda <= 0.22)",
+      "status": "open",
+      "parent": "altroutes",
+      "note": "assessment + Polymath15 reproduction in progress"
+    },
+    {
+      "id": "ccmmu",
+      "title": "W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4",
+      "status": "proved",
+      "parent": "w4",
+      "note": "CCM arXiv:2511.22755 Cor 3.7-3.8 write 'we cannot assert mu_lambda >= 0'; monotone in lambda; positioning statement"
+    },
+    {
+      "id": "simpleeven4",
+      "title": "simple even ground of complete W_4 (proposed certificate)",
+      "status": "open",
+      "parent": "w4",
+      "note": "NS-5: v117 machinery; numerically 8-order gap; would make CvS Thm 6.1 unconditional at lambda=4 (xi-hat_4 real zeros)"
     }
   ]
 }

@@ -33,6 +33,15 @@ graph LR
   floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small><br/><small>&#128193; evidence/v138</small>"]
   shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small><br/><small>&#128193; evidence/v138</small>"]
   metablind["Scoped information-loss obstructions<br/><small>thm:v139-probe-relaxation; thm:v139-protected-orbit</small><br/><small>&#128193; evidence/v139</small>"]
+  altroutes["Alternative criteria (all equivalent; same wall)"]
+  circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_circle_split</small>"]
+  debranges["de Branges / Hermite-Biehler"]
+  f1["function field / Hodge / F_1"]
+  nb["Nyman-Beurling-Baez-Duarte"]
+  li["Li / Keiper coefficients"]
+  dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)"]
+  ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
+  simpleeven4["simple even ground of complete W_4 (proposed certificate)"]
 
   rh --> g1
   rh --> fixedspace
@@ -61,6 +70,15 @@ graph LR
   floor --> floortest
   floor --> shiftbarrier
   uniform --> metablind
+  rh --> altroutes
+  altroutes --> circle
+  altroutes --> debranges
+  altroutes --> f1
+  altroutes --> nb
+  altroutes --> li
+  altroutes --> dbn
+  w4 --> ccmmu
+  w4 --> simpleeven4
 
   click g1 "evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate"
   click w3 "evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate"
@@ -77,37 +95,47 @@ graph LR
   click floortest "evidence/v138/" "evidence: evidence/v138"
   click shiftbarrier "evidence/v138/" "evidence: evidence/v138"
   click metablind "evidence/v139/" "evidence: evidence/v139"
+  click circle "evidence/diag_circle_split/" "evidence: evidence/diag_circle_split"
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
-  class concentration live;
+  class concentration,circle live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1 closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
-  class rh,fixedspace,g2,uniform open;
+  class rh,fixedspace,g2,uniform,altroutes,nb,li,dbn,simpleeven4 open;
 ```
 
 ## Status
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 12 | established result |
-| `live` | 1 | active candidate mechanism |
-| `closed` | 10 | proved insufficient or impossible |
+| `proved` | 13 | established result |
+| `live` | 2 | active candidate mechanism |
+| `closed` | 12 | proved insufficient or impossible |
 | `blocked` | 1 | attempted; obstruction found |
-| `open` | 4 | target, not yet attacked |
+| `open` | 9 | target, not yet attacked |
 
 ## Nodes
 
 - [ ] **RH** — via Weil positivity
+  - [ ] **Alternative criteria (all equivalent; same wall)** — each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21
+    - [ ] **Li / Keiper coefficients** — assessment + lambda_n table in progress
+    - [ ] **Nyman-Beurling-Baez-Duarte** — assessment + d_N table in progress
+    - [~] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_circle_split/`](evidence/diag_circle_split/) · certified positivity = Toeplitz kernel cancelling a Hankel kernel to 1e-75; parity sectors are T(phi)+-H(phi); Szego wrong-size not wrong-sign
+    - [X] **de Branges / Hermite-Biehler** — HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)
+    - [ ] **de Bruijn-Newman (0 <= Lambda <= 0.22)** — assessment + Polymath15 reproduction in progress
+    - [X] **function field / Hodge / F_1** — nothing finite transfers; window lambda has no intersection-theoretic meaning
   - [ ] **Fixed-space / Burnol Sonine route** — `lane/fixed-space` · needs evaluator estimates + closed-operator realization
   - [x] **G1 (weak)** — `thm:v14-radical` · `lane/g1` · evidence: [`evidence/v124/g2_source_certificate/`](evidence/v124/g2_source_certificate/) · closed for the repaired prolate source
   - [ ] **G2: cofinal -o(1)** — `prop:v121-cofinal-rh` · eps_lambda -> 0 cofinally IS RH
     - [x] **Fixed-window certificates** — `lane/window-scaling` · no finite list is cofinal
       - [x] **W_4 >= 0 both sectors** — `prop:v126-full-window` · evidence: [`evidence/v126/`](evidence/v126/) · only positive result; evidence restored and verified
+        - [x] **W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4** — CCM arXiv:2511.22755 Cor 3.7-3.8 write 'we cannot assert mu_lambda >= 0'; monotone in lambda; positioning statement
+        - [ ] **simple even ground of complete W_4 (proposed certificate)** — NS-5: v117 machinery; numerically 8-order gap; would make CvS Thm 6.1 unconditional at lambda=4 (xi-hat_4 real zeros)
       - [x] **lambda=3** — `prop:v116-window-positive` · evidence: [`evidence/v124/g2_certificate/`](evidence/v124/g2_certificate/)
       - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete` · evidence: [`evidence/v126/`](evidence/v126/)
       - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement` · evidence: [`evidence/v126/`](evidence/v126/)

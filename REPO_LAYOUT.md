@@ -15,6 +15,8 @@ manuscript/
 evidence/
   v124/ v135/ v136/ v137/ ...       artifacts, ONE DIRECTORY PER VERSION
   MISSING.md                        ledger of cited-but-absent artifacts
+  diag_<topic>/                     diagnostics that are NOT certificates, labeled as such
+NEXT_STEPS.md                       shared task board: claim before you start
 manifest/
   v1.NN_manifest.json               sha256 of every artifact in that version
 audits/
