@@ -25,7 +25,7 @@ Status vocabulary: `open` · `claimed` · `in-progress` · `done (vN.NN)` ·
 | NS-12 | Function-field / Hodge / F_1 route | Claude | closed — no angle | nothing finite transfers; the operator side gave NS-5 |
 | NS-14 | CCM step (b) at finite λ: compute the real zeros of `ξ̂_3` and `ξ̂_4` from the certified ground vectors (NS-5 makes them provably real) and compare with γ_1, γ_2, … = 14.13, 21.02, 25.01, …; also the zero spacing vs λ | Claude | in-progress | a table of the first ~10 real zeros of `ξ̂_λ` at λ=3,4 against the zeta ordinates, with the discrepancy trend; either outcome is a finding (tracking validates CCM's shape; not tracking locates the difficulty in step (b)) |
 | NS-13 | Standing rule: do **not** compute λ = 10, 12 windows or floors past λ=8 | — | rule | `prop:v121-cofinal-rh`, `prop:v138-shifted-floor` |
-| NS-15 | Review current evidence, dependencies and active work; recommend the next NS to tackle | Codex | claimed | Prioritized recommendation delivered to Alex, with concrete completion criteria; no manuscript version required |
+| NS-15 | Review current evidence, dependencies and active work; recommend the next NS to tackle | Codex | done (v1.40 review; no new result) | Recommend NS-2 next: reproduce CCM section 6 at lambda=sqrt(12), N=120, with the exact normalization dictionary, two-precision replay and a discrepancy statement. NS-14 is already in progress; NS-4b's table and concentration exclusion already exist in v139/adversarial_review.md sections 6–7. Follow with NS-3/6, correcting the stale comparison; retain NS-1 as blocked. The next analytic target remains a uniform finite signed-concentration floor in both parities, with all couplings controlled. |
 
 ## Lanes
 
