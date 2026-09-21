@@ -1,0 +1,127 @@
+\subsection*{A certificate for the complete fixed-window form}
+The preceding estimates now permit a signed certificate that includes
+the entire Fourier complement. This is a computer-assisted result for
+one physical window; its finite arithmetic and its analytic tail bounds
+are both part of the proof.
+
+\begin{proposition}[Complete positivity at $\lambda=3$]
+\label{prop:v116-window-positive}
+For the canonical closed Weil form of
+Proposition~\ref{prop:v114-weil-core}, at $\lambda=3$ there is a
+constant $\epsilon_3>0$ such that
+\[
+ QW_3(f,f)\ge\epsilon_3\|f\|_2^2
+\]
+for every vector in its form domain. The result includes both parity
+sectors and all complex vectors. No numerical value of $\epsilon_3$
+is asserted here. In particular, the LDL pivots below are not lower
+bounds for the smallest eigenvalue.
+\end{proposition}
+\begin{proof}[Analytic reduction and interval certificate]
+Use the actual unshifted orthonormal Fourier basis on $[0,L]$,
+$L=2\log3$, and its orthonormal parity combinations
+$e_0$, $(e_m+e_{-m})/\sqrt2$ and
+$(e_m-e_{-m})/\sqrt2$. The real matrix commutes with reflection, so
+positivity in both sectors implies positivity for the whole complex
+space. For each sector split the head at $N$, use an intermediate
+inverse-action support through $M$, and compute residual rows through
+$J$, with the following exact parameters:
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+Sector & Head dimension & $N$ & $M$ & $J$ & Moment order $r$\\
+\midrule
+Even &257&256&512&4096&80\\
+Odd  &512&512&1024&4096&100\\
+\bottomrule
+\end{tabular}
+\end{center}
+The tail lower functions $g_n$ are those of
+Proposition~\ref{prop:v116-diagonal-inverse}, with the common base cut $N$
+retained in every loss term. In particular their smallest values exceed
+$2.0690$ in the even case and $1.1907$ in the odd case.
+
+Let $T_M$ be the compression to $N<|n|\le M$, and let $B_M$ be the
+corresponding head-to-tail block. A 768-bit Arb interval solve encloses
+$T_M^{-1}B_M$; freeze its midpoint as the exact dyadic matrix $Z$.
+The certificate then uses the complete expression
+\[
+ K_Z=F-B_M^*Z-Z^*B_M+Z^*T_MZ,
+\]
+and computes every residual row $N<|n|\le J$ from
+$R_n=(\mathsf W_3G)_n$, where $G=I_{\rm head}-Z$.
+This retains the nonzero intermediate residual from freezing $Z$.
+The correct separate logarithmic diagonal is used whenever $n=m$.
+For the remote rows, use
+Proposition~\ref{prop:v116-remote-moment} with
+\[
+ B_* =\frac{4/3+P_3+1+\pi/4}{\pi},\qquad
+ P_3=\sum_{1<m\le9}\frac{\Lambda(m)}{\sqrt m},\qquad
+ \tau=10^{-6}.
+\]
+The optional full-length term in this conservative $B_*$ does not
+enter the actual matrix. It only enlarges the absolute sequence bound.
+The squared geometric remainder factors satisfy
+\[
+ \delta^2_{\rm even}<1.656\cdot10^{-148},\qquad
+ \delta^2_{\rm odd}<3.288\cdot10^{-124}.
+\]
+The full matrix majorant $U_{\rm remote}$, including its leading
+moment terms, is retained; these small remainder factors alone are not
+estimates for the whole remote residual.
+
+Proposition~\ref{prop:v116-directional-schur} gives the finite lower form
+\begin{equation}\label{eq:v116-certified-lower}
+ \mathcal L=K_Z-
+ \sum_{N<|n|\le J}\frac{R_n^*R_n}{g_n}
+ -\frac{U_{\rm remote}}{g_{J+1}}
+ \preceq F-B^*T^{-1}B.
+\end{equation}
+In a parity basis the sum uses one normalized row per positive index;
+the remote formula is evaluated in the isometric full-index embedding.
+There is no additional factor two or omitted opposite-sign tail.
+Interval LDL decomposition certifies every pivot of $\mathcal L$ to
+be strictly positive. The smallest pivot enclosures are contained in
+\[
+ (9.17498,9.17499)\cdot10^{-9}\quad\hbox{(257 even pivots)},
+ \qquad
+ (9.68026,9.68027)\cdot10^{-8}\quad\hbox{(512 odd pivots)}.
+\]
+The reproducibility bundle records every pivot, the exact dyadic
+witnesses, their hashes, the matrix assembly, and all analytic error
+constants. Replaying both identical witnesses at 896-bit precision
+again certifies all pivots positive.
+
+For completeness, the coefficient evaluation does not truncate an
+uncontrolled archimedean series. With $a_k=2k+1/2$, the exact
+digamma and trigamma expressions from
+\eqref{eq:v115-arch-exact} leave exponentially weighted sums.
+After $k=0,\ldots,127$, put $a_{128}=256+1/2$ and
+$e_{128}=3^{-513}$. The radii added to the sine sequence and
+complete archimedean diagonal respectively are
+\[
+ \frac{e_{128}}{2a_{128}(1-1/81)},\qquad
+ \frac{2e_{128}}{La_{128}^2(1-1/81)}.
+\]
+They follow from $t/(a^2+t^2)\le1/(2a)$ and
+$|a^2-t^2|/(a^2+t^2)^2\le1/a^2$, uniformly in frequency.
+The full-length $m=9$ prime translation is exactly zero; every
+shorter prime-power shift is present. All remaining function evaluations
+and matrix operations use outward ball enclosures.
+
+Thus the exact Schur complement is positive definite in each finite
+head and $T\succeq g_{N+1}I>0$ on its entire complement. Completing
+the form square proves coercivity, since the triangular map
+$(x,y)\mapsto(x,y+T^{-1}Bx)$ is boundedly invertible and the finite
+positive Schur matrix has a positive smallest eigenvalue. The established
+Fourier form core extends the result to the complete closed form domain.
+No zero-location or Weil-positivity assumption is used.
+\end{proof}
+
+This closes the signed head/complement obligation at this one window.
+It does not prove a bound along unbounded $\lambda$, identify the
+actual lowest vector with the repaired source, or supply its endpoint
+stability. The small ordinary source residual remains insufficient for
+those assertions. The corrected sampler's graph defect and the separate
+full-strip transfer obligations remain unchanged. G2 and RH remain open.
+

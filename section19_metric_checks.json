@@ -1,0 +1,148 @@
+{
+  "scope": "Rational-model finite algebra checks only; no zeta zeros, Weil positivity or RH claim.",
+  "first_slot_linear": true,
+  "jordan_chain_length": 2,
+  "rows": [
+    {
+      "L": 8.0,
+      "core_index": 3,
+      "shell_index": 16,
+      "errors": {
+        "graph_identity": 2.051948766753269e-15,
+        "self_adjoint_metric": 1.0421525870014297e-17,
+        "projection_identity": 1.647906351293059e-16,
+        "source_annihilation": 8.431720145581574e-18,
+        "shell_graph_annihilation": 0.0,
+        "lyapunov_budget": 4.0775126587178684e-17,
+        "commutator_only_budget": 4.117588211919312e-17,
+        "commutator_variance": 2.220446049250313e-16,
+        "projected_graph_source": 6.598935757176416e-17
+      },
+      "pullback_min_eigenvalue": 0.0002559799145344026,
+      "commutator_norm": 0.9765358967967199,
+      "graph_error_norm": 15.497530003899309,
+      "polynomial_resolvent_checks": [
+        {
+          "m": 0,
+          "identity_error": 8.881784197001252e-16,
+          "max_grid_error": 4.330925169949095,
+          "proved_upper_bound": 4.331090172411557
+        },
+        {
+          "m": 1,
+          "identity_error": 8.95090418262362e-16,
+          "max_grid_error": 4.314253050877357,
+          "proved_upper_bound": 4.314418678758792
+        },
+        {
+          "m": 2,
+          "identity_error": 9.155133597044475e-16,
+          "max_grid_error": 4.297645111985012,
+          "proved_upper_bound": 4.297811358025443
+        },
+        {
+          "m": 4,
+          "identity_error": 1.7798229048217483e-15,
+          "max_grid_error": 4.264620787429988,
+          "proved_upper_bound": 4.2647882481947335
+        }
+      ],
+      "source_free_lyapunov_norm": 0.024123814207036413,
+      "eigenvector_relative_defect": 0.4600000000000001
+    },
+    {
+      "L": 16.0,
+      "core_index": 7,
+      "shell_index": 28,
+      "errors": {
+        "graph_identity": 2.081233428419416e-15,
+        "self_adjoint_metric": 2.7344136006067758e-17,
+        "projection_identity": 4.102988277644992e-16,
+        "source_annihilation": 1.001289289607338e-17,
+        "shell_graph_annihilation": 0.0,
+        "lyapunov_budget": 1.580641968154718e-17,
+        "commutator_only_budget": 1.610305174496935e-17,
+        "commutator_variance": 4.440892098500626e-16,
+        "projected_graph_source": 1.7514182373722116e-16
+      },
+      "pullback_min_eigenvalue": 0.0008407315733346852,
+      "commutator_norm": 0.9974132902698324,
+      "graph_error_norm": 14.380390280007806,
+      "polynomial_resolvent_checks": [
+        {
+          "m": 0,
+          "identity_error": 8.881784197001252e-16,
+          "max_grid_error": 4.330925169949095,
+          "proved_upper_bound": 4.331090172411557
+        },
+        {
+          "m": 1,
+          "identity_error": 8.95090418262362e-16,
+          "max_grid_error": 4.314253050877357,
+          "proved_upper_bound": 4.314418678758792
+        },
+        {
+          "m": 2,
+          "identity_error": 9.155133597044475e-16,
+          "max_grid_error": 4.297645111985012,
+          "proved_upper_bound": 4.297811358025443
+        },
+        {
+          "m": 4,
+          "identity_error": 1.7798229048217483e-15,
+          "max_grid_error": 4.264620787429988,
+          "proved_upper_bound": 4.2647882481947335
+        }
+      ],
+      "source_free_lyapunov_norm": 0.015983085094641532,
+      "eigenvector_relative_defect": 0.46
+    },
+    {
+      "L": 32.0,
+      "core_index": 15,
+      "shell_index": 60,
+      "errors": {
+        "graph_identity": 1.7505558966141955e-15,
+        "self_adjoint_metric": 4.886338471005666e-17,
+        "projection_identity": 5.572240982139722e-16,
+        "source_annihilation": 2.1787250609590977e-17,
+        "shell_graph_annihilation": 0.0,
+        "lyapunov_budget": 2.2253880775117323e-17,
+        "commutator_only_budget": 2.228140980418793e-17,
+        "commutator_variance": 0.0,
+        "projected_graph_source": 1.372563360793287e-16
+      },
+      "pullback_min_eigenvalue": 0.0008955758319135523,
+      "commutator_norm": 1.007013855773762,
+      "graph_error_norm": 14.792512852379097,
+      "polynomial_resolvent_checks": [
+        {
+          "m": 0,
+          "identity_error": 8.881784197001252e-16,
+          "max_grid_error": 4.330925169949095,
+          "proved_upper_bound": 4.331090172411557
+        },
+        {
+          "m": 1,
+          "identity_error": 8.95090418262362e-16,
+          "max_grid_error": 4.314253050877357,
+          "proved_upper_bound": 4.314418678758792
+        },
+        {
+          "m": 2,
+          "identity_error": 9.155133597044475e-16,
+          "max_grid_error": 4.297645111985012,
+          "proved_upper_bound": 4.297811358025443
+        },
+        {
+          "m": 4,
+          "identity_error": 1.7798229048217483e-15,
+          "max_grid_error": 4.264620787429988,
+          "proved_upper_bound": 4.2647882481947335
+        }
+      ],
+      "source_free_lyapunov_norm": 0.016590171152428796,
+      "eigenvector_relative_defect": 0.46
+    }
+  ]
+}

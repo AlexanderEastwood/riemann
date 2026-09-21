@@ -1,0 +1,177 @@
+\subsection*{A sharper positive Fourier complement at the certified window}
+The previous bound loses constants by bounding each place on the full
+space. On the omitted Fourier tail one can retain the limiting
+archimedean commutator, the physical incidence of prime shifts, and the
+decay of the negative pole vector. These are bounds for the same Weil
+operator and its original Fourier projection.
+
+For $L=2\log\lambda$ put
+\begin{align}
+ R_L&=\frac{e^{-L/2}}{1-e^{-2L}},&
+ C_L&=\max\{1,1/4+R_L\},\notag\\
+ E_L(t)&=\frac1{15t}+\frac7{2t^2}
+       +\frac\pi{2Lt}+\frac{2+2R_L}{Lt^2},\qquad t>0.
+ \label{eq:v115-arch-errors}
+\end{align}
+Define the weighted prime degree
+\begin{equation}\label{eq:v115-prime-degree}
+ M_\lambda=\mathop{\rm ess\,sup}_{0<x<L}
+ \left\{\sum_{\substack{1<m<\lambda^2\\\log m\le x}}
+                    \frac{\Lambda(m)}{\sqrt m}
+       +\sum_{\substack{1<m<\lambda^2\\\log m\le L-x}}
+                    \frac{\Lambda(m)}{\sqrt m}\right\}.
+\end{equation}
+The strict upper cut omits only a possible full-length translation,
+which is zero on $L^2([0,L])$.
+
+\begin{proposition}[A practical positive omitted complement]
+\label{prop:v115-sharp-tail}
+For $N\ge1$ let $t_*=2\pi(N+1)/L$, and set
+\begin{align}
+ \Gamma_{\lambda,N}^{\rm even}
+   &=\log\frac{N+1}{L}-M_\lambda
+                -\frac{2C_L}{t_*}-E_L(t_*),\notag\\
+ \Gamma_{\lambda,N}^{\rm all}
+   &=\Gamma_{\lambda,N}^{\rm even}-\frac\pi2
+                   -\frac{4\sinh^2(L/4)L}{\pi^2N}.
+ \label{eq:v115-sharp-tail}
+\end{align}
+For every form-domain vector $f$ whose Fourier coefficients vanish on
+$|n|\le N$,
+\[
+ QW_\lambda(f,f)\ge\Gamma_{\lambda,N}^{\rm all}\|f\|_2^2.
+\]
+For an inversion-even $f$, the stronger lower bound with
+$\Gamma_{\lambda,N}^{\rm even}$ holds. In particular, at the actual
+window $\lambda=3$,
+\begin{equation}\label{eq:v115-lambda3-tail}
+ \Gamma_{3,256}^{\rm all}>0.0148,\qquad
+ \Gamma_{3,256}^{\rm even}>1.5867,\qquad
+ \Gamma_{3,512}^{\rm all}>0.7085.
+\end{equation}
+These inequalities control the entire omitted complement, not merely a
+finite further block.
+\end{proposition}
+\begin{proof}
+Write $a_k=2k+1/2$ and use the exact Fourier-grid series for $S_n$
+in the proof of Proposition~\ref{prop:v114-weil-core}.
+For $t>0$, the function $x\mapsto t/(x^2+t^2)$ decreases on $x>0$.
+Comparing its values on $1/2+2\mathbb N$ with its integral gives
+\[
+ \frac\pi4-\frac1{4t}
+ \le\sum_{k\ge0}\frac{t}{a_k^2+t^2}
+ \le\frac\pi4+\frac1t.
+\]
+The exponentially weighted part of $S_n$ is nonnegative and at most
+$R_L/|t_n|$. Oddness therefore proves
+\begin{equation}\label{eq:v115-S-sharp}
+ \left|S_n-\frac\pi4\operatorname{sgn}n\right|
+       \le\frac{C_L}{|t_n|}\qquad(n\ne0).
+\end{equation}
+On the tail, the archimedean off-diagonal multiplier is consequently
+$b_n^{\rm arch}=\operatorname{sgn}(n)/4+e_n$ with
+$\|e\|_\infty\le C_L/(\pi t_*)$.
+Since the compressed discrete Hilbert transform has norm at most $\pi$,
+its commutator has norm at most $\pi/2+2C_L/t_*$.
+For even coefficients the limiting commutator is instead positive:
+under the normalized identification with positive indices its matrix is
+\[
+ K_{nm}=\frac1{2(n+m)},\qquad n,m>N.
+\]
+Positivity follows from
+$1/(n+m)=\int_0^1x^{n+m-1}\,dx$. Thus only $2C_L/t_*$ is lost in
+the even sector. This uses the unshifted Fourier basis of
+\eqref{eq:v114-weil-decomposition}; translation to centered physical
+coordinates conjugates by $(-1)^n$ and preserves both parity and the
+positive quadratic form.
+
+Next retain the complete archimedean diagonal. Its exact series, already
+used in the independent matrix certificate, gives for
+$z=1/4+it/2$ and $t=|t_n|>0$,
+\begin{equation}\label{eq:v115-arch-exact}
+ -A_n=\Re\psi_0(z)-\log\pi+\frac{\Re\psi_1(z)}{2L}
+ -\frac2L\sum_{k\ge0}e^{-a_kL}
+                   \frac{a_k^2-t^2}{(a_k^2+t^2)^2}.
+\end{equation}
+Here $\psi_0$ and $\psi_1$ are digamma and trigamma.
+Binet's exact integral formula~\cite[eq.~5.9.15]{NISTDigamma} at
+$w=z+1=5/4+it/2$ has remainder of modulus at most
+\[
+ 2\int_0^\infty\frac{u\,du}
+ {|u^2+w^2|(e^{2\pi u}-1)}
+ \le\frac8{5t}\int_0^\infty\frac{u\,du}{e^{2\pi u}-1}
+ =\frac1{15t},
+\]
+since $|u^2+w^2|\ge5t/4$. The recurrence
+$\psi_0(z)=\psi_0(z+1)-1/z$, together with
+$\Re\log w\ge\log(t/2)$,
+$\Re(1/(2w))\le5/(2t^2)$, and $\Re(1/z)\le1/t^2$, yields
+\[
+ \Re\psi_0(z)\ge\log(t/2)-\frac1{15t}-\frac7{2t^2}.
+\]
+The convergent trigamma series and a decreasing-integrand comparison give
+\[
+ |\psi_1(z)|\le\sum_{k\ge0}\frac1{(k+1/4)^2+t^2/4}
+                 \le\frac4{t^2}+\frac\pi t.
+\]
+The last term in \eqref{eq:v115-arch-exact} has modulus at most
+$2R_L/(Lt^2)$. Hence
+\begin{equation}\label{eq:v115-diagonal-sharp}
+ -A_n\ge\log\frac{|n|}{L}-E_L(|t_n|).
+\end{equation}
+Its right side increases with $|n|$, so $|n|=N+1$ supplies the uniform
+tail bound. No logarithmic constant or finite-$L$ diagonal term was
+discarded from the exact identity.
+
+For the prime part, set $w_m=\Lambda(m)/\sqrt m$ and $a_m=\log m$.
+The elementary inequality $2\Re(z\overline w)\le|z|^2+|w|^2$ gives
+\[
+ -2\sum_m w_m\Re\int_0^{L-a_m}
+      f(x+a_m)\overline{f(x)}\,dx
+ \ge-\int_0^L d_\lambda(x)|f(x)|^2dx
+ \ge-M_\lambda\|f\|_2^2,
+\]
+where $d_\lambda$ is the function inside braces in
+\eqref{eq:v115-prime-degree}. This applies equally to complex vectors.
+
+In centered physical coordinates the negative pole term is
+$-2|\ip f{\sinh(x/2)}|^2$. Direct Fourier integration gives
+\[
+ |\widehat{\sinh(x/2)}(n)|^2
+ =\frac{4\sinh^2(L/4)t_n^2}{L(t_n^2+1/4)^2}.
+\]
+Consequently
+\[
+ 2\|Q_N\sinh(x/2)\|_2^2
+ \le\frac{4\sinh^2(L/4)L}{\pi^2}
+                         \sum_{n>N}n^{-2}
+ \le\frac{4\sinh^2(L/4)L}{\pi^2N}.
+\]
+It vanishes identically on the even sector; the positive pole term can
+be retained or omitted in a lower bound. Combining these estimates
+proves \eqref{eq:v115-sharp-tail} first on finite Fourier sums and then
+on the tail form domain by Proposition~\ref{prop:v114-weil-core}.
+
+For the numerical constants at $\lambda=3$, symmetry reduces the prime
+degree to $0<x<\log3$. Its breakpoints, expressed in $e^x$, are
+$9/8,9/7,9/5,2,9/4$. With
+$P=w_2+w_3+w_4+w_5+w_7+w_8$, the six interval values are
+\[
+ P,\quad P-w_8,\quad P-w_8-w_7,\quad
+ w_2+w_3+w_4,\quad2w_2+w_3+w_4,\quad2w_2+w_3.
+\]
+All are at most $P$, using $w_5>w_2$ for the fifth value, and the first
+occurs on an interval of positive length. Thus $M_3=P$ exactly.
+Also $\sinh^2(L/4)=1/3$, $R_L=27/80$ and $C_L=1$.
+Outward interval evaluation of the displayed elementary expressions
+gives \eqref{eq:v115-lambda3-tail}; the reproducibility bundle contains
+the 256-bit scalar certificate. These are not new finite-matrix
+eigenvalue computations.
+\end{proof}
+
+At $\lambda=3$ this replaces the earlier sufficient tail cutoff by a
+practical Fourier complement. It does not prove positivity of the
+entire Weil form: the finite head and its signed correction
+$F-B^*T^{-1}B$ must still be controlled on the same operator. The
+verified-solve identity \eqref{eq:v114-schur-residual} remains the next
+test, with the improved even or full tail constant as appropriate.

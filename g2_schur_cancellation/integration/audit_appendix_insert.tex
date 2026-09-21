@@ -1,0 +1,63 @@
+\subsection*{Finite trial positivity and exact-source cancellation audit}
+\label{app:v121-audit}
+The cumulative bundle's \texttt{g2\_schur\_cancellation} directory
+contains the exact witnesses, interval outputs and internal adverse
+review for Propositions~\ref{prop:v121-alpha-zero} and
+\ref{prop:v121-complement-cancellation}. These use the same actual
+matrix assembly as the earlier certificates, with all physical scale
+and parity factors retained. No externally reported F-68 or F-69
+certificate is imported as a premise.
+
+\texttt{certify\_finite\_K.py} reconstructs $K_X$ from its definition
+for $\lambda=4$, split $16$ and solve support through $256$.
+The files \texttt{finite\_K\_X\_even.json.gz} and
+\texttt{finite\_K\_X\_odd.json.gz} contain the frozen exact dyadics.
+Every interval $LDL^*$ pivot is positive in both the $768$- and
+$896$-bit replays. Conservative lower bounds for the smallest pivot
+are listed below; they are \emph{not} eigenvalue lower bounds.
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule Sector & Trial & Smallest pivot exceeds\\\midrule
+Even & $X=0$ & $1.4513\cdot10^{-13}$\\
+Odd & $X=0$ & $8.4162\cdot10^{-13}$\\
+Even & Frozen solve & $1.2207\cdot10^{-58}$\\
+Odd & Frozen solve & $1.3872\cdot10^{-56}$\\\bottomrule
+\end{tabular}
+\end{center}
+This certifies $K_X$, not $S_\infty$ or the omitted inverse-residual
+subtraction. The local $\alpha=0$ conclusion therefore does not
+contradict previously failed lower Schur enclosures.
+
+\nolinkurl{check_cancellation_subspace.py} uses the exact columns in
+\nolinkurl{cancellation_two_mode_witness.json}, each with denominator
+$2^{300}$. The $2\times2$ Gram positivity, nonzero constructed vector,
+actual quadratic values and all matrix row-sum bounds are verified by
+outward ball arithmetic. The source candidate's hash is checked
+against the archived \texttt{pswf\_source\_certificate.json}; the
+existing exact-source certificate is an explicit dependency.
+Projection to the exact source complement is justified analytically,
+as in the proof, rather than by a rounded orthogonality residual.
+
+For clarity, the approximate intermediate energies are
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule Contribution & Source candidate & Orthogonal trial $w$\\\midrule
+Pure archimedean & $-1.4324413624$ & $-0.4195793594$\\
+Pole & $+1.4877438175$ & $+0.8369031184$\\
+Signed prime & $-0.0553024551$ & $-0.4173237590$\\
+Archimedean plus pole & $+0.0553024551$ & $+0.4173237590$\\
+Complete Weil & $5.3123817\cdot10^{-38}$ & $2.5844134\cdot10^{-31}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The displayed rounded components cannot resolve the tiny totals by
+subtraction; the separate full-precision interval evaluations establish
+the strict inequalities. Both precision replays use identical witness
+hashes. The prior source identification and the finite-support equality
+then supply the exact-source statement in the main text.
+
+These are internal computer-assisted proofs with reproducible inputs,
+not external peer verification. The witness proposals are numerical;
+the stated sign gates and perturbation margins are interval-certified.
+No growing-window convergence or new G2 sign conclusion follows.
+

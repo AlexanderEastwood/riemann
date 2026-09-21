@@ -1,0 +1,284 @@
+\subsection*{A polynomial cutoff for the literal source}
+The small physical endpoint need not force an exponentially large Fourier
+cutoff for this fixed two-mode source.  The additional ingredient is an
+exterior norm estimate for a finite entire extension of the arithmetic
+sum.  It controls the endpoint derivative jets without bounding the whole
+interior variation by the endpoint amplitude.
+
+\begin{lemma}[Polynomial approximation with a growing derivative order]
+\label{lem:v114-entire-polynomial}
+Fix a compact real interval $I$ of positive length. Suppose
+\[
+ F(z)=\int_{-\Omega}^{\Omega}e^{izt}\,d\mu(t),\qquad
+ \Omega\le A_0c,\quad \norm\mu\le c^{A_1}.
+\]
+For each fixed $H>0$, there is $A>0$ such that a polynomial $T$ of degree
+$D=\lceil Ac\rceil$ satisfies, simultaneously for $0\le j\le\lceil c\rceil$,
+\begin{equation}\label{eq:v114-polynomial-error}
+ \norm{(F-T)^{(j)}}_{L^\infty(I)}
+       \le e^{-Hc}(Cc)^j.
+\end{equation}
+All constants are independent of $c$ and $j$. Moreover,
+\[
+ \norm T_\infty\le C(D+1)\norm T_2,\qquad
+ \norm{T^{(j)}}_\infty\le(CD^2)^j\norm T_\infty
+\]
+on $I$.
+\end{lemma}
+\begin{proof}
+Take the degree-$D$ Taylor polynomial about the midpoint of $I$ under the
+finite measure. If $d$ is the half-length of $I$, its differentiated
+remainder is at most
+\[
+ \norm\mu\,\Omega^j e^{\Omega d}
+       \frac{(\Omega d)^{D+1-j}}{(D+1-j)!}.
+\]
+The inequality $k!\ge(k/e)^k$, with $A$ sufficiently large, proves
+\eqref{eq:v114-polynomial-error} for the entire stated range of $j$.
+The first polynomial inequality follows from normalized Legendre expansion,
+$|P_k|\le1$, and $\sum_{k=0}^D(2k+1)=(D+1)^2$. The second is Markov's
+inequality iterated on the derivatives, with the fixed interval scaling.
+Real and imaginary parts give the same bounds for complex polynomials.
+\end{proof}
+
+\begin{lemma}[Endpoint jets of the finite arithmetic sum]
+\label{lem:v114-endpoint-jets}
+Put $c=2\pi\lambda^2$, $r=\lceil c\rceil$, and let $p_\lambda^\circ$
+be the inversion-even proxy before the fixed value-at-zero repair.
+If $J_j$ is the sum of absolute jumps of its $j$th ordinary logarithmic
+derivative, including the jump at the identified periodic endpoint, then
+\begin{equation}\label{eq:v114-jet-bound}
+ J_j\le C|B_\lambda^+|\lambda^3(C\lambda^4)^j,
+          \qquad 1\le j<r.
+\end{equation}
+Its zeroth-order periodic boundary jump is zero. On its smooth pieces,
+for fixed constants $A,C,\rho>0$,
+\begin{equation}\label{eq:v114-smooth-remainder}
+ \norm{(p_\lambda^\circ)^{(r)}_{\rm ac}}_1
+       \le CL\lambda^3 r!\rho^{-r}e^{Ac}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write
+\[
+ g(x)=\sqrt\lambda h_\lambda^\circ(\lambda x)
+     =\sum_{j=0,4}a_{j,\lambda}\psi_{j,c}(x),\qquad g(1)=B_\lambda^+.
+\]
+The exact finite Fourier eigenrelation used in
+Lemma~\ref{lem:v12-endpoint-energy} represents $g$ by a measure supported
+on $[-c,c]$ with total variation $O(\lambda)$; this is also the
+bandlimited extension in \cite[\S30.15]{DLMFPSWF}.
+Proposition~\ref{prop:endpoint-radial} and endpoint noncancellation give
+$|g(x)|\le C|B_\lambda^+|$ for $x\ge1$.
+
+Set $M=\lceil2\lambda^2\rceil$ and
+$G(v)=\sum_{m=1}^M g(mv/\lambda^2)$. Its measure has bandwidth
+$2\pi M=O(c)$ and total variation $O(\lambda^3)$. For $1/2\le v\le1$,
+\[
+ G(v)=\lambda v^{-1/2}f_\lambda^\circ(v/\lambda)
+       +\sum_{\substack{m\le M\\mv\ge\lambda^2}}
+                       g(mv/\lambda^2)
+\]
+almost everywhere. The last sum is $O(|B_\lambda^+|\lambda^2)$.
+Corollary~\ref{cor:pswf-cross-tail}, which includes the unrepaired source,
+and $dv/v=du/u$ therefore give
+\[
+ \norm G_{L^2(1/2,1)}\le C|B_\lambda^+|\lambda^2.
+\]
+Since $|B_\lambda^+|\asymp c^{11/4}e^{-c}$, apply
+Lemma~\ref{lem:v114-entire-polynomial} with fixed sufficiently large $H$.
+Its polynomial inequalities imply
+\begin{align*}
+ |G^{(j)}(1)|&\le C|B_\lambda^+|\lambda^4(C\lambda^4)^j,\\
+ \sup_{1\le x\le3}|g^{(j)}(x)|
+       &\le C|B_\lambda^+|(C\lambda^4)^j,
+          \qquad 0\le j\le r.
+\end{align*}
+For the second bound approximate $g$ on $[1,3]$ and use its already
+bounded sup norm, so the extra Legendre degree factor is unnecessary.
+
+At the strict interior lower trace $v=1+$, subtract from $G$ precisely the
+terms with $m\ge\lambda^2$, including equality when $\lambda^2$ is an
+integer, and multiply by $\sqrt v/\lambda$. Their arguments lie in
+$[1,3]$, their number is $O(\lambda^2)$, and differentiation costs at most
+$3^j$. Thus the logarithmic trace jets are bounded by
+$C|B_\lambda^+|\lambda^3(C\lambda^4)^j$.
+To justify the conversion uniformly in $j$, use
+$(v\partial_v)^j=\sum_k S(j,k)v^k\partial_v^k$ and
+$S(j,k)\le\binom jk j^{j-k}$; hence
+$\sum_k S(j,k)A^k\le(A+j)^j$. Here $j=O(\lambda^2)$ and
+$A=C\lambda^4$. For the product factor, $|(\sqrt v)^{(k)}|_{v=1}\le k!$ and
+$\sum_{k=0}^j\binom jk k!A^{j-k}\le2A^j$ when $A\ge2j$;
+thus its cost is uniform in $j$ as well.
+At the upper trace only the first summand survives, giving the stronger
+bound without $\lambda^3$.
+
+Each interior derivative jump is a source endpoint jet times
+$m^{-1/2}$, with the reflected sign. Summing $m<\lambda^2$ costs
+$O(\lambda)$; the preceding trace estimates control the periodic jump.
+This proves \eqref{eq:v114-jet-bound}. Inversion symmetry gives the zero
+function jump at the periodic boundary.
+Finally extend each smooth piece using its fixed finite collection of
+entire summands. On a complex logarithmic disk of fixed small radius
+$\rho$, every active source argument has imaginary part bounded by a
+fixed constant. The Fourier representation bounds the extension by
+$C\lambda^3e^{Ac}$. Cauchy's estimate, integrated over total length $L$,
+proves \eqref{eq:v114-smooth-remainder}. No asymptotic remainder was
+differentiated, and the smooth compact repair is not used in this step.
+\end{proof}
+
+\begin{proposition}[Polynomial physical-endpoint recovery]
+\label{prop:v114-polynomial-endpoint}
+For the exact repaired source in Proposition~\ref{prop:v12-source}, set
+\[
+ N_\lambda=\left\lceil\lambda^8(1+L)\right\rceil,
+       \qquad k_\lambda=P_{N_\lambda}p_\lambda.
+\]
+For all sufficiently large $\lambda$,
+\begin{align}
+ \frac{|\delta_{N_\lambda}(k_\lambda)-B_\lambda|}{|B_\lambda|}
+       &\le\frac C\lambda,\label{eq:v114-polynomial-endpoint}\\
+ |\widehat p_\lambda(n)|
+       &\le C|B_\lambda|\frac{\lambda\sqrt L}{|n|},
+            \qquad |n|>N_\lambda.\label{eq:v114-high-tail}
+\end{align}
+This is an asymptotic estimate with no certified numerical threshold or
+optimized exponent. The vector is the literal ordinary Fourier projection;
+no endpoint shell is added.
+\end{proposition}
+\begin{proof}
+First omit the compact repair. The periodic proxy is BV and continuous
+at the identified endpoint, so the Dirichlet--Jordan theorem identifies
+its symmetric Fourier sum there with its common one-sided trace. We may
+therefore estimate the actual endpoint error by its symmetric Fourier tail.
+In the jump train of
+Lemma~\ref{lem:g1-jump-train}, the endpoint tail contributed by a threshold
+$m$ is, up to sign,
+\[
+ \frac{B_\lambda^+}{\pi\sqrt m}
+       \sum_{n>N}\frac{\sin(2\pi n\log m/L)}n.
+\]
+Dirichlet summation and the bounded sine-series partial sums give
+\[
+ \left|\sum_{n>N}\frac{\sin(n\theta)}n\right|
+       \le C\min\left(1,\frac1{N|\sin(\theta/2)|}\right).
+\]
+Separate the largest integer $m_0<\lambda^2$: its contribution is
+$O(|B_\lambda^+|/\lambda)$ even when $\lambda^2$ approaches an integer.
+For every remaining $m$, $\lambda^2-m\ge1$. Splitting at $m=\lambda$
+and $m=\lambda^2/2$ gives
+\[
+ \sum_{\substack{1<m<\lambda^2\\m\ne m_0}}
+ \frac{m^{-1/2}}{|\sin(\pi\log m/L)|}
+       \le C\lambda L(1+\log\lambda).
+\]
+Near the upper end use
+$\log(\lambda^2/m)\ge(\lambda^2-m)/\lambda^2$ and sum the harmonic
+denominator. Thus the entire function-jump endpoint error divided by
+$|B_\lambda^+|$ is at most
+\begin{equation}\label{eq:v114-resonance-bound}
+ C\left\{\lambda^{-1}+\frac{\lambda L(1+\log\lambda)}N\right\}.
+\end{equation}
+This retains, rather than assumes away, near-threshold arithmetic resonance.
+
+Integrate by parts $r=\lceil c\rceil$ times on the smooth pieces, retaining
+the jumps of every derivative and the periodic derivative jumps. With
+$t_n=2\pi n/L$, the $j$th jump term in a normalized Fourier coefficient
+has magnitude at most $J_j/(\sqrt L\,|t_n|^{j+1})$. Its physical-endpoint
+tail is at most
+\[
+ \frac{2J_j}{L}\sum_{n>N}|t_n|^{-j-1}
+       \le \frac{C J_j}{j}\left(\frac L{2\pi N}\right)^j.
+\]
+By Lemma~\ref{lem:v114-endpoint-jets}, summing $1\le j<r$ gives
+$C|B_\lambda^+|\lambda^7L/N$ whenever $C\lambda^4L/N<1/2$.
+The final smooth-piece remainder, after endpoint summation and division by
+$|B_\lambda^+|$, is bounded by
+\begin{equation}\label{eq:v114-analytic-tail}
+ C\lambda^A(1+L)^Ae^{Ac}r!
+                 \left(\frac{CL}{N}\right)^{r-1}.
+\end{equation}
+Here $A,C$ are fixed and independent of $r,\lambda$.
+At $N=N_\lambda$, $r!\le(C\lambda^2)^r$, so the logarithm of this bound
+is at most $-6c\log\lambda+O(c+\log\lambda+\log L)$.
+It is smaller than every fixed inverse power of $\lambda$.
+Combining this with \eqref{eq:v114-resonance-bound} proves the first
+claim for $p_\lambda^\circ$.
+
+The same expansion gives, at every $|n|>N_\lambda$,
+\[
+ |\widehat p_\lambda^\circ(n)|
+ \le \frac{C|B_\lambda^+|}{\sqrt L}
+       \left(\frac\lambda{|t_n|}+\frac{\lambda^7}{|t_n|^2}\right)
+       +|R_n|.
+\]
+The second term and remainder are absorbed by the first. For the remainder,
+its ratio to $|B_\lambda^+|\lambda/(\sqrt L|t_n|)$ decreases with $|n|$
+and is already smaller than every fixed inverse power at $N_\lambda$.
+This proves \eqref{eq:v114-high-tail} before repair.
+
+Finally let $e=p_\lambda-p_\lambda^\circ$ and
+$a=h_\lambda^\circ(0)$. Direct counting gives
+$\norm e_\infty\le C\lambda^{3/2}|a|$.
+The Fourier Lebesgue constant is $O(\log(N+2))$, so
+\[
+ \frac{|(P_N-I)e(0)|}{|B_\lambda|}
+ \le C\lambda^{3/2}\log(N+2)\frac{|a|}{|B_\lambda|}
+       =O_A(\lambda^{-A})
+\]
+along this polynomial diagonal, by \eqref{eq:v12-zero-value}.
+For the coefficient assertion a direct variation estimate is stronger:
+if the fixed repair bump is supported in $[-b,b]$, then
+\[
+ \int_{1/\lambda}^{\lambda}|D_{\log}\mathcal E(\psi)(u)|\frac{du}{u}
+ \le \sum_{m\le b\lambda}m^{-1/2}
+   \int_0^b x^{-1/2}\bigl(\tfrac12|\psi(x)|+x|\psi'(x)|\bigr)\,dx
+ \le C\sqrt\lambda.
+\]
+Inversion averaging preserves this bound and has no periodic function
+jump. Hence $|\widehat e(n)|\le C|a|\sqrt{\lambda L}/|n|$, which is
+negligible. Use $B_\lambda^+\asymp B_\lambda$ to finish.
+\end{proof}
+
+\begin{corollary}[Weak G1 on the same polynomial-cutoff vector]
+\label{cor:v114-polynomial-g1}
+Let $R>3$, $N=N_\lambda$, $K\ge N$, and $x\in E_K$, measured by
+the weighted norm of Proposition~\ref{prop:g1-weighted-sampler}.
+For all sufficiently large $\lambda$,
+\begin{align}
+ \frac{|\ip{D_{\log}W_{\lambda,K}k_\lambda}{x}|}
+      {|\delta_K(k_\lambda)|}
+ &\le C_R\norm x_{\mathcal H_{R,L}}
+ \left[\mathfrak r(\lambda)+\lambda^2
+ \left\{\frac LN+\left(\frac LN\right)^{R-1}
+                   (1+\log(2N))\right\}\right].
+ \label{eq:v114-polynomial-g1}
+\end{align}
+The bound is uniform in $K$ and tends to zero on bounded weighted test
+families. This is a fixed-source weak pairing statement, not control
+in operator norm on a growing source block.
+\end{corollary}
+\begin{proof}
+The coefficients of $(P_N-I)p_\lambda$ vanish for $|n|\le N$.
+Insert \eqref{eq:v114-high-tail} into the absolute convolution proof
+of Proposition~\ref{prop:g1-weighted-sampler}: on the only frequencies
+used there, $\mathcal V_\lambda$ is replaced by $C|B_\lambda|\lambda$.
+Both its off-diagonal estimate and its separately treated logarithmic
+diagonal therefore give the displayed $\lambda^2$ error. The sums
+converge absolutely for $R>3$; the fixed-window domain identification
+in Proposition~\ref{prop:v114-weil-core} also justifies the passage
+from finite Fourier sums to $p_\lambda$.
+The continuum term is Proposition~\ref{prop:g1-sobolev}. Finally
+$|\delta_K(k_\lambda)|\ge(1-C/\lambda)|B_\lambda|$ and, with the
+first-slot-linear convention,
+$\ip{D_{\log}W_{\lambda,K}k_\lambda}{x}
+=QW_\lambda(k_\lambda,D_{\log}x)$.
+Unlike the filtered vector, $P_Np_\lambda$ lies in $E_N$, so $K\ge N$
+suffices.
+\end{proof}
+
+These results assert no positive Weil complement along this diagonal,
+a small inverse-weighted spectral residual, or control of the corrected
+sampler's graph defect. Those obligations remain separate. The fixed
+orders $0,4$ are essential; no uniform claim over a growing prolate block
+is made.

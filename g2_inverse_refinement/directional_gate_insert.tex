@@ -1,0 +1,51 @@
+\begin{proposition}[One complete far-residual comparison]
+\label{prop:v122-directional-far}
+At $\lambda=4$, take the archived exact dyadic even solve $X$
+on modes $17,\ldots,256$, and the archived exact dyadic head
+vector $v$ of length $17$ specified in
+Appendix~\ref{app:v122-inverse}. Put
+\[
+ f=\binom{v}{-Xv},\qquad K=QW_4(f,f),\qquad
+ k=Q_{512}\mathsf W_4 f.
+\]
+For the complete shifted even far operator
+$U=Q_{512}(\mathsf W_4-10^{-8}D)Q_{512}$ one has
+\begin{equation}\label{eq:v122-directional-far}
+ \ip{U^{-1}k}{k}<5.758\cdot10^{-20}
+ <6.469\cdot10^{-20}<K.
+\end{equation}
+This is one far-energy comparison. It does not include the mixed
+term of \eqref{eq:v122-refined-structured}, and it is not a lower
+bound for the full low Schur matrix.
+\end{proposition}
+\begin{proof}[Outward interval evaluation with a complete remote bound]
+Use $m=20$ and $J=65536$ in
+Proposition~\ref{prop:v122-prefix-refinement}. The frozen $f$ has
+support through $256$. Thus its retained Weil energy and residual
+rows are evaluated from the actual finite matrix coefficients,
+without truncating $f$. The outer residual is unshifted; the far
+inverse and its $D_g$ are those of the shifted tail certificate.
+The following outward enclosures suffice:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule Quantity & Certified enclosure\\\midrule
+$K$ & $(6.4692843941,6.4692843942)\,10^{-20}$\\
+$v_J=\|P_JD_g^{-1/2}k\|^2$ & $(6.9332416283,6.9332416284)\,10^{-20}$\\
+$a_J=\ip{HP_JD_g^{-1/2}k}{P_JD_g^{-1/2}k}$
+ & $(4.0338113722,4.0338113723)\,10^{-19}$\\
+$\|Q_JD_g^{-1/2}k\|^2$ & $<3.4797080873\,10^{-21}$\\
+$\|Q_JHQ_J\|$ & $<1.987323730$\\\bottomrule
+\end{tabular}
+\end{center}
+The remote norm uses the complete order-$64$ moment majorant,
+divided by $g_{J+1}$; the last row uses
+\eqref{eq:v122-remote-H}. Substitution into
+\eqref{eq:v122-prefix-scalar} gives the stricter computed upper
+bound $5.757887789\cdot10^{-20}$, proving the displayed claim.
+All gates replay with identical exact input witnesses at $768$ and
+$896$ bits. The prefix matrix action uses exact Arb polynomial
+products for its divided-difference and Hankel parts, as detailed
+in the reproduction appendix. No floating-point sign decision,
+zero-location assumption or omitted-residual cutoff enters the gate.
+\end{proof}
+

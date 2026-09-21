@@ -1,0 +1,103 @@
+{
+  "scope": "70-digit toy-source convention checks only; no certified numerical bounds and no RH inference.",
+  "source": "h(x)=x^2-(5/3)x^4 on [-1,1], zero outside",
+  "max_derivative_absolute_error": "3.217312983e-69",
+  "rows": [
+    {
+      "n": 10,
+      "fractional_part": "0.2",
+      "u": "0.098039215686274509804",
+      "E_h_over_sqrt_u": "-0.20012955515537035288",
+      "primitive_over_u_3_2": "0.00067926440446885278678",
+      "derivative_absolute_error": "2.15072e-71"
+    },
+    {
+      "n": 10,
+      "fractional_part": "0.5",
+      "u": "0.095238095238095238095",
+      "E_h_over_sqrt_u": "0.018476526413034349542",
+      "primitive_over_u_3_2": "0.027680406295944285531",
+      "derivative_absolute_error": "2.05875e-71"
+    },
+    {
+      "n": 10,
+      "fractional_part": "0.8",
+      "u": "0.092592592592592592593",
+      "E_h_over_sqrt_u": "0.19733591467977317018",
+      "primitive_over_u_3_2": "-0.0049124458491864503492",
+      "derivative_absolute_error": "2.15072e-71"
+    },
+    {
+      "n": 100,
+      "fractional_part": "0.2",
+      "u": "0.0099800399201596806387",
+      "E_h_over_sqrt_u": "-0.20014088975952550745",
+      "primitive_over_u_3_2": "-0.0019291926716935807153",
+      "derivative_absolute_error": "5.23531e-71"
+    },
+    {
+      "n": 100,
+      "fractional_part": "0.5",
+      "u": "0.0099502487562189054726",
+      "E_h_over_sqrt_u": "0.001934722702311209615",
+      "primitive_over_u_3_2": "0.027776714937107623458",
+      "derivative_absolute_error": "2.61929e-70"
+    },
+    {
+      "n": 100,
+      "fractional_part": "0.8",
+      "u": "0.0099206349206349206349",
+      "E_h_over_sqrt_u": "0.19983151933764163977",
+      "primitive_over_u_3_2": "-0.0025129456334161183841",
+      "derivative_absolute_error": "2.46201e-71"
+    },
+    {
+      "n": 1000,
+      "fractional_part": "0.2",
+      "u": "0.00099980003999200159968",
+      "E_h_over_sqrt_u": "-0.20001540848977599523",
+      "primitive_over_u_3_2": "-0.0021928919110156985886",
+      "derivative_absolute_error": "2.41956e-71"
+    },
+    {
+      "n": 1000,
+      "fractional_part": "0.5",
+      "u": "0.00099950024987506246877",
+      "E_h_over_sqrt_u": "0.00019434722227077262409",
+      "primitive_over_u_3_2": "0.027777767053550953952",
+      "derivative_absolute_error": "6.27961e-70"
+    },
+    {
+      "n": 1000,
+      "fractional_part": "0.8",
+      "u": "0.00099920063948840927258",
+      "E_h_over_sqrt_u": "0.19998431312193097914",
+      "primitive_over_u_3_2": "-0.0022515292641113764702",
+      "derivative_absolute_error": "2.91692e-70"
+    },
+    {
+      "n": 10000,
+      "fractional_part": "0.2",
+      "u": "0.000099998000039999200016",
+      "E_h_over_sqrt_u": "-0.2000015540844897776",
+      "primitive_over_u_3_2": "-0.0022192889190943501032",
+      "derivative_absolute_error": "3.21731e-69"
+    },
+    {
+      "n": 10000,
+      "fractional_part": "0.5",
+      "u": "0.000099995000249987500625",
+      "E_h_over_sqrt_u": "0.000019443472222227082726",
+      "primitive_over_u_3_2": "0.027777777670438974887",
+      "derivative_absolute_error": "2.18645e-69"
+    },
+    {
+      "n": 10000,
+      "fractional_part": "0.8",
+      "u": "0.000099992000639948804096",
+      "E_h_over_sqrt_u": "0.19999844312912219307",
+      "primitive_over_u_3_2": "-0.00222515529244745927",
+      "derivative_absolute_error": "2.99722e-69"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+\subsection*{A complete Schur-direction certificate from a finite trial}
+
+The first-degree obstruction above concerns a particular inverse
+majorant and saved trial. A finite iterative calculation can instead
+propose a new trial, after which the complete residual is verified
+afresh. This uses the same verified-solve identity; it does not
+identify a power of a finite compression with the full power.
+
+\begin{proposition}[A posteriori verification without a full-power claim]
+\label{prop:v124-posterior-identity}
+Let the complete outer operator have finite head and coercive
+tail $T$, with Schur form $S_\infty=F-B^*T^{-1}B$.
+For a finite trial $g=(v,w)$ in its operator domain, set
+$e=Bv+Tw$. Then
+\begin{equation}\label{eq:v124-posterior-identity}
+ S_\infty(v,v)=QW(g,g)-\ip{T^{-1}e}{e}.
+\end{equation}
+Thus any certified complete upper bound $\mathcal U(e)$ for the
+last term gives
+\[
+ QW(g,g)-\mathcal U(e)\le S_\infty(v,v)\le QW(g,g).
+\]
+The algorithm that proposed the frozen finite coefficients of $w$
+need not be an approximation to any particular infinite polynomial.
+\end{proposition}
+\begin{proof}
+Expand $\ip{T^{-1}(Bv+Tw)}{Bv+Tw}$ and cancel the tail and
+cross terms in $QW(g,g)$. Coercivity justifies the inverse.
+Equivalently, for any residual $r$ and finite correction $z$,
+\[
+ \ip{T^{-1}r}{r}
+ =2\Re\ip rz-\ip{Tz}{z}
+       +\ip{T^{-1}(r-Tz)}{r-Tz}.
+\]
+If the inner certificate belongs to $T-cD$, use
+$T^{-1}\preceq(T-cD)^{-1}$ only in bounding the new residual
+term. The energy and $e=P_{\rm tail}Wg$ remain unshifted.
+This avoids an erroneous omission of a $cDz$ residual or a shift
+energy when the two operators are mixed.
+\end{proof}
+
+For completeness, let the new residual split as $e=(h,k)$ in
+the already certified inner decomposition. Past the support of
+the saved $Z$, retain rows through $J$ and put
+\[
+ V_J=\sum_{n\le J}|k_n|^2/g_n,\qquad
+ b_J=C\left(h-Z^*k-\sum_{n\le J}R_n^*k_n/g_n\right).
+\]
+The sums run over the inner far rows. If complete remote bounds
+give $\sum_{n>J}|k_n|^2/g_n\le E$ and
+$\|D_g^{-1/2}Q_JRC^*\|^2\le\rho$, then the old structured
+inverse certificate supplies
+\begin{equation}\label{eq:v124-posterior-upper}
+ \mathcal U(e)=V_J+E+
+       \mu^{-1}\bigl(\norm{b_J}+\sqrt{\rho E}\bigr)^2.
+\end{equation}
+Every row beyond $J$ is included. For a matrix of trial columns,
+the simultaneous version retains their Gram matrices and uses
+\eqref{eq:v120-structured-finite-rows}; separate positive scalar
+tests are insufficient for positivity on their span.
+
+\begin{proposition}[One complete positive Schur direction at $\lambda=4$]
+\label{prop:v124-positive-direction}
+Let $v$ be the exact archived even head vector used in
+Propositions~\ref{prop:v122-directional-far} and
+\ref{prop:v123-first-majorant-fails}. For the \emph{complete}
+even Schur form with head $0\le n\le16$,
+\begin{equation}\label{eq:v124-positive-direction}
+ 3.0930\cdot10^{-20}<S_\infty(v,v)<3.2356\cdot10^{-20}.
+\end{equation}
+This certifies one fixed direction. It does not assert that the
+whole even head, the odd head, or the full $\lambda=4$ form is
+positive, and it provides no growing-window uniformity.
+\end{proposition}
+\begin{proof}[Frozen finite trial and complete residual certificate]
+Start with the previous support-$256$ vector $f=[v;-Xv]$.
+Subtract the exact dyadic tail correction $z$, supported on
+$17\le n\le4096$, specified in the reproduction appendix.
+The new vector $g=f-(0,z)$ has exactly the same head $v$.
+A finite preconditioned iteration proposed $z$; neither its
+convergence nor its recursive residual is used in this proof.
+
+Evaluate $QW_4(g,g)$ and the unshifted residual
+$e=Q_{16}W_4g$ through $J=65536$. Retain the original shifted
+inner factors, $\mu=0.9999999999$, and the previously certified
+$\rho<0.165102333$. Direct interval evaluation gives
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule Quantity & Certified enclosure\\\midrule
+$QW_4(g,g)$ & $(3.2355843481,3.2355843482)\,10^{-20}$\\
+$V_J$ & $<3.742924324\,10^{-22}$\\
+$\norm{b_J}^2$ & $<1.617782100\,10^{-23}$\\
+$E$ & $<8.080848756\,10^{-22}$\\
+$\mathcal U(e)$ & $<1.424889\,10^{-21}$\\\bottomrule
+\end{tabular}
+\end{center}
+The bound $E$ is the complete order-$64$ moment majorant applied
+to the finite vector $g$, with its actual support through $4096$,
+divided by $g_{J+1}$. The saved remote $\rho$ belongs to the same
+inner witness and cutoff. Substitution in
+\eqref{eq:v124-posterior-upper} and
+\eqref{eq:v124-posterior-identity} proves the lower bound.
+The upper bound follows from $T^{-1}\succeq0$.
+
+The frozen correction uses exact dyadic coefficients produced at
+$256$ bits; the proof evaluates them anew at $768$ and $896$
+bits. Both checks retain the zero-mode $\sqrt2$ factor, normalized
+parity, logarithmic diagonal and archimedean-series remainder.
+Selected rows, including zero and the support endpoint, are also
+checked by dense coefficient assembly. The independently expanded
+energy identity agrees with the direct energy. No finite power is
+used as a substitute for an infinite operator power.
+\end{proof}
+
+For the \emph{old} trial in this same direction the complete inverse
+correction is consequently bounded by
+\[
+ 3.2337\cdot10^{-20}<\ip{T^{-1}r}{r}
+       <3.3762\cdot10^{-20}.
+\]
+In particular $S_\infty(v,v)>0.4781K_X(v,v)$ on this one
+direction. This explains why the earlier majorant could fail
+without identifying an intrinsically difficult Schur direction.
+The next target is the simultaneous matrix comparison, including
+the remaining directions of small energy. This directional
+certificate cannot be extrapolated to that matrix or to RH.

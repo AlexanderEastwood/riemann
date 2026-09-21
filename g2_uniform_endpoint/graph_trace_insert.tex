@@ -1,0 +1,34 @@
+\begin{proposition}[The Weil graph norm does not control the physical trace]
+\label{prop:v118-graph-trace}
+At every fixed $\lambda>1$, physical endpoint evaluation on finite
+Fourier polynomials has no continuous extension to
+$\mathcal D(\mathsf W_\lambda)$ with its operator graph norm.
+Indeed there are real even finite polynomials $h_N$ with
+\[
+ \delta(h_N)=1,\qquad
+ \|h_N\|_2+\|\mathsf W_\lambda h_N\|_2
+       =O_\lambda\!\left(\frac{\log(2+N)}{\sqrt N}\right)\longrightarrow0.
+\]
+The same failure holds with $\mathsf W_\lambda-\mu I$ for any fixed
+$\mu\in\mathbb R$ and with the weaker closed-form norm.
+\end{proposition}
+\begin{proof}
+In the physical logarithmic basis $U_n=L^{-1/2}e^{2\pi inx/L}$ set
+\[
+ h_N=\frac{\sqrt L}{2N}\sum_{N<|n|\le2N}U_n.
+\]
+There are exactly $2N$ terms. At either physical endpoint all their
+phases are one, so $\delta(h_N)=1$ and
+$\|h_N\|_2=\sqrt{L/(2N)}$. The exact decomposition in
+Proposition~\ref{prop:v114-weil-core} gives
+\[
+ \|\mathsf W_\lambda h_N\|_2
+ \le\left(\max_{N<|n|\le2N}|d_n|
+              +2\pi B_\lambda^{\rm mat}\right)\sqrt{\frac L{2N}}.
+\]
+Since $d_n=\log|n|+O_\lambda(1)$, this proves the estimate.
+A fixed scalar shift changes only the bounded constant. Graph convergence
+implies form convergence for a lower-bounded self-adjoint operator.
+In fact the trace is not closable on the polynomial core in the graph
+norm: this sequence tends to zero while its trace tends to one.
+\end{proof}

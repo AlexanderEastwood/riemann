@@ -1,0 +1,258 @@
+\subsection*{Retaining the archimedean energy in a one-sided estimate}
+
+Choose a literal Fourier tail on which $a_n:=-A_n>0$ and write
+$D=\operatorname{diag}(a_n)$ there. By
+\eqref{eq:v114-weil-decomposition}, the compressed closed form has
+$\mathsf W=D+R$, with $R$ bounded self-adjoint. It contains the
+actual signed prime and pole terms and the archimedean off-diagonal;
+no arithmetic diagonal is absorbed into $D$. Put
+\begin{equation}\label{eq:v120-weighted-remainder}
+ \mathcal B=D^{-1/2}R D^{-1/2}.
+\end{equation}
+The operator $\mathcal B$ is compact self-adjoint, since
+$a_n\sim\log|n|$ at the fixed window. The form identity is
+\[
+ q_{\mathsf W}[f]
+ =\ip{(I+\mathcal B)D^{1/2}f}{D^{1/2}f}.
+\]
+Thus the exact positivity target is $\mathcal B\succeq-I$;
+the stronger two-sided condition $\|\mathcal B\|\le1$ can fail
+because of a harmless positive direction.
+
+\begin{proposition}[The scale of an approximate weighted sign]
+\label{prop:v120-weighted-error}
+Suppose $D\succeq d_0I>0$, $R\succeq-CI$, $C\ge0$, and
+$D^{-1/2}RD^{-1/2}\succeq-(1+\eta)I$, $\eta\ge0$.
+Then, on the entire form domain,
+\begin{equation}\label{eq:v120-weighted-error}
+ D+R\succeq-\frac{\eta C}{1+\eta}I.
+\end{equation}
+The constant is sharp. In particular, a dimensionless error
+$\eta_\lambda\to0$ is not by itself an ordinary lower error
+$o(1)$ when $C_\lambda$ grows.
+\end{proposition}
+\begin{proof}
+The hypotheses give $D+R\succeq-\eta D$ and
+$D+R\succeq D-CI$. Add these inequalities with weights
+$1/(1+\eta)$ and $\eta/(1+\eta)$ respectively. For $C>0$,
+the scalar example $D=C/(1+\eta)$, $R=-C$ attains equality.
+Taking $C_\lambda=\lambda$ and $\eta_\lambda=1/\lambda$
+shows why the missing scale factor cannot be omitted. A sufficient
+conversion requires $\eta_\lambda C_\lambda\to0$, or a more
+precise directional energy estimate.
+\end{proof}
+
+There is also a limitation on how the compact weighted remainder can
+be estimated. A Hilbert--Schmidt budget for its whole infinite matrix
+is unavailable, despite the valid finite-column residual Grams above.
+
+\begin{proposition}[Weighted compactness without a square-summable matrix]
+\label{prop:v120-not-schatten}
+At any fixed $\lambda>\sqrt2$, let $D$ be a positive diagonal on a
+fixed Fourier tail with $a_n\sim\log|n|$. The compact operator
+$D^{-1/2}\mathsf T_{\rm pr}D^{-1/2}$ belongs to no Schatten class
+$\mathcal S_p$, $0<p<\infty$. For the exact archimedean diagonal
+$a_n=-A_n$, the same assertion holds for
+$\mathcal B$ in \eqref{eq:v120-weighted-remainder}.
+\end{proposition}
+\begin{proof}
+The prime diagonal is the nonzero finite trigonometric sequence
+\[
+ \tau_n=2\sum_{1<m<\lambda^2}
+ \frac{\Lambda(m)}{\sqrt m}
+ \left(1-\frac{\log m}{L}\right)
+ \cos\frac{2\pi n\log m}{L}.
+\]
+Collect equal unit-circle frequencies to write
+$\tau_n=\sum_{z\in F}c_z z^n$, with all $c_z>0$.
+Finite geometric sums give
+\[
+ \frac1X\sum_{n=1}^X|\tau_n|^2\longrightarrow
+ \sum_{z\in F}c_z^2>0.
+\]
+Boundedness then implies that $|\tau_n|$ exceeds a positive
+constant on a set of positive lower density. Consequently, for each
+$p\ge1$, $\sum_n|\tau_n/a_n|^p=\infty$: the partial sum on
+that set is bounded below by a constant times $X/(\log X)^p$.
+For self-adjoint $K\in\mathcal S_p$, Jensen's inequality in its
+spectral measure gives
+$\sum_n|\ip{KU_n}{U_n}|^p\le\operatorname{Tr}|K|^p$.
+This is a contradiction. The inclusions
+$\mathcal S_p\subset\mathcal S_1$ for $0<p<1$ settle the
+remaining exponents. For the complete remainder its diagonal is
+$(-\tau_n+O_\lambda(n^{-2}))/a_n$, since the exact pole diagonal
+has this decay and the archimedean remainder has zero diagonal.
+The same argument applies. None of this invalidates the separated
+finite-column moment bounds, whose off-diagonal factor
+$(n-m)^{-1}$ is square summable in the remote row index.
+\end{proof}
+
+\begin{proposition}[Sharp fixed-window decay of the weighted prime tail]
+\label{prop:v120-weighted-tail-asymptotic}
+Under the diagonal assumptions above, let $Q_J$ remove $|n|\le J$.
+At each fixed window,
+\begin{equation}\label{eq:v120-weighted-tail-asymptotic}
+ \lim_{J\to\infty}(\log J)
+ \|Q_JD^{-1/2}\mathsf T_{\rm pr}D^{-1/2}Q_J\|
+       =\|\mathsf T_{\rm pr}\|.
+\end{equation}
+Subtracting any fixed compact operator from $\mathsf T_{\rm pr}$
+before weighting leaves this limit unchanged. No uniformity in
+$\lambda$ is asserted.
+\end{proposition}
+\begin{proof}
+The upper bound is
+$\|\mathsf T_{\rm pr}\|/\inf_{|n|>J}a_n$.
+For the lower bound, fix $\epsilon>0$ and choose a unit Fourier
+polynomial $f$, supported on $|m|\le M$, with
+$|\ip{\mathsf T_{\rm pr}f}{f}|>\|\mathsf T_{\rm pr}\|-\epsilon$.
+Returns of the finite vector of shift phases to any fixed neighborhood
+of the identity are relatively dense. Indeed its cyclic closure is a
+compact group; finitely many integer translates of that neighborhood
+cover it. The largest difference between the corresponding translation
+indices bounds the gap between return times. This also covers rational
+phase relations.
+
+Choose the neighborhood so that the conjugation error in
+\eqref{eq:v119-prime-recurrence} is below $\epsilon$.
+For every large $J$ there is therefore a return
+$k\in[J+M+1,J+M+1+K]$, with $K$ independent of $J$.
+Set $g=M_kf$ and $x=D^{1/2}g$. Both are supported outside $J$,
+$\|x\|^2=(1+o(1))\log J$, and the weighted Rayleigh numerator
+at $x$ equals $\ip{\mathsf T_{\rm pr}g}{g}$, whose absolute value
+is greater than $\|\mathsf T_{\rm pr}\|-2\epsilon$.
+Let $J\to\infty$ and then $\epsilon\downarrow0$.
+For compact $C$ the change in the left side is at most
+\[
+ \frac{\log J}{\inf_{|n|>J}a_n}\|Q_JCQ_J\|\longrightarrow0.
+\]
+The return-length bound $K$ depends on the window and the tolerance.
+Thus one may not combine \eqref{eq:v120-weighted-tail-asymptotic}
+with $\|\mathsf T_{\rm pr}\|\sim\lambda$ to infer a bound on
+an arbitrary joint scale $J=J(\lambda)$.
+\end{proof}
+
+\begin{proposition}[A signed energy bound at the larger window $\lambda=4$]
+\label{prop:v120-lambda4-tail}
+Let $L=2\log4$, retain the exact diagonal $a_n=-A_n$, and let
+$Q_{16}$ be the literal projection onto $|n|>16$. For every complex
+vector in its complete closed form domain,
+\begin{equation}\label{eq:v120-lambda4-tail}
+ QW_4(f,f)\ge10^{-8}\sum_{|n|>16}a_n|f_n|^2,
+ \qquad f=Q_{16}f.
+\end{equation}
+Every weight in this sum is positive. This is an infinite-tail
+computer-assisted bound, not a claim about the remaining low modes
+or about an unbounded family of windows.
+\end{proposition}
+\begin{proof}
+Apply the directional verified-solve proof to
+$\mathsf W_4-cD$, $c=10^{-8}$, on $Q_{16}$.
+Only the archimedean diagonal is changed, to $(1-c)a_n$;
+the exact off-diagonal coefficients $b_n$, both pole signs, and every
+prime power $2,3,4,5,7,8,9,11,13$ remain. The full-length $m=16$
+translation is zero. The positive physical weight
+$\phi(x)=e^{-x/2}+e^{-(L-x)/2}$ gives the certified Schur bound
+\begin{equation}\label{eq:v120-lambda4-prime-bound}
+ \|\mathsf T_{\rm pr}\|
+ \le M_\phi<4.624042316766478.
+\end{equation}
+To verify it, set $u=e^x$. On each interval between
+$1,16,m,16/m$ the ratio $(\mathsf T_{\rm pr}\phi)/\phi$
+is a linear-fractional function of $u$, hence monotone or constant.
+Every one-sided endpoint value is evaluated with outward rounding;
+the chosen upper endpoint is checked against every candidate.
+
+Use $E_L,C_L,h_L$ from \eqref{eq:v115-arch-errors}, with
+$C_L=1$, $h_L=9/16$ and $R_L=64/255$. For $n>N$ the proved
+remote inverse bound applies with
+\[
+ g_n=(1-c)\{\log(n/L)-E_L(2\pi n/L)\}-\kappa,
+\]
+where $\kappa=M_\phi+2C_L/t_*$ in the even sector and
+$\kappa=M_\phi+2C_L/t_*+\pi/2+4h_LL/(\pi^2N)$ in the odd
+sector, $t_*=2\pi(N+1)/L$. These weights are positive and
+increasing for the choices below. Also the same diagonal estimate
+at $n=17$ proves positivity of $a_n$ on the whole claimed tail.
+
+The finite head now consists of $17\le n\le N$ in the normalized
+parity basis; it does not include the omitted physical low modes.
+The solve witness has support $N<n\le M$. With
+$G=I-Z$, form the exact signed $K_Z$ and every residual row up to
+$J$, and use the moment majorant $U_J$ beyond $J$. The lower matrix is
+\begin{equation}\label{eq:v120-lambda4-lower}
+ \mathcal L=K_Z-
+  \sum_{N<n\le J}\frac{R_n^*R_n}{g_n}-\frac{U_J}{g_{J+1}}.
+\end{equation}
+The same full-index parity conversion and both infinite tails as in
+Proposition~\ref{prop:v116-remote-moment} are used. Bounding its
+geometric-remainder constant by including the absent indices
+$1,\ldots,16$ is conservative. The certificate parameters are
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+sector&head size&$N$&$M$&$J$&moment order\\
+\midrule
+even&496&512&1024&4096&48\\
+odd&1520&1536&2048&4096&64\\
+\bottomrule
+\end{tabular}
+\end{center}
+Both $Z$ and an inverse-Cholesky congruence witness $C$ are frozen
+to exact dyadic entries. Their numerical method of construction has
+no proof role: outward interval evaluation verifies every row of
+$C\mathcal L C^*$ has positive diagonal minus the sum of the
+absolute off-diagonal entries. Thus $C\mathcal L C^*\succ0$
+and $\mathcal L\succ0$. Square completion with the positive
+remote operator proves \eqref{eq:v120-lambda4-tail} separately
+in each parity sector and hence for arbitrary complex vectors.
+
+The saved witnesses, analytic series radii, all finite residual rows
+and the infinite moment bound are reproduced by
+\texttt{assembly\_general.py} and
+\texttt{certify\_weighted\_tail.py}. Replaying the same witnesses
+at higher precision verifies the same strict inequalities.
+These are internal computer-assisted certificates, not independent
+external verification. No zero locations or RH assumptions enter them.
+\end{proof}
+
+\begin{proposition}[The two-sided weighted contraction fails at this cutoff]
+\label{prop:v120-norm-counterexample}
+For the same exact $D$ and $Q_{16}$ at $\lambda=4$,
+\[
+ \|D^{-1/2}Q_{16}(\mathsf W_4-D)Q_{16}D^{-1/2}\|>1.
+\]
+This does not contradict Proposition~\ref{prop:v120-lambda4-tail}.
+\end{proposition}
+\begin{proof}
+The archived exact dyadic even vector $v$, supported on
+$17\le|n|\le256$, has the rigorously enclosed quotient
+\[
+ 2.05254409540345<\frac{QW_4(v,v)}{\ip{Dv}{v}}
+                         <2.05254409540346.
+\]
+Its positive numerator excess over $2\ip{Dv}{v}$ exceeds
+$0.0525$ in the saved normalization. The same analytic matrix
+assembly, independent of the floating eigenvector that suggested
+$v$, proves these interval inequalities. Testing the weighted
+remainder on $D^{1/2}v$ gives a Rayleigh value greater than one.
+This is a positive direction, not a negative Weil direction.
+\end{proof}
+
+The larger-window tail sign is now established, but full positivity
+at $\lambda=4$ still requires the signed effective matrix on
+$E_{16}$:
+\[
+ F-B^*T^{-1}B,\qquad
+ F=P_{16}\mathsf W_4P_{16},\quad B=Q_{16}\mathsf W_4P_{16},
+ \quad T=Q_{16}\mathsf W_4Q_{16}.
+\]
+It has $17$ even and $16$ odd coordinates. It is not the raw finite
+Weil matrix: the inverse-tail correction must remain.
+The next growing-window estimate must also satisfy the ordinary-error
+scale in Proposition~\ref{prop:v120-weighted-error}.
+A related recent preprint~\cite{Zhu2026Windows} studies certified
+compact-window positivity and a pointwise prime-comb envelope barrier.
+Our conclusion here concerns the actual Fourier-tail form and does
+not use that preprint's computational certificates. Neither fixed-window
+result supplies a uniform signed arithmetic estimate.

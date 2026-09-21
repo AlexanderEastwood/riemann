@@ -1,0 +1,1452 @@
+{
+  "manuscript_version": "1.24",
+  "date": "2026-09-21",
+  "pdf_pages": 162,
+  "main_sections": 32,
+  "appendices": 2,
+  "historical_claims_accounted_for": 72,
+  "undefined_references": [],
+  "duplicate_labels": [],
+  "latex_warning_lines": [],
+  "visual_review": {
+    "status": "passed",
+    "complete_pdf_pages": 162,
+    "all_pages_reviewed_in_contact_sheets": true,
+    "new_proofs_and_tables_reviewed_at_full_size": [
+      1,
+      105,
+      106,
+      107,
+      154,
+      155
+    ],
+    "layout_corrections": "No clipped text or equations; no remaining LaTeX warning."
+  },
+  "retained_v1_6_results": [
+    "Lemma 19.6: exact transform of the sharply band-limited centered finite sampler, alternating-sum edge expansion and exponential off-line growth when an edge coefficient survives",
+    "Proposition 19.7: the actual source projection leaves a nonzero edge coefficient at at least one of any pair s=1/2 +/- b for a hypothetical off-line first root vector, when band endpoints avoid source zeros"
+  ],
+  "retained_v1_5_results": [
+    "Theorem 19.2: finite-core conditional exclusion criterion and exact signed transport budget, without a global closed-operator or evaluator assumption",
+    "Proposition 19.3: positive source-and-shell annihilating band projection, with a positive lower bound on each fixed finite root space",
+    "Proposition 19.4: exact rank-two commutator, positive limiting frequency variance and compressed-generator graph source",
+    "Proposition 19.5: an explicit polynomial resolvent estimate proves loss of coercivity for growing source-derivative projections on a fixed band"
+  ],
+  "retained_v1_4_results": [
+    "Theorem 20.1: compact-source radicality with a nonzero interior endpoint, including the closed semilocal form-domain passage",
+    "Proposition 20.13 and Theorem 20.23: weak fixed-band/Sobolev G1 and deterministic finite transfer proved for the explicit repaired source, with no remaining source assumption",
+    "Lemma 20.10 terminology correction: the interior-test derivative is the bulk contribution; the two translated-tail endpoint terms also belong to the full absolutely continuous derivative"
+  ],
+  "retained_v1_3_results": [
+    "Corollary 20.9: repaired co-Poisson tail and inversion-even endpoint comparison, including arithmetic-cut coincidences",
+    "Lemma 20.10: uniform zero-extension correlations, explicit translated endpoint terms and local archimedean bound"
+  ],
+  "retained_v1_2_results": [
+    "Lemma 20.4: two-sided endpoint/exterior-energy comparison and fixed-order endpoint size",
+    "Proposition 20.5: explicit normalized source, endpoint noncancellation and superpolynomially small value-at-zero ratio",
+    "Corollary 20.6: lower-tail size of the exact value-and-integral repair"
+  ],
+  "retained_v1_1_results": [
+    "Lemma 28.5: corrected resolvent endpoint asymptotic",
+    "Lemma 28.6: uniform resolvent Gram bounds",
+    "Corollary 28.7: divergence of the proposed endpoint ratio",
+    "Theorem 28.8: loss of the reflected signal on a fixed input space"
+  ],
+  "finite_identity_checks": "The previous nine complex-vector checks are preserved unchanged in finite_identity_checks.json; no changes to their algebra were made in this revision.",
+  "numerical_illustrations": "Non-certified positive-trial Rayleigh and recurrence diagnostics; physical/autocorrelation agreement below1e-50 at60digits for lambda2,3. No norm or sign certificate inferred.",
+  "proof_checks": {
+    "analytic_scope": "Reviewed; orthogonal compression, residual correction, semidefinite range, nested form core and cofinal support arguments retained.",
+    "first_slot_linear": true,
+    "physical_endpoint_and_fourier_cut_preserved": true,
+    "explicit_sampler_graph_defect_retained": true,
+    "prior_454_labels_retained": true,
+    "historical_72_dispositions_retained": true
+  },
+  "limitations": "One complete even Schur direction at lambda=4 is now certified positive. Full even and odd head matrix signs and growing-window uniformity remain open. No G2 or RH proof.",
+  "sha256": {
+    "fixed_space_prime_action_v1.tex": "666556c7da1a94b74831406d4f5bbe283481de0b2224d196087a341d8f99927d",
+    "fixed_space_prime_action_v1.pdf": "5a6f6d78ec01e11d3624e0d164ba273295317b2a686fcef0f4a704834ab4bf3e",
+    "RH_G1_G2_research_log.md": "841593a0d21cf6cc3763862166faef524b68eed5a932a8ed2f31a2a1003892f9",
+    "v1_revision_notes.md": "83934e452952881c1688ad2132098b820f50709f2d943adcc1f2d1db3d50d8c3",
+    "g2_inverse_refinement/inverse_probe_J4096_b768.json": "e0afeb7b75a910d34a769fd0b511f5a0c5b1c59c3b95b7268b618ee11298008a",
+    "g2_inverse_refinement/directional_gate_insert.tex": "5749170043774ad6efa17a4cea6d7458e674a9a2c1bd8ab7064e71cf6e88c48c",
+    "g2_inverse_refinement/adversarial_first_inverse_review.md": "5830616766353b034906c706ac01fc693e37d07362651df385eccb562322a948",
+    "g2_inverse_refinement/inverse_probe_J65536_b896.json": "5a727de6c411cfb9daa9cacf03b9a18052b8017fc4a67e98fe67a32f5b2d33ea",
+    "g2_inverse_refinement/integrate_v122.py": "934b8193ddc2b4d5fbfe837097fcce71837d30a25616f3921007110ebc524c76",
+    "g2_inverse_refinement/parity_inverse_constants_b320.json": "408664c7531f71d6fb839cc49ca79fcec43abb27a20c1bab8831d9d4bc3cc83e",
+    "g2_inverse_refinement/inverse_probe_J16384_b768.json": "4de56a8d796b9e1bf15834263e82220ea7ac0d5a4577debc36698a59d4ea9c77",
+    "g2_inverse_refinement/inverse_refinement_insert.tex": "522fdfc08e28f184503973ac08065cdf77cfa15e614fe236518be33e884639df",
+    "g2_inverse_refinement/inverse_probe_J65536_b768.json": "c37f9992bbac3a3c95ea3e2651f9ae064ef189f98b86cd9b016dd35a179d273a",
+    "g2_inverse_refinement/README_inverse_refinement.md": "d23c5e1369834676290618f2c25dca5dd403d0f1802574868a1fa105814eca96",
+    "g2_inverse_refinement/write_checkpoint.py": "52d38dc888ac2a4f455d09e202982ceba2779ae769781bed3168595c6f9701a8",
+    "g2_inverse_refinement/refine_inverse.py": "a021ef0f047d6daf460e17f6d58e94f2f26fb0cb7bd8b789326f39d496bf8ca7",
+    "g2_inverse_refinement/parity_inverse_constants_b384.json": "cbbfdfb452abc880fc772f112187408839eae8d89aaf1aa9c9b9a8995906aefe",
+    "g2_inverse_refinement/build_complete_pdf.py": "abe1a0e45eae5c473eff945b48b398b55869c88a848c98f83e50bac8457976ec",
+    "g2_inverse_refinement/package_revision.py": "0f8c6e591eb8e02bc8cb9c8e76ccfca91a4a6c63bc2ff7e4dd0bd81173b4d9de",
+    "g2_inverse_refinement/input/fixed_space_prime_action_v1.tex": "4aab65a568570699f4ad1ba509449803da37f9de11a1d3b24a14aacc1b745bb0",
+    "g2_inverse_refinement/input/RH_G1_G2_research_log.md": "3a610331e5222c5e0cd56c3ea101fd481b264ff6d4d96e4e66eb2108f1c3a1c8",
+    "g2_inverse_refinement/input/v1_revision_notes.md": "9ba3a6d926ea874ca2121247aa326fee752b69580e67a40b496354e5fe895c34",
+    "g2_inverse_refinement/input/v1_validation.json": "624275e4cc3a66c795407392ce634b21386a65d6156c9fce40ea6daccfe10747",
+    "g2_inverse_refinement/renders/contact-076.jpg": "4404e42a62ac39e588dc5d389f0febaa441392d36adce9cfdca266163e0a3639",
+    "g2_inverse_refinement/renders/contact-126.jpg": "d22211d9a6231448b1674d29f0e8d86a28cb81f77074a3d14ed37ba7e436a844",
+    "g2_inverse_refinement/renders/contact-026.jpg": "6f377c70ff945cd365b10e8e918f2b88fcf7f25704856847ec65cc6bec865693",
+    "g2_inverse_refinement/renders/contact-151.jpg": "5cc0073c0f37432e91cbebd6b591e235da751fce2150e2d1e9561516c17ee5ff",
+    "g2_inverse_refinement/renders/contact-051.jpg": "df9ce2eb7bc95b1ef1bec8c79493518ecfe766c8aefcacbf804aee2958ebcea4",
+    "g2_inverse_refinement/renders/contact-101.jpg": "dd80f3233862df2236700ecd0215f3223207ca70c13a1691d3596196e85040ff",
+    "g2_inverse_refinement/renders/contact-001.jpg": "8f16c9567998d0db05c533143a58c48c031b2f86b9e123d6c636068ea1bb6234",
+    "g2_mixed_complete/refine_inverse.py": "a021ef0f047d6daf460e17f6d58e94f2f26fb0cb7bd8b789326f39d496bf8ca7",
+    "g2_mixed_complete/mixed_refinement.py": "01ee8f3d366e627c74a6b41e8f1eb3506354ba5bc55a5f06d5582b56cd24f720",
+    "g2_mixed_complete/mixed_directional_check.py": "07cc9afb87e910da983f826b51d60116ee73f81a34390791900ca7fb5abf41ed",
+    "g2_mixed_complete/mixed_complete_insert.tex": "0bb6becb52af0a641a866554718905d3ddf52884fa547e697acd79ca668c3809",
+    "g2_mixed_complete/integrate_v123.py": "a34f0d62acd267a35f9654b3ef294a4fbcfbcb41aeb088f6d37ed123aa0d7d79",
+    "g2_mixed_complete/package_v123.py": "750af28fa9ef7e136d2613a163a50f13438b80f87b0d45d15d5e0bfe621ba3fd",
+    "g2_mixed_complete/build_complete_pdf.py": "abe1a0e45eae5c473eff945b48b398b55869c88a848c98f83e50bac8457976ec",
+    "g2_mixed_complete/adversarial_mixed_refinement.md": "64e6584b33d1a7405de7cda4de79b9330513840f30ebc8b1b8a0ee12fb7c9b7a",
+    "g2_mixed_complete/mixed_complete_integration_review.md": "0bda583913b75f5c3ae8169b21b352d41c1ef24071bb71690e72137ff5804140",
+    "g2_mixed_complete/finite_polynomial_diagnostics_J65536_b768.json": "a71599d22c70b27d63bba438dc49532ff5fab93cd63c0420d5de75716d38a55d",
+    "g2_mixed_complete/mixed_directional_witness_J65536.json": "e78fb84a1e7668e4d1fe9a3a900e393e6c85c0274ab1f5c27e99ceb3405522b7",
+    "g2_mixed_complete/mixed_probe_J65536_b768.json": "6f6022800cee984aba2f89f1118d71224743b2c2f9b3281922730d052b921b10",
+    "g2_mixed_complete/mixed_vectors_J65536_b768.json": "d80952bf083ee2d8acde6011f8494111031c5376f87b8c4853ab913fc4e95b94",
+    "g2_mixed_complete/mixed_directional_J65536_b768.json": "7dab60faf963043b0a0e0bcf3d550782bdddb20894d65278acafecdb744a3122",
+    "g2_mixed_complete/mixed_probe_J65536_b896.json": "1d266d47d6d691a0268a1099e13a4494a8711430c9f3393a7967c51a2caf774c",
+    "g2_mixed_complete/mixed_vectors_J65536_b896.json": "3106329f84f86adefb71b14ac12df85d34329c9352078908c85ec3eef88a098a",
+    "g2_mixed_complete/mixed_directional_J65536_b896.json": "5e97b33a1348a061917103d84525293b12933b6db2599aff5588b3078de9d3b3",
+    "g2_mixed_complete/input/fixed_space_prime_action_v122.tex": "cda3fac19e52feb200c15ebd580c7380fce828be1c0b378690399c1155bdb0ec",
+    "g2_mixed_complete/renders/contact_3.jpg": "11c75292cac60e59e34924cb8ae56df7219a4a2aada67144c341ea7a381f32f1",
+    "g2_mixed_complete/renders/contact_4.jpg": "e692d1945f289e32c39689c9671e7c42078c4985ece4d4e588ddff6093169ad4",
+    "g2_mixed_complete/renders/contact_1.jpg": "9886dde0c4a78d5c1a763b8745c5270ed2dc93a2e0766ffe2ae975727ba02b18",
+    "g2_mixed_complete/renders/contact_2.jpg": "2757211b1d9bf344d69d597becde79d2e44ee986b7c85eded071c5cfedae7433",
+    "g2_posterior_trial/posterior_trial.py": "5f65037dba3b043c0e1c474177883630979d442af5261ce590c7e912a605faba",
+    "g2_posterior_trial/posterior_insert.tex": "865567eb400e2d161a438650ffc2ae5a3a7e39e4361e73c1679c23bfc6343958",
+    "g2_posterior_trial/integrate_v124.py": "b4f0856ff5ba3c7625634709b69b65cfcb10eabc62c0a51650fdaddd4cc49197",
+    "g2_posterior_trial/render_v124.py": "f07ee9fdcb2cf7bfcf586057d1c3e960470e0e45e500cfeeed006193ffbd1c8e",
+    "g2_posterior_trial/package_v124.py": "b6a886d9c3b012b0eaa06edca790805cad77021c96667f00c06f54f8fc6dc395",
+    "g2_posterior_trial/build_complete_pdf.py": "abe1a0e45eae5c473eff945b48b398b55869c88a848c98f83e50bac8457976ec",
+    "g2_posterior_trial/adversarial_posteriori_refinement.md": "9e47a168bc438313b04860330d64b65071f09721c49e151306297a48e7a17de3",
+    "g2_posterior_trial/posterior_integration_review.md": "9bfa6c60ba5f07f37224001c876cc80376723a2bc1fa866bf357163104db3da2",
+    "g2_posterior_trial/posterior_replay_README.md": "7e03cd9e83dce2a8397cd6971f720032e4b045fd169bb0c4bdf5ccd14bacb476",
+    "g2_posterior_trial/refine_inverse.py": "a021ef0f047d6daf460e17f6d58e94f2f26fb0cb7bd8b789326f39d496bf8ca7",
+    "g2_posterior_trial/mixed_refinement.py": "01ee8f3d366e627c74a6b41e8f1eb3506354ba5bc55a5f06d5582b56cd24f720",
+    "g2_posterior_trial/posterior_witness_M4096_s4.json.gz": "ae3886a1e560e3fe3bf0540e8097e22373ca48af736fa323a617e0035f79e6f2",
+    "g2_posterior_trial/posterior_check_M4096_s4_J65536_b768.json": "d588ba0e8002286775a9a592e1187de9e6b852bc285800dd05ebd9024e81adfb",
+    "g2_posterior_trial/posterior_check_M4096_s4_J65536_b896.json": "fed837c0869727ec21fc9e7e7cf1d27f10387287fb8de100da704927645cf317",
+    "g2_posterior_trial/posterior_witness_M4096_s16.json.gz": "454d982369d1998bf59999c3421740b3bac9ee4be2e519ed1ae2dbdae131aa5e",
+    "g2_posterior_trial/posterior_check_M4096_s16_J65536_b768.json": "e57f758d3788f03b2cab1ae1c6287d4f5c4576c6b41900415d1b8e67befa56e3",
+    "g2_posterior_trial/posterior_check_M4096_s16_J65536_b896.json": "65e257ed4ccdcfd212c0ec6a7a19bd349a0ecf9315ba7d3e16e730e39d7ad5a7",
+    "g2_posterior_trial/mixed_probe_J65536_b768.json": "6f6022800cee984aba2f89f1118d71224743b2c2f9b3281922730d052b921b10",
+    "g2_posterior_trial/mixed_probe_J65536_b896.json": "1d266d47d6d691a0268a1099e13a4494a8711430c9f3393a7967c51a2caf774c",
+    "g2_posterior_trial/input/fixed_space_prime_action_v123.tex": "25080a6811766d1f8515464b24faee43e1d22d645cc9618960a4ace27b676782",
+    "g2_posterior_trial/renders/contact_3.jpg": "84b972617c7dd3ebfd557c7f8212d3222e50be0ecf7fad13dae5f929c6028653",
+    "g2_posterior_trial/renders/contact_4.jpg": "806d796ae54274f3c2615c86a71b0a8f7a6d590416e633cfec6624aaa2a775f4",
+    "g2_posterior_trial/renders/contact_5.jpg": "1b6d57aa9d2cbe90cdf7df64171d677999af6309b8d10b3ddf9e5cb12944b7bf",
+    "g2_posterior_trial/renders/contact_1.jpg": "72dc6364e6c91e26e10dbebe8159a30914b4ba744677657328fdbe1109697907",
+    "g2_posterior_trial/renders/contact_2.jpg": "852e5dbedf9cdf82627d456139526621dbd797dbda32454264813a0bc868ca9a"
+  },
+  "retained_v1_7_results": [
+    "Proposition 19.8: exact leading reflected-pair contribution of a sharp-band edge term; unless its explicit endpoint product vanishes, reflection produces an exponentially large oscillatory real term rather than cancellation"
+  ],
+  "retained_v1_8_results": [
+    "Proposition 19.9: full-space projection annihilates the zeta source and both shell graph directions, retains fixed-core ordinary coercivity, and preserves Weil transfer via a uniform full-strip product majorant",
+    "Corollary 19.10: a fixed positive scalar shift of the projected Weil form has a nonzero limiting relative Lyapunov defect on a hypothetical nonempty one-sided off-line root space"
+  ],
+  "primary_input": [
+    {
+      "title": "Burnol, Entrelacement de co-Poisson",
+      "url": "https://arxiv.org/pdf/math/0407443",
+      "used": "Distributional co-Poisson conventions and context; new cutoff norm estimate is proved explicitly in manuscript"
+    },
+    {
+      "title": "Burnol, Two complete and minimal systems associated with the zeros of the Riemann zeta function",
+      "url": "https://arxiv.org/pdf/math/0203120v7",
+      "used": "Mellin/co-Poisson framework; no independent arithmetic shell sign is attributed to this source"
+    },
+    {
+      "title": "Python-FLINT arb_mat documentation",
+      "url": "https://python-flint.readthedocs.io/en/stable/arb_mat.html",
+      "used": "Rigorous enclosed LU solve semantics, distinct from approximate solve"
+    },
+    {
+      "title": "Python-FLINT acb documentation",
+      "url": "https://python-flint.readthedocs.io/en/stable/acb.html",
+      "used": "Certified integration and analytic sinc evaluation"
+    },
+    {
+      "title": "NIST DLMF30.2 and30.3",
+      "url": "https://dlmf.nist.gov/30.2",
+      "used": "Regular angular PSWF differential equation; eigenvalue convention differs byc\u00b2."
+    },
+    {
+      "title": "NIST DLMF30.3",
+      "url": "https://dlmf.nist.gov/30.3",
+      "used": "Regular eigenfunction definition and spectral ordering."
+    },
+    {
+      "title": "CCM,Zeta Spectral Triples,Propositions3.2\u20133.4",
+      "url": "https://arxiv.org/html/2511.22755v1",
+      "used": "Actual physical logarithmic form, closed lower bound and trigonometric form core."
+    },
+    {
+      "title": "Connes\u2013van Suijlekom,Quadratic Forms,Real Zeros and Echoes",
+      "url": "https://arxiv.org/html/2511.23257v1",
+      "used": "Research report only: finite real-zero structure and continuum hypotheses."
+    },
+    {
+      "title": "CCM,Zeta Spectral Triples,Lemma7.2",
+      "url": "https://arxiv.org/html/2511.22755v1",
+      "used": "Uniform fixed-mode Hermite approximation; exact normalization and ordinary co-Poisson norm convergence derived in current proof."
+    },
+    {
+      "title": "NIST DLMF5.9.15",
+      "url": "https://dlmf.nist.gov/5.9.E15",
+      "used": "Exact Binet digamma formula."
+    },
+    {
+      "title": "NIST DLMF5.15.1",
+      "url": "https://dlmf.nist.gov/5.15.E1",
+      "used": "Convergent trigamma series."
+    }
+  ],
+  "retained_v1_9_results": [
+    "Lemma 19.11: an unconditional local L2 zero-synthesis estimate with multiplicities and no zero-separation hypothesis",
+    "Proposition 19.12: norm-level finite Weil-action transfer on the projected fixed root family, using the stronger p>1 tail margin",
+    "Corollary 19.13: top-root growth and lower-jet collapse for the globally positive squared-Weil metric S W^2 S"
+  ],
+  "retained_v1_10_results": [
+    "Lemma 8.1: exact signed Fredholm formula and rank-one moment resummation with explicit 4*pi^2*a^5*H/[5*(1-2a)^2] error",
+    "Proposition 8.2: elementary off-line evaluator upper bound plus nonzero nested evaluation make the Fredholm correction relatively negligible without Assumption 2.1",
+    "Equation (29): the remaining independent arithmetic shell-sign target at p=2, not a proved sign inequality"
+  ],
+  "retained_v1_11_results": [
+    "Lemma 9.1: L2 convergence of integral-corrected integer co-Poisson cutoff with variation/sqrt(M) error; raw zero-integral cutoff has positive sqrt(M) divergence",
+    "Proposition 9.2: regularized adjoint in local H^-1, exact arithmetic source ODE and dilation covariance",
+    "Corollary 9.3: controlled approximation of every fixed finite three-channel source Gram matrix, without inverse convergence",
+    "Growing-interval normalized source-testing error O(R^(1+d)/sqrt(M)); the independent co-Poisson cutoff M=ceil(R^4) suffices",
+    "Power-response formula re-encodes zeta(w)=0 and is explicitly not an independent sign estimate"
+  ],
+  "retained_v1_11_numerical_validation": {
+    "max_real_adjoint_error": 6.842277657836021e-49,
+    "complex_adjoint_error": 1.2095552326542646e-48,
+    "weak_pair_error_M4": 0.0003504215713104148,
+    "weak_pair_error_M32": 9.64394094551253e-06,
+    "power_response_error_M1024": 0.0035307921142948384
+  },
+  "retained_v1_11_proof_checks": [
+    "Right-endpoint tail Riemann error bounded by source variation and supported below b/M",
+    "Integral counterterm remains nonzero for a source with zero total integral",
+    "Raw cutoff divergence follows from exact scaled primitive norm and the corrected cutoff error",
+    "Finite adjoint counterterm and Fubini justified using Cauchy-Schwarz above alpha/M",
+    "First-slot-linear pairing checked explicitly with complex exponential test",
+    "Variation estimate gives convergence in dual derivative norm of H0^1 on each compact interval, not pointwise convergence",
+    "Formal self-adjointness of D=(t^2 derivative)' gives distributional solution span{1,1/t}",
+    "Arithmetic characterization proved in both directions with closure of source range",
+    "Adjoint dilation covariance verified before taking any limit",
+    "Source Gram convergence does not imply inverse, Schur complement or closed-range control",
+    "Euler-summation power response distinguished from an independent zero-excluding inequality",
+    "Original sampler, physical endpoint, Fourier cut, logarithmic Weil diagonal and graph defect unchanged",
+    "All 32 main sections, two appendices, 72 ledger rows and 337 unique labels retained"
+  ],
+  "unique_labels": 496,
+  "finite_certificate": {
+    "g2_finite_certificate.json": {
+      "status": "PASS: rigorous Arb enclosures for exact finite matrix and explicitly frozen rational candidate.",
+      "scope": "Not a true-PSWF approximation certificate, infinite Fourier-complement theorem, continuum positivity theorem, G2 closure or RH proof.",
+      "lambda_exact": 3,
+      "N": 64,
+      "dimension": 129,
+      "precision_bits": 512,
+      "python_flint_version": "0.9.0",
+      "flint_version": "3.6.0",
+      "candidate_sha256": "6d326cafbe715752f89b90cd92eb1d5a68ab0b78befb6afe074e797372b1a18e",
+      "matrix_definition": "Correct CCM logarithmic diagonal and all prime powers 2,3,4,5,7,8,9; exact L=2log(3).",
+      "integration_absolute_and_relative_tolerance": "1e-120",
+      "first_slot_linear": true,
+      "alpha": "[5.3123817005863590028616680254783549108663620501086361102274806186e-38 +/- 3.92e-103]",
+      "complement_gap_certified_lower": "1e-34",
+      "q": "[0.0002158920941115253352981423804729361704 +/- 8.76e-41]",
+      "sin_angle_bound": "[0.0002158920890802254249521833873753222510 +/- 6.91e-41]",
+      "schur_energy": "[1.668982121384273860507e-38 +/- 3.17e-60]",
+      "ground_eigenvalue_lower_bound": "[3.6433995792020851423544e-38 +/- 7.40e-61]",
+      "checks": {
+        "complement_gap_at_least_1e_minus34": true,
+        "schur_tangent_below_0_000216": true,
+        "ground_lower_bound_above_3_64e_minus38": true,
+        "rayleigh_upper_bound_below_5_32e_minus38": true
+      },
+      "source_norm": "[0.65172555083371705274154042783288860950966098845836523897041974678 +/- 3.76e-67]",
+      "candidate_endpoint": "[1.3265847123209625640496560484581526463347525953971201159248322603e-18 +/- 4.33e-83]",
+      "even_complement_pivots": [
+        "[0.14143435365109750497046956144029978919468443720370 +/- 3.67e-51]",
+        "[7.1558730244854382036554472087345380097051731614210e-5 +/- 3.19e-56]",
+        "[6.9036901105364197600363045630225538145311842764067e-6 +/- 1.76e-56]",
+        "[4.0090178052192563493907948544586695467872859880263e-6 +/- 2.41e-56]",
+        "[0.00021876328004222963194237848651688336093358394745740 +/- 6.79e-55]",
+        "[9.7204277754871865745991894396153953261959040832026e-7 +/- 2.04e-58]",
+        "[2.3359363511463098843173090347275504528407103781736e-6 +/- 7.72e-57]",
+        "[2.3806929179702207121809971792773415132407106760004e-6 +/- 1.11e-56]",
+        "[6.1179822122966177424730302363703671858750344291486e-6 +/- 6.94e-57]",
+        "[1.2429963587692449425243707805041157266570839858944e-6 +/- 1.26e-56]",
+        "[2.3845405766792328915511908094613619576450005913661e-5 +/- 4.26e-55]",
+        "[4.9557714901593855325199989379397207996247285338102e-6 +/- 3.69e-56]",
+        "[0.00010598314554653975621899070113822198876687780500443 +/- 3.32e-54]",
+        "[7.5956052806457960008695559899665890203429352834761e-5 +/- 1.16e-55]",
+        "[0.00057620275392942210789605999429913079456955118050337 +/- 2.58e-54]",
+        "[6.9149210943495068112912796242387313218139047523770e-5 +/- 1.99e-55]",
+        "[0.0036124248867309407691032253532648407886770098401453 +/- 3.71e-53]",
+        "[0.00066674274116969603798772409507243199188120068541508 +/- 9.12e-55]",
+        "[0.00037117409990966964490922753429527806047221029194858 +/- 8.66e-55]",
+        "[0.0049448147281625482848618179202578428195889893034744 +/- 4.38e-53]",
+        "[0.052023268383790511776196718801362312351175471727793 +/- 2.66e-52]",
+        "[0.0019060630528278834530126276144304615954604309928482 +/- 4.23e-53]",
+        "[0.070333855559683815069018447075244873180551012018307 +/- 2.49e-52]",
+        "[0.057176675526913240177879560311731319643269016068640 +/- 3.78e-52]",
+        "[0.093719688029043026161149088651854260922045835730051 +/- 3.29e-52]",
+        "[0.0071138761293370180739951683686106537772696212943989 +/- 8.98e-54]",
+        "[2.2513309406263723983346609696530242567800204000553 +/- 2.17e-50]",
+        "[0.052442491977309736523980498524697938238188029575446 +/- 4.19e-52]",
+        "[2.2692049122293669257579718564114331490668868866244 +/- 4.94e-50]",
+        "[0.45387444422785243353590906214825808300263020750469 +/- 3.94e-52]",
+        "[2.3137501406432802843567035888508511864611125509275 +/- 4.72e-50]",
+        "[0.37591791405779909325389587460820981345798167620099 +/- 3.50e-51]",
+        "[1.6577233881641829484679833807684528853240210089423 +/- 4.63e-50]",
+        "[1.1993997923956482634930341472903327165756099922241 +/- 2.23e-51]",
+        "[1.6845541997466409373810131536935016711515925113207 +/- 1.74e-50]",
+        "[1.8573906008183876119181139918713028617247907691123 +/- 1.54e-50]",
+        "[2.8408838276551202238170335150133817110034016747684 +/- 1.29e-50]",
+        "[0.59610891416047142809685699480243538296183687315405 +/- 8.21e-52]",
+        "[4.1590342042121743971533594669428370306227171345862 +/- 4.91e-50]",
+        "[2.6821886880523175853027587857348782920177714369965 +/- 1.58e-50]",
+        "[2.1275205714023458675674658890307391960377834285127 +/- 2.96e-50]",
+        "[2.1465012608707126743540315614249196085927946040450 +/- 2.48e-50]",
+        "[3.9337506752703013399929832596244160312933073725938 +/- 6.27e-51]",
+        "[1.2685321240114544787124303131979994225043444597606 +/- 4.92e-50]",
+        "[2.8292029961025898096676151742542361880953715517342 +/- 2.58e-50]",
+        "[2.4051974358855923456015984363050822297110873108221 +/- 3.00e-50]",
+        "[3.7284682404739427204457277066611664316791538494728 +/- 4.70e-50]",
+        "[1.6280615980731867720826657150369275691068660405839 +/- 9.39e-51]",
+        "[3.6651666014541512679585503909586435979083391040499 +/- 4.33e-50]",
+        "[2.7141785151913194906520908342739052411031815507578 +/- 4.89e-50]",
+        "[2.7960324708529474870738637004930672262957748330882 +/- 4.68e-50]",
+        "[2.2033914887460671204335905158853704127268503865441 +/- 4.47e-51]",
+        "[3.2897859260884499827778570194125369548371108205729 +/- 1.06e-50]",
+        "[1.7101503868124686173394413496655617399818253530961 +/- 1.93e-50]",
+        "[4.2695647458576675693858882625350590989609061223052 +/- 3.94e-50]",
+        "[2.5903376799076520349830587313399472137601994878043 +/- 2.73e-50]",
+        "[2.8640653325108083446080148220797924957562893742282 +/- 1.03e-51]",
+        "[3.3240783776623846477605426412085966838578985669990 +/- 4.44e-50]",
+        "[4.1161911500977769105115490361955530721563813426236 +/- 4.44e-50]",
+        "[1.1857292575562738994804226409573681175026442295583 +/- 4.10e-50]",
+        "[4.0089865714107125041427465679449294224049208473843 +/- 9.25e-51]",
+        "[3.1983170859724016709793220261733674348258218179257 +/- 3.32e-50]",
+        "[3.0184660277033578933285821998965103891886997982644 +/- 8.48e-51]",
+        "[2.3514442328428119985984651203053096297074642073570 +/- 1.11e-50]"
+      ],
+      "odd_block_pivots": [
+        "[0.00056496790434408765606459892664847639633430927327715 +/- 1.35e-54]",
+        "[2.7848537958097301621233888053769983569149994424400e-6 +/- 2.64e-58]",
+        "[6.9324700385606147467521435209001823623114007505183e-7 +/- 3.49e-57]",
+        "[2.9166290249817904928713457108554661830594920042087e-7 +/- 4.27e-57]",
+        "[2.7247276572443676014931411102818673319208413878929e-5 +/- 3.29e-55]",
+        "[9.8945572340653908981327076514034871357528356495354e-8 +/- 9.80e-59]",
+        "[3.6895426737897143054050398047934784043014109811063e-7 +/- 1.96e-57]",
+        "[4.3182654474584327586774335460789982109083455591339e-7 +/- 4.79e-57]",
+        "[9.5421074042536915282424069159120251258317910979570e-7 +/- 3.64e-57]",
+        "[3.2742538987109905052935701648058979221333535833239e-7 +/- 1.67e-57]",
+        "[4.8166298847709006183167581258986259047861053357884e-6 +/- 6.74e-57]",
+        "[1.5562676151576842132927069435020611471600680235843e-6 +/- 8.79e-57]",
+        "[3.1880012975001405404104657556398640489344425768384e-5 +/- 1.55e-55]",
+        "[2.1987600623021958452661971277201710544988251688931e-5 +/- 4.73e-56]",
+        "[0.00022287097959439637863094759190378936648656712027611 +/- 4.61e-54]",
+        "[2.6347445661564991782942436703638858206870703598914e-5 +/- 6.95e-56]",
+        "[0.0013519007641227131239669411775368490517672269596680 +/- 3.42e-53]",
+        "[0.00024715067089168390335284058784756194111708323054997 +/- 2.11e-54]",
+        "[0.00016432994672011236894617928739433304340813598235181 +/- 2.00e-54]",
+        "[0.0024248604162788215806218033536265594414052597011053 +/- 3.16e-53]",
+        "[0.025660847853199554671504379558008284988368901976817 +/- 1.98e-52]",
+        "[0.0010376433546952634571437702698989576395500840245893 +/- 4.59e-53]",
+        "[0.035892473433940898110736613052357097756457597167767 +/- 4.71e-52]",
+        "[0.037142845291954765524461078260043489519126357772275 +/- 2.71e-52]",
+        "[0.046365549747365814869873326429081645648416650662148 +/- 2.60e-52]",
+        "[0.0031031332821702382583042167082236250369322805598397 +/- 3.41e-53]",
+        "[2.2258685382224853451806221210014575339203845372097 +/- 3.44e-50]",
+        "[0.028324207124188724456434077269528833365677949515804 +/- 6.19e-53]",
+        "[2.2689970057154162763346151208721361986973415433597 +/- 2.30e-50]",
+        "[0.27734788592674884041999635995607249400887208465953 +/- 1.08e-51]",
+        "[2.2402988817072931729739884415612442916142844838742 +/- 4.99e-50]",
+        "[0.24723025217551318690459583344236291058449434147188 +/- 1.62e-51]",
+        "[1.4357449269741571067709242501329319618531827286132 +/- 1.37e-50]",
+        "[1.0536986895808677533614151485488349794945431486814 +/- 8.93e-51]",
+        "[1.3018736724753961455037008632563612230502849719562 +/- 3.80e-50]",
+        "[1.3790529204421596058790006006843642154075637393496 +/- 4.87e-50]",
+        "[2.6252430179447370969140371927329566868336962343196 +/- 1.77e-50]",
+        "[0.51442362233854812364367128297410458810880724758689 +/- 1.31e-51]",
+        "[4.0756165781072098358200919793255154817294930952068 +/- 1.64e-50]",
+        "[2.6595819003253985050897916810568835803991960863512 +/- 2.78e-50]",
+        "[1.8975593468205983092096117236909267686842027885325 +/- 2.86e-50]",
+        "[1.8546340558203632867070340278221157053208794412999 +/- 3.76e-50]",
+        "[3.6145643977963688748314379128672098358223355730857 +/- 2.56e-50]",
+        "[1.0939618270926900866801512553822210303093992708675 +/- 4.51e-50]",
+        "[2.7114680248548967657565483651379256033514056978723 +/- 3.44e-50]",
+        "[2.4061655717957411223123539254049173216142932936124 +/- 1.94e-50]",
+        "[3.7119680177477120328794897628588756769321725552666 +/- 1.28e-50]",
+        "[1.5778070385061633018282122548939493679460264081366 +/- 1.31e-50]",
+        "[3.6594543757475400767173914681545195007482620951954 +/- 3.67e-50]",
+        "[2.6569398792178804408564293572999005740420083990927 +/- 1.44e-50]",
+        "[2.7956982279297034163387714494068506126096421598227 +/- 1.88e-50]",
+        "[2.1252940079801984062259494798102197302011009913693 +/- 1.43e-50]",
+        "[3.0938625510195020545567972591402108284493999075257 +/- 3.15e-50]",
+        "[1.5698753948728389442644566078438285307772635198928 +/- 1.43e-50]",
+        "[4.1453735625536886861811916557604180114456071399688 +/- 3.40e-50]",
+        "[2.4737706530488485805797716986429544213562660560761 +/- 3.36e-50]",
+        "[2.7861083908038225100167414998994648910058667409194 +/- 2.72e-50]",
+        "[3.2350499297281099974206052758459295369122552377522 +/- 4.61e-50]",
+        "[3.9914777323328156125188624957188025482728332016182 +/- 3.53e-50]",
+        "[1.1525956355990175345844909728319862329525743835515 +/- 1.84e-50]",
+        "[3.9923217705945076500765461079252939987460407557302 +/- 2.91e-50]",
+        "[3.1933198813603063102667923181840886914641378678262 +/- 7.47e-51]",
+        "[3.0149730289460057525531891490177626819090906166012 +/- 3.59e-50]",
+        "[2.3468721224643654944207105791480291913410181061750 +/- 3.08e-50]"
+      ],
+      "elapsed_seconds": 2.262
+    },
+    "g2_finite_series_certificate.json": {
+      "status": "PASS: independent rigorous series/rational-complement certificate.",
+      "scope": "Exact finite matrix, frozen rational candidate only; not true-PSWF or infinite-dimensional certification.",
+      "lambda_exact": 3,
+      "N": 64,
+      "dimension": 129,
+      "precision_bits": 768,
+      "series_terms": 128,
+      "candidate_sha256": "6d326cafbe715752f89b90cd92eb1d5a68ab0b78befb6afe074e797372b1a18e",
+      "sine_integral_tail_bound": "[3.404661937770110958937337946946481072613504233854932255244399310318345e-248 +/- 2.28e-319]",
+      "arch_diagonal_tail_bound": "[2.416418595837579243981805048796361121700749174065305178044456778090210e-250 +/- 1.33e-320]",
+      "alpha": "[5.3123817005863590028616680254783549108663620501086361102274806186e-38 +/- 3.92e-103]",
+      "q": "[0.00021589209411152533529814238047293617037998048577843899069830362046 +/- 1.03e-69]",
+      "schur_energy": "[1.668982121384273860507255495074522321601149178340614956695566536e-38 +/- 8.15e-102]",
+      "ground_lower": "[3.643399579202085142354412530403832589265212871768021153531914082e-38 +/- 8.61e-102]",
+      "complement_gap_certified_lower": "1e-34",
+      "strictly_positive_pivots": 128,
+      "independent_matrix_entry_overlaps": 8321,
+      "checks": {
+        "q_below_0_000216": true,
+        "ground_above_3_64e_minus38": true,
+        "alpha_below_5_32e_minus38": true
+      },
+      "pivots": [
+        "[2.4916561817426942974736710312223550183873692264732 +/- 3.81e-50]",
+        "[3.2525315318076137882703077338712605999723865992473 +/- 2.93e-50]",
+        "[3.3219974980113882933640524216944241728560162909658 +/- 4.50e-50]",
+        "[4.1774202643328161340536519352558272194321254193098 +/- 4.54e-51]",
+        "[1.4292908916139080818546971276763605824349412036675 +/- 1.88e-50]",
+        "[4.0715794396699869244924902482677151098278250270076 +/- 1.01e-50]",
+        "[3.4864948923094012781871495261992758624550770604941 +/- 3.95e-50]",
+        "[3.0047076169405850591032743652214336512318429202618 +/- 2.09e-50]",
+        "[2.7704566687603741878156915873474036161318504931410 +/- 8.71e-51]",
+        "[4.4057838898413193807052279853196386395663811864678 +/- 2.46e-50]",
+        "[1.9328827659858816151355375925746760603756668760652 +/- 3.16e-51]",
+        "[3.8100362995781419797522472718447282007135953298891 +/- 1.13e-50]",
+        "[2.3781122185090174200824406276733269367517843018967 +/- 8.03e-51]",
+        "[3.0269735645408853498176363030230745612482163687824 +/- 4.66e-50]",
+        "[2.7819260286282425154652167419685881443402276427630 +/- 2.73e-50]",
+        "[3.9748187875731980888043406662481383756305626106500 +/- 4.06e-50]",
+        "[1.9792330002387617142059445881109614772179411338914 +/- 4.81e-50]",
+        "[3.7063823861990356843166527943616031040395359626196 +/- 1.21e-50]",
+        "[2.8356109159172394554448720561601896486450001739514 +/- 2.14e-50]",
+        "[3.0743748496814887126750450576704956422672296036159 +/- 2.83e-51]",
+        "[1.6193832814749596856859735865105285061715465210326 +/- 3.32e-50]",
+        "[4.2468671885175424385421505457790693210769468263136 +/- 1.44e-50]",
+        "[2.4551426467665985274665231633177187670687596146039 +/- 3.51e-50]",
+        "[2.4360942462474806048990461337372287067671601189276 +/- 3.45e-50]",
+        "[2.9402278649273519093423735374002701680518674624282 +/- 4.67e-50]",
+        "[4.3632619198462378506026560739023031594425526752618 +/- 3.20e-50]",
+        "[1.0736981842885121031339320181537520137673413587209 +/- 1.78e-50]",
+        "[3.4480024510235598716388120960520835915558395928353 +/- 9.02e-51]",
+        "[2.6656970641802934498019262868146157555409157929563 +/- 9.29e-51]",
+        "[2.5675789362580793635124779178663717587005794840845 +/- 3.05e-50]",
+        "[1.9753686083844060272432821209198923087322819841975 +/- 2.44e-50]",
+        "[3.3376026804983258669497267306786049198880250447792 +/- 2.86e-50]",
+        "[1.7113102007716917242281918375187028182444227790689 +/- 1.86e-50]",
+        "[3.1596757848276995699964288372724283850648416238380 +/- 3.78e-50]",
+        "[2.0704138804152121497247635649834777208702425839464 +/- 1.33e-50]",
+        "[2.8320219511208546423597525317712657855352412368541 +/- 2.73e-50]",
+        "[1.7825097713940715736150935224524448333999664587801 +/- 4.36e-50]",
+        "[3.2642745057104370131576324454515416638499025763905 +/- 2.57e-50]",
+        "[1.1020359429557757454493799133620395849286350048753 +/- 1.46e-50]",
+        "[2.5151117773928683007037830897391849689491869176210 +/- 3.94e-50]",
+        "[2.5197192376402944389320490503681825163954302489743 +/- 1.04e-50]",
+        "[3.1325436537561754480817610984698133751522061801084 +/- 8.90e-51]",
+        "[0.70870418258330259719669158653460695368534355689540 +/- 3.59e-51]",
+        "[3.7573755101267561629200792010944580465339008723084 +/- 4.79e-50]",
+        "[2.1524541227117949396973037849101079803441899651230 +/- 7.54e-51]",
+        "[1.3847895116165821122256554310380271120241632289457 +/- 6.10e-51]",
+        "[1.4111780856446763724500669178356039804167897694506 +/- 1.90e-50]",
+        "[3.2279671955886061070681382745936418797323414848224 +/- 1.37e-50]",
+        "[0.43016266177919640155807976508513549474436122852097 +/- 9.48e-52]",
+        "[2.4919490757563594728771225799494335498947396552257 +/- 4.68e-50]",
+        "[1.6290847501291116750488247986464912119330160685849 +/- 4.53e-50]",
+        "[2.3122556504359152515023329023148816394251903338331 +/- 4.44e-50]",
+        "[0.58353079124173362558780251306901156244490944898319 +/- 1.12e-51]",
+        "[1.7322905528298443172310113077173438820296573805702 +/- 4.77e-50]",
+        "[0.15627038304579271291515415516440015140420807025266 +/- 1.30e-51]",
+        "[0.25738906197189130499630298019688122128227441529705 +/- 1.70e-51]",
+        "[0.060943001136035260112176573027870285448850915769472 +/- 3.36e-52]",
+        "[0.0034139009189595804180315026771865757502478394307248 +/- 4.93e-53]",
+        "[0.00017773231487339247799277225537836581954651296701908 +/- 1.90e-54]",
+        "[0.00050252308437132809726654229354056834509885144272718 +/- 6.13e-55]",
+        "[1.3468537441175475188623771350494475558652096568785e-9 +/- 3.57e-59]",
+        "[5.4210927945825534823675936845728284278342003736516e-7 +/- 2.72e-57]",
+        "[1.2209429354841378935936052743020143483940621847215e-10 +/- 1.68e-61]",
+        "[1.4610002226779811158599528506220964508683858387823e-12 +/- 3.38e-62]",
+        "[3.8250520244450917106645465969366142083691134961149e-12 +/- 3.04e-62]",
+        "[1.2981627523630105812856917648911379574082173292553e-12 +/- 2.04e-62]",
+        "[1.2288409575847561460816112026319418692976959507935e-12 +/- 9.27e-63]",
+        "[2.9306519883189480689740646389165411319431795944283e-12 +/- 3.33e-63]",
+        "[1.1860407819772390440202369890675124971655918014599e-9 +/- 1.23e-59]",
+        "[1.9406636149163410224337042578225887140102771115399e-11 +/- 2.50e-61]",
+        "[2.7361036528150589503974920213754794127519460613298e-10 +/- 4.26e-60]",
+        "[5.0645872790000328697208793779032176746849576654726e-10 +/- 1.37e-60]",
+        "[5.0864372990083719398645754458611253275779594377167e-9 +/- 3.43e-59]",
+        "[2.9132231650505728531551847999939595540214448645948e-9 +/- 8.14e-60]",
+        "[8.3679230790132708686066999109779646781224761579891e-8 +/- 4.90e-58]",
+        "[7.1141412353744541031660909602858616817626386328608e-8 +/- 1.62e-58]",
+        "[1.4876304046171591816970247487932487825361038643597e-6 +/- 1.90e-56]",
+        "[2.0827576754931184486841596349036608203979329813158e-6 +/- 2.08e-56]",
+        "[3.6707281439375152585855161370697109613649875881024e-5 +/- 4.33e-55]",
+        "[3.7342184808411680305695467491519352792452683669639e-6 +/- 4.93e-56]",
+        "[0.00031904624511758301553328574990165363730842121239112 +/- 2.50e-54]",
+        "[5.8102285992710345737593976962650764373118484433458e-5 +/- 4.55e-55]",
+        "[7.5471200063274600767375470902285588417490757835674e-5 +/- 2.22e-55]",
+        "[0.0010784133859537349494096407634519825576358651763690 +/- 4.62e-53]",
+        "[0.013579084077833154076960155962883035553836165375444 +/- 2.55e-52]",
+        "[0.00067904317610947926454957878293832989016107318572577 +/- 3.18e-54]",
+        "[0.023587301052869472916966103928713465195415331447418 +/- 1.77e-52]",
+        "[0.029999749038985978040400373496399075700427156722353 +/- 2.13e-52]",
+        "[0.037562120333318489231221357852406196728589159997306 +/- 3.02e-52]",
+        "[0.0025879909034456048225791486567064324343044121792646 +/- 2.36e-53]",
+        "[2.2168501782377232875458222580257956940159054695038 +/- 7.58e-51]",
+        "[0.027093952200243626579863835654766670600829485307314 +/- 8.34e-53]",
+        "[2.2688645294573155419567804394274210131672096822332 +/- 3.21e-51]",
+        "[0.27767807250770342628383465824875886269908066761861 +/- 9.11e-52]",
+        "[2.2435626937485820086037965146301673289856699817584 +/- 3.22e-50]",
+        "[0.25504884093816573483260751245889571405631865495454 +/- 2.38e-51]",
+        "[1.4591273889710641999264960128637335016439336807499 +/- 4.47e-50]",
+        "[1.0701390437107738841247562098156916154622805866835 +/- 2.23e-50]",
+        "[1.3537683851368703108644662072483112554677124376102 +/- 6.40e-52]",
+        "[1.4616111169283452983606249063370016691582964991417 +/- 2.85e-51]",
+        "[2.6732645136656413367239350331808955369929430218652 +/- 4.64e-50]",
+        "[0.53316219722926244099056860101284138374912892422533 +/- 1.27e-51]",
+        "[4.0971717236679026347757015830803762398335421835556 +/- 1.86e-50]",
+        "[2.6653293629611352811276146873702406513821031766828 +/- 4.11e-50]",
+        "[1.9593415790680104185612028189087002036652351099365 +/- 6.39e-51]",
+        "[1.9402368451297523882841263991372849109645073312484 +/- 1.93e-50]",
+        "[3.7184937523484177563923477415462291969853479296579 +/- 4.21e-50]",
+        "[1.1543109299717106184492878562291778708708919877020 +/- 4.98e-50]",
+        "[2.7562512499760746461096983380628525894433793459736 +/- 1.03e-50]",
+        "[2.4055645932643994351451358491409904388651427081140 +/- 3.95e-50]",
+        "[3.7181647479450119372713458796700973691213154380686 +/- 2.57e-50]",
+        "[1.5974530512259203944533112332291827228543306257515 +/- 3.46e-51]",
+        "[3.6615272586988682303707620487825608258717404677429 +/- 4.85e-50]",
+        "[2.6796024046248149369951341927594286603990118392671 +/- 2.75e-50]",
+        "[2.7955871136943666326361070065792045794356040352902 +/- 1.26e-51]",
+        "[2.1566403789011544666241358511234077431218250400360 +/- 3.57e-50]",
+        "[3.1748105851914242469790174095260823195861682060452 +/- 3.49e-50]",
+        "[1.6299685413944591429565147315324631863697321372630 +/- 4.95e-50]",
+        "[4.2011993895382803313414367364434205865453480561817 +/- 3.39e-50]",
+        "[2.5270603539830812396801321723564077168255767549530 +/- 2.30e-50]",
+        "[2.8226437585628982419433377701853072813882492334295 +/- 3.11e-50]",
+        "[3.2773840650490131511450808116865874560394420521758 +/- 3.16e-51]",
+        "[4.0516287169370891444045831435612128926949354512297 +/- 2.15e-51]",
+        "[1.1688306101994277771304684900455657856193396572228 +/- 1.07e-50]",
+        "[4.0006007444054147157564461838196914774488848243435 +/- 1.77e-50]",
+        "[3.1958019925018460551404160500890259141462107141988 +/- 1.25e-50]",
+        "[3.0167129181206595867447250674572851259645417072700 +/- 2.96e-50]",
+        "[2.3491526197444174749729946669536522886657119070177 +/- 1.51e-50]"
+      ],
+      "elapsed_seconds": 0.678
+    }
+  },
+  "retained_v1_12_results": [
+    "Proposition 20.25: inverse-weighted finite spectral angle and eigenvalue bounds with rigorous matrix/solve error budget.",
+    "Proposition A.1: actual finite Weil matrix lambda=3,N=64 is positive definite with simple even ground state; certified ground interval and angle for frozen rational candidate.",
+    "Exact archimedean digamma/trigamma representation and explicit geometric tail bounds used in second certificate."
+  ],
+  "retained_v1_12_proof_checks": [
+    "Min-max separation and scalar Schur equation for a positive shifted complement.",
+    "Same-operator spectral calculus used for both inverse norm and Schur energy.",
+    "All prime powers, pole contribution and correct logarithmic diagonal retained.",
+    "Exact decimal rational candidate; no true-source accuracy assumption used.",
+    "Underlying Householder matrix is exactly orthogonal; intervals only enclose its entries.",
+    "Both reflection sectors certified; exact rational full complement retains Gram matrix.",
+    "Rigorous LU solve, interval LDL pivots and strict final ball comparisons.",
+    "Analytic archimedean sums retain convergent differences and symmetric tails.",
+    "8321 entrywise overlaps across independent integration/series assembly paths.",
+    "Historical ledger preserved; no sampler/graph/endpoint convention changed."
+  ],
+  "exact_source_certificate": {
+    "status": "PASS: infinite PSWF/source certification and exact projected-source ground-angle transfer at lambda=3,N=64.",
+    "scope": "Fixed parameters only; no growing-window bound, omitted Fourier positivity, endpoint recovery, graph/full-strip transfer, G2 closure or RH proof.",
+    "precision_bits": 768,
+    "python_flint_version": "0.9.0",
+    "flint_version": "3.6.0",
+    "input_sha256": "ac9dfa8c03f54a326e3ba7af59917ac435e63d41e978310301e6df6e53e83076",
+    "prior_weil_certificate_sha256": "a207516292d6afcc8198da1af463b6e10dd59b2ba77bf31d91034aedfad8d811",
+    "frozen_candidate_sha256": "6d326cafbe715752f89b90cd92eb1d5a68ab0b78befb6afe074e797372b1a18e",
+    "modes": [
+      {
+        "mode": 0,
+        "xi": "[55.7952761850026981295319224742774462174946996603854878238332 +/- 2.32e-59]",
+        "inertia_at_xi_minus_and_plus_one": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "full_infinite_residual_bound": "[5.91254716837865116040588072846876967486670505221031384591888e-56 +/- 3.33e-116]",
+        "angular_L2_error_bound": "[8.36160439369172809664155328386900511580962261697191313458794e-56 +/- 1.97e-116]",
+        "angular_uniform_error_bound": "[2.72250604430501622802565703791378655375711771140716762994692e-52 +/- 4.87e-112]",
+        "physical_center_approx": "[1.18720585869974647112344723261456578806843003445246741680589 +/- 2.42e-60]",
+        "omitted_link": "[-5.91254716837865116040588072846876967486670505221031384591888e-56 +/- 3.33e-116]"
+      },
+      {
+        "mode": 4,
+        "xi": "[497.944774845496922257341009719324968220244846024920006721503 +/- 1.07e-58]",
+        "inertia_at_xi_minus_and_plus_one": [
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "full_infinite_residual_bound": "[4.79597952887538144243222483284066181400916005109504685707698e-52 +/- 4.25e-112]",
+        "angular_L2_error_bound": "[6.78253929459929126018843515955894047884417185753668194576077e-52 +/- 1.97e-112]",
+        "angular_uniform_error_bound": "[2.50825819141848616224289614131717098644797909442157664947842e-48 +/- 3.18e-109]",
+        "physical_center_approx": "[0.716781197616024997291603263013571371127450966866686556835728 +/- 3.20e-61]",
+        "omitted_link": "[-4.79597952887538144243222483284066181400916005109504685707698e-52 +/- 4.25e-112]"
+      }
+    ],
+    "raw_source_uniform_error": "[1.72492274572700926878258830374969213197353157724172588548922e-48 +/- 4.57e-108]",
+    "raw_source_center_approx": "[2.61009508322522676930901657968895933831929560919982863171965e-39 +/- 4.16e-99]",
+    "bump_sup_bound": "129",
+    "repaired_source_vs_raw_polynomial_uniform_error": "[3.36702265960294210185374343721612234130649110743336998533259e-37 +/- 3.22e-97]",
+    "finite_polynomial_coefficients_vs_frozen_norm": "[6.42145221007146572890140115639137626921575251101226014175058e-40 +/- 3.32e-101]",
+    "exact_repaired_source_projection_vs_frozen_norm_bound": "[2.59401610250388973666484857667837593159354792340441266631617e-36 +/- 3.75e-97]",
+    "normalized_projector_distance_bound": "[3.98022771883886708703429485057969637986889833758081480126545e-36 +/- 9.23e-97]",
+    "true_projected_source_ground_angle_sine_bound": "[0.000215892089080225424952183387375326231229248239472416041455171 +/- 2.02e-64]",
+    "physical_endpoint": "[5.58669542376411959e-19 +/- 8.84e-37]",
+    "projected_endpoint": "[1.3265847123209626e-18 +/- 5.59e-35]",
+    "relative_physical_endpoint_error": "[1.3745427514771447 +/- 7.82e-17]",
+    "checks": {
+      "full_infinite_spectral_counts": true,
+      "full_residual_includes_tail": true,
+      "positive_true_modal_centers": true,
+      "exact_source_coefficient_error_below_2_60e_minus36": true,
+      "normalized_projector_distance_below_4e_minus36": true,
+      "true_projected_source_angle_below_0_000216": true,
+      "physical_endpoint_positive": true,
+      "relative_endpoint_error_between_1_374_and_1_375": true
+    }
+  },
+  "retained_v1_13_results": [
+    "Lemma20.26: infinite angular-tail inertia bounds and full-residual L2/graph-norm pointwise eigenfunction estimates.",
+    "Proposition20.27: exact repaired projected source at lambda3,N64 within2.60e-36 of frozen candidate; ground-state angle sine<0.000216.",
+    "Certified exact-source physical endpoint mismatch: relative error strictly between1.374 and1.375."
+  ],
+  "retained_v1_13_proof_checks": [
+    "Canonical self-adjoint Legendre operator plus bounded positive perturbation; compact resolvent.",
+    "Omitted angular tail>=19740; single-link Schur inertia sandwich; all signed interval LDL pivots exclude zero.",
+    "Counts at xi\u00b11 identify target and distance>=1 to all other even spectrum.",
+    "Full residual includes first omitted angular coefficient.",
+    "Graph norm controls closed-interval evaluation by telescoping Legendre bound<=1.",
+    "Physical normalization and modal integral coefficient errors retain scale factors.",
+    "Entire exact repair bounded by proved ||psi||infinity<=129.",
+    "Bessel source-projection estimate and exact polynomial Mellin formula with translation phase.",
+    "Interior endpoint excludesm9; its moment integral has zero length instead.",
+    "Physical delta includes1/sqrtL; endpoint and norm error budgets kept separate.",
+    "Rank-one projector triangle transfers ground angle without gap division.",
+    "Previous certified Weil dependency tied to candidate hash, dimension and parameters.",
+    "All72 historical ledger dispositions preserved byte-for-byte apart from version headings."
+  ],
+  "new_results": [
+    "Exact finite-trial/complete-Schur distinction with coercive and semidefinite domain conditions.",
+    "Interval-certified local alpha4=0 for zero and frozen support256 trials, both parity sectors.",
+    "Interval-certified strong cancellation in the exact repaired-source complement.",
+    "Explicit direct cofinal Weil-to-RH implication, without conditional Riesz realization."
+  ],
+  "tail_constant_check": {
+    "status": "PASS",
+    "lambda_exact": 3,
+    "precision_bits": 256,
+    "complete_arch_diagonal_zero": "[2.6730164557658589790841100642004873911175847771142 +/- 4.92e-50]",
+    "prime_mass": "[3.5375028142662490436625749204946235497230001426946 +/- 5.13e-51]",
+    "bounded_b_constant": "[2.1187451859461071581247038981502287790581506371717 +/- 9.90e-51]",
+    "tail_constant": "[17.698499727050538363130997955387208190646491370467 +/- 3.72e-49]",
+    "threshold_for_Gamma_one": "[46168932.300377188201596906431166194524894027075635 +/- 3.63e-43]",
+    "chosen_N": 50000000,
+    "gamma_at_chosen_N": "[1.0797159145745827575647972465647202876160838541555 +/- 4.97e-50]",
+    "scope": "Analytic tail constant only. No finite head sign, head-tail Schur sign, whole-window positivity or G2 is certified."
+  },
+  "retained_v1_14_results": [
+    "Proposition20.19: canonical Weil operator equals correct diagonal plus bounded discrete-Hilbert commutator; explicit operator/form domains and Fourier operator core.",
+    "Proposition20.20: explicit positive sufficiently high Fourier complement with full prime/pole/archimedean bookkeeping.",
+    "Equation174: exact Schur inverse-action residual identity and sufficient finite lower-bound criterion.",
+    "Lemmas21.5\u201321.6 and Proposition21.7: polynomial-cutoff physical-endpoint recovery O(1/lambda), and endpoint-normalized coefficient tail for exact repaired fixed two-mode source.",
+    "Corollary21.8: weak G1 on that same literal projection, uniform ambient Fourier cutoff in established weighted test norm."
+  ],
+  "retained_v1_14_proof_checks": [
+    "Bounded b_n with sine-series decreasing majorant after dropping exponential factor.",
+    "Discrete Hilbert normpi, skew-adjointness, and bounded self-adjoint commutator.",
+    "Separate exact logarithmic diagonal; log-weight operator and form domains.",
+    "Physical canonical closure identified by CCM actual trigonometric form-core theorem.",
+    "Archimedean lower bound and off-diagonal norm; truncated prime shifts; exact negative pole eigenvalue.",
+    "Schur residual identity with Z columns inD(T); full sign still unproved.",
+    "Entire finite arithmetic extension with correct sqrt(lambda) factors and exterior L2 estimate.",
+    "DegreeO(c) polynomial approximation through orderceil(c), uniform Markov and product/log derivative constants.",
+    "Strict interior lower trace at integerlambda\u00b2; nearest arithmetic threshold retained separately.",
+    "All derivative jumps retained in growing-order integration; analytic remainderexp(-6c loglambda+O(c)).",
+    "C-infinity repair excluded from analytic differentiation and restored using Lebesgue constant/direct variation.",
+    "Dirichlet\u2013Jordan endpoint identification, physical1/sqrtL factor, Bplus/B comparison.",
+    "Separate coefficient-tail proof gives weak weighted G1, including log diagonal andK>=N support.",
+    "Two independent endpoint reviews; adversarial operator and weak-G1 reviews; no external referee verification.",
+    "72historical dispositions preserved byte-for-byte apart from headings."
+  ],
+  "sharp_tail_constants": {
+    "status": "PASS",
+    "scope": "Scalar interval evaluation of proved analytic tail constants; no head/Schur certification.",
+    "lambda_exact": 3,
+    "precision_bits": 256,
+    "L": "[2.1972245773362193827904904738450514092949811156454989034693886673 +/- 2.51e-65]",
+    "prime_degree": "[3.1712987180435458131974931748537816481738366234203450592685904013 +/- 2.13e-65]",
+    "degree_interval_values": [
+      "[3.1712987180435458131974931748537816481738366234203450592685904013 +/- 2.13e-65]",
+      "[2.9262341821764090152690177439449733028509714486455813790080288396 +/- 4.51e-65]",
+      "[2.1907492781654107189706177683697574825619129010448479390425832852 +/- 5.70e-66]",
+      "[1.4709867626118102277519546950913540298830171186588558003376235070 +/- 2.13e-66]",
+      "[1.9611158343460838236089055569089707205287474682083831608587466305 +/- 3.06e-65]",
+      "[1.6145422440661111689002894961798824364909974010282555337984066258 +/- 1.62e-65]"
+    ],
+    "rows": [
+      {
+        "N": 252,
+        "t_min": "[723.47901944717219922199152634441029755165856981207107405992498066 +/- 3.75e-63]",
+        "diagonal_error": "[0.0010893023326931898587438333201809420957081874198617474876067638137 +/- 6.35e-69]",
+        "arch_offdiagonal_error": "[0.0027644201783878243319958204120057872861109793404041107342003633948 +/- 4.98e-68]",
+        "negative_pole_tail": "[0.0011779121423478363755541242212067319115478100883902707698956995719 +/- 1.85e-68]",
+        "full_tail_lower": "[-0.00093219894099537371797868821427169416253929515737492366546180169557 +/- 1.39e-69]",
+        "even_tail_lower": "[1.5710420399962490818888971276466864798475932146185682575919061940 +/- 3.03e-65]"
+      },
+      {
+        "N": 253,
+        "t_min": "[726.33862031455232649164366676474393509138844558207926012340294501 +/- 4.20e-63]",
+        "diagonal_error": "[0.0010849783974548348779661974044206579981756190374021121830462691634 +/- 4.29e-68]",
+        "arch_offdiagonal_error": "[0.0027535366343784234487989864733758432416774715477253543927271336176 +/- 5.54e-69]",
+        "negative_pole_tail": "[0.0011732563631290702238720921096604602439132337639302301739672580716 +/- 3.43e-68]",
+        "full_tail_lower": "[0.0030324426084874958936543331508083503323834468507116083872424949691 +/- 2.04e-68]",
+        "even_tail_lower": "[1.5750020257665131853488481169002202526748813803021947490486820492 +/- 5.34e-66]"
+      },
+      {
+        "N": 256,
+        "t_min": "[734.91742291669270830060008802574484771057807289210381831383683807 +/- 4.47e-63]",
+        "diagonal_error": "[0.0010722101185590900534825157988769991646904093263235914790986747800 +/- 2.51e-68]",
+        "arch_offdiagonal_error": "[0.0027213941833934613073733173705737905968329874440554086216058052096 +/- 1.80e-68]",
+        "negative_pole_tail": "[0.0011595072651236514321860910302503767254298755557591727891160792661 +/- 7.25e-69]",
+        "full_tail_lower": "[0.014832920313056837538371070525350633994512069574234953262337205433 +/- 3.40e-67]",
+        "even_tail_lower": "[1.5867887543730771082018788531953524528185266448175470365389255809 +/- 4.74e-65]"
+      },
+      {
+        "N": 512,
+        "t_min": "[1466.9752449660052893315480356311560578814262700141994505641957118 +/- 1.94e-62]",
+        "diagonal_error": "[0.00053496652337915975090894772008932135697415491917737274680558123647 +/- 1.40e-69]",
+        "arch_offdiagonal_error": "[0.0013633495226746969902435527567981757960742256786008577305120700563 +/- 1.97e-68]",
+        "negative_pole_tail": "[0.00057975363256182571609304551512518836271493777787958639455803963305 +/- 3.63e-69]",
+        "full_tail_lower": "[0.70850772247706709371713627662721431453082812930514764497920548487 +/- 2.81e-66]",
+        "even_tail_lower": "[2.2798838029045255386645510137820909449921277667705801418612358207 +/- 4.59e-65]"
+      }
+    ]
+  },
+  "retained_v1_15_results": [
+    "Proposition20.21: explicit sharp complete and even Fourier-tail lower bounds; at lambda3,N256 the entire omitted complement is positive.",
+    "Lemma20.27: exact Hermite/co-Poisson source limit in ordinary L2 with O(lambda^-1/2) error, including source normalization and repair; source and polynomial projection norms bounded away from zero.",
+    "Proposition20.28: full actual operator residual O(lambda^6 exp(-2pi lambda^2/3)) for source and its literal polynomial Fourier projection; normalized Rayleigh and centered residual prerequisites proved.",
+    "Equation181: exact Schur verified-solve identity with directional residual Gram lower bound before scalarization.",
+    "Updated conditional overlap calibration: residual/ground overlap tending to zero would suffice; no overlap lower bound proved."
+  ],
+  "retained_v1_15_proof_checks": [
+    "Fixed-mode Hermite sup approximation transferred to unit normalization via squared-norm expansion.",
+    "Correct limiting scalar4pi/sqrt3, exact source moments, inversion-even co-Poisson limit and nonzero ordinary norm.",
+    "Uniform full Sobolev estimate used by duality for arbitrary output cutoffs, including modezero; no sqrtM summation loss.",
+    "Graph tail retains complete logarithmic diagonal and bounded commutator; weighted Chebyshev O(lambda) constants.",
+    "High-low Hilbert\u2013Schmidt bound lambda^2 N/M; auxiliary output M distinct from actual source cutoff.",
+    "Prime degree exact on physical interval, zero full-length m9 shift removed only as an L2 zero operator.",
+    "Binet exact remainder, trigamma sum and finite-L complete diagonal constants retained.",
+    "Tail pole scale and even-sector positive Hilbert matrix verified in both centered and unshifted Fourier phases.",
+    "Two independent internal residual audits; separate adverse tail review and repeated scalar Arb check.",
+    "Tiny residual explicitly not used to infer bottom ordering or endpoint-normalized control.",
+    "All72 historical dispositions retained apart from version headings."
+  ],
+  "certificates": {
+    "finite_K_certificate_b768.json": {
+      "bits": 768,
+      "lambda": 4,
+      "head_cut": 16,
+      "solve_cut": 256,
+      "results": [
+        {
+          "parity": "even",
+          "X": "zero",
+          "status": "PASS_STRICT_POSITIVE",
+          "pivot_count": 17,
+          "smallest_lower_pivot": "[1.4513711384056944394515197698311145498955593036556205183684521861e-13 +/- 1.71e-78]",
+          "witness_sha256": null
+        },
+        {
+          "parity": "even",
+          "X": "frozen_finite_solve",
+          "status": "PASS_STRICT_POSITIVE",
+          "pivot_count": 17,
+          "smallest_lower_pivot": "[1.2207988129530108388447993118595036762343875890670936172591727650e-58 +/- 2.43e-123]",
+          "witness_sha256": "e3d399654e2ee217d2346dffc028634fee2cc34b88794fac3a933a7b210ff2e2"
+        },
+        {
+          "parity": "odd",
+          "X": "zero",
+          "status": "PASS_STRICT_POSITIVE",
+          "pivot_count": 16,
+          "smallest_lower_pivot": "[8.4162028473949656352114426087305484676727380741429207550167934804e-13 +/- 3.37e-78]",
+          "witness_sha256": null
+        },
+        {
+          "parity": "odd",
+          "X": "frozen_finite_solve",
+          "status": "PASS_STRICT_POSITIVE",
+          "pivot_count": 16,
+          "smallest_lower_pivot": "[1.3872553434638554466668820359800498363386746003248348667997174305e-56 +/- 4.09e-121]",
+          "witness_sha256": "200652138f543b9077130011839128ed51bee6bf533845765b9d4752e9f636a4"
+        }
+      ],
+      "scope": "K_X is the exact complete-operator finite-support form; alpha=0 for these two frozen solves and for X0. This does not prove the infinite Schur complement positive or any uniform growing-window sign."
+    },
+    "finite_K_certificate_b896.json": {
+      "bits": 896,
+      "lambda": 4,
+      "head_cut": 16,
+      "solve_cut": 256,
+      "results": [
+        {
+          "parity": "even",
+          "X": "zero",
+          "status": "PASS_STRICT_POSITIVE",
+          "pivot_count": 17,
+          "smallest_lower_pivot": "[1.4513711384056944394515197698311145498955593036556205183684521861e-13 +/- 1.71e-78]",
+          "witness_sha256": null
+        },
+        {
+          "parity": "even",
+          "X": "frozen_finite_solve",
+          "status": "PASS_STRICT_POSITIVE",
+          "pivot_count": 17,
+          "smallest_lower_pivot": "[1.2207988129530108388447993118595036762343875890670936172591727650e-58 +/- 2.43e-123]",
+          "witness_sha256": "e3d399654e2ee217d2346dffc028634fee2cc34b88794fac3a933a7b210ff2e2"
+        },
+        {
+          "parity": "odd",
+          "X": "zero",
+          "status": "PASS_STRICT_POSITIVE",
+          "pivot_count": 16,
+          "smallest_lower_pivot": "[8.4162028473949656352114426087305484676727380741429207550167934804e-13 +/- 3.37e-78]",
+          "witness_sha256": null
+        },
+        {
+          "parity": "odd",
+          "X": "frozen_finite_solve",
+          "status": "PASS_STRICT_POSITIVE",
+          "pivot_count": 16,
+          "smallest_lower_pivot": "[1.3872553434638554466668820359800498363386746003248348667997174305e-56 +/- 4.09e-121]",
+          "witness_sha256": "200652138f543b9077130011839128ed51bee6bf533845765b9d4752e9f636a4"
+        }
+      ],
+      "scope": "K_X is the exact complete-operator finite-support form; alpha=0 for these two frozen solves and for X0. This does not prove the infinite Schur complement positive or any uniform growing-window sign."
+    },
+    "cancellation_subspace_b768.json": {
+      "bits": 768,
+      "lambda": 3,
+      "N": 64,
+      "parity": "even",
+      "witness_sha256": "10a6711e7490a7bb3f16ec6cd78cbef3fb06aeecac408e44f851abd096ac9837",
+      "matrices": {
+        "Gram": [
+          [
+            "[1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 4.39e-91]",
+            "[1.50150651380662726713149767988123311191578924135597893096447900819310175081530598041367028e-91 +/- 4.34e-181]"
+          ],
+          [
+            "[1.50150651380662726713149767988123311191578924135597893096447900819310175081530598041367028e-91 +/- 4.34e-181]",
+            "[1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.04e-91]"
+          ]
+        ],
+        "Weil": [
+          [
+            "[3.64339965699232560598066017458126498273479472755317378812290903460961443333994630021515566e-38 +/- 4.82e-128]",
+            "[-1.09092719803634421471995468721500856561287102356714985401715977769008722713e-111 +/- 4.11e-186]"
+          ],
+          [
+            "[-1.09092719803634421471995468721500856561287102356714985401715977769008722713e-111 +/- 4.11e-186]",
+            "[2.58441353845050844336127770840909602014992389042671317967833425467328160006269517113805386e-31 +/- 3.25e-121]"
+          ]
+        ],
+        "Arch": [
+          [
+            "[-1.43207799474532178395174548598704296463479905565878457659506200353404329944971276370027106 +/- 3.15e-90]",
+            "[0.841549173452005532255386866185614247843050671457089755505033271309715824848035847374544734 +/- 1.03e-91]"
+          ],
+          [
+            "[0.841549173452005532255386866185614247843050671457089755505033271309715824848035847374544734 +/- 1.03e-91]",
+            "[-0.419942679834922579679455587634245815168688795757422866118856195846733194854093547626663329 +/- 4.64e-91]"
+          ]
+        ],
+        "Pole": [
+          [
+            "[1.48726189331979796613355911121075179916411083383974846088641133779315098271238148723503665 +/- 9.21e-91]",
+            "[-1.11597971617042522286093011798896145798679914264601177164843881200627311466293015464101657 +/- 3.97e-90]"
+          ],
+          [
+            "[-1.11597971617042522286093011798896145798679914264601177164843881200627311466293015464101657 +/- 3.97e-90]",
+            "[0.837384950490376637120309931098183378168665624532782912997667698844360820533373048678656615 +/- 1.54e-91]"
+          ]
+        ],
+        "Prime": [
+          [
+            "[-0.0551838985744761821818136252237088344928777816110406282315427325132950334353207762592338562 +/- 1.62e-92]",
+            "[0.274430542718419690605543251803347210143748471188922016143405540696557289814894307266471840 +/- 1.43e-91]"
+          ],
+          [
+            "[0.274430542718419690605543251803347210143748471188922016143405540696557289814894307266471840 +/- 1.43e-91]",
+            "[-0.417442270655454057440854343463679121646131777931023919107970593395612633290236829734025453 +/- 1.15e-91]"
+          ]
+        ]
+      },
+      "absolute_Weil_bound_1e-10": true,
+      "absolute_Weil_bound_1e-15": true,
+      "absolute_Weil_bound_1e-20": true,
+      "absolute_Weil_bound_1e-25": true,
+      "absolute_Weil_bound_1e-30": true,
+      "Arch_lower_0.001": false,
+      "Arch_lower_0.01": false,
+      "Arch_lower_0.02": false,
+      "Arch_lower_0.04": false,
+      "frozen_source_energies": {
+        "Weil": "[5.31238170058635900286166802547835491086636205010863611022748061863914374188e-38 +/- 3.38e-113]",
+        "Arch": "[-1.43244136239870241262707723376112611403277388730866687307247693705388683656 +/- 1.41e-76]",
+        "Pole": "[1.48774381754170728506827082062672049675091485023390738754359072685426130222 +/- 3.73e-75]",
+        "Prime": "[-0.0553024551430048724411935868655943826650171459193769244424971095455909165478 +/- 4.92e-77]",
+        "Nonprime": "[0.0553024551430048724411935868655943827181409629252405144711137898003744656564 +/- 1.45e-77]"
+      },
+      "source_orthogonal_witness": {
+        "candidate_energies": {
+          "Weil": "[2.58441341799259710808954269033072771174733100536792695856169464482067635518e-31 +/- 2.42e-106]",
+          "Arch": "[-0.419579359431656068174875861469348181565897595966842192960029318437750042478 +/- 9.94e-78]",
+          "Pole": "[0.836903118449153788030499910968817124114192632186443541554212167887391984183 +/- 4.54e-76]",
+          "Prime": "[-0.417323759017497719855624049499210501206495776508792394325149776678467208604 +/- 3.3e-79]",
+          "Nonprime": "[0.417323759017497719855624049499468942548295036219601348594182849449641941705 +/- 4.64e-76]"
+        },
+        "finite_operator_norm_upper": {
+          "Weil": "[8.9251217391612018055711794052730179623852737728221 +/- 2.34e-50]",
+          "Prime": "[5.4890514507485320242069595514035339799770134584700 +/- 4.36e-50]",
+          "Nonprime": "[4.1752189160472715006014826550508995904009934347596 +/- 1.36e-50]"
+        },
+        "exact_source_transfer": {
+          "uses_prior_projector_bound": "4e-36",
+          "Weil_lower": "[2.58298539851433131580065130162588402887334936156427542629979142617655479671e-31 +/- 2.09e-106]",
+          "absolute_Weil_upper": "[2.58584143747086290037843407903557139462131264917157849082359786346479791365e-31 +/- 2.75e-106]",
+          "Nonprime_lower": "[0.417323759017497719855624049499468875744792379463257338970460368635248495289 +/- 3.59e-76]",
+          "Prime_upper": "[-0.417323759017497719855624049499210413381672564532280007013796954221923528972 +/- 2.16e-76]",
+          "all_strict_gates": true
+        },
+        "scope": "Existence of a unit even Fourier polynomial in E64 exactly orthogonal to the literal repaired source p3, by projection to its exact normalized P64 vector. Full quadratic forms equal their finite-support matrix values. No infinite-operator residual or invariant-subspace assertion."
+      }
+    },
+    "cancellation_subspace_b896.json": {
+      "bits": 896,
+      "lambda": 3,
+      "N": 64,
+      "parity": "even",
+      "witness_sha256": "10a6711e7490a7bb3f16ec6cd78cbef3fb06aeecac408e44f851abd096ac9837",
+      "matrices": {
+        "Gram": [
+          [
+            "[1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 4.39e-91]",
+            "[1.50150651380662726713149767988123311191578924135597893096447900819310175081530598041367028e-91 +/- 4.34e-181]"
+          ],
+          [
+            "[1.50150651380662726713149767988123311191578924135597893096447900819310175081530598041367028e-91 +/- 4.34e-181]",
+            "[1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 +/- 3.04e-91]"
+          ]
+        ],
+        "Weil": [
+          [
+            "[3.64339965699232560598066017458126498273479472755317378812290903460961443333994630021515566e-38 +/- 4.82e-128]",
+            "[-1.09092719803634421471995468721500856561287102356714985401715977769008722713e-111 +/- 4.11e-186]"
+          ],
+          [
+            "[-1.09092719803634421471995468721500856561287102356714985401715977769008722713e-111 +/- 4.11e-186]",
+            "[2.58441353845050844336127770840909602014992389042671317967833425467328160006269517113805386e-31 +/- 3.25e-121]"
+          ]
+        ],
+        "Arch": [
+          [
+            "[-1.43207799474532178395174548598704296463479905565878457659506200353404329944971276370027106 +/- 3.15e-90]",
+            "[0.841549173452005532255386866185614247843050671457089755505033271309715824848035847374544734 +/- 1.03e-91]"
+          ],
+          [
+            "[0.841549173452005532255386866185614247843050671457089755505033271309715824848035847374544734 +/- 1.03e-91]",
+            "[-0.419942679834922579679455587634245815168688795757422866118856195846733194854093547626663329 +/- 4.64e-91]"
+          ]
+        ],
+        "Pole": [
+          [
+            "[1.48726189331979796613355911121075179916411083383974846088641133779315098271238148723503665 +/- 9.21e-91]",
+            "[-1.11597971617042522286093011798896145798679914264601177164843881200627311466293015464101657 +/- 3.97e-90]"
+          ],
+          [
+            "[-1.11597971617042522286093011798896145798679914264601177164843881200627311466293015464101657 +/- 3.97e-90]",
+            "[0.837384950490376637120309931098183378168665624532782912997667698844360820533373048678656615 +/- 1.54e-91]"
+          ]
+        ],
+        "Prime": [
+          [
+            "[-0.0551838985744761821818136252237088344928777816110406282315427325132950334353207762592338562 +/- 1.62e-92]",
+            "[0.274430542718419690605543251803347210143748471188922016143405540696557289814894307266471840 +/- 1.43e-91]"
+          ],
+          [
+            "[0.274430542718419690605543251803347210143748471188922016143405540696557289814894307266471840 +/- 1.43e-91]",
+            "[-0.417442270655454057440854343463679121646131777931023919107970593395612633290236829734025453 +/- 1.15e-91]"
+          ]
+        ]
+      },
+      "absolute_Weil_bound_1e-10": true,
+      "absolute_Weil_bound_1e-15": true,
+      "absolute_Weil_bound_1e-20": true,
+      "absolute_Weil_bound_1e-25": true,
+      "absolute_Weil_bound_1e-30": true,
+      "Arch_lower_0.001": false,
+      "Arch_lower_0.01": false,
+      "Arch_lower_0.02": false,
+      "Arch_lower_0.04": false,
+      "frozen_source_energies": {
+        "Weil": "[5.31238170058635900286166802547835491086636205010863611022748061863914374188e-38 +/- 3.38e-113]",
+        "Arch": "[-1.43244136239870241262707723376112611403277388730866687307247693705388683656 +/- 1.41e-76]",
+        "Pole": "[1.48774381754170728506827082062672049675091485023390738754359072685426130222 +/- 3.73e-75]",
+        "Prime": "[-0.0553024551430048724411935868655943826650171459193769244424971095455909165478 +/- 4.92e-77]",
+        "Nonprime": "[0.0553024551430048724411935868655943827181409629252405144711137898003744656564 +/- 1.45e-77]"
+      },
+      "source_orthogonal_witness": {
+        "candidate_energies": {
+          "Weil": "[2.58441341799259710808954269033072771174733100536792695856169464482067635518e-31 +/- 2.42e-106]",
+          "Arch": "[-0.419579359431656068174875861469348181565897595966842192960029318437750042478 +/- 9.94e-78]",
+          "Pole": "[0.836903118449153788030499910968817124114192632186443541554212167887391984183 +/- 4.54e-76]",
+          "Prime": "[-0.417323759017497719855624049499210501206495776508792394325149776678467208604 +/- 3.3e-79]",
+          "Nonprime": "[0.417323759017497719855624049499468942548295036219601348594182849449641941705 +/- 4.64e-76]"
+        },
+        "finite_operator_norm_upper": {
+          "Weil": "[8.9251217391612018055711794052730179623852737728221 +/- 2.34e-50]",
+          "Prime": "[5.4890514507485320242069595514035339799770134584700 +/- 4.36e-50]",
+          "Nonprime": "[4.1752189160472715006014826550508995904009934347596 +/- 1.36e-50]"
+        },
+        "exact_source_transfer": {
+          "uses_prior_projector_bound": "4e-36",
+          "Weil_lower": "[2.58298539851433131580065130162588402887334936156427542629979142617655479671e-31 +/- 2.09e-106]",
+          "absolute_Weil_upper": "[2.58584143747086290037843407903557139462131264917157849082359786346479791365e-31 +/- 2.75e-106]",
+          "Nonprime_lower": "[0.417323759017497719855624049499468875744792379463257338970460368635248495289 +/- 3.59e-76]",
+          "Prime_upper": "[-0.417323759017497719855624049499210413381672564532280007013796954221923528972 +/- 2.16e-76]",
+          "all_strict_gates": true
+        },
+        "scope": "Existence of a unit even Fourier polynomial in E64 exactly orthogonal to the literal repaired source p3, by projection to its exact normalized P64 vector. Full quadratic forms equal their finite-support matrix values. No infinite-operator residual or invariant-subspace assertion."
+      }
+    }
+  },
+  "retained_v1_16_results": [
+    "Proposition20.22: certified independent positive-weight prime-shift norm bound at lambda3; stronger entire Fourier-tail constants.",
+    "Proposition20.23: increasing diagonal domination of the actual tail and inverse-order comparison.",
+    "Proposition20.24: explicit directional moment Gram enclosure for every remote residual row, including full parity and scale factors.",
+    "Proposition20.25: complete signed Schur sufficient lower bound using diagonal inverse weights and the full remote Gram.",
+    "Proposition20.26: computer-assisted strict coercivity of the complete canonical closed Weil form at lambda3, both complex parity sectors and the entire infinite complement."
+  ],
+  "retained_v1_16_proof_checks": [
+    "Physical positive-weight Schur comparison uses every active prime-power shift; full-length m9 vanishes exactly.",
+    "Finite scalar endpoint comparisons use exact rational coefficients and Arb outward enclosures.",
+    "Common base-cut losses retained in all increasing diagonal weights; inverse order justified on closed form domain.",
+    "Exact dyadic frozen inverse-action witnesses; every intervening residual including middle rounding residual retained.",
+    "Complete actual diagonal used on finite rows; divided differences used only for disjoint remote rows.",
+    "Remote moment PSD congruence retains source-direction cancellation; cMr count, Hurwitz argument J+1, both signed tails and parity sqrt2 checked.",
+    "Archimedean coefficients have explicit uniform exponential-series remainder radii.",
+    "All 8,321 parity matrix entries through N64 overlap prior independent integral certificate.",
+    "All 257 even and 512 odd LDL pivots certified at 768 bits; same exact witnesses independently replayed at 896 bits.",
+    "Coercivity derived by square completion, never inferred from pivot size as a spectral lower bound.",
+    "All 72 historical dispositions preserved apart from release headings; no raw-transfer or critical-beta claim restored."
+  ],
+  "retained_v1_16_certificates": [
+    {
+      "file": "infinite_schur_N256_M512_J4096_r80_even_b768_diagonal.json",
+      "parity": "even",
+      "bits": 768,
+      "witness_sha256": "993c5b325c1cc7dce64c1dbdab9384dd54dea6a480cce8739cf623e9e8bce43c",
+      "ldl": {
+        "status": "positive",
+        "count": 257,
+        "min_pivot": "[9.174986939482229550930301377894165093166709527352338046e-9 +/- 4.28e-64]"
+      }
+    },
+    {
+      "file": "infinite_schur_N256_M512_J4096_r80_even_b896_diagonal.json",
+      "parity": "even",
+      "bits": 896,
+      "witness_sha256": "993c5b325c1cc7dce64c1dbdab9384dd54dea6a480cce8739cf623e9e8bce43c",
+      "ldl": {
+        "status": "positive",
+        "count": 257,
+        "min_pivot": "[9.174986939482229550930301377894165093166709527352338046e-9 +/- 4.28e-64]"
+      }
+    },
+    {
+      "file": "infinite_schur_N512_M1024_J4096_r100_odd_b768_diagonal.json",
+      "parity": "odd",
+      "bits": 768,
+      "witness_sha256": "4054507110d6a806c3dfa926c716c1692de4c9b7dc7801263d50b92cbd8dfdea",
+      "ldl": {
+        "status": "positive",
+        "count": 512,
+        "min_pivot": "[9.680263410532028599614522757015549190466316568427967501e-8 +/- 1.33e-63]"
+      }
+    },
+    {
+      "file": "infinite_schur_N512_M1024_J4096_r100_odd_b896_diagonal.json",
+      "parity": "odd",
+      "bits": 896,
+      "witness_sha256": "4054507110d6a806c3dfa926c716c1692de4c9b7dc7801263d50b92cbd8dfdea",
+      "ldl": {
+        "status": "positive",
+        "count": 512,
+        "min_pivot": "[9.680263410532028599614522757015549190466316568427967501e-8 +/- 1.33e-63]"
+      }
+    }
+  ],
+  "archive_repair": "Prior saved v1.16 ZIP was truncated. Recovered cumulative archive from valid v1.15 plus37 hash-verified v1.16 artifacts and intact root documents; recovered ZIP42113921bytes,118members,allCRCpass. Current archive uses atomic completion and independent verification.",
+  "retained_v1_17_new_results": [
+    "Proposition20.27: computer-assisted complete lambda3 ground ordering: simple even ground,0<mu0<3.644e-38,mu1>1e-36, all other even eigenvalues>1e-34.",
+    "Corollary20.28: exact normalized P64 p3 and rational candidate have sine angle<.01931 to actual whole-operator ground.",
+    "Verified finite-supported correction with exact full-form Rayleigh identity beta=alpha-E/(1+q^2), beta<3.644e-38."
+  ],
+  "retained_v1_17_proof_checks": [
+    "Every diagonal and tail inverse weight shifted; same exact dyadic Z retains its finite middle residual.",
+    "All finite rows recomputed and infinite remote moment Gram retained with shifted inverse denominator.",
+    "Signed LDL continues through negative pivots; each pivot excludes0.",
+    "Even lower inertia1 at1e-34 and odd lower inertia0 at1e-36 verified at768 and896bits with identical witnesses.",
+    "Negative lower-form pivot not treated as actual negative direction; independent finite-supported Rayleigh trial supplies existence.",
+    "Closed-form square completion transfers negative index and kernels; minmax and compact resolvent give global simplicity/parity.",
+    "Exact finite-correction Rayleigh identity independently verified; ordinary overlap uses complete even threshold, not compression gap.",
+    "Exact projected-source coefficient certificate imported with candidate hash check; normalized-distance geometry below4e-36.",
+    "All prior labels,72 ledger dispositions, endpoint convention, Fourier cut and explicit sampler graph defect retained."
+  ],
+  "retained_v1_17_certificates": [
+    {
+      "file": "shift_1e-34_N256_M512_J4096_r80_even_b768_diagonal.json",
+      "parity": "even",
+      "threshold": "1e-34",
+      "bits": 768,
+      "ldl": {
+        "status": "inertia_certified",
+        "count": 257,
+        "negative_count": 1,
+        "positive_count": 256,
+        "negative_indices": [
+          24
+        ],
+        "min_abs_pivot": "[9.174986939482229512299680249918743701150987722295005342e-9 +/- 3.07e-64]"
+      },
+      "witness_sha256": "993c5b325c1cc7dce64c1dbdab9384dd54dea6a480cce8739cf623e9e8bce43c"
+    },
+    {
+      "file": "shift_1e-34_N256_M512_J4096_r80_even_b896_diagonal.json",
+      "parity": "even",
+      "threshold": "1e-34",
+      "bits": 896,
+      "ldl": {
+        "status": "inertia_certified",
+        "count": 257,
+        "negative_count": 1,
+        "positive_count": 256,
+        "negative_indices": [
+          24
+        ],
+        "min_abs_pivot": "[9.174986939482229512299680249918743701150987722295005342e-9 +/- 3.07e-64]"
+      },
+      "witness_sha256": "993c5b325c1cc7dce64c1dbdab9384dd54dea6a480cce8739cf623e9e8bce43c"
+    },
+    {
+      "file": "shift_1e-36_N512_M1024_J4096_r100_odd_b768_diagonal.json",
+      "parity": "odd",
+      "threshold": "1e-36",
+      "bits": 768,
+      "ldl": {
+        "status": "inertia_certified",
+        "count": 512,
+        "negative_count": 0,
+        "positive_count": 512,
+        "negative_indices": [],
+        "min_abs_pivot": "[9.680263410532028599613630085536837914197850144151369337e-8 +/- 1.79e-63]"
+      },
+      "witness_sha256": "4054507110d6a806c3dfa926c716c1692de4c9b7dc7801263d50b92cbd8dfdea"
+    },
+    {
+      "file": "shift_1e-36_N512_M1024_J4096_r100_odd_b896_diagonal.json",
+      "parity": "odd",
+      "threshold": "1e-36",
+      "bits": 896,
+      "ldl": {
+        "status": "inertia_certified",
+        "count": 512,
+        "negative_count": 0,
+        "positive_count": 512,
+        "negative_indices": [],
+        "min_abs_pivot": "[9.680263410532028599613630085536837914197850144151369337e-8 +/- 1.79e-63]"
+      },
+      "witness_sha256": "4054507110d6a806c3dfa926c716c1692de4c9b7dc7801263d50b92cbd8dfdea"
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/1710.03416",
+      "use": "Chen\u2013Weth Theorems 1.1 and 3.1: exact normalization and form core"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2401.18033",
+      "use": "Hernandez-Santamaria\u2013Lopez Rios\u2013Saldana Theorem 1.1: bounded weak solution boundary regularity"
+    },
+    {
+      "url": "https://dlmf.nist.gov/27.12",
+      "use": "Classical unconditional prime number theorem; actual operator norm proof is written explicitly."
+    },
+    {
+      "url": "https://arxiv.org/html/2511.22755v1",
+      "use": "Actual Fourier matrix conventions, already used in the manuscript."
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.24827v2",
+      "use": "Contextual comparison with finite-window certification and pointwise-comb barrier; no certificate imported."
+    }
+  ],
+  "internal_adversarial_review": "g2_schur_cancellation/manuscript_integration_review.md; both wording requests applied.",
+  "retained_v1_18_new_results": [
+    "Proposition 20.29: exact restricted logarithmic-Laplacian decomposition of the complete operator, with common form core and equal operator domain.",
+    "Theorem 20.30: every complete fixed-window eigenfunction is bounded and has continuous zero physical trace, with inverse-square-root logarithmic boundary decay.",
+    "Corollary 20.31: fixed-window Fejer endpoint rate and exact relative mismatch one against the repaired source nonzero endpoint.",
+    "Proposition 20.32: physical trace on the polynomial core is not closable in the complete Weil operator graph norm.",
+    "Proposition 20.41: sharp complement form comparison with constant 2/sqrt(3), no positive complementary gap required."
+  ],
+  "retained_v1_18_proof_checks": [
+    "Exact scalar -log(2pi), Fourier factors, physical cutoff, prime weights and signed pole kernel retained.",
+    "Restricted logarithmic Laplacian distinguished from the spectral logarithm of the Dirichlet Laplacian.",
+    "Common compact smooth form core established by endpoint cutoffs and fractional Sobolev interpolation.",
+    "Eigenfunction boundedness proved by consistent L2/L-infinity killed-jump resolvents before applying boundary regularity.",
+    "Boundary theorem hypotheses checked for complex eigenfunctions by real and imaginary parts; no positivity assumed.",
+    "Fejer kernel normalized to physical mass one; far mass bounded by 1/(2sqrt(N)); no sharp-cut claim substituted.",
+    "Explicit shell has exactly 2N modes, endpoint one and graph norm O(log(N)/sqrt(N)).",
+    "Complement form expansion uses first-slot-linear convention; sharp two-dimensional witness checked.",
+    "Growing-window complementary sign explicitly remains unproved and RH-strength.",
+    "All 410 prior labels and 72 historical ledger rows preserved; sampler graph defect unchanged."
+  ],
+  "retained_v1_18_certificates": [],
+  "retained_v1_19_new_results": [
+    "Proposition20.42: every finite-codimension orthogonal compression retains the complete unsigned prime norm; arbitrary compact corrections cannot reduce that norm.",
+    "Proposition20.43: the actual prime norm is asymptotic to lambda as lambda grows, uniformly over arbitrary families of finite-rank removals by the exact compression identity.",
+    "Precisely scoped scalar-tail-budget obstruction: even the exact compressed prime norm requires an exponential-in-lambda cutoff in that sufficient bound."
+  ],
+  "retained_v1_19_proof_checks": [
+    "Finite simultaneous recurrence includes rationally dependent prime phases and exact periodic returns.",
+    "Conjugation converges in operator norm for the finite active shift sum; modulations are weakly null on every fixed L2 input.",
+    "Finite-rank projections and arbitrary compact operators vanish strongly on the weakly null sequence.",
+    "Exact weights and forward/backward strict cuts checked in Tphi/phi.",
+    "Uniform PNT envelope includes small arguments; S(X) bound follows by partial summation.",
+    "Positive weight is bounded away from zero at every fixed window; no uniform lower bound on that weight is required.",
+    "Only orthogonal finite-rank projections are claimed.",
+    "Scope excludes frequency-weighted, directional and actual signed-positivity conclusions.",
+    "All423 prior labels and72 ledger rows retained; corrected sampler defect unchanged."
+  ],
+  "retained_v1_19_certificates": [],
+  "revision": "Schur trial and exact-source cancellation integration",
+  "prior_labels_preserved": 490,
+  "schur_revision": {
+    "proved": [
+      "Structured closed-form inverse bound, with both signed mixed terms retained.",
+      "Finite-row version enclosing every remote Gram and its mixed term.",
+      "Two-sided complete archimedean diagonal estimate.",
+      "Monotone arithmetic inverse polynomials with full-operator error bound.",
+      "Actual lambda4 shifted far sandwich constants67even/335odd, verified at320and384bits.",
+      "Sufficient ordinary-error criterion with operator norm, growing dimension and congruence scales explicit."
+    ],
+    "failed_candidates": {
+      "even_outer_cutoffs": [
+        256,
+        512,
+        1024
+      ],
+      "certified_obstruction": "K_X\u2212V_J has a strictly negative dyadic witness for every candidate; this is not a negative Weil vector.",
+      "replay_bits": 896
+    },
+    "no_G2_sign_gap_closed": true,
+    "adversarial_review": "Full structured implementation and inverse polynomial/form-domain argument reviewed; corrected global pole scale32h/L before final integration."
+  },
+  "source_bundle_sha256": "ae8d9ec1119a99aca6f46679004cd7237b0f6732c269ff5d227ac47913e48ec6",
+  "cumulative_bundle_previous_members": 311,
+  "retained_v1_20_new_results": [
+    "Complete signed energy control at lambda4 on literal|n|>16, both parity sectors and every infinite tail row included.",
+    "Certified two-sided weighted norm contraction failure from a positive dyadic direction.",
+    "Sharp ordinary-error conversion eta*C/(1+eta).",
+    "Weighted prime/remainder compactness without any finite Schatten class.",
+    "Sharp fixed-window logarithmic weighted-tail norm asymptotic, with no joint-limit claim."
+  ],
+  "retained_v1_20_proof_checks": [
+    "Every prime-bound candidate dominated by the selected exact upper endpoint.",
+    "Exact separate pole and archimedean diagonals.",
+    "Analytic arch floor at index17 positive.",
+    "Complete signed finite residual rows and infinite moment Gram.",
+    "All rows of dyadic-congruence Gershgorin inequalities positive at320 bits.",
+    "Identical saved witness hashes in both precision replays.",
+    "Complex parity decomposition covers the entire literal tail.",
+    "All431 old labels and72ledgerrows retained."
+  ],
+  "retained_v1_20_certificates": [
+    {
+      "status": "PASS",
+      "lambda": 4,
+      "literal_tail_start": 16,
+      "N": 512,
+      "M": 1024,
+      "J": 4096,
+      "r": 48,
+      "bits": 320,
+      "c": "0.00000001",
+      "parity": "even",
+      "head_dimension": 496,
+      "prime_bound": "[4.624042316766477703119533206100034565124 +/- 1.31e-40]",
+      "remote_gamma": "[0.5941837481348047849917217919267701100013 +/- 4.58e-41]",
+      "arch_diagonal_floor": "[1.794029335172341408209840428513935770425 +/- 2.91e-40]",
+      "all_Gershgorin_rows_positive": true,
+      "Gershgorin_margin": "[0.9999999999326661228233470822927372360956 +/- 7.30e-42]",
+      "delta2": "[1.024952431299302541038103793092637001588e-60 +/- 1.03e-100]",
+      "witness": "weighted_witness_l4_s16_even_b320.json.gz",
+      "witness_sha256": "7bd24903f7c9616cb87530c7f8bf17f87b6b7c968677e6cb5740cec32cf44cf3",
+      "seconds": 45.03339719772339,
+      "claim": "W restricted to |n|>start in selected parity >= c times the exact positive archimedean diagonal; fixed window only.",
+      "reproduction_witness": "weighted_witness_l4_s16_even_b256.json.gz"
+    },
+    {
+      "status": "PASS",
+      "lambda": 4,
+      "literal_tail_start": 16,
+      "N": 1536,
+      "M": 2048,
+      "J": 4096,
+      "r": 64,
+      "bits": 320,
+      "c": "0.00000001",
+      "parity": "odd",
+      "head_dimension": 1520,
+      "prime_bound": "[4.624042316766477703119533206100034565124 +/- 1.31e-40]",
+      "remote_gamma": "[0.1217997340930048639332548732476743333211 +/- 2.10e-42]",
+      "arch_diagonal_floor": "[1.794029335172341408209840428513935770425 +/- 2.91e-40]",
+      "all_Gershgorin_rows_positive": true,
+      "Gershgorin_margin": "[0.9999999999052802443544747517974947085484 +/- 4.81e-41]",
+      "delta2": "[4.715799044698373750839593522807338325115e-41 +/- 4.53e-81]",
+      "witness": "weighted_witness_l4_s16_odd_b320.json.gz",
+      "witness_sha256": "fabf1e8a5650d0efba847aa03c47dfac01edb0dab531f35768a136e7f60f8b27",
+      "seconds": 228.98061966896057,
+      "claim": "W restricted to |n|>start in selected parity >= c times the exact positive archimedean diagonal; fixed window only.",
+      "reproduction_witness": "weighted_witness_l4_s16_odd_b256.json.gz"
+    }
+  ],
+  "v122_inverse_refinement": {
+    "proved": [
+      "Parity sandwich constants20even/90odd for the complete shifted lambda4 far operators.",
+      "Finite-prefix scalar, matrix Young, and relative matrix bounds including infinite residual rows.",
+      "A complete far-energy bound below the trial budget on one archived exact dyadic even direction.",
+      "Consistent Q_* substitution in both structured inverse terms with closed form domains."
+    ],
+    "constants_precision_bits": [
+      320,
+      384
+    ],
+    "directional_gate_precision_bits": [
+      768,
+      896
+    ],
+    "directional_cutoff": 65536,
+    "moment_order": 64,
+    "directional_far_upper": "5.758e-20",
+    "directional_trial_lower": "6.469e-20",
+    "mixed_term_certified": false,
+    "full_schur_sign_certified": false,
+    "no_G2_sign_gap_closed": true,
+    "adversarial_review": "Passed; explicit nu>=0 added. Shift, pole factors, original kappa_N, matrix positive-part warning, polynomial indexing and Q_* form domains checked."
+  },
+  "v123_mixed_refinement": {
+    "proved": [
+      "Complete directional mixed remainder including omitted input and output.",
+      "Complete far-energy lower by optimizing the omitted norm.",
+      "First-degree scalar-head majorant failure on an archived exact actual Weil direction.",
+      "Monotone full inverse upper bounds retaining the induced positive head metric.",
+      "First-degree failure even with its exact induced head update for baseline M0=muI.",
+      "Finite-probe matrix lower bound with explicit omitted pairing error."
+    ],
+    "directional_bits": [
+      768,
+      896
+    ],
+    "J": 65536,
+    "moment_order": 64,
+    "scalar_majorant_lower": "6.7609e-20",
+    "updated_head_majorant_lower": "6.6588e-20",
+    "trial_upper": "6.4693e-20",
+    "complete_lambda4_sign": false,
+    "growing_window_uniformity": false,
+    "finite_higher_degree_experiments": "diagnostic only; remote excursions not certified",
+    "adversarial_review": "Passed including separate addendum for the stronger metric-Cauchy failure gate."
+  },
+  "v124_posterior_trial": {
+    "proved": [
+      "Exact complete residual verification of any finite trial in the operator domain.",
+      "Strict positivity of the complete Schur form on the unchanged archived even head vector, including every infinite residual row."
+    ],
+    "bits": [
+      768,
+      896
+    ],
+    "candidate_bits": 256,
+    "candidate_steps": [
+      4,
+      16
+    ],
+    "M": 4096,
+    "J": 65536,
+    "moment_order": 64,
+    "main_complete_lower": "3.0930e-20",
+    "main_complete_upper": "3.2356e-20",
+    "main_inverse_correction_upper": "1.424889e-21",
+    "supplementary_four_step_lower": "2.9028e-20",
+    "complete_one_direction_sign": true,
+    "complete_lambda4_sign": false,
+    "growing_window_uniformity": false,
+    "finite_powers_are_complete_powers": false,
+    "independent_checks": [
+      "Dense assembly of nine rows",
+      "Expanded energy identity",
+      "Frozen dyadic and certificate provenance guards"
+    ],
+    "adversarial_review": "Passed; printed remote-Gram upper tightened to make rounded table reproducible."
+  }
+}

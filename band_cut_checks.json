@@ -1,0 +1,403 @@
+{
+  "scope": "Rational-source convention checks only. No zeta zeros, Weil matrix, certified bounds or RH evidence.",
+  "T": 3.0,
+  "mu": [
+    0.23,
+    0.7
+  ],
+  "rows": [
+    {
+      "N": 8,
+      "L": 16.755160819145562,
+      "ordinary_norm_squared": 0.016148516167608422,
+      "source_orthogonality_error": 8.845921585485513e-19,
+      "alpha_error": 0.043109507744845954,
+      "direct_quadrature_errors": [
+        4.710277376051325e-16,
+        8.95090418262362e-16
+      ],
+      "tests": [
+        {
+          "v": [
+            0.5,
+            0.0
+          ],
+          "transform_abs": 0.9247909990985921,
+          "scaled_remainder_abs": 0.4666696387051642,
+          "L_times_scaled_remainder": 7.819124845917583,
+          "exact_second_difference_error": 2.482534153247273e-16,
+          "limiting_endpoint_coefficient_abs": 0.004582495012171836
+        },
+        {
+          "v": [
+            -0.5,
+            0.0
+          ],
+          "transform_abs": 0.8025678154569434,
+          "scaled_remainder_abs": 0.40556789022455736,
+          "L_times_scaled_remainder": 6.795355223794032,
+          "exact_second_difference_error": 6.206335383118183e-17,
+          "limiting_endpoint_coefficient_abs": 0.002806718181735096
+        },
+        {
+          "v": [
+            0.23,
+            0.7
+          ],
+          "transform_abs": 0.7037671263924193,
+          "scaled_remainder_abs": 3.479196704289135,
+          "L_times_scaled_remainder": 58.294500301805684,
+          "exact_second_difference_error": 2.220446049250313e-16,
+          "limiting_endpoint_coefficient_abs": 0.00699560088085487
+        }
+      ],
+      "reflected_pair": {
+        "v": [
+          0.23,
+          0.7
+        ],
+        "v_sharp": [
+          -0.23,
+          0.7
+        ],
+        "exact": [
+          0.22237493164637093,
+          -0.10041770875851234
+        ],
+        "edge_leading": [
+          -4.6702666949532185e-07,
+          1.6917751823730437e-06
+        ],
+        "relative_error": 139025.6870324649,
+        "pair_sum": 0.44474986329274185,
+        "edge_pair_sum": -9.340533389906437e-07,
+        "endpoint_product_abs": 4.298455570121125e-05
+      }
+    },
+    {
+      "N": 16,
+      "L": 33.510321638291124,
+      "ordinary_norm_squared": 0.015616880587431003,
+      "source_orthogonality_error": 8.347152221522287e-19,
+      "alpha_error": 0.0030571224586873735,
+      "direct_quadrature_errors": [],
+      "tests": [
+        {
+          "v": [
+            0.5,
+            0.0
+          ],
+          "transform_abs": 9.654953726814037,
+          "scaled_remainder_abs": 0.14676811551472116,
+          "L_times_scaled_remainder": 4.918246757144172,
+          "exact_second_difference_error": 1.1102230246251565e-16,
+          "limiting_endpoint_coefficient_abs": 0.004582495012171836
+        },
+        {
+          "v": [
+            -0.5,
+            0.0
+          ],
+          "transform_abs": 7.213371327079946,
+          "scaled_remainder_abs": 0.10946729973895711,
+          "L_times_scaled_remainder": 3.6682844231276746,
+          "exact_second_difference_error": 3.925231146709438e-17,
+          "limiting_endpoint_coefficient_abs": 0.002806718181735096
+        },
+        {
+          "v": [
+            0.23,
+            0.7
+          ],
+          "transform_abs": 1.3452220994809456,
+          "scaled_remainder_abs": 1.9056814431361349,
+          "L_times_scaled_remainder": 63.85999809961468,
+          "exact_second_difference_error": 3.3422138886441676e-16,
+          "limiting_endpoint_coefficient_abs": 0.00699560088085487
+        }
+      ],
+      "reflected_pair": {
+        "v": [
+          0.23,
+          0.7
+        ],
+        "v_sharp": [
+          -0.23,
+          0.7
+        ],
+        "exact": [
+          0.25665732809315217,
+          -0.26441891473984247
+        ],
+        "edge_leading": [
+          1.1343281080829844e-05,
+          1.926768341161624e-05
+        ],
+        "relative_error": 16481.393734450965,
+        "pair_sum": 0.5133146561863043,
+        "edge_pair_sum": 2.2686562161659687e-05,
+        "endpoint_product_abs": 4.5139193607965e-05
+      }
+    },
+    {
+      "N": 32,
+      "L": 67.02064327658225,
+      "ordinary_norm_squared": 0.01560892203681592,
+      "source_orthogonality_error": 8.282694482977909e-19,
+      "alpha_error": 0.0011741661205282423,
+      "direct_quadrature_errors": [],
+      "tests": [
+        {
+          "v": [
+            0.5,
+            0.0
+          ],
+          "transform_abs": 856.2973910864861,
+          "scaled_remainder_abs": 0.00618075631958207,
+          "L_times_scaled_remainder": 0.4142382644741913,
+          "exact_second_difference_error": 5.254036120992994e-16,
+          "limiting_endpoint_coefficient_abs": 0.004582495012171836
+        },
+        {
+          "v": [
+            -0.5,
+            0.0
+          ],
+          "transform_abs": 651.3050986565661,
+          "scaled_remainder_abs": 0.0044849388842746005,
+          "L_times_scaled_remainder": 0.3005834890802408,
+          "exact_second_difference_error": 9.174153617218428e-16,
+          "limiting_endpoint_coefficient_abs": 0.002806718181735096
+        },
+        {
+          "v": [
+            0.23,
+            0.7
+          ],
+          "transform_abs": 2.7603430181909125,
+          "scaled_remainder_abs": 0.15947496550527113,
+          "L_times_scaled_remainder": 10.688114774674036,
+          "exact_second_difference_error": 7.021666937153402e-16,
+          "limiting_endpoint_coefficient_abs": 0.00699560088085487
+        }
+      ],
+      "reflected_pair": {
+        "v": [
+          0.23,
+          0.7
+        ],
+        "v_sharp": [
+          -0.23,
+          0.7
+        ],
+        "exact": [
+          0.3585985435686255,
+          -0.09265948958857537
+        ],
+        "edge_leading": [
+          0.010023160418952628,
+          -0.007404062896751372
+        ],
+        "relative_error": 28.797161644812842,
+        "pair_sum": 0.717197087137251,
+        "edge_pair_sum": 0.020046320837905255,
+        "endpoint_product_abs": 4.5237670337970496e-05
+      }
+    },
+    {
+      "N": 64,
+      "L": 134.0412865531645,
+      "ordinary_norm_squared": 0.015605151639505243,
+      "source_orthogonality_error": 1.0196885022321317e-18,
+      "alpha_error": 0.0005938745320389501,
+      "direct_quadrature_errors": [],
+      "tests": [
+        {
+          "v": [
+            0.5,
+            0.0
+          ],
+          "transform_abs": 6052142016.254063,
+          "scaled_remainder_abs": 9.116941799948882e-05,
+          "L_times_scaled_remainder": 0.012220466082954714,
+          "exact_second_difference_error": 7.001086916415833e-16,
+          "limiting_endpoint_coefficient_abs": 0.004582495012171836
+        },
+        {
+          "v": [
+            -0.5,
+            0.0
+          ],
+          "transform_abs": 3552832547.6653643,
+          "scaled_remainder_abs": 0.0001928673764383405,
+          "L_times_scaled_remainder": 0.025852191271928646,
+          "exact_second_difference_error": 4.9888807506845435e-16,
+          "limiting_endpoint_coefficient_abs": 0.002806718181735096
+        },
+        {
+          "v": [
+            0.23,
+            0.7
+          ],
+          "transform_abs": 124.13356737174921,
+          "scaled_remainder_abs": 0.0003050664341595966,
+          "L_times_scaled_remainder": 0.04089149731893858,
+          "exact_second_difference_error": 1.2714103034970084e-15,
+          "limiting_endpoint_coefficient_abs": 0.00699560088085487
+        }
+      ],
+      "reflected_pair": {
+        "v": [
+          0.23,
+          0.7
+        ],
+        "v_sharp": [
+          -0.23,
+          0.7
+        ],
+        "exact": [
+          -10012.185740072639,
+          10260.283836891122
+        ],
+        "edge_leading": [
+          -10229.949228582438,
+          11546.712682015877
+        ],
+        "relative_error": 0.08457690971998662,
+        "pair_sum": -20024.371480145277,
+        "edge_pair_sum": -20459.898457164876,
+        "endpoint_product_abs": 4.5261195013521146e-05
+      }
+    },
+    {
+      "N": 128,
+      "L": 268.082573106329,
+      "ordinary_norm_squared": 0.015603227646957957,
+      "source_orthogonality_error": 1.7600725776328058e-18,
+      "alpha_error": 0.00029866363586002307,
+      "direct_quadrature_errors": [],
+      "tests": [
+        {
+          "v": [
+            0.5,
+            0.0
+          ],
+          "transform_abs": 1.087905207655673e+24,
+          "scaled_remainder_abs": 4.3234664785902576e-05,
+          "L_times_scaled_remainder": 0.011590460183194354,
+          "exact_second_difference_error": 1.1312475480861564e-15,
+          "limiting_endpoint_coefficient_abs": 0.004582495012171836
+        },
+        {
+          "v": [
+            -0.5,
+            0.0
+          ],
+          "transform_abs": 6.524850376595891e+23,
+          "scaled_remainder_abs": 9.46184042809285e-05,
+          "L_times_scaled_remainder": 0.025365545282846208,
+          "exact_second_difference_error": 1.9204833723657652e-15,
+          "limiting_endpoint_coefficient_abs": 0.002806718181735096
+        },
+        {
+          "v": [
+            0.23,
+            0.7
+          ],
+          "transform_abs": 315410205.64978856,
+          "scaled_remainder_abs": 0.00011288647431229105,
+          "L_times_scaled_remainder": 0.030262896502540496,
+          "exact_second_difference_error": 8.146724847936848e-16,
+          "limiting_endpoint_coefficient_abs": 0.00699560088085487
+        }
+      ],
+      "reflected_pair": {
+        "v": [
+          0.23,
+          0.7
+        ],
+        "v_sharp": [
+          -0.23,
+          0.7
+        ],
+        "exact": [
+          -2.784743741851786e+16,
+          8.740695445097632e+16
+        ],
+        "edge_leading": [
+          -2.847162574724619e+16,
+          9.01025246890893e+16
+        ],
+        "relative_error": 0.029281204058234603,
+        "pair_sum": -5.569487483703572e+16,
+        "edge_pair_sum": -5.694325149449238e+16,
+        "endpoint_product_abs": 4.527318602669678e-05
+      }
+    },
+    {
+      "N": 256,
+      "L": 536.165146212658,
+      "ordinary_norm_squared": 0.015602256743017295,
+      "source_orthogonality_error": 1.6565388965955818e-18,
+      "alpha_error": 0.00014976383040437801,
+      "direct_quadrature_errors": [],
+      "tests": [
+        {
+          "v": [
+            0.5,
+            0.0
+          ],
+          "transform_abs": 6.969608085859155e+52,
+          "scaled_remainder_abs": 2.1620815440500036e-05,
+          "L_times_scaled_remainder": 0.011592327671892595,
+          "exact_second_difference_error": 2.0086325865609814e-15,
+          "limiting_endpoint_coefficient_abs": 0.004582495012171836
+        },
+        {
+          "v": [
+            -0.5,
+            0.0
+          ],
+          "transform_abs": 4.2242743461262713e+52,
+          "scaled_remainder_abs": 4.732571651440246e-05,
+          "L_times_scaled_remainder": 0.0253743997145634,
+          "exact_second_difference_error": 1.967283596142903e-15,
+          "limiting_endpoint_coefficient_abs": 0.002806718181735096
+        },
+        {
+          "v": [
+            0.23,
+            0.7
+          ],
+          "transform_abs": 3.8886148651482355e+21,
+          "scaled_remainder_abs": 5.64561322750518e-05,
+          "L_times_scaled_remainder": 0.03026981041585431,
+          "exact_second_difference_error": 5.410488212738373e-15,
+          "limiting_endpoint_coefficient_abs": 0.00699560088085487
+        }
+      ],
+      "reflected_pair": {
+        "v": [
+          0.23,
+          0.7
+        ],
+        "v_sharp": [
+          -0.23,
+          0.7
+        ],
+        "exact": [
+          7.068159767032966e+42,
+          1.2047866900797437e+43
+        ],
+        "edge_leading": [
+          7.187692925515456e+42,
+          1.2218981529875928e+43
+        ],
+        "relative_error": 0.014723938617332167,
+        "pair_sum": 1.4136319534065932e+43,
+        "edge_pair_sum": 1.4375385851030912e+43,
+        "endpoint_product_abs": 4.527923789866769e-05
+      }
+    }
+  ]
+}

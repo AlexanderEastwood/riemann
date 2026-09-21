@@ -1,0 +1,72 @@
+{
+  "scope": "Finite identities and nonzero-parameter response, no arithmetic evaluator or RH evidence",
+  "h_polynomial": "72t-396t^2+756t^3-660t^4+270t^5-42t^6",
+  "source_moments": [
+    0,
+    0
+  ],
+  "total_variation": 4.698333961826803,
+  "limit_pair": -0.0011701064733072597,
+  "raw_divergence_coefficient": 0.054744890145135894,
+  "rows": [
+    {
+      "M": 4,
+      "primal": -0.0015205280446176743,
+      "dual": -0.0015205280446176743,
+      "adjoint_identity_error": 6.842277657836021e-49,
+      "weak_limit_error": 0.0003504215713104148,
+      "weak_limit_bound": 2.3491669809134015,
+      "sampled_adjoint_error": 0.09208539779353812,
+      "raw_norm_leading_term": 0.10948978029027179
+    },
+    {
+      "M": 8,
+      "primal": -0.001291041631266133,
+      "dual": -0.001291041631266133,
+      "adjoint_identity_error": 5.131708243377016e-49,
+      "weak_limit_error": 0.00012093515795887354,
+      "weak_limit_bound": 1.6611119023433951,
+      "sampled_adjoint_error": 0.05349320891766805,
+      "raw_norm_leading_term": 0.15484193222775275
+    },
+    {
+      "M": 16,
+      "primal": -0.001205667044720654,
+      "dual": -0.001205667044720654,
+      "adjoint_identity_error": 5.131708243377016e-49,
+      "weak_limit_error": 3.556057141339429e-05,
+      "weak_limit_bound": 1.1745834904567007,
+      "sampled_adjoint_error": 0.028890845607002932,
+      "raw_norm_leading_term": 0.21897956058054358
+    },
+    {
+      "M": 32,
+      "primal": -0.001179750414252772,
+      "dual": -0.001179750414252772,
+      "adjoint_identity_error": 1.7105694144590052e-49,
+      "weak_limit_error": 9.64394094551253e-06,
+      "weak_limit_bound": 0.8305559511716976,
+      "sampled_adjoint_error": 0.01502109683226533,
+      "raw_norm_leading_term": 0.3096838644555055
+    }
+  ],
+  "power_response": [
+    {
+      "M": 16,
+      "error": 0.06443136070089882
+    },
+    {
+      "M": 64,
+      "error": 0.024547935945683354
+    },
+    {
+      "M": 256,
+      "error": 0.009314633325774813
+    },
+    {
+      "M": 1024,
+      "error": 0.0035307921142948384
+    }
+  ],
+  "complex_adjoint_identity_error": 1.2095552326542646e-48
+}

@@ -1,0 +1,70 @@
+{
+  "scope": "Arbitrary-precision finite Legendre-Galerkin approximations only; no certified truncation or roundoff bound and no RH inference.",
+  "rows": [
+    {
+      "c": 10,
+      "size": 50,
+      "digits": 85,
+      "endpoint_ratio_divided_by_c_squared": "6.40490453339622136339724",
+      "endpoint_noncancellation_ratio": "1.00164349417999999769245",
+      "value_zero_to_endpoint_ratio": "0.0192329704346512521173639",
+      "normalized_repair_scale": "7.53340269395952795214148",
+      "loss_0_over_fuchs": "0.954060471687515666035774",
+      "endpoint_squared_0_over_c_loss": "0.972449236669793794891466",
+      "loss_4_over_fuchs": "0.323865443643637611480278",
+      "endpoint_squared_4_over_c_loss": "0.688580701101406294014607"
+    },
+    {
+      "c": 20,
+      "size": 50,
+      "digits": 85,
+      "endpoint_ratio_divided_by_c_squared": "9.94109654682006461173522",
+      "endpoint_noncancellation_ratio": "1.00029406995678307780631",
+      "value_zero_to_endpoint_ratio": "0.00000400922319376515854835749",
+      "normalized_repair_scale": "10.2836521927735381390427",
+      "loss_0_over_fuchs": "0.977635636217918960974122",
+      "endpoint_squared_0_over_c_loss": "0.986914300803337510249763",
+      "loss_4_over_fuchs": "0.63875468562280338849087",
+      "endpoint_squared_4_over_c_loss": "0.874665998138267406224517"
+    },
+    {
+      "c": 30,
+      "size": 50,
+      "digits": 85,
+      "endpoint_ratio_divided_by_c_squared": "10.9905769496519801951227",
+      "endpoint_noncancellation_ratio": "1.00012034088536331956134",
+      "value_zero_to_endpoint_ratio": "3.99135872951080875032433e-10",
+      "normalized_repair_scale": "11.0915699830596632447982",
+      "loss_0_over_fuchs": "0.985206333278943826022615",
+      "endpoint_squared_0_over_c_loss": "0.991412611953518314185602",
+      "loss_4_over_fuchs": "0.751559682172446977248546",
+      "endpoint_squared_4_over_c_loss": "0.919836071637667955631907"
+    },
+    {
+      "c": 40,
+      "size": 50,
+      "digits": 85,
+      "endpoint_ratio_divided_by_c_squared": "11.5107427325435823975145",
+      "endpoint_noncancellation_ratio": "1.00006514342753918951408",
+      "value_zero_to_endpoint_ratio": "3.10538470360317578507901e-14",
+      "normalized_repair_scale": "11.4891976506931425415354",
+      "loss_0_over_fuchs": "0.98894608979794042518988",
+      "endpoint_squared_0_over_c_loss": "0.993608739556042769089355",
+      "loss_4_over_fuchs": "0.810719327118769787883213",
+      "endpoint_squared_4_over_c_loss": "0.940969361133025112476461"
+    }
+  ],
+  "larger_dimension_and_precision_check": {
+    "c": 40,
+    "size": 65,
+    "digits": 105,
+    "endpoint_ratio_divided_by_c_squared": "11.5107427325435823975145",
+    "endpoint_noncancellation_ratio": "1.00006514342753918951408",
+    "value_zero_to_endpoint_ratio": "3.1053847036031815601019e-14",
+    "normalized_repair_scale": "11.4891976506931639077704",
+    "loss_0_over_fuchs": "0.988946089893634664593317",
+    "endpoint_squared_0_over_c_loss": "0.993608739459897353714237",
+    "loss_4_over_fuchs": "0.810719327118771295781032",
+    "endpoint_squared_4_over_c_loss": "0.940969361133023362320026"
+  }
+}

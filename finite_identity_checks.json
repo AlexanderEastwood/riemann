@@ -1,0 +1,19 @@
+{
+  "description": "Complex-vector algebra checks; floating point, not certified bounds.",
+  "first_slot_linear": true,
+  "L": 4.0,
+  "N": 16,
+  "absolute_errors": {
+    "physical_rank_two_commutator": 1.0901367812436674e-14,
+    "general_lyapunov": 2.5967907844337375e-15,
+    "shifted_residual": 2.235080522448464e-16,
+    "candidate_decomposition": 9.087003223581274e-15,
+    "unshifted_pairing": 2.498001805406602e-16,
+    "boundary_annihilating_test": 5.617333549722722e-15,
+    "graph_defect_pairing": 0.0,
+    "exact_shell_endpoint": 0.0,
+    "shell_derivative_norm": 0.0
+  },
+  "tolerance": 1e-10,
+  "passed": true
+}

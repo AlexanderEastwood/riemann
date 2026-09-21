@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "lambda_exact": 3,
+  "precision_bits": 256,
+  "complete_arch_diagonal_zero": "[2.6730164557658589790841100642004873911175847771142 +/- 4.92e-50]",
+  "prime_mass": "[3.5375028142662490436625749204946235497230001426946 +/- 5.13e-51]",
+  "bounded_b_constant": "[2.1187451859461071581247038981502287790581506371717 +/- 9.90e-51]",
+  "tail_constant": "[17.698499727050538363130997955387208190646491370467 +/- 3.72e-49]",
+  "threshold_for_Gamma_one": "[46168932.300377188201596906431166194524894027075635 +/- 3.63e-43]",
+  "chosen_N": 50000000,
+  "gamma_at_chosen_N": "[1.0797159145745827575647972465647202876160838541555 +/- 4.97e-50]",
+  "scope": "Analytic tail constant only. No finite head sign, head-tail Schur sign, whole-window positivity or G2 is certified."
+}

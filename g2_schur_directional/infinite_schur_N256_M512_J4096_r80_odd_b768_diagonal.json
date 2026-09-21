@@ -1,0 +1,25 @@
+{
+  "status": "NO CERTIFICATE: a lower-majorant failure is not operator negativity",
+  "N": 256,
+  "M": 512,
+  "J": 4096,
+  "r": 80,
+  "parity": "odd",
+  "bits": 768,
+  "diagonal_inverse": true,
+  "exact_window_lambda": 3,
+  "tail_gamma": "[0.4970758664247014711147376693972306486692252753905831842 +/- 4.59e-56]",
+  "bstar": "[2.118745185946107158124703898150228779058150637171709896 +/- 3.62e-55]",
+  "cmr": "[7.412248776955399455271989825095275679991890833613348476 +/- 1.88e-55]",
+  "delta_squared": "[1.655786604832944379026103231063107491714604691224349270e-148 +/- 2.45e-203]",
+  "tau": "1/1000000",
+  "ldl": {
+    "status": "negative",
+    "index": 41,
+    "pivot": "[-3.42558704938019564971242317422556848636433190 +/- 2.63e-45]"
+  },
+  "max_finite_gram_diagonal": "[0.007154628812532145778790847398640329337738 +/- 2.90e-43]",
+  "max_remote_gram_diagonal": "[0.002151531999073697723398444109310788822189 +/- 1.40e-43]",
+  "scope": "Fixed window and parity only. No uniform-in-window G2 or RH claim.",
+  "elapsed_seconds": 38.80215668678284
+}

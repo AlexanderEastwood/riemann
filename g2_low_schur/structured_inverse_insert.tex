@@ -1,0 +1,296 @@
+\subsection*{Reusing the signed tail certificate in the low-mode correction}
+The scalar conclusion $T\succeq10^{-8}D$ discards most of the
+information in Proposition~\ref{prop:v120-lambda4-tail}. The following
+inverse bound retains its finite signed factorization. All adjoints
+below use the fixed first-slot-linear convention.
+
+\begin{proposition}[A structured inverse bound for a certified tail]
+\label{prop:v120-structured-inverse}
+Let a closed positive tail operator have a finite-head decomposition
+\[
+ T=\begin{pmatrix}F&B^*\\ B&U\end{pmatrix},
+ \qquad U\succeq D_g\succeq\gamma I>0,
+\]
+where $B$ is bounded and $D_g$ is a positive diagonal operator.
+Let $Z$ map the finite head into $\mathcal D(U)$, and set
+\[
+ R=B-UZ,\qquad K_Z=F-B^*Z-Z^*B+Z^*UZ.
+\]
+Suppose a finite Hermitian matrix $\underline L$ and invertible $C$
+satisfy
+\begin{equation}\label{eq:v120-inner-inverse-certificate}
+ 0\prec\underline L\preceq K_Z-R^*D_g^{-1}R,
+ \qquad C\underline L C^*\succeq\mu I,\quad\mu>0.
+\end{equation}
+Then $T$ is bounded below by a strictly positive constant and, for
+any tail right-hand side $r=(h,k)$,
+\begin{equation}\label{eq:v120-structured-inverse}
+ \ip{T^{-1}r}{r}
+ \le \norm{D_g^{-1/2}k}^2+
+ \mu^{-1}\norm{C(h-Z^*k-R^*D_g^{-1}k)}^2.
+\end{equation}
+The same statement holds as a Gram inequality for finitely many
+right-hand sides simultaneously.
+\end{proposition}
+\begin{proof}
+Write the original variable as $(x,y-Zx)$. Its exact form is
+\[
+ \ip{K_Zx}{x}+2\Re\ip{Rx}{y}+q_U[y],
+\]
+which is bounded below by
+\[
+ \ip{\underline Lx}{x}
+       +\norm{D_g^{1/2}(y+D_g^{-1}Rx)}^2.
+\]
+The first change preserves the original form domain because
+$Zx\in\mathcal D(U)$. The displayed lower form is defined on the
+possibly larger domain consisting of the finite head and
+$\mathcal D(D_g^{1/2})$. Its triangular change is bounded and
+invertible there because $D_g^{-1}Rx\in\mathcal D(D_g)$ and the
+head is finite dimensional. Thus that lower form is closed and
+strictly positive; the original form dominates it on its own domain.
+In its inverse variational formula the head part of the linear
+functional is $h-Z^*k-R^*D_g^{-1}k$. Consequently its inverse
+quadratic form equals the first term of
+\eqref{eq:v120-structured-inverse} plus the quadratic form of
+$\underline L^{-1}$ on that head vector. Inverse order and
+\eqref{eq:v120-inner-inverse-certificate} give
+$\underline L^{-1}\preceq\mu^{-1}C^*C$. This proves the bound.
+Applying it to every linear combination of the right-hand sides
+proves the Gram version. The argument concerns closed forms and
+does not replace the logarithmic operator by a bounded matrix.
+\end{proof}
+
+If the saved factors instead certify $T-cD$, with $cD\succeq0$,
+they still bound $T^{-1}$ because
+$T^{-1}\preceq(T-cD)^{-1}$. The factors and residual in the
+right side must then be those of $T-cD$ throughout; a shifted
+residual is not an unshifted residual. In particular, the existing
+$\lambda=4$ certificates are usable without losing their directional
+information to the coarse upper bound $10^8D^{-1}$.
+
+Here is a finite-row version that also retains every omitted mode.
+When $Z$ has finite support, take $J$ past that support and split the inner far-tail rows
+at $J$. For a matrix of right-hand sides define
+\[
+ H_J=h-Z^*k-\sum_{n\le J}R_n^*k_n/g_n,
+ \qquad V_J=\sum_{n\le J}k_n^*k_n/g_n.
+\]
+The sums run over the inner far tail in normalized parity coordinates;
+both Fourier signs are included by that decomposition. Suppose certified positive
+matrices satisfy
+\[
+ \sum_{n>J}R_n^*R_n/g_n\preceq U_R,
+ \qquad \sum_{n>J}k_n^*k_n/g_n\preceq U_k,
+ \qquad \rho\ge\norm{CU_RC^*}.
+\]
+Then, for every $\tau>0$,
+\begin{equation}\label{eq:v120-structured-finite-rows}
+ r^*T^{-1}r\preceq V_J+U_k+
+ \frac{(1+\tau)H_J^*C^*CH_J+
+             (1+\tau^{-1})\rho U_k}{\mu}.
+\end{equation}
+Indeed, if $E=\sum_{n>J}R_n^*k_n/g_n$, then
+$E^*C^*CE\preceq\rho U_k$ by the operator Cauchy--Schwarz
+inequality. Apply the matrix Young inequality to $C(H_J-E)$.
+The trace of $CU_RC^*$ is a permissible choice of $\rho$;
+its possible growth with the inner head dimension must then be
+retained. These are finite-column remote Grams, as in
+Proposition~\ref{prop:v116-remote-moment}, not an invalid
+Hilbert--Schmidt estimate for the whole weighted Weil operator.
+A joint remote Gram can be sharper than separating this mixed term.
+
+\begin{proposition}[A convergent arithmetic refinement of the far inverse]
+\label{prop:v120-inverse-polynomial}
+If $D_g\preceq U\preceq mD_g$, $D_g\succeq\gamma I>0$,
+$m>1$, let $A=D_g^{-1/2}UD_g^{-1/2}$ denote the bounded
+operator represented by the preconditioned form, and set
+\[
+ S=I-A/m,\qquad
+ P_k(A)=\frac1m\sum_{j=0}^{k-1}S^j+S^k,\quad k\ge0.
+\]
+The empty sum gives $P_0=I$. Then
+\begin{equation}\label{eq:v120-inverse-polynomial}
+ A^{-1}\preceq P_{k+1}(A)\preceq P_k(A)\preceq I,
+ \qquad
+ 0\preceq P_k(A)-A^{-1}\preceq(1-1/m)^k I.
+\end{equation}
+Thus $D_g^{-1/2}P_k(A)D_g^{-1/2}$ are decreasing upper
+bounds for $U^{-1}$, with error at most
+$(1-1/m)^kD_g^{-1}$ in form order. In particular,
+\begin{equation}\label{eq:v120-first-inverse-refinement}
+ U^{-1}\preceq D_g^{-1}
+       -m^{-1}D_g^{-1}(U-D_g)D_g^{-1}.
+\end{equation}
+Products involving $U$ in this formula are understood through the
+bounded preconditioned form.
+
+For the actual far operators used in
+Proposition~\ref{prop:v120-lambda4-tail}, including their shift
+$\mathsf W_4-10^{-8}D$, one can take
+\[
+ m=67\quad\hbox{on the even tail }n>512,\qquad
+ m=335\quad\hbox{on the odd tail }n>1536.
+\]
+These bounds cover all omitted Fourier modes at this fixed window.
+\end{proposition}
+\begin{proof}
+The spectral theorem gives $I\preceq A\preceq mI$ and
+$0\preceq S\preceq(1-1/m)I$. The geometric identity is
+\[
+ P_k(A)-A^{-1}=S^k(I-A^{-1}).
+\]
+Its factors commute and are positive. This proves the error bound;
+$P_k-P_{k+1}=m^{-1}S^k(A-I)\succeq0$ proves monotonicity.
+Conjugate by $D_g^{-1/2}$, using the inverse identity for the
+positive closed form $U$. The case $k=1$ is
+\eqref{eq:v120-first-inverse-refinement}.
+
+To verify the two concrete constants, first strengthen
+\eqref{eq:v115-diagonal-sharp} to
+\begin{equation}\label{eq:v120-two-sided-arch}
+ |a_n-\log(|n|/L)|\le E_L(|t_n|),\qquad n\ne0.
+\end{equation}
+For the upper bound use the same Binet formula at
+$w=5/4+it/2$. It gives
+\[
+ \Re\log w-\log(t/2)
+ =\tfrac12\log(1+25/(4t^2))\le25/(8t^2),
+\]
+while $-\Re(1/(2w))-\Re(1/z)\le0$, $z=1/4+it/2$.
+The Binet remainder is at most $1/(15t)$ in absolute value.
+Because $25/8<7/2$, the existing absolute trigamma and exponential
+series bounds give the same $E_L$ for the upper error.
+
+Write $\mathsf W_4=D+R_0$. From
+\eqref{eq:v114-b-d}--\eqref{eq:v114-b-bound}, a valid bound is
+\[
+ \norm{R_0}\le C_R:=2\pi B_*+32h_L/L+2P_4.
+\]
+Here $P_4$ may omit the zero full-length translation $m=16$.
+The pole diagonal bound is $32h_L/L$; its factor $L$ is essential.
+The commutator bound is taken before the parity compression, so it
+also bounds either normalized parity sector. With $c=10^{-8}$,
+$g_n=(1-c)\{\log(n/L)-E_L(t_n)\}-\kappa$, and
+$t_*=2\pi(N+1)/L$, the already proved lower bound and
+\eqref{eq:v120-two-sided-arch} imply
+\[
+ D_g\preceq U\preceq
+ D_g+\{\kappa+2(1-c)E_L(t_*)+C_R\}I.
+\]
+Since $g_n$ is positive and increasing, it suffices that
+\begin{equation}\label{eq:v120-inverse-m-bound}
+ m\ge1+\frac{\kappa+2(1-c)E_L(t_*)+C_R}{g_{N+1}}.
+\end{equation}
+Outward interval evaluation gives $C_R<34.450462$. The right side
+of \eqref{eq:v120-inverse-m-bound} is below $66.76640$ for the
+even $N=512$ choice, and below $334.71708$ for the odd $N=1536$
+choice. The same prime bound, diagonal errors and inverse weights
+as the tail certificate are used. Strict interval checks at two
+precisions verify the stated integers.
+\end{proof}
+
+For a matrix of residuals $Y$, the error of the $k$th inverse bound
+is at most
+\[
+ (1-1/m)^k Y^*D_g^{-1}Y.
+\]
+Along growing windows this part of the error is therefore controlled
+if $\norm{D_{g,\lambda}^{-1/2}Y_\lambda}^2
+ e^{-k_\lambda/m_\lambda}\to0$, with the actual values of
+$m_\lambda$ retained. The explicit integers above apply only at
+$\lambda=4$. Evaluating the signed powers and their complete remote
+contributions, and proving the remaining low-head sign, are separate
+obligations. The inverse iteration proves neither of those signs.
+
+
+\begin{proposition}[An ordinary-error target for growing windows]
+\label{prop:v120-structured-uniform}
+For each window, let the complete form have an outer finite head
+and positive complement $T_\lambda$, with bounded coupling
+$B_\lambda$. For a finite-support solve $X_\lambda$ put
+\[
+ \begin{split}
+ K_{X,\lambda}&=F_\lambda-B_\lambda^*X_\lambda
+       -X_\lambda^*B_\lambda+X_\lambda^*T_\lambda X_\lambda,\\
+ r_\lambda&=B_\lambda-T_\lambda X_\lambda.
+ \end{split}
+\]
+Assume the inner tail admits the factors of
+Proposition~\ref{prop:v120-structured-inverse}, and write
+$r_\lambda=(h_\lambda,k_\lambda)$ in that inner decomposition.
+If, in operator norm on the entire outer head,
+\[
+ \begin{gathered}
+ K_{X,\lambda}\succeq-\alpha_\lambda I,\qquad
+ \norm{D_{g,\lambda}^{-1/2}k_\lambda}\le e_\lambda,\\
+ \norm{C_\lambda(h_\lambda-Z_\lambda^*k_\lambda
+       -R_\lambda^*D_{g,\lambda}^{-1}k_\lambda)}\le t_\lambda,
+ \qquad \alpha_\lambda\ge0,
+ \end{gathered}
+\]
+then the whole closed form satisfies
+\begin{equation}\label{eq:v120-structured-uniform}
+ \mathsf W_\lambda\succeq
+ -\left(\alpha_\lambda+e_\lambda^2+
+               t_\lambda^2/\mu_\lambda\right)I.
+\end{equation}
+Thus convergence of the displayed error to zero along a cofinal
+window family is sufficient for the large-support sign criterion.
+No such convergence is asserted here.
+\end{proposition}
+\begin{proof}
+The exact outer Schur matrix is
+\[
+ S_\lambda=K_{X,\lambda}-r_\lambda^*T_\lambda^{-1}r_\lambda.
+\]
+Apply \eqref{eq:v120-structured-inverse} to each outer head vector.
+Completing the outer form square leaves $S_\lambda$ on the head
+and a nonnegative complementary square. Since the head projection
+is orthogonal, its norm is at most the full ordinary norm, proving
+\eqref{eq:v120-structured-uniform}.
+\end{proof}
+
+Two scales cannot be suppressed in applying this criterion.
+If only individual bounds
+$\norm{D^{-1/2}r e_j}\le\delta$ are known for a head of
+dimension $d$, the valid conclusion is
+$\norm{D^{-1/2}r}^2\le d\delta^2$. Equal residual columns
+attain this factor. In particular, a single source estimate or
+columnwise decay does not prove the required growing-head bound.
+Likewise, $C\mathcal L C^*\succeq-\eta I$ implies only
+\[
+ \mathcal L\succeq-\eta C^{-1}C^{-*}
+             \succeq-\eta\norm{C^{-1}}^2I.
+\]
+Congruence preserves positivity, but it does not preserve the size
+of an ordinary negative error. Using merely $T\succeq cD$
+yields the coarser correction
+$c^{-1}\norm{D^{-1/2}r}^2$, and its division by $c$ is sharp
+already for a scalar tail $T=cD$.
+
+For clarity, the remote truncation itself has an explicit uniform
+budget. If $G$ has Fourier support $|m|\le M$, $J>M$, and
+$|b_n|\le B_*$, the actual off-diagonal divided difference gives
+\begin{equation}\label{eq:v120-separated-uniform-budget}
+ (Q_J\mathsf W_\lambda G)^*(Q_J\mathsf W_\lambda G)
+ \preceq\frac{8B_*^2(2M+1)}{J-M}\,G^*G.
+\end{equation}
+Its proof bounds the squared Hilbert--Schmidt norm of the separated
+row/column block by
+$4B_*^2(2M+1)\sum_{|n|>J}(|n|-M)^{-2}$ and uses the
+integral bound $\sum_{n>J}(n-M)^{-2}\le1/(J-M)$.
+The diagonal is absent. If the diagonal lower weights $g_n$ are increasing,
+dividing by $g_{J+1}$ gives the weighted Gram bound. For
+$G=[I;-X]$ its exact final factor is $I+X^*X$, with no extra
+number-of-columns factor. The moment bound is usually much sharper,
+but a growing moment order controls only its geometric remainder;
+it does not force the leading moment Gram to vanish.
+
+These estimates control how the low-mode inverse correction can be
+certified. They do not establish its arithmetic sign at $\lambda=4$
+or along growing windows. The signed head bound and the quantitative
+inverse factors in \eqref{eq:v120-structured-uniform} remain the
+unproved inputs; positivity of the already certified tail alone does
+not provide either one.
+

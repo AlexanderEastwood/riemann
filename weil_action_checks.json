@@ -1,0 +1,103 @@
+{
+  "scope": "Actual finite arithmetic Weil matrix and first known critical-line zero; floating-point convention checks, not interval certificates or RH evidence.",
+  "root_imaginary": 14.134725141734695,
+  "root_numerical_zeta_residual": 3.4147274494130153e-41,
+  "assumed_numerical_multiplicity": 1,
+  "sigma": 2.0,
+  "a": 4.0,
+  "M": 6,
+  "mpmath_digits": 40,
+  "target_coefficient_quadrature_error": 5.421010862427522e-20,
+  "extra_400_nodes_action_difference_L10_N512": 2.2074714775785026e-14,
+  "cutoff_warning": "Moderate K=128,256; theorem cutoff is not numerically attained.",
+  "rows": [
+    {
+      "L": 4.0,
+      "K": 128,
+      "N": 256,
+      "action_norm": 0.013881446992166884,
+      "target_projected_norm": 0.013824857925720068,
+      "action_error": 0.00078125647805146,
+      "relative_action_error": 0.05651099506765949,
+      "self_form_real": 4.793399585595334e-05,
+      "squared_metric_mass": 0.0001926945705963391
+    },
+    {
+      "L": 4.0,
+      "K": 256,
+      "N": 512,
+      "action_norm": 0.01388200130041871,
+      "target_projected_norm": 0.013824857990917632,
+      "action_error": 0.0007910464003078151,
+      "relative_action_error": 0.057219133883870656,
+      "self_form_real": 4.793399585680115e-05,
+      "squared_metric_mass": 0.00019270996010482691
+    },
+    {
+      "L": 6.0,
+      "K": 128,
+      "N": 256,
+      "action_norm": 0.016988337623625588,
+      "target_projected_norm": 0.01692521611626681,
+      "action_error": 0.0002334895768938676,
+      "relative_action_error": 0.013795367532675757,
+      "self_form_real": 4.813983148378724e-05,
+      "squared_metric_mass": 0.00028860361521429266
+    },
+    {
+      "L": 6.0,
+      "K": 256,
+      "N": 512,
+      "action_norm": 0.0169917466556466,
+      "target_projected_norm": 0.016928574088692454,
+      "action_error": 0.0002377558302995908,
+      "relative_action_error": 0.014044645996404462,
+      "self_form_real": 4.813983138096999e-05,
+      "squared_metric_mass": 0.0002887194544096772
+    },
+    {
+      "L": 8.0,
+      "K": 128,
+      "N": 256,
+      "action_norm": 0.019550559602894108,
+      "target_projected_norm": 0.019551301020466143,
+      "action_error": 4.021527962245225e-05,
+      "relative_action_error": 0.00205691066698606,
+      "self_form_real": 4.7782701362029e-05,
+      "squared_metric_mass": 0.00038222438078631515
+    },
+    {
+      "L": 8.0,
+      "K": 256,
+      "N": 512,
+      "action_norm": 0.019550563641948134,
+      "target_projected_norm": 0.0195513013916659,
+      "action_error": 4.195538439781519e-05,
+      "relative_action_error": 0.0021459126202053964,
+      "self_form_real": 4.7782701361702356e-05,
+      "squared_metric_mass": 0.0003822245387178645
+    },
+    {
+      "L": 10.0,
+      "K": 128,
+      "N": 256,
+      "action_norm": 0.021846253788331903,
+      "target_projected_norm": 0.021850317909931763,
+      "action_error": 1.4673422993094901e-05,
+      "relative_action_error": 0.0006715427690150585,
+      "self_form_real": 4.776393366584968e-05,
+      "squared_metric_mass": 0.00047725880458420594
+    },
+    {
+      "L": 10.0,
+      "K": 256,
+      "N": 512,
+      "action_norm": 0.021850626363587585,
+      "target_projected_norm": 0.02185469024289272,
+      "action_error": 1.5078036513631872e-05,
+      "relative_action_error": 0.0006899222247515195,
+      "self_form_real": 4.776393284636318e-05,
+      "squared_metric_mass": 0.0004774498724811086
+    }
+  ]
+}

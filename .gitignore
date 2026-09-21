@@ -1,0 +1,22 @@
+.DS_Store
+
+# The packaged bundle itself (117 MB, exceeds GitHub's 100 MB file limit).
+# Its contents are committed unpacked at the repo root.
+fixed_space_prime_action_v1_bundle.zip
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

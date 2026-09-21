@@ -1,0 +1,41 @@
+{
+  "bits": 768,
+  "lambda": 4,
+  "head_cut": 16,
+  "solve_cut": 256,
+  "results": [
+    {
+      "parity": "even",
+      "X": "zero",
+      "status": "PASS_STRICT_POSITIVE",
+      "pivot_count": 17,
+      "smallest_lower_pivot": "[1.4513711384056944394515197698311145498955593036556205183684521861e-13 +/- 1.71e-78]",
+      "witness_sha256": null
+    },
+    {
+      "parity": "even",
+      "X": "frozen_finite_solve",
+      "status": "PASS_STRICT_POSITIVE",
+      "pivot_count": 17,
+      "smallest_lower_pivot": "[1.2207988129530108388447993118595036762343875890670936172591727650e-58 +/- 2.43e-123]",
+      "witness_sha256": "e3d399654e2ee217d2346dffc028634fee2cc34b88794fac3a933a7b210ff2e2"
+    },
+    {
+      "parity": "odd",
+      "X": "zero",
+      "status": "PASS_STRICT_POSITIVE",
+      "pivot_count": 16,
+      "smallest_lower_pivot": "[8.4162028473949656352114426087305484676727380741429207550167934804e-13 +/- 3.37e-78]",
+      "witness_sha256": null
+    },
+    {
+      "parity": "odd",
+      "X": "frozen_finite_solve",
+      "status": "PASS_STRICT_POSITIVE",
+      "pivot_count": 16,
+      "smallest_lower_pivot": "[1.3872553434638554466668820359800498363386746003248348667997174305e-56 +/- 4.09e-121]",
+      "witness_sha256": "200652138f543b9077130011839128ed51bee6bf533845765b9d4752e9f636a4"
+    }
+  ],
+  "scope": "K_X is the exact complete-operator finite-support form; alpha=0 for these two frozen solves and for X0. This does not prove the infinite Schur complement positive or any uniform growing-window sign."
+}

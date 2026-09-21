@@ -1,0 +1,203 @@
+\subsection*{Parity signs and certified evaluation of the inverse refinement}
+The global remainder norm in the preceding inverse estimate loses useful
+signs. Retaining them improves the complete far-operator sandwich;
+it does not determine the sign of the low Schur matrix.
+
+\begin{proposition}[Sharper inverse constants at the fixed window]
+\label{prop:v122-parity-inverse}
+For the actual shifted far operators and the unchanged weights $D_g$
+in Proposition~\ref{prop:v120-lambda4-tail}, one has
+\[
+ D_g\preceq U\preceq20D_g\quad\text{in the even sector }n>512,
+ \qquad
+ D_g\preceq U\preceq90D_g\quad\text{in the odd sector }n>1536.
+\]
+Thus the constants in Proposition~\ref{prop:v120-inverse-polynomial}
+can be replaced by $20$ and $90$, respectively, with error factors
+$(19/20)^k$ and $(89/90)^k$. These are complete-operator bounds
+at $\lambda=4$, with no assertion of growing-window uniformity.
+\end{proposition}
+\begin{proof}
+Put $h=9/16$, $c=10^{-8}$, $L=2\log4$ and
+$t_N=2\pi(N+1)/L$. Let $M_\phi$ be the certified prime bound
+in \eqref{eq:v120-lambda4-prime-bound}. The limiting archimedean
+off-diagonal in the normalized parity basis is the matrix
+$1/[2(n+m)]$ in the even sector and its negative in the odd sector.
+It is positive and has norm at most $\pi/2$; the remaining
+archimedean commutator has norm at most $2/t_N$, by the proof of
+Proposition~\ref{prop:v115-sharp-tail}.
+
+In centered coordinates the pole form is
+$2|\ip f{\cosh(x/2)}|^2-2|\ip f{\sinh(x/2)}|^2$.
+Only the positive term acts on even vectors, and only the negative
+term on odd vectors. Direct integration gives
+\[
+ |\widehat{\cosh(x/2)}(n)|^2
+ =\frac{h}{L(t_n^2+1/4)^2},\qquad
+ 2\|Q_N\cosh(x/2)\|^2
+ \le\frac{hL^3}{4\pi^4}\sum_{n>N}n^{-4}
+ \le\frac{hL^3}{12\pi^4N^3}.
+\]
+The factor two for the form and both Fourier signs are included.
+Consequently the remainder above the shifted archimedean diagonal
+has the following upper bounds:
+\begin{equation}\label{eq:v122-parity-upper}
+ \begin{split}
+ C_{\rm e}(N)&=M_\phi+2/t_N+\pi/2+hL^3/(12\pi^4N^3),\\
+ C_{\rm o}(N)&=M_\phi+2/t_N.
+ \end{split}
+\end{equation}
+The odd limiting Hilbert matrix and odd pole term are nonpositive
+and may be omitted in an upper bound. The shift $cD$ changes only
+the exact archimedean diagonal; none of these remainder terms is
+multiplied by $1-c$.
+
+For the same $\kappa$ and increasing $g_n$ as before, the two-sided
+diagonal estimate \eqref{eq:v120-two-sided-arch} now yields
+\[
+ U\preceq D_g+
+ \{\kappa+2(1-c)E_L(t_N)+C_{\rm e/o}(N)\}I.
+\]
+It suffices to bound one plus the braced quantity divided by
+$g_{N+1}$. Outward interval evaluation gives values below
+$19.215607$ for even $N=512$, and below $89.840960$ for odd
+$N=1536$. The integer gates $20$ and $90$ pass at both 320 and
+384 bits. The lower bounds and closed form domains are unchanged.
+\end{proof}
+
+\begin{proposition}[Complete residual bounds from a finite prefix]
+\label{prop:v122-prefix-refinement}
+Assume $D_g\preceq U\preceq mD_g$, with
+$D_g\succeq\gamma I>0$. Put
+$A=D_g^{-1/2}UD_g^{-1/2}$, $H=A-I$, and let $P$ be an
+orthogonal prefix projection, $Q=I-P$. Suppose
+$QHQ\preceq\nu Q$ with $\nu\ge0$. For a residual $k$ write
+\[
+ y=D_g^{-1/2}k=p+q,\quad p=Py,\quad q=Qy,\qquad
+ v=\norm p^2,\quad a=\ip{Hp}{p},\quad \norm q^2\le E.
+\]
+With $[s]_+=\max(s,0)$, the following scalar bound includes
+every omitted residual row:
+\begin{equation}\label{eq:v122-prefix-scalar}
+ \ip{U^{-1}k}{k}
+ \le v+E-\frac1m[\sqrt a-\sqrt{\nu E}]_+^2.
+\end{equation}
+For a matrix of residual columns $Y=D_g^{-1/2}\mathcal R$, put
+$Y_P=PY$, $Y_Q=QY$, $V=Y_P^*Y_P$ and
+$A_P=Y_P^*HY_P$. If $Y_Q^*Y_Q\preceq\mathcal E$, then, for
+every fixed $0<\theta\le1$,
+\begin{equation}\label{eq:v122-prefix-matrix}
+ \mathcal R^*U^{-1}\mathcal R\preceq
+ V+\mathcal E-\frac1m
+ \{(1-\theta)A_P-(\theta^{-1}-1)\nu\mathcal E\}.
+\end{equation}
+If a certified $0\le\rho<1$ instead satisfies
+$\nu\mathcal E\preceq\rho^2A_P$, the braced lower bound can
+be replaced by $(1-\rho)^2A_P$.
+\end{proposition}
+\begin{proof}
+The bounded operator $H$ is positive, so the reverse triangle
+inequality for $H^{1/2}p+H^{1/2}q$ gives
+\[
+ \ip{Hy}{y}\ge
+ [\sqrt a-\|H^{1/2}q\|]_+^2
+ \ge[\sqrt a-\sqrt{\nu E}]_+^2.
+\]
+Combine this with the first inverse polynomial
+$A^{-1}\preceq I-H/m$ and
+$\norm y^2=\norm p^2+\norm q^2\le v+E$.
+For the matrix version, apply the lower Young inequality to
+$H^{1/2}Y_Px+H^{1/2}Y_Qx$ for every head vector $x$.
+Since $1-\theta^{-1}\le0$, the remote upper bound supplies the
+stated lower form. The relative variant follows from the scalar
+reverse triangle inequality in every head direction. No factor
+equal to the number of columns is inserted. The scalar positive
+part in \eqref{eq:v122-prefix-scalar} is not a matrix positive-part
+operation; the latter does not follow from these arguments.
+\end{proof}
+
+In the actual parity tail based at $N$, the prefix can end at any
+$J>N$. The same proof as \eqref{eq:v122-parity-upper} gives the
+complete remote compression bound
+\begin{equation}\label{eq:v122-remote-H}
+ Q_JHQ_J\preceq\nu_J Q_J,\qquad
+ \nu_J=\frac{\kappa_N+2(1-c)E_L(t_J)+C_{\rm e/o}(J)}{g_{J+1}}.
+\end{equation}
+Here $t_J=2\pi(J+1)/L$, whereas the constant $\kappa_N$ in
+the original $D_g$ is kept fixed. The upper numerator decreases
+and the positive denominator increases with the index. The moment
+bound of Proposition~\ref{prop:v116-remote-moment}, divided by
+$g_{J+1}$, supplies $\mathcal E$. Thus these formulas evaluate a
+signed inverse improvement without setting the infinite residual
+to zero. All occurrences of $U$ are interpreted through its
+bounded preconditioned form.
+
+\begin{proposition}[Refining both terms of the structured inverse]
+\label{prop:v122-refined-structured}
+Keep the factors $Z,R,C,\underline L,\mu$ of
+Proposition~\ref{prop:v120-structured-inverse}, and assume also
+$U\preceq mD_g$. Let $Q_*$ be a bounded positive operator such
+that
+\[
+ U^{-1}\preceq Q_*\preceq D_g^{-1}.
+\]
+Then, for every $r=(h,k)$,
+\begin{equation}\label{eq:v122-refined-structured}
+ \ip{T^{-1}r}{r}
+ \le\ip{Q_*k}{k}
+       +\mu^{-1}\norm{C(h-Z^*k-R^*Q_*k)}^2.
+\end{equation}
+The same inequality holds for the simultaneous residual Gram.
+In particular all inverse polynomials of
+Proposition~\ref{prop:v120-inverse-polynomial} can be used while
+retaining the original certified $C$ and $\mu$.
+\end{proposition}
+\begin{proof}
+The assumed sandwich implies
+$m^{-1}D_g^{-1}\preceq Q_*\preceq D_g^{-1}$.
+Consequently $Q_*$ is injective and the closed form of $Q_*^{-1}$
+has the same domain as $D_g^{1/2}$, with equivalent form norms.
+Inverse order gives $U\succeq Q_*^{-1}$ as forms. Moreover
+\[
+ K_Z-R^*Q_*R\succeq K_Z-R^*D_g^{-1}R\succeq\underline L.
+\]
+Repeat the lower-form square completion in
+Proposition~\ref{prop:v120-structured-inverse}, replacing the far
+form by $Q_*^{-1}$ and its inverse by $Q_*$. Its exact inverse
+contains $Q_*$ in both displayed terms, proving the assertion.
+The change preserves the lower form domain since $Q_*Rx$ belongs
+to the operator domain of $Q_*^{-1}$ for every finite head vector.
+Applying the result to all linear combinations proves the Gram
+version. If the saved factors certify $T-cD$, use inverse order
+as before and retain those shifted factors throughout.
+\end{proof}
+
+Improving only the first term while leaving the old mixed term
+unchanged is not justified. Positivity of the complete low Schur
+matrix requires the resulting full correction, on the entire head,
+to fit below $K_X$. The new estimates do not assert that comparison
+or convergence along growing windows.
+
+\begin{remark}[The simultaneous head acceptance test]
+\label{rem:v122-head-ldl}
+For a positive definite trial matrix $K_X$, put
+$C_X=r^*T^{-1}r$. Then
+\[
+ \lambda_{\max}(K_X^{-1/2}C_XK_X^{-1/2})\le1
+ \quad\Longleftrightarrow\quad K_X-C_X\succeq0.
+\]
+Thus an eigenvalue or inverse-square-root estimate is unnecessary.
+It suffices to construct a Hermitian \emph{upper enclosure in form
+order} $\overline C_X\succeq C_X$ for the complete residual Gram
+and certify $K_X-\overline C_X\succeq0$, for example by interval
+$LDL^*$ with strictly positive pivots. A fixed invertible dyadic
+congruence may improve conditioning without changing the sign.
+Strictly positive pivots prove the stronger strict comparison;
+an exact zero pivot requires the corresponding semidefinite
+factorization conditions, not an interval containing zero.
+An entrywise upper bound is not by itself an upper bound in form
+order. For $T_M=P_MT P_M$ and $r_M=P_Mr$, the variational identity
+gives $r_M^*T_M^{-1}r_M\preceq C_X$, the opposite enclosure
+direction. All mixed and remote contributions must be enclosed
+before the $LDL^*$ test proves the complete Schur sign.
+\end{remark}

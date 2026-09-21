@@ -1,0 +1,24 @@
+{
+  "status": "PASS: exact-input scalar interval inequalities",
+  "scope": "Overlap statements require a proved complete even-sector gap and an odd-sector lower threshold above the trial Rayleigh value; no endpoint statement.",
+  "prior_certificate": "g2_finite_certificate.json",
+  "candidate_sha256": "6d326cafbe715752f89b90cd92eb1d5a68ab0b78befb6afe074e797372b1a18e",
+  "precision_bits": 256,
+  "alpha_upper": "5.312382e-38",
+  "energy_lower": "1.668982e-38",
+  "finite_inverse_norm_upper": ".000216",
+  "improved_trial_rayleigh_upper": "[3.6434000778680205589896327997796920934786856866584406032637952141e-38 +/- 2.44e-103]",
+  "conservative_trial_rayleigh_cap": "3.644e-38",
+  "conditional_ground_overlap": [
+    {
+      "even_sector_threshold": "1e-36",
+      "sine_upper": "[0.19110863998384013128986758903662101233534211782620224457683944537 +/- 2.02e-66]",
+      "conservative_claim": ".19112"
+    },
+    {
+      "even_sector_threshold": "1e-34",
+      "sine_upper": "[0.019305263998384013128986758903662101233534211782620224457683944537 +/- 2.02e-67]",
+      "conservative_claim": ".01931"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+\subsection*{Finite trial positivity and the exact omitted-tail correction}
+
+The trial-head term in Proposition~\ref{prop:v120-structured-uniform}
+must be distinguished from the exact Schur complement. A finite-support
+certificate can settle the former without settling the latter.
+
+\begin{proposition}[Finite-support trial forms and Galerkin Schur bounds]
+\label{prop:v121-finite-trial}
+Let the outer head be finite dimensional, let $T\succeq cI$ with
+$c>0$ be a positive self-adjoint tail operator, and let $B$ be the
+bounded head-to-tail coupling. For $X$ with range in $\mathcal D(T)$,
+define $K_X,r$ as in Proposition~\ref{prop:v120-structured-uniform}
+and put $S_\infty=F-B^*T^{-1}B$. Then
+\begin{align}
+ K_X-S_\infty
+  &=(X-T^{-1}B)^*T(X-T^{-1}B)\succeq0,
+       \label{eq:v121-square}\\
+ S_\infty&=K_X-r^*T^{-1}r.\label{eq:v121-residual}
+\end{align}
+Let $P_M$ be the orthogonal projection onto a finite tail space in $\mathcal D(T)$, and
+write $T_M=P_MT|_{\operatorname{Ran}P_M}$, $B_M=P_MB$ and
+$S_M=F-B_M^*T_M^{-1}B_M$. If $X=P_MX$, then
+\begin{equation}\label{eq:v121-finite-trial}
+ K_X=\begin{bmatrix}I\\-X\end{bmatrix}^{*}
+       \begin{bmatrix}F&B_M^*\\B_M&T_M\end{bmatrix}
+       \begin{bmatrix}I\\-X\end{bmatrix}.
+\end{equation}
+In particular, $S_M\succeq0$ implies $K_X\succeq0$ for every such
+$X$, and strict positivity transfers as well. This is the complete
+operator's $K_X$, not a truncation of that trial form.
+
+For the exact finite solve $X_M=T_M^{-1}B_M$, embedded in the complete
+tail, one has $K_{X_M}=S_M$ and
+\begin{equation}\label{eq:v121-galerkin-defect}
+ \boxed{S_\infty=S_M-r_M^*T^{-1}r_M,
+ \qquad r_M=B-TX_M.}
+\end{equation}
+If the finite tail spaces are nested and their union is a form core
+for $T$, then $S_M\downarrow S_\infty$ in matrix norm.
+\end{proposition}
+\begin{proof}
+Expanding the first square gives $K_X-F+B^*T^{-1}B$.
+Since $r=-T(X-T^{-1}B)$, its value is $r^*T^{-1}r$,
+which proves both identities. In \eqref{eq:v121-finite-trial}
+every trial lies in the head plus the retained finite tail space,
+so compression changes none of the quadratic terms. Finite square completion gives
+\[
+ K_X=S_M+(X-T_M^{-1}B_M)^*T_M(X-T_M^{-1}B_M).
+\]
+Thus $K_X\succeq S_M$, and the graph map $h\mapsto(h,-Xh)$ is
+injective. Substitution of the exact finite solve proves
+\eqref{eq:v121-galerkin-defect}; its retained residual rows vanish,
+but its omitted rows need not vanish.
+
+For each head vector $h$, the variational identity is
+\[
+ \ip{B^*T^{-1}Bh}{h}
+ =\sup_{y\in\mathcal D(T^{1/2})}
+ \{2\Re\ip{Bh}{y}-\norm{T^{1/2}y}^2\}.
+\]
+Restricting the supremum to $\operatorname{Ran}P_M$ gives
+$\ip{B_M^*T_M^{-1}B_Mh}{h}$. Nestedness and form-core density make
+these quantities increase to the full supremum. Polarization and
+finite dimensionality of the head give matrix-norm convergence of
+the Schur complements in the stated decreasing order.
+\end{proof}
+
+A finite list of positive $S_M$ therefore does not prove positivity
+of $S_\infty$. Positivity for every member of a cofinal sequence at
+a fixed window would imply $S_\infty\succeq0$, but strict positivity
+would still require a positive limiting margin. The structured inverse
+bounds concern this same $T$; a comparison metric or a shifted lower
+operator does not redefine the target Schur complement.
+
+\begin{remark}[The semidefinite range condition]\label{rem:v121-range}
+For $T\succeq0$, the notation $T^{-1}B$ requires an additional
+condition. A form version is available if
+$\operatorname{Ran}B\subset\operatorname{Ran}T^{1/2}$. Define the
+reduced inverse $C=T^{-1/2}B$, with values orthogonal to $\ker T$.
+For $X$ with range in the form domain, use
+$(T^{1/2}X)^*T^{1/2}X$ in the definition of $K_X$. Then
+\[
+ K_X-(F-C^*C)=(T^{1/2}X-C)^*(T^{1/2}X-C)\succeq0.
+\]
+Orthogonality to $\ker T$, or membership in the closure of its range,
+does not suffice when the range is not closed. At the certified
+$\lambda=4$ split there is no such issue:
+Proposition~\ref{prop:v120-lambda4-tail} gives
+$T\succeq10^{-8}D\succeq1.7940\cdot10^{-8}I$ on $Q_{16}$.
+\end{remark}
+
+\begin{proposition}[A certified local zero head-error term]
+\label{prop:v121-alpha-zero}
+For the actual $\lambda=4$ Weil form with outer head $E_{16}$,
+$K_X\succ0$ in both parity sectors for $X=0$ and for the frozen
+dyadic solves supported on modes $17,\ldots,256$ specified in
+Appendix~\ref{app:v121-audit}. Consequently $\alpha_4=0$ is
+admissible in Proposition~\ref{prop:v120-structured-uniform} for
+each of these choices, on the complete operator.
+\end{proposition}
+\begin{proof}
+Assemble the exact finite entries with the separate logarithmic
+diagonal, normalized parity basis and $L=2\log4$. Outward interval
+$LDL^*$ factorization of $K_X$ verifies all $17$ even pivots and
+all $16$ odd pivots strictly positive, both for $X=0$ and for the
+specified dyadics. The identical witnesses pass at $768$ and $896$
+bits; Appendix~\ref{app:v121-audit} gives the files and gates.
+Real symmetric positivity also proves positivity on the complex
+parity spaces. Equation~\eqref{eq:v121-finite-trial} identifies these
+matrices with the complete trial forms. No infinite Schur sign or
+small residual is used in this argument.
+\end{proof}
+
+This result does not certify $\alpha_\lambda=0$ at untested windows
+or for larger unsupported solves. Positivity of an exact Schur
+complement would guarantee $K_X\succeq0$ for every trial; without
+that premise the least admissible $\alpha$ can depend on $X$.
+For example, $F=0$, $B=T=1$ gives $S=-1$, $K_0=0$ and $K_1=-1$.
+Even $K_0\succ0$ need not help the signed target: its residual is
+the entire coupling $B$.
+
+With a proved $\alpha_\lambda=0$ along a growing family, the precise
+remaining sufficient estimates would be
+\begin{equation}\label{eq:v121-scaled-target}
+ e_\lambda\longrightarrow0,
+ \qquad t_\lambda/\sqrt{\mu_\lambda}\longrightarrow0.
+\end{equation}
+The second condition is stronger than $t_\lambda\to0$ when
+$\mu_\lambda\to0$. Geometric convergence of an inverse approximation
+improves an enclosure of $r_\lambda^*T_\lambda^{-1}r_\lambda$;
+it does not force that residual energy to vanish for a fixed trial.
+These growing-window estimates remain unproved. Failure of this
+sufficient bound would not itself refute Weil positivity.
+

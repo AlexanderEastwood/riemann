@@ -1,0 +1,168 @@
+\subsection*{A positive weight for the prime shifts and a diagonal inverse bound}
+The flat degree bound can be sharpened without changing the Weil operator.
+Let $\mathsf T_{\rm pr}$ denote the sum of the truncated translations and
+their adjoints with weights $w_m=\Lambda(m)/\sqrt m$. Its coefficients
+are nonnegative, and the prime contribution to the Weil form is
+$-\mathsf T_{\rm pr}$. For every bounded function $\phi$ bounded away
+from zero and every complex $f$,
+\begin{equation}\label{eq:v116-weighted-prime-general}
+ |\ip{\mathsf T_{\rm pr}f}{f}|
+ \le\int_0^L\frac{(\mathsf T_{\rm pr}\phi)(x)}{\phi(x)}|f(x)|^2\,dx
+ \le M_\phi\norm f_2^2,
+ \qquad
+ M_\phi:=\mathop{\rm ess\,sup}_{0<x<L}
+       \frac{(\mathsf T_{\rm pr}\phi)(x)}{\phi(x)}.
+\end{equation}
+Here $\phi$ is required to be strictly positive. This follows edge by
+edge from
+\[
+ 2|f(x+s)f(x)|\le
+ \frac{\phi(x)}{\phi(x+s)}|f(x+s)|^2
+ +\frac{\phi(x+s)}{\phi(x)}|f(x)|^2.
+\]
+Thus the argument is a weighted Schur bound on the translation sum;
+it assumes no sign for the complete Weil form.
+
+\begin{proposition}[A certified weighted prime bound at $\lambda=3$]
+\label{prop:v116-weighted-prime}
+At $L=2\log3$, take $\phi(x)=\cosh(x-\log3)$. With
+$w_m=\Lambda(m)/\sqrt m$, put
+\begin{equation}\label{eq:v116-prime-constant}
+ \mathfrak m_3=
+ \frac{85}{116}w_2+\frac{65}{87}w_3+
+ \frac{193}{232}w_4+\frac{137}{145}w_5+
+ \frac{35}{29}w_7.
+\end{equation}
+Then $M_\phi=\mathfrak m_3$ and
+\[
+ 2.6890557719319011796<\mathfrak m_3
+       <2.6890557719319011797.
+\]
+In particular $\norm{\mathsf T_{\rm pr}}\le\mathfrak m_3$.
+Replacing $M_3$ by $\mathfrak m_3$ in
+Proposition~\ref{prop:v115-sharp-tail} gives
+\begin{equation}\label{eq:v116-weighted-tail-values}
+ \widetilde\Gamma_{3,256}^{\rm all}>0.4970,
+ \qquad \widetilde\Gamma_{3,256}^{\rm even}>2.0690,
+ \qquad \widetilde\Gamma_{3,512}^{\rm all}>1.1907.
+\end{equation}
+These are omitted-complement bounds, with no assertion yet about the
+sign of the head/complement Schur matrix.
+\end{proposition}
+\begin{proof}
+Write $u=e^x\in[1,9]$. The ratio for a forward shift by $\log m$ is
+\[
+ \frac{m u^2+9/m}{u^2+9},
+\]
+and for its backward shift it is $(u^2/m+9m)/(u^2+9)$.
+On an interval with fixed active shifts, their weighted sum has the
+form $A+B\tanh(x-\log3)$ and is monotone or constant. The endpoints
+are $u=1,9,m,9/m$, for $m=2,3,4,5,7,8$.
+By reflection it suffices to examine the six intervals in $1<u<3$,
+whose successive upper endpoints are
+\[
+ 9/8,\quad9/7,\quad9/5,\quad2,\quad9/4,\quad3.
+\]
+On each such interval the ratio is increasing. Its largest one-sided
+value is approached from $u<9/7$ and is
+\[
+ \sum_{m=2,3,4,5,7}
+       w_m\frac{9m^2+49}{58m}=\mathfrak m_3.
+\]
+The finite comparisons with the other endpoint values use rational
+coefficients and are certified at 256-bit Arb precision by
+\texttt{certify\_weighted\_prime\_tail.py}; its exact coefficient lists
+and interval enclosures are included in the reproducibility bundle.
+The $m=8$ term is retained on every interval where that shift is active.
+The $m=9$ translation has full interval length and is zero in $L^2$.
+This proves the asserted essential supremum and norm bound by
+\eqref{eq:v116-weighted-prime-general}. Substitution in the explicit
+formulas of Proposition~\ref{prop:v115-sharp-tail}, with
+$h_L=1/3$, $R_L=27/80$ and $C_L=1$, gives
+\eqref{eq:v116-weighted-tail-values}; the same scalar interval
+certificate verifies the strict inequalities.
+\end{proof}
+
+\begin{proposition}[Diagonal domination of the tail inverse]
+\label{prop:v116-diagonal-inverse}
+Continue at $\lambda=3$ and retain $E_L$ and $C_L$ from
+\eqref{eq:v115-arch-errors}. Fix $N\ge1$ and set
+$t_*=2\pi(N+1)/L$. For the even sector define
+\[
+ \kappa_{\rm even}=\mathfrak m_3+2C_L/t_*;
+\]
+for the whole space, and hence also the odd sector, define
+\[
+ \kappa_{\rm all}=\kappa_{\rm even}+\pi/2
+                         +4h_LL/(\pi^2N).
+\]
+In the selected sector put
+\begin{equation}\label{eq:v116-diagonal-weight}
+ g_n=\log\frac{|n|}{L}-E_L(2\pi|n|/L)-\kappa,
+            \qquad |n|>N.
+\end{equation}
+If $g_{N+1}>0$, the canonical omitted-tail operator $T$ satisfies
+the form inequality $T\succeq D_g$, where $D_g$ is this diagonal
+operator, and therefore
+\begin{equation}\label{eq:v116-inverse-order}
+ T^{-1}\preceq D_g^{-1}.
+\end{equation}
+The same weights apply in the normalized positive-index parity basis.
+\end{proposition}
+\begin{proof}
+The proof of Proposition~\ref{prop:v115-sharp-tail} bounds the
+archimedean diagonal at each index by
+$\log(|n|/L)-E_L(2\pi|n|/L)$ before any infimum is taken.
+The remaining archimedean error has norm at most $2C_L/t_*$.
+Its limiting commutator is nonnegative in the even sector and is
+bounded below by $-\pi/2$ on the whole tail. Apply
+Proposition~\ref{prop:v116-weighted-prime} to the prime term and the
+existing negative-pole tail estimate to the whole-space case.
+These bounds prove $T\succeq D_g$ on finite tail sums and hence on
+the common logarithmic form domain. The weights $g_n$ increase with
+$|n|$, since $E_L(t)$ is decreasing, so $D_g\succeq g_{N+1}I>0$.
+The inverse inequality follows, for example, from the variational
+identity
+\[
+ \ip{T^{-1}v}{v}
+ =\sup_w\{2\Re\ip vw-\mathfrak t[w]\}
+ \le\sup_w\left\{2\Re\ip vw-\sum_n g_n|w_n|^2\right\}
+ =\sum_n\frac{|v_n|^2}{g_n}.
+\]
+The quadratic quantities are real in the fixed first-slot-linear
+convention. Restriction to a parity sector is isometric and leaves
+the diagonal weights unchanged.
+\end{proof}
+
+This yields a directional residual certificate that keeps the distant
+frequency gain. Write the head/tail decomposition as
+\[
+ \mathsf W_3=\begin{pmatrix}F&B^*\\B&T\end{pmatrix},
+ \qquad R=B-TZ,
+ \qquad \mathcal C_Z=F-B^*Z-Z^*B+Z^*TZ,
+\]
+where $Z$ has finite Fourier support and $T\succeq D_g>0$ in the
+chosen sector. Let $R_n$ denote its normalized output rows, and suppose
+a certified matrix $\mathcal U_J$ bounds the complete remote Gram:
+\[
+ \sum_{|n|>J}R_n^*R_n\preceq\mathcal U_J,
+                 \qquad J>N.
+\]
+In a parity basis this sum instead runs over positive indices with
+their normalized parity rows. The exact Schur identity and
+\eqref{eq:v116-inverse-order} give
+\begin{equation}\label{eq:v116-directional-schur}
+ \begin{split}
+ F-B^*T^{-1}B
+ &=\mathcal C_Z-R^*T^{-1}R\\
+ &\succeq\mathcal C_Z-
+       \sum_{N<|n|\le J}\frac{R_n^*R_n}{g_n}
+       -\frac{\mathcal U_J}{g_{J+1}}.
+ \end{split}
+\end{equation}
+All residual rows, including those in the support of a frozen
+approximate solve, must be retained. The final expression is a finite
+Hermitian matrix, but its validity depends on a rigorous bound for
+\emph{every} remote row. No scalar norm of $R$ is substituted in
+\eqref{eq:v116-directional-schur}. This distinction permits the
+certificate to preserve very small source directions.

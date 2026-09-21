@@ -1,0 +1,84 @@
+\subsection*{A complement bound without a positive spectral gap}
+The ordinary operator residual permits a different reduction from the
+coercive Schur estimate.  It does not require a positive gap on the
+complement and therefore introduces no division by a collapsing level.
+
+\begin{proposition}[A gap-free near-radical block bound]
+\label{prop:v118-gap-free}
+Let $A$ be a lower-bounded self-adjoint operator with closed form $q$,
+and let $P$ be a finite-rank orthogonal projection with
+$\operatorname{Ran}P\subset\mathcal D(A)$.  Put $Q=I-P$ and assume
+$\norm{AP}\le\epsilon$.  Then $Q$ preserves the form domain and
+\begin{equation}\label{eq:v118-gap-free-difference}
+ \left|q(f,f)-q(Qf,Qf)\right|
+ \le\frac{2}{\sqrt3}\epsilon\norm f^2
+ \qquad(f\in\mathcal D(q)).
+\end{equation}
+Consequently, if
+\[
+ q(g,g)\ge-\eta\norm g^2\quad
+ (g\in\operatorname{Ran}Q\cap\mathcal D(q)),\qquad \eta\ge0,
+\]
+then
+\begin{equation}\label{eq:v118-gap-free-lower}
+ \inf\sigma(A)\ge-\eta-\frac{2}{\sqrt3}\epsilon.
+\end{equation}
+The constant $2/\sqrt3$ in both statements is sharp.
+\end{proposition}
+\begin{proof}
+Write $h=Pf$ and $g=Qf$.  The vector $h$ lies in the operator domain,
+so $g$ belongs to the form domain and, with the fixed first-slot-linear
+convention,
+\[
+ q(f,f)-q(g,g)
+ =\ip{Ah}{h}+2\Re\ip{Ah}{g}
+ =\Re\ip{Ah}{h+2g}.
+\]
+Since $h\perp g$, the absolute value is at most
+\[
+ \epsilon\norm h\sqrt{\norm h^2+4\norm g^2}
+ \le\frac{2}{\sqrt3}\epsilon
+           (\norm h^2+\norm g^2).
+\]
+For the last inequality, the maximum of
+$t\sqrt{4-3t^2}$ on $0\le t\le1$ is $2/\sqrt3$.
+This proves \eqref{eq:v118-gap-free-difference}; the complementary
+lower bound and $\norm{Qf}\le\norm f$ prove
+\eqref{eq:v118-gap-free-lower}.  Sharpness already holds on
+$\mathbb C^2$: take $P$ onto the first coordinate and
+\[
+ A=-\frac{\epsilon}{\sqrt3}
+   \begin{pmatrix}1&\sqrt2\\\sqrt2&0\end{pmatrix}.
+\]
+Then $\norm{AP}=\epsilon$, the complementary form is zero, and the
+lowest eigenvalue is $-2\epsilon/\sqrt3$.
+\end{proof}
+
+For the rank-one projection onto either normalized source of
+Proposition~\ref{prop:v115-absolute-residual},
+$\norm{\mathsf W_\lambda P}=\norm{\mathsf W_\lambda u_\lambda}$
+already tends to zero with the proved ordinary residual bound.
+It therefore suffices to prove asymptotic nonnegativity
+$q_\lambda|_{u_\lambda^\perp}\succeq-\eta_\lambda I$ with
+$\eta_\lambda\to0$ along an unbounded window sequence.  Strict
+complementary coercivity is unnecessary for this version of the
+reduction.  For a growing source block the required uniform
+$\norm{\mathsf W_\lambda P_\lambda}\to0$ remains a separate open
+input.  Neither complementary sign estimate is proved here.
+
+The missing sign cannot be concealed by removing the near-radical
+block.  Indeed, suppose a fixed unit compact test $f$ has
+$q(f,f)=-\delta<0$, and extend it by zero to every larger window.
+Then \eqref{eq:v118-gap-free-difference} gives
+\[
+ q_\lambda((I-P_\lambda)f,(I-P_\lambda)f)
+ \le-\delta+\frac{2}{\sqrt3}\epsilon_\lambda.
+\]
+Whenever $\epsilon_\lambda<\sqrt3\delta/2$, the projected vector
+is nonzero and negative; its normalized Rayleigh value is bounded
+above by the same negative quantity, since its norm is at most one.
+Thus a negative direction persists in the complement of any uniformly
+near-radical block, regardless of its rank.  By the existing cofinal
+Weil-positivity criterion, the desired asymptotic complementary sign
+for the proved rank-one source remains RH-strength.  The reduction
+removes a gap denominator; it does not supply the arithmetic sign.

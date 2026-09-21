@@ -1,0 +1,25 @@
+{
+  "lambda": 4,
+  "parity": "even",
+  "outer_head_cut": 16,
+  "M": 256,
+  "inner_N": 512,
+  "inner_M": 1024,
+  "J": 4096,
+  "r": 64,
+  "bits": 768,
+  "tau_exp": 0,
+  "inner_mu": "[0.99999999990000000000000000000000000 +/- 3e-40]",
+  "rho_trace_upper": "[5.384032034641440603785870043601529753986578896052127580 +/- 1.49e-56]",
+  "result": {
+    "status": "FAIL_LOWER_BOUND",
+    "index": 1,
+    "pivot": "[-2.7957746942118002261086305144362794372432731120203899097778669219e-5 +/- 1.68e-70]"
+  },
+  "pivots": [
+    "[0.000118508316888008452618091752690640958628478581332144545669964 +/- 3.65e-64]"
+  ],
+  "seconds": 46.01824903488159,
+  "inner_witness_sha256": "7bd24903f7c9616cb87530c7f8bf17f87b6b7c968677e6cb5740cec32cf44cf3",
+  "scope": "Failed lower-bound sign gates do not prove a negative Weil direction."
+}

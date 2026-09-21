@@ -1,0 +1,179 @@
+\subsection*{Ordinary source mass and a full operator residual}
+The Sobolev G1 estimate and the polynomial Fourier tail also give an
+absolute ordinary-norm operator residual for this fixed source. This supplies the
+Rayleigh and residual prerequisites in the spectral-overlap criterion;
+it does not supply the overlap itself.
+
+\begin{lemma}[A nonzero ordinary-norm limit of the repaired proxy]
+\label{lem:v115-source-mass}
+Put
+\[
+ h_\infty(u)=\frac{4\pi}{\sqrt3}u^2(2\pi u^2-3)e^{-\pi u^2},
+ \qquad f_\infty=\mathcal E(h_\infty).
+\]
+Extend $p_\lambda$ by zero outside $I_\lambda$. Then
+\begin{equation}\label{eq:v115-source-limit}
+ \norm{p_\lambda-f_\infty}_{L^2(du/u)}=O(\lambda^{-1/2}),
+ \qquad Jf_\infty=f_\infty.
+\end{equation}
+In particular $0<\norm{f_\infty}<\infty$. For
+$N=N_\lambda=\lceil\lambda^8(1+L)\rceil$ and
+$k_\lambda=P_Np_\lambda$, both $\norm{p_\lambda}$ and
+$\norm{k_\lambda}$ tend to $\norm{f_\infty}$ and are bounded above
+and away from zero. A valid eventual common lower bound is
+\begin{equation}\label{eq:v115-mass-lower}
+ m_*:=\frac14\left(\int_1^2h_\infty(u)^2\,du\right)^{1/2}>0.
+\end{equation}
+No numerical threshold in $\lambda$ is asserted.
+\end{lemma}
+\begin{proof}
+The uniform fixed-mode Hermite approximation in
+\cite[Lemma~7.2]{ConnesConsaniMoscovici2025} gives suitably normalized
+$q_{j,\lambda}$ with
+$\sup_{|u|\le\lambda}|q_{j,\lambda}(u)-H_j(u)|=O(\lambda^{-2})$,
+$j=0,4$, where $H_j$ has unit $L^2(\mathbb R)$ norm. This rate survives
+the manuscript's exact unit normalization: expanding the squared norm,
+the cross term is $O(\lambda^{-2})\norm{H_j}_1$, the squared-error term
+is $O(\lambda^{-3})$, and the omitted Hermite tail is Gaussian.
+Thus $\norm{q_{j,\lambda}}=1+O(\lambda^{-2})$.
+
+The limits of the coefficients in \eqref{eq:v12-coefficients} are
+$-H_4(0)=-\sqrt3/(2\,2^{1/4})$ and $H_0(0)=2^{1/4}$, with error
+$O(\lambda^{-2})$. Substitution of the normalized Hermite polynomials
+gives exactly the displayed $h_\infty$, including its scalar factor.
+The fixed repair has exponentially small amplitude by
+\eqref{eq:v12-zero-value}. Consequently
+\[
+ \sup_{|u|\le\lambda}|\widetilde h_\lambda(u)-h_\infty(u)|
+       \le C\lambda^{-2}.
+\]
+The limiting source is a Fourier-invariant combination of orders $0,4$,
+with zero value at zero and zero integral. Poisson summation therefore
+gives $Jf_\infty=f_\infty$. Its Gaussian decay at infinity, followed by
+inversion at zero, gives square integrability.
+
+On the physical window there are at most $\lambda/u$ compact-source
+summands. Their accumulated approximation error is at most
+$C\lambda^{-1}u^{-1/2}$. Its squared Haar norm is bounded by
+\[
+ C\lambda^{-2}\int_{1/\lambda}^\lambda u^{-2}\,du
+       \le C\lambda^{-1}.
+\]
+The omitted Gaussian summands $nu>\lambda$ contribute an exponentially
+smaller norm: bound their decreasing polynomial-Gaussian tail by its
+first term plus $u^{-1}$ times its tail integral. The same estimate and
+inversion control $f_\infty$ outside $I_\lambda$. Inversion averaging
+is an $L^2$ contraction, proving \eqref{eq:v115-source-limit}.
+For $u\ge1$, all summands $h_\infty(nu)$ are positive. Thus
+$\norm{f_\infty}^2\ge\int_1^2h_\infty(u)^2\,du>0$.
+Finally \eqref{eq:v114-high-tail} gives
+\[
+ \norm{(I-P_N)p_\lambda}
+       \le C|B_\lambda|\lambda\sqrt{L/N}\longrightarrow0,
+\]
+so the projected vectors have the same nonzero norm limit. Choosing a
+common sufficiently large threshold proves \eqref{eq:v115-mass-lower}.
+\end{proof}
+
+\begin{proposition}[A full residual after ordinary norm normalization]
+\label{prop:v115-absolute-residual}
+Use the same $N_\lambda,k_\lambda$ and the canonical closed operator
+$\mathsf W_\lambda$ of Proposition~\ref{prop:v114-weil-core}.
+For all sufficiently large $\lambda$, with $c=2\pi\lambda^2$,
+\begin{equation}\label{eq:v115-absolute-residual}
+ \norm{\mathsf W_\lambda p_\lambda}
+ +\norm{\mathsf W_\lambda k_\lambda}
+ +\norm{W_{\lambda,N_\lambda}k_\lambda}
+       \le C\lambda^6 e^{-c/3}.
+\end{equation}
+For either source normalized to ordinary norm one, its Rayleigh value
+and its full centered residual tend to zero at this rate. The finite
+matrix assertion uses that same normalization and the original physical
+Fourier cutoff.
+\end{proposition}
+\begin{proof}
+All source vectors belong to $\mathcal D(\mathsf W_\lambda)$ by
+Proposition~\ref{prop:v114-weil-core}. The weighted Chebyshev estimate
+$P_\lambda=O(\lambda)$, together with $h_L=O(\lambda)$, gives
+$\norm{[M_b,H]}=O(\lambda)$ in \eqref{eq:v114-b-bound}.
+Corollary~\ref{cor:g1-complete-matrix}, including its separately proved
+diagonal, gives uniformly
+\[
+ |d_n|\le C\{\lambda+1+\log(2+|n|/L)\}.
+\]
+Let $N=N_\lambda$ and $e=(I-P_N)p_\lambda$.
+Using \eqref{eq:v114-high-tail} and comparing
+$\sum_{n>N}\log^2(2+n/L)/n^2$ with its integral yields
+\begin{align}
+ \norm{\mathsf W_\lambda e}
+ &\le C|B_\lambda|\lambda\sqrt{L/N}
+        \{\lambda+1+\log(2+N/L)\}\notag\\
+ &\le C|B_\lambda|\lambda^{-2}.
+ \label{eq:v115-uniform-graph-tail}
+\end{align}
+Both the diagonal part and the bounded commutator are retained.
+
+Next split the \emph{output} at an auxiliary integer $M>2N$.
+This does not change the candidate or its finite matrix. For any
+$v=P_Mv$ with $\norm v=1$,
+\[
+ \norm{D_{\log}v}\le2\pi M/L,\qquad
+ |v(-a)|+|v(a)|\le2\sqrt{(2M+1)/L}.
+\]
+The full Sobolev estimate \eqref{eq:G1-sobolev}, whose constant is
+independent of its test function, therefore implies
+\begin{equation}\label{eq:v115-low-output}
+ \norm{P_M\mathsf W_\lambda p_\lambda}
+ \le C|B_\lambda|\mathfrak r(\lambda)
+       \{1+M/L+\sqrt{M/L}\}.
+\end{equation}
+This includes the zero Fourier mode. It uses the already established
+compact-source radicality and centered pole--prime cancellation, with
+both source moments and inversion averaging intact. No fixed-band
+constant is extrapolated to a growing band.
+
+The diagonal has no cross block between $E_N$ and $E_M^\perp$.
+For the complete off-diagonal matrix, Lemma~\ref{lem:g1-high-low}
+gives the Hilbert--Schmidt bound
+\[
+ \norm{(I-P_M)\mathsf W_\lambda P_N}^2
+ \le C\lambda^2\sum_{|m|\le N}\sum_{|n|>M}\frac1{(n-m)^2}
+ \le C\lambda^2N/M.
+\]
+Lemma~\ref{lem:v115-source-mass} and
+\eqref{eq:v115-uniform-graph-tail} now give
+\begin{equation}\label{eq:v115-high-output}
+ \norm{(I-P_M)\mathsf W_\lambda p_\lambda}
+ \le C\lambda^5\sqrt{1+L}\,M^{-1/2}
+         +C|B_\lambda|\lambda^{-2}.
+\end{equation}
+Thus all prime, pole and archimedean pieces remain in the actual matrix;
+no divergent exterior pole or prime norm sum is estimated separately.
+
+Take $M=\lceil e^{2c/3}\rceil$, which exceeds $2N$ eventually.
+By \eqref{eq:v12-combined-endpoint} and
+\eqref{eq:v13-endpoint-comparison},
+$|B_\lambda|\le C\lambda^{11/2}e^{-c}$, while
+$\mathfrak r(\lambda)$ is bounded. Equations
+\eqref{eq:v115-low-output}--\eqref{eq:v115-high-output} are therefore
+at most $C\lambda^6e^{-c/3}$ in total. This proves the first term of
+\eqref{eq:v115-absolute-residual};
+\eqref{eq:v115-uniform-graph-tail} proves the second, and compression
+contractivity proves the third.
+Finally ordinary normalization is legitimate by
+\eqref{eq:v115-mass-lower}. For a unit vector $u$, letting
+$\alpha=\ip{\mathsf W_\lambda u}u$, one has
+$|\alpha|\le\norm{\mathsf W_\lambda u}$ and
+$\norm{(\mathsf W_\lambda-\alpha)u}\le2\norm{\mathsf W_\lambda u}$.
+The same argument applies to the compressed matrix.
+\end{proof}
+
+The preceding proposition supplies no endpoint-normalized operator residual:
+dividing its bound by $|B_\lambda|$ leaves an exponentially growing
+upper bound. Nor does it identify the spectral point near zero as the
+lowest one. The elementary family $\operatorname{diag}(-1,\epsilon)$,
+with candidate $(0,1)$, has Rayleigh value $\epsilon$ and centered
+residual zero while its lowest level stays at $-1$. An independent
+quantitative ground-space overlap or signed complementary lower bound
+is still necessary. No estimate on the corrected sampler's graph defect,
+or on a growing family of prolate modes, is inferred here.
