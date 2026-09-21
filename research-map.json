@@ -269,7 +269,7 @@
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_true_symbol",
-      "note": "Validated symbol beta_a (2e-7 vs block). lambda=3 ground: 49.9% mass on {beta<0}, level energies -/+0.0898 cancel to 1e-38, all at xi<10; deep high-frequency negativity untouched. The scale the live criterion must control."
+      "note": "Validated symbol beta_a (2e-7 vs block). Ground level split: lambda=3 -/+0.0898, lambda=4 -/+0.2257, cancelling to 1e-38 / 1e-75; ~50% mass on {beta<0}; all energy at xi<20; deep high-frequency negativity untouched. Scale the live criterion must control."
     },
     {
       "id": "debranges",

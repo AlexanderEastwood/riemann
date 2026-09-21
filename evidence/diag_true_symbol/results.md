@@ -69,3 +69,27 @@ only `inf β_a` (the pointwise criterion `eq:v130-pointwise`) is pessimistic by
 every admissible `f ⊥ u_a` covers its negative-level mass — at the ground state
 that is an equality at scale `0.09`. This is the number the live mechanism has
 to control, on the right object. Nothing here is a bound.
+
+## 4. The same split at the certified window λ=4 (`levels_l4.py`)
+
+Ground of the N=120 even compression (`ε_N = 3.743e-75`; certified complete
+`μ0 < 2.454e-75`, `prop:v140-ground4`).
+
+| quantity | λ=3 | λ=4 |
+|---|--:|--:|
+| Plancherel | 1.000000 | 1.000000 |
+| `q_neg` | −0.089782 | −0.225661 |
+| `q_pos` | +0.089782 | +0.225661 |
+| `q_neg + q_pos` (true) | +1.4e-16 (2.95e-38) | −8.3e-17 (3.74e-75) |
+| mass on `{β_a<0}` | 0.4991 | 0.5011 |
+| energy in `[0,5)` neg / pos | −0.083 / +0.073 | −0.185 / +0.204 |
+| energy in `[5,10)` | −0.007 / +0.017 | −0.039 / +0.021 |
+| energy in `[10,20)` | −0.0001 / +0.0002 | −0.0008 / +0.0003 |
+| beyond 20 | 0 | 0 |
+
+The cancellation scale grows with the window (0.090 → 0.226) while the
+structure is unchanged: half the Fourier mass on the negative set, everything
+below `ξ ≈ 10–20`, nothing at the deep high-frequency negativity. The next
+step in this lane (NS-16) is the same split over the source-orthogonal
+complement `f ⊥ u_a` — the class the weighted criterion actually quantifies
+over — rather than the ground alone.
