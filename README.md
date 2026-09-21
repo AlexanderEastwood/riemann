@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.41**.
+Alexander Eastwood's complete working manuscript, **v1.42**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -30,6 +30,7 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 |---|---|
 | Only positivity result | `W_4 >= 0`, both parity sectors — evidence restored and verified |
 | Complete ground at lambda=4 | Simple and even; `0<mu0<2.454e-75`, `mu1>1e-73`; its entire Fourier transform has only real zeros ([certificate](evidence/v140/)) |
+| Complete-ground local zero | One unique simple zero in (gamma_1-0.1, gamma_1+0.1), 1024/1280-bit complete bounds ([v1.42](evidence/v142/)); no discrepancy sign or zero ordering |
 | CCM finite benchmark | Eight local lambda=3, N=120 root discrepancies certified at 768/1024 bits; broader reproduction remains diagnostic ([v1.41](evidence/v141/)) |
 | Finite floors | `W_λ >= -8·I` at λ = 5, 6, 8, both parities, full infinite tail (`prop:v138-three-floors`) |
 | Certified window | half-width `a = log 4 = 1.386`; 1.73× the published Zhu window, 4× the classical range |
@@ -89,6 +90,7 @@ graph LR
   simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
   stepb["CCM step (b): finite-compression zeros track zeta zeros (numerical)<br/><small>&#128193; evidence/diag_ns2_semantic_lock</small>"]
   semanticlock["CCM finite-compression semantic lock, lambda=3 N=120<br/><small>lem:v141-centering; prop:v141-ccm-lock</small><br/><small>&#128193; evidence/v141</small>"]
+  groundzero4["complete ground zero within 0.1 of gamma_1<br/><small>lem:v142-energy-projection; prop:v142-ground-zero</small><br/><small>&#128193; evidence/v142</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -128,6 +130,7 @@ graph LR
   w4 --> simpleeven4
   simpleeven4 --> stepb
   windows --> semanticlock
+  simpleeven4 --> groundzero4
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -151,9 +154,10 @@ graph LR
   click simpleeven4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v140/" "evidence: evidence/v140" _blank
   click stepb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_ns2_semantic_lock/" "evidence: evidence/diag_ns2_semantic_lock" _blank
   click semanticlock "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v141/" "evidence: evidence/v141" _blank
+  click groundzero4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v142/" "evidence: evidence/v142" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4 proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration,circle,stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
@@ -170,10 +174,24 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.41_manifest.json)
+- [Checksums and provenance](manifest/v1.42_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
+
+## New in v1.42
+
+One local zero of the **complete** lambda=4 ground transform is now
+certified within 0.1 of the first zeta ordinate. It is unique and simple
+in that interval. The complete even-sector separator 1e-67 makes an
+energy-projection bound small enough to transfer endpoint and derivative
+signs. The old global separator is too coarse for the same test.
+
+All 4097 trial coefficients and the archived infinite-tail bounds are
+retained. Both 1024/1280-bit replays and a second implementation pass.
+No new window is computed. This does not determine the discrepancy's sign,
+order earlier zeros, or establish cofinal convergence. G2 and RH remain
+open. [Proof and replay](evidence/v142/).
 
 ## New in v1.41
 

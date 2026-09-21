@@ -1,3 +1,16 @@
+# Version 1.42 — September 21, 2026
+
+- NS-18: certified a unique simple local zero of the complete lambda=4 ground transform in (gamma_1-0.1, gamma_1+0.1). No earlier-zero enumeration or discrepancy sign is asserted.
+- Reused the complete even Schur data with separator 1e-67, verified at 1024/1280 bits. The old global separator 1e-73 gives a transform-error bound too large for the same endpoint test. The new threshold is even-sector separation, not a global spectral gap.
+- Proved the spectral-energy projection estimate and applied it to the same exact support-4096 trial. Compared the trial with its nonzero orthogonal ground projection; no unaccounted normalization change. The inherited infinite-tail bounds remain complete and the small prior gates are replayed; full old residual assemblies are not rerun.
+- Verified endpoint signs and derivative positivity on eight intervals at both precisions. A second implementation checks principal-determinant inertia, direct centered cosine integrals and derivative signs on 32 intervals. Saved intervals retain all sign gates after parsing. This is a same-agent implementation check, not an external audit.
+- No new windows, eigensolves, trial cutoffs or residual cutoffs. Tiny-discrepancy CCM transfer, cofinal convergence, G2 and RH remain open. NS-1 retains both OPEN historical evidence groups.
+
+Build: 217 pages, 0 undefined/duplicate references, 0 overfull boxes.
+Pyright: 0 errors and 0 warnings. Local branch; no publication is recorded.
+
+---
+
 # Version 1.41 — September 21, 2026
 
 - NS-2: reproduced CCM section 6 Figure 1 at the existing lambda=3, N=120 benchmark; eight local root discrepancies match the published rounded values. The first is approximately 1.582329697193127e-34.

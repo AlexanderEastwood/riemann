@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NS-18: one complete-ground local zero — v1.42</title></head>
+<body style="margin:0;background:#f4f2ec;color:#202b2d;font:18px/1.6 Georgia,serif;">
+<main style="max-width:680px;margin:40px auto;padding:36px;background:#fff;border-top:6px solid #175c56;">
+<p style="font:12px/1.5 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#526765;margin:0 0 12px;">Riemann research record · 21 September 2026 · v1.42</p>
+<h1 style="font-size:32px;line-height:1.18;margin:0 0 24px;">One local zero of the complete ground transform</h1>
+<p style="font-size:21px;">At the existing window λ = 4, the complete ground’s Fourier transform has a <strong>unique simple real zero within 0.1 of the first zeta ordinate</strong>.</p>
+<div style="padding:18px 22px;background:#edf5f1;border-left:4px solid #175c56;margin:24px 0;">
+<p style="margin:0;">γ₁ − 0.1 &lt; τ &lt; γ₁ + 0.1<br><span style="font-size:16px;color:#526765;">γ₁ ≈ 14.13472514173469. The conclusion concerns this local interval. It does not establish that τ is the first positive transform zero.</span></p>
+</div>
+<p>The interval gates pass at <strong>1024 and 1280 bits</strong>, retaining the archived bounds for the entire infinite tail. A second implementation reproduces the spectral count and the root tests.</p>
+<h2 style="font-size:23px;margin-top:30px;">What had to change</h2>
+<p>The old complete <em>global</em> spectral separator, 10<sup>−73</sup>, gives a transform-error bound of about 0.260823. That is too large to transfer the endpoint signs. The archived data certify a stronger separator, <strong>10<sup>−67</sup> within the even sector</strong>. The trial is exactly even, so this is the relevant subspace. It reduces the error budget by a factor of 1000.</p>
+<p>The failed first test was a failure of that coarse bound. It was not evidence that the complete ground lacks a nearby zero. The new even-sector threshold does not replace the published global spectral-gap bound.</p>
+<h2 style="font-size:23px;margin-top:30px;">The complete-object comparison</h2>
+<p>Let f be the normalized archived trial and h its orthogonal projection onto the complete ground. The complete operator is nonnegative, and the remaining even spectrum lies above b = 10<sup>−67</sup>. Its trial energy gives</p>
+<p style="padding:12px 18px;background:#f7f7f3;">‖f − h‖ ≤ √(q[f] / b) &lt; 0.000156641.</p>
+<p>Because this is less than one, h is a nonzero scalar multiple of the ground. The comparison therefore preserves its zeros without needing to renormalize h. For the nonunitary Fourier transform, Cauchy–Schwarz gives the following outward bounds.</p>
+<table style="width:100%;border-collapse:collapse;font-size:16px;margin:18px 0;">
+<tr><th style="text-align:left;padding:9px;border-bottom:2px solid #175c56;">Verified quantity</th><th style="text-align:right;padding:9px;border-bottom:2px solid #175c56;">Bound</th></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Transform error</td><td style="text-align:right;padding:9px;border-bottom:1px solid #ddd;">&lt; 0.000260824</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Derivative error</td><td style="text-align:right;padding:9px;border-bottom:1px solid #ddd;">&lt; 0.000208757</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Projected transform at γ₁ − 0.1</td><td style="text-align:right;padding:9px;border-bottom:1px solid #ddd;">&lt; −0.00006731</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Projected transform at γ₁ + 0.1</td><td style="text-align:right;padding:9px;border-bottom:1px solid #ddd;">&gt; 0.00003349</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Projected derivative throughout interval</td><td style="text-align:right;padding:9px;border-bottom:1px solid #ddd;">&gt; 0.0016</td></tr>
+</table>
+<p>The endpoint signs prove existence; the positive derivative proves uniqueness and simplicity. All 4097 coefficients of the exact trial are retained, with the corrected centering convention.</p>
+<h2 style="font-size:23px;margin-top:30px;">Evidence and checks</h2>
+<p>This calculation reuses the complete v1.25/v1.26 residual enclosures at 768/896 bits and replays their small final gates. Their full residual assemblies were <em>not</em> rerun. New shifted-inertia, ordinary-norm, projection and root gates pass at 1024/1280 bits. The inherited bounds cover every Fourier row beyond the archived cutoff.</p>
+<p>The second implementation checks the spectral count with principal determinants and the transform with direct centered cosine integrals. It also verifies derivative signs on 32 covering intervals, input hashes, agreement across precisions and the signs after saved intervals are read back. This is a same-agent implementation check, not an external audit.</p>
+<p>No new window, eigenvector solve, trial cutoff or residual cutoff was computed. The manuscript builds to <strong>217 pages, with zero undefined or duplicate references and zero overfull boxes</strong>. Python diagnostics report zero errors or warnings.</p>
+<h2 style="font-size:23px;margin-top:30px;">What this leaves open</h2>
+<p>This enclosure does not decide the discrepancy’s sign, identify the zero with γ₁, order earlier transform zeros, or certify the minute discrepancies of the finite-compression benchmark. A sharper estimate of the transform error is needed for that. The next useful test is a direct energy or residual bound for the transform evaluation, to measure how much the present global norm estimate loses.</p>
+<p style="padding:16px 20px;border:1px solid #bbcbc6;"><strong>G2 and RH remain open.</strong> Cofinal convergence to Riemann’s Xi remains open. Both historical NS-1 evidence groups remain OPEN and are not dependencies of this local result.</p>
+<p style="font-size:15px;color:#526765;">Status: NS-18 completed on the isolated local research branch. Concurrent main through 0f8cb16 is preserved in a local merge; no remote publication is recorded. This task was provisionally NS-17 and was renumbered when concurrent work allocated that ID to documentation.</p>
+<p style="font-size:15px;"><a style="color:#175c56;" href="README.md">Evidence guide</a> · <a style="color:#175c56;" href="new_section.tex">Proof</a> · <a style="color:#175c56;" href="ground_zero_b1024.json">1024-bit gates</a> · <a style="color:#175c56;" href="ground_zero_b1280.json">1280-bit gates</a> · <a style="color:#175c56;" href="independent_checks.json">Second implementation</a></p>
+</main></body></html>

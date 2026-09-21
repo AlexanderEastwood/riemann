@@ -1,0 +1,131 @@
+\subsection*{One local zero of the complete ground transform at $\lambda=4$}
+
+The finite-compression semantic lock does not itself locate complete-ground
+zeros. The following transfer uses the complete even-sector spectral
+separation and the energy of an exact archived trial. No new window or
+finite eigenvector is computed.
+
+\begin{lemma}[Energy control of a ground projection]
+\label{lem:v142-energy-projection}
+Let $W\succeq0$ be self-adjoint on a real Hilbert space of functions in
+$L^2([-a,a])$, with a simple normalized ground $u$. Suppose an invariant
+closed subspace contains $u$ and its remaining spectrum lies in
+$[b,\infty)$, where $b>0$. For a real unit trial $f$ in that subspace and
+in the form domain, put $\rho=q_W[f]<b$, $h=P_u f$, and
+$\eta=\sqrt{\rho/b}$. Then $h\ne0$ and
+\[
+ \norm{f-h}_2\le\eta.
+\]
+For the nonunitary Fourier transform and every real $t$,
+\begin{equation}\label{eq:v142-transform-budget}
+ |\widehat f(t)-\widehat h(t)|\le\sqrt{2a}\,\eta,
+ \qquad
+ |\widehat f'(t)-\widehat h'(t)|\le\sqrt{2a^3/3}\,\eta.
+\end{equation}
+If both functions are even, opposite endpoint signs for $\widehat h$
+and a strictly positive derivative throughout an interval prove a
+unique simple zero there, also a zero of $\widehat u$.
+\end{lemma}
+\begin{proof}
+The spectral theorem and nonnegativity give
+$q_W[f]\ge b\norm{(I-P_u)f}_2^2$. Since $\eta<1$, the orthogonal
+projection $h$ is nonzero. Cauchy--Schwarz applied to $e^{-itx}$ and
+$xe^{-itx}$ gives \eqref{eq:v142-transform-budget}. Compact support
+justifies differentiation and makes the transforms entire. Reality
+and evenness make them real on the real axis. The intermediate value
+theorem and strict monotonicity give the asserted unique zero, whose
+nonzero derivative makes it simple. Finally $h$ is a nonzero scalar
+multiple of $u$. This comparison uses $h=P_u f$, not a separately
+renormalized approximation to $u$; no normalization error is omitted.
+\end{proof}
+
+\begin{proposition}[A complete-ground local zero near the first zeta ordinate]
+\label{prop:v142-ground-zero}
+Let $\gamma_1$ be the first positive ordinate of a Riemann zeta zero,
+and let $\xi_4$ be the complete ground of
+Corollary~\ref{cor:v140-real-zeros}. Then $\widehat\xi_4$ has exactly
+one zero in the real interval
+\[
+ I=(\gamma_1-1/10,\gamma_1+1/10),
+ \qquad \gamma_1=14.13472514173469\ldots,
+\]
+and that zero is simple. This is a local statement: it does not order
+all earlier zeros, determine the sign of the discrepancy, identify
+the zero with $\gamma_1$, or establish convergence to Riemann's $\Xi$.
+\end{proposition}
+\begin{proof}[Complete separation and two-precision interval gates]
+Use the complete even-sector data of
+Proposition~\ref{prop:v140-ground4} without changing the physical window,
+the head cut $16$, the exact trial support $4096$, or the archived
+complete residual bounds. Apply Lemma~\ref{lem:v140-shifted-schur} with
+\[
+ \kappa=62629/100000,\quad \delta=1.7940\cdot10^{-8},
+ \quad b=10^{-67}.
+\]
+At both $1024$ and $1280$ bits, the $17$-dimensional lower matrix
+$L_b$ has signed LDL pivots
+\[
+ \underbrace{+\,,\ldots,\,+}_{15},\ -\,,\ +.
+\]
+Its positive subspace has dimension $16$. The exact even trial below
+$b$ supplies a strictly negative direction of the complete shifted
+form, while $T-bI\succ0$. Square completion and compact resolvent,
+as in Proposition~\ref{prop:v140-ground4}, show that precisely one
+complete even eigenvalue is below $b$ and none equals $b$.
+Thus every even vector orthogonal to the ground has spectral support
+strictly above $10^{-67}$. This is an even-sector separator, not an
+improved bound for the first excited eigenvalue across both parities.
+
+Take the same real trial column $G_{\rm ev}e_{16}$, divided by its
+ordinary norm, and center it on $[-\log4,\log4]$. Its complete
+Rayleigh quotient is
+\[
+ 2.45361754930\cdot10^{-75}<\rho<2.45361754931\cdot10^{-75}.
+\]
+With $L=2\log4$, Lemma~\ref{lem:v142-energy-projection} gives the
+following outward bounds for $h=P_{\xi_4}f$:
+\begin{align*}
+ \norm{f-h}_2&<1.566403\cdot10^{-4},\\
+ E_0=\sqrt L\sqrt{\rho/b}&<0.000260824,\\
+ E_1=\sqrt{L^3/12}\sqrt{\rho/b}&<0.000208757.
+\end{align*}
+All $4097$ exact trial coefficients are retained in
+\eqref{eq:v141-transform}, with its correct centering convention.
+Interval evaluation at Arb enclosures of $\gamma_1\pm1/10$ gives
+\[
+ \widehat f(\gamma_1-1/10)+E_0<-0.00006731,
+ \qquad
+ \widehat f(\gamma_1+1/10)-E_0>0.00003349.
+\]
+The differentiated formula, evaluated on eight covering subintervals
+of length $1/40$, gives
+\[
+ \widehat f'(t)-E_1>0.0016\quad(t\in\overline I).
+\]
+These three strict inequalities transfer to $\widehat h$ and prove
+the result. Multiplication by the unitary Fourier factor or by the
+nonzero ground-projection scalar preserves the zero and its simplicity.
+
+Both precision runs reconstruct the exact dyadic trial and ordinary
+Grams. The inherited even residual enclosures at $768/896$ bits
+include every row beyond $J=65536$; their small complete Schur gate
+is replayed, but their full assemblies are not recomputed.
+A second implementation checks the shifted negative index with
+principal determinants and the transform with termwise centered
+cosine integrals, including derivative signs on $32$ subintervals.
+Saved decimal intervals are reparsed to check that serialization
+preserves all gates. Scripts, input hashes and reports are in
+\texttt{evidence/v142/}. This implementation cross-check is not an
+external audit.
+\end{proof}
+
+\paragraph{What had to change, and what remains open.}
+Using the old global separator $10^{-73}$ in the same energy comparison
+would give $E_0\simeq0.260823$, too large to certify either endpoint
+sign. Restricting the comparison to the invariant even sector permits
+$10^{-67}$ and reduces this error bound by a factor of $1000$.
+The obstruction was the coarse separation bound, not a missing zero
+of the complete ground transform. The resulting $0.1$ enclosure
+still does not transfer the minute CCM finite-compression discrepancies.
+A sharper energy or residual-to-transform estimate would be needed
+for that task. Cofinal convergence, G2 and RH remain open.
