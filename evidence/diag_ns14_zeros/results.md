@@ -1,5 +1,10 @@
 # NS-14: real zeros of the windowed ground transform vs zeta ordinates — DIAGNOSTIC
 
+> **RETRACTED CONCLUSION (see the end).** The zeros DO track the zeta ordinates —
+> to 1.6e-34 at λ=3 — as Connes–Consani–Moscovici report and as this
+> repository's own assembly reproduces (`evidence/diag_ns2_semantic_lock/`).
+> The "sinc lattice" result below is an eigenvector-accuracy artifact.
+
 **Status: diagnostic, not a certificate.** Ground vectors of the N=256 even
 compression at λ=3,4 by inverse iteration (768-bit assembly, 120 digits;
 Rayleigh quotients 2.73e-38 and 2.83e-75, consistent with the certified
@@ -51,3 +56,34 @@ Caveat: the compression ground is used in place of the certified complete
 ground; they agree on μ0 to within the bound and share the same low-mode
 structure, and the zero positions depend only on the converged low-mode
 ratios `v_n/v_0`.
+
+---
+
+## RETRACTION (later the same day)
+
+The conclusion above is wrong. With a proper eigensolve (N=120, 1024-bit
+assembly, 220-digit eigensolve — `evidence/diag_ns2_semantic_lock/reproduce_ccm.py`,
+re-run independently), the first zeros of `ξ̂_3` sit on the zeta ordinates:
+
+    k   γ_k          |γ_k − z_k|      CCM Fig. 1
+    1   14.134725    1.58e-34         1.6e-34
+    2   21.022040    2.06e-31         2.1e-31
+    3   25.010858    1.46e-29         1.5e-29
+    4   30.424876    8.29e-27         8.3e-27
+    5   32.935062    1.28e-25         1.3e-25
+    6   37.586178    1.17e-23         1.2e-23
+
+The ground vector used above came from four steps of inverse iteration at 120
+digits — accurate to ~1e-14 relative. The zero positions of `ξ̂` are sensitive
+at the 1e-8 level (`sensitivity.py`: a 1e-8 prime-weight change moves the first
+difference from 1e-33 to 1e-7 and creates spurious zeros), so the noise floor of
+that vector erased the tail that places the zeros, and the sin(zL/2) lattice
+came through instead. The exact factorization `ξ̂ = sin(zL/2)·R(z)` stands; its
+correct reading is the opposite of the one given: the *tiny* high-index tail of
+the ground vector is exactly what moves the zeros of `R` off the lattice onto
+the zeta ordinates, to dozens of digits. "n90 = 2" was the wrong metric.
+
+Corrected consequence for CCM step (b): it is numerically *happening* at every
+window tested (λ = 3, √12, √13, √14 in `diag_ns2_semantic_lock`, and the
+certified simple-even ground at λ=4 is the same object). What is unproved is
+the convergence theorem, not the phenomenon.

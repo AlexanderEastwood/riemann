@@ -269,7 +269,7 @@
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_circle_split",
-      "note": "NS-7 answered (diagnostic): sign arithmetic (prime-free negative O(1); KMS predicts 4-11 negative eigenvalues, certified 0); size = lowest-lattice-mode ground, crest energy ~min d_n cancelled by commutator couplings, residual at the Landau-Widom scale (Zhu law: order right, constant not; certified mu0 at lambda=4 is ~1.9 orders below it). Open analytic form: Basor-Ehrhardt for T+-H."
+      "note": "NS-7 (diagnostic): exact split D+T'+Hk; ground = lowest lattice modes, crest energy ~min d_n cancelled by the commutator couplings; prime-free form negative O(1). Earlier KMS/line-symbol claim RETRACTED (wrong object)."
     },
     {
       "id": "debranges",
@@ -328,11 +328,11 @@
     },
     {
       "id": "stepb",
-      "title": "CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?",
-      "status": "closed",
+      "title": "CCM step (b): zeros of xi-hat_lambda track zeta zeros (numerical)",
+      "status": "live",
       "parent": "simpleeven4",
       "evidence": "evidence/diag_ns14_zeros",
-      "note": "No, at lambda=3,4: zeros are the sinc lattice 2pi k/L (exact factorization xi-hat = sin(zL/2) R(z)); ground mass at n<=2 so R has no off-lattice zeros. Step (b) is where the difficulty sits."
+      "note": "YES, to 1.6e-34 at lambda=3, 2.4e-55 at sqrt13 (CCM Fig.1/table reproduced from this assembly, diag_ns2). Earlier \"sinc lattice\" claim RETRACTED: eigenvector-accuracy artifact. Convergence theorem open."
     }
   ]
 }

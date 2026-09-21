@@ -42,7 +42,7 @@ graph LR
   dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)<br/><small>&#128193; evidence/diag_routes/dbn</small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
   simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
-  stepb["CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?<br/><small>&#128193; evidence/diag_ns14_zeros</small>"]
+  stepb["CCM step (b): zeros of xi-hat_lambda track zeta zeros (numerical)<br/><small>&#128193; evidence/diag_ns14_zeros</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -107,9 +107,9 @@ graph LR
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4 proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
-  class concentration live;
+  class concentration,stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,circle,debranges,f1,nb,li,dbn,stepb closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,circle,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
@@ -121,8 +121,8 @@ graph LR
 | status | count | meaning |
 |---|---:|---|
 | `proved` | 14 | established result |
-| `live` | 1 | active candidate mechanism |
-| `closed` | 17 | proved insufficient or impossible |
+| `live` | 2 | active candidate mechanism |
+| `closed` | 16 | proved insufficient or impossible |
 | `blocked` | 1 | attempted; obstruction found |
 | `open` | 5 | target, not yet attacked |
 
@@ -132,7 +132,7 @@ graph LR
   - [ ] **Alternative criteria (all equivalent; same wall)** — each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21
     - [X] **Li / Keiper coefficients** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · Li class ∩ Paley-Wiener = {0}: no window certifies any lambda_n; W_4>=0 gives windowed lambda_n^[log16] >= 0 only
     - [X] **Nyman-Beurling-Baez-Duarte** — evidence: [`evidence/diag_routes/nb/`](evidence/diag_routes/nb/) · no finite NB statement equivalent to W_lambda>=0; d_N certified to N=600, oscillates around C/log N; Burnol Thm 3.1 is the semantic lock
-    - [X] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_circle_split/`](evidence/diag_circle_split/) · NS-7 answered (diagnostic): sign arithmetic (prime-free negative O(1); KMS predicts 4-11 negative eigenvalues, certified 0); size = lowest-lattice-mode ground, crest energy ~min d_n cancelled by commutator couplings, residual at the Landau-Widom scale (Zhu law: order right, constant not; certified mu0 at lambda=4 is ~1.9 orders below it). Open analytic form: Basor-Ehrhardt for T+-H.
+    - [X] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_circle_split/`](evidence/diag_circle_split/) · NS-7 (diagnostic): exact split D+T'+Hk; ground = lowest lattice modes, crest energy ~min d_n cancelled by the commutator couplings; prime-free form negative O(1). Earlier KMS/line-symbol claim RETRACTED (wrong object).
     - [X] **de Branges / Hermite-Biehler** — HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)
     - [X] **de Bruijn-Newman (0 <= Lambda <= 0.22)** — evidence: [`evidence/diag_routes/dbn/`](evidence/diag_routes/dbn/) · no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s
     - [X] **function field / Hodge / F_1** — nothing finite transfers; window lambda has no intersection-theoretic meaning
@@ -143,7 +143,7 @@ graph LR
       - [x] **W_4 >= 0 both sectors** — `prop:v126-full-window` · evidence: [`evidence/v126/`](evidence/v126/) · only positive result; evidence restored and verified
         - [x] **W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4** — CCM arXiv:2511.22755 Cor 3.7-3.8 write 'we cannot assert mu_lambda >= 0'; monotone in lambda; positioning statement
         - [x] **complete W_4: simple even ground; real-zero transform** — `prop:v140-ground4; cor:v140-real-zeros` · `result/ns5-ground-state` · evidence: [`evidence/v140/`](evidence/v140/) · NS-5 complete: mu0<2.454e-75, mu1>1e-73, 1024/1280-bit shifted inertia; CvS Thm6.1 applies; no Xi convergence or G2 claim
-          - [X] **CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?** — evidence: [`evidence/diag_ns14_zeros/`](evidence/diag_ns14_zeros/) · No, at lambda=3,4: zeros are the sinc lattice 2pi k/L (exact factorization xi-hat = sin(zL/2) R(z)); ground mass at n<=2 so R has no off-lattice zeros. Step (b) is where the difficulty sits.
+          - [~] **CCM step (b): zeros of xi-hat_lambda track zeta zeros (numerical)** — evidence: [`evidence/diag_ns14_zeros/`](evidence/diag_ns14_zeros/) · YES, to 1.6e-34 at lambda=3, 2.4e-55 at sqrt13 (CCM Fig.1/table reproduced from this assembly, diag_ns2). Earlier "sinc lattice" claim RETRACTED: eigenvector-accuracy artifact. Convergence theorem open.
       - [x] **lambda=3** — `prop:v116-window-positive` · evidence: [`evidence/v124/g2_certificate/`](evidence/v124/g2_certificate/)
       - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete` · evidence: [`evidence/v126/`](evidence/v126/)
       - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement` · evidence: [`evidence/v126/`](evidence/v126/)

@@ -150,9 +150,36 @@ Exact split of the ground eigenvector's energy, `lmin = v'Dv + v'T'v + v'Hk·v`
    An earlier line in this file claiming agreement "to ~20× at all four
    windows" was wrong and is superseded by this table.
 
-**NS-7 verdict.** Sign: arithmetic, decided by prime phase on the window's
-resolution lattice (prime-free form negative O(1); KMS on the line symbol
-predicts 4 → 11 negative eigenvalues, certified 0). Size: a lowest-lattice-mode
+**NS-7 verdict (as corrected by the retraction below).** Sign: arithmetic — the prime-free assembled form is negative O(1) and the primes restore positivity (exact); the "KMS on the line symbol" sentence is withdrawn. Size: a lowest-lattice-mode
 ground whose crest energy ≈ min d_n is cancelled by the commutator couplings to
 the last digit, the residual at the Landau–Widom *scale* (the law gives the order of collapse, not the constant). Nothing here is a
 bound; all of it is exact arithmetic on certified compressions.
+
+---
+
+## RETRACTION (later the same day): the off-grid "line symbol" is not a symbol
+
+The sections above titled "Correction and two further diagnostics" claimed that
+`β_λ(t)` evaluated between lattice points is the Fourier-multiplier symbol of
+`W_λ`, that Kac–Murdock–Szegő therefore predicts 4 → 11 negative eigenvalues,
+and that the negative lobes are sub-resolution. **All three claims are
+withdrawn.** The decisive test (`levels.py`): with the actual ground vector and
+Plancherel verified to 0.996,
+
+    λ=3:  (1/2π)∫_{β<0} β|f̂|² = −0.674,  (1/2π)∫_{β>0} β|f̂|² = +0.254,  sum = −0.42   (true q = 2.7e-38)
+    λ=4:                          −0.628                         +0.242         −0.39   (true q = 2.8e-75)
+
+A sum of −0.4 against a true value of ~0 cannot be a normalization error. The
+function scanned was the analytic continuation in `n` of the *diagonal* `d_n`
+(the circle multiplier's values), which coincides with nothing between lattice
+points: the pole term is rank-two, not a multiplier, and the prime terms are
+compressed shifts. The manuscript's line symbol `β_a` (`prop:v130-remainder`,
+`eq:v135-full-symbol`) is a different object with a different archimedean
+normalization (`ψ(5/4+iξ/2)`, continuum kernel). No KMS statement was tested.
+
+**What survives from this lane:** the exact matrix split `D + T' + Hk`; the
+ground-state energy budget (exact); the prime-free control (exact); positivity
+of the lattice diagonal (a fact about the assembled operator). What does not:
+every sentence about the "line symbol", its negative measure, its lobes, KMS,
+and sub-resolution. The correct version of the level-split experiment must use
+the manuscript's own `β_a`; it has not been done.

@@ -210,15 +210,13 @@ structural bridge, and it is a semantic lock, not a result.
 The certified matrix splits exactly as symbol + Toeplitz-structured
 commutator + Hankel reflection term. The reflection term alone makes the
 form negative by O(1); the Toeplitz commutator cancels it to 10^-75. The
-parity sectors are the pencils `T(φ) ± H(φ)` (Basor–Ehrhardt). The symbol-only
-(Kac–Murdock–Szegő) estimate **is** wrong-signed once the line symbol is
-scanned properly: `β_λ` has a negative set of measure 12–16 at `t < 13`, so
-KMS predicts 4 → 11 negative eigenvalues at λ = 3 → 8 against a certified 0.
-The lobes recur with the lattice period `2π/L`, with the lattice on the
-crests and each deep lobe about 0.8 of a resolution cell wide. A prime-free
-control is negative by O(1): the primes decide the sign by phase on the
-window's resolution lattice. An earlier note here claiming the prediction
-failed sampled the circle symbol at the crests and was wrong.
+parity sectors are the pencils `T(φ) ± H(φ)` (Basor–Ehrhardt). A prime-free
+control of the assembled form is negative by O(1) at every window, so the sign
+is arithmetic (exact). An earlier version of this paragraph claimed a
+Kac–Murdock–Szegő prediction of 4 → 11 negative eigenvalues from a "line
+symbol"; that function was the analytic continuation of the diagonal, not the
+multiplier symbol, and the claim is withdrawn (`evidence/diag_circle_split/`,
+retraction section).
 
 ### de Bruijn–Newman (assessed; closed)
 
