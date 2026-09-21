@@ -195,6 +195,15 @@ wrong sign for the symbol-only (Szegő) estimate did **not** occur — the
 diagonal undersamples the negative lobes — and it is wrong by ~73 orders in
 size instead. Recorded as a failed prediction.
 
+### de Bruijn–Newman (assessed; closed)
+
+RH ⇔ Λ = 0 (Rodgers–Tao, arXiv:1801.05914; Polymath15, arXiv:1904.12438,
+Λ ≤ 0.22). No bridge exists in either direction between a finite-window Weil
+certificate and any bound Λ ≤ c: H_t has no Euler product and no explicit
+formula, and every known zero-location → Λ statement needs RH to a height.
+The project toolchain reproduces Polymath15's certified barrier from scratch
+(`evidence/diag_routes/dbn/`), which confirms capability and nothing else.
+
 ### The unification
 
 A certified window is **positivity of a truncated moment problem** whose

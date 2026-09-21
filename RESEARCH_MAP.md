@@ -39,7 +39,7 @@ graph LR
   f1["function field / Hodge / F_1"]
   nb["Nyman-Beurling-Baez-Duarte"]
   li["Li / Keiper coefficients"]
-  dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)"]
+  dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)<br/><small>&#128193; evidence/diag_routes/dbn</small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
   simpleeven4["simple even ground of complete W_4 (proposed certificate)"]
 
@@ -96,17 +96,18 @@ graph LR
   click shiftbarrier "evidence/v138/" "evidence: evidence/v138"
   click metablind "evidence/v139/" "evidence: evidence/v139"
   click circle "evidence/diag_circle_split/" "evidence: evidence/diag_circle_split"
+  click dbn "evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn"
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration,circle live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1 closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,dbn closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
-  class rh,fixedspace,g2,uniform,altroutes,nb,li,dbn,simpleeven4 open;
+  class rh,fixedspace,g2,uniform,altroutes,nb,li,simpleeven4 open;
 ```
 
 ## Status
@@ -115,9 +116,9 @@ graph LR
 |---|---:|---|
 | `proved` | 13 | established result |
 | `live` | 2 | active candidate mechanism |
-| `closed` | 12 | proved insufficient or impossible |
+| `closed` | 13 | proved insufficient or impossible |
 | `blocked` | 1 | attempted; obstruction found |
-| `open` | 9 | target, not yet attacked |
+| `open` | 8 | target, not yet attacked |
 
 ## Nodes
 
@@ -127,7 +128,7 @@ graph LR
     - [ ] **Nyman-Beurling-Baez-Duarte** — assessment + d_N table in progress
     - [~] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_circle_split/`](evidence/diag_circle_split/) · certified positivity = Toeplitz kernel cancelling a Hankel kernel to 1e-75; parity sectors are T(phi)+-H(phi); Szego wrong-size not wrong-sign
     - [X] **de Branges / Hermite-Biehler** — HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)
-    - [ ] **de Bruijn-Newman (0 <= Lambda <= 0.22)** — assessment + Polymath15 reproduction in progress
+    - [X] **de Bruijn-Newman (0 <= Lambda <= 0.22)** — evidence: [`evidence/diag_routes/dbn/`](evidence/diag_routes/dbn/) · no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s
     - [X] **function field / Hodge / F_1** — nothing finite transfers; window lambda has no intersection-theoretic meaning
   - [ ] **Fixed-space / Burnol Sonine route** — `lane/fixed-space` · needs evaluator estimates + closed-operator realization
   - [x] **G1 (weak)** — `thm:v14-radical` · `lane/g1` · evidence: [`evidence/v124/g2_source_certificate/`](evidence/v124/g2_source_certificate/) · closed for the repaired prolate source

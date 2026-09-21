@@ -302,9 +302,10 @@
     {
       "id": "dbn",
       "title": "de Bruijn-Newman (0 <= Lambda <= 0.22)",
-      "status": "open",
+      "status": "closed",
       "parent": "altroutes",
-      "note": "assessment + Polymath15 reproduction in progress"
+      "note": "no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s",
+      "evidence": "evidence/diag_routes/dbn"
     },
     {
       "id": "ccmmu",

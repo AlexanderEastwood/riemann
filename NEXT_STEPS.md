@@ -20,7 +20,7 @@ Status vocabulary: `open` · `claimed` · `in-progress` · `done (vN.NN)` ·
 | NS-7 | Toeplitz-plus-Hankel asymptotics: does Basor–Ehrhardt / Szegő–Widom for `T(φ) ± H(φ)` sections reproduce the certified `lmin` decay rate (3.6e-38 → 6e-129, λ=3→8)? | Claude | in-progress | a stated asymptotic law for `lmin(T±H)` vs the measured values, or a stated reason none applies |
 | NS-8 | Nyman–Beurling–Báez-Duarte assessment + `d_N` table | Claude (agent) | in-progress | report in `evidence/diag_routes/` |
 | NS-9 | Li / Keiper assessment + `λ_n` table + support analysis | Claude (agent) | in-progress | report in `evidence/diag_routes/` |
-| NS-10 | de Bruijn–Newman assessment + one Polymath15 reproduction | Claude (agent) | in-progress | report in `evidence/diag_routes/` |
+| NS-10 | de Bruijn–Newman assessment + one Polymath15 reproduction | Claude | closed — no angle | `evidence/diag_routes/dbn/`: no bridge in either direction; barrier verification reproduced from scratch; arXiv id is 1904.12438 |
 | NS-11 | de Branges / Hermite–Biehler route | Claude | closed — no angle | dictionary recorded in `COMPARISON.md`; no positivity mechanism (Suzuki 2606.09096, Conrey–Li) |
 | NS-12 | Function-field / Hodge / F_1 route | Claude | closed — no angle | nothing finite transfers; the operator side gave NS-5 |
 | NS-13 | Standing rule: do **not** compute λ = 10, 12 windows or floors past λ=8 | — | rule | `prop:v121-cofinal-rh`, `prop:v138-shifted-floor` |
