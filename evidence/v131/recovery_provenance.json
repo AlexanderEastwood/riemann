@@ -1,0 +1,32 @@
+{
+  "status": "partial_original_text_recovery",
+  "original_filename": "g2_weighted_concentration_report.md",
+  "library_file_id": "libfile_3757755e6ed481918071509115104f31",
+  "file_id": "file_000000009ee481f5ae30b0725e468962",
+  "version_id": null,
+  "source_created_at": "2026-09-21T11:49:26.064448Z",
+  "source_modified_at": "2026-09-21T11:49:26.064448Z",
+  "read_coverage": {
+    "start_line": 1,
+    "end_line": 110,
+    "total_lines": 110,
+    "has_more": false
+  },
+  "authoritative_size_bytes": 4925,
+  "recovered_size_bytes": 4925,
+  "recovered_sha256": "006ccbb7fa08e64ed8125260eb7b17f093c83ec93c177d9fb8355de36ffcd5d0",
+  "method": "Complete saved-text read; terminal newline restored to match authoritative UTF-8 byte count. Binary transfer failed; no original binary hash was available.",
+  "not_recovered": [
+    "original v1.31 scripts",
+    "saved numerical outputs",
+    "complete original adversarial evidence"
+  ],
+  "archive_blocker": {
+    "filename": "fixed_space_prime_action_v1_34_bundle.zip",
+    "library_file_id": "libfile_386d5bdf90848191b485e716d0205c09",
+    "version_id": "37",
+    "size_bytes": 207224098,
+    "error": "HTTP 502; transfer proxy reported Connection refused. Native download helper also returned HTTP 502."
+  },
+  "scope": "Original report only; not a complete historical reproduction; no regenerated evidence and no new G2 claim."
+}

@@ -1,0 +1,24 @@
+{
+ "manuscript_revision": "v1.31",
+ "base_commit": "fb5f83003fbd9984761147bb9b2644d34635a351",
+ "files": [
+  {
+   "path": "evidence/v131/README.md",
+   "size_bytes": 1047,
+   "sha256": "e4ccb1c5115eac3d859909ad22e8901750db7aaf9da36ba3b0555dcaad019a89"
+  },
+  {
+   "path": "evidence/v131/g2_weighted_concentration_report.md",
+   "size_bytes": 4925,
+   "sha256": "006ccbb7fa08e64ed8125260eb7b17f093c83ec93c177d9fb8355de36ffcd5d0"
+  },
+  {
+   "path": "evidence/v131/recovery_provenance.json",
+   "size_bytes": 1382,
+   "sha256": "3dbf7eb3c074dcf277de2907ab5c4ce135d9e363a5e7c2292a991c04146de51c"
+  }
+ ],
+ "file_count": 3,
+ "total_bytes": 7354,
+ "note": "Partial recovery of the original v1.31 report; historical scripts and saved outputs remain missing. No manuscript version change."
+}

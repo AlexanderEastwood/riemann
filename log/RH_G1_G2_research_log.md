@@ -1,3 +1,9 @@
+# NS-1 — partial v1.31 original evidence recovery, September 21, 2026
+
+Recovered and committed the original 4,925-byte `g2_weighted_concentration_report.md` under `evidence/v131/`, with complete saved-text line coverage, provenance and a per-version manifest. The text was not regenerated from the manuscript. The original scripts, saved outputs and complete adversarial evidence remain unavailable: the saved 207,224,098-byte v1.34 cumulative archive returns HTTP 502, including through the native download helper. No substitute computations were made and no missing-evidence flag is cleared. NS-1 and both historical ledger groups remain OPEN. The manuscript revision remains v1.40; no mathematical claim or version bump is made. No G2 gap closed.
+
+---
+
 # v1.40 — NS-5 complete ground ordering, September 21, 2026
 
 **Requested task:** certify simple even ground of the complete W4 using the v1.17 machinery, then check Connes–van Suijlekom Theorem6.1. This task was claimed in NEXT_STEPS.md at dc8b396a09f22bdd16ff52e1ac8f5711837768e6. No cheaper finite-compression diagnostic was substituted.
