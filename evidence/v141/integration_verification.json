@@ -1,0 +1,102 @@
+{
+  "classification": "integration verification; no new mathematical result or new window",
+  "main_base": "289961d6c8d3fc3d9cbdc82f45ef1333a494914a",
+  "saved_candidate": "de90f4c84930c5d4480599c0b093f6dd6b26163f",
+  "preservation_checks": [
+    {
+      "source_commit": "289961d6c8d3fc3d9cbdc82f45ef1333a494914a",
+      "path": "evidence/diag_ns2_semantic_lock",
+      "files": 12,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "289961d6c8d3fc3d9cbdc82f45ef1333a494914a",
+      "path": "evidence/diag_ns4b_coverage",
+      "files": 3,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "289961d6c8d3fc3d9cbdc82f45ef1333a494914a",
+      "path": "evidence/drafts/v141_inserts",
+      "files": 5,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "289961d6c8d3fc3d9cbdc82f45ef1333a494914a",
+      "path": "evidence/diag_circle_split",
+      "files": 8,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "289961d6c8d3fc3d9cbdc82f45ef1333a494914a",
+      "path": "evidence/v140",
+      "files": 11,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "289961d6c8d3fc3d9cbdc82f45ef1333a494914a",
+      "path": "evidence/diag_ns14_zeros/results.md",
+      "files": 1,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "289961d6c8d3fc3d9cbdc82f45ef1333a494914a",
+      "path": "evidence/diag_ns14_zeros/zeros.py",
+      "files": 1,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "de90f4c84930c5d4480599c0b093f6dd6b26163f",
+      "path": "evidence/v141/certify_ccm_semantic_lock.py",
+      "files": 1,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "de90f4c84930c5d4480599c0b093f6dd6b26163f",
+      "path": "evidence/v141/ccm_lambda3_N120_b768.json",
+      "files": 1,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "de90f4c84930c5d4480599c0b093f6dd6b26163f",
+      "path": "evidence/v141/ccm_lambda3_N120_b1024.json",
+      "files": 1,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "de90f4c84930c5d4480599c0b093f6dd6b26163f",
+      "path": "evidence/v141/research-report-2026-09-21-v1.html",
+      "files": 1,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "de90f4c84930c5d4480599c0b093f6dd6b26163f",
+      "path": "evidence/v141/research-report-2026-09-21-v2.html",
+      "files": 1,
+      "byte_identical": true
+    },
+    {
+      "source_commit": "de90f4c84930c5d4480599c0b093f6dd6b26163f",
+      "path": "evidence/v124/g2_schur_cancellation/assembly_general.py",
+      "files": 1,
+      "byte_identical": true
+    }
+  ],
+  "numerical_replay": "The unchanged verifier and assembler were replayed at 768 and 1024 bits in resume_verification_2026-09-21.json. Both saved reports and verifier remain byte-identical.",
+  "pyright": "0 errors, 0 warnings, 0 informations for evidence/v141/certify_ccm_semantic_lock.py",
+  "historical_manifest_baseline": {
+    "v134": "4 mismatches",
+    "v135": "2 missing, 1 mismatch",
+    "v136": "5 mismatches",
+    "v137": "5 mismatches",
+    "scope": "The same counts occur at origin/main before this integration. Historical manifests were not rewritten; current v141 is regenerated and verified separately."
+  },
+  "remaining_open": [
+    "NS-1: original v1.28 and v1.31-v1.34 scripts/witnesses",
+    "NS-6: drafted paragraph, not integrated",
+    "complete-ground zero transfer",
+    "cofinal convergence",
+    "G2",
+    "RH"
+  ]
+}

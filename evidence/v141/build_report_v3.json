@@ -1,0 +1,8 @@
+{
+  "command": "./manuscript/build.sh",
+  "pages": 215,
+  "undefined_or_duplicate_references": 0,
+  "overfull_boxes": 0,
+  "manuscript_sha256": "1f92e3348b408845416db40fe4ca8bed9ecbcce3b14cd04d6570224046d94873",
+  "scope": "Integrated v1.41 with later main diagnostics/retractions retained; generated PDF ignored, not committed."
+}

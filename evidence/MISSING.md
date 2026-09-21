@@ -37,3 +37,16 @@ the repository or an immutable release asset. Recovering these files would
 close an availability gap; any new verification must be recorded separately.
 This ledger does not certify completeness of every historical archive.
 G2 and RH remain open.
+
+
+## September 21 follow-up (NS-1, v1.41)
+
+Both later evidence groups remain **OPEN**. A fresh search checked all four
+available local ZIPs, matching script paths across repository refs, and the
+saved project records. No original missing script or witness was recovered.
+GitHub exposes only the already restored v1.26 evidence release. The earlier
+v1.34 library download failure remains recorded; no library-download
+connector is available in this session to retry it. Archive hashes and exact
+search scope are in [the availability record](v141/ns1_recovery_status.json).
+An accessible original archive or extracted evidence with provenance is
+still required. The v1.31 report remains a partial recovery only.

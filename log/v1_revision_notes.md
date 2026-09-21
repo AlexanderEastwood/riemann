@@ -1,3 +1,21 @@
+# Version 1.41 — September 21, 2026
+
+- NS-2: reproduced CCM section 6 Figure 1 at the existing lambda=3, N=120 benchmark; eight local root discrepancies match the published rounded values. The first is approximately 1.582329697193127e-34.
+- Retained the unchanged original coefficient assembler with K=128. Isolated finite eigenpairs and verified root brackets at 768 and 1024 bits; midpoint roots are proposals only. Same problem across precision; no new window and no complete-ground zero transfer.
+- Proved the exact (-1)^n centering dictionary. The old NS-14 reconstruction omitted it and evaluated a different function; its sinc-lattice inference is withdrawn. Original diagnostic files are preserved with a separately versioned correction.
+- NS-3: added the half-width translation table, Zhu/Groskin comparisons and CCM mu_lambda paragraph. Corrected the stale comparison summary and retained the distinction between ground values, ordinary gaps and coordinate pivots.
+- NS-4b: checked the already archived ten-route coverage table and concentration exclusion; linked its exact location from the manuscript.
+- NS-1: original later evidence groups remain OPEN. Available archives, refs and saved records did not yield the missing original scripts or witnesses; no regenerated substitute is passed off as recovery.
+
+Build: 215 pages, 0 undefined/duplicate references, 0 overfull boxes.
+No new independent audit is claimed. G2 and RH remain open.
+
+Resumed verification (2026-09-21): all eight local root gates passed again at 768 and 1024 bits, with identical centers and overlapping discrepancy intervals. Added the exact limitation that A -> c A + s I, c > 0, preserves the tested zeros; renamed the CCM infimum locally to avoid collision with the inverse-approximation parameter. Rebuilt: 215 pages, zero undefined/duplicate references and zero overfull boxes. Preserved the original reports and wrote research-report-2026-09-21-v2.html and build_report_v2.json. Later main-branch diagnostics/retractions still require coordinated integration; no push or merge occurred.
+
+Integration (2026-09-21, NS-16): reconciled the saved candidate with main at 289961d. Retained all broader CCM diagnostic files, detailed NS-4b analysis, NS-3/NS-6 draft inserts, circle retraction files and original NS-14 outputs byte-for-byte. The obsolete KMS summary was not restored. Both interval replays and their verifier are unchanged; the manuscript links the detailed coverage analysis. Build: 215 pages, 0 undefined/duplicate references, 0 overfull boxes. Pyright: 0 errors/warnings. Added a separately versioned integration report and build record. Legacy v1.34-v1.37 manifest warnings match the pre-merge baseline; no historical recovery or cleanup is claimed. NS-1, complete-ground transfer, G2 and RH remain open.
+
+---
+
 # Version 1.40 — September 21, 2026
 
 - Completed NS-5 for the complete lambda=4 operator: a simple even ground with 0<mu0<2.454e-75 and mu1>1e-73, hence ordinary gap>9.7546e-74.

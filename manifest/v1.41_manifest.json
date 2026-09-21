@@ -1,0 +1,94 @@
+{
+ "manuscript_revision": "v1.41",
+ "base_commit": "dc26857a569008a060aaab1257ed338ab2c9d89e",
+ "files": [
+  {
+   "path": "evidence/v141/README.md",
+   "size_bytes": 2960,
+   "sha256": "79569ff6394cc7a8ee350210eeba3aaac147a48bf2e47bf4916325f04e6b6a7c"
+  },
+  {
+   "path": "evidence/v141/build_report.json",
+   "size_bytes": 284,
+   "sha256": "0c9199cc9da48b83888e8cf6f9e7ef42d5315897122e1a676d978c47683296cc"
+  },
+  {
+   "path": "evidence/v141/build_report_v2.json",
+   "size_bytes": 398,
+   "sha256": "e3d28ca0f97e6ac882653821559fed2f41d301f18f0cf17d55e992343be4d06a"
+  },
+  {
+   "path": "evidence/v141/build_report_v3.json",
+   "size_bytes": 332,
+   "sha256": "b2e82ab583dd0c1c79d1f20e7ceb88f7c0918a8442533b8d7d42cc587e21f0c2"
+  },
+  {
+   "path": "evidence/v141/ccm-lambda3-figure.svg",
+   "size_bytes": 49587,
+   "sha256": "9288f303fb98f8f633a4dc289b44d30f2f25ae9427c4ae8d7857d825fe644d37"
+  },
+  {
+   "path": "evidence/v141/ccm_lambda3_N120_b1024.json",
+   "size_bytes": 31992,
+   "sha256": "0cad120c1a1504f7ab0693539eb2c1ffe1811fa498f9281fa5979df8bd5b0b4b"
+  },
+  {
+   "path": "evidence/v141/ccm_lambda3_N120_b768.json",
+   "size_bytes": 31683,
+   "sha256": "dad9ceadd48171870b35cc3f4e4f92d7bf3be19e4faaa0a400f1a91fa44a445f"
+  },
+  {
+   "path": "evidence/v141/certify_ccm_semantic_lock.py",
+   "size_bytes": 6999,
+   "sha256": "19c7c230d444a940d62e1cb4affcd0a081f522b8963e14f72ca429d8d1abb63b"
+  },
+  {
+   "path": "evidence/v141/integration_verification.json",
+   "size_bytes": 3446,
+   "sha256": "74111ef38006669979259a334f7046db7a3b02afe206a6a272a13c7750c3b14b"
+  },
+  {
+   "path": "evidence/v141/new_section.tex",
+   "size_bytes": 7507,
+   "sha256": "f6a83d34fa393938122814ff436ce60b3ab1a617bed53f92ea936786cb521e2d"
+  },
+  {
+   "path": "evidence/v141/ns1_recovery_status.json",
+   "size_bytes": 1991,
+   "sha256": "ec91197391bb781ea05bcdabc0eaf8ef6ed6c7d79aeab8840e8d673ba1b7985b"
+  },
+  {
+   "path": "evidence/v141/replay_comparison.json",
+   "size_bytes": 1646,
+   "sha256": "40eca371b7d5a0dc8ec2e8db73b4ee67f0b592ed4f6a5969f976d08bd9a29664"
+  },
+  {
+   "path": "evidence/v141/requirements.txt",
+   "size_bytes": 34,
+   "sha256": "a84bec3b39ff94ed4f52f05c5614afcdd8617ed367aded7070c590fd4139a2fa"
+  },
+  {
+   "path": "evidence/v141/research-report-2026-09-21-v1.html",
+   "size_bytes": 6593,
+   "sha256": "a7e6497fb64dab80da3cd030215cd0eda0b1fcd38262a093ddbe423d518905ea"
+  },
+  {
+   "path": "evidence/v141/research-report-2026-09-21-v2.html",
+   "size_bytes": 7174,
+   "sha256": "4de57abef180de7b24c74653de71768dd17b9f6d99384d1c2809a48094ded1c8"
+  },
+  {
+   "path": "evidence/v141/research-report-2026-09-21-v3.html",
+   "size_bytes": 4535,
+   "sha256": "c6a21730285a0c8c2189ddf402c2617ffe5df12b8038adb979ffdb2bb9d117f6"
+  },
+  {
+   "path": "evidence/v141/resume_verification_2026-09-21.json",
+   "size_bytes": 1898,
+   "sha256": "0d487060e26435d2f676421d0f6ee1ba3e732ed7637d7dc9cd8e76e37f315682"
+  }
+ ],
+ "file_count": 17,
+ "total_bytes": 159059,
+ "note": "Existing-window CCM semantic lock; exact centering correction; NS-3 and NS-4b completed; NS-1 remains OPEN. G2 and RH open."
+}

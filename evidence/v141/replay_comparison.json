@@ -1,0 +1,68 @@
+{
+  "bits": [
+    768,
+    1024
+  ],
+  "lambda": 3,
+  "N": 120,
+  "K": 128,
+  "checks": [
+    {
+      "index": 1,
+      "identical_decimal_centers": true,
+      "root_intervals_overlap": true,
+      "discrepancies_overlap": true,
+      "radius_bound_passes": true
+    },
+    {
+      "index": 2,
+      "identical_decimal_centers": true,
+      "root_intervals_overlap": true,
+      "discrepancies_overlap": true,
+      "radius_bound_passes": true
+    },
+    {
+      "index": 3,
+      "identical_decimal_centers": true,
+      "root_intervals_overlap": true,
+      "discrepancies_overlap": true,
+      "radius_bound_passes": true
+    },
+    {
+      "index": 4,
+      "identical_decimal_centers": true,
+      "root_intervals_overlap": true,
+      "discrepancies_overlap": true,
+      "radius_bound_passes": true
+    },
+    {
+      "index": 5,
+      "identical_decimal_centers": true,
+      "root_intervals_overlap": true,
+      "discrepancies_overlap": true,
+      "radius_bound_passes": true
+    },
+    {
+      "index": 6,
+      "identical_decimal_centers": true,
+      "root_intervals_overlap": true,
+      "discrepancies_overlap": true,
+      "radius_bound_passes": true
+    },
+    {
+      "index": 7,
+      "identical_decimal_centers": true,
+      "root_intervals_overlap": true,
+      "discrepancies_overlap": true,
+      "radius_bound_passes": true
+    },
+    {
+      "index": 8,
+      "identical_decimal_centers": true,
+      "root_intervals_overlap": true,
+      "discrepancies_overlap": true,
+      "radius_bound_passes": true
+    }
+  ],
+  "scope": "Same finite problem across precision, not a cutoff-convergence or complete-ground claim."
+}

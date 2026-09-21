@@ -22,6 +22,14 @@ Fourier transform. These are fixed-window results; convergence to Riemann's
 Xi remains unproved. Roughly ten scoped no-go results also close proposed
 routes. Treat a proved closure as a contribution, not a setback.
 
+Version 1.41 certifies eight local CCM transform-zero discrepancies at the
+existing lambda=3, N=120 finite compression, with 768/1024-bit replay.
+The earlier NS-14 sinc-lattice conclusion is withdrawn (missing centering
+phase); the broader CCM reproduction remains a diagnostic. The numerical
+zero benchmark cannot test a common positive matrix scale or identity shift.
+Complete-ground zero transfer, G2 and RH remain open; NS-1 retains two OPEN
+evidence groups.
+
 ---
 
 ## 2. Claim discipline — the non-negotiable part

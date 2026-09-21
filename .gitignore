@@ -19,6 +19,7 @@ fixed_space_prime_action_v1_bundle.zip
 __pycache__/
 *.pyc
 .venv/
+/.venv
 venv/
 
 # Versioned cumulative bundles belong in release assets.

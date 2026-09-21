@@ -328,11 +328,20 @@
     },
     {
       "id": "stepb",
-      "title": "CCM step (b): zeros of xi-hat_lambda track zeta zeros (numerical)",
+      "title": "CCM step (b): finite-compression zeros track zeta zeros (numerical)",
       "status": "live",
       "parent": "simpleeven4",
-      "evidence": "evidence/diag_ns14_zeros",
-      "note": "YES, to 1.6e-34 at lambda=3, 2.4e-55 at sqrt13 (CCM Fig.1/table reproduced from this assembly, diag_ns2). Earlier \"sinc lattice\" claim RETRACTED: eigenvector-accuracy artifact. Convergence theorem open."
+      "evidence": "evidence/diag_ns2_semantic_lock",
+      "note": "The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. Complete-ground transfer and cofinal Xi convergence remain open."
+    },
+    {
+      "id": "semanticlock",
+      "title": "CCM finite-compression semantic lock, lambda=3 N=120",
+      "status": "proved",
+      "parent": "windows",
+      "prop": "lem:v141-centering; prop:v141-ccm-lock",
+      "evidence": "evidence/v141",
+      "note": "Eight local root discrepancies reproduce CCM Figure 1 with 768/1024-bit interval gates. The zero benchmark cannot detect a common positive scale or identity shift. No new window, complete-ground transfer or cofinal statement."
     }
   ]
 }

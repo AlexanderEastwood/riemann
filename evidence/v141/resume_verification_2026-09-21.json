@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-21",
+  "classification": "verification record for an existing certified finite compression; no new window",
+  "recovered_commit": "a6b1d8f728494de16c9d4b6f84bf1fbb9b85871b",
+  "main_reviewed": "289961d6c8d3fc3d9cbdc82f45ef1333a494914a",
+  "lambda": 3,
+  "N": 120,
+  "K": 128,
+  "replays": [
+    {
+      "bits": 768,
+      "all_interval_gates_passed": true,
+      "roots": 8,
+      "elapsed_seconds": 36.061,
+      "original_report": "evidence/v141/ccm_lambda3_N120_b768.json",
+      "original_report_sha256": "dad9ceadd48171870b35cc3f4e4f92d7bf3be19e4faaa0a400f1a91fa44a445f",
+      "assembly_sha256": "4da2e6805e92a2850fe28bd51cd2450d1f2ef0566e9f4f5b5b5fb50db2825b58",
+      "matches_original_decimal_centers": true,
+      "overlaps_original_discrepancy_intervals": true
+    },
+    {
+      "bits": 1024,
+      "all_interval_gates_passed": true,
+      "roots": 8,
+      "elapsed_seconds": 59.445,
+      "original_report": "evidence/v141/ccm_lambda3_N120_b1024.json",
+      "original_report_sha256": "0cad120c1a1504f7ab0693539eb2c1ffe1811fa498f9281fa5979df8bd5b0b4b",
+      "assembly_sha256": "4da2e6805e92a2850fe28bd51cd2450d1f2ef0566e9f4f5b5b5fb50db2825b58",
+      "matches_original_decimal_centers": true,
+      "overlaps_original_discrepancy_intervals": true
+    }
+  ],
+  "cross_precision": "All eight decimal centers identical; all discrepancy intervals overlap.",
+  "normalization_scope": "A -> c A + s I with c > 0 preserves eigenvectors and zeros; this numerical test alone cannot detect the scalar or identity shift.",
+  "NS1": "Both historical evidence groups remain OPEN; no original script or witness recovered.",
+  "integration": "Pending target coordination. Newer main diagnostics and retractions must be retained when integrating; neither main nor remote branches changed.",
+  "scope": "No complete-ground zero transfer, cofinal convergence, G2 or RH result."
+}
