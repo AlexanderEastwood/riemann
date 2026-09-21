@@ -23,7 +23,8 @@
       "parent": "rh",
       "prop": "thm:v14-radical",
       "branch": "lane/g1",
-      "note": "closed for the repaired prolate source"
+      "note": "closed for the repaired prolate source",
+      "evidence": "evidence/v124/g2_source_certificate"
     },
     {
       "id": "fixedspace",
@@ -54,7 +55,8 @@
       "title": "lambda=3",
       "status": "proved",
       "parent": "windows",
-      "prop": "prop:v116-window-positive"
+      "prop": "prop:v116-window-positive",
+      "evidence": "evidence/v124/g2_certificate"
     },
     {
       "id": "w4e",
@@ -103,7 +105,8 @@
       "parent": "uniform",
       "prop": "prop:v119-prime-essential",
       "branch": "closed/prime-norm",
-      "note": "norm ~ lambda, survives any finite removal"
+      "note": "norm ~ lambda, survives any finite removal",
+      "evidence": "evidence/v124/g2_growing_sign"
     },
     {
       "id": "normcontr",
@@ -111,7 +114,8 @@
       "status": "closed",
       "parent": "uniform",
       "prop": "prop:v120-norm-counterexample",
-      "branch": "closed/norm-contraction"
+      "branch": "closed/norm-contraction",
+      "evidence": "evidence/v124/g2_weighted_signed"
     },
     {
       "id": "schatten",
@@ -119,7 +123,8 @@
       "status": "closed",
       "parent": "uniform",
       "prop": "prop:v132-schatten",
-      "branch": "closed/schatten"
+      "branch": "closed/schatten",
+      "evidence": "MISSING"
     },
     {
       "id": "sampling",
@@ -127,7 +132,8 @@
       "status": "closed",
       "parent": "uniform",
       "prop": "prop:v121-complement-cancellation",
-      "branch": "closed/sampling-dominance"
+      "branch": "closed/sampling-dominance",
+      "evidence": "evidence/v124/g2_schur_cancellation"
     },
     {
       "id": "farmaj",
@@ -136,7 +142,8 @@
       "parent": "uniform",
       "prop": "prop:v125-cutoff-cost",
       "branch": "closed/scalar-far-majorant",
-      "note": "N ~ L exp(M_phi): exponential cutoff cost"
+      "note": "N ~ L exp(M_phi): exponential cutoff cost",
+      "evidence": "evidence/v126/g2_window_resolution"
     },
     {
       "id": "blockmetric",
@@ -144,7 +151,8 @@
       "status": "closed",
       "parent": "uniform",
       "branch": "closed/block-metric",
-      "note": "v1.28, both parities"
+      "note": "v1.28, both parities",
+      "evidence": "MISSING"
     },
     {
       "id": "flattop",
@@ -152,7 +160,8 @@
       "status": "closed",
       "parent": "uniform",
       "prop": "prop:v132-flat-top",
-      "branch": "closed/flat-top"
+      "branch": "closed/flat-top",
+      "evidence": "MISSING"
     },
     {
       "id": "recipband",
@@ -160,7 +169,8 @@
       "status": "closed",
       "parent": "uniform",
       "branch": "closed/reciprocal-band",
-      "note": "v1.33, commutator norm > 9e-6"
+      "note": "v1.33, commutator norm > 9e-6",
+      "evidence": "MISSING"
     },
     {
       "id": "cotlar",
@@ -168,7 +178,8 @@
       "status": "closed",
       "parent": "uniform",
       "branch": "closed/cotlar-atomization",
-      "note": "v1.34, cross norm >= 73/(375 pi)"
+      "note": "v1.34, cross norm >= 73/(375 pi)",
+      "evidence": "MISSING"
     },
     {
       "id": "scalarprim",
@@ -177,7 +188,8 @@
       "parent": "uniform",
       "prop": "cor:v137-scalar-no-go",
       "branch": "closed/scalar-primitive",
-      "note": "a Delta(beta_a) -> infinity, unconditional"
+      "note": "a Delta(beta_a) -> infinity, unconditional",
+      "evidence": "evidence/v137"
     },
     {
       "id": "concentration",
@@ -186,7 +198,8 @@
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "even sector; retains time-frequency correlations"
+      "note": "even sector; retains time-frequency correlations",
+      "evidence": "MISSING"
     },
     {
       "id": "weaken",
@@ -201,7 +214,8 @@
       "status": "proved",
       "parent": "weaken",
       "prop": "prop:v136-bounded-floor",
-      "note": "decay not required; dichotomy inf spec -> -inf or RH"
+      "note": "decay not required; dichotomy inf spec -> -inf or RH",
+      "evidence": "evidence/v136"
     },
     {
       "id": "gapfree",
@@ -209,7 +223,8 @@
       "status": "proved",
       "parent": "weaken",
       "prop": "prop:v135-growing-radical",
-      "note": "dense radical family; same fact as the floor reduction"
+      "note": "dense radical family; same fact as the floor reduction",
+      "evidence": "evidence/v135"
     },
     {
       "id": "floortest",
@@ -227,7 +242,8 @@
       "status": "proved",
       "parent": "floor",
       "prop": "prop:v138-shifted-floor",
-      "note": "N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi"
+      "note": "N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi",
+      "evidence": "evidence/v138"
     }
   ]
 }
