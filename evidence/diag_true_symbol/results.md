@@ -93,3 +93,91 @@ below `ξ ≈ 10–20`, nothing at the deep high-frequency negativity. The next
 step in this lane (NS-16) is the same split over the source-orthogonal
 complement `f ⊥ u_a` — the class the weighted criterion actually quantifies
 over — rather than the ground alone.
+
+## 5. The ground in lattice units across λ (`selfsim.py` → `selfsim_output.txt`; N=120 even, midpoint eigensolve)
+
+Question: does the ground state have a limiting shape in the window's own
+frequency units `u = ξL/2π` (one unit = one resolution cell = one lattice
+mode)? Answer: **no.** Both the ground and the symbol change with λ in those
+units, in opposite directions.
+
+Ground-state Fourier mass per lattice cell (`2∫|Ff|²` over the cell; rows sum to 1):
+
+| λ | [0,½) | [½,1½) | [1½,2½) | [2½,3½) | [3½,4½) | [4½,6½) | [6½,10½) |
+|--:|--:|--:|--:|--:|--:|--:|--:|
+| 3 | 0.326 | 0.471 | 0.173 | 0.029 | 0.002 | 0.000 | 0.000 |
+| 4 | 0.267 | 0.429 | 0.221 | 0.070 | 0.013 | 0.001 | 0.000 |
+| 6 | 0.212 | 0.369 | 0.244 | 0.120 | 0.043 | 0.012 | 0.000 |
+| 8 | 0.186 | 0.335 | 0.243 | 0.141 | 0.065 | 0.029 | 0.001 |
+
+Lattice-mode coefficients `|v_0..v_5|` tell the same story (λ=3: 0.58, 0.69,
+0.41, 0.16, 0.03, 0.00; λ=8: 0.43, 0.58, 0.49, 0.37, 0.25, 0.15). The ground
+**delocalizes outward in lattice units** as the window grows, even though it
+contracts in physical frequency (§3–4: everything below ξ ≈ 10–20).
+
+The validated symbol at fixed `u`:
+
+| λ | u=¼ | u=½ | u=¾ | u=1 | u=1¼ | u=1½ | u=2 | u=2½ | u=3 | u=4 |
+|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| 3 | −0.001 | −0.285 | +0.005 | +0.284 | −0.012 | −0.279 | +0.272 | −0.259 | +0.238 | +0.119 |
+| 4 | −0.000 | −0.687 | +0.001 | +0.695 | −0.001 | −0.708 | +0.728 | −0.757 | +0.797 | +0.935 |
+| 6 | −0.010 | −0.509 | +0.029 | +0.512 | −0.049 | −0.515 | +0.520 | −0.527 | +0.536 | +0.562 |
+| 8 | +0.000 | −0.131 | −0.001 | +0.132 | +0.002 | −0.134 | +0.138 | −0.142 | +0.148 | +0.166 |
+
+So at low frequency `β_a` is a clean alternating train in the window's own
+units: zeros at the quarter points, troughs at half-integers, crests of equal
+magnitude at the integers — i.e. exactly on the lattice modes the window
+samples. Its amplitude is **not monotone in λ** (0.28, 0.70, 0.51, 0.13). The
+train comes from the `−r_a` term, whose low-frequency size is the *weighted*
+Chebyshev remainder
+
+    r_a(0) = 2 [ Σ_{1<m<λ²} Λ(m)/√m − 2(λ−1) ]  =  −1.66, −2.06, −1.88, −1.50   (λ = 3, 4, 6, 8),
+
+which orders the four windows the same way as the crest amplitude (4 > 6 > 3 > 8).
+The remainder is the whole explanation of the *ordering*, not a formula for the
+amplitude (the constant `Re ψ(5/4) − log π = −2.11` and the ξ-dependence of
+the continuum term also enter). Earlier wording that attributed this to
+`ψ(λ²) − λ²` was loose; the relevant object is the `1/√m`-weighted sum.
+
+**Reading.** In lattice units the ground state's energy budget is a
+window-by-window arithmetic quantity: the ground samples a ± train whose
+amplitude is set by the prime-power remainder at the cutoff `λ²`, spreading
+over more cells as the window grows. There is no λ-independent limiting
+picture in these units, so a self-similar (renormalization-style) argument
+for the ground alone has nothing to act on. Nothing here is a bound.
+
+## 6. The negative lobe nearest the first zeta ordinate (`nearzero.py` → `nearzero_output.txt`)
+
+`γ₁ = 14.1347`. For each λ, the *negative interval of `β_a` nearest `γ₁`*
+(not a lobe centred on `γ₁`: at λ=3 it lies below, at λ ≥ 4 above), its
+depth and width, and the ground's mass and negative-level energy there.
+
+| λ | L | ε_N | lobe centre | depth | width | width·L/2π | mass in `\|ξ−γ₁\|<1` | mass in lobe | E_neg in lobe | mass ξ>10 |
+|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
+| 3 | 2.197 | 3.0e-38 | 12.289 | −0.668 | 1.258 | 0.440 | 3.9e-6 | 1.5e-4 | −5.6e-5 | 1.7e-3 |
+| 4 | 2.773 | 3.7e-75 | 15.613 | −0.550 | 0.988 | 0.436 | 2.7e-6 | 1.1e-6 | −3.7e-7 | 1.4e-3 |
+| 6 | 3.584 | 3.1e-150 | 15.293 | −1.442 | 0.804 | 0.459 | 2.0e-6 | 5.5e-7 | −5.1e-7 | 1.1e-3 |
+| 8 | 4.159 | 7.5e-190 | 15.241 | −2.130 | 0.764 | 0.506 | 1.4e-6 | 3.5e-7 | −4.8e-7 | 9.4e-4 |
+
+(ε_N at λ=6, 8 is the N=120 midpoint value at 2048 bits, cutoff-limited;
+the certified values are in `evidence/v138/`.)
+
+Three things are happening at once near `γ₁`:
+
+1. the nearest lobe **deepens** (−0.55 → −2.13 from λ=4 to 8), consistent
+   with the unconditional `inf β_a → −∞` of `cor:v137-scalar-no-go`;
+2. it **narrows** in physical frequency but stays about **half a resolution
+   cell** wide (0.44–0.51 of `2π/L`), so the window cannot resolve it;
+3. the ground's mass in it **shrinks** (1.5e-4 → 3.5e-7 from λ=3 to 8) and
+   its negative-level energy there stays at the 1e-7 scale — five to six
+   orders below the ∓0.09 / ∓0.23 cancellation budget of §3–4.
+
+In lattice units `γ₁` sits at `u = γ₁L/2π = 4.9, 6.2, 8.1, 9.4`, at the outer
+edge of the ground's support (§5: 1e-3 of the mass in `[6.5,10.5)` at λ=8).
+Both the ground's spread and `u(γ₁)` grow with `L`; whether the ground's mass
+at `u(γ₁)` stays negligible as `a → ∞` is the local, quantitative form of the
+open question, and two more windows would not settle it
+(`prop:v121-cofinal-rh`). The frontier this lane leaves is therefore: the
+ground's energy near the first zeta ordinate is a race between a lobe that
+deepens like `a` (`cor:v137-scalar-no-go`) and half a cell wide, and a ground
+whose mass there is currently 1e-6 and falling. Nothing here is a bound.
