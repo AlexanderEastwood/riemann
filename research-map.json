@@ -3,8 +3,8 @@
   "updated": "2026-09-21",
   "legend": {
     "proved": "established result",
-    "live": "active candidate mechanism",
-    "closed": "proved insufficient or impossible",
+    "live": "current route (gold): being worked now",
+    "closed": "closed route (red): proved insufficient or impossible; kept deliberately",
     "blocked": "attempted; obstruction found",
     "open": "target, not yet attacked"
   },

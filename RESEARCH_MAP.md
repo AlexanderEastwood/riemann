@@ -113,16 +113,24 @@ graph LR
   click groundzero4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v142/" "evidence: evidence/v142" _blank
   click groundzero4resolution "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v143/" "evidence: evidence/v143" _blank
 
-  classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
+  classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution proved;
-  classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
+  classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class concentration,circle,stepb live;
-  classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
+  classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
   class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn closed;
-  classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
+  classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class w5 blocked;
-  classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
+  classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes open;
+  subgraph Legend
+    direction LR
+    lg_live["current route (gold)"]:::live
+    lg_closed["closed route"]:::closed
+    lg_proved["proved"]:::proved
+    lg_open["open"]:::open
+    lg_blocked["blocked"]:::blocked
+  end
 ```
 
 ## Status
@@ -130,8 +138,8 @@ graph LR
 | status | count | meaning |
 |---|---:|---|
 | `proved` | 17 | established result |
-| `live` | 3 | active candidate mechanism |
-| `closed` | 15 | proved insufficient or impossible |
+| `live` | 3 | current route (gold): being worked now |
+| `closed` | 15 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 1 | attempted; obstruction found |
 | `open` | 5 | target, not yet attacked |
 

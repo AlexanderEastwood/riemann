@@ -30,9 +30,9 @@ REPO_URL = _repo_url()
 
 STYLE = {
     "proved":  ("#1b5e20", "#a5d6a7", "proved"),
-    "live":    ("#0d47a1", "#90caf9", "live"),
-    "closed":  ("#b71c1c", "#ef9a9a", "closed"),
-    "blocked": ("#e65100", "#ffcc80", "blocked"),
+    "live":    ("#f57f17", "#ffd54f", "live"),      # gold: the routes currently being worked
+    "closed":  ("#b71c1c", "#ef9a9a", "closed"),    # red: proved dead ends, kept deliberately
+    "blocked": ("#4a148c", "#ce93d8", "blocked"),
     "open":    ("#37474f", "#cfd8dc", "open"),
 }
 MARK = {"proved": "[x]", "live": "[~]", "closed": "[X]",
@@ -80,8 +80,18 @@ def main() -> int:
     for status, (fg, bg, _) in STYLE.items():
         ids = [n["id"] for n in nodes if n["status"] == status]
         if ids:
-            L.append(f"  classDef {status} fill:{bg},stroke:{fg},color:#000;")
+            width = "3px" if status == "live" else "1px"
+            L.append(f"  classDef {status} fill:{bg},stroke:{fg},stroke-width:{width},color:#000;")
             L.append(f"  class {','.join(ids)} {status};")
+    # legend row so the colours are readable without the table below
+    L.append('  subgraph Legend')
+    L.append('    direction LR')
+    L.append('    lg_live["current route (gold)"]:::live')
+    L.append('    lg_closed["closed route"]:::closed')
+    L.append('    lg_proved["proved"]:::proved')
+    L.append('    lg_open["open"]:::open')
+    L.append('    lg_blocked["blocked"]:::blocked')
+    L.append('  end')
     L += ["```", "", "## Status", ""]
 
     c = collections.Counter(n["status"] for n in nodes)
