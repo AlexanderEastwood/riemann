@@ -7,6 +7,13 @@ new near-zero spectral count.
 
 ## Current manuscript
 
+This repository has **one live version**. The four canonical files below are
+replaced in place after each validated research update. Older manuscript
+copies, validation outputs and reproduction snapshots belong under
+[`archive/`](archive/README.md), not beside the current manuscript.
+Git history retains previous committed versions.
+
+
 - [Complete PDF](fixed_space_prime_action_v1.pdf)
 - [Complete LaTeX](fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](RH_G1_G2_research_log.md)
@@ -45,7 +52,8 @@ invented, and the previous files were not overwritten by partial data.
 
 **The full v1.34 cumulative reproduction archive remains unavailable.** Its
 download returned a temporary server error. Older certificate directories
-from the repository's v1.24 snapshot are preserved. The v1.35 proof materials
+from the repository's v1.24 snapshot are preserved under
+[`archive/v1.24_snapshot/`](archive/v1.24_snapshot/). The v1.35 proof materials
 above are complete for this update, but do not reconstruct the missing
 historical archive. This is not a complete cumulative reproduction release.
 

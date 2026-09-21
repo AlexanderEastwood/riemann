@@ -1,0 +1,2007 @@
+{
+  "purpose": "Archive older repository material while retaining one live manuscript",
+  "date": "2026-09-21",
+  "current_manuscript": "1.35",
+  "base_commit": "f06ba5a3aebb3c96e0ab64b71bf83dc44afae750",
+  "content_changed": false,
+  "moved_files": [
+    {
+      "from": "REPRODUCE_v121.md",
+      "to": "archive/v1.24_snapshot/REPRODUCE_v121.md",
+      "sha": "58dfc7789be146cf5187a43b6e180434ce59bfc1",
+      "mode": "100644"
+    },
+    {
+      "from": "audits/section_audit_2026-09-20.md",
+      "to": "archive/v1.24_snapshot/audits/section_audit_2026-09-20.md",
+      "sha": "2897cfad8732df9d0a8f5632551cd3cac0bef3c3",
+      "mode": "100644"
+    },
+    {
+      "from": "audits/supplied_G1_G2_audit_2026-09-19.md",
+      "to": "archive/v1.24_snapshot/audits/supplied_G1_G2_audit_2026-09-19.md",
+      "sha": "e6e96824750edea2d4bc82ca3a9fd1165be260de",
+      "mode": "100644"
+    },
+    {
+      "from": "audits/supplied_claude_audit.md",
+      "to": "archive/v1.24_snapshot/audits/supplied_claude_audit.md",
+      "sha": "1e88712f0e5889c6f51754dacf6482c233f3425a",
+      "mode": "100644"
+    },
+    {
+      "from": "band_cut_checks.json",
+      "to": "archive/v1.24_snapshot/band_cut_checks.json",
+      "sha": "142ef93e911aba0f2a2405f92f65070b14a70ec8",
+      "mode": "100644"
+    },
+    {
+      "from": "bv_radical_passage_checks.json",
+      "to": "archive/v1.24_snapshot/bv_radical_passage_checks.json",
+      "sha": "61a72b400df2668db4356fd8e6c9a60856188d7a",
+      "mode": "100644"
+    },
+    {
+      "from": "check_band_cut.py",
+      "to": "archive/v1.24_snapshot/check_band_cut.py",
+      "sha": "166239c190c68ceca1b097ae2480d09dfffdd6cb",
+      "mode": "100644"
+    },
+    {
+      "from": "check_bv_radical_passage.py",
+      "to": "archive/v1.24_snapshot/check_bv_radical_passage.py",
+      "sha": "d5a61b3a38b83bd468c8381b3fcd0b37b82f4715",
+      "mode": "100644"
+    },
+    {
+      "from": "check_copoisson_adjoint.py",
+      "to": "archive/v1.24_snapshot/check_copoisson_adjoint.py",
+      "sha": "9383f56e6d3f30bd439ebf6141e3bbb235f8737c",
+      "mode": "100644"
+    },
+    {
+      "from": "check_fredholm_shell.py",
+      "to": "archive/v1.24_snapshot/check_fredholm_shell.py",
+      "sha": "e996c4b3f7a2ebd2daab71b708069a30cb533f7e",
+      "mode": "100644"
+    },
+    {
+      "from": "check_full_projection.py",
+      "to": "archive/v1.24_snapshot/check_full_projection.py",
+      "sha": "257d2ecfdf8c86a015a9a774b3ef78dcdf7f7a6c",
+      "mode": "100644"
+    },
+    {
+      "from": "check_prolate_source.py",
+      "to": "archive/v1.24_snapshot/check_prolate_source.py",
+      "sha": "28d66339de2862a2023ad9470e52b2c004b37b4b",
+      "mode": "100644"
+    },
+    {
+      "from": "check_resolvent_endpoints.py",
+      "to": "archive/v1.24_snapshot/check_resolvent_endpoints.py",
+      "sha": "c8f8b7a43daf36b89675f83568b0363e53cc5468",
+      "mode": "100644"
+    },
+    {
+      "from": "check_sampler.py",
+      "to": "archive/v1.24_snapshot/check_sampler.py",
+      "sha": "59d28706f96e30e95f81d6bae42a9fa35e590caa",
+      "mode": "100644"
+    },
+    {
+      "from": "check_section19_metric.py",
+      "to": "archive/v1.24_snapshot/check_section19_metric.py",
+      "sha": "ace218d66885bd63f62bc257962973f72b3c22cd",
+      "mode": "100644"
+    },
+    {
+      "from": "check_weil_action.py",
+      "to": "archive/v1.24_snapshot/check_weil_action.py",
+      "sha": "49e4e89c1f313af9b242bedf548b57737e074383",
+      "mode": "100644"
+    },
+    {
+      "from": "copoisson_adjoint_checks.json",
+      "to": "archive/v1.24_snapshot/copoisson_adjoint_checks.json",
+      "sha": "d0a0d28cd5c3f5ca811d91e96f4fadab051a360d",
+      "mode": "100644"
+    },
+    {
+      "from": "finite_identity_checks.json",
+      "to": "archive/v1.24_snapshot/finite_identity_checks.json",
+      "sha": "49b30c93252cc2e89f6390e388e5f20b4d727059",
+      "mode": "100644"
+    },
+    {
+      "from": "fredholm_shell_checks.json",
+      "to": "archive/v1.24_snapshot/fredholm_shell_checks.json",
+      "sha": "00571636f0c9656e2d523d05ac6090a1c17852f8",
+      "mode": "100644"
+    },
+    {
+      "from": "full_projection_checks.json",
+      "to": "archive/v1.24_snapshot/full_projection_checks.json",
+      "sha": "8489c284b694d9145f2bf2bf62c02878125c4f0c",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_certificate/G2_Finite_Certificate.md",
+      "to": "archive/v1.24_snapshot/g2_certificate/G2_Finite_Certificate.md",
+      "sha": "2e64067bb76203c37eae6d9d56e99d286c0cb8bb",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_certificate/certify_g2_finite.py",
+      "to": "archive/v1.24_snapshot/g2_certificate/certify_g2_finite.py",
+      "sha": "f8250ef574a73beafe65f69236a345b25654bf52",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_certificate/certify_g2_series.py",
+      "to": "archive/v1.24_snapshot/g2_certificate/certify_g2_series.py",
+      "sha": "ad0b07ae7ea86d8551250d6ec93384c26670cebf",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_certificate/g2_finite_candidate.json",
+      "to": "archive/v1.24_snapshot/g2_certificate/g2_finite_candidate.json",
+      "sha": "18b3281153de07edd1211d7e540261575240dfd1",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_certificate/g2_finite_certificate.json",
+      "to": "archive/v1.24_snapshot/g2_certificate/g2_finite_certificate.json",
+      "sha": "7f082093b2e824dff5f6c5a415bb31707d40249b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_certificate/g2_finite_matrix_intervals.json",
+      "to": "archive/v1.24_snapshot/g2_certificate/g2_finite_matrix_intervals.json",
+      "sha": "3fb31fae5149adf3af895d6a637bfc28354ddfd8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_certificate/g2_finite_series_certificate.json",
+      "to": "archive/v1.24_snapshot/g2_certificate/g2_finite_series_certificate.json",
+      "sha": "56f1f35e6250e7debe59dd294cd296154509adff",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_certificate/g2_finite_series_intervals.json",
+      "to": "archive/v1.24_snapshot/g2_certificate/g2_finite_series_intervals.json",
+      "sha": "7f094e3e71559a4dd78a41a6089abeea32dbf40b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_certificate/make_g2_finite_candidate.py",
+      "to": "archive/v1.24_snapshot/g2_certificate/make_g2_finite_candidate.py",
+      "sha": "b4d243b0056d852ea37d22d067dfbb769a82838d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_next/G2_v114_Research_and_Reproduction.md",
+      "to": "archive/v1.24_snapshot/g2_deep_next/G2_v114_Research_and_Reproduction.md",
+      "sha": "fc7c23e28c2bf26042e8bb415b389eb0bae3739b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_next/adversarial_spectral.md",
+      "to": "archive/v1.24_snapshot/g2_deep_next/adversarial_spectral.md",
+      "sha": "3f5acb94d1c15d9652d6a407bca9189a22dfa4b8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_next/check_tail_constant.py",
+      "to": "archive/v1.24_snapshot/g2_deep_next/check_tail_constant.py",
+      "sha": "80847858298baab3c2fa5f8e80bd9064375ca4e1",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_next/endpoint_derivation.md",
+      "to": "archive/v1.24_snapshot/g2_deep_next/endpoint_derivation.md",
+      "sha": "4bd1237ccdf44a26fa47d1fe7acaf8691830d29c",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_next/endpoint_independent_audit.md",
+      "to": "archive/v1.24_snapshot/g2_deep_next/endpoint_independent_audit.md",
+      "sha": "3b8c8cb9547dbb1aba0951c05d42622767d8cb64",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_next/endpoint_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_deep_next/endpoint_insert.tex",
+      "sha": "84615c42d4991b361978cd5721dcd6177c2dadbf",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_next/operator_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_deep_next/operator_insert.tex",
+      "sha": "18ca16d70f809b23ca9e79df812b31e2bbac593b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_next/primary_source_research.md",
+      "to": "archive/v1.24_snapshot/g2_deep_next/primary_source_research.md",
+      "sha": "4c3575b9897f3a0c3e09290d08b34296a0a9cbf7",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_next/tail_constant_check.json",
+      "to": "archive/v1.24_snapshot/g2_deep_next/tail_constant_check.json",
+      "sha": "5e94513dfd5c1424eb0201dd0f59dee3100126b0",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_deep_research/G2_Deep_Research_and_Adversarial_Assessment.md",
+      "to": "archive/v1.24_snapshot/g2_deep_research/G2_Deep_Research_and_Adversarial_Assessment.md",
+      "sha": "edad83e34b54c5e9c557c9c4ffad4b9b2256da99",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/REPRODUCE_v117.md",
+      "to": "archive/v1.24_snapshot/g2_ground_order/REPRODUCE_v117.md",
+      "sha": "c40119ea828d654db265832212b1a4c78914ee80",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/certified_trial_reuse.md",
+      "to": "archive/v1.24_snapshot/g2_ground_order/certified_trial_reuse.md",
+      "sha": "ff8909bfc68f50c629162851dbbb0f8dc4f91f7d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/certify_ground_overlap_constants.py",
+      "to": "archive/v1.24_snapshot/g2_ground_order/certify_ground_overlap_constants.py",
+      "sha": "ab40be87da023b35def3d66ebcf15d58633044b0",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/certify_shifted_inertia.py",
+      "to": "archive/v1.24_snapshot/g2_ground_order/certify_shifted_inertia.py",
+      "sha": "f807bfdbe557269a92b9c48a390aabac33df4721",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/certify_trial_reuse.py",
+      "to": "archive/v1.24_snapshot/g2_ground_order/certify_trial_reuse.py",
+      "sha": "7d48c443943cce6d5c610adc5332831b1e7fa8ac",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/checkpoint_entry.md",
+      "to": "archive/v1.24_snapshot/g2_ground_order/checkpoint_entry.md",
+      "sha": "94531742e4ebe50e998b9dba012879a9d3cc2b1d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/finish_checkpoint.py",
+      "to": "archive/v1.24_snapshot/g2_ground_order/finish_checkpoint.py",
+      "sha": "ae14468d024d564e3e6f20bb9c33ce5faf4ec71c",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/full_trial_certificate.json",
+      "to": "archive/v1.24_snapshot/g2_ground_order/full_trial_certificate.json",
+      "sha": "63207886393ebd3b1a529f57869698743ee44861",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/g2_finite_candidate.json",
+      "to": "archive/v1.24_snapshot/g2_ground_order/g2_finite_candidate.json",
+      "sha": "18b3281153de07edd1211d7e540261575240dfd1",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/g2_finite_certificate.json",
+      "to": "archive/v1.24_snapshot/g2_ground_order/g2_finite_certificate.json",
+      "sha": "7f082093b2e824dff5f6c5a415bb31707d40249b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/ground_order_derivation.md",
+      "to": "archive/v1.24_snapshot/g2_ground_order/ground_order_derivation.md",
+      "sha": "3d3114bc8d36e0750be06d08f4110e09506e6cd8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/ground_order_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_ground_order/ground_order_insert.tex",
+      "sha": "8beeb922555f8fd538b218ad376a9d08d8eab831",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/ground_overlap_scalar_certificate.json",
+      "to": "archive/v1.24_snapshot/g2_ground_order/ground_overlap_scalar_certificate.json",
+      "sha": "522ad5bf4ef0af0e404317d4ed430a1a0f500bc5",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/integrate_v117.py",
+      "to": "archive/v1.24_snapshot/g2_ground_order/integrate_v117.py",
+      "sha": "e90fbe3d23fd41d8025ed41943fdf8f1a14e11c2",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/shift_1e-34_N256_M512_J4096_r80_even_b768_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_ground_order/shift_1e-34_N256_M512_J4096_r80_even_b768_diagonal.json",
+      "sha": "6d30b5c53f919ef41158789d4ece85c87b235767",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/shift_1e-34_N256_M512_J4096_r80_even_b896_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_ground_order/shift_1e-34_N256_M512_J4096_r80_even_b896_diagonal.json",
+      "sha": "fafff4f9d985d34a09e86dffe33ffe66a0ee1fe2",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/shift_1e-34_N512_M1024_J4096_r100_odd_b768_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_ground_order/shift_1e-34_N512_M1024_J4096_r100_odd_b768_diagonal.json",
+      "sha": "462c18dd53409ad62871b29622ed069ad55a0d1a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/shift_1e-36_N512_M1024_J4096_r100_odd_b768_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_ground_order/shift_1e-36_N512_M1024_J4096_r100_odd_b768_diagonal.json",
+      "sha": "a772f491453a7a6bd4de631dc4ee90495119f038",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_ground_order/shift_1e-36_N512_M1024_J4096_r100_odd_b896_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_ground_order/shift_1e-36_N512_M1024_J4096_r100_odd_b896_diagonal.json",
+      "sha": "d48d19c409587bea64f6f3542089386f628719d1",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_growing_sign/REPRODUCE_v119.md",
+      "to": "archive/v1.24_snapshot/g2_growing_sign/REPRODUCE_v119.md",
+      "sha": "8102106a2959076101635fa9e36d1422a5c2dbad",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_growing_sign/adversarial_prime_norm_review.md",
+      "to": "archive/v1.24_snapshot/g2_growing_sign/adversarial_prime_norm_review.md",
+      "sha": "c4ce33a64e69c52825b017ae4989b3b9ef38faa3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_growing_sign/build_complete_pdf.py",
+      "to": "archive/v1.24_snapshot/g2_growing_sign/build_complete_pdf.py",
+      "sha": "858208219e10124b0ef88e8bfabbf3e724da876b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_growing_sign/check_prime_norm.py",
+      "to": "archive/v1.24_snapshot/g2_growing_sign/check_prime_norm.py",
+      "sha": "3dec93d547a001f36da5569f20af7519819eaf41",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_growing_sign/checkpoint_entry.md",
+      "to": "archive/v1.24_snapshot/g2_growing_sign/checkpoint_entry.md",
+      "sha": "494ed64f4ad5dbedefa139ac7c8181b82074e953",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_growing_sign/finish_checkpoint.py",
+      "to": "archive/v1.24_snapshot/g2_growing_sign/finish_checkpoint.py",
+      "sha": "f34acf4b347d64300df9aba470d487349a11e2d3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_growing_sign/integrate_v119.py",
+      "to": "archive/v1.24_snapshot/g2_growing_sign/integrate_v119.py",
+      "sha": "af47561b824163b71ee11e7f3baaaebccbf0a67a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_growing_sign/prime_norm_checks.json",
+      "to": "archive/v1.24_snapshot/g2_growing_sign/prime_norm_checks.json",
+      "sha": "377ca83adc13c515b31b3ee1474824d541038fb3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_growing_sign/prime_norm_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_growing_sign/prime_norm_insert.tex",
+      "sha": "8bd0c632166b727aba7b1e5f294d8a0e7433d8fa",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/README_inverse_refinement.md",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/README_inverse_refinement.md",
+      "sha": "c203e4545bc62b43faf54048f4981b15545f60a2",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/adversarial_first_inverse_review.md",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/adversarial_first_inverse_review.md",
+      "sha": "f8a6f96c2a2d21ec6f66beba54fd37cc06309734",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/build_complete_pdf.py",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/build_complete_pdf.py",
+      "sha": "858208219e10124b0ef88e8bfabbf3e724da876b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/directional_gate_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/directional_gate_insert.tex",
+      "sha": "0eed49d726ea858a6c6dc8bb9bbcdc2735d4b531",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/input/RH_G1_G2_research_log.md",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/input/RH_G1_G2_research_log.md",
+      "sha": "071b3db339d4413b9f4deff742b0b0fdedca14a3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/input/fixed_space_prime_action_v1.tex",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/input/fixed_space_prime_action_v1.tex",
+      "sha": "d089cc1722fe636bfdbf32b872b631a18899e918",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/input/v1_revision_notes.md",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/input/v1_revision_notes.md",
+      "sha": "539f9726b62dcf28db09b4f4e7f83ea80c372d8d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/input/v1_validation.json",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/input/v1_validation.json",
+      "sha": "5c56b724d0a16f15d8ed1b8b089f352e917e2716",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/integrate_v122.py",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/integrate_v122.py",
+      "sha": "9c953418e3649d0e1138f98cc7286bb88ad5593a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/inverse_probe_J16384_b768.json",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/inverse_probe_J16384_b768.json",
+      "sha": "144be23d85a478cf4dc5bbe1589f9c7e4b4a36dd",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/inverse_probe_J4096_b768.json",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/inverse_probe_J4096_b768.json",
+      "sha": "893d6ca8895dc23b780067c7474b34db23e333ba",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/inverse_probe_J65536_b768.json",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/inverse_probe_J65536_b768.json",
+      "sha": "3b4d8c95f5e2079b512975d84cd25c95b0cc25ba",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/inverse_probe_J65536_b896.json",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/inverse_probe_J65536_b896.json",
+      "sha": "ab7c59f3331b11c5b827ea3c215ed5822b01b793",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/inverse_refinement_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/inverse_refinement_insert.tex",
+      "sha": "512e9b8174d22b979e053a8c2bb0ed50def63308",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/package_revision.py",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/package_revision.py",
+      "sha": "0476fb8e6b87af3d422fa4391db4f9bdd565b70a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/parity_inverse_constants_b320.json",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/parity_inverse_constants_b320.json",
+      "sha": "263a8bf0f67f18c29f1d37b0c51344bdd050b454",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/parity_inverse_constants_b384.json",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/parity_inverse_constants_b384.json",
+      "sha": "c809e257ca01cd90c7de2882f923682166e60744",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/refine_inverse.py",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/refine_inverse.py",
+      "sha": "6bca33032599ee19123fa6c6201e56b48d3e6b74",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/renders/contact-001.jpg",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/renders/contact-001.jpg",
+      "sha": "daa03140bb9e95ba85acb559de40778d11726fc8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/renders/contact-026.jpg",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/renders/contact-026.jpg",
+      "sha": "96f7fc0e40a55d79cf7d17cda3acf5f4e696fbf9",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/renders/contact-051.jpg",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/renders/contact-051.jpg",
+      "sha": "ca85647e5ec7bb9d60508283534d837ebb37e878",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/renders/contact-076.jpg",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/renders/contact-076.jpg",
+      "sha": "a1b3df7e0aeaf3c8db9869fb0a52f05bf942a45d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/renders/contact-101.jpg",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/renders/contact-101.jpg",
+      "sha": "85ceda0d24aca54481df82725ef46512067c5657",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/renders/contact-126.jpg",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/renders/contact-126.jpg",
+      "sha": "44580ec7d2d5bcf9ffa02fe59ec3805b6f0eaefd",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/renders/contact-151.jpg",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/renders/contact-151.jpg",
+      "sha": "32f6fbcf95d1e5fb7c941cd34c1dbd3d52ec4d73",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_inverse_refinement/write_checkpoint.py",
+      "to": "archive/v1.24_snapshot/g2_inverse_refinement/write_checkpoint.py",
+      "sha": "32f6fa8915874eb562fa390bffaf9970c6df4814",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/README_schur_revision.md",
+      "to": "archive/v1.24_snapshot/g2_low_schur/README_schur_revision.md",
+      "sha": "63776675ee122e39cda1e64838325f90ba8637dc",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/adversarial_uniform_review.md",
+      "to": "archive/v1.24_snapshot/g2_low_schur/adversarial_uniform_review.md",
+      "sha": "2f071446c2cfb10c95c20f966759c634f4ca5566",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/assembly_general.py",
+      "to": "archive/v1.24_snapshot/g2_low_schur/assembly_general.py",
+      "sha": "7b12e9cdb682d10186daf980e179a886b93ed8b1",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/build_complete_pdf.py",
+      "to": "archive/v1.24_snapshot/g2_low_schur/build_complete_pdf.py",
+      "sha": "858208219e10124b0ef88e8bfabbf3e724da876b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/certify_far_inverse.py",
+      "to": "archive/v1.24_snapshot/g2_low_schur/certify_far_inverse.py",
+      "sha": "464621c777ba86f2b8be8e43ba93b79292b2ac61",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/certify_low_schur.py",
+      "to": "archive/v1.24_snapshot/g2_low_schur/certify_low_schur.py",
+      "sha": "1bdc6b08b8a7855856dd9622531d9ba0565979a7",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/check_structured_ceiling.py",
+      "to": "archive/v1.24_snapshot/g2_low_schur/check_structured_ceiling.py",
+      "sha": "25324535215c61fb4da8f1942f51ffe223e9858c",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/checkpoint.md",
+      "to": "archive/v1.24_snapshot/g2_low_schur/checkpoint.md",
+      "sha": "91965291b36e97dd39ceac0c970cdc3003a06fa3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/current/fixed_space_prime_action_v1.tex",
+      "to": "archive/v1.24_snapshot/g2_low_schur/current/fixed_space_prime_action_v1.tex",
+      "sha": "aea15ef584e943f7e9a609c2bd9e65cafe5b1e94",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/far_inverse_contraction_b320.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/far_inverse_contraction_b320.json",
+      "sha": "ac8df8c286fdaaa2eea2637454ef15b348d191d2",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/far_inverse_contraction_b384.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/far_inverse_contraction_b384.json",
+      "sha": "a9ab612c1d73ff8931c6c4b97dc63ff478c2fb81",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/far_inverse_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_low_schur/far_inverse_insert.tex",
+      "sha": "1ffd0aa44ab2be0a30230cef0f2238340f72ace3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/integrate_v120_schur.py",
+      "to": "archive/v1.24_snapshot/g2_low_schur/integrate_v120_schur.py",
+      "sha": "75942650f1e137619263c48dbe0509629fe61457",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/low_matrix_even_M256_b768.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/low_matrix_even_M256_b768.json",
+      "sha": "490fc2170f89b18f3f8061288b36a6d5e6a1c0ba",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/low_schur_even_M256_J2048_r64_b768.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/low_schur_even_M256_J2048_r64_b768.json",
+      "sha": "00afd2c833a79fc72ef8bb0ecdb70f83fb0d74a3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/low_witness_even_M256_b768.json.gz",
+      "to": "archive/v1.24_snapshot/g2_low_schur/low_witness_even_M256_b768.json.gz",
+      "sha": "d9f4510655e84a71f8e5e601c0c549509ac8920a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/package_revision.py",
+      "to": "archive/v1.24_snapshot/g2_low_schur/package_revision.py",
+      "sha": "a6f58481696fc062515e960ca9afd9c6f8f59de6",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/render_review.py",
+      "to": "archive/v1.24_snapshot/g2_low_schur/render_review.py",
+      "sha": "ffe73697e05aab8ab44d6230e43598cee7d48b84",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/sequences_v3_l4_J2048_b768_k96.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/sequences_v3_l4_J2048_b768_k96.json",
+      "sha": "fc05381b8a70accb58ef038590eacb5535dbb940",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/sequences_v3_l4_J4096_b768_k96.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/sequences_v3_l4_J4096_b768_k96.json",
+      "sha": "a08bd136dd20d182ff8e357b831d77eedf635074",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_ceiling_counterwitness.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_ceiling_counterwitness.json",
+      "sha": "6ef7d23f58f15725bec0681cfbe2d5d87606008f",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_ceiling_counterwitness_M1024.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_ceiling_counterwitness_M1024.json",
+      "sha": "73e126ca3617e57089c699816a155234d0cd0594",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_ceiling_counterwitness_M512.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_ceiling_counterwitness_M512.json",
+      "sha": "ca0e5ba35e18cb25135827a0936f69c635169755",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M1024_J4096_ingredients.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M1024_J4096_ingredients.json",
+      "sha": "617b6e62e950d85cb31f0cdde859e779da648ac2",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M1024_J4096_r64_b768_t0.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M1024_J4096_r64_b768_t0.json",
+      "sha": "b7d1a539ed6b7626d2e409c3e5b4c5827994f6d3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M1024_J4096_r64_b768_t0_matrix.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M1024_J4096_r64_b768_t0_matrix.json",
+      "sha": "f0bf88ac8c2117024f7c19e9f825890f27ee8fe9",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M256_J4096_ingredients.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M256_J4096_ingredients.json",
+      "sha": "a8f297242db1b5497bbee01d7648f85079eebfc2",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M256_J4096_r64_b768_t0.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M256_J4096_r64_b768_t0.json",
+      "sha": "b574ed8fa70b01dbfc7bf9843ec2a1b38f7d6fec",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M256_J4096_r64_b768_t0_matrix.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M256_J4096_r64_b768_t0_matrix.json",
+      "sha": "a9ab513dc716528f07e32f303e665b1dd09bd087",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M256_J4096_r64_b768_t8.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M256_J4096_r64_b768_t8.json",
+      "sha": "0432915391e96591a85b654f9d38246180f9554b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M256_J4096_r64_b768_t8_matrix.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M256_J4096_r64_b768_t8_matrix.json",
+      "sha": "2728d84e48f2749ae16917ec6671db43d292f8fb",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M256_midpoint_diagnostic.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M256_midpoint_diagnostic.json",
+      "sha": "0de9e65a65f561bfc2b215ca1883bdec88209a9d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M512_J4096_ingredients.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M512_J4096_ingredients.json",
+      "sha": "e2b84f6f44468ae94afc6fc807de5023e3e09284",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M512_J4096_r64_b768_t0.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M512_J4096_r64_b768_t0.json",
+      "sha": "8a974e9d5b05a00e5f2342891b3dcdf5b57acc34",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M512_J4096_r64_b768_t0_matrix.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M512_J4096_r64_b768_t0_matrix.json",
+      "sha": "22fea9792ee6d5fd97364118c8daf9702dcf6db6",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_even_M512_midpoint_diagnostic.json",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_even_M512_midpoint_diagnostic.json",
+      "sha": "1e75abcbfee5ee3febf0b5a9c3fcb5c94df34349",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_inverse_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_inverse_insert.tex",
+      "sha": "ed65a27cb42a374ec32fb43863bd09c8ddfb09b5",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_low_schur/structured_low_schur.py",
+      "to": "archive/v1.24_snapshot/g2_low_schur/structured_low_schur.py",
+      "sha": "476be29086a475e4d507c933ea3b34f26e8244f6",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/adversarial_mixed_refinement.md",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/adversarial_mixed_refinement.md",
+      "sha": "d983eb84eae2c7465b75edb27bc1290054890b02",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/build_complete_pdf.py",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/build_complete_pdf.py",
+      "sha": "858208219e10124b0ef88e8bfabbf3e724da876b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/finite_polynomial_diagnostics_J65536_b768.json",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/finite_polynomial_diagnostics_J65536_b768.json",
+      "sha": "0c48c63488f13fb6f8f8b54016c6b2b2e54e200a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/input/fixed_space_prime_action_v122.tex",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/input/fixed_space_prime_action_v122.tex",
+      "sha": "90425344f7e30fb6a19b40b81a02a22bbc221b5b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/integrate_v123.py",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/integrate_v123.py",
+      "sha": "d2510e5e5c3d1d08afc5e7efdba0cbcf145cb122",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_complete_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_complete_insert.tex",
+      "sha": "02b515a1f47e53138499421a5054759b3cd6c4d5",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_complete_integration_review.md",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_complete_integration_review.md",
+      "sha": "38d6360b6d1cce00a26f193e7d59aae9359192e7",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_directional_J65536_b768.json",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_directional_J65536_b768.json",
+      "sha": "84bd8bf3a01228f93f5b01778382a9d94abc89d9",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_directional_J65536_b896.json",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_directional_J65536_b896.json",
+      "sha": "b84d1ad882f89564b89421a123361f2f90a1f074",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_directional_check.py",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_directional_check.py",
+      "sha": "1940bc682a69a67c06d27a4831fb7cf43191e55b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_directional_witness_J65536.json",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_directional_witness_J65536.json",
+      "sha": "27cb2ebc484d1915bace08ce973dccb12b973a0b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_probe_J65536_b768.json",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_probe_J65536_b768.json",
+      "sha": "93a96f78d5fd88d0c1cd7c5bfdd204b4d6fb4bc0",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_probe_J65536_b896.json",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_probe_J65536_b896.json",
+      "sha": "c3adfe4a1d0c74d0d4270106d10e7f454efc48fe",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_refinement.py",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_refinement.py",
+      "sha": "0cc897e8e5883eebd3284f6606375959fd03ddd3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_vectors_J65536_b768.json",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_vectors_J65536_b768.json",
+      "sha": "db87f6aa13cce224f25e79d2e91f672b12964f1d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/mixed_vectors_J65536_b896.json",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/mixed_vectors_J65536_b896.json",
+      "sha": "7d9a9cbb49837867a54aa2872690244d60e34362",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/package_v123.py",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/package_v123.py",
+      "sha": "cf90facefefae773483daee1b5783b7984d5ff73",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/refine_inverse.py",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/refine_inverse.py",
+      "sha": "6bca33032599ee19123fa6c6201e56b48d3e6b74",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/renders/contact_1.jpg",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/renders/contact_1.jpg",
+      "sha": "260dbfc09d6d0a257bfb19a5c231e6c7dea67a20",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/renders/contact_2.jpg",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/renders/contact_2.jpg",
+      "sha": "d581061f6f02d26cfd369df89522d5994bd85204",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/renders/contact_3.jpg",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/renders/contact_3.jpg",
+      "sha": "fa8c7fe17f2128619a8b73923d32b44b6cad8941",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_mixed_complete/renders/contact_4.jpg",
+      "to": "archive/v1.24_snapshot/g2_mixed_complete/renders/contact_4.jpg",
+      "sha": "40ec9a21d7fc6528a40760d828c99074a5d29831",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/adversarial_posteriori_refinement.md",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/adversarial_posteriori_refinement.md",
+      "sha": "dac151a5ede1c191071f905210fd2ea8d8da3054",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/build_complete_pdf.py",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/build_complete_pdf.py",
+      "sha": "858208219e10124b0ef88e8bfabbf3e724da876b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/input/fixed_space_prime_action_v123.tex",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/input/fixed_space_prime_action_v123.tex",
+      "sha": "ed2e0e45ed10d46b53a369a6d94dc5245275f341",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/integrate_v124.py",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/integrate_v124.py",
+      "sha": "eaa961332f94e5c59083d1217335145892e39f2f",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/mixed_probe_J65536_b768.json",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/mixed_probe_J65536_b768.json",
+      "sha": "93a96f78d5fd88d0c1cd7c5bfdd204b4d6fb4bc0",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/mixed_probe_J65536_b896.json",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/mixed_probe_J65536_b896.json",
+      "sha": "c3adfe4a1d0c74d0d4270106d10e7f454efc48fe",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/mixed_refinement.py",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/mixed_refinement.py",
+      "sha": "0cc897e8e5883eebd3284f6606375959fd03ddd3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/package_v124.py",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/package_v124.py",
+      "sha": "2e0f18015fe3b9dc1c7f3d03c5901b06800b4f58",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_check_M4096_s16_J65536_b768.json",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_check_M4096_s16_J65536_b768.json",
+      "sha": "4cf1e1b565bacbd50b4d4b42a059a1dc80516dd8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_check_M4096_s16_J65536_b896.json",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_check_M4096_s16_J65536_b896.json",
+      "sha": "a360df41b6f5ea20cfa57a7b1b7b2c0b231041a8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_check_M4096_s4_J65536_b768.json",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_check_M4096_s4_J65536_b768.json",
+      "sha": "6c4e12803905767dfc60ba8f76aeec63ca42d07b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_check_M4096_s4_J65536_b896.json",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_check_M4096_s4_J65536_b896.json",
+      "sha": "2f2869bba489e862ee3e2970cb615541c9aee7da",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_insert.tex",
+      "sha": "6135a92b71518f835364f08b27a7ec5e53b13a66",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_integration_review.md",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_integration_review.md",
+      "sha": "f4fa626e3fc9b9c0813a8707d6f3083c99d7b719",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_replay_README.md",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_replay_README.md",
+      "sha": "1d3c4b628178bafc0ad01ce49a6309bf1a6cd5d5",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_trial.py",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_trial.py",
+      "sha": "4b6ad4bc86abde02d4402913eb8d0623a2924d1a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_witness_M4096_s16.json.gz",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_witness_M4096_s16.json.gz",
+      "sha": "33d190442e973341b6439f6a80fb5413a63d8df4",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/posterior_witness_M4096_s4.json.gz",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/posterior_witness_M4096_s4.json.gz",
+      "sha": "31743c7b2a91b565376ac54061b4aa2495c4b835",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/refine_inverse.py",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/refine_inverse.py",
+      "sha": "6bca33032599ee19123fa6c6201e56b48d3e6b74",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/render_v124.py",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/render_v124.py",
+      "sha": "4f6d884932edfb1ca17b88ad20b431b7793cb209",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/renders/contact_1.jpg",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/renders/contact_1.jpg",
+      "sha": "0a11c5a1056db069d23268e03d575d2cd1edf2f4",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/renders/contact_2.jpg",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/renders/contact_2.jpg",
+      "sha": "09bdf606c0c7e823863a517a69c2292b1dd6e586",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/renders/contact_3.jpg",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/renders/contact_3.jpg",
+      "sha": "f9f44500306cd4757c1d6768df6923f65c27fc3e",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/renders/contact_4.jpg",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/renders/contact_4.jpg",
+      "sha": "841c1e17f27b8b2fa8316d607b49faad5b4f7e12",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_posterior_trial/renders/contact_5.jpg",
+      "to": "archive/v1.24_snapshot/g2_posterior_trial/renders/contact_5.jpg",
+      "sha": "d9e3efc0a161134b13caeb311c482b8529880589",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/RH_Cancellation_Claim_Audit.md",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/RH_Cancellation_Claim_Audit.md",
+      "sha": "ef4da8761d59a1766759eba2f578728f41b458b8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/SHA256SUMS.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/SHA256SUMS.json",
+      "sha": "32512c490d3441cf4ee9bebced7d7f6210256e5e",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/adversarial_cancellation_review.md",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/adversarial_cancellation_review.md",
+      "sha": "d2eacd1db15a91a17f6d810ce3d8275f5c07f980",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/assembly_general.py",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/assembly_general.py",
+      "sha": "7b12e9cdb682d10186daf980e179a886b93ed8b1",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/cancellation_subspace_b768.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/cancellation_subspace_b768.json",
+      "sha": "7684d79de671903eb63bdbaf63323a729d26e166",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/cancellation_subspace_b896.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/cancellation_subspace_b896.json",
+      "sha": "cd7c2d675ec908167aeed595eec2e246094a3003",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/cancellation_two_mode_witness.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/cancellation_two_mode_witness.json",
+      "sha": "efd9873b30dacef20764d18326121a25228d6456",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/certify_finite_K.py",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/certify_finite_K.py",
+      "sha": "9fcc5bae526e4c3308b0634f2ffac1a88a2ca757",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/check_cancellation_subspace.py",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/check_cancellation_subspace.py",
+      "sha": "bd6793d5c7c5e23361c418fb6b4c74decf6dee7d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/finite_K_X_even.json.gz",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/finite_K_X_even.json.gz",
+      "sha": "d34f10886d639457496a8b69863e9fa04c1d0a3a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/finite_K_X_odd.json.gz",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/finite_K_X_odd.json.gz",
+      "sha": "def778b308ee14cc552c2062b413274fc1397745",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/finite_K_certificate_b768.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/finite_K_certificate_b768.json",
+      "sha": "c2caea6857ed5df552f458752766b4e19884d305",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/finite_K_certificate_b896.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/finite_K_certificate_b896.json",
+      "sha": "75c9350d28e9b7595f3d936826085bfb95f8e29e",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/finite_K_replay_b896.txt",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/finite_K_replay_b896.txt",
+      "sha": "75c9350d28e9b7595f3d936826085bfb95f8e29e",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/g2_finite_candidate.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/g2_finite_candidate.json",
+      "sha": "18b3281153de07edd1211d7e540261575240dfd1",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/integration/audit_appendix_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/integration/audit_appendix_insert.tex",
+      "sha": "04cb573ec43cee955c49f899325b8d17f9755acb",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/integration/cancellation_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/integration/cancellation_insert.tex",
+      "sha": "ee6581cce5ed7a0e101f6762651e6212ba055c59",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/integration/integrate_v121.py",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/integration/integrate_v121.py",
+      "sha": "aad24edfaed0109cb5e03ba2ffdb16fafd8d7ddf",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/integration/render_manifest.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/integration/render_manifest.json",
+      "sha": "89c7c1f6888128fbc01e9fee74a7cf0ed540b02d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/integration/rh_route_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/integration/rh_route_insert.tex",
+      "sha": "6a57caf8af6bb4ddcb691766916595b17d8ddfec",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/integration/schur_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/integration/schur_insert.tex",
+      "sha": "7c7ab8c9c8f23a38cfa70032f82e4c6b4c2d1eb8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/manuscript_integration_review.md",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/manuscript_integration_review.md",
+      "sha": "006f4fabee94ecb94e52e833ab6cc9b8d60baf6c",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/pswf_source_certificate.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/pswf_source_certificate.json",
+      "sha": "f7ab8915c27c398afd4823fe0b5bb9443ff90c65",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/replay_b768.txt",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/replay_b768.txt",
+      "sha": "0888d9d148af56ca7069835e56046504e9f0d65e",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/replay_b896.txt",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/replay_b896.txt",
+      "sha": "376f1f7ea0d305b4f3f76d3b69b62e4c5d332235",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/sequences_v3_l3_J64_b768_k96.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/sequences_v3_l3_J64_b768_k96.json",
+      "sha": "f8b09dc9357c2c4a946bacff494e1377055f9e2f",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/sequences_v3_l3_J64_b896_k96.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/sequences_v3_l3_J64_b896_k96.json",
+      "sha": "f2b6bcbf4be6f6fb7da23b9ffd9eb1f334f25710",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/sequences_v3_l4_J256_b768_k96.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/sequences_v3_l4_J256_b768_k96.json",
+      "sha": "80d8d8d4bc15602f4b852d49206e975a1113db14",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/sequences_v3_l4_J256_b896_k96.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/sequences_v3_l4_J256_b896_k96.json",
+      "sha": "861c52d77ee371e69325303e7b0ceb39ca13f9bf",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/source_polynomial_intervals.json",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/source_polynomial_intervals.json",
+      "sha": "ec4ffabe2c29306f3831cc4ad457a0c56aa11416",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/visual_review/final_contact_01.png",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/visual_review/final_contact_01.png",
+      "sha": "242cbf96b9326db2a1af8222f20cec3013e40682",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/visual_review/final_contact_02.png",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/visual_review/final_contact_02.png",
+      "sha": "0a993e4bff66533320e347e2cc6061261c489482",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/visual_review/final_contact_03.png",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/visual_review/final_contact_03.png",
+      "sha": "2de1f6d4cc696e3314fa20b7c890cdc1233e9e42",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/visual_review/final_contact_04.png",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/visual_review/final_contact_04.png",
+      "sha": "d7015f64fcbbdc05598ca4bfdfb5f90e64448da1",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/visual_review/final_contact_05.png",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/visual_review/final_contact_05.png",
+      "sha": "9af0584367b6636c8967427719361bc1371919d9",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/visual_review/final_contact_06.png",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/visual_review/final_contact_06.png",
+      "sha": "2632729c2bb427baaf90700868d58bce418be925",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/visual_review/final_contact_07.png",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/visual_review/final_contact_07.png",
+      "sha": "7135ee9ad3c93765176bd8c6fa68c3386f1f95ff",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_cancellation/visual_review/final_contact_08.png",
+      "to": "archive/v1.24_snapshot/g2_schur_cancellation/visual_review/final_contact_08.png",
+      "sha": "2df5e84e3d1a04c111ebe8a442a6f6d51d80db22",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/G2_v116_Research_and_Reproduction.md",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/G2_v116_Research_and_Reproduction.md",
+      "sha": "f4a78b9336949ec36c19d6eee6c402c2114c270e",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/adversarial_schur_report.md",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/adversarial_schur_report.md",
+      "sha": "7c1e730628f6a51ee8150797db84af604b06cb21",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/assembly.py",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/assembly.py",
+      "sha": "e8586f9151f89c067583c213215dd8defd59529d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/assembly_independent_overlap.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/assembly_independent_overlap.json",
+      "sha": "1b1170134a21233f241f2345869321ea4ea1bccd",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/certify_infinite_schur.py",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/certify_infinite_schur.py",
+      "sha": "c2ac9a62e365fe4a7ae7db0e1bd93c42d0e7e0b5",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/certify_weighted_prime_tail.py",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/certify_weighted_prime_tail.py",
+      "sha": "022696819fe23a0cf3f445cb239876a9dc19e651",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/checkpoint_entry.md",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/checkpoint_entry.md",
+      "sha": "7193b2965bf124644a298675d123600633ce743f",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/directional_schur_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/directional_schur_insert.tex",
+      "sha": "856f7808fd57a315d51602cd861c269e270e0590",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/directional_tail_derivation.md",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/directional_tail_derivation.md",
+      "sha": "bfe1b9fa9d63558f235306cbdcb0bb2b7289775b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/directional_tail_gram.py",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/directional_tail_gram.py",
+      "sha": "c021b8414abd702c16b290f674b922eb2580c032",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/finish_checkpoint.py",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/finish_checkpoint.py",
+      "sha": "5484f520f2faea462e89d632b9a02b03efdad948",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/fixed_window_certificate_report.md",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/fixed_window_certificate_report.md",
+      "sha": "983559ab6b37ae5b7d34e61fd32f9cde3ef3aaf8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/fixed_window_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/fixed_window_insert.tex",
+      "sha": "974643fbf28be36f1075e64faedbdb91126d5478",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/infinite_schur_N256_M512_J1024_r128_even_b768.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/infinite_schur_N256_M512_J1024_r128_even_b768.json",
+      "sha": "316ca486a9001f553d7cd577820158ed0ec377bb",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/infinite_schur_N256_M512_J4096_r80_even_b768.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/infinite_schur_N256_M512_J4096_r80_even_b768.json",
+      "sha": "e285e65a06ba42a1d423272849867395c9f6183f",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/infinite_schur_N256_M512_J4096_r80_even_b768_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/infinite_schur_N256_M512_J4096_r80_even_b768_diagonal.json",
+      "sha": "b1d97fa98254cf25d6e049f63d1978d2cab0dcb0",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/infinite_schur_N256_M512_J4096_r80_even_b896_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/infinite_schur_N256_M512_J4096_r80_even_b896_diagonal.json",
+      "sha": "7b5fe2bf1d5cd0be61db338764136d880075aead",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/infinite_schur_N256_M512_J4096_r80_odd_b768_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/infinite_schur_N256_M512_J4096_r80_odd_b768_diagonal.json",
+      "sha": "477b5d9caed2458e9158c4c5264feac5d7fe9e4b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/infinite_schur_N512_M1024_J2048_r128_odd_b768.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/infinite_schur_N512_M1024_J2048_r128_odd_b768.json",
+      "sha": "d75a0f7ec887cc6f3f41bf676f8df358e9456436",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/infinite_schur_N512_M1024_J4096_r100_odd_b768_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/infinite_schur_N512_M1024_J4096_r100_odd_b768_diagonal.json",
+      "sha": "ba10fb2ecfeb944d70313c9e7a49191e161b6f56",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/infinite_schur_N512_M1024_J4096_r100_odd_b896_diagonal.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/infinite_schur_N512_M1024_J4096_r100_odd_b896_diagonal.json",
+      "sha": "2ff8849d048746baf7745597156e5c2286305bf9",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/integrate_v116.py",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/integrate_v116.py",
+      "sha": "540dc75dad95e28fd40c700dc1c648d07f7f3999",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/pilot_N256_M512_J1024_even.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/pilot_N256_M512_J1024_even.json",
+      "sha": "45d8fdbbbff5385d3acd38b4f401b9a296be26e2",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/pilot_N256_M512_J1024_odd.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/pilot_N256_M512_J1024_odd.json",
+      "sha": "c49177808b0f96144655576af9769da68a5d6957",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/pilot_N512_M1024_J2048_odd.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/pilot_N512_M1024_J2048_odd.json",
+      "sha": "e06f5fbcbc3f91ba48e20ad5272333c0f997c46e",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/pilot_gamma_sensitivity_odd.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/pilot_gamma_sensitivity_odd.json",
+      "sha": "17eb7a45701561d77f47935dc16bf64e26e62453",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/pilot_improved_gamma_odd.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/pilot_improved_gamma_odd.json",
+      "sha": "ee3fcf8393955a03124a92f9c6ae1ae160042165",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/pilot_schur.py",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/pilot_schur.py",
+      "sha": "5270fefe0bc2875f933e59651b6f5f50bdf20958",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/schur_pilot_report.md",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/schur_pilot_report.md",
+      "sha": "850585edd1ff13f13aaef4d9fda0b7a33b419d68",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/schur_witness_N256_M512_even_b768.json.gz",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/schur_witness_N256_M512_even_b768.json.gz",
+      "sha": "fbf524b3b362006be73c542ca0695dbdc70ae666",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/schur_witness_N512_M1024_odd_b768.json.gz",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/schur_witness_N512_M1024_odd_b768.json.gz",
+      "sha": "219432e462a689859aaac8723f90b3d090359b5e",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/weighted_prime_inverse_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/weighted_prime_inverse_insert.tex",
+      "sha": "995525b28c027c43b41f6074ad745eed4a843c83",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/weighted_prime_tail_certificate.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/weighted_prime_tail_certificate.json",
+      "sha": "c90d5c56df507b2bc369c0d08b0cc85c335a5907",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/weil_sequences_n1024_b768_k128.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/weil_sequences_n1024_b768_k128.json",
+      "sha": "c95de1d30dec67fae81df85af4fa09cf31db3aa3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/weil_sequences_n2048_b768_k128.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/weil_sequences_n2048_b768_k128.json",
+      "sha": "515c2656e8f721330189deb20a70e8dbe5533129",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/weil_sequences_n4096_b768_k128.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/weil_sequences_n4096_b768_k128.json",
+      "sha": "13641ad59484c40b6c46962f6dca8ab3474241ea",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_schur_directional/weil_sequences_n4096_b896_k128.json",
+      "to": "archive/v1.24_snapshot/g2_schur_directional/weil_sequences_n4096_b896_k128.json",
+      "sha": "fb7c5b8d0f97d6f2edd39769293e002f0ba999c7",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/G2_v115_Research_and_Reproduction.md",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/G2_v115_Research_and_Reproduction.md",
+      "sha": "0ff50c3eac10f63ee50a53019c5358be948a5883",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/adversarial_review.md",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/adversarial_review.md",
+      "sha": "832de92078615b3b7f2b5baae84105736e2c19a3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/check_sharp_tail_constants.py",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/check_sharp_tail_constants.py",
+      "sha": "3fd0b64ee3b9bce0788efe213b2f0f7da7a4f4ad",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/checkpoint_entry.md",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/checkpoint_entry.md",
+      "sha": "8e8eac5b8c77bdd694a2320ead1a07a156521c29",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/finish_checkpoint.py",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/finish_checkpoint.py",
+      "sha": "37608bc01ac1b6e9df56de77c698ca457ede2947",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/integrate_v115.py",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/integrate_v115.py",
+      "sha": "42ad0bdad67181c68f09e05586b3e5a54afbd409",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/operator_residual_derivation.md",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/operator_residual_derivation.md",
+      "sha": "795c086816ce63e810415f6e1d0f0cd97d50c784",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/operator_residual_independent_audit.md",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/operator_residual_independent_audit.md",
+      "sha": "5a3085fd9bfacbbf869e6616ffc0283168c41d82",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/residual_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/residual_insert.tex",
+      "sha": "92eb6de75eda4358f03707f7da9029a980d64e29",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/sharp_arch_tail.md",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/sharp_arch_tail.md",
+      "sha": "5ae244fbd3171edebbc66b268aa738e1b81fad4a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/sharp_tail_constants.json",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/sharp_tail_constants.json",
+      "sha": "9182d05404c46c6055440f5f16c5731ca677f627",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_signed_tail/sharp_tail_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_signed_tail/sharp_tail_insert.tex",
+      "sha": "28809e4b1f87b3507ba9df11fbadb682d80dcffe",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_source_certificate/G2_Exact_Source_Certificate.md",
+      "to": "archive/v1.24_snapshot/g2_source_certificate/G2_Exact_Source_Certificate.md",
+      "sha": "ea02caf3aafcf507daead3e4d4f0e1a0f66680d5",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_source_certificate/certify_pswf_source.py",
+      "to": "archive/v1.24_snapshot/g2_source_certificate/certify_pswf_source.py",
+      "sha": "0dac4311b1ed1b464c1c9888751c7dfaac9d7351",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_source_certificate/make_pswf_input.py",
+      "to": "archive/v1.24_snapshot/g2_source_certificate/make_pswf_input.py",
+      "sha": "56ea312b708d4510d271a3e0a4689cb3bad9de03",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_source_certificate/pswf_rational_input.json",
+      "to": "archive/v1.24_snapshot/g2_source_certificate/pswf_rational_input.json",
+      "sha": "1061ca145ee13c71e329b63f3f77db3042e1b8b2",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_source_certificate/pswf_source_certificate.json",
+      "to": "archive/v1.24_snapshot/g2_source_certificate/pswf_source_certificate.json",
+      "sha": "f7ab8915c27c398afd4823fe0b5bb9443ff90c65",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_source_certificate/source_polynomial_intervals.json",
+      "to": "archive/v1.24_snapshot/g2_source_certificate/source_polynomial_intervals.json",
+      "sha": "ec4ffabe2c29306f3831cc4ad457a0c56aa11416",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/G2_Spectral_Pilot_Report.md",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/G2_Spectral_Pilot_Report.md",
+      "sha": "7e9babe50067edfd25306c2154a8fe34863e2bea",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/audit_g2_spectral.py",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/audit_g2_spectral.py",
+      "sha": "9bb5d4ef2d76aabfcc4f6cd7be4f9dd734a58ba9",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/check_g2_endpoint_moments.py",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/check_g2_endpoint_moments.py",
+      "sha": "d8bb26caa5206259f98488862ef581a6089a13e8",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/check_g2_spectral.py",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/check_g2_spectral.py",
+      "sha": "39472dc50b9eaa10e3f485cbae089dec47bb7b12",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/check_g2_spectral_mp.py",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/check_g2_spectral_mp.py",
+      "sha": "f4fd62da1982e26bae176cdb557166ab86de1a38",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/check_g2_spectral_wide.py",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/check_g2_spectral_wide.py",
+      "sha": "e76ce235533476be55b72803491134f27600a551",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/g2_direct_form_checks.json",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/g2_direct_form_checks.json",
+      "sha": "a96934919b9eaa77dfd3f0d4e0e8e78ca00bac73",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/g2_endpoint_moment_checks.json",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/g2_endpoint_moment_checks.json",
+      "sha": "74371e03ca57c8ed91489f62af1e156457130e18",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/g2_spectral_checks.json",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/g2_spectral_checks.json",
+      "sha": "ed4f304ff7859c1d4994d7cb20392c5349a78691",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/g2_spectral_mp_checks.json",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/g2_spectral_mp_checks.json",
+      "sha": "d2114bebdc19dc15b59d3744656a301509fbdaaf",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/g2_spectral_pilot_validation.json",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/g2_spectral_pilot_validation.json",
+      "sha": "cff3aa91505874e741f2774fda9a6a14ac546e52",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/g2_spectral_refinement_differences.json",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/g2_spectral_refinement_differences.json",
+      "sha": "74ba5eddef908b51243bf4ba4f0c0e5f09c9ec7f",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/g2_spectral_wide_checks.json",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/g2_spectral_wide_checks.json",
+      "sha": "7cbe2af65cc6a675e843bcfe2523db871b8a9be9",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_spectral_pilot/research_checkpoint.md",
+      "to": "archive/v1.24_snapshot/g2_spectral_pilot/research_checkpoint.md",
+      "sha": "c46e225c7e803d7406fb2893a48a81a042825a69",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/REPRODUCE_v118.md",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/REPRODUCE_v118.md",
+      "sha": "adb2007c39b05b58a02447865557fcd186d63d3b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/actual_ground_endpoint_derivation.md",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/actual_ground_endpoint_derivation.md",
+      "sha": "6888608460c44072177affffef9a7e7707b53608",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/adversarial_endpoint_review.md",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/adversarial_endpoint_review.md",
+      "sha": "686ed910955d959eae253b1d2c50388ccf028307",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/adversarial_uniform_bound.md",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/adversarial_uniform_bound.md",
+      "sha": "ac57f76138612f617bdccd39f053cd07c8577fd7",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/check_log_kernel_normalization.py",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/check_log_kernel_normalization.py",
+      "sha": "d205b510776c22f3f8a448ae12ea32cd89c47b55",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/checkpoint_entry.md",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/checkpoint_entry.md",
+      "sha": "f792dee03bbe4142f7181336a336ffb4871112c1",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/eigen_endpoint_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/eigen_endpoint_insert.tex",
+      "sha": "8dc06aa096680a9c7f902acd3bbe330bc98724a6",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/endpoint_bibitems.tex",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/endpoint_bibitems.tex",
+      "sha": "9ad15fc9066785efd02456244828645077471916",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/finish_checkpoint.py",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/finish_checkpoint.py",
+      "sha": "497f6d4d5e5f824e818b10ffd642ec5fa5f83c96",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/gap_free_block_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/gap_free_block_insert.tex",
+      "sha": "338ae0c1e25c6d9e2e255fdcc502d5ac93698d40",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/graph_trace_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/graph_trace_insert.tex",
+      "sha": "50982a0442dc7917433f7c4f9a6dd27296d81d83",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/integrate_v118.py",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/integrate_v118.py",
+      "sha": "9baf5b97ad8b5af72a59b2a4234bbd1ea4e43a7f",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/log_kernel_normalization_checks.json",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/log_kernel_normalization_checks.json",
+      "sha": "6a45b3654892d23040977200788987f114c0bbea",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_uniform_endpoint/primary_source_and_endpoint_audit.md",
+      "to": "archive/v1.24_snapshot/g2_uniform_endpoint/primary_source_and_endpoint_audit.md",
+      "sha": "4e33ce73fde841c693a729a6359ccedea5f331c5",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/REPRODUCE_v120.md",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/REPRODUCE_v120.md",
+      "sha": "bf6ddf5bd39cee66ff50d567c9e9f359228de61b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/adversarial_weighted_review.md",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/adversarial_weighted_review.md",
+      "sha": "ed5c418fe0a7d932fbc61b619aab16d1bfa00fa5",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/assembly_general.py",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/assembly_general.py",
+      "sha": "794fdd1a236798586b9c7e0366552887eb753712",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/build_complete_pdf.py",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/build_complete_pdf.py",
+      "sha": "858208219e10124b0ef88e8bfabbf3e724da876b",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/certify_weighted_counterexample.py",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/certify_weighted_counterexample.py",
+      "sha": "4ed0c34777c73cb4f17fb4385273a6f5710a2e03",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/certify_weighted_tail.py",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/certify_weighted_tail.py",
+      "sha": "0be32c1be1dcaecfc986d2b83c14a17b7fde19f4",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/checkpoint_entry.md",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/checkpoint_entry.md",
+      "sha": "f92d1c1e5eaa2a081e24af6cb00cce3d3741a8c3",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/finish_checkpoint.py",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/finish_checkpoint.py",
+      "sha": "1490586a98695a637e0b47ee9014efc531428bd6",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/integrate_v120.py",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/integrate_v120.py",
+      "sha": "e99e8d222cf21eff80e99c8c4d09dc07306f1753",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/sequences_v2_l4_J256_b256.json",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/sequences_v2_l4_J256_b256.json",
+      "sha": "1309da97ecd0a3bd127d008e1ba687be2edf309a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/sequences_v2_l4_J4096_b256.json",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/sequences_v2_l4_J4096_b256.json",
+      "sha": "c451b59cab151f7ad4239843e51094f8affd0336",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/sequences_v2_l4_J4096_b320.json",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/sequences_v2_l4_J4096_b320.json",
+      "sha": "c008bb1d453d898dd31d4faa57da648522236adb",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/weighted_norm_counterexample.json",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/weighted_norm_counterexample.json",
+      "sha": "42fd574e805ab7ad578c1abcaaa23ae0e264cc79",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/weighted_pilot.json",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/weighted_pilot.json",
+      "sha": "07bf0c3e03c847f536b39990dadfda9fa4db5030",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/weighted_pilot.py",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/weighted_pilot.py",
+      "sha": "880275dd6da3b8f376d6467a05c8a6d533a4d300",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/weighted_signed_insert.tex",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/weighted_signed_insert.tex",
+      "sha": "474e5a579e414f9d0464316d56c3de2b5f9e1b0f",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/weighted_tail_l4_s16_even_b256.json",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/weighted_tail_l4_s16_even_b256.json",
+      "sha": "2c381956eae5d0b8b07c74f284205b937e5c709c",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/weighted_tail_l4_s16_even_b320.json",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/weighted_tail_l4_s16_even_b320.json",
+      "sha": "770e361fe62a9eb3b41ba3e3fd18229cb688531d",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/weighted_tail_l4_s16_odd_b320.json",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/weighted_tail_l4_s16_odd_b320.json",
+      "sha": "77feebc4dc3eadba6e6c6fb3219dc260f8b18b3a",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/weighted_witness_l4_s16_even_b256.json.gz",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/weighted_witness_l4_s16_even_b256.json.gz",
+      "sha": "88c67e9d46dc4d587dc522d32f8dbca961ef2add",
+      "mode": "100644"
+    },
+    {
+      "from": "g2_weighted_signed/weighted_witness_l4_s16_odd_b256.json.gz",
+      "to": "archive/v1.24_snapshot/g2_weighted_signed/weighted_witness_l4_s16_odd_b256.json.gz",
+      "sha": "0281c523a49947ccc3851cd6049effaa1ed31140",
+      "mode": "100644"
+    },
+    {
+      "from": "history/v1.20/RH_G1_G2_research_log.md",
+      "to": "archive/v1.24_snapshot/history/v1.20/RH_G1_G2_research_log.md",
+      "sha": "b8d8a1abb95f73f87c373f2b0dd4d1d3e8e2d2a3",
+      "mode": "100644"
+    },
+    {
+      "from": "history/v1.20/fixed_space_prime_action_v1.tex",
+      "to": "archive/v1.24_snapshot/history/v1.20/fixed_space_prime_action_v1.tex",
+      "sha": "486040d89f35f26c562a41d5a63b677e5121a397",
+      "mode": "100644"
+    },
+    {
+      "from": "history/v1.20/v1_revision_notes.md",
+      "to": "archive/v1.24_snapshot/history/v1.20/v1_revision_notes.md",
+      "sha": "f445c2e3e18b9e573ec9475ffdbaf3702767756e",
+      "mode": "100644"
+    },
+    {
+      "from": "history/v1.20/v1_validation.json",
+      "to": "archive/v1.24_snapshot/history/v1.20/v1_validation.json",
+      "sha": "7a0a452da2088435f4396c91d01d2bf7c4c20e2b",
+      "mode": "100644"
+    },
+    {
+      "from": "prolate_source_checks.json",
+      "to": "archive/v1.24_snapshot/prolate_source_checks.json",
+      "sha": "eea29f248dc8a6360d17df56b4cdd5320b07b31b",
+      "mode": "100644"
+    },
+    {
+      "from": "resolvent_endpoint_checks.json",
+      "to": "archive/v1.24_snapshot/resolvent_endpoint_checks.json",
+      "sha": "98defb9d1cc937af692bbdc40099c4d12e28ae5f",
+      "mode": "100644"
+    },
+    {
+      "from": "sampler_checks.json",
+      "to": "archive/v1.24_snapshot/sampler_checks.json",
+      "sha": "d3b6469952b20438e1ed92534ef5e5e7b4b8b968",
+      "mode": "100644"
+    },
+    {
+      "from": "section19_metric_checks.json",
+      "to": "archive/v1.24_snapshot/section19_metric_checks.json",
+      "sha": "32a4f5446fec782d6683496587bd13437a32de1d",
+      "mode": "100644"
+    },
+    {
+      "from": "v121_SHA256SUMS.json",
+      "to": "archive/v1.24_snapshot/v121_SHA256SUMS.json",
+      "sha": "26a164218cfc02a05becca7eaf0f7cee4e1fbf09",
+      "mode": "100644"
+    },
+    {
+      "from": "v1_validation.json",
+      "to": "archive/v1.24_snapshot/v1_validation.json",
+      "sha": "2c9808d49598f5282a3ede0243cfd9236713caa3",
+      "mode": "100644"
+    },
+    {
+      "from": "verify_finite_identities.py",
+      "to": "archive/v1.24_snapshot/verify_finite_identities.py",
+      "sha": "de33de082cc12de9b3780178e3dd8f02b4a2232d",
+      "mode": "100644"
+    },
+    {
+      "from": "weil_action_checks.json",
+      "to": "archive/v1.24_snapshot/weil_action_checks.json",
+      "sha": "67d809ea2073f9b4fc68e197b69198b6714f9cb3",
+      "mode": "100644"
+    },
+    {
+      "from": "github_sync/v1.34_manifest.json",
+      "to": "archive/provenance/v1.34_manifest.json",
+      "sha": "a1c3b8da4a35c4da905dd5ff424fb642a1b1cd7f",
+      "mode": "100644"
+    }
+  ]
+}
