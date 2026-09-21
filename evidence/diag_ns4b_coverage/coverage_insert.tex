@@ -1,0 +1,127 @@
+% NS-4b coverage table -- DRAFT for the manuscript, not yet inserted.
+%
+% SUGGESTED INSERTION ANCHOR (primary): Section~\ref{sec:goals}, immediately
+% after the paragraph that cites Corollary~\ref{cor:v137-scalar-no-go}
+% ("The scalar primitive and scalar minimum cannot supply that finite
+% constant: ... favorable and unfavorable levels.") and before the paragraph
+% beginning "The original even-sector reduction remains as follows."
+% (v1.40 lines 13538--13545).
+%
+% Alternative anchor (body): immediately after the paragraph that follows
+% Proposition~\ref{prop:v139-location-counterexample}, replacing its sentence
+% "Their precise coverage is tabulated in the new evidence report."
+%
+% Uses only preamble macros already in the manuscript (booktabs, array,
+% \norm, \ip). Test-compiled against a scratch copy of v1.40; no new labels
+% except the table label below.
+
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}p{0.27\linewidth}p{0.26\linewidth}cc p{0.26\linewidth}@{}}
+\toprule
+Closed route & Statement & (A) & (B) & Actual cause if neither\\
+\midrule
+unsigned prime-norm domination &
+Propositions~\ref{prop:v119-prime-essential}, \ref{prop:v119-prime-scale};
+target \eqref{eq:v115-sharp-tail} & -- & --\,$^{\dagger}$ &
+essential norm of the unsigned $\mathsf T_{\rm pr}$ survives finite-rank
+removal; $\norm{\mathsf T_{\rm pr}}\sim\lambda$ (PNT); exponential cutoff\\
+norm contraction &
+Proposition~\ref{prop:v120-norm-counterexample} & -- & -- &
+two-sided condition fails on a positive direction at $\lambda=4$;
+scale loss in Proposition~\ref{prop:v120-weighted-error}\\
+Schatten / Hilbert--Schmidt &
+Propositions~\ref{prop:v120-not-schatten}, \ref{prop:v132-schatten} & -- & -- &
+non-decaying prime diagonal; negative-only layer cake discards favorable
+levels (exact model); interlacing\\
+basis / sampling dominance &
+Proposition~\ref{prop:v121-complement-cancellation} & -- & -- &
+coherent $O(1)$ cancellation off the source at $\lambda=3$; discarded
+correlations\\
+scalar far majorant &
+Proposition~\ref{prop:v125-cutoff-cost} & -- & -- &
+$N+1>L\exp(M_\phi/(1-c))$, $M_\phi/\lambda\to1$: exponential cost of the
+unsigned constant\\
+block metrics (v1.28) &
+Proposition~\ref{prop:v128-dyadic-fails},
+Lemma~\ref{lem:v128-comparison-obstruction} & -- & -- &
+row-sum-of-norms comparison discards joint signs in a fixed physical
+partition\\
+flat-top smoothing &
+Proposition~\ref{prop:v132-flat-top} & -- & -- &
+rigidity of characteristic functions; not an estimate\\
+reciprocal-band commutation (v1.33) &
+Proposition~\ref{prop:v133-noncommute} & -- & -- &
+exact Paley--Wiener leakage; commutator norm $>9\cdot10^{-6}$ cofinally\\
+Cotlar cross terms / atomization (v1.34) &
+Proposition~\ref{prop:v134-disjoint} & -- & -- &
+cross channel $\ge73/(375\pi)$ cofinally; regrouping is a relabeling\\
+scalar signed primitive &
+Proposition~\ref{prop:v134-primitive},
+Corollary~\ref{cor:v137-scalar-no-go} & \textbf{yes} & -- &
+(in class (A): budget $a\Delta(\beta_a)$ is sound on all unit densities of
+variation $\le2a$, which contain the probe)\\
+\midrule
+\emph{pointwise minimum} (not one of the ten) &
+\eqref{eq:v130-pointwise}, Corollary~\ref{cor:v137-scalar-no-go} &
+\textbf{yes} & \textbf{yes} & --\\
+\emph{signed weighted concentration} (live) &
+Proposition~\ref{prop:v131-concentration},
+\eqref{eq:v131-weighted-concentration} & outside & outside &
+(A2) fails: sound only on physical densities, which exclude the probe;
+(B3) fails: not orientation-universal\\
+\bottomrule
+\end{tabular}
+\caption{Coverage of the ten recorded closures by the two scoped
+meta-obstructions. (A) is Theorem~\ref{thm:v139-probe-relaxation}: a scalar
+budget sound on a density class containing all physical densities and the
+cutoff probe \eqref{eq:v139-probe-density}. (B) is
+Theorem~\ref{thm:v139-protected-orbit}: a compression lower bound required
+to hold for every orientation in $\mathcal U_S$ after protecting finitely
+many columns. $^{\dagger}$Thematic parallel only (finite-rank removal does
+not move an essential quantity); the recorded estimate uses Fourier-basis
+matrix entries of the archimedean part and concerns the unsigned operator,
+so it is not orientation-universal.}
+\label{tab:ns4b-coverage}
+\end{table}
+
+Table~\ref{tab:ns4b-coverage} records which of the ten closed routes are
+instances of the two scoped obstructions, checked against their
+hypotheses rather than by analogy. Theorem~\ref{thm:v139-probe-relaxation}
+covers exactly one of the ten, the scalar signed primitive: its budget
+$a\Delta(\beta_a)$ is sound against every nonnegative unit density of
+variation at most $2a$, a class that contains the probe
+\eqref{eq:v139-probe-density}. The primitive is not covered by
+Theorem~\ref{thm:v139-protected-orbit}, because the Bernstein bound
+$\norm{F'}_2\le a\norm f$ is a property of the Paley--Wiener position
+that the orbit destroys; the pointwise minimum, which is not one of the
+ten, lies in both classes. The remaining nine
+closures are covered by neither theorem. Five of them are stated on a
+finite-codimension Fourier tail, outside the full-space or rank-one
+hypothesis of Theorem~\ref{thm:v139-probe-relaxation}; the unsigned
+prime-norm and far-majorant closures diverge for the elementary
+unconditional reason $\norm{\mathsf T_{\rm pr}}\sim\lambda$ rather than for
+the conditional probe pairing; the Schatten, block-metric, commutator and
+Cotlar closures are losses of coupling inside a fixed physical partition
+or Paley--Wiener kernel, which neither relaxation models; the flat-top
+result is a rigidity theorem, not an estimate. The live criterion
+\eqref{eq:v131-weighted-concentration} lies outside both classes for the
+reason that matters: its operators
+$\mathcal C_{a,u}(E)=P_a\mathcal F_a^*1_E\mathcal F_aP_a$ are sound
+exactly on the physical densities, which exclude the compactly supported
+probe, so hypothesis (A2) fails; and the adversarial rotation of one
+physical vector into a sublevel band makes its weighted good-set mass
+vanish, so the bound is not orientation-universal and hypothesis (B3)
+fails. Were either theorem to cover it, the conclusion would contradict
+the certified $\mathsf W_4\succeq0$ at a window where
+$\operatorname*{ess\,inf}\beta_4<0$. The counterexample in
+Proposition~\ref{prop:v139-location-counterexample} separates the two
+classes: for $b_a$ the mass-cap budget is $+\tfrac12$ although the
+orientation-universal edge is $-D_a\to-\infty$, and its class contains
+the probe, so the arithmetic input of
+Proposition~\ref{prop:v137-conditional-mass} is essential to
+Theorem~\ref{thm:v139-probe-relaxation}. None of this changes the open
+obligation: the cofinal signed concentration inequality with one uniform
+finite constant in both parities.
