@@ -1,0 +1,122 @@
+{
+  "status": "INCONCLUSIVE_COMPLETE_HEAD_BOUND",
+  "parity": "even",
+  "M": 4096,
+  "J": 65536,
+  "steps": 16,
+  "bits": 768,
+  "rho": "[0.1651023324996273346144114469690134479293446197670190372551902811340505 +/- 3.06e-71]",
+  "gates": [
+    {
+      "tau_exponent": -6,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-0.50104314948637186363264865116878740884210123734166353550171584567 +/- 4.60e-66]"
+      }
+    },
+    {
+      "tau_exponent": -5,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-0.047027961159080316878517263910198239721926133852437349986419706202 +/- 4.00e-67]"
+      }
+    },
+    {
+      "tau_exponent": -4,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-0.0016264423309968109612994406443433410927623979542318054834127125973 +/- 2.67e-68]"
+      }
+    },
+    {
+      "tau_exponent": -3,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 4,
+        "pivot": "[-5.3145616359791464718986969914985820041995887584031511264291175e-14 +/- 9.79e-76]"
+      }
+    },
+    {
+      "tau_exponent": -2,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 7,
+        "pivot": "[-2.04989509451563355245279348675932454142886471892e-19 +/- 8.35e-67]"
+      }
+    },
+    {
+      "tau_exponent": -1,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 7,
+        "pivot": "[-2.082847706746745049500044945244393435165037982872e-19 +/- 8.48e-68]"
+      }
+    },
+    {
+      "tau_exponent": 0,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 7,
+        "pivot": "[-2.416010456496948684991095357336020526403307198491e-19 +/- 5.52e-68]"
+      }
+    },
+    {
+      "tau_exponent": 1,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 7,
+        "pivot": "[-5.8426586097554374539307206231768236050152672919633e-19 +/- 6.73e-69]"
+      }
+    },
+    {
+      "tau_exponent": 2,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 7,
+        "pivot": "[-5.32975156199960966594859111845020329756173479454657e-18 +/- 5.32e-69]"
+      }
+    },
+    {
+      "tau_exponent": 3,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 6,
+        "pivot": "[-3.72096193205061583670798417311566198316937872573479e-20 +/- 6.31e-71]"
+      }
+    },
+    {
+      "tau_exponent": 4,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 4,
+        "pivot": "[-7.3580676016311091462340840203259969678860763105687712137721789296e-14 +/- 7.21e-79]"
+      }
+    },
+    {
+      "tau_exponent": 5,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-0.0017958007974385450854626715479952102561863587750893557426676366764 +/- 2.81e-68]"
+      }
+    },
+    {
+      "tau_exponent": 6,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-0.048721545825174306939599389595382733950985049373729372018175214000 +/- 2.24e-67]"
+      }
+    }
+  ],
+  "K_gate": {
+    "status": "PASS",
+    "pivots": 17,
+    "smallest_lower_pivot": "[1.2475378838305306735354003328319195208979517432068355836771745481e-30 +/- 3.39e-95]"
+  },
+  "seconds": 179.4230818748474,
+  "scope": "Complete one-parity head matrix certificate only if a gate passes; failure does not disprove positivity."
+}

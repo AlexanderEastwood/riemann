@@ -1,0 +1,15 @@
+8192 {'step': 4, 'recursive_residual2': '[0.009948444871571556819380617683084827237970 +/- 2.56e-43]'} 11.7
+8192 {'step': 8, 'recursive_residual2': '[0.0007228732837867000252770312190428284340185 +/- 4.96e-44]'} 15.8
+8192 {'step': 12, 'recursive_residual2': '[0.0001144412237407104677932237315404525306294 +/- 2.91e-44]'} 20.0
+8192 {'step': 16, 'recursive_residual2': '[8.074075955156705377106954525692063045038e-6 +/- 1.90e-46]'} 24.1
+8192 {'step': 20, 'recursive_residual2': '[3.848106341571282430055417693602781697958e-7 +/- 5.84e-48]'} 28.5
+8192 {'step': 24, 'recursive_residual2': '[5.639922207492180516343101354527680216003e-8 +/- 3.48e-48]'} 33.1
+FROZEN 8192
+Traceback (most recent call last):
+  File "/workspace/scratch/0cd0bd59ceda/output/g2_inverse_refinement/directional_tail_repair.py", line 60, in <module>
+    if s.mode in ['verify','both']:verify(s.M,s.steps,s.bits,s.J)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0cd0bd59ceda/output/g2_inverse_refinement/directional_tail_repair.py", line 40, in verify
+    f=[arb(n)*arb(2)**e for n,e in w['dyadics']];v=arb_mat([[arb(n)*arb(2)**e] for n,e in w['direction_dyadics']]);assert len(f)==M and all(t.is_exact() for t in f)
+                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

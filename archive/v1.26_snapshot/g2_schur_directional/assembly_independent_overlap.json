@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "overlapping_entries": 8321,
+  "reference": "Independent quadrature certificate g2_finite_matrix_intervals.json",
+  "cutoff": 64,
+  "new_assembly_cutoff": 1024,
+  "precision_bits": 768
+}

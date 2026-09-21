@@ -1,0 +1,28 @@
+{
+  "status": "PASS_COMPLETE_COMPLEMENT",
+  "bits": 768,
+  "ingredient_bits": 768,
+  "lambda": 4,
+  "parity": "odd",
+  "head_dimension": 16,
+  "complement_dimension": 15,
+  "sigma": "1/1000",
+  "tau": "1/20",
+  "K_gate": {
+    "status": "PASS",
+    "pivots": 16,
+    "smallest_lower_pivot": "[0.84195925188191851042999791714509904763670105631091187634982469694 +/- 2.61e-66]"
+  },
+  "complement_gate": {
+    "status": "PASS",
+    "pivots": 15,
+    "smallest_lower_pivot": "[0.00040860793390912122520311721664946895038137154757928953335986527349 +/- 1.81e-69]"
+  },
+  "projection_omitted_column": 11,
+  "direction_old_energy": "[1.00000000000000091580519290254583968511432475785674111471897710212478342747211451073720900 +/- 3.14e-90]",
+  "old_direction_lower_interval": "[-0.427115218508051804794822669076119201840326651852147957016717179375102155821248848786520187 +/- 4.13e-91]",
+  "trial_witness_sha256": "9f81eef783abc2bb1e3e654895a9492763d071287836e5a92fab9c430abe6c73",
+  "direction_witness_sha256": "4d702408393a7fd2793d0170be4e09f3b8fba23414b51a3d729c39edde3a25e0",
+  "ingredient_sha256": "51ee97d0c73abe7f190ea7f35382a8e2c856dc3fc6ac2e357f10ba0389495077",
+  "scope": "Complete exact inverse correction is at most sigma times OLD K on its exact K-orthogonal complement. The remaining direction is not certified positive."
+}

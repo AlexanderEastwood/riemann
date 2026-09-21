@@ -1,0 +1,178 @@
+{
+  "scope": "Floating-point convention checks only; no zeta zero, Weil matrix or RH evidence.",
+  "model": "Z(v)=(v-mu)^2(v-nu)/((v+2)^8(2-v)); root outputs have no poles in the closed critical strip.",
+  "cutoff": "K=4 L^2 for tractability, not the theorem cutoff.",
+  "first_slot_linear": true,
+  "rows": [
+    {
+      "L": 8.0,
+      "K": 256,
+      "sample_count": 1025,
+      "errors": {
+        "shell_basis_orthonormal": 5.20740757162067e-16,
+        "source_annihilation": 9.682205340777509e-19,
+        "shell_annihilation": 5.0727538348952e-16,
+        "full_graph_identity": 5.5485471536130385e-15,
+        "graph_defect_annihilation": 1.4975637789390896e-14,
+        "projection_on_sample": 1.8367001587184146e-16,
+        "projected_sample_representation": 1.83765402446772e-16,
+        "commutator_only_budget": 8.235905033019955e-16
+      },
+      "pullback_min_eigenvalue": 2.8267182666458636e-09,
+      "weighted_strip_grid_max_error": 0.020426501723653567,
+      "strip_bound_scale_without_constant_R6_p1": 0.1353851284192104,
+      "eigenvector_relative_defect": 0.46,
+      "shell_graph_norm": 60.7778284690405,
+      "source_projection_coefficient": [
+        [
+          -0.09917558788127596,
+          0.6107842619476056
+        ],
+        [
+          -0.3964437930141929,
+          -0.1523724739655745
+        ],
+        [
+          -0.06898912201678352,
+          0.4145300106359978
+        ]
+      ]
+    },
+    {
+      "L": 12.0,
+      "K": 576,
+      "sample_count": 2305,
+      "errors": {
+        "shell_basis_orthonormal": 1.1185187043022341e-15,
+        "source_annihilation": 3.9647552923786285e-19,
+        "shell_annihilation": 1.0694060211347666e-15,
+        "full_graph_identity": 6.717766807326118e-15,
+        "graph_defect_annihilation": 1.605706827742752e-14,
+        "projection_on_sample": 2.917807960831481e-16,
+        "projected_sample_representation": 2.9184258610944377e-16,
+        "commutator_only_budget": 1.1606607911846325e-15
+      },
+      "pullback_min_eigenvalue": 2.8398737890847108e-09,
+      "weighted_strip_grid_max_error": 0.012861184037309367,
+      "strip_bound_scale_without_constant_R6_p1": 0.049828878387512196,
+      "eigenvector_relative_defect": 0.46,
+      "shell_graph_norm": 74.3852924060598,
+      "source_projection_coefficient": [
+        [
+          -0.10040413650707262,
+          0.615139557364883
+        ],
+        [
+          -0.40170429690275145,
+          -0.15386105538797692
+        ],
+        [
+          -0.06974127827633501,
+          0.4163882037076107
+        ]
+      ]
+    },
+    {
+      "L": 16.0,
+      "K": 1024,
+      "sample_count": 4097,
+      "errors": {
+        "shell_basis_orthonormal": 1.3597399555105182e-16,
+        "source_annihilation": 5.830784820151319e-19,
+        "shell_annihilation": 1.5857308358106003e-16,
+        "full_graph_identity": 5.119758524866085e-16,
+        "graph_defect_annihilation": 2.0411631280530734e-14,
+        "projection_on_sample": 2.5302625563120516e-16,
+        "projected_sample_representation": 2.531094749539074e-16,
+        "commutator_only_budget": 1.353449049306159e-15
+      },
+      "pullback_min_eigenvalue": 2.8401053384856167e-09,
+      "weighted_strip_grid_max_error": 0.004829184161425586,
+      "strip_bound_scale_without_constant_R6_p1": 0.0183645766934626,
+      "eigenvector_relative_defect": 0.46,
+      "shell_graph_norm": 85.87170183089408,
+      "source_projection_coefficient": [
+        [
+          -0.10041439982122995,
+          0.6151698848077615
+        ],
+        [
+          -0.401747022325707,
+          -0.15387595342866325
+        ],
+        [
+          -0.06974696430820393,
+          0.4163988398892564
+        ]
+      ]
+    },
+    {
+      "L": 24.0,
+      "K": 2304,
+      "sample_count": 9217,
+      "errors": {
+        "shell_basis_orthonormal": 3.790046463265982e-15,
+        "source_annihilation": 5.601567052945758e-19,
+        "shell_annihilation": 3.78414290389307e-15,
+        "full_graph_identity": 1.0657309802835256e-14,
+        "graph_defect_annihilation": 3.581171950181097e-14,
+        "projection_on_sample": 4.952932516813655e-16,
+        "projected_sample_representation": 4.952956240838421e-16,
+        "commutator_only_budget": 2.4414805131479422e-15
+      },
+      "pullback_min_eigenvalue": 2.840106570703017e-09,
+      "weighted_strip_grid_max_error": 0.0002110585338323361,
+      "strip_bound_scale_without_constant_R6_p1": 0.0025881204098029817,
+      "eigenvector_relative_defect": 0.4600000000000001,
+      "shell_graph_norm": 105.1525230979535,
+      "source_projection_coefficient": [
+        [
+          -0.10041443226119806,
+          0.6151699712663193
+        ],
+        [
+          -0.40174715611333744,
+          -0.1538760032498763
+        ],
+        [
+          -0.0697469814901722,
+          0.41639886548482213
+        ]
+      ]
+    },
+    {
+      "L": 32.0,
+      "K": 4096,
+      "sample_count": 16385,
+      "errors": {
+        "shell_basis_orthonormal": 3.194906681775283e-16,
+        "source_annihilation": 8.982494610525388e-19,
+        "shell_annihilation": 2.77310346921802e-16,
+        "full_graph_identity": 1.121470379394734e-14,
+        "graph_defect_annihilation": 4.1526310734585226e-14,
+        "projection_on_sample": 1.8244588995906484e-16,
+        "projected_sample_representation": 1.8244288836808284e-16,
+        "commutator_only_budget": 4.602526914291232e-16
+      },
+      "pullback_min_eigenvalue": 2.840106573176885e-09,
+      "weighted_strip_grid_max_error": 4.120897570519329e-06,
+      "strip_bound_scale_without_constant_R6_p1": 0.0006799291278929381,
+      "eigenvector_relative_defect": 0.46,
+      "shell_graph_norm": 121.41223714535245,
+      "source_projection_coefficient": [
+        [
+          -0.10041443226128383,
+          0.6151699712665208
+        ],
+        [
+          -0.4017471561136887,
+          -0.15387600325001446
+        ],
+        [
+          -0.0697469814902157,
+          0.41639886548486593
+        ]
+      ]
+    }
+  ]
+}

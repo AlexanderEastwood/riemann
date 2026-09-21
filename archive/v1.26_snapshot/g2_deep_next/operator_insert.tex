@@ -1,0 +1,185 @@
+\subsection*{A closed Weil operator and its omitted Fourier complement}
+The entrywise bound above can be strengthened to an operator statement.
+Here the closed operator is the canonical semilocal Weil operator; it is
+not the arithmetic generator whose realization is conditional in Section~18.
+Fix $\lambda>1$, put $L=2\log\lambda$, $t_n=2\pi n/L$, and write
+\[
+ P_\lambda=\sum_{1<m\le\lambda^2}\frac{\Lambda(m)}{\sqrt m},
+ \qquad \rho(y)=\frac{e^{y/2}}{2\sinh y},
+ \qquad h_L=\sinh^2(L/4).
+\]
+For later constants use the complete archimedean diagonal
+\begin{align}
+ A_n={}&\int_0^L\rho(y)
+ \{2(1-y/L)\cos(t_ny)-2e^{-y/2}\}\,dy \notag\\
+ &+\log(4\pi)+\gamma_{\rm E}+\log\tanh(L/2).
+ \label{eq:v114-arch-diagonal}
+\end{align}
+The cancellation at zero makes this an ordinary convergent integral.
+
+\begin{proposition}[Bounded commutator and the operator core]
+\label{prop:v114-weil-core}
+In the normalized logarithmic Fourier basis the canonical semilocal
+Weil operator $\mathsf W_\lambda$ is
+\begin{equation}\label{eq:v114-weil-decomposition}
+ \mathsf W_\lambda=D_d+[M_b,H],\qquad
+ H_{nm}=\begin{cases}(n-m)^{-1},&n\ne m,\\0,&n=m,\end{cases}
+\end{equation}
+where $D_d$ is real diagonal, $M_b$ is multiplication by the real odd
+sequence
+\begin{align}
+ b_n={}&\frac{32Lh_Ln}{L^2+16\pi^2n^2}
+ +\frac1\pi\left\{\int_0^L\rho(y)\sin(t_ny)\,dy
+ +\sum_{1<m\le\lambda^2}\frac{\Lambda(m)}{\sqrt m}
+                         \sin(t_n\log m)\right\},\notag\\
+ d_n={}&\frac{32Lh_L(L^2-16\pi^2n^2)}{(L^2+16\pi^2n^2)^2}
+ -2\sum_{1<m\le\lambda^2}\frac{\Lambda(m)}{\sqrt m}
+        (1-\log m/L)\cos(t_n\log m)-A_n.
+ \label{eq:v114-b-d}
+\end{align}
+In particular the diagonal is not filled in by a divided-difference limit.
+One has
+\begin{equation}\label{eq:v114-b-bound}
+ \|b\|_\infty\le B_\lambda^{\rm mat}
+ :=\frac{4h_L+P_\lambda+1+\pi/4}{\pi},\qquad
+ \|[M_b,H]\|\le2\pi B_\lambda^{\rm mat}.
+\end{equation}
+At fixed $\lambda$, $d_n=\log|n|+O_\lambda(1)$ as $|n|\to\infty$.
+Consequently
+\begin{align}
+ \mathcal D(\mathsf W_\lambda)
+ &=\left\{x:\sum_n\log^2(2+|n|)|x_n|^2<\infty\right\},\notag\\
+ \mathcal D[\mathsf W_\lambda]
+ &=\left\{x:\sum_n\log(2+|n|)|x_n|^2<\infty\right\}.
+ \label{eq:v114-weil-domains}
+\end{align}
+Finite Fourier sums form an operator core. The operator is lower bounded
+and has compact resolvent.
+\end{proposition}
+\begin{proof}
+The exact CCM entries give $\tau_{nm}=(b_n-b_m)/(n-m)$ for $n\ne m$
+and $\tau_{nn}=d_n$; see also \eqref{eq:beta-bcoeff-direct}.
+For $n>0$, expansion $\rho(y)=\sum_{k\ge0}e^{-(2k+1/2)y}$ and
+$t_nL=2\pi n$ give
+\[
+ S_n:=\int_0^L\rho(y)\sin(t_ny)\,dy
+ =\sum_{k\ge0}\frac{(1-e^{-(2k+1/2)L})t_n}
+                         {(2k+1/2)^2+t_n^2}.
+\]
+Interchange is justified by integrability of
+$\rho(y)|\sin(t_ny)|$. The summands are nonnegative. The $k=0$
+term is at most $1$. For $k\ge1$ discard the factor
+$1-e^{-(2k+1/2)L}\le1$ and compare the decreasing majorant
+$t_n/\{(2k+1/2)^2+t_n^2\}$ with an integral; this gives at most
+$\pi/4$. Thus
+$0\le S_n\le1+\pi/4$. Oddness treats negative $n$, and $S_0=0$.
+The pole part of $b_n$ has absolute value at most $4h_L/\pi$;
+the prime sine sum is bounded by $P_\lambda$. This proves the first
+bound in \eqref{eq:v114-b-bound}.
+
+On $\ell^2(\mathbb Z)$, $H$ is the discrete Hilbert transform.
+The Fourier series $\sum_{k\ne0}e^{ik\theta}/k=i(\pi-\theta)$
+for $0<\theta<2\pi$ proves $H^*=-H$ and $\|H\|=\pi$.
+Hence $[M_b,H]$ is bounded self-adjoint and has the asserted norm.
+Moreover
+\[
+ A_n=A_0-\int_0^L w_L(y)(1-\cos(t_ny))\,dy,
+ \qquad w_L(y)=2\rho(y)(1-y/L).
+\]
+Since $w_L(y)-1/y$ is integrable on $(0,L)$, the last integral is
+$\log|t_n|+O_L(1)$. For example, split
+$\int_0^{|t_n|L}(1-\cos v)\,dv/v$ at $1$ and integrate its
+oscillatory tail by parts. The other terms in $d_n$ are bounded at
+fixed $\lambda$, proving its logarithmic asymptotic.
+
+The diagonal operator is self-adjoint on the first domain in
+\eqref{eq:v114-weil-domains}, has finite sequences as an operator
+core, and has compact resolvent. Bounded self-adjoint perturbation
+preserves these statements and gives the displayed form domain.
+This identifies the actual physical Weil realization: the finite sums
+are a form core for its lower-bounded closed form by
+\cite[Propositions~3.2--3.4]{ConnesConsaniMoscovici2025}, and both
+forms have exactly the same entries there. Uniqueness of the form
+closure proves equality, without imposing a new boundary condition.
+\end{proof}
+
+Every periodic BV proxy, including the repaired $p_\lambda$, therefore
+belongs to $\mathcal D(\mathsf W_\lambda)$ at fixed $\lambda$:
+its Fourier coefficients are $O_\lambda((1+|n|)^{-1})$.
+Furthermore $P_Np_\lambda\to p_\lambda$ in this operator graph norm,
+by the diagonal description and boundedness of the commutator. This
+fixed-window statement supplies no endpoint-normalized uniform rate,
+and does not remove the separate sampler graph defect.
+
+\begin{proposition}[An explicit positive high-frequency tail]
+\label{prop:v114-weil-tail}
+Set $a=\min(1,L)$ and
+\begin{align}
+ C_\lambda^{\rm tail}
+ :={}&|A_0|+4+\pi/2+a+2a/L+2P_\lambda
+                   +2\sinh(L/2)-L,\notag\\
+ \Gamma_{\lambda,N}
+ :={}&\log\frac{2\pi(N+1)a}{L}-C_\lambda^{\rm tail}.
+ \label{eq:v114-tail-constant}
+\end{align}
+For every vector $f$ in the form domain supported on Fourier indices
+$|n|>N$,
+\begin{equation}\label{eq:v114-tail-positive}
+ QW_\lambda(f,f)\ge\Gamma_{\lambda,N}\|f\|_2^2.
+\end{equation}
+In particular this omitted complement is strictly positive whenever
+$\Gamma_{\lambda,N}>0$. The constants use no nontrivial-zero data.
+\end{proposition}
+\begin{proof}
+On $0<y<a$, $2\rho(y)\ge e^{-y/2}/y\ge1/y-1/2$, whence
+\[
+ w_L(y)\ge1/y-(1/2+1/L).
+\]
+Since $w_L\ge0$ on the full interval and
+$F(T):=\int_0^T(1-\cos v)\,dv/v\ge\log T-2$ for $T>0$,
+\[
+ -A_n\ge\log(|t_n|a)-|A_0|-2-a-2a/L\qquad(n\ne0).
+\]
+The bound for $F$ is immediate for $T\le1$; for $T\ge1$ the
+integral of $\cos v/v$ on $[1,T]$ has absolute value at most $2$
+by integration by parts. The off-diagonal archimedean operator has
+norm at most $2+\pi/2$, using $b_n^{\rm arch}=S_n/\pi$ in the
+preceding commutator proof.
+
+The complete prime operator is a sum of negative weighted truncated
+translations and their adjoints, so its lower bound is $-2P_\lambda I$.
+In centered logarithmic coordinates $x\in[-L/2,L/2]$, the pole form is
+\[
+ 2|\ip f{\cosh(x/2)}|^2-2|\ip f{\sinh(x/2)}|^2
+ \ge-\{2\sinh(L/2)-L\}\|f\|_2^2.
+\]
+Combining these three estimates gives
+\eqref{eq:v114-tail-positive} first for finite Fourier sums and then
+on the tail form domain by closure.
+\end{proof}
+
+This is a quantitative omitted-tail theorem, not full Weil positivity.
+Its absolute arithmetic bound still gives a sufficient cutoff
+exponential in $O(\lambda)$; it does not reach the natural prolate
+scale. With $Q_N=I-P_N$ and $\Gamma_{\lambda,N}>0$, write
+\[
+ \mathsf W_\lambda=
+ \begin{pmatrix}F&B^*\\B&T\end{pmatrix},\qquad
+ F=P_N\mathsf W_\lambda P_N,\quad
+ B=Q_N\mathsf W_\lambda P_N,\quad T\succeq\Gamma_{\lambda,N}I.
+\]
+The cross operator $B$ is bounded by \eqref{eq:v114-weil-decomposition}.
+The remaining exact sign problem is the finite matrix
+$K=F-B^*T^{-1}B$. There is a useful verified-solve alternative to
+bounding $B$ alone. For any $Z:E_N\to\mathcal D(T)$ put $R=B-TZ$.
+Then
+\begin{equation}\label{eq:v114-schur-residual}
+ K=F-B^*Z-Z^*B+Z^*TZ-R^*T^{-1}R
+ \succeq F-B^*Z-Z^*B+Z^*TZ
+             -\frac{\|R\|^2}{\Gamma_{\lambda,N}}I.
+\end{equation}
+This follows by expansion. If the final finite lower bound is
+$-\varepsilon I$, $\varepsilon\ge0$, completing the form square
+gives $\mathsf W_\lambda\succeq-\varepsilon I$.
+Proving such a signed bound along growing windows is still open;
+positivity of $F$ alone is insufficient.

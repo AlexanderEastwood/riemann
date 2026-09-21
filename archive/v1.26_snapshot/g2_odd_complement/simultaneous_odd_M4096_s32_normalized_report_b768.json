@@ -1,0 +1,123 @@
+{
+  "trial_witness_sha256": "4d702408393a7fd2793d0170be4e09f3b8fba23414b51a3d729c39edde3a25e0",
+  "status": "INCONCLUSIVE_COMPLETE_HEAD_BOUND",
+  "parity": "odd",
+  "M": 4096,
+  "J": 65536,
+  "steps": 32,
+  "bits": 768,
+  "rho": "[0.04120015102310462817383619637328805580941636627282358749481894063597047 +/- 4.50e-72]",
+  "gates": [
+    {
+      "tau_exponent": -6,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-4.6289716384531149414742192000642606285379731328773412343828613990 +/- 9.98e-66]"
+      }
+    },
+    {
+      "tau_exponent": -5,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 1,
+        "pivot": "[-0.98146525985995795027755432753889546763765612274776901472979253379 +/- 2.20e-66]"
+      }
+    },
+    {
+      "tau_exponent": -4,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 2,
+        "pivot": "[-0.64648018643069133671790693674727650848871745037626793680861907324 +/- 1.60e-66]"
+      }
+    },
+    {
+      "tau_exponent": -3,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 6,
+        "pivot": "[-1.1080103846695063203469549110083586415678493597930426308863096638 +/- 1.79e-65]"
+      }
+    },
+    {
+      "tau_exponent": -2,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 10,
+        "pivot": "[-0.20041128771354580015634639421081386747297789718767237383734879303 +/- 1.60e-66]"
+      }
+    },
+    {
+      "tau_exponent": -1,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 11,
+        "pivot": "[-0.44823787679178866509627583203227614802240117374092303698617622609 +/- 2.54e-66]"
+      }
+    },
+    {
+      "tau_exponent": 0,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 9,
+        "pivot": "[-0.85388759607972339197260856660594676820867274121658760444296883807 +/- 2.01e-66]"
+      }
+    },
+    {
+      "tau_exponent": 1,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 4,
+        "pivot": "[-0.25624509030888166447142199568117108736094551922951427478421926872 +/- 1.69e-66]"
+      }
+    },
+    {
+      "tau_exponent": 2,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 2,
+        "pivot": "[-3.9945937291022365135455238339232313962343394161892270509624278171 +/- 4.31e-65]"
+      }
+    },
+    {
+      "tau_exponent": 3,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-0.40141825891378962329983790440388021865934917026387313685278272180 +/- 1.30e-67]"
+      }
+    },
+    {
+      "tau_exponent": 4,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-12.935839834764088722411689531358921355274027369698072704322912568 +/- 8.12e-66]"
+      }
+    },
+    {
+      "tau_exponent": 5,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-138.28005564334365772799254894477292672512327552030800194962601825 +/- 4.53e-63]"
+      }
+    },
+    {
+      "tau_exponent": 6,
+      "gate": {
+        "status": "FAIL_LOWER_BOUND",
+        "index": 0,
+        "pivot": "[-1391.7222137341470055852473773932993398239860036420340877597172557 +/- 4.17e-62]"
+      }
+    }
+  ],
+  "K_gate": {
+    "status": "PASS",
+    "pivots": 16,
+    "smallest_lower_pivot": "[0.84195853705454867333708968346929352422663123920814110028492709663 +/- 2.72e-67]"
+  },
+  "seconds": 257.25014662742615,
+  "scope": "Complete one-parity head matrix certificate only if a gate passes; failure does not disprove positivity."
+}

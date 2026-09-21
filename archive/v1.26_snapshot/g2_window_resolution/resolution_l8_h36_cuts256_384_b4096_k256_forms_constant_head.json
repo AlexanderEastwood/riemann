@@ -1,0 +1,54 @@
+{
+  "head_input": 36,
+  "metadata": {
+    "lambda": 8,
+    "head": 36,
+    "cuts": [
+      256,
+      384
+    ],
+    "bits": 4096,
+    "arch_terms": 256,
+    "certificates": [
+      {
+        "cut": 256,
+        "tail_positive": "PASS_INTERVAL_LDL",
+        "Schur_gate": {
+          "status": "PASS",
+          "pivots": 37,
+          "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+        }
+      },
+      {
+        "cut": 384,
+        "tail_positive": "PASS_INTERVAL_LDL",
+        "Schur_gate": {
+          "status": "PASS",
+          "pivots": 37,
+          "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+        }
+      }
+    ],
+    "scope": "Nested finite Galerkin Schur forms only; no rows beyond largest cut and no complete inverse upper bound."
+  },
+  "constant_head": {
+    "256": {
+      "energy": "[3.290791217694103431152186822828946107308504042229962564931603869731950952725724079308223369763427566e-278 +/- 3.32e-378]",
+      "log10_energy": "[-277.48269967038859716020872928417815335441573726093000655065173792121871702980546 +/- 3.89e-78]"
+    },
+    "384": {
+      "energy": "[3.134915242485525106671777721696357217058684244007374879759953696255097386049210172280245458719564605e-319 +/- 4.63e-419]",
+      "log10_energy": "[-318.50377419652973589683526348995054247736905862009647545488413944518922558179519 +/- 4.97e-78]"
+    }
+  },
+  "comparisons": [
+    {
+      "left": 256,
+      "right": 384,
+      "constant_head_margin": "[9.526326755795214272702806491872780915201979903815803292465360298195706016570268460524071403023738591e-42 +/- 1.47e-142]",
+      "normalizing_congruence_condition": "1 (scalar)",
+      "relative_infinity_scope": "No complete-tail claim."
+    }
+  ],
+  "scope": "Schur complements retaining only physical mode0; every other mode through each cutoff eliminated. Finite only."
+}

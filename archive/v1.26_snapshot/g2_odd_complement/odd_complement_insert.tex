@@ -1,0 +1,135 @@
+\subsection*{A complete complement bound and a reduced odd-sector target}
+
+The $\lambda=4$ odd computation can be reduced to one direction
+without inferring a matrix sign from separately positive vectors.
+The reduction uses positivity of the \emph{exact inverse correction},
+which is already known from the coercive complete tail.
+
+% Proposed proof insertion only; no numerical gate is asserted here.
+\begin{proposition}[One repaired subspace and its complete complement]
+\label{prop:v126-direction-complement}
+Let $K$ be a positive definite Hermitian form on a finite-dimensional
+complex space, let $\mathcal C\succeq0$, and put $S=K-\mathcal C$.
+Let $E$ be a subspace and write $F=E^{\perp_K}$.
+Suppose that $s\leq1$, $\sigma\geq0$, and, simultaneously on the
+indicated subspaces,
+\[
+ S|_E\succeq sK|_E,
+ \qquad \mathcal C|_F\preceq\sigma K|_F.
+\]
+Then
+\[
+ S\succeq(s-\sigma)K.
+\]
+In particular, when $E=\operatorname{span}\{v\}$ and $K(v,v)=1$,
+the first premise is the single inequality $S(v,v)\geq s$.
+\end{proposition}
+\begin{proof}
+For $x=e+f$ with $e\in E$ and $f\in F$, Cauchy--Schwarz for the
+positive semidefinite form $\mathcal C$ gives
+\begin{align*}
+ \mathcal C(x,x)
+ &\leq\bigl(\sqrt{\mathcal C(e,e)}+
+                 \sqrt{\mathcal C(f,f)}\bigr)^2\\
+ &\leq\bigl(\sqrt{1-s}\,\|e\|_K+
+                 \sqrt{\sigma}\,\|f\|_K\bigr)^2\\
+ &\leq(1-s+\sigma)(\|e\|_K^2+\|f\|_K^2)
+  =(1-s+\sigma)K(x,x).
+\end{align*}
+Subtracting from $K(x,x)$ proves the claim.  Degeneracy of
+$\mathcal C$ causes no problem, since Cauchy--Schwarz holds for
+its induced seminorm.  The constant cannot be improved under
+these premises alone: take $K=I$ on $\mathbb C^2$,
+$E=\operatorname{span}\{(1,0)\}$, and
+$\mathcal C=uu^*$ with $u=(\sqrt{1-s},\sqrt{\sigma})^T$.
+\end{proof}
+
+\paragraph{Use with two finite trials.}
+For a coercive complete tail $T$ and any finite trial $G$ with
+invertible physical head $V$, let
+$K=G^*WG$, $r=QWG$, and $\mathcal C=r^*T^{-1}r$.
+The exact Schur matrix in these head coordinates is $S=K-\mathcal C$.
+A second finite trial with the same physical head gives the same $S$.
+Consequently a directional estimate from the second trial may be combined
+with a complete complement estimate from the first, provided that both
+are normalized by the \emph{same first-trial metric} $K$.
+An available complete upper bound $\mathcal C\preceq U$ permits the
+complement premise to be verified as
+$Z^*(\sigma K-U)Z\succeq0$, where $Z$ spans the exact
+$K$-orthogonal complement.  No numerical eigenvector assumption is needed.
+
+\begin{proposition}[Complete odd complement and ordinary lower error]
+\label{prop:v126-odd-complement}
+At $\lambda=4$, let $G_0$ be the archived odd $16$-column trial
+with support through $4096$, physical head $V=P_{16}G_0$,
+$K=G_0^*\mathsf W_4G_0$, and complete correction
+$\mathcal C=(Q_{16}\mathsf W_4G_0)^*T^{-1}
+                (Q_{16}\mathsf W_4G_0)$.
+There is a specified nonzero exact dyadic vector $v\in\mathbb R^{16}$
+for which
+\begin{equation}\label{eq:v126-complement}
+ K\succ0,\qquad
+ \mathcal C|_{v^{\perp_K}}\preceq10^{-3}K|_{v^{\perp_K}}.
+\end{equation}
+Independently, in the original ordinary Hilbert norm,
+\begin{equation}\label{eq:v126-ordinary-error}
+ \mathsf W_4|_{\mathrm{odd}}\succeq-10^{-43}I,
+ \qquad \mathsf W_4\succeq-10^{-43}I.
+\end{equation}
+These are complete-form estimates at one fixed window. They do not
+assert positivity in the remaining odd direction or a cofinal error.
+\end{proposition}
+\begin{proof}[Outward certificates and the complete-form passage]
+Use the same odd inner factors as
+Proposition~\ref{prop:v120-lambda4-tail}, with $N=1536$,
+inner solve support $2048$, verification cutoff $J=65536$ and
+remote moment order $64$.  The frozen trial has $16$ proposal
+iterations per column; its construction is not a proof input.
+Reconstructing it at $768$ bits gives the complete matrix upper
+$\mathcal U_\tau$ of Proposition~\ref{prop:v125-simultaneous}.
+The exact frozen dyadics defining $v$ are included in the bundle.
+
+Put $a=v^*Kv>0$ and $P=I-v(v^*K)/a$.  Delete column $12$ of
+$P$ to obtain $Z$.  The corresponding coordinate of $v$ is nonzero,
+so $Z$ has rank $15$ and range $v^{\perp_K}$: the kernel of $P$
+is $\operatorname{span}\{v\}$, which has no nonzero vector
+with coordinate $12$ zero.  The projection uses the exact $K$;
+its interval enclosure is not frozen at a midpoint.  For
+$\tau=1/20$, interval $LDL^*$ proves
+\[
+ Z^*(10^{-3}K-\mathcal U_{1/20})Z\succ0,
+\]
+with all $15$ pivots positive and the smallest exceeding
+$0.0004086079$.  Since $\mathcal C\preceq\mathcal U_{1/20}$,
+this proves \eqref{eq:v126-complement}.  The scalar direction
+was suggested numerically, but its proposed eigenvector property
+is neither assumed nor needed.
+
+A separate interval $LDL^*$ test, now with $\tau=1/10$, proves
+\[
+ K-\mathcal U_{1/10}+10^{-43}V^*V\succ0;
+\]
+its smallest pivot exceeds $0.5999218304$.  Thus
+$S=K-\mathcal C\succeq-10^{-43}V^*V$.
+In physical head coordinates the exact Schur form is
+$V^{-*}SV^{-1}\succeq-10^{-43}I$.  Completing the square
+in the positive complete tail gives, for every vector in the form
+domain, a lower bound of $-10^{-43}$ times its head norm squared,
+and hence $-10^{-43}$ times its full norm squared.  The even
+sector is positive by Proposition~\ref{prop:v125-even-complete}.
+The orthogonal parity decomposition proves the second inequality
+in \eqref{eq:v126-ordinary-error}.  All inverse bounds retain the
+rows beyond $J$; no finite Schur matrix is substituted for the
+complete one.
+\end{proof}
+
+For this $v$, one may now seek a different finite trial with
+\emph{exactly the same physical head} $Vv$.  If its complete Schur
+lower estimate is $s\,v^*Kv$ with $10^{-3}<s\le1$, then
+Proposition~\ref{prop:v126-direction-complement} yields
+$S\succeq(s-10^{-3})K\succ0$ on the entire odd head.
+The denominator is the old trial energy $v^*Kv$, not the energy
+of the new trial.  This is a concrete sufficient remaining test,
+not an assertion that it has passed.  A lower bound which fails
+this test does not exhibit a negative Weil vector.
+

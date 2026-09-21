@@ -1,0 +1,31 @@
+{
+  "status": "PASS: high-precision diagnostic",
+  "scope": "Independent constant-mode cross-check of the exact analytic physical decomposition; numerical agreement is not its proof.",
+  "decimal_precision": 90,
+  "rows": [
+    {
+      "lambda_exact": "1.2",
+      "original_archimedean_diagonal": "-0.496243907088964181763199421581665318507395067045459286523529098305247746813",
+      "log_laplacian_plus_remainder": "-0.496243907088964181763199421581665318507395067045459286523529098305247746813",
+      "absolute_difference": "2.4545467e-91"
+    },
+    {
+      "lambda_exact": "2",
+      "original_archimedean_diagonal": "-2.06230508026203680196834379720955240828349953139556566663264039637783131731",
+      "log_laplacian_plus_remainder": "-2.06230508026203680196834379720955240828349953139556566663264039637783131731",
+      "absolute_difference": "0.0"
+    },
+    {
+      "lambda_exact": "3",
+      "original_archimedean_diagonal": "-2.67301645576585897908411006420048739111758477711424911980481855099539369223",
+      "log_laplacian_plus_remainder": "-2.67301645576585897908411006420048739111758477711424911980481855099539369223",
+      "absolute_difference": "4.9090935e-91"
+    },
+    {
+      "lambda_exact": "10",
+      "original_archimedean_diagonal": "-3.6787256180604966628420339596860848564650796921027137795777606706541844879",
+      "log_laplacian_plus_remainder": "-3.6787256180604966628420339596860848564650796921027137795777606706541844879",
+      "absolute_difference": "0.0"
+    }
+  ]
+}

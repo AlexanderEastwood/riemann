@@ -1,0 +1,85 @@
+{
+  "status": "PASS: non-certified numerical diagnostics only",
+  "scope": "Analytic autocorrelation normalization and illustrative simultaneous prime-phase recurrence; no Weil sign or asymptotic theorem is inferred from these numbers.",
+  "growth_trials": [
+    {
+      "lambda_": 2,
+      "trial_rayleigh": 0.7627192294317835,
+      "trial_over_lambda": 0.38135961471589175,
+      "independent_quadrature_difference": "0.0"
+    },
+    {
+      "lambda_": 3,
+      "trial_rayleigh": 2.1810141028809524,
+      "trial_over_lambda": 0.7270047009603174,
+      "independent_quadrature_difference": "6.2230153e-61"
+    },
+    {
+      "lambda_": 5,
+      "trial_rayleigh": 4.87715075612317,
+      "trial_over_lambda": 0.975430151224634,
+      "independent_quadrature_difference": null
+    },
+    {
+      "lambda_": 10,
+      "trial_rayleigh": 11.017605589457139,
+      "trial_over_lambda": 1.1017605589457138,
+      "independent_quadrature_difference": null
+    },
+    {
+      "lambda_": 30,
+      "trial_rayleigh": 33.1798195549003,
+      "trial_over_lambda": 1.1059939851633434,
+      "independent_quadrature_difference": null
+    },
+    {
+      "lambda_": 100,
+      "trial_rayleigh": 105.73586355682336,
+      "trial_over_lambda": 1.0573586355682336,
+      "independent_quadrature_difference": null
+    },
+    {
+      "lambda_": 300,
+      "trial_rayleigh": 308.0667012003307,
+      "trial_over_lambda": 1.0268890040011025,
+      "independent_quadrature_difference": null
+    }
+  ],
+  "lambda2_recurrence": [
+    {
+      "modulation_index": 106,
+      "prime3_phase_error": "0.0189283358892",
+      "rayleigh": "0.7626703473120629",
+      "unmodulated_rayleigh": "0.7627192294317837",
+      "P64_norm": "2.60837792168e-5"
+    },
+    {
+      "modulation_index": 1330,
+      "prime3_phase_error": "0.000395712301718",
+      "rayleigh": "0.7627192080670626",
+      "unmodulated_rayleigh": "0.7627192294317837",
+      "P64_norm": "7.84365888855e-8"
+    },
+    {
+      "modulation_index": 19232,
+      "prime3_phase_error": "0.00372633956972",
+      "rayleigh": "0.7627173348974379",
+      "unmodulated_rayleigh": "0.7627192294317837",
+      "P64_norm": "3.73660540574e-10"
+    },
+    {
+      "modulation_index": 158670,
+      "prime3_phase_error": "3.32196678385e-5",
+      "rayleigh": "0.7627192292812171",
+      "unmodulated_rayleigh": "0.7627192294317837",
+      "P64_norm": "5.489445447e-12"
+    },
+    {
+      "modulation_index": 381074,
+      "prime3_phase_error": "5.84742468823e-7",
+      "rayleigh": "0.762719229431737",
+      "unmodulated_rayleigh": "0.7627192294317837",
+      "P64_norm": "9.51698491284e-13"
+    }
+  ]
+}

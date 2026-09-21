@@ -1,0 +1,21 @@
+{
+  "status": "Non-certified research experiment; no manuscript/PDF change",
+  "manuscript_version": "1.11",
+  "manuscript_tex_sha256": "a14401262b17c2e7f1c070292d9511c9bd11162d2b181693ad52dd8546a6957d",
+  "results": {
+    "G2_Spectral_Pilot_Report.md": "d4d776c89b050ffd9bf638d1b060958a7a90914d4d2e9ac798c7325d1cd515d5",
+    "audit_g2_spectral.py": "73f4f11249eabe7a838999d11a1b75529474238ff6f028b448a9c5c597cff098",
+    "check_g2_endpoint_moments.py": "3e38171ecc1f8378649fd7298c35f503f9636e980889b0fba005698273fc5e7a",
+    "check_g2_spectral.py": "0231078ecbddb216aae377b3538045496bb3830d207e8463c29e12809a4f9cef",
+    "check_g2_spectral_mp.py": "435c22b04c6c3565f791af7be8c49df516ea3e7c3dff408f09b562cf5281a07d",
+    "check_g2_spectral_wide.py": "ff5872bd4bba4b3a747d17fc8837dc029ee10806c06a581a7655cc17be2b486c",
+    "g2_direct_form_checks.json": "e819f6f6cfe2b94727c0b8910e7e906c5920b09f570650d4e6f2bab72d40ce05",
+    "g2_endpoint_moment_checks.json": "c922f63d7d08e7d3e513895da9ca2b65d37309e3643b36155f9bcc543a463621",
+    "g2_spectral_checks.json": "38a41339403d6c3bdc0b25ba55f5a48a5ff9101094036a2db55f8699eddfa617",
+    "g2_spectral_mp_checks.json": "ef0c83a53083631e40e8a94ddc23dd126884d6a117042a9ed4fd7fb06654ad29",
+    "g2_spectral_refinement_differences.json": "95459ce2c9b29bbcc1d780238f2c0fa4568445e8da3e11f26daf4003f2f4de6b",
+    "g2_spectral_wide_checks.json": "39e96a62905c8bc6d006c1941088092e5e0d0b5891c21425867dec56399b94d1",
+    "research_checkpoint.md": "1ae91a6723c97ffad33ace908fc4eb0de26eafa314d9ef1679869617a2c087e1"
+  },
+  "complete": true
+}

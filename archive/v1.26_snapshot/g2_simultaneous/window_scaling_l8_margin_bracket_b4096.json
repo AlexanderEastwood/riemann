@@ -1,0 +1,21 @@
+{
+  "status": "PASS_FINITE_MARGIN_BRACKET",
+  "lambda": 8,
+  "retained_cut": 256,
+  "test_cut": 384,
+  "head_dimension": 65,
+  "bits": 4096,
+  "lower_decimal": "5.697e-101",
+  "upper_decimal": "5.755e-101",
+  "delta": "[5.6971457758547222481174526153318300543420609471649134330711839099695829604403759e-101 +/- 3e-185]",
+  "lower_gate": {
+    "status": "PASS",
+    "pivots": 65,
+    "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]",
+    "method": "Verified congruence before LDL; avoids interval elimination wrapping after decimal serialization."
+  },
+  "Rayleigh_upper": "[5.7546927028835578263812652680119495498404656031968822556274584949187706671114908e-101 +/- 2.02e-181]",
+  "auxiliary_trace_lower": "[5.7546901871602378947869306751969602659835945498775888866942596416801558722829050e-101 +/- 1.16e-181]",
+  "witness_sha256": "ea24597dd5fe626f9bbd1d673c6a49a96ed0150e2f3e59afc499ffd159ae817f",
+  "scope": "Positive finite generalized margin only; all modes beyond384 absent. This is not a bound for the complete residual correction."
+}

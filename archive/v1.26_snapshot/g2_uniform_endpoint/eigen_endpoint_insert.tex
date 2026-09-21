@@ -1,0 +1,220 @@
+\subsection*{The physical endpoint of the complete Weil eigenfunctions}
+
+The endpoint of an actual eigenfunction is not determined by ordinary
+norm convergence of finite eigenvectors.  For the complete operator it
+can instead be determined from the singular archimedean kernel.
+Throughout this subsection $\Omega=(0,L)$, physical functions are
+extended by zero outside $\Omega$, and Fourier frequency is normalized
+as in $U_n(x)=L^{-1/2}e^{2\pi inx/L}$.
+
+\begin{proposition}[Restricted logarithmic Laplacian decomposition]
+\label{prop:v118-log-dirichlet}
+Let $\mathcal A=\tfrac12L_\Delta^{\rm Dir}$ be the restricted,
+exterior-Dirichlet logarithmic Laplacian on $\Omega$, whose full-line
+symbol is $\log|t|$.  This is not the spectral logarithm of the
+Dirichlet Laplacian.  The actual closed Weil operator satisfies
+\begin{equation}\label{eq:v118-log-decomposition}
+ \mathsf W_\lambda=\mathcal A+\mathcal K_\lambda,
+ \qquad \mathcal D(\mathsf W_\lambda)=\mathcal D(\mathcal A),
+\end{equation}
+where, writing $k(y)=\rho(y)-(2y)^{-1}$, $a_m=\log m$, and
+$w_m=\Lambda(m)/\sqrt m$,
+\begin{align}
+ (\mathcal K_\lambda f)(x)={}&-\log(2\pi)f(x)
+       -\int_0^L k(|x-y|)f(y)\,dy\notag\\
+ &-\sum_{1<m<\lambda^2}w_m
+       \{\mathbf1_{x+a_m<L}f(x+a_m)
+                   +\mathbf1_{x>a_m}f(x-a_m)\}\notag\\
+ &+2\int_0^L\cosh((x-y)/2)f(y)\,dy.
+ \label{eq:v118-bounded-physical-part}
+\end{align}
+The operator $\mathcal K_\lambda$ is real and self-adjoint on $L^2$.
+For every $1\le p\le\infty$ it is bounded on $L^p(\Omega)$, with
+\begin{equation}\label{eq:v118-K-bound}
+ \|\mathcal K_\lambda\|_{p\to p}\le C_\lambda
+ :=\log(2\pi)+2\int_0^L|k(y)|\,dy
+                  +2P_\lambda+4\sinh(L/2).
+\end{equation}
+\end{proposition}
+\begin{proof}
+In dimension one the integral normalization of the logarithmic
+Laplacian~\cite[Theorem~1.1]{ChenWethLog} gives
+\[
+ \mathcal A f(x)=\int_0^\infty
+ \frac{2f(x)\mathbf1_{y<1}-f(x+y)-f(x-y)}{2y}\,dy
+                   -\gamma_{\rm E}f(x)
+\]
+on compactly supported smooth tests.  The actual negative-archimedean
+part of the Weil operator is
+\[
+ \int_0^\infty\rho(y)
+ \{2e^{-y/2}f(x)-f(x+y)-f(x-y)\}\,dy
+             -\{\log(4\pi)+\gamma_{\rm E}\}f(x).
+\]
+Its Fourier diagonal is precisely the negative of
+\eqref{eq:v114-arch-diagonal}; the diagonal integral over $y>L$
+equals $-\log\tanh(L/2)$.  Since
+\[
+ \int_0^\infty\left\{\frac1{\sinh y}
+                -\frac{\mathbf1_{y<1}}y\right\}dy=\log2,
+\]
+subtracting $\mathcal A$ leaves $-\log(2\pi)I$ and the kernel $-k$.
+The integral follows by evaluating $\log\tanh(y/2)$ with a positive
+lower cutoff and then taking its limit.  In particular the constant
+part of the logarithmic diagonal has been retained.
+The prime shifts and the pole kernel $2\cosh((x-y)/2)$ give the
+remaining terms of \eqref{eq:v118-bounded-physical-part}.
+The latter kernel is the difference of the centered rank-one
+$2\cosh\otimes\cosh$ and $2\sinh\otimes\sinh$ terms, so no pole
+sign has been removed.
+
+The function $k$ extends continuously to zero, with $k(0)=1/4$.
+The integral-kernel row and column bounds, and the contraction of
+each truncated translation, prove \eqref{eq:v118-K-bound}.
+For the pole kernel the largest row integral is
+$4\sinh(L/2)$.  Symmetry proves self-adjointness.
+
+It remains to identify the closed forms, without imposing an
+unproved endpoint condition.  Smooth compactly supported functions
+are a form core for the restricted logarithmic
+Laplacian~\cite[Theorem~3.1]{ChenWethLog}.  They are also a form core
+for the operator in Proposition~\ref{prop:v114-weil-core}.
+Indeed, approximate each finite periodic Fourier sum $f$ by smooth
+cutoffs that remove endpoint strips of width $\epsilon$.
+The discarded periodic function has $L^2$ norm $O(\epsilon^{1/2})$
+and $H^1$ norm $O(\epsilon^{-1/2})$, hence $H^s$ norm
+$O(\epsilon^{1/2-s})$ for any fixed $0<s<1/2$.
+This tends to zero in the logarithmically weighted form norm.
+The two closed lower-bounded forms therefore agree on a common form
+core.  Bounded perturbation by $\mathcal K_\lambda$ proves
+\eqref{eq:v118-log-decomposition}, including its operator-domain assertion.
+\end{proof}
+
+\begin{theorem}[Zero boundary trace of every complete Weil eigenfunction]
+\label{thm:v118-eigen-endpoint-zero}
+Fix $\lambda>1$.  Every $L^2$ eigenfunction
+$\mathsf W_\lambda u=\mu u$ has a bounded representative whose zero
+extension is continuous on $\mathbb R$.  With
+\[
+ \ell(r)=\frac1{|\log(\min\{r,0.1\})|},\qquad
+ d(x)=\min\{x,L-x\},
+\]
+there is a finite constant $C$ such that
+\begin{equation}\label{eq:v118-eigen-boundary-decay}
+ |u(x)|\le C\sqrt{\ell(d(x))}\quad(0<x<L).
+\end{equation}
+In particular its actual physical endpoints satisfy $u(0)=u(L)=0$.
+No uniform bound for $C$ as $\lambda$ grows is asserted.
+\end{theorem}
+\begin{proof}
+First we prove boundedness, without assuming a positive Sobolev gain.
+For $0<\epsilon<\min\{1,L\}$ let $\mathcal A_\epsilon$ be the
+nonnegative killed small-jump generator
+\[
+ \mathcal A_\epsilon f(x)=\int_0^\epsilon
+       \frac{2f(x)-f(x+y)-f(x-y)}{2y}\,dy
+\]
+in its closed Dirichlet-form realization, and put
+\[
+ J_\epsilon f(x)=\int_{\substack{y\in\Omega\\|x-y|\ge\epsilon}}
+                    \frac{f(y)}{2|x-y|}\,dy.
+\]
+There is an exact decomposition
+\[
+ \mathcal A=\mathcal A_\epsilon+
+       \{\log(1/\epsilon)-\gamma_{\rm E}\}I-J_\epsilon.
+\]
+The small-jump form is Markovian, including its nonnegative exterior
+killing term.  Consequently its resolvent is consistent on $L^2$
+and $L^\infty$, and
+$\|(\mathcal A_\epsilon+aI)^{-1}\|_{p\to p}\le a^{-1}$ for
+$a>0$, $p=2,\infty$.  One may obtain this directly by first cutting
+off jumps smaller than a positive number, using the contraction
+resolvent of that finite-activity killed jump generator, and then
+passing to the increasing closed forms.  Also Cauchy--Schwarz gives
+\[
+ \|J_\epsilon\|_{2\to\infty}\le(2\epsilon)^{-1/2}.
+\]
+Choose $\epsilon$ so that
+$a=\log(1/\epsilon)-\gamma_{\rm E}-\mu>C_\lambda$.
+The eigen equation becomes
+\[
+ (\mathcal A_\epsilon+aI+\mathcal K_\lambda)u=J_\epsilon u.
+\]
+The inverse on the left exists on both $L^2$ and $L^\infty$ by the
+Neumann series for
+$[I+(\mathcal A_\epsilon+aI)^{-1}\mathcal K_\lambda]^{-1}
+ (\mathcal A_\epsilon+aI)^{-1}$, with norm at most
+$(a-C_\lambda)^{-1}$.  Since $J_\epsilon u\in L^2\cap L^\infty$,
+the two series agree.  Uniqueness in $L^2$ identifies the bounded
+solution with $u$, and proves
+\[
+ \|u\|_\infty\le
+   \frac{\|u\|_2}{(a-C_\lambda)\sqrt{2\epsilon}}.
+\]
+Thus boundedness has not been inferred from the logarithmic operator
+domain alone.
+
+By Proposition~\ref{prop:v118-log-dirichlet}, the zero extension lies
+in the logarithmic Dirichlet form space and satisfies
+\[
+ L_\Delta u=2(\mu u-\mathcal K_\lambda u)\in L^\infty(\Omega),
+ \qquad u=0\quad\hbox{outside }\Omega.
+\]
+The interval satisfies an exterior uniform sphere condition.
+The boundary regularity theorem of Hern\'andez-Santamar\'ia,
+L\'opez R\'ios and Salda\~na~\cite[Theorem~1.1]{HLSLogBoundary}
+therefore gives continuity of the zero extension and
+\eqref{eq:v118-eigen-boundary-decay}.  For complex $u$, apply the
+real theorem to its real and imaginary parts.  This proves the endpoint
+assertion for every eigenfunction, independently of its spectral order.
+\end{proof}
+
+\begin{corollary}[Filtered endpoint decay and the nonzero-source obstruction]
+\label{cor:v118-ground-fejer}
+For an eigenfunction as above and $N\ge4$, define its Fej\'er endpoint
+in the actual normalized Fourier coordinates by
+\[
+ \sigma_{N-1}u(0)=L^{-1/2}
+       \sum_{|n|<N}(1-|n|/N)\widehat u(n).
+\]
+Then
+\begin{equation}\label{eq:v118-fejer-endpoint}
+ |\sigma_{N-1}u(0)|
+ \le C\sqrt{\ell(L/\sqrt N)}+\frac{\|u\|_\infty}{2\sqrt N}
+ =O_{\lambda,\mu,u}((\log N)^{-1/2}).
+\end{equation}
+For the exact repaired source with $B_\lambda=p_\lambda(0)\ne0$,
+any complete-operator eigenfunction $u$ and scalar $c$ satisfy
+\begin{equation}\label{eq:v118-ground-source-mismatch}
+ \frac{|p_\lambda(0)-cu(0)|}{|B_\lambda|}=1.
+\end{equation}
+\end{corollary}
+\begin{proof}
+The positive Fej\'er kernel in physical coordinates is
+$L^{-1}F_N(2\pi x/L)$, where
+$F_N(\theta)=N^{-1}\{\sin(N\theta/2)/\sin(\theta/2)\}^2$;
+it has integral one.  Put $h=L/\sqrt N\le L/2$.
+On $d(x)<h$, \eqref{eq:v118-eigen-boundary-decay} bounds the
+convolution by $C\sqrt{\ell(h)}$.
+On $d(x)\ge h$, $\sin(\pi x/L)\ge2d(x)/L$ gives
+\[
+ L^{-1}F_N(2\pi x/L)\le\frac{L}{4N d(x)^2},\qquad
+ \int_{d(x)\ge h}L^{-1}F_N(2\pi x/L)\,dx
+       \le\frac{L}{2Nh}=\frac1{2\sqrt N}.
+\]
+This proves \eqref{eq:v118-fejer-endpoint}.
+The mismatch identity follows from $u(0)=0$.
+\end{proof}
+
+Theorem~\ref{thm:v118-eigen-endpoint-zero} applies in particular to
+the simple even ground at $\lambda=3$.  It disproves a nonzero physical
+endpoint comparison between the repaired source and the complete
+operator's ground, while leaving their ordinary-norm overlap intact.
+It does not identify the endpoint of a finite-compression eigenvector
+on a joint growing-window and growing-cutoff diagonal.
+Nor does continuity alone prove absolute Fourier convergence or
+convergence of sharp Fourier endpoint sums: the quantitative statement
+\eqref{eq:v118-fejer-endpoint} concerns the stated positive filter.
+The finite endpoint and its graph-defect terms therefore remain
+separate from the complete eigenfunction's trace.

@@ -54,10 +54,23 @@ Canonical ChatGPT file replacements for the current LaTeX, log and notes
 failed during transfer. Those saved copies remain v1.34; use this repository
 for v1.37. No stale saved-file link is labelled current.
 
-The complete cumulative historical reproduction ZIP remains unavailable
-and has not been uploaded as a release asset. Historical materials in the
-archive and the current proof files do not reconstruct that missing ZIP.
-This is not a complete cumulative reproduction release.
+The original **v1.26 cumulative reproduction bundle has been recovered**.
+It includes both missing final λ=4 certificate directories:
+
+- [Complete even-sector evidence (`g2_simultaneous`)](archive/v1.26_snapshot/g2_simultaneous/)
+- [Complete odd-sector evidence (`g2_odd_complement`)](archive/v1.26_snapshot/g2_odd_complement/)
+- [Original cumulative ZIP and checksum](https://github.com/AlexanderEastwood/riemann/releases/tag/v1.26-evidence)
+- [Recovery provenance and replay scope](github_sync/README_v126_evidence_recovery.md)
+
+The extracted snapshot preserves every original file and its relative
+layout. Final saved-ingredient proof gates and the exact shared-head check
+were replayed successfully; this publication did not regenerate witnesses
+or rerun every residual assembly. The historical bundle is not the current
+manuscript.
+
+The complete later v1.34 cumulative ZIP remains unavailable. Restoring the
+v1.25/v1.26 positivity evidence does not reconstruct that later archive or
+constitute a complete cumulative reproduction release for the current work.
 
 ## Validation
 

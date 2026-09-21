@@ -1,0 +1,52 @@
+% Proposed proof insertion only; no numerical gate is asserted here.
+\begin{proposition}[One repaired subspace and its complete complement]
+\label{prop:v126-direction-complement}
+Let $K$ be a positive definite Hermitian form on a finite-dimensional
+complex space, let $\mathcal C\succeq0$, and put $S=K-\mathcal C$.
+Let $E$ be a subspace and write $F=E^{\perp_K}$.
+Suppose that $s\leq1$, $\sigma\geq0$, and, simultaneously on the
+indicated subspaces,
+\[
+ S|_E\succeq sK|_E,
+ \qquad \mathcal C|_F\preceq\sigma K|_F.
+\]
+Then
+\[
+ S\succeq(s-\sigma)K.
+\]
+In particular, when $E=\operatorname{span}\{v\}$ and $K(v,v)=1$,
+the first premise is the single inequality $S(v,v)\geq s$.
+\end{proposition}
+\begin{proof}
+For $x=e+f$ with $e\in E$ and $f\in F$, Cauchy--Schwarz for the
+positive semidefinite form $\mathcal C$ gives
+\begin{align*}
+ \mathcal C(x,x)
+ &\leq\bigl(\sqrt{\mathcal C(e,e)}+
+                 \sqrt{\mathcal C(f,f)}\bigr)^2\\
+ &\leq\bigl(\sqrt{1-s}\,\|e\|_K+
+                 \sqrt{\sigma}\,\|f\|_K\bigr)^2\\
+ &\leq(1-s+\sigma)(\|e\|_K^2+\|f\|_K^2)
+  =(1-s+\sigma)K(x,x).
+\end{align*}
+Subtracting from $K(x,x)$ proves the claim.  Degeneracy of
+$\mathcal C$ causes no problem, since Cauchy--Schwarz holds for
+its induced seminorm.  The constant cannot be improved under
+these premises alone: take $K=I$ on $\mathbb C^2$,
+$E=\operatorname{span}\{(1,0)\}$, and
+$\mathcal C=uu^*$ with $u=(\sqrt{1-s},\sqrt{\sigma})^T$.
+\end{proof}
+
+\paragraph{Use with two finite trials.}
+For a coercive complete tail $T$ and any finite trial $G$ with
+invertible physical head $V$, let
+$K=G^*WG$, $r=QWG$, and $\mathcal C=r^*T^{-1}r$.
+The exact Schur matrix in these head coordinates is $S=K-\mathcal C$.
+A second finite trial with the same physical head gives the same $S$.
+Consequently a directional estimate from the second trial may be combined
+with a complete complement estimate from the first, provided that both
+are normalized by the \emph{same first-trial metric} $K$.
+An available complete upper bound $\mathcal C\preceq U$ permits the
+complement premise to be verified as
+$Z^*(\sigma K-U)Z\succeq0$, where $Z$ spans the exact
+$K$-orthogonal complement.  No numerical eigenvector assumption is needed.

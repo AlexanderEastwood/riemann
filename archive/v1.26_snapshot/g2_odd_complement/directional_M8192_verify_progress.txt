@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/0cd0bd59ceda/output/g2_inverse_refinement/directional_tail_repair.py", line 60, in <module>
+    if s.mode in ['verify','both']:verify(s.M,s.steps,s.bits,s.J)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0cd0bd59ceda/output/g2_inverse_refinement/directional_tail_repair.py", line 52, in verify
+    rho=arb(data['rho']);assert data['inner_sha256']==ihash and arb(data['mu'])==mu
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

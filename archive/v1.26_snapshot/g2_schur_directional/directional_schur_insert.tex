@@ -1,0 +1,157 @@
+\subsection*{A directional certificate for the entire Fourier complement}
+
+The residual Gram in \eqref{eq:v114-schur-residual} can be enclosed
+without replacing its small directions by a scalar norm.  We retain
+the actual matrix \eqref{eq:v114-b-d}, including its separate diagonal.
+All adjoints below are the usual coordinate adjoints in the fixed
+orthonormal Fourier basis; quadratic-form order is unchanged by our
+first-slot-linear convention.
+
+\begin{proposition}[Moment enclosure of the remote residual]
+\label{prop:v116-remote-moment}
+Fix $\lambda$, integers $1\le M<J$, and $r\ge1$.  Let
+$G:\mathbb C^d\to E_M$ be any coefficient matrix, with row $G_m$ at
+Fourier index $m$, and choose $B_*\ge\sup_n|b_n|$, for example
+$B_*=B_\lambda^{\rm mat}$ from \eqref{eq:v114-b-bound}.
+Define the $r$-by-$d$ moment matrices by
+\begin{equation}\label{eq:v116-moments}
+ S_j=\sum_{m=-M}^M(m/M)^jG_m,\qquad
+ T_j=\sum_{m=-M}^M(m/M)^j b_mG_m,
+ \qquad 0\le j<r,
+\end{equation}
+using $0^0=1$.  Set
+\begin{align}
+ H_{jk}&=M^{j+k}\{1+(-1)^{j+k}\}
+                  \zeta(j+k+2,J+1),\notag\\
+ c_{M,r}&=\sum_{m=-M}^M(|m|/M)^{2r},\notag\\
+ \delta_{M,J,r}^{2}
+ &=\frac{8B_*^2c_{M,r}M^{2r}\zeta(2r+2,J+1)}
+                    {(1-M/(J+1))^2},
+ \label{eq:v116-moment-constants}
+\end{align}
+where $\zeta(s,a)=\sum_{k\ge0}(k+a)^{-s}$ is the Hurwitz zeta
+function.  For every $\tau>0$, the explicitly finite matrix
+\begin{equation}\label{eq:v116-remote-bound}
+ U_J=(1+\tau)\{2B_*^2S^*HS+2T^*HT\}
+       +(1+\tau^{-1})\delta_{M,J,r}^{2}G^*G
+\end{equation}
+satisfies
+\[
+ (Q_J\mathsf W_\lambda G)^*(Q_J\mathsf W_\lambda G)\preceq U_J.
+\]
+The assertion also holds on either normalized parity sector, provided
+the moments are those of the corresponding full Fourier coefficients.
+\end{proposition}
+\begin{proof}
+Since $|n|>J>M\ge|m|$, no diagonal entry occurs.  The finite geometric
+identity for $(n-m)^{-1}$ gives exactly
+\begin{align*}
+ (\mathsf W_\lambda G)_n&=A_n+E_n,\\
+ A_n&=\sum_{j=0}^{r-1}\frac{M^j}{n^{j+1}}(b_nS_j-T_j),\\
+ E_n&=\sum_{m=-M}^M\left(\frac mn\right)^r
+                         \frac{b_n-b_m}{n-m}G_m.
+\end{align*}
+The matrix $H$ is the Gram matrix of the sequences
+$M^j n^{-j-1}$ on $|n|>J$; pairing the two signs of $n$ proves the
+formula in \eqref{eq:v116-moment-constants} and $H\succeq0$.
+For a column $x$, apply
+$|b_na_n-t_n|^2\le2B_*^2|a_n|^2+2|t_n|^2$ and sum over the remote
+indices.  This bounds the Gram of $A$ by
+$2B_*^2S^*HS+2T^*HT$.
+
+For the remainder, Cauchy--Schwarz in $m$ yields
+\[
+ |E_nx|^2\le
+ \frac{4B_*^2(M/|n|)^{2r}c_{M,r}}{(|n|-M)^2}\|Gx\|^2.
+\]
+Use $|n|-M\ge|n|(1-M/(J+1))$ and sum over both tails.
+The resulting bound is
+$\sum_{|n|>J}|E_nx|^2\le\delta_{M,J,r}^{2}\|Gx\|^2$;
+this accounts for the factor $8$ in
+\eqref{eq:v116-moment-constants}.  Finally apply
+$|a+e|^2\le(1+\tau)|a|^2+(1+\tau^{-1})|e|^2$ before summing.
+Every estimate is a quadratic-form inequality for arbitrary $x$, so
+it proves the stated matrix order, not merely entrywise bounds.
+
+For completeness, an even normalized parity vector has full
+coordinates $G_0=v_0$, $G_m=G_{-m}=v_m/\sqrt2$ for $m>0$;
+an odd vector has $G_0=0$, $G_m=-G_{-m}=v_m/\sqrt2$.
+As $b$ is odd, $S_j=0$ for odd $j$ and $T_j=0$ for even $j$ in the
+even sector, with the opposite zeros in the odd sector.
+These zeros are exact.  The two tails are already counted in $H$;
+no further factor of two is inserted in the parity calculation.
+\end{proof}
+
+\begin{proposition}[Diagonal-weighted Schur certificate]
+\label{prop:v116-directional-schur}
+Write $P=P_N$, $Q=I-P$ and
+$F=P\mathsf W_\lambda P$, $B=Q\mathsf W_\lambda P$,
+$T=Q\mathsf W_\lambda Q$.  Suppose an independent form estimate gives
+\[
+ T\succeq D_g:=\operatorname{diag}_{|n|>N}(g_{|n|})
+       \succeq\gamma I>0,
+\]
+where $g_k$ is nondecreasing for $k>N$; the estimate of
+Proposition~\ref{prop:v116-diagonal-inverse} is one source of such a
+sequence.  Let $N<M<J$, let $Z:E_N\to E_M\cap Q\mathcal H$ be any
+finite matrix, and put
+\[
+ G=I_{E_N\hookrightarrow E_M}-Z,\qquad
+ K_Z=F-B^*Z-Z^*B+Z^*TZ.
+\]
+For $N<|n|\le J$ compute the rows
+$R_n=(\mathsf W_\lambda G)_n$ using the complete actual matrix,
+and form
+\begin{equation}\label{eq:v116-directional-lower}
+ \mathcal L_Z=K_Z-
+     \sum_{N<|n|\le J}\frac{R_n^*R_n}{g_{|n|}}
+                    -\frac{U_J}{g_{J+1}},
+\end{equation}
+with $U_J$ from Proposition~\ref{prop:v116-remote-moment}.
+Then the exact Schur complement satisfies
+$F-B^*T^{-1}B\succeq\mathcal L_Z$.
+In particular, a certified inequality
+$\mathcal L_Z\succeq-\varepsilon I$, $\varepsilon\ge0$, implies
+$\mathsf W_\lambda\succeq-\varepsilon I$ on the entire form domain.
+The same implication holds after restriction to either parity sector.
+\end{proposition}
+\begin{proof}
+The cross operator $B$ is bounded by
+Proposition~\ref{prop:v114-weil-core}; finite $Z$ has range in the
+operator domain.  Thus $R=B-TZ=Q\mathsf W_\lambda G$ is well-defined.
+Inverse order gives $T^{-1}\preceq D_g^{-1}$.  For unbounded
+positive operators this follows, for example, by comparing the
+variational formulas for their inverse quadratic forms; the positive
+lower bound $\gamma$ makes both inverses bounded.  The exact
+verified-solve identity therefore gives
+\[
+ F-B^*T^{-1}B=K_Z-R^*T^{-1}R
+                  \succeq K_Z-R^*D_g^{-1}R.
+\]
+Split the last quadratic form into $N<|n|\le J$ and $|n|>J$.
+Monotonicity gives $g_{|n|}^{-1}\le g_{J+1}^{-1}$ on the remote part,
+where \eqref{eq:v116-remote-bound} applies.  This proves
+\eqref{eq:v116-directional-lower}.  Writing $\mathfrak w_\lambda$ for the closed form of
+$\mathsf W_\lambda$, completion of the square gives, for head $x$
+and form-domain tail $y$,
+\[
+ \mathfrak w_\lambda[x+y]
+ =\|T^{1/2}(y+T^{-1}Bx)\|^2
+       +\langle(F-B^*T^{-1}B)x,x\rangle.
+\]
+Interpreted as the closed form on its form domain, this is at least
+$-\varepsilon\|x\|^2\ge-\varepsilon\|x+y\|^2$.
+For a calculation confined to one parity sector, all ingredients
+are taken in that sector and the same proof applies.
+\end{proof}
+
+The use of $g_{|n|}$ on the intervening rows, and of the full moment
+Grams on the remote rows, is substantive: replacing either by a
+single operator norm can destroy the small head directions that the
+certificate must preserve.  The finite rows in
+\eqref{eq:v116-directional-lower} include the true diagonal $d_n$;
+only the disjoint remote rows use the divided-difference expansion.
+These propositions supply a finite sufficient test, not a
+uniform-in-$\lambda$ positivity theorem.  A passed test at one window
+does not close G2 or justify any transfer without its existing graph
+defect.

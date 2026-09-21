@@ -1,0 +1,159 @@
+\subsection*{Fixed-window spectral ordering and ordinary ground overlap}
+
+The fixed-window computer-assisted positivity certificate can be shifted to count its low
+eigenvalues.  The thresholds in the two reflection sectors need not
+coincide.  In particular, an even trial vector only sees the even spectral
+gap when its overlap with the ground state is estimated.
+
+\begin{proposition}[A fixed-window simple even ground state]
+\label{prop:v117-ground-order}
+Let $\mu_0\le\mu_1\le\cdots$ be the eigenvalues, counted with
+multiplicity, of the complete canonical operator $\mathsf W_3$.
+Then its ground state is simple and even, and
+\begin{equation}\label{eq:v117-ground-order}
+ 0<\mu_0<3.644\cdot10^{-38},\qquad \mu_1>10^{-36}.
+\end{equation}
+Within the even sector alone, every eigenvalue other than $\mu_0$
+exceeds $10^{-34}$.  These statements concern the complete operator,
+including its infinite Fourier complement, at the single window
+$\lambda=3$.
+\end{proposition}
+\begin{proof}[Shifted inertia and a matching trial direction]
+For a threshold $a>0$ replace every diagonal $d_n$ by $d_n-a$ and
+every tail lower weight $g_n$ by $g_n-a$.  Keep the same exact dyadic
+witness $Z$ and the same head, intermediate and remote cutoffs as in
+Proposition~\ref{prop:v116-window-positive}.  If $T_a=T-aI$, then
+\[
+ K_{Z,a}=K_{Z,0}-a(I+Z^*Z),\qquad
+ R_a=B-T_aZ=R_0+aZ.
+\]
+Thus all intermediate residual rows change and are recomputed.  The
+remote moment bound is unchanged, because those rows have no diagonal
+entry and $G=\binom{I_{\rm head}}{-Z}$ is unchanged.  The diagonal inverse comparison gives
+\[
+ S_a:=F-aI-B^*T_a^{-1}B\succeq
+ L_a:=K_{Z,a}-\sum_{N<n\le J}\frac{R_{a,n}^*R_{a,n}}{g_n-a}
+                      -\frac{U_J}{g_{J+1}-a}.
+\]
+The sum uses normalized parity rows.  All denominators are strictly
+positive by the earlier entire-tail bounds.
+
+The signed interval LDL certificate for the even lower matrix at
+$a_{\rm e}=10^{-34}$ has $257$ nonzero pivots, exactly one of which
+is negative (zero-based index $24$).  For the odd lower matrix at
+$a_{\rm o}=10^{-36}$ all $512$ pivots are strictly positive.
+The complete signed elimination retains negative pivots with their
+signs; it does not stop at the first negative pivot.  The exact dyadic
+witnesses and every pivot enclosure are retained in the bundle;
+\texttt{certify\_shifted\_inertia.py} recomputes all shifted residual rows.
+The exact parameters are those of Proposition~\ref{prop:v116-window-positive}:
+$(N,M,J,r)=(256,512,4096,80)$ for the even sector and
+$(512,1024,4096,100)$ for the odd sector. Both certificates pass
+at 768 bits and again at 896 bits using identical dyadic witnesses.
+By finite-dimensional min--max (see also \cite[Section~4.3]{Teschl2009}), $S_{a_{\rm e}}$ has at most one
+nonpositive eigenvalue, because the second eigenvalue of its lower
+matrix is strictly positive.  The odd Schur matrix is positive definite.
+
+A matching negative even direction is supplied by the existing
+finite-supported candidate of
+Proposition~\ref{prop:v112-finite-certificate}. More precisely, in that
+$N=64$ certificate let $u$ be its normalized even vector, let $Q$ project
+onto its even orthogonal complement. Set
+$W_{64}=P_{64}\mathsf W_3P_{64}$, $\alpha=\ip{W_{64}u}{u}$,
+$C=QW_{64}Q$ on that complement, and $r=QW_{64}u$. Write $A=C-\alpha I$, $z=A^{-1}r$, $q=\norm z$ and
+$E=\ip zr$.  The vector
+\[
+ v=\frac{u-z}{\sqrt{1+q^2}}
+\]
+has norm one and belongs to the finite Fourier core.  Direct expansion
+gives its exact complete-form Rayleigh value
+\[
+ \beta=QW_3(v,v)=\alpha-\frac{E}{1+q^2}.
+\]
+The previously certified enclosures imply
+\[
+ \alpha<5.312382\cdot10^{-38},\quad
+ E>1.668982\cdot10^{-38},\quad q<0.000216,
+ \qquad \beta<3.644\cdot10^{-38}.
+\]
+The last strict scalar comparison is separately checked by
+\texttt{certify\_ground\_overlap\_constants.py}.  Because $v$ has
+finite support, its finite-compression Rayleigh value equals its
+complete-form value exactly.  No approximation of the omitted output
+coefficients is used in this identity.  In particular $\beta<a_{\rm e}$.
+
+On the closed form domain, square completion reads
+\[
+ q_a[x+y]=\ip{S_ax}{x}
+       +\norm{T_a^{1/2}(y+T_a^{-1}Bx)}^2.
+\]
+The map $(x,y)\mapsto(x,y+T_a^{-1}Bx)$ is boundedly invertible and
+preserves that domain.  It transfers the negative index to $S_a$;
+also $\ker(\mathsf W_3-aI)$ is isomorphic to $\ker S_a$.
+The negative even trial direction therefore makes the first even
+Schur eigenvalue strictly negative, while its second is strictly
+positive.  There is no even eigenvalue exactly at $a_{\rm e}$, and
+exactly one even eigenvalue lies below it, counted with multiplicity.
+Every odd eigenvalue exceeds $a_{\rm o}$.  The established compact
+resolvent makes these full spectral statements.  Finally
+Proposition~\ref{prop:v116-window-positive} supplies $\mu_0>0$,
+and min--max applied to $v$ supplies $\mu_0\le\beta$.
+Since $\beta<a_{\rm o}<a_{\rm e}$, the unique even low eigenvalue is
+the simple ground state of the whole operator.  This proves
+\eqref{eq:v117-ground-order} and the stronger even-sector threshold.
+\end{proof}
+
+\begin{corollary}[An ordinary ground-overlap bound at one window]
+\label{cor:v117-ground-overlap}
+For the normalized rational candidate $u$ of
+Proposition~\ref{prop:v112-finite-certificate} and the complete unit
+ground vector $\xi_0$ at $\lambda=3$,
+\[
+ \sin\angle(u,\xi_0)<0.01931.
+\]
+The same strict upper bound holds for the normalized exact $N=64$
+source projection after the already certified normalization error is
+included.  This is an ordinary Hilbert-space bound; it asserts no
+endpoint comparison with $\xi_0$.
+\end{corollary}
+\begin{proof}
+The improved trial $v$ in the proof above is even.  In its spectral
+expansion, every non-ground component has energy greater than
+$a_{\rm e}=10^{-34}$, and the ground energy is positive.  Hence
+\[
+ \sin\angle(v,\xi_0)
+ <\sqrt{3.644\cdot10^{-38}/10^{-34}}.
+\]
+Also $z\perp u$, so the norm of the difference of the two rank-one
+orthogonal projections onto $u$ and $v$ equals
+$q/\sqrt{1+q^2}<0.000216$.  The triangle inequality for these
+projectors proves
+\[
+ \sin\angle(u,\xi_0)
+ <0.000216+\sqrt{3.644\cdot10^{-4}}
+ <0.019305264<0.01931.
+\]
+For the unnormalized rational candidate $c$,
+Proposition~\ref{prop:v113-source-certificate} gives
+$\|P_{64}p_3-c\|<\varepsilon:=2.60\cdot10^{-36}$, while the
+exact rational norm calculation gives $\|c\|>0.65172555$.
+Writing $\rho=\varepsilon/\|c\|$, elementary ball geometry yields
+\[
+ \left\|\frac{P_{64}p_3}{\|P_{64}p_3\|}-\frac c{\|c\|}\right\|^2
+ \le\frac{2\rho^2}{1+\sqrt{1-\rho^2}}<(4\cdot10^{-36})^2.
+\]
+Indeed the real inner product of these two unit vectors is positive
+and at least $\sqrt{1-\rho^2}$, by minimizing the squared distance
+from $c$ along the positive ray through $P_{64}p_3$.
+This normalization error fits within the final margin.  The ordinary
+norm controls projector distance but not the physical endpoint
+functional; the earlier endpoint obstruction is therefore unchanged.
+\end{proof}
+
+This proves parity, simplicity and quantitative ordinary overlap at one
+fixed window. It does not identify the unprojected source with the
+ground vector. There is still no uniform family of spectral thresholds
+or source overlap estimates along unbounded windows. Endpoint stability,
+the existing sampler graph defect and full-strip transfer requirements
+remain separate; G2 and RH are not closed by this result.
+

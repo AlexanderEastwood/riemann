@@ -1,0 +1,132 @@
+{
+  "status": "CERTIFIED_HEAD_LOWER_ERROR",
+  "source": "simultaneous_odd_M4096_s4_normalized_ingredients_b768.json",
+  "bits": 768,
+  "parity": "odd",
+  "M": 4096,
+  "J": 65536,
+  "steps": 4,
+  "best": {
+    "tau_exp": -2,
+    "epsilon_exponent": 12,
+    "epsilon": "1e-12",
+    "gate": {
+      "status": "PASS",
+      "pivots": 16,
+      "smallest_lower_pivot": "[0.96884201537981959088297855361908514950702850838900312489366066342 +/- 2.69e-66]"
+    }
+  },
+  "checks": [
+    {
+      "tau_exp": -5,
+      "epsilon_exponent": 1,
+      "epsilon": "1e-1",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[1157.1534454965857366479756922912654532795324947200556388633562597 +/- 6.01e-64]"
+      }
+    },
+    {
+      "tau_exp": -4,
+      "epsilon_exponent": 2,
+      "epsilon": "1e-2",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[116.59655799298570329044748592609590052148387292368642428564395255 +/- 2.09e-63]"
+      }
+    },
+    {
+      "tau_exp": -3,
+      "epsilon_exponent": 7,
+      "epsilon": "1e-7",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[0.97431108540599585152159076312967038148267277009606363459777092896 +/- 8.52e-67]"
+      }
+    },
+    {
+      "tau_exp": -2,
+      "epsilon_exponent": 12,
+      "epsilon": "1e-12",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[0.96884201537981959088297855361908514950702850838900312489366066342 +/- 2.69e-66]"
+      }
+    },
+    {
+      "tau_exp": -1,
+      "epsilon_exponent": 12,
+      "epsilon": "1e-12",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[0.96938119378857966656498598717583535266073765219681855703489136552 +/- 2.06e-66]"
+      }
+    },
+    {
+      "tau_exp": 0,
+      "epsilon_exponent": 9,
+      "epsilon": "1e-9",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[0.97710842236448125377438778728255133794176393657412103562744769095 +/- 9.29e-68]"
+      }
+    },
+    {
+      "tau_exp": 1,
+      "epsilon_exponent": 3,
+      "epsilon": "1e-3",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[12.526604338010836264797052927541190111825414193204431977201736891 +/- 1.92e-66]"
+      }
+    },
+    {
+      "tau_exp": 2,
+      "epsilon_exponent": 1,
+      "epsilon": "1e-1",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[1157.5480941616177567508613332303283247025520460731712657743802399 +/- 9.02e-64]"
+      }
+    },
+    {
+      "tau_exp": 3,
+      "epsilon_exponent": -1,
+      "epsilon": "1e+1",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[115676.08693654656956572919710895768679645504305456086395398536890 +/- 1.89e-60]"
+      }
+    },
+    {
+      "tau_exp": 4,
+      "epsilon_exponent": -2,
+      "epsilon": "1e+2",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[1156752.0572290883150250892564656817927062755966609631331363185618 +/- 4.51e-59]"
+      }
+    },
+    {
+      "tau_exp": 5,
+      "epsilon_exponent": -3,
+      "epsilon": "1e+3",
+      "gate": {
+        "status": "PASS",
+        "pivots": 16,
+        "smallest_lower_pivot": "[11567511.760154452577514049255197219080222190121913120475671456317 +/- 3.11e-58]"
+      }
+    }
+  ],
+  "scope": "S_infinity >= -epsilon I on the ordinary outer head; not a positivity result or growing-window estimate. A shifted complete form square gives the same lower error for the full parity operator."
+}

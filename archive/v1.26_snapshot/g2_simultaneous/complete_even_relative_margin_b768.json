@@ -1,0 +1,42 @@
+{
+  "certified_dimensionless_margin_lower": "62629/100000",
+  "margin_gate": {
+    "status": "PASS",
+    "pivots": 17,
+    "smallest_lower_pivot": "[4.5423039584329218875000078861614827688856190368508915014499939532e-5 +/- 4.04e-70]"
+  },
+  "selected_tau": "1/10",
+  "status": "PASS_COMPLETE_EVEN_RELATIVE_MARGIN",
+  "bits": 768,
+  "head_dimension": 17,
+  "proposal_support": 4096,
+  "verification_cutoff": 65536,
+  "saved_v124_physical_head_direction_headroom": "[12.128485307699947992130806576151784189099902257043746209568668717526006839339336 +/- 1.99e-79]",
+  "trial_witness_sha256": "072322123c7165bd789534e69b237cf941a60f8230dae3e28a30be5cbe860ee1",
+  "diagnostics": {
+    "generalized_margin": 0.6262963600887284,
+    "norm_U_over_min_eigenvalue_K": 0.41367540488450233,
+    "min_eigenvalue_lower_over_min_eigenvalue_K": 0.6666316615941174,
+    "log10_condition_V": 37.518657038319915,
+    "per_direction_relative_corrections": [
+      6.749175645753045e-18,
+      8.301743250706644e-18,
+      2.5505715308105002e-17,
+      8.145343723692465e-15,
+      9.845798316449256e-14,
+      7.216696399713619e-13,
+      1.2530723379215277e-12,
+      3.673865343328499e-12,
+      5.201382531279431e-12,
+      1.4315400922871843e-11,
+      1.995089721641489e-11,
+      4.252585890666916e-11,
+      8.398388612500634e-11,
+      1.4469702912789386e-09,
+      7.051332650936727e-07,
+      0.0027693538999429097,
+      0.3737036399112717
+    ]
+  },
+  "scope": "Relative COMPLETE correction bound for this matrix of trials at lambda4 only. Not an ordinary eigenvalue gap or growing-window estimate. Numbers under diagnostics are floating evaluations, distinct from the exact rational interval-certified margin."
+}

@@ -1,0 +1,233 @@
+\subsection*{A simultaneous complete Schur certificate}
+
+A finite trial may be chosen in coordinates adapted to its head energy;
+the final certificate must still use its actual head and every residual
+cross term.  This distinction is essential when some ordinary head
+energies are extremely small.
+
+\begin{proposition}[Simultaneous trial and ordinary-error certificate]
+\label{prop:v125-simultaneous}
+Let the complete closed Weil form have finite head and coercive tail
+$T$, and let $G$ be a matrix of finite Fourier trial columns.  Write
+$V=P_{16}G$, $E=Q_{16}\mathsf W_4G$ and $K=G^*\mathsf W_4G$.
+Then
+\begin{equation}\label{eq:v125-simultaneous}
+ V^*S_\infty V=K-E^*T^{-1}E.
+\end{equation}
+Suppose $V$ is square and invertible, and a complete matrix upper bound
+$\mathcal U\succeq E^*T^{-1}E$ is certified.  If
+$K-\mathcal U\succ0$, the entire parity form is strictly positive.
+More generally, if $\varepsilon\ge0$ and
+\[
+ K-\mathcal U+\varepsilon V^*V\succeq0,
+\]
+then $S_\infty\succeq-\varepsilon I$ and the entire parity form is
+bounded below by $-\varepsilon I$ in ordinary norm.
+\end{proposition}
+\begin{proof}
+Apply Proposition~\ref{prop:v124-posterior-identity} to every linear
+combination of the columns.  Invertibility of the actual head $V$
+transfers the resulting congruent inequality to $S_\infty$.
+For a head vector $x$ and tail vector $y$, the closed form identity is
+\[
+ q_{\mathsf W_4}[x,y]
+ =\ip{S_\infty x}{x}
+   +\norm{T^{1/2}(y+T^{-1}Bx)}^2.
+\]
+The head-to-tail map $B$ is bounded because the head is finite
+and its Fourier vectors belong to the operator domain.  Thus the
+completion is valid on the form domain.  The tail square is
+nonnegative, and $\norm{x}\le\norm{(x,y)}$.  Strict head and tail
+positivity also imply fixed-window coercivity by the bounded
+invertible triangular change in this identity.  No quantitative
+ordinary spectral gap is identified with an $LDL^*$ pivot.
+\end{proof}
+
+\begin{proposition}[Retaining a joint remote Gram]
+\label{prop:v125-joint-remote}
+In the finite-row structured inverse bound, put
+$Y=D_g^{-1/2}Q_JRC^*$ and $y=D_g^{-1/2}Q_Jk$, and let
+$H=C(h-Z^*k-R_J^*D_g^{-1}k_J)$ be the retained mixed matrix.
+Suppose one joint enclosure and a lower bound satisfy
+\[
+ \Gamma=\begin{pmatrix}\Gamma_{YY}&\Gamma_{Yk}\\
+ \Gamma_{Yk}^*&\Gamma_{kk}\end{pmatrix}
+ \succeq [Y,y]^*[Y,y],\qquad 0\preceq L_Y\preceq Y^*Y,
+ \qquad A_0=\mu I+L_Y-\Gamma_{YY}\succ0.
+\]
+Then the complete inverse correction is bounded by
+\begin{equation}\label{eq:v125-joint-remote}
+ E^*T^{-1}E\preceq V_J+\Gamma_{kk}
+ +(H-\Gamma_{Yk})^*A_0^{-1}(H-\Gamma_{Yk}).
+\end{equation}
+Here $V_J=k_J^*D_g^{-1}k_J$.  One may take $L_Y=0$.
+If $\Gamma_{YY}\preceq\rho I$ with $\rho<\mu$, replacing
+$A_0^{-1}$ by $(\mu-\rho)^{-1}I$ gives a simpler valid bound.
+\end{proposition}
+\begin{proof}
+For an outer coefficient vector $x$, the remote portion of the old
+structured majorant is
+\[
+ \norm{yx}^2+\mu^{-1}\norm{Hx-Y^*yx}^2
+ =\sup_z\{\norm{yx-Yz}^2-\norm{Yz}^2
+       +2\Re\ip{Hx}{z}-\mu\norm z^2\}.
+\]
+Apply the joint upper Gram to $(-z,x)$ and the lower bound $L_Y$
+to $\norm{Yz}^2$, then complete the finite $A_0$ square.
+This proves the claim for every $x$.  The bounded finite-column maps
+justify all remote pairings.  The cross block must come from the
+\emph{same joint} Gram; unrelated diagonal upper bounds do not
+justify an invented mixed term.
+\end{proof}
+
+\begin{proposition}[The complete even form at $\lambda=4$]
+\label{prop:v125-even-complete}
+The canonical complete Weil form $\mathsf W_4$ restricted to its
+even parity space is strictly positive on every nonzero vector
+in its form domain, and is bounded below by a positive constant
+at this fixed window.
+\end{proposition}
+\begin{proof}[Frozen matrix certificate]
+Keep the outer head $0\le n\le16$ and the complete tail certified
+in Proposition~\ref{prop:v120-lambda4-tail}.  The archived matrix
+trial has $17$ columns and support through $M=4096$.  Its exact
+dyadic base and correction coefficients define $G$; the actual
+head $V=P_{16}G$ is certified invertible.  The proposal first scales
+the old finite trial by its head-energy $LDL^*$ factors, rounds
+that base to exact dyadics, and uses $16$ preconditioned finite CG
+steps at $512$ bits for each column.  Neither CG convergence nor
+its recursive residual enters the proof.
+
+Recompute the unshifted $K=G^*\mathsf W_4G$ and
+$E=Q_{16}\mathsf W_4G$ at $768$ and $896$ bits from the same
+frozen inputs.  Retain all cross-Grams through $J=65536$ and apply
+the order-$64$ moment bound to the entire trial for every omitted
+row.  The saved shifted inner factors have $N=512$, support $1024$,
+$\mu=0.9999999999$ and complete remote bound
+$\rho<0.165102333$.  Inverse order is used only for the residual
+inverse, so the trial energy and residual stay unshifted.
+For $\tau=1/10$, equation~\eqref{eq:v120-structured-finite-rows}
+gives the complete matrix upper bound $\mathcal U_\tau$.
+All $17$ interval $LDL^*$ pivots of $K-\mathcal U_\tau$ are positive;
+the smallest exceeds $0.7645944101$ in these saved head coordinates.
+Both precision replays give this strict gate.  This number certifies
+sign and is not an ordinary-norm eigenvalue bound.
+
+The verifier checks the actual head determinant, exact dyadic
+reconstruction, inner-certificate provenance, positivity of the
+far diagonal, and nine independently assembled physical rows for
+every column.  The complete remote moment includes the zero-mode
+normalization and both Fourier signs through the parity basis.
+Proposition~\ref{prop:v125-simultaneous} therefore proves positivity
+of the entire even form, not only a Fourier compression.
+\end{proof}
+
+A common remote Gram for the padded inner source $[I;-Z]C^*$ and
+this trial also supplies the cross centre in
+Proposition~\ref{prop:v125-joint-remote}.  Its scalar-denominator
+certificate has all $17$ pivots positive, the smallest greater than
+$0.7892519172$; using the full finite denominator improves that
+smallest pivot to more than $0.7892519657$.  This is an additional
+fixed-witness check, not needed for the preceding even sign proof.
+The whole-operator conclusion comes from a simultaneous matrix
+inequality and complete tail control; separately positive directions
+would not suffice.
+
+The comparison also has a certified dimensionless margin:
+\begin{equation}\label{eq:v125-relative-margin}
+ \mathcal U_{1/10}\preceq
+ \left(1-\frac{62629}{100000}\right)K.
+\end{equation}
+Interval $LDL^*$ verifies the equivalent positive matrix at both
+precisions.  Thus the generalized relative margin exceeds $0.62629$;
+unlike a smallest ordinary eigenvalue or a coordinate pivot, this
+ratio is invariant under an invertible head congruence.  On the
+original physical head direction from
+Proposition~\ref{prop:v124-positive-direction}, this new matrix trial
+has certified headroom greater than $12.1284$.  Its trial is different
+from the earlier single-direction trial, whose headroom was about
+$22.71$; changing the trial changes this diagnostic while leaving
+$S_\infty(v,v)$ unchanged.
+
+The analogous odd-head bounds tested here are inconclusive.  The
+exact statement established so far is positivity of the complete
+even sector at $\lambda=4$; it is not yet
+$\mathsf W_4\succeq0$ on both sectors.  No finite list of such
+fixed-window statements implies the cofinal estimate needed for RH.
+
+\subsection*{What the present diagonal majorant costs as the window grows}
+
+\begin{proposition}[Exponential cutoff cost of the scalar far bound]
+\label{prop:v125-cutoff-cost}
+Fix $0\le c<1$, put $L=2\log\lambda$, and use the present far
+weights
+\[
+ g_{N+1}=(1-c)\{\log((N+1)/L)-E_L(2\pi(N+1)/L)\}
+               -\kappa_{\lambda,N},
+ \qquad \kappa_{\lambda,N}\ge M_{\phi,\lambda}
+                    \ge\|\mathsf T_{{\rm pr},\lambda}\|.
+\]
+If $g_{N+1}>0$, then
+\begin{equation}\label{eq:v125-cutoff-cost}
+ N+1>L\exp\!\left(\frac{M_{\phi,\lambda}}{1-c}\right).
+\end{equation}
+Consequently, along any unbounded family using these positive weights,
+\[
+ \liminf_{\lambda\to\infty}
+ \frac{\log((N(\lambda)+1)/L)}{\lambda}\ge\frac1{1-c}.
+\]
+This is a cost of this particular scalar diagonal majorant, not a
+lower bound on the cutoff required by every possible argument.
+\end{proposition}
+\begin{proof}
+The error $E_L$ is positive, so positivity of $g_{N+1}$ gives
+$(1-c)\log((N+1)/L)>\kappa_{\lambda,N}\ge M_{\phi,\lambda}$.
+Use Proposition~\ref{prop:v119-prime-scale}, which proves
+$\|\mathsf T_{{\rm pr},\lambda}\|/\lambda\to1$, for the limit.
+\end{proof}
+
+For $c=10^{-8}$, freshly evaluating the physical weighted prime bound
+and the parity constants at each window gives the following smallest
+integer $N$ for which the stated $g_{N+1}$ is positive.  These are
+certificates for the remote block only; they do not certify the
+intervening inner head or its inverse factors.
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$\lambda$ & $M_{\phi,\lambda}$ (rounded) & even $N$ & odd $N$\\
+\midrule
+3&2.980079&44&209\\
+4&4.624042&283&1360\\
+5&6.145139&1502&7224\\
+6&7.644648&7488&36021\\
+8&10.306338&124442&598623\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each threshold has positive interval margin, while its preceding
+integer has negative margin; monotonicity in $N$ proves minimality
+for this formula.  The displayed prime values are rounded summaries,
+not the outward endpoints used by the verifier.
+
+The appropriate whole-head diagnostic is
+$1-\lambda_{\max}(\mathcal U,K)$, with $K\succ0$ and a
+\emph{complete} inverse upper bound $\mathcal U$.  The separately
+useful ratios $\lambda_{\min}(K-\mathcal U)/\lambda_{\min}(K)$ and
+$\|\mathcal U\|/\lambda_{\min}(K)$ depend on the chosen coordinates;
+they should be recorded with the head dimension and condition of
+its congruence.  A strong single direction cannot distinguish all
+possible causes of a weak whole-head margin.  For example,
+\[
+ K=\operatorname{diag}(1,\epsilon),\qquad
+ U=\operatorname{diag}(\delta,\epsilon(1-\eta)),
+ \quad 0<\epsilon,\delta,\eta<1,
+\]
+has generalized margin $\min(1-\delta,\eta)$, while the headroom
+in its first direction is $1/\delta$ and the condition of a
+normalizing congruence is $\epsilon^{-1/2}$.  These parameters
+may vary independently.  The actual error terms
+$\alpha_\lambda$, $e_\lambda^2$ and $t_\lambda^2/\mu_\lambda$
+still require complete window-specific witnesses.  The same
+numerical cutoff or moment order may be used at different windows
+only after its inequalities are verified afresh.
+

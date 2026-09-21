@@ -1,0 +1,247 @@
+\subsection*{Complete mixed correlations and a monotone head refinement}
+
+The successful far-energy comparison in
+Proposition~\ref{prop:v122-directional-far} leaves a mixed term.
+The next estimate includes both the omitted input and the output
+outside the retained Fourier rows. These are different contributions.
+
+\begin{proposition}[A directional enclosure of the complete mixed term]
+\label{prop:v123-mixed-tail}
+Use the factors of Proposition~\ref{prop:v122-refined-structured},
+and put
+\[
+ A=D_g^{-1/2}UD_g^{-1/2},\quad H=A-I,\quad
+ Y=D_g^{-1/2}RC^*,\quad y=D_g^{-1/2}k,\quad d=C(h-Z^*k).
+\]
+Here $A$ is represented by its bounded closed form and
+$0\preceq H\preceq(m-1)I$. Let $P$ be an orthogonal Fourier
+prefix projection on the inner far tail, $Q=I-P$, $p=Py$ and
+$q=Qy$. Suppose
+\[
+ \norm q^2\le E,\qquad 0\preceq QHQ\preceq\nu Q,
+ \qquad 0\le\nu<m.
+\]
+Set $v=\norm p^2$, $a=\ip{Hp}{p}$ and
+\[
+ b=d-Y^*(I-H/m)y,\qquad
+ b_P=d-(PY)^*(I-PHP/m)p.
+\]
+For any finite head vector $z$, let
+$\eta_z=\ip{H PYz}{PYz}$ and suppose
+$\norm{QYz}^2\le\rho_z$. Then
+\begin{equation}\label{eq:v123-mixed-tail}
+ |z^*(b-b_P)|\le
+ \frac{\sqrt{\nu\eta_z E}+\sqrt{\nu a\rho_z}}{m}
+       +\sqrt{\rho_z E}=:\epsilon_z.
+\end{equation}
+In addition the complete first-polynomial far energy satisfies
+\begin{equation}\label{eq:v123-far-lower}
+ \ip{(I-H/m)y}{y}\ge v-\frac{a}{m-\nu}.
+\end{equation}
+In particular, for $z\ne0$ the complete scalar-$\mu$ majorant
+in \eqref{eq:v122-refined-structured} is at least
+\begin{equation}\label{eq:v123-majorant-lower}
+ v-\frac{a}{m-\nu}
+ +\frac{[|z^*b_P|-\epsilon_z]_+^2}{\mu\norm z^2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Write $f=Yz=f_P+f_Q$. The difference of the mixed pairings is
+the sum of $m^{-1}f_P^*Hq$, $m^{-1}f_Q^*Hp$, and
+$-f_Q^*(I-QHQ/m)q$. Positive-form Cauchy--Schwarz bounds the
+first two by the corresponding square roots in
+\eqref{eq:v123-mixed-tail}. Since $0\preceq QHQ\preceq\nu Q$
+and $\nu<m$, the last factor is a contraction on the remote
+subspace. This proves the mixed estimate without setting either
+remote contribution to zero.
+
+For $x=\norm q$, positivity of $H$ and its remote compression give
+\[
+ \ip{(I-H/m)y}{y}
+ \ge v-a/m-2\sqrt{a\nu}\,x/m+(1-\nu/m)x^2.
+\]
+The minimum of this scalar quadratic over $x\ge0$ is
+$v-a/(m-\nu)$. The directional lower bound on $\norm b$
+then proves \eqref{eq:v123-majorant-lower}. All pairings are
+bounded-operator pairings after preconditioning. No application
+of the unbounded $U$ to an arbitrary Hilbert vector is used.
+\end{proof}
+
+\begin{proposition}[Failure of the first scalar-head majorant]
+\label{prop:v123-first-majorant-fails}
+On the same exact even head direction and frozen support-$256$
+trial as Proposition~\ref{prop:v122-directional-far}, let
+$\mathcal B_1$ denote the complete right side of
+\eqref{eq:v122-refined-structured} with
+$Q_*=D_g^{-1/2}(I-H/20)D_g^{-1/2}$ and the saved
+$\mu=0.9999999999$. Then
+\begin{equation}\label{eq:v123-first-majorant-fails}
+ \mathcal B_1>6.7609\cdot10^{-20}
+ >6.4693\cdot10^{-20}>K_X(v,v).
+\end{equation}
+Thus this particular complete majorant cannot certify that trial
+direction. This is not a negative Weil vector and does not exclude
+a better inverse polynomial or a stronger initial head certificate.
+\end{proposition}
+\begin{proof}[Complete interval certificate]
+Retain $J=65536$, $m=20$ and the complete remote bounds of
+Proposition~\ref{prop:v122-directional-far}. Choose the exact
+$160$-bit dyadic head vector $z$ specified in the reproduction
+appendix, obtained by rounding the direction of $b_P$. Its
+normalization is enclosed, not assumed exact. The following
+outward enclosures suffice in addition to the previous values of
+$v,a,E,\nu$:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule Quantity & Certified enclosure\\\midrule
+$\eta_z$ & $(0.4276838592,0.4276838593)$\\
+$\rho_z$ & $<0.0672057785$\\
+$|z^*b_P|$ & $(1.7339321076,1.7339321077)\,10^{-10}$\\
+$\norm z$ & $(1-10^{-45},1+10^{-45})$\\
+$\epsilon_z$ & $<2.961708367\,10^{-11}$\\
+complete far energy & $>4.693812399\,10^{-20}$\\
+$\mu^{-1}\norm b^2$ & $>2.067157472\,10^{-20}$\\\bottomrule
+\end{tabular}
+\end{center}
+The bound on $\rho_z$ uses the complete order-$64$ moment
+majorant on the finite vector $[I;-Z]C^*z$, whose support ends
+at $1024$, divided by $g_{J+1}$. It includes every row beyond
+$J$. The scalar $\eta_z$ and the retained pairings use the exact
+Arb polynomial action from the preceding appendix, with the
+unchanged archimedean-series remainder and parity normalization.
+Equation~\eqref{eq:v123-majorant-lower} gives
+$\mathcal B_1>6.760969872\cdot10^{-20}$, whereas the already
+certified $K_X(v,v)<6.469284395\cdot10^{-20}$.
+The same frozen direction and solve replay at $768$ and $896$
+bits. The outer residual is that of the unshifted Weil form;
+the inner inverse factors consistently belong to the certified
+shifted tail. Their inverse upper bound remains valid by order.
+\end{proof}
+
+\begin{proposition}[Retaining the strengthened head metric]
+\label{prop:v123-monotone-head}
+In the same setup, let a positive definite finite matrix $M_0$
+satisfy
+\[
+ C K_Z C^*-Y^*Y\succeq M_0\succ0.
+\]
+The existing certificate permits $M_0=\mu I$. Let $P_j(A)$
+be the inverse upper polynomials of
+Proposition~\ref{prop:v120-inverse-polynomial}, and set
+\begin{align*}
+ M_j&=M_0+Y^*(I-P_j(A))Y,\\
+ b_j&=d-Y^*P_j(A)y,\\
+ \mathcal E_j(r)&=\ip{P_j(A)y}{y}+b_j^*M_j^{-1}b_j.
+\end{align*}
+Then these are complete simultaneous upper bounds with
+\begin{equation}\label{eq:v123-monotone-head}
+ \ip{T^{-1}r}{r}\le\mathcal E_{j+1}(r)
+          \le\mathcal E_j(r).
+\end{equation}
+They converge as $j\to\infty$. Their limit need not equal
+$\ip{T^{-1}r}{r}$: any loss in replacing
+$CK_ZC^*-Y^*Y$ by $M_0$ remains.
+For the first polynomial, the head improvement is exactly
+$Y^*HY/m$. It must be retained together with the changed
+mixed vector if monotonicity of the complete bound is required.
+\end{proposition}
+\begin{proof}
+After the finite triangular substitution and head congruence,
+the original form has blocks $CK_ZC^*$, $RC^*$ and $U$,
+and the dual vector is $(d,k)$. Put
+$Q_j=D_g^{-1/2}P_j(A)D_g^{-1/2}$ and consider the lower form
+\[
+ \mathcal L_j=
+ \begin{pmatrix}
+ M_0+Y^*Y & CR^*\\
+ RC^* & Q_j^{-1}
+ \end{pmatrix}.
+\]
+The assumed head comparison and $Q_j^{-1}\preceq U$ imply
+that the transformed original form dominates $\mathcal L_j$.
+Its Schur complement is $M_j\succeq M_0\succ0$.
+Because $m^{-1}D_g^{-1}\preceq Q_j\preceq D_g^{-1}$,
+all far forms have the same domain $\mathcal D(D_g^{1/2})$.
+The finite head and bounded coupling give closed, coercive
+lower forms by the same square completion as before.
+
+Their inverse quadratic forms at $(d,k)$ are precisely
+$\mathcal E_j(r)$. The polynomials decrease in operator order,
+so $Q_j^{-1}$ increases. The head of $\mathcal L_j$ is fixed;
+therefore $\mathcal L_{j+1}\succeq\mathcal L_j$, proving the
+claimed inverse order. Norm convergence of $P_j(A)$ to $A^{-1}$,
+boundedness of $Y$, and the common positive floor of $M_j$
+give convergence of the displayed scalar and Gram expressions.
+The possible head loss explains the stated limitation of the
+limit. A certificate for the shifted tail is again transferred
+only by the already stated inverse order.
+\end{proof}
+
+\begin{corollary}[The first head update does not rescue this trial]
+\label{cor:v123-updated-first-fails}
+For the same saved data, choose $M_0=\mu I$ in
+Proposition~\ref{prop:v123-monotone-head}. Even its exact first
+head update satisfies
+\[
+ \mathcal E_1(r)>6.6588\cdot10^{-20}>K_X(v,v).
+\]
+This excludes the first inverse degree with that initial certificate,
+including its full positive head update. It does not exclude a
+stronger initial $M_0$ or a higher inverse degree.
+\end{corollary}
+\begin{proof}
+Use the same frozen $z$ and complete tail bounds. Positive-form
+Cauchy gives
+\[
+ z^*M_1z\le\mu\norm z^2+
+ \frac{(\sqrt{\eta_z}+\sqrt{\nu\rho_z})^2}{20}
+       <1.051962238.
+\]
+Metric Cauchy--Schwarz therefore gives
+\[
+ b_1^*M_1^{-1}b_1
+ \ge\frac{[|z^*b_P|-\epsilon_z]_+^2}{z^*M_1z}
+       >1.965049122\cdot10^{-20}.
+\]
+Adding the complete far lower bound gives
+$\mathcal E_1(r)>6.658861521\cdot10^{-20}$.
+Both precision replays include this gate with the same exact
+dyadic witnesses and all remote correlations.
+\end{proof}
+
+\begin{proposition}[Finite probes for the positive head improvement]
+\label{prop:v123-head-probes}
+Keep $H,Y,P,Q,\nu$ as above. Let $V$ have finitely many
+finite-prefix columns, suppose $G=V^*HV\succ0$, and set
+$B_P=V^*HPY$. If $Y^*QY\preceq E_Y$, then for every
+$0<\theta<1$,
+\begin{equation}\label{eq:v123-head-probes}
+ Y^*HY\succeq
+ (1-\theta)B_P^*G^{-1}B_P
+       -(\theta^{-1}-1)\nu E_Y.
+\end{equation}
+Consequently the right side, divided by $m$ and added to $M_0$,
+is a valid finite lower enclosure of the first improved head.
+It may be inverted only after its positivity is certified.
+\end{proposition}
+\begin{proof}
+The Gram matrix of $H^{1/2}V$ and $H^{1/2}Y$ gives
+$Y^*HY\succeq B^*G^{-1}B$, where $B=V^*HY$.
+Write $B=B_P+E_B$ with $E_B=V^*HQY$.
+The projection onto the range of $H^{1/2}V$ shows
+\[
+ E_B^*G^{-1}E_B\preceq Y^*QHQY\preceq\nu E_Y.
+\]
+Young's inequality in the $G^{-1}$ metric proves
+\eqref{eq:v123-head-probes}. This keeps the omitted probe
+correlation explicitly. No unjustified matrix positive-part
+operation is applied.
+\end{proof}
+
+The complete low-mode Schur sign at $\lambda=4$ is still open.
+The first-degree obstruction now has a proof even with the
+induced head update and the saved initial certificate. Increasing
+the inverse degree, or strengthening the initial certificate,
+requires a different complete enclosure.
+Neither finite-prefix improvements nor convergence at this fixed
+window establishes uniformity as $\lambda\to\infty$.

@@ -1,0 +1,144 @@
+\subsection*{Why a finite source block cannot reduce the unsigned prime norm}
+
+The arithmetic bound in the preceding tail estimates is not merely a
+poor choice of positive weight.  There is an exact recurrence obstruction
+to replacing it by a small norm on the source complement.
+
+\begin{proposition}[Prime norm survives every finite-dimensional removal]
+\label{prop:v119-prime-essential}
+Fix $\lambda>1$ and let $\mathsf T_{\rm pr}$ be the positive-coefficient
+sum of truncated prime translations in
+\eqref{eq:v116-weighted-prime-general}.  For every finite-rank
+orthogonal projection $P$ on $L^2(0,L)$, $Q=I-P$, one has
+\begin{equation}\label{eq:v119-prime-compression}
+ \|Q\mathsf T_{\rm pr}Q\|=\|\mathsf T_{\rm pr}\|.
+\end{equation}
+For every compact operator $C$ on this space,
+\begin{equation}\label{eq:v119-prime-compact}
+ \|Q(\mathsf T_{\rm pr}-C)Q\|\ge\|\mathsf T_{\rm pr}\|.
+\end{equation}
+In particular the essential norm of $\mathsf T_{\rm pr}$ equals its
+ordinary norm.  The projection need not be a Fourier projection and
+may remove any prescribed finite source block.
+\end{proposition}
+\begin{proof}
+For each positive integer $k$, let
+$M_k f(x)=e^{2\pi ikx/L}f(x)$.  Simultaneous recurrence of the finitely
+many phases gives integers $k_j\to\infty$ such that
+\[
+ e^{2\pi ik_j\log m/L}\longrightarrow1
+ \quad\hbox{for every active }m.
+\]
+For completeness, partition the unit cube in the finitely many phase
+coordinates into $H^d$ cubes and compare $H^d+1$ successive multiples.
+Two lie in one cube, giving a positive return with coordinate errors
+at most $1/H$.  If such returns have an unbounded subsequence, use it;
+otherwise a fixed positive return has all coordinate errors zero,
+and its increasing multiples give the required sequence.  No rational
+independence of prime logarithms is assumed.
+
+Conjugating a truncated translation by $M_k$ only multiplies it by
+its corresponding phase.  Since each translation has norm at most one,
+\begin{equation}\label{eq:v119-prime-recurrence}
+ \|M_{k_j}^*\mathsf T_{\rm pr}M_{k_j}-\mathsf T_{\rm pr}\|
+ \le2\sum_m w_m|e^{2\pi ik_j\log m/L}-1|\longrightarrow0.
+\end{equation}
+For every fixed $f\in L^2(0,L)$, $M_{k_j}f\rightharpoonup0$:
+each scalar product is a Fourier coefficient of an $L^1$ function.
+Thus $PM_{k_j}f\to0$, $PM_{k_j}\mathsf T_{\rm pr}f\to0$, and
+$CM_{k_j}f\to0$ strongly.  Combining these statements with
+\eqref{eq:v119-prime-recurrence} gives
+\[
+ Q(\mathsf T_{\rm pr}-C)Q M_{k_j}f
+       -M_{k_j}\mathsf T_{\rm pr}f\longrightarrow0.
+\]
+For unit $f$, the input has norm at most one, so taking norms and then
+the supremum over $f$ proves \eqref{eq:v119-prime-compact}.
+Putting $C=0$ and using compression contractivity proves
+\eqref{eq:v119-prime-compression}.  Taking the infimum over compact
+$C$, with $P=0$, proves the essential-norm assertion.
+\end{proof}
+
+\begin{proposition}[The sharp growing-window scale of the unsigned prime norm]
+\label{prop:v119-prime-scale}
+With the actual weights $w_m=\Lambda(m)/\sqrt m$ and $L=2\log\lambda$,
+\begin{equation}\label{eq:v119-prime-scale}
+ \|\mathsf T_{\rm pr}\|=(1+o(1))\lambda
+       \qquad(\lambda\longrightarrow\infty).
+\end{equation}
+Consequently \eqref{eq:v119-prime-scale} also holds for
+$\|Q_\lambda\mathsf T_{\rm pr}Q_\lambda\|$ for any family of
+finite-rank orthogonal projections $I-Q_\lambda$, with no restriction on their
+finite ranks or Fourier cutoffs.
+\end{proposition}
+\begin{proof}
+Write
+\[
+ a(x)=e^{-x/2},\quad b(x)=e^{-(L-x)/2},\quad\phi(x)=a(x)+b(x),
+\]
+and
+\[
+ \Psi(X)=\sum_{1<m<X}\Lambda(m),\quad
+ S(X)=\sum_{1<m<X}\frac{\Lambda(m)}m.
+\]
+The strict cutoff agrees with the truncated translations almost
+everywhere.  Direct evaluation gives
+\begin{equation}\label{eq:v119-prime-weight-ratio}
+ \frac{(\mathsf T_{\rm pr}\phi)(x)}{\phi(x)}
+ =\frac{a(x)\{S(e^{L-x})+\Psi(e^x)\}
+       +b(x)\{\Psi(e^{L-x})+S(e^x)\}}{a(x)+b(x)}.
+\end{equation}
+The exact identity
+\[
+ a(x)e^x+b(x)e^{L-x}=\lambda\{a(x)+b(x)\}
+\]
+identifies the leading constant.  The classical prime number
+theorem~\cite{NISTPrimeAsymptotics}, equivalently $\Psi(X)\sim X$,
+implies that for each $\delta>0$ there is $C_\delta<\infty$ with
+\[
+ |\Psi(X)-X|\le\delta X+C_\delta\qquad(X\ge1).
+\]
+The Chebyshev bound and partial summation give
+$0\le S(X)\le C(1+\log X)$, with an absolute $C$.
+Therefore, uniformly for $0<x<L$,
+\[
+ (1-\delta)\lambda-C_\delta
+ \le\frac{\mathsf T_{\rm pr}\phi}{\phi}
+ \le(1+\delta)\lambda+C_\delta+C(1+L).
+\]
+At each fixed window $\phi$ is bounded and bounded away from zero.
+The upper estimate and the weighted Schur inequality
+\eqref{eq:v116-weighted-prime-general} bound the operator norm from
+above.  Integrating the lower estimate against $\phi^2$ gives the
+same lower bound for its Rayleigh quotient and hence for the norm.
+Divide by $\lambda$, let $\lambda\to\infty$, and then let
+$\delta\downarrow0$. This proves \eqref{eq:v119-prime-scale}.
+The projection assertion follows from
+Proposition~\ref{prop:v119-prime-essential} at each window.
+\end{proof}
+
+These statements concern the unsigned prime operator, not the sign of
+the full Weil form.  They make precise a limitation of the particular
+place-by-place bound \eqref{eq:v115-sharp-tail}. Even replacing its
+prime constant by the exact tail norm cannot certify positivity unless
+\begin{equation}\label{eq:v119-unsigned-cutoff}
+ \log\frac{N+1}{L}>\|\mathsf T_{\rm pr}\|
+       =(1+o(1))\lambda.
+\end{equation}
+Here we refer to the whole-space bound, whose remaining subtracted
+terms are nonnegative. Thus this method still requires an exponential
+Fourier cutoff in $\lambda$, rather than the polynomial source cutoff.
+This is a limitation of that sufficient scalar bound, not a necessary
+cutoff for actual Weil positivity or for a frequency-weighted argument.
+
+The physical pole operator has rank at most two.  Equation
+\eqref{eq:v119-prime-compact} shows that combining it with the prime
+operator does not make their ordinary operator norm smaller than
+$\|\mathsf T_{\rm pr}\|$, even after a finite source removal.
+The recurrence frequencies in the proof may be arbitrarily large;
+there the archimedean logarithmic energy also grows.  No negative
+direction for the complete Weil operator is inferred.  A scalable G2
+estimate must control the arithmetic term together with that energy
+or retain more precise signed correlations, rather than assert a small
+unweighted norm on the complement.  The required signed estimate
+remains open.

@@ -1,0 +1,23 @@
+{
+  "status": "Observed differences only. Matrix/vector strings stored to 70 significant digits, B to 30; zero means agreement at stored precision, not zero true error.",
+  "rows": [
+    {
+      "lambda_": 2.0,
+      "observed_matrix_frobenius_difference": "0.0",
+      "observed_source_coefficient_difference": "9.174956096703908926694817e-65",
+      "relative_B_difference": "0.0"
+    },
+    {
+      "lambda_": 2.5,
+      "observed_matrix_frobenius_difference": "0.0",
+      "observed_source_coefficient_difference": "1.907782651044446952152201e-48",
+      "relative_B_difference": "0.0"
+    },
+    {
+      "lambda_": 3.0,
+      "observed_matrix_frobenius_difference": "0.0",
+      "observed_source_coefficient_difference": "1.017801621654538402157011e-36",
+      "relative_B_difference": "1.677994747770199202343648e-17"
+    }
+  ]
+}

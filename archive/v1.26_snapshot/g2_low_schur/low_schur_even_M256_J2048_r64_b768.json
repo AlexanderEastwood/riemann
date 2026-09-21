@@ -1,0 +1,21 @@
+{
+  "lambda": 4,
+  "head_cut": 16,
+  "M": 256,
+  "J": 2048,
+  "r": 64,
+  "bits": 768,
+  "parity": "even",
+  "tail_c": "1/100000000",
+  "result": {
+    "status": "FAIL_LOWER_BOUND",
+    "index": 0,
+    "pivot": "[-27684.101751212330725836940994281759624600823802873646661602160648 +/- 3.63e-61]"
+  },
+  "pivots": [],
+  "remote_delta2": "[4.038100475915037221702208795338016380831888808455673328e-119 +/- 3.15e-174]",
+  "witness": "low_witness_even_M256_b768.json.gz",
+  "witness_sha256": "0a7e67c38fe6c6820a2a9c3c6e4e52607319e2655838df9734a88703c9d8118d",
+  "seconds": 4.120691776275635,
+  "scope": "A negative lower-bound pivot is not proof that the exact Weil form is negative."
+}

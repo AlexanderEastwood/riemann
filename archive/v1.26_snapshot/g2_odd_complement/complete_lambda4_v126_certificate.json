@@ -1,0 +1,33 @@
+{
+  "status": "PASS_COMPLETE_ODD_AND_FULL_LAMBDA4",
+  "lambda": 4,
+  "certified_directional_s": "429/1000",
+  "complete_complement_sigma": "1/1000",
+  "certified_odd_S_over_K_lower": "107/250",
+  "full_window_negative_error": 0,
+  "old_trial_support": 4096,
+  "directional_trial_support": 8192,
+  "verified_rows_through": 65536,
+  "remote_moment_order": 64,
+  "same_physical_head_exact_fraction_check": true,
+  "physical_head_mantissa_bits_max": 912,
+  "old_head_invertibility_gate": true,
+  "direction_lower_recomputations": [
+    "[0.42914078943603974648311831026347114783609254069101795817581333609279439057397622 +/- 3.71e-81]",
+    "[0.42914078943603974648311831026347114783609254069101795817581333609279439057397622 +/- 3.71e-81]"
+  ],
+  "reports": [
+    {
+      "path": "directional_odd_M8192_s24_report_b1024_J65536.json",
+      "sha256": "e5f8b2e9aab3323d78af708d4d035d3f81c7cae485fc401a0372f359c914f953"
+    },
+    {
+      "path": "directional_odd_M8192_s24_report_b1280_J65536.json",
+      "sha256": "e3040e65a0ba7e3a651048c1d70353afc250635d09ef6447195c3cf2d25d4d0b"
+    }
+  ],
+  "old_witness_sha256": "9f81eef783abc2bb1e3e654895a9492763d071287836e5a92fab9c430abe6c73",
+  "directional_witness_sha256": "7c9ef2808fe5db611804c94e02aca0f8bdfe63eceadc685c68942b4bef93bacf",
+  "complement_report_sha256": "9d76d616053ab505599e074eff99eeb05cbc1b71c92960acb18b13667fb5bd55",
+  "scope": "Complete fixed-window odd sign via PSD inverse-correction gluing; full lambda4 sign additionally uses existing complete even certificate. Relative107/250 is not an ordinary spectral-gap constant. No G2/RH or growing-window theorem."
+}

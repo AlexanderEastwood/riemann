@@ -1,0 +1,164 @@
+[
+  {
+    "lambda": 3,
+    "N": 4,
+    "M": 256,
+    "arch_min": 0.8224172906263316,
+    "sectors": {
+      "even": {
+        "normalized_min": 2.6897872768855718e-11,
+        "normalized_max": 3.0141434329119288,
+        "remainder_norm": 2.0141434329119288
+      },
+      "odd": {
+        "normalized_min": 3.9398100368358736e-13,
+        "normalized_max": 2.8223465880038585,
+        "remainder_norm": 1.8223465880038585
+      }
+    }
+  },
+  {
+    "lambda": 3,
+    "N": 8,
+    "M": 256,
+    "arch_min": 1.4100858191537655,
+    "sectors": {
+      "even": {
+        "normalized_min": 0.0039527789484273875,
+        "normalized_max": 1.8393784889228888,
+        "remainder_norm": 0.9960472210515726
+      },
+      "odd": {
+        "normalized_min": 0.006130292348291824,
+        "normalized_max": 1.7814245584720143,
+        "remainder_norm": 0.9938697076517081
+      }
+    }
+  },
+  {
+    "lambda": 3,
+    "N": 16,
+    "M": 256,
+    "arch_min": 2.0460343210344196,
+    "sectors": {
+      "even": {
+        "normalized_min": 0.26808560795193925,
+        "normalized_max": 1.765415897269312,
+        "remainder_norm": 0.7654158972693119
+      },
+      "odd": {
+        "normalized_min": 0.26426094220936935,
+        "normalized_max": 1.7589714714999538,
+        "remainder_norm": 0.7589714714999538
+      }
+    }
+  },
+  {
+    "lambda": 4,
+    "N": 16,
+    "M": 256,
+    "arch_min": 1.8134041739444307,
+    "sectors": {
+      "even": {
+        "normalized_min": 6.071807480731145e-07,
+        "normalized_max": 2.0525440954034546,
+        "remainder_norm": 1.0525440954034546
+      },
+      "odd": {
+        "normalized_min": 1.2253629451387418e-06,
+        "normalized_max": 1.985676307525809,
+        "remainder_norm": 0.9999987746370549
+      }
+    }
+  },
+  {
+    "lambda": 5,
+    "N": 25,
+    "M": 256,
+    "arch_min": 2.0890361680355665,
+    "sectors": {
+      "even": {
+        "normalized_min": 5.045084359805305e-13,
+        "normalized_max": 2.1250281770484967,
+        "remainder_norm": 1.1250281770484967
+      },
+      "odd": {
+        "normalized_min": 9.851696810812444e-14,
+        "normalized_max": 2.116221167360323,
+        "remainder_norm": 1.1162211673603228
+      }
+    }
+  },
+  {
+    "lambda": 8,
+    "N": 64,
+    "M": 256,
+    "arch_min": 2.7491301670437274,
+    "sectors": {
+      "even": {
+        "normalized_min": -2.2054616124990476e-14,
+        "normalized_max": 2.2962190543789665,
+        "remainder_norm": 1.2962190543789665
+      },
+      "odd": {
+        "normalized_min": -2.2127336536617888e-14,
+        "normalized_max": 2.2949806594320803,
+        "remainder_norm": 1.2949806594320803
+      }
+    }
+  },
+  {
+    "lambda": 10,
+    "N": 100,
+    "M": 300,
+    "arch_min": 3.0879352661626918,
+    "sectors": {
+      "even": {
+        "normalized_min": -4.124432533442244e-14,
+        "normalized_max": 2.3267576428070513,
+        "remainder_norm": 1.3267576428070513
+      },
+      "odd": {
+        "normalized_min": -4.0458776077406716e-14,
+        "normalized_max": 2.328341915675979,
+        "remainder_norm": 1.328341915675979
+      }
+    }
+  },
+  {
+    "lambda": 16,
+    "N": 256,
+    "M": 768,
+    "arch_min": 3.8361461749535555,
+    "sectors": {
+      "even": {
+        "normalized_min": -1.2832735182485876e-13,
+        "normalized_max": 2.4516425501667523,
+        "remainder_norm": 1.4516425501667523
+      },
+      "odd": {
+        "normalized_min": -1.2808829466043145e-13,
+        "normalized_max": 2.4508775630436506,
+        "remainder_norm": 1.4508775630436506
+      }
+    }
+  },
+  {
+    "lambda": 24,
+    "N": 576,
+    "M": 1728,
+    "arch_min": 4.508425749970304,
+    "sectors": {
+      "even": {
+        "normalized_min": -3.844471716878732e-13,
+        "normalized_max": 2.704617032504617,
+        "remainder_norm": 1.704617032504617
+      },
+      "odd": {
+        "normalized_min": -3.8436426904234396e-13,
+        "normalized_max": 2.704449856309602,
+        "remainder_norm": 1.7044498563096022
+      }
+    }
+  }
+]

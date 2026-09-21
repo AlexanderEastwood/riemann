@@ -1,0 +1,69 @@
+{
+  "scope": "Rational transforms only; no zeta zeros, Weil calculation, or RH evidence.",
+  "parameters": {
+    "sigma": 2.0,
+    "a": 4.0,
+    "M": 6,
+    "mu": [
+      0.2,
+      1.3
+    ]
+  },
+  "cutoff": "ceil(exp(L/2)*L**2), deliberately smaller than the theorem cutoff",
+  "rows": [
+    {
+      "L": 4,
+      "K": 119,
+      "reflected_residue_relative_error": 0.0734713127418698,
+      "unreflected_pole_normalized_magnitude": 9.185717115011638,
+      "endpoint_ratio_magnitude": 4.425592908669262,
+      "scaled_unreflected_endpoint_magnitude": 0.6043825674966692,
+      "shell_endpoint_magnitude": 1.8703997939822507e-05
+    },
+    {
+      "L": 6,
+      "K": 724,
+      "reflected_residue_relative_error": 0.005791823030918944,
+      "unreflected_pole_normalized_magnitude": 3.6249228352505702,
+      "endpoint_ratio_magnitude": 35.26060844785938,
+      "scaled_unreflected_endpoint_magnitude": 0.07549027607298436,
+      "shell_endpoint_magnitude": 1.1429034190215133e-06
+    },
+    {
+      "L": 8,
+      "K": 3495,
+      "reflected_residue_relative_error": 0.0009637632919870081,
+      "unreflected_pole_normalized_magnitude": 1.5086783454892936,
+      "endpoint_ratio_magnitude": 282.8742675811599,
+      "scaled_unreflected_endpoint_magnitude": 0.009369252660785523,
+      "shell_endpoint_magnitude": 8.726212659046614e-08
+    },
+    {
+      "L": 10,
+      "K": 14842,
+      "reflected_residue_relative_error": 0.00022758775650660214,
+      "unreflected_pole_normalized_magnitude": 1.073779076326867,
+      "endpoint_ratio_magnitude": 1869.4381437381667,
+      "scaled_unreflected_endpoint_magnitude": 0.0014190752033101232,
+      "shell_endpoint_magnitude": 7.56182327905415e-09
+    },
+    {
+      "L": 12,
+      "K": 58094,
+      "reflected_residue_relative_error": 7.846901604658779e-05,
+      "unreflected_pole_normalized_magnitude": 1.0088629603451886,
+      "endpoint_ratio_magnitude": 5886.939832111145,
+      "scaled_unreflected_endpoint_magnitude": 0.0004506659860866263,
+      "shell_endpoint_magnitude": 7.107676355004206e-10
+    },
+    {
+      "L": 14,
+      "K": 214941,
+      "reflected_residue_relative_error": 1.8724875774218677e-05,
+      "unreflected_pole_normalized_magnitude": 1.0009315529339553,
+      "endpoint_ratio_magnitude": 24924.378817226614,
+      "scaled_unreflected_endpoint_magnitude": 0.00010643665477813031,
+      "shell_endpoint_magnitude": 7.067231945683238e-11
+    }
+  ]
+}

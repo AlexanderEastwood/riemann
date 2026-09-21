@@ -1,0 +1,798 @@
+{
+  "status": "NON-CERTIFIED NUMERICAL PILOT; no truncation or interval enclosure.",
+  "source": "Manuscript normalized n=0,4 angular PSWF source with fixed exact scalar repair; finite Legendre approximation.",
+  "finite_object": "P_N p_lambda and actual (2N+1)-dimensional Weil matrix in [0,L] basis; diagnostic N only, not asymptotic cutoff.",
+  "repair": "phi=exp(1-1/(1-(t/(3/4))^2)) on |t|<3/4, psi=phi*(1-C*t^2), C=integral(phi)/integral(t^2*phi).",
+  "rows": [
+    {
+      "source": {
+        "lambda_": 1.5,
+        "c": 14.137166941154069,
+        "legendre_even_dimension": 55,
+        "digits": 85,
+        "h_at_zero_before_repair": "0.0000192055982359909812530745033341",
+        "B_plus": "0.0278192609052393998859629767125",
+        "B_physical": "0.0288451585148487869626256999224",
+        "B_over_B_plus": "1.036877241746425134553516",
+        "bump_radius": 0.75,
+        "bump_moment_ratio": "11.2436714491324274411789777267",
+        "raw_integral_check": "0.0"
+      },
+      "finite": [
+        {
+          "N": 8,
+          "dimension": 17,
+          "source_norm": 0.655358135163916,
+          "alpha": 0.0001828161057987827,
+          "residual": 0.004516706581309649,
+          "complement_bottom": 0.014935643459306043,
+          "gamma": 0.01475282735350726,
+          "residual_over_gamma": 0.3061587093158703,
+          "ground_eigenvalue": 0.00016253858494914326,
+          "ground_gap": 0.014773104874356506,
+          "lowest_eigenvalues": [
+            0.00016253858494914326,
+            0.01493564345930565,
+            0.2811311655142971,
+            0.8980298313074266
+          ],
+          "even_lowest": [
+            0.00016253858494976787,
+            0.2811311655142977,
+            0.9047107316061485
+          ],
+          "odd_lowest": [
+            0.014935643459305951,
+            0.8980298313074246,
+            1.36072267583732
+          ],
+          "source_ground_overlap": 0.9999763756382494,
+          "source_ground_angle_sine": 0.006873730092956217,
+          "projected_source_endpoint": 0.039503319468693225,
+          "relative_endpoint_error": 0.3694956624474043,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 16,
+          "dimension": 33,
+          "source_norm": 0.6553593122950764,
+          "alpha": 0.00016665857290718732,
+          "residual": 0.005002702626396586,
+          "complement_bottom": 0.013784854879068664,
+          "gamma": 0.013618196306161477,
+          "residual_over_gamma": 0.36735427467242054,
+          "ground_eigenvalue": 0.00014841511092682154,
+          "ground_gap": 0.013636439768142454,
+          "lowest_eigenvalues": [
+            0.00014841511092682154,
+            0.013784854879069277,
+            0.2765055015080369,
+            0.898011044287909
+          ],
+          "even_lowest": [
+            0.00014841511092741905,
+            0.27650550150803777,
+            0.9023634855275104
+          ],
+          "odd_lowest": [
+            0.013784854879069258,
+            0.8980110442879078,
+            1.3589175451818405
+          ],
+          "source_ground_overlap": 0.9999816898133567,
+          "source_ground_angle_sine": 0.006051449249868831,
+          "projected_source_endpoint": 0.03488362512719833,
+          "relative_endpoint_error": 0.20934073249211252,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 32,
+          "dimension": 65,
+          "source_norm": 0.6553596947684454,
+          "alpha": 0.00016192815091490393,
+          "residual": 0.005165426553686379,
+          "complement_bottom": 0.013152046306865953,
+          "gamma": 0.012990118155951049,
+          "residual_over_gamma": 0.3976427690397864,
+          "ground_eigenvalue": 0.00014466922287307126,
+          "ground_gap": 0.013007377083992697,
+          "lowest_eigenvalues": [
+            0.00014466922287307126,
+            0.013152046306865768,
+            0.2747274793022947,
+            0.8980097321407396
+          ],
+          "even_lowest": [
+            0.000144669222872028,
+            0.2747274793022946,
+            0.9017592087795494
+          ],
+          "odd_lowest": [
+            0.013152046306865846,
+            0.8980097321407382,
+            1.3520576650231666
+          ],
+          "source_ground_overlap": 0.999983372455162,
+          "source_ground_angle_sine": 0.005766698639664774,
+          "projected_source_endpoint": 0.03188651698294586,
+          "relative_endpoint_error": 0.10543739832566547,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 64,
+          "dimension": 129,
+          "source_norm": 0.6553598194131555,
+          "alpha": 0.00016111312101757742,
+          "residual": 0.0054064726623648226,
+          "complement_bottom": 0.012765730528980609,
+          "gamma": 0.012604617407963032,
+          "residual_over_gamma": 0.42892794659116396,
+          "ground_eigenvalue": 0.00014369899893690015,
+          "ground_gap": 0.012622031530045569,
+          "lowest_eigenvalues": [
+            0.00014369899893690015,
+            0.012765730528982468,
+            0.274151134278648,
+            0.8980077866311904
+          ],
+          "even_lowest": [
+            0.00014369899893773602,
+            0.2741511342786482,
+            0.9015973928099414
+          ],
+          "odd_lowest": [
+            0.012765730528981608,
+            0.8980077866311927,
+            1.3398778423495479
+          ],
+          "source_ground_overlap": 0.9999837996807535,
+          "source_ground_angle_sine": 0.005692132820190071,
+          "projected_source_endpoint": 0.030403229287907743,
+          "relative_endpoint_error": 0.05401498390993061,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "lambda_": 2.0,
+        "c": 25.132741228718345,
+        "legendre_even_dimension": 55,
+        "digits": 85,
+        "h_at_zero_before_repair": "1.04994505572604400739430358473e-13",
+        "B_plus": "0.00000283858048106598243171462030153",
+        "B_physical": "0.00000218586077641204381986585282127",
+        "B_over_B_plus": "0.7700541841220508879577059",
+        "bump_radius": 0.75,
+        "bump_moment_ratio": "11.2436714491324274411789777267",
+        "raw_integral_check": "0.0"
+      },
+      "finite": [
+        {
+          "N": 8,
+          "dimension": 17,
+          "source_norm": 0.6513505286580653,
+          "alpha": 2.932869797760099e-12,
+          "residual": 1.5184876494754631e-07,
+          "complement_bottom": 1.3245540585355746e-09,
+          "gamma": 1.3216211887378146e-09,
+          "residual_over_gamma": 114.89583115156178,
+          "ground_eigenvalue": 2.7482763861184997e-12,
+          "ground_gap": 1.3218063508062115e-09,
+          "lowest_eigenvalues": [
+            2.7482763861184997e-12,
+            1.3245546271923299e-09,
+            3.606270999335591e-07,
+            5.5664384733025767e-05
+          ],
+          "even_lowest": [
+            2.7486792623094544e-12,
+            3.606270995038252e-07,
+            0.006140480235690606
+          ],
+          "odd_lowest": [
+            1.3245546590037443e-09,
+            5.566438473274124e-05,
+            0.14178378116336743
+          ],
+          "source_ground_overlap": 0.9999997688101514,
+          "source_ground_angle_sine": 0.000679985032037656,
+          "projected_source_endpoint": 5.31747083406782e-06,
+          "relative_endpoint_error": 1.4326667514461378,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 16,
+          "dimension": 33,
+          "source_norm": 0.6513505286582769,
+          "alpha": 1.9154022263911612e-12,
+          "residual": 3.1154279483253684e-07,
+          "complement_bottom": 6.47372836261331e-10,
+          "gamma": 6.454574340349399e-10,
+          "residual_over_gamma": 482.6697755806968,
+          "ground_eigenvalue": 1.0952170668906458e-12,
+          "ground_gap": 6.462764051387164e-10,
+          "lowest_eigenvalues": [
+            1.0952170668906458e-12,
+            6.473716222056071e-10,
+            2.4644862367566915e-07,
+            3.664267588415144e-05
+          ],
+          "even_lowest": [
+            1.0950628037474303e-12,
+            2.464486234255389e-07,
+            0.0031543610057760325
+          ],
+          "odd_lowest": [
+            6.473722722269166e-10,
+            3.664267588482702e-05,
+            0.1125841396028599
+          ],
+          "source_ground_overlap": 0.9999989556241001,
+          "source_ground_angle_sine": 0.0014452510885869178,
+          "projected_source_endpoint": 6.336970933438094e-06,
+          "relative_endpoint_error": 1.8990734459492165,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 32,
+          "dimension": 65,
+          "source_norm": 0.6513505286583388,
+          "alpha": 1.3097166366050518e-12,
+          "residual": 3.0020478983734936e-07,
+          "complement_bottom": 5.435667599763921e-10,
+          "gamma": 5.422570433397871e-10,
+          "residual_over_gamma": 553.6208215726875,
+          "ground_eigenvalue": 9.281361383808594e-13,
+          "ground_gap": 5.426394205168886e-10,
+          "lowest_eigenvalues": [
+            9.281361383808594e-13,
+            5.435675566552695e-10,
+            1.8122077869301353e-07,
+            3.542873224926051e-05
+          ],
+          "even_lowest": [
+            9.283076567622453e-13,
+            1.8122077986266385e-07,
+            0.0026906849952428947
+          ],
+          "odd_lowest": [
+            5.435667946131278e-10,
+            3.54287322487278e-05,
+            0.09956614340410344
+          ],
+          "source_ground_overlap": 0.999999266627332,
+          "source_ground_angle_sine": 0.0012110923987393057,
+          "projected_source_endpoint": 5.079155565774428e-06,
+          "relative_endpoint_error": 1.3236409292780071,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 64,
+          "dimension": 129,
+          "source_norm": 0.6513505286583748,
+          "alpha": 1.0589395251574202e-12,
+          "residual": 3.0504559166499465e-07,
+          "complement_bottom": 5.334372998959535e-10,
+          "gamma": 5.323783603707961e-10,
+          "residual_over_gamma": 572.9864592026871,
+          "ground_eigenvalue": 8.713184939781538e-13,
+          "ground_gap": 5.325664041815436e-10,
+          "lowest_eigenvalues": [
+            8.713184939781538e-13,
+            5.334377226755217e-10,
+            1.593357760924785e-07,
+            3.3213233305298964e-05
+          ],
+          "even_lowest": [
+            8.708755805189544e-13,
+            1.5933577528808122e-07,
+            0.002592747141037218
+          ],
+          "odd_lowest": [
+            5.334372482830681e-10,
+            3.3213233303781156e-05,
+            0.09139578348845365
+          ],
+          "source_ground_overlap": 0.9999996139267477,
+          "source_ground_angle_sine": 0.0008787185871540491,
+          "projected_source_endpoint": 3.7531874804570427e-06,
+          "relative_endpoint_error": 0.7170295203419447,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "lambda_": 2.5,
+        "c": 39.269908169872416,
+        "legendre_even_dimension": 55,
+        "digits": 85,
+        "h_at_zero_before_repair": "4.77468788359004457420142221303e-25",
+        "B_plus": "7.66638666219570526465100684597e-12",
+        "B_physical": "7.85898920878642486326659221977e-12",
+        "B_over_B_plus": "1.025122988844337381718535",
+        "bump_radius": 0.75,
+        "bump_moment_ratio": "11.2436714491324274411789777267",
+        "raw_integral_check": "0.0"
+      },
+      "finite": [
+        {
+          "N": 8,
+          "dimension": 17,
+          "source_norm": 0.6514141653498954,
+          "alpha": 2.0607113538878989e-13,
+          "residual": 1.0543736869151255e-07,
+          "complement_bottom": -2.973710135875298e-15,
+          "gamma": -2.090448455246652e-13,
+          "residual_over_gamma": null,
+          "ground_eigenvalue": -6.4978982822572344e-15,
+          "ground_gap": 3.143892254338695e-15,
+          "lowest_eigenvalues": [
+            -6.4978982822572344e-15,
+            -3.3540060279185394e-15,
+            1.2469719435225805e-12,
+            2.2807345347722703e-10
+          ],
+          "even_lowest": [
+            -6.419752095194215e-15,
+            1.2469363874175399e-12,
+            2.3986962013931428e-08
+          ],
+          "odd_lowest": [
+            -3.319940858157366e-15,
+            2.2807323844874506e-10,
+            1.060702557830687e-06
+          ],
+          "source_ground_overlap": 0.9995821779325282,
+          "source_ground_angle_sine": 0.028904490302778293,
+          "projected_source_endpoint": 3.6112678191356387e-07,
+          "relative_endpoint_error": 45949.79243903538,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 16,
+          "dimension": 33,
+          "source_norm": 0.6514141653499407,
+          "alpha": 4.9468506592363095e-14,
+          "residual": 3.424478589129252e-12,
+          "complement_bottom": 8.038293357073367e-14,
+          "gamma": 3.091442697837058e-14,
+          "residual_over_gamma": 110.77283080566896,
+          "ground_eigenvalue": 3.355944324260794e-14,
+          "ground_gap": 4.737099999662182e-14,
+          "lowest_eigenvalues": [
+            3.355944324260794e-14,
+            8.093044323922976e-14,
+            9.51417432382163e-14,
+            1.172482099033065e-13
+          ],
+          "even_lowest": [
+            3.3784395207013636e-14,
+            9.563256040385638e-14,
+            7.080352016633965e-12
+          ],
+          "odd_lowest": [
+            8.115903684835334e-14,
+            1.1694122835245668e-13,
+            1.3940168283276669e-09
+          ],
+          "source_ground_overlap": 0.864773085320905,
+          "source_ground_angle_sine": 0.5021628330577271,
+          "projected_source_endpoint": 1.779624716464538e-11,
+          "relative_endpoint_error": 1.2644447895091913,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 32,
+          "dimension": 65,
+          "source_norm": 0.6514141653499407,
+          "alpha": -2.9875984514071765e-14,
+          "residual": 4.745398579266925e-13,
+          "complement_bottom": -6.508138717499721e-14,
+          "gamma": -3.520540266092545e-14,
+          "residual_over_gamma": null,
+          "ground_eigenvalue": -6.518680197908777e-14,
+          "ground_gap": 2.5168167942156588e-15,
+          "lowest_eigenvalues": [
+            -6.518680197908777e-14,
+            -6.266998518487211e-14,
+            -4.3793859228254506e-14,
+            -2.1142508080313403e-14
+          ],
+          "even_lowest": [
+            -6.273171325913237e-14,
+            -2.1029377033090173e-14,
+            2.845457523556968e-12
+          ],
+          "odd_lowest": [
+            -6.456942472830269e-14,
+            -4.4179648393991614e-14,
+            6.788692812850123e-10
+          ],
+          "source_ground_overlap": 0.07939531414326718,
+          "source_ground_angle_sine": 0.9968432093825448,
+          "projected_source_endpoint": 1.4644622151953356e-11,
+          "relative_endpoint_error": 0.8634231149701198,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 64,
+          "dimension": 129,
+          "source_norm": 0.6514141653499407,
+          "alpha": 8.203694796582318e-14,
+          "residual": 8.057744044167564e-13,
+          "complement_bottom": 1.276134165538367e-13,
+          "gamma": 4.557646858801351e-14,
+          "residual_over_gamma": 17.67961470864535,
+          "ground_eigenvalue": 5.6587785382524026e-14,
+          "ground_gap": 7.138120568649041e-14,
+          "lowest_eigenvalues": [
+            5.6587785382524026e-14,
+            1.2796899106901444e-13,
+            1.531032184234125e-13,
+            1.6315690936517172e-13
+          ],
+          "even_lowest": [
+            5.749558322424669e-14,
+            1.512544382767047e-13,
+            2.798445941566316e-12
+          ],
+          "odd_lowest": [
+            1.2751854534889182e-13,
+            1.63797967497766e-13,
+            5.815281718003092e-10
+          ],
+          "source_ground_overlap": 0.8567249860735795,
+          "source_ground_angle_sine": 0.5157734950898747,
+          "projected_source_endpoint": 1.6667262113064376e-11,
+          "relative_endpoint_error": 1.1207895405213457,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        }
+      ]
+    },
+    {
+      "source": {
+        "lambda_": 3.0,
+        "c": 56.548667764616276,
+        "legendre_even_dimension": 55,
+        "digits": 85,
+        "h_at_zero_before_repair": "-1.16824380249502569618664531722e-36",
+        "B_plus": "6.8469446192699516959548943848e-19",
+        "B_physical": "5.58669542376411968480534864414e-19",
+        "B_over_B_plus": "0.8159399169143265594795124",
+        "bump_radius": 0.75,
+        "bump_moment_ratio": "11.2436714491324274411789777267",
+        "raw_integral_check": "1.20645881e-86"
+      },
+      "finite": [
+        {
+          "N": 8,
+          "dimension": 17,
+          "source_norm": 0.6517255508265554,
+          "alpha": 2.7673976466733043e-11,
+          "residual": 2.860127486052555e-06,
+          "complement_bottom": -7.017520743713934e-15,
+          "gamma": -2.7680993987476757e-11,
+          "residual_over_gamma": null,
+          "ground_eigenvalue": -7.062690318833509e-15,
+          "ground_gap": 4.612025995691108e-16,
+          "lowest_eigenvalues": [
+            -7.062690318833509e-15,
+            -6.6014877192643986e-15,
+            2.622564272117827e-15,
+            2.922577968015197e-13
+          ],
+          "even_lowest": [
+            -6.353153739530364e-15,
+            2.4223329434106223e-15,
+            2.828098939438659e-11
+          ],
+          "odd_lowest": [
+            -6.997619274316998e-15,
+            2.9232883463535243e-13,
+            2.22372918459609e-09
+          ],
+          "source_ground_overlap": 0.10598891709642444,
+          "source_ground_angle_sine": 0.9943673111344354,
+          "projected_source_endpoint": -1.4330713156400885e-06,
+          "relative_endpoint_error": 2565150248830.093,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 16,
+          "dimension": 33,
+          "source_norm": 0.6517255508337177,
+          "alpha": 5.6175025270935616e-14,
+          "residual": 2.5434038549878414e-12,
+          "complement_bottom": 6.423203431282361e-14,
+          "gamma": 8.057009041887992e-15,
+          "residual_over_gamma": 315.6759340550334,
+          "ground_eigenvalue": 2.8025637018519846e-14,
+          "ground_gap": 4.998487244790073e-14,
+          "lowest_eigenvalues": [
+            2.8025637018519846e-14,
+            7.801050946642058e-14,
+            9.253602795555412e-14,
+            1.0150767172825426e-13
+          ],
+          "even_lowest": [
+            2.7289959993520414e-14,
+            9.268451289463213e-14,
+            1.0788183856883416e-13
+          ],
+          "odd_lowest": [
+            7.789387911998408e-14,
+            1.0170590629222235e-13,
+            1.1650797723712725e-13
+          ],
+          "source_ground_overlap": 0.7498783398382554,
+          "source_ground_angle_sine": 0.6615757518541788,
+          "projected_source_endpoint": -8.410613083669094e-12,
+          "relative_endpoint_error": 15054720.195703564,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 32,
+          "dimension": 65,
+          "source_norm": 0.6517255508337177,
+          "alpha": -3.4237250396066314e-14,
+          "residual": 1.6498161695997322e-13,
+          "complement_bottom": -9.796236697615868e-14,
+          "gamma": -6.372511658009237e-14,
+          "residual_over_gamma": null,
+          "ground_eigenvalue": -9.734473640899027e-14,
+          "ground_gap": 2.2301889952616007e-15,
+          "lowest_eigenvalues": [
+            -9.734473640899027e-14,
+            -9.511454741372867e-14,
+            -8.322020610566684e-14,
+            -8.099001711040524e-14
+          ],
+          "even_lowest": [
+            -9.537864486261522e-14,
+            -8.2482446892297e-14,
+            -6.551376535240463e-14
+          ],
+          "odd_lowest": [
+            -9.700149921631968e-14,
+            -8.374886435269229e-14,
+            -6.718307077315812e-14
+          ],
+          "source_ground_overlap": 0.0033359473685503037,
+          "source_ground_angle_sine": 0.9999944357120965,
+          "projected_source_endpoint": 4.7988166626357854e-15,
+          "relative_endpoint_error": 8588.723080701813,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        },
+        {
+          "N": 64,
+          "dimension": 129,
+          "source_norm": 0.6517255508337177,
+          "alpha": 9.262559478528714e-14,
+          "residual": 3.1390786989759496e-13,
+          "complement_bottom": 9.109719993167393e-14,
+          "gamma": -1.5283948536132144e-15,
+          "residual_over_gamma": null,
+          "ground_eigenvalue": 3.6177532061652326e-14,
+          "ground_gap": 8.590203080073088e-14,
+          "lowest_eigenvalues": [
+            3.6177532061652326e-14,
+            1.220795628623832e-13,
+            1.4379106515267785e-13,
+            1.475669785944682e-13
+          ],
+          "even_lowest": [
+            3.5947756448187664e-14,
+            1.4603381715448832e-13,
+            1.4900911609249647e-13
+          ],
+          "odd_lowest": [
+            1.2225907790399404e-13,
+            1.4768332290702912e-13,
+            1.5998537694075581e-13
+          ],
+          "source_ground_overlap": 0.7020620115412826,
+          "source_ground_angle_sine": 0.7121158135799317,
+          "projected_source_endpoint": 4.250488755025953e-15,
+          "relative_endpoint_error": 7607.234264831503,
+          "symmetry_error": 0.0,
+          "reflection_error": 0.0,
+          "even_source_error": 0.0
+        }
+      ]
+    }
+  ],
+  "convergence_checks": [
+    {
+      "lambda_": 1.5,
+      "observed_matrix_quadrature_difference_norm": 4.2339144409713186e-12,
+      "observed_source_quadrature_difference_norm": 3.932633592953022e-14,
+      "refined_diagnostics": {
+        "N": 64,
+        "dimension": 129,
+        "source_norm": 0.6553598194131383,
+        "alpha": 0.0001611131209601282,
+        "residual": 0.005406472662363523,
+        "complement_bottom": 0.012765730528831877,
+        "gamma": 0.012604617407871749,
+        "residual_over_gamma": 0.42892794659416716,
+        "ground_eigenvalue": 0.00014369899887971304,
+        "ground_gap": 0.012622031529951318,
+        "lowest_eigenvalues": [
+          0.00014369899887971304,
+          0.01276573052883103,
+          0.27415113427850335,
+          0.8980077866309664
+        ],
+        "even_lowest": [
+          0.00014369899887931741,
+          0.27415113427850424,
+          0.9015973928097094
+        ],
+        "odd_lowest": [
+          0.012765730528831558,
+          0.8980077866309649,
+          1.3398778423492903
+        ],
+        "source_ground_overlap": 0.9999837996807518,
+        "source_ground_angle_sine": 0.005692132820482639,
+        "projected_source_endpoint": 0.0304032292879623,
+        "relative_endpoint_error": 0.05401498391182199,
+        "symmetry_error": 0.0,
+        "reflection_error": 0.0,
+        "even_source_error": 0.0
+      }
+    },
+    {
+      "lambda_": 2.0,
+      "observed_matrix_quadrature_difference_norm": 4.223738062326734e-12,
+      "observed_source_quadrature_difference_norm": 1.5946791053151523e-13,
+      "refined_diagnostics": {
+        "N": 64,
+        "dimension": 129,
+        "source_norm": 0.6513505286583832,
+        "alpha": 9.6030040909822e-13,
+        "residual": 3.050451445687254e-07,
+        "complement_bottom": 5.332459074246553e-10,
+        "gamma": 5.322856070155571e-10,
+        "residual_over_gamma": 573.0854649237394,
+        "ground_eigenvalue": 7.719552450140864e-13,
+        "ground_gap": 5.324743586245582e-10,
+        "lowest_eigenvalues": [
+          7.719552450140864e-13,
+          5.332463138695723e-10,
+          1.59335593390398e-07,
+          3.321323308947995e-05
+        ],
+        "even_lowest": [
+          7.71496266258912e-13,
+          1.5933559212272152e-07,
+          0.002592747140819259
+        ],
+        "odd_lowest": [
+          5.332464471385452e-10,
+          3.3213233087660754e-05,
+          0.09139578348819014
+        ],
+        "source_ground_overlap": 0.9999996135526904,
+        "source_ground_angle_sine": 0.0008791441689900914,
+        "projected_source_endpoint": 3.7531874915129745e-06,
+        "relative_endpoint_error": 0.7170295253998752,
+        "symmetry_error": 0.0,
+        "reflection_error": 0.0,
+        "even_source_error": 0.0
+      }
+    },
+    {
+      "lambda_": 2.5,
+      "observed_matrix_quadrature_difference_norm": 4.216682718388048e-12,
+      "observed_source_quadrature_difference_norm": 7.2838279824547e-14,
+      "refined_diagnostics": {
+        "N": 64,
+        "dimension": 129,
+        "source_norm": 0.6514141653499389,
+        "alpha": -4.230020594821575e-14,
+        "residual": 9.67766452657051e-13,
+        "complement_bottom": -1.0410750600071146e-13,
+        "gamma": -6.18073000524957e-14,
+        "residual_over_gamma": null,
+        "ground_eigenvalue": -1.0412399025207018e-13,
+        "ground_gap": 8.047444586886242e-15,
+        "lowest_eigenvalues": [
+          -1.0412399025207018e-13,
+          -9.607654566518394e-14,
+          -6.489269789099976e-14,
+          -2.867919725001165e-14
+        ],
+        "even_lowest": [
+          -9.60736629023039e-14,
+          -2.924554644751173e-14,
+          2.562089476680101e-12
+        ],
+        "odd_lowest": [
+          -1.0406386630513082e-13,
+          -6.462323188088028e-14,
+          5.812706078643602e-10
+        ],
+        "source_ground_overlap": 0.008274717472669162,
+        "source_ground_angle_sine": 0.9999657639393199,
+        "projected_source_endpoint": 1.666961996448199e-11,
+        "relative_endpoint_error": 1.1210895602000825,
+        "symmetry_error": 0.0,
+        "reflection_error": 0.0,
+        "even_source_error": 0.0
+      }
+    },
+    {
+      "lambda_": 3.0,
+      "observed_matrix_quadrature_difference_norm": 4.2115711791922716e-12,
+      "observed_source_quadrature_difference_norm": 8.91444567359082e-14,
+      "refined_diagnostics": {
+        "N": 64,
+        "dimension": 129,
+        "source_norm": 0.6517255508337189,
+        "alpha": -4.922688474316457e-14,
+        "residual": 6.954408679299404e-13,
+        "complement_bottom": -1.2753185513679008e-13,
+        "gamma": -7.830497039362552e-14,
+        "residual_over_gamma": null,
+        "ground_eigenvalue": -1.2806271916427594e-13,
+        "ground_gap": 9.439826391280337e-16,
+        "lowest_eigenvalues": [
+          -1.2806271916427594e-13,
+          -1.271187365251479e-13,
+          -1.214548406903797e-13,
+          -1.1767891013386757e-13
+        ],
+        "even_lowest": [
+          -1.27781542498641e-13,
+          -1.1786380367991312e-13,
+          -1.0695429097931246e-13
+        ],
+        "odd_lowest": [
+          -1.2461922679985564e-13,
+          -1.2044278928418575e-13,
+          -1.0123117671210411e-13
+        ],
+        "source_ground_overlap": 0.059403248113462356,
+        "source_ground_angle_sine": 0.9982340677985151,
+        "projected_source_endpoint": 9.455933133427782e-15,
+        "relative_endpoint_error": 16924.80750546216,
+        "symmetry_error": 0.0,
+        "reflection_error": 0.0,
+        "even_source_error": 0.0
+      }
+    }
+  ]
+}

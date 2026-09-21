@@ -1,0 +1,23 @@
+{
+  "status": "PASS_COMPLETE_HEAD",
+  "parity": "even",
+  "M": 4096,
+  "J": 65536,
+  "steps": 16,
+  "bits": 768,
+  "rho_joint": "[0.16510233249962733461441144696901344792934461976701903725519028113405053056503711 +/- 1.49e-81]",
+  "scalar_gate": {
+    "status": "PASS",
+    "pivots": 17,
+    "smallest_lower_pivot": "[0.78925191724413283579787949480793389104864320772820328768691167385 +/- 4.59e-66]"
+  },
+  "joint_gate": {
+    "status": "PASS",
+    "pivots": 17,
+    "smallest_lower_pivot": "[0.78925196576392532477152203249518219611703339586305801382759843498 +/- 2.77e-66]"
+  },
+  "outer_sha256": "0a7e67c38fe6c6820a2a9c3c6e4e52607319e2655838df9734a88703c9d8118d",
+  "inner_sha256": "7bd24903f7c9616cb87530c7f8bf17f87b6b7c968677e6cb5740cec32cf44cf3",
+  "seconds": 45.85137152671814,
+  "scope": "One common Gram majorizes all remote inner and outer sources and their cross block. A failed lower bound is not a negative Weil vector."
+}

@@ -1,0 +1,83 @@
+\subsection*{Strong cancellation persists in the exact source complement}
+
+The proved ordinary source residual does not mean that significant
+prime/non-prime cancellation is confined to one direction. The following
+fixed-window certificate tests that possible shortcut on the literal
+source, rather than on sampled basis or random vectors.
+
+\begin{proposition}[A certified cancelling direction off the source]
+\label{prop:v121-complement-cancellation}
+At $\lambda=3$ there exists an inversion-even unit Fourier polynomial
+$v\in E_{64}$ exactly orthogonal to the repaired source $p_3$ such that
+\begin{equation}\label{eq:v121-complement-cancellation}
+ \begin{gathered}
+ \ip{v}{p_3}=0,\qquad
+ 0<QW_3(v,v)<3\cdot10^{-31},\\
+ q_{\rm np}(v)>0.4,\qquad q_{\rm pr}(v)<-0.4.
+ \end{gathered}
+\end{equation}
+Here $q_{\rm np}=q_{\rm ar}+q_{\rm po}$ includes both the pure
+archimedean term and the pole term, and $q_{\rm pr}$ is the signed
+prime contribution, so $QW_3=q_{\rm np}+q_{\rm pr}$.
+\end{proposition}
+\begin{proof}
+Let $V$ have the two real dyadic columns supplied in
+Appendix~\ref{app:v121-audit}, in the normalized even basis of $E_{64}$.
+Let $c$ be the exact rational source candidate from
+Proposition~\ref{prop:v113-source-certificate}, converted to the same
+parity coordinates. Set $a=V^*c$ and $x=(-a_2,a_1)^t$. The exact
+algebra gives $\ip{Vx}{c}=0$. The certified Gram matrix $V^*V$ is
+positive definite and $\norm{Vx}>0$, so put $w=Vx/\norm{Vx}$.
+All vectors are real here; the stated Hermitian convention is unchanged.
+
+Outward interval evaluation of the separate finite matrices gives
+\[
+ \begin{aligned}
+ 2.5844134\cdot10^{-31}&<QW_3(w,w)<2.5844135\cdot10^{-31},\\
+ q_{\rm np}(w)&>0.4173237590,\\
+ q_{\rm pr}(w)&<-0.4173237590.
+ \end{aligned}
+\]
+These are inequalities for exact dyadic/rational constructions;
+approximate eigenvectors were used only to propose the dyadic columns.
+
+Write $u=P_{64}p_3/\norm{P_{64}p_3}$ and $\widehat c=c/\norm c$.
+The existing exact-source certificate, matched to $c$ by its file hash,
+gives $\norm{P_u-P_{\widehat c}}<\delta=4\cdot10^{-36}$.
+Since $w\perp c$, define
+\[
+ v=\frac{(I-P_u)w}{\norm{(I-P_u)w}}.
+\]
+Then $\norm{v-w}<2\delta$. Also $v\in E_{64}$, hence $v\perp u$
+implies $v\perp p_3$, not just orthogonality to an approximate source.
+For any finite Hermitian matrix $H$,
+\[
+ |\ip{Hv}{v}-\ip{Hw}{w}|
+ \le2\norm H\norm{v-w}<4\delta\norm H.
+\]
+The certified all-row bounds for the compressed matrices are
+\[
+ \norm{W_{64}}<8.926,\qquad
+ \norm{H_{\rm np,64}}<4.176,\qquad
+ \norm{H_{\rm pr,64}}<5.490.
+\]
+Applying these bounds to the full interval enclosures, before rounding,
+gives
+\[
+ 2.5829853\cdot10^{-31}<QW_3(v,v)<2.5858415\cdot10^{-31}
+\]
+and preserves both strict $0.4$ bounds. A finite-support polynomial's
+complete quadratic form equals its finite matrix quadratic form.
+No invariant-subspace or full operator-residual assertion is required.
+\end{proof}
+
+Thus $QW_3(v,v)/q_{\rm np}(v)<7.5\cdot10^{-31}$ inside the exact
+source complement. This rules out an explanation in which substantial
+archimedean-plus-pole dominance eliminates the need for cancellation
+everywhere off that source. It does not rule out positivity on the
+complement, and exhibits neither a negative Weil direction nor an
+additional exact null vector. Positive basis-vector or typical
+random-vector energies cannot control these coherent linear combinations.
+The pole term must be included explicitly: calling $q_{\rm np}$ the
+pure archimedean contribution would change the asserted comparison.
+

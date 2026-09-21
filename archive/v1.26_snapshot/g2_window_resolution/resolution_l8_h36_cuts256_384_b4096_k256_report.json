@@ -1,0 +1,48 @@
+{
+  "lambda": 8,
+  "head": 36,
+  "cuts": [
+    256,
+    384
+  ],
+  "bits": 4096,
+  "arch_terms": 256,
+  "certificates": [
+    {
+      "cut": 256,
+      "tail_positive": "PASS_INTERVAL_LDL",
+      "Schur_gate": {
+        "status": "PASS",
+        "pivots": 37,
+        "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+      }
+    },
+    {
+      "cut": 384,
+      "tail_positive": "PASS_INTERVAL_LDL",
+      "Schur_gate": {
+        "status": "PASS",
+        "pivots": 37,
+        "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+      }
+    }
+  ],
+  "scope": "Nested finite Galerkin Schur forms only; no rows beyond largest cut and no complete inverse upper bound.",
+  "comparisons": [
+    {
+      "retained_cut": 256,
+      "test_cut": 384,
+      "margin_diagnostic": "1.16723899850878886968748613312034667160789208050398147098684e-93",
+      "margin_lower": "[1.15556660852370098099061127178914320489181315969894165627697646959112747648721406024366408e-93 +/- 1.96e-183]",
+      "margin_upper": "[1.16723899850878886968748613312034667160789208050398147098684491877891664291637783862996372e-93 +/- 8.52e-184]",
+      "lower_gate": {
+        "status": "PASS",
+        "pivots": 37,
+        "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+      },
+      "congruence_log10_condition_diagnostic": 116.1870235726808,
+      "K_normalization_entrywise_error_upper": "[2.5484786769674421007e-544 +/- 4.03e-564]"
+    }
+  ],
+  "seconds": 141.28271555900574
+}

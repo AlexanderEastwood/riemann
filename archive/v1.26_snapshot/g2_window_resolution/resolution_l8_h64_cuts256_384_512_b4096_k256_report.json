@@ -1,0 +1,72 @@
+{
+  "lambda": 8,
+  "head": 64,
+  "cuts": [
+    256,
+    384,
+    512
+  ],
+  "bits": 4096,
+  "arch_terms": 256,
+  "certificates": [
+    {
+      "cut": 256,
+      "tail_positive": "PASS_INTERVAL_LDL",
+      "Schur_gate": {
+        "status": "PASS",
+        "pivots": 65,
+        "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+      }
+    },
+    {
+      "cut": 384,
+      "tail_positive": "PASS_INTERVAL_LDL",
+      "Schur_gate": {
+        "status": "PASS",
+        "pivots": 65,
+        "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+      }
+    },
+    {
+      "cut": 512,
+      "tail_positive": "PASS_INTERVAL_LDL",
+      "Schur_gate": {
+        "status": "PASS",
+        "pivots": 65,
+        "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+      }
+    }
+  ],
+  "scope": "Nested finite Galerkin Schur forms only; no rows beyond largest cut and no complete inverse upper bound.",
+  "comparisons": [
+    {
+      "retained_cut": 256,
+      "test_cut": 384,
+      "margin_diagnostic": "5.75469270288355782638126526801194954984046560319688225562746e-101",
+      "margin_lower": "[5.69714577585472224811745261533183005434206094716491343307118390996958296044037587210081052e-101 +/- 4.79e-191]",
+      "margin_upper": "[5.75469270288355782638126526801194954984046560319688225562745849491877066711149077989980860e-101 +/- 1.23e-191]",
+      "lower_gate": {
+        "status": "PASS",
+        "pivots": 65,
+        "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+      },
+      "congruence_log10_condition_diagnostic": 139.45063651654328,
+      "K_normalization_entrywise_error_upper": "[4.5136622978990276834e-590 +/- 2.12e-610]"
+    },
+    {
+      "retained_cut": 384,
+      "test_cut": 512,
+      "margin_diagnostic": "1.36266862899969418294770748791055013996995405005770798397338e-44",
+      "margin_lower": "[1.34904194270969724111823041303144463857025450955713090413364138442257658994907873640786265e-44 +/- 4.46e-134]",
+      "margin_upper": "[1.36266862899969418294770748791055013996995405005770798397337513578038039388795831960390166e-44 +/- 2.17e-134]",
+      "lower_gate": {
+        "status": "PASS",
+        "pivots": 65,
+        "smallest_lower_pivot": "[1.0000000000000000000000000000000000000000000000000000000000000000 +/- 3e-70]"
+      },
+      "congruence_log10_condition_diagnostic": 159.96091539019514,
+      "K_normalization_entrywise_error_upper": "[3.0499999022534931393e-544 +/- 4.12e-564]"
+    }
+  ],
+  "seconds": 326.2447988986969
+}

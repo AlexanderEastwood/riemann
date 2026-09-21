@@ -1,0 +1,60 @@
+{
+  "status": "CERTIFIED_HEAD_LOWER_ERROR",
+  "source": "simultaneous_even_M4096_s16_normalized_ingredients_b768.json",
+  "bits": 768,
+  "parity": "even",
+  "M": 4096,
+  "J": 65536,
+  "steps": 16,
+  "best": {
+    "positive": true,
+    "tau_exp": -1
+  },
+  "checks": [
+    {
+      "tau_exp": -5,
+      "epsilon_exponent": -2,
+      "epsilon": "1e+2",
+      "gate": {
+        "status": "PASS",
+        "pivots": 17,
+        "smallest_lower_pivot": "[28663.295226977115243362210633370787752645031065492376432131601402 +/- 1.32e-61]"
+      }
+    },
+    {
+      "tau_exp": -4,
+      "epsilon_exponent": -1,
+      "epsilon": "1e+1",
+      "gate": {
+        "status": "PASS",
+        "pivots": 17,
+        "smallest_lower_pivot": "[2867.2117219456265672819140819345556528190997201157634203246269942 +/- 3.45e-63]"
+      }
+    },
+    {
+      "tau_exp": -3,
+      "epsilon_exponent": 5,
+      "epsilon": "1e-5",
+      "gate": {
+        "status": "PASS",
+        "pivots": 17,
+        "smallest_lower_pivot": "[0.83842578165005296186076112168462363809527277889930721918414153559 +/- 9.76e-67]"
+      }
+    },
+    {
+      "tau_exp": -2,
+      "epsilon_exponent": 41,
+      "epsilon": "1e-41",
+      "gate": {
+        "status": "PASS",
+        "pivots": 17,
+        "smallest_lower_pivot": "[0.67683001005180529461028327508461551674531577813678184067605500004 +/- 1.78e-66]"
+      }
+    },
+    {
+      "tau_exp": -1,
+      "positive": true
+    }
+  ],
+  "scope": "S_infinity >= -epsilon I on the ordinary outer head; not a positivity result or growing-window estimate. A shifted complete form square gives the same lower error for the full parity operator."
+}

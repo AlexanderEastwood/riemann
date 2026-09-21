@@ -1,0 +1,45 @@
+\begin{corollary}[Ordinary error localized to the unresolved subspace]
+\label{cor:v126-local-error}
+Under the hypotheses of Proposition~\ref{prop:v126-direction-complement},
+assume $0\le\sigma<1$, let $P_E$ be the $K$-orthogonal projection
+onto $E$, and set
+\[
+ \eta=\frac{(\sigma-s)_+}{1-\sigma}.
+\]
+Then
+\begin{equation}\label{eq:v126-local-error}
+ S\succeq-\eta P_E^*KP_E.
+\end{equation}
+If $S$ is the complete Schur form of a trial with invertible
+physical head $V$ and coercive complete tail, the full form has
+ordinary lower error at most
+\begin{equation}\label{eq:v126-local-physical-error}
+ \varepsilon^{\rm loc}
+ =\eta\,\norm{K^{1/2}P_EV^{-1}}^2.
+\end{equation}
+The congruence cost is thus restricted to the unresolved subspace;
+it is not discarded.
+\end{corollary}
+\begin{proof}
+Write $x=e+f$, $e\in E$, $f\in E^{\perp_K}$, and
+$a=\norm e_K$, $b=\norm f_K$. Positivity of $\mathcal C$ gives
+\[
+ S(x,x)\ge sa^2+(1-\sigma)b^2
+                 -2\sqrt{(1-s)\sigma}\,ab.
+\]
+Completing the square in $b$ bounds this below by
+$(s-\sigma)a^2/(1-\sigma)$, which proves
+\eqref{eq:v126-local-error}. For physical head $y=Vx$, use
+$a^2=\norm{K^{1/2}P_EV^{-1}y}^2$. The positive complete-tail
+square and $\norm y\le\norm{\text{full vector}}$ give
+\eqref{eq:v126-local-physical-error} on the closed form domain.
+\end{proof}
+
+Along a cofinal window family, establishing all these hypotheses
+and $\varepsilon^{\rm loc}_\lambda\to0$ would satisfy
+Proposition~\ref{prop:v121-cofinal-rh}, using its fixed-support
+identification with the same Weil form. This is a sufficient target
+which can tolerate a negative restricted estimate; no such
+convergence is proved here. Its factors must be controlled for
+the complete operator at every window of that family.
+
