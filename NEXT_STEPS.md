@@ -27,6 +27,8 @@ Status vocabulary: `open` · `claimed` · `in-progress` · `done (vN.NN)` ·
 | NS-13 | Standing rule: do **not** compute λ = 10, 12 windows or floors past λ=8 | — | rule | `prop:v121-cofinal-rh`, `prop:v138-shifted-floor` |
 | NS-15 | Review current evidence, dependencies and active work; recommend the next NS to tackle | Codex | done (v1.40 review; no new result) | Recommend NS-2 next: reproduce CCM section 6 at lambda=sqrt(12), N=120, with the exact normalization dictionary, two-precision replay and a discrepancy statement. NS-14 is already in progress; NS-4b's table and concentration exclusion already exist in v139/adversarial_review.md sections 6–7. Follow with NS-3/6, correcting the stale comparison; retain NS-1 as blocked. The next analytic target remains a uniform finite signed-concentration floor in both parities, with all couplings controlled. |
 
+| NS-16 | Integrate the saved v1.41 candidate with current main, preserve later diagnostics and retractions, rebuild and verify manifests, then publish the authorized merge | Codex (Astra) | claimed | v1.41 on main with its version tag; NS-1 stays OPEN; no new windows and no G2/RH claim |
+
 ## Lanes
 
 ```
