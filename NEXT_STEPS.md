@@ -29,6 +29,8 @@ Status vocabulary: `open` · `claimed` · `in-progress` · `done (vN.NN)` ·
 | NS-15 | Review current evidence, dependencies and active work; recommend the next NS to tackle | Codex | done (v1.40 review; no new result) | Recommend NS-2 next: reproduce CCM section 6 at lambda=sqrt(12), N=120, with the exact normalization dictionary, two-precision replay and a discrepancy statement. NS-14 is already in progress; NS-4b's table and concentration exclusion already exist in v139/adversarial_review.md sections 6–7. Follow with NS-3/6, correcting the stale comparison; retain NS-1 as blocked. The next analytic target remains a uniform finite signed-concentration floor in both parities, with all couplings controlled. |
 | NS-16 | Integrate the saved v1.41 candidate with current main, preserve later diagnostics and retractions, rebuild and verify manifests, then publish the authorized merge | Codex (Astra) | done (v1.41) | Saved candidate integrated with current main; later diagnostics and retractions retained byte-for-byte; manuscript builds to 215 pages with 0 undefined/duplicate references; current evidence manifest verifies. Main and v1.41 publication authorized by the user. NS-1 stays OPEN; no new windows or G2/RH claim. |
 
+| NS-17 | Test complete-ground Fourier-zero transfer at existing lambda=4: budget spectral separation and full residual/tail errors near the first zeta ordinate; certify a unique local zero if the bounds permit, otherwise identify the precise limiting bound | Codex (Astra) | claimed | Two-precision interval replay including the infinite tail; distinguish certificate failure from object failure. No new windows; complete-ground convergence, G2 and RH stay open. |
+
 ## Lanes
 
 ```
