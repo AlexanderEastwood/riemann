@@ -47,7 +47,7 @@ certificates; the full version with a node-by-node list is
 
 <!-- research-map:start -->
 ```mermaid
-graph TD
+graph LR
   rh["RH"]
   g1["G1 (weak)<br/><small>thm:v14-radical</small><br/><small>&#128193; evidence/v124/g2_source_certificate</small>"]
   fixedspace["Fixed-space / Burnol Sonine route"]

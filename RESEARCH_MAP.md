@@ -4,7 +4,7 @@ _Generated from `research-map.json` — last updated 2026-09-21._
 _Do not hand-edit: run `python3 tools/make_map.py`._
 
 ```mermaid
-graph TD
+graph LR
   rh["RH"]
   g1["G1 (weak)<br/><small>thm:v14-radical</small><br/><small>&#128193; evidence/v124/g2_source_certificate</small>"]
   fixedspace["Fixed-space / Burnol Sonine route"]

@@ -37,7 +37,7 @@ def main() -> int:
     L = [f"# {doc['title']}", "",
          f"_Generated from `research-map.json` — last updated {doc['updated']}._",
          "_Do not hand-edit: run `python3 tools/make_map.py`._", "", "```mermaid",
-         "graph TD"]
+         "graph LR"]
 
     for n in nodes:
         label = esc(n["title"])
