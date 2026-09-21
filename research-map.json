@@ -2,92 +2,222 @@
   "title": "Riemann project research map",
   "updated": "2026-09-21",
   "legend": {
-    "proved":  "established result",
-    "live":    "active candidate mechanism",
-    "closed":  "proved insufficient or impossible",
+    "proved": "established result",
+    "live": "active candidate mechanism",
+    "closed": "proved insufficient or impossible",
     "blocked": "attempted; obstruction found",
-    "open":    "target, not yet attacked"
+    "open": "target, not yet attacked"
   },
   "nodes": [
-    {"id": "rh", "title": "RH", "status": "open", "parent": null,
-     "note": "via Weil positivity"},
-
-    {"id": "g1", "title": "G1 (weak)", "status": "proved", "parent": "rh",
-     "prop": "thm:v14-radical", "branch": "lane/g1",
-     "note": "closed for the repaired prolate source"},
-
-    {"id": "fixedspace", "title": "Fixed-space / Burnol Sonine route", "status": "open",
-     "parent": "rh", "branch": "lane/fixed-space",
-     "note": "needs evaluator estimates + closed-operator realization"},
-
-    {"id": "g2", "title": "G2: cofinal -o(1)", "status": "open", "parent": "rh",
-     "prop": "prop:v121-cofinal-rh",
-     "note": "eps_lambda -> 0 cofinally IS RH"},
-
-    {"id": "windows", "title": "Fixed-window certificates", "status": "proved",
-     "parent": "g2", "branch": "lane/window-scaling",
-     "note": "no finite list is cofinal"},
-    {"id": "w3", "title": "lambda=3", "status": "proved", "parent": "windows",
-     "prop": "prop:v116-window-positive"},
-    {"id": "w4e", "title": "lambda=4 even", "status": "proved", "parent": "windows",
-     "prop": "prop:v125-even-complete", "branch": "result/v125-even-complete",
-     "evidence": "MISSING"},
-    {"id": "w4o", "title": "lambda=4 odd", "status": "proved", "parent": "windows",
-     "prop": "prop:v126-odd-complement", "branch": "result/v126-odd-complement",
-     "evidence": "MISSING"},
-    {"id": "w4", "title": "W_4 >= 0 both sectors", "status": "proved", "parent": "windows",
-     "prop": "prop:v126-full-window", "evidence": "MISSING",
-     "note": "only positive result; artifacts absent"},
-    {"id": "w5", "title": "lambda=5", "status": "blocked", "parent": "windows",
-     "note": "10^-8 D tail metric certified FALSE, both parities (v1.28)"},
-
-    {"id": "uniform", "title": "Uniform mechanism for G2", "status": "open", "parent": "g2"},
-
-    {"id": "primenorm", "title": "unsigned prime-norm domination", "status": "closed",
-     "parent": "uniform", "prop": "prop:v119-prime-essential",
-     "branch": "closed/prime-norm", "note": "norm ~ lambda, survives any finite removal"},
-    {"id": "normcontr", "title": "norm contraction", "status": "closed",
-     "parent": "uniform", "prop": "prop:v120-norm-counterexample",
-     "branch": "closed/norm-contraction"},
-    {"id": "schatten", "title": "Schatten / Hilbert-Schmidt", "status": "closed",
-     "parent": "uniform", "prop": "prop:v132-schatten", "branch": "closed/schatten"},
-    {"id": "sampling", "title": "basis / sampling dominance", "status": "closed",
-     "parent": "uniform", "prop": "prop:v121-complement-cancellation",
-     "branch": "closed/sampling-dominance"},
-    {"id": "farmaj", "title": "scalar far majorant", "status": "closed",
-     "parent": "uniform", "prop": "prop:v125-cutoff-cost",
-     "branch": "closed/scalar-far-majorant",
-     "note": "N ~ L exp(M_phi): exponential cutoff cost"},
-    {"id": "blockmetric", "title": "block metrics", "status": "closed",
-     "parent": "uniform", "branch": "closed/block-metric", "note": "v1.28, both parities"},
-    {"id": "flattop", "title": "flat-top smoothing", "status": "closed",
-     "parent": "uniform", "prop": "prop:v132-flat-top", "branch": "closed/flat-top"},
-    {"id": "recipband", "title": "reciprocal-band commutation", "status": "closed",
-     "parent": "uniform", "branch": "closed/reciprocal-band",
-     "note": "v1.33, commutator norm > 9e-6"},
-    {"id": "cotlar", "title": "Cotlar cross terms / atomization", "status": "closed",
-     "parent": "uniform", "branch": "closed/cotlar-atomization",
-     "note": "v1.34, cross norm >= 73/(375 pi)"},
-    {"id": "scalarprim", "title": "scalar signed primitive", "status": "closed",
-     "parent": "uniform", "prop": "cor:v137-scalar-no-go",
-     "branch": "closed/scalar-primitive",
-     "note": "a Delta(beta_a) -> infinity, unconditional"},
-
-    {"id": "concentration", "title": "signed weighted concentration", "status": "live",
-     "parent": "uniform", "prop": "prop:v131-concentration",
-     "branch": "lane/concentration",
-     "note": "even sector; retains time-frequency correlations"},
-
-    {"id": "weaken", "title": "Target weakening", "status": "proved", "parent": "g2",
-     "branch": "lane/bounded-floor"},
-    {"id": "floor", "title": "uniform finite floor suffices", "status": "proved",
-     "parent": "weaken", "prop": "prop:v136-bounded-floor",
-     "note": "decay not required; dichotomy inf spec -> -inf or RH"},
-    {"id": "gapfree", "title": "no uniform positive gap exists", "status": "proved",
-     "parent": "weaken", "prop": "prop:v135-growing-radical",
-     "note": "dense radical family; same fact as the floor reduction"},
-    {"id": "floortest", "title": "certify finite floor at lambda=5,6,8", "status": "open",
-     "parent": "floor", "branch": "result/floor-lambda5",
-     "note": "proposed: needs no tail metric, probes the dichotomy"}
+    {
+      "id": "rh",
+      "title": "RH",
+      "status": "open",
+      "parent": null,
+      "note": "via Weil positivity"
+    },
+    {
+      "id": "g1",
+      "title": "G1 (weak)",
+      "status": "proved",
+      "parent": "rh",
+      "prop": "thm:v14-radical",
+      "branch": "lane/g1",
+      "note": "closed for the repaired prolate source"
+    },
+    {
+      "id": "fixedspace",
+      "title": "Fixed-space / Burnol Sonine route",
+      "status": "open",
+      "parent": "rh",
+      "branch": "lane/fixed-space",
+      "note": "needs evaluator estimates + closed-operator realization"
+    },
+    {
+      "id": "g2",
+      "title": "G2: cofinal -o(1)",
+      "status": "open",
+      "parent": "rh",
+      "prop": "prop:v121-cofinal-rh",
+      "note": "eps_lambda -> 0 cofinally IS RH"
+    },
+    {
+      "id": "windows",
+      "title": "Fixed-window certificates",
+      "status": "proved",
+      "parent": "g2",
+      "branch": "lane/window-scaling",
+      "note": "no finite list is cofinal"
+    },
+    {
+      "id": "w3",
+      "title": "lambda=3",
+      "status": "proved",
+      "parent": "windows",
+      "prop": "prop:v116-window-positive"
+    },
+    {
+      "id": "w4e",
+      "title": "lambda=4 even",
+      "status": "proved",
+      "parent": "windows",
+      "prop": "prop:v125-even-complete",
+      "branch": "result/v125-even-complete",
+      "evidence": "evidence/v126"
+    },
+    {
+      "id": "w4o",
+      "title": "lambda=4 odd",
+      "status": "proved",
+      "parent": "windows",
+      "prop": "prop:v126-odd-complement",
+      "branch": "result/v126-odd-complement",
+      "evidence": "evidence/v126"
+    },
+    {
+      "id": "w4",
+      "title": "W_4 >= 0 both sectors",
+      "status": "proved",
+      "parent": "windows",
+      "prop": "prop:v126-full-window",
+      "evidence": "evidence/v126",
+      "note": "only positive result; evidence restored and verified"
+    },
+    {
+      "id": "w5",
+      "title": "lambda=5",
+      "status": "blocked",
+      "parent": "windows",
+      "note": "10^-8 D tail metric certified FALSE, both parities (v1.28)"
+    },
+    {
+      "id": "uniform",
+      "title": "Uniform mechanism for G2",
+      "status": "open",
+      "parent": "g2"
+    },
+    {
+      "id": "primenorm",
+      "title": "unsigned prime-norm domination",
+      "status": "closed",
+      "parent": "uniform",
+      "prop": "prop:v119-prime-essential",
+      "branch": "closed/prime-norm",
+      "note": "norm ~ lambda, survives any finite removal"
+    },
+    {
+      "id": "normcontr",
+      "title": "norm contraction",
+      "status": "closed",
+      "parent": "uniform",
+      "prop": "prop:v120-norm-counterexample",
+      "branch": "closed/norm-contraction"
+    },
+    {
+      "id": "schatten",
+      "title": "Schatten / Hilbert-Schmidt",
+      "status": "closed",
+      "parent": "uniform",
+      "prop": "prop:v132-schatten",
+      "branch": "closed/schatten"
+    },
+    {
+      "id": "sampling",
+      "title": "basis / sampling dominance",
+      "status": "closed",
+      "parent": "uniform",
+      "prop": "prop:v121-complement-cancellation",
+      "branch": "closed/sampling-dominance"
+    },
+    {
+      "id": "farmaj",
+      "title": "scalar far majorant",
+      "status": "closed",
+      "parent": "uniform",
+      "prop": "prop:v125-cutoff-cost",
+      "branch": "closed/scalar-far-majorant",
+      "note": "N ~ L exp(M_phi): exponential cutoff cost"
+    },
+    {
+      "id": "blockmetric",
+      "title": "block metrics",
+      "status": "closed",
+      "parent": "uniform",
+      "branch": "closed/block-metric",
+      "note": "v1.28, both parities"
+    },
+    {
+      "id": "flattop",
+      "title": "flat-top smoothing",
+      "status": "closed",
+      "parent": "uniform",
+      "prop": "prop:v132-flat-top",
+      "branch": "closed/flat-top"
+    },
+    {
+      "id": "recipband",
+      "title": "reciprocal-band commutation",
+      "status": "closed",
+      "parent": "uniform",
+      "branch": "closed/reciprocal-band",
+      "note": "v1.33, commutator norm > 9e-6"
+    },
+    {
+      "id": "cotlar",
+      "title": "Cotlar cross terms / atomization",
+      "status": "closed",
+      "parent": "uniform",
+      "branch": "closed/cotlar-atomization",
+      "note": "v1.34, cross norm >= 73/(375 pi)"
+    },
+    {
+      "id": "scalarprim",
+      "title": "scalar signed primitive",
+      "status": "closed",
+      "parent": "uniform",
+      "prop": "cor:v137-scalar-no-go",
+      "branch": "closed/scalar-primitive",
+      "note": "a Delta(beta_a) -> infinity, unconditional"
+    },
+    {
+      "id": "concentration",
+      "title": "signed weighted concentration",
+      "status": "live",
+      "parent": "uniform",
+      "prop": "prop:v131-concentration",
+      "branch": "lane/concentration",
+      "note": "even sector; retains time-frequency correlations"
+    },
+    {
+      "id": "weaken",
+      "title": "Target weakening",
+      "status": "proved",
+      "parent": "g2",
+      "branch": "lane/bounded-floor"
+    },
+    {
+      "id": "floor",
+      "title": "uniform finite floor suffices",
+      "status": "proved",
+      "parent": "weaken",
+      "prop": "prop:v136-bounded-floor",
+      "note": "decay not required; dichotomy inf spec -> -inf or RH"
+    },
+    {
+      "id": "gapfree",
+      "title": "no uniform positive gap exists",
+      "status": "proved",
+      "parent": "weaken",
+      "prop": "prop:v135-growing-radical",
+      "note": "dense radical family; same fact as the floor reduction"
+    },
+    {
+      "id": "floortest",
+      "title": "certify finite floor at lambda=5,6,8",
+      "status": "open",
+      "parent": "floor",
+      "branch": "result/floor-lambda5",
+      "note": "proposed: needs no tail metric, probes the v136 dichotomy"
+    }
   ]
 }

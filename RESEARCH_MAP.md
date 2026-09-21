@@ -11,9 +11,9 @@ graph TD
   g2["G2: cofinal -o(1)<br/><small>prop:v121-cofinal-rh</small>"]
   windows["Fixed-window certificates"]
   w3["lambda=3<br/><small>prop:v116-window-positive</small>"]
-  w4e["lambda=4 even<br/><small>prop:v125-even-complete</small><br/><small>EVIDENCE MISSING</small>"]
-  w4o["lambda=4 odd<br/><small>prop:v126-odd-complement</small><br/><small>EVIDENCE MISSING</small>"]
-  w4["W_4 >= 0 both sectors<br/><small>prop:v126-full-window</small><br/><small>EVIDENCE MISSING</small>"]
+  w4e["lambda=4 even<br/><small>prop:v125-even-complete</small>"]
+  w4o["lambda=4 odd<br/><small>prop:v126-odd-complement</small>"]
+  w4["W_4 >= 0 both sectors<br/><small>prop:v126-full-window</small>"]
   w5["lambda=5"]
   uniform["Uniform mechanism for G2"]
   primenorm["unsigned prime-norm domination<br/><small>prop:v119-prime-essential</small>"]
@@ -87,15 +87,15 @@ graph TD
   - [x] **G1 (weak)** — `thm:v14-radical` · `lane/g1` · closed for the repaired prolate source
   - [ ] **G2: cofinal -o(1)** — `prop:v121-cofinal-rh` · eps_lambda -> 0 cofinally IS RH
     - [x] **Fixed-window certificates** — `lane/window-scaling` · no finite list is cofinal
-      - [x] **W_4 >= 0 both sectors** — `prop:v126-full-window` · **evidence missing** · only positive result; artifacts absent
+      - [x] **W_4 >= 0 both sectors** — `prop:v126-full-window` · only positive result; evidence restored and verified
       - [x] **lambda=3** — `prop:v116-window-positive`
-      - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete` · **evidence missing**
-      - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement` · **evidence missing**
+      - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete`
+      - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement`
       - [!] **lambda=5** — 10^-8 D tail metric certified FALSE, both parities (v1.28)
     - [x] **Target weakening** — `lane/bounded-floor`
       - [x] **no uniform positive gap exists** — `prop:v135-growing-radical` · dense radical family; same fact as the floor reduction
       - [x] **uniform finite floor suffices** — `prop:v136-bounded-floor` · decay not required; dichotomy inf spec -> -inf or RH
-        - [ ] **certify finite floor at lambda=5,6,8** — `result/floor-lambda5` · proposed: needs no tail metric, probes the dichotomy
+        - [ ] **certify finite floor at lambda=5,6,8** — `result/floor-lambda5` · proposed: needs no tail metric, probes the v136 dichotomy
     - [ ] **Uniform mechanism for G2**
       - [X] **Cotlar cross terms / atomization** — `closed/cotlar-atomization` · v1.34, cross norm >= 73/(375 pi)
       - [X] **Schatten / Hilbert-Schmidt** — `prop:v132-schatten` · `closed/schatten`

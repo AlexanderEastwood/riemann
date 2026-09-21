@@ -2,8 +2,39 @@
 
 Alexander Eastwood's complete working manuscript, **v1.37**.
 
-**G2 and the Riemann Hypothesis remain open.** The update proves an
-obstruction to a scalar sufficient estimate, not a negative Weil-form test.
+**G2 and the Riemann Hypothesis remain open.** Nothing in this repository
+claims otherwise.
+
+## Navigating this repository
+
+- **[RESEARCH_MAP.md](RESEARCH_MAP.md)** — the whole project as one diagram:
+  every idea, which sub-ideas were tried, and which passed or failed.
+- **[COMPARISON.md](COMPARISON.md)** — where the certified `lambda = 4`
+  window sits relative to published work, with the parameter translation.
+- **[REPO_LAYOUT.md](REPO_LAYOUT.md)** — directory layout, branch and tag
+  conventions, and how to add a new version.
+- **[evidence/MISSING.md](evidence/MISSING.md)** — artifacts the manuscript
+  cites that this repository does not yet contain. Read this before relying
+  on any computer-assisted claim.
+- **[AGENTS.md](AGENTS.md)** — instructions for AI agents contributing here.
+
+```sh
+./manuscript/build.sh                     # build the PDF (source validation is not a build)
+python3 tools/verify_manifest.py v126     # check a version's artifacts, or --all
+python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
+```
+
+## Status at a glance
+
+| | |
+|---|---|
+| Only positive result | `W_4 >= 0`, both parity sectors — evidence restored and verified |
+| Certified window | half-width `a = log 4 = 1.386`; 1.73× the published Zhu window, 4× the classical range |
+| Live mechanism | signed weighted concentration, even sector (`prop:v131-concentration`) |
+| Routes proved closed | 10 |
+| Evidence gaps | 2 of 4 tracked groups open — see the ledger |
+| G2 | open |
+| RH | open, and not claimed |
 
 ## Current manuscript
 
@@ -12,36 +43,8 @@ obstruction to a scalar sufficient estimate, not a negative Weil-form test.
 - [Revision notes](log/v1_revision_notes.md)
 - [Checksums and provenance](manifest/v1.37_manifest.json)
 
-There is one live manuscript at the root. Delivery is **LaTeX only** at the
-author's request. Previous PDFs and superseded evidence are historical
-material in the per-version [evidence](evidence/) directories and Git history.
-
-## Navigating this repository
-
-- **[RESEARCH_MAP.md](RESEARCH_MAP.md)** — the whole project as one diagram:
-  every idea, which sub-ideas were tried, and which passed or failed.
-- **[REPO_LAYOUT.md](REPO_LAYOUT.md)** — directory layout, branch and tag
-  conventions, and how to add a new version.
-- **[evidence/MISSING.md](evidence/MISSING.md)** — artifacts the manuscript
-  cites that this repository does not yet contain. Read this before relying
-  on any computer-assisted claim.
-
-Verify a version's artifacts:
-
-```sh
-python3 tools/verify_manifest.py v137     # or --all
-./manuscript/build.sh                     # source validation is not a build
-```
-
-## Status at a glance
-
-| | |
-|---|---|
-| Only positive result | `W_4 >= 0`, both parity sectors (artifacts currently missing) |
-| Live mechanism | signed weighted concentration, even sector |
-| Routes proved closed | 10 |
-| G2 | open |
-| RH | open, and not claimed |
+One live manuscript; delivery is **LaTeX only** at the author's request.
+Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.37`).
 
 ## New in v1.37
 
@@ -60,53 +63,36 @@ Any bounded cofinal scalar certificate would itself imply RH via v1.36,
 then contradict that pairing. The linear rates are RH-conditional; no
 unconditional linear rate is asserted.
 
-The probe is not a physical squared Paley--Wiener transform. Therefore
-these scalar obstructions do not refute positivity of the physical form.
-The signed concentration estimate, retaining favorable and unfavorable
-levels jointly, remains open in both parities. No G2 sign gap was closed.
+The probe is not a physical squared Paley–Wiener transform, so these scalar
+obstructions do not refute positivity of the physical form. The signed
+concentration estimate, retaining favorable and unfavorable levels jointly,
+remains open in both parities. No G2 sign gap was closed.
 
-- [Proof and novelty report](g2_scalar_budget_no_go/research_report.md)
-- [Proof excerpt](g2_scalar_budget_no_go/new_section.tex)
-- [Independent adversarial review](g2_scalar_budget_no_go/adversarial_review.md)
-- [Probe checks](g2_scalar_budget_no_go/check_probe.py)
-- [Check results](g2_scalar_budget_no_go/probe_results.json)
+- [Proof and novelty report](evidence/v137/research_report.md)
+- [Proof excerpt](evidence/v137/new_section.tex)
+- [Independent adversarial review](evidence/v137/adversarial_review.md)
+- [Probe checks](evidence/v137/check_probe.py) · [results](evidence/v137/probe_results.json)
 
-The result is a continuation and rejection of a prior proposal, not a new
-positive mechanism. The ingredients are classical; worldwide novelty is
-not claimed. Numerical quadrature is diagnostic and not a proof.
+The ingredients are classical; worldwide novelty is not claimed. Numerical
+quadrature is diagnostic and not a proof.
 
-## Saved-copy and reproduction status
+## The `lambda = 4` evidence
 
-Canonical ChatGPT file replacements for the current LaTeX, log and notes
-failed during transfer. Those saved copies remain v1.34; use this repository
-for v1.37. No stale saved-file link is labelled current.
+The original v1.26 reproduction bundle has been recovered and committed
+under [`evidence/v126/`](evidence/v126/): 468 files, byte-identical to the
+archived ZIP (SHA-256 `ccdb8eaa…82d8f`, independently re-verified). It
+includes both final certificate directories:
 
-The original **v1.26 cumulative reproduction bundle has been recovered**.
-It includes both missing final λ=4 certificate directories:
+- [complete even sector — `g2_simultaneous`](evidence/v126/g2_simultaneous/)
+- [complete odd sector — `g2_odd_complement`](evidence/v126/g2_odd_complement/)
 
-- [Complete even-sector evidence (`g2_simultaneous`)](archive/v1.26_snapshot/g2_simultaneous/)
-- [Complete odd-sector evidence (`g2_odd_complement`)](archive/v1.26_snapshot/g2_odd_complement/)
-- [Original cumulative ZIP and checksum](https://github.com/AlexanderEastwood/riemann/releases/tag/v1.26-evidence)
-- [Recovery provenance and replay scope](github_sync/README_v126_evidence_recovery.md)
+Final proof gates using the saved ingredients, witness bindings and the
+exact shared-head equality were replayed successfully. This did not
+regenerate witnesses or rerun every residual assembly; RESTORED in the
+ledger records availability, not a fresh independent audit of every
+computation. Provenance and per-file checksums:
+[`manifest/README_v126_evidence_recovery.md`](manifest/README_v126_evidence_recovery.md).
 
-The extracted snapshot preserves every original file and its relative
-layout. Final saved-ingredient proof gates and the exact shared-head check
-were replayed successfully; this publication did not regenerate witnesses
-or rerun every residual assembly. The historical bundle is not the current
-manuscript.
+## License
 
-The complete later v1.34 cumulative ZIP remains unavailable. Restoring the
-v1.25/v1.26 positivity evidence does not reconstruct that later archive or
-constitute a complete cumulative reproduction release for the current work.
-
-**Two of four tracked evidence gaps remain open:** the λ=5 disproof
-witnesses through v1.28 and the v1.31–v1.34 concentration evidence and
-diagnostics. See [the evidence availability ledger](evidence/MISSING.md)
-for the two restored groups and the two remaining open groups.
-
-## Validation
-
-Independent mathematical adversarial review passed. The complete source
-passed three draft-mode LaTeX validation runs without warnings or unresolved
-references. **No PDF was generated.** Exact analytic constants are supplied
-in the proof; separate standard-library quadrature checks the probe scaling.
+Apache-2.0 — see [LICENSE](LICENSE).
