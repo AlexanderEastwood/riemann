@@ -1,3 +1,19 @@
+# Version 1.40 — September 21, 2026
+
+- Completed NS-5 for the complete lambda=4 operator: a simple even ground with 0<mu0<2.454e-75 and mu1>1e-73, hence ordinary gap>9.7546e-74.
+- Extended the v1.17 shifted-inertia mechanism using a proved resolvent-change upper bound; lambda3 tail constants were not reused. The old lambda4 exact trial matrices and complete Schur inequalities remain fixed.
+- Reconstructed ordinary head and tail Grams from exact frozen dyadic coefficients, retained every inverse-shift term, and certified one even negative pivot versus none odd at1024/1280bits. The complete Rayleigh witness supplies the actual shifted negative direction.
+- Replayed the small prior even margin, odd complement, matching-head and repaired-direction gates. The full old infinite-tail assemblies are inherited inputs, not freshly recomputed at the new precisions.
+- Checked the precise real-distribution and essential-selfadjoint-core hypotheses of Connes–van Suijlekom Theorem6.1. The entire Fourier transform of the complete ground has only real zeros; no simple-zero or Riemann-Xi convergence claim is made.
+- Corrected the experimental interpretation: the eight-order figure describes a finite even-sector diagnostic; the chosen complete threshold must also respect the odd sector. The initially tried1e-70 is too large, as an exact odd trial lies below it;1e-73 passes.
+- Added incremental evidence/v140/, updated the shared task board and research map, and retained LaTeX-only delivery. No older missing evidence was replaced by regenerated substitutes.
+
+Build: 213 pages, zero undefined/duplicate references.
+
+NS-5 is closed at lambda=4. No cofinal G2 gap was closed, and RH is not proved.
+
+---
+
 # Version 1.39 — September 21, 2026
 
 - Replaced the informal proposed meta-obstruction with two exact hypotheses: a density relaxation admitting the v1.37 cutoff probe, and a compression bound invariant under domain-preserving spectral rotations fixing finite graph data.

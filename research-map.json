@@ -318,10 +318,13 @@
     },
     {
       "id": "simpleeven4",
-      "title": "simple even ground of complete W_4 (proposed certificate)",
-      "status": "open",
+      "title": "complete W_4: simple even ground; real-zero transform",
+      "status": "proved",
       "parent": "w4",
-      "note": "NS-5: v117 machinery; numerically 8-order gap; would make CvS Thm 6.1 unconditional at lambda=4 (xi-hat_4 real zeros)"
+      "note": "NS-5 complete: mu0<2.454e-75, mu1>1e-73, 1024/1280-bit shifted inertia; CvS Thm6.1 applies; no Xi convergence or G2 claim",
+      "prop": "prop:v140-ground4; cor:v140-real-zeros",
+      "branch": "result/ns5-ground-state",
+      "evidence": "evidence/v140"
     }
   ]
 }

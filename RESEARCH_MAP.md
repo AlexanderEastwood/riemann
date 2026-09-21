@@ -41,7 +41,7 @@ graph LR
   li["Li / Keiper coefficients<br/><small>&#128193; evidence/diag_routes/li</small>"]
   dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)<br/><small>&#128193; evidence/diag_routes/dbn</small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
-  simpleeven4["simple even ground of complete W_4 (proposed certificate)"]
+  simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -99,9 +99,10 @@ graph LR
   click nb "evidence/diag_routes/nb/" "evidence: evidence/diag_routes/nb"
   click li "evidence/diag_routes/li/" "evidence: evidence/diag_routes/li"
   click dbn "evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn"
+  click simpleeven4 "evidence/v140/" "evidence: evidence/v140"
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4 proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration,circle live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
@@ -109,18 +110,18 @@ graph LR
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
-  class rh,fixedspace,g2,uniform,altroutes,simpleeven4 open;
+  class rh,fixedspace,g2,uniform,altroutes open;
 ```
 
 ## Status
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 13 | established result |
+| `proved` | 14 | established result |
 | `live` | 2 | active candidate mechanism |
 | `closed` | 15 | proved insufficient or impossible |
 | `blocked` | 1 | attempted; obstruction found |
-| `open` | 6 | target, not yet attacked |
+| `open` | 5 | target, not yet attacked |
 
 ## Nodes
 
@@ -138,7 +139,7 @@ graph LR
     - [x] **Fixed-window certificates** — `lane/window-scaling` · no finite list is cofinal
       - [x] **W_4 >= 0 both sectors** — `prop:v126-full-window` · evidence: [`evidence/v126/`](evidence/v126/) · only positive result; evidence restored and verified
         - [x] **W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4** — CCM arXiv:2511.22755 Cor 3.7-3.8 write 'we cannot assert mu_lambda >= 0'; monotone in lambda; positioning statement
-        - [ ] **simple even ground of complete W_4 (proposed certificate)** — NS-5: v117 machinery; numerically 8-order gap; would make CvS Thm 6.1 unconditional at lambda=4 (xi-hat_4 real zeros)
+        - [x] **complete W_4: simple even ground; real-zero transform** — `prop:v140-ground4; cor:v140-real-zeros` · `result/ns5-ground-state` · evidence: [`evidence/v140/`](evidence/v140/) · NS-5 complete: mu0<2.454e-75, mu1>1e-73, 1024/1280-bit shifted inertia; CvS Thm6.1 applies; no Xi convergence or G2 claim
       - [x] **lambda=3** — `prop:v116-window-positive` · evidence: [`evidence/v124/g2_certificate/`](evidence/v124/g2_certificate/)
       - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete` · evidence: [`evidence/v126/`](evidence/v126/)
       - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement` · evidence: [`evidence/v126/`](evidence/v126/)

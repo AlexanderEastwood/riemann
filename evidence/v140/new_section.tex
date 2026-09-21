@@ -1,0 +1,187 @@
+\subsection*{A complete simple even ground and its real-zero transform at $\lambda=4$}
+
+The fixed-window sign can be sharpened to spectral ordering without
+replacing the complete operator by a compression. We retain the actual
+physical window, normalized parity bases and ordinary Hilbert norm of
+Proposition~\ref{prop:v114-weil-core}. The following comparison accounts
+for the entire change in the tail inverse under a spectral shift.
+
+\begin{lemma}[A shifted Schur lower bound from a complete unshifted certificate]
+\label{lem:v140-shifted-schur}
+Let $W=\left(\begin{smallmatrix}F&B^*\\B&T\end{smallmatrix}\right)$
+be a lower-bounded self-adjoint operator with finite head,
+$T\succeq\delta I$, $\delta>0$, and bounded head-to-tail coupling $B$.
+Let $G=(V,Z)^t$ be a finite trial map, with $V$ invertible and
+$\operatorname{Ran}Z\subset\mathcal D(T)$. Put
+\[
+ K=G^*WG,\quad H_h=V^*V,\quad H_t=Z^*Z,\quad
+ S=F-B^*T^{-1}B.
+\]
+Suppose $K\succ0$ and $V^*SV\succeq\kappa K$, $\kappa>0$.
+For $0<\sigma<\delta$, define
+\begin{equation}\label{eq:v140-shifted-lower}
+ L_\sigma=\kappa K-\sigma\left[H_h+
+       \frac{2}{1-\sigma/\delta}(H_t+\delta^{-1}K)\right].
+\end{equation}
+Then
+\[
+ V^*\{F-\sigma I-B^*(T-\sigma I)^{-1}B\}V
+ \succeq L_\sigma.
+\]
+\end{lemma}
+\begin{proof}
+Set $r=BV+TZ$ and $\mathcal C=r^*T^{-1}r$. Square completion gives
+$V^*SV=K-\mathcal C$, hence $0\preceq\mathcal C\preceq K$.
+With $Y=T^{-1}BV=-Z+T^{-1}r$, the Hilbert-space square inequality
+and $T^{-2}\preceq\delta^{-1}T^{-1}$ give
+\[
+ Y^*Y\preceq2H_t+2r^*T^{-2}r
+             \preceq2H_t+2\delta^{-1}K.
+\]
+The resolvent identity yields the exact shifted Schur identity
+\[
+ V^*S_\sigma V=V^*SV-\sigma H_h
+       -\sigma Y^*(I-\sigma T^{-1})^{-1}Y.
+\]
+Spectral calculus gives
+$(I-\sigma T^{-1})^{-1}\preceq(1-\sigma/\delta)^{-1}I$;
+substitution proves the claim. All inverse actions are bounded,
+and $T^{-1}B$ maps the finite head into $\mathcal D(T)$.
+No omitted residual row or inverse-shift term has been discarded.
+\end{proof}
+
+\begin{proposition}[Complete ground ordering at $\lambda=4$]
+\label{prop:v140-ground4}
+Let $\mu_0\le\mu_1\le\cdots$ be the eigenvalues, counted with
+multiplicity, of the canonical complete $\mathsf W_4$ in its ordinary
+Hilbert norm. Its ground state is simple and even, and
+\begin{equation}\label{eq:v140-ground4-bounds}
+ 0<\mu_0<2.454\cdot10^{-75},\qquad \mu_1>10^{-73}.
+\end{equation}
+In particular its spectral gap is greater than $9.7546\cdot10^{-74}$.
+\end{proposition}
+\begin{proof}[Complete certificates and shifted inertia]
+Split at $E_{16}$ separately in the two parities.
+Proposition~\ref{prop:v120-lambda4-tail} gives the complete tail floor
+$\delta=1.7940\cdot10^{-8}$. Use exactly the frozen $4096$-support
+trial matrices of Propositions~\ref{prop:v125-even-complete} and
+\ref{prop:v126-odd-complement}. Their head dimensions are $17$ and
+$16$. The certified complete Schur inequalities in these same
+coordinates are
+\[
+ V_{\rm ev}^*S_{\rm ev}V_{\rm ev}\succeq
+       \frac{62629}{100000}K_{\rm ev},\qquad
+ V_{\rm od}^*S_{\rm od}V_{\rm od}\succeq
+       \frac{428}{1000}K_{\rm od}.
+\]
+The even constant is rechecked against the complete residual Gram
+upper bound. The odd constant follows from the complete
+$K$-orthogonal complement gate with $\sigma_{\rm old}=1/1000$
+and the different, exactly matching-head $8192$-support trial with
+directional bound $429/1000$, using
+Proposition~\ref{prop:v126-direction-complement}. These bounds include
+every remote Fourier row, not only the rows through $J=65536$.
+
+The new verifier reconstructs the exact dyadic trial coefficients
+and computes $H_h,H_t$ without a midpoint solve or a normalized-coordinate
+replacement of the ordinary Gram. Applying
+Lemma~\ref{lem:v140-shifted-schur} with $\sigma=10^{-73}$ gives:
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+sector & precision & dimension & negative pivots & positive pivots\\
+\midrule
+even & $1024$ & $17$ & $1$ & $16$\\
+even & $1280$ & $17$ & $1$ & $16$\\
+odd & $1024$ & $16$ & $0$ & $16$\\
+odd & $1280$ & $16$ & $0$ & $16$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every outward interval pivot excludes zero. The exact even trial
+$f=G_{\rm ev}e_{16}$ (zero-based column index) has
+\[
+ 2.45361754930\cdot10^{-75}
+ <\frac{K_{{\rm ev},16,16}}{(H_h+H_t)_{{\rm ev},16,16}}
+ <2.45361754931\cdot10^{-75}.
+\]
+This is its complete Rayleigh quotient because $f$ is finite
+supported; no omitted input coefficient is present.
+
+The finite lower even Schur matrix has exactly one negative eigenvalue
+and all others positive, so the exact shifted even Schur form has
+at most one nonpositive eigenvalue. The even trial below $\sigma$
+forces one strictly negative eigenvalue by square completion.
+The odd shifted Schur form is positive definite.
+Since $T-\sigma I\succ0$, its triangular square-completion map is
+boundedly invertible and preserves the form domain. It identifies
+negative indices and identifies the kernels of the complete shifted
+operators with the finite Schur kernels. Compact resolvent, proved
+in Proposition~\ref{prop:v114-weil-core}, therefore gives exactly one
+complete eigenvalue below $\sigma$ and none at $\sigma$. It is even
+and simple. Previous complete positivity gives $\mu_0>0$; the
+Rayleigh bound gives the asserted upper bound.
+
+The new gates and exact Grams are evaluated at $1024$ and $1280$
+bits. They reuse the saved complete even residual enclosures at
+$768/896$ bits and the saved odd complement enclosure at $768$ bits;
+the matching odd directional enclosures are the $1024/1280$-bit
+ones. The small prior final gates and exact shared-head equality
+are replayed. This is not represented as a fresh assembly of the
+old infinite-tail ingredients. Full input hashes and all pivots are
+recorded under \texttt{evidence/v140/}.
+\end{proof}
+
+\begin{corollary}[Real zeros of the complete ground transform at $\lambda=4$]
+\label{cor:v140-real-zeros}
+Let $\xi_4$ be a normalized ground eigenfunction of the complete
+$\mathsf W_4$ in centered logarithmic coordinates, extended by zero
+outside $[-\log4,\log4]$. The nonzero entire function
+\[
+ \widehat\xi_4(z)=\frac1{\sqrt{2\pi}}
+       \int_{-\log4}^{\log4}\xi_4(x)e^{-izx}\,dx
+\]
+has only real zeros.
+\end{corollary}
+\begin{proof}
+We check the precise distribution hypothesis of
+\cite[Theorem~6.1 and Remark~4.3]{ConnesVanSuijlekom2025}.
+Put $L=2\log4$, $w_m=\Lambda(m)/\sqrt m$,
+$\rho(t)=e^{t/2}/(2\sinh t)$ and
+$c_L=\log(4\pi)+\gamma_{\rm E}+\log\tanh(L/2)$.
+For a smooth function $h$ on $[0,L]$ define the real distribution
+\begin{align*}
+ \mathcal D_L(h)={}&\int_0^L2\cosh(t/2)h(t)\,dt
+       -\sum_{1<m\le16}w_m h(\log m)\\
+ &-\int_0^L\rho(t)\{h(t)-e^{-t/2}h(0)\}\,dt
+       -\tfrac12c_Lh(0).
+\end{align*}
+The canceled numerator is $O(t)$, so the origin integral converges
+and this distribution has order at most one. For a trigonometric
+polynomial $f$ on $[0,L]$, extend by zero and let
+$R_f(t)=\int f(x+t)\overline{f(x)}\,dx$. Its symmetrization
+$h_f(t)=R_f(t)+R_f(-t)$ is smooth from the right on $[0,L]$.
+The physical Weil formula is exactly
+$QW_4(f,f)=\mathcal D_L(h_f)$. In particular
+$h_f(0)=2\norm f_2^2$ retains the logarithmic diagonal and
+$h_f(L)=0$, so the endpoint prime-power convention introduces no
+extra term. Polarization preserves the first-slot-linear convention.
+
+Proposition~\ref{prop:v114-weil-core} supplies lower boundedness
+and essential self-adjointness on trigonometric polynomials, exactly
+the operator-core hypothesis of the cited theorem.
+Proposition~\ref{prop:v140-ground4} supplies the simple isolated
+global minimum with reflection-even eigenfunction. Theorem~6.1
+therefore applies. Translation from the centered interval to $[0,L]$
+and removal of our unitary normalization multiply the transform by
+$\sqrt{2\pi}e^{-izL/2}$, which has no zeros. The asserted zero set
+is unchanged.
+\end{proof}
+
+The corollary concerns the actual complete ground transform, not a
+finite Ritz vector, a repaired source proxy or Riemann's $\Xi$.
+It asserts neither simplicity of its zeros nor convergence of these
+functions to $\Xi$. The small-window spectral question NS-5 is
+closed at $\lambda=4$; the cofinal G2 estimate, endpoint-transfer
+qualifications and explicit sampler graph defect are unchanged.
+No G2 gap or RH claim follows.

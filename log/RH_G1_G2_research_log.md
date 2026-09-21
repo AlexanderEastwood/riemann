@@ -1,3 +1,31 @@
+# v1.40 — NS-5 complete ground ordering, September 21, 2026
+
+**Requested task:** certify simple even ground of the complete W4 using the v1.17 machinery, then check Connes–van Suijlekom Theorem6.1. This task was claimed in NEXT_STEPS.md at dc8b396a09f22bdd16ff52e1ac8f5711837768e6. No cheaper finite-compression diagnostic was substituted.
+
+**What had to change:** v1.17 hard-codes lambda3 tail constants and directly reassembles shifted residuals. At lambda4 we retained the exact4096-support normalized trials and complete unshifted Schur bounds from v1.25/v1.26, and proved a resolvent-change comparison for W4−sigma I. With delta=1.7940e-8, K=G*WG, Hh=V*V and Ht=Z*Z,
+
+    S_sigma^V >= kappa K - sigma[Hh + 2/(1-sigma/delta)(Ht+K/delta)].
+
+Here kappa=.62629 even and .428 odd. C=r*T^-1r satisfies0<=C<=K; Y=T^-1BV=−Z+T^-1r gives Y*Y<=2Ht+2K/delta. The full inverse change is retained; simply shifting an unshifted lower matrix would have been invalid.
+
+**Initial attempt and correction:** sigma=1e-70 gives one negative lower pivot in each parity, at1024/1280bits. This alone would not prove an odd negative shifted direction. However the old exact odd trial has complete Rayleigh quotient in (3.59269956625,3.59269956626)e-71, which DOES prove that1e-70 is too large for odd positivity. This falsifies that threshold, not simple even ground. The user's eight-order separation describes the even finite-compression gap; it is not the complete global spectral gap, and the N64 values move substantially by N256. We changed only the exact test threshold to1e-73. No extra window, inverse solve, CG depth or remote cutoff was introduced.
+
+**Certified result:** at1024 and1280bits the even17x17 shifted lower form has1negative and16positive pivots; the odd16x16 form has16positive pivots. All exclude zero. The exact frozen even trial, column16, has complete Rayleigh quotient in (2.45361754930,2.45361754931)e-75. Square completion and compact resolvent therefore give 0<mu0<2.454e-75, mu1>1e-73, and gap>9.7546e-74 for the complete operator. The ground is simple and even. This is an ordinary spectral threshold, not an LDL pivot magnitude or a congruence-relative margin.
+
+**Inherited evidence versus fresh work:** all exact trial coefficients and ordinary Grams are reconstructed at both new precisions. The verifier replays the prior small even margin gate, odd K-orthogonal complement gate, exact Fraction shared-head check, and odd directional scalar gate. Full residual assemblies remain the archived complete inputs: even768/896bits, odd complement768bits, repaired odd direction1024/1280bits. Each includes all rows after J65536 via the original order64 majorant. These old full assemblies were not rerun. Input paths and byte hashes are recorded in the reports, and no previous file is modified.
+
+**External implication:** the exact one-sided real distribution on[0,2log4], with its origin subtraction and logarithmic diagonal, is exhibited in the proof. prop:v114-weil-core gives essential selfadjointness on trigonometric polynomials. CvS Theorem6.1 (https://arxiv.org/html/2511.23257v1#S6.Thmtheorem1) then gives only real zeros for the entire Fourier transform of the complete normalized ground. Translation/unitary-normalization factors are zero-free. No endpoint-nonzero condition, simplicity of transform zeros, or convergence to Riemann Xi is asserted.
+
+**Classification and novelty:** certified fixed-window extension of v1.17 and application of the published CvS theorem. The new ingredient within this project is a rigorous shift bound reusing existing complete Schur certificates and retaining the ordinary Gram. This is not registered as a new uniform G2 mechanism; worldwide novelty/publication readiness is unresolved.
+
+**Adversarial review:** independent reviewer checked the resolvent comparison, all domains and inertia steps, theorem hypotheses and the same-trial normalization. Detailed code/proof review is in evidence/v140/adversarial_review.md. Both complete parities are included. The actual physical endpoint, first-slot-linear convention, Fourier cut, logarithmic diagonal and explicit sampler graph defect are unchanged.
+
+**Build:** ./manuscript/build.sh completed: 213 pages, zero undefined/duplicate references. LaTeX-only delivery; the temporary ignored PDF is not published. The independent principal-determinant and exact-Fraction norm checks passed at1024/1280bits and are archived with their checker.
+
+**Next obligation:** cofinal ordinary lower control, or an independently justified convergence linking these complete ground transforms to Riemann Xi. NS-5 closes a local spectral-ordering obligation only. No G2 gap was closed; RH remains unproved. Two historical evidence groups remain OPEN, unchanged.
+
+---
+
 # v1.39 — Scoped meta-obstructions, September 21, 2026
 
 **Requested task:** prove a general obstruction to estimates insensitive to the arithmetic location of negative beta_a mass, extending cor:v137-scalar-no-go. No fixed-window computation was substituted.

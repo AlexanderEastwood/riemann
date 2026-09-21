@@ -1,0 +1,10 @@
+{
+  "revision": "v1.40",
+  "command": "./manuscript/build.sh",
+  "pages": 213,
+  "undefined_or_duplicate_references": 0,
+  "manuscript_sha256": "14c2702d1739cd3ea7d57c89c72ab068d01d94a86e1483e760d966e99738d970",
+  "new_section_sha256": "71acc45cdf2200668e8a74338008087f58ebdcaac04b54df6d275ffc4d541f21",
+  "delivery": "Complete LaTeX only; temporary ignored PDF not committed or delivered.",
+  "numerical_gates": "Certified at1024 and1280 bits; independent principal determinants and exact Fraction norms pass."
+}

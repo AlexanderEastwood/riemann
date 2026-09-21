@@ -42,7 +42,7 @@ the same object on the same functions.
 | | Zhu (`a = 0.8`) | this manuscript (`a = 1.386`) |
 |---|---|---|
 | statement | two-sided **quantitative** enclosure `8.9e-18 <= lambda_min <= 2.27e-17` | **nonnegativity** `W_4 >= 0`; no ordinary spectral gap claimed |
-| parity | both sectors; ground state simple and even | both sectors; ground state simple and even (`prop:v117-ground-order`, at `a = 1.099`) |
+| parity | both sectors; ground state simple and even | both sectors; complete ground simple and even at lambda=4 (`prop:v140-ground4`), with `0<mu0<2.454e-75`, `mu1>1e-73` |
 | method | one-stroke reduction to a single finite PSD matrix | structured inverse, simultaneous 17-column certificate, direction–complement gluing |
 | arithmetic | interval | Arb ball arithmetic, 768–1280 bits, two-precision replay |
 
@@ -153,14 +153,21 @@ beyond CCM's own λ = 3 numerics. The floors `W_λ >= −8·I` are lower bounds
 on `μ_5, μ_6, μ_8`. This is the cleanest positioning statement available and
 it is a target statement, not a shortcut: cofinal `μ_λ >= 0` is RH.
 
-A finite lemma this enables (proposed; see `NEXT_STEPS.md`): CCM Thm 5.10 and
-Connes–van Suijlekom Thm 6.1 (arXiv:2511.23257) need the ground state of
-`W_λ` to be **simple and even**. The manuscript proves this at λ = 3
-(`prop:v117-ground-order`) but not at λ = 4. Numerically it holds at λ = 4
-with an eight-order gap (even ground 3.7e-72, next even 1.4e-64, odd ground
-3.1e-68 — `evidence/diag_circle_split/`). Certifying it with the v117
-machinery would make CvS Thm 6.1 unconditional at λ = 4: the entire
-function `ξ̂_4` has only real zeros.
+NS-5 is now completed in v1.40. The complete ground of `W_4` is
+simple, isolated and even, with `0<mu0<2.454e-75`, `mu1>1e-73` and
+ordinary gap greater than `9.7546e-74` (`prop:v140-ground4`). The
+1024/1280-bit shifted-inertia certificates retain the full tail inverse
+change and reuse the archived complete lambda4 Schur bounds. These
+figures replace no finite eigenvalue diagnostic: they are bounds for
+the complete operator. The earlier eight-order figure concerns the
+finite even-sector separation, not the complete global gap.
+
+The precise real-distribution and trigonometric-core hypotheses of
+Connes–van Suijlekom Theorem6.1 (arXiv:2511.23257) are verified in
+`cor:v140-real-zeros`. Thus `xi-hat_4`, the entire Fourier transform
+of the complete ground eigenfunction, has only real zeros. This does
+not assert simplicity of those zeros or convergence to Riemann Xi.
+See [the proof and certificate](evidence/v140/research_report.md).
 
 ### In de Branges / Krein–Langer terms (Suzuki, arXiv:2606.09096)
 
