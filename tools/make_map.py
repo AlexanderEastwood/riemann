@@ -104,6 +104,22 @@ def main() -> int:
 
     OUT.write_text("\n".join(L) + "\n")
     print(f"{OUT.name}: {len(nodes)} nodes, {dict(c)}")
+
+    # Also splice the diagram into README.md between markers, so the README
+    # renders it directly and cannot drift from research-map.json.
+    i, j = L.index("```mermaid"), L.index("```", L.index("```mermaid") + 1)
+    diagram = "\n".join(L[i:j + 1])
+    readme = ROOT / "README.md"
+    start, end = "<!-- research-map:start -->", "<!-- research-map:end -->"
+    if readme.exists():
+        r = readme.read_text()
+        if start in r and end in r:
+            a, b = r.index(start) + len(start), r.index(end)
+            r = r[:a] + "\n" + diagram + "\n" + r[b:]
+            readme.write_text(r)
+            print(f"README.md: diagram updated between markers ({j - i + 1} lines)")
+        else:
+            print("README.md: markers not found; diagram not spliced")
     return 0
 
 if __name__ == "__main__":
