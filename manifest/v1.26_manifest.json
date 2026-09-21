@@ -1,6 +1,6 @@
 {
  "manuscript_revision": "v1.26",
- "base_commit": "bad32dddb63b6199702f20ddc4019e16bc9d8eb7",
+ "base_commit": "d2263dddd08cc94eab0327dd991461a4f1ff3b54",
  "files": [
   {
    "path": "evidence/v126/README_v126.md",
@@ -2341,14 +2341,9 @@
    "path": "evidence/v126/weil_action_checks.json",
    "size_bytes": 3426,
    "sha256": "1d888c6f6ad8d97f3b458feab513fbb659638d9b97b848e3d1f2ccba20841fc6"
-  },
-  {
-   "path": "manuscript/fixed_space_prime_action_v1.tex",
-   "size_bytes": 669216,
-   "sha256": "4bb282a93c0f8c52d743860dbc918513fcefb09021710e71ad2d8d7cb7b9aed8"
   }
  ],
- "file_count": 469,
- "total_bytes": 227816522,
+ "file_count": 468,
+ "total_bytes": 227147306,
  "note": "Recovered original v1.26 bundle; 468 files byte-identical to ZIP sha256 ccdb8eaa882358ca5cef1668344180a325fc00799c97ed724d05a99ca0982d8f"
 }

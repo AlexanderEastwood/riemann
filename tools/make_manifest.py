@@ -44,10 +44,11 @@ def main() -> int:
         print(f"error: {ev.relative_to(ROOT)} does not exist", file=sys.stderr)
         return 2
 
+    # Evidence only. The live manuscript is deliberately NOT included: it is
+    # rewritten every version, so listing it would make every prior version's
+    # manifest report a spurious MISMATCH. Manuscript versions are pinned by
+    # git tags (v1.NN), which is the right primitive for that.
     targets = sorted(p for p in ev.rglob("*") if p.is_file())
-    tex = ROOT / "manuscript" / "fixed_space_prime_action_v1.tex"
-    if tex.exists():
-        targets.append(tex)
 
     files, total, oversize = [], 0, []
     for p in targets:

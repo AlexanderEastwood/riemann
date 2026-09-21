@@ -1,7 +1,7 @@
 {
  "manuscript_revision": "v1.38",
  "delivery": "LaTeX only",
- "base_commit": "f7fb0e06c3d28c51835d28343342c1da9ac78878",
+ "base_commit": "d2263dddd08cc94eab0327dd991461a4f1ff3b54",
  "base_tree": "1175ebe74037fb9f080abe9de9cd3dda1b6fa22b",
  "source_provenance": {
   "source_revision": "v1.37",
@@ -97,11 +97,6 @@
    "path": "evidence/v138/shifted_floor.py",
    "size_bytes": 6108,
    "sha256": "90e039e81c024d6f4e1ee6d8437ff16da0a835728bbbbd1379cc2ca49d4b9569"
-  },
-  {
-   "path": "manuscript/fixed_space_prime_action_v1.tex",
-   "size_bytes": 678662,
-   "sha256": "3a06deaf0fa558535a2569974e447fbbbcbc3eee8917dc714061edf9d82f78d1"
   }
  ],
  "archived_unchanged": [
@@ -142,7 +137,7 @@
    "size_bytes": 6004
   }
  ],
- "file_count": 13,
- "total_bytes": 2296462,
+ "file_count": 12,
+ "total_bytes": 1617800,
  "note": "v1.38 finite-floor certificates: W_lambda >= -8I at lambda=5,6,8 both parities, delta=8 N=256 J=4096 r=16, replayed 160/256 bits"
 }
