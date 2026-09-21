@@ -129,21 +129,30 @@ Exact split of the ground eigenvector's energy, `lmin = v'Dv + v'T'v + v'Hk·v`
    (−0.0015 → −0.0001); the balance is purely diagonal vs Toeplitz commutator,
    matching to 3–4 digits. Even sector: split between the two, the Hankel
    share falling 49% → 38% → 32% → 27% with λ.
-3. **Rate.** Zhu's Landau–Widom law reproduces lmin at all four windows to a
-   constant factor:
+3. **Rate.** Zhu's Landau–Widom law, −ln λ_min(L) ~ 2π²N(T*)/ln N(T*), T* = 2πe^{2L}, against the best available upper bounds on μ0:
 
-   | λ | Zhu law | measured | ratio |
-   |--:|--:|--:|--:|
+   | λ | Zhu law log10 λ_min | best upper bound on μ0 (log10) | source | gap (orders) |
+   |--:|--:|--:|:--|--:|
+   | 3 | -38.9 | -37.6 | compression N=256 | +1.3 |
+   | 4 | -72.7 | -74.6 | CERTIFIED mu0 < 2.454e-75 (prop:v140-ground4) | -1.9 |
+   | 6 | -175.9 | -181.7 | compression N=36 head, M=256 tail (earlier run; unconverged in M) | -5.8 |
+   | 8 | -326.4 | -128.2 | compression N=64 (far from converged) | +198.2 |
 
-
-   So the residual of the cancellation follows the prolate eigenvalue-plunge
-   rate. A rigorous asymptotic for these sections would be a Basor–Ehrhardt /
-   Szegő–Widom statement for `T(φ) ± H(φ)` with this non-smooth symbol; that
-   is beyond a diagnostic and is left as the open analytic form of NS-7.
+   Read the gap column as "measured minus law" in orders of magnitude. At λ=3
+   the law is within 1.3 orders. At λ=4 the *certified* μ0 lies about 1.9
+   orders **below** the law. At λ=6 and 8 the only values in hand are finite
+   compressions that are not converged in the cutoff (earlier M-sweep), so
+   they are loose upper bounds and cannot test the law; the law itself
+   predicts 1e-176 and 1e-327 there — below double-precision range, which is
+   why a naive float evaluation divided by zero. Zhu's law is an empirical
+   fit with a "~"; the honest statement is that it gives the right *scale of
+   collapse* (tens to hundreds of orders) at these windows, not the constant.
+   An earlier line in this file claiming agreement "to ~20× at all four
+   windows" was wrong and is superseded by this table.
 
 **NS-7 verdict.** Sign: arithmetic, decided by prime phase on the window's
 resolution lattice (prime-free form negative O(1); KMS on the line symbol
 predicts 4 → 11 negative eigenvalues, certified 0). Size: a lowest-lattice-mode
 ground whose crest energy ≈ min d_n is cancelled by the commutator couplings to
-the last digit, the residual following the Landau–Widom rate. Nothing here is a
+the last digit, the residual at the Landau–Widom *scale* (the law gives the order of collapse, not the constant). Nothing here is a
 bound; all of it is exact arithmetic on certified compressions.

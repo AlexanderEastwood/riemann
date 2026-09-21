@@ -269,7 +269,7 @@
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_circle_split",
-      "note": "NS-7 answered (diagnostic): sign arithmetic (prime-free negative O(1); KMS predicts 4-11 negative eigenvalues, certified 0); size = lowest-lattice-mode ground, crest energy ~min d_n cancelled by commutator couplings, residual at Landau-Widom rate (Zhu law to ~20x). Open analytic form: Basor-Ehrhardt for T+-H."
+      "note": "NS-7 answered (diagnostic): sign arithmetic (prime-free negative O(1); KMS predicts 4-11 negative eigenvalues, certified 0); size = lowest-lattice-mode ground, crest energy ~min d_n cancelled by commutator couplings, residual at the Landau-Widom scale (Zhu law: order right, constant not; certified mu0 at lambda=4 is ~1.9 orders below it). Open analytic form: Basor-Ehrhardt for T+-H."
     },
     {
       "id": "debranges",
