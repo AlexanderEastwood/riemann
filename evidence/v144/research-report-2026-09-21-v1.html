@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NS-20 — Weighted concentration on the level pencil — v1.44</title></head>
+<body style="margin:0;padding:36px 20px;background:#f5f3ee;color:#202b33;font-family:Georgia,serif;line-height:1.6;">
+<main style="max-width:680px;margin:0 auto;padding:32px;background:#fff;border-top:5px solid #244f61;">
+<p style="margin:0;color:#496674;font-size:13px;letter-spacing:1px;">RIEMANN RESEARCH RECORD · 21 SEPTEMBER 2026 · v1.44</p>
+<h1 style="font-size:29px;line-height:1.2;margin:14px 0 20px;">A finite pencil test still leaves the cofinal input</h1>
+<p><strong>NS-20 is complete as an exact translation with explicit hypotheses.</strong> The directional concentration demand at λ = 4 is a finite-window statement. Its intended use still requires the full source-complement inequality, with uniform control along a cofinal family. The analysis stops at that distinction; no new concentration estimate or numerical experiment is claimed.</p>
+<h2 style="font-size:21px;margin-top:28px;">What each direction demands</h2>
+<p>Fix a = log 4 and the even head with modes 0 through 48, of dimension 49. Use the exact positive and negative level forms q<sup>±</sup>[f] = ∫β<sub>a,±</sub>|Ff|² and q = q<sup>+</sup> − q<sup>−</sup>. Assume the exact positive-level head matrix W<sup>+</sup> is positive definite and choose its normalized generalized eigenvectors:</p>
+<p style="padding:14px 18px;background:#f4f6f8;">Wv<sub>k</sub> = ν<sub>k</sub>W<sup>+</sup>v<sub>k</sub>, &nbsp; q[v<sub>k</sub>] = ν<sub>k</sub>q<sup>+</sup>[v<sub>k</sub>].</p>
+<p>For an explicit pointwise minorant m<sub>a</sub> = −D<sub>a</sub> + Σw<sub>j</sub>1<sub>G<sub>j</sub></sub> ≤ β<sub>a</sub>, define the nonnegative loss ℒ<sub>a</sub>[f] = ∫(β<sub>a</sub> − m<sub>a</sub>)|Ff|². On the actual source complement, the weighted concentration form is exactly q[f] − ℒ<sub>a</sub>[f]. Therefore, for every pencil direction satisfying v<sub>k</sub> ⟂ u<sub>a</sub>, its demand is precisely</p>
+<div style="padding:18px 22px;background:#edf4f4;border-left:4px solid #244f61;margin:22px 0;">
+<p style="margin:0;font-size:19px;">ℒ<sub>a</sub>[v<sub>k</sub>] / q<sup>+</sup>[v<sub>k</sub>] ≤ ν<sub>k</sub> + η<sub>a</sub>‖v<sub>k</sub>‖² / q<sup>+</sup>[v<sub>k</sub>].</p>
+</div>
+<p>For zero allowed error, the relative loss may be at most ν<sub>k</sub>. With allowed error η<sub>a</sub>, the second term remains. Tiny ν<sub>k</sub> alone does not force accuracy at scale ν<sub>k</sub> for the weaker bounded-error objective.</p>
+<h2 style="font-size:21px;margin-top:28px;">The necessary change of test class</h2>
+<p><strong>The saved diagnostic pencil is uncompressed.</strong> It does not establish that its individual vectors are orthogonal to the actual repaired source. The proposition therefore restricts the head to H<sub>48</sub> ∩ u<sub>a</sub><sup>⊥</sup>. Projecting a raw v<sub>k</sub> changes its positive and negative level energies; its ratio cannot simply retain the old ν<sub>k</sub>.</p>
+<p>In a W<sup>+</sup>-orthonormal pencil basis V, let R record the minorant-loss form, G the ordinary norm, and b<sub>k</sub> = ⟨v<sub>k</sub>,u<sub>a</sub>⟩. The demand on all admissible mixtures is</p>
+<p style="padding:14px 18px;background:#f4f6f8;">c* [diag(ν<sub>k</sub>) − R + η<sub>a</sub>G] c ≥ 0<br>for every c satisfying Σb<sub>k</sub>c<sub>k</sub> = 0.</p>
+<p>Individual directional tests do not suffice: the loss and norm cross terms also matter. The proof includes an exact two-dimensional algebraic example where the diagonal tests pass and the matrix inequality fails. It is an illustration of this logical distinction, not an arithmetic counterexample.</p>
+<h2 style="font-size:21px;margin-top:28px;">How the twelve deep directions enter</h2>
+<p>Section 7 of the saved <a style="color:#244f61;" href="../diag_true_symbol/results.md">symbol diagnostic</a> reports twelve λ = 4, N = 48 values below 10<sup>−8</sup>, with ν<sub>0</sub> approximately 2.9 × 10<sup>−65</sup>. These values use floating quadrature and midpoint eigenvalues. <strong>They remain diagnostic only.</strong> They establish neither exact thresholds, source orthogonality, nor a suitable minorant.</p>
+<p>The proposition records the corresponding conditional statement: if the first twelve exact pencil values satisfy the threshold, their span contains at least eleven source-admissible dimensions, all with q/q<sup>+</sup> below 10<sup>−8</sup>. Removing one source cannot eliminate that entire block. The diagnostic threshold is not promoted to a proved premise.</p>
+<h2 style="font-size:21px;margin-top:28px;">Where the cofinal requirement enters</h2>
+<table style="border-collapse:collapse;width:100%;font-size:15px;">
+<tr><th style="text-align:left;padding:9px;border-bottom:2px solid #bccbd0;">Statement</th><th style="text-align:left;padding:9px;border-bottom:2px solid #bccbd0;">Required scope</th></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">One directional loss test</td><td style="padding:9px;border-bottom:1px solid #ddd;">One admissible vector at one window</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Restricted matrix inequality</td><td style="padding:9px;border-bottom:1px solid #ddd;">Every admissible mixture in this finite head</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Live sufficient criterion</td><td style="padding:9px;border-bottom:1px solid #ddd;">Complete complements along a cofinal family, including both parities and the source residual/coupling conditions</td></tr>
+</table>
+<p>The original concentration criterion asks for η<sub>a</sub> → 0. The later bounded-floor reduction already permits uniformly bounded η<sub>a</sub> under its stated hypotheses. Either version needs uniform control as a → ∞. A single head at λ = 4 supplies neither that family nor its complete-complement estimates.</p>
+<p><strong>This is a missing scope and uniformity input, not a proved failure of weighted concentration or of the Weil form.</strong> No new minorant, failed concentration bound, negative Weil direction, or cofinal estimate is asserted. The task stops at this finding.</p>
+<h2 style="font-size:21px;margin-top:28px;">Build and preservation</h2>
+<p><strong>Actual build: 225 pages; 0 undefined references; 0 duplicate references; 0 overfull boxes.</strong> This is an analytic proposition, so no new numerical gate or two-precision computation is claimed.</p>
+<p>The v1.43 enclosure and evidence are unchanged. The original pencil scripts, outputs and diagnostic report are preserved. No new window, tail metric, or numerical run was introduced. The missing v1.31 evidence has not been recovered by this translation.</p>
+<p><a style="color:#244f61;" href="pencil_concentration.tex">Proposition and proof</a> · <a style="color:#244f61;" href="scope_review.md">Proof review</a> · <a style="color:#244f61;" href="provenance.json">Provenance</a> · <a style="color:#244f61;" href="build_report.json">Build record</a></p>
+<p style="margin:28px 0 0;padding-top:16px;border-top:1px solid #cbd3d7;"><strong>G2 and RH remain open.</strong> The weighted concentration mechanism remains open; NS-20 closes only the requested translation and quantifier assessment.</p>
+</main></body></html>

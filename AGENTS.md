@@ -42,6 +42,15 @@ is not centered to that scale. The finite N=120 discrepancy ~+2.92504e-71
 is not a complete-ground value. The resolution limitation is scoped to the
 displayed bounds, not every argument using the archive. G2 and RH stay open.
 
+Version 1.44 translates weighted concentration to the level pencil (NS-24).
+For source-admissible directions, the minorant loss divided by q+ must be
+at most nu_k + eta_a ||v_k||^2/q+. Raw diagnostic vectors are not assumed
+source-orthogonal; mixtures need the full restricted matrix inequality.
+The local demand is finite-window, but the live complete-space criterion
+remains cofinal; uniformly bounded errors suffice under v1.36's hypotheses.
+No diagnostic threshold is certified and no concentration no-go follows.
+No new numerical run, tail metric or enclosure refinement. G2/RH stay open.
+
 ---
 
 ## 2. Claim discipline — the non-negotiable part

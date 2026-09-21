@@ -1,5 +1,23 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-21 — v1.44 / NS-24: pencil demands and cofinal quantifiers
+
+Actual build: 225 pages, 0 undefined references, 0 duplicate references,
+0 overfull boxes. No numerical experiment was run.
+
+The exact directional demand is L_a[v_k]/q_a^+[v_k] <= nu_k +
+eta_a ||v_k||^2/q_a^+[v_k]. The diagnostic raw even head is not
+source-compressed, so admissibility is explicit; all mixtures require
+the restricted matrix inequality with its loss and norm cross terms.
+The single-window test does not supply the cofinal complete-complement
+estimate. Uniformly bounded errors already suffice under the existing
+v1.36 both-parity and source hypotheses. Small diagnostic nu_k values
+alone do not refute that weaker target. NS-24 is done and the analysis
+stops at this finding: no new run, window, tail metric or enclosure
+refinement. This is an exact translation, not a new concentration bound
+or a failure of the object. G2, RH and the two NS-1 evidence groups remain open.
+
+
 ## 2026-09-21 — v1.43 / NS-19: complete enclosure and scoped resolution
 
 The revised Task B closes with |z_1(4)-gamma_1|<8.752082e-33<9e-33,

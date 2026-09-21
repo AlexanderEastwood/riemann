@@ -1,0 +1,16 @@
+{
+  "manuscript_version": "v1.44",
+  "task": "NS-24",
+  "command": "./manuscript/build.sh",
+  "exit_code": 0,
+  "pages": 225,
+  "undefined_references": 0,
+  "duplicate_references": 0,
+  "overfull_boxes": 0,
+  "manuscript_sha256": "ff0899a8638091a5d298ee1198c981ab968cfe09781ef9ecd90272fb0183847b",
+  "proof_section_exactly_integrated": true,
+  "duplicate_source_labels": 0,
+  "claim_category": "Exact identities and proved implications, explicit hypotheses",
+  "numerical_experiments_run": 0,
+  "scope": "Finite-window pencil translation; no cofinal concentration bound, G2 or RH claim."
+}
