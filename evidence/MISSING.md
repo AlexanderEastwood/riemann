@@ -50,3 +50,34 @@ connector is available in this session to retry it. Archive hashes and exact
 search scope are in [the availability record](v141/ns1_recovery_status.json).
 An accessible original archive or extracted evidence with provenance is
 still required. The v1.31 report remains a partial recovery only.
+
+## September 21 follow-up after v1.43
+
+**Classification: open input; availability search, not a certificate.**
+NS-1 remains blocked and both evidence groups remain **OPEN**. No missing
+original script, witness or saved output was recovered in this follow-up.
+
+The search refreshed all remote refs and checked matching paths in their
+history, then checked current GitHub release assets. Only the original
+v1.26 ZIP and its checksum are released. Local filename searches covered
+Downloads, Desktop, Documents (including the ChatGPT research directory
+and Codex workspaces), CloudStorage, Codex attachments, repository
+worktrees and temporary files. Saved research/recovery transcripts supplied
+references, not the absent originals. The four previously inspected ZIPs
+remain the available local bundles; this follow-up did not repeat their
+byte-level validation.
+
+The recorded source in [the v1.31 provenance](v131/recovery_provenance.json)
+is `fixed_space_prime_action_v1_34_bundle.zip`, library file
+`libfile_386d5bdf90848191b485e716d0205c09`, version `37`, recorded size
+`207224098` bytes. These identifiers are historical metadata, not a fresh
+verification that the remote binary is retrievable. No ChatGPT-library
+connector is available in the current session; its accessible web session
+is signed out. The historical HTTP 502 was not replayed. An accessible
+original archive, or the six named original directories with their shared
+dependencies and provenance, is required to continue recovery.
+
+The public repository already contained v1.43 at the time of this search.
+This follow-up changes only the recovery ledger and task status. It does
+not close MAJOR M1, change the manuscript, regenerate historical evidence,
+or claim a new verification. G2 and RH remain open.
