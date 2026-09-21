@@ -1,3 +1,17 @@
+# Version 1.41 — September 21, 2026
+
+- NS-2: reproduced CCM section 6 Figure 1 at the existing lambda=3, N=120 benchmark; eight local root discrepancies match the published rounded values. The first is approximately 1.582329697193127e-34.
+- Retained the unchanged original coefficient assembler with K=128. Isolated finite eigenpairs and verified root brackets at 768 and 1024 bits; midpoint roots are proposals only. Same problem across precision; no new window and no complete-ground zero transfer.
+- Proved the exact (-1)^n centering dictionary. The old NS-14 reconstruction omitted it and evaluated a different function; its sinc-lattice inference is withdrawn. Original diagnostic files are preserved with a separately versioned correction.
+- NS-3: added the half-width translation table, Zhu/Groskin comparisons and CCM mu_lambda paragraph. Corrected the stale comparison summary and retained the distinction between ground values, ordinary gaps and coordinate pivots.
+- NS-4b: checked the already archived ten-route coverage table and concentration exclusion; linked its exact location from the manuscript.
+- NS-1: original later evidence groups remain OPEN. Available archives, refs and saved records did not yield the missing original scripts or witnesses; no regenerated substitute is passed off as recovery.
+
+Build: 215 pages, 0 undefined/duplicate references, 0 overfull boxes.
+No new independent audit is claimed. G2 and RH remain open.
+
+---
+
 # Version 1.40 — September 21, 2026
 
 - Completed NS-5 for the complete lambda=4 operator: a simple even ground with 0<mu0<2.454e-75 and mu1>1e-73, hence ordinary gap>9.7546e-74.

@@ -1,0 +1,64 @@
+{
+ "manuscript_revision": "v1.41",
+ "base_commit": "d2ce0895e89f88b68ce593ffb0229bcdeb348ff9",
+ "files": [
+  {
+   "path": "evidence/v141/README.md",
+   "size_bytes": 1903,
+   "sha256": "51b65d2fc876bdf9f6b3efc2c2648cd0ab8977ebdfa74627907642d4f4ba3800"
+  },
+  {
+   "path": "evidence/v141/build_report.json",
+   "size_bytes": 284,
+   "sha256": "0c9199cc9da48b83888e8cf6f9e7ef42d5315897122e1a676d978c47683296cc"
+  },
+  {
+   "path": "evidence/v141/ccm-lambda3-figure.svg",
+   "size_bytes": 49587,
+   "sha256": "9288f303fb98f8f633a4dc289b44d30f2f25ae9427c4ae8d7857d825fe644d37"
+  },
+  {
+   "path": "evidence/v141/ccm_lambda3_N120_b1024.json",
+   "size_bytes": 31992,
+   "sha256": "0cad120c1a1504f7ab0693539eb2c1ffe1811fa498f9281fa5979df8bd5b0b4b"
+  },
+  {
+   "path": "evidence/v141/ccm_lambda3_N120_b768.json",
+   "size_bytes": 31683,
+   "sha256": "dad9ceadd48171870b35cc3f4e4f92d7bf3be19e4faaa0a400f1a91fa44a445f"
+  },
+  {
+   "path": "evidence/v141/certify_ccm_semantic_lock.py",
+   "size_bytes": 6999,
+   "sha256": "19c7c230d444a940d62e1cb4affcd0a081f522b8963e14f72ca429d8d1abb63b"
+  },
+  {
+   "path": "evidence/v141/new_section.tex",
+   "size_bytes": 7003,
+   "sha256": "b081dfdc3ddcba0d597539a9f3df18e7961c5ca9ed638e41ec7473aad6e8238a"
+  },
+  {
+   "path": "evidence/v141/ns1_recovery_status.json",
+   "size_bytes": 1991,
+   "sha256": "ec91197391bb781ea05bcdabc0eaf8ef6ed6c7d79aeab8840e8d673ba1b7985b"
+  },
+  {
+   "path": "evidence/v141/replay_comparison.json",
+   "size_bytes": 1646,
+   "sha256": "40eca371b7d5a0dc8ec2e8db73b4ee67f0b592ed4f6a5969f976d08bd9a29664"
+  },
+  {
+   "path": "evidence/v141/requirements.txt",
+   "size_bytes": 34,
+   "sha256": "a84bec3b39ff94ed4f52f05c5614afcdd8617ed367aded7070c590fd4139a2fa"
+  },
+  {
+   "path": "evidence/v141/research-report-2026-09-21-v1.html",
+   "size_bytes": 6593,
+   "sha256": "a7e6497fb64dab80da3cd030215cd0eda0b1fcd38262a093ddbe423d518905ea"
+  }
+ ],
+ "file_count": 11,
+ "total_bytes": 139715,
+ "note": "Existing-window CCM semantic lock; exact centering correction; NS-3 and NS-4b completed; NS-1 remains OPEN. G2 and RH open."
+}

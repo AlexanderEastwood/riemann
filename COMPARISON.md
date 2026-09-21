@@ -41,12 +41,12 @@ the same object on the same functions.
 
 | | Zhu (`a = 0.8`) | this manuscript (`a = 1.386`) |
 |---|---|---|
-| statement | two-sided **quantitative** enclosure `8.9e-18 <= lambda_min <= 2.27e-17` | **nonnegativity** `W_4 >= 0`; no ordinary spectral gap claimed |
+| statement | two-sided **quantitative** enclosure `8.9e-18 <= lambda_min <= 2.27e-17` | **complete positivity** `W_4 >= 0`; v1.40 also certifies a simple ground and ordinary gap > `9.7546e-74` |
 | parity | both sectors; ground state simple and even | both sectors; complete ground simple and even at lambda=4 (`prop:v140-ground4`), with `0<mu0<2.454e-75`, `mu1>1e-73` |
 | method | one-stroke reduction to a single finite PSD matrix | structured inverse, simultaneous 17-column certificate, direction–complement gluing |
 | arithmetic | interval | Arb ball arithmetic, 768–1280 bits, two-precision replay |
 
-Zhu is stronger *in kind* (a certified two-sided gap) on a smaller window.
+Zhu supplies an explicit positive lower bound for the ground value on a smaller window.
 This manuscript is stronger *in reach*. Neither subsumes the other, and the
 manuscript should say so rather than leave it to the reader.
 
@@ -55,28 +55,21 @@ The `LDL*` pivots and the invariant margin `1 - lambda_max(U, K)` recorded in
 bound and must not be quoted as one; see the scope string inside each
 certificate JSON.
 
-## A cross-check that validates both sides at once
+## Empirical decay comparison: limited scope
 
-Zhu's empirical law for the window infimum,
+The former roughly-20-times comparison used unconverged finite compressions.
+It is not a semantic lock and does not determine the complete ground value.
+For lambda=4, the quoted empirical prediction 2.07e-73 is more than 84 times
+the certified complete-ground upper bound 2.454e-75. For lambda=6 and 8 the
+available unconverged compressions cannot test the law. The numerical
+comparison does not determine an asymptotic constant.
 
-    -ln lambda_min(L) ~ 2 pi^2 N(T*) / ln N(T*),    T* = 2 pi e^{2L},
-
-evaluated at this manuscript's windows and compared with the smallest
-eigenvalue of the finite compression computed independently here:
-
-| `lambda` | `a` | Zhu law predicts | computed compression `lmin` | ratio |
-|---:|---:|---:|---:|---:|
-| 3 | 1.0986 | 1.39e-39 | 3.64e-38 | 26× |
-| 4 | 1.3863 | 2.07e-73 | 3.74e-72 | 18× |
-
-Agreement to a factor of ~20 across 34 orders of magnitude, from an
-asymptotic law. If the translation above were wrong the law would miss by
-tens of orders, not a constant factor. This corroborates the coordinate
-identification, the compression computation, and the law itself.
-
-(Compression eigenvalues are diagnostics: `lmin` of a compression is an
-*upper* bound on the operator infimum and certifies nothing. They are used
-here only to check the translation.)
+The normalization lock is now independent: at the existing lambda=3,
+N=120 benchmark, the first eight local transform-zero discrepancies agree
+with CCM section 6 Figure 1 at its displayed precision. The first is
+approximately 1.582329697193127e-34, matching 1.6e-34. The interval gates replay
+at 768 and 1024 bits; see [v1.41](evidence/v141/). This is a finite-compression
+reproduction, not a complete-ground or cofinal convergence theorem.
 
 ## The one no-go with published prior art
 
@@ -110,13 +103,11 @@ The certified-Weil-positivity literature now shares a house style
 (certificate-first, "not a proof of RH", scoped no-gos, checksummed
 witnesses), so tone does not distinguish this project. Two things would:
 
-1. **A semantic lock.** A short, checkable statement pinning `QW_lambda`
-   as assembled in `assembly_general.py` to the published
-   Connes–Consani–Moscovici normalization (arXiv:2511.22755), by
-   reproducing one of CCM's own §6 numerical values from this code. CCM
-   ship no ancillary files, so that reproduction would be a citable
-   contribution on its own and would let a reviewer trust the object
-   without trusting the definitions.
+1. **The semantic lock is recorded in v1.41.** The unchanged assembler
+   reproduces eight CCM §6 Figure 1 discrepancies at lambda=3, N=120,
+   with the centering dictionary stated explicitly and interval gates
+   replayed at two precisions. This validates this external benchmark;
+   it does not audit every archived computation.
 2. **A named external reviewer** on `evidence/MISSING.md` and the
    certificate ledger. Self-review cannot reach a `REVIEWED` state.
 
@@ -213,7 +204,7 @@ form negative by O(1); the Toeplitz commutator cancels it to 10^-75. The
 parity sectors are the pencils `T(φ) ± H(φ)` (Basor–Ehrhardt). The symbol-only
 (Kac–Murdock–Szegő) estimate **is** wrong-signed once the line symbol is
 scanned properly: `β_λ` has a negative set of measure 12–16 at `t < 13`, so
-KMS predicts 4 → 11 negative eigenvalues at λ = 3 → 8 against a certified 0.
+KMS predicts 4 → 11 negative eigenvalues at λ = 3 → 8 against positive computed compression minima (certified complete positivity is available at lambda=3,4, not 6,8).
 The lobes recur with the lattice period `2π/L`, with the lattice on the
 crests and each deep lobe about 0.8 of a resolution cell wide. A prime-free
 control is negative by O(1): the primes decide the sign by phase on the
@@ -238,3 +229,16 @@ That is why no finite list of windows can close G2, stated in language
 (Krein–Langer on one side, Szegő–Widom / Basor–Ehrhardt on the other) that
 predates this project. It does not move RH; it stops "one more window"
 arguments and it tells the next attempt what kind of statement it must be.
+
+## Correction to NS-14 (v1.41)
+
+The sinc-lattice conclusion in the original `diag_ns14_zeros` report is
+withdrawn. Its reconstruction omitted the `(-1)^n` change from unshifted
+to centered cosine coefficients. The corrected exact formula has removable
+poles, and its value at a retained lattice point is `sqrt(L/2)(-1)^k v_k`,
+not zero merely because `v_k` is small. The new lambda=3, N=120 certificate
+reproduces CCM's local zero discrepancies. It does not rerun NS-14's N=256
+experiment or transfer zero locations to the complete ground. Thus no
+negative conclusion about CCM step (b) follows from the old diagnostic.
+See [the preserved report's correction](evidence/diag_ns14_zeros/results-v2.md).
+G2 and RH remain open.

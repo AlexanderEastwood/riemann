@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.40**.
+Alexander Eastwood's complete working manuscript, **v1.41**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -86,7 +86,8 @@ graph LR
   dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)<br/><small>&#128193; evidence/diag_routes/dbn</small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
   simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
-  stepb["CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?<br/><small>&#128193; evidence/diag_ns14_zeros</small>"]
+  stepb["CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?<br/><small>&#128193; evidence/v141</small>"]
+  semanticlock["CCM finite-compression semantic lock, lambda=3 N=120<br/><small>lem:v141-centering; prop:v141-ccm-lock</small><br/><small>&#128193; evidence/v141</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -125,6 +126,7 @@ graph LR
   w4 --> ccmmu
   w4 --> simpleeven4
   simpleeven4 --> stepb
+  windows --> semanticlock
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -146,18 +148,19 @@ graph LR
   click li "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/li/" "evidence: evidence/diag_routes/li" _blank
   click dbn "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn" _blank
   click simpleeven4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v140/" "evidence: evidence/v140" _blank
-  click stepb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_ns14_zeros/" "evidence: evidence/diag_ns14_zeros" _blank
+  click stepb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v141/" "evidence: evidence/v141" _blank
+  click semanticlock "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v141/" "evidence: evidence/v141" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4 proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,circle,debranges,f1,nb,li,dbn,stepb closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,circle,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
-  class rh,fixedspace,g2,uniform,altroutes open;
+  class rh,fixedspace,g2,uniform,altroutes,stepb open;
 ```
 <!-- research-map:end -->
 
@@ -166,10 +169,24 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.39_manifest.json)
+- [Checksums and provenance](manifest/v1.41_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
+
+## New in v1.41
+
+The existing lambda=3, N=120 compression reproduces the first eight local
+zero discrepancies in CCM §6 Figure 1, with interval eigenpair/root gates
+replayed at 768 and 1024 bits. The first discrepancy is approximately
+1.582329697193127e-34, matching their rounded 1.6e-34.
+
+This identifies the missing `(-1)^n` centering phase in the prior NS-14
+script. Its sinc-lattice conclusion is withdrawn; the old run is preserved
+with a correction. The new result is finite-dimensional and supplies no
+complete-ground zero locations or cofinal convergence. G2 and RH remain open.
+The literature comparison is integrated and both missing evidence groups
+remain OPEN. [Proof and replay](evidence/v141/).
 
 ## New in v1.39
 

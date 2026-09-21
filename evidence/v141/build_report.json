@@ -1,0 +1,8 @@
+{
+  "command": "./manuscript/build.sh",
+  "pages": 215,
+  "undefined_or_duplicate_references": 0,
+  "overfull_boxes": 0,
+  "manuscript_sha256": "a7e67c288830b0f062c4ff78ed944a5f4b33e6f9de567aa267913da30391d095",
+  "delivery": "LaTeX source; generated PDF is ignored, not committed"
+}

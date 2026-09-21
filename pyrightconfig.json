@@ -1,0 +1,7 @@
+{
+  "venvPath": ".",
+  "venv": ".venv",
+  "typeCheckingMode": "basic",
+  "include": ["evidence/v141/*.py"],
+  "exclude": ["node_modules", "__pycache__", ".Codex/worktrees", "data", "evidence/diag_semantic_lock/cache"]
+}

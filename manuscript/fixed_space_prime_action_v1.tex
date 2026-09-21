@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.40},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.41},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.40\\
+\large Complete working manuscript, version 1.41\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 21, 2026}
@@ -184,6 +184,15 @@ imply RH directly, but remains unproved.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.41 completes the CCM numerical semantic lock at the existing
+$\lambda=3$, $N=120$ compression. Proposition~\ref{prop:v141-ccm-lock}
+reproduces eight published discrepancies using interval root gates
+replayed at $768$ and $1024$ bits. Lemma~\ref{lem:v141-centering}
+identifies the missing centering phase in the prior NS-14 diagnostic;
+its sinc-lattice conclusion is withdrawn. The comparison of published
+windows is made explicit, and the v1.39 coverage table is linked.
+The original later evidence groups remain OPEN. G2 and RH remain open.
+
 Version 1.40 completes NS-5: Proposition~\ref{prop:v140-ground4}
 certifies the simple even ground of the complete $\mathsf W_4$,
 with ordinary spectral gap greater than $9.7546\cdot10^{-74}$.
@@ -8281,6 +8290,151 @@ qualifications and explicit sampler graph defect are unchanged.
 No G2 gap or RH claim follows.
 
 
+\subsection*{Published window normalization and an external numerical lock}
+
+The support half-width used by Zhu~\cite{Zhu2026Windows} is
+$a=\log\lambda$; the present Fourier interval has full length
+$L=2a$. These symbols must not be interchanged. The comparison below
+uses the same physical Weil form and ordinary $L^2$ norm, after
+translation of the logarithmic interval.
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Result & half-width $a$ & multiplicative $\lambda=e^a$\\
+\midrule
+Classical Yoshida / Connes--Consani & $\tfrac12\log2\simeq0.3466$ & $\sqrt2$\\
+Zhu's certified window & $0.8$ & $e^{0.8}\simeq2.2255$\\
+Proposition~\ref{prop:v116-window-positive} & $\log3\simeq1.0986$ & $3$\\
+Proposition~\ref{prop:v126-full-window} & $\log4\simeq1.3863$ & $4$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus the certified $\lambda=4$ half-width is approximately $1.73$
+times Zhu's and exactly four times the classical half-width. Zhu
+provides a quantitative lower ground bound on the smaller window;
+Proposition~\ref{prop:v140-ground4} supplies the complete simple-even
+ground ordering here. No ordinary ground lower constant may be read
+from an LDL pivot or a relative Schur margin. The empirical
+Landau--Widom fit is not a normalization test: unconverged finite
+compression values are only upper bounds for the complete infimum.
+
+In the notation of Connes--Consani--Moscovici
+\cite[Corollaries 3.7--3.8]{ConnesConsaniMoscovici2025},
+$\mu_\lambda=\inf\sigma(A_\lambda)$ decreases with $\lambda$.
+Support consistency and the common form normalization therefore give
+\[
+ \mathsf W_4\succeq0\quad\Longleftrightarrow\quad
+ \mu_\lambda\ge0\ \text{for every }1<\lambda\le4.
+\]
+The fixed floors in Proposition~\ref{prop:v138-three-floors} similarly
+bound the corresponding complete $\mu_\lambda$. These are fixed-range
+statements. A cofinal bound is an additional open input.
+
+\begin{lemma}[The centering phase in the Fourier dictionary]
+\label{lem:v141-centering}
+Put $a=L/2$, $\omega_n=2\pi n/L$, and let $v=(v_0,\ldots,v_N)$
+be coefficients in the actual unshifted even basis on $[0,L]$:
+\[
+ f_v(y)=\frac{v_0}{\sqrt L}
+       +\sqrt{\frac2L}\sum_{n=1}^Nv_n\cos(\omega_n y).
+\]
+Its centered representative $g_v(x)=f_v(x+a)$ on $[-a,a]$ has
+cosine coefficients $(-1)^nv_n$ for $n\ge1$. For the nonunitary
+Fourier transform used by CCM,
+\begin{equation}\label{eq:v141-transform}
+ \widehat g_v(z)=\frac{2\sin(az)}{\sqrt L}
+ \left\{\frac{v_0}{z}+\sqrt2\sum_{n=1}^N
+          \frac{v_nz}{z^2-\omega_n^2}\right\}.
+\end{equation}
+All apparent poles are removable. In particular, for $1\le k\le N$,
+\begin{equation}\label{eq:v141-lattice-value}
+ \widehat g_v(\omega_k)=\sqrt{L/2}\,(-1)^kv_k.
+\end{equation}
+Hence the sine factor alone does not impose lattice zeros in the
+retained band.
+\end{lemma}
+\begin{proof}
+The phase is the exact identity
+$\cos(\omega_n(x+a))=(-1)^n\cos(\omega_nx)$.
+Integrating each cosine against $e^{-izx}$ cancels this phase
+against the factor $(-1)^n$ in the sine numerators, giving
+\eqref{eq:v141-transform}. Orthogonality of exponentials, or the
+removable-pole limit, gives \eqref{eq:v141-lattice-value}.
+This is CCM's finite partial-fraction formula in orthonormal parity
+coordinates. Unitary Fourier normalization multiplies it by
+$(2\pi)^{-1/2}$; translating the whole function multiplies its
+transform by a zero-free exponential. Neither changes its zeros.
+\end{proof}
+
+\begin{proposition}[A certified finite-compression semantic lock]
+\label{prop:v141-ccm-lock}
+At the already studied window $\lambda=3$, take $N=120$ as in
+\cite[Section 6, Figure 1]{ConnesConsaniMoscovici2025}. Assemble
+both parity compressions with the existing exact coefficient formulas.
+Their common global lowest eigenvalue is simple and even. Normalize
+its even coefficient vector by $v_0=1$. For each of the first eight
+positive zeta ordinates $\gamma_k$, the transform
+\eqref{eq:v141-transform} has a unique root in the archived local
+interval $I_k$ of radius at most $1.000001\cdot10^{-110}$.
+Its positive discrepancy from $\gamma_k$ rounds to the corresponding
+published entry:
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+$k$ & reproduced discrepancy (rounded) & CCM Figure 1\\
+\midrule
+1 & $1.582329697193127\cdot10^{-34}$ & $1.6\cdot10^{-34}$\\
+2 & $2.060550289594801\cdot10^{-31}$ & $2.1\cdot10^{-31}$\\
+3 & $1.460904856368295\cdot10^{-29}$ & $1.5\cdot10^{-29}$\\
+4 & $8.293686860378121\cdot10^{-27}$ & $8.3\cdot10^{-27}$\\
+5 & $1.279455965166440\cdot10^{-25}$ & $1.3\cdot10^{-25}$\\
+6 & $1.174389453606719\cdot10^{-23}$ & $1.2\cdot10^{-23}$\\
+7 & $7.528486586592898\cdot10^{-22}$ & $7.5\cdot10^{-22}$\\
+8 & $6.565874264666424\cdot10^{-21}$ & $6.6\cdot10^{-21}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+This is a local finite-compression root certificate, not an exhaustive
+ordering of all transform zeros or a transfer to the complete ground.
+\end{proposition}
+\begin{proof}[Interval verification]
+The verifier in \texttt{evidence/v141/} uses the original archived
+coefficient assembler, \texttt{assembly\_general.py}, without modification.
+It reassembles $121$ even and $120$ odd coordinates using the
+$128$-term archimedean formula and its explicit geometric remainder.
+The logarithmic diagonal, normalized zero mode, pole term and all
+prime powers below $9$ are retained. The endpoint contribution at
+$9$ vanishes on the autocorrelations, so the strict prime cutoff
+agrees with CCM's inclusive convention.
+
+Arb's verified eigenpair routine isolates all eigenvalues and proves
+that the chosen even value lies strictly below every other even and
+odd value. Verified eigenvector ratios enclose the real coefficients.
+Midpoint root finding only proposes decimal centers. Acceptance uses
+opposite interval signs of the rational factor at the endpoints,
+a derivative interval excluding zero on the entire bracket, and a
+sine interval excluding zero there. These give existence and local
+uniqueness by the intermediate value theorem and monotonicity.
+Arb enclosures of the fixed low zeta ordinates then give the saved
+discrepancy intervals, each strictly inside its published rounding
+cell. Every gate is replayed at $768$ and $1024$ bits, at the same
+$\lambda,N$ and series order. Direct termwise transforms provide an
+additional algebraic consistency check. No midpoint solve is used.
+\end{proof}
+
+\paragraph{What had to change.}
+The earlier NS-14 diagnostic applied unshifted eigenvector coefficients
+to centered cosines without the required $(-1)^n$ conversion. It
+therefore evaluated a different window function. In addition, a small
+coefficient is not zero: \eqref{eq:v141-lattice-value} precludes the
+inference from concentrated low-mode mass to exact retained-band
+lattice zeros. The new certificate disproves that diagnostic inference
+at $\lambda=3$ and reproduces CCM's fixed-$N$ benchmark. It does not
+establish complete-ground zero locations at $\lambda=3$ or $4$, nor
+convergence to $\Xi$. Those transfer and cofinal inputs remain open;
+G2 and RH remain open. No new window is computed.
+
+
 \subsection*{What the present diagonal majorant costs as the window grows}
 
 \begin{proposition}[Exponential cutoff cost of the scalar far bound]
@@ -8311,6 +8465,16 @@ $(1-c)\log((N+1)/L)>\kappa_{\lambda,N}\ge M_{\phi,\lambda}$.
 Use Proposition~\ref{prop:v119-prime-scale}, which proves
 $\|\mathsf T_{{\rm pr},\lambda}\|/\lambda\to1$, for the limit.
 \end{proof}
+
+With $a=\log\lambda$, this exponential-in-$\lambda$ cutoff belongs to
+the doubly exponential family in the support half-width. Zhu's
+pointwise-envelope obstruction~\cite[Section 14]{Zhu2026Windows}
+has that shape, for a different certificate class. Groskin
+\cite{Groskin2026} quantifies the archimedean integral-cutoff cost
+for finite Weil matrices and gives a cutoff-free interval factorization.
+His integral cutoff is not the Fourier-mode cutoff $N$ here. These
+comparisons provide context, not a universal obstruction to every
+signed estimate.
 
 For $c=10^{-8}$, freshly evaluating the physical weighted prime bound
 and the parity constants at each window gives the following smallest
@@ -10618,7 +10782,8 @@ displayed classes. The Schatten, signed block-norm, noncommuting
 band, Cotlar, and flat-top results have additional geometric or
 structural hypotheses; their recorded closures are not corollaries
 of a single insensitivity assertion. Their precise coverage is
-tabulated in the new evidence report. The surviving joint signed
+tabulated in \texttt{evidence/v139/adversarial\_review.md},
+Sections~6--7 (the ten-route coverage table, NS-4b). The surviving joint signed
 concentration operator retains information excluded by both
 relaxations. Its cofinal finite-floor bound is still unproved.
 All endpoint, prime-cut, logarithmic-diagonal, Fourier normalization
@@ -14958,6 +15123,13 @@ arXiv:1209.4497 (2012).
 A. Connes, C. Consani, and H. Moscovici,
 \emph{Zeta Spectral Triples},
 arXiv:2511.22755 (2025).
+
+\bibitem{Groskin2026}
+A. Groskin,
+\emph{A finite Guinand--Weil dictionary and archimedean tail order
+for the truncated Weil quadratic form},
+arXiv:2607.02828v1 (2026).
+\url{https://arxiv.org/abs/2607.02828v1}.
 
 \bibitem{ConnesVanSuijlekom2025}
 A. Connes and W. D. van Suijlekom,

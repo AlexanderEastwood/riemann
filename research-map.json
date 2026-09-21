@@ -329,10 +329,19 @@
     {
       "id": "stepb",
       "title": "CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?",
-      "status": "closed",
+      "status": "open",
       "parent": "simpleeven4",
-      "evidence": "evidence/diag_ns14_zeros",
-      "note": "No, at lambda=3,4: zeros are the sinc lattice 2pi k/L (exact factorization xi-hat = sin(zL/2) R(z)); ground mass at n<=2 so R has no off-lattice zeros. Step (b) is where the difficulty sits."
+      "evidence": "evidence/v141",
+      "note": "Original NS-14 diagnostic omitted the (-1)^n centering phase and is superseded. NS-2 reproduces eight CCM finite-compression discrepancies at lambda=3,N=120. Complete-ground zero transfer and cofinal Xi convergence remain open."
+    },
+    {
+      "id": "semanticlock",
+      "title": "CCM finite-compression semantic lock, lambda=3 N=120",
+      "status": "proved",
+      "parent": "windows",
+      "prop": "lem:v141-centering; prop:v141-ccm-lock",
+      "evidence": "evidence/v141",
+      "note": "Eight local root discrepancies reproduce CCM Figure 1 with 768/1024-bit interval gates. No new window, complete-ground transfer or cofinal statement."
     }
   ]
 }

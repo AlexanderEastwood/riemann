@@ -1,0 +1,44 @@
+{
+  "classification": "open input; availability search, not a certificate",
+  "date": "2026-09-21",
+  "groups_still_OPEN": [
+    "v1.28 lambda5 transfer and block metrics",
+    "v1.31-v1.34 concentration and closures"
+  ],
+  "local_archives_inspected": [
+    {
+      "filename": "fixed_space_prime_action_v1_25_bundle.zip",
+      "size_bytes": 152013246,
+      "sha256": "6874c0a585a9ad21cb1aeb7e777ff3e5072fc293da4cb35ab6437ee82be3c2a0",
+      "entries": 401,
+      "target_paths": []
+    },
+    {
+      "filename": "fixed_space_prime_action_v1_26_bundle.zip",
+      "size_bytes": 181710377,
+      "sha256": "ccdb8eaa882358ca5cef1668344180a325fc00799c97ed724d05a99ca0982d8f",
+      "entries": 468,
+      "target_paths": []
+    },
+    {
+      "filename": "fixed_space_prime_action_v1_bundle 2.zip",
+      "size_bytes": 106521154,
+      "sha256": "4f3074dcd20668a9bdb519f6d76ee75f478b551fe45a2f3fbbbb508e50609e54",
+      "entries": 263,
+      "target_paths": []
+    },
+    {
+      "filename": "fixed_space_prime_action_v1_bundle.zip",
+      "size_bytes": 854227,
+      "sha256": "9e4b37470eaa2e1bbfd9e722e833454754a51153c9f934f1ed2410c24281ad9a",
+      "entries": 11,
+      "target_paths": []
+    }
+  ],
+  "git_history_search": "No matching original target script paths found across available refs.",
+  "saved_record_search": "Located manuscript/log/provenance references; no original target scripts or saved witnesses recovered.",
+  "github_releases": "Only v1.26-evidence is published, with the v1.26 archive and checksum.",
+  "prior_download_failure": "The saved v1.34 library archive is recorded as 207224098 bytes and HTTP 502 in v131/recovery_provenance.json. The historical download was not replayed: no matching library download connector is callable in this session.",
+  "needed": "An accessible original v1.28-v1.34 archive or extracted original evidence with provenance.",
+  "scope": "No historical scripts are regenerated as substitutes; both evidence ledger rows remain OPEN."
+}

@@ -42,7 +42,8 @@ graph LR
   dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)<br/><small>&#128193; evidence/diag_routes/dbn</small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
   simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
-  stepb["CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?<br/><small>&#128193; evidence/diag_ns14_zeros</small>"]
+  stepb["CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?<br/><small>&#128193; evidence/v141</small>"]
+  semanticlock["CCM finite-compression semantic lock, lambda=3 N=120<br/><small>lem:v141-centering; prop:v141-ccm-lock</small><br/><small>&#128193; evidence/v141</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -81,6 +82,7 @@ graph LR
   w4 --> ccmmu
   w4 --> simpleeven4
   simpleeven4 --> stepb
+  windows --> semanticlock
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -102,29 +104,30 @@ graph LR
   click li "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/li/" "evidence: evidence/diag_routes/li" _blank
   click dbn "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn" _blank
   click simpleeven4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v140/" "evidence: evidence/v140" _blank
-  click stepb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_ns14_zeros/" "evidence: evidence/diag_ns14_zeros" _blank
+  click stepb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v141/" "evidence: evidence/v141" _blank
+  click semanticlock "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v141/" "evidence: evidence/v141" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4 proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,circle,debranges,f1,nb,li,dbn,stepb closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,circle,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
-  class rh,fixedspace,g2,uniform,altroutes open;
+  class rh,fixedspace,g2,uniform,altroutes,stepb open;
 ```
 
 ## Status
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 14 | established result |
+| `proved` | 15 | established result |
 | `live` | 1 | active candidate mechanism |
-| `closed` | 17 | proved insufficient or impossible |
+| `closed` | 16 | proved insufficient or impossible |
 | `blocked` | 1 | attempted; obstruction found |
-| `open` | 5 | target, not yet attacked |
+| `open` | 6 | target, not yet attacked |
 
 ## Nodes
 
@@ -140,10 +143,11 @@ graph LR
   - [x] **G1 (weak)** — `thm:v14-radical` · `lane/g1` · evidence: [`evidence/v124/g2_source_certificate/`](evidence/v124/g2_source_certificate/) · closed for the repaired prolate source
   - [ ] **G2: cofinal -o(1)** — `prop:v121-cofinal-rh` · eps_lambda -> 0 cofinally IS RH
     - [x] **Fixed-window certificates** — `lane/window-scaling` · no finite list is cofinal
+      - [x] **CCM finite-compression semantic lock, lambda=3 N=120** — `lem:v141-centering; prop:v141-ccm-lock` · evidence: [`evidence/v141/`](evidence/v141/) · Eight local root discrepancies reproduce CCM Figure 1 with 768/1024-bit interval gates. No new window, complete-ground transfer or cofinal statement.
       - [x] **W_4 >= 0 both sectors** — `prop:v126-full-window` · evidence: [`evidence/v126/`](evidence/v126/) · only positive result; evidence restored and verified
         - [x] **W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4** — CCM arXiv:2511.22755 Cor 3.7-3.8 write 'we cannot assert mu_lambda >= 0'; monotone in lambda; positioning statement
         - [x] **complete W_4: simple even ground; real-zero transform** — `prop:v140-ground4; cor:v140-real-zeros` · `result/ns5-ground-state` · evidence: [`evidence/v140/`](evidence/v140/) · NS-5 complete: mu0<2.454e-75, mu1>1e-73, 1024/1280-bit shifted inertia; CvS Thm6.1 applies; no Xi convergence or G2 claim
-          - [X] **CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?** — evidence: [`evidence/diag_ns14_zeros/`](evidence/diag_ns14_zeros/) · No, at lambda=3,4: zeros are the sinc lattice 2pi k/L (exact factorization xi-hat = sin(zL/2) R(z)); ground mass at n<=2 so R has no off-lattice zeros. Step (b) is where the difficulty sits.
+          - [ ] **CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?** — evidence: [`evidence/v141/`](evidence/v141/) · Original NS-14 diagnostic omitted the (-1)^n centering phase and is superseded. NS-2 reproduces eight CCM finite-compression discrepancies at lambda=3,N=120. Complete-ground zero transfer and cofinal Xi convergence remain open.
       - [x] **lambda=3** — `prop:v116-window-positive` · evidence: [`evidence/v124/g2_certificate/`](evidence/v124/g2_certificate/)
       - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete` · evidence: [`evidence/v126/`](evidence/v126/)
       - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement` · evidence: [`evidence/v126/`](evidence/v126/)
