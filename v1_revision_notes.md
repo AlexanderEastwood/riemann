@@ -1,3 +1,18 @@
+# Version 1.37 — September 21, 2026
+
+- Retested the v1.34 scalar primitive bound against v1.36's relaxed uniform finite lower-floor objective.
+- Proved for the actual arithmetic symbol that a*Delta(beta_a) tends to infinity and inf beta_a tends to minus infinity. Neither scalar route can provide even a bounded cofinal error.
+- Constructed a fixed nonnegative frequency probe with vanishing transform at the two physical cutoff endpoints. Its negative truncated mass isolates one critical zero under RH; all other zeros and the full exterior archimedean tail are controlled.
+- Separated the RH-conditional linear bounds from the unconditional divergence conclusion. The latter follows by contradiction using the already proved finite-floor implication.
+- Checked the strict prime endpoint, Fourier factors, explicit-formula regularity, physical domain and both parities with an independent adversarial reviewer. Added analytic constants and separate quadrature diagnostics.
+- This is a proved no-go for a prior scalar route, not a new live positivity mechanism. The joint signed concentration estimate with one uniform finite ordinary lower constant remains open.
+- Updated the complete source, abstract, status, research goals, historical route status, evidence inventory and references. No graph defect, endpoint or scale convention was changed.
+- LaTeX-only delivery. Source validation uses draft mode without generating a PDF.
+
+No G2 sign gap was closed, and RH is not proved.
+
+---
+
 ## Delivery policy — September 21, 2026
 
 At the author’s explicit request, manuscript delivery is LaTeX only from this update forward. The previously generated v1.36 PDF is not published or included in the update package. The existing GitHub v1.35 PDF and evidence are archived; the root contains one live LaTeX manuscript. Future runs must not generate or deliver PDFs unless requested again. This changes delivery only, not the mathematical conclusions.

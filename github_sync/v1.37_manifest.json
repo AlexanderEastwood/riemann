@@ -1,0 +1,143 @@
+{
+  "manuscript_revision": "v1.37",
+  "delivery": "LaTeX only",
+  "base_commit": "717e1ec90df425acadf73912447fc89d648e1dae",
+  "base_tree": "d393660ac44c35dd956f2006b698d9d209b8faa9",
+  "source_provenance": {
+    "base_revision": "v1.36",
+    "verified_complete_base_tex_git_blob": "b52aa0c2a27d8649644aa535e24fb592b5f9ae3f",
+    "method": "Complete verified v1.36 source plus reviewed v1.37 proof and full-manuscript integration",
+    "fresh_library_versions": {
+      "latex": 35,
+      "research_log": 39,
+      "revision_notes": 35
+    },
+    "library_revision": "v1.34",
+    "v137_library_replacements": "all three failed with transfer_failed; no current version advanced"
+  },
+  "validation": {
+    "adversarial_review": "g2_scalar_budget_no_go/adversarial_review.md",
+    "probe_diagnostics": "g2_scalar_budget_no_go/probe_results.json",
+    "analytic_proof": "g2_scalar_budget_no_go/new_section.tex",
+    "diagnostic_scope": "Exact rational gate and binary64 probe quadrature; not interval-certified Weil estimates",
+    "latex": "Three pdflatex draft-mode validation passes; no warnings, duplicate labels or unresolved references",
+    "pdf_files_generated": 0,
+    "conclusions": "Actual arithmetic scalar budgets diverge; conditional linear rate kept conditional",
+    "open_gaps": "Joint physical signed concentration bound remains unproved in both parities. No G2 sign gap closed; RH unproved"
+  },
+  "archive_status": {
+    "full_cumulative_zip": "unavailable; no complete release asset uploaded",
+    "past_pdf": "remains archived in archive/v1.35; no new PDF generated"
+  },
+  "files": [
+    {
+      "path": "fixed_space_prime_action_v1.tex",
+      "original_filename": "fixed_space_prime_action_v1_37.tex",
+      "size_bytes": 669216,
+      "sha256": "4bb282a93c0f8c52d743860dbc918513fcefb09021710e71ad2d8d7cb7b9aed8",
+      "git_blob_sha": "5387b4ac547d069544c682941b9fb9c596b43d9e"
+    },
+    {
+      "path": "RH_G1_G2_research_log.md",
+      "original_filename": "RH_G1_G2_research_log.md",
+      "size_bytes": 295590,
+      "sha256": "e0c8c7d782d66a64ba1d170ed42c8396928d490e4d70d15450b64afa8e6c7318",
+      "git_blob_sha": "84ead96bcfa5afe0976fd3de4e93930e61f7f57f"
+    },
+    {
+      "path": "v1_revision_notes.md",
+      "original_filename": "v1_37_revision_notes.md",
+      "size_bytes": 73471,
+      "sha256": "a4c4670c1f8878235394c13370cd45accfc88539a69ca7023c1f6dfd0995dab0",
+      "git_blob_sha": "3f79231b9ebc7cd114d02fd0ca4069e2b18ec0a5"
+    },
+    {
+      "path": "README.md",
+      "original_filename": "README.md",
+      "size_bytes": 3187,
+      "sha256": "73237719f3041662002ec16315222eb27ae999942b4a8c5fd1355a3337bd435b",
+      "git_blob_sha": "0baec165f53d8f98eb72ca3feb393299e201b50f"
+    },
+    {
+      "path": "archive/README.md",
+      "original_filename": "archive_README.md",
+      "size_bytes": 1386,
+      "sha256": "d957e7cad3a187e062b3d578283dc8b150dc3f769a21dff32c8649b59b0f35b0",
+      "git_blob_sha": "b7488258f060da4bd8f4186330f6bd3b936ef63e"
+    },
+    {
+      "path": "g2_scalar_budget_no_go/adversarial_review.md",
+      "original_filename": "adversarial_review.md",
+      "size_bytes": 9953,
+      "sha256": "afb57288a707b191ccf0a40f5df63c6513bc5419ef820b0c0b24f5fae863676e",
+      "git_blob_sha": "7bb2acafceddaf3b7a995f7b0c90219480674040"
+    },
+    {
+      "path": "g2_scalar_budget_no_go/check_probe.py",
+      "original_filename": "check_probe.py",
+      "size_bytes": 2543,
+      "sha256": "ae2ffc7f7bfefb7548b6fa5276559ce8bc85e4162fdb3b1ab64dcbbc290127af",
+      "git_blob_sha": "8eadcdce8f427ba3bf4bcde1392680da6491e2c7"
+    },
+    {
+      "path": "g2_scalar_budget_no_go/new_section.tex",
+      "original_filename": "new_section.tex",
+      "size_bytes": 8942,
+      "sha256": "edd2217cc5a875ec77f3a4081d52ec933d0c51a376d185a68ad9a758e9c106cf",
+      "git_blob_sha": "0ccb4fc588f18ca01ed9da3ab860deb43a8bfaf6"
+    },
+    {
+      "path": "g2_scalar_budget_no_go/probe_results.json",
+      "original_filename": "probe_results.json",
+      "size_bytes": 871,
+      "sha256": "298e8a9c68e92df0ba2300667b6864ad4225602a1e4029ca93eada7b1207b7b5",
+      "git_blob_sha": "6d00d6c8ca008d225650d9f025a0719257321de2"
+    },
+    {
+      "path": "g2_scalar_budget_no_go/research_report.md",
+      "original_filename": "research_report.md",
+      "size_bytes": 9183,
+      "sha256": "ef0bd3a664896a95126ea27fce04b8779a40702583e5562c8ecb7bc631cef427",
+      "git_blob_sha": "c9973d6f626173ff4dffc20372315a7e1cb15014"
+    }
+  ],
+  "archived_unchanged": [
+    {
+      "from": "g2_radical_topology/adversarial_review.md",
+      "to": "archive/v1.36/g2_radical_topology/adversarial_review.md",
+      "git_blob_sha": "dc7b8352e5c6dd03206bf33fab315244770f547e",
+      "size_bytes": 15210
+    },
+    {
+      "from": "g2_radical_topology/check_topology_countermodels.py",
+      "to": "archive/v1.36/g2_radical_topology/check_topology_countermodels.py",
+      "git_blob_sha": "88330e674e424c1fc86079c30a0c3b75deb4580b",
+      "size_bytes": 1754
+    },
+    {
+      "from": "g2_radical_topology/countermodel_results.json",
+      "to": "archive/v1.36/g2_radical_topology/countermodel_results.json",
+      "git_blob_sha": "519b671f11d91fe2d8984f2b118b9ee5d86d6cda",
+      "size_bytes": 1796
+    },
+    {
+      "from": "g2_radical_topology/new_section.tex",
+      "to": "archive/v1.36/g2_radical_topology/new_section.tex",
+      "git_blob_sha": "8655bae9209d604e47057b38b2977179839b9283",
+      "size_bytes": 12083
+    },
+    {
+      "from": "g2_radical_topology/research_report.md",
+      "to": "archive/v1.36/g2_radical_topology/research_report.md",
+      "git_blob_sha": "f2d1f595011c5c4561bd59f089b57403170549c7",
+      "size_bytes": 9586
+    },
+    {
+      "from": "github_sync/v1.36_manifest.json",
+      "to": "archive/provenance/v1.36_manifest.json",
+      "git_blob_sha": "3a92aedd6a4ab00d262b3e60c6b6a9dc59cd38a3",
+      "size_bytes": 6060
+    }
+  ],
+  "history_policy": "Single live root LaTeX manuscript; preserve all prior archive files and Git history"
+}

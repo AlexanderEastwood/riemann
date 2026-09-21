@@ -1,0 +1,31 @@
+{
+  "status": "analytic sign/endpoint gates and numerical scaling checks passed",
+  "scope": "probe and isolated spectral-atom diagnostics; not a numerical proof of the arithmetic theorem",
+  "delta": "1/100",
+  "unsmeared_sinc_integral": -0.17717525300250492,
+  "smoothed_K0": -0.35434715073059375,
+  "proved_upper_bound_on_K0": "-1/(3*pi)",
+  "proved_total_variation_of_w": 2,
+  "proved_mass_of_w": "2*pi",
+  "exact_rational_gate": "6*(22/7)^2 < 100",
+  "endpoint_residual_abs": 2.449274235012921e-16,
+  "atom_scaling": [
+    {
+      "T": 2,
+      "pairing": -0.35435050600500984
+    },
+    {
+      "T": 7,
+      "pairing": -0.3543505060050097
+    },
+    {
+      "T": 19,
+      "pairing": -0.35435050600500984
+    },
+    {
+      "T": 100,
+      "pairing": -0.35435050600500984
+    }
+  ],
+  "quadrature": "binary64 adaptive Simpson diagnostic; not interval-certified"
+}

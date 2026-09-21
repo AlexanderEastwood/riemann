@@ -1,0 +1,204 @@
+\subsection*{Why a bounded scalar primitive error cannot supply the finite floor}
+
+The weaker target in Corollary~\ref{cor:v136-complement-floor} makes it
+necessary to revisit the scalar primitive route: its earlier failure to
+give an $o(1)$ error does not itself exclude an $O(1)$ error. The following
+argument rules out that weaker scalar target for the \emph{actual}
+arithmetic symbol. It does not rule out the signed concentration operator.
+Keep $a=\log\lambda$, $T=2a$, the exact $\beta_a$ of
+\eqref{eq:v130-beta}, and $\Delta_a=\Delta(\beta_a)$ from
+\eqref{eq:v134-drawdown}.
+
+\begin{lemma}[A positive probe with a negative truncated Fourier mass]
+\label{lem:v137-probe}
+Fix $\delta=1/100$ and an even nonnegative
+$\kappa\in C_c^\infty(-\delta,\delta)$ with integral one. Put
+\[
+ w=\mathbf1_{[\pi,3\pi]}*\kappa,\qquad
+ H(t)=\int_{\mathbb R}w(s)e^{-its}\,ds,\qquad
+ K(u)=\int_{-1}^1H(t)e^{iut}\,dt.
+\]
+Then $w\ge0$, $\int w=2\pi$, $\norm{w'}_1=2$, and
+\begin{equation}\label{eq:v137-probe-properties}
+ H(1)=H(-1)=0,\qquad
+ K(0)<-\frac1{3\pi},\qquad
+ |K(u)|\le\frac{C_w}{1+u^2}.
+\end{equation}
+Here $K$ is real on the real line; no symmetry of $w$ about zero is
+required.
+\end{lemma}
+\begin{proof}
+The two translates in $w'(s)=\kappa(s-\pi)-\kappa(s-3\pi)$ have
+disjoint supports, giving the stated variation. With the nonunitary
+transform used only in this lemma,
+\[
+ H(t)=2e^{-2\pi it}\frac{\sin(\pi t)}{t}\widehat\kappa_{\rm nu}(t),
+\]
+where the quotient is interpreted continuously at zero. This proves
+the endpoint zeros. Also
+\begin{align*}
+ \int_\pi^{3\pi}\frac{\sin s}{s}\,ds
+ &=-\pi\int_0^\pi
+       \frac{\sin u}{(\pi+u)(2\pi+u)}\,du
+ \le-\frac1{3\pi}.
+\end{align*}
+Since $\sin s/s=\int_0^1\cos(ts)\,dt$ has derivative bounded by
+$1/2$, convolution with $\kappa$ changes that integral by at most
+$\pi\delta$. Therefore
+\[
+ K(0)=2\int_{\mathbb R}\frac{\sin s}{s}w(s)\,ds
+ \le-\frac2{3\pi}+2\pi\delta<-\frac1{3\pi}.
+\]
+The last strict inequality follows from $6\pi^2<100$.
+Twice integrating the definition of $K$ by parts, using $H(\pm1)=0$,
+gives the claimed $u^{-2}$ decay; for example the numerator can be
+bounded by $|H'(1)|+|H'(-1)|+\int_{-1}^1|H''|$.
+Finally $H(-t)=\overline{H(t)}$, so $K(u)$ is real.
+\end{proof}
+
+\begin{proposition}[Conditional negative mass beside a critical zero]
+\label{prop:v137-conditional-mass}
+Assume RH. Fix any ordinate $\gamma_0$ of a nontrivial zero, of
+multiplicity $m_0$, and use Lemma~\ref{lem:v137-probe}. Then
+\begin{equation}\label{eq:v137-probe-limit}
+ J_a:=\int_{\mathbb R}\beta_a(\xi)
+              w\bigl(T(\xi-\gamma_0)\bigr)\,d\xi
+ =m_0K(0)+O_{\gamma_0,w}(T^{-2})+E_T,
+\end{equation}
+where
+\begin{equation}\label{eq:v137-exterior-error}
+ |E_T|\le\frac{8\pi e^{-5T/2}}{5T(1-e^{-2T})}.
+\end{equation}
+Consequently, for all sufficiently large $a$,
+\begin{equation}\label{eq:v137-conditional-lower}
+ \Delta_a\ge\frac1{6\pi},\qquad
+ \inf_{\xi\in\mathbb R}\beta_a(\xi)
+      \le-\frac{a}{6\pi^2}.
+\end{equation}
+The threshold is not asserted effective here, and these displayed rates
+are conditional on RH.
+\end{proposition}
+\begin{proof}
+Write $\mathcal W$ for the complete geometric Weil distribution in
+logarithmic coordinates. Under RH its spectral form is
+$\mathcal W(t)=\sum_\gamma m_\gamma e^{i\gamma t}$ in the distributional
+sense, with distinct real ordinates in this notation; this is the
+classical explicit formula, not a new spectral assumption beyond RH
+\cite[Theorem 2.1]{BurnolExplicit2000}.
+The inverse-transform kernel of $\beta_a$ agrees with $\mathcal W$
+on $|t|<T$. Outside that interval it is exactly
+\[
+ -\rho_*(|t|),\qquad
+ \rho_*(t)=\frac{e^{-5t/2}}{1-e^{-2t}}\quad(t>0).
+\]
+Indeed this is the off-origin kernel of
+$\Re\psi(5/4+i\xi/2)-\log\pi$. The prime and continuum terms in
+\eqref{eq:v130-r-symbol} have support in $[-T,T]$; inside that interval
+the identity
+$-\rho_*(|t|)+e^{|t|/2}=-\rho(|t|)+2\cosh(t/2)$
+retains the complete pole and archimedean terms. All distributions at
+zero have the same normalization as \eqref{eq:v135-full-symbol}.
+
+The nonunitary Fourier transform of the probe in \eqref{eq:v137-probe-limit}
+is
+\[
+ V_T(t)=T^{-1}e^{-i\gamma_0t}H(t/T).
+\]
+The explicit formula applied to $\mathbf1_{[-T,T]}V_T$ therefore gives
+the exact identity
+\begin{equation}\label{eq:v137-zero-sum}
+ J_a=\sum_\gamma m_\gamma K\bigl(T(\gamma-\gamma_0)\bigr)+E_T,
+ \qquad
+ E_T=-\int_{|t|>T}\rho_*(|t|)V_T(t)\,dt.
+\end{equation}
+There is no additional $2\pi$ in this identity: $V_T$ is the
+nonunitary transform of the frequency test and $K$ is defined above
+without a normalization factor. The ordinary physical Fourier transform
+in \eqref{eq:v135-full-symbol} remains unitary.
+
+For completeness the truncated test is legitimate. It is continuous,
+compactly supported, smooth near zero and piecewise smooth elsewhere;
+its endpoint values vanish because $H(\pm1)=0$. Its second distributional
+derivative is a finite measure. Smooth mollification gives convergence
+on the geometric side and Fourier decay $O((1+|\gamma|)^{-2})$
+uniformly in the mollification parameter, for each fixed $T$.
+The bound $N(Y)=O(Y\log(2+Y))$ then permits dominated convergence on
+the RH zero sum. This extends the smooth explicit formula to this test.
+If $e^T$ is a prime power, the endpoint atom pairs with zero; the strict
+prime cutoff is therefore preserved exactly.
+
+The ordinate $\gamma_0$ is isolated. Thus
+\[
+ \sum_{\gamma\ne\gamma_0}
+       \frac{m_\gamma}{|\gamma-\gamma_0|^2}<\infty,
+\]
+and \eqref{eq:v137-probe-properties} bounds all other zero terms by
+$O_{\gamma_0,w}(T^{-2})$. Since $|H(t)|\le2\pi$, integration of
+$\rho_*$ bounds $E_T$ by \eqref{eq:v137-exterior-error}.
+This proves \eqref{eq:v137-probe-limit}, and eventually
+$J_a\le-1/(6\pi)$.
+
+The scalar decomposition of Proposition~\ref{prop:v134-primitive}
+gives $\beta_a=b_a+U_a'$ with $b_a\ge0$ and
+$\norm{U_a}_\infty=\Delta_a/2$. Since the rescaled probe has variation
+two, integration by parts yields
+\[
+ J_a\ge-\frac{\Delta_a}{2}
+      \norm{(w(T(\cdot-\gamma_0)))'}_1=-\Delta_a.
+\]
+This proves the first inequality in \eqref{eq:v137-conditional-lower}.
+Its mass is $2\pi/T=\pi/a$, which proves the second.
+\end{proof}
+
+\begin{corollary}[Unconditional scalar-budget obstruction]
+\label{cor:v137-scalar-no-go}
+For the exact arithmetic symbol of this manuscript,
+\begin{equation}\label{eq:v137-scalar-divergence}
+ a\Delta(\beta_a)\longrightarrow+\infty,
+ \qquad
+ \inf_{\xi\in\mathbb R}\beta_a(\xi)\longrightarrow-\infty
+ \quad(a\longrightarrow\infty).
+\end{equation}
+In particular neither a bounded scalar primitive budget nor a bounded
+pointwise negative error can supply the finite floor of
+Proposition~\ref{prop:v136-bounded-floor}, even along a cofinal sequence.
+No unconditional linear rate is claimed.
+\end{corollary}
+\begin{proof}
+If $a_j\Delta(\beta_{a_j})$ were bounded on any sequence
+$a_j\to\infty$, Proposition~\ref{prop:v134-primitive} would give a
+uniform finite lower bound for the complete physical forms. The full
+parity identity \eqref{eq:v135-full-symbol} and
+Proposition~\ref{prop:v136-bounded-floor} would then imply RH.
+But under RH, Proposition~\ref{prop:v137-conditional-mass} forces
+$a_j\Delta(\beta_{a_j})\ge a_j/(6\pi)$ eventually, a contradiction.
+Absence of a bounded cofinal subsequence is precisely the first limit
+in \eqref{eq:v137-scalar-divergence}.
+Likewise a cofinal pointwise lower bound $\beta_{a_j}\ge-C$ would
+give a complete physical lower floor, imply RH, and contradict the
+second estimate in \eqref{eq:v137-conditional-lower}.
+This proves the second limit.
+\end{proof}
+
+This is not a negative physical Weil test. The nonnegative frequency
+probe $w(T(\xi-\gamma_0))$ is not asserted to be the squared transform
+of a vector supported in $(-a,a)$. Such an assertion would contradict
+the RH positivity used in the conditional part of the argument.
+The result identifies exactly the cost of discarding physical
+time--frequency correlations. Both parities remain within the complete
+symbol identity, but no projection, low-concentration identification,
+source-to-physical transfer or sampler graph formula is changed.
+
+The nearest project proposal is the v1.34 scalar primitive estimate,
+retested under v1.36's weaker bounded-error objective. The new ingredient
+is an endpoint-vanishing positive frequency probe, which gives an
+absolutely convergent zero sum and a surviving negative cutoff side lobe.
+This is a proved obstruction to that route, not a new positive mechanism.
+The explicit formula and cutoff oscillations are classical. Nearby
+pointwise-envelope barriers, for example \cite{Zhu2026}, bound the raw
+prime comb; the present statement concerns the continuum-cancelled
+symbol and its optimal signed primitive. No worldwide novelty is claimed.
+The joint signed concentration estimate remains open: it must retain
+the favorable levels jointly with their physical concentration operators
+to obtain a uniform finite ordinary lower error. No G2 sign gap is closed.
+
