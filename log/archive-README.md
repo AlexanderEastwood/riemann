@@ -1,3 +1,10 @@
+> **Archived index (pre-reorganization).** This file is kept as a historical
+> record. The `archive/` paths it references were moved on 2026-09-21:
+> `v1.24_snapshot/` → `../evidence/v124/`, `v1.26_snapshot/` → `../evidence/v126/`,
+> `v1.35/`…`v1.37/` → `../evidence/v135/`…`v137/`, `provenance/` and
+> `relocation_manifest.json` → `../manifest/`. Use `../REPO_LAYOUT.md` for the
+> current layout.
+
 # Archived research material
 
 **Historical material only. The current manuscript is [v1.38 at the repository root](../README.md).**
