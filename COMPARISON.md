@@ -107,7 +107,10 @@ witnesses), so tone does not distinguish this project. Two things would:
    reproduces eight CCM §6 Figure 1 discrepancies at lambda=3, N=120,
    with the centering dictionary stated explicitly and interval gates
    replayed at two precisions. This validates this external benchmark;
-   it does not audit every archived computation.
+   it does not audit every archived computation. The zero comparison is
+   invariant under A -> c A + s I (c > 0), so it cannot by itself test a
+   common positive scalar or an identity shift; full normalization requires
+   the separate coefficient identities.
 2. **A named external reviewer** on `evidence/MISSING.md` and the
    certificate ledger. Self-review cannot reach a `REVIEWED` state.
 

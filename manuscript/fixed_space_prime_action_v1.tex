@@ -8320,14 +8320,14 @@ compression values are only upper bounds for the complete infimum.
 
 In the notation of Connes--Consani--Moscovici
 \cite[Corollaries 3.7--3.8]{ConnesConsaniMoscovici2025},
-$\mu_\lambda=\inf\sigma(A_\lambda)$ decreases with $\lambda$.
+$\mu^{\mathrm{CCM}}_\lambda=\inf\sigma(A_\lambda)$ decreases with $\lambda$.
 Support consistency and the common form normalization therefore give
 \[
  \mathsf W_4\succeq0\quad\Longleftrightarrow\quad
- \mu_\lambda\ge0\ \text{for every }1<\lambda\le4.
+ \mu^{\mathrm{CCM}}_\lambda\ge0\ \text{for every }1<\lambda\le4.
 \]
 The fixed floors in Proposition~\ref{prop:v138-three-floors} similarly
-bound the corresponding complete $\mu_\lambda$. These are fixed-range
+bound the corresponding complete $\mu^{\mathrm{CCM}}_\lambda$. These are fixed-range
 statements. A cofinal bound is an additional open input.
 
 \begin{lemma}[The centering phase in the Fourier dictionary]
@@ -8396,6 +8396,14 @@ $k$ & reproduced discrepancy (rounded) & CCM Figure 1\\
 \end{center}
 This is a local finite-compression root certificate, not an exhaustive
 ordering of all transform zeros or a transfer to the complete ground.
+
+\paragraph{Normalization scope of the numerical test.}
+For any $c>0$ and real $s$, replacing the assembled finite matrix
+$A$ by $cA+sI$ preserves its ground eigenspace and hence these
+transform zeros. Agreement with the published zero discrepancies
+cannot by itself test an overall positive scalar or an identity shift.
+The identification of the full form normalization rests separately on
+the defining coefficient formulas, not on this numerical benchmark.
 \end{proposition}
 \begin{proof}[Interval verification]
 The verifier in \texttt{evidence/v141/} uses the original archived

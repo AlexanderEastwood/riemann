@@ -1,0 +1,9 @@
+{
+  "command": "./manuscript/build.sh",
+  "pages": 215,
+  "undefined_or_duplicate_references": 0,
+  "overfull_boxes": 0,
+  "manuscript_sha256": "36ebd29429b5250fa3ea103b61eeb97607df1c73c5dd1e6850127b840eac46c5",
+  "scope": "Rebuilt local v1.41 candidate after normalization-scope clarification; not integrated with newer main.",
+  "delivery": "LaTeX source; generated PDF ignored, not committed"
+}

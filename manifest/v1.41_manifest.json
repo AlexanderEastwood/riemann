@@ -1,16 +1,21 @@
 {
  "manuscript_revision": "v1.41",
- "base_commit": "d2ce0895e89f88b68ce593ffb0229bcdeb348ff9",
+ "base_commit": "86b9471cd61b7de9d1f93165d0b0629139d7cbc4",
  "files": [
   {
    "path": "evidence/v141/README.md",
-   "size_bytes": 1903,
-   "sha256": "51b65d2fc876bdf9f6b3efc2c2648cd0ab8977ebdfa74627907642d4f4ba3800"
+   "size_bytes": 2484,
+   "sha256": "a5e09488b2692bd5c86f28253d542bf075f2b61fed05b229556487a49c57dfe7"
   },
   {
    "path": "evidence/v141/build_report.json",
    "size_bytes": 284,
    "sha256": "0c9199cc9da48b83888e8cf6f9e7ef42d5315897122e1a676d978c47683296cc"
+  },
+  {
+   "path": "evidence/v141/build_report_v2.json",
+   "size_bytes": 398,
+   "sha256": "e3d28ca0f97e6ac882653821559fed2f41d301f18f0cf17d55e992343be4d06a"
   },
   {
    "path": "evidence/v141/ccm-lambda3-figure.svg",
@@ -34,8 +39,8 @@
   },
   {
    "path": "evidence/v141/new_section.tex",
-   "size_bytes": 7003,
-   "sha256": "b081dfdc3ddcba0d597539a9f3df18e7961c5ca9ed638e41ec7473aad6e8238a"
+   "size_bytes": 7507,
+   "sha256": "f6a83d34fa393938122814ff436ce60b3ab1a617bed53f92ea936786cb521e2d"
   },
   {
    "path": "evidence/v141/ns1_recovery_status.json",
@@ -56,9 +61,19 @@
    "path": "evidence/v141/research-report-2026-09-21-v1.html",
    "size_bytes": 6593,
    "sha256": "a7e6497fb64dab80da3cd030215cd0eda0b1fcd38262a093ddbe423d518905ea"
+  },
+  {
+   "path": "evidence/v141/research-report-2026-09-21-v2.html",
+   "size_bytes": 7174,
+   "sha256": "4de57abef180de7b24c74653de71768dd17b9f6d99384d1c2809a48094ded1c8"
+  },
+  {
+   "path": "evidence/v141/resume_verification_2026-09-21.json",
+   "size_bytes": 1898,
+   "sha256": "0d487060e26435d2f676421d0f6ee1ba3e732ed7637d7dc9cd8e76e37f315682"
   }
  ],
- "file_count": 11,
- "total_bytes": 139715,
+ "file_count": 14,
+ "total_bytes": 150270,
  "note": "Existing-window CCM semantic lock; exact centering correction; NS-3 and NS-4b completed; NS-1 remains OPEN. G2 and RH open."
 }

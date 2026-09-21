@@ -10,6 +10,8 @@
 Build: 215 pages, 0 undefined/duplicate references, 0 overfull boxes.
 No new independent audit is claimed. G2 and RH remain open.
 
+Resumed verification (2026-09-21): all eight local root gates passed again at 768 and 1024 bits, with identical centers and overlapping discrepancy intervals. Added the exact limitation that A -> c A + s I, c > 0, preserves the tested zeros; renamed the CCM infimum locally to avoid collision with the inverse-approximation parameter. Rebuilt: 215 pages, zero undefined/duplicate references and zero overfull boxes. Preserved the original reports and wrote research-report-2026-09-21-v2.html and build_report_v2.json. Later main-branch diagnostics/retractions still require coordinated integration; no push or merge occurred.
+
 ---
 
 # Version 1.40 — September 21, 2026

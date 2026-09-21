@@ -36,3 +36,14 @@ The original coefficient assembler is SHA-bound in both replay JSON files.
 The exact decimal root centers and radii are stored separately from rounded
 displays. This pass has no new independent audit; the published CCM values
 are the external numerical reference.
+
+Resumed verification (2026-09-21): both precision replays passed again.
+The benchmark is invariant under a positive common matrix scale and an
+identity shift; it does not independently test those two normalization
+choices. See the separately versioned research report and build report
+listed below. The saved candidate has not been integrated with the later
+main-branch diagnostics and retractions.
+
+- [Resumed research report](research-report-2026-09-21-v2.html)
+- [Resumed build report](build_report_v2.json)
+- [Replay verification summary](resume_verification_2026-09-21.json)
