@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.34},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.35},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.34\\
+\large Complete working manuscript, version 1.35\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 21, 2026}
@@ -133,6 +133,13 @@ Dirichlet model with an exact null source has $a\Delta_a=\pi^3/6$;
 numerical arithmetic stress tests also fail to show decay.  The method
 is therefore recorded as a rejected scalar candidate, not as the live
 G2 mechanism.
+The same continuum symbol now represents both complex parity sectors.
+A uniformly conditioned lattice of translated Gaussian radical sources
+gives a growing physical block of dimension proportional to $\log\lambda$
+with full operator residual at most $C\log\lambda\,e^{-\lambda/100}$.
+Its odd subblock lies in every complement formed from even image columns.
+Thus a uniform or polynomial positive gap on that complement is impossible;
+the signs of the crowded near-zero eigenvalues remain undetermined.
 Strong cancellation persists in the exact
 source complement. Every complete eigenfunction has zero physical
 endpoint. A cofinal complete-Weil lower error tending to zero would
@@ -141,6 +148,22 @@ imply RH directly, but remains unproved.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.35 proves a quantitative growing-block obstruction, rather
+than another fixed-window positivity result.  Proposition~\ref{prop:v135-growing-radical}
+constructs $2\lfloor a/(2D)\rfloor+1$ independent physical columns with
+uniform ordinary Gram lower bound and full operator residual
+$Ca e^{-\lambda/100}$, where $a=\log\lambda$ and $D$ is fixed by the
+limiting source.  Corollary~\ref{cor:v135-coercivity-obstruction} bounds
+any positive complementary gap by that error after fewer columns are
+removed, and applies to (G2.6) with arbitrarily many even image columns
+through its untouched odd block.  The same number of complete eigenvalues
+lies near zero, without a conclusion about their signs.
+Proposition~\ref{prop:v135-both-parities} also extends the exact continuum
+symbol to both parities and gives their combined gap-free error budget.
+The translated radical family is a quantified continuation of a previously
+logged fixed-rank obstruction, not a novel positivity mechanism.  The
+signed cofinal complement estimate remains unproved. No G2 sign gap is closed.
+
 Version 1.34 proves two further limits on proposed simplifications of
 the signed concentration route.  First, disjoint reciprocal-scale
 frequency channels have an actual-source-compressed cross norm with
@@ -9347,6 +9370,261 @@ signed weighted concentration inequality
 \eqref{eq:v131-weighted-concentration}; the odd sector remains open and
 no G2 sign gap is closed.
 
+\subsection*{Both parities and a quantitative growing radical block}
+
+The signed concentration route can be formulated on the complete physical
+space.  This extension does not infer the odd sign from the even sign.
+Retain $a=\log\lambda$, $I=(-a,a)$, the unitary Fourier transform of
+zero extensions, and the canonical closed operator $\mathsf W_\lambda$.
+Its form domain is
+\[
+ \mathcal D(q_a)=\left\{f\in L^2(I):
+ \int_{\mathbb R}\log(2+|\xi|)
+       |\widehat{\widetilde f}(\xi)|^2d\xi<\infty\right\}.
+\]
+
+\begin{proposition}[The same exact symbol in both parities]
+\label{prop:v135-both-parities}
+For every complex $f\in\mathcal D(q_a)$,
+\begin{equation}\label{eq:v135-full-symbol}
+ q_a[f]=\int_{\mathbb R}\beta_a(\xi)
+                    |\widehat{\widetilde f}(\xi)|^2d\xi,
+\end{equation}
+with exactly the symbol, prime cutoff and normalization in
+\eqref{eq:v130-r-symbol}--\eqref{eq:v130-beta}.
+Let $u_a$ be the actual normalized even source and let
+$P_a=I-|u_a\rangle\langle u_a|$ now act on all of $L^2(I)$.
+The weighted concentration criterion
+\eqref{eq:v131-weighted-concentration}, with this full-space meaning,
+is equivalent to its two parity blocks.  If their respective ordinary
+negative errors are $\eta_a^{\rm ev}$ and $\eta_a^{\rm odd}$, and
+$\norm{\mathsf W_\lambda u_a}\le\epsilon_a$, then
+\begin{equation}\label{eq:v135-full-error}
+ \mathsf W_\lambda\succeq-
+ \max\left\{\eta_a^{\rm odd},
+      \eta_a^{\rm ev}+\frac2{\sqrt3}\epsilon_a\right\}I.
+\end{equation}
+For a symmetric set $E$ of finite measure, the uncompressed parity
+concentration traces are
+\begin{equation}\label{eq:v135-parity-traces}
+ \operatorname{tr}C_E^{\rm ev/odd}
+ =\int_E\frac{a\mathbin{\pm}\sin(2a\xi)/(2\xi)}{2\pi}\,d\xi.
+\end{equation}
+Source removal subtracts $\int_E|\widehat{\widetilde u_a}|^2$ only
+from the even trace.  In particular the complete compressed trace is
+$a|E|/\pi-\int_E|\widehat{\widetilde u_a}|^2$.
+\end{proposition}
+\begin{proof}
+The full pole has kernel $2\cosh((x-y)/2)$ and is
+$2|c\rangle\langle c|-2|s\rangle\langle s|$.  The elementary
+identity $2\cosh(t/2)-e^{|t|/2}=e^{-|t|/2}$ therefore gives
+\[
+ 2|c\rangle\langle c|-2|s\rangle\langle s|-K_a^+=K_a^-.
+\]
+Apply the multiplier and digamma-recurrence calculation of
+Proposition~\ref{prop:v130-remainder}; parity is no longer needed.
+The differences from the archimedean form are bounded at fixed $a$,
+so the identity extends from the smooth core to the displayed domain.
+The symbol and all the symmetric level sets commute with reflection;
+the even source projection is the identity on the odd sector.
+Apply Proposition~\ref{prop:v118-gap-free} only to the even block and
+take the worse of the two lower errors to obtain
+\eqref{eq:v135-full-error}.  The squared norms of the cosine and sine
+evaluation vectors give \eqref{eq:v135-parity-traces}.  There are no
+cross-parity form terms, also for complex tests.
+\end{proof}
+
+The next result quantifies why a positive complement gap is an
+unnecessarily strong objective.  The radical construction itself is
+classical~\cite[Section 3]{ConnesConsani2023}.  The earlier research
+log already used even derivatives of its Gaussian example to rule out
+a fixed gap after removal of a fixed-rank block.  Here separated
+translations give a uniformly invertible physical Gram and an explicit
+\emph{growing-rank ordinary operator} estimate.  This is a continuation
+of that obstruction, not a new positivity mechanism.
+
+Use $h_\infty$ and $f_\infty$ from
+Lemma~\ref{lem:v115-source-mass}, and put
+\[
+ k(x)=f_\infty(e^x),\qquad \phi=k/\norm k_2,\qquad
+ M_2=\norm{(1+|x|)^2\phi}_2,\qquad
+ D=\left\lceil4\pi\sqrt{M_2}\right\rceil.
+\]
+Thus $D$ is a fixed integer defined by the actual physical source,
+not a parameter fitted at each window.  Fix a smooth $\vartheta$ with
+$0\le\vartheta\le1$, $\vartheta(t)=1$ for $t\le-1$, and
+$\vartheta(t)=0$ for $t\ge-1/2$.  For $a\ge2$ put
+\[
+ \chi_a(x)=\vartheta(|x|-a),\quad
+ J_a=\left\lfloor\frac{a}{2D}\right\rfloor,\quad
+ g_{a,j}(x)=\chi_a(x)\phi(x-jD)\quad(|j|\le J_a).
+\]
+All columns lie in $C_c^\infty(I)\subset\mathcal D(\mathsf W_\lambda)$.
+Let $G_a$ be their synthesis map and $\Gamma_a=G_a^*G_a$.
+
+\begin{proposition}[Growing physical blocks with a vanishing full residual]
+\label{prop:v135-growing-radical}
+There are constants $C,a_0$, depending only on the fixed source and
+cutoff, such that, for $a\ge a_0$,
+\begin{align}
+ \Gamma_a&\succeq\tfrac12 I,
+       &m_a:=\operatorname{rank}G_a&=2J_a+1,\label{eq:v135-gram}\\
+ \norm{\mathsf W_\lambda P_{G_a}}
+       &\le\varepsilon_a,
+       &\varepsilon_a&:=Ca\exp(-\lambda/100).
+       \label{eq:v135-block-residual}
+\end{align}
+Here $P_{G_a}=G_a\Gamma_a^{-1}G_a^*$ is the ordinary physical
+orthogonal projection.  The same bound, after enlarging $C$ if
+necessary, holds on the odd block of dimension $J_a$ spanned by
+$(g_{a,j}-g_{a,-j})/\sqrt2$, $1\le j\le J_a$.
+These are complete operators, with no Fourier truncation.
+\end{proposition}
+\begin{proof}
+The Gaussian source formula, its Fourier invariance, and Poisson
+summation give $k(-x)=k(x)\ne0$.  Differentiating its normally
+convergent series on $x\ge0$, and then reflecting, gives, for each
+fixed $r\ge0$,
+\begin{equation}\label{eq:v135-gaussian-tail}
+ |k^{(r)}(x)|\le C_r\exp\{-\tfrac\pi2 e^{2|x|}\}.
+\end{equation}
+Indeed a derivative only introduces polynomial factors in $e^x$ and
+$ne^x$ into the Gaussian series; half its exponent absorbs them.
+All translates are polarized global radicals: translation by $t$
+corresponds to the even Schwartz source
+$h_t(u)=e^{-t/2}h_\infty(e^{-t}u)$, which has zero value and zero
+integral.  The Schwartz radical theorem applies to arbitrary compact
+logarithmic tests, not just to even ones.  No positive global closed
+operator is assumed here.
+
+For $s\ne0$, splitting at $|x|=|s|/2$ and using the weighted norm
+on whichever translated factor lies in a tail gives
+\[
+ |\ip{\phi(\cdot-s)}\phi|
+ \le\frac{2M_2}{(1+|s|/2)^2}.
+\]
+Hence the sum of all off-diagonal absolute entries in any row of
+the uncut lattice Gram is at most
+\[
+ 4M_2\sum_{n\ge1}(1+nD/2)^{-2}
+ \le\frac{8\pi^2M_2}{3D^2}\le\frac16.
+\]
+Every finite uncut Gram is therefore at least $5I/6$.
+
+Write $r_{a,j}=(1-\chi_a)\phi(\cdot-jD)$ on the entire line.
+For $|jD|\le a/2$, its support satisfies $|x|\ge a-1$, hence
+$|x-jD|\ge a/2-1$.  Equation~\eqref{eq:v135-gaussian-tail} and
+the bounded cutoff derivatives imply the uniform estimate
+\begin{equation}\label{eq:v135-weighted-tail}
+ \norm{r_{a,j}}_{H^1(\mathbb R)}+
+ \sup_x e^{2|x|}\bigl(|r_{a,j}(x)|+|r'_{a,j}(x)|\bigr)
+ \le\delta_a:=C\exp\{-\pi\lambda/(4e^2)\}.
+\end{equation}
+For clarity, with $X=e^{2|x-jD|}\ge\lambda/e^2$ one has
+$e^{2|x|}\le\lambda X\le e^2X^2$; absorbing $X^2$ into half
+the exponent in \eqref{eq:v135-gaussian-tail} proves the supremum
+bound.  Its integrable envelope also proves the $H^1$ bound.
+The cutoff Gram loss is positive semidefinite, and its trace is
+at most $Cm_a\delta_a^2$, using the same estimate for the
+uncut tails.  Since $m_a=O(a)$, this loss is eventually below $1/3$.
+This proves \eqref{eq:v135-gram}.
+
+It remains to bound the \emph{complete} residual, not merely its
+quadratic value.  Denote the global explicit-formula distribution by
+$\mathcal W$.  Radicality gives, on $I$,
+\[
+ \mathsf W_\lambda g_{a,j}=-\mathcal W r_{a,j}.
+\]
+This distributional equality has an $L^2(I)$ representative as follows.
+The full-line archimedean multiplier
+$\Re\psi(1/4+i\xi/2)-\log\pi$ is bounded by $C(1+|\xi|)$,
+so its $L^2$ action on $r_{a,j}$ is at most $C\delta_a$.
+The prime part includes \emph{every} $n\ge2$, also those beyond
+$\lambda^2$.  Since $|x\pm\log n|\ge\log n-|x|$,
+\[
+ \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+   |r_{a,j}(x\pm\log n)|
+ \le\delta_a e^{2|x|}
+             \sum_{n\ge2}\frac{\Lambda(n)}{n^{5/2}}
+ \le C\delta_a e^{2a}\qquad(x\in I).
+\]
+The series converges absolutely.  Both pole integrals are bounded
+by $C\delta_a e^{|x|/2}$, using their kernels $e^{\pm(x-y)/2}$.
+Thus
+\[
+ \norm{\mathsf W_\lambda g_{a,j}}_2
+ \le C\sqrt a\,\lambda^2\delta_a
+ \le C\sqrt a\,e^{-\lambda/100}.
+\]
+The last inequality absorbs a polynomial into the strictly stronger
+exponent $\pi/(4e^2)>1/100$.  The operator domain is legitimate
+because each $g_{a,j}$ is smooth and compactly supported inside $I$.
+Now $G_a\Gamma_a^{-1/2}$ is an isometry, so
+\[
+ \norm{\mathsf W_\lambda P_{G_a}}
+ =\norm{\mathsf W_\lambda G_a\Gamma_a^{-1/2}}
+ \le\sqrt2\left(\sum_j
+             \norm{\mathsf W_\lambda g_{a,j}}_2^2\right)^{1/2}.
+\]
+This is at most $Ca e^{-\lambda/100}$.  Reflection exchanges
+indices $j$ and $-j$.  The antisymmetric coefficient embedding is
+an isometry, so its Gram lower bound and residual estimate follow
+from the same argument; it produces exactly $J_a$ odd columns.
+\end{proof}
+
+\begin{corollary}[A growing-rank obstruction to positive coercivity]
+\label{cor:v135-coercivity-obstruction}
+For every physical subspace $F_a\subset L^2(I)$ with
+$\dim F_a<m_a$, there is a unit vector
+$v_a\in F_a^\perp\cap\mathcal D(\mathsf W_\lambda)$ such that
+\begin{equation}\label{eq:v135-complement-ceiling}
+ \norm{\mathsf W_\lambda v_a}\le\varepsilon_a,
+ \qquad |q_a[v_a]|\le\varepsilon_a.
+\end{equation}
+Consequently any positive coercivity constant on $F_a^\perp$ is
+at most $\varepsilon_a$.  This excludes a uniform positive constant
+or a positive polynomial-in-$\lambda^{-1}$ lower bound when
+$\dim F_a=o(\log\lambda)$.
+If all deep and plunge image columns in (G2.6) are even, their
+low-concentration complement contains the complete odd block above,
+regardless of the number of those columns; the same ceiling applies.
+More generally it still applies if fewer than $J_a$ independent odd
+constraints are added.
+The spectral projection of $\mathsf W_\lambda$ onto
+$[-2\varepsilon_a,2\varepsilon_a]$ has rank at least $m_a$,
+including at least $J_a$ odd eigenvalues.
+\end{corollary}
+\begin{proof}
+Dimension gives a nonzero vector in
+$\operatorname{Ran}G_a\cap F_a^\perp$; normalize it and apply
+\eqref{eq:v135-block-residual} and Cauchy--Schwarz.
+Odd vectors are orthogonal to every even image, which proves the
+physical (G2.6) assertion without identifying it with $u_a^\perp$.
+If the indicated spectral projection had rank below $m_a$, a unit
+vector in $\operatorname{Ran}G_a$ could be chosen orthogonal to its
+range.  The spectral theorem would give
+$\norm{\mathsf W_\lambda v_a}\ge2\varepsilon_a$, a contradiction.
+The same proof on the odd block gives its count. Compact resolvent
+is already established in Proposition~\ref{prop:v114-weil-core}.
+\end{proof}
+
+The result determines neither side of zero for these eigenvalues.
+In particular it is compatible with RH and with the gap-free target.
+For the explicitly constructed $P_{G_a}$,
+Proposition~\ref{prop:v118-gap-free} still requires the independent
+arithmetic estimate
+\[
+ q_a[f]\ge-\eta_a\norm f^2\quad
+ (f\perp\operatorname{Ran}G_a),\qquad \eta_a\longrightarrow0.
+\]
+The signed concentration criterion on the whole actual rank-one
+complement remains another live conditional target.  Neither estimate
+follows from the small residual.  No source-to-physical norm transfer,
+Fourier-cut limit, or sampler graph identity was used or modified.
+The logarithmic diagonal, physical endpoints and graph defect remain
+as previously stated.  No G2 sign gap is closed.
+
+
 \subsection*{Finite trial positivity and the exact omitted-tail correction}
 
 The trial-head term in Proposition~\ref{prop:v120-structured-uniform}
@@ -9557,9 +9835,12 @@ parameters, including pointwise values rather than only an $L^2$ error.
 
 \begin{lemma}[Certified angular eigenfunction error]
 \label{lem:v113-angular}
-On $L^2(-1,1)$ let
-$e_\ell(x)=\sqrt{(2\ell+1)/2}\,P_\ell(x)$,
-$De_\ell=\ell(\ell+1)e_\ell$, and
+On $L^2(-1,1)$ define
+\[
+ e_\ell(x)=\sqrt{(2\ell+1)/2}\,P_\ell(x),\qquad
+ De_\ell=\ell(\ell+1)e_\ell,
+\]
+and let
 $\mathsf J_c=D+c^2X^2$, where $Xf(x)=xf(x)$ and
 $\mathcal D(\mathsf J_c)=\mathcal D(D)$.
 Restrict to the even subspace. Let $J_M$ be its compression to
@@ -12062,7 +12343,15 @@ remain valid. The logarithmic weighted-tail asymptotic in
 Proposition~\ref{prop:v120-weighted-tail-asymptotic} is strictly a
 fixed-window statement and supplies no uniform joint-limit obstruction.
 
-The physical even-sector alternative is now sharply delimited.
+The physical continuum-symbol alternative is now sharply delimited.
+Proposition~\ref{prop:v135-both-parities} extends its exact representation
+to both parities; the odd weighted sign estimate remains an independent
+block of the same target.  Proposition~\ref{prop:v135-growing-radical}
+proves a growing complete near-radical block, and
+Corollary~\ref{cor:v135-coercivity-obstruction} excludes positive
+polynomial gaps on the specified complements.  Neither result fixes the
+sign of any near-zero eigenvalue.
+The original even-sector reduction remains as follows.
 Propositions~\ref{prop:v130-continuum-cancellation} and
 \ref{prop:v130-remainder} reduce it to the exact arithmetic symbol
 $\beta_a$ on the Paley--Wiener image of the physical window. The live
@@ -12123,6 +12412,25 @@ proved or its scope narrowed to the results that are already supported.
 
 \appendix
 \section{Reproducible finite checks}\label{app:numerics}
+
+\subsection*{Growing radical blocks and the full parity symbol (v1.35)}
+The analytic proofs are Propositions~\ref{prop:v135-both-parities} and
+\ref{prop:v135-growing-radical}, and
+Corollary~\ref{cor:v135-coercivity-obstruction}.  The accompanying directory
+\texttt{g2\_growing\_radical/} contains the proof excerpt, novelty and
+scope report, independent adversarial review, and
+\texttt{check\_growing\_radical.py}.  Its double-precision diagnostics check
+the Gaussian source moments and Poisson symmetry, and the complete pole
+cancellation on complex mixed-parity tests at $\lambda=3,4,5$.
+Omitting the negative odd pole produces a visible nonzero error in each
+case.  A numerical estimate suggests $D=15$; this value is not certified
+or used by the theorem, which uses its exact norm-based definition.
+No growing-window numerical residual or finite-window sign certificate is
+claimed.  The result uses every global prime row in the tail estimate,
+including those above $\lambda^2$, and applies the ordinary Gram
+normalization before claiming an operator bound.
+
+
 
 The accompanying file \texttt{check\_sampler.py} constructs the real symmetric CCM matrix with the
 separate logarithmic diagonal, using prime-power sums and numerical

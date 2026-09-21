@@ -1,0 +1,29 @@
+{
+  "status": "non-rigorous diagnostic, not a proof",
+  "kappa": 0.6529439097519495,
+  "M2": 1.2949169280243236,
+  "diagnostic_D": 15,
+  "analytic_row_majorant_evaluated": 0.15147043332591378,
+  "poisson_symmetry_error": 1.61525000816218e-16,
+  "source_integral": 1.1334977485420213e-16,
+  "parity_checks": [
+    {
+      "lam": 3,
+      "kernel_error": 9.992007221626409e-16,
+      "complex_form_error": 5.578433628253579e-17,
+      "missing_odd_pole": 0.019912875851235072
+    },
+    {
+      "lam": 4,
+      "kernel_error": 1.27675647831893e-15,
+      "complex_form_error": 1.8010413101087647e-16,
+      "missing_odd_pole": 0.051518284844775844
+    },
+    {
+      "lam": 5,
+      "kernel_error": 1.4155343563970746e-15,
+      "complex_form_error": 2.7859292249906936e-16,
+      "missing_odd_pole": 0.09537509855374364
+    }
+  ]
+}

@@ -1,31 +1,60 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.34 (192 pages)**.
+Alexander Eastwood's complete working manuscript, **v1.35 (195 pages)**.
 
-**G2 and the Riemann Hypothesis remain open.** This repository records proved reductions, scoped certificates, failed approaches, and unresolved obligations; it does not claim an RH proof.
+**G2 and the Riemann Hypothesis remain open.** No sign is inferred from the
+new near-zero spectral count.
 
 ## Current manuscript
 
 - [Complete PDF](fixed_space_prime_action_v1.pdf)
-- [Complete LaTeX source](fixed_space_prime_action_v1.tex)
+- [Complete LaTeX](fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](RH_G1_G2_research_log.md)
 - [Revision notes](v1_revision_notes.md)
-- [Snapshot checksums and provenance](github_sync/v1.34_manifest.json)
+- [Checksums and provenance](github_sync/v1.35_manifest.json)
 
-The PDF in this commit was rebuilt from the unchanged saved v1.34 LaTeX source. It compiles cleanly to 192 pages and was visually checked. It is not a byte-for-byte copy of the saved signed PDF.
+## New in v1.35
+
+A uniformly conditioned physical lattice of translated radical sources gives
+an ordinary operator-residual bound `C log(lambda) exp(-lambda/100)` on a
+block of dimension proportional to `log(lambda)`. An odd subblock survives
+removal of any number of even image columns. This rules out positive
+uniform/polynomial gaps on the specified complements; it does not establish
+the asymptotic nonnegativity required by G2.
+
+The exact continuum symbol now covers both complex parity sectors. Their
+signed concentration estimates remain unproved.
+
+- [Proof and novelty report](g2_growing_radical/research_report.md)
+- [Proof excerpt](g2_growing_radical/new_section.tex)
+- [Independent adversarial review](g2_growing_radical/adversarial_review.md)
+- [Diagnostic script](g2_growing_radical/check_growing_radical.py)
+
+The radical construction is classical. This is a quantified continuation of
+the earlier fixed-rank obstruction, not a newly claimed positivity mechanism
+or a worldwide novelty claim. Diagnostics are not interval certificates.
+
+## Saved-copy status
+
+The canonical ChatGPT file replacements for v1.35 failed during byte transfer.
+Those stable download links still identify v1.34; the validated v1.35 snapshot
+is available from this repository. No Library version number was advanced or
+invented, and the previous files were not overwritten by partial data.
 
 ## Reproduction archive status
 
-**The full v1.34 cumulative reproduction archive has not yet been uploaded.** Its download returned a temporary server error. The existing certificate directories and historical files from the repository's v1.24 snapshot are preserved, but they are not the complete v1.34 evidence archive. Do not treat this manuscript sync as a complete reproduction release.
-
-The 207,224,098-byte cumulative ZIP is intended for a GitHub release attachment, not an ordinary Git blob. Its pending status is recorded in the snapshot manifest.
+**The full v1.34 cumulative reproduction archive remains unavailable.** Its
+download returned a temporary server error. Older certificate directories
+from the repository's v1.24 snapshot are preserved. The v1.35 proof materials
+above are complete for this update, but do not reconstruct the missing
+historical archive. This is not a complete cumulative reproduction release.
 
 ## Build
-
-With a suitable TeX Live installation and latexmk:
 
 ```bash
 latexmk -pdf -interaction=nonstopmode -halt-on-error fixed_space_prime_action_v1.tex
 ```
 
-Generated PDF bytes can vary with build timestamps and provenance metadata. Source hashes and provenance are recorded in the manifest. This sync made no mathematical changes and performed no new mathematical certification.
+The complete PDF was rebuilt, compiled without warnings and visually checked.
+PDF bytes may vary with build timestamps. Source and artifact hashes are
+recorded in the manifest.

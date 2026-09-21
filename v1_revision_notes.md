@@ -1,3 +1,33 @@
+# Complete manuscript v1.35 revision notes
+
+## v1.35 — full parity symbol and growing physical radical blocks
+
+- Extended the exact continuum-symbol representation to both complex parity
+  sectors, retaining the negative odd pole. The combined gap-free error is
+  `max(eta_odd, eta_even + 2 epsilon_source/sqrt(3))`.
+- Proved a uniformly conditioned physical translate block of dimension
+  `2 floor(log(lambda)/(2D)) + 1`, with full ordinary operator residual
+  `C log(lambda) exp(-lambda/100)`; `D` is fixed by the source.
+- Included every exterior prime row, both pole terms and the archimedean
+  action in the proof. No Fourier cut or source-to-physical transfer is used.
+- Proved the corresponding near-zero spectral count and the obstruction to
+  positive uniform/polynomial gaps after `o(log lambda)` constraints.
+- The odd subblock remains in the physical G2.6 complement of any even deep
+  and plunge images, independently of their rank. Additional odd constraints
+  must be counted separately.
+- Novelty audit found the prior v1.14 fixed-rank derivative obstruction.
+  This is its quantitative growing-rank continuation, not a new positive
+  mechanism. The new ingredient is the uniform physical Riesz Gram estimate.
+- Proof underwent an independent adversarial review. Numerical checks are
+  explicitly diagnostic and are not used to certify any sign.
+- No G2 sign gap closed. The near-zero eigenvalue signs, both parity blocks
+  of the cofinal signed concentration estimate, and RH remain open.
+
+The full manuscript is included. The update package contains new evidence
+only; it does not replace the unavailable cumulative historical archive.
+
+---
+
 # Complete manuscript v1.34 revision notes
 
 ## v1.34 — disjoint-channel persistence and optimal primitive transport
