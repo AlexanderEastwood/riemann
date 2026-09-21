@@ -1,3 +1,11 @@
+# v1.42 — NS-17 integration and PR preparation, September 21, 2026
+
+Rebased the local result onto origin/main at 0f8cb16, preserving concurrent diagnostics. All five requested insert groups are integrated at their header anchors, with previous positioning prose consolidated. Groskin is updated to v3; KreinLanger2014 and BasorEhrhardt2002 are present; all Zhu citations use one Zhu2026 bibitem. NS-6/NS-17 complete in this version. The continuation paragraph explicitly avoids inferring global arithmetic identification from local extension uniqueness, and the matrix comparison does not falsely identify divided-difference commutators with standard one-symbol T±H. Original draft files are unchanged; integrated variants and source hashes are archived. Added the user's symbol context as a finite-compression midpoint diagnostic, with numerical zeros beyond the plotting scale not interpreted as exact absence of mass.
+
+Build: 218 pages, 0 undefined/duplicate references, 0 overfull boxes. The 1024/1280-bit coarse NS-18 certificate is unchanged; sign/factor-10 discrepancy sharpening is now in progress. G2 and RH remain open; both NS-1 evidence groups remain OPEN.
+
+---
+
 # v1.42 — NS-18 complete-ground local zero, September 21, 2026
 
 **Requested experiment:** transfer a local zero near gamma_1 to the complete ground at the existing lambda=4 window, starting with the spectral/residual feasibility budget. Claimed at 2e5364b before research under the provisional ID NS-17; renamed NS-18 after concurrent main used NS-17 for documentation. The resulting certificate addresses that complete object; no finite-compression diagnostic is substituted.

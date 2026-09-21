@@ -1,16 +1,21 @@
 {
  "manuscript_revision": "v1.42",
- "base_commit": "d4218128ed11bfde27966416e1f95de5fbe2fe29",
+ "base_commit": "f87147b6326d60f43a4645256b3f1783ab6b0e3c",
  "files": [
   {
    "path": "evidence/v142/README.md",
-   "size_bytes": 2959,
-   "sha256": "7a0a7a6adffa25cdc238f76f65af9074e3e824f1cad560a0099bb092f7a4ccba"
+   "size_bytes": 3346,
+   "sha256": "9e399f44f6d1ab715344632dbbbd160dd1a6bb91ca3f260c2908452ea6af00a0"
   },
   {
    "path": "evidence/v142/build_report.json",
    "size_bytes": 662,
    "sha256": "638856f1ec846007225f8cf8663557f37cbf4be54be037f643647c71818fa44b"
+  },
+  {
+   "path": "evidence/v142/build_report_ns17.json",
+   "size_bytes": 492,
+   "sha256": "309f6e3863760e19a3e070927ea64546ff759fc32f6ea9c6253c194b5edb9eb9"
   },
   {
    "path": "evidence/v142/certify_ground_zero.py",
@@ -48,6 +53,36 @@
    "sha256": "8c8559689e385502c7a0846248e34c0e6d86a0e2539335ea4203d40ad315f340"
   },
   {
+   "path": "evidence/v142/ns17_inserts/bib_inserts.tex",
+   "size_bytes": 869,
+   "sha256": "3278ed7b9983a1677a0a868ab668a5d55627309f5bf6d7ce27186b1b72a514b3"
+  },
+  {
+   "path": "evidence/v142/ns17_inserts/cutoff_cost_cite_insert.tex",
+   "size_bytes": 1006,
+   "sha256": "200d18762cc2dc67f8d1531695b126a327dfb9171bfdcd1b57712c30c22563c8"
+  },
+  {
+   "path": "evidence/v142/ns17_inserts/determinacy_insert.tex",
+   "size_bytes": 1779,
+   "sha256": "afd14fea1ab566acc890c02fcd951a4e0fa81a237a523aa2e5f3493ae11e677b"
+  },
+  {
+   "path": "evidence/v142/ns17_inserts/no_prior_art_note.tex",
+   "size_bytes": 676,
+   "sha256": "70e47902d9a7192b86023eb1d7368dcaaa9fa24d8216570a30d9db639d51e965"
+  },
+  {
+   "path": "evidence/v142/ns17_inserts/window_comparison_insert.tex",
+   "size_bytes": 3691,
+   "sha256": "dbff650037e09b53e6cdc931dc71713489594b11d8ab4e100b80f3311fb6ff7f"
+  },
+  {
+   "path": "evidence/v142/ns17_integration.json",
+   "size_bytes": 2327,
+   "sha256": "bf8ffcb957ddd72f225fbe2b69a1e50e3b5aeec6d7851012d8c3c41c820f543a"
+  },
+  {
    "path": "evidence/v142/requirements.txt",
    "size_bytes": 20,
    "sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d"
@@ -63,12 +98,17 @@
    "sha256": "e7dae631196d5b55598d6bd08a9c2c7cf3125d2414bd7dd610b0bc611a440197"
   },
   {
+   "path": "evidence/v142/research-report-2026-09-21-v3.html",
+   "size_bytes": 3280,
+   "sha256": "1bf499e3f38ac95af580fad8b87c1bbe5c13de83aaa9c2e9dd521e893efe7c15"
+  },
+  {
    "path": "evidence/v142/scope_review.md",
    "size_bytes": 3482,
    "sha256": "a5c771bbf8390ec70e4e49966dd392087d368c3e06603bbe7936251accd0910b"
   }
  ],
- "file_count": 13,
- "total_bytes": 81441,
+ "file_count": 21,
+ "total_bytes": 95948,
  "note": "NS-18 (initially NS-17) complete lambda=4 local simple zero within 0.1 of gamma_1; concurrent main preserved; exact archived trial and inherited complete tail bounds; no new windows; G2/RH open."
 }

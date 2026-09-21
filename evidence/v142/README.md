@@ -50,3 +50,9 @@ by this new result.
 The original NS-17 claim commit is preserved; the completed task is NS-18
 after reconciliation with concurrent main. Its separate documentation task
 NS-17 remains open. No mathematical claim changed during reconciliation.
+
+NS-17 is now integrated at the five requested anchors. See `ns17_inserts/`,
+`ns17_integration.json`, `build_report_ns17.json`, and the separately versioned
+`research-report-2026-09-21-v3.html`. The determinacy and matrix-structure
+claims were qualified; the original drafts remain unchanged. Zhu citations
+use the single key `Zhu2026`. The finer NS-18 discrepancy is still in progress.

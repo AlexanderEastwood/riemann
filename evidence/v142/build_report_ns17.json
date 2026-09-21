@@ -1,0 +1,13 @@
+{
+  "manuscript_version": "v1.42",
+  "task": "NS-17",
+  "pages": 218,
+  "undefined_or_duplicate_references": 0,
+  "overfull_boxes": 0,
+  "command": "./manuscript/build.sh",
+  "exit_code": 0,
+  "all_five_integrated_texts_found": true,
+  "zhu_key": "Zhu2026",
+  "manuscript_sha256": "e7552ff17983142e5cb7653bbde4d3ed8b58fec7084e9d8fe38cac9570bdd1c0",
+  "claim_qualifications": "See ns17_integration.json; the determinacy draft was not promoted to an unsupported fixed-window RH equivalence."
+}
