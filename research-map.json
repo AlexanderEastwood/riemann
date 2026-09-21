@@ -213,11 +213,21 @@
     },
     {
       "id": "floortest",
-      "title": "certify finite floor at lambda=5,6,8",
-      "status": "open",
+      "title": "W_lambda >= -8 I at lambda=5,6,8",
+      "status": "proved",
       "parent": "floor",
-      "branch": "result/floor-lambda5",
-      "note": "proposed: needs no tail metric, probes the v136 dichotomy"
+      "branch": "result/v138-three-floors",
+      "note": "both parities, full infinite tail, Z=0; margin 0.84 -> 0.10 (odd) as lambda grows; not cofinal",
+      "prop": "prop:v138-three-floors",
+      "evidence": "evidence/v138"
+    },
+    {
+      "id": "shiftbarrier",
+      "title": "bounded shift keeps the exp cutoff barrier",
+      "status": "proved",
+      "parent": "floor",
+      "prop": "prop:v138-shifted-floor",
+      "note": "N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi"
     }
   ]
 }

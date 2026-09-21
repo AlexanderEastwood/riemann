@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.37**.
+Alexander Eastwood's complete working manuscript, **v1.38**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -28,7 +28,8 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 
 | | |
 |---|---|
-| Only positive result | `W_4 >= 0`, both parity sectors — evidence restored and verified |
+| Only positivity result | `W_4 >= 0`, both parity sectors — evidence restored and verified |
+| Finite floors | `W_λ >= -8·I` at λ = 5, 6, 8, both parities, full infinite tail (`prop:v138-three-floors`) |
 | Certified window | half-width `a = log 4 = 1.386`; 1.73× the published Zhu window, 4× the classical range |
 | Live mechanism | signed weighted concentration, even sector (`prop:v131-concentration`) |
 | Routes proved closed | 10 |
@@ -41,10 +42,39 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.37_manifest.json)
+- [Checksums and provenance](manifest/v1.38_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
-Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.37`).
+Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
+
+## New in v1.38
+
+v1.36 reduced G2 to a **uniform finite floor**: one constant `C_*` with
+`W_λ >= -C_*·I` along a cofinal family suffices, with no decay required.
+v1.38 tests that reduction directly instead of seeking another positivity
+certificate.
+
+With a common shift `δ = 8`, head cutoff `N = 256`, remote cutoff
+`J = 4096`, moment order 16, and **no tail-metric prerequisite** (`Z = 0`),
+both complete parity forms are certified at λ = 5, 6, 8:
+
+    -8  <=  inf σ(W_λ^±)  <  1e-16
+
+The lower bound retains the complete infinite Fourier tail; the upper
+bound is a certified finite-support trial quotient. By support
+consistency the floor holds for every `1 < λ <= 8`. The same exact dyadic
+witnesses pass at 160 and 256 bits.
+
+The shift is what makes it affordable: the remote cutoff needs
+`N+1 > L·exp(M_φ − δ)`, so `δ = 8` buys a factor `e^8`. But
+`prop:v138-shifted-floor` proves any *bounded* shift keeps the exponential
+barrier of `prop:v125-cutoff-cost`; escaping it in this comparison would
+need `δ` to grow like `M_φ ~ λ`, which is uninformative. The certificate's
+generalized margin falls from 0.84 to 0.10 (odd) across the three windows.
+**That decrease measures enclosure headroom, not the sign of the physical
+edge** — no cofinal lower estimate is asserted, and no G2 gap is closed.
+
+- [certificates, 160 and 256 bits](evidence/v138/)
 
 ## New in v1.37
 

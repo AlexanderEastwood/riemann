@@ -30,7 +30,8 @@ graph TD
   weaken["Target weakening"]
   floor["uniform finite floor suffices<br/><small>prop:v136-bounded-floor</small>"]
   gapfree["no uniform positive gap exists<br/><small>prop:v135-growing-radical</small>"]
-  floortest["certify finite floor at lambda=5,6,8"]
+  floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small>"]
+  shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -57,9 +58,10 @@ graph TD
   weaken --> floor
   weaken --> gapfree
   floor --> floortest
+  floor --> shiftbarrier
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
@@ -67,18 +69,18 @@ graph TD
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
-  class rh,fixedspace,g2,uniform,floortest open;
+  class rh,fixedspace,g2,uniform open;
 ```
 
 ## Status
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 9 | established result |
+| `proved` | 11 | established result |
 | `live` | 1 | active candidate mechanism |
 | `closed` | 10 | proved insufficient or impossible |
 | `blocked` | 1 | attempted; obstruction found |
-| `open` | 5 | target, not yet attacked |
+| `open` | 4 | target, not yet attacked |
 
 ## Nodes
 
@@ -95,7 +97,8 @@ graph TD
     - [x] **Target weakening** — `lane/bounded-floor`
       - [x] **no uniform positive gap exists** — `prop:v135-growing-radical` · dense radical family; same fact as the floor reduction
       - [x] **uniform finite floor suffices** — `prop:v136-bounded-floor` · decay not required; dichotomy inf spec -> -inf or RH
-        - [ ] **certify finite floor at lambda=5,6,8** — `result/floor-lambda5` · proposed: needs no tail metric, probes the v136 dichotomy
+        - [x] **W_lambda >= -8 I at lambda=5,6,8** — `prop:v138-three-floors` · `result/v138-three-floors` · both parities, full infinite tail, Z=0; margin 0.84 -> 0.10 (odd) as lambda grows; not cofinal
+        - [x] **bounded shift keeps the exp cutoff barrier** — `prop:v138-shifted-floor` · N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi
     - [ ] **Uniform mechanism for G2**
       - [X] **Cotlar cross terms / atomization** — `closed/cotlar-atomization` · v1.34, cross norm >= 73/(375 pi)
       - [X] **Schatten / Hilbert-Schmidt** — `prop:v132-schatten` · `closed/schatten`
