@@ -1,0 +1,96 @@
+#!/usr/bin/env python3
+"""Render research-map.json as a Mermaid diagram inside RESEARCH_MAP.md.
+
+Usage:  python3 tools/make_map.py
+
+GitHub renders Mermaid natively, so the map is visible in the browser with
+no build step. Edit research-map.json and re-run; do not hand-edit the
+generated markdown.
+"""
+import json, collections
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+SRC, OUT = ROOT / "research-map.json", ROOT / "RESEARCH_MAP.md"
+
+STYLE = {
+    "proved":  ("#1b5e20", "#a5d6a7", "proved"),
+    "live":    ("#0d47a1", "#90caf9", "live"),
+    "closed":  ("#b71c1c", "#ef9a9a", "closed"),
+    "blocked": ("#e65100", "#ffcc80", "blocked"),
+    "open":    ("#37474f", "#cfd8dc", "open"),
+}
+MARK = {"proved": "[x]", "live": "[~]", "closed": "[X]",
+        "blocked": "[!]", "open": "[ ]"}
+
+def esc(s: str) -> str:
+    return s.replace('"', "'").replace("\n", " ")
+
+def main() -> int:
+    doc = json.loads(SRC.read_text())
+    nodes = doc["nodes"]
+    by_id = {n["id"]: n for n in nodes}
+    kids = collections.defaultdict(list)
+    for n in nodes:
+        kids[n.get("parent")].append(n)
+
+    L = [f"# {doc['title']}", "",
+         f"_Generated from `research-map.json` — last updated {doc['updated']}._",
+         "_Do not hand-edit: run `python3 tools/make_map.py`._", "", "```mermaid",
+         "graph TD"]
+
+    for n in nodes:
+        label = esc(n["title"])
+        if n.get("prop"):
+            label += f"<br/><small>{esc(n['prop'])}</small>"
+        if n.get("evidence") == "MISSING":
+            label += "<br/><small>EVIDENCE MISSING</small>"
+        L.append(f'  {n["id"]}["{label}"]')
+    L.append("")
+    for n in nodes:
+        if n.get("parent"):
+            L.append(f'  {n["parent"]} --> {n["id"]}')
+    L.append("")
+    for status, (fg, bg, _) in STYLE.items():
+        ids = [n["id"] for n in nodes if n["status"] == status]
+        if ids:
+            L.append(f"  classDef {status} fill:{bg},stroke:{fg},color:#000;")
+            L.append(f"  class {','.join(ids)} {status};")
+    L += ["```", "", "## Status", ""]
+
+    c = collections.Counter(n["status"] for n in nodes)
+    L.append("| status | count | meaning |")
+    L.append("|---|---:|---|")
+    for s, desc in doc["legend"].items():
+        L.append(f"| `{s}` | {c.get(s,0)} | {desc} |")
+
+    L += ["", "## Nodes", ""]
+
+    def walk(parent, depth):
+        for n in sorted(kids[parent], key=lambda x: x["title"]):
+            bits = []
+            if n.get("prop"):
+                bits.append(f"`{n['prop']}`")
+            if n.get("branch"):
+                bits.append(f"`{n['branch']}`")
+            if n.get("evidence") == "MISSING":
+                bits.append("**evidence missing**")
+            if n.get("note"):
+                bits.append(n["note"])
+            L.append("  " * depth + f"- {MARK[n['status']]} **{n['title']}**"
+                     + (" — " + " · ".join(bits) if bits else ""))
+            walk(n["id"], depth + 1)
+
+    walk(None, 0)
+    L += ["", "## Reading it", "",
+          "Each node is an idea. A node with children is a branch point: the",
+          "children are the sub-ideas tried from it. `closed` children are proved",
+          "dead ends and are kept deliberately — they are the project's main",
+          "output. `live` is the only node currently worth spending on.", ""]
+
+    OUT.write_text("\n".join(L) + "\n")
+    print(f"{OUT.name}: {len(nodes)} nodes, {dict(c)}")
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())

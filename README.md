@@ -1,48 +1,85 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.38**.
+Alexander Eastwood's complete working manuscript, **v1.37**.
 
-**G2 and the Riemann Hypothesis remain open.** This update tests a common finite lower floor; it does not prove the required cofinal bound.
+**G2 and the Riemann Hypothesis remain open.** The update proves an
+obstruction to a scalar sufficient estimate, not a negative Weil-form test.
 
 ## Current manuscript
 
-- [Complete LaTeX](fixed_space_prime_action_v1.tex)
-- [Research log and candidate register](RH_G1_G2_research_log.md)
-- [Revision notes](v1_revision_notes.md)
-- [Checksums and provenance](github_sync/v1.38_manifest.json)
+- [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
+- [Research log and candidate register](log/RH_G1_G2_research_log.md)
+- [Revision notes](log/v1_revision_notes.md)
+- [Checksums and provenance](manifest/v1.37_manifest.json)
 
-One live manuscript remains at the root. Delivery is **LaTeX only**. Previous PDFs, superseded evidence and provenance are in the [archive](archive/README.md) and Git history.
+There is one live manuscript at the root. Delivery is **LaTeX only** at the
+author's request. Previous PDFs and superseded evidence are historical
+material in the per-version [evidence](evidence/) directories and Git history.
 
-## New in v1.38
+## Navigating this repository
 
-Both complete parity forms at lambda = 5, 6, 8 satisfy **W>=-8I**. The same parameters work throughout: additive shift 8, head cutoff 256, explicit residual cutoff 4096, moment order 16, Young parameter 1/10 and zero solve. Each window's coefficients and tail constants are freshly evaluated. No disproved positive tail metric is used.
+- **[RESEARCH_MAP.md](RESEARCH_MAP.md)** — the whole project as one diagram:
+  every idea, which sub-ideas were tried, and which passed or failed.
+- **[REPO_LAYOUT.md](REPO_LAYOUT.md)** — directory layout, branch and tag
+  conventions, and how to add a new version.
+- **[evidence/MISSING.md](evidence/MISSING.md)** — artifacts the manuscript
+  cites that this repository does not yet contain. Read this before relying
+  on any computer-assisted claim.
 
-The six certificates include the infinite tail and pass at 160 bits, then at 256 bits with the identical frozen dyadic witnesses. Each finite-support trial has a certified positive Rayleigh quotient below 1e-16. Therefore the true spectral edges lie between -8 and 1e-16; their signs are not determined.
+Verify a version's artifacts:
 
-| lambda | even generalized-margin lower | odd generalized-margin lower |
-|---|---:|---:|
-|5|0.8430|0.9190|
-|6|0.7166|0.7620|
-|8|0.2474|0.1022|
+```sh
+python3 tools/verify_manifest.py v137     # or --all
+./manuscript/build.sh                     # source validation is not a build
+```
 
-These are lower bounds for `1-lambda_max(U,K)` of the shifted certificate, not resolution margins or whitening row margins. Their decline does not establish a falling physical spectral edge.
+## Status at a glance
 
-A shift of 0.001 barely lowers the old cutoff cost. A shift of 8 makes the lambda = 8 remote gates pass already at N = 43 even and N = 204 odd. This is a substantial finite computational saving. The proved requirement `N+1>L exp(M_phi-delta)` still makes the same scalar comparison exponential in lambda for every bounded shift. No new arithmetic cancellation mechanism is claimed.
+| | |
+|---|---|
+| Only positive result | `W_4 >= 0`, both parity sectors (artifacts currently missing) |
+| Live mechanism | signed weighted concentration, even sector |
+| Routes proved closed | 10 |
+| G2 | open |
+| RH | open, and not claimed |
 
-- [Research report and exact remaining target](g2_finite_floor/research_report.md)
-- [Analytic proof](g2_finite_floor/new_section.tex)
-- [Higher-precision complete certificates](g2_finite_floor/replay_b256.json)
-- [Frozen dyadic witnesses](g2_finite_floor/dyadic_witnesses.npz)
-- [Adversarial review](g2_finite_floor/adversarial_review.md)
-- [Reproduction instructions](g2_finite_floor/REPRODUCE.md)
+## New in v1.37
 
-The lambda = 8 lower floor transfers down to all 1 < lambda ≤ 8 by physical support consistency. A bounded interval is still not a cofinal family. **No G2 sign gap was closed.**
+v1.36 showed that one uniform finite ordinary lower floor on the complete
+small-residual complement would suffice. v1.37 tests whether the older
+scalar primitive estimate could meet this weaker target.
+
+It cannot: for the exact arithmetic symbol, its optimal scalar error
+`a Delta(beta_a)` tends to infinity. The pointwise infimum of `beta_a`
+also tends to minus infinity. Both conclusions are unconditional.
+
+The proof uses a nonnegative frequency probe whose Fourier transform
+vanishes at the two physical cutoff endpoints. Under RH its pairing with
+the exact symbol retains a negative cutoff side lobe around a zero.
+Any bounded cofinal scalar certificate would itself imply RH via v1.36,
+then contradict that pairing. The linear rates are RH-conditional; no
+unconditional linear rate is asserted.
+
+The probe is not a physical squared Paley--Wiener transform. Therefore
+these scalar obstructions do not refute positivity of the physical form.
+The signed concentration estimate, retaining favorable and unfavorable
+levels jointly, remains open in both parities. No G2 sign gap was closed.
+
+- [Proof and novelty report](g2_scalar_budget_no_go/research_report.md)
+- [Proof excerpt](g2_scalar_budget_no_go/new_section.tex)
+- [Independent adversarial review](g2_scalar_budget_no_go/adversarial_review.md)
+- [Probe checks](g2_scalar_budget_no_go/check_probe.py)
+- [Check results](g2_scalar_budget_no_go/probe_results.json)
+
+The result is a continuation and rejection of a prior proposal, not a new
+positive mechanism. The ingredients are classical; worldwide novelty is
+not claimed. Numerical quadrature is diagnostic and not a proof.
 
 ## Saved-copy and reproduction status
 
 Canonical ChatGPT file replacements for the current LaTeX, log and notes
 failed during transfer. Those saved copies remain v1.34; use this repository
-for v1.38. No stale saved-file link is labelled current.
+for v1.37. No stale saved-file link is labelled current.
 
 The original **v1.26 cumulative reproduction bundle has been recovered**.
 It includes both missing final λ=4 certificate directories:
@@ -67,7 +104,9 @@ witnesses through v1.28 and the v1.31–v1.34 concentration evidence and
 diagnostics. See [the evidence availability ledger](evidence/MISSING.md)
 for the two restored groups and the two remaining open groups.
 
-
 ## Validation
 
-The mathematical setup was adversarially reviewed. Every complete floor and frozen trial was replayed with outward arithmetic at higher precision. Source validation uses LaTeX draft mode. **No PDF is generated or delivered.**
+Independent mathematical adversarial review passed. The complete source
+passed three draft-mode LaTeX validation runs without warnings or unresolved
+references. **No PDF was generated.** Exact analytic constants are supplied
+in the proof; separate standard-library quadrature checks the probe scaling.
