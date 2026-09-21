@@ -1,0 +1,93 @@
+% ---------------------------------------------------------------------------
+% INSERT FILE: window_comparison_insert.tex   (NS-3, drafted 2026-09-21)
+% purpose: place the lambda=4 certificate on the half-width axis used by the
+%          published compact-window literature (Zhu; Yoshida / Connes--Consani)
+%          and state the CCM mu_lambda positioning.  Source: COMPARISON.md.
+% anchor:  manuscript/fixed_space_prime_action_v1.tex, immediately AFTER the
+%          paragraph that follows the proof of prop:v126-full-window, i.e.
+%          after the line
+%            to $L=2\log4$ and are not transferred to other windows.
+%          and BEFORE the line
+%            \subsection*{The unchanged construction fails at $\lambda=5$}
+% cites:   \cite{Zhu2026} (already in the bibliography),
+%          \cite{ConnesConsaniMoscovici2025} (already in the bibliography).
+% note:    the live tex already uses $\mu_\lambda$ for an inverse-approximation
+%          quantity (near prop:v125-simultaneous and eq. at line ~10922); the
+%          CCM infimum is therefore written $\mu^{\mathrm{CCM}}_\lambda$ here.
+% status:  draft for integration; not yet in the manuscript
+% ---------------------------------------------------------------------------
+
+\subsection*{Position of the certified window}
+\label{sec:v141-window-position}
+The window parameter $\lambda$ is not the parameter used in the
+published compact-window literature, which is indexed by the
+logarithmic support half-width. A test supported multiplicatively in
+$[\lambda^{-1},\lambda]$ is supported in $[-a,a]$ in the logarithmic
+coordinate, with
+\[
+ a=\log\lambda=L/2 .
+\]
+Zhu~\cite{Zhu2026} writes this half-width $L$; it is one half of the
+logarithmic length $L=2\log\lambda$ of the reading conventions. The
+classical positivity range of Yoshida and Connes--Consani is stated
+as $\operatorname{supp}f\subset[-(\log2)/2,(\log2)/2]$, as recalled in
+\cite{Zhu2026}. On one axis:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+result & half-width $a$ & $\lambda=e^{a}$\\
+\midrule
+classical Yoshida / Connes--Consani & $0.3466$ & $1.414$\\
+Zhu~\cite{Zhu2026}, certified $L=0.8$ & $0.8000$ & $2.226$\\
+Proposition~\ref{prop:v116-window-positive}, $\lambda=3$ & $1.0986$ & $3$\\
+Proposition~\ref{prop:v126-full-window}, $\lambda=4$ & $1.3863$ & $4$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The $\lambda=4$ certificate is therefore at $1.73$ times the
+half-width of the published Zhu window and $4$ times the classical
+range. The comparison is legitimate because the semilocal form and the
+global Weil form agree on every test supported inside the window;
+Proposition~\ref{prop:v121-cofinal-rh} relies on exactly this
+extension-by-zero identity, so the two sides certify the same object
+on the same functions.
+
+The two results are not of the same kind. Zhu proves a certified
+two-sided enclosure
+$8.9\cdot10^{-18}\le\lambda_{\min}(0.8)\le2.27\cdot10^{-17}$ of the
+normalized window infimum at $a=0.8$, by a one-stroke reduction to a
+single finite positive semidefinite matrix.
+Proposition~\ref{prop:v126-full-window} proves nonnegativity
+$\mathsf W_4\succeq0$ at $a=\log4$, and
+Proposition~\ref{prop:v140-ground4} encloses its complete ground,
+$0<\mu_0<2.454\cdot10^{-75}$ and $\mu_1>10^{-73}$, by a structured
+inverse, a simultaneous seventeen-column certificate and
+direction--complement gluing. Zhu's result is stronger in kind, a
+quantitative two-sided gap on a smaller window; the present one is
+stronger in reach. Neither subsumes the other. The $LDL^*$ pivots and
+the margin $1-\lambda_{\max}(\mathcal U,K)$ recorded in the
+$\lambda=4$ certificates are coordinate quantities, not ordinary-norm
+eigenvalue bounds, and are not comparable with Zhu's enclosure.
+
+In the notation of Connes--Consani--Moscovici
+\cite[Corollaries~3.7--3.8]{ConnesConsaniMoscovici2025}, write
+$\mu^{\mathrm{CCM}}_\lambda$ for the infimum of the spectrum of the
+self-adjoint operator of the form $QW_\lambda$ certified here. They
+prove that $\lambda\mapsto\mu^{\mathrm{CCM}}_\lambda$ is nonincreasing,
+write that they ``cannot assert that'' it is nonnegative, and prove
+that $\lim_{\lambda\to\infty}\mu^{\mathrm{CCM}}_\lambda=0$ implies RH.
+By that monotonicity,
+\[
+ \mathsf W_4\succeq0
+ \quad\Longleftrightarrow\quad
+ \mu^{\mathrm{CCM}}_\lambda\ge0\ \text{ for every }1<\lambda\le4,
+\]
+so Proposition~\ref{prop:v126-full-window} settles the sign of
+$\mu^{\mathrm{CCM}}_\lambda$ on $1<\lambda\le4$, a range $1.73$ times
+Zhu's certified window and beyond the windows of their own numerical
+section. The floors of Proposition~\ref{prop:v138-three-floors} are the
+lower bounds $\mu^{\mathrm{CCM}}_\lambda\ge-8$ for $1<\lambda\le8$.
+This is a target statement, not a shortcut: cofinal nonnegativity of
+$\mu^{\mathrm{CCM}}_\lambda$ is RH by
+Proposition~\ref{prop:v121-cofinal-rh}, and no cofinal statement is
+made here. No G2 gap or RH claim follows.
