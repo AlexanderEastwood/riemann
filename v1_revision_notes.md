@@ -1,3 +1,18 @@
+# Version 1.38 — September 21, 2026
+
+- Executed the requested cheaper finite-floor experiment at lambda = 5, 6, 8. Both complete parities satisfy W>=-8I, with every remote Fourier row enclosed.
+- Held delta = 8, N = 256, J = 4096, moment order 16, tau = 1/10 and zero solve fixed across all six cases. Freshly evaluated every window-dependent constant; no false positive weighted-tail metric was reused.
+- Replayed exactly the same dyadic congruence and trial vectors at 256 bits after160-bit initial certificates. All gates passed. Each trial quotient is positive and below 1e-16.
+- Recorded certified lower bounds for the generalized shifted-certificate margin, separately from near-one whitening row margins. Margin bounds decline across the tested windows but do not diagnose negative eigenvalues.
+- Proved the shifted scalar cutoff cost N+1>L exp(M_phi-delta): a fixed finite shift is a large practical constant-factor saving, but cannot turn this comparison into a polynomial-cutoff cofinal argument.
+- By support consistency, the lambda = 8 floor also covers all 1 < lambda ≤ 8. This bounded interval is not the cofinal premise of v1.36.
+- Classified the experiment as continuation of the existing shifted Schur/moment route, not a new arithmetic mechanism. Preserved all physical subspace, scale, endpoint and graph-defect qualifications.
+- Updated the complete source, abstract, status, evidence inventory, cumulative log and notes. LaTeX only; no new PDF.
+
+No G2 sign gap was closed, and RH is not proved.
+
+---
+
 # Version 1.37 — September 21, 2026
 
 - Retested the v1.34 scalar primitive bound against v1.36's relaxed uniform finite lower-floor objective.
@@ -176,13 +191,13 @@ See `g2_capacity_candidate/g2_capacity_candidate_report.md` and the persistent r
 
 # Complete manuscript v1.28 revision notes
 
-September21,2026 — complete176-page working manuscript. New proofs:pages114–115; reproduction:page166.
+September 21, 2026 — complete176-page working manuscript. New proofs:pages114–115; reproduction:page166.
 
-- Tested the actual lambda5 signed dyadic blocks at the preregistered N=lambda^2=25.
+- Tested the actual lambda = 5 signed dyadic blocks at the preregistered N=lambda^2=25.
 - Certified positivity of all four diagonal blocks in each parity, but proved the norm-row comparison fails in both sectors. Exact comparison-eigenvalue lower bounds:1.539632 even and1.6014215 odd.
 - Proved the obstruction persists under every smaller admissible positive block metric and every positive scalar row reweighting; uncomputed blocks cannot decrease the comparison.
 - Replayed frozen witnesses at320/448 bits; all twelve coupling gates independently checked in signed Fourier coordinates.
-- No complete lambda5 positivity margin or negative Weil direction is asserted. Other partitions, cutoffs and signed joint estimates remain open. Weak G1 and complete lambda4 positivity are unchanged; no G2/RH closure.
+- No complete lambda = 5 positivity margin or negative Weil direction is asserted. Other partitions, cutoffs and signed joint estimates remain open. Weak G1 and complete lambda = 4 positivity are unchanged; no G2/RH closure.
 
 See g2_block_metric/block_metric_test_report.md and the persistent research log for the exact protocol, scope, reproduction and next target.
 
@@ -192,13 +207,13 @@ See g2_block_metric/block_metric_test_report.md and the persistent research log 
 
 September 21,2026 —173pages — all72historical dispositions preserved.
 
-- Rigid lambda5 transfer fails at the actual fixed tail metric in both parities. Finite-support interval counterwitnesses prove this on the complete tail; both unshifted Weil energies remain positive.
-- Head or metric must change. No successful tuning rule, positive lambda5 tail/factors, or complete certificate margin is asserted. The full run stops at that prerequisite; no lambda8 calculation.
+- Rigid lambda = 5 transfer fails at the actual fixed tail metric in both parities. Finite-support interval counterwitnesses prove this on the complete tail; both unshifted Weil energies remain positive.
+- Head or metric must change. No successful tuning rule, positive lambda = 5 tail/factors, or complete certificate margin is asserted. The full run stops at that prerequisite; no lambda = 8 calculation.
 - New nonclosability proof rules out bounded sourceL2 transport through the fixed point-value repair. Physical G2.6 spaces are explicitly defined through finite image Grams; dimension and residual hypotheses are retained.
 - New finite-rank obstruction shows polynomial-rank repairs cannot make the old unsigned diagonal comparison positive at polynomial cutoffs. A signed infinite-block metric criterion is proved as a conditional alternative; its Weil-specific uniform hypotheses remain open.
-- Complete lambda4 positivity and weakG1 are retained. No G2 sign gap is closed; RH is not proved.
+- Complete lambda = 4 positivity and weakG1 are retained. No G2 sign gap is closed; RH is not proved.
 
-New proofs and definitions: pages112–117. New reproduction details: page164. Frozen parameters, witnesses, reports, analytic reviews and scripts are in g2_lambda5_transfer/ in the cumulative bundle. Every prior manuscript label is preserved, and the release uses explicit v1_27 filenames to avoid confusion with earlier bundles.
+New proofs and definitions: pages112–117. New reproduction details: page164. Frozen parameters, witnesses, reports, analytic reviews and scripts are in g2_lambda = 5_transfer/ in the cumulative bundle. Every prior manuscript label is preserved, and the release uses explicit v1_27 filenames to avoid confusion with earlier bundles.
 
 ---
 
@@ -219,24 +234,24 @@ This closes a fixed-window obligation. G2 uniformity and RH remain open.
 
 # Revision notes - full manuscript v1.25
 
-September21,2026. Complete166-page working manuscript.
+September 21, 2026. Complete166-page working manuscript.
 
-- Certified strict positivity of the entire even-parity Weil form at lambda4, including every infinite residual row, using a simultaneous17-column frozen trial. The odd sector remains open.
+- Certified strict positivity of the entire even-parity Weil form at lambda = 4, including every infinite residual row, using a simultaneous17-column frozen trial. The odd sector remains open.
 - Certified complete generalized margin >0.62629 for the same witness at768/896bits. Coordinate LDL pivots are not identified with ordinary spectral gaps.
 - Proved a joint-remote-Gram estimate retaining correlated residual terms; stated its required positive lower-Gram hypothesis explicitly after adverse review.
 - Proved exponential cutoff cost for the current scalar far majorant and freshly certified its thresholds at lambda3,4,5,6,8.
 - Recorded a separate finite-only growth study, condition numbers and declining margins. It does not supply missing complete tail certificates or a cofinal error estimate.
 - Integrated abstract, status, proofs, next targets and reproduction appendix; preserved all496prior labels and72historical claim dispositions. Compiled and visually checked the full PDF.
 
-One local complete even-sector sign obligation is closed. Full lambda4 positivity, growing-window G2 and RH remain unproved. Weak G1, physical endpoint, Fourier cut, logarithmic diagonal, scale factors and explicit sampler graph defect are preserved.
+One local complete even-sector sign obligation is closed. Full lambda = 4 positivity, growing-window G2 and RH remain unproved. Weak G1, physical endpoint, Fourier cut, logarithmic diagonal, scale factors and explicit sampler graph defect are preserved.
 
 ---
 
 # Revision notes - full manuscript v1.24
 
-September21,2026. Complete162-page working manuscript.
+September 21, 2026. Complete162-page working manuscript.
 
-- Certified a positive value of the COMPLETE lambda4 Schur form on the unchanged archived even head vector:3.0930e-20<S_infinity(v,v)<3.2356e-20.
+- Certified a positive value of the COMPLETE lambda = 4 Schur form on the unchanged archived even head vector:3.0930e-20<S_infinity(v,v)<3.2356e-20.
 - Used a better frozen finite trial and a complete residual certificate, including all omitted rows. This does not equate finite iterative powers with full operator powers.
 - Kept the previous first-degree failure results intact; their scope is the old majorants/trial, not the Schur form itself.
 - Replayed the main16step and supplementary4step exact dyadic trials at768/896bits. Added dense-row and energy-identity checks, and completed adversarial proof/code review.
@@ -248,10 +263,10 @@ The saved one-direction test is closed. The full simultaneous even/odd head comp
 
 # Revision notes - full manuscript v1.23
 
-September21,2026. Complete160-page manuscript. No G2 sign gap closed.
+September 21, 2026. Complete160-page manuscript. No G2 sign gap closed.
 
 - Proved complete mixed-pairing enclosures including both omitted input and omitted first-polynomial output.
-- Certified that the saved first-degree inverse majorant fails on the actual frozen lambda4 trial, even with its exact positive head update: lower6.6588e-20 exceeds trial6.4693e-20.
+- Certified that the saved first-degree inverse majorant fails on the actual frozen lambda = 4 trial, even with its exact positive head update: lower6.6588e-20 exceeds trial6.4693e-20.
 - Proved a monotone complete inverse refinement that retains the induced head matrix and a rigorous finite-probe enclosure of its improvement.
 - Kept higher-degree finite-prefix successes in the research log, without asserting complete-tail positivity.
 - Integrated the abstract, status, Section20, Section32 and reproduction appendix; retained all prior labels and72 historical dispositions.
@@ -263,9 +278,9 @@ Next target: degree4/8 complete corrections with certified remote excursions, th
 
 # Revision notes - full manuscript v1.22
 
-September21,2026. Complete156-page working manuscript; no G2 sign gap closed.
+September 21, 2026. Complete156-page working manuscript; no G2 sign gap closed.
 
-- Proved sharper full far-inverse constants20even/90odd atlambda4, replacing67/335 for the same operator and weights.
+- Proved sharper full far-inverse constants20even/90odd atlambda = 4, replacing67/335 for the same operator and weights.
 - Proved finite-prefix scalar and matrix estimates with every omitted residual row enclosed.
 - Certified a complete far-energy comparison on one previously obstructing even head direction: upper5.758e-20 is below trial energy6.469e-20. This does not include the structured mixed term or certify the entire head matrix.
 - Proved that an improved inverse must replace both inverse occurrences in the structured bound, retaining the original finite certificate and closed form domains.
@@ -283,7 +298,7 @@ The complete manuscript is 152 pages, with 32 main sections, two appendices, 466
 
 **Established locally:** Proposition 20.55 certifies K_X positive in both parity sectors at lambda=4, split16, for X=0 and the exact frozen dyadic trials supported on modes17..256. This establishes alpha4=0 for these complete-operator trial forms. Every pivot is interval-positive at768 and896bits with identical witnesses. These pivot bounds are not spectral lower bounds.
 
-**Exact distinction:** Proposition 20.53 proves the finite-support compression identity, K_X-S_infinity=(X-T^-1 B)*T(X-T^-1 B), and S_infinity=S_M-r_M*T^-1*r_M for exact Galerkin solves. Finite Schur complements decrease to the full complement under nested form-core exhaustion. The semidefinite version states the required Ran(B) subset Ran(T^(1/2)) condition. The actual certified lambda4 tail is coercive.
+**Exact distinction:** Proposition 20.53 proves the finite-support compression identity, K_X-S_infinity=(X-T^-1 B)*T(X-T^-1 B), and S_infinity=S_M-r_M*T^-1*r_M for exact Galerkin solves. Finite Schur complements decrease to the full complement under nested form-core exhaustion. The semidefinite version states the required Ran(B) subset Ran(T^(1/2)) condition. The actual certified lambda = 4 tail is coercive.
 
 **Certified correction to a proposed shortcut:** Proposition 20.42 constructs a unit even Fourier polynomial in E64 exactly orthogonal to the literal repaired source p3, with 0<QW3(v,v)<3e-31, non-prime energy>0.4 and signed prime energy<-0.4. Thus substantial cancellation persists on the exact source complement. This is a positive direction; it disproves neither complement positivity nor RH. The pure archimedean and pole contributions are separately identified.
 
@@ -291,17 +306,17 @@ The complete manuscript is 152 pages, with 32 main sections, two appendices, 466
 
 The final PDF compiles without warnings, undefined references or overflow. All152 pages were rendered and inspected, with detailed checks of the new proofs and tables. The mathematical integration passed internal adverse review. Both requested wording fixes about orthogonal compression and retained finite subspaces were applied. The literal Fourier cut, physical endpoint, logarithmic diagonal, first-slot-linear convention, sampler graph defect and previously proved weak G1 are preserved.
 
-**Still open:** the complete low-mode Schur sign at lambda4 and uniform residual/sign estimates on growing windows. No G2 sign gap was closed, and no RH proof is claimed. No publication or outside contact occurred.
+**Still open:** the complete low-mode Schur sign at lambda = 4 and uniform residual/sign estimates on growing windows. No G2 sign gap was closed, and no RH proof is claimed. No publication or outside contact occurred.
 
 The cumulative evidence bundle adds g2_schur_cancellation with the verified witnesses, scripts, both precision replays, mathematical audit and integration review. Earlier evidence and revision history are retained.
 
 ---
 
-# v1.20 Schur revision — September21,2026
+# v1.20 Schur revision — September 21, 2026
 
 The complete manuscript keeps the requested version1.20 label. This revision adds proved structured tail-inverse and finite-row estimates, a sufficient ordinary-error criterion with growing-dimension and congruence factors retained, and monotone arithmetic inverse polynomials.
 
-At lambda4 the actual infinite far operators satisfy I<=D_g^(-1/2)U D_g^(-1/2)<=67I (even,n>512) and<=335I (odd,n>1536). The two-sided archimedean diagonal bound and correct pole scale justify these constants; strict gates replay at320/384bits.
+At lambda = 4 the actual infinite far operators satisfy I<=D_g^(-1/2)U D_g^(-1/2)<=67I (even,n>512) and<=335I (odd,n>1536). The two-sided archimedean diagonal bound and correct pole scale justify these constants; strict gates replay at320/384bits.
 
 The attempted low Schur sign did not close. Three candidate majorants have rigorously certified negative ceiling directions; those are failures of the bounds, not negative Weil directions. The research log and cumulative bundle retain all attempts and reproducible witnesses. The next target is the signed inverse-polynomial correction.
 
@@ -313,9 +328,9 @@ No growing-window G2 sign gap was closed; RH is not claimed. Weak G1, the physic
 
 The complete manuscript has143 pages,442 unique labels,32 main sections,two appendices and all72 historical claim dispositions. All431 prior labels and the physical endpoint, literal Fourier cut, logarithmic diagonal and sampler graph defect are retained.
 
-**New signed estimate:** Proposition20.47 proves QW4(f,f)>=10^-8 sum(-A_n)|f_n|^2 for every complex closed-form vector with literal Fourier support|n|>16. The exact archimedean diagonal is positive there, with a proved lower bound>1.7940. The entire infinite tail in both parity sectors is included. This closes a larger fixed-window tail-sign obligation; it does not establish full lambda4 positivity or growing-window G2.
+**New signed estimate:** Proposition20.47 proves QW4(f,f)>=10^-8 sum(-A_n)|f_n|^2 for every complex closed-form vector with literal Fourier support|n|>16. The exact archimedean diagonal is positive there, with a proved lower bound>1.7940. The entire infinite tail in both parity sectors is included. This closes a larger fixed-window tail-sign obligation; it does not establish full lambda = 4 positivity or growing-window G2.
 
-The certificate retains the actual prime,pole and archimedean entries. A positive physical weight gives a prime upper bound<4.624042316766478. Signed verified solves use heads17..512 and17..1536, with every residual through4096 and explicit infinite moment remainders. Frozen exact dyadic solve and congruence witnesses pass320-bit interval verification of every Gershgorin row. The same witnesses were generated at256 bits; even256 was also replayed under the final gates. This is internal computer-assisted validation, not an outside referee check.
+The certificate retains the actual prime,pole and archimedean entries. A positive physical weight gives a prime upper bound<4.624042316766478. Signed verified solves use heads17..512 and17..1536, with every residual through4096 and explicit infinite moment remainders. Frozen exact dyadic solve and congruence witnesses pass320-bit interval verification of every Gershgorin row. The same witnesses were generated at 256 bits; even256 was also replayed under the final gates. This is internal computer-assisted validation, not an outside referee check.
 
 Proposition20.48 certifies a positive dyadic trial with energy/archimedean-energy ratio>2.05254. Thus the two-sided weighted remainder norm contraction fails even though the one-sided sign bound succeeds. It is not a negative Weil direction.
 
@@ -323,7 +338,7 @@ Proposition20.44 proves the sharp weighted-error conversion -eta*C/(1+eta), prev
 
 The abstract,status,Section20,research goals,reproduction appendix and bibliography are integrated. The PDF is compiled without warnings and visually reviewed throughout, including detailed new-proof checks. The cumulative bundle contains proof scripts, exact witnesses, interval reports, exploratory diagnostics, adverse review and the persistent log. The log records an early discarded pole-denominator coding error and the subsequent exact comparison and all-row gate corrections; no invalid intermediate is presented as a result.
 
-**Remaining:** full lambda4 positivity requires the signed effective head F-B*T^-1*B on17 even+16 odd coordinates. Raw finite-matrix positivity is insufficient. Uniform signed control along growing windows remains RH-strength and is still open. No growing-window G2 sign gap was closed; no RH proof is claimed. No publication or outside contact occurred.
+**Remaining:** full lambda = 4 positivity requires the signed effective head F-B*T^-1*B on17 even+16 odd coordinates. Raw finite-matrix positivity is insufficient. Uniform signed control along growing windows remains RH-strength and is still open. No growing-window G2 sign gap was closed; no RH proof is claimed. No publication or outside contact occurred.
 
 ## Previous release: complete manuscript v1.19 — September 21, 2026
 
@@ -383,7 +398,7 @@ The complete paper is 129 pages, with 32 main sections, two appendices, 407 uniq
 
 The proof combines four supported improvements. Proposition 20.22 uses the positive physical weight cosh(x-log3) to reduce the prime-shift norm bound to 2.6890557719..., with all endpoint comparisons certified. Proposition 20.23 retains the increasing tail diagonal and proves inverse order. Proposition 20.24 bounds every remote residual row using exact Fourier moments and a controlled geometric remainder. Proposition 20.25 combines these with the complete signed Schur identity.
 
-For the even sector the head has 257 dimensions, N256/M512/J4096/r80. For the odd sector it has 512 dimensions, N512/M1024/J4096/r100. All finite rows and the infinite remote moment Grams are included. Every pivot of each final interval LDL decomposition is strictly positive. The witnesses are exact frozen dyadic matrices, and their middle residuals are explicitly retained. Independent replays at 896 bits using the identical witnesses reproduce both 768-bit certificates. The reported pivots are not spectral lower bounds; the paper asserts existence, without a numerical value, of a positive complete-form coercivity constant.
+For the even sector the head has 257 dimensions, N = 256/M512/J = 4096/r80. For the odd sector it has 512 dimensions, N512/M1024/J = 4096/r100. All finite rows and the infinite remote moment Grams are included. Every pivot of each final interval LDL decomposition is strictly positive. The witnesses are exact frozen dyadic matrices, and their middle residuals are explicitly retained. Independent replays at 896 bits using the identical witnesses reproduce both 768-bit certificates. The reported pivots are not spectral lower bounds; the paper asserts existence, without a numerical value, of a positive complete-form coercivity constant.
 
 The abstract, status, Section 20, Section 32 research goals and appendix are integrated. New material is on pages 67–73, with the reproduction summary on 124. All 129 PDF pages were rendered and visually reviewed, including detailed inspection of the new proof pages. The complete LaTeX build has no warnings or unresolved references. The historical 72-row ledger is unchanged apart from its release heading.
 

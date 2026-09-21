@@ -1,0 +1,166 @@
+\subsection*{A fixed finite-floor experiment and its cutoff cost}
+
+Proposition~\ref{prop:v136-bounded-floor} permits a fixed ordinary
+negative error of any finite size. This does make some finite-window
+certificates cheaper. It does not by itself remove the scalar-tail
+cost in Proposition~\ref{prop:v125-cutoff-cost}.
+
+\begin{proposition}[Additive shifts and the remaining cutoff barrier]
+\label{prop:v138-shifted-floor}
+In the orthonormal Fourier splitting of
+Proposition~\ref{prop:v116-directional-schur}, let $\delta\ge0$ and
+suppose $T\succeq D_g$, with increasing $g_n$ and
+$g_{N+1}+\delta>0$. For a fixed finite solve $Z$ set
+\[
+ K_\delta=K_Z+\delta(I+Z^*Z),\qquad
+ R_\delta=R-\delta Z.
+\]
+If $U_J$ encloses the remote residual beyond the support of $Z$, then
+\begin{equation}\label{eq:v138-shifted-lower}
+ \mathcal L_\delta:=K_\delta-
+ \sum_{N<n\le J}\frac{R_{\delta,n}^*R_{\delta,n}}{g_n+\delta}
+ -\frac{U_J}{g_{J+1}+\delta}\succeq0
+ \quad\Longrightarrow\quad
+ \mathsf W_\lambda\succeq-\delta I.
+\end{equation}
+The displayed sum is in one normalized parity basis. Verifying both
+parities proves the inequality on the full complex form domain.
+For the present scalar comparison with $c=0$, its prerequisite forces
+\begin{equation}\label{eq:v138-shifted-cost}
+ N+1>L\exp(M_{\phi,\lambda}-\delta),\qquad L=2\log\lambda.
+\end{equation}
+Consequently any bounded choice of $\delta$ retains
+$\liminf_{\lambda\to\infty}\log((N+1)/L)/\lambda\ge1$.
+A polynomial cutoff in this particular comparison would instead
+require $\delta\ge M_{\phi,\lambda}-O(\log\lambda)$.
+\end{proposition}
+\begin{proof}
+Apply the verified-solve identity to $\mathsf W_\lambda+\delta I$.
+Its off-diagonal block is still $B$, its tail is $T+\delta I$, and
+expansion gives the stated $K_\delta$ and $R_\delta$. Inverse order
+gives $(T+\delta I)^{-1}\preceq(D_g+\delta I)^{-1}$.
+The shifted remote rows beyond the solve support are unchanged.
+The moment enclosure and completion of the square prove
+\eqref{eq:v138-shifted-lower} on the closed form domain.
+For the cost, positivity of the first scalar weight implies
+$\log((N+1)/L)>M_{\phi,\lambda}-\delta$, since its other losses
+are nonnegative. Use
+$M_{\phi,\lambda}\ge\|\mathsf T_{{\rm pr},\lambda}\|$ and
+Proposition~\ref{prop:v119-prime-scale}. This is a limitation of
+the chosen scalar comparison, not of every matrix tail metric.
+\end{proof}
+
+Fresh outward evaluation of all window-dependent constants gives the
+following smallest admitted integer $N\ge1$ with $g_{N+1}+\delta>0$:
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$\lambda$ & $\delta=10^{-3}$ even & $\delta=10^{-3}$ odd
+ & $\delta=8$ even & $\delta=8$ odd\\
+\midrule
+5&1501&7217&1&4\\
+6&7481&35985&3&14\\
+8&124317&598024&43&204\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each threshold except the lower endpoint $N=1$ has a certified
+negative predecessor. These are only remote-tail gates. They show
+why a moderately sized constant, rather than $10^{-3}$, is the useful
+finite experiment suggested by the bounded-floor reduction.
+
+\begin{proposition}[Complete finite floors at three windows]
+\label{prop:v138-three-floors}
+For each $\lambda\in\{5,6,8\}$ and both reflection sectors,
+\begin{equation}\label{eq:v138-three-floors}
+ \mathsf W_\lambda\succeq-8I,\qquad
+ -8\le\inf\sigma(\mathsf W_\lambda^{\pm})<10^{-16}.
+\end{equation}
+The lower estimate includes the complete infinite Fourier tail;
+the upper estimate comes from a certified finite-support trial.
+By physical support consistency, the lower estimate also holds for
+every $1<\lambda\le8$. No cofinal lower estimate is asserted.
+\end{proposition}
+\begin{proof}[Complete interval certificate]
+Use the canonical form and logarithmic domain of
+Proposition~\ref{prop:v114-weil-core}, with ordinary physical
+$L^2$ normalization and its established Fourier form core. Freeze
+the same parameters at all three windows:
+\[
+ \delta=8,\quad N=256,\quad J=4096,\quad r=16,
+ \quad\tau=1/10,\quad Z=0.
+\]
+The even head is $0{:}256$, the odd head $1{:}256$. There is no
+conjugate-gradient solve or positive $10^{-8}D$ tail prerequisite.
+In the remote-moment formula take $M=N$, so $G$ is the head embedding
+and $G^*G=I$. The moment proof only requires $M<J$; a nonempty
+intermediate solve block is unnecessary when $Z=0$.
+Here $K_8=F+8I$, $R_8=B$, and all actual rows through $J$ are retained.
+The entire remainder beyond $J$ is bounded by
+Proposition~\ref{prop:v116-remote-moment}, including its leading
+moment Gram and geometric remainder.
+
+At each window recompute $L$, every strict-cutoff prime power,
+the separate logarithmic diagonal, $M_{\phi,\lambda}$, the parity
+tail constants and $B_*$. The coefficient enclosure retains $64$
+archimedean series terms and the analytic infinite-series remainder.
+The first runs at $160$ bits freeze inverse-Cholesky congruences as
+exact IEEE dyadics. A fresh $256$-bit evaluation, using the identical
+dyadics, verifies every row of
+$C\mathcal L_8C^*$ is greater than $999/1000$ after subtraction
+of the absolute off-diagonal row sum. The matrices $C$ are triangular
+with nonzero diagonal. Thus every complete lower matrix is positive.
+The code also checks exact finite-support Rayleigh quotients: each
+is strictly positive and less than $10^{-16}$. These are upper
+bounds for the true lower spectral edge, not signs of that edge.
+The two parities give the full complex-space inequality.
+Finally, zero extension of a test from a smaller physical interval
+preserves its ordinary norm and Weil form. Apply the $\lambda=8$
+bound and use the form core to obtain the assertion for $\lambda\le8$.
+\end{proof}
+
+The near-one congruence row margins are not invariant headroom.
+For a comparable certificate quantity put
+$\mathcal U_8=K_8-\mathcal L_8$ and
+\[
+ \mathfrak h_\lambda^\pm
+ =1-\lambda_{\max}(\mathcal U_8,K_8).
+\]
+The same exact congruence verifies
+$C\mathcal L_8C^*\succeq(999/1000)I$ and
+$CK_8C^*\preceq M I$. Hence
+$\mathfrak h_\lambda^\pm\ge(999/1000)/M$.
+The following are downward-rounded lower bounds for this generalized
+margin of the \emph{shifted} certificate:
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$\lambda$ & even $g_{257}+8$ & odd $g_{257}+8$
+ & even $\mathfrak h$ lower & odd $\mathfrak h$ lower\\
+\midrule
+5&6.2297&4.6549&0.8430&0.9190\\
+6&4.6225&3.0457&0.7166&0.7620\\
+8&1.8111&0.2302&0.2474&0.1022\\
+\bottomrule
+\end{tabular}
+\end{center}
+These margins quantify enclosure headroom with the same target and
+construction. Their decrease is not evidence of a negative physical
+eigenvalue; the actual lower edge remains bracketed only between
+$-8$ and the small positive trial quotient. A worsening lower bound
+cannot establish the divergence in
+\eqref{eq:v136-negative-divergence}. A negative Rayleigh upper bound
+would have a different logical role, and none was found here.
+
+This is a continuation of the existing Schur/moment and shifted-inertia
+routes, not a new arithmetic positivity mechanism. General certified
+finite-window lower and trial upper bounds also appear in
+\cite{Zhu2026}; no external numerical certificate is imported.
+The actual unproved target remains one finite ordinary lower constant
+on a cofinal family, on the full physical form or on a complement
+meeting the residual hypotheses of Proposition~\ref{prop:v136-bounded-floor}.
+The present bound covers every physical subspace at the listed windows
+without identifying $C_a^{\mathrm{low}}$ with a rank-one complement.
+All endpoint, scale and sampler graph-defect obligations are unchanged.
+No growing-window G2 gap is closed.
+
