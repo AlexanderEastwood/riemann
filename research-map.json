@@ -244,6 +244,16 @@
       "prop": "prop:v138-shifted-floor",
       "note": "N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi",
       "evidence": "evidence/v138"
+    },
+    {
+      "id": "metablind",
+      "title": "Scoped information-loss obstructions",
+      "status": "proved",
+      "parent": "uniform",
+      "prop": "thm:v139-probe-relaxation; thm:v139-protected-orbit",
+      "branch": "result/v139-meta-obstruction",
+      "evidence": "evidence/v139",
+      "note": "Full-histogram cap/probe relaxation fails; protected finite-head spectral orientation fails. Does not subsume all ten closures."
     }
   ]
 }

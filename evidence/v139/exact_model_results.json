@@ -1,0 +1,73 @@
+{
+  "scope": "Exact abstract finite-dimensional and mass-cap checks; not a Weil computation",
+  "arithmetic": "fractions.Fraction (exact; no precision replay needed)",
+  "protected_head_models": [
+    {
+      "negative_depth": 2,
+      "source_residual": "0",
+      "unrotated_test_energy": "1",
+      "rotated_test_energy": "-2",
+      "complete_source_column_preserved": true,
+      "exact_unitary_equivalence": true
+    },
+    {
+      "negative_depth": 2,
+      "source_residual": "1/16",
+      "unrotated_test_energy": "1",
+      "rotated_test_energy": "-2",
+      "complete_source_column_preserved": true,
+      "exact_unitary_equivalence": true
+    },
+    {
+      "negative_depth": 17,
+      "source_residual": "0",
+      "unrotated_test_energy": "1",
+      "rotated_test_energy": "-17",
+      "complete_source_column_preserved": true,
+      "exact_unitary_equivalence": true
+    },
+    {
+      "negative_depth": 17,
+      "source_residual": "1/16",
+      "unrotated_test_energy": "1",
+      "rotated_test_energy": "-17",
+      "complete_source_column_preserved": true,
+      "exact_unitary_equivalence": true
+    },
+    {
+      "negative_depth": 1000,
+      "source_residual": "0",
+      "unrotated_test_energy": "1",
+      "rotated_test_energy": "-1000",
+      "complete_source_column_preserved": true,
+      "exact_unitary_equivalence": true
+    },
+    {
+      "negative_depth": 1000,
+      "source_residual": "1/16",
+      "unrotated_test_energy": "1",
+      "rotated_test_energy": "-1000",
+      "complete_source_column_preserved": true,
+      "exact_unitary_equivalence": true
+    }
+  ],
+  "location_blind_positive_models": [
+    {
+      "negative_depth": "1",
+      "a_times_area_over_pi": "1/4",
+      "location_independent_floor": "1/2"
+    },
+    {
+      "negative_depth": "100",
+      "a_times_area_over_pi": "1/202",
+      "location_independent_floor": "1/2"
+    },
+    {
+      "negative_depth": "1000000000000",
+      "a_times_area_over_pi": "1/2000000000002",
+      "location_independent_floor": "1/2"
+    }
+  ],
+  "probe_rational_gate": "6*(22/7)^2 < 100",
+  "all_exact_checks_passed": true
+}

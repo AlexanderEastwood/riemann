@@ -1,3 +1,33 @@
+# v1.39 — Scoped meta-obstructions, September 21, 2026
+
+**Requested task:** prove a general obstruction to estimates insensitive to the arithmetic location of negative beta_a mass, extending cor:v137-scalar-no-go. No fixed-window computation was substituted.
+
+**What had to change:** the informal universal hypothesis is false. We replaced it by two explicitly different information-loss properties, and retained a coverage table rather than claiming to explain all ten closures.
+
+**Proved result 1:** every sound density-relaxation budget B_a diverges if the relaxation contains all normalized physical Fourier densities (full space or the complete actual source complement) and the explicit symmetrized v1.37 cutoff probe. Both parities must be included for the unconditional finite-floor implication. Under RH only, B_a >= a/(6 pi^2) eventually. Unconditionally, a bounded cofinal B_a would imply RH and then contradict that probe pairing.
+
+The concrete mass/height/variation class is p>=0, integral p=1, sup p<=a/pi, TV(p)<=2a. The exact probe has variation <=2a/pi and passes it. The optimal full-histogram mass-cap floor is
+
+    ell_cap(a,beta_a) = (a/pi) integral_0^(pi/a) beta_a^up(s) ds -> -infinity.
+
+It retains the distribution of all favorable and unfavorable values; any lower rule sound on every capped probability density is no better. This is a stronger class obstruction than using only the scalar minimum. Arbitrary sharper local-derivative or source-dependent evaluation constraints are not declared probe-insensitive.
+
+**Proved result 2:** let M_a multiply by beta_a. Protect any finite physical head E with F_a E in D(M_a) by fixing S=F_a E + M_a F_a E. Among domain-preserving finite-rank unitary changes U fixing S, the infimum physical compression Rayleigh value is exactly ess inf beta_a. All protected complete operator actions, including the actual finite-source residual, remain unchanged. The conclusion is valid separately in either parity and even when head rank grows with a, provided it is finite at each a. Since ess inf beta_a -> -infinity, a universally orientation-blind bound cannot supply a cofinal floor. Such U* M_a U generally ceases to be a multiplier: no rearranged-prime or negative-Weil assertion follows.
+
+**Falsification of overbroad wording:** b=1-(D+1)1_E with |E|=pi/[2a(D+1)] has physical form >=(1/2)||f||^2 for every placement and shape of E, even as D->infinity. Thus location independence and divergent negative depth alone do not imply failure. The actual arithmetic signed-probe pairing is essential.
+
+**Candidate register:** G2.6-META-01; status PROVED SCOPED OBSTRUCTION, not a live positive mechanism. Nearest prior: v1.37 primitive/pointwise no-go. New within the inspected project: optimal histogram benchmark and arbitrary probe-containing relaxations, plus protected finite graph data in the orientation adversary. Classical ancestors: Lieb–Loss bathtub principle and Fan–Pall spectral compression. Worldwide novelty/publication readiness remain unresolved. Signed Schur/inverse, dyadic metrics, source-compressed Schatten, common-Gram, Picone and cross-channel routes are not relabeled as members without checking the stated property. The report/review contain the ten-route coverage table; most closures are not logical consequences of this theorem.
+
+**Adversarial outcome:** independent review passed the actual proof file (SHA256 pinned in evidence/v139/adversarial_review.md). It corrected parity quantifiers, rejected a claim about all physical derivative constraints, and required explicit non-multiplier scope. Exact Fraction checks passed six protected-column finite-dimensional models, three location-blind positive models, and the v1.37 rational probe constant. They are abstract tests, not numerical proof substitutes or arithmetic window certificates.
+
+**Physical scope:** a=log(lambda), interval(-a,a), original unitary Fourier normalization and log-weighted form domain; no new Fourier cutoff. The full source complement is used only with its established residual. C_a^low is not identified with it; remaining blocks and couplings remain obligations. First-slot linearity, endpoints, prime cut, log diagonal and sampler graph defect are unchanged.
+
+**Build:** ./manuscript/build.sh completed: 210 pages, zero undefined/duplicate references. Temporary PDF ignored and not delivered. Incremental evidence is in evidence/v139/; no cumulative archive created. Existing missing originals for v1.28 and v1.31–v1.34 remain missing; none were regenerated as substitutes.
+
+**Next precise target:** a signed joint concentration lower estimate with a single finite cofinal ordinary constant, both parities and all physical couplings, using realizability/geometry sufficient to exclude the forbidden probes/orientations. The new no-go does not provide it. No G2 sign gap closed; RH remains unproved.
+
+---
+
 # RH manuscript research log
 
 # Complete manuscript v1.38 — September 21, 2026

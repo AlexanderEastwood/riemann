@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.38**.
+Alexander Eastwood's complete working manuscript, **v1.39**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -75,6 +75,7 @@ graph LR
   gapfree["no uniform positive gap exists<br/><small>prop:v135-growing-radical</small><br/><small>&#128193; evidence/v135</small>"]
   floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small><br/><small>&#128193; evidence/v138</small>"]
   shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small><br/><small>&#128193; evidence/v138</small>"]
+  metablind["Scoped information-loss obstructions<br/><small>thm:v139-probe-relaxation; thm:v139-protected-orbit</small><br/><small>&#128193; evidence/v139</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -102,6 +103,7 @@ graph LR
   weaken --> gapfree
   floor --> floortest
   floor --> shiftbarrier
+  uniform --> metablind
 
   click g1 "evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate"
   click w3 "evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate"
@@ -117,9 +119,10 @@ graph LR
   click gapfree "evidence/v135/" "evidence: evidence/v135"
   click floortest "evidence/v138/" "evidence: evidence/v138"
   click shiftbarrier "evidence/v138/" "evidence: evidence/v138"
+  click metablind "evidence/v139/" "evidence: evidence/v139"
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
@@ -136,10 +139,25 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.38_manifest.json)
+- [Checksums and provenance](manifest/v1.39_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
+
+## New in v1.39
+
+Two precise meta-obstructions delimit information-losing estimates. The
+optimal full-histogram mass-cap bound, and a mass/height/variation
+relaxation, cannot supply a cofinal finite floor for the actual symbol.
+A separate spectral-rotation theorem preserves any finite head and its
+complete operator action while exposing the divergent negative multiplier
+edge. Its conjugates need not remain multiplication operators.
+
+The unrestricted slogan “every location-insensitive estimate fails” is
+false; an exact positive counterexample and a ten-route coverage audit
+are included. These results do not close G2 or prove RH.
+
+[Proof, exact checks and scope audit](evidence/v139/).
 
 ## New in v1.38
 

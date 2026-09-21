@@ -1,0 +1,13 @@
+{
+  "revision": "v1.39",
+  "build_command": "./manuscript/build.sh",
+  "exit_code": 0,
+  "pages": 210,
+  "undefined_or_duplicate_references": 0,
+  "source_sha256": "a35d27deb311dac88fcb963b6298cb3709d97831dee902f3c95919a0ce360ab4",
+  "proof_excerpt_sha256": "77616f0f82cbdeb26cb28a383da9438b8c2ed41d5dbb7faef5950e7bf2f669ce",
+  "pdf_delivery": false,
+  "base_commit": "5b65fc41547e98b933c8dacc137db40e17102afd",
+  "verification": "Analytic proofs, independent adversarial review, exact rational countermodels",
+  "open_gaps": "G2 and RH unproved; no G2 sign gap closed"
+}

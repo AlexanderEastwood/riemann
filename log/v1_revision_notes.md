@@ -1,3 +1,17 @@
+# Version 1.39 — September 21, 2026
+
+- Replaced the informal proposed meta-obstruction with two exact hypotheses: a density relaxation admitting the v1.37 cutoff probe, and a compression bound invariant under domain-preserving spectral rotations fixing finite graph data.
+- Proved that every sound budget in the former class diverges for the actual arithmetic symbol. This includes the optimal full-histogram mass-cap bound, and the mass/height/total-variation relaxation. Both parities and the complete-source-complement premise are explicit.
+- Proved that arbitrary finite head and complete operator-action data can be kept exactly while a spectral rotation realizes compression Rayleigh values arbitrarily close to the multiplier's essential infimum. The form domain and source residual are preserved; the conjugates generally leave the multiplier class.
+- Gave a positive location-independent counterexample and audited all ten historical closures. These theorems do not logically subsume all ten. In particular, concentration Schatten norms and block/cross-channel quantities may retain geometric information.
+- Independent adversarial analysis corrected parity quantifiers and rejected a claim that the cutoff probe satisfies every physical derivative constraint. Conditional linear rates remain conditional; unconditional budget divergence is proved by the existing bounded-floor implication.
+- Added exact rational model verification and primary-literature comparison with the classical bathtub principle and Fan–Pall spectral compression. The arithmetic specialization is a project continuation, not a claimed globally new theorem or publication-ready result.
+- Retained one live LaTeX manuscript in manuscript/, incremental evidence/v139/, manifests, and log/. An actual local build is required; its ignored PDF is not delivered.
+
+No G2 sign gap was closed, and RH is not proved.
+
+---
+
 # Version 1.38 — September 21, 2026
 
 - Executed the requested cheaper finite-floor experiment at lambda = 5, 6, 8. Both complete parities satisfy W>=-8I, with every remote Fourier row enclosed.
