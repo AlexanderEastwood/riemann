@@ -1,0 +1,39 @@
+{
+  "status": "PASS_NS19_ENCLOSURE_AND_CONDITIONAL_RESOLUTION_REQUIREMENT",
+  "bits": 1024,
+  "lambda": 4,
+  "radius_formula": "sqrt(C_ell*rho)/d",
+  "radius": "[8.75208157392882826134926077656034276753021405526300873879192811185756632521097590419602755686687201e-33 +/- 2.04e-132]",
+  "outward_radius_exact": "8.752082e-33",
+  "left_endpoint": "[14.13472514173469379045725198356246151870225711569924317568556746014996342980925676494901039317156101 +/- 2.78e-99]",
+  "right_endpoint": "[14.13472514173469379045725198356247902286625711569924317568556746014996342980925676494901039317156101 +/- 2.78e-99]",
+  "symmetric_discrepancy_interval_exact": [
+    "-8.752082e-33",
+    "8.752082e-33"
+  ],
+  "coarse_projection_error": "[0.0001566402741732515405759257990885063797820916493295150411960518448027309804369100153571606928486415238 +/- 2.69e-104]",
+  "rayleigh": "[2.453617549307141360348636625771684272694897173805340600812913138175873174664253109302033891089289546e-75 +/- 2.32e-175]",
+  "evaluator_dual_constant": "[79920.06156776016924952258035555881309122899132672420351752148530160389432321252433581524397635323506 +/- 3.80e-96]",
+  "target_root_transfer_radius_exact": "1e-71",
+  "target_transform_error_exact": "1.6e-74",
+  "target_error_energy": "[3.203200735561878615648110857772225441717669679890268504864387738706032001380128496343832849681442739e-153 +/- 4.51e-253]",
+  "rayleigh_minus_lower_bound_threshold": "[3.203200656967583228366419076249628765636430599822904223052162208214555466230840294118879825890369125e-153 +/- 2.28e-253]",
+  "relative_gap_threshold": "[1.305501200817589120369682401674147201740822634865840184140522886822302539459867052971074064258289213e-78 +/- 6.74e-178]",
+  "safe_sufficient_gap_exact": "3.2031e-153",
+  "safe_gap_root_transfer_budget": "[9.999901588991101513832696029959942776078482777233593392369942538523818731537404246777003070523245387e-72 +/- 1.44e-172]",
+  "ordinary_norm_transfer_gap_threshold": "[9.233248035140766087196670333195142151575269975057542334259014452271477739419048318267278872935976682e-216 +/- 1.32e-316]",
+  "trial_transform_at_gamma": "[1.064123340460188230596680392468054983223595556411126888765632333336442537307444187357766326219592497e-40 +/- 1.07e-140]",
+  "trial_transform_derivative_at_gamma": "[0.003108687178299833466093529742625809524962298439186121393273035679122271204981599949562963979908080317 +/- 3.31e-104]",
+  "lower_bound_hypotheses": "0 <= l <= mu0 <= rho < b; simple even ground; even excited spectrum >= b; unit f; h=P_ground f; |ell(v)|^2 <= C_ell*q[v]; derivative floor d on root interval.",
+  "missing_input": "A certified lower bound l sufficiently close to the COMPLETE trial Rayleigh rho. No such lower bound is asserted. A matching trial zero is also needed for a gamma-centered 1e-71 enclosure; the frozen trial does not supply it.",
+  "direct_bound_limitation": "The direct sqrt(C_ell*rho)/d bound uses an UPPER ground-energy budget, not rho-l. A lower bound alone does not improve it.",
+  "resolution_scope": "A floor of these stated archived scalar estimates, not an optimality theorem for all arguments using v125/v126 data. The finite CCM benchmark scale is below their resolution; the complete discrepancy is not proved to have that scale. Failure of the bound, not the object.",
+  "inputs": [
+    {
+      "path": "evidence/v143/discrepancy_budget_b1024.json",
+      "sha256": "4e7403d19f8175e4bcf4e73048598b91a3e78a224d997059834683eef77190ab"
+    }
+  ],
+  "coarse_verifier_sha256": "8e795e9fe97780e8a19a039300bbc92ffdc133fa1c61b03dfdeccf13655f0de2",
+  "verifier_sha256": "81cf4a91cc4dc43f02e704ad68ab72f6123ea67431c19bff16720280f37c0207"
+}

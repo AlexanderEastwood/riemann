@@ -1,0 +1,21 @@
+{
+  "manuscript_version": "v1.43",
+  "task": "NS-19",
+  "pages": 222,
+  "undefined_references": 0,
+  "duplicate_references": 0,
+  "overfull_boxes": 0,
+  "command": "./manuscript/build.sh",
+  "exit_code": 0,
+  "pyright": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "precision_bits": [
+    1024,
+    1280
+  ],
+  "second_implementation_checks": "PASS",
+  "manuscript_sha256": "1b512afe4c4b4074e78993a7db7d8dc7258afa279045b970865f3d0f7c76d0f5",
+  "scope": "Finite-window enclosure and resolution accounting; no complete discrepancy sign, G2 or RH claim."
+}

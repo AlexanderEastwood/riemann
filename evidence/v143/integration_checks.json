@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "base_main": "8ff2615",
+  "preserved_paths": [
+    "evidence/v124",
+    "evidence/v126",
+    "evidence/v140",
+    "evidence/v141",
+    "evidence/v142",
+    "manifest/v1.42_manifest.json",
+    "evidence/diag_true_symbol"
+  ],
+  "all_five_ns17_insert_blocks_retained": true,
+  "one_Zhu2026_bibitem": true,
+  "duplicate_source_labels": 0,
+  "new_section_exactly_integrated": true,
+  "build_source_hash_matches": true,
+  "new_tail_metric": false,
+  "new_window": false
+}

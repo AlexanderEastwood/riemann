@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.42**.
+Alexander Eastwood's complete working manuscript, **v1.43**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -30,7 +30,7 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 |---|---|
 | Only positivity result | `W_4 >= 0`, both parity sectors — evidence restored and verified |
 | Complete ground at lambda=4 | Simple and even; `0<mu0<2.454e-75`, `mu1>1e-73`; its entire Fourier transform has only real zeros ([certificate](evidence/v140/)) |
-| Complete-ground local zero | One unique simple zero in (gamma_1-0.1, gamma_1+0.1), 1024/1280-bit complete bounds ([v1.42](evidence/v142/)); no discrepancy sign or zero ordering |
+| Complete-ground first zero | First positive zero simple and within 8.752082e-33 of gamma_1, at 1024/1280 bits ([v1.43](evidence/v143/)); no discrepancy sign |
 | CCM finite benchmark | Eight local lambda=3, N=120 root discrepancies certified at 768/1024 bits; broader reproduction remains diagnostic ([v1.41](evidence/v141/)) |
 | Finite floors | `W_λ >= -8·I` at λ = 5, 6, 8, both parities, full infinite tail (`prop:v138-three-floors`) |
 | Certified window | half-width `a = log 4 = 1.386`; 1.73× the published Zhu window, 4× the classical range |
@@ -91,6 +91,7 @@ graph LR
   stepb["CCM step (b): finite-compression zeros track zeta zeros (numerical)<br/><small>&#128193; evidence/diag_ns2_semantic_lock</small>"]
   semanticlock["CCM finite-compression semantic lock, lambda=3 N=120<br/><small>lem:v141-centering; prop:v141-ccm-lock</small><br/><small>&#128193; evidence/v141</small>"]
   groundzero4["complete ground zero within 0.1 of gamma_1<br/><small>lem:v142-energy-projection; prop:v142-ground-zero</small><br/><small>&#128193; evidence/v142</small>"]
+  groundzero4resolution["first complete zero within 9e-33; archived resolution quantified<br/><small>prop:v143-first-zero-bound; prop:v143-resolution; prop:v143-fixed-window-meaning</small><br/><small>&#128193; evidence/v143</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -131,6 +132,7 @@ graph LR
   simpleeven4 --> stepb
   windows --> semanticlock
   simpleeven4 --> groundzero4
+  groundzero4 --> groundzero4resolution
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -155,9 +157,10 @@ graph LR
   click stepb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_ns2_semantic_lock/" "evidence: evidence/diag_ns2_semantic_lock" _blank
   click semanticlock "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v141/" "evidence: evidence/v141" _blank
   click groundzero4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v142/" "evidence: evidence/v142" _blank
+  click groundzero4resolution "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v143/" "evidence: evidence/v143" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4 proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration,circle,stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
@@ -174,10 +177,22 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.42_manifest.json)
+- [Checksums and provenance](manifest/v1.43_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
+
+## New in v1.43
+
+NS-19 closes with a two-sided enclosure of the complete first positive
+lambda=4 zero and a precise resolution statement. The radius is
+`sqrt(C_ell*rho)/0.0016 < 8.752082e-33 < 9e-33`. The missing lower-energy
+transfer would require a Rayleigh gap about `3.2032e-153` (relative
+`1.3055e-78`), plus a suitably centered trial for a gamma-centered result.
+The finite N=120 discrepancy of about `+2.92504e-71` is separately
+certified and does not transfer to the complete ground. This is a limit
+of the displayed archived bounds, not a failure of the object or a
+universal no-go theorem. No new window or tail metric; G2 and RH stay open.
 
 ## New in v1.42
 
