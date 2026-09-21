@@ -1,0 +1,16 @@
+{
+  "version": "v1.45",
+  "task": "NS-25 / Task A",
+  "scope": "Audit MINOR M1 and M2 wording only; no numerical bound changed",
+  "pages": 225,
+  "undefined_references": 0,
+  "duplicate_references": 0,
+  "overfull_boxes": 0,
+  "command": "./manuscript/build.sh",
+  "exit_code": 0,
+  "manuscript_sha256": "a4a812a95630aceaea0a8b83c84c4288981192a3e9400ad5362639d73ab43218",
+  "audit": "audits/2026-09-21-v1.43.md",
+  "audit_sha256": "758645d9ef63abc04c64c8b6aa8389017d7eafc6ddaa983226cb96247555cafc",
+  "claim_commit": "00a3246",
+  "historical_evidence_unchanged": true
+}
