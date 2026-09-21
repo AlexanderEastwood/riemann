@@ -7,10 +7,10 @@ current manuscript or generating new mathematical results.
 
 ## Files and provenance
 
-- [Complete even certificate](../archive/v1.26_snapshot/g2_simultaneous/)
-- [Odd complement and directional certificate](../archive/v1.26_snapshot/g2_odd_complement/)
-- [Finite window-resolution diagnostics](../archive/v1.26_snapshot/g2_window_resolution/)
-- [Complete original extracted snapshot](../archive/v1.26_snapshot/)
+- [Complete even certificate](../evidence/v126/g2_simultaneous/)
+- [Odd complement and directional certificate](../evidence/v126/g2_odd_complement/)
+- [Finite window-resolution diagnostics](../evidence/v126/g2_window_resolution/)
+- [Complete original extracted snapshot](../evidence/v126/)
 - [Original ZIP release](https://github.com/AlexanderEastwood/riemann/releases/tag/v1.26-evidence)
 - [Every file's SHA-256 and publication verification scope](v1.26_evidence_recovery.json)
 - [ZIP checksum file](v1.26_evidence_recovery.sha256)
@@ -56,8 +56,8 @@ write reports. Keep the sibling directories together.
 
 The original instructions are:
 
-- [Even replay README](../archive/v1.26_snapshot/g2_simultaneous/simultaneous_replay_README.md)
-- [Odd replay README](../archive/v1.26_snapshot/g2_odd_complement/README_odd_complement.md)
+- [Even replay README](../evidence/v126/g2_simultaneous/simultaneous_replay_README.md)
+- [Odd replay README](../evidence/v126/g2_odd_complement/README_odd_complement.md)
 
 Run only their verification commands to preserve the frozen witnesses.
 The even README's statement that odd positivity remains open describes
