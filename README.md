@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.39**.
+Alexander Eastwood's complete working manuscript, **v1.40**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -29,6 +29,7 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | | |
 |---|---|
 | Only positivity result | `W_4 >= 0`, both parity sectors — evidence restored and verified |
+| Complete ground at lambda=4 | Simple and even; `0<mu0<2.454e-75`, `mu1>1e-73`; its entire Fourier transform has only real zeros ([certificate](evidence/v140/)) |
 | Finite floors | `W_λ >= -8·I` at λ = 5, 6, 8, both parities, full infinite tail (`prop:v138-three-floors`) |
 | Certified window | half-width `a = log 4 = 1.386`; 1.73× the published Zhu window, 4× the classical range |
 | Live mechanism | signed weighted concentration, even sector (`prop:v131-concentration`) |
@@ -84,7 +85,7 @@ graph LR
   li["Li / Keiper coefficients<br/><small>&#128193; evidence/diag_routes/li</small>"]
   dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)<br/><small>&#128193; evidence/diag_routes/dbn</small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
-  simpleeven4["simple even ground of complete W_4 (proposed certificate)"]
+  simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -142,9 +143,10 @@ graph LR
   click nb "evidence/diag_routes/nb/" "evidence: evidence/diag_routes/nb"
   click li "evidence/diag_routes/li/" "evidence: evidence/diag_routes/li"
   click dbn "evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn"
+  click simpleeven4 "evidence/v140/" "evidence: evidence/v140"
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4 proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration,circle live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
@@ -152,7 +154,7 @@ graph LR
   classDef blocked fill:#ffcc80,stroke:#e65100,color:#000;
   class w5 blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,color:#000;
-  class rh,fixedspace,g2,uniform,altroutes,simpleeven4 open;
+  class rh,fixedspace,g2,uniform,altroutes open;
 ```
 <!-- research-map:end -->
 

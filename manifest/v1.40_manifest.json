@@ -1,0 +1,63 @@
+{
+ "manuscript_revision": "v1.40",
+ "base_commit": "ce45128be78335fd38f32d9bdf6efbced19842b3",
+ "files": [
+  {
+   "path": "evidence/v140/README.md",
+   "size_bytes": 994,
+   "sha256": "ddd3390e3d12c1aa40c5b99cdc8c5f1fb1a14aa8f9100ffce558d4eca120c44c"
+  },
+  {
+   "path": "evidence/v140/REPRODUCE.md",
+   "size_bytes": 3730,
+   "sha256": "f59db8d5efce780087af39834da083fc66ffdfdac95672a6195371aae06b7c35"
+  },
+  {
+   "path": "evidence/v140/adversarial_review.md",
+   "size_bytes": 9314,
+   "sha256": "764372531f6c54490c13f3e5361297a50d63bbb033d50741cec829e2ac2fa2dd"
+  },
+  {
+   "path": "evidence/v140/build_report.json",
+   "size_bytes": 514,
+   "sha256": "193b031bb731e411f9d04d52c1e9cef63501c8b9c8b23ae0d1338d902e365a49"
+  },
+  {
+   "path": "evidence/v140/certify_ground4.py",
+   "size_bytes": 10352,
+   "sha256": "2c5d4a44de0a8e280e9c4cb2672eb715470df859fc0234c5c7be0305ddf3e4c0"
+  },
+  {
+   "path": "evidence/v140/check_independent.py",
+   "size_bytes": 4285,
+   "sha256": "56c1b9b49b8475dfd672eadf4b69e6ed6bd6a2cc4c667b4937eda901c3751f6c"
+  },
+  {
+   "path": "evidence/v140/ground4_b1024_shift1e-73.json",
+   "size_bytes": 13010,
+   "sha256": "e7bcf35e64482ff0415c490155cbacdb7fa3ddcb607386ce7d353e3d16cbd1d2"
+  },
+  {
+   "path": "evidence/v140/ground4_b1280_shift1e-73.json",
+   "size_bytes": 13009,
+   "sha256": "8eaef58850ab2a86fb070d1e553f6c7af866784a5a36e5dd78a71b8d2726ba1e"
+  },
+  {
+   "path": "evidence/v140/independent_checks.json",
+   "size_bytes": 5042,
+   "sha256": "881b793ee5ec58132aa8a1b4b18f6c20f4221577868c814d2ba2487ab2b64dba"
+  },
+  {
+   "path": "evidence/v140/new_section.tex",
+   "size_bytes": 8229,
+   "sha256": "71acc45cdf2200668e8a74338008087f58ebdcaac04b54df6d275ffc4d541f21"
+  },
+  {
+   "path": "evidence/v140/research_report.md",
+   "size_bytes": 4157,
+   "sha256": "33a7725aaa6873f10a4f40d10f7331699eb5c8c79a843364391c6992385339cb"
+  }
+ ],
+ "file_count": 11,
+ "total_bytes": 72636
+}

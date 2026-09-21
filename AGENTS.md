@@ -15,11 +15,12 @@ positivity on semilocal Weil forms, following Burnol's Sonine spaces.
 
 **RH is not proved. G2 is not proved. Nothing here claims otherwise.**
 
-The single positive result is `W_4 >= 0`: the complete semilocal Weil form
-at window lambda=4 is nonnegative in both parity sectors. Everything else of
-value is **negative** — roughly ten scoped no-go results closing proposed
-routes. Those no-gos are the project's main publishable output. Treat a
-proved closure as a contribution, not a setback.
+The complete semilocal Weil form at window lambda=4 is nonnegative in both
+parity sectors. Version 1.40 additionally certifies its simple even ground
+and, by Connes–van Suijlekom Theorem 6.1, real zeros of the ground's entire
+Fourier transform. These are fixed-window results; convergence to Riemann's
+Xi remains unproved. Roughly ten scoped no-go results also close proposed
+routes. Treat a proved closure as a contribution, not a setback.
 
 ---
 
