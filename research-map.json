@@ -325,6 +325,14 @@
       "prop": "prop:v140-ground4; cor:v140-real-zeros",
       "branch": "result/ns5-ground-state",
       "evidence": "evidence/v140"
+    },
+    {
+      "id": "stepb",
+      "title": "CCM step (b): do the zeros of xi-hat_lambda track zeta zeros?",
+      "status": "closed",
+      "parent": "simpleeven4",
+      "evidence": "evidence/diag_ns14_zeros",
+      "note": "No, at lambda=3,4: zeros are the sinc lattice 2pi k/L (exact factorization xi-hat = sin(zL/2) R(z)); ground mass at n<=2 so R has no off-lattice zeros. Step (b) is where the difficulty sits."
     }
   ]
 }
