@@ -72,3 +72,8 @@ v1.26 release restores the two missing positivity-evidence directories,
 but does not claim to contain every later v1.27–v1.34 artifact or to be a
 complete reproduction release for the current manuscript. G2 and RH remain
 open.
+
+[The evidence availability ledger](../evidence/MISSING.md) therefore keeps
+two groups OPEN: the λ=5 disproof evidence through v1.28 and the
+v1.31–v1.34 concentration evidence and diagnostics. Only the two λ=4
+evidence groups are marked RESTORED.

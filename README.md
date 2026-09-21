@@ -72,6 +72,11 @@ The complete later v1.34 cumulative ZIP remains unavailable. Restoring the
 v1.25/v1.26 positivity evidence does not reconstruct that later archive or
 constitute a complete cumulative reproduction release for the current work.
 
+**Two of four tracked evidence gaps remain open:** the λ=5 disproof
+witnesses through v1.28 and the v1.31–v1.34 concentration evidence and
+diagnostics. See [the evidence availability ledger](evidence/MISSING.md)
+for the two restored groups and the two remaining open groups.
+
 ## Validation
 
 Independent mathematical adversarial review passed. The complete source
