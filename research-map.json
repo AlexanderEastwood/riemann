@@ -362,6 +362,16 @@
       "branch": "codex/complete-ground-zero-transfer",
       "evidence": "evidence/v143",
       "note": "NS-19: 1024/1280-bit evaluator bound and earlier-zero exclusion. A lower-energy transfer at 1e-71 needs rho-l about 3.2032e-153 plus a suitable trial center. No complete sign, universal resolution no-go or cofinal claim."
+    },
+    {
+      "id": "pencilconcentration",
+      "title": "pencil loss budget; cofinal obligation retained",
+      "status": "proved",
+      "parent": "concentration",
+      "prop": "prop:v144-pencil-concentration",
+      "branch": "codex/complete-ground-zero-transfer",
+      "evidence": "evidence/v144",
+      "note": "NS-24 exact translation: relative loss <= nu_k + eta_a ||v_k||^2/q+. Source constraint and mixture cross terms retained. Diagnostic thresholds not certified; fixed-head tests do not replace cofinal full-complement control. No new concentration bound."
     }
   ]
 }

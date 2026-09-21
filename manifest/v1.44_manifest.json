@@ -1,0 +1,43 @@
+{
+ "manuscript_revision": "v1.44",
+ "base_commit": "3b833c1557e2592dff9f636ee1bdb75ccf1a8e3f",
+ "files": [
+  {
+   "path": "evidence/v144/README.md",
+   "size_bytes": 3007,
+   "sha256": "9b75a01e61c38a25071159be7bba65ff7499510f70c170574b397f6314801075"
+  },
+  {
+   "path": "evidence/v144/build_report.json",
+   "size_bytes": 590,
+   "sha256": "1f98f5248e329816991599ad34b95f56ac9febd326ec8ae4b09b75e895958032"
+  },
+  {
+   "path": "evidence/v144/pencil_concentration.tex",
+   "size_bytes": 6463,
+   "sha256": "4528f36ee96c3467f5aeb969b69d507874579f5f346509f97bbe637775d8b7b6"
+  },
+  {
+   "path": "evidence/v144/provenance.json",
+   "size_bytes": 1603,
+   "sha256": "9d3937bf31c5f37a213679d543bf43f55808ebbbff97b906617c43a84479a606"
+  },
+  {
+   "path": "evidence/v144/research-report-2026-09-21-v1.html",
+   "size_bytes": 7444,
+   "sha256": "09e1738cc97b1f81eababde639be75db56cd24b4005235b32a38d88b93f0ad03"
+  },
+  {
+   "path": "evidence/v144/research-report-2026-09-21-v2.html",
+   "size_bytes": 7444,
+   "sha256": "8bc2a8373bee59d768bb59a612c7d2b9f1cc9a807b37ecb79247def8df68b193"
+  },
+  {
+   "path": "evidence/v144/scope_review.md",
+   "size_bytes": 1630,
+   "sha256": "22dfed5d633ff0c96ddc1859bd00ea5e8875d75119b7726fbd19035efa7a789f"
+  }
+ ],
+ "file_count": 7,
+ "total_bytes": 28181
+}

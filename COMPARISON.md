@@ -287,3 +287,21 @@ the actual complete discrepancy is not certified to have that scale.
 No universal impossibility claim about every use of v125/v126 data is made.
 This is a bound failure, not an object failure. CCM's source-to-ground
 approximation and cofinal convergence, G2 and RH remain open.
+
+
+## Weighted concentration on the level pencil (NS-24, v1.44)
+
+For an exact source-admissible pencil direction, the weighted criterion
+requires `L_a[v_k]/q_a^+[v_k] <= nu_k + eta_a ||v_k||^2/q_a^+[v_k]`, where
+L_a is the loss between the exact symbol and its proposed lower minorant.
+At zero allowed error, the relative loss budget is nu_k. For the weaker
+bounded-error goal the eta term remains; tiny nu_k alone is not a no-go.
+
+The section-7 diagnostic uses the uncompressed even head. Its twelve
+lambda=4 N=48 values below 1e-8 are diagnostic only, and do not establish
+source orthogonality. The exact class is restricted by the source constraint;
+mixtures require a full matrix inequality, not only directional checks.
+A fixed head supplies no complete-complement or cofinal estimate. The live
+criterion still requires uniform errors on a cofinal family, with the
+bounded-error weakening and both-parity/source hypotheses retained. The
+task stops at this distinction; no new concentration bound, G2 or RH claim.

@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.43**.
+Alexander Eastwood's complete working manuscript, **v1.44**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -43,7 +43,7 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 ## Research map
 
 Every idea, which sub-ideas were tried from it, and which passed or failed.
-Green = proved · blue = live · red = closed · orange = blocked · grey = open.
+Green = proved · gold = current route · red = closed · purple = blocked · grey = open.
 Nodes with a folder icon link to the `evidence/` directory holding their
 certificates; the full version with a node-by-node list is
 [RESEARCH_MAP.md](RESEARCH_MAP.md).
@@ -92,6 +92,7 @@ graph LR
   semanticlock["CCM finite-compression semantic lock, lambda=3 N=120<br/><small>lem:v141-centering; prop:v141-ccm-lock</small><br/><small>&#128193; evidence/v141</small>"]
   groundzero4["complete ground zero within 0.1 of gamma_1<br/><small>lem:v142-energy-projection; prop:v142-ground-zero</small><br/><small>&#128193; evidence/v142</small>"]
   groundzero4resolution["first complete zero within 9e-33; archived resolution quantified<br/><small>prop:v143-first-zero-bound; prop:v143-resolution; prop:v143-fixed-window-meaning</small><br/><small>&#128193; evidence/v143</small>"]
+  pencilconcentration["pencil loss budget; cofinal obligation retained<br/><small>prop:v144-pencil-concentration</small><br/><small>&#128193; evidence/v144</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -133,6 +134,7 @@ graph LR
   windows --> semanticlock
   simpleeven4 --> groundzero4
   groundzero4 --> groundzero4resolution
+  concentration --> pencilconcentration
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -158,9 +160,10 @@ graph LR
   click semanticlock "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v141/" "evidence: evidence/v141" _blank
   click groundzero4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v142/" "evidence: evidence/v142" _blank
   click groundzero4resolution "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v143/" "evidence: evidence/v143" _blank
+  click pencilconcentration "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v144/" "evidence: evidence/v144" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class concentration,circle,stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -185,10 +188,21 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.43_manifest.json)
+- [Checksums and provenance](manifest/v1.44_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
+
+## New in v1.44
+
+NS-24 translates the weighted concentration inequality to exact pencil
+directions: the relative minorant loss must be at most
+`nu_k + eta_a ||v_k||^2/q+[v_k]`, with source admissibility and all mixture
+cross terms retained. This is a fixed-window head condition. The complete
+criterion still needs cofinal uniform control; uniformly bounded errors
+already suffice under v1.36's hypotheses. The twelve small lambda=4 N=48
+values are cited only as diagnostics. No new computation or concentration
+bound is claimed, and the v1.43 enclosure is unchanged. G2 and RH stay open.
 
 ## New in v1.43
 

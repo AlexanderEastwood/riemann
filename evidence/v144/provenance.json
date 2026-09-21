@@ -1,0 +1,36 @@
+{
+  "base_main": "3b833c1557e2592dff9f636ee1bdb75ccf1a8e3f",
+  "claim_commit": "66c8ae31d59c9fd8784e2d0cef58977d1bdaafdf",
+  "claim_category": [
+    "exact identity",
+    "proved implication with explicit hypotheses"
+  ],
+  "numerical_experiments_run": 0,
+  "new_window": false,
+  "new_tail_metric": false,
+  "zero_enclosure_refined": false,
+  "diagnostic_inputs": [
+    {
+      "path": "evidence/diag_true_symbol/results.md",
+      "sha256": "c3e89ef9cc1f8dbd5cf446f095ba15badc244b704cf52b4fd1972a759ebef51c",
+      "role": "diagnostic motivation only; no proof bound"
+    },
+    {
+      "path": "evidence/diag_true_symbol/pencil.py",
+      "sha256": "cc46f7c68909e61d641e6d960dc74541f76a2f3e89c30b28b0ea42a6ad7eb043",
+      "role": "diagnostic motivation only; no proof bound"
+    },
+    {
+      "path": "evidence/diag_true_symbol/pencil_output.txt",
+      "sha256": "7251a8e56cf472123d0bdf92be89feea47fb62c138037678c5657b2875cfb8a5",
+      "role": "diagnostic motivation only; no proof bound"
+    }
+  ],
+  "preservation": "diag_true_symbol and tagged v1.43 evidence unchanged",
+  "historical_missing_evidence": "NS-1 groups remain OPEN; no scripts recovered",
+  "scope": "Fixed-window pencil translation; cofinal full-complement criterion remains an open input.",
+  "concurrent_update": "Preserved the diagram-style update, NS-1 follow-up claim and later layer-cake diagnostic; no new diagnostic work in NS-20.",
+  "task_id": "NS-24",
+  "original_local_task_id": "NS-20",
+  "task_id_reconciliation": "Concurrent main allocated NS-20 through NS-23; all their rows are retained. This work is NS-24."
+}

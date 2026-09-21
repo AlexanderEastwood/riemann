@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.43},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.44},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.43\\
+\large Complete working manuscript, version 1.44\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 21, 2026}
@@ -184,6 +184,17 @@ imply RH directly, but remains unproved.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.44 records the exact pencil-direction demand of the weighted
+concentration criterion (Proposition~\ref{prop:v144-pencil-concentration}).
+The admissible directional loss is at most
+$\nu_kq_a^+[v_k]+\eta_a\norm{v_k}^2$; mixtures also require the full
+restricted matrix inequality. The diagnostic uncompressed head is not
+silently identified with the actual source complement. These are
+fixed-window statements; the live sufficient criterion still requires
+complete-space cofinal control, with bounded errors already sufficient
+under the earlier hypotheses. No new numerical bound or refinement of
+v1.43 is made. G2 and RH remain open.
+
 Version 1.43 closes NS-19 with a complete first-positive-zero enclosure
 $|z_1(4)-\gamma_1|<8.752082\cdot10^{-33}<9\cdot10^{-33}$, verified
 at $1024/1280$ bits with the archived tail metric. The evaluator bound,
@@ -9765,6 +9776,146 @@ removed before comparison.  Concentration operators and
 Logvinenko--Sereda estimates are classical; only this arithmetic
 specialization is new within the project, and no worldwide novelty is
 claimed.  The odd sector remains a separate obligation.
+
+\subsection*{The weighted criterion on a level pencil: finite tests and cofinal quantifiers}
+
+This is an exact translation of the existing sufficient criterion, not a
+new concentration estimate or a numerical certificate. The pencil in
+\texttt{evidence/diag\_true\_symbol/}, Section~7, motivates the test class;
+its quadrature and midpoint generalized eigenvalues remain diagnostic only.
+
+\begin{proposition}[Directional loss budget and the scope of the pencil test]
+\label{prop:v144-pencil-concentration}
+Fix $a=\log4$ and let $H_{48}\subset\mathcal D(q_a)$ be the even
+head spanned by cosine modes $0,\ldots,48$ (dimension $49$).
+Use zero extension and the unitary Fourier normalization of
+\eqref{eq:v135-full-symbol}. Define the exact level forms
+\[
+ q_a^\pm[f]=\int_{\mathbb R}(\beta_a)_\pm
+                    |\widehat{\widetilde f}|^2,
+ \qquad q_a=q_a^+-q_a^-.
+\]
+Let $W,W^+$ be their respective exact head matrices for $q_a,q_a^+$,
+and assume $W^+\succ0$. Choose a complete generalized eigenbasis
+\[
+ Wv_k=\nu_k W^+v_k,\qquad
+ V^*W^+V=I,\qquad V^*WV=\operatorname{diag}(\nu_k),
+ \quad 0\le k\le48,
+\]
+identifying each column $v_k$ with its physical head function.
+Thus $\nu_k=q_a[v_k]/q_a^+[v_k]$ and
+$q_a^-[v_k]/q_a^+[v_k]=1-\nu_k$.
+Let $u_a\in\mathcal D(q_a)$ be the actual normalized even source,
+$P_a=I-|u_a\rangle\langle u_a|$, and put
+$E=H_{48}\cap u_a^\perp$.
+
+Suppose symmetric measurable sets $G_{a,j}$ and positive weights $w_{a,j}$
+give the pointwise minorant in \eqref{eq:v131-step-minorant}. Write
+\[
+ m_a=-D_a+\sum_jw_{a,j}1_{G_{a,j}}\le\beta_a,\qquad
+ r_a=\beta_a-m_a\ge0,\qquad
+ \mathcal L_a[f]=\int r_a|\widehat{\widetilde f}|^2.
+\]
+Here $\mathcal L_a$ is the nonnegative energy lost by this minorant;
+it is not a new tail metric. For $\eta_a\ge0$ and each pencil
+vector satisfying $P_av_k=v_k$, the directional restriction of
+\eqref{eq:v131-weighted-concentration} is exactly
+\begin{equation}\label{eq:v144-direction-budget}
+ \frac{\mathcal L_a[v_k]}{q_a^+[v_k]}
+ \le\nu_k+\eta_a\frac{\norm{v_k}^2}{q_a^+[v_k]}.
+\end{equation}
+In particular, a zero-error test ($\eta_a=0$) must lose no more
+than the relative surplus $\nu_k$ in that direction. With nonzero
+allowed error, the second term must not be omitted.
+
+This directional demand is necessary, but is not by itself sufficient
+on the span. Define matrices $G,R$ by
+\[
+ c^*Gc=\norm{Vc}^2,\qquad c^*Rc=\mathcal L_a[Vc],
+ \qquad b_k=\ip{v_k}{u_a}.
+\]
+Then the restriction of \eqref{eq:v131-weighted-concentration} to
+\emph{all} of $E$ is equivalent to
+\begin{equation}\label{eq:v144-pencil-matrix}
+ c^*\{\operatorname{diag}(\nu_k)-R+\eta_a G\}c\ge0
+ \quad\hbox{for every }c\hbox{ with }\sum_k b_kc_k=0.
+\end{equation}
+Thus the minorant-loss and ordinary-norm cross terms must also be
+controlled. The uncompressed diagnostic does not establish $b_k=0$.
+For a nonadmissible $v_k$, substituting $P_av_k$ changes both level
+energies; its ratio is not certified to remain $\nu_k$.
+
+Conditionally, if the first twelve \emph{exact} values satisfy
+$\nu_k<10^{-8}$ for $0\le k\le11$, their span intersects $u_a^\perp$
+in dimension at least eleven, and every nonzero vector in that
+intersection has $q_a[f]/q_a^+[f]<10^{-8}$. This conditional statement
+uses no numerical threshold as a proved hypothesis.
+
+All statements so far concern one fixed window and a finite head.
+The full live criterion instead demands the operator inequality on
+the complete source complement along a cofinal family $a\to\infty$,
+with uniform control of its permitted errors. The original
+Proposition~\ref{prop:v131-concentration} asks for $\eta_a\to0$;
+the weaker sufficient objective in
+Corollary~\ref{cor:v136-complement-floor} allows
+$\sup_a\eta_a<\infty$, with both parity blocks and the stated source
+residual/coupling hypotheses. Neither cofinal quantifier follows
+from \eqref{eq:v144-direction-budget} or
+\eqref{eq:v144-pencil-matrix} at $a=\log4$.
+\end{proposition}
+\begin{proof}
+For $f=P_af$, Plancherel gives the exact identity
+\[
+ -D_a\norm f^2+\sum_jw_{a,j}
+       \ip{\mathcal C_{a,u}(G_{a,j})f}f
+ =\int m_a|\widehat{\widetilde f}|^2
+ =q_a[f]-\mathcal L_a[f].
+\]
+Testing the left-hand side against $-\eta_a\norm f^2$ and substituting
+$q_a[v_k]=\nu_kq_a^+[v_k]$ proves
+\eqref{eq:v144-direction-budget}. For $f=Vc$ the source constraint is
+$\sum_kb_kc_k=0$, and the same identity proves
+\eqref{eq:v144-pencil-matrix}. Diagonal tests cannot replace that
+matrix inequality: even with $q=\nu I$ and the positive loss matrix
+$R=\nu\left(\begin{smallmatrix}1&1\\1&1\end{smallmatrix}\right)$,
+$\nu>0$, the two zero-error diagonal tests pass while $q-R$ has
+negative determinant $-\nu^2$. This is an algebraic illustration,
+not a counterexample for the arithmetic symbol.
+
+The twelve-vector span loses at most one dimension under the source
+constraint. In it,
+\[
+ \frac{q_a[Vc]}{q_a^+[Vc]}
+   =\frac{\sum_{k=0}^{11}\nu_k|c_k|^2}
+          {\sum_{k=0}^{11}|c_k|^2}<10^{-8},
+\]
+under the stated exact hypotheses. The last assertions separate the
+quantifiers in the cited concentration and bounded-floor criteria;
+no extension from a finite head to its complement is implicit.
+\end{proof}
+
+\paragraph{Diagnostic scope.}
+Section~7 of \path{evidence/diag_true_symbol/results.md} reports
+at $\lambda=4$, $N=48$ twelve pencil values below $10^{-8}$, with
+$\nu_0\approx2.9\cdot10^{-65}$. These are diagnostic values:
+$W^-$ uses floating quadrature and the generalized eigensolve uses
+midpoints. They do not certify exact thresholds, a source-compressed
+pencil, or any proposed minorant. They illustrate the relative
+loss budgets that a zero-error minorant would face if the exact
+values and admissibility hypotheses were established.
+For the weaker bounded-error goal the allowance is instead
+$\nu_k+\eta_a\norm{v_k}^2/q_a^+[v_k]$; tiny $\nu_k$ alone does not
+force relative accuracy $\nu_k$, or refute that goal.
+
+The finding is a finite-window diagnostic test class, not a replacement
+for the cofinal analytic input. A concentration proof still needs an
+explicit minorant and control on every admissible mixture and on the
+complete complement, uniformly over the cofinal family (including the
+other parity). No such family or new bound is supplied here. The
+translation does not show that the weighted criterion fails, and
+certainly does not produce a negative direction of $W_4$. The task
+stops at this quantifier distinction. No new window, tail metric or
+zero-enclosure refinement is attempted; G2 and RH remain open.
 
 \subsection*{Source-compressed Schatten refinement and two no-go tests}
 
