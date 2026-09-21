@@ -332,7 +332,7 @@
       "status": "live",
       "parent": "simpleeven4",
       "evidence": "evidence/diag_ns2_semantic_lock",
-      "note": "The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. v1.42 separately encloses one complete lambda=4 zero within 0.1 of gamma_1. High-accuracy discrepancy transfer and cofinal Xi convergence remain open."
+      "note": "The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. v1.42 separately encloses one complete lambda=4 zero within 0.1 of gamma_1. High-accuracy discrepancy transfer and cofinal Xi convergence remain open. v1.43 certifies a complete first-positive-zero radius 8.752082e-33 and quantifies the archived bound resolution; no complete discrepancy sign or 1e-71 magnitude."
     },
     {
       "id": "semanticlock",
@@ -352,6 +352,16 @@
       "branch": "codex/complete-ground-zero-transfer",
       "evidence": "evidence/v142",
       "note": "1024/1280-bit complete even separator 1e-67 plus energy projection; unique simple local zero, no earlier-zero ordering, discrepancy sign or cofinal claim."
+    },
+    {
+      "id": "groundzero4resolution",
+      "title": "first complete zero within 9e-33; archived resolution quantified",
+      "status": "proved",
+      "parent": "groundzero4",
+      "prop": "prop:v143-first-zero-bound; prop:v143-resolution; prop:v143-fixed-window-meaning",
+      "branch": "codex/complete-ground-zero-transfer",
+      "evidence": "evidence/v143",
+      "note": "NS-19: 1024/1280-bit evaluator bound and earlier-zero exclusion. A lower-energy transfer at 1e-71 needs rho-l about 3.2032e-153 plus a suitable trial center. No complete sign, universal resolution no-go or cofinal claim."
     }
   ]
 }

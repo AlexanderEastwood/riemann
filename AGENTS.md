@@ -33,6 +33,15 @@ projection bounds. This is not the global spectral gap, a zero enumeration,
 a discrepancy sign, or a high-accuracy CCM transfer. Cofinal convergence,
 G2 and RH remain open; NS-1 retains two OPEN evidence groups.
 
+Version 1.43 closes NS-19: the first positive complete-ground zero is
+simple and satisfies abs(z_1(4)-gamma_1)<8.752082e-33<9e-33, at 1024/1280
+bits. The limiting direct budget is C_ell*rho. A hypothetical lower-ground
+energy estimate would need rho-l <= about 3.2032e-153 to make its separate
+trial-transfer uncertainty 1e-71; this input is absent, and the frozen trial
+is not centered to that scale. The finite N=120 discrepancy ~+2.92504e-71
+is not a complete-ground value. The resolution limitation is scoped to the
+displayed bounds, not every argument using the archive. G2 and RH stay open.
+
 ---
 
 ## 2. Claim discipline — the non-negotiable part

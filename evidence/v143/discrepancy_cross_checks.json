@@ -1,0 +1,46 @@
+{
+  "status": "PASS_SECOND_IMPLEMENTATION_NS19; NO_COMPLETE_SIGN_CLAIM",
+  "checks": [
+    {
+      "bits": 1024,
+      "dual_comparison_matrix_positive": true,
+      "dual_solve_agrees": true,
+      "complete_root_radius_below_9e_33": true,
+      "dyadic_coverage_exact": true,
+      "negative_subintervals_recomputed": 304,
+      "finite_only_discrepancy_positive": true,
+      "resolution_threshold_algebra_checked": true,
+      "complete_discrepancy_sign_unresolved": true
+    },
+    {
+      "bits": 1280,
+      "dual_comparison_matrix_positive": true,
+      "dual_solve_agrees": true,
+      "complete_root_radius_below_9e_33": true,
+      "dyadic_coverage_exact": true,
+      "negative_subintervals_recomputed": 304,
+      "finite_only_discrepancy_positive": true,
+      "resolution_threshold_algebra_checked": true,
+      "complete_discrepancy_sign_unresolved": true
+    }
+  ],
+  "cross_precision_overlap_keys": [
+    "head_evaluator_dual_squared",
+    "complete_tail_evaluator_norm_squared",
+    "tail_evaluator_dual_squared_upper",
+    "complete_evaluator_dual_squared_upper",
+    "rayleigh_upper_enclosure",
+    "projected_ground_value_budget",
+    "zero_displacement_budget"
+  ],
+  "resolution_overlap_keys": [
+    "radius",
+    "target_error_energy",
+    "rayleigh_minus_lower_bound_threshold",
+    "relative_gap_threshold",
+    "ordinary_norm_transfer_gap_threshold",
+    "trial_transform_at_gamma"
+  ],
+  "checker_sha256": "31652b7163efbb618d28f47da84f6ba27576f085cdbae3d9f47ac9bc5c6b86d6",
+  "scope": "Same-agent implementation check of the absolute complete bound and finite benchmark. No claim that the finite discrepancy transfers to the complete ground."
+}

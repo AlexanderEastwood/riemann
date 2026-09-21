@@ -262,3 +262,28 @@ bounds retained. This is a coarse local enclosure. It does not determine
 the sign of the discrepancy or transfer the minute finite-compression
 values, and it does not order earlier zeros. Cofinal convergence, G2
 and RH remain open.
+
+
+## NS-19 resolution accounting (v1.43)
+
+The complete first positive lambda=4 ground-transform zero is now certified
+simple and within `8.752082e-33` of gamma_1. At 1024/1280 bits the evaluator
+dual comparison gives `sqrt(C_ell*rho)/0.0016 = 8.7520815739...e-33`.
+Its limit is the upper energy budget times the evaluator constant, not
+the original `sqrt(rho/b)` ordinary projection error.
+
+A hypothetical certified lower ground-energy bound l would improve the
+separate trial-transfer estimate through `b*(rho-l)/(b-l)`. Resolution
+`1e-71` would need a gap about `3.2032e-153`, relative `1.3055e-78`.
+No such estimate is archived, and the frozen trial's transform value
+`1.0641...e-40` at gamma_1 would still prevent that transfer alone from
+giving the desired gamma-centered enclosure. The direct energy bound
+instead requires an upper-energy improvement; a lower bound is not a
+substitute for it.
+
+The finite N=120 discrepancy `(2.9250,2.9251)e-71` is separately certified.
+Its scale lies below the resolution of the displayed archived estimates;
+the actual complete discrepancy is not certified to have that scale.
+No universal impossibility claim about every use of v125/v126 data is made.
+This is a bound failure, not an object failure. CCM's source-to-ground
+approximation and cofinal convergence, G2 and RH remain open.

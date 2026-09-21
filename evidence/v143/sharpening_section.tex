@@ -1,0 +1,251 @@
+\subsection*{A complete first-zero enclosure and its archived resolution (NS-19)}
+
+NS-19 records the strongest enclosure extracted here from the archived
+comparison, and quantifies its resolution. The former signed, factor-ten
+target is no longer pursued. The complete discrepancy is not assigned the
+scale of a finite-compression benchmark.
+
+\begin{lemma}[Evaluation bound from the archived Schur comparison]
+\label{lem:v143-evaluator-dual}
+Use the block operator and trial map of
+Lemma~\ref{lem:v140-shifted-schur}. Suppose $T\succeq\delta I$,
+$K\succ0$, and $V^*SV\succeq\kappa K$ with $0<\kappa<1$.
+For a bounded real functional $\ell$, write $p=\ell G$ and let
+$\ell_t$ be its restriction to the tail in ordinary coordinates. Put
+\[
+ A^2=pK^{-1}p^*,\qquad B^2=\delta^{-1}\norm{\ell_t}^2,
+ \qquad
+ C_\ell=\frac{A^2+B^2+2\sqrt{1-\kappa}\,AB}{\kappa}.
+\]
+For every even $v$ in the complete form domain,
+\[
+ |\ell(v)|^2\le C_\ell q_W[v].
+\]
+\end{lemma}
+\begin{proof}
+Write $v=Gx+(0,y)^t$, possible since $V$ is invertible, and put
+$r=BV+TZ$, $X^2=x^*Kx$, $Y^2=q_T[y]$. The complete Schur identity
+$r^*T^{-1}r=K-V^*SV$ gives
+\[
+ q_W[v]\ge X^2+Y^2-2\sqrt{1-\kappa}\,XY,
+ \qquad |\ell(v)|\le AX+BY.
+\]
+The first inequality retains the cross term through its complete
+inverse-weighted bound. The positive two-by-two matrix with diagonal
+$1$ and off-diagonal $-\sqrt{1-\kappa}$ has determinant $\kappa$.
+Applying Cauchy--Schwarz in that matrix metric gives the displayed
+constant. This uses the already certified tail floor, not a new tail metric.
+\end{proof}
+
+\begin{proposition}[Complete first positive zero: an absolute bound]
+\label{prop:v143-first-zero-bound}
+Assume the complete nonnegative form $\mathsf W_4$ has its certified simple
+real even ground, that the remainder of its even spectrum lies in
+$[b,\infty)$ with $b=10^{-67}$, and that the archived Schur hypotheses
+of Lemma~\ref{lem:v143-evaluator-dual} hold with the constants below.
+Let $f$ be the normalized exact column $16$ of the archived $4097$-row
+trial, $\rho=q_W[f]$, and $h=P_{\xi_4}f$. Assume the archived local
+endpoint gates and $\widehat h'>d=0.0016$ throughout
+$[\gamma_1-0.1,\gamma_1+0.1]$. All these hypotheses and the earlier-zero
+exclusion below are verified at $1024$ and $1280$ bits.
+Then the first positive zero $z_1(4)$ of the complete ground transform
+is simple and
+\begin{equation}\label{eq:v143-first-zero-absolute}
+ -8.752082\cdot10^{-33}<z_1(4)-\gamma_1<8.752082\cdot10^{-33}.
+\end{equation}
+The interval includes zero; neither the sign of the discrepancy nor
+a nonzero lower bound for its magnitude is certified.
+\end{proposition}
+\begin{proof}[Interval evaluation at $1024$ and $1280$ bits]
+Set $L=2\log4$ and use the real functional
+$\ell(v)=\int_{-L/2}^{L/2}v(x)\cos(\gamma_1x)\,dx$.
+Use the same $G,K,\kappa=62629/100000$ and
+$\delta=1.7940\cdot10^{-8}$ as above. The vector $p$ is evaluated
+using every trial coefficient, and the solve with $K$ is certified.
+For the normalized unshifted cosine basis, the head coordinates of
+$\ell$ are
+\[
+ c_0=\frac{2\sin(\gamma_1L/2)}{\sqrt L\,\gamma_1},\qquad
+ c_n=\frac{2\sqrt2\sin(\gamma_1L/2)}{\sqrt L}
+       \frac{\gamma_1}{\gamma_1^2-(2\pi n/L)^2}.
+\]
+Parseval supplies the entire omitted evaluator tail, without truncation:
+\[
+ \norm{\ell_t}^2=\frac L2+\frac{\sin(\gamma_1L)}{2\gamma_1}
+                    -\sum_{n=0}^{16}c_n^2.
+\]
+The interval calculations give
+\[
+ A^2\in(0.41411,0.41412),\qquad
+ B^2\in(49877,49878),\qquad C_\ell\in(79920.06156,79920.06158)<79921.
+\]
+For the same unit trial $f$ and $h=P_{\xi_4}f$ used in
+Proposition~\ref{prop:v142-ground-zero}, nonnegativity gives
+$q_W[h]\le q_W[f]=\rho$. Hence
+\[
+ |\widehat h(\gamma_1)|<1.400334\cdot10^{-35}.
+\]
+The already verified $\widehat h'>0.0016$ on
+$[\gamma_1-0.1,\gamma_1+0.1]$, the mean value theorem and its unique
+root give the displacement budget
+\[
+ |z-\gamma_1|<8.752082\cdot10^{-33}<9\cdot10^{-33}.
+\]
+
+To identify this local root as the first positive zero, the verifier
+also covers $[0,\gamma_1-0.1]$ with $304$ dyadic subintervals.
+On each, direct sinc integrals for trial modes $0$ through $64$ give
+an upper bound strictly below zero after adding both the old
+complete-ground projection error and
+$\sqrt L(\sum_{n=65}^{4096}|f_n|^2)^{1/2}$. This last term accounts
+for every omitted coefficient of the exact finite trial; it is not
+an omitted infinite eigenfunction tail. The projection estimate
+already covers that entire tail. These signs exclude all earlier
+nonnegative transform values. The previous local uniqueness and
+simplicity gates finish the claim.
+
+Both precisions use the same trial and inherited complete residual
+bounds. A second implementation checks the two-by-two dual solve,
+recomputes all earlier-zero signs, verifies exact dyadic coverage
+with rational arithmetic, and checks the serialized enclosures.
+The files \texttt{discrepancy\_budget\_b1024.json} and
+\texttt{discrepancy\_budget\_b1280.json} under \texttt{evidence/v143/}
+record the result and explicitly mark the signed target unresolved.
+\end{proof}
+
+\begin{proposition}[Resolution of the archived bounds and the missing energy direction]
+\label{prop:v143-resolution}
+Retain the hypotheses, normalization and functional $\ell$ of
+Proposition~\ref{prop:v143-first-zero-bound}. Write
+\[
+ \rho=2.45361754930714\ldots\cdot10^{-75},\qquad
+ C_\ell=79920.06156776\ldots,\qquad d=0.0016.
+\]
+The two decimal ellipses here denote the enclosures in the archived
+$1024/1280$-bit reports, not exact midpoint inputs.
+The direct bound and its scalar resolution budget are
+\begin{equation}\label{eq:v143-direct-budget}
+ |z_1(4)-\gamma_1|\le R_0:=\frac{\sqrt{C_\ell\rho}}d,
+ \qquad R_0=8.75208157392882\ldots\cdot10^{-33}.
+\end{equation}
+In this formula the limiting energy input is the \emph{upper} budget
+$q_W[h]\le\rho$, multiplied by the complete evaluator constant
+$C_\ell$. It is not the ordinary projection error
+$\sqrt{\rho/b}=1.5664027417\ldots\cdot10^{-4}$.
+A lower bound on the ground energy alone does not reduce
+\eqref{eq:v143-direct-budget}.
+
+If an additional certified lower bound $0\le\underline\mu\le\mu_0$
+is supplied, set $\Delta=\rho-\underline\mu$ and $e=f-h$. Then
+\begin{align}
+ \norm e^2&\le\frac{\Delta}{b-\underline\mu},\label{eq:v143-lower-norm}\\
+ q_W[e]&\le\frac{b\Delta}{b-\underline\mu},\label{eq:v143-lower-energy}\\
+ |\ell(f)-\ell(h)|&\le
+ \sqrt{\frac{C_\ell b\Delta}{b-\underline\mu}}.
+ \label{eq:v143-lower-transfer}
+\end{align}
+Thus allocating a root-resolution budget $\varepsilon=10^{-71}$
+entirely to this transfer term requires the scalar condition
+\begin{equation}\label{eq:v143-required-lower}
+ \Delta\le
+ \frac{(d\varepsilon)^2(b-\rho)}{C_\ell b-(d\varepsilon)^2}
+ =3.20320065696758\ldots\cdot10^{-153}.
+\end{equation}
+The rounded condition $\rho-\underline\mu\le3.2031\cdot10^{-153}$
+is sufficient for that transfer budget. This is a relative gap of
+about $1.3055\cdot10^{-78}$ in the Rayleigh energy, not a lower
+bound of size $10^{-153}$. No lower estimate this close to $\rho$
+is present in the archive. With only the old ordinary-norm projection
+inequality, the corresponding gap requirement would instead be
+$9.2332480\ldots\cdot10^{-216}$.
+
+Even the condition \eqref{eq:v143-required-lower} would not alone
+put the complete zero within $10^{-71}$ of $\gamma_1$: the same
+frozen trial has the certified value
+\[
+ 1.0641\cdot10^{-40}<\widehat f(\gamma_1)<1.0642\cdot10^{-40}.
+\]
+For a $\gamma_1$-centered enclosure one must also control this center
+value, since the resulting bound is
+\[
+ |z_1(4)-\gamma_1|\le
+ \frac{|\widehat f(\gamma_1)|+
+       \sqrt{C_\ell b\Delta/(b-\underline\mu)}}d.
+\]
+A Temple--Lehmann-type lower-energy estimate is therefore a missing
+\emph{transfer} direction, not by itself a solution of the original
+$\gamma_1$-centered discrepancy problem.
+\end{proposition}
+\begin{proof}
+The direct bound is the preceding proposition. To make its right-hand
+side at most $10^{-71}$ without changing the evaluator constant would
+need an upper ground-energy budget of at most
+$(d\varepsilon)^2/C_\ell=3.2032007355\ldots\cdot10^{-153}$;
+a lower energy estimate does not provide this.
+For the transfer alternative, spectral orthogonality gives
+$\rho=\mu_0\norm h^2+q_W[e]$ and $q_W[e]\ge b\norm e^2$.
+As $\norm h^2=1-\norm e^2$,
+\[
+ \rho\ge\underline\mu+(b-\underline\mu)\norm e^2,
+ \qquad
+ q_W[e]\le\Delta+\underline\mu\,q_W[e]/b.
+\]
+These prove the first two estimates; the evaluator lemma applied to $e$
+proves the third. Squaring its value-to-zero budget and using
+$b-\underline\mu=b-\rho+\Delta$ gives
+\eqref{eq:v143-required-lower}. Replacing the evaluator estimate by
+$|\ell(e)|\le\sqrt L\norm e$ gives the ordinary-norm threshold
+$(d\varepsilon)^2(b-\rho)/(L-(d\varepsilon)^2)$.
+The code \texttt{certify\_resolution.py} replays both thresholds,
+the outward rounding and the frozen-trial value at both precisions.
+The mean value theorem gives the last displayed enclosure. The
+claimed extra lower-energy hypothesis has not been verified.
+\end{proof}
+
+\begin{proposition}[Finite-window meaning and the scope of the resolution floor]
+\label{prop:v143-fixed-window-meaning}
+Under Proposition~\ref{prop:v143-first-zero-bound}'s complete-operator,
+tail, endpoint and derivative hypotheses, its enclosure is one
+finite-window proximity statement of the type sought in CCM's
+step~(b). Its scalar radius $R_0$ is the resolution floor of the
+\emph{displayed archived comparison with these inputs unchanged}.
+The $\lambda=4$, $N=120$ finite-compression benchmark
+\[
+ 2.9250\cdot10^{-71}<z_{1,120}(4)-\gamma_1
+                         <2.9251\cdot10^{-71}
+\]
+is below that resolution by more than $10^{38}$, and also below
+that of the archived ordinary projection estimates. Even formally
+omitting the nonnegative tail contribution from the same dual
+comparison leaves the radius
+\[
+ \frac{\sqrt{\rho A^2/\kappa}}d
+ =2.5174230434\ldots\cdot10^{-35}>10^{35}(3\cdot10^{-71}).
+\]
+The finite benchmark is not an enclosure of the complete discrepancy.
+Consequently these statements neither assign that discrepancy a sign
+or a $10^{-71}$ magnitude, nor prove that no different argument using
+the same archived data could resolve it. This is a failure of the
+stated bounds to resolve the benchmark scale, not a failure of the
+complete-ground zero agreement.
+\end{proposition}
+\begin{proof}
+The first enclosure has already been proved. The separate finite
+benchmark was certified before the revised NS-19 task, with the
+unchanged coefficient assembler and verified eigenpair/root gates;
+its $1024/1280$-bit reports are retained as finite-compression evidence
+under \texttt{evidence/v143/}. Comparing its outward interval to
+$R_0$ and to the formally reduced head-only budget proves the
+stated resolution gaps. Neither comparison is a lower bound on the
+actual complete discrepancy. No optimality theorem for every
+possible use of the v1.25/v1.26 data is asserted.
+\end{proof}
+
+CCM's second missing step additionally needs control of how
+$k_\lambda$ approximates a scalar multiple of $\xi_\lambda$
+\cite[Section 8]{ConnesConsaniMoscovici2025}. The fixed-window
+enclosure supplies no cofinal rate, no convergence of further zeros,
+and no locally uniform convergence of normalized transforms to
+Riemann's $\Xi$. No new window or tail metric is introduced.
+NS-19 closes the enclosure-and-resolution accounting; the former
+signed target is not claimed. G2 and RH remain open.

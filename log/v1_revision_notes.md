@@ -1,5 +1,24 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-21 — v1.43 / NS-19: complete enclosure and scoped resolution
+
+The revised Task B closes with |z_1(4)-gamma_1|<8.752082e-33<9e-33,
+including first-positive-zero exclusion, at 1024/1280 bits. The construction
+uses the complete evaluator dual bound instead of the old ordinary
+projection error; all archived tail cross terms remain. The direct limit
+is C_ell*rho. A hypothetical lower-energy transfer would require
+rho-l about 3.2032e-153 (relative 1.3055e-78); this is missing and the
+frozen trial is not centered for a gamma-based 1e-71 enclosure. A lower
+bound alone does not improve the direct upper-energy bound.
+
+The separately certified finite N=120 discrepancy ~+2.92504e-71 remains
+finite. Resolution failure is scoped to the displayed bounds, not the
+object or all possible arguments using the archive. User ended the signed
+target; NS-19 is done. Actual build: 222 pages, 0 undefined references,
+0 duplicate references, 0 overfull boxes. Tagged v1.42 evidence unchanged.
+No new window or tail metric. NS-1, cofinal convergence, G2 and RH remain open.
+
+
 Rebased the local result onto origin/main at 0f8cb16, preserving concurrent diagnostics. All five requested insert groups are integrated at their header anchors, with previous positioning prose consolidated. Groskin is updated to v3; KreinLanger2014 and BasorEhrhardt2002 are present; all Zhu citations use one Zhu2026 bibitem. NS-6/NS-17 complete in this version. The continuation paragraph explicitly avoids inferring global arithmetic identification from local extension uniqueness, and the matrix comparison does not falsely identify divided-difference commutators with standard one-symbol T±H. Original draft files are unchanged; integrated variants and source hashes are archived. Added the user's symbol context as a finite-compression midpoint diagnostic, with numerical zeros beyond the plotting scale not interpreted as exact absence of mass.
 
 Build: 218 pages, 0 undefined/duplicate references, 0 overfull boxes. The 1024/1280-bit coarse NS-18 certificate is unchanged; sign/factor-10 discrepancy sharpening is now in progress. G2 and RH remain open; both NS-1 evidence groups remain OPEN.
