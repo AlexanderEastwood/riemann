@@ -11,9 +11,9 @@ graph TD
   g2["G2: cofinal -o(1)<br/><small>prop:v121-cofinal-rh</small>"]
   windows["Fixed-window certificates"]
   w3["lambda=3<br/><small>prop:v116-window-positive</small>"]
-  w4e["lambda=4 even<br/><small>prop:v125-even-complete</small>"]
-  w4o["lambda=4 odd<br/><small>prop:v126-odd-complement</small>"]
-  w4["W_4 >= 0 both sectors<br/><small>prop:v126-full-window</small>"]
+  w4e["lambda=4 even<br/><small>prop:v125-even-complete</small><br/><small>&#128193; evidence/v126</small>"]
+  w4o["lambda=4 odd<br/><small>prop:v126-odd-complement</small><br/><small>&#128193; evidence/v126</small>"]
+  w4["W_4 >= 0 both sectors<br/><small>prop:v126-full-window</small><br/><small>&#128193; evidence/v126</small>"]
   w5["lambda=5"]
   uniform["Uniform mechanism for G2"]
   primenorm["unsigned prime-norm domination<br/><small>prop:v119-prime-essential</small>"]
@@ -30,7 +30,7 @@ graph TD
   weaken["Target weakening"]
   floor["uniform finite floor suffices<br/><small>prop:v136-bounded-floor</small>"]
   gapfree["no uniform positive gap exists<br/><small>prop:v135-growing-radical</small>"]
-  floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small>"]
+  floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small><br/><small>&#128193; evidence/v138</small>"]
   shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small>"]
 
   rh --> g1
@@ -59,6 +59,11 @@ graph TD
   weaken --> gapfree
   floor --> floortest
   floor --> shiftbarrier
+
+  click w4e "evidence/v126/" "evidence: evidence/v126"
+  click w4o "evidence/v126/" "evidence: evidence/v126"
+  click w4 "evidence/v126/" "evidence: evidence/v126"
+  click floortest "evidence/v138/" "evidence: evidence/v138"
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier proved;
@@ -89,15 +94,15 @@ graph TD
   - [x] **G1 (weak)** — `thm:v14-radical` · `lane/g1` · closed for the repaired prolate source
   - [ ] **G2: cofinal -o(1)** — `prop:v121-cofinal-rh` · eps_lambda -> 0 cofinally IS RH
     - [x] **Fixed-window certificates** — `lane/window-scaling` · no finite list is cofinal
-      - [x] **W_4 >= 0 both sectors** — `prop:v126-full-window` · only positive result; evidence restored and verified
+      - [x] **W_4 >= 0 both sectors** — `prop:v126-full-window` · evidence: [`evidence/v126/`](evidence/v126/) · only positive result; evidence restored and verified
       - [x] **lambda=3** — `prop:v116-window-positive`
-      - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete`
-      - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement`
+      - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete` · evidence: [`evidence/v126/`](evidence/v126/)
+      - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement` · evidence: [`evidence/v126/`](evidence/v126/)
       - [!] **lambda=5** — 10^-8 D tail metric certified FALSE, both parities (v1.28)
     - [x] **Target weakening** — `lane/bounded-floor`
       - [x] **no uniform positive gap exists** — `prop:v135-growing-radical` · dense radical family; same fact as the floor reduction
       - [x] **uniform finite floor suffices** — `prop:v136-bounded-floor` · decay not required; dichotomy inf spec -> -inf or RH
-        - [x] **W_lambda >= -8 I at lambda=5,6,8** — `prop:v138-three-floors` · `result/v138-three-floors` · both parities, full infinite tail, Z=0; margin 0.84 -> 0.10 (odd) as lambda grows; not cofinal
+        - [x] **W_lambda >= -8 I at lambda=5,6,8** — `prop:v138-three-floors` · `result/v138-three-floors` · evidence: [`evidence/v138/`](evidence/v138/) · both parities, full infinite tail, Z=0; margin 0.84 -> 0.10 (odd) as lambda grows; not cofinal
         - [x] **bounded shift keeps the exp cutoff barrier** — `prop:v138-shifted-floor` · N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi
     - [ ] **Uniform mechanism for G2**
       - [X] **Cotlar cross terms / atomization** — `closed/cotlar-atomization` · v1.34, cross norm >= 73/(375 pi)
@@ -118,4 +123,8 @@ Each node is an idea. A node with children is a branch point: the
 children are the sub-ideas tried from it. `closed` children are proved
 dead ends and are kept deliberately — they are the project's main
 output. `live` is the only node currently worth spending on.
+
+Nodes marked with a folder icon are clickable in the diagram and link
+to the `evidence/vNNN/` directory holding their certificates; the same
+links appear in the list above.
 

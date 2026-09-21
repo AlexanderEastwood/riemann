@@ -43,13 +43,21 @@ def main() -> int:
         label = esc(n["title"])
         if n.get("prop"):
             label += f"<br/><small>{esc(n['prop'])}</small>"
-        if n.get("evidence") == "MISSING":
+        ev = n.get("evidence")
+        if ev == "MISSING":
             label += "<br/><small>EVIDENCE MISSING</small>"
+        elif ev:
+            label += f"<br/><small>&#128193; {esc(ev)}</small>"
         L.append(f'  {n["id"]}["{label}"]')
     L.append("")
     for n in nodes:
         if n.get("parent"):
             L.append(f'  {n["parent"]} --> {n["id"]}')
+    L.append("")
+    for n in nodes:
+        ev = n.get("evidence")
+        if ev and ev != "MISSING":
+            L.append(f'  click {n["id"]} "{ev}/" "evidence: {ev}"')
     L.append("")
     for status, (fg, bg, _) in STYLE.items():
         ids = [n["id"] for n in nodes if n["status"] == status]
@@ -73,8 +81,11 @@ def main() -> int:
                 bits.append(f"`{n['prop']}`")
             if n.get("branch"):
                 bits.append(f"`{n['branch']}`")
-            if n.get("evidence") == "MISSING":
+            ev = n.get("evidence")
+            if ev == "MISSING":
                 bits.append("**evidence missing**")
+            elif ev:
+                bits.append(f"evidence: [`{ev}/`]({ev}/)")
             if n.get("note"):
                 bits.append(n["note"])
             L.append("  " * depth + f"- {MARK[n['status']]} **{n['title']}**"
@@ -86,7 +97,10 @@ def main() -> int:
           "Each node is an idea. A node with children is a branch point: the",
           "children are the sub-ideas tried from it. `closed` children are proved",
           "dead ends and are kept deliberately — they are the project's main",
-          "output. `live` is the only node currently worth spending on.", ""]
+          "output. `live` is the only node currently worth spending on.", "",
+          "Nodes marked with a folder icon are clickable in the diagram and link",
+          "to the `evidence/vNNN/` directory holding their certificates; the same",
+          "links appear in the list above.", ""]
 
     OUT.write_text("\n".join(L) + "\n")
     print(f"{OUT.name}: {len(nodes)} nodes, {dict(c)}")
