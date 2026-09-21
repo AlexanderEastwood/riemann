@@ -1,0 +1,18 @@
+{
+  "manuscript_version": "v1.42",
+  "command": "./manuscript/build.sh",
+  "exit_code": 0,
+  "pages": 217,
+  "undefined_or_duplicate_references": 0,
+  "overfull_boxes": 0,
+  "pyright": {
+    "errors": 0,
+    "warnings": 0,
+    "information": 0
+  },
+  "manuscript_sha256": "f6299e1dd3a93b6a4e5bc5a2898960e2a83635dab7efcd4a6758b0cf195a5634",
+  "log_sha256": "2d9eb9669bd0e16642d8d5c8c006472cfac8e7e1b481bc029dc8a827e96948e1",
+  "new_section_integrated_verbatim": true,
+  "claim_commit": "2e5364bdf83a6bb8a4f6881e2daaf2e0806ca6a9",
+  "scope": "Local research branch. Built PDF is ignored; LaTeX is the manuscript delivery. No new external audit, G2 or RH claim."
+}

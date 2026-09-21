@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.41},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.42},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.41\\
+\large Complete working manuscript, version 1.42\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 21, 2026}
@@ -184,6 +184,17 @@ imply RH directly, but remains unproved.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.42 integrates the five NS-17 positioning/goals/bibliography
+inserts at their specified anchors, with the continuation claim qualified
+and the Zhu bibliography deduplicated. It also proves a unique simple local zero of the complete
+$\lambda=4$ ground transform within $1/10$ of the first zeta ordinate
+(Proposition~\ref{prop:v142-ground-zero}). The archived complete even
+Schur data certify the stronger even-sector separator $10^{-67}$;
+a spectral-energy projection estimate transfers endpoint and derivative
+signs at $1024/1280$ bits. The full old tail bounds are inherited,
+not reassembled. No tiny-discrepancy, zero-ordering or cofinal claim
+is made. G2 and RH remain open.
+
 Version 1.41 completes the CCM numerical semantic lock at the existing
 $\lambda=3$, $N=120$ compression. Proposition~\ref{prop:v141-ccm-lock}
 reproduces eight published discrepancies using interval root gates
@@ -6582,7 +6593,7 @@ odd sector. It is not the raw finite
 Weil matrix: the inverse-tail correction must remain.
 The next growing-window estimate must also satisfy the ordinary-error
 scale in Proposition~\ref{prop:v120-weighted-error}.
-A related recent preprint~\cite{Zhu2026Windows} studies certified
+A related recent preprint~\cite{Zhu2026} studies certified
 compact-window positivity and a pointwise prime-comb envelope barrier.
 Our conclusion here concerns the actual Fourier-tail form and does
 not use that preprint's computational certificates. Neither fixed-window
@@ -7811,6 +7822,84 @@ It gives no bound for the heads, inverse factors or residuals at
 unbounded $\lambda$. In particular, the constants above are tied
 to $L=2\log4$ and are not transferred to other windows.
 
+% NS-17: window_comparison_insert.tex
+\subsection*{Position of the certified window}
+\label{sec:v141-window-position}
+The window parameter $\lambda$ is not the parameter used in the
+published compact-window literature, which is indexed by the
+logarithmic support half-width. A test supported multiplicatively in
+$[\lambda^{-1},\lambda]$ is supported in $[-a,a]$ in the logarithmic
+coordinate, with
+\[
+ a=\log\lambda=L/2 .
+\]
+Zhu~\cite{Zhu2026} writes this half-width $L$; it is one half of the
+logarithmic length $L=2\log\lambda$ of the reading conventions. The
+classical positivity range of Yoshida and Connes--Consani is stated
+as $\operatorname{supp}f\subset[-(\log2)/2,(\log2)/2]$, as recalled in
+\cite{Zhu2026}. On one axis:
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+result & half-width $a$ & $\lambda=e^{a}$\\
+\midrule
+classical Yoshida / Connes--Consani & $0.3466$ & $1.414$\\
+Zhu~\cite{Zhu2026}, certified $L=0.8$ & $0.8000$ & $2.226$\\
+Proposition~\ref{prop:v116-window-positive}, $\lambda=3$ & $1.0986$ & $3$\\
+Proposition~\ref{prop:v126-full-window}, $\lambda=4$ & $1.3863$ & $4$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The $\lambda=4$ certificate is therefore at $1.73$ times the
+half-width of the published Zhu window and $4$ times the classical
+range. The comparison is legitimate because the semilocal form and the
+global Weil form agree on every test supported inside the window;
+Proposition~\ref{prop:v121-cofinal-rh} relies on exactly this
+extension-by-zero identity, so the two sides certify the same object
+on the same functions.
+
+The two results are not of the same kind. Zhu proves a certified
+two-sided enclosure
+$8.9\cdot10^{-18}\le\lambda_{\min}(0.8)\le2.27\cdot10^{-17}$ of the
+normalized window infimum at $a=0.8$, by a one-stroke reduction to a
+single finite positive semidefinite matrix.
+Proposition~\ref{prop:v126-full-window} proves nonnegativity
+$\mathsf W_4\succeq0$ at $a=\log4$, and
+Proposition~\ref{prop:v140-ground4} encloses its complete ground,
+$0<\mu_0<2.454\cdot10^{-75}$ and $\mu_1>10^{-73}$, by a structured
+inverse, a simultaneous seventeen-column certificate and
+direction--complement gluing. Zhu's result is stronger in kind, a
+quantitative two-sided gap on a smaller window; the present one is
+stronger in reach. Neither subsumes the other. The $LDL^*$ pivots and
+the margin $1-\lambda_{\max}(\mathcal U,K)$ recorded in the
+$\lambda=4$ certificates are not ordinary-norm eigenvalue bounds and are not comparable with
+Zhu's enclosure: the pivots depend on coordinates, whereas the relative
+margin compares two forms.
+
+In the notation of Connes--Consani--Moscovici
+\cite[Corollaries~3.7--3.8]{ConnesConsaniMoscovici2025}, write
+$\mu^{\mathrm{CCM}}_\lambda$ for the infimum of the spectrum of the
+self-adjoint operator of the form $QW_\lambda$ certified here. They
+prove that $\lambda\mapsto\mu^{\mathrm{CCM}}_\lambda$ is nonincreasing,
+write that they ``cannot assert that'' it is nonnegative, and prove
+that $\lim_{\lambda\to\infty}\mu^{\mathrm{CCM}}_\lambda=0$ implies RH.
+By that monotonicity,
+\[
+ \mathsf W_4\succeq0
+ \quad\Longleftrightarrow\quad
+ \mu^{\mathrm{CCM}}_\lambda\ge0\ \text{ for every }1<\lambda\le4,
+\]
+so Proposition~\ref{prop:v126-full-window} settles the sign of
+$\mu^{\mathrm{CCM}}_\lambda$ on $1<\lambda\le4$, a range $1.73$ times
+Zhu's certified window and beyond the windows of their own numerical
+section. The floors of Proposition~\ref{prop:v138-three-floors} are the
+lower bounds $\mu^{\mathrm{CCM}}_\lambda\ge-8$ for $1<\lambda\le8$.
+This is a target statement, not a shortcut: cofinal nonnegativity of
+$\mu^{\mathrm{CCM}}_\lambda$ is RH by
+Proposition~\ref{prop:v121-cofinal-rh}, and no cofinal statement is
+made here. No G2 gap or RH claim follows.
+
+
 
 \subsection*{The unchanged construction fails at $\lambda=5$}
 \label{sec:v127-transfer}
@@ -8290,45 +8379,7 @@ qualifications and explicit sampler graph defect are unchanged.
 No G2 gap or RH claim follows.
 
 
-\subsection*{Published window normalization and an external numerical lock}
-
-The support half-width used by Zhu~\cite{Zhu2026Windows} is
-$a=\log\lambda$; the present Fourier interval has full length
-$L=2a$. These symbols must not be interchanged. The comparison below
-uses the same physical Weil form and ordinary $L^2$ norm, after
-translation of the logarithmic interval.
-\begin{center}
-\begin{tabular}{lrr}
-\toprule
-Result & half-width $a$ & multiplicative $\lambda=e^a$\\
-\midrule
-Classical Yoshida / Connes--Consani & $\tfrac12\log2\simeq0.3466$ & $\sqrt2$\\
-Zhu's certified window & $0.8$ & $e^{0.8}\simeq2.2255$\\
-Proposition~\ref{prop:v116-window-positive} & $\log3\simeq1.0986$ & $3$\\
-Proposition~\ref{prop:v126-full-window} & $\log4\simeq1.3863$ & $4$\\
-\bottomrule
-\end{tabular}
-\end{center}
-Thus the certified $\lambda=4$ half-width is approximately $1.73$
-times Zhu's and exactly four times the classical half-width. Zhu
-provides a quantitative lower ground bound on the smaller window;
-Proposition~\ref{prop:v140-ground4} supplies the complete simple-even
-ground ordering here. No ordinary ground lower constant may be read
-from an LDL pivot or a relative Schur margin. The empirical
-Landau--Widom fit is not a normalization test: unconverged finite
-compression values are only upper bounds for the complete infimum.
-
-In the notation of Connes--Consani--Moscovici
-\cite[Corollaries 3.7--3.8]{ConnesConsaniMoscovici2025},
-$\mu^{\mathrm{CCM}}_\lambda=\inf\sigma(A_\lambda)$ decreases with $\lambda$.
-Support consistency and the common form normalization therefore give
-\[
- \mathsf W_4\succeq0\quad\Longleftrightarrow\quad
- \mu^{\mathrm{CCM}}_\lambda\ge0\ \text{for every }1<\lambda\le4.
-\]
-The fixed floors in Proposition~\ref{prop:v138-three-floors} similarly
-bound the corresponding complete $\mu^{\mathrm{CCM}}_\lambda$. These are fixed-range
-statements. A cofinal bound is an additional open input.
+\subsection*{An external numerical semantic lock}
 
 \begin{lemma}[The centering phase in the Fourier dictionary]
 \label{lem:v141-centering}
@@ -8439,8 +8490,143 @@ inference from concentrated low-mode mass to exact retained-band
 lattice zeros. The new certificate disproves that diagnostic inference
 at $\lambda=3$ and reproduces CCM's fixed-$N$ benchmark. It does not
 establish complete-ground zero locations at $\lambda=3$ or $4$, nor
-convergence to $\Xi$. Those transfer and cofinal inputs remain open;
+convergence to $\Xi$. Proposition~\ref{prop:v142-ground-zero} below
+adds one coarse complete-ground local enclosure at $\lambda=4$;
+high-accuracy discrepancy transfer and cofinal convergence remain open.
 G2 and RH remain open. No new window is computed.
+
+
+\subsection*{One local zero of the complete ground transform at $\lambda=4$}
+
+The finite-compression semantic lock does not itself locate complete-ground
+zeros. The following transfer uses the complete even-sector spectral
+separation and the energy of an exact archived trial. No new window or
+finite eigenvector is computed.
+
+\begin{lemma}[Energy control of a ground projection]
+\label{lem:v142-energy-projection}
+Let $W\succeq0$ be self-adjoint on a real Hilbert space of functions in
+$L^2([-a,a])$, with a simple normalized ground $u$. Suppose an invariant
+closed subspace contains $u$ and its remaining spectrum lies in
+$[b,\infty)$, where $b>0$. For a real unit trial $f$ in that subspace and
+in the form domain, put $\rho=q_W[f]<b$, $h=P_u f$, and
+$\eta=\sqrt{\rho/b}$. Then $h\ne0$ and
+\[
+ \norm{f-h}_2\le\eta.
+\]
+For the nonunitary Fourier transform and every real $t$,
+\begin{equation}\label{eq:v142-transform-budget}
+ |\widehat f(t)-\widehat h(t)|\le\sqrt{2a}\,\eta,
+ \qquad
+ |\widehat f'(t)-\widehat h'(t)|\le\sqrt{2a^3/3}\,\eta.
+\end{equation}
+If both functions are even, opposite endpoint signs for $\widehat h$
+and a strictly positive derivative throughout an interval prove a
+unique simple zero there, also a zero of $\widehat u$.
+\end{lemma}
+\begin{proof}
+The spectral theorem and nonnegativity give
+$q_W[f]\ge b\norm{(I-P_u)f}_2^2$. Since $\eta<1$, the orthogonal
+projection $h$ is nonzero. Cauchy--Schwarz applied to $e^{-itx}$ and
+$xe^{-itx}$ gives \eqref{eq:v142-transform-budget}. Compact support
+justifies differentiation and makes the transforms entire. Reality
+and evenness make them real on the real axis. The intermediate value
+theorem and strict monotonicity give the asserted unique zero, whose
+nonzero derivative makes it simple. Finally $h$ is a nonzero scalar
+multiple of $u$. This comparison uses $h=P_u f$, not a separately
+renormalized approximation to $u$; no normalization error is omitted.
+\end{proof}
+
+\begin{proposition}[A complete-ground local zero near the first zeta ordinate]
+\label{prop:v142-ground-zero}
+Let $\gamma_1$ be the first positive ordinate of a Riemann zeta zero,
+and let $\xi_4$ be the complete ground of
+Corollary~\ref{cor:v140-real-zeros}. Then $\widehat\xi_4$ has exactly
+one zero in the real interval
+\[
+ I=(\gamma_1-1/10,\gamma_1+1/10),
+ \qquad \gamma_1=14.13472514173469\ldots,
+\]
+and that zero is simple. This is a local statement: it does not order
+all earlier zeros, determine the sign of the discrepancy, identify
+the zero with $\gamma_1$, or establish convergence to Riemann's $\Xi$.
+\end{proposition}
+\begin{proof}[Complete separation and two-precision interval gates]
+Use the complete even-sector data of
+Proposition~\ref{prop:v140-ground4} without changing the physical window,
+the head cut $16$, the exact trial support $4096$, or the archived
+complete residual bounds. Apply Lemma~\ref{lem:v140-shifted-schur} with
+\[
+ \kappa=62629/100000,\quad \delta=1.7940\cdot10^{-8},
+ \quad b=10^{-67}.
+\]
+At both $1024$ and $1280$ bits, the $17$-dimensional lower matrix
+$L_b$ has signed LDL pivots
+\[
+ \underbrace{+\,,\ldots,\,+}_{15},\ -\,,\ +.
+\]
+Its positive subspace has dimension $16$. The exact even trial below
+$b$ supplies a strictly negative direction of the complete shifted
+form, while $T-bI\succ0$. Square completion and compact resolvent,
+as in Proposition~\ref{prop:v140-ground4}, show that precisely one
+complete even eigenvalue is below $b$ and none equals $b$.
+Thus every even vector orthogonal to the ground has spectral support
+strictly above $10^{-67}$. This is an even-sector separator, not an
+improved bound for the first excited eigenvalue across both parities.
+
+Take the same real trial column $G_{\rm ev}e_{16}$, divided by its
+ordinary norm, and center it on $[-\log4,\log4]$. Its complete
+Rayleigh quotient is
+\[
+ 2.45361754930\cdot10^{-75}<\rho<2.45361754931\cdot10^{-75}.
+\]
+With $L=2\log4$, Lemma~\ref{lem:v142-energy-projection} gives the
+following outward bounds for $h=P_{\xi_4}f$:
+\begin{align*}
+ \norm{f-h}_2&<1.566403\cdot10^{-4},\\
+ E_0=\sqrt L\sqrt{\rho/b}&<0.000260824,\\
+ E_1=\sqrt{L^3/12}\sqrt{\rho/b}&<0.000208757.
+\end{align*}
+All $4097$ exact trial coefficients are retained in
+\eqref{eq:v141-transform}, with its correct centering convention.
+Interval evaluation at Arb enclosures of $\gamma_1\pm1/10$ gives
+\[
+ \widehat f(\gamma_1-1/10)+E_0<-0.00006731,
+ \qquad
+ \widehat f(\gamma_1+1/10)-E_0>0.00003349.
+\]
+The differentiated formula, evaluated on eight covering subintervals
+of length $1/40$, gives
+\[
+ \widehat f'(t)-E_1>0.0016\quad(t\in\overline I).
+\]
+These three strict inequalities transfer to $\widehat h$ and prove
+the result. Multiplication by the unitary Fourier factor or by the
+nonzero ground-projection scalar preserves the zero and its simplicity.
+
+Both precision runs reconstruct the exact dyadic trial and ordinary
+Grams. The inherited even residual enclosures at $768/896$ bits
+include every row beyond $J=65536$; their small complete Schur gate
+is replayed, but their full assemblies are not recomputed.
+A second implementation checks the shifted negative index with
+principal determinants and the transform with termwise centered
+cosine integrals, including derivative signs on $32$ subintervals.
+Saved decimal intervals are reparsed to check that serialization
+preserves all gates. Scripts, input hashes and reports are in
+\texttt{evidence/v142/}. This implementation cross-check is not an
+external audit.
+\end{proof}
+
+\paragraph{What had to change, and what remains open.}
+Using the old global separator $10^{-73}$ in the same energy comparison
+would give $E_0\simeq0.260823$, too large to certify either endpoint
+sign. Restricting the comparison to the invariant even sector permits
+$10^{-67}$ and reduces this error bound by a factor of $1000$.
+The obstruction was the coarse separation bound, not a missing zero
+of the complete ground transform. The resulting $0.1$ enclosure
+still does not transfer the minute CCM finite-compression discrepancies.
+A sharper energy or residual-to-transform estimate would be needed
+for that task. Cofinal convergence, G2 and RH remain open.
 
 
 \subsection*{What the present diagonal majorant costs as the window grows}
@@ -8474,15 +8660,23 @@ Use Proposition~\ref{prop:v119-prime-scale}, which proves
 $\|\mathsf T_{{\rm pr},\lambda}\|/\lambda\to1$, for the limit.
 \end{proof}
 
-With $a=\log\lambda$, this exponential-in-$\lambda$ cutoff belongs to
-the doubly exponential family in the support half-width. Zhu's
-pointwise-envelope obstruction~\cite[Section 14]{Zhu2026Windows}
-has that shape, for a different certificate class. Groskin
-\cite{Groskin2026} quantifies the archimedean integral-cutoff cost
-for finite Weil matrices and gives a cutoff-free interval factorization.
-His integral cutoff is not the Fourier-mode cutoff $N$ here. These
-comparisons provide context, not a universal obstruction to every
-signed estimate.
+% NS-17: cutoff_cost_cite_insert.tex
+The doubly exponential shape of \eqref{eq:v125-cutoff-cost}, namely
+$N\sim\exp(e^{a})$ in the half-width $a=\log\lambda$, is that of a
+published family: Zhu~\cite{Zhu2026} shows that any one-stroke
+certificate must resolve frequencies up to $2\pi e^{A_L}$ with
+$A_L\sim4e^{L}$ in the half-width $L$, drawing the same conclusion that
+the positivity route cannot reach RH unassisted, and
+Groskin~\cite{Groskin2026} gives the corresponding brute-cutoff cost
+for the Connes--van Suijlekom truncations (an archimedean cutoff of
+order $10^{63}$ to resolve a spectral scale $10^{-59}$ at prime cutoff
+$c=100$), resolved there instead by a cutoff-free interval $LDL^{T}$
+factorization, the factorization technique used here.
+The objects differ: Zhu bounds the frequency resolution of a
+one-stroke certificate, Groskin the archimedean cutoff of a Galerkin
+truncation, and the proposition above the remote cutoff of one specific
+scalar majorant; the proposition is placed in that family and is not
+presented as new.
 
 For $c=10^{-8}$, freshly evaluating the physical weighted prime bound
 and the parity constants at each window gives the following smallest
@@ -13525,6 +13719,36 @@ a bound on a finite compression alone, or an incomplete transport
 estimate does not meet this proposition. The implication isolates the
 strength of the missing estimate; it does not establish that estimate.
 
+% NS-17: determinacy_insert.tex (qualified integration)
+The gap isolated by Proposition~\ref{prop:v121-cofinal-rh} can be
+viewed as a continuation and identification problem. In the screw-function
+realization of Suzuki~\cite{Suzuki2026}, let $g$ be the Weil screw
+function, $a=\log\lambda$, and $\lambda_a=\inf\sigma(A_a)$ as in
+\eqref{eq:g2-monotone}. A certified window
+$\mathsf W_\lambda\succeq0$ gives $\lambda_a\ge0$ and the associated
+local positive kernel. The continuation theory of
+Kre\u{\i}n--Langer~\cite{KreinLanger2014} distinguishes the existence of
+positive extensions of local data from their uniqueness and from the
+identification of a prescribed extension. Here the prescribed global
+function is the arithmetic function $g$; Suzuki's global screw-function
+criterion identifies its positivity with RH. A local certificate does
+not establish that global identification. In particular we do not infer
+that RH is equivalent to uniqueness of an extension of one fixed-window
+kernel, or that uniqueness alone identifies the extension with $g$.
+Any determinacy route must state and prove that additional identification.
+
+Truncated moment problems and the Toeplitz--Hankel determinant theory
+of Basor--Ehrhardt~\cite{BasorEhrhardt2002} provide a useful comparison,
+not a further positivity theorem for this operator. The Fourier-basis
+split in \texttt{evidence/diag\_circle\_split/} includes divided-difference
+commutator terms; it is not an identification with the standard
+single-symbol matrices $T(\phi)\pm H(\phi)$ covered by that reference.
+Those numerical comparisons remain diagnostics. The cofinal estimate in
+Proposition~\ref{prop:v121-cofinal-rh} is still a sufficient arithmetic
+input of RH strength, not a consequence of extension terminology or a
+finite list of positive sections. No G2 gap or RH claim follows.
+
+
 
 
 Proposition~\ref{prop:v112-schur-angle} isolates an inverse-weighted
@@ -13644,7 +13868,9 @@ certified direction and the whole complementary bound. Thus
 $\mathsf W_4\succeq0$ exactly at this window.
 Proposition~\ref{prop:v140-ground4} additionally proves its simple
 even ground, and Corollary~\ref{cor:v140-real-zeros} gives the
-real-zero ground transform. The primary
+real-zero ground transform. Proposition~\ref{prop:v142-ground-zero}
+locates one simple complete-ground zero within $1/10$ of $\gamma_1$,
+without identifying it with a Riemann zero. The primary
 next target is the cofinal ordinary-error estimate, rather than a
 longer finite list of certified windows.
 
@@ -13736,6 +13962,38 @@ neither a second-moment estimate nor a renamed one-negative-square
 claim supplies it. The cofinal signed inequality and the odd sector
 remain open.
 
+% NS-17: no_prior_art_note.tex
+For four of these closures the recorded search of the arXiv and journal literature
+as of 2026-09-21 found no specific published prior art: the failure of
+norm contraction (Proposition~\ref{prop:v120-norm-counterexample}), the
+Schatten and Hilbert--Schmidt no-go
+(Propositions~\ref{prop:v120-not-schatten} and~\ref{prop:v132-schatten}),
+the failure of reciprocal-band approximate commutation
+(Proposition~\ref{prop:v133-noncommute}), and the unconditional
+divergence of the scalar signed-primitive budget
+(Corollary~\ref{cor:v137-scalar-no-go}); the cutoff cost of
+Proposition~\ref{prop:v125-cutoff-cost}, by contrast, belongs to a
+published family and is cited as such there.
+
+\paragraph{Diagnostic concentration geometry.}
+The validated-symbol experiments in
+\nolinkurl{evidence/diag_true_symbol/} concern finite-compression ground
+vectors and midpoint quadrature, not certified complete-ground densities.
+At $\lambda=3,4$ they place approximately half the Fourier mass on
+$\{\beta_a<0\}$, with negative and positive level energies of about
+$\mp0.090$ and $\mp0.226$. The quadrature resolves their cancellation
+only to about $10^{-16}$; the much smaller $10^{-38}$ and $10^{-75}$
+scales are the separately computed finite Rayleigh values.
+The plotted mass beyond $\xi\simeq20$ is negligible at the diagnostic
+resolution, not proved zero. In lattice units $u=\xi L/(2\pi)$, the
+observed alternating symbol train and its relation to the Chebyshev
+remainder $\psi(\lambda^2)-\lambda^2$, and the ground's outward spread
+with its first nearby zero at $u\simeq\gamma_1L/(2\pi)$, are diagnostic
+context for a future signed concentration estimate. They supply no
+bound on the source-orthogonal complement and trigger no new experiment
+here.
+
+
 The continuum endpoint is now settled by
 Theorem~\ref{thm:v118-eigen-endpoint-zero}: every complete eigenfunction
 has continuous zero physical trace. Hence a nonzero endpoint comparison
@@ -13780,6 +14038,17 @@ proved or its scope narrowed to the results that are already supported.
 
 \appendix
 \section{Reproducible finite checks}\label{app:numerics}
+
+\subsection*{One local complete-ground zero (v1.42)}
+The directory \texttt{evidence/v142/} contains the energy-projection
+proof, the $1024/1280$-bit even-separator and root gates, dependency
+hashes, and a second implementation using principal determinants and
+termwise cosine integrals. All $4097$ exact trial coefficients are
+retained. The original complete residual bounds remain inherited
+inputs; only their small final gates are replayed. The root interval
+is $(\gamma_1-1/10,\gamma_1+1/10)$. No earlier-zero enumeration,
+discrepancy sign, high-accuracy CCM transfer, or cofinal conclusion
+is claimed. This pass has no new external audit.
 
 \subsection*{Complete $\lambda=4$ ground ordering and real zeros (v1.40)}
 The directory \texttt{evidence/v140/} contains the shifted-resolvent
@@ -14598,7 +14867,7 @@ its small negative values at larger windows are unresolved numerical
 roundoff, not negative Weil directions. The analytic arguments for
 weighted compactness, non-Schatten behavior, fixed-window norm decay
 and ordinary-error scaling do not rely on these computations.
-The primary-source comparison with \cite{Zhu2026Windows} is contextual;
+The primary-source comparison with \cite{Zhu2026} is contextual;
 no external certificate or conjectured decay law is imported.
 
 \subsection*{Structured low-mode inverse bounds and their scope}
@@ -15136,13 +15405,6 @@ A. Connes, C. Consani, and H. Moscovici,
 \emph{Zeta Spectral Triples},
 arXiv:2511.22755 (2025).
 
-\bibitem{Groskin2026}
-A. Groskin,
-\emph{A finite Guinand--Weil dictionary and archimedean tail order
-for the truncated Weil quadratic form},
-arXiv:2607.02828v1 (2026).
-\url{https://arxiv.org/abs/2607.02828v1}.
-
 \bibitem{ConnesVanSuijlekom2025}
 A. Connes and W. D. van Suijlekom,
 \emph{Quadratic Forms, Real Zeros and Echoes of the Spectral Action},
@@ -15170,6 +15432,31 @@ C. R. Math. Acad. Sci. Paris 352 (2014), 229--234.
 M. Suzuki,
 \emph{Weil's quadratic form via the screw function},
 arXiv:2606.09096v2 (2026).
+
+% NS-17: bib_inserts.tex
+\bibitem{Groskin2026}
+A. Groskin,
+\emph{A finite Guinand--Weil dictionary and archimedean tail order for the
+truncated Weil quadratic form},
+arXiv:2607.02828v3 (2026).
+\url{https://arxiv.org/abs/2607.02828v3}.
+
+\bibitem{KreinLanger2014}
+M. G. Kre\u{\i}n and H. Langer,
+\emph{Continuation of Hermitian positive definite functions and related
+questions},
+Integral Equations Operator Theory 78 (2014), 1--69.
+\url{https://doi.org/10.1007/s00020-013-2091-z}.
+
+\bibitem{BasorEhrhardt2002}
+E. L. Basor and T. Ehrhardt,
+\emph{Asymptotic formulas for the determinants of symmetric Toeplitz plus
+Hankel matrices},
+in: A. B\"ottcher, I. Gohberg, and P. Junghanns (eds.),
+\emph{Toeplitz Matrices and Singular Integral Equations},
+Operator Theory: Advances and Applications, Birkh\"auser, Basel, 2002, 61--90;
+arXiv:math/0202078.
+\url{https://doi.org/10.1007/978-3-0348-8199-9_5}.
 
 \bibitem{ConnesConsani2023}
 A. Connes and C. Consani,
@@ -15240,12 +15527,6 @@ arXiv:2401.18033v2 (2024),
 NIST Digital Library of Mathematical Functions, Section~27.12,
 Asymptotic Formulas: Primes, prime number theorem and classical error
 estimates. \url{https://dlmf.nist.gov/27.12}.
-
-\bibitem{Zhu2026Windows}
-X. Zhu, \emph{Weil positivity in compact windows: a finite reduction,
-certified two-sided bounds, and a Landau--Widom decay law},
-arXiv:2608.24827v2 (September 2, 2026).
-\url{https://arxiv.org/abs/2608.24827v2}.
 
 \bibitem{FrankSeiringer2008}
 R. L. Frank and R. Seiringer,

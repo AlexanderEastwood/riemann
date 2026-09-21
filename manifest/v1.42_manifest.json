@@ -1,0 +1,114 @@
+{
+ "manuscript_revision": "v1.42",
+ "base_commit": "f87147b6326d60f43a4645256b3f1783ab6b0e3c",
+ "files": [
+  {
+   "path": "evidence/v142/README.md",
+   "size_bytes": 3346,
+   "sha256": "9e399f44f6d1ab715344632dbbbd160dd1a6bb91ca3f260c2908452ea6af00a0"
+  },
+  {
+   "path": "evidence/v142/build_report.json",
+   "size_bytes": 662,
+   "sha256": "638856f1ec846007225f8cf8663557f37cbf4be54be037f643647c71818fa44b"
+  },
+  {
+   "path": "evidence/v142/build_report_ns17.json",
+   "size_bytes": 492,
+   "sha256": "309f6e3863760e19a3e070927ea64546ff759fc32f6ea9c6253c194b5edb9eb9"
+  },
+  {
+   "path": "evidence/v142/certify_ground_zero.py",
+   "size_bytes": 8212,
+   "sha256": "8e795e9fe97780e8a19a039300bbc92ffdc133fa1c61b03dfdeccf13655f0de2"
+  },
+  {
+   "path": "evidence/v142/check_independent.py",
+   "size_bytes": 6464,
+   "sha256": "a215dd6d519baf5eef1007b3103fa0a01b6782f9cd6e6383149cda9e6e371ea1"
+  },
+  {
+   "path": "evidence/v142/ground_zero_b1024.json",
+   "size_bytes": 13800,
+   "sha256": "e136e7c2297b5f22053a565edb062b2e14d2868be74c05e5a2fccee55d431325"
+  },
+  {
+   "path": "evidence/v142/ground_zero_b1280.json",
+   "size_bytes": 13800,
+   "sha256": "6e3b78f2e08e597c4c161faa2e28a69af6815a1f733128f7d86454e83e606fd8"
+  },
+  {
+   "path": "evidence/v142/independent_checks.json",
+   "size_bytes": 10694,
+   "sha256": "2e7945a95afe47db0e7b87efffcd68490784744a100e05e222496056c228a0c7"
+  },
+  {
+   "path": "evidence/v142/integration_checks.json",
+   "size_bytes": 1963,
+   "sha256": "61bad33338496e0d731c8a2c45d307429ab1335e22e1310c7c4678fc7fb86fac"
+  },
+  {
+   "path": "evidence/v142/new_section.tex",
+   "size_bytes": 6108,
+   "sha256": "8c8559689e385502c7a0846248e34c0e6d86a0e2539335ea4203d40ad315f340"
+  },
+  {
+   "path": "evidence/v142/ns17_inserts/bib_inserts.tex",
+   "size_bytes": 869,
+   "sha256": "3278ed7b9983a1677a0a868ab668a5d55627309f5bf6d7ce27186b1b72a514b3"
+  },
+  {
+   "path": "evidence/v142/ns17_inserts/cutoff_cost_cite_insert.tex",
+   "size_bytes": 1006,
+   "sha256": "200d18762cc2dc67f8d1531695b126a327dfb9171bfdcd1b57712c30c22563c8"
+  },
+  {
+   "path": "evidence/v142/ns17_inserts/determinacy_insert.tex",
+   "size_bytes": 1779,
+   "sha256": "afd14fea1ab566acc890c02fcd951a4e0fa81a237a523aa2e5f3493ae11e677b"
+  },
+  {
+   "path": "evidence/v142/ns17_inserts/no_prior_art_note.tex",
+   "size_bytes": 676,
+   "sha256": "70e47902d9a7192b86023eb1d7368dcaaa9fa24d8216570a30d9db639d51e965"
+  },
+  {
+   "path": "evidence/v142/ns17_inserts/window_comparison_insert.tex",
+   "size_bytes": 3691,
+   "sha256": "dbff650037e09b53e6cdc931dc71713489594b11d8ab4e100b80f3311fb6ff7f"
+  },
+  {
+   "path": "evidence/v142/ns17_integration.json",
+   "size_bytes": 2327,
+   "sha256": "bf8ffcb957ddd72f225fbe2b69a1e50e3b5aeec6d7851012d8c3c41c820f543a"
+  },
+  {
+   "path": "evidence/v142/requirements.txt",
+   "size_bytes": 20,
+   "sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d"
+  },
+  {
+   "path": "evidence/v142/research-report-2026-09-21-v1.html",
+   "size_bytes": 6570,
+   "sha256": "c7f7688a04e68b2b9227f9a6eb7f4f7d38d8b491842a6c056779366ecdf4c0ba"
+  },
+  {
+   "path": "evidence/v142/research-report-2026-09-21-v2.html",
+   "size_bytes": 6707,
+   "sha256": "e7dae631196d5b55598d6bd08a9c2c7cf3125d2414bd7dd610b0bc611a440197"
+  },
+  {
+   "path": "evidence/v142/research-report-2026-09-21-v3.html",
+   "size_bytes": 3280,
+   "sha256": "1bf499e3f38ac95af580fad8b87c1bbe5c13de83aaa9c2e9dd521e893efe7c15"
+  },
+  {
+   "path": "evidence/v142/scope_review.md",
+   "size_bytes": 3482,
+   "sha256": "a5c771bbf8390ec70e4e49966dd392087d368c3e06603bbe7936251accd0910b"
+  }
+ ],
+ "file_count": 21,
+ "total_bytes": 95948,
+ "note": "NS-18 (initially NS-17) complete lambda=4 local simple zero within 0.1 of gamma_1; concurrent main preserved; exact archived trial and inherited complete tail bounds; no new windows; G2/RH open."
+}

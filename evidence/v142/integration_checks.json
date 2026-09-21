@@ -1,0 +1,51 @@
+{
+  "incoming_main": "0f8cb16",
+  "claim_commit": "2e5364b",
+  "original_provisional_task": "NS-17",
+  "reconciled_task": "NS-18",
+  "incoming_evidence_byte_for_byte_preserved": [
+    {
+      "path": "evidence/diag_circle_split/results.md",
+      "sha256": "59cf1e23ed49904e1cfb6bdbff0d1f2d8b92a40e2e5a31fde0f5e3054f712eb6"
+    },
+    {
+      "path": "evidence/diag_true_symbol/README.md",
+      "sha256": "983516853488c210ff24743b3978c9ec6980a696ad23425dc3414cb806d1ad0e"
+    },
+    {
+      "path": "evidence/diag_true_symbol/beta_check2.py",
+      "sha256": "7a173e1d465f5b13b517ab5ade9d71f9970b186a9726d171a7bb738a14a7707e"
+    },
+    {
+      "path": "evidence/diag_true_symbol/beta_true.py",
+      "sha256": "7e0990bb585eed25dd7a95b36f44c8903fa052966b53360dd9f8dc4e6c0ec4c0"
+    },
+    {
+      "path": "evidence/diag_true_symbol/ground_l3_N120.json",
+      "sha256": "07ef234a7c0fbcbe36ff90cdcc23eff476a1f1013db577b565593779e9517895"
+    },
+    {
+      "path": "evidence/diag_true_symbol/ground_true.py",
+      "sha256": "fd03b3e6d38cb851f447e81001ada8f27495e986b4d7c95b2fb3371dc2f64ffa"
+    },
+    {
+      "path": "evidence/diag_true_symbol/levels_l4.py",
+      "sha256": "cd0abe667a329cd22005b31a9eeb0eae222639d84029edc9bbd0cafc0b562024"
+    },
+    {
+      "path": "evidence/diag_true_symbol/levels_true.py",
+      "sha256": "e2ec5391e2765211ffa733bc28427c23e239ba3284411dcacde767d57de3d405"
+    },
+    {
+      "path": "evidence/diag_true_symbol/results.md",
+      "sha256": "ee1567c0871f4a3113780a2a4429c9f423fc9bf5be59ce644ca6a0db581395b2"
+    },
+    {
+      "path": "evidence/diag_true_symbol/true_scan.py",
+      "sha256": "36e6917d71249520d191e7106f2d717e32b9d3dd2d862b36f5ee63714d91bb50"
+    }
+  ],
+  "built_manuscript_source_unchanged": true,
+  "all_mathematical_verifier_files_unchanged": true,
+  "scope": "Board-ID and source-positioning correction; diagnostic work retained as diagnostic. No new mathematical computation or remote publication."
+}

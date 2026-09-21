@@ -27,8 +27,11 @@ existing lambda=3, N=120 finite compression, with 768/1024-bit replay.
 The earlier NS-14 sinc-lattice conclusion is withdrawn (missing centering
 phase); the broader CCM reproduction remains a diagnostic. The numerical
 zero benchmark cannot test a common positive matrix scale or identity shift.
-Complete-ground zero transfer, G2 and RH remain open; NS-1 retains two OPEN
-evidence groups.
+Version 1.42 adds a unique simple complete-ground local zero at lambda=4
+within 0.1 of gamma_1, using an even-sector separator 1e-67 and energy
+projection bounds. This is not the global spectral gap, a zero enumeration,
+a discrepancy sign, or a high-accuracy CCM transfer. Cofinal convergence,
+G2 and RH remain open; NS-1 retains two OPEN evidence groups.
 
 ---
 

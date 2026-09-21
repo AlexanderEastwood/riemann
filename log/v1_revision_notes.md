@@ -1,3 +1,24 @@
+# v1.42 — NS-17 integration and PR preparation, September 21, 2026
+
+Rebased the local result onto origin/main at 0f8cb16, preserving concurrent diagnostics. All five requested insert groups are integrated at their header anchors, with previous positioning prose consolidated. Groskin is updated to v3; KreinLanger2014 and BasorEhrhardt2002 are present; all Zhu citations use one Zhu2026 bibitem. NS-6/NS-17 complete in this version. The continuation paragraph explicitly avoids inferring global arithmetic identification from local extension uniqueness, and the matrix comparison does not falsely identify divided-difference commutators with standard one-symbol T±H. Original draft files are unchanged; integrated variants and source hashes are archived. Added the user's symbol context as a finite-compression midpoint diagnostic, with numerical zeros beyond the plotting scale not interpreted as exact absence of mass.
+
+Build: 218 pages, 0 undefined/duplicate references, 0 overfull boxes. The 1024/1280-bit coarse NS-18 certificate is unchanged; sign/factor-10 discrepancy sharpening is now in progress. G2 and RH remain open; both NS-1 evidence groups remain OPEN.
+
+---
+
+# Version 1.42 — September 21, 2026
+
+- NS-18: certified a unique simple local zero of the complete lambda=4 ground transform in (gamma_1-0.1, gamma_1+0.1). No earlier-zero enumeration or discrepancy sign is asserted.
+- Reused the complete even Schur data with separator 1e-67, verified at 1024/1280 bits. The old global separator 1e-73 gives a transform-error bound too large for the same endpoint test. The new threshold is even-sector separation, not a global spectral gap.
+- Proved the spectral-energy projection estimate and applied it to the same exact support-4096 trial. Compared the trial with its nonzero orthogonal ground projection; no unaccounted normalization change. The inherited infinite-tail bounds remain complete and the small prior gates are replayed; full old residual assemblies are not rerun.
+- Verified endpoint signs and derivative positivity on eight intervals at both precisions. A second implementation checks principal-determinant inertia, direct centered cosine integrals and derivative signs on 32 intervals. Saved intervals retain all sign gates after parsing. This is a same-agent implementation check, not an external audit.
+- No new windows, eigensolves, trial cutoffs or residual cutoffs. Tiny-discrepancy CCM transfer, cofinal convergence, G2 and RH remain open. NS-1 retains both OPEN historical evidence groups.
+
+Build: 217 pages, 0 undefined/duplicate references, 0 overfull boxes.
+Pyright: 0 errors and 0 warnings. Local branch; no publication is recorded.
+
+---
+
 # Version 1.41 — September 21, 2026
 
 - NS-2: reproduced CCM section 6 Figure 1 at the existing lambda=3, N=120 benchmark; eight local root discrepancies match the published rounded values. The first is approximately 1.582329697193127e-34.

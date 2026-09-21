@@ -1,3 +1,29 @@
+# v1.42 — NS-17 integration and PR preparation, September 21, 2026
+
+Rebased the local result onto origin/main at 0f8cb16, preserving concurrent diagnostics. All five requested insert groups are integrated at their header anchors, with previous positioning prose consolidated. Groskin is updated to v3; KreinLanger2014 and BasorEhrhardt2002 are present; all Zhu citations use one Zhu2026 bibitem. NS-6/NS-17 complete in this version. The continuation paragraph explicitly avoids inferring global arithmetic identification from local extension uniqueness, and the matrix comparison does not falsely identify divided-difference commutators with standard one-symbol T±H. Original draft files are unchanged; integrated variants and source hashes are archived. Added the user's symbol context as a finite-compression midpoint diagnostic, with numerical zeros beyond the plotting scale not interpreted as exact absence of mass.
+
+Build: 218 pages, 0 undefined/duplicate references, 0 overfull boxes. The 1024/1280-bit coarse NS-18 certificate is unchanged; sign/factor-10 discrepancy sharpening is now in progress. G2 and RH remain open; both NS-1 evidence groups remain OPEN.
+
+---
+
+# v1.42 — NS-18 complete-ground local zero, September 21, 2026
+
+**Requested experiment:** transfer a local zero near gamma_1 to the complete ground at the existing lambda=4 window, starting with the spectral/residual feasibility budget. Claimed at 2e5364b before research under the provisional ID NS-17; renamed NS-18 after concurrent main used NS-17 for documentation. The resulting certificate addresses that complete object; no finite-compression diagnostic is substituted.
+
+**What had to change:** applying the global separator 1e-73 directly gives nonunitary transform error about 0.260823, so the endpoint sign test fails. The same archived complete shifted-Schur comparison certifies an even-sector separator b=1e-67. Exactly even trial error has no odd component, so this separator suffices and reduces the transform budget by 1000. It is not the global spectral gap. This is a failure of the original bound, not the zero or the operator.
+
+**Proof:** with unit trial f and h=P_ground f, nonnegativity and even spectral separation give ||f-h||<=sqrt(q[f]/b). The projection is nonzero since q[f]<b, and is a scalar multiple of the complete ground. Comparing to this projection avoids an extra unit-normalization error. Transform/derivative error norms are sqrt(L) and sqrt(L^3/12), L=2log4. The exact frozen trial has q[f] about 2.45361754930714e-75, yielding errors below 0.000260824 and 0.000208757. Opposite endpoint signs at gamma_1±0.1 and derivative lower bound 0.0016 prove a unique simple local zero.
+
+**Complete inputs:** shifted lower inertia has one negative and 16 positive directions at b, and the exact trial supplies the required complete negative direction. T-b stays positive. Archived 768/896-bit even residual enclosures include all rows beyond J=65536; small complete gates are replayed. Full old residual assemblies are not rerun. No new window, finite eigensolve, support or remote cutoff was introduced. All 4097 trial coefficients retain their exact centering phase.
+
+**Verification:** new gates at1024/1280bits; second implementation with principal determinants and direct sinc integrals, including derivative positivity on32intervals; saved-interval and dependency-hash checks. This is same-agent cross-checking, not an external audit. New proof and evidence under evidence/v142/, with a separately versioned styled HTML report. Build217pages, zero undefined/duplicate references and overfull boxes; Pyright clean.
+
+**Scope:** one local real zero, not necessarily the first positive transform zero. No sign or tiny value of its discrepancy is determined. Complete zero enumeration, high-accuracy CCM transfer, cofinal Xi convergence, G2 and RH remain open. The two NS-1 missing evidence groups remain OPEN and are not dependencies of this result. This branch is local; concurrent main through 0f8cb16 is merged here, with its diagnostic artifacts preserved. No remote publication is recorded.
+
+**Next useful refinement:** retain the even separator while bounding the transform error directly in an energy/residual dual norm. That would test how much the global Cauchy-Schwarz projection bound loses, without computing another window. It is an open task, not a new claimed estimate.
+
+---
+
 # NS-1 — partial v1.31 original evidence recovery, September 21, 2026
 
 Recovered and committed the original 4,925-byte `g2_weighted_concentration_report.md` under `evidence/v131/`, with complete saved-text line coverage, provenance and a per-version manifest. The text was not regenerated from the manuscript. The original scripts, saved outputs and complete adversarial evidence remain unavailable: the saved 207,224,098-byte v1.34 cumulative archive returns HTTP 502, including through the native download helper. No substitute computations were made and no missing-evidence flag is cleared. NS-1 and both historical ledger groups remain OPEN. The manuscript revision remains v1.40; no mathematical claim or version bump is made. No G2 gap closed.

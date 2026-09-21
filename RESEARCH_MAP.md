@@ -44,6 +44,7 @@ graph LR
   simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
   stepb["CCM step (b): finite-compression zeros track zeta zeros (numerical)<br/><small>&#128193; evidence/diag_ns2_semantic_lock</small>"]
   semanticlock["CCM finite-compression semantic lock, lambda=3 N=120<br/><small>lem:v141-centering; prop:v141-ccm-lock</small><br/><small>&#128193; evidence/v141</small>"]
+  groundzero4["complete ground zero within 0.1 of gamma_1<br/><small>lem:v142-energy-projection; prop:v142-ground-zero</small><br/><small>&#128193; evidence/v142</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -83,6 +84,7 @@ graph LR
   w4 --> simpleeven4
   simpleeven4 --> stepb
   windows --> semanticlock
+  simpleeven4 --> groundzero4
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -106,9 +108,10 @@ graph LR
   click simpleeven4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v140/" "evidence: evidence/v140" _blank
   click stepb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_ns2_semantic_lock/" "evidence: evidence/diag_ns2_semantic_lock" _blank
   click semanticlock "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v141/" "evidence: evidence/v141" _blank
+  click groundzero4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v142/" "evidence: evidence/v142" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4 proved;
   classDef live fill:#90caf9,stroke:#0d47a1,color:#000;
   class concentration,circle,stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,color:#000;
@@ -123,7 +126,7 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 15 | established result |
+| `proved` | 16 | established result |
 | `live` | 3 | active candidate mechanism |
 | `closed` | 15 | proved insufficient or impossible |
 | `blocked` | 1 | attempted; obstruction found |
@@ -147,7 +150,8 @@ graph LR
       - [x] **W_4 >= 0 both sectors** — `prop:v126-full-window` · evidence: [`evidence/v126/`](evidence/v126/) · only positive result; evidence restored and verified
         - [x] **W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4** — CCM arXiv:2511.22755 Cor 3.7-3.8 write 'we cannot assert mu_lambda >= 0'; monotone in lambda; positioning statement
         - [x] **complete W_4: simple even ground; real-zero transform** — `prop:v140-ground4; cor:v140-real-zeros` · `result/ns5-ground-state` · evidence: [`evidence/v140/`](evidence/v140/) · NS-5 complete: mu0<2.454e-75, mu1>1e-73, 1024/1280-bit shifted inertia; CvS Thm6.1 applies; no Xi convergence or G2 claim
-          - [~] **CCM step (b): finite-compression zeros track zeta zeros (numerical)** — evidence: [`evidence/diag_ns2_semantic_lock/`](evidence/diag_ns2_semantic_lock/) · The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. Complete-ground transfer and cofinal Xi convergence remain open.
+          - [~] **CCM step (b): finite-compression zeros track zeta zeros (numerical)** — evidence: [`evidence/diag_ns2_semantic_lock/`](evidence/diag_ns2_semantic_lock/) · The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. v1.42 separately encloses one complete lambda=4 zero within 0.1 of gamma_1. High-accuracy discrepancy transfer and cofinal Xi convergence remain open.
+          - [x] **complete ground zero within 0.1 of gamma_1** — `lem:v142-energy-projection; prop:v142-ground-zero` · `codex/complete-ground-zero-transfer` · evidence: [`evidence/v142/`](evidence/v142/) · 1024/1280-bit complete even separator 1e-67 plus energy projection; unique simple local zero, no earlier-zero ordering, discrepancy sign or cofinal claim.
       - [x] **lambda=3** — `prop:v116-window-positive` · evidence: [`evidence/v124/g2_certificate/`](evidence/v124/g2_certificate/)
       - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete` · evidence: [`evidence/v126/`](evidence/v126/)
       - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement` · evidence: [`evidence/v126/`](evidence/v126/)

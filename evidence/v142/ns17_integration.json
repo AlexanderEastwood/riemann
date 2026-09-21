@@ -1,0 +1,42 @@
+{
+  "status": "PASS_FIVE_INSERTS_AT_SPECIFIED_ANCHORS",
+  "inserts": [
+    {
+      "source": "evidence/drafts/v141_inserts/window_comparison_insert.tex",
+      "source_sha256": "666d9ac73ee1c3b3b2d9e291f6c9e3c90ba7fd3f0d2a82fd333f549cb9ff6970",
+      "integrated": "evidence/v142/ns17_inserts/window_comparison_insert.tex",
+      "integrated_sha256": "dbff650037e09b53e6cdc931dc71713489594b11d8ab4e100b80f3311fb6ff7f"
+    },
+    {
+      "source": "evidence/drafts/v141_inserts/cutoff_cost_cite_insert.tex",
+      "source_sha256": "d37078e8839e0266d9419360ee829fee28299b2a3857776ecddbec423411f1c9",
+      "integrated": "evidence/v142/ns17_inserts/cutoff_cost_cite_insert.tex",
+      "integrated_sha256": "200d18762cc2dc67f8d1531695b126a327dfb9171bfdcd1b57712c30c22563c8"
+    },
+    {
+      "source": "evidence/drafts/v141_inserts/no_prior_art_note.tex",
+      "source_sha256": "91aabbf93840fda72949057e41f86766c299c0741ecf772e1a650f0bcc9ca6a4",
+      "integrated": "evidence/v142/ns17_inserts/no_prior_art_note.tex",
+      "integrated_sha256": "70e47902d9a7192b86023eb1d7368dcaaa9fa24d8216570a30d9db639d51e965"
+    },
+    {
+      "source": "evidence/drafts/v141_inserts/determinacy_insert.tex",
+      "source_sha256": "4222e20f491845915787a31a94b07ddf02d7a06894f5e3714788870e1a9202ac",
+      "integrated": "evidence/v142/ns17_inserts/determinacy_insert.tex",
+      "integrated_sha256": "afd14fea1ab566acc890c02fcd951a4e0fa81a237a523aa2e5f3493ae11e677b"
+    },
+    {
+      "source": "evidence/drafts/v141_inserts/bib_inserts.tex",
+      "source_sha256": "737b3d631a92c9d4b3f383be2b88ed31ea1e35ebb59b92caf75a9dc7422ea29e",
+      "integrated": "evidence/v142/ns17_inserts/bib_inserts.tex",
+      "integrated_sha256": "3278ed7b9983a1677a0a868ab668a5d55627309f5bf6d7ce27186b1b72a514b3"
+    }
+  ],
+  "qualifications": [
+    "Determinacy is a continuation/identification framework; no unsupported fixed-window uniqueness equivalence with RH.",
+    "The recorded matrix splitting includes divided-difference commutators; no false identification with standard single-symbol T plus/minus H.",
+    "Relative Schur margin is not an ordinary spectral gap; only LDL pivots are coordinate-dependent."
+  ],
+  "zhu_key": "Zhu2026",
+  "diagnostic_context": "Finite-compression midpoint data only, not a certificate or complete-ground density."
+}

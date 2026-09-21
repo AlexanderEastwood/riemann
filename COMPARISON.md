@@ -249,3 +249,16 @@ experiment or transfer zero locations to the complete ground. Thus no
 negative conclusion about CCM step (b) follows from the old diagnostic.
 See [the preserved report's correction](evidence/diag_ns14_zeros/results-v2.md).
 G2 and RH remain open.
+
+
+## Complete-ground local transfer (v1.42)
+
+The complete lambda=4 ground transform now has a certified unique simple
+zero in `(gamma_1-0.1, gamma_1+0.1)`; see [v1.42](evidence/v142/).
+The even-sector separator 1e-67 and the exact trial's complete energy
+bound its orthogonal ground-projection error. Endpoint signs and a
+positive derivative pass at 1024/1280 bits, with all old infinite-tail
+bounds retained. This is a coarse local enclosure. It does not determine
+the sign of the discrepancy or transfer the minute finite-compression
+values, and it does not order earlier zeros. Cofinal convergence, G2
+and RH remain open.
