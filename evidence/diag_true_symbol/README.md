@@ -9,7 +9,8 @@ one direction (§7, pencil.py; wminus_tail.py bounds the neglected tail), and th
 layer-cake constant η_a^op of prop:v131-concentration on the head, ~0.35 D_a and
 growing with the window (§8, layercake.py), and the overlap of the pencil directions
 with the certified lambda=3 source: the ground direction is the source, the rest of the
-deep block is admissible to ~1% (§9, source_overlap.py).
+deep block is admissible to ~1% (§9, source_overlap.py); the odd sector validated and
+its pencil, same block structure (§10, pencil_odd.py).
 Run from the repo root with .venv/bin/python; beta_true.py runs the validation
 when executed directly (~5 min); pencil.py takes cases as "lam,N,bits"
 arguments. cert.py holds the Arb-to-mpmath midpoint conversion the scripts share.

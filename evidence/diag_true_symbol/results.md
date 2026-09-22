@@ -373,3 +373,30 @@ eigenvalue; full ground 3.64e-38.
    λ=3 only (the certified source exists at no other window); at λ=4 the
    analogous statement would need the v126 normalized source. Nothing here is
    a bound.
+
+## 10. The odd sector (`pencil_odd.py` → `pencil_odd_output.txt`)
+
+Everything above is even-sector. The bounded-floor corollary needs both
+parity blocks, and `prop:v135-both-parities` says the same symbol `β_a`
+drives the odd form. Checked: with odd modes
+`e_n = √(2/L) sin(2πn x/L)`, `n ≥ 1`, the full-symbol grid quadrature
+reproduces `block(…,'odd',…)` to 2.3e-5 (λ=3) and 1.2e-4 (λ=4) on every
+head entry with `|W| > 1e-2`, with the same `(−1)^n` basis sign as the even
+sector and no high-frequency tail (odd transforms decay like `1/ξ²`, so
+`|Fe_n|²` is `O(ξ⁻⁴)`). The odd pencil, N=48:
+
+| | λ=3 even | λ=3 odd | λ=4 even | λ=4 odd |
+|--|--:|--:|--:|--:|
+| ν_0 | 4.7e-37 | 1.7e-33 | 2.9e-65 | 1.2e-61 |
+| ν_1 | 3.5e-30 | 5.0e-27 | 2.7e-58 | 4.1e-55 |
+| ν_2 | 4.7e-24 | 2.1e-21 | 5.2e-52 | 5.8e-49 |
+| e_k/ν_k over the deep block | 0.09–0.50 | 0.09–0.60 | 0.23–0.69 | 0.21–0.43 |
+| #ν < 1e-8 / 1e-16 / 1e-30 | 6 / 4 / 1 | 5 / 3 / 1 | 12 / 10 / 7 | 12 / 9 / 6 |
+
+**Reading.** The odd block is the even block shifted up by three to four
+decades (its ground is `1e-34` / `1e-61` against `1e-38` / `1e-75`,
+`levels_true.py`, `evidence/v138/`), with the same count of cancelled
+directions and the same 0.1–0.6 level energies per direction. There is no
+parity in which the deep block is absent, so nothing in §7–§9 is an
+even-sector artefact. The odd sector has no source constraint (the source is
+even), so all of its deep directions are admissible. Nothing here is a bound.
