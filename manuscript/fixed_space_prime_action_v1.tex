@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.52},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.53},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.52\\
+\large Complete working manuscript, version 1.53\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 22, 2026}
@@ -206,6 +206,19 @@ new witnesses; they do not recover the original evidence.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.53 proves a larger complete near-zero block, jointly with
+Astra-2 (NS-46). Fixed-range, increasingly close translates have dimension
+$2\lfloor\lambda^2/(40000\log\lambda)\rfloor+1$, full residual at most
+$C\exp(-\lambda^2/2000)$, and explicit even/odd dimensions. The finite
+Gram lower bound deteriorates with the spacing and is retained throughout.
+This strengthens the necessary removal rank for a uniform or polynomial
+positive-gap strategy
+to order $\lambda^2/\log\lambda$. Neither the energy signs nor a lower
+bound on the remaining complete complement are supplied. The threshold
+and constant are analytic existence statements, not certified finite-window
+numbers. Section~\ref{sec:v153-fine-block} contains the full proof.
+No new numerical window, tail metric, G2 or RH claim.
+
 Version 1.52 adds fresh certificates for failure of the existing
 $\lambda=5$ stipulated $10^{-8}D$ tail comparison and the existing
 $N=25$ dyadic block-norm comparison, in both parities
@@ -6214,9 +6227,11 @@ It therefore suffices to prove asymptotic nonnegativity
 $q_\lambda|_{u_\lambda^\perp}\succeq-\eta_\lambda I$ with
 $\eta_\lambda\to0$ along an unbounded window sequence.  Strict
 complementary coercivity is unnecessary for this version of the
-reduction.  For a growing source block the required uniform
-$\norm{\mathsf W_\lambda P_\lambda}\to0$ remains a separate open
-input.  Neither complementary sign estimate is proved here.
+reduction.  For an arbitrary growing source block the required uniform
+$\norm{\mathsf W_\lambda P_\lambda}\to0$ must still be established.
+Proposition~\ref{prop:v135-growing-radical} and
+Corollary~\ref{ns46-a2-cor-large-block} prove it for their specified
+translate families. Neither complementary sign estimate is proved here.
 
 The missing sign cannot be concealed by removing the near-radical
 block.  Indeed, suppose a fixed unit compact test $f$ has
@@ -17433,6 +17448,335 @@ via monotonicity and the known source upper bound. Those must not be
 rebranded as weak new selection assumptions. Neither conclusion alone
 has been shown here to identify the Gaussian ground profile. The
 abstract countermodel establishes no arithmetic nonimplication.
+
+
+\section{Fine translated-radical blocks and the rank cost of positive coercivity (v1.53)}
+\label{sec:v153-fine-block}
+This section strengthens the existing near-zero multiplicity obstruction.
+It does not prove a lower bound for the complete Weil form. The change
+from v1.35 is essential: the translate centers now remain in a fixed
+physical interval and their spacing shrinks. This improves the complete
+boundary residual to an exponential in $-\lambda^2$, while the finite
+Gram is poorly conditioned. An elementary interpolation estimate pays
+that conditioning cost explicitly. A growing source block must therefore
+be assessed as a block, with its full Gram and operator residual.
+
+The resulting complete near-zero subspace has dimension asymptotic to
+$\lambda^2/(20000\log\lambda)$, in both parities together. It rules out
+a positive uniform or polynomial gap after removal of
+$o(\lambda^2/\log\lambda)$ directions. This is a failure of that positive
+coercivity objective, not a negative Weil direction. The weaker uniform
+negative-floor target remains open; its gap-free transfer was already
+proved in \ref{prop:v118-gap-free} and \ref{cor:v136-complement-floor}.
+No new numerical window, Fourier cutoff or tail metric is introduced.
+
+% NS-46 analytic proof draft. No numerical or cofinal sign claim.
+\subsection*{Finite fine-lattice Grams without an infinite-lattice assumption}
+
+\begin{lemma}[An elementary finite-arc Gram lower bound]
+\label{lem:ns46-finite-arc}
+Let $\phi\in L^2(\mathbb R)$ have unitary Fourier transform satisfying
+$|\widehat\phi(\xi)|^2\ge c_0>0$ on $[-r,r]$, with $r>0$.
+Let $m\ge2$, $\delta>0$ and $0<r\delta\le\pi/2$.
+The Gram matrix of the $m$ translates
+$\phi(\cdot-t_0-j\delta)$, $0\le j<m$, obeys
+\begin{equation}\label{eq:ns46-gram-bound}
+ \Gamma_{m,\delta}\succeq\gamma_{m,\delta}I,
+ \qquad
+ \gamma_{m,\delta}:=\frac{c_0r}{m}
+       \left(\frac{r\delta}{4\pi e}\right)^{2(m-1)}.
+\end{equation}
+No positive lower bound for an infinite-lattice Gram is assumed.
+The displayed bound is allowed to deteriorate with both $m$ and $\delta$.
+\end{lemma}
+\begin{proof}
+For coefficients $c_j$ put $P(z)=\sum_{j=0}^{m-1}c_jz^j$ and
+$\theta_0=r\delta$, $\ell=\theta_0/m$. The uncut physical norm is at least
+\[
+ \frac{c_0}{\delta}\int_{-\theta_0}^{\theta_0}
+                      |P(e^{i\theta})|^2\,d\theta.
+\]
+The sign of the phase and the common shift do not affect this inequality.
+Write $I_P$ for the integral. For each $0\le k<m$, the interval
+\[
+ B_k=[-\theta_0+2k\ell,-\theta_0+(2k+1)\ell]
+\]
+has length $\ell$, and lies inside the integration arc. Choose
+$\theta_k\in B_k$ with
+$|P(e^{i\theta_k})|\le\sqrt{I_P/\ell}$, which is possible by averaging.
+For $j\ne k$ the angles satisfy
+\[
+ |\theta_j-\theta_k|\ge |j-k|\ell,
+ \qquad |\theta_j-\theta_k|\le2\theta_0\le\pi.
+\]
+Thus, with $z_k=e^{i\theta_k}$,
+$|z_j-z_k|\ge(2\ell/\pi)|j-k|$.
+
+Lagrange interpolation at these distinct nodes is exact for $P$.
+On the full unit circle its numerator factors have modulus at most two,
+so
+\begin{align*}
+ |P(z)|
+ &\le\sqrt{I_P/\ell}
+   \sum_{k=0}^{m-1}
+   \frac{2^{m-1}}{(2\ell/\pi)^{m-1}k!(m-1-k)!}\\
+ &=\sqrt{I_P/\ell}\,
+   \frac{(2\pi/\ell)^{m-1}}{(m-1)!}.
+\end{align*}
+Parseval on the full circle bounds $\sum_j|c_j|^2$ by the square
+of this supremum. Therefore
+\[
+ I_P\ge\ell
+ \left((m-1)!\left(\frac{\ell}{2\pi}\right)^{m-1}\right)^2
+ \sum_j|c_j|^2.
+\]
+The elementary factorial bound
+$(m-1)!\ge((m-1)/e)^{m-1}$ and $(m-1)/m\ge1/2$ give
+\[
+ (m-1)!\left(\frac{r\delta}{2\pi m}\right)^{m-1}
+ \ge\left(\frac{r\delta}{4\pi e}\right)^{m-1}.
+\]
+Multiplying by $c_0/\delta$ proves the lemma, for complex coefficients
+as well as real ones. The result uses only a finite polynomial and a
+single fixed Fourier interval; it makes no assertion about the zeros
+of the transform on any infinite arithmetic progression.
+\end{proof}
+
+\paragraph{Application data for the actual source.}
+The Gaussian arithmetic radical in v1.35 is real, even, smooth and
+nonnegative, and not zero, as made explicit in v1.50. Its normalized
+version $\phi$ has $\widehat\phi(0)>0$. Continuity therefore supplies
+fixed $r,c_0>0$ as in the lemma. Their existence is analytic; no numerical
+value or certified effective threshold is asserted here.
+
+For $a=\log\lambda$ sufficiently large, take
+\[
+ J_a=\left\lfloor\frac{\lambda^2}{40000a}\right\rfloor,
+ \qquad m_a=2J_a+1,\qquad \delta_a=1/J_a,
+ \qquad t_{a,j}=j\delta_a\quad(-J_a\le j\le J_a).
+\]
+All centers are in the fixed interval $[-1,1]$.
+The lemma applies after a common shift to the indices $0,\ldots,m_a-1$.
+For sufficiently large $a$,
+\[
+ m_a\le\frac{\lambda^2}{10000a},\qquad
+ \log\left(\frac{4\pi e}{r\delta_a}\right)\le3a.
+\]
+Consequently its uncut Gram lower bound satisfies
+\begin{equation}\label{eq:ns46-gram-asymptotic}
+ \gamma_a\ge\frac{c_0r}{m_a}
+       \exp\left(-\frac{6\lambda^2}{10000}\right).
+\end{equation}
+This is a lower bound for the smallest ordinary Gram eigenvalue,
+not for a Weil eigenvalue. In particular the conditioning is explicitly
+paid for, not silently assumed uniform.
+
+
+% Astra-2 / NS-46: complete residual, cutoff loss, exact parity and rank.
+% Companion finite-arc Gram estimate is owned by the coordinator.
+\subsection*{Dense finite radical blocks: complete residual and rank accounting}
+\label{ns46-a2-sec-block}
+
+\paragraph{Scope and input.}
+All operators below are the complete physical $\mathsf W_{e^a}$,
+with the domain, both pole terms, all prime rows and fixed smooth
+cutoff $\chi_a$ of Proposition~\ref{prop:v135-growing-radical}.
+Write $\phi=h/\|h\|_2$ for the even Gaussian arithmetic radical.
+Choose fixed $r,c_0>0$ such that $|\widehat\phi(\xi)|^2\ge c_0$
+for $|\xi|\le r$; these exist because $\widehat\phi(0)>0$.
+Lemma~\ref{lem:ns46-finite-arc} supplies the following
+uncut Gram lower bound for $m\ge2$ equally spaced translates,
+spacing $d>0$, whenever $rd\le\pi/2$:
+\begin{equation}\label{ns46-a2-eq-arc-input}
+ K_m\succeq\gamma_m I,\qquad
+ \gamma_m=\frac{c_0r}{m}
+       \left(\frac{rd}{4\pi e}\right)^{2(m-1)}.
+\end{equation}
+The results here use this proved explicit bound as their input.
+No lower bound for an infinite lattice with shrinking spacing is
+being assumed. This is an analytic construction, not an interval
+computation or a new finite-window certificate.
+
+\begin{lemma}[Uniform complete tails for a fixed range of centers]
+\label{ns46-a2-lem-fixed-centers}
+Fix $T>0$. For $|t|\le T$, let
+$g_{a,t}=\chi_a\phi(\cdot-t)$ and
+$r_{a,t}=(1-\chi_a)\phi(\cdot-t)$. There is a constant $C_T$,
+independent of $a,t$, such that, for all sufficiently large $a$,
+\begin{align}
+ \|r_{a,t}\|_{H^1}
+  +\sup_x e^{2|x|}(|r_{a,t}(x)|+|r'_{a,t}(x)|)
+ &\le C_Te^{-c_Te^{2a}},\notag\\
+ \int_{|x|\ge a-1}|\phi(x-t)|^2\,dx
+ &\le C_T^2e^{-2c_Te^{2a}},
+ \quad c_T=\frac\pi4e^{-2(T+1)},
+ \label{ns46-a2-eq-tails}\\
+ \|\mathsf W_{e^a}g_{a,t}\|_2
+ &\le C_T\sqrt a\,e^{2a}e^{-c_Te^{2a}}.
+ \label{ns46-a2-eq-column-residual}
+\end{align}
+\end{lemma}
+\begin{proof}
+On the tail support $|x|\ge a-1$, one has
+$|x-t|\ge a-1-T$. Put $X=e^{2|x-t|}$, so
+$X\ge e^{2a-2(T+1)}$ and $e^{2|x|}\le e^{2T}X$.
+The derivative bounds \eqref{eq:v135-gaussian-tail} and the uniformly
+bounded derivatives of the fixed cutoff bound the weighted pointwise
+tails by $C_TXe^{-\pi X/2}\le C_Te^{-\pi X/4}$.
+Integrating the squared Gaussian bound after the substitution
+$X=e^{2|x-t|}$ proves the $H^1$ and full tail-mass estimates, with
+the same weaker exponent. Constants are uniform for all $|t|\le T$.
+
+Polarized radicality gives, distributionally on $I_a$,
+$\mathsf W_{e^a}g_{a,t}=-\mathcal W r_{a,t}$.
+The archimedean multiplier is bounded by $C(1+|\xi|)$, so its
+$L^2$ contribution is controlled by the $H^1$ tail. For $x\in I_a$,
+each of the two full prime sums is bounded by
+\[
+ C_Te^{-c_Te^{2a}}e^{2|x|}
+         \sum_{n\ge2}\frac{\Lambda(n)}{n^{5/2}}.
+\]
+This includes prime rows beyond $e^{2a}$; there is no finite-prime
+truncation of the residual. Both pole integrals are bounded by
+$C_Te^{-c_Te^{2a}}e^{|x|/2}$. Integration on $I_a$ gives
+\eqref{ns46-a2-eq-column-residual}. Each $g_{a,t}$ is smooth and
+compactly supported inside $I_a$, hence in the complete operator domain.
+\end{proof}
+
+\begin{proposition}[Gram loss and residual amplification]
+\label{ns46-a2-prop-transfer}
+Take any $m$ distinct centers in $[-T,T]$ whose uncut synthesis
+Gram satisfies $K\succeq\gamma I$, $\gamma>0$.
+Let $G$ synthesize the cutoff columns, $\Gamma=G^*G$, and
+$\tau_a=C_Te^{-c_Te^{2a}}$. If
+$m\tau_a^2\le\gamma/2$, then
+\begin{equation}\label{ns46-a2-eq-transfer}
+ \Gamma\succeq\gamma I/2,\qquad
+ \operatorname{rank}G=m,\qquad
+ \|\mathsf W_{e^a}P_G\|
+ \le \sqrt{2m/\gamma}\,
+         C_T\sqrt a\,e^{2a}e^{-c_Te^{2a}}.
+\end{equation}
+Here $P_G=G\Gamma^{-1}G^*$ is the ordinary orthogonal projection.
+\end{proposition}
+\begin{proof}
+The Gram loss is positive semidefinite and
+\[
+ \operatorname{tr}(K-\Gamma)
+ =\sum_j\int(1-\chi_a^2)|\phi(x-t_j)|^2\,dx
+ \le m\tau_a^2.
+\]
+The full tail mass in \eqref{ns46-a2-eq-tails} is essential here:
+one cannot replace $1-\chi_a^2$ by $(1-\chi_a)^2$ as an upper bound.
+Thus $\Gamma\succeq\gamma I/2$. Since $G\Gamma^{-1/2}$ is an
+isometry onto its range, the complete column residuals give
+\[
+ \|\mathsf W_{e^a}P_G\|
+ =\|\mathsf W_{e^a}G\Gamma^{-1/2}\|
+ \le\sqrt{2/\gamma}
+       \left(\sum_j\|\mathsf W_{e^a}g_{a,t_j}\|^2\right)^{1/2}.
+\]
+This proves the displayed bound without a midpoint inverse or a
+quadratic-value substitute for the operator residual.
+\end{proof}
+
+\begin{corollary}[A block of order $\lambda^2/\log\lambda$]
+\label{ns46-a2-cor-large-block}
+Put $\lambda=e^a$ and, for sufficiently large $a$, choose
+\[
+ J=\left\lfloor\frac{\lambda^2}{40000a}\right\rfloor,
+ \quad m=2J+1,\quad d=1/J,\quad t_j=j/J\quad(-J\le j\le J).
+\]
+Using \eqref{ns46-a2-eq-arc-input}, the cutoff synthesis has
+rank $m$ and its ordinary projection satisfies
+\begin{equation}\label{ns46-a2-eq-large-residual}
+ \|\mathsf W_{e^a}P_G\|\le\eta_a,
+ \qquad \eta_a=C\exp(-\lambda^2/2000).
+\end{equation}
+The even and odd parts have exact dimensions $J+1$ and $J$,
+and inherit the same residual bound. All constants and the eventual
+threshold are independent of $a$; no numerical threshold is certified.
+\end{corollary}
+\begin{proof}
+Use $T=1$. Then $c_T=\pi/(4e^4)>1/1000$.
+Absorbing the polynomial prefactor in
+\eqref{ns46-a2-eq-column-residual} gives a column residual at most
+$Ce^{-\lambda^2/1000}$, and the full tail norm has the same bound.
+For large $a$, $rd\le\pi/2$, $m\le\lambda^2/(10000a)$ and
+$\log(4\pi e/(rd))\le3a$. Hence
+\[
+ \gamma_m^{-1/2}\le C\sqrt m\,
+       \exp(3ma)\le C\sqrt m\exp(3\lambda^2/10000).
+\]
+In particular $m\tau_a^2/\gamma_m\to0$, so
+Proposition~\ref{ns46-a2-prop-transfer} applies. Its resulting
+bound is at most
+$Cm\exp(-7\lambda^2/10000)\le C\exp(-\lambda^2/2000)$.
+
+Reflection sends the $j$th cutoff column to the $-j$th column.
+The coefficient embeddings consisting of the central column and
+$(e_j+e_{-j})/\sqrt2$, or of $(e_j-e_{-j})/\sqrt2$, are
+isometries of dimensions $J+1$ and $J$. The full Gram lower bound
+makes both restricted syntheses injective. Their images are exactly
+the two parity parts and their projections lie under $P_G$.
+\end{proof}
+
+\paragraph{Exact source accounting.}
+An even source imposes no condition on the $J$ odd columns. In the
+even block its orthogonality condition removes at most one dimension:
+the resulting dimension is $J$ if its projection into that block is
+nonzero, and $J+1$ otherwise. The lower dimension $J$ is enough for
+the conclusion below; no identification of the cutoff column with
+the actual source or unproved nonzero-overlap claim is needed.
+
+\begin{corollary}[Necessary removal rank for positive coercivity]
+\label{ns46-a2-cor-rank}
+For every physical subspace $F_a$ with $\dim F_a<m$, there is a
+unit $v_a\in\operatorname{Ran}G\cap F_a^\perp$ with
+\[
+ \|\mathsf W_{e^a}v_a\|\le\eta_a,
+ \qquad |q_a[v_a]|\le\eta_a.
+\]
+Thus every positive coercivity constant on $F_a^\perp$ is at most
+$\eta_a$. In particular removing $o(\lambda^2/\log\lambda)$
+dimensions cannot leave a fixed positive or positive polynomial-in-
+$\lambda^{-1}$ gap. The complete spectral projection onto
+$[-2\eta_a,2\eta_a]$ has rank at least $2J+1$, with at least
+$J+1$ even and $J$ odd eigenvalues counted with multiplicity.
+\end{corollary}
+\begin{proof}
+Dimension gives the indicated unit vector, and the complete residual
+gives its form bound. If the spectral projection had smaller rank,
+a unit vector in the block orthogonal to its range would have
+operator norm at least $2\eta_a$, contradicting
+\eqref{ns46-a2-eq-large-residual}. Apply the same argument to each
+parity block. The complete self-adjoint operators have compact
+resolvent, as already established in the manuscript.
+\end{proof}
+With an actual even source constraint already imposed, fewer than
+$J$ additional independent even constraints still leave such a vector;
+fewer than $J$ odd constraints do so in the odd sector. More precisely
+the relevant number is the rank of the constraint functionals restricted
+to the indicated block. No identification with a sampler image or a
+finite Fourier head is made.
+
+\paragraph{What remains missing.}
+The block construction supplies many complete near-zero directions and
+their full residual; it supplies neither their energy signs nor a lower
+bound on the infinite-dimensional orthogonal complement. The remaining
+signed estimate is exactly
+\[
+ q_a[y]\ge-C_*\|y\|^2\quad
+ (y\in\mathcal D(q_a)\cap\operatorname{Ran}(I-P_G)),
+ \qquad C_*<\infty\ \hbox{uniformly on a cofinal family},
+\]
+in both parities. Together with the residual, the existing gap-free
+transfer in v1.18/v1.36 would give a full uniform floor. Rewriting this
+estimate in block coordinates is not new arithmetic input. Increasing
+the block's rank does not bound negative eigenvalues remaining outside
+it. The result is a stronger necessary rank obstruction for a positive
+gap strategy; it does not exclude gap-free block methods, produce a
+negative Weil direction, prove G2 or RH, or close the signed-floor route.
 
 
 \appendix

@@ -1,0 +1,39 @@
+{
+ "manuscript_revision": "v1.53",
+ "base_commit": "0355edb92c7b5177ac7a5e7cd01b6c3a05d2b5ee",
+ "files": [
+  {
+   "path": "evidence/v153/README.md",
+   "size_bytes": 2662,
+   "sha256": "7fc107b5e02a0404165d807b597263c8c5b6fe17bacb7243a49cab0cf749dc07"
+  },
+  {
+   "path": "evidence/v153/build_report.json",
+   "size_bytes": 1057,
+   "sha256": "1eee3eedf22035c56ff0440e6f5a87bba0d51f602b1d6688d183e7633c219a22"
+  },
+  {
+   "path": "evidence/v153/new_section.tex",
+   "size_bytes": 14017,
+   "sha256": "3690b9c5d584f3f2078759f9067d02c1aa1e0c29846af63c6608d632b4893384"
+  },
+  {
+   "path": "evidence/v153/ns46-fine-block-2026-09-22-v1.html",
+   "size_bytes": 6621,
+   "sha256": "f8ccdc12d1e70c13e0d7727f5a295effd17e66b979551ff24e005a9cfa018ca6"
+  },
+  {
+   "path": "evidence/v153/provenance.json",
+   "size_bytes": 2889,
+   "sha256": "21173e38656a5424bbdb414e0574f5398189bda8bef900ff8ebb0e1f454eac46"
+  },
+  {
+   "path": "evidence/v153/review_record.md",
+   "size_bytes": 3647,
+   "sha256": "1cebc5ad61e624bc6e5eb2967aa64705cea16a70ebd85ba8172b514758f992c8"
+  }
+ ],
+ "file_count": 6,
+ "total_bytes": 30893,
+ "note": "NS-46 analytic fine radical block and scoped rank obstruction; no numerical certificate or uniform signed floor."
+}
