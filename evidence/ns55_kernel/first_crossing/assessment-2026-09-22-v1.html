@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NS-55 · First-crossing assessment · 22 September 2026</title></head>
+<body style="margin:0;background:#f2efe7;color:#202922;font-family:Georgia,'Times New Roman',serif;line-height:1.6;">
+<main style="max-width:680px;margin:40px auto;padding:36px;background:#fffefa;border-top:5px solid #375645;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;color:#58705d;">RIEMANN RESEARCH RECORD · NS-55 · 22 SEPTEMBER 2026</p>
+<h1 style="font-size:31px;line-height:1.2;font-weight:normal;">What a first zero would have to do</h1>
+<p style="font-size:19px;">A first zero eigenvalue forces its eigenfunction to reach both ends of the window. Shrinking that function inward raises its energy. These facts are rigorous on the complete form domain, but neither excludes the crossing.</p>
+<p style="padding:14px 18px;background:#edf3ee;border-left:3px solid #557060;"><strong>Status:</strong> exact identities, proved implications, and an abstract countermodel. Arithmetic injectivity, G2, and RH remain open.</p>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:30px;">A complete-domain calculation</h2>
+<p>Suppose a* is the first window where the lowest eigenvalue is zero, and f is a nonzero nullvector. If f’s support had diameter smaller than 2a*, translating it into a smaller window would give a zero-energy vector where the form is strictly positive. Therefore its essential support reaches both −a* and a*. This does not assert a nonzero boundary trace.</p>
+<p>For 0&lt;r&lt;1, define the norm-preserving inward dilation U<sub>r</sub>f(x)=r<sup>−½</sup>f(x/r). It belongs to the complete smaller-window domain. The nullvector equation removes both cross terms and gives</p>
+<p style="padding:16px;background:#f5f2e9;text-align:center;font-size:20px;">q<sub>ra*</sub>[U<sub>r</sub>f] = q<sub>a*</sub>[U<sub>r</sub>f−f] &gt; 0.</p>
+<p>No square-integrable derivative of f, eigenvalue derivative, or unproved boundary formula is used.</p>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:30px;">Where the arithmetic remains</h2>
+<p>The proof derives an exact finite difference for the energy under dilation. It consists of a strictly positive archimedean change, the change in both signed pole terms, and the finite sum of prime-shift overlap changes</p>
+<p style="padding:14px;background:#f5f2e9;text-align:center;">R<sub>f</sub>(log n / r) − R<sub>f</sub>(log n),<br>where R<sub>f</sub>(t)=∫f(x+t) overline(f(x)) dx.</p>
+<p>The archimedean change is bounded above by 5 log(1/r)‖f‖₂². Every prime whose overlap disappears during the shrink remains accounted for: its correlation is exactly zero after separation. The odd pole is retained; dilation preserves both parity sectors.</p>
+<p>A reverse signed estimate for the complete overlap-and-pole expression could contradict the first-zero hypothesis. None has been proved here. Naming that reverse estimate alone would merely create another sufficient exclusion test.</p>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:30px;">Why geometric monotonicity cannot settle it</h2>
+<p>There is a concrete infinite-dimensional countermodel with the same restricted logarithmic principal operator and complete form domain. Subtract a fixed constant c from half the restricted logarithmic Laplacian. Its lowest eigenvalue is exactly</p>
+<p style="padding:14px;background:#f5f2e9;text-align:center;font-size:20px;">ν(a) = ν(1) − log a − c.</p>
+<p>This operator is translation invariant on supported tests, has compact resolvent, is positive on small windows, and undergoes a first zero crossing at a=e<sup>ν(1)−c</sup>. Thus those structural properties, even with strict monotonicity, cannot themselves rule out a crossing. This countermodel is not the arithmetic Weil operator.</p>
+<p>Likewise, two translated zero-energy functions in a larger window can have a nonzero cross pairing. Their suitable linear combination then has negative energy there. That explains a possible crossing; it does not contradict positivity before it.</p>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:30px;">Finding</h2>
+<p>The calculation had to use finite differences on zero extensions, preserving the full boundary interaction and arithmetic terms. A generic shape derivative is not justified by logarithmic form regularity.</p>
+<p>The next missing ingredient remains an arithmetic uniqueness or signed overlap estimate. The first-crossing formulation limits the needed exclusion to nullvectors of nonnegative operators, but this checkpoint proves no such exclusion. It exposes the gap without claiming that the Weil form fails.</p>
+<p style="border-top:1px solid #d4d8cd;padding-top:20px;font-size:14px;">Sources: <a style="color:#315641;" href="https://arxiv.org/html/2606.09096v2#S4">Suzuki, version 2, Theorem 1.3 and Section 4</a>, for complete-domain scaling and continuity; <a style="color:#315641;" href="https://arxiv.org/html/2401.18033v2#A1.SS1">Hernández-Santamaría, López Ríos and Saldaña, logarithmic Laplacian normalization and scaling</a>. The accompanying proof supplies the finite-difference formulas and countermodel. No new numerical window or tail metric was computed.</p>
+<p style="font-family:Arial,sans-serif;font-size:12px;color:#617065;">Evidence assessment · version 1 · parent task reports manuscript integration and build separately</p>
+</main></body></html>

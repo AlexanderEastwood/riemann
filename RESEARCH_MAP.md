@@ -64,6 +64,8 @@ graph LR
   fineradicalrank["Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions<br/><small>lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank</small><br/><small>&#128193; evidence/v153</small><br/><small><b>wall: positive-gap strategy must remove rank >= lambda^2/(20000 log lambda)</b></small>"]
   kernelapi["Exact kernel exclusion: affine-potential injectivity<br/><small>prop:ns51-affine-potential; eq:ns51-api</small><br/><small>&#128193; evidence/ns51_kernel</small><br/><small><b>wall: API: actual arithmetic affine-potential injectivity (open)</b></small>"]
   generic_h1["Generic H¹ bootstrap from a zero eigenvalue<br/><small>prop:ns51-no-generic-bootstrap</small><br/><small>&#128193; evidence/ns51_kernel</small>"]
+  localucp["Local open-set UCP for the full prime-shift operator<br/><small>prop:ns55-local-ucp-counterexample; prop:ns55-parity-ucp-counterexample</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: local f=A_a f=0 does not force f=0; whole-window API is not refuted</b></small>"]
+  fullpositivecone["Ordinary-cone positivity for the full Weil semigroup<br/><small>prop:ns55-nonpositive-semigroup</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: order-preservation shortcut fails; quadratic-form positivity is a different property</b></small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -123,6 +125,8 @@ graph LR
   gapfree --> fineradicalrank
   altroutes --> kernelapi
   kernelapi --> generic_h1
+  kernelapi --> localucp
+  kernelapi --> fullpositivecone
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -179,13 +183,15 @@ graph LR
   click fineradicalrank "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v153/" "evidence: evidence/v153" _blank
   click kernelapi "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns51_kernel/" "evidence: evidence/ns51_kernel" _blank
   click generic_h1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns51_kernel/" "evidence: evidence/ns51_kernel" _blank
+  click localucp "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v155/" "evidence: evidence/v155" _blank
+  click fullpositivecone "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v155/" "evidence: evidence/v155" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1 closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
@@ -206,7 +212,7 @@ graph LR
 |---|---:|---|
 | `proved` | 22 | established result |
 | `live` | 2 | current route (gold): being worked now |
-| `closed` | 19 | closed route (red): proved insufficient or impossible; kept deliberately |
+| `closed` | 21 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 6 | attempted; obstruction found |
 | `open` | 10 | target, not yet attacked |
 | `wall` | 0 | wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge |
@@ -216,8 +222,10 @@ graph LR
 - [ ] **RH** — via Weil positivity
   - [ ] **Alternative mechanisms: distinct missing inputs** — Logical RH equivalence does not establish equal proof difficulty or a universal route closure. NS-51–53 test explicit first lemmas.
     - [X] **Direct rational Li / entire window-test identification** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · **wall: direct rational-Li / entire-window classes intersect only at zero** → `None` (Scoped direct-identification obstruction; no statement excluding indirect Li inequalities) · The specified rational Li-transform class has trivial intersection with the finite-window entire Paley–Wiener class. This closes direct identification only; it does not exclude indirect inequalities or all Li approaches.
-    - [~] **Exact kernel exclusion: affine-potential injectivity** — `prop:ns51-affine-potential; eq:ns51-api` · `codex/ns51-new-routes` · evidence: [`evidence/ns51_kernel/`](evidence/ns51_kernel/) · **wall: API: actual arithmetic affine-potential injectivity (open)** → `rh` (eq:ns51-api; prop:ns51-sign-continuation) · Complete form-domain reduction is exact in both parities. API remains open; no uniform positive gap is required.
+    - [~] **Exact kernel exclusion: affine-potential injectivity** — `prop:ns51-affine-potential; eq:ns51-api` · `codex/ns55-arithmetic-kernel` · evidence: [`evidence/ns51_kernel/`](evidence/ns51_kernel/) · **wall: API: actual arithmetic affine-potential injectivity (open)** → `rh` (eq:ns51-api; prop:ns51-sign-continuation) · Complete form-domain reduction is exact in both parities. NS-55 rules out importing local UCP or ordinary-cone semigroup positivity; first-zero nullvectors must reach both endpoints. API remains open, with no signed arithmetic overlap estimate and no required uniform positive gap.
       - [X] **Generic H¹ bootstrap from a zero eigenvalue** — `prop:ns51-no-generic-bootstrap` · evidence: [`evidence/ns51_kernel/`](evidence/ns51_kernel/) · Rank-one bounded perturbation of the same logarithmic principal operator has a non-H¹ nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted.
+      - [X] **Local open-set UCP for the full prime-shift operator** — `prop:ns55-local-ucp-counterexample; prop:ns55-parity-ucp-counterexample` · evidence: [`evidence/v155/`](evidence/v155/) · **wall: local f=A_a f=0 does not force f=0; whole-window API is not refuted** → `None` (prop:ns55-local-ucp-counterexample) · Exact local-patch counterexamples, in each parity for a>log2 and after finitely many linear constraints. They do not solve A_a f=0 on the whole window and give no negative diagonal Weil energy. Prime-shift-free exterior-cell uniqueness remains valid under its explicit support hypothesis.
+      - [X] **Ordinary-cone positivity for the full Weil semigroup** — `prop:ns55-nonpositive-semigroup` · evidence: [`evidence/v155/`](evidence/v155/) · **wall: order-preservation shortcut fails; quadratic-form positivity is a different property** → `None` (prop:ns55-nonpositive-semigroup) · Positive off-diagonal pole-minus-archimedean cross terms for disjoint nonnegative tests show that the full real-space semigroup is not positivity preserving. A bounded positive multiplication conjugation cannot repair the cone property. No separate parity-cone claim, negative q direction, or API closure.
     - [ ] **Nyman-Beurling-Baez-Duarte** — `prop:ns53-nb-block-gain; eq:ns53-nb-rbc` · evidence: [`evidence/ns53_nb_blocks/`](evidence/ns53_nb_blocks/) · **wall: RBC: corrected arithmetic residual block correlations (open sufficient input)** → `rh` (eq:ns53-nb-rbc; exact convergence criterion is prior art, and RBC is not proved or claimed equivalent to RH) · Reopened: any d_N→0 suffices. Exact residualized block gain and trace lower bound proved; the sufficient arithmetic residual block-correlation input is open. Finite distances do not prove it.
     - [ ] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_true_symbol/`](evidence/diag_true_symbol/) · measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained
     - [ ] **de Branges / Hermite-Biehler** — **wall: screw-kernel positivity = RH; no fixed-window bridge** → `rh` (Suzuki Thm 1.5 (arXiv 2606.09096); the shifted finite-window construction sits strictly below the spectral bottom and does not determine its sign; fixed-window determinacy equivalence not proved) · Shifted fixed-window structures do not determine the unshifted sign; arbitrary extension uniqueness is not established. NS-51 gives a complete-domain nullvector reduction; arithmetic injectivity remains open.

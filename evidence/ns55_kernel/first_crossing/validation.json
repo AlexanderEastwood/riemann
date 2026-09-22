@@ -1,0 +1,20 @@
+{
+  "task": "NS-55 first-crossing subtask",
+  "fragment": "proof.tex",
+  "classification": "exact identities; proved implications; abstract operator countermodel; open arithmetic input",
+  "fragment_build_directory": "/private/tmp/ns55-first-crossing-check-x3uj79fg",
+  "fragment_build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error first-crossing-check.tex",
+  "existing_manuscript_labels_and_citations_imported": true,
+  "fragment_pages": 3,
+  "undefined_or_duplicate_reference_warning_lines": 0,
+  "overfull_boxes": 0,
+  "full_manuscript_build": "Parent responsibility; not represented by this fragment check",
+  "prime_shift_review_major": 0,
+  "prime_shift_review_minor": 0,
+  "new_window": false,
+  "new_tail_metric": false,
+  "numerical_certificate": false,
+  "API": "open",
+  "G2": "open",
+  "RH": "open"
+}

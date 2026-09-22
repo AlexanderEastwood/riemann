@@ -1,0 +1,59 @@
+{
+ "manuscript_revision": "v1.55",
+ "base_commit": "793e15b16ed96811913a643e2839b31f6454d3d0",
+ "files": [
+  {
+   "path": "evidence/v155/README.md",
+   "size_bytes": 1275,
+   "sha256": "d3d9dbd77049e5ed3ceb04e36ae7df13941888fffd8250987da50bcf422887e7"
+  },
+  {
+   "path": "evidence/v155/artifact-index.json",
+   "size_bytes": 2450,
+   "sha256": "87401684ac9bf6bccd32bac402a69b40ac4a0f6b9cd40a4c391e4e84011348b9"
+  },
+  {
+   "path": "evidence/v155/build-output.txt",
+   "size_bytes": 149789,
+   "sha256": "486b3a7fb11d33d584e01e35e2abb688aa0e0de41169b03a24ef38ab2a9daf35"
+  },
+  {
+   "path": "evidence/v155/integration-review-2026-09-22-v1.html",
+   "size_bytes": 5361,
+   "sha256": "74d38c636498d591098bde08a8ac7ac47c89eb030c17e374b63c5e0adc14c747"
+  },
+  {
+   "path": "evidence/v155/intro.tex",
+   "size_bytes": 810,
+   "sha256": "768f97990d7e619c32579a1c837b33cf73e30b4da105f578f61961cd1af8de65"
+  },
+  {
+   "path": "evidence/v155/kernel-uniqueness-2026-09-22-v1.html",
+   "size_bytes": 7816,
+   "sha256": "b3c2c7e893525ea08afcb486a1622284b229fefd838338a703fa72fe0621836f"
+  },
+  {
+   "path": "evidence/v155/latex-final-log.txt",
+   "size_bytes": 32622,
+   "sha256": "a7336984b68917d218e0ae48cfe50aa3a4e781396bd0eba4948f608a47024e1a"
+  },
+  {
+   "path": "evidence/v155/post-rebase-build.txt",
+   "size_bytes": 287,
+   "sha256": "fa25bc14e513e2c15c728c2d9bc8981215a6f43834766aab2a3c7fa4453b6b6d"
+  },
+  {
+   "path": "evidence/v155/proof.tex",
+   "size_bytes": 23791,
+   "sha256": "aa94567cd00321e710b902975183ed1e8676786646771d7c2bc5dbf8da173ead"
+  },
+  {
+   "path": "evidence/v155/validation.json",
+   "size_bytes": 1640,
+   "sha256": "62932f69305f02a7c4e253e69ae09b349fbf332ff4f345b7aad640d36008ff2e"
+  }
+ ],
+ "file_count": 10,
+ "total_bytes": 225841,
+ "note": "NS-55 exact scoped local uniqueness results. No full-window kernel, uniform floor, G2 or RH claim."
+}

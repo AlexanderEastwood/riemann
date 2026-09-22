@@ -1,0 +1,19 @@
+# Independent review — NS-55 unique continuation
+
+Reviewer: NS-55 prime-shift subagent, 22 September 2026 UTC.
+Reviewed `evidence/ns55_kernel/unique_continuation/proof.tex` in the shared task worktree. No files owned by that agent were altered.
+
+**Disposition: 0 MAJOR, 0 MINOR.** The local counterexample, parity extension, and prime-free exterior-cell theorem have the stated scopes. In particular a local-patch witness is not a nullvector on the entire interval.
+
+## Detailed checks
+
+1. **Kernel normalization.** `R(t)=2cosh(t/2)-rho(t)` and `rho(t)=exp(-t/2)/(1-exp(-2t))` agree with the archived complete operator. For separated supports the logarithmic off-diagonal kernel and its bounded correction combine to `-rho`; both pole contributions remain.
+2. **One-shift construction.** The chosen epsilon keeps U, V=U-log2, and W disjoint with compact closures inside the window. Since `2epsilon<log(3/2)`, every shift log n for n>=3 goes strictly left of V on U. Positive shifts are beyond the support. The n=2 term is exactly `-w2 v`. The integral interaction on V gives T v and that on W gives H, so `(w2 I-T)v=H` is the exact equation on U.
+3. **Existence and domain.** The explicit M0 bounds both rho and cosh on the separated interval; Schur gives `||T||<=2epsilon M0<w2/2`. The Neumann inverse exists on L2. Its equation extends v smoothly to a neighborhood of the closed interval. The assembled f is compactly supported and piecewise smooth with finitely many jumps. Hence its zero extension is in H^s for 0<s<1/2, while its Fourier transform is bounded near zero. These two properties put the full-line logarithmic multiplier in L2. The restricted form representation then gives membership of the complete operator domain; no H1 assumption is made.
+4. **Parity extension.** The finite set of forbidden central differences can be avoided. The reflected integral kernels `R(x-t+ell)+sigma R(x+t-ell)` have positive arguments and stay separated from zero. The only prime shift connecting U to the support is the intended U-to-V log2 shift. The map from freely chosen h to f is injective by restriction to W, proving infinite dimension. Finitely many real linear constraints retain a nonzero subspace; a complex source condition counts as at most two such constraints.
+5. **External theorem.** Checked directly against the primary full text: [Chen–Hauer–Weth v1, Theorem 1.7](https://arxiv.org/html/2312.15689v1), and [Harrach–Lin–Weth v1, Proposition 4.1](https://arxiv.org/html/2412.17775v1). Both require u and the logarithmic operator to vanish on the same open set. Compact L2 support supplies the weighted L1 condition, but the complete arithmetic equation does not supply the missing vanishing of the bounded nonlocal remainder. The citations are used correctly.
+6. **Prime-free exterior cell.** With b=sup support below the window endpoint, positive shifts are outside the support and the stated shifted-support exclusion removes the remaining ones. Only the separated integral component is analytically continued to x>b. The j=0 exponential in rho cancels exactly the `exp(-(x-y)/2)` pole component. Multiplication by exp(-x/2) gives `M_- - sum_(j>=1) M_j exp(-(2j+1)x)`. The geometric bound on moments gives an actual convergent power series, so all positive integer moments of the pushed measure vanish. Its support stays away from zero, making polynomials without constant term dense and forcing the measure to vanish.
+
+## Scope note
+
+The support-gap theorem requires literal support separation; continuity, smallness and zero endpoint trace do not imply it. The last paragraph correctly separates these hypotheses from the first-crossing endpoint-support statement. The counterexamples invalidate an unconditional transplantation of local logarithmic UCP to the full shifted operator, while leaving complete API open. They imply no negative diagonal Weil direction or G2/RH result.

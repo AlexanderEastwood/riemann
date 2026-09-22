@@ -1,5 +1,33 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.55 — NS-55 arithmetic kernel mechanism tests (2026-09-22)
+
+What changed: a local logarithmic unique-continuation argument must retain the
+prime shifts. Exact Neumann constructions show that the actual arithmetic
+operator permits f = A_a f = 0 on a nonempty open patch with f nonzero elsewhere.
+The witnesses lie in the complete operator domain, work in both parities for
+a > log 2, and survive finitely many source constraints. They are not global
+nullvectors and give no negative diagonal Weil direction. This local property
+is actually false, rather than merely uncertified.
+
+A separate exact sign calculation rules out preservation of the ordinary
+nonnegative cone by the full semigroup. Positive bounded multiplication
+conjugation does not repair it. This does not refute nonnegative Weil energy
+or a specific ground state's positivity. A prime-free exterior observation
+cell yields a scoped uniqueness theorem; a first-zero nullvector's support
+saturates both window endpoints, so the needed cell is not supplied.
+
+The finite inward-dilation identity replaces an unjustified differentiated
+virial calculation. It keeps the complete domain, both pole terms and all prime
+correlation differences. The signed arithmetic estimate remains absent.
+Primitive/Fredholm/window-entry statements are archived as supporting evidence;
+a discrete exceptional set does not exclude the physical coupling.
+
+Independent cross-reviews found no unresolved MAJOR/MINOR issues. Actual full
+build: 285 pages, 0 undefined references, 0 duplicate references, 0 overfull boxes.
+No new window, tail metric or uniform floor. API, G2 and RH remain open.
+
+
 ## v1.54 — NS-51/52/53 first analytic results (2026-09-22)
 
 What changed: nullvectors are tested through a continuous affine screw potential
