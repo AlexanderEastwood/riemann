@@ -1,0 +1,24 @@
+lambda=3 N=64: ground eigenvalue 3.643e-38; |<ground,u>| = 0.99999998, sin(angle) = 2.159e-04  (certificate: < 2.16e-4)
+full head pencil: k, nu_k, |b_k| = |<v_k,u>| (v_k Euclidean-normalized)
+  k= 0  nu= 4.058e-37   |b_k|=1.000000
+  k= 1  nu= 2.884e-30   |b_k|=0.014059
+  k= 2  nu= 3.966e-24   |b_k|=0.017621
+  k= 3  nu= 5.538e-19   |b_k|=0.005071
+  k= 4  nu= 4.952e-14   |b_k|=0.013774
+  k= 5  nu=  1.076e-9   |b_k|=0.008394
+  k= 6  nu=  7.649e-6   |b_k|=0.002520
+  k= 7  nu=  0.009741   |b_k|=0.001249
+  k= 8  nu=    0.5053   |b_k|=0.001323
+  k= 9  nu=    0.5673   |b_k|=0.000311
+source-complement pencil (E = head ∩ u^perp): k, nu'_k   vs full-head nu_{k+1}
+  k= 0  nu'= 2.884e-30    full nu_1= 2.884e-30
+  k= 1  nu'= 3.965e-24    full nu_2= 3.966e-24
+  k= 2  nu'= 5.538e-19    full nu_3= 5.538e-19
+  k= 3  nu'= 4.951e-14    full nu_4= 4.952e-14
+  k= 4  nu'=  1.076e-9    full nu_5=  1.076e-9
+  k= 5  nu'=  7.649e-6    full nu_6=  7.649e-6
+  k= 6  nu'=  0.009741    full nu_7=  0.009741
+  k= 7  nu'=    0.5053    full nu_8=    0.5053
+  k= 8  nu'=    0.5673    full nu_9=    0.5673
+  k= 9  nu'=    0.6401    full nu_10=    0.6401
+complement Rayleigh floor (min eig of W on u^perp) = 2.584e-31  vs full ground 3.643e-38, second 2.584e-31

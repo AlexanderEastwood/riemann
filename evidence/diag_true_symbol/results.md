@@ -323,3 +323,53 @@ to linear in the level: `‖C(E(t))‖ ≈ 0.6–0.8 · (1 − t/D_a)`.
    minorant with `J` growing with `a` can hold the loss bounded, which is
    the arithmetic-blind obstruction of v1.39 in operator form. Nothing here
    is a bound.
+
+## 9. Are the pencil directions source-admissible? (`source_overlap.py` → `source_overlap_output.txt`)
+
+v1.44 (`prop:v144-pencil-concentration`) points out that the criterion acts on
+the source complement `E = H ∩ u_a^⊥`, that the uncompressed pencil does not
+establish `b_k = ⟨v_k, u_a⟩ = 0`, and that projecting a raw pencil vector need
+not preserve its ratio. Checked here at the one window where the source is
+certified: λ=3, even head N=64, `u` = the certified projected source
+(`evidence/v124/g2_source_certificate/source_polynomial_intervals.json`,
+`projected_positive_coefficients`; its n=0 entry is stored against the
+unnormalized constant mode and must be divided by √2 — with that, the angle to
+the finite Weil ground is `sin = 2.159e-4`, matching the certificate's
+`< 2.16e-4` to four digits, which fixes the basis).
+
+| k | ν_k (full head) | \|b_k\| = \|⟨v_k,u⟩\| | ν'_k (complement pencil) |
+|--:|--:|--:|--:|
+| 0 | 4.06e-37 | **1.000000** | — |
+| 1 | 2.88e-30 | 0.0141 | 2.884e-30 |
+| 2 | 3.97e-24 | 0.0176 | 3.965e-24 |
+| 3 | 5.54e-19 | 0.0051 | 5.538e-19 |
+| 4 | 4.95e-14 | 0.0138 | 4.951e-14 |
+| 5 | 1.08e-9 | 0.0084 | 1.076e-9 |
+| 6 | 7.65e-6 | 0.0025 | 7.649e-6 |
+| 7 | 9.74e-3 | 0.0012 | 9.741e-3 |
+| 8 | 0.505 | 0.0013 | 0.5053 |
+
+Rayleigh floor of `W` on `u^⊥`: 2.584e-31, equal to the second even
+eigenvalue; full ground 3.64e-38.
+
+**Reading.**
+
+1. **The ground pencil direction *is* the source.** `b_0 = 1` to six digits:
+   the deepest cancellation of the whole head is the direction the criterion
+   quantifies *away from*. This is the certified `G1` fact
+   (`thm:v14-radical`, angle sine < 2.16e-4) seen from the pencil side, and it
+   means the 1e-37 (λ=3) / 1e-65 (λ=4) surplus of §7 is not a demand on the
+   mechanism at all.
+2. **Every other deep direction is source-admissible to ~1%**, and the
+   complement pencil reproduces the full-head values `ν_{k+1}` to four
+   digits. So the source constraint removes exactly one direction and leaves
+   the rest of the deep block untouched: the deepest *admissible* surplus at
+   λ=3 is 2.9e-30, and the block structure of §7 (6 / 13 / ≥30 / ≥41
+   directions below 1e-8) loses one member per window.
+3. **For v1.44's quantifier.** The directional budget
+   `eq:v144-direction-budget` should be read on `E` with `ν'_k`, which here
+   equals `ν_{k+1}`; the mixture condition `eq:v144-pencil-matrix` on
+   `ker b` is, to the same 1%, the pencil on the complement. This is
+   λ=3 only (the certified source exists at no other window); at λ=4 the
+   analogous statement would need the v126 normalized source. Nothing here is
+   a bound.

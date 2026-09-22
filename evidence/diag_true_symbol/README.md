@@ -7,7 +7,9 @@ ordinate against the ground's mass there (§6, nearzero.py), and the level
 pencil W v = ν (W + W⁻) v showing the cancellation is a whole deep block, not
 one direction (§7, pencil.py; wminus_tail.py bounds the neglected tail), and the
 layer-cake constant η_a^op of prop:v131-concentration on the head, ~0.35 D_a and
-growing with the window (§8, layercake.py).
+growing with the window (§8, layercake.py), and the overlap of the pencil directions
+with the certified lambda=3 source: the ground direction is the source, the rest of the
+deep block is admissible to ~1% (§9, source_overlap.py).
 Run from the repo root with .venv/bin/python; beta_true.py runs the validation
 when executed directly (~5 min); pencil.py takes cases as "lam,N,bits"
 arguments. cert.py holds the Arb-to-mpmath midpoint conversion the scripts share.
