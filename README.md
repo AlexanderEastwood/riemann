@@ -79,13 +79,13 @@ graph LR
   floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small><br/><small>&#128193; evidence/v138</small>"]
   shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small><br/><small>&#128193; evidence/v138</small>"]
   metablind["Scoped information-loss obstructions<br/><small>thm:v139-probe-relaxation; thm:v139-protected-orbit</small><br/><small>&#128193; evidence/v139</small>"]
-  altroutes["Alternative criteria (all equivalent; same wall)"]
+  altroutes["Alternative criteria (classical RH equivalents; no finite bridge proved)"]
   circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_true_symbol</small>"]
-  debranges["de Branges / Hermite-Biehler"]
-  f1["function field / Hodge / F_1"]
-  nb["Nyman-Beurling-Baez-Duarte<br/><small>&#128193; evidence/diag_routes/nb</small>"]
-  li["Li / Keiper coefficients<br/><small>&#128193; evidence/diag_routes/li</small>"]
-  dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)<br/><small>&#128193; evidence/diag_routes/dbn</small>"]
+  debranges["de Branges / Hermite-Biehler<br/><small><b>wall: screw-kernel positivity = RH; no fixed-window bridge</b></small>"]
+  f1["function field / Hodge / F_1<br/><small><b>wall: no intersection form supplied for this window (missing construction)</b></small>"]
+  nb["Nyman-Beurling-Baez-Duarte<br/><small>&#128193; evidence/diag_routes/nb</small><br/><small><b>wall: d_N -> 0 = RH; no finite bridge from W_4 to d_N</b></small>"]
+  li["Li / Keiper coefficients<br/><small>&#128193; evidence/diag_routes/li</small><br/><small><b>wall: all Li coefficients >= 0 = RH; windowed coefficients are different objects</b></small>"]
+  dbn["de Bruijn-Newman (Lambda = 0 iff RH)<br/><small>&#128193; evidence/diag_routes/dbn</small><br/><small><b>wall: Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved</b></small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
   simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
   stepb["CCM step (b): finite-compression zeros track zeta zeros (numerical)<br/><small>&#128193; evidence/diag_ns2_semantic_lock</small>"]
@@ -166,6 +166,10 @@ graph LR
   stepb --> coarseprofile
   gapfree --> fineradicalrank
   concentration -. "QG + WLH packet" .-> floor
+  debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
+  nb -. "d_N -> 0 = RH; no finite bridge from W_4 to d_N" .-> rh
+  li -. "all Li coefficients >= 0 = RH; windowed coefficients are different objects" .-> rh
+  dbn -. "Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved" .-> rh
   minorantlevels -. "ZLD + packet" .-> floor
   zeroleveldistribution -. "ZLD + packet" .-> floor
   weightedexactcost -. "QG + WLH packet" .-> floor
@@ -221,9 +225,9 @@ graph LR
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
+  class concentration,debranges,f1,nb,li,dbn,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes,circle open;
   subgraph Legend

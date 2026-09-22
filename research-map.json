@@ -266,10 +266,10 @@
     },
     {
       "id": "altroutes",
-      "title": "Alternative criteria (all equivalent; same wall)",
+      "title": "Alternative criteria (classical RH equivalents; no finite bridge proved)",
       "status": "open",
       "parent": "rh",
-      "note": "each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21"
+      "note": "Each child is a classical RH criterion. The record proved structural obstructions to specific bridges, not that every bridge fails; 'all equivalent; same wall' withdrawn per audit PR #22."
     },
     {
       "id": "circle",
@@ -283,40 +283,65 @@
     {
       "id": "debranges",
       "title": "de Branges / Hermite-Biehler",
-      "status": "closed",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Structural statement only: existence of the shifted de Branges structure does not decide the unshifted sign.",
+      "wall": {
+        "input": "screw-kernel positivity = RH; no fixed-window bridge",
+        "to": "rh",
+        "src": "Suzuki Thm 1.5 (arXiv 2606.09096); the shifted finite-window construction sits strictly below the spectral bottom and does not determine its sign; fixed-window determinacy equivalence not proved"
+      }
     },
     {
       "id": "f1",
       "title": "function field / Hodge / F_1",
-      "status": "closed",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "nothing finite transfers; window lambda has no intersection-theoretic meaning"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Not an RH-equivalent criterion here: a missing construction, so no dashed edge.",
+      "wall": {
+        "input": "no intersection form supplied for this window (missing construction)",
+        "to": null,
+        "src": "RESEARCH_MAP note supplied no number-field intersection form, transfer map, or impossibility proof; function-field RH is a theorem for different objects"
+      }
     },
     {
       "id": "nb",
       "title": "Nyman-Beurling-Baez-Duarte",
-      "status": "closed",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "no finite NB statement equivalent to W_lambda>=0; d_N certified to N=600, oscillates around C/log N; Burnol Thm 3.1 is the semantic lock",
-      "evidence": "evidence/diag_routes/nb"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. The earlier 'a proof must attain the sharp C/log N rate' sentence is withdrawn (audit A3).",
+      "evidence": "evidence/diag_routes/nb",
+      "wall": {
+        "input": "d_N -> 0 = RH; no finite bridge from W_4 to d_N",
+        "to": "rh",
+        "src": "Burnol's zero-evaluator/co-Poisson dictionary is structural, not a bound for a specified d_N; the report's sharp-rate necessity claim is false (audit A3)"
+      }
     },
     {
       "id": "li",
       "title": "Li / Keiper coefficients",
-      "status": "closed",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "Li class \u2229 Paley-Wiener = {0}: no window certifies any lambda_n; W_4>=0 gives windowed lambda_n^[log16] >= 0 only",
-      "evidence": "evidence/diag_routes/li"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. What is proved: the canonical rational Li-transform class meets the fixed-window entire class trivially.",
+      "evidence": "evidence/diag_routes/li",
+      "wall": {
+        "input": "all Li coefficients >= 0 = RH; windowed coefficients are different objects",
+        "to": "rh",
+        "src": "Li class \u2229 finite-window Paley-Wiener class = {0} blocks direct identification; that every transfer reduces to prop:v121 is argued, not proved"
+      }
     },
     {
       "id": "dbn",
-      "title": "de Bruijn-Newman (0 <= Lambda <= 0.22)",
-      "status": "closed",
+      "title": "de Bruijn-Newman (Lambda = 0 iff RH)",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s",
-      "evidence": "evidence/diag_routes/dbn"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Blanket 'no bridge' withdrawn (audit A4); the route was closed before the v1.46 exact zero expansion existed.",
+      "evidence": "evidence/diag_routes/dbn",
+      "wall": {
+        "input": "Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved",
+        "to": "rh",
+        "src": "Rodgers-Tao Lambda >= 0; the record reproduced a specified positive-time barrier, not a theorem excluding all transfer arguments (audit A4); v1.46 exact zero expansion postdates the route report"
+      }
     },
     {
       "id": "ccmmu",

@@ -33,13 +33,13 @@ graph LR
   floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small><br/><small>&#128193; evidence/v138</small>"]
   shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small><br/><small>&#128193; evidence/v138</small>"]
   metablind["Scoped information-loss obstructions<br/><small>thm:v139-probe-relaxation; thm:v139-protected-orbit</small><br/><small>&#128193; evidence/v139</small>"]
-  altroutes["Alternative criteria (all equivalent; same wall)"]
+  altroutes["Alternative criteria (classical RH equivalents; no finite bridge proved)"]
   circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_true_symbol</small>"]
-  debranges["de Branges / Hermite-Biehler"]
-  f1["function field / Hodge / F_1"]
-  nb["Nyman-Beurling-Baez-Duarte<br/><small>&#128193; evidence/diag_routes/nb</small>"]
-  li["Li / Keiper coefficients<br/><small>&#128193; evidence/diag_routes/li</small>"]
-  dbn["de Bruijn-Newman (0 <= Lambda <= 0.22)<br/><small>&#128193; evidence/diag_routes/dbn</small>"]
+  debranges["de Branges / Hermite-Biehler<br/><small><b>wall: screw-kernel positivity = RH; no fixed-window bridge</b></small>"]
+  f1["function field / Hodge / F_1<br/><small><b>wall: no intersection form supplied for this window (missing construction)</b></small>"]
+  nb["Nyman-Beurling-Baez-Duarte<br/><small>&#128193; evidence/diag_routes/nb</small><br/><small><b>wall: d_N -> 0 = RH; no finite bridge from W_4 to d_N</b></small>"]
+  li["Li / Keiper coefficients<br/><small>&#128193; evidence/diag_routes/li</small><br/><small><b>wall: all Li coefficients >= 0 = RH; windowed coefficients are different objects</b></small>"]
+  dbn["de Bruijn-Newman (Lambda = 0 iff RH)<br/><small>&#128193; evidence/diag_routes/dbn</small><br/><small><b>wall: Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved</b></small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
   simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
   stepb["CCM step (b): finite-compression zeros track zeta zeros (numerical)<br/><small>&#128193; evidence/diag_ns2_semantic_lock</small>"]
@@ -120,6 +120,10 @@ graph LR
   stepb --> coarseprofile
   gapfree --> fineradicalrank
   concentration -. "QG + WLH packet" .-> floor
+  debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
+  nb -. "d_N -> 0 = RH; no finite bridge from W_4 to d_N" .-> rh
+  li -. "all Li coefficients >= 0 = RH; windowed coefficients are different objects" .-> rh
+  dbn -. "Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved" .-> rh
   minorantlevels -. "ZLD + packet" .-> floor
   zeroleveldistribution -. "ZLD + packet" .-> floor
   weightedexactcost -. "QG + WLH packet" .-> floor
@@ -175,9 +179,9 @@ graph LR
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
+  class concentration,debranges,f1,nb,li,dbn,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes,circle open;
   subgraph Legend
@@ -196,21 +200,21 @@ graph LR
 |---|---:|---|
 | `proved` | 22 | established result |
 | `live` | 1 | current route (gold): being worked now |
-| `closed` | 22 | closed route (red): proved insufficient or impossible; kept deliberately |
-| `blocked` | 6 | attempted; obstruction found |
+| `closed` | 17 | closed route (red): proved insufficient or impossible; kept deliberately |
+| `blocked` | 11 | attempted; obstruction found |
 | `open` | 6 | target, not yet attacked |
 | `wall` | 0 | dashed edge: the named open input this blocked node terminates on; edges into "uniform finite floor" all end on inputs that v1.51 relates to the bounded-floor target (CAE is that target restated) |
 
 ## Nodes
 
 - [ ] **RH** — via Weil positivity
-  - [ ] **Alternative criteria (all equivalent; same wall)** — each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21
-    - [X] **Li / Keiper coefficients** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · Li class ∩ Paley-Wiener = {0}: no window certifies any lambda_n; W_4>=0 gives windowed lambda_n^[log16] >= 0 only
-    - [X] **Nyman-Beurling-Baez-Duarte** — evidence: [`evidence/diag_routes/nb/`](evidence/diag_routes/nb/) · no finite NB statement equivalent to W_lambda>=0; d_N certified to N=600, oscillates around C/log N; Burnol Thm 3.1 is the semantic lock
+  - [ ] **Alternative criteria (classical RH equivalents; no finite bridge proved)** — Each child is a classical RH criterion. The record proved structural obstructions to specific bridges, not that every bridge fails; 'all equivalent; same wall' withdrawn per audit PR #22.
+    - [!] **Li / Keiper coefficients** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · **wall: all Li coefficients >= 0 = RH; windowed coefficients are different objects** → `rh` (Li class ∩ finite-window Paley-Wiener class = {0} blocks direct identification; that every transfer reduces to prop:v121 is argued, not proved) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. What is proved: the canonical rational Li-transform class meets the fixed-window entire class trivially.
+    - [!] **Nyman-Beurling-Baez-Duarte** — evidence: [`evidence/diag_routes/nb/`](evidence/diag_routes/nb/) · **wall: d_N -> 0 = RH; no finite bridge from W_4 to d_N** → `rh` (Burnol's zero-evaluator/co-Poisson dictionary is structural, not a bound for a specified d_N; the report's sharp-rate necessity claim is false (audit A3)) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. The earlier 'a proof must attain the sharp C/log N rate' sentence is withdrawn (audit A3).
     - [ ] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_true_symbol/`](evidence/diag_true_symbol/) · measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained
-    - [X] **de Branges / Hermite-Biehler** — HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)
-    - [X] **de Bruijn-Newman (0 <= Lambda <= 0.22)** — evidence: [`evidence/diag_routes/dbn/`](evidence/diag_routes/dbn/) · no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s
-    - [X] **function field / Hodge / F_1** — nothing finite transfers; window lambda has no intersection-theoretic meaning
+    - [!] **de Branges / Hermite-Biehler** — **wall: screw-kernel positivity = RH; no fixed-window bridge** → `rh` (Suzuki Thm 1.5 (arXiv 2606.09096); the shifted finite-window construction sits strictly below the spectral bottom and does not determine its sign; fixed-window determinacy equivalence not proved) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Structural statement only: existence of the shifted de Branges structure does not decide the unshifted sign.
+    - [!] **de Bruijn-Newman (Lambda = 0 iff RH)** — evidence: [`evidence/diag_routes/dbn/`](evidence/diag_routes/dbn/) · **wall: Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved** → `rh` (Rodgers-Tao Lambda >= 0; the record reproduced a specified positive-time barrier, not a theorem excluding all transfer arguments (audit A4); v1.46 exact zero expansion postdates the route report) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Blanket 'no bridge' withdrawn (audit A4); the route was closed before the v1.46 exact zero expansion existed.
+    - [!] **function field / Hodge / F_1** — **wall: no intersection form supplied for this window (missing construction)** → `None` (RESEARCH_MAP note supplied no number-field intersection form, transfer map, or impossibility proof; function-field RH is a theorem for different objects) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Not an RH-equivalent criterion here: a missing construction, so no dashed edge.
   - [ ] **Fixed-space / Burnol Sonine route** — `lane/fixed-space` · needs evaluator estimates + closed-operator realization
   - [x] **G1 (weak)** — `thm:v14-radical` · `lane/g1` · evidence: [`evidence/v124/g2_source_certificate/`](evidence/v124/g2_source_certificate/) · closed for the repaired prolate source
   - [ ] **G2: cofinal -o(1)** — `prop:v121-cofinal-rh` · eps_lambda -> 0 cofinally IS RH
