@@ -137,13 +137,13 @@ For a `K`-level minorant the loss is then at least `c' · QC_K(m̃)`, where
 `QC_K(m̃)` is the one-sided `K`-level quantization cost of `m̃` (levels
 `−D = ℓ_1 < … < ℓ_K`, cost `Σ_j ∫_{[ℓ_j,ℓ_{j+1})} (t − ℓ_j) dm̃`), computed
 exactly by dynamic programming on 200 levels; the crude bound is
-`QC_K ≥ φ_-² / (2K ρ̃_max)` with `ρ̃_max` the sup of the level density.
+`QC_K ≥ h φ_-²/(2K M(h)) − (3/2) h φ_-` with `M(h)` the concentration function (see item 3 for why a sup-density bound does not exist).
 
 | | λ=3 | λ=4 | λ=6 | λ=8 |
 |--|--:|--:|--:|--:|
 | `φ_-` | 0.050 | 0.091 | 0.157 | 0.207 |
-| `ρ̃_max` (uniform would be `φ_-/D`) | 0.092 (0.021) | 0.077 (0.027) | 0.079 (0.028) | 0.110 (0.033) |
-| `φ_-²/ρ̃_max` | 0.028 | 0.109 | 0.312 | 0.390 |
+| 20-bin peak of the level histogram, `ρ̃_20` (not a sup: the density is unbounded at trough levels) | 0.092 | 0.077 | 0.079 | 0.110 |
+| concentration function `M(D/20)` = max bin mass | 0.0072 | 0.0108 | 0.0199 | 0.0270 |
 | `QC_1(m̃)` | 0.084 | 0.223 | 0.648 | 0.943 |
 | `QC_8(m̃)` | 0.0067 | 0.0170 | 0.0444 | 0.0689 |
 | `QC_16(m̃)` | 0.0031 | 0.0082 | 0.0208 | 0.0328 |
@@ -172,12 +172,21 @@ to `K ≈ 0.5/5e-5 ≈ 10⁴`; at λ=6 to `K ≈ 180`.)
    least `c' QC_K(m̃) ≈ c' QC_1(m̃)/(1.8K)`, with `QC_1(m̃) = φ_- D − mean(β_a⁻)`
    growing 0.08 → 0.94 across the four windows.
 3. **What the cofinal inputs become.** Under WLH with `c' ≥ c_0` and `Q ≤ Q_*`
-   along a cofinal family, bounded loss forces `K ≥ c_0 φ_-²/(2 ρ̃_max (η+Q_*))`.
-   So the zero-distribution input ZLD of v1.47 (a lower bound on **every** level
-   band) is replaced by the single scalar `φ_-(a)²/ρ̃_max(a) → ∞` (measured
-   0.028 → 0.39, growing), and the packet-coverage input by the existence of an
-   admissible state with WLH constant `c_0` and bounded energy, which the head
-   states here achieve with `Q → 0`. Both remain open inputs; neither is
-   proved here; the source constraint is not imposed on the LP states.
+   along a cofinal family, bounded loss forces `K` to satisfy
+   `c_0 QC_K(m̃) ≤ η + Q_*`. *Correction (2026-09-22, after Astra's review of
+   v1.48):* the "crude" constant `ρ̃_max` in the first draft of this item was
+   a 20-bin histogram peak, but the true level density
+   `(1/X) Σ_{β=t} 1/|β'|` is unbounded at every trough level (inverse
+   square root), so `φ_-²/ρ̃_max` is not a valid scalar; the finite substitute
+   is the concentration function `M(h)` (largest level mass of an interval of
+   length `h`), giving `QC_K ≥ h φ_-²/(2K M(h)) − (3/2) h φ_-`. The sharper and
+   correct cofinal input is growth of the exact cost: measured
+   `QC_1(m̃) = φ_- D − mean(β_a⁻) = 0.084, 0.22, 0.65, 0.94` with
+   `K·QC_K/QC_1 ≈ 0.55` for `K ≤ 32`. So ZLD (a lower bound on **every** level
+   band) is replaced by `QC_1(m̃) → ∞` with `K QC_K ≥ κ_0 QC_1`, and the
+   packet-coverage input by the existence of an admissible state with WLH
+   constant `c_0` and bounded energy, which the head states here achieve
+   with `Q → 0`. Both remain open inputs; neither is proved here; the source
+   constraint is not imposed on the LP states.
 4. Same caveats as §5: even head, N=256, float, 20 bins for the constraint
    (a finer partition tightens the demand), grid `D` at λ ≥ 6.
