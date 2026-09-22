@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NS-46 — Growing radical blocks: result and remaining gap</title></head>
+<body style="margin:0;padding:36px 20px;background:#f3f2ee;color:#23312b;font-family:Georgia,'Times New Roman',serif;line-height:1.65;">
+<main style="max-width:680px;margin:0 auto;padding:32px;background:white;border-top:5px solid #426450;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.4px;color:#426450;margin:0 0 12px;">NS-46 · ASTRA-2 · ANALYTIC ASSESSMENT</p>
+<h1 style="font-size:31px;line-height:1.2;margin:0 0 14px;">A larger necessary removal rank, with the signed floor still open</h1>
+<p style="font-size:14px;color:#657168;">September 22, 2026 UTC · Version 1 · Joint NS-46 work based on local v1.52</p>
+<p style="font-size:19px;">The translated-radical construction extends from a block of order log λ to one of order λ²/log λ. Its complete operator residual still tends to zero. This is a substantive stronger obstruction to obtaining a positive gap after removing a smaller block. It does not supply the signed lower bound on the remaining complement.</p>
+
+<h2 style="font-size:23px;margin:28px 0 10px;">The proved construction</h2>
+<p>Let a = log λ. Use the normalized even Gaussian arithmetic radical φ and exactly the fixed smooth cutoff χ<sub>a</sub> from v1.35. For sufficiently large a, choose</p>
+<p style="padding:16px;background:#edf4ee;text-align:center;font-size:18px;">J = ⌊λ²/(40000a)⌋, &nbsp; m = 2J+1,<br>g<sub>a,j</sub>(x) = χ<sub>a</sub>(x)φ(x−j/J), &nbsp; −J ≤ j ≤ J.</p>
+<p>All translate centers lie in the fixed interval [−1, 1]. The coordinator’s elementary finite-arc lemma controls the smallest ordinary Gram eigenvalue using only a Fourier interval around zero on which |φ̂|² has a positive lower bound. It permits the Gram matrix to become badly conditioned and explicitly pays for that loss.</p>
+<p>The new tail estimate uses |x−j/J| ≥ a−2 at the physical boundary. Uniformly over all columns, the weighted exterior tails are bounded by</p>
+<p style="padding:12px;background:#f6f5f0;text-align:center;">C exp[−πλ²/(4e⁴)].</p>
+<p>The complete residual retains the archimedean multiplier, both pole integrals, and every global prime row, including rows beyond λ². The prime contribution has only an additional polynomial factor in λ. Combining this with the finite Gram estimate gives</p>
+<p style="padding:16px;background:#edf4ee;text-align:center;font-size:20px;">‖W<sub>λ</sub>P<sub>G</sub>‖ ≤ η<sub>a</sub> = C exp(−λ²/2000).</p>
+<p>This is a bound for the complete operator on the ordinary orthogonal projection onto the constructed block. It is not a quadratic-value diagnostic, finite Fourier compression, or spectral lower bound. The constants are analytic; no effective threshold in λ is numerically certified.</p>
+
+<h2 style="font-size:23px;margin:28px 0 10px;">Conditioning and cutoff loss are included</h2>
+<p>If the uncut Gram is at least γI and each column has tail mass at most τ², the cutoff Gram is at least (γ−mτ²)I. The exact loss uses <strong>1−χ²</strong>; the smaller expression (1−χ)² cannot replace it as an upper bound.</p>
+<p>Once mτ² ≤ γ/2, the normalized block residual is at most √(2m/γ) times the largest column residual. For the stated J, the resulting amplification is dominated by the stronger boundary-tail exponent. Thus the proof does not assume uniformly conditioned increasingly dense translates.</p>
+
+<h2 style="font-size:23px;margin:28px 0 10px;">Exact parity and spectral consequences</h2>
+<ul style="padding-left:23px;">
+<li>The block has exactly J+1 even directions and J odd directions.</li>
+<li>An actual even-source constraint removes at most one even dimension. At least J even and all J odd directions remain; no identification of the cutoff radical with the actual source is needed.</li>
+<li>Removing fewer than m physical dimensions leaves a unit vector with complete residual at most η<sub>a</sub> and absolute Weil energy at most η<sub>a</sub>.</li>
+<li>The complete spectral interval [−2η<sub>a</sub>, 2η<sub>a</sub>] contains at least m eigenvalues with multiplicity: at least J+1 even and J odd.</li>
+</ul>
+<p>Consequently, removing o(λ²/log λ) dimensions cannot leave a fixed positive gap or a positive gap of polynomial size in λ⁻¹. These statements do not determine which side of zero the near-zero eigenvalues occupy.</p>
+
+<h2 style="font-size:23px;margin:28px 0 10px;">What fixed-density lattices do and do not give</h2>
+<p>For each fixed spacing d &gt; 0, the infinite translate Gram has a strictly positive lower bound for this particular source. Its periodized Fourier density cannot vanish: that would force zeta to vanish at every point of a fixed vertical arithmetic progression, contrary to <a href="https://arxiv.org/abs/1208.2684v1" style="color:#315c78;">Li–Radziwiłł, Theorem 4</a>.</p>
+<p>This supplies no quantitative constant as d tends to zero. A single fixed lattice also has an infinite-dimensional orthogonal complement in each parity: two Fourier bands separated by 2π/d can cancel in every translate pairing. Fixed spacing changes the coefficient of the older O(a) rank construction, not its order. The new finite-block proof does not depend on this external theorem.</p>
+
+<h2 style="font-size:23px;margin:28px 0 10px;">The missing signed estimate</h2>
+<p>The target remaining on the complete complement is</p>
+<p style="padding:16px;background:#fff8e8;text-align:center;font-size:18px;">q<sub>a</sub>[y] ≥ −C<sub>*</sub>‖y‖² for y ⟂ Ran G,<br>with one finite C<sub>*</sub> on a cofinal family, in both parities.</p>
+<p>The small full residual would control the cross terms through the existing gap-free transfer if this estimate were proved. Increasing rank alone does not establish it or show that all negative directions lie in the removed block. Restating this inequality in new coordinates would merely restate the uniform-floor target.</p>
+<p>The new result therefore limits a positive-coercivity strategy. It does not close gap-free block methods, prove a negative Weil direction, establish positivity transfer, or prove G2 or RH.</p>
+
+<h2 style="font-size:23px;margin:28px 0 10px;">Deliverables and checks</h2>
+<p><a href="complete_block_bounds.tex" style="color:#315c78;">Complete residual, parity and rank proof</a> · <a href="fixed_lattice.tex" style="color:#315c78;">Fixed-spacing proof and incompleteness construction</a> · <a href="bibliography_additions.tex" style="color:#315c78;">Bibliography addition</a>.</p>
+<p>The coordinator owns the companion finite-arc lemma. The fixed-spacing result is a standalone companion, not a dependency of the dense-block theorem or part of the proposed v1.53 integration. An assisting agent supplied that disjoint analysis; its primary source was checked directly. No numerical experiment or new window was run.</p>
+<p>The actual unchanged baseline build is 265 pages with zero undefined/duplicate references. A temporary copy containing the companion lemma and both Astra-2 fragments builds to 271 pages with zero undefined/duplicate references and zero overfull boxes. These are typesetting checks, not proof certificates or a released manuscript version. No manuscript/map/board source was changed and no commit or push was made by Astra-2.</p>
+</main></body></html>

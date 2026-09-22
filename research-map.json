@@ -508,6 +508,15 @@
       "prop": "prop:ns43-ccm-coarse-profile",
       "evidence": "evidence/v152",
       "note": "Under the explicit scale, full both-parity liminf, nonnegativity and lower-semicontinuity hypotheses, density of translated radicals forces the limit form to zero. Finer scales and other selection mechanisms remain open."
+    },
+    {
+      "id": "fineradicalrank",
+      "title": "Uniform or polynomial positive gap after o(lambda\u00b2/log lambda) removed directions",
+      "status": "closed",
+      "parent": "gapfree",
+      "prop": "lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank",
+      "evidence": "evidence/v153",
+      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda\u00b2/(20000 log lambda), exact even/odd counts and residual C exp(-lambda\u00b2/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods."
     }
   ]
 }

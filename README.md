@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.52**.
+Alexander Eastwood's complete working manuscript, **v1.53**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -35,7 +35,7 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | Finite floors | `W_λ >= -8·I` at λ = 5, 6, 8, both parities, full infinite tail (`prop:v138-three-floors`) |
 | Certified window | half-width `a = log 4 = 1.386`; 1.73× the published Zhu window, 4× the classical range |
 | Live mechanism | CCM step (b): identify a limit mechanism for the complete ground |
-| Routes proved closed | 21 scoped map nodes; unavailable v1.28 numerical closure separately blocked |
+| Routes proved closed | 22 scoped map nodes; unavailable v1.28 numerical closure separately blocked |
 | Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |
@@ -107,6 +107,7 @@ graph LR
   relativeselection["Complete relative selection and entire-transform control<br/><small>prop:ns43-ccm-rayleigh-selection; prop:ns43-ccm-residual-selection</small><br/><small>&#128193; evidence/v152</small>"]
   absoluteselection["Absolute residual/resolvent data alone select ground: abstract inference<br/><small>prop:ns43-ccm-nonselection</small><br/><small>&#128193; evidence/v152</small>"]
   coarseprofile["Single profile from the specified coarse rescaled liminf<br/><small>prop:ns43-ccm-coarse-profile</small><br/><small>&#128193; evidence/v152</small>"]
+  fineradicalrank["Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions<br/><small>lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank</small><br/><small>&#128193; evidence/v153</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -163,6 +164,7 @@ graph LR
   stepb --> relativeselection
   stepb --> absoluteselection
   stepb --> coarseprofile
+  gapfree --> fineradicalrank
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -206,13 +208,14 @@ graph LR
   click relativeselection "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v152/" "evidence: evidence/v152" _blank
   click absoluteselection "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v152/" "evidence: evidence/v152" _blank
   click coarseprofile "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v152/" "evidence: evidence/v152" _blank
+  click fineradicalrank "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v153/" "evidence: evidence/v153" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
@@ -233,12 +236,30 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.52_manifest.json)
+- [Checksums and provenance](manifest/v1.53_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
 
-## New in v1.52
+## New in v1.53
+
+[NS-46, jointly with Astra-2](evidence/v153/), proves a larger complete near-zero
+block: dimension asymptotic to **lambda²/(20000 log lambda)** and full operator
+residual at most **C exp(-lambda²/2000)**. The construction changes from widely
+spaced translates to increasingly close translates inside a fixed interval.
+A finite-arc interpolation proof explicitly pays for the deteriorating Gram.
+
+The block has exact even/odd dimensions. Removing o(lambda²/log lambda)
+directions cannot leave a positive uniform or polynomial gap. This is a stronger
+rank obstruction, **not a complementary lower floor**. It determines no energy
+sign and gives no certified finite starting window. The gap-free uniform-floor
+route remains open. No new numerical window, tail metric, G2 or RH claim.
+
+[Assessment, proof and review scope](evidence/v153/ns46-fine-block-2026-09-22-v1.html).
+The joint result is reviewed in [PR #24](https://github.com/AlexanderEastwood/riemann/pull/24)
+and builds on the merged v1.52. Archived reports retain their prepublication checkpoint status.
+
+## New in v1.52 (PR #21)
 
 [NS-43/44/45](evidence/v152/) add two fresh, narrowly scoped comparison
 certificates and complete analytic proofs for route selection. At the existing

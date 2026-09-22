@@ -1,5 +1,24 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.53 local draft — NS-46 with Astra-2 (2026-09-22)
+
+What changed: the source translates stay in [-1,1] with shrinking spacing;
+we explicitly bound the finite Gram instead of requiring uniform conditioning.
+The complete boundary residual then decays exponentially in -lambda² and pays
+for a block of rank ~lambda²/(20000 log lambda). The full prime remainder,
+both poles, exact parity dimensions, source codimension and all block mixtures
+are retained. Independent finite-arc and complete-residual reviews pass.
+
+The obstruction is to a uniform or polynomial positive gap after
+o(lambda²/log lambda) constraints. A smaller positive gap is not excluded.
+It is an actual upper ceiling on that coercivity constant, not a negative Weil
+direction. No signed lower bound on the remaining complement was obtained.
+The existing gap-free floor transfer was identified as prior art and is not
+repackaged as a new result. No new numerical window or tail metric; G2/RH open.
+Evidence, actual build and versioned report are in evidence/v153/. Draft based
+on PR21; no publication or tag is asserted for v1.53.
+
+
 ## v1.52 local draft — NS-43/44/45 (2026-09-22)
 
 Fresh exact dyadic witnesses at the existing lambda=5 window close two precise

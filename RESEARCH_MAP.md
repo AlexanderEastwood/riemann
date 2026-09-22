@@ -61,6 +61,7 @@ graph LR
   relativeselection["Complete relative selection and entire-transform control<br/><small>prop:ns43-ccm-rayleigh-selection; prop:ns43-ccm-residual-selection</small><br/><small>&#128193; evidence/v152</small>"]
   absoluteselection["Absolute residual/resolvent data alone select ground: abstract inference<br/><small>prop:ns43-ccm-nonselection</small><br/><small>&#128193; evidence/v152</small>"]
   coarseprofile["Single profile from the specified coarse rescaled liminf<br/><small>prop:ns43-ccm-coarse-profile</small><br/><small>&#128193; evidence/v152</small>"]
+  fineradicalrank["Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions<br/><small>lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank</small><br/><small>&#128193; evidence/v153</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -117,6 +118,7 @@ graph LR
   stepb --> relativeselection
   stepb --> absoluteselection
   stepb --> coarseprofile
+  gapfree --> fineradicalrank
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -160,13 +162,14 @@ graph LR
   click relativeselection "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v152/" "evidence: evidence/v152" _blank
   click absoluteselection "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v152/" "evidence: evidence/v152" _blank
   click coarseprofile "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v152/" "evidence: evidence/v152" _blank
+  click fineradicalrank "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v153/" "evidence: evidence/v153" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
@@ -187,7 +190,7 @@ graph LR
 |---|---:|---|
 | `proved` | 22 | established result |
 | `live` | 1 | current route (gold): being worked now |
-| `closed` | 21 | closed route (red): proved insufficient or impossible; kept deliberately |
+| `closed` | 22 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 6 | attempted; obstruction found |
 | `open` | 6 | target, not yet attacked |
 
@@ -221,6 +224,7 @@ graph LR
       - [X] **lambda=5: stipulated 10^-8 D tail comparison** — `prop:v152-tail-comparison` · evidence: [`evidence/ns44_metric_replay/`](evidence/ns44_metric_replay/) · NS-44 fresh exact dyadic witnesses, Arb 320/448: positive q/D <7e-18 even and <12e-18 odd, contradicting the stipulated 1e-8 comparison. Failure of this comparison, not negative Weil directions or complete lambda=5 positivity. Historical v1.27 originals remain unarchived.
     - [x] **Target weakening** — `lane/bounded-floor`
       - [x] **no uniform positive gap exists** — `prop:v135-growing-radical` · evidence: [`evidence/v135/`](evidence/v135/) · dense radical family; same fact as the floor reduction
+        - [X] **Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions** — `lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank` · evidence: [`evidence/v153/`](evidence/v153/) · NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda²/(20000 log lambda), exact even/odd counts and residual C exp(-lambda²/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods.
       - [x] **uniform finite floor suffices** — `prop:v136-bounded-floor` · evidence: [`evidence/v136/`](evidence/v136/) · decay not required; dichotomy inf spec -> -inf or RH
         - [x] **W_lambda >= -8 I at lambda=5,6,8** — `prop:v138-three-floors` · `result/v138-three-floors` · evidence: [`evidence/v138/`](evidence/v138/) · both parities, full infinite tail, Z=0; margin 0.84 -> 0.10 (odd) as lambda grows; not cofinal
         - [x] **bounded shift keeps the exp cutoff barrier** — `prop:v138-shifted-floor` · evidence: [`evidence/v138/`](evidence/v138/) · N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi
