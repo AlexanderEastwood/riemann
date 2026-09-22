@@ -1,5 +1,36 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-21 — v1.47 / NS-29: level distribution as a zero statement
+
+Actual build: 237 pages, 0 undefined references, 0 duplicate references,
+0 overfull boxes. Analytic work only; no numerical experiment substituted.
+
+What had to change: lower cumulative sublevel measures are insufficient;
+one needs increments across every interval of levels. Packet density must
+be bounded below on a set covering each of those level bands, with original
+energy uniformly bounded. Positive fraction alone and upper density are
+insufficient. The conditional bound on [-theta D,0] is
+eta >= [b alpha kappa theta^2 D/K - Q]+.
+
+The corrected complete zero sum equals beta, so its band distribution is
+precisely the named open input ZLD. Primary zero-counting, zero-density,
+Landau-Gonek and pair-correlation results were assessed; no theorem or
+standard-conjecture reduction supplies this signed value distribution.
+Its logical strength relative to RH and pair correlation remains
+unclassified; no equivalence or independence is asserted.
+
+The v1.37 depth proof gives no uniform band measure. An explicit derivative
+bound gives local width with a window-dependent cost; the RH probe gives
+a cumulative bound that can be zero at t=theta D. A smooth pulse spread
+across [0,X] has energy log X + O(1), illustrating the separate energy
+obstacle; source projection retains its cross and pointwise costs.
+
+Outcome: named zero-distribution input plus independent packet coverage,
+both open. This is a gap in the proposed obstruction, not failure of the
+true concentration inequality or physical form. The route remains blocked,
+not closed. No new window, head run, tail metric or zero enclosure. NS-28
+is untouched; NS-1's two groups, G2 and RH remain open.
+
 ## 2026-09-21 — v1.46 / NS-26 and NS-27: explicit formula and scoped obstruction
 
 Actual build: 232 pages, 0 undefined references, 0 duplicate references,

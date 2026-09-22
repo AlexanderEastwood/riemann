@@ -1,0 +1,44 @@
+{
+ "manuscript_revision": "v1.47",
+ "base_commit": "556f2db9b395c458c3be390664994cf54533ceca",
+ "files": [
+  {
+   "path": "evidence/v147/README.md",
+   "size_bytes": 3755,
+   "sha256": "c077676f6af0021e5df7ec1271f419535ffd68ea5ef3026af1cb44d60466ed6e"
+  },
+  {
+   "path": "evidence/v147/build_report.json",
+   "size_bytes": 779,
+   "sha256": "59a014221d8f1d1c2fd42c6e1ab358366917f9276cdc035325c7b7067dddac2c"
+  },
+  {
+   "path": "evidence/v147/level_distribution_zero_statement.tex",
+   "size_bytes": 18310,
+   "sha256": "08318a91fb04cf2741f99a3464193f525b99107a7ea3b943bf187c50899dfa71"
+  },
+  {
+   "path": "evidence/v147/provenance.json",
+   "size_bytes": 1227,
+   "sha256": "30e4906acc781031527bfc017ab9e4bb9a813f42a2bf1081a6983ea2e895ee8a"
+  },
+  {
+   "path": "evidence/v147/references.tex",
+   "size_bytes": 1327,
+   "sha256": "e5b9f0e0f7d81d8262e4b5fc836f52a24d1200af7290bde4ef72d981c86edadd"
+  },
+  {
+   "path": "evidence/v147/research-report-2026-09-21-v1.html",
+   "size_bytes": 5823,
+   "sha256": "84ffe627c227b30496ab67960c5169869b99a0f1ed70ec559b30abfb944ff6ed"
+  },
+  {
+   "path": "evidence/v147/scope_review.md",
+   "size_bytes": 3899,
+   "sha256": "285d31a9c989cddcbd413b14b441958ea75fc0182e6b7d1469b7ea04c2af7e61"
+  }
+ ],
+ "file_count": 7,
+ "total_bytes": 35120,
+ "note": "NS-29: exact level/zero reductions and explicit open inputs; no new computation or closure; G2/RH open."
+}

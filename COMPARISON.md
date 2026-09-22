@@ -335,3 +335,25 @@ multiplicity is also not established. A two-value countermodel demonstrates
 why depth and concentration alone are insufficient; it is not a counterexample
 to the arithmetic criterion. Source projection and odd-sector scope are
 explicit. The route remains blocked, not closed. G2 and RH remain open.
+
+
+## Level distribution as a zero statement (NS-29, v1.47)
+
+The exact corrected zero field equals beta_a. Uniform lower measures of
+all its level bands form the named open input ZLD; a lower bound on each
+cumulative sublevel set is insufficient. The reduction separately requires
+a source-admissible packet whose Fourier density covers those same bands
+and whose original energy is bounded. On [-theta D,0] these hypotheses give
+eta >= [b alpha kappa theta^2 D/K - Q]+.
+
+The cited zero-counting, zero-density, Landau-Gonek and pair-correlation
+results do not provide this signed value-distribution statement. No
+implication or equivalence with RH, pair correlation, the density hypothesis
+or Lindelof is established; logical independence is not claimed either.
+v1.37 gives global depth divergence, not uniform band measure. The explicit
+local slope estimate has a window-dependent cost. Broad Fourier pulses
+have energy log X + O(1), so broad spread alone does not give uniform Q.
+Both arithmetic distribution and bounded-energy coverage remain open.
+This is a gap in the proposed minorant obstruction, not an object failure;
+the route remains blocked and the weighted criterion valid. G2 and RH
+remain open. See evidence/v147/ and its primary-source bibliography.

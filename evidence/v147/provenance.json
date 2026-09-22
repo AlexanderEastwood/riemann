@@ -1,0 +1,33 @@
+{
+  "classification": "unchanged archived proof and diagnostic inputs; no diagnostic promoted to certificate",
+  "base_main": "2a998d2",
+  "claim_commit": "556f2db",
+  "files": [
+    {
+      "path": "evidence/v146/beta_lattice_identity.tex",
+      "sha256": "ac18164e177e1786692d40cf07ed911369fe30e6ddf4d147500365862ff7f459",
+      "size_bytes": 7689
+    },
+    {
+      "path": "evidence/v146/step_minorant_scope.tex",
+      "sha256": "af3c1937f099d7f52561e6d1756e8f1bd41180bdf9beae7092decb52327ad352",
+      "size_bytes": 11904
+    },
+    {
+      "path": "evidence/v137/new_section.tex",
+      "sha256": "edd2217cc5a875ec77f3a4081d52ec933d0c51a376d185a68ad9a758e9c106cf",
+      "size_bytes": 8942
+    },
+    {
+      "path": "evidence/v137/adversarial_review.md",
+      "sha256": "afb57288a707b191ccf0a40f5df63c6513bc5419ef820b0c0b24f5fae863676e",
+      "size_bytes": 9953
+    },
+    {
+      "path": "evidence/diag_comb_minorant/results.md",
+      "sha256": "960cb4f0efeb0fe15a8cb10a55e27e776df956f6044a01811e558cb26b0270fd",
+      "size_bytes": 18446
+    }
+  ],
+  "external_primary_sources": "Six full bibliographic entries in references.tex; inspected 2026-09-21. No external mathematical repository used as an authority."
+}

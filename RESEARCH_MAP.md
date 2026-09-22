@@ -49,6 +49,7 @@ graph LR
   pencilconcentration["pencil loss budget; cofinal obligation retained<br/><small>prop:v144-pencil-concentration</small><br/><small>&#128193; evidence/v144</small>"]
   betaexplicit["exact lattice symbol; varying envelopes<br/><small>prop:v146-beta-explicit</small><br/><small>&#128193; evidence/v146</small>"]
   minorantlevels["bounded-complexity minorants: arithmetic gap remains<br/><small>prop:v146-packet-loss; prop:v146-level-complexity</small><br/><small>&#128193; evidence/v146</small>"]
+  zeroleveldistribution["zero level distribution and packet coverage: open inputs<br/><small>prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet</small><br/><small>&#128193; evidence/v147</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -93,6 +94,7 @@ graph LR
   concentration --> pencilconcentration
   concentration --> betaexplicit
   concentration --> minorantlevels
+  minorantlevels --> zeroleveldistribution
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -122,6 +124,7 @@ graph LR
   click pencilconcentration "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v144/" "evidence: evidence/v144" _blank
   click betaexplicit "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v146/" "evidence: evidence/v146" _blank
   click minorantlevels "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v146/" "evidence: evidence/v146" _blank
+  click zeroleveldistribution "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v147/" "evidence: evidence/v147" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit proved;
@@ -130,7 +133,7 @@ graph LR
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
   class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class w5,concentration,minorantlevels blocked;
+  class w5,concentration,minorantlevels,zeroleveldistribution blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes open;
   subgraph Legend
@@ -150,7 +153,7 @@ graph LR
 | `proved` | 19 | established result |
 | `live` | 2 | current route (gold): being worked now |
 | `closed` | 15 | closed route (red): proved insufficient or impossible; kept deliberately |
-| `blocked` | 3 | attempted; obstruction found |
+| `blocked` | 4 | attempted; obstruction found |
 | `open` | 5 | target, not yet attacked |
 
 ## Nodes
@@ -194,8 +197,9 @@ graph LR
       - [X] **reciprocal-band commutation** — `closed/reciprocal-band` · **evidence missing** · v1.33, commutator norm > 9e-6
       - [X] **scalar far majorant** — `prop:v125-cutoff-cost` · `closed/scalar-far-majorant` · evidence: [`evidence/v126/g2_window_resolution/`](evidence/v126/g2_window_resolution/) · N ~ L exp(M_phi): exponential cutoff cost
       - [X] **scalar signed primitive** — `cor:v137-scalar-no-go` · `closed/scalar-primitive` · evidence: [`evidence/v137/`](evidence/v137/) · a Delta(beta_a) -> infinity, unconditional
-      - [!] **signed weighted concentration** — `prop:v131-concentration` · `lane/concentration` · evidence: [`evidence/v146/`](evidence/v146/) · Valid sufficient criterion; blocked after NS-22 finite-head diagnostics, not proved closed. NS-27/v1.46 proves local packet bounds and a conditional linear distinct-level obstruction, but the arithmetic level-distribution and bounded-energy-packet hypotheses are missing. Depth growth alone does not supply them; positive spill must be retained.
-        - [!] **bounded-complexity minorants: arithmetic gap remains** — `prop:v146-packet-loss; prop:v146-level-complexity` · `codex/beta-lattice-identity` · evidence: [`evidence/v146/`](evidence/v146/) · NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure.
+      - [!] **signed weighted concentration** — `prop:v131-concentration` · `lane/concentration` · evidence: [`evidence/v146/`](evidence/v146/) · Valid sufficient criterion; blocked after NS-22 finite-head diagnostics, not proved closed. NS-27/v1.46 proves local packet bounds and a conditional linear distinct-level obstruction, but the arithmetic level-distribution and bounded-energy-packet hypotheses are missing. Depth growth alone does not supply them; positive spill must be retained. NS-29/v1.47 separates corrected-zero level-band distribution from admissible packet coverage and energy; both cofinal inputs remain open.
+        - [!] **bounded-complexity minorants: arithmetic gap remains** — `prop:v146-packet-loss; prop:v146-level-complexity` · `codex/beta-lattice-identity` · evidence: [`evidence/v146/`](evidence/v146/) · NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure. NS-29 makes the missing value-distribution statement ZLD explicit; cumulative size and arbitrary positive-fraction spread are insufficient.
+          - [!] **zero level distribution and packet coverage: open inputs** — `prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet` · `codex/level-density-zero-statement` · evidence: [`evidence/v147/`](evidence/v147/) · NS-29: conditional reduction requires lower measures for every level band and source-admissible bounded-energy packet coverage of those bands. Zero theorems assessed do not provide the input. D->infinity gives no uniform band measure; broad pulses cost log X. No closure or RH-equivalence claim.
         - [x] **exact lattice symbol; varying envelopes** — `prop:v146-beta-explicit` · `codex/beta-lattice-identity` · evidence: [`evidence/v146/`](evidence/v146/) · Unconditional Perron identity with strict endpoint, trivial zeros and remainder. NS-26: 40 low plus 14 deep/centroid samples; numerical illustration only. Classical explicit formula restated, not new positivity content.
         - [x] **pencil loss budget; cofinal obligation retained** — `prop:v144-pencil-concentration` · `codex/complete-ground-zero-transfer` · evidence: [`evidence/v144/`](evidence/v144/) · NS-24 exact translation: relative loss <= nu_k + eta_a ||v_k||^2/q+. Source constraint and mixture cross terms retained. Diagnostic thresholds not certified; fixed-head tests do not replace cofinal full-complement control. No new concentration bound.
       - [X] **unsigned prime-norm domination** — `prop:v119-prime-essential` · `closed/prime-norm` · evidence: [`evidence/v124/g2_growing_sign/`](evidence/v124/g2_growing_sign/) · norm ~ lambda, survives any finite removal

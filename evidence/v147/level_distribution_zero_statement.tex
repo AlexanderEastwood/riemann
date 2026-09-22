@@ -1,0 +1,376 @@
+\subsection*{Level distribution is a value-distribution and packet input (NS-29)}
+
+The depth is $D_a=\| (\beta_a)_-\|_\infty=-\inf\beta_a$ when
+$\inf\beta_a<0$, not the signed infimum itself. Fix $a>0$, an integer
+head size $N\ge1$, and $X=2\pi N/L$, where $L=2a$. The head cutoff
+specifies the observation interval $[0,X]$; it does not truncate the
+complete symbol, the Fourier transform, or the form. In any cofinal
+assertion below $N=N(a)$ must be specified as part of the family.
+In particular the global depth $D_a$ must not be replaced silently by
+$D_{a,X}:=\max(0,-\min_{[0,X]}\beta_a)\le D_a$.
+
+\begin{proposition}[Separation of level measure and packet coverage]
+\label{prop:v147-level-separation}
+Fix $D=D_a>0$ and $0<\theta\le1$. Put
+\[
+ F_{a,X}(t)=|\{\xi\in[0,X]:\beta_a(\xi)<-t\}|,
+ \qquad E(t_1,t_2)=\{\xi\in[0,X]:-t_2<\beta_a(\xi)<-t_1\}.
+\]
+The following is an explicit sufficient level-measure hypothesis:
+\begin{equation}\label{eq:v147-level-increments}
+ F_{a,X}(t_1)-F_{a,X}(t_2)
+ =|E(t_1,t_2)|\ge\kappa X\frac{t_2-t_1}{D}
+ \quad(0\le t_1<t_2\le\theta D),\qquad\kappa>0.
+\end{equation}
+Suppose also that a source-admissible even unit vector
+$g\in\mathcal D(q_a)$, a measurable $S\subset[0,X]$, and constants
+$b,\alpha>0$, $Q\ge0$ satisfy
+\begin{align}
+ |\mathcal F_ag(\xi)|^2&\ge b/X\quad\hbox{a.e. on }S,
+ &q_a[g]&\le Q, \notag\\
+ |S\cap E(t_1,t_2)|&\ge\alpha|E(t_1,t_2)|
+ &&(0\le t_1<t_2\le\theta D).
+ \label{eq:v147-packet-coverage}
+\end{align}
+Then, for every Borel $B\subset[-\theta D,0]$,
+\begin{equation}\label{eq:v147-weighted-density}
+ \mu_g(B)\ge\frac{2b\alpha\kappa}{D}|B|.
+\end{equation}
+For $\theta=1$ this is precisely the hypothesis of
+Proposition~\ref{prop:v146-level-complexity}, with $c=2b\alpha\kappa$.
+For $0<\theta<1$ it is a weaker, sufficient replacement: every minorant
+with at most $K$ distinct values satisfies
+\begin{equation}\label{eq:v147-partial-level-loss}
+ \eta(m)\ge\left[\frac{b\alpha\kappa\theta^2D}{K}-Q\right]_+.
+\end{equation}
+Thus uniform positive $b,\alpha,\kappa,\theta$ and bounded $Q$ on a
+cofinal family imply the same linear-in-$D_a$ level-count obstruction.
+These are additional hypotheses, not conclusions about the arithmetic
+symbol. Taking $S=[0,X]$ permits $\alpha=1$. Merely requiring
+$|S|\ge\alpha X$, or an upper bound on Fourier density, does not
+replace \eqref{eq:v147-packet-coverage}.
+\end{proposition}
+\begin{proof}
+The exact $\beta_a$ is nonconstant and real analytic on the real axis,
+and tends to $+\infty$ at infinity. Its level sets in $[0,X]$ have
+Lebesgue measure zero, so the equality in
+\eqref{eq:v147-level-increments} is valid, including at the endpoints.
+On each band, integration of the Fourier lower bound gives at least
+$b\alpha\kappa(t_2-t_1)/D$. Evenness doubles this contribution on the
+reflected interval; all omitted frequency mass is nonnegative.
+Domination on intervals extends to Borel sets (equivalently, apply the
+Radon--Nikodym derivative of the level pushforward). This proves
+\eqref{eq:v147-weighted-density}.
+
+For the last bound partition $[-\theta D,0]$ at the minorant's values
+in its interior. There are at most $K$ gaps: at least one value is
+$-D\le-\theta D$, since the minorant is at least $-D$, has finitely
+many values, and is below a symbol with infimum $-D$. On each gap the
+minorant is at most its lower endpoint; if that endpoint is the
+inserted $-\theta D$, this remains an upper bound. For gap lengths
+$\Delta_j$ the loss is therefore at least
+\[
+ \frac{b\alpha\kappa}{D}\sum_j\Delta_j^2
+ \ge\frac{b\alpha\kappa\theta^2D}{K}.
+\]
+Subtract $q_a[g]\le Q$ using \eqref{eq:v146-gap-packet}.
+Unconditional $D_a\to\infty$ proves the conditional cofinal assertion.
+\end{proof}
+
+A cumulative estimate such as
+$F_{a,X}(t)\ge\kappa X(1-t/D)$ is not enough. For example, the
+nonarithmetic affine symbol $\beta(\xi)=-D/2-D\xi/(2X)$ has
+$F(t)=X$ for $0<t\le D/2$ and $F(t)=2X(1-t/D)$ for $D/2<t<D$.
+It satisfies that cumulative estimate with $\kappa=1$, but has no
+mass in any level interval contained in $(-D/2,0)$. This is a
+counterexample to the measure-theoretic inference, not to the
+arithmetic symbol. Subtracting two lower bounds is not a lower bound
+for their difference. Likewise two sets each having positive measure
+need not intersect in every level band.
+
+There is also an exact local description. At almost every regular level
+$y$, the unweighted and weighted densities on $[0,X]$ are
+\begin{equation}\label{eq:v147-coarea}
+ h_{a,X}(y)=\sum_{\substack{0<\xi<X\\\beta_a(\xi)=y}}
+          \frac1{|\beta_a'(\xi)|},\qquad
+ h_{g,X}(y)=\sum_{\substack{0<\xi<X\\\beta_a(\xi)=y}}
+          \frac{|\mathcal F_ag(\xi)|^2}{|\beta_a'(\xi)|}.
+\end{equation}
+This follows by splitting at the finitely many critical points and
+changing variables on the monotone pieces. The increment condition is
+equivalent to $h_{a,X}(y)\ge\kappa X/D$ almost everywhere on the
+specified level interval. It asks for enough crossings with controlled
+slopes, not just zeros of $\zeta$ or one deepest trough. Necessarily
+$D_{a,X}\ge\theta D_a$; the finite head need not see the global depth.
+
+This separation is sufficient, not necessary for the original weighted
+hypothesis. The single-interval geometry following
+Proposition~\ref{prop:v146-level-complexity} could supply the weighted
+level density on a frequency interval of length $O(1/a)$ with packet
+density of order $a$, without a positive fraction of the whole $[0,X]$.
+There is also no assertion uniform over arbitrary choices of $N$:
+for fixed $a$ the negative set of $\beta_a$ is bounded, so
+$F_{a,X}(0)/X\to0$ as $X\to\infty$. Choosing excessively large
+heads can therefore defeat \eqref{eq:v147-level-increments} without
+affecting the complete weighted condition. Prescribing the cofinal
+range is part of ZLD, not a harmless choice made after the estimate.
+
+\paragraph{Exact reduction to a zero statement.}
+Use all nontrivial zeros with multiplicity and the symmetric-height
+Perron convention of Proposition~\ref{prop:v146-beta-explicit}. Define
+\begin{align}
+ Z_a(\xi)&=2\Re\lim_{T\to\infty}
+       \sum_{|\Im\rho|<T}\frac{x^{\rho-1/2+i\xi}}{\rho-1/2+i\xi},
+ &x&=e^{2a}, \notag\\
+ C_a(\xi)&=e_x\cos(2a\xi)
+       -2\Re\sum_{n\ge1}\frac{x^{-2n-1/2+i\xi}}{2n+1/2-i\xi},
+ &\mathcal Z_a(\xi)&=Z_a(\xi)+C_a(\xi)=\beta_a(\xi).
+ \label{eq:v147-corrected-zero-field}
+\end{align}
+Real continuous limits are used at critical-line zeros. No zero-location
+hypothesis enters this identity. In particular the endpoint is retained
+for prime-power $x$. Uniformly in real $\xi$,
+\begin{equation}\label{eq:v147-correction-size}
+ |C_a(\xi)|\le\varepsilon_a:=
+ e_x+\frac{4x^{-5/2}}{5(1-x^{-2})}\longrightarrow0.
+\end{equation}
+Indeed $|2n+1/2-i\xi|\ge2n+1/2\ge5/2$, and
+$e_x\le(\log x)/\sqrt x$. Consequently
+\[
+ \{Z_a<-t-\varepsilon_a\}\subset\{\beta_a<-t\}
+ \subset\{Z_a<-t+\varepsilon_a\}.
+\]
+For a band one must instead shrink both ends:
+\[
+ \{-t_2+\varepsilon_a<Z_a<-t_1-\varepsilon_a\}
+ \subset E(t_1,t_2)
+ \quad\hbox{within }[0,X].
+\]
+The inner band can be empty when $t_2-t_1\le2\varepsilon_a$.
+Thus even a small correction cannot simply be discarded in a demand
+about \emph{every} level interval. A finite zero prefix also needs the
+Perron remainder $-2\Re R_{x,T}$; \eqref{eq:v147-correction-size} is
+not an estimate for that remainder.
+
+\begin{assumption}[Corrected zero level distribution, ZLD]
+\label{ass:v147-zld}
+Fix a cofinal set of windows, a prescribed head-size function $N(a)$,
+and $0<\theta\le1$. There is a constant $\kappa>0$ independent of
+$a$ such that, eventually, for every $0\le r_1<r_2\le\theta$,
+\begin{equation}\label{eq:v147-zld}
+ \frac1{X_a}\left|\left\{0\le\xi\le X_a:
+  -r_2D_a<\mathcal Z_a(\xi)<-r_1D_a\right\}\right|
+ \ge\kappa(r_2-r_1),\qquad X_a=2\pi N(a)/L.
+\end{equation}
+This is a named \emph{open input}, not an established conjecture from
+the literature. The independent packet input is
+\eqref{eq:v147-packet-coverage} with $b,\alpha$ bounded below and
+$Q$ bounded above on that same family. Neither input is asserted here.
+\end{assumption}
+Substituting \eqref{eq:v147-corrected-zero-field} proves that ZLD is
+exactly \eqref{eq:v147-level-increments}. No information is gained by
+changing from the prime expression to the zero expression. Only ZLD
+with $\theta=1$ addresses the full original interval $[-D_a,0]$;
+fixed $\theta<1$ suffices for the modified bound
+\eqref{eq:v147-partial-level-loss}.
+
+\paragraph{What the zero literature supplies, and the missing reduction.}
+The following assessment concerns the stated theorems, not a proof
+that no future consequence of zero theory can yield ZLD.
+
+Riemann--von Mangoldt gives
+$N(T)=\frac{T}{2\pi}\log\frac{T}{2\pi e}+O(\log T)$; explicit
+versions are given by Hasanalizade--Shen--Wong
+\cite{HasanalizadeShenWong2022}. It counts ordinates, without a signed
+value-distribution conclusion for \eqref{eq:v147-corrected-zero-field}.
+At large height $T$, an interval of width $O(1/a)$ has main count
+$O((\log T)/a)$, while differencing the displayed error leaves
+$O(\log T)$. In particular this count estimate alone does not isolate
+or control cancellation at every window-scale side lobe.
+
+Zero-density theorems bound the number of zeros off a specified
+vertical line. For example Ingham's bound is
+$N(\sigma,T)\ll T^{3(1-\sigma)/(2-\sigma)}\log^5T$; see
+\cite{Ingham1940,ChourasiyaSimonic2025}. This is an upper count,
+not a lower signed band measure. In the present sum an off-line zero
+also has the factor $x^{\Re\rho-1/2}$, which may be large. Replacing
+all those factors by one uses RH. Removing this issue by assuming RH
+still leaves phase cancellation and the normalization by the extreme
+value $D_a$; it does not supply a proof of ZLD.
+
+Landau--Gonek estimates control the linear sums
+$\sum_{0<\Im\rho\le T}x^\rho$, including an arithmetic main term
+at prime powers; see \cite[Introduction, (1.1)]{Aryan2019}.
+They do not state a signed distribution theorem for a moving resolvent.
+Even on RH, with $A_x(v)=\sum_{0<\gamma\le v}x^{i\gamma}$ and
+$\xi<U<V$, partial summation reads
+\[
+ \sum_{U<\gamma\le V}\frac{x^{i\gamma}}{\gamma-\xi}
+ =\frac{A_x(V)}{V-\xi}-\frac{A_x(U)}{U-\xi}
+       +\int_U^V\frac{A_x(v)}{(v-\xi)^2}\,dv.
+\]
+An upper error bound here loses control as the interval approaches
+$\xi$ and gives no lower signed quantile. The real, paired expression
+has removable singularities; the problem is the loss of its cancellation
+in such absolute estimates, not a pole in $\beta_a$. Controlling a
+first or second moment likewise does not give a lower density on
+\emph{every} interval of values, particularly relative to a supremum.
+
+Montgomery's theorem and pair-correlation conjecture concern averages
+of differences of ordinates \cite{Montgomery1973}; the unconditional
+complex-zero extension also remains a correlation average
+\cite[Theorem 1]{BaluyotEtAl2023}. ZLD instead concerns values of a
+phase-sensitive complete sum, with $x=e^{2a}$ varying, on a prescribed
+frequency interval and normalized by its global negative depth. No
+reduction from these correlation statements to ZLD, or conversely, is
+proved here or supplied by the cited results. The same applies to the
+classical density hypothesis
+$N(\sigma,T)\ll_\epsilon T^{2(1-\sigma)+\epsilon}$ (and to
+Lindel\"of's hypothesis): these control counts or upper growth, not the
+required signed level distribution. ZLD is therefore a separate input
+with \emph{unclassified logical strength}; it is not justified to call
+it weaker than RH, equivalent to RH or pair correlation, or logically
+independent of them. Its conjunction with the packet input obstructs
+a minorant method; it is not a positivity assertion.
+
+\begin{proposition}[What depth growth actually says about measure]
+\label{prop:v147-depth-measure}
+Unconditionally, at a fixed window define
+\[
+ M_a=\tfrac12\psi'(5/4)
+       +2\sum_{1<n<x}\frac{\Lambda(n)\log n}{\sqrt n}
+       +2\int_0^L t e^{t/2}\,dt.
+\]
+Then $|\beta_a'|\le M_a$. If $d=D_{a,X}>t\ge0$, then
+\begin{equation}\label{eq:v147-depth-width}
+ F_{a,X}(t)\ge\min\{X,(d-t)/M_a\}.
+\end{equation}
+If $\beta_a([0,X])$ contains $[-\theta D_a,0]$, then
+\eqref{eq:v147-level-increments} holds at this window with
+$\kappa=D_a/(M_aX)$. No uniform positive lower bound for this
+$\kappa$ follows from $D_a\to\infty$.
+
+Under the additional RH hypothesis of
+Proposition~\ref{prop:v137-conditional-mass}, let
+$w_a(\xi)=w(2a(\xi-\gamma_0))$. Eventually, for $0\le t<D_a$,
+\begin{equation}\label{eq:v147-probe-measure}
+ |\{\beta_a<-t\}\cap\operatorname{supp}w_a|
+ \ge\frac{[1/(6\pi)-\pi t/a]_+}{D_a-t}.
+\end{equation}
+This is a conditional, possibly zero, cumulative measure bound. It
+is not ZLD or a physical packet estimate.
+\end{proposition}
+\begin{proof}
+Differentiate the finite prime sum and the continuum integral in
+\eqref{eq:v130-r-symbol}. The trigamma series implies
+$|\psi'(5/4+i\xi/2)|\le\psi'(5/4)$, proving the derivative bound.
+From a minimizer on $[0,X]$, the Lipschitz estimate supplies a
+one-sided interval of length at least the right side of
+\eqref{eq:v147-depth-width}; strict endpoints have zero measure.
+If the range contains the indicated levels, almost every such level
+has a regular preimage. Equation~\eqref{eq:v147-coarea} then gives
+$h_{a,X}\ge1/M_a$. This proves the fixed-window increment estimate.
+
+For the RH statement, $0\le w_a\le1$, $\int w_a=\pi/a$ and,
+eventually, $J_a=\int\beta_aw_a\le-1/(6\pi)$. Splitting the
+integral at $\beta_a=-t$ gives
+\[
+ J_a\ge-\frac{\pi t}{a}
+        -(D_a-t)\int_{\{\beta_a<-t\}}w_a.
+\]
+Rearranging and using $w_a\le1$ proves the claim.
+\end{proof}
+At $t=\theta D_a$, the numerator in
+\eqref{eq:v147-probe-measure} need not be positive: the argument has
+no upper control on $D_a/a$. Even a positive value is not a bound on
+all band differences normalized by $X_a$. The unconditional v1.37
+argument is a contradiction: a bounded cofinal scalar floor would
+imply RH and then contradict the conditional probe. It proves global
+depth divergence, not a uniform sublevel measure, a head-range depth,
+or the Fourier mass of a realizable packet. Continuity supplies local
+width only with its window-dependent slope cost, as made explicit above.
+
+\begin{proposition}[Broad Fourier coverage does not bound the energy]
+\label{prop:v147-broad-packet}
+Fix a nonnegative, even $h\in C_c^\infty(-1/2,1/2)$ of $L^2$ norm
+one. For $X\to\infty$ and $a>1/(2X)$ put
+$f_X(t)=\sqrt X h(Xt)$, a unit even physical window vector. For a
+constant $b_h>0$ depending only on $h$,
+\begin{equation}\label{eq:v147-broad-packet}
+ |\mathcal F_af_X(\xi)|^2\ge b_h/X\quad(0\le\xi\le X),
+ \qquad q_a[f_X]=\log X+C_h+o(1).
+\end{equation}
+The energy asymptotic is uniform in these windows once
+$1/X<\log2$. It gives no uniform $Q$ for this construction.
+These vectors are not asserted source-admissible.
+\end{proposition}
+\begin{proof}
+The unitary transform is $X^{-1/2}\widehat h(\xi/X)$. On $|v|\le1$,
+$\widehat h(v)\ge(2\pi)^{-1/2}\cos(1/2)\int h>0$, proving the
+lower bound. The autocorrelation of $f_X$ is supported in
+$[-1/X,1/X]$. Every prime lag $\log n\ge\log2$ therefore contributes
+zero exactly; the continuum term contributes $O(1/X)$, since the
+autocorrelation has absolute value at most one. Finally
+\[
+ \int_{\mathbb R}A(Xv)|\widehat h(v)|^2\,dv
+ =\log X-\log(2\pi)
+       +\int_{\mathbb R}\log|v|\,|\widehat h(v)|^2\,dv+o(1).
+\]
+This follows from the digamma asymptotic; split $|v|<1/X$, whose
+logarithmic contribution is $O((\log X)/X)$, and use the rapid decay
+of $\widehat h$ on the remainder. The displayed integral defining
+$C_h$ is finite. No prime cancellation or RH is used.
+\end{proof}
+
+Source projection has a pointwise cost as well as an energy cost. For
+any unit even $f\in\mathcal D(q_a)$, with the actual source
+$u_a\in\mathcal D(\mathsf W_{e^a})$, write $r=|\langle f,u_a\rangle|<1$ and
+$g=P_af/\sqrt{1-r^2}$. Then
+\begin{equation}\label{eq:v147-projected-density}
+ |\mathcal F_ag(\xi)|\ge
+ \frac{[|\mathcal F_af(\xi)|-r|\mathcal F_au_a(\xi)|]_+}
+      {\sqrt{1-r^2}}.
+\end{equation}
+In particular a raw $b/X$ lower bound persists with $b/(4X)$ if
+$r\|\mathcal F_au_a\|_\infty\le\sqrt{b/X}/2$. Small ordinary
+source overlap alone is not this scale-dependent inequality.
+The exact form expansion also gives
+\[
+ \left|(1-r^2)q_a[g]-q_a[f]\right|
+ \le(2r+r^2)\|\mathsf W_{e^a}u_a\|.
+\]
+Thus for the broad pulses, if $r\to0$ and the source residual is
+bounded, projection still leaves $q_a[g]/\log X\to1$.
+It cannot repair their energy cost. The packet of a single trough in
+Lemma~\ref{lem:v146-packet-concentration}, conversely, supplies local
+Fourier mass but not coverage of every level across $[0,X]$ or a
+uniform original energy. At one fixed window every nonzero physical
+packet has an analytic transform and hence can be bounded below off
+small neighborhoods of its finitely many zeros in $[0,X]$; the bound
+and the energy may depend on the window, and those neighborhoods
+can meet precisely the needed level bands. This does not give
+\eqref{eq:v147-packet-coverage}.
+
+\paragraph{Finding and scope.}
+The outcome of NS-29 is a reduction to the named open input ZLD
+\emph{together with} bounded-energy packet coverage. The existing
+unconditional zero theorems assessed above do not complete that reduction
+into a proved bound. Nor can one identify packet spread alone as the
+remaining obstacle: the uniform arithmetic band measure (a) is itself
+unproved, and even granting it leaves the joint coverage and energy
+requirement (b). The modification from cumulative sublevel size to
+\emph{increments}, and from an arbitrary positive fraction to
+\emph{coverage of each level band}, is essential.
+
+The new fixed-window implications require no RH assumption. RH is used
+explicitly in \eqref{eq:v147-probe-measure} and when interpreting the
+critical-line exponential sums in the literature discussion. The two cofinal
+inputs remain open. The argument and factors of two apply to odd
+packets as well because their Fourier modulus is even; the even-source
+constraint is then absent. NS-22 and the concurrent NS-28 measurements
+are diagnostics, not substitutes for these cofinal hypotheses. No new
+window, head computation, tail metric or zero enclosure is made. This
+is a gap in a proposed minorant obstruction, not failure of the true
+weighted concentration criterion or of the physical object. The route
+remains blocked, not closed. G2 and RH remain open.
+
