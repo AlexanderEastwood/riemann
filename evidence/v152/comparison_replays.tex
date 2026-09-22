@@ -1,0 +1,103 @@
+\subsection*{Fresh certificates for two existing comparison failures}
+
+The following computations use the existing $\lambda=5$ window and
+the already stipulated metrics and partition. They introduce neither a
+new window nor a replacement tail metric. The frozen vectors are new;
+the original v1.27--v1.28 evidence is still not archived. In particular,
+the historical displayed witness ratios and four-block tables are not
+claimed to have been recovered or replayed.
+
+\begin{proposition}[Fresh failure of the stipulated $10^{-8}D$ tail comparison]
+\label{prop:v152-tail-comparison}
+At $\lambda=5$, in each parity there is an exact dyadic vector supported
+on $17\le n\le128$ with strictly positive Weil energy, but with
+\[
+ 0<\frac{v^*\mathsf W_5v}{v^*Dv}
+ <\begin{cases}7\cdot10^{-18},&\text{even},\\
+               12\cdot10^{-18},&\text{odd}.
+   \end{cases}
+\]
+Here $D=\operatorname{diag}(a_n)$ is the stipulated positive
+archimedean metric, not the complete diagonal of $\mathsf W_5$.
+Consequently $Q_{16}\mathsf W_5Q_{16}\succeq10^{-8}Q_{16}DQ_{16}$
+is false in both parities. No negative Weil direction is asserted.
+\end{proposition}
+\begin{proof}[Certified verification]
+The integer coordinates and common denominator $2^{60}$ are frozen in
+\path{evidence/ns44_metric_replay/witnesses.json}. With those identical
+vectors, fresh Arb coefficient enclosures at $320$ and $448$ bits,
+including the analytic $96$-term series remainder, prove positive norm,
+positive $D$ energy, positive Weil energy, and
+$v^*(\mathsf W_5-10^{-8}D)v<0$ in each parity.
+The respective ratio balls are contained in the displayed rational
+intervals; rounded display values are
+$6.4235244156530\cdot10^{-18}$ and
+$1.1127922753304\cdot10^{-17}$.
+The shifted energies are respectively approximately
+$-2.4267798261306\cdot10^{-8}$ and
+$-2.4549167289288\cdot10^{-8}$; the signs are decided by the
+archived balls, not these rounded values.
+
+A separate expansion into the normalized $+n,-n$ Fourier coordinates
+verifies the same signs and overlaps the parity assembly. This checks
+signs and indexing independently while sharing the analytic coefficient
+enclosures; it is not a second derivation of the kernel. A further
+reviewer replay and direct four-sign double sum reproduce the gates.
+All coefficients are freshly assembled with an empty temporary cache.
+The float proposal is used only to choose frozen vectors; no midpoint
+solve enters a proof gate. The complete ball strings, source hashes,
+verifier and independent review are archived and indexed in
+\path{evidence/v152/}.
+\end{proof}
+
+\begin{proposition}[Fresh obstruction for the existing dyadic block comparison]
+\label{prop:v152-block-comparison}
+For the $\lambda=5$, $N=25$ dyadic partition, the signed block
+norm-comparison criterion fails in both parities for every admissible
+choice $0<M_j\preceq T_{jj}$ and every positive scalar row weighting.
+The first three blocks
+\[
+ I_0=\{26,\ldots,50\},\quad I_1=\{51,\ldots,100\},\quad
+ I_2=\{101,\ldots,200\}
+\]
+already suffice. This closes this partition's sufficient comparison,
+not all signed block methods or the sign of the complete Weil form.
+\end{proposition}
+\begin{proof}[Certified pairings and exact comparison argument]
+For each of the three pairs in each parity, separate frozen dyadic
+vectors $x,y$ satisfy, at both $320$ and $448$ bits,
+\[
+ X=x^*T_{jj}x>0,\qquad Y=y^*T_{kk}y>0,\qquad
+ |x^*T_{jk}y|^2-H_{jk}^2XY>0.
+\]
+The zero-diagonal symmetric rational matrices $H$ have entries
+\[
+ (H_{01},H_{02},H_{12})=
+ \begin{cases}(997,568,481)/1000,&\text{even},\\
+              (997,484,612)/1000,&\text{odd}.
+ \end{cases}
+\]
+The same fresh coefficient and independent signed-index checks are
+used for both energies and the cross pairing. The exact Rayleigh
+quotients on $(1,1,1)$ are
+\[
+ \frac{341}{250}=1.364>1\quad\text{and}\quad
+ \frac{2093}{1500}>1,
+\]
+respectively. The frozen witnesses and strict interval gates are in
+\path{evidence/ns45_block_replay/}; an independent rerun gives a
+byte-identical certificate. Pair witnesses need not be one common
+physical vector because they lower-bound separate operator norms.
+
+If admissible positive metrics exist, then each $T_{jj}$ is positive
+definite. The verified quotients lower-bound the normalized coupling
+norms for $T$, and Lemma~\ref{lem:v128-comparison-obstruction} gives
+$\beta_{jk}(M)\ge\beta_{jk}(T)>H_{jk}$. If the metrics do not exist,
+the criterion already fails its prerequisite. Thus no unconditional
+full-block inertia assertion is needed. A positive row weighting making
+every comparison row sum below one would, by diagonal similarity and
+the row-sum norm, force the spectral radius of $H$ below one, contrary
+to its exact Rayleigh quotient. An infinite continuation adds only
+nonnegative norm terms, so it cannot repair these first three rows.
+This proves precisely the stated comparison failure.
+\end{proof}

@@ -87,10 +87,12 @@
     },
     {
       "id": "w5",
-      "title": "lambda=5",
-      "status": "blocked",
+      "title": "lambda=5: stipulated 10^-8 D tail comparison",
+      "status": "closed",
       "parent": "windows",
-      "note": "v1.27 historically reports 10^-8 D tail-metric failure in both parities; original witnesses/verifiers not archived (NS-38). No complete positivity certificate at lambda=5 is claimed here."
+      "note": "NS-44 fresh exact dyadic witnesses, Arb 320/448: positive q/D <7e-18 even and <12e-18 odd, contradicting the stipulated 1e-8 comparison. Failure of this comparison, not negative Weil directions or complete lambda=5 positivity. Historical v1.27 originals remain unarchived.",
+      "prop": "prop:v152-tail-comparison",
+      "evidence": "evidence/ns44_metric_replay"
     },
     {
       "id": "uniform",
@@ -147,12 +149,13 @@
     },
     {
       "id": "blockmetric",
-      "title": "block metrics",
-      "status": "blocked",
+      "title": "lambda=5 N=25: tested dyadic norm comparison",
+      "status": "closed",
       "parent": "uniform",
       "branch": "closed/block-metric",
-      "note": "v1.28 reports failure of its tested dyadic partition in both parities; original numerical witnesses and verifiers not archived (NS-38). Analytic comparison lemma is available; arithmetic closure is not currently replayable.",
-      "evidence": "MISSING"
+      "note": "NS-45 new 320/448-bit dyadic pair certificates on the first three existing blocks give exact rational Rayleigh bounds 341/250 even and 2093/1500 odd >1. Excludes all admissible smaller block metrics and positive row weights for this partition; no full-block inertia or general signed-block no-go. Historical v1.28 originals remain unarchived.",
+      "evidence": "evidence/ns45_block_replay",
+      "prop": "prop:v152-block-comparison"
     },
     {
       "id": "flattop",
@@ -198,8 +201,8 @@
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "Valid sufficient criterion (prop:v131); a cofinal uniform finite concentration floor remains unproved. Separately, QG plus an admissible bounded-energy weighted packet would obstruct bounded level complexity; these are open inputs for that proposed no-go, not a positivity mechanism. NS-22 grid-family losses and its invalid sampled tail charge prove no closure (NS-31/36).",
-      "evidence": "evidence/v146"
+      "note": "Valid sufficient criterion; the missing positivity input is a complete joint signed operator lower bound with a uniform cofinal error. QG plus a separate admissible bounded-energy packet would obstruct bounded level count, not supply this positivity input. NS-22 grid-family losses and its invalid sampled tail charge prove no closure (NS-31/36). NS-43 proves unrestricted exact adaptive levels are equivalent to the floor target; a nonarithmetic countermodel refutes general completeness of scalar set bounds. Specific arithmetic operator estimates remain open.",
+      "evidence": "evidence/v152"
     },
     {
       "id": "weaken",
@@ -332,7 +335,7 @@
       "status": "live",
       "parent": "simpleeven4",
       "evidence": "evidence/diag_ns2_semantic_lock",
-      "note": "The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. v1.42 separately encloses one complete lambda=4 zero within 0.1 of gamma_1. High-accuracy discrepancy transfer and cofinal Xi convergence remain open. v1.43 certifies a complete first-positive-zero radius 8.752082e-33 and quantifies the archived bound resolution; no complete discrepancy sign or 1e-71 magnitude."
+      "note": "The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. v1.42 separately encloses one complete lambda=4 zero within 0.1 of gamma_1. High-accuracy discrepancy transfer and cofinal Xi convergence remain open. v1.43 certifies a complete first-positive-zero radius 8.752082e-33 and quantifies the archived bound resolution; no complete discrepancy sign or 1e-71 magnitude. NS-43 supplies precise complete relative-selection and entire-transform criteria; none is proved cofinally. Absolute residuals and ordinary resolvent collapse alone do not select the Gaussian, as an explicitly nonarithmetic countermodel shows."
     },
     {
       "id": "semanticlock",
@@ -421,7 +424,7 @@
       "prop": "lem:v150-weight; prop:v150-critical-energy; ass:v150-cae",
       "branch": "codex/bounded-capacity-weight",
       "evidence": "evidence/v150",
-      "note": "NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open."
+      "note": "NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open. NS-43 extends the loss obstruction to any fixed prime-power channel and moving omitted channels bounded away from the endpoint, with unchanged other signed terms. Full coefficient-one or compensated estimates remain open."
     },
     {
       "id": "capacityslack",
@@ -442,6 +445,78 @@
       "branch": "codex/ns38-ns39-integration",
       "evidence": "evidence/v151",
       "note": "NS-39: exact inverse corrected-zero-field formula for the potential, including finite-window pole mass. ZLD implies QG growth with kappa theta\u00b2 D/(2K) on the same prescribed family; no packet input supplied. CAE equals the uniform complement floor. General measure countermodels are not arithmetic independence. All three arithmetic inputs remain open; no new positivity conclusion."
+    },
+    {
+      "id": "capacitychannels",
+      "title": "Fixed/sub-endpoint channel deletion with unchanged signed terms",
+      "status": "closed",
+      "parent": "capacityweight",
+      "prop": "prop:ns43-fixed-channel; prop:ns43-moving-channel",
+      "evidence": "evidence/v152",
+      "note": "Exact source-admissible even and odd tests force an unbounded comparison error for the specified Gaussian weight. Covers bounded channel counts and sublinear-in-exp(2a) cutoffs. Endpoint-approaching omissions, compensation, and another weight are not closed."
+    },
+    {
+      "id": "bumpstrength",
+      "title": "Restricted bump discrepancy can carry the full zero obstruction",
+      "status": "proved",
+      "parent": "capacityweight",
+      "prop": "prop:ns43-bump-strength",
+      "evidence": "evidence/v152",
+      "note": "For an explicit smooth compact probe with transform zeros only on the imaginary axis, a bounded translated prime discrepancy would exclude off-line zeros. The bound is unproved; no converse or weaker-than-RH claim. For arbitrary probes, boundedness permits off-line zeros only at common transform zeros; it does not exclude that masking."
+    },
+    {
+      "id": "adaptiveidentity",
+      "title": "Unrestricted exact adaptive hierarchy = complement floor",
+      "status": "proved",
+      "parent": "concentration",
+      "prop": "ns43-conc-prop-adaptive",
+      "evidence": "evidence/v152",
+      "note": "Fixed-window compactness proves convergence of complete compressed lower edges. Cofinal uniform floor existence is equivalent; no effective complexity or new arithmetic bound. Growing adaptive level counts are unrestricted."
+    },
+    {
+      "id": "scalarsetshortcut",
+      "title": "Scalar set bounds alone determine signed floor: general inference",
+      "status": "closed",
+      "parent": "concentration",
+      "prop": "ns43-conc-prop-scalar",
+      "evidence": "evidence/v152",
+      "note": "Exact commuting three-outcome countermodels share all scalar set extrema but have signed bottoms -1/5 and +1/10, also after exact source removal. General inference is false; no arithmetic realization or physical concentration impossibility claimed."
+    },
+    {
+      "id": "relativeselection",
+      "title": "Complete relative selection and entire-transform control",
+      "status": "blocked",
+      "parent": "stepb",
+      "prop": "prop:ns43-ccm-rayleigh-selection; prop:ns43-ccm-residual-selection",
+      "evidence": "evidence/v152",
+      "note": "Missing cofinal complete separator relative to the explicit cutoff residual, or Rayleigh-excess/gap plus evaluator/weighted-tightness control. Global-ground use additionally needs odd ordering. No fixed-head replacement or polynomial positive separator."
+    },
+    {
+      "id": "absoluteselection",
+      "title": "Absolute residual/resolvent data alone select ground: abstract inference",
+      "status": "closed",
+      "parent": "stepb",
+      "prop": "prop:ns43-ccm-nonselection",
+      "evidence": "evidence/v152",
+      "note": "Exact abstract family has simple even nonnegative real-zero grounds, arbitrarily fast residual decay, resolvent collapse and tight support, yet alternating profiles. It is not an arithmetic support-consistent Weil family; CCM itself remains open."
+    },
+    {
+      "id": "coarseprofile",
+      "title": "Single profile from the specified coarse rescaled liminf",
+      "status": "closed",
+      "parent": "stepb",
+      "prop": "prop:ns43-ccm-coarse-profile",
+      "evidence": "evidence/v152",
+      "note": "Under the explicit scale, full both-parity liminf, nonnegativity and lower-semicontinuity hypotheses, density of translated radicals forces the limit form to zero. Finer scales and other selection mechanisms remain open."
+    },
+    {
+      "id": "fineradicalrank",
+      "title": "Uniform or polynomial positive gap after o(lambda\u00b2/log lambda) removed directions",
+      "status": "closed",
+      "parent": "gapfree",
+      "prop": "lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank",
+      "evidence": "evidence/v153",
+      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda\u00b2/(20000 log lambda), exact even/odd counts and residual C exp(-lambda\u00b2/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods."
     }
   ]
 }

@@ -1,0 +1,74 @@
+{
+  "classification": "analytic source and independent-review artifact integrity; not a numerical certificate",
+  "task": "NS-46",
+  "authors": [
+    "Astra Main",
+    "Astra-2"
+  ],
+  "base_commit": "24f4ab55f623a894b3d1bc532ba0b3cedac3f286",
+  "base_pull_request": 21,
+  "claim_commit": "0355edb",
+  "public_main_at_validation": "b0baadf",
+  "authoritative_analytic_fragments": [
+    "evidence/ns46_radical_block/coordinator/finite_arc_gram.tex",
+    "evidence/ns46_radical_block/astra2/complete_block_bounds.tex"
+  ],
+  "integration": "Both pinned sources embedded unchanged in new_section.tex; full new section embedded verbatim once in live manuscript. Optional fixed-spacing companion is outside integration and proof dependency.",
+  "new_window": false,
+  "new_tail_metric": false,
+  "certified_finite_starting_threshold": false,
+  "signed_floor_proved": false,
+  "g2_or_rh_proved": false,
+  "artifacts": [
+    {
+      "path": "evidence/ns46_radical_block/astra2/SHA256SUMS",
+      "size_bytes": 633,
+      "sha256": "387351e583db3ce001b92aa21db2fac458cb539b30e52e9398a446008c8fa4a0"
+    },
+    {
+      "path": "evidence/ns46_radical_block/astra2/bibliography_additions.tex",
+      "size_bytes": 332,
+      "sha256": "5b466d798637eb76b2956438764d62d60a6adb922c8212ff2a556d164a8c0a4b"
+    },
+    {
+      "path": "evidence/ns46_radical_block/astra2/complete_block_bounds.tex",
+      "size_bytes": 8971,
+      "sha256": "44307ff1ab01dd6d93b1d287367359cb209bf6166789c30de894f281591bd3d2"
+    },
+    {
+      "path": "evidence/ns46_radical_block/astra2/fixed_lattice.tex",
+      "size_bytes": 3137,
+      "sha256": "c13a3cfdfd05821d725f1cdc861892e94742a2ccfa1886200580f6fc9c4f0f56"
+    },
+    {
+      "path": "evidence/ns46_radical_block/astra2/ns46-block-assessment-2026-09-22-v1.html",
+      "size_bytes": 7492,
+      "sha256": "db68a69148c2b83c7e2f6578c0b87515d188b0bf5cd1b87f83ff22fd645b8336"
+    },
+    {
+      "path": "evidence/ns46_radical_block/astra2/verification.md",
+      "size_bytes": 3683,
+      "sha256": "c307f3b3f0fcdf0b6ae8a14f128a8fa56fd19c4e454dc305fe9128da4aa49a2d"
+    },
+    {
+      "path": "evidence/ns46_radical_block/coordinator/finite_arc_gram.tex",
+      "size_bytes": 3804,
+      "sha256": "ed8d0093fb1a21e8f81857b4c3f053762a9d22a2a50d38313aec2237df1e701b"
+    },
+    {
+      "path": "evidence/ns46_radical_block/review/complete_block_review.md",
+      "size_bytes": 9388,
+      "sha256": "9e80800c58662a6f2f4f742e80476c46d9cda140c5812f635fa07c0e9f0adb48"
+    },
+    {
+      "path": "evidence/ns46_radical_block/review/finite_arc_review.md",
+      "size_bytes": 4753,
+      "sha256": "253f1476e5b2f6e37c2230c15072290c9a717fc88df0d5c39e71edda1f271000"
+    },
+    {
+      "path": "evidence/ns46_radical_block/review/integration_review.md",
+      "size_bytes": 6314,
+      "sha256": "f9aef2964161142b68ba864e8a3c335eb55c0afca1ca9a184513934c518ac8ef"
+    }
+  ]
+}

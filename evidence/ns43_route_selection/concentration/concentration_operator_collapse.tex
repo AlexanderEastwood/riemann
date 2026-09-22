@@ -1,0 +1,233 @@
+% NS-43 concentration subtask. Analytic working fragment, not a version claim.
+% All conclusions are explicitly scoped. No numerical or RH claim.
+\subsection*{Adaptive concentration: completeness is not an estimate (NS-43)}
+\label{ns43-conc-sec}
+
+\paragraph{Objects and source constraint.}
+Fix $a>0$. Let $\mathcal H_a=L^2(-a,a)$, let $\mathcal F_a$ mean
+zero extension followed by the unitary Fourier transform, and let
+$\beta_a$ be the exact complete symbol, including its endpoint and pole
+terms. Put $D_a=\| (\beta_a)_-\|_\infty$.
+Use either of the closed spaces
+\[
+ S_a^{\rm ev}=\{f\in L^2_{\rm ev}(-a,a):\langle f,u_a\rangle=0\},
+ \qquad S_a^{\rm odd}=L^2_{\rm odd}(-a,a),
+\]
+where $u_a$ is the actual normalized repaired source.
+In this subsection $S_a$ denotes one of these spaces and $P_{S_a}$
+its orthogonal projection. All operator lower bounds act on the
+\emph{whole} $S_a$, not on a head or on individual pencil directions.
+For an even Borel set $G$ put
+\[
+ C_{a,S}(G)=P_{S_a}\mathcal F_a^*1_G\mathcal F_aP_{S_a}|_{S_a}.
+\]
+The complete form is
+$q_a[f]=\int\beta_a|\mathcal F_af|^2$, with form domain given by
+$\int(\beta_a+D_a)|\mathcal F_af|^2<\infty$.
+
+\begin{proposition}[Exact adaptive hierarchy and the original lower edge]
+\label{ns43-conc-prop-adaptive}
+Suppose $\beta_a$ is continuous, even, bounded below, and tends to
+$+\infty$ at both frequency ends. These properties hold for the
+manuscript's fixed-window symbol. For integers $n\ge1$ define
+\begin{align*}
+ \delta_n&=2^{-n},\qquad J_n=n2^n,\\
+ m_{a,n}(\xi)&=-D_a+
+ \delta_n\sum_{j=1}^{J_n}
+       1_{\{\beta_a(\xi)+D_a\ge j\delta_n\}}.
+\end{align*}
+These are finite step minorants with positive weights, and
+$m_{a,n}\uparrow\beta_a$ pointwise. Their exact compressed lower
+edges obey
+\begin{equation}\label{ns43-conc-eq-edge-limit}
+ \lambda_{a,n}:=\inf_{\substack{f\in S_a\\\|f\|=1}}
+   \int m_{a,n}|\mathcal F_af|^2
+ \ \uparrow\
+ \lambda_a:=\inf_{\substack{f\in S_a\cap\mathcal D(q_a)\\\|f\|=1}}
+   q_a[f].
+\end{equation}
+Consequently the following two existence statements on any prescribed
+cofinal family are equivalent:
+\begin{enumerate}[label=(\alph*)]
+\item the complete even source complement and complete odd sector
+have one common finite lower floor $-C$, independent of $a$;
+\item one may choose finite indices $n_{\rm ev}(a),n_{\rm odd}(a)$
+so that the corresponding exact signed concentration sums
+\[
+ -D_a I_{S_a}+\delta_n\sum_{j=1}^{J_n}
+ C_{a,S}\bigl(\{\beta_a+D_a\ge j\delta_n\}\bigr)
+\]
+have a common finite lower floor independent of $a$.
+\end{enumerate}
+More precisely, (a) yields a floor $-C-\varepsilon$ in (b) for any
+fixed $\varepsilon>0$; (b) yields its stated floor in (a).
+This equivalence supplies no effective choice of $n(a)$ and no
+arithmetic lower estimate for any of the sums.
+\end{proposition}
+\begin{proof}
+The formula is lower dyadic rounding of
+$\min(\beta_a+D_a,n)$, minus $D_a$. Refinement of the grid and
+increase of the cap prove monotonicity and pointwise convergence.
+Each $m_{a,n}$ is bounded. Thus its compressed form is a bounded
+self-adjoint operator, and $\lambda_{a,n}\le\lambda_a$.
+The numbers increase to some finite $\ell\le\lambda_a$; finiteness
+above follows by testing one fixed unit vector in
+$S_a\cap\mathcal D(q_a)$, and below by $-D_a$.
+
+Choose unit $f_n\in S_a$ with
+$\int m_{a,n}|\mathcal F_af_n|^2\le\lambda_{a,n}+1/n$.
+The integrals against $m_{a,n}+D_a$ are uniformly bounded by some
+$B<\infty$. Given $R\ge1$, choose $M_R$ with
+$\beta_a(\xi)+D_a\ge2R$ for $|\xi|>M_R$.
+For sufficiently large $n$, lower rounding gives
+$m_{a,n}+D_a\ge R$ there. Hence
+\[
+ \int_{|\xi|>M_R}|\mathcal F_af_n|^2\le B/R.
+\]
+Restriction of $\mathcal F_a$ to $[-M_R,M_R]$ is a compact map:
+its integral kernel has finite square integral on the product of
+the two bounded intervals. This fact and the uniform frequency-tail
+bound make $(\mathcal F_af_n)$, after discarding finitely many
+terms for each $R$, relatively compact in $L^2(\mathbb R)$.
+Take a strongly convergent subsequence. Its physical limit $f$ is
+in the closed space $S_a$ and has norm one.
+
+For each fixed $k$, boundedness of $m_{a,k}$ and monotonicity give
+\[
+ \int m_{a,k}|\mathcal F_af|^2
+ =\lim_n\int m_{a,k}|\mathcal F_af_n|^2\le\ell.
+\]
+Monotone convergence applied after adding $D_a$ gives
+$f\in\mathcal D(q_a)$ and $q_a[f]\le\ell$.
+Thus $\lambda_a\le\ell$, proving \eqref{ns43-conc-eq-edge-limit}.
+Choose the two finite indices separately at each window to within
+$\varepsilon$ of their limits. Conversely a pointwise minorant's
+operator lower bound transfers immediately to $q_a$.
+\end{proof}
+
+\paragraph{What this closes.}
+The proposal ``allow arbitrary adaptive levels and assert that their
+exact signed operator sums have a uniform lower floor'' is an
+equivalent restatement of the unknown complement-floor target.
+It is not a weaker arithmetic input. This closes only that claimed
+logical shortcut. It does not close a method that proves a specific
+operator comparison from additional arithmetic structure.
+The finite level count is allowed to grow without restriction here.
+Therefore the statement does not evade a proved obstruction by
+silently retaining bounded complexity.
+
+\begin{proposition}[All scalar set bounds can still lose the signed floor]
+\label{ns43-conc-prop-scalar}
+Even exact upper and lower concentration bounds for every measurable
+set do not in general determine the signed operator lower edge.
+This failure occurs already for commuting positive operator-valued
+measures with three outcomes, after an exact rank-one source has
+been removed.
+\end{proposition}
+\begin{proof}
+On $\mathbb C^3$ define two three-outcome positive operator-valued
+measures by making outcome operator $C_i$ diagonal, with its three
+diagonal entries the $i$th column of the following arrays:
+\[
+ A=\frac1{10}
+ \begin{pmatrix}0&7&3\\3&0&7\\7&3&0\end{pmatrix},
+ \qquad
+ B=\frac1{10}
+ \begin{pmatrix}7&0&3\\3&7&0\\0&3&7\end{pmatrix}.
+\]
+Each row sums to one, so in both models $\sum_iC_i=I$.
+For every singleton $E$, the exact lower and upper scalar bounds are
+$p(E)=0$, $c(E)=7/10$. For every two-element set they are
+$p(E)=3/10$, $c(E)=1$. Empty and full sets have their usual values.
+These list \emph{all} subsets; hence all scalar data coincide.
+
+For symbol values $b=(-1/2,1/2,3/2)$, the exact signed operators have
+diagonal entries
+\[
+ \sum_i b_i C_i^A=\operatorname{diag}(4/5,9/10,-1/5),
+ \qquad
+ \sum_i b_i C_i^B=\operatorname{diag}(1/10,1/5,6/5).
+\]
+Thus their bottoms are $-1/5$ and $1/10$ despite identical scalar
+concentration data for every set.
+
+The usual scalar certification rule cannot recover the positive
+bottom in model $B$, even after optimizing over all sets and weights.
+Indeed the probability vector $z=(7/10,3/10,0)$ satisfies every
+scalar constraint $p(E)\le z(E)\le c(E)$ in model $B$.
+For any pointwise minorant
+$\alpha+\sum_jw_j1_{G_j}\le b$ with $w_j\ge0$, one therefore has
+\[
+ \alpha+\sum_jw_jp(G_j)
+ \le\alpha+\sum_jw_jz(G_j)\le\sum_i b_i z_i=-1/5.
+\]
+This upper bound on the certifiable lower bound is attained by
+$b=-1/2+1_{\{2,3\}}+1_{\{3\}}$.
+Multiplying $b$ by any $t>0$ gives an exact best scalar lower bound
+$-t/5$, while the actual model-$B$ operator is at least $(t/10)I$.
+The scalar loss therefore diverges along $t\to\infty$ even though
+the true signed floor is nonnegative.
+
+To add an exact source, take an orthogonal direct sum with one unit
+vector $u$ and give the three outcome operators on that vector the
+values $(1/2,1/2,0)$. Their signed sum annihilates $u$ and has no
+cross terms with $u^\perp$. Compression off this same exact source
+returns the two arrays above. The countermodel is finite and
+nonarithmetic: it does not assert that either array arises from
+physical Paley--Wiener concentration or from the corrected zero field.
+\end{proof}
+
+\paragraph{Relation to the existing obstructions.}
+The negative-only and primitive scalar estimates discard signed
+physical information; v1.37 closes its stated pointwise and primitive
+uniform-budget proposals. The signed operators in
+Proposition~\ref{ns43-conc-prop-adaptive} retain the positive regions
+and all cross terms, so those scalar no-go proofs do not apply to them.
+This is a distinction in hypotheses, not a proof that their lower
+edges meet the target.
+
+The QG growth clause in Assumption~\ref{ass:v149-qg}, together with
+its \emph{separate} source-admissible unit packet satisfying the
+all-Borel domination and uniform upper energy assumptions, gives
+\[
+ \eta(m_a)\ge
+ [c_0\,\mathrm{QC}_{K(a)}(\widetilde m_a)-Q_*]_+.
+\]
+It obstructs a bounded level count under those two open inputs.
+For every fixed bound $K_0$, the cost diverges, so a successful
+bounded-loss family would have $K(a)\to\infty$.
+Neither QG alone, a finite-bin packet test, nor the conditional
+obstruction proves failure of unrestricted adaptive comparison.
+In particular there is no contradiction with
+Proposition~\ref{ns43-conc-prop-adaptive}: its indices are unrestricted
+and its existence is conditional on the original floor.
+
+The odd sector requires no source projection. In the even sector,
+the actual source must be removed before every concentration or
+packet comparison. For a raw unit $f$ with
+$r=|\langle f,u_a\rangle|<1$, its normalized projection $g$ obeys
+the already proved pointwise and energy estimates
+\[
+ |\mathcal F_ag(\xi)|\ge
+ \frac{[|\mathcal F_af(\xi)|-r|\mathcal F_au_a(\xi)|]_+}
+ {\sqrt{1-r^2}},\qquad
+ |(1-r^2)q_a[g]-q_a[f]|
+ \le(2r+r^2)\|\mathsf W_{e^a}u_a\|.
+\]
+Thus raw packet coverage or a raw pencil ratio cannot be substituted
+for the source-compressed hypotheses. The repaired-source residual
+is used only in the subsequent complement-to-full-floor transfer;
+it does not supply the missing signed comparison or packet coverage.
+
+\paragraph{Disposition and missing input.}
+The full signed concentration route remains open. The proposed
+unrestricted exact hierarchy is classified as an \emph{exact
+reformulation}; completeness of optimization from individual scalar
+set bounds is a \emph{proved-false general simplification}, with no
+arithmetic impossibility claim. A productive next input must estimate
+joint signed operators using actual arithmetic structure, with a
+cofinal uniform error on both complete parity obligations. No such
+estimate is proved here. QG is an obstruction-investigation input,
+not a positivity mechanism; CAE is already the same floor in another
+coordinate system. These statements add no numerical window, tail
+metric, certificate, G2 conclusion, or RH conclusion.

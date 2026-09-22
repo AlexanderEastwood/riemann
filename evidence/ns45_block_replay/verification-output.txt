@@ -1,0 +1,16 @@
+320 even 0 1 ratio [0.999999999941359 +/- 1.77e-16] H 997/1000 positive squared gap [0.0001336371369 +/- 1.36e-15]
+320 even 0 2 ratio [0.570611002137691 +/- 1.47e-16] H 71/125 positive squared gap [6.793204656e-10 +/- 1.49e-20]
+320 even 1 2 ratio [0.483822806630242 +/- 4.54e-16] H 481/1000 positive squared gap [0.002543700675 +/- 4.19e-14]
+EXACT RAYLEIGH 320 even 341/250 >1
+320 odd 0 1 ratio [0.999999999989032 +/- 1.02e-16] H 997/1000 positive squared gap [0.0001338199377 +/- 5.49e-16]
+320 odd 0 2 ratio [0.486262656063857 +/- 4.45e-17] H 121/250 positive squared gap [4.411709475e-9 +/- 7.48e-20]
+320 odd 1 2 ratio [0.614753122673701 +/- 2.38e-16] H 153/250 positive squared gap [0.0001638613213 +/- 3.35e-14]
+EXACT RAYLEIGH 320 odd 2093/1500 >1
+448 even 0 1 ratio [0.999999999941359 +/- 1.77e-16] H 997/1000 positive squared gap [0.0001336371369 +/- 1.36e-15]
+448 even 0 2 ratio [0.570611002137691 +/- 1.47e-16] H 71/125 positive squared gap [6.793204656e-10 +/- 1.49e-20]
+448 even 1 2 ratio [0.483822806630242 +/- 4.54e-16] H 481/1000 positive squared gap [0.002543700675 +/- 4.19e-14]
+EXACT RAYLEIGH 448 even 341/250 >1
+448 odd 0 1 ratio [0.999999999989032 +/- 1.02e-16] H 997/1000 positive squared gap [0.0001338199377 +/- 5.49e-16]
+448 odd 0 2 ratio [0.486262656063857 +/- 4.45e-17] H 121/250 positive squared gap [4.411709475e-9 +/- 7.48e-20]
+448 odd 1 2 ratio [0.614753122673701 +/- 2.38e-16] H 153/250 positive squared gap [0.0001638613213 +/- 3.35e-14]
+EXACT RAYLEIGH 448 odd 2093/1500 >1

@@ -1,0 +1,188 @@
+{
+  "classification": "incremental artifact integrity and review provenance; not an independent mathematical certificate",
+  "base_commit": "a89a581faecfee590b2aa158168e98b1cbe4c4ed",
+  "base_pull_request": 20,
+  "public_main_at_validation": "a0e916a426420e3c5abab7651696e52a865c93de",
+  "authoritative_analytic_fragments": [
+    "evidence/ns43_route_selection/capacity/prime_channel_obstruction.tex",
+    "evidence/ns43_route_selection/coordinator/bump_input_strength.tex",
+    "evidence/ns43_route_selection/concentration/concentration_operator_collapse-v2.tex",
+    "evidence/ns43_route_selection/ccm/selection_note-v2.tex"
+  ],
+  "integration": "route_selection.tex embeds final concentration v2 exactly; CCM v2 reference syntax normalized and user-facing node recommendations omitted; DLMF primary link added to bump proof; complete new section embedded verbatim in manuscript",
+  "historical_artifact_recovery": false,
+  "new_window": false,
+  "new_tail_metric": false,
+  "g2_or_rh_proved": false,
+  "primary_reference": {
+    "claim": "absolutely convergent von Mangoldt Dirichlet identity",
+    "url": "https://dlmf.nist.gov/27.4.E12"
+  },
+  "artifacts": [
+    {
+      "path": "evidence/ns43_route_selection/capacity/prime_channel_obstruction.tex",
+      "size_bytes": 10508,
+      "sha256": "69adde550e66edf804ebe3b0ac215f60a255fdb5228b675cdd0a67bcc8c6d66a"
+    },
+    {
+      "path": "evidence/ns43_route_selection/capacity/scope.md",
+      "size_bytes": 3993,
+      "sha256": "4463460881e8c4c5d5232f9ca765518a5a63fd796281c80b94e30739f086cc50"
+    },
+    {
+      "path": "evidence/ns43_route_selection/ccm/README.md",
+      "size_bytes": 4577,
+      "sha256": "b4dd98b5e4d4aa44417864c75b20ffe01c43715c3c3140ca7f1081e996e55f5b"
+    },
+    {
+      "path": "evidence/ns43_route_selection/ccm/ccm-selection-2026-09-22-v1.html",
+      "size_bytes": 16564,
+      "sha256": "15693cadd83fa1554d8564201e752c581de8982d60a4177e3a8f0b4103514f3e"
+    },
+    {
+      "path": "evidence/ns43_route_selection/ccm/ccm-selection-2026-09-22-v2.html",
+      "size_bytes": 17720,
+      "sha256": "e4dc97e7fe398572e5f9b7c413582f65aa1189412f83119146b27174e8394144"
+    },
+    {
+      "path": "evidence/ns43_route_selection/ccm/ns45_review.md",
+      "size_bytes": 4860,
+      "sha256": "ab5efbb39294d911364858121ea549a01255f9984b8724c26422f4a9fff9a2c6"
+    },
+    {
+      "path": "evidence/ns43_route_selection/ccm/ns45_reviewer_replay.txt",
+      "size_bytes": 1992,
+      "sha256": "aa5a5acabc8da1d3ad476dcb987c0585aff365587efc67a559bb4bf99e596f22"
+    },
+    {
+      "path": "evidence/ns43_route_selection/ccm/selection_note-v2.tex",
+      "size_bytes": 21143,
+      "sha256": "3c4135cdea011f07184a68afd54c45e389cb53f982ebb11cd33b0de08ebd9286"
+    },
+    {
+      "path": "evidence/ns43_route_selection/ccm/selection_note.tex",
+      "size_bytes": 20073,
+      "sha256": "003c493a4a8a674456875c1a5d31d1c841a1163042554f70589e770884840ede"
+    },
+    {
+      "path": "evidence/ns43_route_selection/concentration/assessment.md",
+      "size_bytes": 3358,
+      "sha256": "f132ff2625aa32e4ad1c54a5d356929d713e6927e97eb5fcff43573d36a09043"
+    },
+    {
+      "path": "evidence/ns43_route_selection/concentration/ccm_review.md",
+      "size_bytes": 7435,
+      "sha256": "f5830c7a458dbcac6ab0870b16ae9f53a1935d2a8afb74d0a28b5a818224699e"
+    },
+    {
+      "path": "evidence/ns43_route_selection/concentration/concentration_operator_collapse-v2.tex",
+      "size_bytes": 10846,
+      "sha256": "6320c6f77d81f98a3496bb6043af71f036c1e49be728a519ed91cfce1955031a"
+    },
+    {
+      "path": "evidence/ns43_route_selection/concentration/concentration_operator_collapse.tex",
+      "size_bytes": 10490,
+      "sha256": "7a89a9ad050996bda0bcbec7255ab81ef88b0ac632204cae765857d2e1830a8e"
+    },
+    {
+      "path": "evidence/ns43_route_selection/concentration/integration_review.md",
+      "size_bytes": 6704,
+      "sha256": "12869d2e096dd8aeddeb64f7bb5f5d8b5a88350cb297731bb3e09331e5f6e5cf"
+    },
+    {
+      "path": "evidence/ns43_route_selection/concentration/ns44_review.md",
+      "size_bytes": 7511,
+      "sha256": "051decb509707532758f1b772e0f27d219591b98925f7fb557485ea58a7428a7"
+    },
+    {
+      "path": "evidence/ns43_route_selection/coordinator/bump_input_strength.tex",
+      "size_bytes": 4289,
+      "sha256": "a333c4fbcd7098e4b789215834232e44224a9d57df465f708d886f6f272345e2"
+    },
+    {
+      "path": "evidence/ns44_metric_replay/README.md",
+      "size_bytes": 5217,
+      "sha256": "50e4340f91d35f28eb1d5efcade1f1cd5390e66e75f6bb669a552535bc3edb04"
+    },
+    {
+      "path": "evidence/ns44_metric_replay/certificate.json",
+      "size_bytes": 5553,
+      "sha256": "a32b8d9dac79037392f6dfc124152bf04dcac826864af16dafeb88dcc468781b"
+    },
+    {
+      "path": "evidence/ns44_metric_replay/metric-replay-2026-09-22-v1.html",
+      "size_bytes": 6400,
+      "sha256": "3c6429874e19190a37d452d69fd667555de073b37f07c461df9777bcf9368021"
+    },
+    {
+      "path": "evidence/ns44_metric_replay/pyright.txt",
+      "size_bytes": 37,
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+    },
+    {
+      "path": "evidence/ns44_metric_replay/replay-output.txt",
+      "size_bytes": 729,
+      "sha256": "f8119f168f93682a7af04205319b861910c57884ba4028c0d88af8cc051354df"
+    },
+    {
+      "path": "evidence/ns44_metric_replay/replay.py",
+      "size_bytes": 7205,
+      "sha256": "8d49106455b72127d8ff8c617cc12f4f0419580896e49e2b3117115892a89fa2"
+    },
+    {
+      "path": "evidence/ns44_metric_replay/witnesses.json",
+      "size_bytes": 8414,
+      "sha256": "3ec8f56770f2b8afacc12b1d4e9b6ad78ae7dfbe5b71ae32b8a1532a22776767"
+    },
+    {
+      "path": "evidence/ns45_block_replay/README.md",
+      "size_bytes": 5646,
+      "sha256": "24ba8dc6e1cc25f4a656e417d3b579230447a4233e75c9223ce84099d3094b76"
+    },
+    {
+      "path": "evidence/ns45_block_replay/block-comparison-replay-2026-09-22-v1.html",
+      "size_bytes": 3545,
+      "sha256": "686f8dcc15bbeb8a6fdd7ca78ff35d1f16a2e7f43ca266b35be66c53be99b362"
+    },
+    {
+      "path": "evidence/ns45_block_replay/certificate.json",
+      "size_bytes": 26314,
+      "sha256": "ee9b6a526ec79a6501f426957e847940d7052f0da39bb8c86690b7237aa19114"
+    },
+    {
+      "path": "evidence/ns45_block_replay/inventory.json",
+      "size_bytes": 979,
+      "sha256": "62a6cc6bcf16d1e0da9716df89f4d94dff67f4a21b4cfc2d32f7a9f2d59bee5e"
+    },
+    {
+      "path": "evidence/ns45_block_replay/pyright-output.txt",
+      "size_bytes": 37,
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+    },
+    {
+      "path": "evidence/ns45_block_replay/replay-output.txt",
+      "size_bytes": 1815,
+      "sha256": "c1fb4c741c897904a99544b83ff8d2e4db6bdbb22a877053f1afcd9e905214b2"
+    },
+    {
+      "path": "evidence/ns45_block_replay/replay.py",
+      "size_bytes": 10308,
+      "sha256": "77aa0b462347380193594473504e0c299fe036ab813a7e4c1690f4300527435e"
+    },
+    {
+      "path": "evidence/ns45_block_replay/verification-output.txt",
+      "size_bytes": 1504,
+      "sha256": "be6766b0f091b487ae39d8c2bd565e6c6c258e624c8fa172a4654dd09156406e"
+    },
+    {
+      "path": "evidence/ns45_block_replay/witnesses.json",
+      "size_bytes": 38544,
+      "sha256": "2a8725849e1cb8b363bd0d79bdb07b1d0b17b22a856f0fdd01fb72145a1e1a64"
+    },
+    {
+      "path": "evidence/v124/g2_schur_cancellation/assembly_general.py",
+      "size_bytes": 2978,
+      "sha256": "4da2e6805e92a2850fe28bd51cd2450d1f2ef0566e9f4f5b5b5fb50db2825b58"
+    }
+  ]
+}

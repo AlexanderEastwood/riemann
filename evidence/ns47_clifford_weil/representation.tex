@@ -1,0 +1,346 @@
+\subsection*{An exact Clifford lift and the ordinary closed-square obstruction (NS-47)}
+
+This subsection constructs a representation of the existing complete Weil
+form. It does not establish the requested uniform lower bound. The
+identities and the obstruction below are unconditional, using the archived
+v1.36 and v1.50 results. The remaining estimate is identified explicitly.
+There is no new window, tail metric or numerical claim; G2 and RH remain
+open. All Hilbert inner products are linear in the first slot.
+
+\paragraph{The two signed channels.}
+Let $H=L^2(\mathbb R,dx)$, $\mathcal C=C_c^\infty(\mathbb R)$,
+$I_a=(-a,a)$ and $\lambda=e^a$. Use precisely the positive even
+weight $h$, probability measure $\nu$, and kernel $\rho$ of
+\eqref{eq:v150-weight}--\eqref{eq:v150-global-energy}. In particular,
+$I_h=\int \cosh(x/2)h(x)\,dx=1/\sqrt3$ and
+$d\nu=I_h^{-1}\cosh(x/2)h(x)\,dx$.
+Write $\ell_n=\log n$ and $w_n=\Lambda(n)/\sqrt n$.
+Define the Hilbert spaces
+\[
+ E_+=L^2(\mathbb R^2,dx\,dy)\oplus
+                 \bigoplus_{n\ge2} L^2(\mathbb R,dx),\qquad
+ E_-=L^2_0(\nu)\oplus\mathbb C,
+\]
+where $L^2_0(\nu)$ denotes the mean-zero subspace. Zero-weight prime
+channels are harmless. For $f\in\mathcal C$, put $g=f/h$ and
+\begin{align}
+ (D_0f)(x,y)&=\sqrt{\frac{\rho(|x-y|)h(x)h(y)}2}
+                         (g(x)-g(y)),\notag\\
+ (D_nf)(x)&=\sqrt{w_nh(x)h(x+\ell_n)}
+                         (g(x+\ell_n)-g(x)),\notag\\
+ Df&=(D_0f,(D_nf)_{n\ge2}),\label{eq:ns47-edge-map}\\
+ Nf&=\left(\sqrt{\frac23}\left(g-\int g\,d\nu\right),
+                  \sqrt2\int\sinh(x/2)f(x)\,dx\right).
+ \label{eq:ns47-negative-map}
+\end{align}
+These maps are linear; the centering is taken on the whole probability
+space, including outside the support of $f$.
+
+\begin{proposition}[Exact signed lift, with a closed positive edge operator]
+\label{prop:ns47-clifford-lift}
+For the complete support-consistent form $q$ and every $f\in\mathcal C$,
+\begin{equation}\label{eq:ns47-signed-lift}
+ q[f]=\norm{Df}_{E_+}^2-\norm{Nf}_{E_-}^2.
+\end{equation}
+The maximal operator $D:H\supset\mathcal D(D)\to E_+$ given by
+\eqref{eq:ns47-edge-map}, with domain where the squared-edge sum is
+finite, is densely defined and closed. Consequently the graded operator
+\begin{equation}\label{eq:ns47-dirac}
+ \mathscr D=\begin{pmatrix}0&D^*\\D&0\end{pmatrix},\qquad
+ \mathcal D(\mathscr D)=\mathcal D(D)\oplus\mathcal D(D^*)
+ \quad\hbox{on }H\oplus E_+,
+\end{equation}
+is self-adjoint, anticommutes with $\Gamma=\operatorname{diag}(I,-I)$,
+and has square $\operatorname{diag}(D^*D,DD^*)$ on its square domain.
+Here $D^*D$ represents the positive edge energy, not the complete Weil
+operator.
+
+For an explicit Clifford module put $K=E_+\oplus E_-$, let
+$i_\pm:E_\pm\to K$ be the canonical inclusions, and set
+\[
+ S f=(i_+Df,i_-Nf)\in K\oplus K,\qquad
+ e_+=\begin{pmatrix}I&0\\0&-I\end{pmatrix},\quad
+ e_-=\begin{pmatrix}0&I\\-I&0\end{pmatrix}.
+\]
+Then $e_+^2=I$, $e_-^2=-I$, $e_+e_-+e_-e_+=0$, and
+\begin{equation}\label{eq:ns47-clifford}
+ q[f]=\langle e_+Sf,Sf\rangle.
+\end{equation}
+Thus this is an explicit $\mathrm{Cl}_{1,1}$ representation with
+infinite-dimensional coefficient space, not a representation of all
+arithmetic channels by five scalar coordinates.
+\end{proposition}
+\begin{proof}
+Proposition~\ref{prop:v150-critical-energy} gives finite separate energies
+on $\mathcal C$ and exactly \eqref{eq:ns47-signed-lift}, including the
+factor $1/2$ on the ordered continuous edges and the coefficient $2/3$
+on the variance. To prove maximal closedness, suppose $f_j\to f$ in
+$H$ and $Df_j\to F$ in $E_+$. Pass to a subsequence with almost
+everywhere convergence of $f_j$. Pass further to a subsequence giving
+almost everywhere convergence in every component of $Df_j$ (there are
+only countably many). Translated null sets remain null, and the union
+of the two coordinate null sets is null for product measure. Hence the
+component limits equal the displayed differences of $f/h$ almost
+everywhere. The diagonal $x=y$ is irrelevant. Thus $Df=F\in E_+$.
+The domain contains $\mathcal C$ and is dense. The block-adjoint
+calculation, using $D^{**}=D$, proves self-adjointness of
+\eqref{eq:ns47-dirac}; see also the classical general construction in
+\cite[Appendix A, Proposition A.1]{Holzmann2021NS47}. The grading and
+Clifford relations follow by multiplication. No positivity of the
+indefinite pairing in \eqref{eq:ns47-clifford} has been inferred.
+\end{proof}
+
+For each fixed $a$, zero extension identifies the maximal edge domain
+with $\mathcal D(q_a)$, not merely with an unspecified closed extension
+of the core. Indeed, on $[-a-1,a+1]$ the functions $h$ and $1/h$ are
+bounded and Lipschitz, and $h$ has a positive minimum. The continuous
+edges with $|x-y|<1$ therefore give, up to fixed-window constants and a
+bounded ordinary-norm term, the killed logarithmic seminorm
+\[
+ \int_{|t|<1}\frac{\norm{f(\cdot+t)-f}^2}{|t|}\,dt.
+\]
+Multiplication by $h$ or $1/h$ preserves this domain: expand the
+product difference, and bound the coefficient difference by a constant
+times $|t|$. The Fourier multiplier of this seminorm is comparable,
+after adding the ordinary norm, to $\log(2+|\xi|)$.
+The continuous edges with $|x-y|\ge1$ and the entire prime-edge sum
+are bounded ordinary-norm forms at fixed support. For the latter,
+the Gaussian decay makes $\sum_n w_nh(x\pm\ell_n)/h(x)$ uniformly
+finite for $x\in I_a$. The former follows from the integrable
+off-diagonal kernel and the same decay. These comparisons prove
+maximal-domain equality with the physical logarithmic form domain;
+all their constants may depend on $a$. The operator $N_a$ obtained
+by restricting $N$ is bounded in $L^2(I_a)$, since $h^{-1}$ is bounded
+there. For example
+\begin{equation}\label{eq:ns47-local-cost}
+ \norm{N_af}^2\le C_a\norm f^2,\qquad
+ C_a=\frac{2}{\sqrt3}\sup_{x\in I_a}\frac{\cosh(x/2)}{h(x)}
+          +2\norm{\sinh(x/2)}_{L^2(I_a)}^2.
+\end{equation}
+This particular bound diverges with $a$; it is not the required uniform
+floor. All exterior continuous edges and all exterior prime edges are
+still in $D$: their energy is exactly
+$\int_{I_a}(T_a/h)|f|^2$ in \eqref{eq:v150-edge-split}.
+Only the original correlations have the strict cutoff $n<e^{2a}$.
+
+For even $f$ the second component of $Nf$ vanishes; for odd $f$ its
+first component is $\sqrt{2/3}f/h$ and its second must be retained.
+The actual even source condition remains $\langle f,u_a\rangle=0$,
+or $\int hg\overline{u_a}=0$; it is not the centering condition in
+$N$. Parity orthogonality gives the two original blocks and their
+sum without a missing cross term. A bounded invertible change of
+Clifford coordinates satisfying $U^*e_+U=e_+$ preserves the displayed
+form and cannot itself establish its sign.
+
+\begin{proposition}[The exact contraction demand and its critical constant]
+\label{prop:ns47-contraction}
+Fix $C\ge0$, let $M_Cf=(Df,\sqrt C f)$, and let
+$\mathcal H_C=\overline{M_C\mathcal C}\subset E_+\oplus H$.
+The following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+\item $q[f]\ge-C\norm f^2$ for every $f\in\mathcal C$;
+\item there is a contraction $K_C:\mathcal H_C\to E_-$ such that
+      $Nf=K_CM_Cf$ for every $f\in\mathcal C$.
+\end{enumerate}
+They are also equivalent to a common full-space lower floor on a
+cofinal family of complete windows. If they hold, then
+\begin{equation}\label{eq:ns47-positive-factor}
+ q[f]+C\norm f^2=\norm{A_Cf}^2,\qquad
+ A_C=(I-K_C^*K_C)^{1/2}M_C\big|_{\mathcal C}.
+\end{equation}
+The same range construction on each admissible window domain gives
+the equivalent source-complement version of CAE. It requires one
+common $C$ in both parities. No $K_C$ or that uniform estimate is
+constructed here.
+
+For this Gaussian edge map, any such full-space contraction must have
+norm exactly one. The negative channel itself satisfies, on either
+admissible parity space,
+\begin{equation}\label{eq:ns47-negative-growth}
+ \norm{N_a|_{\rm adm}}^2\ge
+       [\kappa\exp(\gamma e^{2a})-B_a]_+.
+\end{equation}
+Thus merely bounding this channel in ordinary norm cannot give a
+uniform error. More generally, a windowwise estimate
+\begin{equation}\label{eq:ns47-strict-contraction}
+ \norm{Nf}^2\le(1-\delta_a)\norm{Df}^2+C\norm f^2,
+ \qquad 0\le\delta_a\le1,
+\end{equation}
+on either the even actual source complement or the odd sector forces
+\begin{equation}\label{eq:ns47-critical-rate}
+ \delta_a\le \frac{C+B_a}{\kappa}\exp(-\gamma e^{2a})
+\end{equation}
+for large $a$, with precisely $B_a,\kappa,\gamma$ of
+Proposition~\ref{prop:v150-capacity-slack}.
+\end{proposition}
+\begin{proof}
+The signed identity changes (i) into $\norm{Nf}\le\norm{M_Cf}$.
+Define $K_C(M_Cf)=Nf$. This is well-defined, since the inequality
+annihilates $N$ on the kernel of $M_C$, and is contractive; it extends
+uniquely to $\mathcal H_C$. The converse and
+\eqref{eq:ns47-positive-factor} follow by taking norms. This is the
+elementary range-factorization argument underlying Douglas's
+theorem~\cite{Douglas}; it does not assume a bounded global
+operator $N$. Support consistency and the fixed-window form cores
+give the asserted cofinal equivalence. The same proof works on each
+source-admissible linear domain, without identifying these varying
+domains as one global subspace. The source residual and
+Corollary~\ref{cor:v136-complement-floor} then give the already known
+conditional full-floor implication.
+
+Use the unit vectors constructed in the proof of
+Proposition~\ref{prop:v150-capacity-slack}. They are admissible in
+each indicated parity sector and satisfy
+$\norm{Df}^2\ge\kappa\exp(\gamma e^{2a})$ and $q_a[f]\le B_a$.
+The identity $\norm{Nf}^2=\norm{Df}^2-q_a[f]$ proves
+\eqref{eq:ns47-negative-growth}.
+Equation~\eqref{eq:ns47-strict-contraction} would give
+$q_a[f]\ge\delta_a\norm{Df}^2-C$, proving
+\eqref{eq:ns47-critical-rate}. If $\norm{K_C}\le\theta<1$,
+then $\norm{Nf}^2\le\theta^2(\norm{Df}^2+C\norm f^2)$ gives
+the same contradiction with $\delta=1-\theta^2>0$ and ordinary
+error $\theta^2C$. All support and source cross terms in these tests
+are already controlled in v1.50. This reuses that analytic result;
+it is not a new numerical experiment.
+\end{proof}
+
+\paragraph{A restriction on a global positive-square construction.}
+The next obstruction concerns a single factor on the ordinary space
+$H$. It does not concern the fixed-window self-adjoint operators,
+an incompatible family of local factors, or a completion in a Weil
+metric. ``Bounded remainder'' means a two-sided ordinary-norm bound
+on a Hermitian quadratic form, including the special case of a
+nonnegative error bounded by $C\norm f^2$.
+
+\begin{lemma}[An unbounded positive edge at fixed support]
+\label{lem:ns47-high-frequency}
+In either parity there are unit vectors in a single
+$C_c^\infty(I_b)$, for fixed $b>0$, on which $q$ tends to $+\infty$.
+More precisely, for a fixed nonzero even $\varphi\in C_c^\infty(I_b)$,
+the normalized functions $\varphi(x)\cos(Rx)$ and
+$\varphi(x)\sin(Rx)$ have form $\log R+O_b(1)$ as $R\to\infty$.
+\end{lemma}
+\begin{proof}
+At this fixed support the exact multiplier of
+Proposition~\ref{prop:v135-both-parities} satisfies
+$\beta_b(\xi)=\log(2+|\xi|)+O_b(1)$. The finite prime sum and
+finite continuum integral are bounded, and the digamma asymptotic
+gives this estimate uniformly on the real axis after enlarging the
+constant on a compact interval. For a single modulation, translate
+$\widehat\varphi$ by $R$ and split the integral at
+$|\xi-R|=R/2$. Schwartz decay makes the exterior error $o(1)$,
+while on the interior the logarithm is $\log R+O(1)$.
+The modulations by $R$ and $-R$ have a mixed weighted Fourier
+integral $o(1)$: their Schwartz peaks are separated by $2R$, and
+the multiplier grows only logarithmically. The squared ordinary
+norms of the cosine and sine tests tend to
+$\norm\varphi^2/2$, with errors decreasing faster than any power
+of $R$. Normalizing proves the assertion in each parity. These are
+analytic tests, not additional computed windows.
+\end{proof}
+
+\begin{proposition}[No ordinary closable square with bounded remainder]
+\label{prop:ns47-no-closed-square}
+Use the complete form $q$ on $\mathcal C$ and the dense cutoff-radical
+property of Lemma~\ref{lem:v136-total-radicals}. There do not exist
+a Hilbert space $E$, a linear map $T:\mathcal C\to E$ closable
+in ordinary $L^2(\mathbb R)$, and a bounded self-adjoint operator
+$B$ on that space such that
+\begin{equation}\label{eq:ns47-forbidden-square}
+ q[f]=\norm{Tf}^2+\langle Bf,f\rangle
+ \quad(f\in\mathcal C).
+\end{equation}
+The same assertion holds separately on either complete parity core.
+More generally, if $T$ is ordinary closable and only the comparison
+\begin{equation}\label{eq:ns47-lower-comparison}
+ q[f]\ge\norm{Tf}^2-C\norm f^2\qquad(f\in\mathcal C)
+\end{equation}
+holds for a fixed $C\ge0$, then $\overline T$ is everywhere defined
+and bounded, with $\norm{\overline T}\le\sqrt C$. In particular an
+unbounded ordinary closable Dirac factor cannot even be a global
+lower comparison with uniform ordinary error.
+In particular $q$ has no semibounded closable extension in the ordinary
+global $L^2$ space. If the contraction in
+Proposition~\ref{prop:ns47-contraction} exists, the factor $A_C$ in
+\eqref{eq:ns47-positive-factor} is necessarily nonclosable there.
+No negative physical Weil direction is asserted.
+\end{proposition}
+\begin{proof}
+Let $\mathcal R$ be the dense translate span of
+Lemma~\ref{lem:v136-total-radicals}. For any fixed $r\in\mathcal R$,
+its compact cutoffs $r_a$ satisfy $r_a\to r$ in $H$ and
+$q[r_a]\to0$, the latter by their complete operator residual.
+If \eqref{eq:ns47-forbidden-square} held, then
+\[
+ \norm{Tr_a}^2=q[r_a]-\langle Br_a,r_a\rangle
+                   \longrightarrow-\langle Br,r\rangle.
+\]
+This is bounded. Choose a weakly convergent subsequence
+$Tr_a\rightharpoonup v$. The graph of the closed operator
+$\overline T$ is a closed linear subspace of $H\oplus E$ and
+hence is weakly closed. It contains the weak limit $(r,v)$.
+Consequently
+\[
+ r\in\mathcal D(\overline T),\qquad
+ \norm{\overline T r}^2\le-\langle Br,r\rangle
+                      \le\norm B\norm r^2.
+\]
+This bound holds for every $r$ in the dense linear space
+$\mathcal R$. Applying it to differences, and using closedness
+once more, extends $\overline T$ to all of $H$ with
+$\norm{\overline T}\le\sqrt{\norm B}$.
+Equation~\eqref{eq:ns47-forbidden-square} would therefore give
+$q[f]\le2\norm B\norm f^2$ on the compact core, contradicting
+Lemma~\ref{lem:ns47-high-frequency}.
+For \eqref{eq:ns47-lower-comparison}, the same cutoff and weak-graph
+argument gives $\norm{\overline T r}^2\le C\norm r^2$ on
+$\mathcal R$, and the same closedness argument extends this bound
+to all of $H$. This step does not need an upper bound on $q$.
+
+For each parity use its dense reflected translate span from v1.36,
+its same-parity cutoffs, and the corresponding high-frequency tests.
+A semibounded closable form extension would have a closure whose
+nonnegative constant shift is the square norm of a closed operator;
+its restriction to $\mathcal C$ would yield
+\eqref{eq:ns47-forbidden-square} with $B$ a scalar operator, which
+has just been excluded. Finally, \eqref{eq:ns47-positive-factor}
+has exactly that form with $B=-CI$, so its factor cannot be
+closable. No assumption about a sign or about RH entered the proof.
+\end{proof}
+
+The two-sided remainder hypothesis matters for excluding every exact
+representation \eqref{eq:ns47-forbidden-square}. A lower bound on an
+additive signed remainder, or an upper bound on a subtracted cost,
+instead gives only \eqref{eq:ns47-lower-comparison}, which forces the positive factor
+to be bounded; it does not exclude all bounded comparisons. The
+proposition forbids promoting the global geometric lift to an ordinary
+closable positive square plus a bounded error. The dense-radical input
+is inherited from v1.36;
+this is a scoped consequence, not a claim of a new general theory of
+Clifford algebras or of worldwide novelty. Its scope is distinct from
+the vanishing-error positive-comparison statement of v1.36.
+
+\paragraph{Named open input and next admissible construction.}
+Call the unproved demand \emph{critical Clifford domination}:
+construct, on the complete admissible domains, contractions
+$K_{a,C}$ satisfying $N_af=K_{a,C}(D_af,\sqrt C f)$ with a common
+finite $C$, in the even actual source complement and the odd sector.
+This is exactly CAE in the displayed coordinates, not a new independent
+hypothesis or progress on its truth. A successful use of these
+coordinates must allow the cofinal contraction norms to approach one:
+no window-independent strict contraction factor below one is available.
+All exterior channels, the odd pole, and the actual source condition
+must be retained. For a full global
+factorization the positive factor must also accommodate ordinary
+nonclosability. Window-dependent factors or a different completion
+are not excluded, but would need an explicit ordinary-norm transfer
+and the uniform estimate; their existence alone supplies neither.
+
+What had to change is the proposal to obtain the full bound from one
+ordinary closed Dirac square with bounded remainder. That construction
+is excluded by Proposition~\ref{prop:ns47-no-closed-square}. The signed
+Clifford lift exists exactly, and its positive edge block is closed,
+but the required cancellation estimate has not been proved. This is
+a failure of the specified construction, not a disproof of the
+uniform floor or of RH. The broader geometric approach remains open;
+G2 and RH remain open.

@@ -1,0 +1,54 @@
+{
+ "manuscript_revision": "v1.52",
+ "base_commit": "09ea3d6c0125a6543af248e7045534a776b7a236",
+ "files": [
+  {
+   "path": "evidence/v152/README.md",
+   "size_bytes": 4290,
+   "sha256": "25d6b029685fdca07e1a23998f40ff855ffff56a92cb92ac1ff8e67ef0ea2db8"
+  },
+  {
+   "path": "evidence/v152/build_report.json",
+   "size_bytes": 1261,
+   "sha256": "347b9a0c1a24057aea3f5d478197c28b4256ddbd729eb62d773e83fe8e460c95"
+  },
+  {
+   "path": "evidence/v152/comparison_replays.tex",
+   "size_bytes": 4869,
+   "sha256": "5c7b2c69a05aa7f7002bc4fd8a7ee8d486aac03e027fe750a997f544d085d181"
+  },
+  {
+   "path": "evidence/v152/ns43-route-assessment-2026-09-22-v1.html",
+   "size_bytes": 8753,
+   "sha256": "8c85c4dafc70e3d3ca5ead21ff074c90a438efb29bc304f12c2079b2005e8a05"
+  },
+  {
+   "path": "evidence/v152/provenance.json",
+   "size_bytes": 7524,
+   "sha256": "c5d55fee6c8219b1cb52a33bb6da36de124bc404ad62ca436e9eebb928963446"
+  },
+  {
+   "path": "evidence/v152/pyright-output.txt",
+   "size_bytes": 37,
+   "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+  },
+  {
+   "path": "evidence/v152/review_record.md",
+   "size_bytes": 5098,
+   "sha256": "975f43a3d37be145c3a4146fbbcefc3fae8696627d3a5d20f2f9ee26eca1d7c0"
+  },
+  {
+   "path": "evidence/v152/route_selection.tex",
+   "size_bytes": 51514,
+   "sha256": "d1673ceed4912cad67cb6c7fe79ca15c3ea0d24dc0aec7d27c2458e611cc39d5"
+  },
+  {
+   "path": "evidence/v152/verify_artifacts.py",
+   "size_bytes": 2219,
+   "sha256": "83b7acb9dcc29dac92939be3a45e11c0e99c648dd0d7b04e0623c342fe12d3d1"
+  }
+ ],
+ "file_count": 9,
+ "total_bytes": 85565,
+ "note": "NS43 analytic scope closures and open inputs; NS44/45 fresh certified failures of two existing lambda5 comparisons. New external artifacts indexed in provenance.json; historical recovery OPEN. Local draft based PR20, no G2/RH claim."
+}
