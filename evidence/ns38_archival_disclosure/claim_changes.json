@@ -197,6 +197,86 @@
     {
       "before": "\\end{abstract}",
       "after": "\\end{abstract}\n\\paragraph{Evidence availability (NS-38, September 22, 2026).}\nThe original $\\lambda=5$ computational evidence (v1.27--v1.28) and\noriginal concentration-era companion evidence (v1.31--v1.34) are\n\\emph{not archived}, except for one recovered v1.31 report. The v1.29\ncapacity and v1.30 continuum companion artifacts are also not archived.\nAffected numerical assertions and archival descriptions are explicitly\nmarked below; historical verification accounts are not currently\nreplayable certificates. Complete analytic proofs printed here remain\navailable independently of missing companion reviews. The scientific\nv1.35 files are available under \\path{evidence/v135/} and match their\nrecorded hashes. See \\path{evidence/MISSING.md} for per-group disposition.\nThis disclosure alone does not change the manuscript version."
+    },
+    {
+      "before": "problem, not a consequence of smoothing.  Numerical tests at\n$\\lambda=3,4,5$ agree with these obstructions and are used only as\nfalsification diagnostics.",
+      "after": "problem, not a consequence of smoothing. Historical numerical tests\nat $\\lambda=3,4,5$ reported agreement; their original scripts and outputs\nare not archived, and those reports are only falsification diagnostics."
+    },
+    {
+      "before": "correct, but numerical diagnostics at $\\lambda=3,4,5$ show that it\ndiscards most favorable symbol mass.",
+      "after": "correct, but historical numerical diagnostics at $\\lambda=3,4,5$\nreported that it discards most favorable symbol mass; the original\nscripts and outputs are not archived (only the v1.31 report survives)."
+    },
+    {
+      "before": "positive complete signed energy, including under an independent\nphysical-space calculation. Thus the scalar shortcuts fail, while the",
+      "after": "positive complete signed energy in that historical report, including\na reported independent physical-space calculation whose script and\noutput are not archived. Those numerical reports do not close a route; the"
+    },
+    {
+      "before": "stronger pointwise multiplier criterion is numerically false at already\ncertified positive fixed windows.",
+      "after": "stronger pointwise multiplier criterion was reported numerically false\nat already certified positive fixed windows; the original v1.30\ndiagnostic script and output are not archived."
+    },
+    {
+      "before": "bound.  A finite $\\lambda=3$, $N=64$ diagnostic falsifies the stronger\npointwise-supersolution shortcut;",
+      "after": "bound. A historical finite $\\lambda=3$, $N=64$ diagnostic reports\nfalsification of the stronger pointwise-supersolution shortcut; its\nrecomputation script and output are not archived;"
+    },
+    {
+      "before": "The first four dyadic blocks are individually positive, but certified\ncoupling lower bounds disprove the criterion for this partition in\nboth parities. The obstruction survives every admissible smaller\nblock metric and every positive scalar row reweighting. It is a\nfailure of that sufficient comparison, not a negative Weil direction,\nand supplies no conclusion about other cutoffs or partitions.",
+      "after": "The historical computation reports individually positive first four\ndyadic blocks and coupling lower bounds contradicting the criterion in\nboth parities. Its original witnesses, verifiers and outputs are not\narchived. Conditional on those reported gates, the obstruction survives\nevery admissible smaller block metric and positive scalar row reweighting.\nIt concerns that sufficient comparison, not a negative Weil direction\nor other cutoffs and partitions."
+    },
+    {
+      "before": "defect are retained. The unchanged $10^{-8}D$ metric at $\\lambda=5$\nremains disproved;",
+      "after": "defect are retained. The unchanged $10^{-8}D$ metric at $\\lambda=5$\nis historically reported to fail; its original evidence is not archived;"
+    },
+    {
+      "before": "Use the exact coefficient formula and analytic coefficient enclosures\nof Proposition~\\ref{prop:v114-weil-core}. The outward verifier forms",
+      "after": "The historical account uses the exact coefficient formula and analytic\ncoefficient enclosures of Proposition~\\ref{prop:v114-weil-core}.\nIt reports that the outward verifier forms"
+    },
+    {
+      "before": "At $320$ and $448$ bits the frozen vectors give the stated strict",
+      "after": "At $320$ and $448$ bits the frozen vectors reportedly give the stated strict"
+    },
+    {
+      "before": "and reproduces the intervals at $448$ bits.",
+      "after": "and reportedly reproduces the intervals at $448$ bits."
+    },
+    {
+      "before": "row contributes to the pairing. The ratios are below $10^{-8}$,\nproving the assertion on the complete tail.",
+      "after": "row contributes to the pairing. If the reported ratio enclosures hold,\nthey are below $10^{-8}$ and imply the asserted complete-tail failure."
+    },
+    {
+      "before": "or a resolution margin cannot replace it. These are counterexamples\nto the frozen metric, not negative Weil vectors.",
+      "after": "or a resolution margin cannot replace it. These reported witnesses\nwould be counterexamples to the frozen metric, not negative Weil vectors."
+    },
+    {
+      "before": "Reconstruct the exact coefficients at $320$ and $448$ bits, with the",
+      "after": "The historical account reconstructs exact coefficients at $320$ and\n$448$ bits, with the"
+    },
+    {
+      "before": "dyadic inverse-Cholesky proposals $C_j$ satisfy the outward",
+      "after": "dyadic inverse-Cholesky proposals $C_j$ reportedly satisfy the outward"
+    },
+    {
+      "before": "pairs $(x_{jk},y_{jk})$. Direct interval evaluation proves positive",
+      "after": "pairs $(x_{jk},y_{jk})$. The missing interval evaluation reportedly proves positive"
+    },
+    {
+      "before": "The following are exact integer numerators of strict lower bounds",
+      "after": "The following are exact integer numerators of the reported strict lower bounds"
+    },
+    {
+      "before": "Lemma~\\ref{lem:v128-comparison-obstruction} proves the assertion.\nBoth precision replays use identical frozen witnesses and give",
+      "after": "Conditional on the asserted block comparisons,\nLemma~\\ref{lem:v128-comparison-obstruction} proves the assertion.\nBoth precision replays reportedly use identical frozen witnesses and give"
+    },
+    {
+      "before": "to the norm comparison, so these finite obstructions settle failure\nof the infinite criterion on this partition.",
+      "after": "to the norm comparison, so verified versions of these reported finite\nobstructions would settle failure of the infinite criterion on this partition."
+    },
+    {
+      "before": "These numbers are lower bounds for a norm-comparison eigenvalue,",
+      "after": "These reported numbers concern lower bounds for a norm-comparison eigenvalue,"
+    },
+    {
+      "before": "inside them, or reweighting scalar rows cannot fix the present test.",
+      "after": "inside them, or reweighting scalar rows could not fix a test with the\nreported certified lower comparisons."
     }
   ]
 }

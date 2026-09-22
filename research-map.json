@@ -90,7 +90,7 @@
       "title": "lambda=5",
       "status": "blocked",
       "parent": "windows",
-      "note": "10^-8 D tail metric certified FALSE, both parities (v1.28)"
+      "note": "v1.27 historically reports 10^-8 D tail-metric failure in both parities; original witnesses/verifiers not archived (NS-38). No complete positivity certificate at lambda=5 is claimed here."
     },
     {
       "id": "uniform",
@@ -148,10 +148,10 @@
     {
       "id": "blockmetric",
       "title": "block metrics",
-      "status": "closed",
+      "status": "blocked",
       "parent": "uniform",
       "branch": "closed/block-metric",
-      "note": "v1.28, both parities",
+      "note": "v1.28 reports failure of its tested dyadic partition in both parities; original numerical witnesses and verifiers not archived (NS-38). Analytic comparison lemma is available; arithmetic closure is not currently replayable.",
       "evidence": "MISSING"
     },
     {

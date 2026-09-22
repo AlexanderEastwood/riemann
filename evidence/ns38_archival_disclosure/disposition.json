@@ -4,10 +4,12 @@
   "undefined_or_duplicate_reference_messages": 0,
   "original_numerical_gates_replayed": 0,
   "original_artifacts_recovered": 0,
-  "changes": 49,
+  "changes": 69,
   "group_dispositions": {
     "lambda5": "NOT ARCHIVED; disclosure complete, recovery open",
     "v131_v134": "NOT ARCHIVED except one report; disclosure complete, recovery open"
   },
-  "v135_scientific_files_matching_legacy_hashes": 5
+  "v135_scientific_files_matching_legacy_hashes": 5,
+  "additional_changes": "historical proof headings; map unavailable block-metric closure marked blocked",
+  "review": "Astra RH1 read-only review; front-matter and historical-proof wording corrected"
 }

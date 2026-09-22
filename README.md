@@ -35,8 +35,8 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | Finite floors | `W_λ >= -8·I` at λ = 5, 6, 8, both parities, full infinite tail (`prop:v138-three-floors`) |
 | Certified window | half-width `a = log 4 = 1.386`; 1.73× the published Zhu window, 4× the classical range |
 | Live mechanism | signed weighted concentration, even sector (`prop:v131-concentration`) |
-| Routes proved closed | 10 |
-| Evidence gaps | 2 of 4 tracked groups open — see the ledger |
+| Routes proved closed | 15 map nodes; unavailable v1.28 numerical closure separately blocked |
+| Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |
 
@@ -186,9 +186,9 @@ graph LR
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class w5,concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight blocked;
+  class w5,blockmetric,concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes,circle open;
   subgraph Legend

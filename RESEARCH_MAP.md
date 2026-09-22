@@ -140,9 +140,9 @@ graph LR
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class w5,concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight blocked;
+  class w5,blockmetric,concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes,circle open;
   subgraph Legend
@@ -161,8 +161,8 @@ graph LR
 |---|---:|---|
 | `proved` | 19 | established result |
 | `live` | 1 | current route (gold): being worked now |
-| `closed` | 16 | closed route (red): proved insufficient or impossible; kept deliberately |
-| `blocked` | 6 | attempted; obstruction found |
+| `closed` | 15 | closed route (red): proved insufficient or impossible; kept deliberately |
+| `blocked` | 7 | attempted; obstruction found |
 | `open` | 6 | target, not yet attacked |
 
 ## Nodes
@@ -189,7 +189,7 @@ graph LR
       - [x] **lambda=3** — `prop:v116-window-positive` · evidence: [`evidence/v124/g2_certificate/`](evidence/v124/g2_certificate/)
       - [x] **lambda=4 even** — `prop:v125-even-complete` · `result/v125-even-complete` · evidence: [`evidence/v126/`](evidence/v126/)
       - [x] **lambda=4 odd** — `prop:v126-odd-complement` · `result/v126-odd-complement` · evidence: [`evidence/v126/`](evidence/v126/)
-      - [!] **lambda=5** — 10^-8 D tail metric certified FALSE, both parities (v1.28)
+      - [!] **lambda=5** — v1.27 historically reports 10^-8 D tail-metric failure in both parities; original witnesses/verifiers not archived (NS-38). No complete positivity certificate at lambda=5 is claimed here.
     - [x] **Target weakening** — `lane/bounded-floor`
       - [x] **no uniform positive gap exists** — `prop:v135-growing-radical` · evidence: [`evidence/v135/`](evidence/v135/) · dense radical family; same fact as the floor reduction
       - [x] **uniform finite floor suffices** — `prop:v136-bounded-floor` · evidence: [`evidence/v136/`](evidence/v136/) · decay not required; dichotomy inf spec -> -inf or RH
@@ -202,7 +202,7 @@ graph LR
       - [X] **Schatten / Hilbert-Schmidt** — `prop:v132-schatten` · `closed/schatten` · **evidence missing**
       - [x] **Scoped information-loss obstructions** — `thm:v139-probe-relaxation; thm:v139-protected-orbit` · `result/v139-meta-obstruction` · evidence: [`evidence/v139/`](evidence/v139/) · Full-histogram cap/probe relaxation fails; protected finite-head spectral orientation fails. Does not subsume all ten closures.
       - [X] **basis / sampling dominance** — `prop:v121-complement-cancellation` · `closed/sampling-dominance` · evidence: [`evidence/v124/g2_schur_cancellation/`](evidence/v124/g2_schur_cancellation/)
-      - [X] **block metrics** — `closed/block-metric` · **evidence missing** · v1.28, both parities
+      - [!] **block metrics** — `closed/block-metric` · **evidence missing** · v1.28 reports failure of its tested dyadic partition in both parities; original numerical witnesses and verifiers not archived (NS-38). Analytic comparison lemma is available; arithmetic closure is not currently replayable.
       - [X] **flat-top smoothing** — `prop:v132-flat-top` · `closed/flat-top` · **evidence missing**
       - [X] **norm contraction** — `prop:v120-norm-counterexample` · `closed/norm-contraction` · evidence: [`evidence/v124/g2_weighted_signed/`](evidence/v124/g2_weighted_signed/)
       - [X] **reciprocal-band commutation** — `closed/reciprocal-band` · **evidence missing** · v1.33, commutator norm > 9e-6

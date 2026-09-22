@@ -121,7 +121,7 @@ files. Historical manifests are not rewritten to hide their status.
 
 The [claim-by-claim changes](ns38_archival_disclosure/claim_changes.json),
 [present-file hash comparison](ns38_archival_disclosure/present_proof_hashes.json)
-and [versioned report](ns38_archival_disclosure/ns38-archival-disclosure-2026-09-22-v1.html)
+and [versioned report](ns38_archival_disclosure/ns38-archival-disclosure-2026-09-22-v2.html)
 record this disposition. Recovery remains an open input. The archival overclaim
 is corrected; availability has not been restored. No manuscript version bump is
 made for NS-38 alone, and no original numerical gate was replayed.

@@ -411,9 +411,9 @@ Proposition~\ref{prop:v132-flat-top} proves that a nontrivial positive
 frequency smoothing cannot preserve every form on the physical
 difference interval.  A signed flat-top extension remains possible in
 principle, but positivity of such an extension is an additional sign
-problem, not a consequence of smoothing.  Numerical tests at
-$\lambda=3,4,5$ agree with these obstructions and are used only as
-falsification diagnostics.  The full signed weighted-superlevel
+problem, not a consequence of smoothing. Historical numerical tests
+at $\lambda=3,4,5$ reported agreement; their original scripts and outputs
+are not archived, and those reports are only falsification diagnostics.  The full signed weighted-superlevel
 criterion of Proposition~\ref{prop:v131-concentration} remains the live
 conditional even-sector mechanism.  Its cofinal arithmetic inequality
 and the odd sector remain open.
@@ -423,12 +423,14 @@ source-compressed time--frequency concentration hierarchy.
 Proposition~\ref{prop:v131-concentration} proves both a rigorous
 negative-level layer-cake bound and a sharper weighted superlevel
 operator criterion. The scalar trace specialization is finite and
-correct, but numerical diagnostics at $\lambda=3,4,5$ show that it
-discards most favorable symbol mass. Generic Logvinenko--Sereda
+correct, but historical numerical diagnostics at $\lambda=3,4,5$
+reported that it discards most favorable symbol mass; the original
+scripts and outputs are not archived (only the v1.31 report survives). Generic Logvinenko--Sereda
 constants likewise do not meet the necessary signed budget. Explicit
 even packets centred at the deepest located wells nevertheless retain
-positive complete signed energy, including under an independent
-physical-space calculation. Thus the scalar shortcuts fail, while the
+positive complete signed energy in that historical report, including
+a reported independent physical-space calculation whose script and
+output are not archived. Those numerical reports do not close a route; the
 weighted concentration operator remains a live conditional mechanism.
 Its required cofinal arithmetic concentration inequality and the odd
 sector remain open.
@@ -441,8 +443,9 @@ operator. Proposition~\ref{prop:v130-remainder} isolates the complete
 arithmetic discrepancy as a scalar Fourier multiplier and states the
 ordinary-error estimate sufficient for the gap-free route. The Green
 operator is compact, so this produces no hidden spectral gap. A
-stronger pointwise multiplier criterion is numerically false at already
-certified positive fixed windows.
+stronger pointwise multiplier criterion was reported numerically false
+at already certified positive fixed windows; the original v1.30
+diagnostic script and output are not archived.
 The arithmetic remainder estimate and the odd sector remain open.
 
 Version 1.29 isolates a new candidate mechanism for G2.6 after screening
@@ -452,23 +455,25 @@ ground-state transform and gives an exact capacity-absorption condition
 for asymptotic nonnegativity on the source complement.  The mechanism
 uses the simultaneous signs of the physical jump kernel and is not a
 new Schur solve, block metric, finite-rank repair or scalar prime-norm
-bound.  A finite $\lambda=3$, $N=64$ diagnostic falsifies the stronger
-pointwise-supersolution shortcut; it neither proves nor disproves the
+bound. A historical finite $\lambda=3$, $N=64$ diagnostic reports
+falsification of the stronger pointwise-supersolution shortcut; its
+recomputation script and output are not archived; it neither proves nor disproves the
 complete capacity condition.  The odd pole has the opposite sign and
 is explicitly outside this candidate's present scope.
 
 Version 1.28 tested the signed block-metric criterion at $\lambda=5$
 with the explicitly chosen polynomial cutoff $N=\lambda^2=25$.
-The first four dyadic blocks are individually positive, but certified
-coupling lower bounds disprove the criterion for this partition in
-both parities. The obstruction survives every admissible smaller
-block metric and every positive scalar row reweighting. It is a
-failure of that sufficient comparison, not a negative Weil direction,
-and supplies no conclusion about other cutoffs or partitions.
+The historical computation reports individually positive first four
+dyadic blocks and coupling lower bounds contradicting the criterion in
+both parities. Its original witnesses, verifiers and outputs are not
+archived. Conditional on those reported gates, the obstruction survives
+every admissible smaller block metric and positive scalar row reweighting.
+It concerns that sufficient comparison, not a negative Weil direction
+or other cutoffs and partitions.
 Complete positivity at $\lambda=4$, weak G1, all 72 historical
 dispositions, the physical endpoint and the sampler's explicit graph
 defect are retained. The unchanged $10^{-8}D$ metric at $\lambda=5$
-remains disproved; no complete $\lambda=5$ positivity margin or
+is historically reported to fail; its original evidence is not archived; no complete $\lambda=5$ positivity margin or
 successful growing-window tuning rule is asserted. No G2 sign gap
 is closed, and RH is not proved.
 
@@ -8021,27 +8026,28 @@ parity indices $17,\ldots,128$, satisfy respectively
 \end{align*}
 Both denominators and both Weil numerators are strictly positive.
 \end{proposition}
-\begin{proof}
-Use the exact coefficient formula and analytic coefficient enclosures
-of Proposition~\ref{prop:v114-weil-core}. The outward verifier forms
+\begin{proof}[Historical verification account; original evidence not archived]
+The historical account uses the exact coefficient formula and analytic
+coefficient enclosures of Proposition~\ref{prop:v114-weil-core}.
+It reports that the outward verifier forms
 \[
  W_{nm}^{\pm}=W_{nm}\pm W_{n,-m},\qquad
  W_{nn}=d_n,\quad
  W_{nm}=\frac{b_n-b_m}{n-m}\ (n\ne m),\quad b_{-n}=-b_n.
 \]
 The metric diagonal is $a_n$, not the full arithmetic diagonal $d_n$.
-At $320$ and $448$ bits the frozen vectors give the stated strict
+At $320$ and $448$ bits the frozen vectors reportedly give the stated strict
 intervals and negative values of $QW_5(v,v)-10^{-8}\ip{Dv}{v}$.
 A separate signed-index quadratic assembly expands each parity vector
 to coefficients $v_n/\sqrt2$ at $+n$ and $\pm v_n/\sqrt2$ at $-n$,
-and reproduces the intervals at $448$ bits. The odd expansion differs
+and reportedly reproduces the intervals at $448$ bits. The odd expansion differs
 from real-sine coordinates only by a common unit phase. Witness hashes,
 coefficient enclosures and the independent verifier are described in
 Appendix~\ref{app:v127-transfer}; only the descriptions and recorded
 hashes survive here. The underlying files are not archived. Each vector has literal finite support,
 so its complete quadratic form is exactly this finite sum: no remote
-row contributes to the pairing. The ratios are below $10^{-8}$,
-proving the assertion on the complete tail.
+row contributes to the pairing. If the reported ratio enclosures hold,
+they are below $10^{-8}$ and imply the asserted complete-tail failure.
 \end{proof}
 
 The first remote-weight gate already fails at the frozen even
@@ -8061,8 +8067,8 @@ obstruction, and no successful tuning rule has been established.
 In particular, no positive $\lambda=5$ tail metric or structured
 inverse factors are asserted. The complete certificate margin
 $1-\lambda_{\max}(\mathcal U,K)$ is unavailable; a finite-prefix value
-or a resolution margin cannot replace it. These are counterexamples
-to the frozen metric, not negative Weil vectors.
+or a resolution margin cannot replace it. These reported witnesses
+would be counterexamples to the frozen metric, not negative Weil vectors.
 
 \subsection*{What a non-scalar metric must change}
 A change of coordinates alone cannot turn a negative lower comparison
@@ -8216,14 +8222,15 @@ Proposition~\ref{prop:v127-block-metric} fails for this partition,
 for all metrics $0\prec M_j\preceq T_{jj}$. It still fails after
 any positive scalar row reweighting.
 \end{proposition}
-\begin{proof}
-Reconstruct the exact coefficients at $320$ and $448$ bits, with the
+\begin{proof}[Historical verification account; original evidence not archived]
+The historical account reconstructs exact coefficients at $320$ and
+$448$ bits, with the
 same $96$-term analytic archimedean enclosure used above. Frozen
-dyadic inverse-Cholesky proposals $C_j$ satisfy the outward
+dyadic inverse-Cholesky proposals $C_j$ reportedly satisfy the outward
 Gershgorin certificates $C_jT_{jj}C_j^*\succ(99/100)I$ in every
 block. In particular each $C_j$ is invertible and $T_{jj}\succ0$.
 Numerical singular vectors are used only to propose exact dyadic
-pairs $(x_{jk},y_{jk})$. Direct interval evaluation proves positive
+pairs $(x_{jk},y_{jk})$. The missing interval evaluation reportedly proves positive
 block energies and lower bounds on
 \[
  r_{jk}=\frac{|\ip{T_{jk}y_{jk}}{x_{jk}}|}
@@ -8231,7 +8238,7 @@ block energies and lower bounds on
               \ip{T_{kk}y_{jk}}{y_{jk}}}}
  \le\beta_{jk}(T).
 \]
-The following are exact integer numerators of strict lower bounds
+The following are exact integer numerators of the reported strict lower bounds
 $H_{jk}$ with denominator $10^6$, in the order indicated:
 \begin{center}
 \begin{tabular}{lrrrrrr}
@@ -8254,20 +8261,21 @@ Rayleigh lower bounds
  \frac{{\bf1}^tH_-{\bf1}}4
  =\frac{6405686}{4000000}=1.6014215>1.
 \end{align*}
+Conditional on the asserted block comparisons,
 Lemma~\ref{lem:v128-comparison-obstruction} proves the assertion.
-Both precision replays use identical frozen witnesses and give
+Both precision replays reportedly use identical frozen witnesses and give
 identical rational lower matrices. Each pairing is a complete
 finite-support pairing in the actual operator; no remote row is
 missing from it. Every uncomputed block would add nonnegative terms
-to the norm comparison, so these finite obstructions settle failure
-of the infinite criterion on this partition. The witness files,
+to the norm comparison, so verified versions of these reported finite
+obstructions would settle failure of the infinite criterion on this partition. The witness files,
 congruence factors and independent check are described in
 Appendix~\ref{app:v128-test}, but are not archived. The integer
 Rayleigh arithmetic displayed here is exact; the missing step is
 replaying the asserted lower comparison with the actual blocks.
 \end{proof}
 
-These numbers are lower bounds for a norm-comparison eigenvalue,
+These reported numbers concern lower bounds for a norm-comparison eigenvalue,
 not values of $1-\lambda_{\max}(\mathcal U,K)$ and not resolution
 margins. No complete $\lambda=5$ positivity margin is obtained.
 The ordinary block eigenvalues and proposed singular values are not
@@ -8287,7 +8295,8 @@ directions. This exact illustrative example is not an asserted
 factorization of the actual Weil blocks. A subsequent signed
 criterion must preserve such information, or change the partition;
 merely shrinking the admissible block metrics, rotating coordinates
-inside them, or reweighting scalar rows cannot fix the present test.
+inside them, or reweighting scalar rows could not fix a test with the
+reported certified lower comparisons.
 
 \subsection*{A complete simple even ground and its real-zero transform at $\lambda=4$}
 
