@@ -1,0 +1,49 @@
+{
+  "label": "DIAGNOSTIC, NOT A CERTIFICATE",
+  "base": "a0e916a",
+  "python": "3.14.6",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "mpmath": "1.4.1",
+    "python-flint": "0.9.0"
+  },
+  "source_sha256": {
+    "evidence/v150/capacity_weight.tex": "bf309b2d55f565f2ffde564a22108df96f5dfb6a09fb8051c8bee3a70d0d8fff",
+    "evidence/v124/g2_schur_cancellation/assembly_general.py": "4da2e6805e92a2850fe28bd51cd2450d1f2ef0566e9f4f5b5b5fb50db2825b58",
+    "evidence/diag_true_symbol/pencil.py": "cc46f7c68909e61d641e6d960dc74541f76a2f3e89c30b28b0ea42a6ad7eb043",
+    "evidence/diag_true_symbol/pencil_odd.py": "1f6581604cda6c8c690ba440383dacbb6e3b88b5281b7811668a2a066b3e76d7",
+    "evidence/diag_true_symbol/cert.py": "ab5e9456548f5bfbdbe106a852025e2cf0a8e3ad407caa565afb05a98b06c329"
+  },
+  "artifact_sha256": {
+    "budget_l3_even_g144.json": "7c78fafd35ceb0a9c56b13e7310799d51314ff0ffa821994e88b6744998a1ad4",
+    "budget_l3_even_g96.json": "1dd9d794232658831a4e3a2b65c2e930c0b862d1236afbac273cb8b70e75524c",
+    "budget_l3_odd_g144.json": "7572d215a6de95812f22b29dd4da9295d123e38fb19c278a86a57e125a3a82bc",
+    "budget_l3_odd_g96.json": "0359afdc9eeeae1197b373d958b6f15c5ef7d754781b826d15cb9ab0ccff0677",
+    "budget_l4_even_g144.json": "cbc857820ac127ad4acd5affeb1f1fbbf44f490d49ad8bf81488901234b3795e",
+    "budget_l4_even_g96.json": "93034118327695701f5ee3aed18a51cf49808f35dc19890ceb5e50198f837818",
+    "budget_l4_odd_g144.json": "f1869923f7c087c123c9dbd36e6226f6d8b5ed1ce9eb56d6af3cd5b84368f4c9",
+    "budget_l4_odd_g96.json": "2bcbc4ad24bb94f608f4be3d41c9ea009ff4a3b985c7a7846ee6161c9f47243f",
+    "build_output.txt": "ee4a6786e9d0c1c5b9d2eeedf612a75b99c3ff938893926c3b340a87699031ec",
+    "checks.json": "45ba7d900536dd6c8f3ea3e7d650c19ab24e9bd24ace2eb7693c476115872e07",
+    "freeze.py": "14fb5d6ec9f836f00a363e5b4594b911aea395f2890feec920a03015d731c278",
+    "freeze_output.txt": "78f06932479e236af66c40b3e6833ae8d6dc76828e9364a3813f867e7d1f8567",
+    "measure.py": "e0d983e9902c29b5b5d6dbdd666bbc379b8707f3035857b49412d64c96e0d85b",
+    "measure_l3_even_g144.txt": "4caa3fcd0896fd086ef414b894c80127c4725bf465cf744b9553fed51f538722",
+    "measure_l3_even_g96.txt": "f607ab2383cf1ad2ebeebdabb04887630aed2a54b9d83020e684e1c23ca05081",
+    "measure_l3_odd_g144.txt": "3322059f8551619acb912501ab7f9c12daaf610a192e9220fdaaf0a013591794",
+    "measure_l3_odd_g96.txt": "11cfd1f53d6543392567db7e8ecad45e612ad6b76e9509cd7d44496dd5943315",
+    "measure_l4_even_g144.txt": "b9b31bb5977957f73717b9309af85915f3e44f5e9e0f826f649c9cc980d6e058",
+    "measure_l4_even_g96.txt": "024a43f6c98b3bd8516ae3ade96dd435329507dc03ff804bf4c596cf2ea6e2c4",
+    "measure_l4_odd_g144.txt": "c7cfa21459102a1610137de35d44be409c5b5c17368c550068e0ac170dcae43a",
+    "measure_l4_odd_g96.txt": "e3419c6c8df0654dad9b759dffb51ce784748a046c8af546df1c30a91a37e9ba",
+    "ns42-energy-budgets-2026-09-22-v1.html": "5d04d1ae94f715f9ce4f98033a6355b53bbe4748e14c01909412f8e88ec8cb63",
+    "pyright.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+    "report.py": "be43a81b06f0eece875c66fc24240b0c3d698b40a2ea9bc86d9040a91e620c4d",
+    "results.md": "cd040fafbca78d70e77f54da231a98a961f1e203f16eee68c909685f3c7aad71",
+    "vectors_l3_even.json": "e6e5927c1444c20721d481cf9fafd9c354b5881a9616efbb3b45e5b3dcc78f54",
+    "vectors_l3_odd.json": "bf885196540c315a989ced359ce346d3e0ca65803e91c85a204b003d50dae2b1",
+    "vectors_l4_even.json": "52a4e86bbaba0ba1b5d98882d06609d8e8ec4679d131ad87aa2064e015395b78",
+    "vectors_l4_odd.json": "c2a87da5c51cb5537b0ebc4c05bdf183f24fd8ae1f94df3f0ec99d5fc824d62b"
+  }
+}
