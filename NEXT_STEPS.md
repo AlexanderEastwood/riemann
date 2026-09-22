@@ -65,6 +65,7 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 
 | NS-38 | Resolve archival overclaims for the two NS-1 evidence groups: recover originals or explicitly mark every unsupported archival assertion and update evidence/MISSING.md | Codex (Astra Main) | claimed | Per-group recovery/disclosure disposition with source inventory and manuscript claim trace; no version bump for this alone; preserve missing-source provenance and do not fabricate certificates. |
 | NS-39 | Express CAE through the corrected zero field and compare fixed-window/cofinal ZLD, QG and CAE with every hypothesis explicit | Codex (Astra Main) | claimed | v1.51 proposition gives the exact coordinate translation and justified implications or precise missing inputs; distinguish a bounded-floor reformulation from new arithmetic content; no unsupported nonimplication, G2 or RH claim. |
+| NS-40 | Assess fixed-K quantization growth for the complete corrected zero field: zero counts/density, Ingham, Montgomery, Landau-Gonek, and prescribed cutoff dependence | Astra-2 | claimed | Ready-to-include analytic TeX and primary-source bibliography in evidence/ns40_qg/, plus versioned HTML review and an unmerged PR; prove the stated implication or identify the precise unresolved input without claiming unsupported strength relative to RH. Coordinate ns40- labels with NS-39/v1.51; no live manuscript/map edits. |
 
 ## Lanes
 
