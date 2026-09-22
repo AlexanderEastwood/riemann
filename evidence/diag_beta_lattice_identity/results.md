@@ -160,3 +160,94 @@ The energy still uses the full Fourier distribution of the state. The
 failure here is of the constant-amplitude and truncated-zero surrogates,
 not of the symbol or the concentration criterion. No new window, head,
 Weil-tail metric or complete-ground enclosure was computed. G2 and RH remain open.
+
+## Deep-trough follow-up and the summation convention (2026-09-21)
+
+The analytic sharp zero sum is ordered by symmetric height |Im rho|<=T,
+counting multiplicities and both conjugates. Its Perron limit (equivalently
+its Cesaro limit here) is used; a finite prefix retains R_{x,T}. This is
+not an absolutely convergent sum, and 400 zeros with or without Cesaro
+weights do not give 1e-6 at the deep samples.
+
+For a reproducible finite numerical evaluation we instead use the exact
+Gaussian Perron identity above, epsilon=.025, including the pole,
+trivial residues and exact desmoothing to the same strict cutoff. The
+finite sum is ordered in increasing positive ordinate and includes each
+conjugate. This convention has an absolutely convergent full zero sum.
+The desmoothing correction is evaluated, not discarded. The number of
+zeros below is specific to this convention and these sample frequencies;
+it is not a required or sufficient count for an unsmoothed sharp sum.
+
+Replay:
+
+    .venv/bin/python evidence/diag_beta_lattice_identity/verify_deep.py
+
+The script reads the top five archived grid troughs at each of lambda=4,8,
+and the J=8 and J=16 binding centroids, directly from the NS-22 JSON. It
+does not refine trough positions, rerun a head, or introduce a window.
+It also repeats all forty low lattice samples. Both precisions use the
+same epsilon: 192-bit zero inputs/45 decimal digits, and 256-bit/65 digits.
+A reference prefix of 1200 positive zeros is checked against 1000; the
+finite zero count at a separating height about 1648.69457 is 1200 at both
+precisions. Counts below use the first prefix whose sum of absolute
+omitted real paired contributions through 1200 is below 2e-7. Each
+selected prefix is then compared to the recomputed original symbol and
+passes 1e-6 at both precisions. This is an empirical sufficient count,
+not a claim of a minimal count or an interval certificate on the infinite
+tail. The 1000-to-1200 difference is below 1e-64 in the higher-precision run.
+
+| lambda | sample group | locations | sufficient positive zeros (and conjugates) |
+|---:|:---|---:|---:|
+| 3 | low_lattice | 10 | 83 |
+| 4 | low_lattice | 10 | 83 |
+| 4 | deep_and_centroids | 7 | 530 |
+| 6 | low_lattice | 10 | 80 |
+| 8 | low_lattice | 10 | 80 |
+| 8 | deep_and_centroids | 7 | 609 |
+
+The following error is at the listed point-specific sufficient prefix,
+against the recomputed original beta. The common window counts above
+are the maxima of these sufficient prefixes. The reference-prefix
+residuals at the deep points are below 6e-27 (lambda=4) and 4e-43 (lambda=8)
+at both precisions. Archived grid depths agree to within 7e-13; unlike
+the three-decimal low-sample text file, the NS-22 JSON stores full float
+values. A centroid is not a trough location; two of the centroids have
+positive beta.
+
+| lambda | kind | xi | cell u | beta | positive zeros | absolute residual |
+|---:|:---|---:|---:|---:|---:|---:|
+| 4 | trough | 526.500000000 | 232.329287 | -3.419437295 | 431 | 1.456e-07 |
+| 4 | trough | 39.247000000 | 17.318571 | -3.365250756 | 99 | 6.955e-09 |
+| 4 | trough | 222.840000000 | 98.332874 | -3.300770464 | 215 | 4.577e-08 |
+| 4 | trough | 81.020000000 | 35.751793 | -3.206301313 | 124 | 7.267e-09 |
+| 4 | trough | 652.130000000 | 287.766188 | -3.136706249 | 530 | 1.843e-08 |
+| 4 | centroid J=8 | 64.554323267 | 28.485964 | +4.608588674 | 115 | 4.637e-08 |
+| 4 | centroid J=16 | 46.512756391 | 20.524740 | -0.481323287 | 103 | 3.212e-09 |
+| 8 | trough | 362.255000000 | 239.779048 | -6.220830020 | 311 | 9.610e-09 |
+| 8 | trough | 290.745000000 | 192.446093 | -5.658707866 | 261 | 9.610e-08 |
+| 8 | trough | 177.390000000 | 117.415647 | -5.543126380 | 182 | 4.066e-08 |
+| 8 | trough | 634.630000000 | 420.065913 | -5.515281321 | 517 | 7.121e-09 |
+| 8 | trough | 751.895000000 | 497.684414 | -5.513353521 | 609 | 6.415e-08 |
+| 8 | centroid J=8 | 220.024046355 | 145.635413 | -2.259398834 | 214 | 6.358e-08 |
+| 8 | centroid J=16 | 213.278014653 | 141.170168 | +7.424038966 | 207 | 2.495e-08 |
+
+For the deep checks |xi|<=800 and x>=16, the previous left-contour estimate
+holds with 8 replaced by 50. The functional-equation/digamma-series estimate
+then gives 2|I_e|<1e-20 for .025<=epsilon<=.03. The main formula retains
+that contour exactly; its omission in this numerical illustration is
+well below 1e-6. The finite zero count establishes the finite region only;
+no RH extrapolation is made to zeros beyond the reference prefix.
+
+At lambda=8, xi=751.895 (cell 497.684), the sharp 400-zero sum with endpoint
+and trivial terms still has error about 5.567. The corresponding error at
+lambda=4, xi=652.130 is about 0.233. The 400-zero prefix cannot resolve
+these samples by simply dropping the Perron remainder.
+
+The identity therefore extends to the deep troughs, not just the low-cell
+train. Their depths are values of the full weighted, phased zero sum plus
+specified corrections. This translates a trough-density question into a
+level-set question for that whole sum; it does not turn it into a theorem
+about nearest-neighbour zero spacings. Contributions from other zeros,
+cutoff phases, the shifted denominators, and (without RH) the factors
+x^(Re rho-1/2) remain. A handful of matching trough values establishes no
+cofinal trough count, width, or density. G2 and RH remain open.
