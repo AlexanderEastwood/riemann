@@ -1,0 +1,9 @@
+DIAGNOSTIC, NOT A CERTIFICATE.
+
+NS-41 bounded read-only review by the NS-42 measurement agent, at the coordinator's request. No numerical rerun and no file edits by the reviewer. Scope: odd basis, weighted mass normalization, all-grid primal slacks, bound directions, and absence of an even-source constraint.
+
+Disposition: no MAJOR/MINOR found.
+
+Reviewed measure.py SHA prefix 4a854d6d4d35, refine_energy.py 209a70ebf5de, verify_frozen.py 1a1e89907adf, v1 HTML ec483b7aac6d, and all saved candidate/direct-replay data. Odd sinc normalization equals (-1)^n sqrt(2/L)/sqrt(2pi) times the sine-difference quotient; n=1..256 matches the odd block. M_b is two-sided mass and m_b=sum h_j/800 is the matching normalized one-sided reference. Gram whitening and normalization are consistent; the fourteen saved direct screens each contain twenty positive slacks. Smallest selected slack is lambda6/grid2 2.7702897957e-6; lambda4 min ratios 1.4774943453/1.4685161884. The dual formula has the correct lower-bound direction and its infeasible eigenvectors are never upper witnesses. Energy is evaluated on the exact saved decimals in mp, while mass checks remain correctly scoped as float diagnostics. All required qualifications are present: two gapped finite grids, frozen/extended deepest bin, midpoint rather than enclosure energies, no all-Borel/cofinal inference, and source orthogonality by odd parity.
+
+Optional prose polish from reviewer: change the opening "Every displayed energy" to "Every primal energy" because a separate dual table follows. Not a mathematical finding. Adopted in HTML v2, with this peer-review note added; v1 preserved. No numerical or measurement-code change followed the review.
