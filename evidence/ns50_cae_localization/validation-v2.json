@@ -1,0 +1,59 @@
+{
+  "task": "NS-50",
+  "record_version": 2,
+  "status": "Independent adversarial review completed: 0 MAJOR; 1 MINOR corrected and verified. Uniform CAE remains open.",
+  "scientific_input_snapshot": "b0baadf06abf788a5ef24435724e9afaf8c517a5",
+  "reviewed_pr_head": "64ee4c12ce349fb7226f2e6d2e303cb2a38dca6c",
+  "current_main_integration_base": "939b0a0583764a37bc363959294d9fdcc98b9aa6",
+  "integration_method": "Ordinary merge preserves published branch history; live manuscript identical to integration base.",
+  "current_main_build": {
+    "command": "./manuscript/build.sh",
+    "pages": 269,
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0
+  },
+  "corrected_proof_with_pinned_v151": {
+    "pages": 253,
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0
+  },
+  "corrected_proof_with_current_v153": {
+    "pages": 273,
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0
+  },
+  "review": {
+    "reviewer": "ns50_adversarial_review",
+    "type": "Separate AI-agent independent adversarial mathematical review, not human peer review or machine-checked proof.",
+    "report": "ns50-adversarial-review-2026-09-22-v1.html",
+    "report_sha256": "2d630aed581e4a5eefa92b1d8d465a237a044d880080ed8ee97bc55e8c669854",
+    "major_findings": 0,
+    "minor_findings": 1,
+    "outstanding_findings": 0,
+    "correction": "Only the malformed parity label containing one carriage return was replaced by a TeX text label. Reviewer verified the complete byte comparison.",
+    "corrected_proof": "localization-v2.tex",
+    "corrected_proof_sha256": "f01a0f20eb9376d5e8957643dd3adfdf1cac5202e240db06be661f549a2fd992",
+    "inherited_interval_gates_replayed": false
+  },
+  "direct_dependencies_checked_unchanged_since_v151": [
+    "prop:v135-both-parities",
+    "prop:v135-growing-radical",
+    "lem:v136-total-radicals",
+    "prop:v136-bounded-floor",
+    "cor:v136-complement-floor",
+    "prop:v151-input-comparison"
+  ],
+  "checks": {
+    "original_artifact_hashes": "4 of 4 match the original index",
+    "sole_proof_change": "Parity-label repair; no mathematical change",
+    "inherited_manifests": {
+      "v152": "9/9, no missing or mismatched files",
+      "v153": "7/7, no missing or mismatched files"
+    },
+    "html": "Balanced, inline CSS, local links resolved"
+  },
+  "new_window": false,
+  "new_manuscript_version": false,
+  "numerical_gate_replayed": false,
+  "scope": "Fixed localizer, ordinary L2, full even and odd compact tests, 0 <= theta < 1. Odd sector is source admissible. No closure of theta = 1, varying localizers, other completions, or the physical Weil form."
+}
