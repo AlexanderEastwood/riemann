@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.50},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.51},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,10 +35,10 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.50\\
+\large Complete working manuscript, version 1.51\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
-\date{September 21, 2026}
+\date{September 22, 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -200,6 +200,20 @@ This disclosure alone does not change the manuscript version.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.51 compares the three open inputs in one proposition,
+\ref{prop:v151-input-comparison}. The positive-weight potential is an
+inverse multiplier of the complete corrected zero field, with the finite
+window pole mass and exterior contribution retained. ZLD implies the
+quantization-growth clause of QG on the same prescribed family, with
+lower bound $\kappa\theta^2D_a/(2K)$; the separate packet input is not
+supplied. CAE is exactly the uniform complement-floor target in these
+coordinates, not a new estimate. General measure countermodels do not
+prove arithmetic independence. Universal-head QG is false by cutoff
+dilution, whether or not CAE holds; no converse for a specified natural
+rule is established. All three arithmetic inputs remain unproved.
+NS-38 separately makes the missing historical evidence explicit, without
+claiming recovery. No new window, tail metric, G2 or RH claim is made.
+
 Version 1.50 tests the explicit positive Gaussian arithmetic radical in
 the physical prime-shift capacity identity. Its exact transformed form
 retains both poles and exterior edges. A scoped obstruction proves that
@@ -11553,6 +11567,189 @@ exact identities, proved implications or the named open input CAE.
 No RH assumption, new window, tail metric or numerical certificate
 enters. G2 and RH remain open.
 
+\subsection*{Corrected zero field, quantization, and the critical energy target (NS-39)}
+\label{sec:v151-input-comparison}
+The three named inputs concern different quantities. ZLD is a lower
+level-band measure, QG is growth of a one-sided quantization cost, and
+CAE is a signed physical-form bound. The following proposition gives
+what follows from their stated definitions. It does not assert logical
+independence of unproved assertions about the actual zeta function.
+
+\begin{proposition}[Zero-field potential and the implications actually supplied]
+\label{prop:v151-input-comparison}
+Let $a>0$, $I_a=(-a,a)$, $h$ be the positive weight of
+\eqref{eq:v150-weight}, $h_a=1_{I_a}h$ on $\mathbb R$, and
+$I_{h,a}=\int_{I_a}c(x)h(x)\,dx$, where $c(x)=\cosh(x/2)$.
+Use the complete corrected field $\mathcal Z_a=\beta_a$ of
+\eqref{eq:v147-corrected-zero-field}, including its endpoint, trivial
+zeros and prescribed symmetric-height limit. Put
+\[
+ Y_a=\mathcal F^{-1}(\mathcal Z_a\widehat h_a),
+\]
+with the unitary Fourier transform. Let $u_a$ denote the actual normalized
+even source. Then the following statements hold.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Exact identity, fixed window.} The product defining $Y_a$
+is in $L^2(\mathbb R)$, and almost everywhere on $I_a$,
+\begin{align}
+ r_a(x)&=\frac{Y_a(x)-2I_{h,a}c(x)}{h(x)},
+       \label{eq:v151-zero-potential}\\
+ T_a(x)&=Y_a(x)+2(I_h-I_{h,a})c(x).
+       \label{eq:v151-zero-exterior}
+\end{align}
+In particular, the global $I_h$ cannot replace $I_{h,a}$ in
+\eqref{eq:v151-zero-potential}. For each $f$ in the complete physical
+form domain, writing $g=f/h$ on $I_a$ and zero outside,
+\begin{align}
+ \mathcal J_h[g]-\tfrac23\operatorname{Var}_{\nu}(g)
+              -2|\langle f,s\rangle|^2
+ &=q_a[f]
+ =\int_{\mathbb R}\mathcal Z_a(\xi)
+                   |\widehat{\widetilde f}(\xi)|^2\,d\xi,
+ \label{eq:v151-zero-energy}
+\end{align}
+where $s(x)=\sinh(x/2)$ and $\widetilde f$ is zero extension.
+The identities retain all exterior edges and both parity poles.
+
+\item \emph{Proved implication, identical cutoff rule.} At a fixed
+window with $D_a>0$, suppose the band inequality in
+\eqref{eq:v147-zld} holds with constants $\kappa>0$, $0<\theta\le1$ for the
+prescribed $N(a)$ and $X_a=2\pi N(a)/L$. Then, for each $K\ge1$,
+\begin{equation}\label{eq:v151-zld-qg}
+ \mathrm{QC}_K(\widetilde m_a)
+       \ge\frac{\kappa\theta^2D_a}{2K}.
+\end{equation}
+On a cofinal family, uniform $\kappa,\theta>0$ and $D_a\to\infty$
+therefore imply the quantization-growth clause
+\eqref{eq:v149-qg} of QG. For the actual symbol, the required global
+depth growth is Corollary~\ref{cor:v137-scalar-no-go}. This does
+\emph{not} supply the independent source-admissible, bounded-energy
+packet clause of Assumption~\ref{ass:v149-qg}. At one window QG
+has no growth assertion: only the finite cost inequality is applicable.
+
+\item \emph{Exact equivalence; the open arithmetic input.} At any
+fixed window and for any specified $C\ge0$, the CAE inequality is
+equivalent to
+\begin{equation}\label{eq:v151-zero-floor}
+ \int\mathcal Z_a|\widehat{\widetilde f}|^2
+       \ge-C\|f\|^2
+\end{equation}
+for every even $f\perp u_a$ and every odd $f$ in the complete form
+domain. A window-dependent $C=D_a$ is automatic. On a cofinal family,
+a single finite $C$ independent of $a$ is precisely CAE and precisely
+the uniform complement-floor target. No additional signed estimate is
+obtained by either change of coordinates. The source residual and
+both parity requirements in Corollary~\ref{cor:v136-complement-floor}
+are still the hypotheses for transferring that target to a full floor.
+
+\item \emph{Limits of these implications.} On families with $D\to\infty$, the quantization-growth clause is
+strictly less restrictive than uniform ZLD for general level measures, and
+neither level-measure property alone forces a uniform signed physical
+floor. The countermodels in the proof establish only these general
+statements; they are not arithmetic counterexamples. CAE itself does
+not refer to $N(a)$. For the actual symbol there is a prescribed integer head rule with
+every fixed-$K$ cost tending to zero, whether or not CAE holds. This
+refutes QG uniformly over all head rules; it also rules out uniform
+ZLD on that diluting rule. CAE and the physical form are unchanged
+by the choice of rule. No converse for a particular fixed
+arithmetic rule, and no further implication between actual arithmetic
+QG and CAE, is proved here.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+The compact function $h_a$ has bounded variation, so
+$\widehat h_a(\xi)=O_a((1+|\xi|)^{-1})$. The finite prime sum and
+archimedean asymptotic give
+$\mathcal Z_a(\xi)=O_a(\log(2+|\xi|))$; hence
+$\mathcal Z_a\widehat h_a\in L^2$. Equivalently, $Y_a$ is the
+$L^2$ limit of the inverse transforms of
+$e^{-\varepsilon|\xi|}\mathcal Z_a\widehat h_a$ as
+$\varepsilon\downarrow0$.
+Compression of the full symbol multiplier to $I_a$ is the physical
+operator $H_a+\Pi$ in both parities, with
+$\Pi=2|c\rangle\langle c|-2|s\rangle\langle s|$.
+On the even $h_a$, $\Pi h_a=2I_{h,a}c$. The local jump differences
+of $h/h=1$ vanish, so the v1.29 identity gives $H_a h=h r_a$.
+Consequently $Y_a|_{I_a}=h r_a+2I_{h,a}c$. Combining this with
+$h r_a=T_a-2I_hc$ proves (i). These are restricted $L^2$ identities;
+endpoint singularities are permitted. The positive minimum of $h$
+controls division only at each fixed window, not uniformly in $a$.
+Equation~\eqref{eq:v151-zero-energy} combines the existing complete
+symbol and energy identities and extends on their physical form domain.
+No finite zero prefix has been substituted for $\mathcal Z_a$, and
+no interchange of its height limit with the inverse transform or
+quadratic integral is asserted. Such a substitution would require its
+Perron remainder, not just the small correction $C_a$.
+
+For (ii), ZLD says that $\widetilde m_a$ dominates
+$(\kappa/D_a)\,dt$ on $[-\theta D_a,0]$ (first on intervals,
+then on Borel sets). An admissible set of at most $K$ minorant levels
+contains the compulsory level $-D_a$. Its gaps clipped to that interval
+have total length $\theta D_a$ and number at most $K$. On a clipped
+gap of length $\Delta$, its one-sided distance to the preceding
+level has integral at least $\Delta^2/2$. Thus its cost is at least
+\[
+ \frac{\kappa}{2D_a}\sum\Delta^2
+ \ge\frac{\kappa\theta^2D_a}{2K}.
+\]
+Taking the infimum gives \eqref{eq:v151-zld-qg}. Equation
+\eqref{eq:v151-zero-energy} proves (iii); $\mathcal Z_a\ge-D_a$
+and Plancherel give the automatic local bound. Neither statement
+makes $\sup_aD_a$ finite.
+
+For the first limitation in (iv), let $U_J$ denote the uniform
+probability measure on $J$, and take $D>1$ and
+\[
+ \mu_D=\tfrac12\bigl[(1-D^{-2})U_{[-D,-D/2]}
+                         +D^{-2}U_{[-D,0]}\bigr].
+\]
+It has mass $1/2$, full support and
+$\mathrm{QC}_K(\mu_D)\ge(1-D^{-2})D/(8K)$ by the same gap
+argument. Nevertheless its density on $(-D/2,0)$ is only
+$1/(2D^3)$, contradicting every fixed positive ZLD constant on
+$[-\theta D,0]$ for any fixed $\theta>0$ eventually. Thus QG need
+not give uniform all-band control for general level measures.
+
+For failure of a general implication to a signed floor, take the
+nonarithmetic, even analytic multiplier $b_D(\xi)=\xi^2-D$ and
+$X_D=\sqrt D$. Its normalized negative-level density is
+\[
+ \frac{1}{2\sqrt D\sqrt{D+t}}\ge\frac1{2D},
+              \qquad -D<t<0.
+\]
+It satisfies ZLD with $\theta=1$, $\kappa=1/2$ and hence QG, yet
+for every fixed nonzero odd compact smooth test $f$,
+\[
+ \int b_D|\widehat f|^2=\|f'\|^2-D\|f\|^2\longrightarrow-\infty.
+\]
+The test is admissible on all sufficiently large physical windows
+and orthogonal to every even source. This is not the Weil multiplier
+or its Gaussian-radical identity; it shows exactly why signed
+energy control cannot be inferred from level-distribution data alone.
+
+Finally put $\ell_a=|\{\beta_a<0\}\cap[0,\infty)|<\infty$.
+For the actual field the compulsory one-level minorant gives
+\begin{equation}\label{eq:v151-cutoff-dilution}
+ 0\le\mathrm{QC}_K(\widetilde m_a)
+ \le\mathrm{QC}_1(\widetilde m_a)\le D_a\ell_a/X_a.
+\end{equation}
+A prescribed integer rule with $X_a\ge a(1+D_a\ell_a)$ makes
+this at most $1/a$. Choosing such a rule changes only the frequency
+averaging range, not CAE or the physical operator. Thus QG uniformly over every rule is false, whether or not CAE
+holds. This does not prove a logical nonimplication from actual
+arithmetic CAE, whose truth is unknown, or disprove QG for a
+particular natural rule.
+\end{proof}
+
+\paragraph{Disposition.}
+CAE is the bounded-floor target rewritten in positive-weight coordinates.
+ZLD implies the QG growth clause on the same prescribed family; the
+converse fails for general level measures. Neither hypothesis alone
+supplies the missing signed arithmetic estimate. Whether a special
+property of the actual corrected zero field yields any further
+implication remains open. No assertion here proves CAE, G2 or RH.
+
+
 \subsection*{Source-compressed Schatten refinement and two no-go tests}
 
 There is a sharper scalar consequence of the concentration hierarchy,
@@ -17252,8 +17449,8 @@ to automatic approximate commutation does not require the missing
 stronger check and does not close the arithmetic hierarchy.
 
 \subsection*{Disjoint-channel and primitive-transport reproduction}
-The original \texttt{g2\_primitive\_transport} directory, its two adverse
-reviews, \texttt{test\_primitive\_transport.py} and saved output are
+The original \path{g2_primitive_transport} directory, its two adverse
+reviews, \path{test_primitive_transport.py} and saved output are
 \emph{not archived}. The disjoint-channel lower bound in
 Proposition~\ref{prop:v134-disjoint}, exact drawdown optimization and
 Dirichlet-model value $\pi^3/6$ are proved analytically in the manuscript.

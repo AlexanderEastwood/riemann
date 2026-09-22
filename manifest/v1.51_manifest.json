@@ -1,0 +1,39 @@
+{
+ "manuscript_revision": "v1.51",
+ "base_commit": "d5e524de59fd7178debdd1cffff62e75a1a3003a",
+ "files": [
+  {
+   "path": "evidence/v151/README.md",
+   "size_bytes": 1903,
+   "sha256": "7e912249a1a5ec969dec43ee26452c1f666a541f76639f667951a13e282abc02"
+  },
+  {
+   "path": "evidence/v151/build_report.json",
+   "size_bytes": 676,
+   "sha256": "e4529de34f4e8c8c3a2785bca7fe792807064fad3f1052869e4bc03da29865dc"
+  },
+  {
+   "path": "evidence/v151/ns39-three-inputs-2026-09-22-v1.html",
+   "size_bytes": 5809,
+   "sha256": "e846080cf2f3f23c818ce9a0d7971fb521a2c7f134045a3da4f4e7f35fe79dd5"
+  },
+  {
+   "path": "evidence/v151/provenance.json",
+   "size_bytes": 1469,
+   "sha256": "d6624cc3308003f407a9f86e914e55018f2a37e22aea45a173b3055f312e3d5a"
+  },
+  {
+   "path": "evidence/v151/scope_review.md",
+   "size_bytes": 2192,
+   "sha256": "d7bddac96b66ec949896c697678477360d2b6c6d2ab1205af4841aeb58af850e"
+  },
+  {
+   "path": "evidence/v151/zero_field_energy.tex",
+   "size_bytes": 8943,
+   "sha256": "3fb7fe818bee8782241419409798ca236d3c3be9f349686b9341bab4e8e78461"
+  }
+ ],
+ "file_count": 6,
+ "total_bytes": 20992,
+ "note": "NS-39 exact identities and proved implications; all arithmetic inputs remain open. NS-38 disclosures and NS-41/42 diagnostics are separate records, not numerical proof inputs."
+}

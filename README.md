@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.50**.
+Alexander Eastwood's complete working manuscript, **v1.51**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -99,6 +99,7 @@ graph LR
   weightedexactcost["weighted exact cost: peak bound fails at critical levels<br/><small>prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg</small><br/><small>&#128193; evidence/v149</small>"]
   capacityweight["positive arithmetic weight: critical capacity input<br/><small>lem:v150-weight; prop:v150-critical-energy; ass:v150-cae</small><br/><small>&#128193; evidence/v150</small>"]
   capacityslack["fixed energy loss for the Gaussian arithmetic weight<br/><small>prop:v150-capacity-slack</small><br/><small>&#128193; evidence/v150</small>"]
+  inputcomparison["ZLD to QG; CAE is the signed-floor target<br/><small>prop:v151-input-comparison</small><br/><small>&#128193; evidence/v151</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -147,6 +148,7 @@ graph LR
   zeroleveldistribution --> weightedexactcost
   floor --> capacityweight
   capacityweight --> capacityslack
+  capacityweight --> inputcomparison
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -180,9 +182,10 @@ graph LR
   click weightedexactcost "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v149/" "evidence: evidence/v149" _blank
   click capacityweight "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v150/" "evidence: evidence/v150" _blank
   click capacityslack "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v150/" "evidence: evidence/v150" _blank
+  click inputcomparison "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v151/" "evidence: evidence/v151" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -207,10 +210,28 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.50_manifest.json)
+- [Checksums and provenance](manifest/v1.51_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
+
+## New in v1.51
+
+[NS-39](evidence/v151/) gives one proposition comparing the three open inputs:
+ZLD implies QG's growth clause on the same prescribed family, with lower cost
+`κ θ² D / (2K)`; packet feasibility remains separate. The complete corrected
+zero field gives the positive-weight potential exactly. CAE is precisely the
+uniform complement-floor target in those coordinates. No new signed estimate,
+arithmetic independence, G2 or RH result follows.
+
+[NS-38](evidence/ns38_archival_disclosure/ns38-archival-disclosure-2026-09-22-v3.html)
+uses explicit disclosure for both missing evidence groups; no originals were
+recovered. The five v1.35 scientific files are present and match legacy hashes.
+The two new measurement records are separate diagnostics:
+[NS-41 odd feasible states](evidence/diag_ns41_odd_feasibility/) and
+[NS-42 transformed energies](evidence/diag_ns42_energy_budget/).
+Neither is cited as a bound. NS-40's QG literature assessment is coordinated
+separately in [PR #19](https://github.com/AlexanderEastwood/riemann/pull/19).
 
 ## New in v1.50
 

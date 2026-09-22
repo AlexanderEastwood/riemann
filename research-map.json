@@ -432,6 +432,16 @@
       "branch": "closed/v150-capacity-slack",
       "evidence": "evidence/v150",
       "note": "Scoped closure: for this explicit weight, discarding fixed delta>0 of transformed energy, or the prime-2 channel alone, forces eta >= delta*kappa*exp(gamma*lambda^2)-O(lambda log lambda). Exact source-admissible even and odd tests, all cross terms controlled. Does not close coefficient-one capacity, another weight, or the physical Weil form."
+    },
+    {
+      "id": "inputcomparison",
+      "title": "ZLD to QG; CAE is the signed-floor target",
+      "status": "proved",
+      "parent": "capacityweight",
+      "prop": "prop:v151-input-comparison",
+      "branch": "codex/ns38-ns39-integration",
+      "evidence": "evidence/v151",
+      "note": "NS-39: exact inverse corrected-zero-field formula for the potential, including finite-window pole mass. ZLD implies QG growth with kappa theta\u00b2 D/(2K) on the same prescribed family; no packet input supplied. CAE equals the uniform complement floor. General measure countermodels are not arithmetic independence. All three arithmetic inputs remain open; no new positivity conclusion."
     }
   ]
 }

@@ -1,0 +1,20 @@
+{
+  "base_main": "a0e916a426420e3c5abab7651696e52a865c93de",
+  "v150_tag_commit": "01f68b8af6b42db1c06f796c0c46840c8e6cf7ca",
+  "classification": "exact identity, proved implication, open input",
+  "source_sha256": {
+    "evidence/v150/capacity_weight.tex": "bf309b2d55f565f2ffde564a22108df96f5dfb6a09fb8051c8bee3a70d0d8fff",
+    "evidence/v135/new_section.tex": "95b12e631f5f55c987ca8ddfdb1c8712b2a40bbaa01967ec29157742769b77fa",
+    "evidence/v136/new_section.tex": "78e5f6cb2fe60bff4b6edd41594e8499d815cf4cd20b9d96eb0dec7b628828a3",
+    "evidence/v137/new_section.tex": "edd2217cc5a875ec77f3a4081d52ec933d0c51a376d185a68ad9a758e9c106cf",
+    "evidence/v151/zero_field_energy.tex": "3fb7fe818bee8782241419409798ca236d3c3be9f349686b9341bab4e8e78461",
+    "manuscript/fixed_space_prime_action_v1.tex": "191b47c4e6ecd0ee8ccc7947912eb9fb9518d83cad0c61763128110f4c59d116"
+  },
+  "coordination": {
+    "NS38": "disclosure commits 6dd457c and e6b6b1d; final tag-provenance correction in integration",
+    "NS40": "https://github.com/AlexanderEastwood/riemann/pull/19; separately filed, not integrated into manuscript",
+    "NS41": "delegated branch codex/ns41-odd-feasibility, original final 1e21ec99925c61c8d6681014a87aeb9b05599ea2",
+    "NS42": "delegated branch codex/ns42-energy-budget, original final 0d3bcc7; Astra RH1 definitions review no outstanding MAJOR/MINOR"
+  },
+  "scope": "No new window or tail metric. No G2/RH claim. Diagnostics are not used as bounds."
+}

@@ -1,0 +1,23 @@
+{
+  "classification": "actual manuscript build, not source validation",
+  "pages": 250,
+  "undefined_reference_messages": 0,
+  "multiply_defined_reference_messages": 0,
+  "overfull_boxes": 0,
+  "bibliography_items": 48,
+  "duplicate_labels": [],
+  "duplicate_bibliography_keys": [],
+  "integrated_fragment_matches": true,
+  "diagnostic_inventories": {
+    "diag_ns41_odd_feasibility": {
+      "artifact_hashes_pass": 23,
+      "pinned_source_hashes_pass": 7,
+      "source_ref": "a0e916a426420e3c5abab7651696e52a865c93de"
+    },
+    "diag_ns42_energy_budget": {
+      "artifact_hashes_pass": 29,
+      "pinned_source_hashes_pass": 5,
+      "source_ref": "a0e916a"
+    }
+  }
+}
