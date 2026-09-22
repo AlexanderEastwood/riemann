@@ -1,0 +1,117 @@
+{
+  "task": "NS-54",
+  "date_utc": "2026-09-22",
+  "category": "analytic review and proved conditional measure statements",
+  "original_manuscript_base": "f0178e032c6f9ed46b8fa3dbf0c97b54d12e6417",
+  "standalone_claim_commit": "ccd722bf2b0e6fd6f0133f5b9220fed130b2c325",
+  "integrated_main": "bea0ed27c0822e3ce4041fb9d584dd70942cc8ee",
+  "manuscript": {
+    "path": "manuscript/fixed_space_prime_action_v1.tex",
+    "sha256": "db6f5106ce070346a498a5ca939df596423b493aa7d5ad7158581b8b3eb1f126",
+    "modified_by_this_task": false
+  },
+  "actual_build": {
+    "command": "./manuscript/build.sh",
+    "pages": 278,
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0
+  },
+  "existing_manifests": {
+    "v153": {
+      "ok": 7,
+      "relocated": 0,
+      "missing": 0,
+      "mismatched": 0
+    },
+    "v154": {
+      "ok": 6,
+      "relocated": 0,
+      "missing": 0,
+      "mismatched": 0
+    }
+  },
+  "author_temporary_integration_build": {
+    "base": "f0178e0",
+    "pages": 273,
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0,
+    "record": "evidence/ns54_zero_picture/selberg/verification.md"
+  },
+  "review": {
+    "proof": "0 MAJOR, 0 MINOR",
+    "report": "0 outstanding MAJOR/MINOR; one packet-qualification MINOR corrected and independently verified",
+    "essay_findings": {
+      "major": 5,
+      "minor": 3
+    }
+  },
+  "html": "opened in the in-app browser; opening layout visually checked; all text and formulas present in accessibility snapshot",
+  "limits": [
+    "No arithmetic Gaussian or band law proved",
+    "No unconditional arithmetic QG or ZLD refutation",
+    "Independent packet input remains open",
+    "No new window, tail metric, numerical experiment, manuscript version, G2 or RH claim"
+  ],
+  "artifacts": [
+    {
+      "path": "audits/ns54-zero-picture-review-2026-09-22-v1.html",
+      "bytes": 13970,
+      "sha256": "084dd3a6a437b643cda51af8e928aabfd53b9856fc4e83c891eb62ec39a2080e"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/README.md",
+      "bytes": 2279,
+      "sha256": "0be5e90f8fc7d5f2aa9fb3e5f2ae2388f3c71c7b9fbfba34d61493872eb97a1f"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/identity/identity_review.md",
+      "bytes": 9480,
+      "sha256": "3a95e1fd8279baecdcebb3ffee4511484c52104a077663e74a33d07280167f47"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/review/map_heat_notes.md",
+      "bytes": 5291,
+      "sha256": "7c9e8ecee994b07369eb94e8e21dde9f0f3165b1e16d50dc69edf6d0583d431b"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/review/report_independent_review.md",
+      "bytes": 7320,
+      "sha256": "bbd4740174c0c39bfb4d5fe37f20a861c7f5d5406b60d8a8c064701d16d892a5"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/review/selberg_independent_review.md",
+      "bytes": 10703,
+      "sha256": "b70fedbe9778e353e5ee078b151c94791feebb313910274d4f6d11aa62108b79"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/selberg/SHA256SUMS",
+      "bytes": 627,
+      "sha256": "7d30e47ee31c2ae3709eec02ec4205885e8ad26eac336b890020f6c58ad4b588"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/selberg/bibliography_additions.tex",
+      "bytes": 873,
+      "sha256": "42567dc697f95fbda78231bca4c176ce8534970cf62421f1cf76fdae0eef3bed"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/selberg/ns54-selberg-qg-review-2026-09-22-v1.html",
+      "bytes": 6691,
+      "sha256": "f5f55b246ec33b30afb7393cd755576d094df4adbb994a55fb977e570efac3a4"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/selberg/selberg_qg_assessment.tex",
+      "bytes": 13176,
+      "sha256": "f9f4c43f07c768f32df09df7aa472149a1d4d1220ce6c3ea4dbc30ae99c87b3d"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/selberg/sources.md",
+      "bytes": 5002,
+      "sha256": "422b6c1e6c33ce1c3b73416cb3eb40a283130026336a6f9b556279b8fb6356ac"
+    },
+    {
+      "path": "evidence/ns54_zero_picture/selberg/verification.md",
+      "bytes": 3328,
+      "sha256": "241d7ac49feb3ac41851566cba3ad279d5df01d1a3549b24aba4e572e291f7de"
+    }
+  ]
+}
