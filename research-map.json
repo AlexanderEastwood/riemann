@@ -7,7 +7,7 @@
     "closed": "closed route (red): proved insufficient or impossible; kept deliberately",
     "blocked": "attempted; obstruction found",
     "open": "target, not yet attacked",
-    "wall": "dashed edge: the named open input this blocked node terminates on; edges into \"uniform finite floor\" all end on inputs that v1.51 relates to the bounded-floor target (CAE is that target restated)"
+    "wall": "wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge"
   },
   "nodes": [
     {
@@ -93,7 +93,12 @@
       "parent": "windows",
       "note": "NS-44 fresh exact dyadic witnesses, Arb 320/448: positive q/D <7e-18 even and <12e-18 odd, contradicting the stipulated 1e-8 comparison. Failure of this comparison, not negative Weil directions or complete lambda=5 positivity. Historical v1.27 originals remain unarchived.",
       "prop": "prop:v152-tail-comparison",
-      "evidence": "evidence/ns44_metric_replay"
+      "evidence": "evidence/ns44_metric_replay",
+      "wall": {
+        "input": "stipulated 1e-8 D tail comparison fails: positive q/D < 7e-18 (lambda=5)",
+        "to": null,
+        "src": "prop:v152-tail-comparison; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "uniform",
@@ -109,7 +114,12 @@
       "prop": "prop:v119-prime-essential",
       "branch": "closed/prime-norm",
       "note": "norm ~ lambda, survives any finite removal",
-      "evidence": "evidence/v124/g2_growing_sign"
+      "evidence": "evidence/v124/g2_growing_sign",
+      "wall": {
+        "input": "cost: prime norm ~ lambda survives finite removal; exponential cutoff (estimate, not route)",
+        "to": null,
+        "src": "prop:v119-prime-essential; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "normcontr",
@@ -118,7 +128,12 @@
       "parent": "uniform",
       "prop": "prop:v120-norm-counterexample",
       "branch": "closed/norm-contraction",
-      "evidence": "evidence/v124/g2_weighted_signed"
+      "evidence": "evidence/v124/g2_weighted_signed",
+      "wall": {
+        "input": "specific estimate: violated by a POSITIVE direction, q/D > 2.05 at lambda=4",
+        "to": null,
+        "src": "prop:v120-norm-counterexample; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "schatten",
@@ -127,7 +142,12 @@
       "parent": "uniform",
       "prop": "prop:v132-schatten",
       "branch": "closed/schatten",
-      "evidence": "MISSING"
+      "evidence": "MISSING",
+      "wall": {
+        "input": "scoped: remainder outside finite Schatten classes; negative-only penalty stays a constant (does not obstruct v136)",
+        "to": null,
+        "src": "prop:v132-schatten; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "sampling",
@@ -136,7 +156,12 @@
       "parent": "uniform",
       "prop": "prop:v121-complement-cancellation",
       "branch": "closed/sampling-dominance",
-      "evidence": "evidence/v124/g2_schur_cancellation"
+      "evidence": "evidence/v124/g2_schur_cancellation",
+      "wall": {
+        "input": "estimate counterexample: source-complement vector with tiny q despite O(1) cancellation",
+        "to": null,
+        "src": "prop:v121-complement-cancellation; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "farmaj",
@@ -146,7 +171,12 @@
       "prop": "prop:v125-cutoff-cost",
       "branch": "closed/scalar-far-majorant",
       "note": "N ~ L exp(M_phi): exponential cutoff cost",
-      "evidence": "evidence/v126/g2_window_resolution"
+      "evidence": "evidence/v126/g2_window_resolution",
+      "wall": {
+        "input": "cost of one estimate: N > L exp(M_phi/(1-c)); not every method",
+        "to": null,
+        "src": "prop:v125-cutoff-cost; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "blockmetric",
@@ -156,7 +186,12 @@
       "branch": "closed/block-metric",
       "note": "NS-45 new 320/448-bit dyadic pair certificates on the first three existing blocks give exact rational Rayleigh bounds 341/250 even and 2093/1500 odd >1. Excludes all admissible smaller block metrics and positive row weights for this partition; no full-block inertia or general signed-block no-go. Historical v1.28 originals remain unarchived.",
       "evidence": "evidence/ns45_block_replay",
-      "prop": "prop:v152-block-comparison"
+      "prop": "prop:v152-block-comparison",
+      "wall": {
+        "input": "fixed-partition comparison fails: Rayleigh 341/250, 2093/1500 > 1 (lambda=5, N=25)",
+        "to": null,
+        "src": "prop:v152-block-comparison; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "flattop",
@@ -165,7 +200,12 @@
       "parent": "uniform",
       "prop": "prop:v132-flat-top",
       "branch": "closed/flat-top",
-      "evidence": "MISSING"
+      "evidence": "MISSING",
+      "wall": {
+        "input": "construction class: form-exact positive smoothing = point mass; signed smoothing not covered",
+        "to": null,
+        "src": "prop:v132-flat-top; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "recipband",
@@ -174,7 +214,12 @@
       "parent": "uniform",
       "branch": "closed/reciprocal-band",
       "note": "v1.33, commutator norm > 9e-6",
-      "evidence": "MISSING"
+      "evidence": "MISSING",
+      "wall": {
+        "input": "generic mechanism: persistent source-compressed commutator > 9e-6; not every band choice",
+        "to": null,
+        "src": "v1.33; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "cotlar",
@@ -183,7 +228,12 @@
       "parent": "uniform",
       "branch": "closed/cotlar-atomization",
       "note": "v1.34, cross norm >= 73/(375 pi)",
-      "evidence": "MISSING"
+      "evidence": "MISSING",
+      "wall": {
+        "input": "shortcut: cross norm >= 73/(375 pi) cofinally; not all Cotlar arguments",
+        "to": null,
+        "src": "v1.34; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "scalarprim",
@@ -193,7 +243,12 @@
       "prop": "cor:v137-scalar-no-go",
       "branch": "closed/scalar-primitive",
       "note": "a Delta(beta_a) -> infinity, unconditional",
-      "evidence": "evidence/v137"
+      "evidence": "evidence/v137",
+      "wall": {
+        "input": "genuine closure of the scalar route: a Delta(beta_a) -> infinity, unconditional",
+        "to": null,
+        "src": "cor:v137-scalar-no-go; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "concentration",
@@ -485,7 +540,12 @@
       "prop": "prop:v150-capacity-slack",
       "branch": "closed/v150-capacity-slack",
       "evidence": "evidence/v150",
-      "note": "Scoped closure: for this explicit weight, discarding fixed delta>0 of transformed energy, or the prime-2 channel alone, forces eta >= delta*kappa*exp(gamma*lambda^2)-O(lambda log lambda). Exact source-admissible even and odd tests, all cross terms controlled. Does not close coefficient-one capacity, another weight, or the physical Weil form."
+      "note": "Scoped closure: for this explicit weight, discarding fixed delta>0 of transformed energy, or the prime-2 channel alone, forces eta >= delta*kappa*exp(gamma*lambda^2)-O(lambda log lambda). Exact source-admissible even and odd tests, all cross terms controlled. Does not close coefficient-one capacity, another weight, or the physical Weil form.",
+      "wall": {
+        "input": "fixed-slack shortcut: eta >= delta kappa exp(gamma lambda^2) - O(lambda log lambda)",
+        "to": null,
+        "src": "prop:v150-capacity-slack; coefficient-one CAE and other weights not closed"
+      }
     },
     {
       "id": "inputcomparison",
@@ -504,7 +564,12 @@
       "parent": "capacityweight",
       "prop": "prop:ns43-fixed-channel; prop:ns43-moving-channel",
       "evidence": "evidence/v152",
-      "note": "Exact source-admissible even and odd tests force an unbounded comparison error for the specified Gaussian weight. Covers bounded channel counts and sublinear-in-exp(2a) cutoffs. Endpoint-approaching omissions, compensation, and another weight are not closed."
+      "note": "Exact source-admissible even and odd tests force an unbounded comparison error for the specified Gaussian weight. Covers bounded channel counts and sublinear-in-exp(2a) cutoffs. Endpoint-approaching omissions, compensation, and another weight are not closed.",
+      "wall": {
+        "input": "channel deletion: unbounded comparison error for the Gaussian weight",
+        "to": null,
+        "src": "prop:ns43-fixed-channel; prop:ns43-moving-channel"
+      }
     },
     {
       "id": "bumpstrength",
@@ -531,7 +596,12 @@
       "parent": "concentration",
       "prop": "ns43-conc-prop-scalar",
       "evidence": "evidence/v152",
-      "note": "Exact commuting three-outcome countermodels share all scalar set extrema but have signed bottoms -1/5 and +1/10, also after exact source removal. General inference is false; no arithmetic realization or physical concentration impossibility claimed."
+      "note": "Exact commuting three-outcome countermodels share all scalar set extrema but have signed bottoms -1/5 and +1/10, also after exact source removal. General inference is false; no arithmetic realization or physical concentration impossibility claimed.",
+      "wall": {
+        "input": "general inference false: countermodels with equal scalar set extrema and opposite signed bottoms",
+        "to": null,
+        "src": "ns43-conc-prop-scalar"
+      }
     },
     {
       "id": "relativeselection",
@@ -554,7 +624,12 @@
       "parent": "stepb",
       "prop": "prop:ns43-ccm-nonselection",
       "evidence": "evidence/v152",
-      "note": "Exact abstract family has simple even nonnegative real-zero grounds, arbitrarily fast residual decay, resolvent collapse and tight support, yet alternating profiles. It is not an arithmetic support-consistent Weil family; CCM itself remains open."
+      "note": "Exact abstract family has simple even nonnegative real-zero grounds, arbitrarily fast residual decay, resolvent collapse and tight support, yet alternating profiles. It is not an arithmetic support-consistent Weil family; CCM itself remains open.",
+      "wall": {
+        "input": "abstract inference false: countermodel family with alternating profiles",
+        "to": null,
+        "src": "prop:ns43-ccm-nonselection"
+      }
     },
     {
       "id": "coarseprofile",
@@ -563,7 +638,12 @@
       "parent": "stepb",
       "prop": "prop:ns43-ccm-coarse-profile",
       "evidence": "evidence/v152",
-      "note": "Under the explicit scale, full both-parity liminf, nonnegativity and lower-semicontinuity hypotheses, density of translated radicals forces the limit form to zero. Finer scales and other selection mechanisms remain open."
+      "note": "Under the explicit scale, full both-parity liminf, nonnegativity and lower-semicontinuity hypotheses, density of translated radicals forces the limit form to zero. Finer scales and other selection mechanisms remain open.",
+      "wall": {
+        "input": "under the explicit coarse scale the limit form is zero; finer scales open",
+        "to": null,
+        "src": "prop:ns43-ccm-coarse-profile"
+      }
     },
     {
       "id": "fineradicalrank",
@@ -572,7 +652,12 @@
       "parent": "gapfree",
       "prop": "lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank",
       "evidence": "evidence/v153",
-      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda\u00b2/(20000 log lambda), exact even/odd counts and residual C exp(-lambda\u00b2/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods."
+      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda\u00b2/(20000 log lambda), exact even/odd counts and residual C exp(-lambda\u00b2/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods.",
+      "wall": {
+        "input": "positive-gap strategy must remove rank >= lambda^2/(20000 log lambda)",
+        "to": null,
+        "src": "lem:ns46-finite-arc; ns46-a2-cor-rank"
+      }
     }
   ]
 }
