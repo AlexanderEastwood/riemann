@@ -73,6 +73,8 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 
 | NS-44 | Rebuild one finite-support counterexample to the already stipulated lambda=5 tail comparison Q16 W Q16 >= 1e-8 Q16 D Q16 in both parities | Codex Astra Main; assisting-agent review | claimed | Freeze new dyadic candidates and verify outward at two precisions; distinguish new certificate from recovery of absent v127 witnesses, no new window or replacement tail metric. Close only the stipulated comparison if gates pass. |
 
+| NS-45 | Rebuild a finite witness obstruction to the already tested lambda=5, N=25 dyadic block-norm criterion | Assisting agent NS42; Codex Astra Main review | claimed | Fresh exact dyadic pairing witnesses, positive energies and rational comparison Rayleigh gate at two precisions; conditional block positivity handled logically. Not recovery of missing v128 files, no new window or tail metric. |
+
 ## Lanes
 
 ```
