@@ -1,0 +1,38 @@
+{
+ "manuscript_revision": "v1.50",
+ "base_commit": "908f40df9ba7707da83d45ad559dcf5e5eaa3038",
+ "files": [
+  {
+   "path": "evidence/v150/README.md",
+   "size_bytes": 4394,
+   "sha256": "023c0181be520832de234c9f197e7c51e590f03eff89d003181d87a187d0fc40"
+  },
+  {
+   "path": "evidence/v150/build_report.json",
+   "size_bytes": 1232,
+   "sha256": "c35c11314f1439a35c5198ce4b9a81d5c05eb81e590ae550e67cac1846c636e0"
+  },
+  {
+   "path": "evidence/v150/capacity_weight.tex",
+   "size_bytes": 14226,
+   "sha256": "bf309b2d55f565f2ffde564a22108df96f5dfb6a09fb8051c8bee3a70d0d8fff"
+  },
+  {
+   "path": "evidence/v150/provenance.json",
+   "size_bytes": 3624,
+   "sha256": "a023b7d3c0c6d7ec17cfc2a4b691c5991feeae7d821529b24563375c55de98c0"
+  },
+  {
+   "path": "evidence/v150/research-report-2026-09-21-v1.html",
+   "size_bytes": 5513,
+   "sha256": "08f660606a7e38d8c1bc7617ae78eee167a2bf27323122b76c62f17a3d1ba4a7"
+  },
+  {
+   "path": "evidence/v150/scope_review.md",
+   "size_bytes": 5399,
+   "sha256": "713ccd18efca4cab4ec3a158911e8e7165d40c1ba3b10a78c130268ad4a2f7ec"
+  }
+ ],
+ "file_count": 6,
+ "total_bytes": 34388
+}

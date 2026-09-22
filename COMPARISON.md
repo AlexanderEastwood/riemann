@@ -380,3 +380,28 @@ packets. A QC_1/K law requires an additional quantization-shape hypothesis.
 Neither input is established; depth divergence gives no fraction limit.
 The failure is of the crude bound and diagnostic interpretation, not of
 the valid concentration criterion or physical form. G2 and RH remain open.
+
+
+## Explicit capacity weight and its relative-error obstruction (NS-34, v1.50)
+
+The positive Gaussian arithmetic radical h=E(H)(exp x) is an explicit
+comparison weight with pole mass 1/sqrt(3), independent of an unknown
+lowest eigenvector. Its full Picone identity gives q[hg]=J_h[g] minus
+(2/3)Var_nu(g) and the negative odd sinh square. The exact finite-window
+exterior contribution is retained; this is not a new tail metric.
+
+For this weight, generic strict absorption fails even at the weaker
+bounded-error target. Discarding delta>0 of transformed energy forces
+eta >= [delta*kappa exp(gamma lambda^2)-O(lambda log lambda)]+. Deleting
+only prime-2 energy also fails. The proof uses compact far-translated
+bumps in two parity spaces; one even linear constraint removes the actual
+source without uncontrolled cross terms. It establishes no negative
+physical Weil direction and does not exclude a different weight.
+
+The surviving Critical Arithmetic Energy comparison (CAE), with full
+coefficient one and the odd pole retained, is the existing uniform
+complement-floor requirement written in these coordinates. It is open;
+so is the stronger local capacity test that discards the positive potential.
+The calculation identifies the accuracy the weight demands but supplies
+no independent arithmetic sign bound. Both parities, source residual and
+cofinal uniformity are still needed. G2 and RH remain open.

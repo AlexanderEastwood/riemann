@@ -1,5 +1,49 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-21 — v1.50 / NS-34: explicit capacity weight and a scoped loss obstruction
+
+Classification: exact identities, proved scoped implications, and named
+open input CAE. This is the proposed analytic capacity attempt, not a
+substituted numerical diagnostic. No new window or tail metric.
+
+The selected h(x)=E(H)(exp x) is the positive, even Gaussian arithmetic
+radical already archived in v1.15/v1.35. Its pole mass is exactly
+integral cosh(x/2) h(x) dx = 1/sqrt(3). The full identity is
+q[hg]=J_h[g]-(2/3)Var_nu(g)-2|integral sinh(x/2)h(x)g(x)dx|^2.
+The odd square and all finite-window exterior edges are retained; h is
+not substituted for the actual repaired source in the constraint.
+
+What had to change: generic strict absorption of the negative potential
+cannot spend a fixed fraction delta>0 of this transformed positive energy.
+The inward prime-2 edge on far-translated compact tests costs at least
+kappa exp(gamma lambda^2), while their original form is at most
+A+(8a+1)exp(a)+2a. A two-dimensional even test space imposes the actual
+source constraint exactly; the odd tests are already admissible. Thus
+eta >= [delta*kappa exp(gamma lambda^2)-B_a]+, and bounded eta forces
+delta=O(lambda log(lambda) exp(-gamma lambda^2)). Omitting prime-2 alone
+has the same obstruction. All mixtures and cross terms are controlled.
+
+Failure is of these lower comparisons, not of the physical form. The
+unweakened coefficient-one capacity condition remains unproved; retaining
+all terms gives the named Critical Arithmetic Energy comparison (CAE),
+which is an exact re-expression of the missing uniform complement floor,
+not an independently established positivity mechanism. Other weights are
+not excluded. The map closes only fixed-slack/prime-2-deletion for this
+weight and leaves the full capacity route blocked. G2 and RH remain open;
+NS-1's two original evidence groups remain OPEN.
+
+Actual build: 246 pages, 0 undefined references, 0 duplicate references,
+48 bibliography items, 0 duplicate bibliography keys and 0 overfull boxes.
+New proof pages 160-164 rendered and inspected. Independent NS-37 review
+has no unresolved MAJOR/MINOR; both clarifications are integrated and the
+reviewed fragment hash matches. See evidence/v150/build_report.json and
+audits/ns37-capacity-weight-2026-09-21-v2.html. The remaining NS-31 goals
+sentence was corrected to the weighted strict-cutoff amplitude already
+proved in eq:v146-amplitude; historical diagnostics are unchanged.
+The general Picone method and completed-zeta kernel are classical; no
+worldwide novelty or publication readiness is claimed.
+
+
 ## 2026-09-21 — v1.49 / NS-32 and NS-33: audit and exact weighted zero input
 
 PR #14 was re-reviewed at revised head f3611ef and remains held, not merged

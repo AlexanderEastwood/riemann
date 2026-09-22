@@ -1,0 +1,23 @@
+{
+  "version": "v1.50",
+  "date": "2026-09-21",
+  "classification": "Build metadata for analytic identities and proved scoped implications; no numerical proof gate",
+  "build_command": "./manuscript/build.sh",
+  "pages": 246,
+  "undefined_references": 0,
+  "duplicate_references": 0,
+  "overfull_boxes": 0,
+  "bibliography_items": 48,
+  "duplicate_bibliography_keys": 0,
+  "label_count": 718,
+  "duplicate_label_keys": 0,
+  "missing_reference_targets": [],
+  "missing_citation_keys": [],
+  "manuscript_sha256": "e163dc59aa86164646405d52ae193193b29bafce874e9757aebaee61973e3882",
+  "fragment_sha256": "bf309b2d55f565f2ffde564a22108df96f5dfb6a09fb8051c8bee3a70d0d8fff",
+  "visual_review": "Rendered and inspected new proof pages 160-164; equations and text legible, no clipping. Final rebuild retains the reviewed proof fragment byte-for-byte; separate goals wording correction to the previously proved weighted amplitude.",
+  "independent_review": "audits/ns37-capacity-weight-2026-09-21-v2.html; no unresolved MAJOR/MINOR; reviewed fragment hash matches integration exactly",
+  "numerical_scope": "No new window, tail metric, optimizer, source projection, zero enclosure or numerical certificate.",
+  "G2": "open",
+  "RH": "open"
+}
