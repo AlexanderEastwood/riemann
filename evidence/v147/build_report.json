@@ -1,0 +1,19 @@
+{
+  "version": "v1.47",
+  "date": "2026-09-21",
+  "build_command": "./manuscript/build.sh",
+  "classification": "build metadata; analytic work with no numerical proof gate",
+  "pages": 237,
+  "undefined_references": 0,
+  "duplicate_references": 0,
+  "overfull_boxes": 0,
+  "bibliography_items": 48,
+  "duplicate_bibliography_keys": 0,
+  "missing_reference_targets": [],
+  "missing_citation_keys": [],
+  "manuscript_sha256": "62b4350fc491b1d45cc60f91f88ac4041e26267fbd8258d437d452531035e460",
+  "visual_review": "New proof pages 151-154 rendered and inspected; no clipping or equation overflow. Final prose additions retain zero overfull boxes.",
+  "numerical_scope": "No new computation, window, head, tail metric, zero bound or interval gate.",
+  "G2": "open",
+  "RH": "open"
+}

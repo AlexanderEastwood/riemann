@@ -198,7 +198,7 @@
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "Valid sufficient criterion; blocked after NS-22 finite-head diagnostics, not proved closed. NS-27/v1.46 proves local packet bounds and a conditional linear distinct-level obstruction, but the arithmetic level-distribution and bounded-energy-packet hypotheses are missing. Depth growth alone does not supply them; positive spill must be retained.",
+      "note": "Valid sufficient criterion; blocked after NS-22 finite-head diagnostics, not proved closed. NS-27/v1.46 proves local packet bounds and a conditional linear distinct-level obstruction, but the arithmetic level-distribution and bounded-energy-packet hypotheses are missing. Depth growth alone does not supply them; positive spill must be retained. NS-29/v1.47 separates corrected-zero level-band distribution from admissible packet coverage and energy; both cofinal inputs remain open.",
       "evidence": "evidence/v146"
     },
     {
@@ -391,7 +391,17 @@
       "prop": "prop:v146-packet-loss; prop:v146-level-complexity",
       "branch": "codex/beta-lattice-identity",
       "evidence": "evidence/v146",
-      "note": "NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure."
+      "note": "NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure. NS-29 makes the missing value-distribution statement ZLD explicit; cumulative size and arbitrary positive-fraction spread are insufficient."
+    },
+    {
+      "id": "zeroleveldistribution",
+      "title": "zero level distribution and packet coverage: open inputs",
+      "status": "blocked",
+      "parent": "minorantlevels",
+      "prop": "prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet",
+      "branch": "codex/level-density-zero-statement",
+      "evidence": "evidence/v147",
+      "note": "NS-29: conditional reduction requires lower measures for every level band and source-admissible bounded-energy packet coverage of those bands. Zero theorems assessed do not provide the input. D->infinity gives no uniform band measure; broad pulses cost log X. No closure or RH-equivalence claim."
     }
   ]
 }
