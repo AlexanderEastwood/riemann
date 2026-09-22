@@ -63,6 +63,9 @@ Task-ID reconciliation: the pencil-concentration translation was locally claimed
 
 Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14 review and the v1.49 follow-up. Concurrent user assignment reserves NS-31 for the circle/symbol-lane audit. This task therefore uses NS-32 (PR review) and NS-33 (weighted zero input); original claims remain in history.
 
+| NS-38 | Resolve archival overclaims for the two NS-1 evidence groups: recover originals or explicitly mark every unsupported archival assertion and update evidence/MISSING.md | Codex (Astra Main) | claimed | Per-group recovery/disclosure disposition with source inventory and manuscript claim trace; no version bump for this alone; preserve missing-source provenance and do not fabricate certificates. |
+| NS-39 | Express CAE through the corrected zero field and compare fixed-window/cofinal ZLD, QG and CAE with every hypothesis explicit | Codex (Astra Main) | claimed | v1.51 proposition gives the exact coordinate translation and justified implications or precise missing inputs; distinguish a bounded-floor reformulation from new arithmetic content; no unsupported nonimplication, G2 or RH claim. |
+
 ## Lanes
 
 ```
