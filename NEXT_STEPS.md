@@ -75,6 +75,8 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 
 | NS-45 | Rebuild a finite witness obstruction to the already tested lambda=5, N=25 dyadic block-norm criterion | Assisting agent NS42; Codex Astra Main review | completed (v1.52 local draft) | New exact dyadic pair certificates at 320/448 on first three existing N=25 blocks. Rational Rayleigh 341/250 even, 2093/1500 odd exceed 1. Metric-existence dichotomy avoids an unused block-inertia claim; only this partition comparison closes. |
 
+| NS-47 | Construct an explicit geometric-algebra / graded Dirac representation of the complete Weil form and test a lower bound uniform in growing windows; retain both parities, source and exterior terms | Codex (Astra RH1) | in progress (claimed 2026-09-21) | User-assigned analytic task; coordinated with Astra Main from 24f4ab5. Owns evidence/ns47_clifford_weil/ only plus this row; standalone proof fragment pending version integration. No new window or tail metric. A uniform floor, G2 and RH remain unproved. |
+
 ## Lanes
 
 ```
