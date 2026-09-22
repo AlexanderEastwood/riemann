@@ -1,0 +1,240 @@
+% NS-55 prime-shift lane: exact identities and scoped operator obstructions.
+% Uses v118 physical realization and v154 affine-potential notation.
+\subsection*{Prime-shift primitives and the limits of transfer arguments}
+
+\paragraph{Scope.}
+Let $I_a=(-a,a)$, $L=2a$, and use the complete operator $A_a$,
+form domain $V_a$ and screw function $\mathfrak g$ of
+Proposition~\ref{prop:ns51-affine-potential}. Write
+$\ell_n=\log n$ and $w_n=\Lambda(n)/\sqrt n$. Terms with
+$w_n=0$ are omitted. The following are exact identities and proved
+obstructions to particular inferences. They prove neither an arithmetic
+nullvector nor affine-potential injectivity (API). Both pole signs are
+retained. No new window or tail metric is computed; G2 and RH remain open.
+
+\begin{proposition}[The exact two-sided primitive equation]
+\label{prop:ns55-prime-primitives}
+Remove the prime ramps from the screw function, writing on $|t|<L$
+\[
+ \mathfrak g(t)=\mathfrak g_0(t)+
+       \sum_{1<n<e^L}w_n(|t|-\ell_n)_+.
+\]
+Thus $\mathfrak g_0$ includes the archimedean and both pole terms.
+For $f\in L^2(I_a)$ define the clamped primitive and total integral
+\[
+ H_f(x)=\int_{-\infty}^x E_af(y)\,dy,
+ \qquad M_f=\int_{I_a}f(y)\,dy.
+\]
+Then, at every $x\in I_a$,
+\begin{equation}\label{eq:ns55-prime-primitive}
+ U_f(x)=(\mathfrak g_0'*E_af)(x)+
+ \sum_{1<n<e^L}w_n
+       \{H_f(x-\ell_n)+H_f(x+\ell_n)-M_f\}.
+\end{equation}
+In particular API's equation $U_f=b$ is exactly this two-sided
+shifted-primitive equation, subject to $f\in V_a$ and the parity constants
+of Proposition~\ref{prop:ns51-affine-potential}. Differentiation is valid
+in distributions and gives
+\begin{equation}\label{eq:ns55-prime-differentiated}
+ (\mathfrak g_0''*E_af)|_{I_a}
+ +\sum_{1<n<e^L}w_n\{E_af(\cdot-\ell_n)+E_af(\cdot+\ell_n)\}|_{I_a}=0.
+\end{equation}
+No $H^1$ regularity of $f$ is required or inferred.
+\end{proposition}
+\begin{proof}
+The derivative of $(|t|-\ell)_+$ is
+$\mathbf1_{t>\ell}-\mathbf1_{t<-\ell}$ almost everywhere. Its
+convolution with $E_af$ is
+$H_f(x-\ell_n)-\{M_f-H_f(x+\ell_n)\}$.
+The local $L^2$ property of $\mathfrak g_0'$ and compact support of
+$E_af$ make its convolution continuous, as in the affine-potential
+criterion. The finite sum is continuous too. Finally
+$H_f'=E_af$ in distributions. Membership of this antiderivative in
+$H^1_{\rm loc}$ does not imply $f\in H^1$.
+\end{proof}
+
+\paragraph{Why this is not a propagation rule.}
+The prime part couples both $x-\ell_n$ and $x+\ell_n$.
+More importantly, $\mathfrak g_0''*E_af$ remains a nonlocal term.
+Knowing $f=0$ on a subinterval does not make that term zero there;
+values of $f$ throughout the interval still enter. The logarithmic
+singularity also lies on the convolution diagonal, so analyticity
+of the kernel away from its singularities does not imply analyticity
+of the potential across the support. No identity theorem can be
+applied to that unsupported analytic continuation. Additional
+prime-free exterior hypotheses can change this conclusion; none
+is imposed in the present statement.
+
+\begin{proposition}[The full semigroup is not positivity preserving]
+\label{prop:ns55-nonpositive-semigroup}
+Let $r>1$ be the unique real solution of $r^3-r-1=0$, and suppose
+$L>\log r$. There are real nonnegative
+$f,g\in C_c^\infty(I_a)$ with disjoint supports such that
+\begin{equation}\label{eq:ns55-positive-cross}
+ q_a(f,g)>0.
+\end{equation}
+Consequently the complete semigroup $e^{-sA_a}$ is not positivity
+preserving on the full real $L^2(I_a)$ space with its ordinary
+nonnegative cone: for these tests and all sufficiently small $s>0$,
+\[
+ \langle e^{-sA_a}f,g\rangle<0.
+\]
+This asserts no negative diagonal Weil energy and makes no separate
+claim about order preservation after a parity restriction.
+\end{proposition}
+\begin{proof}
+For disjoint supports the diagonal terms in the operator contribute
+nothing. Away from prime-power separations, the off-diagonal integral
+kernel of Proposition~\ref{prop:v118-log-dirichlet} is
+\[
+ J(t)=2\cosh(t/2)-\rho(t),\qquad
+ \rho(t)=\frac{e^{t/2}}{e^t-e^{-t}},\quad t>0.
+\]
+The logarithmic Laplacian contributes $-1/(2t)$ and its bounded
+correction contributes $-(\rho(t)-1/(2t))$, giving $-\rho(t)$;
+the pole kernel gives the displayed $2\cosh(t/2)$.
+For $u=e^t>1$,
+\[
+ J(t)=\frac{u^3-u-1}{\sqrt u\,(u^2-1)}.
+\]
+The numerator is strictly increasing on $(1,\infty)$, changes sign
+once, and is positive precisely when $t>\log r$.
+Choose a separation $t_0\in(\log r,L)$ outside the finite set
+$\{\log n:1<n<e^L,\ \Lambda(n)\ne0\}$. Two sufficiently small
+disjoint intervals inside $I_a$, at separation $t_0$, have all
+cross separations in the positive region of $J$ and avoid every
+prime-power separation. Choose nonzero nonnegative smooth bumps
+$f,g$ supported in these intervals. All translated prime cross
+terms vanish and the remaining double integral is strictly positive.
+The tests belong to $\mathcal D(A_a)$, and $A_a$ is self-adjoint
+and bounded below at this fixed window. Strong differentiability
+of its semigroup on the operator domain gives
+\[
+ \langle e^{-sA_a}f,g\rangle
+ =\langle f,g\rangle-s\langle A_af,g\rangle+o(s)
+ =-s q_a(f,g)+o(s),
+\]
+which is negative for small positive $s$.
+\end{proof}
+
+\paragraph{Meaning of the order obstruction.}
+A standard positive-kernel or maximum-principle transfer cannot simply
+be attributed to the complete arithmetic operator. This does not
+exclude a more specialized uniqueness argument, positivity of a
+particular eigenfunction, a different cone, or API itself.
+Positivity of the quadratic form is distinct from preservation of
+pointwise positivity by its semigroup. Moreover conjugation by a
+strictly positive multiplier $h$ with $h,h^{-1}\in L^\infty(I_a)$
+cannot repair this: multiplication by $h$ and by $h^{-1}$ both
+preserve the nonnegative cone, so positivity of the conjugated
+semigroup would imply positivity of the original one. This concerns
+the full signed operator, not a separate positive edge form.
+
+\begin{proposition}[Prime entry is not an analytic window perturbation]
+\label{prop:ns55-prime-entry}
+Rescale $(0,L)$ unitarily to $(0,1)$. For a single prime-power length
+$\ell>0$, define the symmetric compressed shift
+\[
+ (J_{\ell,L}u)(x)=
+ \mathbf1_{x+\ell/L<1}u(x+\ell/L)
+ +\mathbf1_{x>\ell/L}u(x-\ell/L).
+\]
+It vanishes for $L\le\ell$, but
+\begin{equation}\label{eq:ns55-prime-entry-norm}
+ \|J_{\ell,L}\|_{2\to2}=1\qquad(\ell<L<2\ell).
+\end{equation}
+The corresponding unitarily rescaled screw-ramp operator has kernel
+$R_{\ell,L}(x,y)=wL(L|x-y|-\ell)_+$ and Hilbert--Schmidt norm
+\begin{equation}\label{eq:ns55-ramp-norm}
+ \|R_{\ell,L}\|_{\rm HS}
+      =\frac{w}{\sqrt6}(L-\ell)_+^2.
+\end{equation}
+In particular, smoothing to the potential makes prime entry small
+but does not make this term real analytic across $L=\ell$.
+The actual bounded perturbation $\widetilde{\mathcal K}_L$ of
+Proposition~\ref{prop:v118-log-dirichlet}, after this rescaling,
+satisfies for each prime power $n_0$ with $\ell=\log n_0$
+\begin{equation}\label{eq:ns55-full-k-jump}
+ \liminf_{L\downarrow\ell,\,L>\ell}
+ \|\widetilde{\mathcal K}_L-
+             \widetilde{\mathcal K}_{\ell}\|_{2\to2}\ge w_{n_0}>0.
+\end{equation}
+Thus an analytic Fredholm argument in the raw bounded window
+perturbation cannot be invoked at prime entry. No failure of
+form or resolvent continuity is inferred.
+\end{proposition}
+\begin{proof}
+For $\ell<L<2\ell$, put $b=\ell/L>1/2$. The shift interchanges
+$L^2(0,1-b)$ and $L^2(b,1)$ by translation and is zero on the
+middle interval. This proves its norm. For the potential kernel,
+\[
+ \|R_{\ell,L}\|_{\rm HS}^2
+ =2w^2L^2\int_{\ell/L}^1(1-t)(Lt-\ell)^2\,dt
+ =\frac{w^2}{6}(L-\ell)^4
+\]
+when $L>\ell$; it is zero otherwise. An operator-valued real-analytic
+function vanishing for $L<\ell$ would also vanish just above $\ell$.
+
+For the last assertion take normalized $u_L$ supported in the
+right interval $(b,1)$ and project the output onto $(0,1-b)$.
+The new shift has norm one on that input and output pair. For $L$
+sufficiently close to $\ell$, no other prime power enters, and
+all old shifts have lengths bounded strictly below one after
+rescaling; their outputs from this shrinking right interval miss
+the shrinking left interval, at both $L$ and $\ell$.
+The scalar diagonal misses it too. The rescaled $k$ and pole
+integral kernels are uniformly bounded near $L=\ell$, so their
+restricted input--output norm is $O(1-b)$ by the Hilbert--Schmidt
+bound. The projected difference therefore has norm at least
+$w_{n_0}-O(1-b)$.
+\end{proof}
+
+\begin{proposition}[What fixed-window Fredholm reduction actually gives]
+\label{prop:ns55-coupling-fredholm}
+Fix $a$. Let $\mathcal A=\tfrac12L_\Delta^{\rm Dir}$ and
+$A_a=\mathcal A+\mathcal K_a$ be the complete realization.
+Choose $\beta$ so that $T=\mathcal A+\beta I\ge I$, and set
+\[
+ B=\mathcal K_a-\beta I,\qquad
+ C=T^{-1/2}BT^{-1/2}.
+\]
+Then $C$ is compact and self-adjoint, and
+\begin{equation}\label{eq:ns55-fredholm-equivalence}
+ \ker A_a=\{0\}\quad\Longleftrightarrow\quad
+ -1\notin\sigma(C).
+\end{equation}
+More generally the common-domain coupling family $T+zB$ is
+invertible except at the discrete real set
+\[
+ \{-1/\nu:\nu\in\sigma(C)\setminus\{0\}\},
+\]
+and its inverse away from that set is
+$T^{-1/2}(I+zC)^{-1}T^{-1/2}$. It is meromorphic in $z$,
+with finite-rank principal parts. This does not exclude the actual
+coupling $z=1$ from the exceptional set.
+\end{proposition}
+\begin{proof}
+The reference operator has compact resolvent, so $T^{-1/2}$ is
+compact and bounded. The asserted properties of $C$ follow.
+If $(I+zC)v=0$ and $f=T^{-1/2}v$, then
+$f=-zT^{-1}Bf\in\mathcal D(T)$ and $(T+zB)f=0$.
+Conversely a nullvector gives $v=T^{1/2}f$ in the kernel of
+$I+zC$. The same factorization gives the inverse when it exists.
+The spectral theorem for the compact self-adjoint $C$ proves the
+exceptional-set and meromorphy assertions. Its nonzero eigenvalues
+have finite multiplicity and accumulate only at zero, so their
+reciprocals have no finite accumulation.
+\end{proof}
+
+\paragraph{Named missing input.}
+One still needs to exclude $-1$ from the spectrum of this specific
+arithmetic compact operator at every required window, or prove
+uniqueness in the shifted-primitive equation by a different mechanism.
+The Fredholm reduction supplies neither estimate. Applying analytic
+Fredholm theory directly to the compact potential operator
+$\mathcal C_a$ from v1.54 would also be invalid: a compact operator
+on an infinite-dimensional space is not Fredholm, whereas the
+standard theorem concerns an identity plus a compact operator.
+The preconditioning above repairs that issue at fixed $a$ but
+leaves the physical exceptional point unresolved. These are
+obstructions to proposed shortcuts, not to arithmetic injectivity.

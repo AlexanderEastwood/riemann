@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>v1.55 integration review — September 22, 2026</title></head>
+<body style="margin:0;background:#f2efe7;color:#242a28;font-family:Georgia,'Times New Roman',serif;line-height:1.65;">
+<main style="max-width:680px;margin:40px auto;padding:36px;background:#fff;border-top:7px solid #315b4c;">
+<p style="margin:0;color:#52675e;font-size:14px;letter-spacing:.06em;">INDEPENDENT INTEGRATION REVIEW · SEPTEMBER 22, 2026 · VERSION 1</p>
+<h1 style="font-size:29px;line-height:1.25;margin:14px 0 20px;">v1.55: local uniqueness tests</h1>
+<p style="padding:16px 20px;background:#edf4ee;border-left:4px solid #315b4c;"><strong>Disposition: 0 MAJOR findings; 0 MINOR findings.</strong> The integrated claims retain the proved scopes. Arithmetic injectivity (API), a uniform lower floor, G2 and RH remain open.</p>
+<h2 style="font-size:21px;margin-top:28px;">What was reviewed</h2>
+<p>The release proof in <code>evidence/v155/proof.tex</code>, its manuscript integration and status paragraph, the new README and COMPARISON sections, the NS-55 board row, the <code>localucp</code>, <code>fullpositivecone</code> and parent <code>kernelapi</code> map entries, and the v1.55 entries in both research logs. This review follows independent mathematical checks of the three component proofs; it is an integration audit, not a new numerical experiment.</p>
+<h2 style="font-size:21px;margin-top:28px;">Scope and proof checks</h2>
+<ol style="padding-left:24px;">
+<li style="margin-bottom:13px;"><strong>The local counterexample is for the actual arithmetic operator.</strong> The Neumann construction cancels the prime shift and integral response on an open patch, producing a nonzero function with both its value and the operator value zero there. The texts consistently distinguish this from a nullvector satisfying the equation on the whole window and from a negative diagonal Weil direction.</li>
+<li style="margin-bottom:13px;"><strong>Parity and source constraints are supported.</strong> The separate parity construction is stated for <em>a</em> &gt; log 2. Its injective, infinite-dimensional family permits finitely many linear constraints, including source orthogonality. No claim that the same construction supplies a complete source-constrained kernel is made.</li>
+<li style="margin-bottom:13px;"><strong>The semigroup conclusion concerns the ordinary positive cone.</strong> The exact off-diagonal sign test disproves preservation of pointwise nonnegativity by the full semigroup. The map and prose keep this distinct from nonnegative quadratic energy, a particular ground state's sign, and any separate cone claim in a parity sector.</li>
+<li style="margin-bottom:13px;"><strong>The restricted uniqueness theorem keeps its geometric hypotheses.</strong> The prime-free exterior observation cell is explicit. Support saturation of a hypothetical first-zero nullvector prevents inferring that cell from an endpoint trace. Thus this theorem is not promoted to whole-window injectivity.</li>
+<li style="margin-bottom:13px;"><strong>The inward-dilation identity retains the signed terms.</strong> The complete form domain, both pole contributions and all prime correlation differences remain in the calculation. The missing signed arithmetic estimate is named. Positivity on a smaller window is not misrepresented as a contradiction to a crossing.</li>
+<li style="margin-bottom:13px;"><strong>The map closes only the disproved shortcuts.</strong> Local open-set UCP and ordinary-cone positivity are the closed nodes. The parent arithmetic-injectivity node remains open. The board marks this bounded test complete while retaining API as open.</li>
+</ol>
+<h2 style="font-size:21px;margin-top:28px;">Validation</h2>
+<p>The release proof occurs <strong>verbatim exactly once</strong> in the manuscript. The current parent-generated manuscript PDF and LaTeX log were inspected: <strong>285 pages, 0 undefined references, 0 duplicate-reference warnings, and 0 overfull boxes</strong>. The research-map JSON parses successfully. This reviewer did not rerun the full manuscript build; those counts were checked against its existing output.</p>
+<p><strong>NOTE.</strong> The translation and model-crossing results, primitive equation, prime-entry estimates and coupling-Fredholm discussion remain archived supporting evidence. Their scope is identified in the integration; a discrete exceptional coupling set is explicitly not an exclusion of the physical coupling.</p>
+<h2 style="font-size:21px;margin-top:28px;">Reporting assessment</h2>
+<p>The write-up explains what changed: a proposed local logarithmic uniqueness argument must keep the arithmetic shifts, and a differentiated variation must be replaced by a complete-domain finite difference. It distinguishes two actual failures of proposed principles from the unresolved whole-window object. No new window, tail metric, uniform floor, G2 or RH result is claimed.</p>
+<p style="margin-top:30px;padding-top:16px;border-top:1px solid #d8dfd8;color:#59625d;font-size:14px;">Reviewer: Codex Astra, independent integration pass. Review scope: the v1.55 working state in <code>/private/tmp/riemann-ns55</code>. No files outside this review were changed by this pass.</p>
+</main>
+</body>
+</html>

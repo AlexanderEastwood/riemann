@@ -431,3 +431,29 @@ so is the stronger local capacity test that discards the positive potential.
 The calculation identifies the accuracy the weight demands but supplies
 no independent arithmetic sign bound. Both parities, source residual and
 cofinal uniformity are still needed. G2 and RH remain open.
+
+
+## NS-55 / v1.55: local uniqueness is not whole-window injectivity
+
+The logarithmic-Laplacian theorem requires u = L_Delta u = 0 on the same open
+set. Its hypothesis does not transfer to the arithmetic bounded nonlocal
+remainder. The exact prime-2 construction in `evidence/v155/proof.tex` proves
+local UCP false for the actual operator when 2a > log 2, in both parities for
+a > log 2 and after finitely many source constraints. It never asserts
+A_a f = 0 on the whole window. This is a failure of a proposed local property,
+not a negative Weil direction or a failure of API.
+
+The full real-space semigroup is not order preserving when 2a > log r,
+r^3-r-1=0, by an exact positive off-diagonal pairing of disjoint nonnegative
+tests. Bounded positive multiplication cannot repair this cone property;
+quadratic-form positivity remains a different question. A prime-free
+exterior-of-support observation cell yields a valid restricted uniqueness
+lemma. First-zero support saturation prevents obtaining such a cell inside
+the window from zero endpoint traces alone.
+
+The complete-domain inward-dilation identity leaves precisely the signed
+prime autocorrelation changes together with both pole changes to estimate.
+No such arithmetic exclusion is supplied. The supporting primitive equation,
+prime-entry norm obstruction and fixed-window Fredholm reduction are archived
+in `evidence/ns55_kernel/`; the physical exceptional coupling remains unresolved.
+Full build: 285 pages, zero undefined/duplicate references. API, G2 and RH remain open.

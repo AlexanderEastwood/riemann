@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NS-55 · Independent prime-shift review · 22 September 2026</title></head>
+<body style="margin:0;background:#f2efe7;color:#202922;font-family:Georgia,'Times New Roman',serif;line-height:1.6;">
+<main style="max-width:680px;margin:40px auto;padding:36px;background:#fffefa;border-top:5px solid #375645;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;color:#58705d;">INDEPENDENT MATHEMATICAL REVIEW · NS-55 · VERSION 1</p>
+<h1 style="font-size:30px;line-height:1.2;font-weight:normal;">Prime-shift primitives and operator obstructions</h1>
+<p>Reviewed the complete draft at <span style="font-family:monospace;font-size:13px;">evidence/ns55_kernel/prime_shift/proof.tex</span>, including the full semigroup statement, window-entry estimates and fixed-window Fredholm reduction.</p>
+<p style="padding:14px 18px;background:#edf3ee;border-left:3px solid #557060;"><strong>Disposition: 0 MAJOR and 0 MINOR mathematical findings.</strong> The results are scoped to the proposed inferences. They do not establish a negative diagonal Weil energy or arithmetic kernel injectivity.</p>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:28px;">Checks performed</h2>
+<ol style="padding-left:24px;">
+<li style="margin-bottom:15px;"><strong>Primitive identity.</strong> The derivative of (|t|−ℓ)<sub>+</sub> is the difference of the two exterior indicators. Convolution therefore gives H(x−ℓ)+H(x+ℓ)−M, with the displayed signs. Differentiating H distributionally is valid and makes no H¹ assertion about f. The residual convolution term remains nonlocal.</li>
+<li style="margin-bottom:15px;"><strong>Actual semigroup obstruction.</strong> For u=e<sup>t</sup>, direct algebra gives J(t)=(u³−u−1)/(√u(u²−1)). Above its stated threshold one can place two disjoint nonnegative smooth bumps whose cross separations avoid every active prime shift. The resulting strictly positive form cross term implies a negative semigroup pairing for small positive time through its valid operator-domain derivative. This proves failure of preservation of the ordinary nonnegative cone. It does not prove a negative quadratic-form value.</li>
+<li style="margin-bottom:15px;"><strong>Compressed-shift norm.</strong> For b=ℓ/L&gt;½, the operator exchanges the left and right endpoint spaces isometrically and vanishes on the middle. Its norm is exactly one even as the endpoint intervals shrink. Strong convergence or small support is not operator-norm convergence.</li>
+<li style="margin-bottom:15px;"><strong>Ramp Hilbert–Schmidt norm.</strong> Unitary rescaling gives the kernel wL(L|x−y|−ℓ)<sub>+</sub>. Integrating its square over the two triangular corners gives w²(L−ℓ)⁴/6, hence the stated norm w(L−ℓ)²/√6. The function is zero before entry and nonzero after entry, excluding real analyticity across the threshold.</li>
+<li style="margin-bottom:15px;"><strong>Jump of the complete bounded remainder.</strong> On shrinking right-input and left-output intervals, the new prime shift has norm one. Every old shift misses that input–output pair for sufficiently small parameter change, as does the scalar diagonal. The bounded integral kernels contribute only O(1−b). This proves the lower bound w for the operator-norm jump of the bounded remainder. It does not assert failure of continuity of the closed forms or eigenvalues.</li>
+<li style="margin-bottom:15px;"><strong>Fredholm reduction.</strong> The compact self-adjoint operator C=T<sup>−½</sup>BT<sup>−½</sup> gives the exact kernel criterion −1∉σ(C). The recovery f=−zT<sup>−1</sup>Bf supplies the operator domain. Nonzero eigenvalues of C give the discrete real exceptional couplings; the inverse formula and finite-rank meromorphic principal parts follow. This does not exclude z=1, and the text says so.</li>
+</ol>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:28px;">Scope notes</h2>
+<p>Conjugation by an everywhere positive bounded invertible multiplier cannot repair the ordinary-cone semigroup failure: it is an order isomorphism. This observation concerns the full signed operator, not a separately defined positive edge operator.</p>
+<p>The distinction between an identity-plus-compact Fredholm family and the compact potential itself is correct. No analytic dependence on the raw window parameter is assumed at a prime-entry threshold.</p>
+<p style="border-top:1px solid #d4d8cd;padding-top:20px;">This was an analytic review, not an interval computation or a manuscript build. Parent owns integration and build verification. No new window or tail metric. API, G2 and RH remain open.</p>
+</main></body></html>

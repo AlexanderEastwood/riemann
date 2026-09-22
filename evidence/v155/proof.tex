@@ -1,0 +1,525 @@
+\section{Local uniqueness tests for the complete arithmetic operator (v1.55)}
+\label{sec:v155-local-uniqueness}
+
+The affine-potential criterion of Proposition~\ref{prop:ns51-affine-potential}
+asks for the absence of a nullvector satisfying the equation on the
+\emph{whole} window. Here we test three possible mechanisms for that
+uniqueness. The complete arithmetic operator fails a local-patch
+unique-continuation property, and its semigroup does not preserve the
+ordinary cone of nonnegative functions. Neither statement gives a
+nullvector on the whole window or a negative diagonal Weil direction.
+An exact inward-dilation identity isolates the arithmetic overlap
+terms still required at a hypothetical first zero. API, the uniform
+floor, G2 and RH remain open. No numerical window or tail metric is added.
+
+% NS-55: exact and scoped. Local-patch witnesses are not full nullvectors.
+\subsection*{Unique continuation: the arithmetic shifts change the theorem}
+
+Use $I_a=(-a,a)$, its complete operator $A_a$, and
+\[
+ \ell=\log2,\quad w_2=\frac{\log2}{\sqrt2},\quad
+ \rho(t)=\frac{e^{-t/2}}{1-e^{-2t}},\quad
+ R(t)=2\cosh(t/2)-\rho(t)\quad(t>0).
+\]
+If $f$ vanishes on an open $J\subset I_a$ separated from its support,
+the exact operator there is
+\begin{equation}\label{eq:ns55-off-support-operator}
+ (A_af)(x)=\int_{I_a}R(|x-y|)f(y)\,dy
+ -\sum_{1<n<e^{2a}}\frac{\Lambda(n)}{\sqrt n}
+       \{E_af(x-\log n)+E_af(x+\log n)\}.
+\end{equation}
+This follows from Proposition~\ref{prop:v118-log-dirichlet}: local
+diagonal terms vanish, and the logarithmic kernel and its correction
+combine into $-\rho$. Equivalently it is the off-origin distribution
+identity for $-\mathfrak g''$. In particular the pole term is retained.
+
+\begin{proposition}[Failure of local open-set unique continuation]
+\label{prop:ns55-local-ucp-counterexample}
+For every $a>\tfrac12\log2$, there are a nonempty $U\Subset I_a$
+and a nonzero real $f\in\mathcal D(A_a)$ with
+\[
+ f|_U=0,\qquad (A_af)|_U=0.
+\]
+The second equality is pointwise and distributional on $U$ only.
+No complete nullvector or negative Weil direction is asserted.
+\end{proposition}
+\begin{proof}
+Set
+\[
+ \delta_0=\min\{\ell/8,\tfrac14\log(3/2)\},\qquad
+ M_0=2\cosh((\ell+2\delta_0)/2)+\rho(\ell-2\delta_0).
+\]
+Choose $0<\epsilon<\min\{a-\ell/2,\delta_0,w_2/(4M_0)\}$ and put
+\[
+ U=(\ell/2-\epsilon,\ell/2+\epsilon),\quad V=U-\ell,\quad
+ W=(-\epsilon,\epsilon).
+\]
+Their closures are disjoint and inside $I_a$. Choose any nonzero real
+$h\in C_c^\infty(W)$ and define on $L^2(U)$
+\[
+ (Tv)(x)=\int_U R(x-t+\ell)v(t)\,dt,\qquad
+ H(x)=\int_W R(x-y)h(y)\,dy .
+\]
+Since $|R(t)|\le M_0$ for $|t-\ell|\le2\delta_0$, Schur's estimate
+gives $\|T\|_{2\to2}\le2\epsilon M_0<w_2/2$. Define
+$v=(w_2I-T)^{-1}H$ by its convergent Neumann series. The equation
+$w_2v=H+Tv$ makes $v$ smooth on a neighborhood of $\overline U$:
+the smooth kernels and their derivatives are bounded on that
+neighborhood times the fixed integration intervals.
+
+Set $f(y)=v(y+\ell)$ on $V$, $f=h$ on $W$, and zero elsewhere.
+This is nonzero. On $U$, positive prime shifts lie beyond the support.
+For $n\ge3$, $2\epsilon<\log(3/2)$ puts $x-\log n$ left of $V$.
+The only nonzero translated value can therefore be $n=2$, equal to
+$v(x)$. Equation~\eqref{eq:ns55-off-support-operator} gives
+$A_af=-w_2v+Tv+H=0$ on $U$.
+
+The zero extension is compactly supported and piecewise smooth with
+finitely many jumps, hence belongs to $H^s(\mathbb R)$ for
+$0<s<1/2$. Its full-line logarithmic multiplier lies in $L^2$:
+$\log^2|\xi|\ll_s1+|\xi|^{2s}$ at high frequency, and its transform
+is bounded near zero, where $\log^2|\xi|$ is integrable. The form
+representation therefore puts $f$ in
+$\mathcal D(\tfrac12L_\Delta^{\rm Dir})$. Bounded perturbation
+gives $f\in\mathcal D(A_a)$. This is the complete operator, not a head.
+\end{proof}
+
+\begin{proposition}[Parity and finitely many linear constraints]
+\label{prop:ns55-parity-ucp-counterexample}
+For every $a>\log2$ and $\sigma\in\{1,-1\}$, there are a nonempty
+$U\Subset(0,a)$ and an infinite-dimensional real linear subspace
+$\mathcal L_\sigma\subset\mathcal D(A_a)$ such that
+\[
+ f(-x)=\sigma f(x),\qquad f=A_af=0\text{ on }U\cup(-U)
+ \quad(f\in\mathcal L_\sigma).
+\]
+One may impose any prescribed finite number of real linear conditions
+on $\mathcal L_\sigma$ and still obtain nonzero witnesses. In particular,
+source orthogonality does not restore this local unique-continuation
+statement. This assertion remains about a local patch, not the full kernel.
+\end{proposition}
+\begin{proof}
+Put $\mathcal P_a=\{\log n:1<n<e^{2a},\ \Lambda(n)>0\}$.
+Choose $v_0\in(0,a-\ell)$ avoiding the finitely many equations
+$2v_0+\ell\in\mathcal P_a$, and let $u_0=v_0+\ell$.
+Choose $w_0\in(0,v_0/2)$ with
+$u_0-w_0,u_0+w_0\notin\mathcal P_a$.
+
+Choose an initial radius $\epsilon_0>0$ such that the intervals
+$U_{\epsilon_0},V_{\epsilon_0},W_{\epsilon_0}$ about $u_0,v_0,w_0$
+and their reflections have disjoint closures inside $I_a$.
+Choose it smaller if necessary so differences from $U_{\epsilon_0}$
+to $V_{\epsilon_0},-V_{\epsilon_0},W_{\epsilon_0},-W_{\epsilon_0}$
+meet $\mathcal P_a$ only in the intended $U-V$ difference $\ell$.
+There are only finitely many forbidden central differences, all
+separated from $\mathcal P_a$, so this is possible. Set
+\[
+ M_\sigma=\sup_{x,t\in\overline{U_{\epsilon_0}}}
+  |R(x-t+\ell)+\sigma R(x+t-\ell)|<\infty .
+\]
+Choose $0<\epsilon\le\epsilon_0$ with
+$2\epsilon M_\sigma<w_2/2$, and write $U,V,W$ for the smaller intervals.
+For arbitrary $h\in C_c^\infty(W)$, define
+\begin{align*}
+ (T_\sigma v)(x)&=\int_U
+       \{R(x-t+\ell)+\sigma R(x+t-\ell)\}v(t)\,dt,\\
+ H_\sigma(x)&=\int_W
+       \{R(x-y)+\sigma R(x+y)\}h(y)\,dy .
+\end{align*}
+All arguments are positive. Solve
+$(w_2I-T_\sigma)v=H_\sigma$ by the same norm bound.
+Set $f(y)=v(y+\ell)$ on $V$, $f=h$ on $W$, reflect with sign $\sigma$,
+and put it zero elsewhere. The same smoothness and domain proof applies.
+The sole nonzero prime-shift term on $U$ is $-w_2v$, and the integrals
+give $T_\sigma v+H_\sigma$, hence $A_af=0$ there. Parity gives the
+reflected equality. The linear map $h\mapsto f$ is injective since
+$f|_W=h$, so its image is infinite dimensional. Its intersection with
+the kernels of finitely many linear functionals is still infinite
+dimensional. A complex orthogonality condition on real witnesses is
+at most two real linear conditions.
+\end{proof}
+
+\paragraph{The logarithmic theorem and its missing hypotheses.}
+Chen--Hauer--Weth~\cite[Theorem 1.7]{ChenHauerWeth2023} prove that
+$u=L_\Delta u=0$ on the \emph{same} nonempty open set implies $u=0$
+on $\mathbb R$, for $u\in L^1((1+|x|)^{-1}dx)$.
+See also Harrach--Lin--Weth~\cite[Proposition 4.1]{HarrachLinWeth2025}.
+Compactly supported $L^2$ functions satisfy the integrability hypothesis.
+But on an interior open set the arithmetic equation gives
+$L_\Delta E_af=-2\mathcal K_a f$; $f=0$ does not annihilate this
+nonlocal remainder. The preceding counterexamples show the difference
+for the actual operator. Replacing it by a local multiplication
+potential would change the problem.
+
+Outside the window, only $E_af=0$ is prescribed; neither
+$L_\Delta E_af=0$ nor the full arithmetic equation is prescribed.
+For example, at $x>a$ one has
+\[
+ (L_\Delta E_af)(x)=-\int_{-a}^a\frac{f(y)}{x-y}\,dy,
+\]
+which generally is nonzero. Endpoint trace zero supplies no open
+interior vanishing set or missing exterior equation.
+
+\begin{proposition}[Uniqueness with a prime-shift-free exterior-of-support cell]
+\label{prop:ns55-prime-free-cell}
+Let $f\in V_a$ have essential support $S\subset[-a,a]$, with
+$b=\sup S<a$. Suppose a nonempty open interval $J\Subset(b,a)$ obeys
+\[
+ J\cap\bigcup_{s\in\mathcal P_a}(S+s)=\varnothing,\qquad
+ A_af=0\text{ on }J\text{ in distributions}.
+\]
+Then $f=0$. The reflected left-hand statement also holds.
+Here $A_af$ is understood weakly if only $f\in V_a$ is initially given.
+\end{proposition}
+\begin{proof}
+Assume $S$ nonempty. Positive shifts lie beyond $S$; the displayed
+separation removes negative shifts. Thus
+\[
+ \mathcal R_f(x)=\int_{I_a}R(x-y)f(y)\,dy=0\quad(x\in J).
+\]
+This is real analytic for all $x>b$, so vanishes on that half-line.
+Put
+$M_-=\int e^{-y/2}f(y)\,dy$ and
+$M_j=\int e^{(2j+1/2)y}f(y)\,dy$.
+The locally uniformly convergent identity
+$\rho(t)=\sum_{j\ge0}e^{-(2j+1/2)t}$ for $t>0$ gives
+\[
+ 0=e^{-x/2}\mathcal R_f(x)
+   =M_- -\sum_{j=1}^\infty M_j e^{-(2j+1)x}\quad(x>b).
+\]
+The $j=0$ term cancels exactly one pole contribution. Since
+$|M_j|\le\|f\|_1e^{(2j+1/2)b}$, the last series is a power
+series in $z=e^{-x}$ with radius at least $e^{-b}$.
+Taking $x\to\infty$ and then its coefficients gives $M_-=0$
+and $M_j=0$ for every $j\ge1$.
+
+Push the finite complex measure $e^{y/2}f(y)\,dy$ forward by
+$t=e^{2y}$. It is supported in $[e^{-2a},e^{2b}]$, away from zero,
+and all its positive integer moments vanish. Polynomials without a
+constant term are dense among continuous functions on this interval:
+approximate the desired function divided by $t$ and multiply by $t$.
+Thus the measure is zero, proving $f=0$.
+Only the separated integral component was analytically continued,
+not the whole arithmetic equation with its shifts.
+\end{proof}
+
+\paragraph{Scope of the remaining gap.}
+The last proposition requires actual support separation, not smallness
+or zero endpoint trace. A separate first-crossing support argument forces
+a first-crossing nullvector to reach both window endpoints; hence it
+cannot supply the last proposition's exterior-of-support cell inside
+the window. The local counterexamples are not first-crossing nullvectors.
+They disprove the direct transplantation of the logarithmic open-set
+unique-continuation theorem to the full shifted operator, while the
+prime-free-cell theorem is a restricted arithmetic uniqueness result.
+Complete affine-potential injectivity, G2 and RH remain open.
+
+% NS-55 first-crossing subtask. Exact identities and scoped countermodel.
+% No H^1 assumption, shape derivative, numerical window, or RH assumption.
+\subsection*{First-crossing geometry on the complete form domain}
+
+Let $V_a=\mathcal D(q_a)$ be the complete form domain from NS-51,
+with unitary Fourier transform of the zero extension understood.
+Let $\mu(a)=\inf\sigma(A_a)$. A \emph{first-zero window} means
+\begin{equation}\label{eq:ns55fc-first}
+ \mu(a_*)=0,\qquad \mu(b)>0\quad(0<b<a_*).
+\end{equation}
+This is a conditional setup, not an assertion that such a window exists.
+If a zero or negative lower edge occurs, continuity and small-window
+positivity yield such a first window. The required continuity is
+Suzuki's Theorem 1.3, with its complete-domain scaling argument in
+Section 4 of version 2
+(\url{https://arxiv.org/html/2606.09096v2#S4}).
+
+\begin{proposition}[Support saturation and exact inward variation]
+\label{prop:ns55fc-geometry}
+Assume \eqref{eq:ns55fc-first}, and let $0\ne f\in\ker A_{a_*}$.
+Then the essential support of its zero extension has diameter $2a_*$;
+its extreme support points are $-a_*$ and $a_*$. For $0<r<1$ set
+\[
+ (U_rf)(x)=r^{-1/2}f(x/r),
+\]
+where $f$ has already been extended by zero. Then $U_rf\in V_{ra_*}$,
+$\|U_rf\|_2=\|f\|_2$, and
+\begin{equation}\label{eq:ns55fc-null-variation}
+ q_{ra_*}[U_rf]
+ =q_{a_*}[U_rf-f]
+ \ge\mu(ra_*)\|f\|_2^2>0.
+\end{equation}
+All identities are valid on the complete form domain. Inward dilation
+preserves each parity sector.
+\end{proposition}
+\begin{proof}
+The global compact-support form is invariant under simultaneous
+translation, and its restrictions are support consistent. If the
+essential support diameter were smaller than $2a_*$, a translation
+would place $f$ in $V_b$ for some $b<a_*$. Its unchanged form value
+zero contradicts $q_b\ge\mu(b)\|\cdot\|_2^2$.
+
+The Fourier identity $\widehat{U_rf}(\xi)=\sqrt r\,\widehat f(r\xi)$
+and comparison of $\log(2+|\xi|/r)$ with $\log(2+|\xi|)$ prove
+membership in $V_{ra_*}$. Since $f$ is an operator nullvector,
+$q_{a_*}(f,v)=0$ for every $v\in V_{a_*}$ by the representation
+theorem for closed forms. Expand $q_{a_*}[U_rf-f]$; both cross terms
+and $q_{a_*}[f]$ vanish. Support consistency and the variational
+principle on $I_{ra_*}$ give \eqref{eq:ns55fc-null-variation}.
+No derivative of $r\mapsto U_rf$ is taken.
+\end{proof}
+
+The endpoint conclusion means that an argument requiring an empty
+exterior support strip \emph{inside} $I_{a_*}$ cannot be applied to
+a first-zero nullvector without a new arithmetic step. It does not
+mean that $f$ has a nonzero trace: the archived continuous zero
+extension and logarithmic endpoint decay are fully compatible with
+support saturation.
+
+\begin{proposition}[Exact dilation defect with both poles and all primes]
+\label{prop:ns55fc-dilation}
+For $f\in V_a$, let
+\[
+ R_f(t)=\int_{\mathbb R}f(x+t)\overline{f(x)}\,dx,
+ \quad P_f(r)=\int_{-a}^a f(x)\cosh(rx/2)\,dx,
+ \quad S_f(r)=\int_{-a}^a f(x)\sinh(rx/2)\,dx,
+\]
+and set $\alpha(\xi)=\operatorname{Re}\psi(1/4+i\xi/2)-\log\pi$.
+For $0<r<1$ define
+\begin{align}
+ \mathcal A_r[f]&=\int_{\mathbb R}
+    [\alpha(\xi/r)-\alpha(\xi)]|\widehat f(\xi)|^2\,d\xi,
+       \label{eq:ns55fc-arch}\\
+ \mathcal P_r[f]&=2r\bigl(|P_f(r)|^2-|S_f(r)|^2\bigr)
+                  -2\bigl(|P_f(1)|^2-|S_f(1)|^2\bigr),\notag\\
+ \mathcal R_r[f]&=2\sum_{1<n<e^{2a}}\frac{\Lambda(n)}{\sqrt n}
+          \operatorname{Re}\{R_f(\log n/r)-R_f(\log n)\}.
+          \notag
+\end{align}
+Then
+\begin{equation}\label{eq:ns55fc-defect}
+ q_{ra}[U_rf]-q_a[f]
+       =\mathcal A_r[f]+\mathcal P_r[f]-\mathcal R_r[f].
+\end{equation}
+For nonzero $f$,
+\begin{equation}\label{eq:ns55fc-arch-bound}
+ 0<\mathcal A_r[f]\le5\log(1/r)\|f\|_2^2.
+\end{equation}
+In the even sector $S_f(r)=0$; in the odd sector $P_f(r)=0$.
+Neither pole sign may be dropped in the full-space identity.
+\end{proposition}
+\begin{proof}
+The exact complete formula, obtained from
+\eqref{eq:v129-jump-decomposition} and
+Proposition~\ref{prop:v135-both-parities}, is
+\[
+ q_a[f]=\int\alpha(\xi)|\widehat f(\xi)|^2\,d\xi
+  +2|P_f(1)|^2-2|S_f(1)|^2
+  -2\sum_{1<n<e^{2a}}\frac{\Lambda(n)}{\sqrt n}
+                        \operatorname{Re}R_f(\log n).
+\]
+This extends from the smooth core by the form norm: at fixed $a$
+the pole and finite prime operators are bounded, and the logarithmic
+multiplier defines the principal closed form. Change variables in
+the Fourier integral. Directly,
+$R_{U_rf}(t)=R_f(t/r)$ and
+$P_{U_rf}(1)=\sqrt r P_f(r)$, with the same formula for $S$.
+The correlation $R_f$ is continuous, and $R_f(t)=0$ for
+$|t|\ge2a$. Thus the dilated prime sum can use the fixed upper
+cutoff $e^{2a}$: every added term past $e^{2ra}$ is exactly zero,
+including equality. This proves \eqref{eq:ns55fc-defect}, retaining
+every changed support overlap rather than differentiating the prime
+cutoff or discarding boundary terms.
+
+For $s_k=k+1/4$ and $t=|\xi|/2$, the convergent digamma series gives
+\[
+ \xi\alpha'(\xi)
+ =\sum_{k\ge0}\frac{2t^2s_k}{(s_k^2+t^2)^2}>0\quad(\xi\ne0).
+\]
+For fixed $t>0$, $F_t(s)=2t^2s/(s^2+t^2)^2$ is nonnegative and
+unimodal. Comparing its unit-spaced samples on either side of its
+maximum with their adjacent integrals gives
+\[
+ \sum_{k\ge0}F_t(k+1/4)
+ \le\int_{1/4}^\infty F_t(s)\,ds
+               +2\sup_{s\ge1/4}F_t(s)\le1+4=5;
+\]
+the last estimate uses $F_t(s)\le1/(2s)$. Integrate this logarithmic
+derivative from $|\xi|$ to $|\xi|/r$. Strict increase away from the
+origin and the fact that a nonzero $L^2$ transform cannot be supported
+at one point prove \eqref{eq:ns55fc-arch-bound}.
+\end{proof}
+
+At a first-zero nullvector, the exact necessary inequality is therefore
+\begin{equation}\label{eq:ns55fc-necessary}
+ \mathcal R_r[f]
+ \le\mathcal A_r[f]+\mathcal P_r[f]
+             -\mu(ra_*)\|f\|_2^2
+ <\mathcal A_r[f]+\mathcal P_r[f],\qquad 0<r<1.
+\end{equation}
+There is no contradiction: inward scaling has positive energy.
+An independent arithmetic estimate forcing the reverse non-strict
+inequality for even one $r<1$ at every proposed first-zero nullvector
+would exclude such a nullvector. No such estimate is derived here.
+Merely naming that reverse inequality restates a sufficient exclusion
+test; it does not make an arithmetic lemma out of the variational identity.
+
+The form domain does not in general make $R_f$ differentiable at the
+prime shifts. Its Fourier representation controls a logarithmic moment,
+not $\int|\xi||\widehat f(\xi)|^2d\xi$. Consequently dividing
+\eqref{eq:ns55fc-defect} by $1-r$ and passing to a differentiated
+virial identity would require an additional regularity or limit
+argument. The finite identity requires neither. Strong continuity of
+dilations in the logarithmic form topology, and hence continuity of
+the defect, follows by smooth approximation and locally uniform
+dilation bounds in that topology; it supplies no differentiability rate.
+
+
+% NS-55 prime-shift lane: exact identities and scoped operator obstructions.
+% Uses v118 physical realization and v154 affine-potential notation.
+\subsection*{Prime-shift primitives and the limits of transfer arguments}
+
+\paragraph{Scope.}
+Let $I_a=(-a,a)$, $L=2a$, and use the complete operator $A_a$,
+form domain $V_a$ and screw function $\mathfrak g$ of
+Proposition~\ref{prop:ns51-affine-potential}. Write
+$\ell_n=\log n$ and $w_n=\Lambda(n)/\sqrt n$. Terms with
+$w_n=0$ are omitted. The following are exact identities and proved
+obstructions to particular inferences. They prove neither an arithmetic
+nullvector nor affine-potential injectivity (API). Both pole signs are
+retained. No new window or tail metric is computed; G2 and RH remain open.
+
+\begin{proposition}[The exact two-sided primitive equation]
+\label{prop:ns55-prime-primitives}
+Remove the prime ramps from the screw function, writing on $|t|<L$
+\[
+ \mathfrak g(t)=\mathfrak g_0(t)+
+       \sum_{1<n<e^L}w_n(|t|-\ell_n)_+.
+\]
+Thus $\mathfrak g_0$ includes the archimedean and both pole terms.
+For $f\in L^2(I_a)$ define the clamped primitive and total integral
+\[
+ H_f(x)=\int_{-\infty}^x E_af(y)\,dy,
+ \qquad M_f=\int_{I_a}f(y)\,dy.
+\]
+Then, at every $x\in I_a$,
+\begin{equation}\label{eq:ns55-prime-primitive}
+ U_f(x)=(\mathfrak g_0'*E_af)(x)+
+ \sum_{1<n<e^L}w_n
+       \{H_f(x-\ell_n)+H_f(x+\ell_n)-M_f\}.
+\end{equation}
+In particular API's equation $U_f=b$ is exactly this two-sided
+shifted-primitive equation, subject to $f\in V_a$ and the parity constants
+of Proposition~\ref{prop:ns51-affine-potential}. Differentiation is valid
+in distributions and gives
+\begin{equation}\label{eq:ns55-prime-differentiated}
+ (\mathfrak g_0''*E_af)|_{I_a}
+ +\sum_{1<n<e^L}w_n\{E_af(\cdot-\ell_n)+E_af(\cdot+\ell_n)\}|_{I_a}=0.
+\end{equation}
+No $H^1$ regularity of $f$ is required or inferred.
+\end{proposition}
+\begin{proof}
+The derivative of $(|t|-\ell)_+$ is
+$\mathbf1_{t>\ell}-\mathbf1_{t<-\ell}$ almost everywhere. Its
+convolution with $E_af$ is
+$H_f(x-\ell_n)-\{M_f-H_f(x+\ell_n)\}$.
+The local $L^2$ property of $\mathfrak g_0'$ and compact support of
+$E_af$ make its convolution continuous, as in the affine-potential
+criterion. The finite sum is continuous too. Finally
+$H_f'=E_af$ in distributions. Membership of this antiderivative in
+$H^1_{\rm loc}$ does not imply $f\in H^1$.
+\end{proof}
+
+\paragraph{Why this is not a propagation rule.}
+The prime part couples both $x-\ell_n$ and $x+\ell_n$.
+More importantly, $\mathfrak g_0''*E_af$ remains a nonlocal term.
+Knowing $f=0$ on a subinterval does not make that term zero there;
+values of $f$ throughout the interval still enter. The logarithmic
+singularity also lies on the convolution diagonal, so analyticity
+of the kernel away from its singularities does not imply analyticity
+of the potential across the support. No identity theorem can be
+applied to that unsupported analytic continuation. Additional
+prime-free exterior hypotheses can change this conclusion; none
+is imposed in the present statement.
+
+\begin{proposition}[The full semigroup is not positivity preserving]
+\label{prop:ns55-nonpositive-semigroup}
+Let $r>1$ be the unique real solution of $r^3-r-1=0$, and suppose
+$L>\log r$. There are real nonnegative
+$f,g\in C_c^\infty(I_a)$ with disjoint supports such that
+\begin{equation}\label{eq:ns55-positive-cross}
+ q_a(f,g)>0.
+\end{equation}
+Consequently the complete semigroup $e^{-sA_a}$ is not positivity
+preserving on the full real $L^2(I_a)$ space with its ordinary
+nonnegative cone: for these tests and all sufficiently small $s>0$,
+\[
+ \langle e^{-sA_a}f,g\rangle<0.
+\]
+This asserts no negative diagonal Weil energy and makes no separate
+claim about order preservation after a parity restriction.
+\end{proposition}
+\begin{proof}
+For disjoint supports the diagonal terms in the operator contribute
+nothing. Away from prime-power separations, the off-diagonal integral
+kernel of Proposition~\ref{prop:v118-log-dirichlet} is
+\[
+ J(t)=2\cosh(t/2)-\rho(t),\qquad
+ \rho(t)=\frac{e^{t/2}}{e^t-e^{-t}},\quad t>0.
+\]
+The logarithmic Laplacian contributes $-1/(2t)$ and its bounded
+correction contributes $-(\rho(t)-1/(2t))$, giving $-\rho(t)$;
+the pole kernel gives the displayed $2\cosh(t/2)$.
+For $u=e^t>1$,
+\[
+ J(t)=\frac{u^3-u-1}{\sqrt u\,(u^2-1)}.
+\]
+The numerator is strictly increasing on $(1,\infty)$, changes sign
+once, and is positive precisely when $t>\log r$.
+Choose a separation $t_0\in(\log r,L)$ outside the finite set
+$\{\log n:1<n<e^L,\ \Lambda(n)\ne0\}$. Two sufficiently small
+disjoint intervals inside $I_a$, at separation $t_0$, have all
+cross separations in the positive region of $J$ and avoid every
+prime-power separation. Choose nonzero nonnegative smooth bumps
+$f,g$ supported in these intervals. All translated prime cross
+terms vanish and the remaining double integral is strictly positive.
+The tests belong to $\mathcal D(A_a)$, and $A_a$ is self-adjoint
+and bounded below at this fixed window. Strong differentiability
+of its semigroup on the operator domain gives
+\[
+ \langle e^{-sA_a}f,g\rangle
+ =\langle f,g\rangle-s\langle A_af,g\rangle+o(s)
+ =-s q_a(f,g)+o(s),
+\]
+which is negative for small positive $s$.
+\end{proof}
+
+\paragraph{Meaning of the order obstruction.}
+A standard positive-kernel or maximum-principle transfer cannot simply
+be attributed to the complete arithmetic operator. This does not
+exclude a more specialized uniqueness argument, positivity of a
+particular eigenfunction, a different cone, or API itself.
+Positivity of the quadratic form is distinct from preservation of
+pointwise positivity by its semigroup. Moreover conjugation by a
+strictly positive multiplier $h$ with $h,h^{-1}\in L^\infty(I_a)$
+cannot repair this: multiplication by $h$ and by $h^{-1}$ both
+preserve the nonnegative cone, so positivity of the conjugated
+semigroup would imply positivity of the original one. This concerns
+the full signed operator, not a separate positive edge form.
+
+
+\paragraph{What remains after these tests.}
+The whole-window API input has not been weakened by a proved arithmetic
+estimate. The local counterexamples rule out one proposed uniqueness
+principle for the actual operator, while the nonpositive semigroup rules
+out using its ordinary cone as a maximum-principle mechanism. The
+prime-free-cell result needs support separation that a first-zero
+nullvector lacks. The finite dilation identity preserves the precise
+signed prime overlaps and pole changes; their required estimate remains
+unproved. This is a failure of these proposed mechanisms, not a
+counterexample to whole-window injectivity or Weil positivity.
+
+The full NS-55 evidence also records the norm discontinuity of an
+entering compressed prime shift, its continuous screw-ramp smoothing,
+and a valid fixed-window compact Fredholm reduction. The latter leaves
+the physical coupling point potentially exceptional; discreteness is
+not exclusion. These supporting arguments are archived in
+\path{evidence/ns55_kernel/}; no global analyticity, additional endpoint
+regularity, new window, tail metric, G2 or RH result is asserted.

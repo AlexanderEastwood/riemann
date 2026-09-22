@@ -1,0 +1,201 @@
+% NS-55: exact and scoped. Local-patch witnesses are not full nullvectors.
+\subsection*{Unique continuation: the arithmetic shifts change the theorem}
+
+Use $I_a=(-a,a)$, its complete operator $A_a$, and
+\[
+ \ell=\log2,\quad w_2=\frac{\log2}{\sqrt2},\quad
+ \rho(t)=\frac{e^{-t/2}}{1-e^{-2t}},\quad
+ R(t)=2\cosh(t/2)-\rho(t)\quad(t>0).
+\]
+If $f$ vanishes on an open $J\subset I_a$ separated from its support,
+the exact operator there is
+\begin{equation}\label{eq:ns55-off-support-operator}
+ (A_af)(x)=\int_{I_a}R(|x-y|)f(y)\,dy
+ -\sum_{1<n<e^{2a}}\frac{\Lambda(n)}{\sqrt n}
+       \{E_af(x-\log n)+E_af(x+\log n)\}.
+\end{equation}
+This follows from Proposition~\ref{prop:v118-log-dirichlet}: local
+diagonal terms vanish, and the logarithmic kernel and its correction
+combine into $-\rho$. Equivalently it is the off-origin distribution
+identity for $-\mathfrak g''$. In particular the pole term is retained.
+
+\begin{proposition}[Failure of local open-set unique continuation]
+\label{prop:ns55-local-ucp-counterexample}
+For every $a>\tfrac12\log2$, there are a nonempty $U\Subset I_a$
+and a nonzero real $f\in\mathcal D(A_a)$ with
+\[
+ f|_U=0,\qquad (A_af)|_U=0.
+\]
+The second equality is pointwise and distributional on $U$ only.
+No complete nullvector or negative Weil direction is asserted.
+\end{proposition}
+\begin{proof}
+Set
+\[
+ \delta_0=\min\{\ell/8,\tfrac14\log(3/2)\},\qquad
+ M_0=2\cosh((\ell+2\delta_0)/2)+\rho(\ell-2\delta_0).
+\]
+Choose $0<\epsilon<\min\{a-\ell/2,\delta_0,w_2/(4M_0)\}$ and put
+\[
+ U=(\ell/2-\epsilon,\ell/2+\epsilon),\quad V=U-\ell,\quad
+ W=(-\epsilon,\epsilon).
+\]
+Their closures are disjoint and inside $I_a$. Choose any nonzero real
+$h\in C_c^\infty(W)$ and define on $L^2(U)$
+\[
+ (Tv)(x)=\int_U R(x-t+\ell)v(t)\,dt,\qquad
+ H(x)=\int_W R(x-y)h(y)\,dy .
+\]
+Since $|R(t)|\le M_0$ for $|t-\ell|\le2\delta_0$, Schur's estimate
+gives $\|T\|_{2\to2}\le2\epsilon M_0<w_2/2$. Define
+$v=(w_2I-T)^{-1}H$ by its convergent Neumann series. The equation
+$w_2v=H+Tv$ makes $v$ smooth on a neighborhood of $\overline U$:
+the smooth kernels and their derivatives are bounded on that
+neighborhood times the fixed integration intervals.
+
+Set $f(y)=v(y+\ell)$ on $V$, $f=h$ on $W$, and zero elsewhere.
+This is nonzero. On $U$, positive prime shifts lie beyond the support.
+For $n\ge3$, $2\epsilon<\log(3/2)$ puts $x-\log n$ left of $V$.
+The only nonzero translated value can therefore be $n=2$, equal to
+$v(x)$. Equation~\eqref{eq:ns55-off-support-operator} gives
+$A_af=-w_2v+Tv+H=0$ on $U$.
+
+The zero extension is compactly supported and piecewise smooth with
+finitely many jumps, hence belongs to $H^s(\mathbb R)$ for
+$0<s<1/2$. Its full-line logarithmic multiplier lies in $L^2$:
+$\log^2|\xi|\ll_s1+|\xi|^{2s}$ at high frequency, and its transform
+is bounded near zero, where $\log^2|\xi|$ is integrable. The form
+representation therefore puts $f$ in
+$\mathcal D(\tfrac12L_\Delta^{\rm Dir})$. Bounded perturbation
+gives $f\in\mathcal D(A_a)$. This is the complete operator, not a head.
+\end{proof}
+
+\begin{proposition}[Parity and finitely many linear constraints]
+\label{prop:ns55-parity-ucp-counterexample}
+For every $a>\log2$ and $\sigma\in\{1,-1\}$, there are a nonempty
+$U\Subset(0,a)$ and an infinite-dimensional real linear subspace
+$\mathcal L_\sigma\subset\mathcal D(A_a)$ such that
+\[
+ f(-x)=\sigma f(x),\qquad f=A_af=0\text{ on }U\cup(-U)
+ \quad(f\in\mathcal L_\sigma).
+\]
+One may impose any prescribed finite number of real linear conditions
+on $\mathcal L_\sigma$ and still obtain nonzero witnesses. In particular,
+source orthogonality does not restore this local unique-continuation
+statement. This assertion remains about a local patch, not the full kernel.
+\end{proposition}
+\begin{proof}
+Put $\mathcal P_a=\{\log n:1<n<e^{2a},\ \Lambda(n)>0\}$.
+Choose $v_0\in(0,a-\ell)$ avoiding the finitely many equations
+$2v_0+\ell\in\mathcal P_a$, and let $u_0=v_0+\ell$.
+Choose $w_0\in(0,v_0/2)$ with
+$u_0-w_0,u_0+w_0\notin\mathcal P_a$.
+
+Choose an initial radius $\epsilon_0>0$ such that the intervals
+$U_{\epsilon_0},V_{\epsilon_0},W_{\epsilon_0}$ about $u_0,v_0,w_0$
+and their reflections have disjoint closures inside $I_a$.
+Choose it smaller if necessary so differences from $U_{\epsilon_0}$
+to $V_{\epsilon_0},-V_{\epsilon_0},W_{\epsilon_0},-W_{\epsilon_0}$
+meet $\mathcal P_a$ only in the intended $U-V$ difference $\ell$.
+There are only finitely many forbidden central differences, all
+separated from $\mathcal P_a$, so this is possible. Set
+\[
+ M_\sigma=\sup_{x,t\in\overline{U_{\epsilon_0}}}
+  |R(x-t+\ell)+\sigma R(x+t-\ell)|<\infty .
+\]
+Choose $0<\epsilon\le\epsilon_0$ with
+$2\epsilon M_\sigma<w_2/2$, and write $U,V,W$ for the smaller intervals.
+For arbitrary $h\in C_c^\infty(W)$, define
+\begin{align*}
+ (T_\sigma v)(x)&=\int_U
+       \{R(x-t+\ell)+\sigma R(x+t-\ell)\}v(t)\,dt,\\
+ H_\sigma(x)&=\int_W
+       \{R(x-y)+\sigma R(x+y)\}h(y)\,dy .
+\end{align*}
+All arguments are positive. Solve
+$(w_2I-T_\sigma)v=H_\sigma$ by the same norm bound.
+Set $f(y)=v(y+\ell)$ on $V$, $f=h$ on $W$, reflect with sign $\sigma$,
+and put it zero elsewhere. The same smoothness and domain proof applies.
+The sole nonzero prime-shift term on $U$ is $-w_2v$, and the integrals
+give $T_\sigma v+H_\sigma$, hence $A_af=0$ there. Parity gives the
+reflected equality. The linear map $h\mapsto f$ is injective since
+$f|_W=h$, so its image is infinite dimensional. Its intersection with
+the kernels of finitely many linear functionals is still infinite
+dimensional. A complex orthogonality condition on real witnesses is
+at most two real linear conditions.
+\end{proof}
+
+\paragraph{The logarithmic theorem and its missing hypotheses.}
+Chen--Hauer--Weth~\cite[Theorem 1.7]{ChenHauerWeth2023} prove that
+$u=L_\Delta u=0$ on the \emph{same} nonempty open set implies $u=0$
+on $\mathbb R$, for $u\in L^1((1+|x|)^{-1}dx)$.
+See also Harrach--Lin--Weth~\cite[Proposition 4.1]{HarrachLinWeth2025}.
+Compactly supported $L^2$ functions satisfy the integrability hypothesis.
+But on an interior open set the arithmetic equation gives
+$L_\Delta E_af=-2\mathcal K_a f$; $f=0$ does not annihilate this
+nonlocal remainder. The preceding counterexamples show the difference
+for the actual operator. Replacing it by a local multiplication
+potential would change the problem.
+
+Outside the window, only $E_af=0$ is prescribed; neither
+$L_\Delta E_af=0$ nor the full arithmetic equation is prescribed.
+For example, at $x>a$ one has
+\[
+ (L_\Delta E_af)(x)=-\int_{-a}^a\frac{f(y)}{x-y}\,dy,
+\]
+which generally is nonzero. Endpoint trace zero supplies no open
+interior vanishing set or missing exterior equation.
+
+\begin{proposition}[Uniqueness with a prime-shift-free exterior-of-support cell]
+\label{prop:ns55-prime-free-cell}
+Let $f\in V_a$ have essential support $S\subset[-a,a]$, with
+$b=\sup S<a$. Suppose a nonempty open interval $J\Subset(b,a)$ obeys
+\[
+ J\cap\bigcup_{s\in\mathcal P_a}(S+s)=\varnothing,\qquad
+ A_af=0\text{ on }J\text{ in distributions}.
+\]
+Then $f=0$. The reflected left-hand statement also holds.
+Here $A_af$ is understood weakly if only $f\in V_a$ is initially given.
+\end{proposition}
+\begin{proof}
+Assume $S$ nonempty. Positive shifts lie beyond $S$; the displayed
+separation removes negative shifts. Thus
+\[
+ \mathcal R_f(x)=\int_{I_a}R(x-y)f(y)\,dy=0\quad(x\in J).
+\]
+This is real analytic for all $x>b$, so vanishes on that half-line.
+Put
+$M_-=\int e^{-y/2}f(y)\,dy$ and
+$M_j=\int e^{(2j+1/2)y}f(y)\,dy$.
+The locally uniformly convergent identity
+$\rho(t)=\sum_{j\ge0}e^{-(2j+1/2)t}$ for $t>0$ gives
+\[
+ 0=e^{-x/2}\mathcal R_f(x)
+   =M_- -\sum_{j=1}^\infty M_j e^{-(2j+1)x}\quad(x>b).
+\]
+The $j=0$ term cancels exactly one pole contribution. Since
+$|M_j|\le\|f\|_1e^{(2j+1/2)b}$, the last series is a power
+series in $z=e^{-x}$ with radius at least $e^{-b}$.
+Taking $x\to\infty$ and then its coefficients gives $M_-=0$
+and $M_j=0$ for every $j\ge1$.
+
+Push the finite complex measure $e^{y/2}f(y)\,dy$ forward by
+$t=e^{2y}$. It is supported in $[e^{-2a},e^{2b}]$, away from zero,
+and all its positive integer moments vanish. Polynomials without a
+constant term are dense among continuous functions on this interval:
+approximate the desired function divided by $t$ and multiply by $t$.
+Thus the measure is zero, proving $f=0$.
+Only the separated integral component was analytically continued,
+not the whole arithmetic equation with its shifts.
+\end{proof}
+
+\paragraph{Scope of the remaining gap.}
+The last proposition requires actual support separation, not smallness
+or zero endpoint trace. A separate first-crossing support argument forces
+a first-crossing nullvector to reach both window endpoints; hence it
+cannot supply the last proposition's exterior-of-support cell inside
+the window. The local counterexamples are not first-crossing nullvectors.
+They disprove the direct transplantation of the logarithmic open-set
+unique-continuation theorem to the full shifted operator, while the
+prime-free-cell theorem is a restricted arithmetic uniqueness result.
+Complete affine-potential injectivity, G2 and RH remain open.

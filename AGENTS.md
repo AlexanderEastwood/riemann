@@ -102,6 +102,15 @@ gains retain the Schur complement and admit a trace lower bound; the RBC
 asymptotic arithmetic estimate remains open. Any proven NB convergence rate
 would suffice. No new window, tail metric, uniform floor, G2 or RH claim.
 
+Version 1.55 (NS-55) proves local-patch UCP false for the actual prime-shift
+operator, including both parities and finite source constraints. The witnesses
+are not full-window nullvectors. Its full real-space semigroup fails ordinary
+pointwise positivity preservation; this is not negative diagonal Weil energy.
+A prime-free exterior observation cell yields scoped uniqueness, but a first-zero
+nullvector reaches both window endpoints. Finite dilation retains unestimated
+signed prime/pole changes. API, the uniform floor, G2 and RH remain open.
+No new window or tail metric.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NS-55 · Arithmetic unique continuation · 22 September 2026</title></head>
+<body style="margin:0;background:#f3f0e9;color:#202c31;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.62;">
+<main style="max-width:680px;margin:38px auto;padding:38px 32px;background:#fffdf8;border-top:6px solid #294f57;">
+<p style="margin:0 0 10px;color:#53666a;font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;">NS-55 · Research assessment · 22 September 2026 · Version 1</p>
+<h1 style="font-size:31px;line-height:1.2;margin:0 0 22px;">The prime shifts change the uniqueness theorem</h1>
+<p style="font-size:20px;line-height:1.5;"><strong>The complete arithmetic operator can vanish on an open interval where the input itself vanishes, while the input is nonzero elsewhere.</strong> We prove this by construction. This rules out directly importing the logarithmic Laplacian’s local uniqueness theorem.</p>
+<p style="padding:13px 16px;background:#eaf0ef;border-left:3px solid #294f57;">The witnesses satisfy the equation only on the observation interval. They are <strong>not full nullvectors</strong>, negative Weil directions, or counterexamples to RH. Complete arithmetic injectivity, G2 and RH remain open.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">What is proved</h2>
+<table style="width:100%;border-collapse:collapse;font-size:15px;">
+<tr><th style="padding:10px 8px;text-align:left;border-bottom:2px solid #bac7c9;">Statement</th><th style="padding:10px 8px;text-align:left;border-bottom:2px solid #bac7c9;">Scope</th></tr>
+<tr><td style="padding:11px 8px;border-bottom:1px solid #dce2e1;">A nonzero f in the complete operator domain has f = A<sub>a</sub>f = 0 on an open interior interval.</td><td style="padding:11px 8px;border-bottom:1px solid #dce2e1;">Every a &gt; ½ log 2.</td></tr>
+<tr><td style="padding:11px 8px;border-bottom:1px solid #dce2e1;">An infinite-dimensional space of such witnesses exists in each parity. Finitely many linear constraints can be imposed.</td><td style="padding:11px 8px;border-bottom:1px solid #dce2e1;">Every a &gt; log 2. Includes source orthogonality.</td></tr>
+<tr><td style="padding:11px 8px;border-bottom:1px solid #dce2e1;">A weak solution vanishes if an observation interval lies beyond its support and avoids every active prime-shifted copy of that support.</td><td style="padding:11px 8px;border-bottom:1px solid #dce2e1;">An explicit support-separation hypothesis.</td></tr>
+</table>
+<p>These are exact analytic results for the complete operator. No finite head, new numerical window, or tail metric enters.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">How the local cancellation works</h2>
+<p>Away from the input’s support, the smooth part of the actual kernel is</p>
+<p style="padding:12px 14px;background:#f0f3f2;text-align:center;font-size:17px;">R(t) = 2 cosh(t/2) − e<sup>−t/2</sup>/(1 − e<sup>−2t</sup>), &nbsp; t &gt; 0.</p>
+<p>The remaining terms evaluate the input at shifts by log n, weighted by Λ(n)/√n. Choose two short intervals separated by log 2. On the observation interval, the n = 2 term becomes −w<sub>2</sub>v, where w<sub>2</sub> = log 2/√2. The other support intervals are placed so that every unwanted prime shift vanishes there.</p>
+<p>A third interval carries an arbitrary smooth input h. The equation on the observation interval becomes</p>
+<p style="padding:12px 14px;background:#f0f3f2;text-align:center;">(w<sub>2</sub>I − T)v = Hh.</p>
+<p>The smooth integral operator T has norm at most 2εM<sub>0</sub>. Taking ε so that 2εM<sub>0</sub> &lt; w<sub>2</sub>/2 gives a convergent Neumann inverse. This constructs v exactly. Both the pole contribution and the full prime sum remain in the equation.</p>
+<p>The resulting input is piecewise smooth with finitely many jumps. It belongs to H<sup>s</sup> for 0 &lt; s &lt; ½, enough to put its logarithmic Fourier multiplier in L² and hence put the input in the complete operator domain. No H¹ assumption is made.</p>
+<p>Reflection gives the even and odd constructions. The independent choice of h leaves an infinite-dimensional witness space. A finite source constraint therefore cannot restore this particular local uniqueness property.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">The restricted theorem that survives</h2>
+<p>Suppose the essential support ends at b &lt; a. Require a nonempty interval J inside (b,a) which avoids every translated support S + log n active at the window. If the weak arithmetic equation holds on J, all prime shifts vanish there. The remaining integral potential is analytic throughout x &gt; b.</p>
+<p>Its vanishing on J therefore forces it to vanish on that half-line. Expanding the exponential kernel yields moments of the input; the first exponential term cancels exactly one pole contribution. All remaining positive integer moments vanish. After the change of variable t = e<sup>2y</sup>, these moments determine a measure supported on a compact interval away from zero, so f = 0.</p>
+<p><strong>The hypothesis does real work.</strong> A separate first-crossing argument proves that a proposed first-zero nullvector reaches both window endpoints. That vector has no empty exterior-of-support strip inside the window. Its zero boundary trace does not create such a strip.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">Known uniqueness and geometric extension</h2>
+<p>Chen–Hauer–Weth’s Theorem 1.7 requires u and L<sub>Δ</sub>u to vanish on the same open set. The complete arithmetic equation instead gives L<sub>Δ</sub>E<sub>a</sub>f = −2K<sub>a</sub>f, with a nonlocal K<sub>a</sub>. <a href="https://arxiv.org/html/2312.15689v1" style="color:#245b70;">Primary full text, v1</a>.</p>
+<p>Their known three-dimensional representation is the line-source potential</p>
+<p style="padding:12px 14px;background:#f0f3f2;text-align:center;">W<sub>u</sub>(x,y) = ½ ∫ u(s) / √((x − s)² + |y|²) ds, &nbsp; y ∈ ℝ².</p>
+<p>It is harmonic off the line. With T<sub>u</sub> = lim<sub>r→0</sub>(W<sub>u</sub> + u log r), the arithmetic null equation becomes T<sub>E<sub>a</sub>f</sub> = (log 2 − γ)f + K<sub>a</sub>f on the interval. The nonlocal arithmetic boundary term survives; exterior input zero does not supply exterior trace zero. This is existing geometric representation, not a new positivity bound. <a href="https://arxiv.org/html/2312.15689v1" style="color:#245b70;">Chen–Hauer–Weth, Theorems 1.2 and 1.6</a>.</p>
+<p>Harrach–Lin–Weth also state the simultaneous-vanishing result in Proposition 4.1. Their logarithmic Schrödinger problem has a local multiplication potential; its forward setup assumes the relevant absence of a zero Dirichlet eigenvalue. That assumption cannot prove the missing injectivity here. <a href="https://doi.org/10.1016/j.jde.2025.113665" style="color:#245b70;">Journal of Differential Equations 444 (2025), 113665</a>; <a href="https://arxiv.org/html/2412.17775v1" style="color:#245b70;">primary preprint</a>.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">Assessment under the repository’s claim rules</h2>
+<p><strong>What had to change:</strong> replacing the arithmetic operator by its logarithmic principal part loses the prime-shift cancellation. A usable uniqueness theorem must retain those shifts or impose an actual support-separation condition.</p>
+<p><strong>Precise obstruction:</strong> the complete operator’s local open-set uniqueness assertion is false. The restricted exterior-cell theorem is true, but its support hypothesis is unavailable for a first-crossing nullvector.</p>
+<p><strong>Bound or object:</strong> the local theorem fails for the actual operator; this is more than failure of a bound. The object of interest—complete-window injectivity—remains unresolved.</p>
+<p><strong>Review:</strong> parent and prime-shift agent independently checked the construction, domain argument and moment proof; no MAJOR or MINOR mathematical findings were identified. I independently reviewed the first-crossing lane’s complete-domain dilation calculation and crossing countermodel without such findings.</p>
+<p><strong>Build status:</strong> full manuscript integration, page count and reference counts are the parent task’s responsibility. This subtask report does not substitute source review for a manuscript build.</p>
+<p style="margin-top:28px;padding-top:15px;border-top:1px solid #bac7c9;color:#53666a;font-size:14px;">Proof source: evidence/ns55_kernel/unique_continuation/proof.tex. Classification: exact identity, proved implications and counterexample, and named open input. No new window or tail metric. API, G2 and RH remain open.</p>
+</main></body></html>

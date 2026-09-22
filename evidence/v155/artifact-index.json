@@ -1,0 +1,65 @@
+{
+  "scope": "New NS-55 task artifacts only; not cumulative",
+  "files": [
+    {
+      "path": "evidence/ns55_kernel/first_crossing/assessment-2026-09-22-v1.html",
+      "sha256": "ea39b33b49c4313d2c2b03eab1a6f6b80cae8725ed59007b7b74ec113be2038f",
+      "size_bytes": 5539
+    },
+    {
+      "path": "evidence/ns55_kernel/first_crossing/findings.md",
+      "sha256": "e118e60e8f454a492d767c9d95dbf80b9b470168194648fdb5cf949c7ba3da14",
+      "size_bytes": 5610
+    },
+    {
+      "path": "evidence/ns55_kernel/first_crossing/prime-shift-review-2026-09-22-v1.html",
+      "sha256": "a44d2e84b9f26f6195f43b24e4b8760a3b674c01770947e46d3cf0ea4f4f6d19",
+      "size_bytes": 4795
+    },
+    {
+      "path": "evidence/ns55_kernel/first_crossing/proof.tex",
+      "sha256": "f6a37393d8bd2ecac13c1b87d1434babcd6def615614e5fe87057ad38e872e7a",
+      "size_bytes": 10902
+    },
+    {
+      "path": "evidence/ns55_kernel/first_crossing/validation.json",
+      "sha256": "23392009e493764948731a01d36002d4565a4544b21bf9881650a7d4baefc368",
+      "size_bytes": 832
+    },
+    {
+      "path": "evidence/ns55_kernel/prime_shift/assessment.md",
+      "sha256": "23964433a556ee8575e6474b556ae1f32438e9a75473e6d1d71b7a7bf6a8002e",
+      "size_bytes": 6268
+    },
+    {
+      "path": "evidence/ns55_kernel/prime_shift/prime-shift-assessment-2026-09-22-v1.html",
+      "sha256": "b0a54bee834f4b35833d864b4a2519cd5265374cbefd5cd7bf60a966d07fded3",
+      "size_bytes": 5084
+    },
+    {
+      "path": "evidence/ns55_kernel/prime_shift/proof.tex",
+      "sha256": "8be4284b2f76c28d499743ecd1661164015ce82e91c0c4b8b9ab49c830825177",
+      "size_bytes": 10722
+    },
+    {
+      "path": "evidence/ns55_kernel/prime_shift/ucp-independent-review.md",
+      "sha256": "85c9363be004520537cdd26ba7a60a19f5635e1757ef12d4996ea600827369e6",
+      "size_bytes": 3912
+    },
+    {
+      "path": "evidence/ns55_kernel/unique_continuation/findings.md",
+      "sha256": "ee3bccd7bc8675ae27c49770dc3d664984961f16e84f1924e6ead88c0470c3eb",
+      "size_bytes": 6641
+    },
+    {
+      "path": "evidence/ns55_kernel/unique_continuation/proof.tex",
+      "sha256": "0ce30b29310010a177b4c36c00138119163ac18c851447fabe8065eb9bf77113",
+      "size_bytes": 9036
+    },
+    {
+      "path": "evidence/ns55_kernel/unique_continuation/unique-continuation-report-2026-09-22-v1.html",
+      "sha256": "809e4830190ce50e199e8c5d94084b3932b7bf57c8b1c020e8ffdfd470d036a2",
+      "size_bytes": 8854
+    }
+  ]
+}

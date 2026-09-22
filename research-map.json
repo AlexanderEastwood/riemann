@@ -668,8 +668,8 @@
       "parent": "altroutes",
       "prop": "prop:ns51-affine-potential; eq:ns51-api",
       "evidence": "evidence/ns51_kernel",
-      "branch": "codex/ns51-new-routes",
-      "note": "Complete form-domain reduction is exact in both parities. API remains open; no uniform positive gap is required.",
+      "branch": "codex/ns55-arithmetic-kernel",
+      "note": "Complete form-domain reduction is exact in both parities. NS-55 rules out importing local UCP or ordinary-cone semigroup positivity; first-zero nullvectors must reach both endpoints. API remains open, with no signed arithmetic overlap estimate and no required uniform positive gap.",
       "wall": {
         "input": "API: actual arithmetic affine-potential injectivity (open)",
         "to": "rh",
@@ -684,6 +684,34 @@
       "prop": "prop:ns51-no-generic-bootstrap",
       "evidence": "evidence/ns51_kernel",
       "note": "Rank-one bounded perturbation of the same logarithmic principal operator has a non-H¹ nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted."
+    },
+    {
+      "id": "localucp",
+      "title": "Local open-set UCP for the full prime-shift operator",
+      "status": "closed",
+      "parent": "kernelapi",
+      "prop": "prop:ns55-local-ucp-counterexample; prop:ns55-parity-ucp-counterexample",
+      "evidence": "evidence/v155",
+      "note": "Exact local-patch counterexamples, in each parity for a>log2 and after finitely many linear constraints. They do not solve A_a f=0 on the whole window and give no negative diagonal Weil energy. Prime-shift-free exterior-cell uniqueness remains valid under its explicit support hypothesis.",
+      "wall": {
+        "input": "local f=A_a f=0 does not force f=0; whole-window API is not refuted",
+        "to": null,
+        "src": "prop:ns55-local-ucp-counterexample"
+      }
+    },
+    {
+      "id": "fullpositivecone",
+      "title": "Ordinary-cone positivity for the full Weil semigroup",
+      "status": "closed",
+      "parent": "kernelapi",
+      "prop": "prop:ns55-nonpositive-semigroup",
+      "evidence": "evidence/v155",
+      "note": "Positive off-diagonal pole-minus-archimedean cross terms for disjoint nonnegative tests show that the full real-space semigroup is not positivity preserving. A bounded positive multiplication conjugation cannot repair the cone property. No separate parity-cone claim, negative q direction, or API closure.",
+      "wall": {
+        "input": "order-preservation shortcut fails; quadratic-form positivity is a different property",
+        "to": null,
+        "src": "prop:ns55-nonpositive-semigroup"
+      }
     }
   ]
 }
