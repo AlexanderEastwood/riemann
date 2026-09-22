@@ -6,7 +6,8 @@
     "live": "current route (gold): being worked now",
     "closed": "closed route (red): proved insufficient or impossible; kept deliberately",
     "blocked": "attempted; obstruction found",
-    "open": "target, not yet attacked"
+    "open": "target, not yet attacked",
+    "wall": "wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge"
   },
   "nodes": [
     {
@@ -92,7 +93,12 @@
       "parent": "windows",
       "note": "NS-44 fresh exact dyadic witnesses, Arb 320/448: positive q/D <7e-18 even and <12e-18 odd, contradicting the stipulated 1e-8 comparison. Failure of this comparison, not negative Weil directions or complete lambda=5 positivity. Historical v1.27 originals remain unarchived.",
       "prop": "prop:v152-tail-comparison",
-      "evidence": "evidence/ns44_metric_replay"
+      "evidence": "evidence/ns44_metric_replay",
+      "wall": {
+        "input": "stipulated 1e-8 D tail comparison fails: positive q/D < 7e-18 (lambda=5)",
+        "to": null,
+        "src": "prop:v152-tail-comparison; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "uniform",
@@ -108,7 +114,12 @@
       "prop": "prop:v119-prime-essential",
       "branch": "closed/prime-norm",
       "note": "norm ~ lambda, survives any finite removal",
-      "evidence": "evidence/v124/g2_growing_sign"
+      "evidence": "evidence/v124/g2_growing_sign",
+      "wall": {
+        "input": "cost: prime norm ~ lambda survives finite removal; exponential cutoff (estimate, not route)",
+        "to": null,
+        "src": "prop:v119-prime-essential; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "normcontr",
@@ -117,7 +128,12 @@
       "parent": "uniform",
       "prop": "prop:v120-norm-counterexample",
       "branch": "closed/norm-contraction",
-      "evidence": "evidence/v124/g2_weighted_signed"
+      "evidence": "evidence/v124/g2_weighted_signed",
+      "wall": {
+        "input": "specific estimate: violated by a POSITIVE direction, q/D > 2.05 at lambda=4",
+        "to": null,
+        "src": "prop:v120-norm-counterexample; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "schatten",
@@ -126,7 +142,12 @@
       "parent": "uniform",
       "prop": "prop:v132-schatten",
       "branch": "closed/schatten",
-      "evidence": "MISSING"
+      "evidence": "MISSING",
+      "wall": {
+        "input": "scoped: remainder outside finite Schatten classes; negative-only penalty stays a constant (does not obstruct v136)",
+        "to": null,
+        "src": "prop:v132-schatten; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "sampling",
@@ -135,7 +156,12 @@
       "parent": "uniform",
       "prop": "prop:v121-complement-cancellation",
       "branch": "closed/sampling-dominance",
-      "evidence": "evidence/v124/g2_schur_cancellation"
+      "evidence": "evidence/v124/g2_schur_cancellation",
+      "wall": {
+        "input": "estimate counterexample: source-complement vector with tiny q despite O(1) cancellation",
+        "to": null,
+        "src": "prop:v121-complement-cancellation; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "farmaj",
@@ -145,7 +171,12 @@
       "prop": "prop:v125-cutoff-cost",
       "branch": "closed/scalar-far-majorant",
       "note": "N ~ L exp(M_phi): exponential cutoff cost",
-      "evidence": "evidence/v126/g2_window_resolution"
+      "evidence": "evidence/v126/g2_window_resolution",
+      "wall": {
+        "input": "cost of one estimate: N > L exp(M_phi/(1-c)); not every method",
+        "to": null,
+        "src": "prop:v125-cutoff-cost; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "blockmetric",
@@ -155,7 +186,12 @@
       "branch": "closed/block-metric",
       "note": "NS-45 new 320/448-bit dyadic pair certificates on the first three existing blocks give exact rational Rayleigh bounds 341/250 even and 2093/1500 odd >1. Excludes all admissible smaller block metrics and positive row weights for this partition; no full-block inertia or general signed-block no-go. Historical v1.28 originals remain unarchived.",
       "evidence": "evidence/ns45_block_replay",
-      "prop": "prop:v152-block-comparison"
+      "prop": "prop:v152-block-comparison",
+      "wall": {
+        "input": "fixed-partition comparison fails: Rayleigh 341/250, 2093/1500 > 1 (lambda=5, N=25)",
+        "to": null,
+        "src": "prop:v152-block-comparison; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "flattop",
@@ -164,7 +200,12 @@
       "parent": "uniform",
       "prop": "prop:v132-flat-top",
       "branch": "closed/flat-top",
-      "evidence": "MISSING"
+      "evidence": "MISSING",
+      "wall": {
+        "input": "construction class: form-exact positive smoothing = point mass; signed smoothing not covered",
+        "to": null,
+        "src": "prop:v132-flat-top; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "recipband",
@@ -173,7 +214,12 @@
       "parent": "uniform",
       "branch": "closed/reciprocal-band",
       "note": "v1.33, commutator norm > 9e-6",
-      "evidence": "MISSING"
+      "evidence": "MISSING",
+      "wall": {
+        "input": "generic mechanism: persistent source-compressed commutator > 9e-6; not every band choice",
+        "to": null,
+        "src": "v1.33; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "cotlar",
@@ -182,7 +228,12 @@
       "parent": "uniform",
       "branch": "closed/cotlar-atomization",
       "note": "v1.34, cross norm >= 73/(375 pi)",
-      "evidence": "MISSING"
+      "evidence": "MISSING",
+      "wall": {
+        "input": "shortcut: cross norm >= 73/(375 pi) cofinally; not all Cotlar arguments",
+        "to": null,
+        "src": "v1.34; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "scalarprim",
@@ -192,7 +243,12 @@
       "prop": "cor:v137-scalar-no-go",
       "branch": "closed/scalar-primitive",
       "note": "a Delta(beta_a) -> infinity, unconditional",
-      "evidence": "evidence/v137"
+      "evidence": "evidence/v137",
+      "wall": {
+        "input": "genuine closure of the scalar route: a Delta(beta_a) -> infinity, unconditional",
+        "to": null,
+        "src": "cor:v137-scalar-no-go; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+      }
     },
     {
       "id": "concentration",
@@ -202,7 +258,12 @@
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
       "note": "Valid sufficient criterion; the missing positivity input is a complete joint signed operator lower bound with a uniform cofinal error. QG plus a separate admissible bounded-energy packet would obstruct bounded level count, not supply this positivity input. NS-22 grid-family losses and its invalid sampled tail charge prove no closure (NS-31/36). NS-43 proves unrestricted exact adaptive levels are equivalent to the floor target; a nonarithmetic countermodel refutes general completeness of scalar set bounds. Specific arithmetic operator estimates remain open.",
-      "evidence": "evidence/v152"
+      "evidence": "evidence/v152",
+      "wall": {
+        "input": "QG + WLH packet",
+        "to": "floor",
+        "src": "ass:v149-qg; ZLD implies the QC_K bound at a fixed window (prop:v151-input-comparison ii); CAE = target"
+      }
     },
     {
       "id": "weaken",
@@ -260,10 +321,10 @@
     },
     {
       "id": "altroutes",
-      "title": "Alternative criteria (all equivalent; same wall)",
+      "title": "Alternative criteria (classical RH equivalents; no finite bridge proved)",
       "status": "open",
       "parent": "rh",
-      "note": "each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21"
+      "note": "Each child is a classical RH criterion. The record proved structural obstructions to specific bridges, not that every bridge fails; 'all equivalent; same wall' withdrawn per audit PR #22."
     },
     {
       "id": "circle",
@@ -277,40 +338,65 @@
     {
       "id": "debranges",
       "title": "de Branges / Hermite-Biehler",
-      "status": "closed",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Structural statement only: existence of the shifted de Branges structure does not decide the unshifted sign.",
+      "wall": {
+        "input": "screw-kernel positivity = RH; no fixed-window bridge",
+        "to": "rh",
+        "src": "Suzuki Thm 1.5 (arXiv 2606.09096); the shifted finite-window construction sits strictly below the spectral bottom and does not determine its sign; fixed-window determinacy equivalence not proved"
+      }
     },
     {
       "id": "f1",
       "title": "function field / Hodge / F_1",
-      "status": "closed",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "nothing finite transfers; window lambda has no intersection-theoretic meaning"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Not an RH-equivalent criterion here: a missing construction, so no dashed edge.",
+      "wall": {
+        "input": "no intersection form supplied for this window (missing construction)",
+        "to": null,
+        "src": "RESEARCH_MAP note supplied no number-field intersection form, transfer map, or impossibility proof; function-field RH is a theorem for different objects"
+      }
     },
     {
       "id": "nb",
       "title": "Nyman-Beurling-Baez-Duarte",
-      "status": "closed",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "no finite NB statement equivalent to W_lambda>=0; d_N certified to N=600, oscillates around C/log N; Burnol Thm 3.1 is the semantic lock",
-      "evidence": "evidence/diag_routes/nb"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. The earlier 'a proof must attain the sharp C/log N rate' sentence is withdrawn (audit A3).",
+      "evidence": "evidence/diag_routes/nb",
+      "wall": {
+        "input": "d_N -> 0 = RH; no finite bridge from W_4 to d_N",
+        "to": "rh",
+        "src": "Burnol's zero-evaluator/co-Poisson dictionary is structural, not a bound for a specified d_N; the report's sharp-rate necessity claim is false (audit A3)"
+      }
     },
     {
       "id": "li",
       "title": "Li / Keiper coefficients",
-      "status": "closed",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "Li class \u2229 Paley-Wiener = {0}: no window certifies any lambda_n; W_4>=0 gives windowed lambda_n^[log16] >= 0 only",
-      "evidence": "evidence/diag_routes/li"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. What is proved: the canonical rational Li-transform class meets the fixed-window entire class trivially.",
+      "evidence": "evidence/diag_routes/li",
+      "wall": {
+        "input": "all Li coefficients >= 0 = RH; windowed coefficients are different objects",
+        "to": "rh",
+        "src": "Li class \u2229 finite-window Paley-Wiener class = {0} blocks direct identification; that every transfer reduces to prop:v121 is argued, not proved"
+      }
     },
     {
       "id": "dbn",
-      "title": "de Bruijn-Newman (0 <= Lambda <= 0.22)",
-      "status": "closed",
+      "title": "de Bruijn-Newman (Lambda = 0 iff RH)",
+      "status": "blocked",
       "parent": "altroutes",
-      "note": "no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s",
-      "evidence": "evidence/diag_routes/dbn"
+      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Blanket 'no bridge' withdrawn (audit A4); the route was closed before the v1.46 exact zero expansion existed.",
+      "evidence": "evidence/diag_routes/dbn",
+      "wall": {
+        "input": "Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved",
+        "to": "rh",
+        "src": "Rodgers-Tao Lambda >= 0; the record reproduced a specified positive-time barrier, not a theorem excluding all transfer arguments (audit A4); v1.46 exact zero expansion postdates the route report"
+      }
     },
     {
       "id": "ccmmu",
@@ -394,7 +480,12 @@
       "prop": "prop:v146-packet-loss; prop:v146-level-complexity",
       "branch": "codex/beta-lattice-identity",
       "evidence": "evidence/v146",
-      "note": "NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure. NS-29 makes the missing value-distribution statement ZLD explicit; cumulative size and arbitrary positive-fraction spread are insufficient."
+      "note": "NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure. NS-29 makes the missing value-distribution statement ZLD explicit; cumulative size and arbitrary positive-fraction spread are insufficient.",
+      "wall": {
+        "input": "ZLD + packet",
+        "to": "floor",
+        "src": "prop:v146-level-complexity inputs, named as ZLD in v1.47"
+      }
     },
     {
       "id": "zeroleveldistribution",
@@ -404,7 +495,12 @@
       "prop": "prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet",
       "branch": "codex/level-density-zero-statement",
       "evidence": "evidence/v147",
-      "note": "NS-29: conditional reduction requires lower measures for every level band and source-admissible bounded-energy packet coverage of those bands. Zero theorems assessed do not provide the input. D->infinity gives no uniform band measure; broad pulses cost log X. No closure or RH-equivalence claim."
+      "note": "NS-29: conditional reduction requires lower measures for every level band and source-admissible bounded-energy packet coverage of those bands. Zero theorems assessed do not provide the input. D->infinity gives no uniform band measure; broad pulses cost log X. No closure or RH-equivalence claim.",
+      "wall": {
+        "input": "ZLD + packet",
+        "to": "floor",
+        "src": "ass:v147-zld; packet coverage eq:v147-packet-coverage"
+      }
     },
     {
       "id": "weightedexactcost",
@@ -414,7 +510,12 @@
       "prop": "prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg",
       "branch": "codex/weighted-level-review",
       "evidence": "evidence/v149",
-      "note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim."
+      "note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim.",
+      "wall": {
+        "input": "QG + WLH packet",
+        "to": "floor",
+        "src": "ass:v149-qg"
+      }
     },
     {
       "id": "capacityweight",
@@ -424,7 +525,12 @@
       "prop": "lem:v150-weight; prop:v150-critical-energy; ass:v150-cae",
       "branch": "codex/bounded-capacity-weight",
       "evidence": "evidence/v150",
-      "note": "NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open. NS-43 extends the loss obstruction to any fixed prime-power channel and moving omitted channels bounded away from the endpoint, with unchanged other signed terms. Full coefficient-one or compensated estimates remain open."
+      "note": "NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open. NS-43 extends the loss obstruction to any fixed prime-power channel and moving omitted channels bounded away from the endpoint, with unchanged other signed terms. Full coefficient-one or compensated estimates remain open.",
+      "wall": {
+        "input": "CAE",
+        "to": "floor",
+        "src": "ass:v150-cae; CAE is the bounded-floor target in positive-weight coordinates (v1.51)"
+      }
     },
     {
       "id": "capacityslack",
@@ -434,7 +540,12 @@
       "prop": "prop:v150-capacity-slack",
       "branch": "closed/v150-capacity-slack",
       "evidence": "evidence/v150",
-      "note": "Scoped closure: for this explicit weight, discarding fixed delta>0 of transformed energy, or the prime-2 channel alone, forces eta >= delta*kappa*exp(gamma*lambda^2)-O(lambda log lambda). Exact source-admissible even and odd tests, all cross terms controlled. Does not close coefficient-one capacity, another weight, or the physical Weil form."
+      "note": "Scoped closure: for this explicit weight, discarding fixed delta>0 of transformed energy, or the prime-2 channel alone, forces eta >= delta*kappa*exp(gamma*lambda^2)-O(lambda log lambda). Exact source-admissible even and odd tests, all cross terms controlled. Does not close coefficient-one capacity, another weight, or the physical Weil form.",
+      "wall": {
+        "input": "fixed-slack shortcut: eta >= delta kappa exp(gamma lambda^2) - O(lambda log lambda)",
+        "to": null,
+        "src": "prop:v150-capacity-slack; coefficient-one CAE and other weights not closed"
+      }
     },
     {
       "id": "inputcomparison",
@@ -453,7 +564,12 @@
       "parent": "capacityweight",
       "prop": "prop:ns43-fixed-channel; prop:ns43-moving-channel",
       "evidence": "evidence/v152",
-      "note": "Exact source-admissible even and odd tests force an unbounded comparison error for the specified Gaussian weight. Covers bounded channel counts and sublinear-in-exp(2a) cutoffs. Endpoint-approaching omissions, compensation, and another weight are not closed."
+      "note": "Exact source-admissible even and odd tests force an unbounded comparison error for the specified Gaussian weight. Covers bounded channel counts and sublinear-in-exp(2a) cutoffs. Endpoint-approaching omissions, compensation, and another weight are not closed.",
+      "wall": {
+        "input": "channel deletion: unbounded comparison error for the Gaussian weight",
+        "to": null,
+        "src": "prop:ns43-fixed-channel; prop:ns43-moving-channel"
+      }
     },
     {
       "id": "bumpstrength",
@@ -480,7 +596,12 @@
       "parent": "concentration",
       "prop": "ns43-conc-prop-scalar",
       "evidence": "evidence/v152",
-      "note": "Exact commuting three-outcome countermodels share all scalar set extrema but have signed bottoms -1/5 and +1/10, also after exact source removal. General inference is false; no arithmetic realization or physical concentration impossibility claimed."
+      "note": "Exact commuting three-outcome countermodels share all scalar set extrema but have signed bottoms -1/5 and +1/10, also after exact source removal. General inference is false; no arithmetic realization or physical concentration impossibility claimed.",
+      "wall": {
+        "input": "general inference false: countermodels with equal scalar set extrema and opposite signed bottoms",
+        "to": null,
+        "src": "ns43-conc-prop-scalar"
+      }
     },
     {
       "id": "relativeselection",
@@ -489,7 +610,12 @@
       "parent": "stepb",
       "prop": "prop:ns43-ccm-rayleigh-selection; prop:ns43-ccm-residual-selection",
       "evidence": "evidence/v152",
-      "note": "Missing cofinal complete separator relative to the explicit cutoff residual, or Rayleigh-excess/gap plus evaluator/weighted-tightness control. Global-ground use additionally needs odd ordering. No fixed-head replacement or polynomial positive separator."
+      "note": "Missing cofinal complete separator relative to the explicit cutoff residual, or Rayleigh-excess/gap plus evaluator/weighted-tightness control. Global-ground use additionally needs odd ordering. No fixed-head replacement or polynomial positive separator.",
+      "wall": {
+        "input": "cofinal separator",
+        "to": "g2",
+        "src": "prop:ns43-ccm-rayleigh-selection: missing cofinal complete separator relative to the cutoff residual"
+      }
     },
     {
       "id": "absoluteselection",
@@ -498,7 +624,12 @@
       "parent": "stepb",
       "prop": "prop:ns43-ccm-nonselection",
       "evidence": "evidence/v152",
-      "note": "Exact abstract family has simple even nonnegative real-zero grounds, arbitrarily fast residual decay, resolvent collapse and tight support, yet alternating profiles. It is not an arithmetic support-consistent Weil family; CCM itself remains open."
+      "note": "Exact abstract family has simple even nonnegative real-zero grounds, arbitrarily fast residual decay, resolvent collapse and tight support, yet alternating profiles. It is not an arithmetic support-consistent Weil family; CCM itself remains open.",
+      "wall": {
+        "input": "abstract inference false: countermodel family with alternating profiles",
+        "to": null,
+        "src": "prop:ns43-ccm-nonselection"
+      }
     },
     {
       "id": "coarseprofile",
@@ -507,7 +638,12 @@
       "parent": "stepb",
       "prop": "prop:ns43-ccm-coarse-profile",
       "evidence": "evidence/v152",
-      "note": "Under the explicit scale, full both-parity liminf, nonnegativity and lower-semicontinuity hypotheses, density of translated radicals forces the limit form to zero. Finer scales and other selection mechanisms remain open."
+      "note": "Under the explicit scale, full both-parity liminf, nonnegativity and lower-semicontinuity hypotheses, density of translated radicals forces the limit form to zero. Finer scales and other selection mechanisms remain open.",
+      "wall": {
+        "input": "under the explicit coarse scale the limit form is zero; finer scales open",
+        "to": null,
+        "src": "prop:ns43-ccm-coarse-profile"
+      }
     },
     {
       "id": "fineradicalrank",
@@ -516,7 +652,12 @@
       "parent": "gapfree",
       "prop": "lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank",
       "evidence": "evidence/v153",
-      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda\u00b2/(20000 log lambda), exact even/odd counts and residual C exp(-lambda\u00b2/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods."
+      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda\u00b2/(20000 log lambda), exact even/odd counts and residual C exp(-lambda\u00b2/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods.",
+      "wall": {
+        "input": "positive-gap strategy must remove rank >= lambda^2/(20000 log lambda)",
+        "to": null,
+        "src": "lem:ns46-finite-arc; ns46-a2-cor-rank"
+      }
     }
   ]
 }
