@@ -198,7 +198,7 @@
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "Valid sufficient criterion; blocked after NS-22 finite-head diagnostics, not proved closed. NS-27/v1.46 proves local packet bounds and a conditional linear distinct-level obstruction, but the arithmetic level-distribution and bounded-energy-packet hypotheses are missing. Depth growth alone does not supply them; positive spill must be retained. NS-29/v1.47 separates corrected-zero level-band distribution from admissible packet coverage and energy; both cofinal inputs remain open. v1.49 retains exact weighted quantization with QG/packet inputs open; the finite histogram peak cannot justify a continuous density cap.",
+      "note": "Valid sufficient criterion (prop:v131). Blocked on the named open inputs of v1.46-v1.49 (QG: exact K-level quantization growth of the symbol's level distribution; an admissible bounded-energy packet with the weighted level hypothesis), not on any diagnostic: the NS-22 finite-head losses are restricted-family upper bounds and its tail charge was not a global minorant (NS-31). Not proved closed.",
       "evidence": "evidence/v146"
     },
     {
@@ -269,7 +269,7 @@
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_true_symbol",
-      "note": "Validated symbol beta_a (2e-7 vs block). Ground level split: lambda=3 -/+0.0898, lambda=4 -/+0.2257, cancelling to 1e-38 / 1e-75; ~50% mass on {beta<0}; all energy at xi<20. In lattice units the symbol is a +/- train with crests on the lattice; the ground spreads outward in u with lambda; not self-similar. Level pencil W v = nu (W+W^-) v: the cancellation is a whole deep block (6/12/21/26 directions below 1e-8 at lambda=3/4/6/8, N=48), each cancelling 0.1-0.5 of level energy; not a single critical direction."
+      "note": "Validated symbol beta_a (independent mpmath replay confirms even and odd entries at lambda=4, NS-31). Finite-head pencil: cancellation is a deep block in both parities (counts survive 120/180-digit replay). Ground pencil direction aligns with the certified lambda=3 source (overlap 0.99999998). Lattice-unit and level-distribution diagnostics retained as finite-head observations only; the lane's closure-type conclusions (layer-cake -> infinity, no limiting shape, lobe-mass counterexample, small-prime surplus) were withdrawn after the NS-31 audit. Diagnostic, not a certificate."
     },
     {
       "id": "debranges",

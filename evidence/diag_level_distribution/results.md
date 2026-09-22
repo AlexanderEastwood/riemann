@@ -1,5 +1,9 @@
 # NS-28: the two inputs of `prop:v146-level-complexity`, measured — DIAGNOSTIC, NOT A CERTIFICATE
 
+> **Correction notice (2026-09-22, after the adversarial audit `audits/circle-symbol-lane-2026-09-22-v2.html` (NS-31, PR #16); originals and the NS-32 notice retained below).**
+> Withdrawn: (§4–6) every "pure-state upper bound" whose vector was not checked against all 20 constraints — at λ=4, c=0.03/0.05 and c'=1/4, and λ=3, c=0.01 and c'=2, the returned vectors are infeasible (ratios 0.0041, 0.0375, 0.636, 1.845, 0.0089, 1.659), so the corresponding "Q_min" entries are dual *lower* bounds only, and the "K_max via QC_K" column, computed from the dual value, does not establish content; (§4, §5 item 1, board) "c = 0.5 infeasible at every window" — feasible mixtures with c ≥ 0.529 (λ=4) and c ≥ 0.538 (λ=8) exist for the same 20-bin SDP (audit `max_constant.json`); the script never ran c = 0.5; (§6) the concentration-function row: the printed values are the largest *aligned* bin (0.0072 at λ=3), whereas the sliding supremum on the same grid is 0.0083, and a lower estimate of `M(h)` in a denominator overstates the bound; the "20-bin peak" row is the 200-bin peak (the 20-bin peak is 0.061); the DP cost is a bin-midpoint, edge-level surrogate, not the continuum `QC_K`, and hundreds/thousands of levels are extrapolations beyond K ≤ 32; "Q ≤ Q_* holds trivially" and "Q → 0" as cofinal statements.
+> What stands: the SDP dual inequality itself (valid for every state in the head); λ=3, c'=1 remains cheap after source projection and a feasibility repair (audit: energy 2.43e-9, all slacks positive); the qualitative contrast between the two hypotheses as a comparison of finite-bin problems.
+
 > **Review correction (NS-32/33, v1.49; original measurements retained below).**
 > The finite `rho~_max` values are maxima of 200-bin averages, not upper bounds
 > for the exact continuous density. A negative critical point makes the latter

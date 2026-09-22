@@ -1,5 +1,8 @@
 # NS-21 lobe-mass test against the level surplus -- DIAGNOSTIC, NOT A CERTIFICATE
 
+> **Correction notice (2026-09-22, after the adversarial audit `audits/circle-symbol-lane-2026-09-22-v2.html` (NS-31, PR #16); originals retained below).**
+> Withdrawn: "counterexample (kills every variant)" and "the failure is of the object". The numbers exclude constants below about 1e98 (variant A), 1e45 (B), 1e104 (C) at λ=8, N=48; a finite set of positive ratios always has a finite maximum, so they cannot refute the existence of *some* uniform constant, and nonmonotone mass in k cannot disprove `mass ≤ C ν^p`. What stands: ordinary-sized constants are incompatible with these samples by tens of orders, and the proposed simple scaling law has no numerical support. Also: at λ=8 the first negative lobe is `[0.378, 1.135]`, not `[0, π/L]`; the script integrates the correct interval, the prose mislocated it. Board status changed from "closed — no angle" to "diagnostic".
+
 **Status: diagnostic, not a certificate. Float quadrature, N=48 finite section,
 midpoint pencil. No bound is claimed. The candidate lemma tested here is killed
 by a counterexample (section 5); the replacement statement in section 6 is a

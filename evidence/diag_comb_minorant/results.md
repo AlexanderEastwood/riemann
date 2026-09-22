@@ -1,5 +1,9 @@
 # Comb-following step minorants for the weighted concentration criterion -- DIAGNOSTIC, NOT A CERTIFICATE
 
+> **Correction notice (2026-09-22, after the adversarial audit `audits/circle-symbol-lane-2026-09-22-v2.html` (NS-31, PR #16); originals retained below).**
+> Withdrawn: the "charged tail" as a valid global minorant — the charge is the largest sampled depth on a finite scan, and `β_8(130060.425) = −8.812 < −8.050`, `β_6(152359.725) = −6.436 < −5.808` (50-digit values, independently confirmed), so the with-tail η values are outputs of a tail-substituted model, not bounds; (D2) the centered comb was implemented with a nondecreasing (suffix-minimum) profile where a nonincreasing (prefix-minimum) one was required — the corrected λ=4 profile gives η = 3.157 rather than 3.332; (D3) the matrix quantizes a lower-edge rounding of `β` while the pointwise check uses `β` itself; D1 has J+1 values; and the verdict's "every bounded-complexity step minorant loses a fixed fraction of D_a" and "bounded η_a requires the level count to grow linearly with D_a" as conclusions — the optimized losses are upper bounds on the best loss within restricted grid families and cannot bound all minorants or a necessary complexity.
+> What stands: the measured losses of the specific families on the head at ξ ≤ 800, as finite-head numbers; the observation that the binding direction is a packet at a deep trough, not the ground.
+
 **Status: diagnostic, not a certificate.** Board row NS-22 (2026-09-21, Claude).
 Float quadrature, midpoint eigenvalues, one head size; nothing here is a bound,
 and nothing here bears on G2 or RH. Companion to

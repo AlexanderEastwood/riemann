@@ -1,5 +1,8 @@
 # Arithmetic content of the pencil surplus (NS-20) -- DIAGNOSTIC
 
+> **Correction notice (2026-09-22, after the adversarial audit `audits/circle-symbol-lane-2026-09-22-v2.html` (NS-31, PR #16); originals retained below).**
+> Withdrawn: "only the prime powers with log m < 1.7 enter the net value at all", "which primes carry the surplus", and "a three-to-five-term balance summing to 1e-38…1e-92". The small primes dominate the net prime sum to a few percent or an absolute 1e-4; they do not determine the surplus, which is 1e-38…1e-92 — e.g. at λ=3 the m=8 term is 1.7e-25, twelve orders above the surplus, and at λ=6 the m=32 term is 7.8e-69 against 1e-92. Deleting small terms changes the quantity. The super-exponential-in-lag decay is an observed finite list, not an asymptotic. Also: the three "sum of primes" level rows have the net sum in the "pos" column and the positive level in the "neg" column; the correct pairs are (−0.546, +0.491) at λ=3 v₀, (−0.664, +0.598) at λ=4, (−1.089, +1.000) at λ=6, with the same shift for v₁, v₂. What stands: the exact term-by-term decomposition and its cross-checks; the qualitative statement that the O(1) budget is carried by digamma, continuum and m=2, and the level energies by the prime powers near the cutoff.
+
 **Status: diagnostic, not a certificate.** Midpoint (mpmath, 120 digits) values of exact
 closed-form quadratic forms, plus float grid quadrature for the level split. Nothing here is
 a bound; nothing here bears on G2 or RH.
