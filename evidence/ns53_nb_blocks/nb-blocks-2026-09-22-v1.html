@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NS-53 · Integer-dilation blocks · 22 September 2026</title></head>
+<body style="margin:0;background:#f3f1eb;color:#202832;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.65;">
+<main style="max-width:680px;margin:36px auto;padding:38px 32px;background:#ffffff;border-top:5px solid #24475c;">
+<p style="margin:0 0 12px;color:#546777;font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.5px;">RIEMANN RESEARCH RECORD · NS-53 · 22 SEPTEMBER 2026 · V1</p>
+<h1 style="font-size:31px;line-height:1.2;margin:0 0 22px;">An exact block formula, with the arithmetic gain still open</h1>
+<p style="font-size:19px;color:#24475c;">The approximation route needs convergence at any rate. This checkpoint identifies the exact improvement from adding integer dilations and the arithmetic estimate still missing.</p>
+<p>RH and G2 remain open. The results below are exact identities and conditional implications; there is no new numerical certificate or convergence claim.</p>
+<h2 style="font-size:23px;margin-top:30px;">The correction to the earlier assessment</h2>
+<p>In the strong Nyman–Beurling criterion, the squared distance E<sub>N</sub> from χ = 1<sub>(0,1)</sub> to the span of ρ<sub>n</sub>(x) = {1/(nx)}, n ≤ N, need only tend to zero. A bound such as E<sub>N</sub> = O((log N)<sup>−1/2</sup>) would suffice. The known lower bound does not require proving a matching sharp upper rate.</p>
+<h2 style="font-size:23px;margin-top:30px;">What adding a block actually buys</h2>
+<p>Let G describe the old vectors, D the new block, and C their cross terms. Let b and b<sub>B</sub> be their correlations with χ. The old optimal coefficients are c = G<sup>−1</sup>b. Two corrections are essential:</p>
+<div style="padding:18px 20px;background:#eef3f6;border-left:3px solid #24475c;margin:20px 0;">
+<p style="margin:0 0 8px;"><strong>Residual correlations:</strong> h = b<sub>B</sub> − C<sup>T</sup>c.</p>
+<p style="margin:0 0 8px;"><strong>Residual Gram matrix:</strong> S = D − C<sup>T</sup>G<sup>−1</sup>C.</p>
+<p style="margin:0;"><strong>Exact improvement:</strong> E<sub>N</sub> − E<sub>M</sub> = h<sup>T</sup>S<sup>−1</sup>h.</p>
+</div>
+<p>These formulas project the entire new block off the old span. They retain the cross terms and Gram conditioning. The derivation is standard Hilbert-space geometry specialized to the arithmetic dictionary, not a new estimate towards RH.</p>
+<p>For κ = log(2π) − γ, an unconditional lower bound follows:</p>
+<p style="text-align:center;padding:15px;background:#f7f5ef;">E<sub>N</sub> − E<sub>M</sub> ≥ ‖h‖² / [κ log(M/N)].</p>
+<p>For a block N &lt; n ≤ qN, the denominator is bounded independently of N. The unknown is the numerator: how much correlation the <em>actual optimal residual</em> retains with the new arithmetic block.</p>
+<h2 style="font-size:23px;margin-top:30px;">An elementary arithmetic checkpoint</h2>
+<p>The proof gives exact integral and convergent cell-series expressions for every Gram entry. It also expresses the whole residual through divisor sums on each interval j ≤ 1/x &lt; j+1.</p>
+<p>For the unsmoothed Möbius choice c<sub>n</sub> = −μ(n), the first N+1 cells alone contribute</p>
+<p style="text-align:center;padding:15px;background:#f7f5ef;">(N+1) |∑<sub>n≤N</sub> μ(n)/n|².</p>
+<p>This is a necessary penalty for that particular coefficient choice, not a lower bound on the optimal distance. The raw Möbius approximation is already known to fail in this norm; the checkpoint does not claim a new obstruction.</p>
+<h2 style="font-size:23px;margin-top:30px;">The open input</h2>
+<p>A sufficient residual block-correlation hypothesis is written explicitly in the proof. At N<sub>j</sub> = q<sup>j</sup>, it asks for ‖h<sub>j</sub>‖² ≥ κ log q · α<sub>j</sub>E<sub>N<sub>j</sub></sub>, where 0 ≤ α<sub>j</sub> &lt; 1 and ∑α<sub>j</sub> diverges. The hypothetical choice α<sub>j</sub> = 1/[2(j+1)] would already imply the slower rate above.</p>
+<p><strong>No such asymptotic estimate is proved.</strong> Nor is this sufficient hypothesis asserted to follow from RH. The trace bound may discard large gains in directions associated with small eigenvalues of S. An exact block quotient could succeed where the trace estimate fails.</p>
+<p>The finding is a missing estimate. It establishes neither failure of the stated sufficient hypothesis nor failure of the approximation object. More finite distances would not settle it. No new Weil window or tail metric was introduced.</p>
+<h2 style="font-size:23px;margin-top:30px;">Primary sources and verification</h2>
+<p><a href="https://arxiv.org/html/math/0202141v2" style="color:#24475c;">Báez-Duarte, Theorem 1.1 and Introduction</a> establishes the qualitative criterion and records the raw-prefix failure. <a href="https://doi.org/10.1006/aima.2001.2066" style="color:#24475c;">Burnol, Advances in Mathematics 170 (2002)</a> supplies the lower-bound result. Existing numerical work is described by <a href="https://doi.org/10.1080/10586458.2002.10504480" style="color:#24475c;">Landreau–Richard, Experimental Mathematics 11 (2002)</a>.</p>
+<p>The accompanying proof contains complete derivations of the new checkpoint’s identities and conditional implication. Manuscript integration, build page count, and reference counts are recorded by the integrating author; this document does not claim that a source check is a manuscript build.</p>
+<p style="border-top:1px solid #d9dee2;padding-top:18px;margin-top:30px;color:#63717b;font-size:14px;">Claim categories: exact identity · proved implication · named open input. G2 and RH remain open.</p>
+</main></body></html>

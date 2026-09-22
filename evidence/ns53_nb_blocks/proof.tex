@@ -1,0 +1,210 @@
+% NS-53. Exact identities, proved implications, and an explicitly open input.
+% No finite numerical approximation is offered as convergence evidence.
+\subsection{NS-53: residualized integer-dilation blocks}
+\label{sec:ns53-nb-blocks}
+
+Work in the real Hilbert space $H=L^2((0,\infty),dx)$, with
+$\chi=\mathbf 1_{(0,1)}$ and $\rho_n(x)=\{1/(nx)\}$ for integers $n\geq1$.
+Real coefficients lose nothing for this real target; the complex version
+uses conjugate transposes. Put
+\[
+ V_N=\operatorname{span}\{\rho_1,\ldots,\rho_N\},\qquad
+ r_N=\chi-P_N\chi,\qquad E_N=\|r_N\|^2=d_N^2,
+\]
+where $P_N$ is the orthogonal projection onto $V_N$.
+The strong Nyman--Beurling criterion is the established equivalence
+$E_N\to0\Longleftrightarrow\mathrm{RH}$; see B\'aez-Duarte,
+\href{https://arxiv.org/abs/math/0202141}{Theorem~1.1}.
+No particular upper rate is required. Burnol's
+\href{https://doi.org/10.1006/aima.2001.2066}{lower-bound theorem}
+does not require a matching upper bound. This checkpoint proves no
+convergence statement and makes no G2 or RH claim.
+
+\begin{proposition}[Exact arithmetic entries and finite independence]
+\label{prop:ns53-nb-entries}
+Let $G_{mn}=\langle\rho_m,\rho_n\rangle$, $b_n=\langle\chi,\rho_n\rangle$,
+and $\kappa=\log(2\pi)-\gamma$, where $\gamma$ is Euler's constant.
+Then
+\begin{align}
+ G_{mn}&=\int_0^\infty\{y/m\}\{y/n\}\,\frac{dy}{y^2},
+ & b_n&=\frac{\log n+1-\gamma}{n},
+ &G_{nn}&=\frac{\kappa}{n}.\label{eq:ns53-nb-entries}
+\end{align}
+In particular, writing $a_j=\lfloor j/m\rfloor$ and
+$d_j=\lfloor j/n\rfloor$, the following is an exact convergent series:
+\begin{equation}
+ G_{mn}=\frac1{mn}+\sum_{j=1}^{\infty}
+ \left[\frac1{mn}-\left(\frac{d_j}{m}+\frac{a_j}{n}\right)
+ \log\left(1+\frac1j\right)+\frac{a_jd_j}{j(j+1)}\right].
+ \label{eq:ns53-nb-gram-series}
+\end{equation}
+Each bracket is a nonnegative cell integral. Every Gram matrix belonging
+to finitely many distinct positive integers is positive definite.
+Moreover $E_N>0$ for every finite $N$.
+\end{proposition}
+
+\begin{proof}
+Substitute $y=1/x$ and integrate on $[j,j+1)$; both floor functions
+are constant on that interval. This gives the integral and series formulas.
+The change $y=nt$ gives the diagonal scaling and
+\[
+ b_n=\frac1n\left(\log n+\int_1^\infty\frac{\{t\}}{t^2}\,dt\right).
+\]
+The integral truncated at an integer $K$ is $1+\log K-H_K$.
+Similarly, integrating $\{t\}^2/t^2$ on the first $M+1$ unit cells gives
+\[
+ 2M+2-H_{M+1}-2M\log(M+1)+2\log(M!).
+\]
+Stirling's formula gives its limit $\kappa$. For finite independence,
+a vanishing linear combination of $\{y/n\}$ is piecewise affine.
+At the smallest index with nonzero coefficient its jump cannot be
+cancelled by a smaller nonzero coefficient, a contradiction. If
+$\chi=\sum_{n\leq N}c_n\rho_n$, comparison of the jumps at every positive
+integer in the $y$ variable gives
+$\sum_{n\mid j}c_n=-\mathbf 1_{j=1}$, with $c_n=0$ for $n>N$.
+M\"obius inversion would force $c_n=-\mu(n)$ for every $n$, contradicted
+by a prime greater than $N$. A finite-dimensional span is closed, so
+$E_N>0$.
+\end{proof}
+
+\begin{proposition}[Exact block improvement, including all cross terms]
+\label{prop:ns53-nb-block-gain}
+Fix integers $1\leq N<M$. Let $G$ be the $N$ by $N$ old Gram matrix,
+$C=(G_{mn})_{1\leq m\leq N,\,N<n\leq M}$, and
+$D=(G_{mn})_{N<m,n\leq M}$.
+Write $b=(b_m)_{m\leq N}$, $b_B=(b_n)_{N<n\leq M}$, and define
+\begin{equation}
+ c=G^{-1}b,\qquad h=b_B-C^{\mathsf T}c,\qquad
+ S=D-C^{\mathsf T}G^{-1}C.
+ \label{eq:ns53-nb-schur}
+\end{equation}
+Then $S$ is positive definite, and
+\begin{equation}
+ E_N-E_M=h^{\mathsf T}S^{-1}h
+ =\sup_{w\ne0}\frac{|w^{\mathsf T}h|^2}{w^{\mathsf T}Sw}.
+ \label{eq:ns53-nb-gain}
+\end{equation}
+The gain is zero if and only if $h=0$; strict finite improvement is not
+asserted for every block. The coefficients for the enlarged optimum are
+$(c-G^{-1}CS^{-1}h,S^{-1}h)$. In addition,
+\begin{equation}
+ E_N-E_M\ \geq\
+ \frac{\sum_{n=N+1}^M|b_n-\sum_{m\leq N}c_mG_{mn}|^2}
+ {\kappa\sum_{n=N+1}^M1/n}
+ \ \geq\
+ \frac{\|h\|_2^2}{\kappa\log(M/N)}.
+ \label{eq:ns53-nb-trace-gain}
+\end{equation}
+These are finite, unconditional identities and inequalities, not estimates
+of the numerator as $N$ grows.
+\end{proposition}
+
+\begin{proof}
+Set $z_n=(I-P_N)\rho_n$ for $N<n\leq M$. Its Gram matrix is $S$,
+and $\langle r_N,z_n\rangle=h_n$. Finite independence shows that these
+$z_n$ are independent. The orthogonal decomposition
+$V_M=V_N\mathbin{\oplus}\operatorname{span}\{z_n\}$ gives
+\eqref{eq:ns53-nb-gain} and the coefficient update. Since
+$0<S\leq D$, the largest eigenvalue of $S$ is at most
+$\operatorname{tr}D=\kappa\sum_{n=N+1}^M1/n$. Therefore
+$h^{\mathsf T}S^{-1}h\geq\|h\|_2^2/\operatorname{tr}D$.
+The decreasing function $1/x$ gives
+$\sum_{n=N+1}^M1/n\leq\log(M/N)$.
+\end{proof}
+
+\begin{remark}[Conditioning is retained]
+Replacing $S$ by $D$ in the exact identity, or using $b_B$ instead of $h$,
+would discard the old--new interaction. A small eigenvalue of $S$ can
+make the exact gain much larger than the trace lower bound; it causes no
+missing inverse error in the analytic lower bound. For a proposed real
+block vector $w$, its exact gain after optimizing its scalar coefficient
+is $|w^{\mathsf T}h|^2/(w^{\mathsf T}Sw)$. If
+$\sum_{n=N+1}^M w_n/n=0$, the unprojected combination
+$\sum w_n\rho_n$ vanishes on $x>1/(N+1)$. Its residualized combination
+need not have this support, and its norm is still $w^{\mathsf T}Sw$.
+\end{remark}
+
+\begin{proposition}[Exact divisor cells and the raw M\"obius-prefix penalty]
+\label{prop:ns53-nb-divisor-cells}
+For arbitrary real coefficients $c_1,\ldots,c_N$, put
+\[
+ A=\sum_{n\leq N}\frac{c_n}{n},\qquad
+ B_j=1+\sum_{n\leq N}c_n\left\lfloor\frac jn\right\rfloor
+     =1+\sum_{k=1}^j\ \sum_{\substack{n\mid k\\n\leq N}}c_n.
+\]
+For $r=\chi-\sum c_n\rho_n$, one has $r(1/y)=-Ay$ on $(0,1)$
+and $r(1/y)=B_j-Ay$ on $[j,j+1)$, $j\geq1$. Consequently
+\begin{equation}
+ \|r\|^2=A^2+\sum_{j=1}^{\infty}
+ \left[A^2-2AB_j\log\left(1+\frac1j\right)
+          +\frac{B_j^2}{j(j+1)}\right].
+ \label{eq:ns53-nb-divisor-energy}
+\end{equation}
+The brackets are nonnegative cell integrals; they are not to be split
+into three separately summed series. For the raw choice $c_n=-\mu(n)$,
+\begin{equation}
+ \left\|\chi+\sum_{n\leq N}\mu(n)\rho_n\right\|^2
+ \geq (N+1)\left|\sum_{n\leq N}\frac{\mu(n)}n\right|^2.
+ \label{eq:ns53-nb-mobius-penalty}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Expand each fractional part. The energy identity is the integral of the
+squared affine function on each unit cell. For the M\"obius choice,
+$B_j=0$ for $1\leq j\leq N$, by
+$\sum_{n\mid k}\mu(n)=\mathbf 1_{k=1}$. The interval $(0,N+1)$ alone
+then contributes the displayed lower bound.
+\end{proof}
+
+\begin{remark}[What the arithmetic lemma does and does not supply]
+Equation~\eqref{eq:ns53-nb-mobius-penalty} gives an explicit necessary
+condition for this particular unsmoothed coefficient choice to converge:
+$\sqrt N\sum_{n\leq N}\mu(n)/n\to0$. It is not a lower bound for the
+optimal $E_N$. The divergence of the raw natural approximation is already
+recorded in B\'aez-Duarte's Introduction; no novelty is claimed for its
+failure. Smoothing or adaptive coefficients change the problem and must
+be evaluated through the full residual and Gram matrix.
+\end{remark}
+
+\begin{proposition}[A sufficient block-correlation input at any rate]
+\label{prop:ns53-nb-any-rate}
+Fix an integer $q\geq2$, $N_j=q^j$, and real numbers
+$0\leq\alpha_j<1$ for $j\geq j_0$, with $\sum_j\alpha_j=\infty$.
+Use the actual optimal coefficients $c^{(N_j)}=G_{N_j}^{-1}b_{N_j}$.
+Suppose the following \emph{residual block-correlation input} holds:
+\begin{equation}
+ \sum_{n=N_j+1}^{qN_j}
+ \left|\frac{\log n+1-\gamma}{n}
+       -\sum_{m\leq N_j}c_m^{(N_j)}G_{mn}\right|^2
+ \geq\kappa\log q\,\alpha_j E_{N_j}.
+ \tag{RBC}\label{eq:ns53-nb-rbc}
+\end{equation}
+Then $E_N\to0$. For example, the hypothetical bound (RBC) with
+$\alpha_j=1/(2(j+1))$ would give
+$E_{q^j}=O(j^{-1/2})$, hence $E_N=O((\log N)^{-1/2})$.
+This slower-than-optimal rate would already meet the established criterion.
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:ns53-nb-trace-gain} gives
+$E_{N_{j+1}}\leq(1-\alpha_j)E_{N_j}$. Iteration and
+$1-t\leq e^{-t}$ prove convergence. Monotonicity supplies intermediate
+$N$. For the example, summing $1/(2(j+1))$ yields the stated rate.
+\end{proof}
+
+\paragraph{Named open input and disposition.}
+(RBC) is \emph{unproved}; it is a specific sufficient arithmetic estimate,
+not asserted equivalent to RH or known to follow from RH. It may be
+stronger than needed because the trace bound can lose the small
+Gram eigenvalues that amplify the exact gain. The weaker exact target is
+a nonsummable sequence of relative gains
+$h_j^{\mathsf T}S_j^{-1}h_j/E_{N_j}$, which is equivalent to convergence
+and is not itself a new theorem. The arithmetic work still missing is
+a lower estimate for the corrected correlations, or for an explicitly
+constructed block quotient, for the \emph{actual optimal residuals}.
+Entry formulas, a finite collection of positive gains, and a finite list of distances
+do not supply it. No such asymptotic gain estimate is proved here.
+The missing step is the asymptotic gain estimate; this establishes
+neither failure of (RBC) nor failure of the approximation object. No new Weil window, tail metric, G2 or RH
+claim is introduced.

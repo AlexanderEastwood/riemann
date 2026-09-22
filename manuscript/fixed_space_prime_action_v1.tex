@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.53},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.54},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.53\\
+\large Complete working manuscript, version 1.54\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 22, 2026}
@@ -206,6 +206,16 @@ new witnesses; they do not recover the original evidence.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.54 supplies a complete-domain affine screw-potential equation
+for nullvectors and a rank-one countermodel to a generic $H_0^1$ bootstrap.
+Paired heat-zero transport removes internal inverse-gap singularities but
+retains the external-zero interaction; a same-test heat comparison has an
+explicit unmatched-zero obstruction. Exact Nyman--Beurling block gains admit
+an unconditional trace lower bound. Arithmetic injectivity, full transport
+and asymptotic correlation estimates remain open. These are scoped identities
+and implications, not a uniform floor, G2 or RH proof.
+Section~\ref{sec:v154-new-shapes} records the hypotheses and proofs.
+
 Version 1.53 proves a larger complete near-zero block, jointly with
 Astra-2 (NS-46). Fixed-range, increasingly close translates have dimension
 $2\lfloor\lambda^2/(40000\log\lambda)\rfloor+1$, full residual at most
@@ -17778,6 +17788,713 @@ it. The result is a stronger necessary rank obstruction for a positive
 gap strategy; it does not exclude gap-free block methods, produce a
 negative Weil direction, prove G2 or RH, or close the signed-floor route.
 
+
+\section{Kernel exclusion, paired heat transport and arithmetic approximation (v1.54)}
+\label{sec:v154-new-shapes}
+This checkpoint tests three different intermediate mechanisms. It proves an
+exact complete-domain nullvector reduction and a scoped regularity countermodel,
+finite heat-zero transport identities with an explicitly conditional comparison
+obstruction, and an unconditional arithmetic block-gain inequality. The missing
+inputs are, respectively, arithmetic injectivity, suitable full heat transport,
+and asymptotic residual correlation. None is supplied by changing coordinates.
+The countermodels and implications below do not produce a negative Weil
+direction. No new window or tail metric is computed; G2 and RH remain open.
+
+\subsection*{The complete nullvector equation without an $H^1$ assumption (NS-51)}
+
+\paragraph{Classification and scope.}
+The next statements are exact identities and proved implications, with a
+named open arithmetic injectivity input. They concern the complete
+fixed-window operator, not a finite head. The new regularity countermodel
+rules out one generic inference, not injectivity of the arithmetic
+operator. No new window or tail metric is computed. G2 and RH remain open.
+
+Put $I_a=(-a,a)$, and let $E_a$ denote zero extension from $I_a$.
+Write $V_a=\mathcal D(q_a)$ for the complete physical form domain:
+\[
+ V_a=\left\{f\in L^2(I_a):
+  \int_{\mathbb R}\log(2+|\xi|)|\widehat{E_af}(\xi)|^2\,d\xi<\infty\right\}.
+\]
+Let $A_a$ be its self-adjoint form operator. These are the unshifted,
+complete objects of Proposition~\ref{prop:v118-log-dirichlet}; no source
+projection is imposed. Let $\mathfrak g$ be Suzuki's real even screw
+function, normalized by $\mathfrak g(0)=0$ and, for $t>0$,
+\begin{align}
+ \mathfrak g(t)={}&-4(e^{t/2}+e^{-t/2}-2)
+  +\sum_{n<e^t}\frac{\Lambda(n)}{\sqrt n}(t-\log n)
+  -\frac t2\bigl(\psi(1/4)-\log\pi\bigr)\notag\\
+ &-\frac14\left\{\Phi(1,2,1/4)
+             -e^{-t/2}\Phi(e^{-2t},2,1/4)\right\}.
+ \label{eq:ns51-screw}
+\end{align}
+Here $\Phi(z,s,v)=\sum_{j\ge0}z^j/(j+v)^s$ for $|z|<1$,
+with its convergent value at $(1,2,1/4)$. Including a prime-power
+endpoint instead makes no difference in this formula, since its ramp
+vanishes at that endpoint. Suzuki's distributional identity is
+$A_a\varphi=(-\mathfrak g''*E_a\varphi)|_{I_a}$ for
+$\varphi\in C_c^\infty(I_a)$~\cite[Sections 2.5 and 3]{Suzuki2026}.
+All convolutions below are local convolutions with a compactly supported
+function or distribution; no global temperedness of $\mathfrak g$ is
+assumed.
+
+\begin{proposition}[Affine screw potential criterion on the complete domain]
+\label{prop:ns51-affine-potential}
+For $f\in L^2(I_a)$ set
+\[
+ F_f(x)=\int_{-a}^a\mathfrak g(x-y)f(y)\,dy,\qquad
+ U_f(x)=\int_{-a}^a\mathfrak g'(x-y)f(y)\,dy.
+\]
+Then $F_f\in C^1(\mathbb R)$ and $F_f'=U_f\in C(\mathbb R)$.
+For $f\in V_a$ the following conditions are equivalent:
+\begin{enumerate}[label=(\roman*)]
+ \item $f\in\mathcal D(A_a)$ and $A_af=0$;
+ \item $F_f$ is affine on $I_a$;
+ \item $U_f$ is constant on $I_a$.
+\end{enumerate}
+Let $\Pi_{\rm aff}$ be the ordinary $L^2(I_a)$ projection onto
+$\operatorname{span}\{1,x\}$ and $P_0$ the projection onto mean-zero
+functions. The operators
+\[
+ \mathcal C_a f=(I-\Pi_{\rm aff})F_f|_{I_a},\qquad
+ \mathcal T_a f=P_0 U_f|_{I_a}
+\]
+are compact on $L^2(I_a)$, and
+\begin{equation}\label{eq:ns51-kernel-reduction}
+ \ker A_a=V_a\cap\ker\mathcal C_a=V_a\cap\ker\mathcal T_a.
+\end{equation}
+For even $f$ the affine potential is constant and $U_f=0$; for odd
+$f$ it is $b x$ and $U_f=b$. The constant $b$ must not be discarded.
+\end{proposition}
+\begin{proof}
+The screw function is locally absolutely continuous. Its derivative
+has only a logarithmic singularity at zero and finitely many bounded
+jumps on every compact interval. Indeed differentiation of
+\eqref{eq:ns51-screw} gives, almost everywhere for $t>0$,
+\begin{equation}\label{eq:ns51-screw-derivative}
+ \mathfrak g'(t)=-4\sinh(t/2)
+ +\sum_{n<e^t}\frac{\Lambda(n)}{\sqrt n}
+ -\frac12(\psi(1/4)-\log\pi)
+ -\frac12e^{-t/2}\Phi(e^{-2t},1,1/4),
+\end{equation}
+and odd reflection gives its value for $t<0$.
+In particular $\mathfrak g'\in L^2_{\rm loc}(\mathbb R)$.
+Translation continuity in local $L^2$ and Cauchy--Schwarz show that
+$U_f$ is continuous, locally uniformly in $x$. The distributional
+identity $F_f'=U_f$ then proves $F_f\in C^1$.
+
+For $f\in V_a$ and $\varphi\in C_c^\infty(I_a)$, the core identity
+and symmetry give, in the first-slot-linear convention,
+\[
+ q_a(f,\varphi)=\langle f,A_a\varphi\rangle
+ =-\int_{I_a}F_f(x)\overline{\varphi''(x)}\,dx
+ =\int_{I_a}U_f(x)\overline{\varphi'(x)}\,dx.
+\]
+A nullvector therefore has $F_f''=0$ as a distribution on $I_a$,
+which is equivalent to the displayed affine and constant conditions.
+Conversely these conditions annihilate $q_a(f,\varphi)$ on the smooth
+form core. The form norm, after a fixed-window positive shift, makes
+$q_a(f,\cdot)$ continuous. Core density therefore gives
+$q_a(f,v)=0$ for every $v\in V_a$. The representation theorem for
+closed forms implies $f\in\mathcal D(A_a)$ and $A_af=0$.
+The kernels $\mathfrak g(x-y)$ and $\mathfrak g'(x-y)$ are square
+integrable on $I_a^2$; for the latter the squared kernel norm is
+\[
+ \int_{-2a}^{2a}(2a-|t|)|\mathfrak g'(t)|^2\,dt<\infty.
+\]
+Thus their integral operators are Hilbert--Schmidt, and bounded
+projections preserve compactness. Evenness of $\mathfrak g$ gives
+the two parity conclusions.
+\end{proof}
+
+\paragraph{What changes in the derivative reduction.}
+For $f\in H_0^1(I_a)$ one can write the familiar equation
+$G_a Df=0$ with $D=i\,d/dx$ and the ordinary mean-zero screw operator
+$G_a$. For general $f\in V_a$, $D(E_af)$ is only guaranteed to be a
+compactly supported $H^{-1}$ distribution. Integration by parts in
+this distributional sense gives
+\[
+ \mathfrak g*D(E_af)=i\,\mathfrak g'*E_af=iU_f.
+\]
+This is the extension on this particular derivative range; it does
+not assert a bounded extension of $G_a$ to every $H^{-1}$ distribution.
+It retains any boundary contributions of zero extension. Therefore
+$\mathcal T_af=0$ is meaningful without making $Df$ an ordinary
+$L^2$ vector. Suzuki's shifted derivative-completion and generalized
+eigenvalue construction already addresses this distinction
+\cite[Sections 8.3--8.5]{Suzuki2026}; the proposition gives its
+zero-eigenvalue question as a local continuous integral equation.
+It is a derived formulation, not a newly discovered RH equivalence.
+
+\begin{proposition}[A zero eigenvalue does not supply generic $H_0^1$ regularity]
+\label{prop:ns51-no-generic-bootstrap}
+There is an interval $I_r$, a bounded real self-adjoint rank-one
+operator $K$ on $L^2(I_r)$, and a nonzero even
+$\tau\in\mathcal D(\tfrac12L_\Delta^{\rm Dir})$ such that
+\[
+ (\tfrac12L_\Delta^{\rm Dir}+K)\tau=0,
+ \qquad \tau\notin H_0^1(I_r).
+\]
+The operator $K$ is bounded on every $L^p(I_r)$, $1\le p\le\infty$,
+and $\tau$ has the continuous zero extension and logarithmic boundary
+rate appearing in Theorem~\ref{thm:v118-eigen-endpoint-zero}.
+This is a countermodel for inference from the principal operator and
+bounded perturbation alone, not a counterexample for the arithmetic
+$\mathcal K_\lambda$.
+\end{proposition}
+\begin{proof}
+Choose $0<r<e^{-\gamma_{\rm E}}$. The one-dimensional specialization
+of \cite[Theorem 1.2]{HLSLogBoundary} supplies the positive even torsion
+function $\tau$ with $L_\Delta^{\rm Dir}\tau=1$ and two-sided bounds
+$\tau(x)\asymp\ell(r-|x|)^{1/2}$. Its weak equation with right side
+$1\in L^2(I_r)$ puts it in the operator domain. Set
+\[
+ M=\int_{I_r}\tau(x)\,dx>0,\qquad
+ Kf=-\frac{1}{2M}\left(\int_{I_r}f(x)\,dx\right)\mathbf1_{I_r}.
+\]
+This is bounded, real, self-adjoint and rank one, and $K\tau=-1/2$.
+If $\tau\in H_0^1(I_r)$, absolute continuity and Cauchy--Schwarz
+would give $|\tau(x)|\le\sqrt{r-|x|}\,\|\tau'\|_2$ near either
+endpoint. This contradicts its logarithmic lower bound. The two-sided
+boundary estimate also supplies the stated continuous extension.
+\end{proof}
+
+\paragraph{Named open input: affine-potential injectivity (API).}
+For every finite $a>0$, require
+\begin{equation}\label{eq:ns51-api}
+ f\in V_a,\quad (\mathfrak g*E_af)|_{I_a}\in
+ \operatorname{span}\{1,x\}\quad\Longrightarrow\quad f=0.
+\end{equation}
+The parity versions must use the constants specified above. No
+injectivity estimate for the actual arithmetic kernel is proved here.
+Injectivity on all of $L^2(I_a)$ would be sufficient but is a stronger
+statement than the one established as equivalent to the physical
+kernel condition; no regularity upgrade is being assumed.
+
+\begin{proposition}[Sign continuation with an explicit missing input]
+\label{prop:ns51-sign-continuation}
+Assume the complete fixed-window realizations above, compact resolvent,
+continuity of their lowest eigenvalue in $a$, positivity for sufficiently
+small $a$, and API for every finite $a>0$. Then every $A_a$ is strictly
+positive at fixed $a$. Consequently the complete compact-test Weil
+form is nonnegative and Weil's criterion implies RH. No common positive
+spectral gap is required. This is a conditional implication; API is open.
+\end{proposition}
+\begin{proof}
+The first four structural inputs, excluding API, are supplied by the
+fixed-window theory and \cite[Theorems 1.3--1.4]{Suzuki2026}.
+If the continuous lowest eigenvalue ever became nonpositive, it would
+be zero at some finite intermediate window. Compact resolvent makes
+that lower edge an eigenvalue. Proposition~\ref{prop:ns51-affine-potential}
+then contradicts API. Every smooth compact test lies in a finite window,
+so its energy is nonnegative. Apply the classical Weil criterion.
+\end{proof}
+
+\paragraph{Scope of the finding.}
+The unjustified $H_0^1$ shortcut has been replaced by a valid weak
+integral formulation. The generic bootstrap is false, while its truth
+for a hypothetical arithmetic nullvector has not been decided. The
+remaining obstacle is uniqueness for this specific signed arithmetic
+integral equation, not a proved negative direction and not a required
+uniform inverse bound. Complete even and odd sectors have both been
+retained; no source-complement argument is substituted. Growing
+near-zero blocks are consistent with fixed-window injectivity.
+
+
+% NS-52. Exact finite identities and a conditional obstruction; no RH assumption.
+% Standalone fragment: requires amsmath, amssymb, amsthm, hyperref and
+% proposition/proof environments. No manuscript version is assigned here.
+\subsection*{NS-52: paired heat-zero transport and its first obstruction}
+
+\paragraph{Normalization and claim scope.}
+Use the conventional de Bruijn--Newman family
+\[
+ H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+ \qquad H_0(z)=\tfrac18\xi(\tfrac12+iz/2),
+\]
+as in Polymath15, equations (1)--(4) and Proposition 3.1
+(\url{https://arxiv.org/html/1904.12438#S3}).
+Put $Z_t(w)=8H_t(2w)$ and $\kappa=1/4$. Then
+\begin{equation}\label{eq:ns52-normalization}
+ Z_0(w)=\Xi(w):=\xi(\tfrac12+iw),\qquad
+ \partial_t Z_t=-\kappa\partial_w^2 Z_t.
+\end{equation}
+Thus the heat coefficient in the ordinary zeta-ordinate coordinate is
+$1/4$, not $1$. All zero sums below count multiplicity. No assertion
+about the locations of the zeros of $Z_0$ is assumed.
+
+For $f,g\in C_c^\infty(-a,a)$ define the nonunitary transform and
+its analytic sesquilinear product by
+\[
+ F_f(w)=\int_{-a}^a f(x)e^{-iwx}\,dx,\qquad
+ F_g^*(w)=\overline{F_g(\overline w)},\qquad
+ \Psi_{f,g}(w)=F_f(w)F_g^*(w).
+\]
+The second factor is an entire function of $w$. Replacing it by
+$\overline{F_g(w)}$ off the real axis would give the wrong form.
+With $\mathcal Z_t$ the zero multiset of $Z_t$, put
+\begin{equation}\label{eq:ns52-zero-form}
+ q_{a,t}(f,g)=\sum_{w\in\mathcal Z_t}\Psi_{f,g}(w).
+\end{equation}
+At $t=0$, $\rho=1/2+iw$ and
+$\rho^\sharp=1-\overline\rho=1/2+i\overline w$ identify this
+exactly with the manuscript's first-slot-linear Weil zero formula:
+$q_{a,0}(f,g)=q_a(f,g)$. There is no $2\pi$ factor with the
+displayed nonunitary transform. Using the unitary transform instead
+would put $2\pi$ in front of the sum. The factor $8$ in $Z_t$ does
+not change any zero or its multiplicity. The completed function has
+no poles; no additional pole term is to be added to this zero-side
+definition. This is not an assertion that the undeformed geometric
+prime and pole terms can be heat-evolved separately.
+
+For completeness, the sum in \eqref{eq:ns52-zero-form} is absolutely
+convergent on this smooth core for every $t\ge0$, locally uniformly
+in $t$. The de Bruijn strip theorem (Polymath15, Theorem 3.2) and
+the unconditional initial critical strip give
+$|\operatorname{Im} w|\le1/2$. For $0\le t\le T$, Gaussian
+majorization of the super-exponentially decreasing $\Phi$ gives
+$|Z_t(w)|\le C_T e^{C_T|w|^2}$ and $Z_t(0)\ge Z_0(0)>0$.
+Jensen's formula therefore bounds the zero count in $|w|\le R$
+by $C_T(1+R)^2$, uniformly in $t$. Repeated integration by parts
+gives arbitrary inverse powers of $|\operatorname{Re}w|$ for both
+test transforms on the fixed strip. This proves convergence and
+uniformly small tails. Local contour integrals count any finite
+cluster continuously through collisions, so the complete form is
+continuous in $t$ on the smooth core. This argument does not justify
+termwise differentiation of the infinite sum or claim a closed
+deformed form on the original complete form domain.
+If all zeros at a fixed $t_0$ are real, then
+\[
+ q_{a,t_0}[f]=\sum_{w\in\mathcal Z_{t_0}}|F_f(w)|^2\ge0.
+\]
+For example the classical de Bruijn theorem supplies such $t_0\ge1/2$.
+
+\begin{proposition}[Finite-cluster transport, including a collision]
+\label{prop:ns52-cluster}
+Let $Z(t,w)$ be holomorphic near $J\times\overline\Omega$, where
+$J$ is an interval of real times and $\Omega$ is a bounded domain
+with piecewise smooth positively oriented boundary $\Gamma$.
+Assume $Z$ has no zero on $\Gamma$ for $t\in J$ and satisfies
+$\partial_t Z=-\kappa Z_{ww}$ with constant $\kappa>0$.
+For an entire $\Psi$, define the finite sum $S_\Gamma(t)$ of
+$\Psi$ over the zeros in $\Omega$, counted with multiplicity.
+Then $S_\Gamma$ is differentiable through all internal collisions and
+\begin{align}
+ S_\Gamma(t)&=\frac1{2\pi i}\int_\Gamma
+                   \Psi(w)\frac{Z_w}{Z}(t,w)\,dw,
+                   \label{eq:ns52-contour}\\
+ S_\Gamma'(t)&=\frac{\kappa}{2\pi i}\int_\Gamma
+                   \Psi'(w)\frac{Z_{ww}}{Z}(t,w)\,dw.
+                   \label{eq:ns52-contour-derivative}
+\end{align}
+At a time with $m$ simple cluster zeros $w_1,\ldots,w_m$, set
+$A(w)=Z(t,w)/\prod_{j=1}^m(w-w_j)$ and $b=A'/A$ locally in
+the cluster. Then
+\begin{equation}\label{eq:ns52-divided-difference}
+ S_\Gamma'
+ =2\kappa\sum_{1\le j<k\le m}
+       \frac{\Psi'(w_j)-\Psi'(w_k)}{w_j-w_k}
+   +2\kappa\sum_{j=1}^m b(w_j)\Psi'(w_j).
+\end{equation}
+If the cluster consists at a particular time of one zero $c$ of
+order $m$, write $Z(t,w)=(w-c)^m A(w)$ with $A(c)\ne0$. Its
+derivative at that time is exactly
+\begin{equation}\label{eq:ns52-multiple}
+ S_\Gamma'=
+ \kappa m(m-1)\Psi''(c)
+       +2\kappa m\frac{A'(c)}{A(c)}\Psi'(c).
+\end{equation}
+In particular, a double zero contributes
+$2\kappa\Psi''(c)+4\kappa(A'/A)(c)\Psi'(c)$.
+\end{proposition}
+\begin{proof}
+The argument principle proves \eqref{eq:ns52-contour}. The nonvanishing
+boundary allows differentiation under its compact integral. Since
+\[
+ \partial_t(Z_w/Z)=-\kappa\partial_w(Z_{ww}/Z),
+\]
+integration by parts around $\Gamma$ gives
+\eqref{eq:ns52-contour-derivative}. At a simple zero,
+$w_j'=\kappa Z_{ww}(w_j)/Z_w(w_j)$, and factorization gives
+\[
+ w_j'=2\kappa\sum_{k\ne j}\frac1{w_j-w_k}
+                         +2\kappa b(w_j).
+\]
+Pair the $j,k$ and $k,j$ contributions to $\sum_jw_j'\Psi'(w_j)$.
+This proves \eqref{eq:ns52-divided-difference}. At an order-$m$ zero,
+\[
+ \frac{Z_{ww}}Z=\frac{m(m-1)}{(w-c)^2}
+       +\frac{2m}{w-c}\frac{A'}A+\frac{A''}A.
+\]
+The residue after multiplying by $\Psi'$ is precisely
+\eqref{eq:ns52-multiple}. No labeling or derivative of a colliding
+individual root is needed.
+\end{proof}
+
+\paragraph{Complete symmetries and the term that must not be omitted.}
+For real $t$, $Z_t$ is real entire and even. Choose the union of
+cluster contours invariant under conjugation and $w\mapsto-w$,
+counting each distinct zero once with its actual multiplicity.
+Then the sum defines a Hermitian sesquilinear contribution and the
+same identities apply. A double collision at a nonzero real $c$
+has a reflected double collision at $-c$; both must be included
+in the symmetry-complete contribution. At $c=0$ one would count
+one cluster, not duplicate it (the actual $H_t$ has no imaginary-axis
+zero). There is no RH assumption here.
+
+For an isolated pair $w_\pm=c\pm d$, the internal term is
+$2\kappa[\Psi'(w_+)-\Psi'(w_-)]/(w_+-w_-)$.
+It converges to $2\kappa\Psi''(c)$ as $d\to0$.
+The two divergent individual velocities therefore cancel exactly.
+The remaining $b=A'/A$ term retains the interaction with the rest
+of the entire function; it does not vanish by symmetry. The local
+analytic factor suffices for the proof, so no additional rearrangement
+of an infinite velocity sum is used here. For a full isolated double
+cluster the limiting value is the double-zero formula above, not
+merely $2\kappa\Psi''(c)$.
+
+\begin{proposition}[The elementary estimate still grows with support]
+\label{prop:ns52-support}
+For $f,g\in L^2(-a,a)$ and $n\ge0$,
+\begin{equation}\label{eq:ns52-pw}
+ |\Psi_{f,g}^{(n)}(w)|
+ \le 2a(2a)^n e^{2a|\operatorname{Im}w|}\|f\|_2\|g\|_2.
+\end{equation}
+Consequently, at a double collision with
+$|\operatorname{Im}c|\le Y$ and $|(A'/A)(c)|\le B$, the bound
+\begin{equation}\label{eq:ns52-support-cost}
+ |S_\Gamma'|
+ \le16\kappa(a^3+Ba^2)e^{2aY}\|f\|_2\|g\|_2
+\end{equation}
+holds. The $a^3$ dependence of a single real collision contribution
+cannot be replaced by a constant for all compact smooth tests.
+Specifically, suppose a double collision occurs at real $c$, and
+choose a real odd $h\in C_c^\infty(-1,1)$ with $\|h\|_2=1$ and
+$M_1=\int u h(u)\,du\ne0$. For
+$f_a(x)=a^{-1/2}h(x/a)e^{icx}$ one has exactly
+\begin{equation}\label{eq:ns52-collision-witness}
+ \|f_a\|_2=1,\qquad
+ S_\Gamma'[f_a]=4\kappa a^3 M_1^2.
+\end{equation}
+The occurrence of such a collision in the nonnegative-time arithmetic
+family is not asserted.
+\end{proposition}
+\begin{proof}
+Cauchy--Schwarz gives
+$|F_f^{(j)}(w)|\le a^j\sqrt{2a}e^{a|\operatorname{Im}w|}\|f\|_2$.
+Leibniz's formula proves \eqref{eq:ns52-pw}; use $n=1,2$ in
+\eqref{eq:ns52-multiple} to obtain \eqref{eq:ns52-support-cost}.
+For the witness, $F_{f_a}(c+v)=\sqrt a F_h(av)$, so
+$F_{f_a}(c)=0$, $\Psi_{f_a,f_a}'(c)=0$, and
+$\Psi_{f_a,f_a}''(c)=2a^3M_1^2$. Apply the double-zero formula.
+This is a lower bound on a conditional individual cluster's derivative,
+not a lower bound on the complete arithmetic derivative: other clusters
+remain present.
+\end{proof}
+
+\paragraph{Passage to the whole time-dependent sum.}
+Absolute convergence of \eqref{eq:ns52-zero-form} at each time
+does not imply convergence of its differentiated cluster series.
+One sufficient hypothesis is an exhausting family of finite zero
+multisets tracked with multiplicity on $[0,t_0]$, with piecewise
+contours as necessary, whose endpoint sums converge to the complete
+forms, and whose integrated derivatives satisfy
+\[
+ \int_0^{t_0}S_n'(t)[f]\,dt\le C\|f\|_2^2
+\]
+for every compact smooth $f$, with one $C$ independent of the
+exhaustion and its support. An integrable bound
+$S_n'(t)[f]\le B(t)\|f\|_2^2$, $\int_0^{t_0}B(t)\,dt<\infty$,
+would suffice. Full symmetry makes these diagonal quantities real.
+These are hypotheses, not consequences of pair cancellation. They
+would imply $q_a[f]\ge q_{a,t_0}[f]-C\|f\|_2^2$ by the fundamental
+theorem of calculus followed by the endpoint limit. The next result
+shows that this particular comparison has an additional obstruction.
+
+\begin{proposition}[An unmatched real zero obstructs uniform
+same-test comparison]\label{prop:ns52-unmatched}
+Assume the archived cutoff-radical lemma: there exists
+$\phi\in\mathcal S(\mathbb R)$ such that, for every fixed finite
+linear combination $h$ of its real translates, smooth cutoffs
+$\chi_a h\in C_c^\infty(-a,a)$ satisfy
+\[
+ \chi_a h\longrightarrow h\text{ in }L^2\text{ and }L^1,
+ \qquad q_a[\chi_a h]\longrightarrow0.
+\]
+Assume $q_{a,t_0}$ is the same-test zero form
+\eqref{eq:ns52-zero-form}, all its zeros are real, and it has a
+zero $c$ of multiplicity $m_c\ge1$ with $F_\phi(c)\ne0$.
+Then no finite $C\ge0$ independent of $a$ can satisfy
+\begin{equation}\label{eq:ns52-rejected-comparison}
+ q_a[f]\ge q_{a,t_0}[f]-C\|f\|_2^2
+ \quad(f\in C_c^\infty(-a,a))
+\end{equation}
+on a cofinal family of windows.
+\end{proposition}
+\begin{proof}
+Fix $T>0$. The Schwartz assumption implies
+\[
+ B_T:=\sum_{k\in\mathbb Z}
+       |\langle\phi,\phi(\cdot-kT)\rangle|<\infty.
+\]
+For each fixed positive integer $M$ put
+\[
+ h_M=M^{-1/2}\sum_{j=1}^M e^{icjT}\phi(\cdot-jT).
+\]
+Counting equal differences of shifts gives
+$\|h_M\|_2^2\le B_T$, whereas
+$F_{h_M}(c)=\sqrt M F_\phi(c)$.
+Since all deformed zeros are real,
+$q_{a,t_0}[f]\ge m_c|F_f(c)|^2$ for every smooth test.
+Apply \eqref{eq:ns52-rejected-comparison} to $\chi_a h_M$ and
+let $a\to\infty$ along the prescribed cofinal family, keeping $M$
+fixed. The $L^1$ convergence controls the single real Fourier
+evaluation. Thus
+\[
+ m_c M|F_\phi(c)|^2\le C\|h_M\|_2^2\le CB_T.
+\]
+Now let $M\to\infty$, a contradiction. No cutoff estimate uniform
+in $M$, global closedness, or lower semicontinuity of a deformed
+form is used.
+\end{proof}
+
+The cutoff input is Lemma~\ref{lem:v136-total-radicals}: its ordinary
+norm convergence and vanishing complete operator residual imply the
+displayed form limit. Schwartz decay and dominated convergence supply
+the additional $L^1$ limit. The source used there has Fourier transform
+a nonzero constant times $\Xi$, by \eqref{eq:v150-mellin} and the
+source normalization, so $F_\phi(c)\ne0$ means precisely that this
+real deformed zero is not an original Xi zero. An unmatched zero
+at a specified $t_0$ has not been certified or proved in this
+checkpoint. The proposition states its hypothesis explicitly; it
+does not assert an unconditional arithmetic closure. It also does
+not assert any negative direction of the original Weil form.
+
+\paragraph{Disposition.}
+The finite algebraic test succeeds: multiplicities and complete
+pairing remove the inverse-gap singularity. What had to change is
+the normalization, the analytic off-real sesquilinear product, and
+retention of the exterior-cluster logarithmic derivative. What is
+still missing is a complete signed transport estimate with support
+independent error. Moreover the proposed same-test positive-time
+comparison is impossible whenever there is an unmatched real
+deformed zero. A broader heat approach would therefore need a
+different comparison or a justified transport of tests that respects
+the original radical; no such transport is supplied. These are
+finite exact identities, proved implications with explicit hypotheses,
+and a named open transport input. No new window, tail metric,
+numerical certificate, G2 assertion, or RH assertion is made.
+
+
+% NS-53. Exact identities, proved implications, and an explicitly open input.
+% No finite numerical approximation is offered as convergence evidence.
+\subsection{NS-53: residualized integer-dilation blocks}
+\label{sec:ns53-nb-blocks}
+
+Work in the real Hilbert space $H=L^2((0,\infty),dx)$, with
+$\chi=\mathbf 1_{(0,1)}$ and $\rho_n(x)=\{1/(nx)\}$ for integers $n\geq1$.
+Real coefficients lose nothing for this real target; the complex version
+uses conjugate transposes. Put
+\[
+ V_N=\operatorname{span}\{\rho_1,\ldots,\rho_N\},\qquad
+ r_N=\chi-P_N\chi,\qquad E_N=\|r_N\|^2=d_N^2,
+\]
+where $P_N$ is the orthogonal projection onto $V_N$.
+The strong Nyman--Beurling criterion is the established equivalence
+$E_N\to0\Longleftrightarrow\mathrm{RH}$; see B\'aez-Duarte,
+\href{https://arxiv.org/abs/math/0202141}{Theorem~1.1}.
+No particular upper rate is required. Burnol's
+\href{https://doi.org/10.1006/aima.2001.2066}{lower-bound theorem}
+does not require a matching upper bound. This checkpoint proves no
+convergence statement and makes no G2 or RH claim.
+
+\begin{proposition}[Exact arithmetic entries and finite independence]
+\label{prop:ns53-nb-entries}
+Let $G_{mn}=\langle\rho_m,\rho_n\rangle$, $b_n=\langle\chi,\rho_n\rangle$,
+and $\kappa=\log(2\pi)-\gamma$, where $\gamma$ is Euler's constant.
+Then
+\begin{align}
+ G_{mn}&=\int_0^\infty\{y/m\}\{y/n\}\,\frac{dy}{y^2},
+ & b_n&=\frac{\log n+1-\gamma}{n},
+ &G_{nn}&=\frac{\kappa}{n}.\label{eq:ns53-nb-entries}
+\end{align}
+In particular, writing $a_j=\lfloor j/m\rfloor$ and
+$d_j=\lfloor j/n\rfloor$, the following is an exact convergent series:
+\begin{equation}
+ G_{mn}=\frac1{mn}+\sum_{j=1}^{\infty}
+ \left[\frac1{mn}-\left(\frac{d_j}{m}+\frac{a_j}{n}\right)
+ \log\left(1+\frac1j\right)+\frac{a_jd_j}{j(j+1)}\right].
+ \label{eq:ns53-nb-gram-series}
+\end{equation}
+Each bracket is a nonnegative cell integral. Every Gram matrix belonging
+to finitely many distinct positive integers is positive definite.
+Moreover $E_N>0$ for every finite $N$.
+\end{proposition}
+
+\begin{proof}
+Substitute $y=1/x$ and integrate on $[j,j+1)$; both floor functions
+are constant on that interval. This gives the integral and series formulas.
+The change $y=nt$ gives the diagonal scaling and
+\[
+ b_n=\frac1n\left(\log n+\int_1^\infty\frac{\{t\}}{t^2}\,dt\right).
+\]
+The integral truncated at an integer $K$ is $1+\log K-H_K$.
+Similarly, integrating $\{t\}^2/t^2$ on the first $M+1$ unit cells gives
+\[
+ 2M+2-H_{M+1}-2M\log(M+1)+2\log(M!).
+\]
+Stirling's formula gives its limit $\kappa$. For finite independence,
+a vanishing linear combination of $\{y/n\}$ is piecewise affine.
+At the smallest index with nonzero coefficient its jump cannot be
+cancelled by a smaller nonzero coefficient, a contradiction. If
+$\chi=\sum_{n\leq N}c_n\rho_n$, comparison of the jumps at every positive
+integer in the $y$ variable gives
+$\sum_{n\mid j}c_n=-\mathbf 1_{j=1}$, with $c_n=0$ for $n>N$.
+M\"obius inversion would force $c_n=-\mu(n)$ for every $n$, contradicted
+by a prime greater than $N$. A finite-dimensional span is closed, so
+$E_N>0$.
+\end{proof}
+
+\begin{proposition}[Exact block improvement, including all cross terms]
+\label{prop:ns53-nb-block-gain}
+Fix integers $1\leq N<M$. Let $G$ be the $N$ by $N$ old Gram matrix,
+$C=(G_{mn})_{1\leq m\leq N,\,N<n\leq M}$, and
+$D=(G_{mn})_{N<m,n\leq M}$.
+Write $b=(b_m)_{m\leq N}$, $b_B=(b_n)_{N<n\leq M}$, and define
+\begin{equation}
+ c=G^{-1}b,\qquad h=b_B-C^{\mathsf T}c,\qquad
+ S=D-C^{\mathsf T}G^{-1}C.
+ \label{eq:ns53-nb-schur}
+\end{equation}
+Then $S$ is positive definite, and
+\begin{equation}
+ E_N-E_M=h^{\mathsf T}S^{-1}h
+ =\sup_{w\ne0}\frac{|w^{\mathsf T}h|^2}{w^{\mathsf T}Sw}.
+ \label{eq:ns53-nb-gain}
+\end{equation}
+The gain is zero if and only if $h=0$; strict finite improvement is not
+asserted for every block. The coefficients for the enlarged optimum are
+$(c-G^{-1}CS^{-1}h,S^{-1}h)$. In addition,
+\begin{equation}
+ E_N-E_M\ \geq\
+ \frac{\sum_{n=N+1}^M|b_n-\sum_{m\leq N}c_mG_{mn}|^2}
+ {\kappa\sum_{n=N+1}^M1/n}
+ \ \geq\
+ \frac{\|h\|_2^2}{\kappa\log(M/N)}.
+ \label{eq:ns53-nb-trace-gain}
+\end{equation}
+These are finite, unconditional identities and inequalities, not estimates
+of the numerator as $N$ grows.
+\end{proposition}
+
+\begin{proof}
+Set $z_n=(I-P_N)\rho_n$ for $N<n\leq M$. Its Gram matrix is $S$,
+and $\langle r_N,z_n\rangle=h_n$. Finite independence shows that these
+$z_n$ are independent. The orthogonal decomposition
+$V_M=V_N\mathbin{\oplus}\operatorname{span}\{z_n\}$ gives
+\eqref{eq:ns53-nb-gain} and the coefficient update. Since
+$0<S\leq D$, the largest eigenvalue of $S$ is at most
+$\operatorname{tr}D=\kappa\sum_{n=N+1}^M1/n$. Therefore
+$h^{\mathsf T}S^{-1}h\geq\|h\|_2^2/\operatorname{tr}D$.
+The decreasing function $1/x$ gives
+$\sum_{n=N+1}^M1/n\leq\log(M/N)$.
+\end{proof}
+
+\begin{remark}[Conditioning is retained]
+Replacing $S$ by $D$ in the exact identity, or using $b_B$ instead of $h$,
+would discard the old--new interaction. A small eigenvalue of $S$ can
+make the exact gain much larger than the trace lower bound; it causes no
+missing inverse error in the analytic lower bound. For a proposed real
+block vector $w$, its exact gain after optimizing its scalar coefficient
+is $|w^{\mathsf T}h|^2/(w^{\mathsf T}Sw)$. If
+$\sum_{n=N+1}^M w_n/n=0$, the unprojected combination
+$\sum w_n\rho_n$ vanishes on $x>1/(N+1)$. Its residualized combination
+need not have this support, and its norm is still $w^{\mathsf T}Sw$.
+\end{remark}
+
+\begin{proposition}[Exact divisor cells and the raw M\"obius-prefix penalty]
+\label{prop:ns53-nb-divisor-cells}
+For arbitrary real coefficients $c_1,\ldots,c_N$, put
+\[
+ A=\sum_{n\leq N}\frac{c_n}{n},\qquad
+ B_j=1+\sum_{n\leq N}c_n\left\lfloor\frac jn\right\rfloor
+     =1+\sum_{k=1}^j\ \sum_{\substack{n\mid k\\n\leq N}}c_n.
+\]
+For $r=\chi-\sum c_n\rho_n$, one has $r(1/y)=-Ay$ on $(0,1)$
+and $r(1/y)=B_j-Ay$ on $[j,j+1)$, $j\geq1$. Consequently
+\begin{equation}
+ \|r\|^2=A^2+\sum_{j=1}^{\infty}
+ \left[A^2-2AB_j\log\left(1+\frac1j\right)
+          +\frac{B_j^2}{j(j+1)}\right].
+ \label{eq:ns53-nb-divisor-energy}
+\end{equation}
+The brackets are nonnegative cell integrals; they are not to be split
+into three separately summed series. For the raw choice $c_n=-\mu(n)$,
+\begin{equation}
+ \left\|\chi+\sum_{n\leq N}\mu(n)\rho_n\right\|^2
+ \geq (N+1)\left|\sum_{n\leq N}\frac{\mu(n)}n\right|^2.
+ \label{eq:ns53-nb-mobius-penalty}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Expand each fractional part. The energy identity is the integral of the
+squared affine function on each unit cell. For the M\"obius choice,
+$B_j=0$ for $1\leq j\leq N$, by
+$\sum_{n\mid k}\mu(n)=\mathbf 1_{k=1}$. The interval $(0,N+1)$ alone
+then contributes the displayed lower bound.
+\end{proof}
+
+\begin{remark}[What the arithmetic lemma does and does not supply]
+Equation~\eqref{eq:ns53-nb-mobius-penalty} gives an explicit necessary
+condition for this particular unsmoothed coefficient choice to converge:
+$\sqrt N\sum_{n\leq N}\mu(n)/n\to0$. It is not a lower bound for the
+optimal $E_N$. The divergence of the raw natural approximation is already
+recorded in B\'aez-Duarte's Introduction; no novelty is claimed for its
+failure. Smoothing or adaptive coefficients change the problem and must
+be evaluated through the full residual and Gram matrix.
+\end{remark}
+
+\begin{proposition}[A sufficient block-correlation input at any rate]
+\label{prop:ns53-nb-any-rate}
+Fix an integer $q\geq2$, $N_j=q^j$, and real numbers
+$0\leq\alpha_j<1$ for $j\geq j_0$, with $\sum_j\alpha_j=\infty$.
+Use the actual optimal coefficients $c^{(N_j)}=G_{N_j}^{-1}b_{N_j}$.
+Suppose the following \emph{residual block-correlation input} holds:
+\begin{equation}
+ \sum_{n=N_j+1}^{qN_j}
+ \left|\frac{\log n+1-\gamma}{n}
+       -\sum_{m\leq N_j}c_m^{(N_j)}G_{mn}\right|^2
+ \geq\kappa\log q\,\alpha_j E_{N_j}.
+ \tag{RBC}\label{eq:ns53-nb-rbc}
+\end{equation}
+Then $E_N\to0$. For example, the hypothetical bound (RBC) with
+$\alpha_j=1/(2(j+1))$ would give
+$E_{q^j}=O(j^{-1/2})$, hence $E_N=O((\log N)^{-1/2})$.
+This slower-than-optimal rate would already meet the established criterion.
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:ns53-nb-trace-gain} gives
+$E_{N_{j+1}}\leq(1-\alpha_j)E_{N_j}$. Iteration and
+$1-t\leq e^{-t}$ prove convergence. Monotonicity supplies intermediate
+$N$. For the example, summing $1/(2(j+1))$ yields the stated rate.
+\end{proof}
+
+\paragraph{Named open input and disposition.}
+(RBC) is \emph{unproved}; it is a specific sufficient arithmetic estimate,
+not asserted equivalent to RH or known to follow from RH. It may be
+stronger than needed because the trace bound can lose the small
+Gram eigenvalues that amplify the exact gain. The weaker exact target is
+a nonsummable sequence of relative gains
+$h_j^{\mathsf T}S_j^{-1}h_j/E_{N_j}$, which is equivalent to convergence
+and is not itself a new theorem. The arithmetic work still missing is
+a lower estimate for the corrected correlations, or for an explicitly
+constructed block quotient, for the \emph{actual optimal residuals}.
+Entry formulas, a finite collection of positive gains, and a finite list of distances
+do not supply it. No such asymptotic gain estimate is proved here.
+The missing step is the asymptotic gain estimate; this establishes
+neither failure of (RBC) nor failure of the approximation object. No new Weil window, tail metric, G2 or RH
+claim is introduced.
 
 \appendix
 \section{Reproducible finite checks}\label{app:numerics}

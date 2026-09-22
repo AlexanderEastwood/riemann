@@ -1,5 +1,35 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.54 — NS-51/52/53 first analytic results (2026-09-22)
+
+What changed: nullvectors are tested through a continuous affine screw potential
+on the complete logarithmic form domain; no ordinary H0¹ derivative is assumed.
+A positive torsion function plus a bounded self-adjoint rank-one perturbation
+of the same logarithmic principal operator disproves the generic bootstrap.
+This is not a counterexample for the arithmetic operator. API is the named,
+unproved affine-potential injectivity input; both parities are retained.
+
+Paired heat-zero transport has coefficient 1/4 in Xi coordinates. Finite cluster
+contours give exact derivatives through collisions and preserve the exterior
+zero interaction. Same-test comparison with a real-zero positive-time form is
+impossible if it has one zero unmatched by Xi; that hypothesis is not established
+at a specified time here. The general heat route and suitable test transport
+remain open. The original Weil form has not been shown negative.
+
+Nyman–Beurling approximation is reopened: any rigorous d_N→0 rate suffices.
+Exact residualized block gain retains all old/new Gram couplings and has an
+unconditional lower bound ||h||²/(kappa log(M/N)). No asymptotic bound on its
+arithmetic numerator is proved. RBC is a named sufficient open input; failure
+of the raw Möbius prefix is prior art and is not a failure of optimal approximation.
+
+Independent domain and cross-route reviews have no outstanding mathematical
+MAJOR/MINOR findings; two heat typesetting corrections were fixed. The release
+proof is integrated verbatim and all new reports have an artifact hash inventory.
+Actual manuscript build: 278 pages, 0 undefined references, 0 duplicate references,
+0 overfull boxes. No new numerical window, tail metric, uniform floor, G2 or RH
+claim. Publication status is recorded by the PR and tag, not inferred from a draft.
+
+
 ## v1.53 local draft — NS-46 with Astra-2 (2026-09-22)
 
 What changed: the source translates stay in [-1,1] with shrinking spacing;

@@ -92,6 +92,16 @@ starting threshold are analytic, not finite numerical certificates. The
 complete complementary signed floor remains open; gap-free transfer was
 already in v1.18/v1.36. No new window, tail metric, G2 or RH claim.
 
+Version 1.54 (NS-51–53) gives the complete form-domain affine screw-potential
+criterion for nullvectors, with a countermodel to a generic H0^1 bootstrap.
+API (arithmetic affine-potential injectivity) remains open. Symmetry-paired
+heat-zero transport removes internal inverse-gap singularities but retains
+external-cluster terms; uniform same-test comparison fails conditionally on
+an unmatched real deformed zero, not verified here. Exact Nyman–Beurling block
+gains retain the Schur complement and admit a trace lower bound; the RBC
+asymptotic arithmetic estimate remains open. Any proven NB convergence rate
+would suffice. No new window, tail metric, uniform floor, G2 or RH claim.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

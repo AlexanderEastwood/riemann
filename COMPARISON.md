@@ -168,39 +168,37 @@ See [the proof and certificate](evidence/v140/research_report.md).
 
 ### In de Branges / Krein–Langer terms (Suzuki, arXiv:2606.09096)
 
-Suzuki proves unconditionally that at every window, after shifting by any
-`μ < λ_a := inf σ(A_a)`, the windowed Weil space is a de Branges space with
-real-zero structure functions. The Hermite–Biehler structure therefore
-exists whether or not the form is positive; the sign is carried entirely by
-`λ_a`, which de Branges data cannot produce. Exact dictionary:
+Suzuki's fixed-window construction uses a shift strictly below the spectral
+bottom. The existence of that shifted positive space does not decide the
+unshifted bottom's sign. In particular, `W_lambda >= -8 I` safely permits a
+shift `8+epsilon`; the nonnegative endpoint shift may have a nullspace and
+needs separate quotient/domain analysis. This is a limitation of the stated
+shift construction, not a theorem excluding all de Branges methods.
 
-    W_λ >= 0      ⟺  λ_a >= 0  ⟺  g|(−2a, 2a) is a screw function on the interval
-    W_λ >= −8·I   ⟺  shift 8 makes the windowed space a de Branges space
+Positive local screw data admit positive extensions under the cited extension
+theorems. The required arithmetic conclusion is that the prescribed global
+Weil screw function is positive. Uniqueness of arbitrary extensions is not
+established and is not substituted for that identification. NS-51 below
+instead uses the published nondegeneracy/continuity formulation and states
+its missing arithmetic injectivity input explicitly.
 
-with `g` the Weil screw function and `a = log λ`. Conrey–Li (IMRN 2000)
-refuted de Branges' own positivity conditions on ζ-built spaces numerically
-(34th zero; `ξ(1+282i)/ξ(2+282i) < 0`); nothing unconditional survives there.
-Lagarias / Suzuki give the RH-conditional identification `H_W ≅ K(Θ_ξ)` with
-no converse. **No de Branges tool supplies a positivity mechanism.**
+### Li's criterion and Nyman–Beurling (scoped assessments)
 
-What the theory does supply is a name for the wall. By Krein–Langer
-continuation, `W_4 >= 0` says the Weil screw function on
-`(−2 log 4, 2 log 4) = (−2.77, 2.77)` has **at least one** positive-definite
-extension to ℝ; RH says that extension is **unique and equals g**.
-Determinacy at any certified window would already be RH.
+The prior Li assessment concerns the direct identification of rational Li
+transforms with finite-window entire Paley–Wiener tests. It does not prove
+that every indirect transfer is impossible. The historical diagnostics are
+retained in `evidence/diag_routes/li/`.
 
-### Li's criterion and Nyman–Beurling (assessed; closed)
-
-Li: the Bombieri–Lagarias test functions have Mellin transforms with a pole
-at 0, so the Li class meets the Paley–Wiener class of every finite window only
-in {0}; no window certificate constrains any `λ_n`. `W_4 >= 0` does give the
-windowed coefficients `λ_n^{[log 16]} >= 0` for all n. Nyman–Beurling: no
-finite statement is equivalent to `W_λ >= 0`; `d_N` was certified to N = 600
-and `d_N² log N` oscillates around `C = 2+γ−log 4π` with Burnol's bound making
-that rate sharp — no analogue of the v1.36 floor weakening exists there.
-Burnol's Thm 3.1 (co-Poisson complement = span of zero evaluators) is the one
-structural bridge, and it is a semantic lock, not a result.
-(`evidence/diag_routes/li/`, `evidence/diag_routes/nb/`)
+Nyman–Beurling is reopened by NS-53. The established criterion is `d_N -> 0`;
+any proved upper rate tending to zero suffices. Burnol's lower bound of order
+`1/log N` for the squared distance does not require a matching upper bound.
+The archived finite distances in `evidence/diag_routes/nb/` establish no
+asymptotic decay theorem. NS-53 gives the exact residualized block gain
+`h^T S^(-1) h`, with the full Schur complement, and the unconditional lower
+bound `||h||^2 / (kappa log(M/N))`, `kappa=log(2pi)-gamma`. A divergent
+cumulative relative gain would prove convergence; the needed arithmetic
+residual block-correlation bound is explicitly OPEN, not a consequence of
+the finite identities. See `evidence/ns53_nb_blocks/`.
 
 ### In Toeplitz–Hankel terms (`evidence/diag_circle_split/`)
 
@@ -218,24 +216,52 @@ negativity of `β_a` at high frequency. That is the scale the weighted
 concentration criterion has to control. (An earlier KMS claim here used the
 wrong object and is withdrawn.)
 
-### de Bruijn–Newman (assessed; closed)
+### de Bruijn–Newman (NS-52: exact paired transport, open arithmetic route)
 
-RH ⇔ Λ = 0 (Rodgers–Tao, arXiv:1801.05914; Polymath15, arXiv:1904.12438,
-Λ ≤ 0.22). No bridge exists in either direction between a finite-window Weil
-certificate and any bound Λ ≤ c: H_t has no Euler product and no explicit
-formula, and every known zero-location → Λ statement needs RH to a height.
-The project toolchain reproduces Polymath15's certified barrier from scratch
-(`evidence/diag_routes/dbn/`), which confirms capability and nothing else.
+RH is equivalent to Lambda=0 after Rodgers–Tao's unconditional lower bound.
+The historical Polymath15 barrier reproduction does not exclude all bridges
+from Weil forms. NS-52 fixes the normalization `Z_t(w)=8 H_t(2w)`, so the
+heat coefficient in the ordinary zeta coordinate is 1/4. Finite zero-cluster
+transport has an exact contour formula; inverse-gap singularities cancel
+inside the paired contribution, but the exterior-cluster logarithmic
+derivative remains. The smooth-core complete zero sum exists; differentiating
+it and controlling it uniformly in support are separate demands.
 
-### The unification
+A particular same-test comparison `q_0 >= q_t0 - C ||f||^2` is impossible
+if the real-zero deformed function has even one zero at which the original
+radical transform is nonzero. The result is conditional: this checkpoint
+does not verify an unmatched zero at a specified time. It closes neither
+the heat approach nor a comparison with a different justified test transport.
+See `evidence/ns52_heat_pairs/`. No physical negative Weil direction follows.
 
-A certified window is **positivity of a truncated moment problem** whose
-sections are `T(φ) ± H(φ)`; RH is the **determinacy** of that moment
-problem. Positivity of finitely many sections never decides determinacy.
-That is why no finite list of windows can close G2, stated in language
-(Krein–Langer on one side, Szegő–Widom / Basor–Ehrhardt on the other) that
-predates this project. It does not move RH; it stops "one more window"
-arguments and it tells the next attempt what kind of statement it must be.
+### Complete kernel exclusion (NS-51)
+
+For `f` in the complete logarithmic form domain, `A_a f=0` exactly when
+its screw potential `(g * E_a f)|(-a,a)` is affine. This local continuous
+integral equation avoids an unproved `H_0^1` assumption. Even parity allows
+a constant potential; odd parity allows `b x`, and its derivative constant
+must be retained. Ordinary `L2` screw-operator injectivity cannot be silently
+substituted for injectivity on the derivative completion.
+
+A bounded self-adjoint rank-one perturbation of the same logarithmic
+principal operator has a zero eigenfunction with logarithmic boundary decay
+outside `H_0^1`. Thus the proposed generic bootstrap fails; an arithmetic
+bootstrap is neither proved nor refuted. Affine-potential injectivity (API)
+on the complete form domain remains OPEN. With continuity of the lowest
+eigenvalue and a positive small-window starting point it would prevent a
+first sign crossing, without a uniform positive gap. This is the established
+nondegeneracy route in an explicit integral formulation, not a proved new
+positivity mechanism. See `evidence/ns51_kernel/`.
+
+### What the comparisons establish
+
+The assessed finite-window data do not supply the missing cofinal assertions.
+They do not prove that every alternative mechanism fails, or that logically
+equivalent criteria have equally difficult proofs. Literal Toeplitz–Hankel
+structure and applicable asymptotics remain separate obligations; a truncated
+moment analogy is not a proved arithmetic determinacy equivalence. NS-51–53
+record concrete first lemmas and their remaining inputs without promoting
+an unexcluded route to a proved estimate.
 
 ## Correction to NS-14 (v1.41)
 

@@ -1,0 +1,70 @@
+{
+  "scope": "Every new NS51\u201353 task artifact; release files separately covered by v1.54 manifest.",
+  "files": [
+    {
+      "path": "evidence/ns51_kernel/domain-review-2026-09-22-v1.html",
+      "size_bytes": 5476,
+      "sha256": "b0c523bb0f58079625fa9f61f7264af9c1694add8ed724205b42b2eb11283ac1"
+    },
+    {
+      "path": "evidence/ns51_kernel/domain-review.md",
+      "size_bytes": 9631,
+      "sha256": "dab09aac5c809222bd42e9ccfa67943e68fa2dae48eeed17e4c1a2a4e9209f57"
+    },
+    {
+      "path": "evidence/ns51_kernel/kernel-route-2026-09-22-v1.html",
+      "size_bytes": 4121,
+      "sha256": "bb51f03a5e3b8b9c82a85b1995d0aa8e0ec04e13d71adc1664c5be0f76248633"
+    },
+    {
+      "path": "evidence/ns51_kernel/proof.tex",
+      "size_bytes": 9456,
+      "sha256": "ee27a3cd7a43df40605eccb468588854bafe05bb2a91b6e47c7af1e3f3c20cba"
+    },
+    {
+      "path": "evidence/ns52_heat_pairs/findings.md",
+      "size_bytes": 8090,
+      "sha256": "ead90ce2e676562e2f397dc15ee6ecaddde301399929d2d81ff5249dd2fbf979"
+    },
+    {
+      "path": "evidence/ns52_heat_pairs/heat-pairs-2026-09-22-v1.html",
+      "size_bytes": 5584,
+      "sha256": "152aa47db20eb7ba87e3d9debf8a6809f6cccbb58e13fc6282a386b08c5dc50f"
+    },
+    {
+      "path": "evidence/ns52_heat_pairs/ns53-independent-review-2026-09-22.md",
+      "size_bytes": 3404,
+      "sha256": "6875cdf58cea3505ea2f84f6e98f185d7c56632650dc8db3bb517010b633d4ee"
+    },
+    {
+      "path": "evidence/ns52_heat_pairs/proof.tex",
+      "size_bytes": 12863,
+      "sha256": "b7f3df5788d9d69051560e84c71cef9835d21e34bc8a18de9bb4b73cffbd5893"
+    },
+    {
+      "path": "evidence/ns52_heat_pairs/validation.json",
+      "size_bytes": 702,
+      "sha256": "6d1cb749d099c3d4f0ac67fb2cdacdecf1debdfad9e8953c61a8879bff1b14a6"
+    },
+    {
+      "path": "evidence/ns53_nb_blocks/findings.md",
+      "size_bytes": 6595,
+      "sha256": "be721714960aa92049b958370f0a9fa4421c80620ac1b8d6a06708fa01fa7311"
+    },
+    {
+      "path": "evidence/ns53_nb_blocks/nb-blocks-2026-09-22-v1.html",
+      "size_bytes": 5812,
+      "sha256": "f213e975f1d66d2abd2706ee6212c36472254d13e51498029a8e59186b8e7f45"
+    },
+    {
+      "path": "evidence/ns53_nb_blocks/ns52-independent-review.md",
+      "size_bytes": 3558,
+      "sha256": "b9ebce5ea6e23672873edd699c1ad42451f3da981476e41fa946a2938b3ee44c"
+    },
+    {
+      "path": "evidence/ns53_nb_blocks/proof.tex",
+      "size_bytes": 9340,
+      "sha256": "36de7fe507f8957a361f14ae430c6a96a812cb90c3dd8de20c22057f1a10b7d5"
+    }
+  ]
+}
