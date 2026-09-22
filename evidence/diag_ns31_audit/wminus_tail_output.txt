@@ -1,0 +1,2 @@
+lambda=4: negative measure in [4000,2e5] = 61.6, last beta<0 at 77404; W^-[0,0]: main 0.220947 + beyond-grid 4.21e-08 (1.9e-07 rel);  W^-[0,1]: main 0.004528 + 5.95e-08 (1.3e-05 rel)
+lambda=8: negative measure in [4000,2e5] = 4294.5, last beta<0 at 199902; W^-[0,0]: main 0.047499 + beyond-grid 2.02e-06 (4.2e-05 rel);  W^-[0,1]: main 0.008624 + 2.85e-06 (3.3e-04 rel)

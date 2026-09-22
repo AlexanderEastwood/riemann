@@ -265,11 +265,11 @@
     {
       "id": "circle",
       "title": "circle / Toeplitz-Hankel lens",
-      "status": "live",
+      "status": "open",
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_true_symbol",
-      "note": "The correct symbol and centering sign agree with independent even/odd lambda=4 quadrature. Finite-head deep-block cancellation survives precision replay, with different parity counts; only lambda=3 source alignment was checked in the original lane. A literal Toeplitz-plus-Hankel structure, any six-digit relative pencil guarantee, and the diagnostic asymptotic closures are unproved or withdrawn. Current interpretation: evidence/diag_ns36_corrections/circle-lane-current-reading-2026-09-22-v1.html. No certificate or cofinal conclusion."
+      "note": "measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained"
     },
     {
       "id": "debranges",
@@ -412,6 +412,26 @@
       "branch": "codex/weighted-level-review",
       "evidence": "evidence/v149",
       "note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim."
+    },
+    {
+      "id": "capacityweight",
+      "title": "positive arithmetic weight: critical capacity input",
+      "status": "blocked",
+      "parent": "floor",
+      "prop": "lem:v150-weight; prop:v150-critical-energy; ass:v150-cae",
+      "branch": "codex/bounded-capacity-weight",
+      "evidence": "evidence/v150",
+      "note": "NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open."
+    },
+    {
+      "id": "capacityslack",
+      "title": "fixed energy loss for the Gaussian arithmetic weight",
+      "status": "closed",
+      "parent": "capacityweight",
+      "prop": "prop:v150-capacity-slack",
+      "branch": "closed/v150-capacity-slack",
+      "evidence": "evidence/v150",
+      "note": "Scoped closure: for this explicit weight, discarding fixed delta>0 of transformed energy, or the prime-2 channel alone, forces eta >= delta*kappa*exp(gamma*lambda^2)-O(lambda log lambda). Exact source-admissible even and odd tests, all cross terms controlled. Does not close coefficient-one capacity, another weight, or the physical Weil form."
     }
   ]
 }

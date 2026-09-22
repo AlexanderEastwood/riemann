@@ -51,6 +51,8 @@ graph LR
   minorantlevels["bounded-complexity minorants: arithmetic gap remains<br/><small>prop:v146-packet-loss; prop:v146-level-complexity</small><br/><small>&#128193; evidence/v146</small>"]
   zeroleveldistribution["zero level distribution and packet coverage: open inputs<br/><small>prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet</small><br/><small>&#128193; evidence/v147</small>"]
   weightedexactcost["weighted exact cost: peak bound fails at critical levels<br/><small>prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg</small><br/><small>&#128193; evidence/v149</small>"]
+  capacityweight["positive arithmetic weight: critical capacity input<br/><small>lem:v150-weight; prop:v150-critical-energy; ass:v150-cae</small><br/><small>&#128193; evidence/v150</small>"]
+  capacityslack["fixed energy loss for the Gaussian arithmetic weight<br/><small>prop:v150-capacity-slack</small><br/><small>&#128193; evidence/v150</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -97,6 +99,8 @@ graph LR
   concentration --> minorantlevels
   minorantlevels --> zeroleveldistribution
   zeroleveldistribution --> weightedexactcost
+  floor --> capacityweight
+  capacityweight --> capacityslack
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -128,17 +132,19 @@ graph LR
   click minorantlevels "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v146/" "evidence: evidence/v146" _blank
   click zeroleveldistribution "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v147/" "evidence: evidence/v147" _blank
   click weightedexactcost "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v149/" "evidence: evidence/v149" _blank
+  click capacityweight "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v150/" "evidence: evidence/v150" _blank
+  click capacityslack "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v150/" "evidence: evidence/v150" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
-  class circle,stepb live;
+  class stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn closed;
+  class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class w5,concentration,minorantlevels,zeroleveldistribution,weightedexactcost blocked;
+  class w5,concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
-  class rh,fixedspace,g2,uniform,altroutes open;
+  class rh,fixedspace,g2,uniform,altroutes,circle open;
   subgraph Legend
     direction LR
     lg_live["current route (gold)"]:::live
@@ -154,10 +160,10 @@ graph LR
 | status | count | meaning |
 |---|---:|---|
 | `proved` | 19 | established result |
-| `live` | 2 | current route (gold): being worked now |
-| `closed` | 15 | closed route (red): proved insufficient or impossible; kept deliberately |
-| `blocked` | 5 | attempted; obstruction found |
-| `open` | 5 | target, not yet attacked |
+| `live` | 1 | current route (gold): being worked now |
+| `closed` | 16 | closed route (red): proved insufficient or impossible; kept deliberately |
+| `blocked` | 6 | attempted; obstruction found |
+| `open` | 6 | target, not yet attacked |
 
 ## Nodes
 
@@ -165,7 +171,7 @@ graph LR
   - [ ] **Alternative criteria (all equivalent; same wall)** — each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21
     - [X] **Li / Keiper coefficients** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · Li class ∩ Paley-Wiener = {0}: no window certifies any lambda_n; W_4>=0 gives windowed lambda_n^[log16] >= 0 only
     - [X] **Nyman-Beurling-Baez-Duarte** — evidence: [`evidence/diag_routes/nb/`](evidence/diag_routes/nb/) · no finite NB statement equivalent to W_lambda>=0; d_N certified to N=600, oscillates around C/log N; Burnol Thm 3.1 is the semantic lock
-    - [~] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_true_symbol/`](evidence/diag_true_symbol/) · The correct symbol and centering sign agree with independent even/odd lambda=4 quadrature. Finite-head deep-block cancellation survives precision replay, with different parity counts; only lambda=3 source alignment was checked in the original lane. A literal Toeplitz-plus-Hankel structure, any six-digit relative pencil guarantee, and the diagnostic asymptotic closures are unproved or withdrawn. Current interpretation: evidence/diag_ns36_corrections/circle-lane-current-reading-2026-09-22-v1.html. No certificate or cofinal conclusion.
+    - [ ] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_true_symbol/`](evidence/diag_true_symbol/) · measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained
     - [X] **de Branges / Hermite-Biehler** — HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)
     - [X] **de Bruijn-Newman (0 <= Lambda <= 0.22)** — evidence: [`evidence/diag_routes/dbn/`](evidence/diag_routes/dbn/) · no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s
     - [X] **function field / Hodge / F_1** — nothing finite transfers; window lambda has no intersection-theoretic meaning
@@ -189,6 +195,8 @@ graph LR
       - [x] **uniform finite floor suffices** — `prop:v136-bounded-floor` · evidence: [`evidence/v136/`](evidence/v136/) · decay not required; dichotomy inf spec -> -inf or RH
         - [x] **W_lambda >= -8 I at lambda=5,6,8** — `prop:v138-three-floors` · `result/v138-three-floors` · evidence: [`evidence/v138/`](evidence/v138/) · both parities, full infinite tail, Z=0; margin 0.84 -> 0.10 (odd) as lambda grows; not cofinal
         - [x] **bounded shift keeps the exp cutoff barrier** — `prop:v138-shifted-floor` · evidence: [`evidence/v138/`](evidence/v138/) · N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi
+        - [!] **positive arithmetic weight: critical capacity input** — `lem:v150-weight; prop:v150-critical-energy; ass:v150-cae` · `codex/bounded-capacity-weight` · evidence: [`evidence/v150/`](evidence/v150/) · NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open.
+          - [X] **fixed energy loss for the Gaussian arithmetic weight** — `prop:v150-capacity-slack` · `closed/v150-capacity-slack` · evidence: [`evidence/v150/`](evidence/v150/) · Scoped closure: for this explicit weight, discarding fixed delta>0 of transformed energy, or the prime-2 channel alone, forces eta >= delta*kappa*exp(gamma*lambda^2)-O(lambda log lambda). Exact source-admissible even and odd tests, all cross terms controlled. Does not close coefficient-one capacity, another weight, or the physical Weil form.
     - [ ] **Uniform mechanism for G2**
       - [X] **Cotlar cross terms / atomization** — `closed/cotlar-atomization` · **evidence missing** · v1.34, cross norm >= 73/(375 pi)
       - [X] **Schatten / Hilbert-Schmidt** — `prop:v132-schatten` · `closed/schatten` · **evidence missing**

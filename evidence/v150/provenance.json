@@ -1,0 +1,86 @@
+{
+  "classification": "Analytic work; archived inputs and independent review provenance",
+  "base_main": "318b3ce5c79a2df05a960a0f6705d208f6c5dc67",
+  "claim_commit": "a9b6277",
+  "original_claim_before_rebase": "38324b5",
+  "task": "NS-34",
+  "independent_review_task": "NS-37",
+  "independent_review_commits": {
+    "original_claim": "baf5e0e",
+    "integrated_claim": "a05a7b4",
+    "original_completion": "ee3548c",
+    "integrated_completion": "908f40d"
+  },
+  "files": [
+    {
+      "path": "evidence/v124/g2_signed_tail/residual_insert.tex",
+      "sha256": "4bf50d74c39c3df932411d01ec4f650e398a34720a1643b4a8326c093b8a8293",
+      "size_bytes": 7933,
+      "role": "archived v1.15 normalization and actual source residual"
+    },
+    {
+      "path": "evidence/v124/g2_signed_tail/operator_residual_derivation.md",
+      "sha256": "785ab5b240d3a40ee2fcddba32936ef67f66a0cdc8db6cb8a123f3f02604d264",
+      "size_bytes": 10918,
+      "role": "archived v1.15 analytic derivation"
+    },
+    {
+      "path": "evidence/v135/new_section.tex",
+      "sha256": "95b12e631f5f55c987ca8ddfdb1c8712b2a40bbaa01967ec29157742769b77fa",
+      "size_bytes": 11265,
+      "role": "Gaussian radical and both-parity context"
+    },
+    {
+      "path": "evidence/v136/new_section.tex",
+      "sha256": "78e5f6cb2fe60bff4b6edd41594e8499d815cf4cd20b9d96eb0dec7b628828a3",
+      "size_bytes": 12083,
+      "role": "uniform bounded-floor implication"
+    },
+    {
+      "path": "audits/ns37-capacity-weight-2026-09-21-v1.html",
+      "sha256": "c4760693abbc226d2ea604539737693206690a9769985e8310b16acbf946c7c6",
+      "size_bytes": 10995,
+      "role": "independent initial review preserved"
+    },
+    {
+      "path": "audits/ns37-capacity-weight-2026-09-21-v2.html",
+      "sha256": "a1355032a9a32a190c70fbefa72b986f50ce176070efd2b4834d2b74b5061c92",
+      "size_bytes": 11632,
+      "role": "independent final review"
+    },
+    {
+      "path": "audits/ns37-inputs/capacity-weight-draft-2026-09-21-v2.tex",
+      "sha256": "bf309b2d55f565f2ffde564a22108df96f5dfb6a09fb8051c8bee3a70d0d8fff",
+      "size_bytes": 14226,
+      "role": "exact reviewed final fragment"
+    }
+  ],
+  "inherited_manuscript_inputs": {
+    "base": "318b3ce",
+    "labels": [
+      "lem:v115-source-mass",
+      "prop:v129-picone",
+      "eq:v129-transformed-energy",
+      "prop:v135-both-parities",
+      "cor:v136-complement-floor",
+      "eq:v146-amplitude"
+    ]
+  },
+  "external_ancestry": [
+    {
+      "source": "https://doi.org/10.4171/lem/1049",
+      "role": "Existing ConnesConsani2023 citation for Gaussian arithmetic radical; inherited input, no positivity assumption."
+    },
+    {
+      "source": "https://arxiv.org/abs/0803.0503",
+      "role": "Existing FrankSeiringer2008 citation for classical ground-state method; not a source for the new arithmetic constant."
+    }
+  ],
+  "independent_review_scope": "The use of inherited radicality and smooth-core results was checked; their original proofs were not re-audited by NS-37.",
+  "additional_correction": "NS-31 flagged one remaining goals sentence attributing amplitude to unweighted psi(lambda^2)-lambda^2. It now uses the already proved weighted strict-cutoff remainder in eq:v146-amplitude and disclaims an exact constant comb.",
+  "numerical_runs": [],
+  "scope": "No global route closure: fixed energy-loss/prime-2 deletion fails for the specified Gaussian weight; full CAE and coefficient-one capacity remain open.",
+  "missing_archive_status": "NS-1 two original evidence groups remain OPEN; no missing v1.29/v1.30 candidate artifacts claimed recovered.",
+  "G2": "open",
+  "RH": "open"
+}
