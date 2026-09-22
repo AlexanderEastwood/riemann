@@ -75,6 +75,8 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 
 | NS-45 | Rebuild a finite witness obstruction to the already tested lambda=5, N=25 dyadic block-norm criterion | Assisting agent NS42; Codex Astra Main review | completed (v1.52 local draft) | New exact dyadic pair certificates at 320/448 on first three existing N=25 blocks. Rational Rayleigh 341/250 even, 2093/1500 odd exceed 1. Metric-existence dichotomy avoids an unused block-inertia claim; only this partition comparison closes. |
 
+| NS-46 | Test a growing translated-radical block as a route to the uniform complete floor: prove a new complementary estimate or identify the exact quantitative obstruction, retaining both parities and all cross terms | Astra Main + Astra-2; assisting-agent prior-art and review | claimed | Check rank/separation demands beyond v1.35 and the complete shifted Schur reduction. A formal reformulation alone is not a new arithmetic bound or grounds for a version bump. No new window, tail metric, G2 or RH claim. |
+
 ## Lanes
 
 ```
