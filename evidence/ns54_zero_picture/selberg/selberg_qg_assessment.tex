@@ -1,0 +1,270 @@
+% NS-54 / Astra-2. Analytic review and conditional measure-theoretic results.
+% Pinned base: f0178e0; team claim: ccd722b. No arithmetic CLT is asserted.
+% Append bibliography_additions.tex within the bibliography when integrating.
+\subsection*{Selberg laws and the prescribed one-sided cost (NS-54)}
+\label{ns54-selberg-sec}
+
+\paragraph{Status and ranked findings.}
+The proposed unconditional transfer from Selberg's central limit theorem
+to the arithmetic QG input is not established. The conditional
+measure-law implication below is proved, but its arithmetic hypothesis
+remains an open input. The current live label is
+Assumption~\ref{ass:v149-qg}, not the retired v1.48 candidate.
+\begin{enumerate}
+\item \textbf{MAJOR: the observable is changed.} The complete
+$\beta_a=\mathcal Z_a$ is not $S(t)$ or its simple smoothing.
+Its exact prime coefficients have an additional logarithmic factor;
+the zero-side kernel, centering, and off-line weights must be retained.
+\item \textbf{MAJOR: the cited limit law does not cover the requested
+family.} The prescribed $N(a)$, observation measure, simultaneous
+$a$--height limit, changing kernel, and complete remainder have not
+been matched to a primary theorem. Thus neither arithmetic QG growth
+nor failure of arithmetic ZLD follows from the cited CLT alone.
+\item \textbf{MAJOR if full QG or a minorant obstruction is claimed:}
+even a proved unweighted value law supplies no source-admissible
+bounded-energy packet satisfying the all-Borel weighted domination
+in \eqref{eq:v149-wlh}.
+\item \textbf{MINOR, rate wording:} ``cost grows like the Gaussian
+spread'' is not an asymptotic supplied by a CLT. For the actual
+anchored one-sided definition, a full Gaussian limit implies the
+stronger but nonquantitative divergence of cost divided by that spread
+for each fixed number of levels.
+\end{enumerate}
+These findings concern the proposed deductions, not defects in the
+existing exact identities or a proof that no future transfer can work.
+
+\paragraph{Exact object, measure, and direction of approximation.}
+Fix the entire cofinal family and its integer rule $N(a)$, and keep
+\[
+ L=2a,\quad x=e^{2a},\quad X_a=\pi N(a)/a,\quad
+ U_a\sim\operatorname{Unif}[0,X_a],\quad
+ D_a=-\inf_{\xi\in\mathbb R}\beta_a(\xi)>0.
+\]
+The negative pushforward is a subprobability measure:
+$\widetilde m_a(B)=\Pr(\beta_a(U_a)\in B)$ for
+$B\subset[-D_a,0]$. It is not normalized conditionally on negativity.
+The admissible grids contain $-D_a$, have at most $K$ levels in
+$[-D_a,0]$, and round \emph{down}:
+\[
+ p_{\mathcal L}(t)=\max\{\ell\in\mathcal L:\ell\le t\},\qquad
+ \mathrm{QC}_K=\inf_{\mathcal L}\int(t-p_{\mathcal L}(t))\,d\widetilde m_a(t).
+\]
+The depth is global, not the observed head depth or the depth of a
+smoothed zero prefix. All zeros, endpoint and trivial terms, and the
+symmetric-height Perron convention in
+Proposition~\ref{prop:v146-beta-explicit} remain in the field.
+
+\paragraph{Exact identity: a differentiated finite logarithmic polynomial.}
+Put $A(\xi)=\Re\psi(5/4+i\xi/2)-\log\pi$ and define
+\[
+ V_x(\xi)=-\frac1\pi\sum_{2\le n<x}
+       \frac{\Lambda(n)}{\sqrt n\log n}\sin(\xi\log n),\qquad
+ I_x(\xi)=\Re\frac{x^{1/2+i\xi}-1}{1/2+i\xi}.
+\]
+The exact prime expression gives, by finite differentiation,
+\begin{equation}\label{ns54-selberg-eq-derivative}
+             \beta_a(\xi)=A(\xi)+2\pi V_x'(\xi)+2I_x(\xi).
+\end{equation}
+No approximation of $S$ by $V_x$ is asserted. Even such an
+approximation without derivative control would not suffice:
+$n^{-1}\sin(n^2t)\to0$ uniformly whereas its derivative does not.
+Convergence of finitely many values likewise gives no continuity
+theorem for a growing differential or convolution operator.
+
+\begin{proposition}[Fixed-window long-height calibration]
+\label{ns54-selberg-prop-fixed}
+For fixed $a$, let $B_a=\beta_a-A$ and average uniformly on $[T,2T]$.
+Then
+\begin{equation}\label{ns54-selberg-eq-fixed}
+ \mathbb E_T B_a=O_a(T^{-1}),\qquad
+ \operatorname{Var}_T B_a
+   =2\sum_{2\le n<e^{2a}}\frac{\Lambda(n)^2}{n}+O_a(T^{-1}).
+\end{equation}
+In particular the variance in this limit is not a universal
+$\log\log T$ variance. Also $\beta_a(\xi)=\log\xi+O_a(1)$ as
+$\xi\to+\infty$.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{ns54-selberg-eq-derivative} says
+$B_a=-2\sum_{n<x}\Lambda(n)n^{-1/2}\cos(\xi\log n)+2I_x$.
+For fixed $x$, $I_x=O_a(T^{-1})$ on $[T,2T]$.
+The average of each cosine is $O_a(T^{-1})$; the distinct
+frequencies $\log n$ have vanishing cross averages with this same
+fixed-$a$ error. Each square has average $1/2+O_a(T^{-1})$.
+This proves both moment assertions. The finite sum is bounded and
+$A(\xi)=\log(\xi/(2\pi))+o(1)$, proving the last assertion.
+No uniformity in growing $a$ is claimed.
+\end{proof}
+
+\paragraph{Zero-side interpretation, explicitly conditional where necessary.}
+Only under RH may every zero be replaced by its ordinate in the
+real sinc expression. Writing $k_L(u)=\sin(Lu)/u$, with $k_L(0)=L$,
+that expression is
+\[
+ \beta_a(\xi)=2\lim_{H\to\infty}
+              \sum_{|\gamma|<H}k_L(\gamma-\xi)+C_a(\xi).
+\]
+It includes the density contribution; it is not the negative of a
+centered density fluctuation. On a finite positive-height interval
+away from endpoint zeros, $N(t)=\vartheta(t)/\pi+1+S(t)$ gives
+\[
+ \int_A^B k_L(t-\xi)\,dN(t)
+ =\int_A^B k_L(t-\xi)\vartheta'(t)/\pi\,dt
+  +[k_L(t-\xi)S(t)]_A^B
+  -\int_A^B k_L'(t-\xi)S(t)\,dt.
+\]
+Thus the centered part involves a derivative kernel, with boundary
+and limiting terms. Unconditionally the complete formula instead
+contains $x^{\rho-1/2}$ and $\rho-1/2+i\xi$; discarding real parts
+of zeros is not licensed by a theorem about their ordinates.
+
+\paragraph{What the primary CLTs actually say.}
+Radziwi\l\l--Soundararajan's Theorem~1 is unconditional for
+$\log|\zeta(1/2+it)|/\sqrt{\tfrac12\log\log T}$ with
+$t$ uniform on $[T,2T]$ and fixed thresholds
+\cite{ns54-RadziwillSoundararajan}.
+Bourgade's Theorem~1.1 supplies joint laws for a fixed number of
+shifted logarithms with prescribed separation limits, not a
+growing derivative operator \cite{ns54-Bourgade}.
+Maples--Rodgers' Theorem~1.2 is genuinely unconditional: it treats
+centered ordinate counts with a fixed compactly supported
+bounded-variation test, $n(T)\to\infty$, $n(T)=o(\log T)$, and
+diverging Fourier variance \cite{ns54-MaplesRodgers}.
+The sinc profile is not that test: it has noncompact support,
+infinite total variation, and finite $H^{1/2}$ Fourier energy.
+Bourgade--Kuan's Theorem~1 assumes RH and additional decay and
+regularity \cite{ns54-BourgadeKuan}; its stated decay also excludes
+the unmodified sinc profile. These observations delimit those
+theorems, not all possible extensions of their methods.
+
+\begin{proposition}[Quantitative sufficient transfer to fixed-level growth]
+\label{ns54-selberg-prop-transfer}
+Let $b_a\to\infty$, $c\in\mathbb R$, and suppose the distribution
+function of $Y_a=\beta_a(U_a)/b_a$ has distance at most $\Delta_a$
+from $z\mapsto\Phi(z-c)$, where $\Delta_a\to0$ and $\Phi$ is
+the standard Gaussian distribution function. For fixed $K$, put
+\[
+ J_j=(-3j-1,-3j),\quad 1\le j\le K+1,\qquad
+ m_K=\min_j\{\Phi(-3j-c)-\Phi(-3j-1-c)\}>0.
+\]
+Eventually $\Delta_a\le m_K/4$ and
+\begin{equation}\label{ns54-selberg-eq-transfer}
+                  \mathrm{QC}_K(\widetilde m_a)\ge b_am_K/2.
+\end{equation}
+An explicit sufficient surrogate hypothesis is: for real $F_a$,
+centers $\mu_a$, and nonnegative $\delta_a,r_a,\epsilon_a$,
+\[
+ \sup_z\left|\Pr\left(\frac{F_a(U_a)-\mu_a}{b_a}\le z\right)
+                    -\Phi(z)\right|\le\delta_a,\qquad
+ \Pr(|F_a(U_a)-\beta_a(U_a)|>r_ab_a)\le\epsilon_a.
+\]
+One can then take
+\begin{equation}\label{ns54-selberg-eq-error}
+ \Delta_a=\delta_a+\epsilon_a+
+             \frac{r_a+|\mu_a/b_a-c|}{\sqrt{2\pi}}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The Gaussian density is at most $1/\sqrt{2\pi}$. Sandwiching the
+two distribution functions outside the exceptional event proves
+\eqref{ns54-selberg-eq-error}. Each $J_j$ has $Y_a$-mass at least
+$m_K-2\Delta_a\ge m_K/2$; continuity of the actual field's value
+distribution removes endpoint atoms. Their intersections with its
+support retain that mass and the pairwise distance is at least $2$.
+For any admissible grid the set on which downward error is less
+than $b_a$ lies in at most $K$ intervals of length $b_a$.
+Each meets at most one of the $K+1$ separated bands $b_aJ_j$.
+On a missed band the loss is at least $b_a$, proving the bound.
+\end{proof}
+
+\begin{proposition}[Full unbounded-left laws force a stronger one-sided cost]
+\label{ns54-selberg-prop-unbounded}
+Suppose, on the prescribed entire family,
+$\beta_a(U_a)/b_a\Rightarrow Y$ with $b_a>0$, and the probability
+law of $Y$ has unbounded support to the left. Then
+\begin{equation}\label{ns54-selberg-eq-unbounded}
+ \frac{D_a}{b_a}\longrightarrow\infty,\qquad
+ \frac{\mathrm{QC}_K(\widetilde m_a)}{b_a}\longrightarrow\infty
+                   \quad\hbox{for every fixed }K\ge1.
+\end{equation}
+If also $b_a\to\infty$, the QG growth clause follows. On the same
+family ZLD fails for every fixed $\theta>0$.
+\end{proposition}
+\begin{proof}
+For any $M>0$ the limiting law gives positive mass to an open
+interval below $-M$. Weak convergence therefore implies
+$D_a/b_a>M$ eventually. This proves the first limit.
+If the second failed along a subsequence, choose grids whose
+normalized costs are bounded, within $1$ of the infima.
+Order the normalized levels and pad by repetitions to $K$ entries.
+By compactness of the extended interval $[-\infty,0]$, pass to a
+subsequence on which every entry converges. At least the entry
+$-D_a/b_a$ tends to $-\infty$.
+
+If all entries tend to $-\infty$, choose a bounded negative open
+interval with positive limiting mass. All downward losses there
+tend uniformly to infinity. Otherwise let $\ell_*$ be the smallest
+finite limiting level and choose such an interval strictly below
+$\ell_*$. Every finite-limit level is eventually above the interval;
+every other level tends to $-\infty$. Hence again the loss there
+tends uniformly to infinity. Weak convergence gives a positive
+lower bound for its mass, contradicting bounded normalized cost.
+All omitted losses are nonnegative, so no moment-convergence
+assumption is needed.
+
+Finally weak convergence makes $\beta_a(U_a)/b_a$ tight. For
+$0<r_1<r_2\le\theta$,
+\[
+ \Pr(-r_2D_a<\beta_a(U_a)<-r_1D_a)
+ \le\Pr(\beta_a(U_a)/b_a<-r_1D_a/b_a)\longrightarrow0.
+\]
+This contradicts ZLD's fixed positive lower bound
+$\kappa(r_2-r_1)$. The conclusion is conditional on the full
+head-sampling law; a Gaussian law on just one subinterval does
+not control the remaining head mass.
+\end{proof}
+
+\paragraph{Why centering and negative mass cannot be omitted.}
+A CLT only for $(\beta_a-\mu_a)/b_a$ leaves $\mu_a/b_a$ unknown.
+As a measure-theoretic countermodel, take $Z_n$ standard Gaussian
+conditioned on $|Z_n|\le n$ and $Y_n=b_n(2n+Z_n)$ with
+$b_n\to\infty$. Its centered normalized law is Gaussian, but it
+has no negative mass and hence zero negative cost. A negative
+global minimum may be placed outside the observation interval
+without changing this example. This is not an arithmetic
+counterexample. Similarly, a limit conditional on negative values
+has to restore their fraction $\varphi_-(a)$: separated bands then
+give a cost of at least a constant times $b_a\varphi_-(a)$, and
+that product must diverge. A positive limiting negative fraction
+follows from a full Gaussian law with finite normalized centering;
+it is not a consequence of Gaussian fluctuation language alone.
+
+\paragraph{Exact open transfer lemma and scope.}
+To use Selberg-type methods here, prove the surrogate hypotheses of
+Proposition~\ref{ns54-selberg-prop-transfer}, or another sufficient
+band-law hypothesis, for the \emph{actual} prescribed $N(a)$.
+Specify height $T(a)$ and the relation of the kernel width $1/(2a)$
+to mean zero spacing $2\pi/\log T(a)$. Matching the scale
+$L=2a$ to Maples--Rodgers' $\log T/(2\pi n(T))$ requires
+$n(T)=\log T/(2\pi L)$. Its required divergence fails when
+$\log T\asymp L$; the theorem cannot then be used by silently
+choosing a different head rule. A law on $[T,2T]\subset[0,X_a]$
+contributes only the factor $T/X_a$ to unweighted band masses.
+Thus a vanishing sampling fraction may destroy the growth transfer;
+NS-40's exact cutoff dilution still applies.
+
+An ordinate-only surrogate must control the omitted off-line
+weights and shifted denominators. A finite-zero surrogate must
+control $-2\Re R_{x,H}(1/2-i\xi)$ with $H>X_a$, as well as
+smoothing/desmoothing errors; that inequality on $H$ is not an
+error bound. The endpoint/trivial correction alone is uniformly
+bounded by $e_x+4x^{-5/2}/(5(1-x^{-2}))\to0$, which is adequate
+relative to $b_a\to\infty$ but is not the Perron remainder.
+Errors $o(b_a)$ outside a fraction $o(1)$ suffice for the displayed
+Gaussian transfer if the surrogate law and centering are proved.
+
+None of these arithmetic distribution and error hypotheses is
+established by this review. No particular cofinal $N(a)$ is supplied
+by the bare definition of QG. The packet requirement remains
+separate even after the growth clause. There is no new numerical
+window, signed complementary floor, G2, or RH conclusion.
