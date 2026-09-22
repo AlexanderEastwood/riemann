@@ -63,11 +63,18 @@ def main() -> int:
             label += "<br/><small>EVIDENCE MISSING</small>"
         elif ev:
             label += f"<br/><small>&#128193; {esc(ev)}</small>"
+        if n.get("wall"):
+            label += f"<br/><small><b>wall: {esc(n['wall']['input'])}</b></small>"
         L.append(f'  {n["id"]}["{label}"]')
     L.append("")
     for n in nodes:
         if n.get("parent"):
             L.append(f'  {n["parent"]} --> {n["id"]}')
+    # dashed "wall" edges: each blocked node points at the node its named open input reduces to
+    for n in nodes:
+        w = n.get("wall")
+        if w and w.get("to") in by_id:
+            L.append(f'  {n["id"]} -. "{esc(w["input"])}" .-> {w["to"]}')
     L.append("")
     # GitHub renders Mermaid in a sandboxed iframe (viewscreen.githubusercontent.com),
     # so a RELATIVE click href resolves against that origin and 404s. Emit absolute
@@ -114,6 +121,8 @@ def main() -> int:
                 bits.append("**evidence missing**")
             elif ev:
                 bits.append(f"evidence: [`{ev}/`]({ev}/)")
+            if n.get("wall"):
+                bits.append(f"**wall: {n['wall']['input']}** → `{n['wall']['to']}` ({n['wall']['src']})")
             if n.get("note"):
                 bits.append(n["note"])
             L.append("  " * depth + f"- {MARK[n['status']]} **{n['title']}**"
