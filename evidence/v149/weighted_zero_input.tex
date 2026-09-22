@@ -1,0 +1,331 @@
+\subsection*{The exact weighted cost, not a histogram peak (NS-32/33)}
+
+The review of the v1.48 candidate (PR~14, head \texttt{9b2b900})
+retains its weighted-cost implication but rejects the claimed cofinal
+biconditional and the use of a histogram peak as a bounded continuous
+level density. The candidate is not merged by this review. The audit is
+archived as \path{audits/2026-09-21-v1.48-pr14-v2.html}.
+This subsection gives a self-contained corrected formulation and answers
+the zero-statement question. None of the diagnostic optimizations is rerun.
+
+Fix $a>0$, $D=D_a>0$, a prescribed integer head size $N\ge1$, and $X=2\pi N/L$,
+$L=2a$, $x=e^L$. Let $\mathcal Z_a$ be the \emph{complete corrected zero field}
+of \eqref{eq:v147-corrected-zero-field}; thus $\mathcal Z_a=\beta_a$,
+with all nontrivial zeros, the strict-cutoff endpoint and the trivial
+terms retained. Its symmetric-height Perron convention and continuous
+real limits are unchanged. Define finite positive Borel measures on
+$[-D,0]$ by
+\begin{equation}\label{eq:v149-measures}
+ \widetilde m_a(B)=\frac1X\int_0^X
+               1_{\{\mathcal Z_a(\xi)\in B\}}\,d\xi,
+ \qquad
+ \mu_g(B)=\int_{\{\beta_a\in B\}}|\mathcal F_ag(\xi)|^2\,d\xi.
+\end{equation}
+For a unit vector both measures have total mass at most one. The negative
+fraction and the exact density at almost every regular negative level are
+\begin{align}
+ \varphi_-(a)&=\frac1X\int_0^X1_{\{\mathcal Z_a(\xi)<0\}}\,d\xi,
+ \notag\\
+ \widetilde\rho_a(t)&=\frac1X
+  \int_{\{\xi\in(0,X):\mathcal Z_a(\xi)=t\}}
+       \frac{d\mathcal H^0(\xi)}{|\mathcal Z_a'(\xi)|},
+ &R_a&=\mathop{\rm ess\,sup}_{-D<t<0}\widetilde\rho_a(t).
+ \label{eq:v149-zero-density}
+\end{align}
+Here $\mathcal H^0$ counts preimages, so the integral is a sum, and
+$R_a$ is allowed to be infinite. The measures have no atoms at levels
+$-D$ or $0$. Equation~\eqref{eq:v147-coarea} proves absolute continuity,
+not an $L^\infty$ bound for the density.
+
+\begin{proposition}[Critical levels make the peak-density bound vacuous]
+\label{prop:v149-critical-density}
+Suppose $\xi_0\in(0,X)$ is a critical point with
+$t_0=\beta_a(\xi_0)<0$. Then $R_a=\infty$. More precisely, if
+\[
+ \beta_a(\xi)=t_0+A(\xi-\xi_0)^r+O((\xi-\xi_0)^{r+1}),
+ \qquad A\ne0,\quad r\ge2,
+\]
+one local inverse branch contributes
+\begin{equation}\label{eq:v149-critical-asymptotic}
+ \frac{1+o(1)}{Xr|A|^{1/r}}
+               |t-t_0|^{1/r-1}
+\end{equation}
+to $\widetilde\rho_a(t)$ on the side reached by that branch.
+In particular every complete negative component contained inside
+$(0,X)$ supplies an interior minimum and makes $R_a$ infinite.
+The same conclusion holds for a one-sided boundary critical point if
+its interior branch has negative levels.
+\end{proposition}
+\begin{proof}
+The actual symbol is nonconstant real analytic. Thus the first nonzero
+Taylor derivative at a critical point has finite order $r\ge2$.
+Inverting on either available monotone branch gives
+$|\xi-\xi_0|=(|t-t_0|/|A|)^{1/r}(1+o(1))$ and hence
+\eqref{eq:v149-critical-asymptotic}. The exponent is strictly between
+$-1$ and $0$: the singularity is integrable but unbounded on sets of
+positive level measure. Other preimages add nonnegative terms, so
+there is no cancellation in the density. A complete negative component
+has zero boundary values and a negative interior minimum, proving the
+last assertion, with the boundary case treated one-sidedly.
+\end{proof}
+
+Thus there need not be a finite ``most common level'' near zero. The
+largest \emph{bin average} in the NS-28 histogram is a different,
+resolution-dependent statistic. Near the critical value above its
+average on an adjacent bin of width $h$ grows like $h^{1/r-1}$ as
+$h\downarrow0$. A finite bin peak cannot upper-bound $R_a$. The theorem
+is conditional only on the stated geometric critical point, not on RH;
+it does not certify the location of any diagnostic trough.
+
+A finite density upper bound would itself be an all-band statement:
+\[
+ \widetilde m_a(B)\le R_a|B|\quad\hbox{for every Borel }B\subset[-D,0].
+\]
+To make $\varphi_-^2/R_a\to\infty$ using a finite upper estimate $r_a$
+would suffice to prove, eventually,
+\begin{equation}\label{eq:v149-slope-demand}
+ \frac1{X_a}\sum_{\mathcal Z_a(\xi)=t}\frac1{|\mathcal Z_a'(\xi)|}
+ \le r_a=o(\varphi_-(a)^2)
+ \quad\hbox{for almost every }-D_a<t<0.
+\end{equation}
+A bound on the number of crossings by $n_a$, together with
+$|\mathcal Z_a'|\ge s_a>0$ at all their negative regular preimages,
+would give $r_a=n_a/(X_as_a)$. A lower slope bound at one level or
+one preimage is insufficient; multiplicity of crossings matters too.
+Near a negative critical point the displayed uniform slope mechanism
+fails. The derivative means the derivative of the \emph{whole} corrected
+field, not an unjustified termwise derivative of a conditionally
+convergent zero prefix. It can equivalently be evaluated from the exact
+finite-prime formula:
+\[
+ \beta_a'(\xi)=-\tfrac12\Im\psi'(5/4+i\xi/2)
+   +2\sum_{1<n<x}\frac{\Lambda(n)\log n}{\sqrt n}\sin(\xi\log n)
+   -2\int_0^L t e^{t/2}\sin(\xi t)\,dt.
+\]
+No replacement $|x^{\rho-1/2}|=1$ is used; that replacement for every
+zero would require RH.
+
+\paragraph{The arithmetic of the scalar and its relation to ZLD.}
+For $0<\varphi_-\le1$ and $0<R_a<\infty$,
+\begin{equation}\label{eq:v149-scalar-arithmetic}
+ R_a\ge\frac{\varphi_-}{D_a},\qquad
+ 0\le\frac{\varphi_-^2}{R_a}\le\varphi_-D_a\le D_a,
+ \qquad
+ \frac{\varphi_-^2}{R_a}\to\infty
+ \ \Longleftrightarrow\ \frac{R_a}{\varphi_-^2}\to0.
+\end{equation}
+In particular divergence requires $R_a\to0$. A positive lower bound
+on $R_a$ prevents it; an upper bound on $R_a$ does \emph{not} prevent
+it. Uniform level density has $R_a=\varphi_-/D_a$, and gives the
+scalar $\varphi_-D_a$, which can diverge even with $\varphi_-\le1$.
+With $R_a=\infty$ the packing lower bound is simply zero. Thus bounded
+negative fraction alone is not the reason for rejecting the scalar;
+its actual unbounded peak at critical levels is the sharper issue.
+
+ZLD is a lower bound on all level bands; a finite $R_a$ is an upper
+bound on all bands. Neither replaces the other as a matter of measure
+theory. For example, with $U_I$ the uniform probability measure on
+$I$, the measure
+$\tfrac14U_{[-D,0]}+\tfrac14U_{[-1,0]}$ satisfies full-range ZLD with
+$\kappa=1/4$, but has $\varphi_-=1/2$, $R\to1/4$ and bounded scalar.
+Conversely, for fixed $0<\theta\le1$ and $p=D^{-2}$, the measure
+\[
+ \tfrac12\bigl((1-p)U_{[-\theta D/2,0]}+pU_{[-D,0]}\bigr)
+\]
+has scalar asymptotic to $\theta D/4$, but no uniform ZLD constant
+on $[-\theta D,0]$: the lower part has density $p/(2D)$.
+These are full-support measure countermodels to the proposed inference,
+not distributions asserted for zeta. No implication, equivalence or
+logical independence for the actual zero field is proved by them.
+
+\begin{proposition}[The surviving weighted-cost implication]
+\label{prop:v149-weighted-cost}
+Let $\mathcal L_K$ be the finite subsets of $[-D,0]$ containing $-D$
+and having at most $K\ge1$ elements. For $\mathcal L\in\mathcal L_K$
+put $p_{\mathcal L}(t)=\max\{\ell\in\mathcal L:\ell\le t\}$ and define
+\begin{equation}\label{eq:v149-qc}
+ \mathrm{QC}_K(\widetilde m_a)
+ =\inf_{\mathcal L\in\mathcal L_K}
+       \int_{[-D,0]}(t-p_{\mathcal L}(t))\,d\widetilde m_a(t).
+\end{equation}
+This at-most-$K$ formulation avoids any need to assume strict spacing
+or attainment of a minimum. Suppose a unit even source-admissible
+$g\in\mathcal D(q_a)$ satisfies $q_a[g]\le Q$, $Q\ge0$, and
+\begin{equation}\label{eq:v149-wlh}
+ \mu_g(B)\ge c'\widetilde m_a(B)
+ \quad\hbox{for every Borel }B\subset[-D,0],\qquad c'>0.
+\end{equation}
+Then every step minorant from \eqref{eq:v131-step-minorant} with at most
+$K$ distinct values satisfies
+\begin{equation}\label{eq:v149-weighted-cost-bound}
+ \eta(m)\ge[c'\mathrm{QC}_K(\widetilde m_a)-Q]_+.
+\end{equation}
+No bounded density of $\widetilde m_a$ is needed. If it additionally has
+a density bounded by a finite positive $R$, then
+$\mathrm{QC}_K\ge\varphi_-^2/(2KR)$. For uniform density on $[-D,0]$,
+$\mathrm{QC}_K=\varphi_-D/(2K)$, recovering v1.46 with $c=c'\varphi_-$.
+\end{proposition}
+\begin{proof}
+The negative values of $m$ include $-D$ and form a set
+$\mathcal L\in\mathcal L_K$. At a negative symbol value $t$ one has
+$m\le p_{\mathcal L}(t)$; all discarded loss is nonnegative. Since
+$\mu_g-c'\widetilde m_a$ is a finite positive measure, its integral
+against the nonnegative Borel function $t-p_{\mathcal L}(t)$ is
+nonnegative, by approximation by simple functions. Hence the total
+packet loss is at least $c'\mathrm{QC}_K$. Subtract $q_a[g]\le Q$ as
+in \eqref{eq:v146-gap-packet}. The infimum is nonincreasing in $K$
+because $\mathcal L_K\subset\mathcal L_{K+1}$, so fewer levels cause
+no gap in this argument.
+
+Under the additional density bound, write $m_j$ for the mass in each
+gap. Packing it nearest the gap's left endpoint at density at most
+$R$ costs at least $m_j^2/(2R)$. Summing at most $K$ gaps and using
+Cauchy--Schwarz gives $\varphi_-^2/(2KR)$. For uniform density, equal
+gaps attain this value, proving the constant exactly.
+\end{proof}
+
+\paragraph{The one-level cost is an exact zero functional.}
+Put $\mathcal Z_a^-=\max(-\mathcal Z_a,0)$, and keep the global
+$D_a$ even when the head range does not attain it. Then
+\begin{align}
+ A_a:=\mathrm{QC}_1(\widetilde m_a)
+ &=\frac1{X_a}\int_{\{0\le\xi\le X_a:\mathcal Z_a(\xi)<0\}}
+                         (D_a+\mathcal Z_a(\xi))\,d\xi \notag\\
+ &=\varphi_-(a)D_a-\frac1{X_a}\int_0^{X_a}\mathcal Z_a^-(\xi)\,d\xi
+ =\int_0^{D_a}\left(\varphi_-(a)-\frac{F_{a,X_a}(t)}{X_a}\right)dt.
+ \label{eq:v149-qc1-zero}
+\end{align}
+This follows directly from $p_{\{-D\}}=-D$ and the layer-cake identity
+for the negative part. Thus $A_a\to\infty$ asks that the total
+frequency-averaged distance of negative values from the deepest
+value diverge. For example it suffices that
+$\varphi_-D_a\to\infty$ and
+$X_a^{-1}\int\mathcal Z_a^-\le(1-\delta)\varphi_-D_a$ for some fixed
+$\delta>0$. It is a statement about values of the corrected zero sum,
+not about the number of zeros or a prescribed zero spacing.
+
+There is no conclusion here that $\varphi_-$ tends to a positive limit,
+or to zero. Corollary~\ref{cor:v137-scalar-no-go} proves global depth
+\emph{only}; it does not prove nested negative sets, increasing measure,
+or any fraction for the chosen range. The four observed fractions do
+not establish an asymptotic. The choice of $N(a)$ matters: at each fixed
+window the negative set is bounded, so choosing an excessively large
+prescribed head range can make its fraction arbitrarily small. No
+uniform assertion over all choices of $N(a)$ is possible. These points
+are independent of RH and do not themselves disprove a positive-fraction
+statement for a suitably specified family.
+
+\begin{proposition}[One-level growth does not imply fixed-level growth]
+\label{prop:v149-qc1-insufficient}
+There is no universal positive constant $\kappa$ such that
+$\mathrm{QC}_K(\nu)\ge\kappa\mathrm{QC}_1(\nu)/K$ for all finite
+absolutely continuous level measures $\nu$. In fact there are measures
+on $[-D,0]$ of mass $1/2$, with support the whole interval, such that
+$\mathrm{QC}_1\sim D/2$ but $\mathrm{QC}_2\to0$ as $D\to\infty$.
+\end{proposition}
+\begin{proof}
+Take $D>3$, $h=D^{-1}$, $p=D^{-2}$ and $r=D^{-3}$, and put
+\[
+ \nu_D=\tfrac12\bigl((1-p-r)U_{[-1-h,-1]}
+             +pU_{[-D,-D+h]}+rU_{[-D,0]}\bigr).
+\]
+The one-level cost is asymptotic to $D/2$, since almost all the mass
+sits near $-1$ while the compulsory level is $-D$. The admissible two
+levels $\{-D,-1-h\}$ give cost at most $h/4+rD/2$, hence
+\[
+ \mathrm{QC}_2(\nu_D)\le\frac1{4D}+\frac1{2D^2}\longrightarrow0.
+\]
+The bridge of mass $r/2$ makes the support all of $[-D,0]$. These are
+ordinary absolutely continuous measures. They are not claimed to be
+arithmetic level distributions; they disprove the proposed general
+quantization inference.
+\end{proof}
+
+\begin{assumption}[Exact level quantization growth, QG]
+\label{ass:v149-qg}
+Fix a cofinal family and a prescribed rule $N(a)$, hence $X_a$.
+For every fixed integer $K\ge1$, require
+\begin{equation}\label{eq:v149-qg}
+ \mathrm{QC}_K(\widetilde m_a)
+ =\inf_{\mathcal L\in\mathcal L_K}\frac1{X_a}
+   \int_{\{\mathcal Z_a<0\}\cap[0,X_a]}
+       (\mathcal Z_a(\xi)-p_{\mathcal L}(\mathcal Z_a(\xi)))\,d\xi
+ \longrightarrow\infty.
+\end{equation}
+Separately require source-admissible unit packets $g_a$ satisfying
+\eqref{eq:v149-wlh} with $c'\ge c_0>0$ and $q_a[g_a]\le Q_*<\infty$, $Q_*\ge0$.
+Both are named open inputs. Neither follows here from the four diagnostic
+windows or from v1.37.
+\end{assumption}
+Under these hypotheses, a minorant family with bounded level count
+$K(a)\le K_0$ has
+$\eta(m_a)\ge[c_0\mathrm{QC}_{K_0}(\widetilde m_a)-Q_*]_+\to\infty$.
+Thus a uniformly bounded loss forces $K(a)\to\infty$ (apply the same
+argument to any subsequence with bounded $K$). This is a sufficient
+obstruction, not a necessary condition for all possible proofs of one.
+QG says that the corrected zero field's negative values cannot be
+approximated from below by any fixed number of levels with bounded
+mean error. It needs no bounded peak density.
+
+A stronger quantitative alternative is \emph{quantization shape control}:
+for some $\kappa>0$ independent of $a,K$, require
+\begin{equation}\label{eq:v149-shape}
+ A_a\to\infty,\qquad
+ \mathrm{QC}_K(\widetilde m_a)\ge\frac{\kappa A_a}{K}
+ \quad\hbox{for all }K\ge1\hbox{ on the cofinal family}.
+\end{equation}
+With the packet input this gives
+$K\ge c_0\kappa A_a/(C+Q_*)$ for loss $\eta\le C$ and $C+Q_*>0$.
+If $C+Q_*=0$, positive exact cost instead gives incompatibility.
+Linear growth in $D_a$ additionally needs $A_a\ge d_0D_a$ for a fixed
+$d_0>0$. Equation~\eqref{eq:v149-qc1-zero} by itself gives none of the
+shape inequality: concentration in a few narrow level bands is precisely
+the missing obstruction. The empirical relation
+$\mathrm{QC}_K\approx\mathrm{QC}_1/(1.8K)$ is not that theorem.
+
+\paragraph{Diagnostic and source constraints after review.}
+The archived NS-28 code constrains 20 level bins for raw $N=256$ even
+vectors, scans to $\xi=800$ independently of $2\pi N/L$, uses a sampled
+depth, and computes a 200-bin surrogate cost with reconstruction levels
+on bin edges. The reported finite peak is a peak of bin averages, and
+only $K\le32$ costs are evaluated. At $\lambda=4,c'=1$, the saved
+returned vector has minimum bin ratio $0.636<1$: its energy is not a
+feasible upper bound even for the binned optimization. The dual number
+alone supplies no such upper bound. Claims of exact WLH, cofinal
+$Q\to0$, and measured costs at hundreds or thousands of levels are
+therefore withdrawn as interpretations of those diagnostics; their
+raw files are preserved.
+
+For a raw unit vector $f$, projection to
+$g=P_af/\sqrt{1-r^2}$ with $r=|\langle f,u_a\rangle|<1$ obeys
+\eqref{eq:v147-projected-density}. If $E=q_a[f]$ and
+$\delta=(2r+r^2)\|\mathsf W_{e^a}u_a\|$, the form expansion gives
+\[
+ \frac{E-\delta}{1-r^2}\le q_a[g]\le\frac{E+\delta}{1-r^2}.
+\]
+For $E>0$, the explicit sufficient checks $r^2\le1/4$ and
+$\delta\le E/2$ would keep this within $[E/2,2E]$. No such overlap
+check is archived for the LP minimizer; a small source residual alone
+does not control the denominator or preserve the weighted level
+constraints. The missing $\lambda=3$ computation is to recover that
+minimizer in the centered source basis, enclose its overlap and source
+tail, its complete energy and the source cross term, and recheck the
+projected constraints. It is named, not run. Passing the finite bin
+constraints would still not prove the all-Borel hypothesis.
+
+\paragraph{Finding (NS-33).}
+The peak-density scalar is the wrong general bound for an exact level
+measure containing a negative critical point: it is vacuous there.
+The valid alternative is the exact cost, reduced to the named open
+input QG plus the admissible bounded-energy weighted packet input.
+Replacing it by $\mathrm{QC}_1/K$ requires the additional shape
+hypothesis \eqref{eq:v149-shape}; divergence of
+$\varphi_-D_a-X_a^{-1}\int\beta_a^-$ alone is insufficient. No cofinal
+input is proved unconditionally. All new local identities, implications
+and countermodels require no RH. Odd packets satisfy the same measure
+argument because their Fourier modulus is even, without the even-source
+constraint. This is a limitation of the proposed bound and diagnostic
+interpretation, not a failure of the physical form or the valid weighted
+concentration criterion. No new window, tail metric, optimization or zero
+enclosure is computed. The route remains blocked. G2 and RH remain open.
+

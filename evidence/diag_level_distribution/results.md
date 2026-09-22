@@ -1,5 +1,23 @@
 # NS-28: the two inputs of `prop:v146-level-complexity`, measured — DIAGNOSTIC, NOT A CERTIFICATE
 
+> **Review correction (NS-32/33, v1.49; original measurements retained below).**
+> The finite `rho~_max` values are maxima of 200-bin averages, not upper bounds
+> for the exact continuous density. A negative critical point makes the latter
+> essentially unbounded. The DP optimizes a sampled midpoint measure with
+> reconstruction levels restricted to bin edges, not the continuum QC_K.
+> At lambda=4, c'=1, the archived pure state's minimum bin ratio is 0.636,
+> below 1; its energy is not a feasible upper bound. No feasible mixture is
+> archived for that claim. The c'=4 returned state also fails (1.845<4).
+> Only K up to 32 is evaluated: larger counts are extrapolated. Twenty bins,
+> no source projection, grid depth and the fixed scan X=800 remain limitations.
+> The finite observations establish neither cofinal bounded Q nor Q->0,
+> exact all-Borel WLH, growth of negative-set measure, nor an equivalence
+> between scalar growth and necessary level complexity. Corollary v1.37
+> gives depth divergence only. QC_1 growth alone does not force fixed-K
+> growth; v1.49 states the missing QG/shape assumptions explicitly.
+> See `audits/2026-09-21-v1.48-pr14-v2.html` and `evidence/v149/`.
+
+
 Even head, N=256 window modes (reach `ξ < 2πN/L` = 732 / 580 / 449 / 387 at
 λ = 3 / 4 / 6 / 8), grid `ξ ∈ [0, 800]`, `W = block()` Arb midpoints in float64
 (energies below 1e-16 read as 0), `β_a` from `evidence/diag_true_symbol/pencil.py`.

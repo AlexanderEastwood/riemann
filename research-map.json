@@ -198,7 +198,7 @@
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "Valid sufficient criterion; blocked after NS-22 finite-head diagnostics, not proved closed. NS-27/v1.46 proves local packet bounds and a conditional linear distinct-level obstruction, but the arithmetic level-distribution and bounded-energy-packet hypotheses are missing. Depth growth alone does not supply them; positive spill must be retained. NS-29/v1.47 separates corrected-zero level-band distribution from admissible packet coverage and energy; both cofinal inputs remain open.",
+      "note": "Valid sufficient criterion; blocked after NS-22 finite-head diagnostics, not proved closed. NS-27/v1.46 proves local packet bounds and a conditional linear distinct-level obstruction, but the arithmetic level-distribution and bounded-energy-packet hypotheses are missing. Depth growth alone does not supply them; positive spill must be retained. NS-29/v1.47 separates corrected-zero level-band distribution from admissible packet coverage and energy; both cofinal inputs remain open. v1.49 retains exact weighted quantization with QG/packet inputs open; the finite histogram peak cannot justify a continuous density cap.",
       "evidence": "evidence/v146"
     },
     {
@@ -402,6 +402,16 @@
       "branch": "codex/level-density-zero-statement",
       "evidence": "evidence/v147",
       "note": "NS-29: conditional reduction requires lower measures for every level band and source-admissible bounded-energy packet coverage of those bands. Zero theorems assessed do not provide the input. D->infinity gives no uniform band measure; broad pulses cost log X. No closure or RH-equivalence claim."
+    },
+    {
+      "id": "weightedexactcost",
+      "title": "weighted exact cost: peak bound fails at critical levels",
+      "status": "blocked",
+      "parent": "zeroleveldistribution",
+      "prop": "prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg",
+      "branch": "codex/weighted-level-review",
+      "evidence": "evidence/v149",
+      "note": "NS-32/33: PR14 held for major findings. Exact density is unbounded at negative critical values; histogram peak is not a cap. Weighted QC_K bound survives. QC_1 growth alone is insufficient; fixed-K exact-cost growth plus admissible bounded-energy WLH remain open. No closed physical route or G2/RH claim."
     }
   ]
 }
