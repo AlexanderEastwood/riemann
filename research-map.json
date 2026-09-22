@@ -198,8 +198,8 @@
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "Live mechanism of v1.31; v1.44 gives its exact pencil-coordinate demands. NS-22 (diag_comb_minorant, head N=256, float): every bounded-complexity step minorant loses a fixed fraction of D_a (layer-cake 0.35 D_a, one level set 0.6 D_a, J troughs 0.44-0.85 D_a); only a J-level quantization of beta_a with J ~ 1.2 D_a/eta keeps eta_a bounded, i.e. the level count grows without bound in a and the minorant then reproduces q_a itself. Obstruction found numerically; not a proved closure.",
-      "evidence": "MISSING"
+      "note": "Valid sufficient criterion; blocked after NS-22 finite-head diagnostics, not proved closed. NS-27/v1.46 proves local packet bounds and a conditional linear distinct-level obstruction, but the arithmetic level-distribution and bounded-energy-packet hypotheses are missing. Depth growth alone does not supply them; positive spill must be retained.",
+      "evidence": "evidence/v146"
     },
     {
       "id": "weaken",
@@ -372,6 +372,26 @@
       "branch": "codex/complete-ground-zero-transfer",
       "evidence": "evidence/v144",
       "note": "NS-24 exact translation: relative loss <= nu_k + eta_a ||v_k||^2/q+. Source constraint and mixture cross terms retained. Diagnostic thresholds not certified; fixed-head tests do not replace cofinal full-complement control. No new concentration bound."
+    },
+    {
+      "id": "betaexplicit",
+      "title": "exact lattice symbol; varying envelopes",
+      "status": "proved",
+      "parent": "concentration",
+      "prop": "prop:v146-beta-explicit",
+      "branch": "codex/beta-lattice-identity",
+      "evidence": "evidence/v146",
+      "note": "Unconditional Perron identity with strict endpoint, trivial zeros and remainder. NS-26: 40 low plus 14 deep/centroid samples; numerical illustration only. Classical explicit formula restated, not new positivity content."
+    },
+    {
+      "id": "minorantlevels",
+      "title": "bounded-complexity minorants: arithmetic gap remains",
+      "status": "blocked",
+      "parent": "concentration",
+      "prop": "prop:v146-packet-loss; prop:v146-level-complexity",
+      "branch": "codex/beta-lattice-identity",
+      "evidence": "evidence/v146",
+      "note": "NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure."
     }
   ]
 }

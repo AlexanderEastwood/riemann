@@ -1,0 +1,48 @@
+{
+ "manuscript_revision": "v1.46",
+ "base_commit": "54fcec1b2a46da0a3f2dbf542612b07f0b00ff6f",
+ "files": [
+  {
+   "path": "evidence/v146/README.md",
+   "size_bytes": 5406,
+   "sha256": "7d9d08a95d10c66b49b59fd8feaf0f521c7aeb3581b1099c2b18a749c673bf8a"
+  },
+  {
+   "path": "evidence/v146/beta_lattice_deep_checks.tex",
+   "size_bytes": 3707,
+   "sha256": "f583f02202171dd922ddf2bba2b2cb00a1c67d2ff4735917ceb2322878f7f342"
+  },
+  {
+   "path": "evidence/v146/beta_lattice_identity.tex",
+   "size_bytes": 7689,
+   "sha256": "ac18164e177e1786692d40cf07ed911369fe30e6ddf4d147500365862ff7f459"
+  },
+  {
+   "path": "evidence/v146/build_report.json",
+   "size_bytes": 737,
+   "sha256": "09566cc9f3bedd4b7520b7a6773ed2b61eed5a65bad8e60d63f9806a14107e95"
+  },
+  {
+   "path": "evidence/v146/provenance.json",
+   "size_bytes": 2392,
+   "sha256": "18d13f7261cd055e5dcc9540b2c5f23efb783ea7e1541edebe2de189e6316466"
+  },
+  {
+   "path": "evidence/v146/research-report-2026-09-21-v1.html",
+   "size_bytes": 6346,
+   "sha256": "4d88260f35a641c402a4d2c7dfe175e8a6551cc2511e04426b82dc377443c095"
+  },
+  {
+   "path": "evidence/v146/scope_review.md",
+   "size_bytes": 3482,
+   "sha256": "7d478cae6b362c3058ce4b247c43a0e68cbbddd2a3352e44b4a383f3c30bf86f"
+  },
+  {
+   "path": "evidence/v146/step_minorant_scope.tex",
+   "size_bytes": 11904,
+   "sha256": "af3c1937f099d7f52561e6d1756e8f1bd41180bdf9beae7092decb52327ad352"
+  }
+ ],
+ "file_count": 8,
+ "total_bytes": 41663
+}

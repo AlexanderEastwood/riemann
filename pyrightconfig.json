@@ -2,6 +2,21 @@
   "venvPath": ".",
   "venv": ".venv",
   "typeCheckingMode": "basic",
-  "include": ["evidence/v141/*.py", "evidence/v142/*.py", "evidence/v143/*.py"],
-  "exclude": ["node_modules", "__pycache__", ".Codex/worktrees", "data", "evidence/diag_semantic_lock/cache"]
+  "include": [
+    "evidence/v141/*.py",
+    "evidence/v142/*.py",
+    "evidence/v143/*.py",
+    "evidence/diag_beta_lattice_identity/*.py"
+  ],
+  "exclude": [
+    "node_modules",
+    "__pycache__",
+    ".Codex/worktrees",
+    "data",
+    "evidence/diag_semantic_lock/cache"
+  ],
+  "extraPaths": [
+    "evidence/diag_true_symbol",
+    "evidence/v124/g2_schur_cancellation"
+  ]
 }

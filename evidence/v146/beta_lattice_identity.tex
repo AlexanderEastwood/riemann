@@ -1,0 +1,158 @@
+\subsection*{The lattice comb is the sharply truncated explicit formula}
+
+\begin{proposition}[Exact zero expansion of the discrepancy symbol]
+\label{prop:v146-beta-explicit}
+Let $a>0$, $L=2a$, $x=e^L>1$, and let $\beta_a$ be exactly
+\eqref{eq:v130-beta}, with the strict prime cutoff $n<x$. Write
+$s=\tfrac12-i\xi$, $\xi\in\mathbb R$, and put
+\[
+ A(\xi)=\Re\psi(\tfrac54+\tfrac{i\xi}2)-\log\pi,
+ \quad e_x=\begin{cases}\Lambda(x)/\sqrt{x},&x\in\mathbb N,\\0,&x\notin\mathbb N,\end{cases}
+ \quad T_x(s)=\sum_{n=1}^\infty\frac{x^{-2n-s}}{2n+s}.
+\]
+Here $\Lambda(x)=0$ at integers which are not prime powers. Sum all
+nontrivial zeros $\rho$, with multiplicity, by symmetric height limits;
+no restriction $\Re\rho=1/2$ is imposed. Away from $\zeta(s)=0$,
+\begin{align}
+ \beta_a(\xi)={}&A(\xi)+2\Re\frac{\zeta'}\zeta(s)
+       -2\Re\frac1{1-s}
+       +2\Re\sum_\rho\frac{x^{\rho-s}}{\rho-s}
+       -2\Re T_x(s)+e_x\cos(\xi L) \notag\\
+ ={}&2\Re\sum_\rho\frac{x^{\rho-s}}{\rho-s}
+       -2\Re T_x(s)+e_x\cos(\xi L).
+ \label{eq:v146-beta-explicit}
+\end{align}
+The full real expression extends continuously at the excluded values.
+At finite zero height $T$, add the Perron remainder $-2\Re R_{x,T}(s)$
+to the right side; it is not permissible to discard this term merely
+because a finite zero list has been smoothed.
+
+More explicitly, for $c>1$, $B>0$ not an even integer, and $T>|\xi|$
+with no boundary zero, set
+\[
+ F_s(z)=-\frac{\zeta'}\zeta(z)\frac{x^{z-s}}{z-s},\qquad
+ E_{c,T}=\lim_{H\to\infty}\frac1{2\pi i}
+ \left(\int_{c-iH}^{c-iT}+\int_{c+iT}^{c+iH}\right)F_s(z)\,dz.
+\]
+Let $\mathcal C_{B,T}$ run from $c+iT$ to $-B+iT$, down to
+$-B-iT$, and back to $c-iT$. Then an exact remainder is
+\begin{equation}\label{eq:v146-perron-remainder}
+ R_{x,T}(s)=E_{c,T}-\frac1{2\pi i}\int_{\mathcal C_{B,T}}F_s(z)\,dz
+       -\sum_{2n>B}\frac{x^{-2n-s}}{2n+s}.
+\end{equation}
+For the infinite expansion use the usual Perron symmetric-height
+limit (or its Cesaro limit), in which this remainder tends to zero.
+\end{proposition}
+\begin{proof}
+Put $S_x(s)=\sum_{n<x}\Lambda(n)n^{-s}$ and
+$S_x^0(s)=S_x(s)+\tfrac12\Lambda(x)x^{-s}$, with the extra term zero
+unless $x$ is an integer. Perron inversion applied to $-\zeta'/\zeta$
+gives $S_x^0$. The residues of $F_s$ at $1,s,\rho,-2n$ are,
+respectively,
+\[
+ \frac{x^{1-s}}{1-s},\quad-\frac{\zeta'}\zeta(s),\quad
+ -\frac{x^{\rho-s}}{\rho-s},\quad\frac{x^{-2n-s}}{2n+s}.
+\]
+The rectangle with its right edge upwards gives exactly
+\eqref{eq:v146-perron-remainder}. Letting the contours tend to infinity
+in the standard Perron order gives the displayed zero expansion;
+this is the classical explicit-formula argument, with the shifted
+Perron denominator retained (compare \cite{HarperZetaNotes}).
+Subtracting $(x^{1-s}-1)/(1-s)$ and taking $-2\Re$ gives the first
+line of \eqref{eq:v146-beta-explicit}. In particular the strict
+endpoint contributes $+e_x\cos(\xi L)$, not zero and not twice this.
+
+The functional equation, not RH, gives on $\Re s=1/2$
+\[
+ 2\Re\frac{\zeta'}\zeta(s)=\log\pi-\Re\psi(s/2).
+\]
+This follows by logarithmically differentiating the completed zeta
+functional equation and using conjugation; the real parts of
+$1/s+1/(s-1)$ cancel. The digamma recurrence now gives
+$A+2\Re(\zeta'/\zeta)(s)=2\Re(1/(1-s))$, proving the second line
+(\cite{DLMFZetaReflection}). Continuity follows from the original
+finite prime sum. At a critical-line zero, the real part of the
+individual singular quotient is interpreted by this limit; one does
+not evaluate an infinite imaginary pole numerically.
+\end{proof}
+
+\paragraph{Exact lattice identity; no exact constant-amplitude comb.}
+For $\xi=2\pi u/L$ away from the excluded ordinates, define
+\[
+ H_x(\xi)=\sum_\rho\frac{x^{\rho-1/2}}{\rho-1/2+i\xi}
+       -\sum_{n=1}^\infty\frac{x^{-2n-1/2}}{2n+1/2-i\xi},\quad
+ C_x(\xi)=e_x+2\Re H_x(\xi),\quad S_x(\xi)=-2\Im H_x(\xi).
+\]
+Then the exact identity is
+\begin{equation}\label{eq:v146-lattice}
+ \beta_a(2\pi u/L)=C_x(2\pi u/L)\cos(2\pi u)
+                         +S_x(2\pi u/L)\sin(2\pi u).
+\end{equation}
+Thus integers sample $C_x$, half-integers sample $-C_x$, and odd
+quarter-integers sample $\pm S_x$. The phase supplies alternation;
+equal crests and exactly opposite troughs would additionally require
+$C_x$ to be constant at those sample points, and quarter-point zeros
+would require $S_x=0$ there. Neither is an identity. Conjugation makes
+$C_x$ even and $S_x$ odd, but supplies neither missing condition.
+The zero-frequency amplitude has the exact arithmetic expression
+\begin{equation}\label{eq:v146-amplitude}
+ C_x(0)=\beta_a(0)=\psi(5/4)-\log\pi
+        -2\sum_{n<x}\frac{\Lambda(n)}{\sqrt n}+4(\sqrt x-1).
+\end{equation}
+It is the weighted remainder plus the archimedean constant, not
+$\psi(x)-x$, and it is not a single amplitude for every lattice cell.
+The archimedean constant is about $-1.372183419$, correcting the
+$-2.11$ printed in the earlier diagnostic discussion.
+
+For any conjugate pair actually on the critical line, its contribution
+to the zero term is exactly
+\[
+ 2\left\{\frac{\sin((\gamma+\xi)L)}{\gamma+\xi}
+        +\frac{\sin((\gamma-\xi)L)}{\gamma-\xi}\right\}.
+\]
+Replacing all zeros by such pairs would assume RH. In the unconditional
+formula the factors satisfy $|x^{\rho-1/2}|=x^{\Re\rho-1/2}$; setting
+all of them equal to one is precisely where RH would enter. Even for
+critical-line pairs the denominators depend on $\xi$. The expression
+$4\sum_{\gamma>0}\sin(\gamma L)/\gamma$ is only their zero-frequency
+amplitude contribution, before endpoint and trivial-zero terms; a
+constant-amplitude crest-minus-trough would be twice the amplitude.
+
+\paragraph{Numerical illustration, not a certificate (NS-26).}
+The archived windows have $x=9,16,36,64$, all integers. Their endpoint
+amplitudes are $\log3/3,\log2/4,0,\log2/8$, respectively. The
+noninteger case is covered above by $e_x=0$, but cannot be substituted
+for these archived inputs. At $\lambda=3$ the decomposition of
+$\beta_a(2\pi/L)-\beta_a(\pi/L)$ is, numerically,
+\[
+ \underbrace{-0.159765789563}_{\text{full zero contribution}}
+ \;\underbrace{-0.003943883015}_{\text{trivial zeros}}
+ \;+\underbrace{0.732408192445}_{\text{strict endpoint}}
+ =0.568698519867.
+\]
+With the first $400$ positive zeros and height-Cesaro weight
+$1-\gamma/680$, the first entry is $-0.157163432709$ and its remaining
+correction is $-0.002602356854$. At zero frequency the full zero
+contribution is $-0.077669995516$; index-Cesaro summation of $400$
+zeros gives $-0.077720711653$. This accounts for the reported
+``$-0.08$ versus $+0.57$'': endpoint convention and amplitude-versus-
+difference normalization are substantial, while shifted denominators,
+trivial zeros and finite-sum remainders account for the residual.
+The archimedean block cancels exactly; it is not an unspecified fitted
+correction.
+
+The ten $u$ values in \path{evidence/diag_true_symbol/selfsim_output.txt}
+were checked at each of its four windows, using Gaussian-regularized
+Perron residues with the exact desmoothing correction back to $n<x$.
+The derivation and replay are in
+\path{evidence/diag_beta_lattice_identity/}. The saved file has only
+three decimals: all $40$ roundings agree, and the recomputed legacy
+formula and zero-side evaluation agree to better than $10^{-6}$
+(maximum observed discrepancy below $4\cdot10^{-21}$). The numerical
+illustration is not an interval certificate or a new window run.
+
+This is the explicit formula restated for the actual symbol. It
+supplies no new sign, uniform minorant or ground-energy bound. The
+complete energy still involves the state's full Fourier distribution,
+not a scalar amplitude or just lattice samples. The concentration
+criterion, G2 and RH remain open.

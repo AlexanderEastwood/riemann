@@ -124,10 +124,12 @@ The validated symbol at fixed `u`:
 | 6 | −0.010 | −0.509 | +0.029 | +0.512 | −0.049 | −0.515 | +0.520 | −0.527 | +0.536 | +0.562 |
 | 8 | +0.000 | −0.131 | −0.001 | +0.132 | +0.002 | −0.134 | +0.138 | −0.142 | +0.148 | +0.166 |
 
-So at low frequency `β_a` is a clean alternating train in the window's own
-units: zeros at the quarter points, troughs at half-integers, crests of equal
-magnitude at the integers — i.e. exactly on the lattice modes the window
-samples. Its amplitude is **not monotone in λ** (0.28, 0.70, 0.51, 0.13). The
+At low frequency `β_a` resembles an alternating train in the window's own
+units, but the displayed quarter-point samples are not exactly zero and
+the integer crests are not equal. NS-26 gives the exact varying cosine
+and sine envelopes in `prop:v146-beta-explicit` and `eq:v146-lattice`;
+see `evidence/diag_beta_lattice_identity/results.md`. The representative
+crest scale is **not monotone in λ** (0.28, 0.70, 0.51, 0.13). The
 train comes from the `−r_a` term, whose low-frequency size is the *weighted*
 Chebyshev remainder
 
@@ -135,7 +137,7 @@ Chebyshev remainder
 
 which orders the four windows the same way as the crest amplitude (4 > 6 > 3 > 8).
 The remainder is the whole explanation of the *ordering*, not a formula for the
-amplitude (the constant `Re ψ(5/4) − log π = −2.11` and the ξ-dependence of
+amplitude (the constant `Re ψ(5/4) − log π ≈ −1.372183419` and the ξ-dependence of
 the continuum term also enter). Earlier wording that attributed this to
 `ψ(λ²) − λ²` was loose; the relevant object is the `1/√m`-weighted sum.
 

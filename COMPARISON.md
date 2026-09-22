@@ -309,3 +309,29 @@ A fixed head supplies no complete-complement or cofinal estimate. The live
 criterion still requires uniform errors on a cofinal family, with the
 bounded-error weakening and both-parity/source hypotheses retained. The
 task stops at this distinction; no new concentration bound, G2 or RH claim.
+
+
+## Exact lattice identity and the minorant gap (NS-26/27, v1.46)
+
+The symbol is the sharply truncated explicit formula with the shifted
+Perron denominator. Its archimedean block cancels by the functional equation,
+without RH; the strict prime-power endpoint, trivial zeros and finite-prefix
+remainder remain. This is classical explicit-formula content, not a new
+lens or sign theorem. The lattice envelopes vary. The archived x=9,16,36,64
+are integers; treating them as nonintegers loses a substantial endpoint term.
+Forty low sample locations and fourteen deep-trough/centroid locations were
+reproduced numerically with an explicit Gaussian/desmoothing convention,
+sufficient zero counts and residuals, all below 1e-6. This is not a cofinal
+trough-density or zero-spacing theorem.
+
+The minorant task proves eta >= [(b+B)c-B]+ and eta >= [c*delta-Q]+,
+retaining positive spill and original packet energy. A conditional distinct-
+level bound eta >= [c D_a/(2K)-Q]+ gives the requested linear complexity
+consequence only with a uniform arithmetic level-distribution lower bound
+seen by a source-admissible bounded-energy packet. v1.37's unconditional
+D_a->infinity does not establish these hypotheses. The J-trough lobe-floor
+family has the exact bound eta>=d_(J+1), but the required cofinal trough
+multiplicity is also not established. A two-value countermodel demonstrates
+why depth and concentration alone are insufficient; it is not a counterexample
+to the arithmetic criterion. Source projection and odd-sector scope are
+explicit. The route remains blocked, not closed. G2 and RH remain open.
