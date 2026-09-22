@@ -71,6 +71,8 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 
 | NS-43 | Prioritize remaining complete-space routes and prove or delimit specific blocked-node closures: capacity comparison, CCM ground selection and source-sensitive concentration | Codex Astra Main with assisting agents | claimed | Concrete analytic next-step attempt, independently reviewed; close only precisely proved subroutes, distinguish missing evidence from no-go results, no estimated probability of solving RH, new window or tail metric. |
 
+| NS-44 | Rebuild one finite-support counterexample to the already stipulated lambda=5 tail comparison Q16 W Q16 >= 1e-8 Q16 D Q16 in both parities | Codex Astra Main; assisting-agent review | claimed | Freeze new dyadic candidates and verify outward at two precisions; distinguish new certificate from recovery of absent v127 witnesses, no new window or replacement tail metric. Close only the stipulated comparison if gates pass. |
+
 ## Lanes
 
 ```
