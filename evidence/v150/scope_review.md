@@ -66,3 +66,13 @@ separate independent NS-37 review. No new numerical gate is involved.
 18. The broad ground-state method and Gaussian zeta kernel are classical.
     The archive establishes the particular scoped comparison obstruction;
     worldwide novelty and publication readiness are not claimed.
+
+19. NS-37 independent review found no MAJOR. M1's rescaling wording is now
+    explicit: h->k h entails g->g/k and I_h->k I_h; 2 I_h^2 Var_nu(g)
+    is invariant, whereas the displayed 2/3 is tied to the frozen scale.
+    M2's eta>=0 hypothesis was added before the final reviewed wording.
+20. Fixed-window closure is spelled out through J_h=q_a+V_a with V_a a
+    bounded ordinary L2 form. The shifted form norms agree up to constants
+    depending on a, which suffices for domain identification, not uniform
+    cofinal estimates. The squared-edge map gives the nonnegative integral
+    on this closure. No global closed positive Weil realization is assumed.

@@ -412,6 +412,26 @@
       "branch": "codex/weighted-level-review",
       "evidence": "evidence/v149",
       "note": "NS-32/33: PR14 held for major findings. Exact density is unbounded at negative critical values; histogram peak is not a cap. Weighted QC_K bound survives. QC_1 growth alone is insufficient; fixed-K exact-cost growth plus admissible bounded-energy WLH remain open. No closed physical route or G2/RH claim."
+    },
+    {
+      "id": "capacityweight",
+      "title": "positive arithmetic weight: critical capacity input",
+      "status": "blocked",
+      "parent": "floor",
+      "prop": "lem:v150-weight; prop:v150-critical-energy; ass:v150-cae",
+      "branch": "codex/bounded-capacity-weight",
+      "evidence": "evidence/v150",
+      "note": "NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open."
+    },
+    {
+      "id": "capacityslack",
+      "title": "fixed energy loss for the Gaussian arithmetic weight",
+      "status": "closed",
+      "parent": "capacityweight",
+      "prop": "prop:v150-capacity-slack",
+      "branch": "closed/v150-capacity-slack",
+      "evidence": "evidence/v150",
+      "note": "Scoped closure: for this explicit weight, discarding fixed delta>0 of transformed energy, or the prime-2 channel alone, forces eta >= delta*kappa*exp(gamma*lambda^2)-O(lambda log lambda). Exact source-admissible even and odd tests, all cross terms controlled. Does not close coefficient-one capacity, another weight, or the physical Weil form."
     }
   ]
 }

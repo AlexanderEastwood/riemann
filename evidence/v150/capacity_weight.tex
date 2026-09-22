@@ -15,9 +15,10 @@ Put $\ell=\log2$, and use the unnormalized positive weight
 \end{equation}
 Thus $h(x)=f_\infty(e^x)$ from Lemma~\ref{lem:v115-source-mass}.
 Its restriction to each $I_a=(-a,a)$ is the comparison weight; it is
-\emph{not} identified with the actual repaired source $u_a$. Dividing
-it by its norm on $I_a$ changes none of the identities for a fixed
-$f=hg$, by homogeneity.
+\emph{not} identified with the actual repaired source $u_a$. Positive
+scalar rescaling leaves the forms unchanged when $g$ and $I_h$ are
+rescaled consistently. All displayed constants below use the
+unnormalized weight \eqref{eq:v150-weight}.
 
 \begin{lemma}[Explicit positive weight and normalization]
 \label{lem:v150-weight}
@@ -148,10 +149,14 @@ with $T_a\ge0$, hence \eqref{eq:v150-local-identity}.
 For interior $x$, every prime shift with $n\ge e^{2a}$ is exterior,
 so this is precisely the strict-cutoff finite form. Endpoint equalities
 are irrelevant on the open interval. At each fixed $a$, $h$ and $1/h$
-are bounded and smooth, while $c/h$ is bounded. Closing the identity on
-the physical smooth core extends it to the form domain. The exterior
-energy is a nonnegative part of $\mathcal J_h$, so its integral, and
-then those of $(r_a)_\pm$, are finite there. This argument makes no
+are bounded and smooth, while $c/h$ is bounded. On the physical core,
+$\mathcal J_h=q_a+V_a$ where
+$V_a[f]=2I_h\int(c/h)|f|^2-\Pi[f]$ is a bounded $L^2$ form.
+The shifted form norms are therefore equivalent, and completion of the
+squared-edge map identifies its nonnegative integral with this closure.
+No uniform-in-$a$ multiplier bound is asserted. The exterior energy is
+a nonnegative part of $\mathcal J_h$, so its integral, and then those
+of $(r_a)_\pm$, are finite on the resulting form domain. This argument makes no
 claim for noncompact $f/h$ with infinite separate transformed energies.
 \end{proof}
 
