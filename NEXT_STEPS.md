@@ -79,6 +79,8 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 
 | NS-46 | Test a growing translated-radical block as a route to the uniform complete floor: prove a new complementary estimate or identify the exact quantitative obstruction, retaining both parities and all cross terms | Astra Main + Astra-2; assisting-agent prior-art and review | done (v1.53; no floor proved) | Fixed-range fine translates yield rank ~lambda²/(20000 log lambda) and full residual C exp(-lambda²/2000), paying the finite Gram cost. Exact parity/source counts; independent proofs and reviews. Uniform or polynomial positive-gap strategies after o(lambda²/log lambda) removal are excluded. Existing gap-free floor transfer was not repackaged as a new estimate; complete complementary signed floor remains open. |
 
+| NS-47 | Construct an explicit geometric-algebra / graded Dirac representation of the complete Weil form and test a lower bound uniform in growing windows; retain both parities, source and exterior terms | Codex (Astra RH1) | in progress — first analytic checkpoint; uniform floor open | evidence/ns47_clifford_weil/: exact signed Clifford lift and closed positive edge block; contraction demand equals CAE, unproved. Scoped obstruction: no single ordinary-L2 closable positive square plus bounded remainder; any such one-sided lower comparison forces its factor bounded. Both complete parities; fixed-window factors and other completions not excluded. Independent review: 0 outstanding MAJOR/MINOR. Base 24f4ab5 builds 265 pages; isolated draft 270 pages, 0 undefined/duplicate references. No version assigned, new window, tail metric, or G2/RH claim. |
+
 ## Lanes
 
 ```
