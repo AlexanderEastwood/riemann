@@ -308,7 +308,13 @@ to linear in the level: `‖C(E(t))‖ ≈ 0.6–0.8 · (1 − t/D_a)`.
    form of the mechanism does not give a uniform finite floor either. This
    is a statement about the bound, on the head; the true form is ≥ 0.
 2. **The concentration norm never approaches 1**, even for the whole
-   negative set (0.63–0.81 at `t = 0`, with `|E(0)|` in the hundreds). The
+   negative set (0.63–0.81 at `t = 0`, with `|E(0)|` in the hundreds).
+   *Correction (v1.46, `lem:v146-packet-concentration`,
+   `eq:v146-halfcell-upper`): these 0.6–0.8 values are for the entire
+   negative set and must not be read as the concentration norm of a single
+   half-cell trough, which the even trace bound caps below 0.509; the
+   certified lower bounds for one cell / half-cell packet are 7/10 and
+   11/25 uncompressed, 3/5 and 3/8 after source projection.* The
    negative set is a comb at the window's own resolution (§5), and a comb of
    half-cells has concentration eigenvalues bounded away from 1 no matter
    how many teeth it has. That is the same fact as the pencil's 50/50 level
