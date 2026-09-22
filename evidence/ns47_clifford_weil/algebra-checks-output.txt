@@ -1,0 +1,18 @@
+batch("evidence/ns47_clifford_weil/algebra-checks.mac")
+display2d:false
+ep:matrix([1,0],[0,-1])
+em:matrix([0,1],[-1,0])
+id2:ident(2)
+zero2:zeromatrix(2,2)
+checks:[is(ep . ep = id2),is(em . em = -id2),is(ep . em+em . ep = zero2),
+        is(transpose(ep) = ep)]
+picone:expand((hx*gx-hy*gy)^2-hx*hy*(gx-gy)^2+(-(hx-hy))*(hx*gx^2-hy*gy^2))
+checks:endcons(is(picone = 0),checks)
+checks:endcons(is(ratsimp(2*(1/sqrt(3))^2-2/3) = 0),checks)
+checks:endcons(is(expand((d-n)+c-(d+c-n)) = 0),checks)
+print("Exact checks:",checks)
+Exact checks: [true,true,true,true,true,true,true]
+if not every(identity,checks) then error("An exact algebra check failed")
+print("PASS: all 7 exact checks; this is not a numerical certificate.")
+PASS: all 7 exact checks; this is not a numerical certificate.
+quit()
