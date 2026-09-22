@@ -194,11 +194,11 @@
     {
       "id": "concentration",
       "title": "signed weighted concentration",
-      "status": "live",
+      "status": "blocked",
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "even sector; retains time-frequency correlations",
+      "note": "Live mechanism of v1.31; v1.44 gives its exact pencil-coordinate demands. NS-22 (diag_comb_minorant, head N=256, float): every bounded-complexity step minorant loses a fixed fraction of D_a (layer-cake 0.35 D_a, one level set 0.6 D_a, J troughs 0.44-0.85 D_a); only a J-level quantization of beta_a with J ~ 1.2 D_a/eta keeps eta_a bounded, i.e. the level count grows without bound in a and the minorant then reproduces q_a itself. Obstruction found numerically; not a proved closure.",
       "evidence": "MISSING"
     },
     {

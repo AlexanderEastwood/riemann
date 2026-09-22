@@ -119,11 +119,11 @@ graph LR
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
-  class concentration,circle,stepb live;
+  class circle,stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
   class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class w5 blocked;
+  class w5,concentration blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes open;
   subgraph Legend
@@ -141,9 +141,9 @@ graph LR
 | status | count | meaning |
 |---|---:|---|
 | `proved` | 18 | established result |
-| `live` | 3 | current route (gold): being worked now |
+| `live` | 2 | current route (gold): being worked now |
 | `closed` | 15 | closed route (red): proved insufficient or impossible; kept deliberately |
-| `blocked` | 1 | attempted; obstruction found |
+| `blocked` | 2 | attempted; obstruction found |
 | `open` | 5 | target, not yet attacked |
 
 ## Nodes
@@ -187,7 +187,7 @@ graph LR
       - [X] **reciprocal-band commutation** — `closed/reciprocal-band` · **evidence missing** · v1.33, commutator norm > 9e-6
       - [X] **scalar far majorant** — `prop:v125-cutoff-cost` · `closed/scalar-far-majorant` · evidence: [`evidence/v126/g2_window_resolution/`](evidence/v126/g2_window_resolution/) · N ~ L exp(M_phi): exponential cutoff cost
       - [X] **scalar signed primitive** — `cor:v137-scalar-no-go` · `closed/scalar-primitive` · evidence: [`evidence/v137/`](evidence/v137/) · a Delta(beta_a) -> infinity, unconditional
-      - [~] **signed weighted concentration** — `prop:v131-concentration` · `lane/concentration` · **evidence missing** · even sector; retains time-frequency correlations
+      - [!] **signed weighted concentration** — `prop:v131-concentration` · `lane/concentration` · **evidence missing** · Live mechanism of v1.31; v1.44 gives its exact pencil-coordinate demands. NS-22 (diag_comb_minorant, head N=256, float): every bounded-complexity step minorant loses a fixed fraction of D_a (layer-cake 0.35 D_a, one level set 0.6 D_a, J troughs 0.44-0.85 D_a); only a J-level quantization of beta_a with J ~ 1.2 D_a/eta keeps eta_a bounded, i.e. the level count grows without bound in a and the minorant then reproduces q_a itself. Obstruction found numerically; not a proved closure.
         - [x] **pencil loss budget; cofinal obligation retained** — `prop:v144-pencil-concentration` · `codex/complete-ground-zero-transfer` · evidence: [`evidence/v144/`](evidence/v144/) · NS-24 exact translation: relative loss <= nu_k + eta_a ||v_k||^2/q+. Source constraint and mixture cross terms retained. Diagnostic thresholds not certified; fixed-head tests do not replace cofinal full-complement control. No new concentration bound.
       - [X] **unsigned prime-norm domination** — `prop:v119-prime-essential` · `closed/prime-norm` · evidence: [`evidence/v124/g2_growing_sign/`](evidence/v124/g2_growing_sign/) · norm ~ lambda, survives any finite removal
 

@@ -323,6 +323,13 @@ to linear in the level: `‖C(E(t))‖ ≈ 0.6–0.8 · (1 − t/D_a)`.
    minorant with `J` growing with `a` can hold the loss bounded, which is
    the arithmetic-blind obstruction of v1.39 in operator form. Nothing here
    is a bound.
+4. **Correction after NS-22** (`evidence/diag_comb_minorant/`): the binding
+   direction of every step minorant is *not* the low-frequency train of §5
+   but a packet sitting at a deep trough at cell index 12–500, so the
+   obstruction is the density of near-`D_a` troughs at moderate frequency.
+   Item 3's "cell-scale comb" wording pointed at the wrong part of the
+   symbol; the level structure is what matters, and NS-22 measures it:
+   `η_a(J) ≈ 1.2 D_a / J` for a `J`-level quantization of `β_a`.
 
 ## 9. Are the pencil directions source-admissible? (`source_overlap.py` → `source_overlap_output.txt`)
 
