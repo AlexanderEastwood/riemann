@@ -1,6 +1,6 @@
 # Riemann project research map
 
-_Generated from `research-map.json` — last updated 2026-09-21._
+_Generated from `research-map.json` — last updated 2026-09-22._
 _Do not hand-edit: run `python3 tools/make_map.py`._
 
 ```mermaid
@@ -138,13 +138,13 @@ graph LR
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
-  class circle,stepb live;
+  class stepb live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
   class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn,capacityslack closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class w5,concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
-  class rh,fixedspace,g2,uniform,altroutes open;
+  class rh,fixedspace,g2,uniform,altroutes,circle open;
   subgraph Legend
     direction LR
     lg_live["current route (gold)"]:::live
@@ -160,10 +160,10 @@ graph LR
 | status | count | meaning |
 |---|---:|---|
 | `proved` | 19 | established result |
-| `live` | 2 | current route (gold): being worked now |
+| `live` | 1 | current route (gold): being worked now |
 | `closed` | 16 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 6 | attempted; obstruction found |
-| `open` | 5 | target, not yet attacked |
+| `open` | 6 | target, not yet attacked |
 
 ## Nodes
 
@@ -171,7 +171,7 @@ graph LR
   - [ ] **Alternative criteria (all equivalent; same wall)** — each is a known RH-equivalent criterion; none is closer; assessed 2026-09-21
     - [X] **Li / Keiper coefficients** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · Li class ∩ Paley-Wiener = {0}: no window certifies any lambda_n; W_4>=0 gives windowed lambda_n^[log16] >= 0 only
     - [X] **Nyman-Beurling-Baez-Duarte** — evidence: [`evidence/diag_routes/nb/`](evidence/diag_routes/nb/) · no finite NB statement equivalent to W_lambda>=0; d_N certified to N=600, oscillates around C/log N; Burnol Thm 3.1 is the semantic lock
-    - [~] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_true_symbol/`](evidence/diag_true_symbol/) · Validated symbol beta_a (independent mpmath replay confirms even and odd entries at lambda=4, NS-31). Finite-head pencil: cancellation is a deep block in both parities (counts survive 120/180-digit replay). Ground pencil direction aligns with the certified lambda=3 source (overlap 0.99999998). Lattice-unit and level-distribution diagnostics retained as finite-head observations only; the lane's closure-type conclusions (layer-cake -> infinity, no limiting shape, lobe-mass counterexample, small-prime surplus) were withdrawn after the NS-31 audit. Diagnostic, not a certificate.
+    - [ ] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_true_symbol/`](evidence/diag_true_symbol/) · measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained
     - [X] **de Branges / Hermite-Biehler** — HB structure exists at every window after a shift; sign is the one scalar lambda_a; Krein-Langer determinacy = the wall (Suzuki 2606.09096, Conrey-Li)
     - [X] **de Bruijn-Newman (0 <= Lambda <= 0.22)** — evidence: [`evidence/diag_routes/dbn/`](evidence/diag_routes/dbn/) · no bridge either way (H_t has no Euler product / explicit formula); Lambda<=0 needs RH to all heights; Polymath15 barrier reproduced in 35s
     - [X] **function field / Hodge / F_1** — nothing finite transfers; window lambda has no intersection-theoretic meaning

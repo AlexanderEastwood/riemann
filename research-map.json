@@ -1,6 +1,6 @@
 {
   "title": "Riemann project research map",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "legend": {
     "proved": "established result",
     "live": "current route (gold): being worked now",
@@ -265,11 +265,11 @@
     {
       "id": "circle",
       "title": "circle / Toeplitz-Hankel lens",
-      "status": "live",
+      "status": "open",
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_true_symbol",
-      "note": "Validated symbol beta_a (independent mpmath replay confirms even and odd entries at lambda=4, NS-31). Finite-head pencil: cancellation is a deep block in both parities (counts survive 120/180-digit replay). Ground pencil direction aligns with the certified lambda=3 source (overlap 0.99999998). Lattice-unit and level-distribution diagnostics retained as finite-head observations only; the lane's closure-type conclusions (layer-cake -> infinity, no limiting shape, lobe-mass counterexample, small-prime surplus) were withdrawn after the NS-31 audit. Diagnostic, not a certificate."
+      "note": "measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained"
     },
     {
       "id": "debranges",
