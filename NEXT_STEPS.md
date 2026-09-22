@@ -88,6 +88,10 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 
 Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this audit. The existing unmerged `codex/ns43-route-selection` uses those IDs for different work. Coordinator assigned this audit NS-48/49 because NS-43/44/45 are already used by PR #21, NS-46 by the growing-radical task and NS-47 by the separate factorization task. NS-43/44 remain aliases from the user request only; no existing task is overwritten. Audit base is v1.51 at `b0baadf`, branch `audit/2026-09-22-conclusions`.
 
+| NS-51 | Derive the complete-domain nullvector equation and test the screw-operator injectivity reduction, including endpoint regularity and both parities | Codex Astra RH1; independent domain review | done (v1.54; API open) | Exact nullvector iff affine screw potential on the complete form domain. Rank-one logarithmic-torsion countermodel defeats generic H0¹ bootstrap, not arithmetic injectivity. Independent review: 0 MAJOR/MINOR. No new window/tail metric or G2/RH claim. |
+| NS-52 | Derive symmetry-paired zero contributions under heat deformation and test cancellation at a collision, with support dependence retained | Codex Astra RH1; heat-route agent and independent cross-review | done (v1.54; arithmetic transport open) | Correct Xi heat coefficient 1/4; exact finite cluster transport retains exterior-zero term. Support cost grows; unmatched real deformed zero conditionally forbids uniform same-test comparison. That hypothesis is not verified. No general heat closure, new window/tail metric or G2/RH claim. |
+| NS-53 | Reopen constructive Nyman–Beurling approximation: exact arithmetic block residual update and sufficient convergence condition without imposing the sharp rate | Codex Astra RH1; approximation-route agent and independent cross-review | done (v1.54; RBC open) | Exact residualized Schur-complement gain and unconditional harmonic-trace lower bound; exact divisor cells. Any convergence rate suffices, but asymptotic corrected correlation lower bound remains unproved. No convergence/failure, G2 or RH claim. |
+
 ## Lanes
 
 ```

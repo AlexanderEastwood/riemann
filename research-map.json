@@ -97,7 +97,7 @@
       "wall": {
         "input": "stipulated 1e-8 D tail comparison fails: positive q/D < 7e-18 (lambda=5)",
         "to": null,
-        "src": "prop:v152-tail-comparison; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v152-tail-comparison; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -118,7 +118,7 @@
       "wall": {
         "input": "cost: prime norm ~ lambda survives finite removal; exponential cutoff (estimate, not route)",
         "to": null,
-        "src": "prop:v119-prime-essential; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v119-prime-essential; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -132,7 +132,7 @@
       "wall": {
         "input": "specific estimate: violated by a POSITIVE direction, q/D > 2.05 at lambda=4",
         "to": null,
-        "src": "prop:v120-norm-counterexample; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v120-norm-counterexample; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -146,7 +146,7 @@
       "wall": {
         "input": "scoped: remainder outside finite Schatten classes; negative-only penalty stays a constant (does not obstruct v136)",
         "to": null,
-        "src": "prop:v132-schatten; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v132-schatten; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -160,7 +160,7 @@
       "wall": {
         "input": "estimate counterexample: source-complement vector with tiny q despite O(1) cancellation",
         "to": null,
-        "src": "prop:v121-complement-cancellation; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v121-complement-cancellation; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -175,7 +175,7 @@
       "wall": {
         "input": "cost of one estimate: N > L exp(M_phi/(1-c)); not every method",
         "to": null,
-        "src": "prop:v125-cutoff-cost; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v125-cutoff-cost; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -190,7 +190,7 @@
       "wall": {
         "input": "fixed-partition comparison fails: Rayleigh 341/250, 2093/1500 > 1 (lambda=5, N=25)",
         "to": null,
-        "src": "prop:v152-block-comparison; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v152-block-comparison; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -204,7 +204,7 @@
       "wall": {
         "input": "construction class: form-exact positive smoothing = point mass; signed smoothing not covered",
         "to": null,
-        "src": "prop:v132-flat-top; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v132-flat-top; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -218,7 +218,7 @@
       "wall": {
         "input": "generic mechanism: persistent source-compressed commutator > 9e-6; not every band choice",
         "to": null,
-        "src": "v1.33; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "v1.33; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -232,7 +232,7 @@
       "wall": {
         "input": "shortcut: cross norm >= 73/(375 pi) cofinally; not all Cotlar arguments",
         "to": null,
-        "src": "v1.34; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "v1.34; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -247,7 +247,7 @@
       "wall": {
         "input": "genuine closure of the scalar route: a Delta(beta_a) -> infinity, unconditional",
         "to": null,
-        "src": "cor:v137-scalar-no-go; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "cor:v137-scalar-no-go; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -321,10 +321,10 @@
     },
     {
       "id": "altroutes",
-      "title": "Alternative criteria (classical RH equivalents; no finite bridge proved)",
+      "title": "Alternative mechanisms: distinct missing inputs",
       "status": "open",
       "parent": "rh",
-      "note": "Each child is a classical RH criterion. The record proved structural obstructions to specific bridges, not that every bridge fails; 'all equivalent; same wall' withdrawn per audit PR #22."
+      "note": "Logical RH equivalence does not establish equal proof difficulty or a universal route closure. NS-51–53 test explicit first lemmas."
     },
     {
       "id": "circle",
@@ -338,9 +338,9 @@
     {
       "id": "debranges",
       "title": "de Branges / Hermite-Biehler",
-      "status": "blocked",
+      "status": "open",
       "parent": "altroutes",
-      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Structural statement only: existence of the shifted de Branges structure does not decide the unshifted sign.",
+      "note": "Shifted fixed-window structures do not determine the unshifted sign; arbitrary extension uniqueness is not established. NS-51 gives a complete-domain nullvector reduction; arithmetic injectivity remains open.",
       "wall": {
         "input": "screw-kernel positivity = RH; no fixed-window bridge",
         "to": "rh",
@@ -350,9 +350,9 @@
     {
       "id": "f1",
       "title": "function field / Hodge / F_1",
-      "status": "blocked",
+      "status": "open",
       "parent": "altroutes",
-      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Not an RH-equivalent criterion here: a missing construction, so no dashed edge.",
+      "note": "No number-field intersection form and quantified positivity transfer are supplied here. A missing construction is not an impossibility theorem.",
       "wall": {
         "input": "no intersection form supplied for this window (missing construction)",
         "to": null,
@@ -362,41 +362,43 @@
     {
       "id": "nb",
       "title": "Nyman-Beurling-Baez-Duarte",
-      "status": "blocked",
+      "status": "open",
       "parent": "altroutes",
-      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. The earlier 'a proof must attain the sharp C/log N rate' sentence is withdrawn (audit A3).",
-      "evidence": "evidence/diag_routes/nb",
+      "note": "Reopened: any d_N→0 suffices. Exact residualized block gain and trace lower bound proved; the sufficient arithmetic residual block-correlation input is open. Finite distances do not prove it.",
+      "evidence": "evidence/ns53_nb_blocks",
       "wall": {
-        "input": "d_N -> 0 = RH; no finite bridge from W_4 to d_N",
+        "input": "RBC: corrected arithmetic residual block correlations (open sufficient input)",
         "to": "rh",
-        "src": "Burnol's zero-evaluator/co-Poisson dictionary is structural, not a bound for a specified d_N; the report's sharp-rate necessity claim is false (audit A3)"
-      }
+        "src": "eq:ns53-nb-rbc; exact convergence criterion is prior art, and RBC is not proved or claimed equivalent to RH"
+      },
+      "prop": "prop:ns53-nb-block-gain; eq:ns53-nb-rbc"
     },
     {
       "id": "li",
-      "title": "Li / Keiper coefficients",
-      "status": "blocked",
+      "title": "Direct rational Li / entire window-test identification",
+      "status": "closed",
       "parent": "altroutes",
-      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. What is proved: the canonical rational Li-transform class meets the fixed-window entire class trivially.",
+      "note": "The specified rational Li-transform class has trivial intersection with the finite-window entire Paley–Wiener class. This closes direct identification only; it does not exclude indirect inequalities or all Li approaches.",
       "evidence": "evidence/diag_routes/li",
       "wall": {
-        "input": "all Li coefficients >= 0 = RH; windowed coefficients are different objects",
-        "to": "rh",
-        "src": "Li class \u2229 finite-window Paley-Wiener class = {0} blocks direct identification; that every transfer reduces to prop:v121 is argued, not proved"
+        "input": "direct rational-Li / entire-window classes intersect only at zero",
+        "to": null,
+        "src": "Scoped direct-identification obstruction; no statement excluding indirect Li inequalities"
       }
     },
     {
       "id": "dbn",
-      "title": "de Bruijn-Newman (Lambda = 0 iff RH)",
-      "status": "blocked",
+      "title": "de Bruijn–Newman: paired transport",
+      "status": "open",
       "parent": "altroutes",
-      "note": "audit PR #22 (2026-09-22-conclusions-review.md \u00a74): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Blanket 'no bridge' withdrawn (audit A4); the route was closed before the v1.46 exact zero expansion existed.",
-      "evidence": "evidence/diag_routes/dbn",
+      "note": "Finite-cluster singularities cancel; external interaction and support growth remain. Same-test uniform comparison fails IF an unmatched real deformed zero exists; that hypothesis is not verified here. General heat route open.",
+      "evidence": "evidence/ns52_heat_pairs",
       "wall": {
-        "input": "Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved",
+        "input": "complete signed transport with uniform support control (open)",
         "to": "rh",
-        "src": "Rodgers-Tao Lambda >= 0; the record reproduced a specified positive-time barrier, not a theorem excluding all transfer arguments (audit A4); v1.46 exact zero expansion postdates the route report"
-      }
+        "src": "prop:ns52-cluster; prop:ns52-unmatched gives only a conditional obstruction to one same-test comparison"
+      },
+      "prop": "prop:ns52-cluster; prop:ns52-unmatched"
     },
     {
       "id": "ccmmu",
@@ -555,7 +557,7 @@
       "prop": "prop:v151-input-comparison",
       "branch": "codex/ns38-ns39-integration",
       "evidence": "evidence/v151",
-      "note": "NS-39: exact inverse corrected-zero-field formula for the potential, including finite-window pole mass. ZLD implies QG growth with kappa theta\u00b2 D/(2K) on the same prescribed family; no packet input supplied. CAE equals the uniform complement floor. General measure countermodels are not arithmetic independence. All three arithmetic inputs remain open; no new positivity conclusion."
+      "note": "NS-39: exact inverse corrected-zero-field formula for the potential, including finite-window pole mass. ZLD implies QG growth with kappa theta² D/(2K) on the same prescribed family; no packet input supplied. CAE equals the uniform complement floor. General measure countermodels are not arithmetic independence. All three arithmetic inputs remain open; no new positivity conclusion."
     },
     {
       "id": "capacitychannels",
@@ -647,17 +649,41 @@
     },
     {
       "id": "fineradicalrank",
-      "title": "Uniform or polynomial positive gap after o(lambda\u00b2/log lambda) removed directions",
+      "title": "Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions",
       "status": "closed",
       "parent": "gapfree",
       "prop": "lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank",
       "evidence": "evidence/v153",
-      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda\u00b2/(20000 log lambda), exact even/odd counts and residual C exp(-lambda\u00b2/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods.",
+      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda²/(20000 log lambda), exact even/odd counts and residual C exp(-lambda²/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods.",
       "wall": {
         "input": "positive-gap strategy must remove rank >= lambda^2/(20000 log lambda)",
         "to": null,
         "src": "lem:ns46-finite-arc; ns46-a2-cor-rank"
       }
+    },
+    {
+      "id": "kernelapi",
+      "title": "Exact kernel exclusion: affine-potential injectivity",
+      "status": "live",
+      "parent": "altroutes",
+      "prop": "prop:ns51-affine-potential; eq:ns51-api",
+      "evidence": "evidence/ns51_kernel",
+      "branch": "codex/ns51-new-routes",
+      "note": "Complete form-domain reduction is exact in both parities. API remains open; no uniform positive gap is required.",
+      "wall": {
+        "input": "API: actual arithmetic affine-potential injectivity (open)",
+        "to": "rh",
+        "src": "eq:ns51-api; prop:ns51-sign-continuation"
+      }
+    },
+    {
+      "id": "generic_h1",
+      "title": "Generic H¹ bootstrap from a zero eigenvalue",
+      "status": "closed",
+      "parent": "kernelapi",
+      "prop": "prop:ns51-no-generic-bootstrap",
+      "evidence": "evidence/ns51_kernel",
+      "note": "Rank-one bounded perturbation of the same logarithmic principal operator has a non-H¹ nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted."
     }
   ]
 }

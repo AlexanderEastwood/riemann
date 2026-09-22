@@ -1,0 +1,283 @@
+% NS-52. Exact finite identities and a conditional obstruction; no RH assumption.
+% Standalone fragment: requires amsmath, amssymb, amsthm, hyperref and
+% proposition/proof environments. No manuscript version is assigned here.
+\subsection*{NS-52: paired heat-zero transport and its first obstruction}
+
+\paragraph{Normalization and claim scope.}
+Use the conventional de Bruijn--Newman family
+\[
+ H_t(z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+ \qquad H_0(z)=\tfrac18\xi(\tfrac12+iz/2),
+\]
+as in Polymath15, equations (1)--(4) and Proposition 3.1
+(\url{https://arxiv.org/html/1904.12438#S3}).
+Put $Z_t(w)=8H_t(2w)$ and $\kappa=1/4$. Then
+\begin{equation}\label{eq:ns52-normalization}
+ Z_0(w)=\Xi(w):=\xi(\tfrac12+iw),\qquad
+ \partial_t Z_t=-\kappa\partial_w^2 Z_t.
+\end{equation}
+Thus the heat coefficient in the ordinary zeta-ordinate coordinate is
+$1/4$, not $1$. All zero sums below count multiplicity. No assertion
+about the locations of the zeros of $Z_0$ is assumed.
+
+For $f,g\in C_c^\infty(-a,a)$ define the nonunitary transform and
+its analytic sesquilinear product by
+\[
+ F_f(w)=\int_{-a}^a f(x)e^{-iwx}\,dx,\qquad
+ F_g^*(w)=\overline{F_g(\overline w)},\qquad
+ \Psi_{f,g}(w)=F_f(w)F_g^*(w).
+\]
+The second factor is an entire function of $w$. Replacing it by
+$\overline{F_g(w)}$ off the real axis would give the wrong form.
+With $\mathcal Z_t$ the zero multiset of $Z_t$, put
+\begin{equation}\label{eq:ns52-zero-form}
+ q_{a,t}(f,g)=\sum_{w\in\mathcal Z_t}\Psi_{f,g}(w).
+\end{equation}
+At $t=0$, $\rho=1/2+iw$ and
+$\rho^\sharp=1-\overline\rho=1/2+i\overline w$ identify this
+exactly with the manuscript's first-slot-linear Weil zero formula:
+$q_{a,0}(f,g)=q_a(f,g)$. There is no $2\pi$ factor with the
+displayed nonunitary transform. Using the unitary transform instead
+would put $2\pi$ in front of the sum. The factor $8$ in $Z_t$ does
+not change any zero or its multiplicity. The completed function has
+no poles; no additional pole term is to be added to this zero-side
+definition. This is not an assertion that the undeformed geometric
+prime and pole terms can be heat-evolved separately.
+
+For completeness, the sum in \eqref{eq:ns52-zero-form} is absolutely
+convergent on this smooth core for every $t\ge0$, locally uniformly
+in $t$. The de Bruijn strip theorem (Polymath15, Theorem 3.2) and
+the unconditional initial critical strip give
+$|\operatorname{Im} w|\le1/2$. For $0\le t\le T$, Gaussian
+majorization of the super-exponentially decreasing $\Phi$ gives
+$|Z_t(w)|\le C_T e^{C_T|w|^2}$ and $Z_t(0)\ge Z_0(0)>0$.
+Jensen's formula therefore bounds the zero count in $|w|\le R$
+by $C_T(1+R)^2$, uniformly in $t$. Repeated integration by parts
+gives arbitrary inverse powers of $|\operatorname{Re}w|$ for both
+test transforms on the fixed strip. This proves convergence and
+uniformly small tails. Local contour integrals count any finite
+cluster continuously through collisions, so the complete form is
+continuous in $t$ on the smooth core. This argument does not justify
+termwise differentiation of the infinite sum or claim a closed
+deformed form on the original complete form domain.
+If all zeros at a fixed $t_0$ are real, then
+\[
+ q_{a,t_0}[f]=\sum_{w\in\mathcal Z_{t_0}}|F_f(w)|^2\ge0.
+\]
+For example the classical de Bruijn theorem supplies such $t_0\ge1/2$.
+
+\begin{proposition}[Finite-cluster transport, including a collision]
+\label{prop:ns52-cluster}
+Let $Z(t,w)$ be holomorphic near $J\times\overline\Omega$, where
+$J$ is an interval of real times and $\Omega$ is a bounded domain
+with piecewise smooth positively oriented boundary $\Gamma$.
+Assume $Z$ has no zero on $\Gamma$ for $t\in J$ and satisfies
+$\partial_t Z=-\kappa Z_{ww}$ with constant $\kappa>0$.
+For an entire $\Psi$, define the finite sum $S_\Gamma(t)$ of
+$\Psi$ over the zeros in $\Omega$, counted with multiplicity.
+Then $S_\Gamma$ is differentiable through all internal collisions and
+\begin{align}
+ S_\Gamma(t)&=\frac1{2\pi i}\int_\Gamma
+                   \Psi(w)\frac{Z_w}{Z}(t,w)\,dw,
+                   \label{eq:ns52-contour}\\
+ S_\Gamma'(t)&=\frac{\kappa}{2\pi i}\int_\Gamma
+                   \Psi'(w)\frac{Z_{ww}}{Z}(t,w)\,dw.
+                   \label{eq:ns52-contour-derivative}
+\end{align}
+At a time with $m$ simple cluster zeros $w_1,\ldots,w_m$, set
+$A(w)=Z(t,w)/\prod_{j=1}^m(w-w_j)$ and $b=A'/A$ locally in
+the cluster. Then
+\begin{equation}\label{eq:ns52-divided-difference}
+ S_\Gamma'
+ =2\kappa\sum_{1\le j<k\le m}
+       \frac{\Psi'(w_j)-\Psi'(w_k)}{w_j-w_k}
+   +2\kappa\sum_{j=1}^m b(w_j)\Psi'(w_j).
+\end{equation}
+If the cluster consists at a particular time of one zero $c$ of
+order $m$, write $Z(t,w)=(w-c)^m A(w)$ with $A(c)\ne0$. Its
+derivative at that time is exactly
+\begin{equation}\label{eq:ns52-multiple}
+ S_\Gamma'=
+ \kappa m(m-1)\Psi''(c)
+       +2\kappa m\frac{A'(c)}{A(c)}\Psi'(c).
+\end{equation}
+In particular, a double zero contributes
+$2\kappa\Psi''(c)+4\kappa(A'/A)(c)\Psi'(c)$.
+\end{proposition}
+\begin{proof}
+The argument principle proves \eqref{eq:ns52-contour}. The nonvanishing
+boundary allows differentiation under its compact integral. Since
+\[
+ \partial_t(Z_w/Z)=-\kappa\partial_w(Z_{ww}/Z),
+\]
+integration by parts around $\Gamma$ gives
+\eqref{eq:ns52-contour-derivative}. At a simple zero,
+$w_j'=\kappa Z_{ww}(w_j)/Z_w(w_j)$, and factorization gives
+\[
+ w_j'=2\kappa\sum_{k\ne j}\frac1{w_j-w_k}
+                         +2\kappa b(w_j).
+\]
+Pair the $j,k$ and $k,j$ contributions to $\sum_jw_j'\Psi'(w_j)$.
+This proves \eqref{eq:ns52-divided-difference}. At an order-$m$ zero,
+\[
+ \frac{Z_{ww}}Z=\frac{m(m-1)}{(w-c)^2}
+       +\frac{2m}{w-c}\frac{A'}A+\frac{A''}A.
+\]
+The residue after multiplying by $\Psi'$ is precisely
+\eqref{eq:ns52-multiple}. No labeling or derivative of a colliding
+individual root is needed.
+\end{proof}
+
+\paragraph{Complete symmetries and the term that must not be omitted.}
+For real $t$, $Z_t$ is real entire and even. Choose the union of
+cluster contours invariant under conjugation and $w\mapsto-w$,
+counting each distinct zero once with its actual multiplicity.
+Then the sum defines a Hermitian sesquilinear contribution and the
+same identities apply. A double collision at a nonzero real $c$
+has a reflected double collision at $-c$; both must be included
+in the symmetry-complete contribution. At $c=0$ one would count
+one cluster, not duplicate it (the actual $H_t$ has no imaginary-axis
+zero). There is no RH assumption here.
+
+For an isolated pair $w_\pm=c\pm d$, the internal term is
+$2\kappa[\Psi'(w_+)-\Psi'(w_-)]/(w_+-w_-)$.
+It converges to $2\kappa\Psi''(c)$ as $d\to0$.
+The two divergent individual velocities therefore cancel exactly.
+The remaining $b=A'/A$ term retains the interaction with the rest
+of the entire function; it does not vanish by symmetry. The local
+analytic factor suffices for the proof, so no additional rearrangement
+of an infinite velocity sum is used here. For a full isolated double
+cluster the limiting value is the double-zero formula above, not
+merely $2\kappa\Psi''(c)$.
+
+\begin{proposition}[The elementary estimate still grows with support]
+\label{prop:ns52-support}
+For $f,g\in L^2(-a,a)$ and $n\ge0$,
+\begin{equation}\label{eq:ns52-pw}
+ |\Psi_{f,g}^{(n)}(w)|
+ \le 2a(2a)^n e^{2a|\operatorname{Im}w|}\|f\|_2\|g\|_2.
+\end{equation}
+Consequently, at a double collision with
+$|\operatorname{Im}c|\le Y$ and $|(A'/A)(c)|\le B$, the bound
+\begin{equation}\label{eq:ns52-support-cost}
+ |S_\Gamma'|
+ \le16\kappa(a^3+Ba^2)e^{2aY}\|f\|_2\|g\|_2
+\end{equation}
+holds. The $a^3$ dependence of a single real collision contribution
+cannot be replaced by a constant for all compact smooth tests.
+Specifically, suppose a double collision occurs at real $c$, and
+choose a real odd $h\in C_c^\infty(-1,1)$ with $\|h\|_2=1$ and
+$M_1=\int u h(u)\,du\ne0$. For
+$f_a(x)=a^{-1/2}h(x/a)e^{icx}$ one has exactly
+\begin{equation}\label{eq:ns52-collision-witness}
+ \|f_a\|_2=1,\qquad
+ S_\Gamma'[f_a]=4\kappa a^3 M_1^2.
+\end{equation}
+The occurrence of such a collision in the nonnegative-time arithmetic
+family is not asserted.
+\end{proposition}
+\begin{proof}
+Cauchy--Schwarz gives
+$|F_f^{(j)}(w)|\le a^j\sqrt{2a}e^{a|\operatorname{Im}w|}\|f\|_2$.
+Leibniz's formula proves \eqref{eq:ns52-pw}; use $n=1,2$ in
+\eqref{eq:ns52-multiple} to obtain \eqref{eq:ns52-support-cost}.
+For the witness, $F_{f_a}(c+v)=\sqrt a F_h(av)$, so
+$F_{f_a}(c)=0$, $\Psi_{f_a,f_a}'(c)=0$, and
+$\Psi_{f_a,f_a}''(c)=2a^3M_1^2$. Apply the double-zero formula.
+This is a lower bound on a conditional individual cluster's derivative,
+not a lower bound on the complete arithmetic derivative: other clusters
+remain present.
+\end{proof}
+
+\paragraph{Passage to the whole time-dependent sum.}
+Absolute convergence of \eqref{eq:ns52-zero-form} at each time
+does not imply convergence of its differentiated cluster series.
+One sufficient hypothesis is an exhausting family of finite zero
+multisets tracked with multiplicity on $[0,t_0]$, with piecewise
+contours as necessary, whose endpoint sums converge to the complete
+forms, and whose integrated derivatives satisfy
+\[
+ \int_0^{t_0}S_n'(t)[f]\,dt\le C\|f\|_2^2
+\]
+for every compact smooth $f$, with one $C$ independent of the
+exhaustion and its support. An integrable bound
+$S_n'(t)[f]\le B(t)\|f\|_2^2$, $\int_0^{t_0}B(t)\,dt<\infty$,
+would suffice. Full symmetry makes these diagonal quantities real.
+These are hypotheses, not consequences of pair cancellation. They
+would imply $q_a[f]\ge q_{a,t_0}[f]-C\|f\|_2^2$ by the fundamental
+theorem of calculus followed by the endpoint limit. The next result
+shows that this particular comparison has an additional obstruction.
+
+\begin{proposition}[An unmatched real zero obstructs uniform
+same-test comparison]\label{prop:ns52-unmatched}
+Assume the archived cutoff-radical lemma: there exists
+$\phi\in\mathcal S(\mathbb R)$ such that, for every fixed finite
+linear combination $h$ of its real translates, smooth cutoffs
+$\chi_a h\in C_c^\infty(-a,a)$ satisfy
+\[
+ \chi_a h\longrightarrow h\text{ in }L^2\text{ and }L^1,
+ \qquad q_a[\chi_a h]\longrightarrow0.
+\]
+Assume $q_{a,t_0}$ is the same-test zero form
+\eqref{eq:ns52-zero-form}, all its zeros are real, and it has a
+zero $c$ of multiplicity $m_c\ge1$ with $F_\phi(c)\ne0$.
+Then no finite $C\ge0$ independent of $a$ can satisfy
+\begin{equation}\label{eq:ns52-rejected-comparison}
+ q_a[f]\ge q_{a,t_0}[f]-C\|f\|_2^2
+ \quad(f\in C_c^\infty(-a,a))
+\end{equation}
+on a cofinal family of windows.
+\end{proposition}
+\begin{proof}
+Fix $T>0$. The Schwartz assumption implies
+\[
+ B_T:=\sum_{k\in\mathbb Z}
+       |\langle\phi,\phi(\cdot-kT)\rangle|<\infty.
+\]
+For each fixed positive integer $M$ put
+\[
+ h_M=M^{-1/2}\sum_{j=1}^M e^{icjT}\phi(\cdot-jT).
+\]
+Counting equal differences of shifts gives
+$\|h_M\|_2^2\le B_T$, whereas
+$F_{h_M}(c)=\sqrt M F_\phi(c)$.
+Since all deformed zeros are real,
+$q_{a,t_0}[f]\ge m_c|F_f(c)|^2$ for every smooth test.
+Apply \eqref{eq:ns52-rejected-comparison} to $\chi_a h_M$ and
+let $a\to\infty$ along the prescribed cofinal family, keeping $M$
+fixed. The $L^1$ convergence controls the single real Fourier
+evaluation. Thus
+\[
+ m_c M|F_\phi(c)|^2\le C\|h_M\|_2^2\le CB_T.
+\]
+Now let $M\to\infty$, a contradiction. No cutoff estimate uniform
+in $M$, global closedness, or lower semicontinuity of a deformed
+form is used.
+\end{proof}
+
+The cutoff input is Lemma~\ref{lem:v136-total-radicals}: its ordinary
+norm convergence and vanishing complete operator residual imply the
+displayed form limit. Schwartz decay and dominated convergence supply
+the additional $L^1$ limit. The source used there has Fourier transform
+a nonzero constant times $\Xi$, by \eqref{eq:v150-mellin} and the
+source normalization, so $F_\phi(c)\ne0$ means precisely that this
+real deformed zero is not an original Xi zero. An unmatched zero
+at a specified $t_0$ has not been certified or proved in this
+checkpoint. The proposition states its hypothesis explicitly; it
+does not assert an unconditional arithmetic closure. It also does
+not assert any negative direction of the original Weil form.
+
+\paragraph{Disposition.}
+The finite algebraic test succeeds: multiplicities and complete
+pairing remove the inverse-gap singularity. What had to change is
+the normalization, the analytic off-real sesquilinear product, and
+retention of the exterior-cluster logarithmic derivative. What is
+still missing is a complete signed transport estimate with support
+independent error. Moreover the proposed same-test positive-time
+comparison is impossible whenever there is an unmatched real
+deformed zero. A broader heat approach would therefore need a
+different comparison or a justified transport of tests that respects
+the original radical; no such transport is supplied. These are
+finite exact identities, proved implications with explicit hypotheses,
+and a named open transport input. No new window, tail metric,
+numerical certificate, G2 assertion, or RH assertion is made.
