@@ -1,5 +1,29 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-22 — v1.48 / NS-30: level-measure-weighted level-count bound
+
+Analytic: one proposition (prop:v148-weighted-levels) with proof; no new
+numerical certificate. Build figures recorded in evidence/v148/build_report.json.
+
+What had to change: the level hypothesis of v1.46/v1.47 normalizes the
+packet's level mass against Lebesgue measure on [-D, 0]; the symbol's deep
+levels are rare on the head range (a few parts in 1e4 of the frequency
+measure below -0.9 D), so that shape forces mass onto the most expensive
+levels. Normalizing against the symbol's own level distribution m~ gives
+eta >= c' QC_K(m~) - Q, QC_K the one-sided K-level quantization cost, with
+QC_K >= phi_-^2 / (2 K rho~_max); uniform density recovers v1.46 exactly.
+
+What the inputs become: ZLD (lower measure of every level band) is replaced
+by the scalar phi_-^2 / rho~_max -> infinity along the family; packet
+coverage of every band is replaced by one admissible state with level mass
+>= c' m~ and bounded energy. Both open. NS-28 (diag_level_distribution
+sections 4-6) measures the weighted hypothesis as satisfied by states of
+energy 2e-9 .. 1.8e-3 at c' = 1, against 0.13-0.29 for the uniform one at
+c = 0.3, and c' QC_K - Q positive for hundreds to thousands of levels.
+
+Outcome: a re-shaping of the open inputs supported by measurement, not a
+closure. The route remains blocked. G2 and RH remain open.
+
 ## 2026-09-21 — v1.47 / NS-29: level distribution as a zero statement
 
 Actual build: 237 pages, 0 undefined references, 0 duplicate references,

@@ -1,0 +1,10 @@
+{
+  "version": "1.48",
+  "pages": 238,
+  "undefined_references": 0,
+  "multiply_defined": 0,
+  "overfull_boxes": 0,
+  "builder": "./manuscript/build.sh (latexmk)",
+  "date": "2026-09-22",
+  "note": "analytic addition only: prop:v148-weighted-levels and its scope paragraphs; no numerical certificate"
+}

@@ -1,0 +1,120 @@
+\subsection*{A level-measure-weighted form of the level-count bound (NS-30)}
+
+Proposition~\ref{prop:v146-level-complexity} and the separation of
+Proposition~\ref{prop:v147-level-separation} normalize the packet's level
+mass against Lebesgue measure on $[-D,0]$. The arithmetic symbol does not
+spend its negative range uniformly over levels: on the head range the
+deepest tenth of levels carries a few parts in $10^4$ of the frequency
+measure. Normalizing against the symbol's own level distribution instead
+changes what the packet must supply and what the zero input must say.
+
+Fix a window, the even sector, a head range $[0,X]$ with $X=2\pi N/L$,
+and $D=D_a$. Define the normalized level distribution of the symbol and
+the level mass of a packet by
+\[
+ \widetilde m(B)=\frac1X\bigl|\{\xi\in[0,X]:\beta_a(\xi)\in B\}\bigr|,
+ \qquad
+ \mu_g(B)=\int_{\{\beta_a\in B\}}|\mathcal F_ag|^2\,d\xi,
+ \qquad B\subset[-D,0]\ \hbox{Borel},
+\]
+and put $\varphi_-=\widetilde m([-D,0))$. For $K\ge1$ define the
+one-sided $K$-level quantization cost of $\widetilde m$,
+\begin{equation}\label{eq:v148-qc}
+ \mathrm{QC}_K(\widetilde m)
+ =\min_{-D=\ell_1<\ell_2<\cdots<\ell_K\le0}\;
+  \sum_{j=1}^{K}\int_{[\ell_j,\ell_{j+1})}(t-\ell_j)\,d\widetilde m(t),
+ \qquad \ell_{K+1}=0.
+\end{equation}
+
+\begin{proposition}[Weighted level hypothesis and the quantization cost]
+\label{prop:v148-weighted-levels}
+Let $g\in P_a\mathcal H_a^{\rm ev}\cap\mathcal D(q_a)$ be a unit vector
+with $q_a[g]\le Q$, $Q\ge0$, and suppose that for some $c'>0$
+\begin{equation}\label{eq:v148-wlh}
+ \mu_g(B)\ge c'\,\widetilde m(B)\qquad\hbox{for every Borel }B\subset[-D,0].
+\end{equation}
+Then every step minorant $m$ of \eqref{eq:v131-step-minorant} with at most
+$K$ distinct values satisfies
+\begin{equation}\label{eq:v148-weighted-loss}
+ \eta(m)\ge\bigl[c'\,\mathrm{QC}_K(\widetilde m)-Q\bigr]_+ .
+\end{equation}
+If $\widetilde m$ has a density bounded by $\widetilde\rho_{\max}$ on
+$[-D,0]$, then
+\begin{equation}\label{eq:v148-qc-lower}
+ \mathrm{QC}_K(\widetilde m)\ge\frac{\varphi_-^{\,2}}{2K\,\widetilde\rho_{\max}},
+\end{equation}
+and when the level distribution is uniform on $[-D,0]$ this reproduces
+\eqref{eq:v146-level-lower} with $c=c'\varphi_-$. Consequently, along a
+cofinal family on which \eqref{eq:v148-wlh} holds with $c'\ge c_0>0$ and
+$Q\le Q_*<\infty$, a bounded loss $\eta(m)\le C$ forces
+\[
+ K\ge\frac{c_0\,\varphi_-^{\,2}}{2\,\widetilde\rho_{\max}\,(C+Q_*)} .
+\]
+The level count is unbounded along the family exactly when
+$\varphi_-(a)^2/\widetilde\rho_{\max}(a)\to\infty$.
+\end{proposition}
+\begin{proof}
+A packet with $|\mathcal F_ag|^2\ge b/X$ almost everywhere on $[0,X]$
+satisfies \eqref{eq:v148-wlh} with $c'=2b$, by evenness; the hypothesis is
+stated in the weaker measure form. Let $-D=\ell_1<\cdots<\ell_n$ be the
+distinct values of $m$ in $[-D,0)$, so $n\le K$, and put $\ell_{n+1}=0$.
+The value $-D$ occurs because $m\ge-D$, $m\le\beta_a$, and
+$\inf\beta_a=-D$; a minorant with fewer than $K$ negative values is
+covered by monotonicity of the minimum in \eqref{eq:v148-qc} in $K$. Where
+$\beta_a(\xi)\in[\ell_j,\ell_{j+1})$ one has $m(\xi)\le\beta_a(\xi)<\ell_{j+1}$,
+so $m(\xi)\le\ell_j$ and $\beta_a(\xi)-m(\xi)\ge\beta_a(\xi)-\ell_j\ge0$.
+Hence
+\[
+ \int(\beta_a-m)|\mathcal F_ag|^2\,d\xi
+ \ge\sum_{j=1}^{n}\int_{[\ell_j,\ell_{j+1})}(t-\ell_j)\,d\mu_g(t)
+ \ge c'\sum_{j=1}^{n}\int_{[\ell_j,\ell_{j+1})}(t-\ell_j)\,d\widetilde m(t)
+ \ge c'\,\mathrm{QC}_K(\widetilde m),
+\]
+the middle step because domination of measures on Borel sets,
+\eqref{eq:v148-wlh}, integrates nonnegative functions. The identity
+$-\ip{T_mg}{g}=\int(\beta_a-m)|\mathcal F_ag|^2-q_a[g]$ of
+Proposition~\ref{prop:v146-packet-loss} and $q_a[g]\le Q$ give
+\eqref{eq:v148-weighted-loss}.
+
+For \eqref{eq:v148-qc-lower}, let $m_j=\widetilde m([\ell_j,\ell_{j+1}))$.
+A measure of density at most $\widetilde\rho_{\max}$ and mass $m_j$ on
+$[\ell_j,\ell_{j+1})$ has $\int(t-\ell_j)\,d\widetilde m\ge m_j^2/(2\widetilde\rho_{\max})$,
+attained by packing the mass against $\ell_j$. Then
+$\sum_jm_j^2\ge(\sum_jm_j)^2/K=\varphi_-^{\,2}/K$ by Cauchy--Schwarz.
+Under uniform density $\widetilde\rho_{\max}=\varphi_-/D$, and the right side
+of \eqref{eq:v148-qc-lower} is $\varphi_-D/(2K)$. The cofinal statements
+follow by rearranging \eqref{eq:v148-weighted-loss}.
+\end{proof}
+
+\paragraph{What changes in the open inputs.}
+The zero-distribution input ZLD of Assumption~\ref{ass:v147-zld} asks for
+a lower bound on the measure of \emph{every} band of levels. Under
+\eqref{eq:v148-wlh} the only property of the symbol that enters is the
+scalar $\varphi_-^{\,2}/\widetilde\rho_{\max}$, the negative fraction of the
+head range squared over the peak level density; by
+Proposition~\ref{prop:v146-beta-explicit} it is a functional of the
+corrected zero field on $[0,X]$. The packet input changes from coverage of
+every band with bounded energy to the existence of one admissible state
+whose level mass is at least a fixed multiple of the symbol's own level
+distribution, with bounded energy. Neither input is proved here; both are
+named open inputs on the same footing as ZLD. The gain is in shape, not in
+proof: the deep levels, which are rare on the head range, are now asked to
+carry only their own share of the packet's mass.
+
+\paragraph{Diagnostic values (not hypotheses).}
+On the even head with $N=256$ and $X=800$
+(\path{evidence/diag_level_distribution/}, sections~4--6, floating point),
+the uniform hypothesis of Proposition~\ref{prop:v146-level-complexity} with
+$c=0.3$ costs a minimum energy $Q$ of $5\cdot10^{-4}$, $10^{-3}$, $0.29$
+and $0.13$ at $\lambda=3,4,6,8$, so \eqref{eq:v146-level-lower} has content
+only for $K\le2$ at $\lambda=6$ and $K\le7$ at $\lambda=8$, below the
+$13$--$15$ levels the measured minorants of
+\path{evidence/diag_comb_minorant/} use. Under \eqref{eq:v148-wlh} with
+$c'=1$ the minimum energy is $2\cdot10^{-9}$, below $10^{-15}$,
+$1.8\cdot10^{-3}$ and $5\cdot10^{-5}$, the exact quantization costs are
+$\mathrm{QC}_{16}(\widetilde m)=0.0031,\,0.0082,\,0.021,\,0.033$, and
+$\varphi_-^{\,2}/\widetilde\rho_{\max}=0.028,\,0.11,\,0.31,\,0.39$. These
+are head-resolved midpoint numbers; the source constraint is not imposed
+on the minimizing states; they certify nothing and are recorded only to
+show which shape of hypothesis the actual states satisfy. The route
+remains blocked, not closed. G2 and RH remain open.

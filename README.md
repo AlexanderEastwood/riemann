@@ -96,6 +96,7 @@ graph LR
   betaexplicit["exact lattice symbol; varying envelopes<br/><small>prop:v146-beta-explicit</small><br/><small>&#128193; evidence/v146</small>"]
   minorantlevels["bounded-complexity minorants: arithmetic gap remains<br/><small>prop:v146-packet-loss; prop:v146-level-complexity</small><br/><small>&#128193; evidence/v146</small>"]
   zeroleveldistribution["zero level distribution and packet coverage: open inputs<br/><small>prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet</small><br/><small>&#128193; evidence/v147</small>"]
+  weightedlevels["weighted level bound: eta >= c' QC_K(m~) - Q<br/><small>prop:v148-weighted-levels</small><br/><small>&#128193; evidence/v148</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -141,6 +142,7 @@ graph LR
   concentration --> betaexplicit
   concentration --> minorantlevels
   minorantlevels --> zeroleveldistribution
+  zeroleveldistribution --> weightedlevels
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -171,6 +173,7 @@ graph LR
   click betaexplicit "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v146/" "evidence: evidence/v146" _blank
   click minorantlevels "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v146/" "evidence: evidence/v146" _blank
   click zeroleveldistribution "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v147/" "evidence: evidence/v147" _blank
+  click weightedlevels "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v148/" "evidence: evidence/v148" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit proved;
@@ -179,7 +182,7 @@ graph LR
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
   class primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,debranges,f1,nb,li,dbn closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class w5,concentration,minorantlevels,zeroleveldistribution blocked;
+  class w5,concentration,minorantlevels,zeroleveldistribution,weightedlevels blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes open;
   subgraph Legend

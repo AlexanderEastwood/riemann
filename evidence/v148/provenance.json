@@ -1,0 +1,37 @@
+{
+  "classification": "proved implication with explicit hypotheses (prop:v148-weighted-levels); diagnostic inputs cited as illustrations only; no diagnostic promoted to certificate",
+  "base_main": "71fa684",
+  "author": "Claude (Fable 5.1), reviewed by the repository owner before merge",
+  "files": [
+    {
+      "path": "evidence/v148/weighted_levels.tex",
+      "sha256": "737e70862dfdff18a9626834030929940c4f88aabaeb4aa3a5d84443603cb8a5",
+      "size_bytes": 6392
+    },
+    {
+      "path": "evidence/diag_level_distribution/results.md",
+      "sha256": "17ddfa51b4dfbfb560de17fc41cdf061a4e4b7d2a5c18dd7388728eb09f46562",
+      "size_bytes": 10835
+    },
+    {
+      "path": "evidence/diag_level_distribution/weighted_level_lp.py",
+      "sha256": "17967616df2703087ddb4d84beb6b11b3056b2a11ee97155c9832a26adb585ad",
+      "size_bytes": 4633
+    },
+    {
+      "path": "evidence/diag_level_distribution/weighted_level_lp_output.txt",
+      "sha256": "8d4a891e9aebc4958f5fae38afcd040f3b120fd19105f7d66dc22737784be3b3",
+      "size_bytes": 3894
+    },
+    {
+      "path": "evidence/diag_level_distribution/min_energy_lp.py",
+      "sha256": "95fc2fccaed49bc1a583f820963c27e475aeae560b072305abcb9011a3153bcb",
+      "size_bytes": 4648
+    },
+    {
+      "path": "evidence/diag_level_distribution/min_energy_lp_output.txt",
+      "sha256": "0efe072a92e1513cd2decea200e567a497f1841a0e7e1deaf49a1328f61cd5ba",
+      "size_bytes": 3120
+    }
+  ]
+}
