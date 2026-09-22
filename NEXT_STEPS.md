@@ -56,6 +56,8 @@ Task-ID reconciliation: the pencil-concentration translation was locally claimed
 
 Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14 review and the v1.49 follow-up. Concurrent user assignment reserves NS-31 for the circle/symbol-lane audit. This task therefore uses NS-32 (PR review) and NS-33 (weighted zero input); original claims remain in history.
 
+| NS-36 | Reconcile the circle-lane record after NS-31 and test the unresolved lambda=4, c'=1 finite-bin feasibility claim with the source constraint | Codex (NS-31 reviewer) | claimed | Preserve historical diagnostic reports; correct surviving map/board overstatements and publish a versioned current reading; produce a checked finite-bin witness or state the unresolved obstruction; no new window, certificate, cofinal, G2 or RH claim. |
+
 ## Lanes
 
 ```
