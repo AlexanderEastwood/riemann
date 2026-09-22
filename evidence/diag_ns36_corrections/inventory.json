@@ -1,0 +1,55 @@
+{
+  "status": "DIAGNOSTIC, NOT A CERTIFICATE",
+  "integration_base": "318b3ce5c79a2df05a960a0f6705d208f6c5dc67",
+  "ns31_audit_head": "bed0df5e64e3d82f027a7ba1a3d28cabb7d86eda",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "libraries": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "mpmath": "1.4.1",
+    "python-flint": "0.9.0"
+  },
+  "input_sha256": {
+    "evidence/diag_true_symbol/pencil.py": "cc46f7c68909e61d641e6d960dc74541f76a2f3e89c30b28b0ea42a6ad7eb043",
+    "evidence/diag_true_symbol/cert.py": "ab5e9456548f5bfbdbe106a852025e2cf0a8e3ad407caa565afb05a98b06c329",
+    "evidence/v124/g2_schur_cancellation/assembly_general.py": "4da2e6805e92a2850fe28bd51cd2450d1f2ef0566e9f4f5b5b5fb50db2825b58",
+    "evidence/v124/g2_source_certificate/certify_pswf_source.py": "877d56cc6e6679649f21ab58852e501e53909a8e6d3a4983c41b4313eb1a860d",
+    "evidence/v124/g2_source_certificate/source_polynomial_intervals.json": "ca563d0705e8f06057b617ef63a26bd2d9edac9653ec2e517ccf52fc46c1ec5a"
+  },
+  "artifact_sha256": {
+    "evidence/diag_ns36_corrections/build_output.txt": "e354756dbc531d9d9fe41e4e643a809d8a1addc7f60ab345e6375f2d9f492a77",
+    "evidence/diag_ns36_corrections/circle-lane-current-reading-2026-09-22-v1.html": "f8312fd5b8253a9f10a4760f0ec3c8f663daea012a223e2e0adf0cd02d4527c7",
+    "evidence/diag_ns36_corrections/feasibility_grid1.json": "c232d6b572cd6f033ffa1c5ff78497b3436088731b94d202d87eccff1f563cca",
+    "evidence/diag_ns36_corrections/feasibility_grid1_output.txt": "f4a00bc6e20ff0a52cef115c667c62f745ae34e40a11094a0381eb7d249dfbad",
+    "evidence/diag_ns36_corrections/feasibility_grid2.json": "8589612da33ee02f7eef1125bc470df9809f97298c055df8f5f9c488fb351033",
+    "evidence/diag_ns36_corrections/feasibility_grid2_output.txt": "6275f94e6d69cf94a17f0c887a98c8ab27d31cecbc13b1152b8f469f6085e79e",
+    "evidence/diag_ns36_corrections/feasibility_repair.py": "22a41b221eb9de2eb2ac2b5eae0746a11e998f24ea83c4d4969be7f6531898b5",
+    "evidence/diag_ns36_corrections/historical_preservation.json": "6dea54a4c16ff7fb4c60cc9b91da9c7c13338f6a21b0500eb1b34b9eda6fd59f",
+    "evidence/diag_ns36_corrections/manifest_v149_check.txt": "a2a039e9d33381a3b68cc9b15346358e605608618f23feca1511172e262d8d26",
+    "evidence/diag_ns36_corrections/peer_review.json": "bc3205664604f454dbc37d3ed5c093589b7fe4f4a9874e8a8c88126d00723281",
+    "evidence/diag_ns36_corrections/pyright_output.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+    "evidence/diag_ns36_corrections/results.md": "40e6c9543d958705954c7ce545cda6be670e4488aee91a82fbf281217ffd4f79",
+    "evidence/diag_ns36_corrections/saved_witness_checks.json": "b7edd5aa1f1aef6bf1f7b8d05d208d88628a6994405c3db097c357fb212b8aba",
+    "evidence/diag_ns36_corrections/saved_witness_checks_output.txt": "b7edd5aa1f1aef6bf1f7b8d05d208d88628a6994405c3db097c357fb212b8aba",
+    "evidence/diag_ns36_corrections/source_M110_d170_output.txt": "de8cb74cb7b21f814386597a48c83ae04a8d6c8eeab573257d4b5da09bc5a38f",
+    "evidence/diag_ns36_corrections/source_M90_d130_output.txt": "055ad184427e75b8e71fe72d9ea9b0bb67674f5960ba6612ee12a2be86ce1aaf",
+    "evidence/diag_ns36_corrections/source_loader_lambda3_check.json": "9c1323d590ea0869c7fd6b91b32784625ed1d6f08de2de463368ddf814c18cf1",
+    "evidence/diag_ns36_corrections/source_loader_output.txt": "8765a4d6cf5788ec3a92ca791369536f94ce88ab05f93a20c7ad19e27e6640d8",
+    "evidence/diag_ns36_corrections/source_projection.py": "1bbf6d809acacc1403e4b51739c1881e58cabdeb5a1c08d63631fe907746d54c",
+    "evidence/diag_ns36_corrections/source_projection_M110_d170_grid2.json": "939e23bb870958ad7251ac69eab9d54d76789a96e8c7e738c95beadd5013a271",
+    "evidence/diag_ns36_corrections/source_projection_M90_d130_grid1.json": "ec1ade93f24c47b6bc54c3d4860c58aedcda96a9792323ca0b814ec3c01f1d35",
+    "evidence/diag_ns36_corrections/verify_saved_witnesses.py": "5607fe9ada3679b761cc80ec6b356a5ffe794f57db7381c5ae40e7d17ffc0dd9"
+  },
+  "record_sha256": {
+    "NEXT_STEPS.md": "aacf22e7ad58e8b3d64e0b6a194f2da73cabf3b4eab0aa1a2ed9b21dfb018abd",
+    "research-map.json": "8a93adf5d2ef2c2b4fdd7882e1d27246004d7276f383c79cd5f421868af77436",
+    "RESEARCH_MAP.md": "1a1e0c26e4216442709f079058bf706535a172aa7ddfab07bc33770b0266e1da",
+    "pyrightconfig.json": "92f8eb211619752c7824647f2ab250bb76c7b9c042287a4ae5328d70a8aab452",
+    "evidence/diag_true_symbol/README.md": "91fc52d2d8f288fb3c9d8cd37b4d04f360cf8b0334fe4d6f799e6666a56caa21",
+    "evidence/diag_level_distribution/README.md": "63423f5fcdb2f894179fb6baf675faee21490cee392e8ea0a3a343309734ee69",
+    "evidence/diag_comb_minorant/README.md": "8a098abc6903d0b86f42ecacea23d07c2661d846a010ef633faa42a0365dd0e6",
+    "evidence/diag_lobe_mass/README.md": "fe741ba6880dfa5fd83c582e5ed7643f45db20aa538812dc5d672255d516921c",
+    "evidence/diag_pencil_arithmetic/README.md": "0a3f461c9671580f32d8e6ee926cb3c5e8a9975c77cf6834310dbc74370b5e8a"
+  },
+  "source_stdout_note": "Initial source stdout records internal arithmetic overlaps under the original key. JSON was subsequently augmented with independently computed exported-vector overlaps; this clarification did not change coefficient data or energies."
+}

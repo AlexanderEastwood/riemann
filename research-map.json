@@ -1,6 +1,6 @@
 {
   "title": "Riemann project research map",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "legend": {
     "proved": "established result",
     "live": "current route (gold): being worked now",
@@ -198,7 +198,7 @@
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "Valid sufficient criterion (prop:v131). Blocked on the named open inputs of v1.46-v1.49 (QG: exact K-level quantization growth of the symbol's level distribution; an admissible bounded-energy packet with the weighted level hypothesis), not on any diagnostic: the NS-22 finite-head losses are restricted-family upper bounds and its tail charge was not a global minorant (NS-31). Not proved closed.",
+      "note": "Valid sufficient criterion (prop:v131); a cofinal uniform finite concentration floor remains unproved. Separately, QG plus an admissible bounded-energy weighted packet would obstruct bounded level complexity; these are open inputs for that proposed no-go, not a positivity mechanism. NS-22 grid-family losses and its invalid sampled tail charge prove no closure (NS-31/36).",
       "evidence": "evidence/v146"
     },
     {
@@ -269,7 +269,7 @@
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_true_symbol",
-      "note": "Validated symbol beta_a (independent mpmath replay confirms even and odd entries at lambda=4, NS-31). Finite-head pencil: cancellation is a deep block in both parities (counts survive 120/180-digit replay). Ground pencil direction aligns with the certified lambda=3 source (overlap 0.99999998). Lattice-unit and level-distribution diagnostics retained as finite-head observations only; the lane's closure-type conclusions (layer-cake -> infinity, no limiting shape, lobe-mass counterexample, small-prime surplus) were withdrawn after the NS-31 audit. Diagnostic, not a certificate."
+      "note": "The correct symbol and centering sign agree with independent even/odd lambda=4 quadrature. Finite-head deep-block cancellation survives precision replay, with different parity counts; only lambda=3 source alignment was checked in the original lane. A literal Toeplitz-plus-Hankel structure, any six-digit relative pencil guarantee, and the diagnostic asymptotic closures are unproved or withdrawn. Current interpretation: evidence/diag_ns36_corrections/circle-lane-current-reading-2026-09-22-v1.html. No certificate or cofinal conclusion."
     },
     {
       "id": "debranges",
@@ -411,7 +411,7 @@
       "prop": "prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg",
       "branch": "codex/weighted-level-review",
       "evidence": "evidence/v149",
-      "note": "NS-32/33: PR14 held for major findings. Exact density is unbounded at negative critical values; histogram peak is not a cap. Weighted QC_K bound survives. QC_1 growth alone is insufficient; fixed-K exact-cost growth plus admissible bounded-energy WLH remain open. No closed physical route or G2/RH claim."
+      "note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim."
     }
   ]
 }
