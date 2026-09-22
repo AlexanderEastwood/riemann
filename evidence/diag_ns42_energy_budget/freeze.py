@@ -45,7 +45,7 @@ def run(lam: int, n: int = 48, dps: int = 150) -> None:
                 'pencil_residual':mp.nstr(residual,12),'norm2':mp.nstr((vec.T*vec)[0],100),
                 'coefficients':[mp.nstr(v,130) for v in vec]})
         path=OUT/f'vectors_l{lam}_{parity}.json'; path.write_text(json.dumps(data,indent=2)+'\n')
-        print(lam,parity,[(v['k'],v['q'][:26],v['nu'][:26]) for v in data['vectors']],flush=True)
+        print(lam,parity,[(v['k'],mp.nstr(mp.mpf(v['q']),12),mp.nstr(mp.mpf(v['nu']),12)) for v in data['vectors']],flush=True)
 
 if __name__=='__main__':
     for arg in sys.argv[1:] or ['3','4']:
