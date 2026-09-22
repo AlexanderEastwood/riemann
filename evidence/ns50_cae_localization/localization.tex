@@ -1,0 +1,248 @@
+\subsection*{NS-50: exact fixed-width localization and the critical remainder}
+
+\paragraph{Status and provenance.}
+This is an analytic attempt at the complete uniform signed floor, not a
+proof of CAE, G2 or RH. It uses the v1.51 complete form, the already
+certified positive window $\lambda=4$, and
+Lemma~\ref{lem:v136-total-radicals}. The localization identity below is
+derived directly. The failed remainder estimate is a specialization of
+NS-47's ordinary-closable-comparison obstruction; its proof is included
+so this checkpoint needs no pending NS-47 manuscript integration. No
+new window, tail metric, numerical illustration or interval gate is used.
+
+\paragraph{The signed form and the localization.}
+Put $\mathcal C=C_c^\infty(\mathbb R)$ and use zero extension and the
+unitary Fourier transform throughout. For $f\in\mathcal C$ write
+\[
+ c_f(t)=\int_{\mathbb R} f(x+t)\overline{f(x)}\,dx,
+ \qquad w_n=\frac{\Lambda(n)}{\sqrt n},\qquad \ell_n=\log n,
+ \qquad \rho(t)=\frac{e^{t/2}}{2\sinh t}.
+\]
+The complete support-consistent form in
+Proposition~\ref{prop:v135-both-parities} is equivalently
+\begin{align}
+ q[f]={}&c_{\rm ar}\norm f^2
+       +2\int_0^\infty\rho(t)
+                   (\norm f^2-\Re c_f(t))\,dt\notag\\
+ &-2\sum_{n\ge2}w_n\Re c_f(\ell_n)
+       +4\int_0^\infty\cosh(t/2)\Re c_f(t)\,dt,
+ \label{eq:ns50-q-correlation}
+\end{align}
+where $c_{\rm ar}=\psi(1/4)-\log\pi$. For each compact test the
+prime sum is finite, and its strict endpoint convention is automatic
+because $c_f(t)=0$ at and beyond the support diameter. The pole is the
+full kernel $2\cosh((x-y)/2)$; its negative odd square has not been
+discarded. The archimedean multiplier is
+$\alpha(\xi)=\Re\psi(1/4+i\xi/2)-\log\pi$.
+
+Fix a nonzero real even $\chi\in C_c^\infty(-b,b)$ with
+$0<b<\log4$ and $\norm\chi_2=1$. Set
+\[
+ \chi_s(x)=\chi(x-s),\qquad
+ H(t)=\int_{\mathbb R}\chi(x+t)\chi(x)\,dx,
+ \qquad V(t)=1-H(t),
+\]
+and define
+\[
+ \mathcal L_\chi[f]=\int_{\mathbb R}q[\chi_s f],ds,
+ \qquad \mathcal D_\chi[f]=\mathcal L_\chi[f]-q[f].
+\]
+Here $\mathcal D_\chi$ denotes a signed remainder, not a positive
+Dirichlet energy. We have $H(0)=1$, $H$ real and even,
+$\operatorname{supp}H\subset[-2b,2b]$, $V\ge0$, and
+\[
+ V(t)=\tfrac12\norm{\chi(\cdot+t)-\chi}^2
+       \le\tfrac12t^2\norm{\chi'}^2.
+\]
+Translations preserve \eqref{eq:ns50-q-correlation}. After recentering,
+each $\chi_s f$ lies inside the already positive $\lambda=4$ window.
+Thus $\mathcal L_\chi[f]\ge0$. This uses both certified parities;
+a translated localized piece need not retain the parity or the source
+orthogonality of $f$.
+
+\begin{proposition}[Exact signed localization remainder]
+\label{prop:ns50-localization}
+For every $f\in\mathcal C$,
+\begin{align}
+ \mathcal D_\chi[f]={}&
+  2\int_0^\infty \rho(t)V(t)\Re c_f(t)\,dt
+  +2\sum_{n\ge2}w_n V(\ell_n)\Re c_f(\ell_n)\notag\\
+ &-4\int_0^\infty\cosh(t/2)V(t)\Re c_f(t)\,dt.
+ \label{eq:ns50-remainder}
+\end{align}
+In particular all signed prime, archimedean and pole cross terms are
+retained. At every fixed complete window $I_a$, this remainder extends
+to a bounded Hermitian form in ordinary $L^2(I_a)$, with a bound that
+may depend on $a$.
+
+Moreover
+\begin{equation}\label{eq:ns50-multiplier}
+ \mathcal L_\chi[f]=\int_{\mathbb R}
+                m_\chi(\xi)|\widehat f(\xi)|^2\,d\xi,
+ \qquad m_\chi(\xi)=q[e^{i\xi x}\chi(x)]\ge0,
+\end{equation}
+and the continuous real even multiplier satisfies
+\begin{equation}\label{eq:ns50-high-frequency}
+ m_\chi(\xi)=\log(2+|\xi|)+O_\chi(1).
+\end{equation}
+Consequently $\mathcal L_\chi$ has a closed nonnegative extension
+on the global logarithmic Fourier form domain; its square-root
+multiplier $T_\chi f=\sqrt{m_\chi}\widehat f$ is closed and unbounded.
+These statements also hold in either parity sector.
+\end{proposition}
+\begin{proof}
+Fubini and the normalization of $\chi$ give
+\[
+ \int\norm{\chi_s f}^2\,ds=\norm f^2,
+ \qquad \int c_{\chi_s f}(t)\,ds=H(t)c_f(t).
+\]
+Substitute these two identities into
+\eqref{eq:ns50-q-correlation}. The difference of the two
+archimedean terms is $2\int\rho V\Re c_f$, the difference of the
+prime terms is $2\sum w_nV(\ell_n)\Re c_f(\ell_n)$, and the pole
+difference has the opposite sign. This proves
+\eqref{eq:ns50-remainder}. Near zero, $\rho(t)=O(1/t)$ and
+$V(t)=O_\chi(t^2)$; at infinity $\rho$ decays exponentially.
+Thus $\rho V\in L^1(0,\infty)$. The prime and pole correlations
+have compact $t$ support for a compact $f$, so every interchange is
+absolutely justified after the archimedean difference is grouped.
+The original archimedean energy can also be integrated as a
+nonnegative squared difference before this subtraction.
+
+For $\operatorname{supp}f\subset I_a$, Cauchy--Schwarz gives the
+explicit fixed-window bound
+\begin{align*}
+ |\mathcal D_\chi[f]|\le\Bigl(&2\int_0^\infty\rho V
+       +2\sum_{n<e^{2a}}w_nV(\ell_n)
+       +4\int_0^{2a}\cosh(t/2)V(t)\,dt\Bigr)\norm f^2.
+\end{align*}
+This is only a convergence/domain bound. Its unsigned terms are not
+proposed as a cofinal estimate.
+
+Taking Fourier transforms of the localized correlation yields
+\begin{align*}
+ m_\chi(\xi)={}&\alpha(\xi)
+       +2\int_0^\infty\rho(t)V(t)\cos(\xi t)\,dt\notag\\
+ &-2\sum_{n\ge2}w_nH(\ell_n)\cos(\xi\ell_n)
+       +4\int_0^\infty\cosh(t/2)H(t)\cos(\xi t)\,dt.
+\end{align*}
+The last three terms are bounded uniformly in $\xi$: the first
+integrand is integrable, the prime sum has finitely many terms, and
+the last integrand has compact support. The digamma asymptotic
+proves \eqref{eq:ns50-high-frequency}. The same formula equals
+$q[e^{i\xi x}\chi]$, since its correlation is $e^{i\xi t}H(t)$.
+Fixed-window positivity proves its nonnegativity for every real
+$\xi$. Continuity and evenness follow either from this expression
+or from the multiplier formula. A nonnegative measurable multiplier
+defines a closed square-root multiplication operator. The two-sided
+logarithmic estimate identifies its form domain and proves
+unboundedness. Evenness of $m_\chi$ makes it commute with reflection;
+both its even and odd restrictions are unbounded, for example by
+normalized cosine and sine modulations of a fixed even smooth bump.
+On each fixed window, closure from the physical smooth core extends
+the identities to the complete logarithmic form domain.
+\end{proof}
+
+\begin{proposition}[Bounded or strictly absorbable localization errors fail]
+\label{prop:ns50-critical-coefficient}
+Fix $0\le\theta<1$. There is no finite $C$ such that
+\begin{equation}\label{eq:ns50-failed-bound}
+ \mathcal D_\chi[f]\le
+            \theta\mathcal L_\chi[f]+C\norm f^2
+ \quad\hbox{for all }f\in\mathcal C.
+\end{equation}
+The same failure holds separately on the full even core and on the
+odd core. In particular the signed localization error has no
+window-independent upper ordinary-norm bound, including under RH.
+This excludes this stronger sufficient comparison, not CAE.
+
+For either full parity core let
+\[
+ B_{\theta,\chi}^{\pm}(a)=
+ \sup_{\substack{f\in C_c^\infty(I_a),\ f\ {m of\ parity}\ \pm\\
+                 \norm f=1}}
+   \bigl(\mathcal D_\chi[f]-\theta\mathcal L_\chi[f]\bigr).
+\]
+These finite fixed-window quantities increase to $+\infty$ as
+$a\to\infty$. No rate or sign of $q_a$ is inferred.
+\end{proposition}
+\begin{proof}
+The proposed estimate is exactly
+\[
+ q[f]\ge(1-\theta)\mathcal L_\chi[f]-C\norm f^2.
+\]
+Let $\mathcal R$ be the dense linear translate span in
+Lemma~\ref{lem:v136-total-radicals}. For every fixed $r\in\mathcal R$
+there are compact cutoffs $r_a\to r$ in ordinary norm with
+$q[r_a]\to0$, by the complete ordinary operator residual.
+With $T=\sqrt{1-\theta}\,T_\chi$, the estimate gives
+\[
+ \limsup_a\norm{Tr_a}^2\le C\norm r^2.
+\]
+Choose a weakly convergent subsequence of the bounded images. Since
+the graph of the closed linear operator $T$ is a norm-closed linear
+subspace, it is weakly closed. The pairs $(r_a,Tr_a)$ therefore have
+a weak graph limit $(r,v)$, and
+$r\in\mathcal D(T)$ with $\norm{Tr}^2\le C\norm r^2$.
+This holds on the dense linear space $\mathcal R$, including all
+differences. Approximating any vector by that space and using
+closedness again makes $T$ everywhere defined with norm at most
+$\sqrt C$. This contradicts \eqref{eq:ns50-high-frequency}.
+For either parity use the reflected dense translate span and its
+same-parity cutoffs from the same lemma.
+
+The preceding proposition bounds $\mathcal D_\chi$ on each fixed
+window, and $\theta\mathcal L_\chi\ge0$, so each displayed supremum
+is finite. Support consistency makes it nondecreasing. A finite
+cofinal upper bound would imply \eqref{eq:ns50-failed-bound} on
+the entire corresponding compact parity core, which has just been
+excluded. It therefore diverges. No assumption on RH has entered.
+\end{proof}
+
+\paragraph{What the source condition does and does not change.}
+The odd core is already source admissible. Its obstruction alone
+prevents using \eqref{eq:ns50-failed-bound} with a common bounded
+error in both required sectors. No density or monotonicity assertion
+is made here for the varying even spaces $u_a^\perp$; the full-even
+statement must not be silently renamed a source-complement statement.
+Localization need not preserve that constraint on each piece because
+the fixed-window positivity input is for the full two-parity form.
+The eventual target is still tested on the original admissible $f$.
+
+\paragraph{The critical signed input remains open.}
+For the coefficient exactly one, the inequality
+\begin{equation}\label{eq:ns50-open-critical}
+ \mathcal D_\chi[f]\le\mathcal L_\chi[f]+C\norm f^2
+\end{equation}
+is exactly $q[f]\ge-C\norm f^2$. On every even
+$f\perp u_a$ and every odd $f$ in a cofinal family of complete
+domains, with the same finite $C$, it is therefore exactly CAE.
+The established source residual and
+Corollary~\ref{cor:v136-complement-floor} would transfer it to a
+full floor and RH. Equation~\eqref{eq:ns50-open-critical} is not
+proved here. It retains the signed prime-pole cancellation of
+\eqref{eq:ns50-remainder}; bounding each component separately would
+change the task.
+
+A bounded Fourier cap $m_{\chi,M}=\min(m_\chi,M)$ removes the
+unbounded-factor obstruction but supplies no estimate: putting
+$\mathcal L_{\chi,M}=\int m_{\chi,M}|\widehat f|^2$ and
+$\mathcal D_{\chi,M}=\mathcal L_{\chi,M}-q$ again leaves precisely
+$\mathcal D_{\chi,M}\le\mathcal L_{\chi,M}+C\norm f^2$.
+For a fixed $M$, the stronger-looking bounded remainder condition
+$\mathcal D_{\chi,M}\le C_M\norm f^2$ is equivalent to existence
+of a full uniform floor, up to changing constants: a floor $-C$
+gives $C_M=M+C$, while such a $C_M$ gives the floor $-C_M$.
+Thus frequency capping avoids the proved exclusion but proves no
+new arithmetic statement. Likewise taking a coefficient greater
+than one in \eqref{eq:ns50-failed-bound} leaves a negative multiple
+of the unbounded $\mathcal L_\chi$, hence does not by itself yield
+the desired ordinary floor.
+
+The attempted construction had to change from bounded localization
+error to critical signed absorption. The former fails for the
+specified fixed-width averaging, even though every local piece is
+positive. The latter is a new expression of the old missing estimate,
+not progress on its truth. Window-dependent localization, other
+completions and other arithmetic constructions are not excluded by
+this result. No failure of the physical Weil form is asserted.

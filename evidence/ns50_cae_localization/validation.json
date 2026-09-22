@@ -1,0 +1,33 @@
+{
+  "task": "NS-50",
+  "status": "analytic localization checkpoint; uniform CAE remains open",
+  "base_commit": "b0baadf06abf788a5ef24435724e9afaf8c517a5",
+  "baseline_build": {
+    "command": "./manuscript/build.sh",
+    "pages": 250,
+    "undefined_or_duplicate_references": 0
+  },
+  "isolated_fragment_build": {
+    "pages": 253,
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0
+  },
+  "manuscript_changed": false,
+  "new_window": false,
+  "numerical_gate_replayed": false,
+  "review": "author analytic self-review; independent peer review pending",
+  "formal_dependencies": [
+    "prop:v135-both-parities",
+    "lem:v136-total-radicals",
+    "cor:v136-complement-floor",
+    "prop:v151-input-comparison",
+    "inherited complete lambda=4 positivity"
+  ],
+  "comparison_only": "NS47 ordinary-closable-comparison principle; proof repeated using baseline v1.51, no pending integration dependency",
+  "checks": {
+    "html_balanced": true,
+    "inline_css_only": true,
+    "diff_whitespace": "pass",
+    "html_local_links": "pass"
+  }
+}

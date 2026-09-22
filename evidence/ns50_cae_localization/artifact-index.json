@@ -1,0 +1,18 @@
+{
+  "analytic-review.md": {
+    "bytes": 4084,
+    "sha256": "447c6b1dda24705ce27467f489bc3d15eb6e3f5e4dc0f06ed8c1c1acc9c93230"
+  },
+  "cae-localization-2026-09-22-v1.html": {
+    "bytes": 8700,
+    "sha256": "746c29c53348d4c2fe32dd3f60129b782059dcfa512d2e26d59fdfbfa2948aa1"
+  },
+  "localization.tex": {
+    "bytes": 11309,
+    "sha256": "51945787dcb58ea4a8b30c647709edc2173ef0f34cb7c68b0922e9da29ea8ea9"
+  },
+  "validation.json": {
+    "bytes": 1056,
+    "sha256": "27c247cb5c47f68448bf9f198f135e2e7e665cb1c4313371e3b052906bb9c6f4"
+  }
+}
