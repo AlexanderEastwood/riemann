@@ -1,0 +1,202 @@
+{
+  "classification": "archival disclosure, not recovery or numerical verification",
+  "source": "manuscript/fixed_space_prime_action_v1.tex",
+  "changes": [
+    {
+      "before": "this cost. The unchanged tail metric is false at $\\lambda=5$ in both\nparities.",
+      "after": "this cost. Historical computations report failure of the unchanged\ntail metric at $\\lambda=5$ in both parities; the original witnesses\nand verifiers are not archived, so that report is not presently replayable."
+    },
+    {
+      "before": "alternative. At $\\lambda=5$, its first four dyadic blocks above\n$N=\\lambda^2$ already violate the criterion in both parities, even\nwith the largest admissible block metrics and arbitrary positive row\nreweighting. This obstruction concerns the selected block comparison;",
+      "after": "alternative. A second historical computation reports that at $\\lambda=5$\nits first four dyadic blocks above $N=\\lambda^2$ violate the criterion\nin both parities, including all admissible block metrics and positive\nrow reweightings. Its original evidence is not archived either.\nThe reported obstruction concerns the selected block comparison;"
+    },
+    {
+      "before": "compactly supported wave-packet falsification attempts.",
+      "after": "compactly supported wave-packet falsification attempts reported in v1.31\n(the original scripts and outputs are not archived; only a report survives)."
+    },
+    {
+      "before": "numerical arithmetic stress tests also fail to show decay.",
+      "after": "historical numerical arithmetic stress tests also reported no decay,\nbut their original script and output are not archived."
+    },
+    {
+      "before": "\\subsection*{The unchanged construction fails at $\\lambda=5$}",
+      "after": "\\subsection*{Reported failure of the unchanged construction at $\\lambda=5$}"
+    },
+    {
+      "before": "\\label{sec:v127-transfer}\nThe transfer",
+      "after": "\\label{sec:v127-transfer}\n\\paragraph{Availability (NS-38).} The original frozen protocols, dyadic\nwitnesses, coefficient enclosures and $320/448$-bit verification outputs\nfor this subsection are \\emph{not archived}. The following numerical\nassertions and verification account are historical reports, not currently\nreplayable certified computations. See \\path{evidence/MISSING.md}.\nThe transfer"
+    },
+    {
+      "before": "The frozen protocol is recorded in\nAppendix~\\ref{app:v127-transfer}.",
+      "after": "The surviving protocol description is recorded in\nAppendix~\\ref{app:v127-transfer}; the original protocol file is not archived."
+    },
+    {
+      "before": "\\begin{proposition}[A counterexample to the stipulated tail metric]",
+      "after": "\\begin{proposition}[Reported counterexample; original evidence not archived]"
+    },
+    {
+      "before": "\\label{prop:v127-metric-fails}\nLet",
+      "after": "\\label{prop:v127-metric-fails}\nThe historical computation reports the following assertion. Let"
+    },
+    {
+      "before": "coefficient enclosures and the independent verifier are included in\nAppendix~\\ref{app:v127-transfer}.",
+      "after": "coefficient enclosures and the independent verifier are described in\nAppendix~\\ref{app:v127-transfer}; only the descriptions and recorded\nhashes survive here. The underlying files are not archived."
+    },
+    {
+      "before": "its certified lower weights are approximately",
+      "after": "its historically reported certified lower weights are approximately"
+    },
+    {
+      "before": "Fresh evaluation of the same\nweight formula gives first positive cutoffs",
+      "after": "The same historical evaluation\nof the weight formula reports first positive cutoffs"
+    },
+    {
+      "before": "that proposition disproves the required metric itself, independently\nof the verification cutoff.",
+      "after": "the reported witnesses, if recovered and verified, disprove the required\nmetric itself, independently of the verification cutoff."
+    },
+    {
+      "before": "Keeping\n$Q_{16}$ and a common scalar $cD$ forces",
+      "after": "Conditional on the reported witness bounds, keeping\n$Q_{16}$ and a common scalar $cD$ forces"
+    },
+    {
+      "before": "tests its natural $N=\\lambda^2$ instance at $\\lambda=5$ and proves\nfailure on that particular partition.",
+      "after": "records the historical test of its natural $N=\\lambda^2$ instance at\n$\\lambda=5$, whose original evidence is not archived."
+    },
+    {
+      "before": "\\label{sec:v128-test}\nThe new test",
+      "after": "\\label{sec:v128-test}\n\\paragraph{Availability (NS-38).} The original proposals, dyadic\nwitnesses, congruence factors, $320/448$-bit outputs and independent\nverifier are \\emph{not archived}. The numerical failure below is a\nhistorical report, not a currently replayable certificate. The intervening\ncomparison lemma is analytic and is proved in full here.\nThe historical test"
+    },
+    {
+      "before": "$Q_{16}$ metric already disproved in Proposition~\\ref{prop:v127-metric-fails}.",
+      "after": "$Q_{16}$ metric reported to fail in Proposition~\\ref{prop:v127-metric-fails}."
+    },
+    {
+      "before": "\\begin{proposition}[The tested dyadic comparison fails in both parities]",
+      "after": "\\begin{proposition}[Reported dyadic failure; original evidence not archived]"
+    },
+    {
+      "before": "\\label{prop:v128-dyadic-fails}\nFor",
+      "after": "\\label{prop:v128-dyadic-fails}\nThe historical computation reports the following assertion. For"
+    },
+    {
+      "before": "The witness files,\ncongruence factors and independent check are recorded in\nAppendix~\\ref{app:v128-test}.",
+      "after": "The witness files,\ncongruence factors and independent check are described in\nAppendix~\\ref{app:v128-test}, but are not archived. The integer\nRayleigh arithmetic displayed here is exact; the missing step is\nreplaying the asserted lower comparison with the actual blocks."
+    },
+    {
+      "before": "now rules out its tested $\\lambda=5$, $N=25$ dyadic instance, even\nafter admissible metric changes and scalar row reweighting.",
+      "after": "reports failure of its tested $\\lambda=5$, $N=25$ dyadic instance,\nincluding admissible metric changes and scalar row reweighting; the\noriginal numerical evidence is not archived."
+    },
+    {
+      "before": "The failure of a global conditional-positive-definiteness shortcut can\nbe made rigorous at a certified positive physical window.",
+      "after": "A historical rational computation reports failure of a global\nconditional-positive-definiteness shortcut at a certified positive physical\nwindow. Its original verifier and output are not archived; the analytic\nnegative-index implication below is conditional on the reported enclosure."
+    },
+    {
+      "before": "\\begin{proposition}[Global negative index does not model the physical window]",
+      "after": "\\begin{proposition}[Negative-index implication of a reported enclosure]"
+    },
+    {
+      "before": "At $a=\\log4$ the exact symbol in \\eqref{eq:v130-beta} satisfies",
+      "after": "The unarchived rational computation reports that at $a=\\log4$ the\nexact symbol in \\eqref{eq:v130-beta} satisfies"
+    },
+    {
+      "before": "Consequently the full-line multiplier by $\\beta_a$ has infinite",
+      "after": "If this reported enclosure holds, the full-line multiplier by $\\beta_a$ has infinite"
+    },
+    {
+      "before": "The displayed enclosure follows from exact rational interval\narithmetic:",
+      "after": "The historical account attributes the displayed enclosure to exact\nrational interval arithmetic (the code and output are not archived):"
+    },
+    {
+      "before": "The scalar layer-cake estimate is rigorous but too lossy in the first\ntests.",
+      "after": "The scalar layer-cake estimate is rigorous. Historical first tests\nreported the following diagnostic losses; their original scripts and\noutputs are not archived. The surviving v1.31 report alone is available\nat \\path{evidence/v131/g2_weighted_concentration_report.md}."
+    },
+    {
+      "before": "An adversarial wave-packet test also did not falsify the weighted\nmechanism.",
+      "after": "A historical adversarial wave-packet test also reported no falsification\nof the weighted mechanism; its original script and output are not archived."
+    },
+    {
+      "before": "The rigid transfer test now disproves the unchanged $10^{-8}D$\ntail metric at $\\lambda=5$ in both parities",
+      "after": "The historical rigid transfer test reports failure of the unchanged\n$10^{-8}D$ tail metric at $\\lambda=5$ in both parities; its original\nwitnesses and verifiers are not archived"
+    },
+    {
+      "before": "margin is unavailable, and changing remote cutoffs alone cannot fix\nthat false prerequisite.",
+      "after": "margin is unavailable. Conditional on the reported counterwitness\nbounds, changing remote cutoffs alone cannot repair that prerequisite."
+    },
+    {
+      "before": "Proposition~\\ref{prop:v128-dyadic-fails} now rules out this dyadic\npartition under every admissible smaller block metric and every\npositive scalar row reweighting. A finite norm-comparison obstruction\nalready settles that failure;",
+      "after": "Proposition~\\ref{prop:v128-dyadic-fails} reports failure of this dyadic\npartition under every admissible smaller block metric and every\npositive scalar row reweighting, but its original evidence is not archived.\nThe reported finite norm-comparison obstruction would settle that failure;"
+    },
+    {
+      "before": "The directory \\texttt{g2\\_scalar\\_budget\\_no\\_go/} contains the proof,",
+      "after": "The relocated directory \\path{evidence/v137/} contains the proof,"
+    },
+    {
+      "before": "\\texttt{g2\\_radical\\_topology/} contains their proof excerpt, candidate and",
+      "after": "\\path{evidence/v136/} contains their proof excerpt, candidate and"
+    },
+    {
+      "before": "\\texttt{g2\\_growing\\_radical/} contains the proof excerpt, novelty and",
+      "after": "\\path{evidence/v135/} contains the proof excerpt, novelty and"
+    },
+    {
+      "before": "\\subsection*{Source-weighted capacity candidate audit}\nThe bundle directory \\texttt{g2\\_capacity\\_candidate} contains the\ncandidate register, the complete formula-level novelty comparison and\nthe adversarial review of Proposition~\\ref{prop:v129-capacity}. The\nfinite projected-source values quoted after that proposition were\nrecomputed from the archived $\\lambda=3$, $N=64$ interval midpoints\nonly as a falsification diagnostic. They are not interval certificates\nand are not used in the proof of the Picone identity.\n\nThe review independently expands the archimedean constant, checks both\nprime orientation factors, preserves the zero-extension killing terms\nand verifies the first-slot-linear pole sign. It also records the\ntwo-coordinate counterexample to the tempting claim that\n$W_\\lambda h\\ge0$ pointwise alone proves positivity. The only rigorous\nnew implication is therefore the conditional capacity reduction.\nThe arithmetic capacity estimate, its cofinal error and the odd sector\nremain open.\n\n",
+      "after": "\\subsection*{Source-weighted capacity candidate audit}\nThe original \\texttt{g2\\_capacity\\_candidate} companion directory is\n\\emph{not archived}: its candidate register, novelty comparison,\nadversarial review and recomputation outputs are absent. The complete\nanalytic proof of Proposition~\\ref{prop:v129-capacity} is printed in this\nmanuscript and does not depend on that missing review. The finite\nprojected-source values following it were historically reported as\nrecomputed from the available $\\lambda=3$, $N=64$ interval midpoints;\nthe recomputation script and output are not archived. Those values are\nfalsification diagnostics, not interval certificates or proof inputs.\nThe historical review was described as checking the archimedean constant,\nprime orientation factors, exterior killing terms, pole sign and the\ntwo-coordinate counterexample. This is a description of an unavailable\nreview, not a claim of current independent verification. The arithmetic\ncapacity estimate, its cofinal error and the odd sector remain open.\n\n"
+    },
+    {
+      "before": "\\subsection*{Weighted-concentration and Schatten no-go audit}\nThe bundle directories \\texttt{g2\\_weighted\\_concentration} and\n\\texttt{g2\\_schatten\\_no\\_go} contain the proofs, candidate register,\nadversarial review and diagnostics for\nPropositions~\\ref{prop:v131-concentration}--%\n\\ref{prop:v132-flat-top}. The Hilbert--Schmidt identity and interlacing\nbounds are analytic. The dilation countermodel uses the sharp\nDirichlet Poincar\\'e inequality and exact unitary scaling; no numerical\nconcentration eigenvalue is used in its proof.\n\n\\texttt{certify\\_beta4\\_negative.py} uses exact rational interval\narithmetic and proved series remainders. It certifies\n$\\beta_{\\log4}(1)<-3/5$ without a floating-point proof step. The\nglobal negative-index consequence applies to unrestricted Schwartz\ntests, not to the compact physical window. The positive flat-top no-go\nis likewise analytic and does not assume a particular smoothing\nwindow.\n\nThe finite cosine-compression and trapezoidal-flat-top scripts run only\nat $\\lambda=3,4,5$. They are adversarial diagnostics, not certificates\nof the physical form or a cofinal trend. Their purpose is to try to\nfalsify scalar simplifications before promoting them. The surviving\nsigned weighted-superlevel inequality remains conditional, and its\ncofinal arithmetic constants and the odd sector remain open.\n\n",
+      "after": "\\subsection*{Weighted-concentration and Schatten no-go audit}\nThe original \\texttt{g2\\_weighted\\_concentration} and\n\\texttt{g2\\_schatten\\_no\\_go} evidence sets are \\emph{not archived}.\nOnly \\path{evidence/v131/g2_weighted_concentration_report.md} survives,\nwith its recovery provenance. The original scripts, outputs, candidate\nregister and complete adversarial reviews are absent. The analytic\nHilbert--Schmidt, interlacing, dilation and positive flat-top arguments\nare proved in the manuscript and do not rely on those diagnostics.\n\nThe original \\texttt{certify\\_beta4\\_negative.py} and its output are\n\\emph{not archived}. The historical account reports exact rational\ninterval arithmetic proving $\\beta_{\\log4}(1)<-3/5$; that numerical\nclaim cannot presently be replayed. Proposition~\\ref{prop:v132-global-index}\nnow explicitly separates the reported enclosure from the analytic\nnegative-index implication conditional on it. The implication concerns\nunrestricted Schwartz tests, not the compact physical window.\n\nFinite cosine-compression and trapezoidal-flat-top tests were reported\nonly for $\\lambda=3,4,5$. Their original scripts and outputs are not\narchived; they were diagnostics, not certificates or cofinal evidence.\nThe signed weighted-superlevel implication remains analytic and\nconditional; its cofinal arithmetic constants remain open.\n\n"
+    },
+    {
+      "before": "\\subsection*{Continuum-cancellation and local no-go audit}\nThe bundle subdirectory \\texttt{g2\\_continuum\\_cancellation} contains\nthe exact proof report and the non-rigorous symbol diagnostic for\nPropositions~\\ref{prop:v130-continuum-cancellation}--%\n\\ref{prop:v130-local-no-go}. The continuum identity was checked both\nas a kernel factorization and by its positive Fourier multiplier.\nThe six-bump proof is algebraic: its strict support separation, sole\nprime--$2$ correlation and two vanishing Laplace moments use no\nquadrature or endpoint approximation.\n\nThe script \\texttt{test\\_continuum\\_symbol.py} scans only the already\nstudied windows $\\lambda=3,4,5$. It is a falsification diagnostic for\nthe stronger pointwise criterion, not a sign certificate. The exact\nnormal form retains the physical support constraint; replacing it by\narbitrary frequency localization would contradict the certified\npositive fixed windows and is not done here.\n\n",
+      "after": "\\subsection*{Continuum-cancellation and local no-go audit}\nThe original \\texttt{g2\\_continuum\\_cancellation} proof report and\n\\texttt{test\\_continuum\\_symbol.py}, including its saved output, are\n\\emph{not archived}. The complete analytic proofs of\nPropositions~\\ref{prop:v130-continuum-cancellation}--\\ref{prop:v130-local-no-go}\nare printed in this manuscript. Kernel factorization, the positive\nFourier multiplier and the six-bump algebraic argument require no\nnumerical diagnostic or absent companion review.\nThe missing script was reported to scan $\\lambda=3,4,5$ as a\nfalsification diagnostic, not a sign certificate. The exact normal\nform retains the physical support constraint; arbitrary frequency\nlocalization is not substituted for it.\n\n"
+    },
+    {
+      "before": "\\subsection*{Signed-block criterion test and certified failure}\n\\label{app:v128-test}\nThe directory \\texttt{g2\\_block\\_metric} contains the protocol frozen\nbefore the test, the original numerical proposals, exact dyadic pair\nand congruence witnesses, and outward $320$- and $448$-bit certificates.\nThe primary cutoff is explicitly $N=\\lambda^2=25$ with four blocks\n$26{:}50$, $51{:}100$, $101{:}200$, $201{:}400$. The metrics are the\nfull actual signed diagonal blocks; no scalar tail certificate is\nsubstituted for them.\n\n\\nolinkurl{certify_block_failure.py} verifies all four positive blocks\nand all six normalized coupling lower bounds in each parity. It\nthen checks the integer Rayleigh numerators of the comparison\nmatrices, so no eigensolver accuracy is used in the failure gate.\nEvery dyadic proposal is reconstructed exactly. The accompanying\nindependent verifier checks all six block pairings in each parity\nusing signed Fourier coordinates. The first three blocks alone\nalready give a comparison Rayleigh value above one in both parities. Both verifiers use the\nsame audited analytic coefficient enclosures and Arb arithmetic.\nThis is internal adversarial verification, not a separately derived\nanalytic kernel or external certification.\n\nThe infinite tail is not replaced by zero. A finite positive prefix\ncould not certify the proposed infinite criterion, but these certified\nlower bounds disprove it because additional norm terms cannot decrease\nthe comparison. The successful gates establish a route obstruction;\nthere is no complete $\\lambda=5$ sign certificate, no generalized\npositivity margin, and no new $\\lambda=8$ calculation in this run.\n\n",
+      "after": "\\subsection*{Signed-block test: original evidence not archived}\n\\label{app:v128-test}\nThe original \\texttt{g2\\_block\\_metric} directory is \\emph{not archived}.\nIts frozen protocol, numerical proposals, exact dyadic pair and congruence\nwitnesses, $320/448$-bit outputs, \\nolinkurl{certify_block_failure.py}\nand independent signed-index verifier are absent. The manuscript preserves\nonly their historical description: $N=\\lambda^2=25$, blocks $26{:}50$,\n$51{:}100$, $101{:}200$, $201{:}400$, and actual signed block metrics.\n\nThe historical account reports positive-block Gershgorin gates and six\nnormalized coupling lower bounds per parity, followed by integer\nRayleigh checks. The displayed integer arithmetic is reproducible from\nthe text; its asserted relation to the actual blocks is not replayable\nwithout the missing witnesses and verifiers. These are reported gates,\nnot currently available certificates. If those gates hold, additional\nnonnegative norm terms cannot repair the finite comparison obstruction.\nNo complete $\\lambda=5$ sign certificate or positivity margin follows.\n\n"
+    },
+    {
+      "before": "The bundle directory \\texttt{g2\\_lambda5\\_transfer} contains the frozen\nprotocol, both dyadic counterwitnesses, $320$- and $448$-bit replays,\nand one obstruction report per parity. These are not positive tail\ncertificates or inverse factors. The parameter record precedes the\ntests and has SHA256",
+      "after": "The original \\texttt{g2\\_lambda5\\_transfer} directory is \\emph{not\narchived}: the protocol, dyadic counterwitnesses, $320/448$-bit outputs\nand obstruction reports are absent. What follows is surviving historical\nmetadata, not an available certificate. The parameter record was reported\nto precede the tests and to have SHA256"
+    },
+    {
+      "before": "stipulated tail prerequisite was disproved.",
+      "after": "stipulated tail prerequisite was reported to fail."
+    },
+    {
+      "before": "The counterwitness files have hashes",
+      "after": "The absent counterwitness files have historically recorded hashes"
+    },
+    {
+      "before": "\\nolinkurl{falsify_fixed_tail_metric.py} replays the complete finite-support\nquadratics. \\nolinkurl{audit_l5_tail_metric_expanded.py} independently\nreassembles them in signed Fourier indices using the same audited\nanalytic coefficient enclosures and Arb arithmetic. Thus it checks\nparity factors and signs, not an independently derived analytic kernel.",
+      "after": "\\nolinkurl{falsify_fixed_tail_metric.py} and\n\\nolinkurl{audit_l5_tail_metric_expanded.py} are \\emph{not archived}.\nThe historical account describes complete finite-support quadratic\nreplay and an independent signed-index assembly using the same analytic\ncoefficient enclosures and Arb arithmetic. The asserted agreement is\nnot currently replayable; it was a parity/sign check, not an independent\nanalytic kernel derivation. None of the recorded hashes above has been\nrevalidated against its absent original in NS-38."
+    },
+    {
+      "before": "\\subsection*{Concentration commutator reproduction and scope}\nThe cumulative bundle's \\texttt{g2\\_nested\\_commutator} directory\ncontains the complete independent adverse review,\n\\texttt{certify\\_scaled\\_commutator.py}, and its machine-readable\ncertificate.  The script performs exact rational polynomial integration\nfor a degree-four Taylor kernel and uses only rational enclosures for\n$\\pi$ and $\\sqrt5$ in its final comparison.  It certifies the stronger\ncheck\n\\[\n \\norm{[C_{1/10},C_{1/5}]}>1.198\\cdot10^{-5}.\n\\]\nThe main proof uses the shorter degree-two estimate exceeding\n$9\\cdot10^{-6}$; neither bound is inferred from an eigensolver.  The\npassage to the actual source is analytic and depends explicitly on\nLemma~\\ref{lem:v115-source-mass}.  No calculation above\n$\\lambda=5$ was made.  The result is a no-go for an automatic\napproximate-commutation simplification, not a negative result for the\narithmetic superlevel hierarchy and not a G2 sign estimate.\n\n",
+      "after": "\\subsection*{Concentration commutator reproduction and scope}\nThe original \\texttt{g2\\_nested\\_commutator} directory, adverse review,\n\\texttt{certify\\_scaled\\_commutator.py} and machine-readable certificate\nare \\emph{not archived}. The historical account reports exact rational\nintegration of a degree-four Taylor kernel and a stronger lower check\n$\\norm{[C_{1/10},C_{1/5}]}>1.198\\cdot10^{-5}$. That check is not\npresently replayable and is not used here as an available bound.\nThe complete main proof instead uses its printed degree-two estimate\nexceeding $9\\cdot10^{-6}$. Its passage to the actual source is analytic,\nwith Lemma~\\ref{lem:v115-source-mass} explicit. This scoped obstruction\nto automatic approximate commutation does not require the missing\nstronger check and does not close the arithmetic hierarchy.\n\n"
+    },
+    {
+      "before": "\\subsection*{Disjoint-channel and primitive-transport reproduction}\nThe cumulative bundle's \\texttt{g2\\_primitive\\_transport} directory\ncontains two independent adverse reviews and\n\\texttt{test\\_primitive\\_transport.py}.  The disjoint-channel lower\nbound in Proposition~\\ref{prop:v134-disjoint} is analytic and uses only\n$\\sin t/t\\ge1-t^2/6$ and the proved strong source limit.  No numerical\nsingular-value estimate enters it.  The primitive-transport review\nderives the exact drawdown optimization and the Dirichlet-model value\n$\\pi^3/6$ independently.  The script evaluates the arithmetic drawdown\non a finite frequency grid for $\\lambda=3,4,5,6$; its output is explicitly\ndiagnostic, not interval-certified and not used in a proof.  No\n$\\lambda=8$ calculation was made.  The reports also record why direct\nCotlar regrouping is algebraically the existing joint-channel target\nrather than a new candidate.\n\n\n",
+      "after": "\\subsection*{Disjoint-channel and primitive-transport reproduction}\nThe original \\texttt{g2\\_primitive\\_transport} directory, its two adverse\nreviews, \\texttt{test\\_primitive\\_transport.py} and saved output are\n\\emph{not archived}. The disjoint-channel lower bound in\nProposition~\\ref{prop:v134-disjoint}, exact drawdown optimization and\nDirichlet-model value $\\pi^3/6$ are proved analytically in the manuscript.\nThey do not use a numerical singular-value estimate or the missing review.\nThe historical account reports finite-grid drawdown diagnostics at\n$\\lambda=3,4,5,6$, not interval certificates; the outputs are unavailable\nand are not proof inputs. No $\\lambda=8$ run was reported. The exact\njoint-channel regrouping identity is likewise printed in the manuscript.\n\n"
+    },
+    {
+      "before": "Second,\nthe saved $\\lambda=3$, $N=64$ compression gives a projected ratio with",
+      "after": "Second,\nthe historically reported calculation from the saved $\\lambda=3$, $N=64$\ncompression gives a projected ratio with"
+    },
+    {
+      "before": "diagnostics, not certificates.\n\nThus the exact remaining lemma",
+      "after": "diagnostics, not certificates. The v1.29 recomputation script, output\nand companion review are not archived; the underlying source compression\nis available, but does not reproduce these derived values by itself.\n\nThus the exact remaining lemma"
+    },
+    {
+      "before": "from about $2.54$ to $5.51$; they are not proof evidence.",
+      "after": "from about $2.54$ to $5.51$; their original script and output are not\narchived, and they are not proof evidence."
+    },
+    {
+      "before": "candidate.  A non-rigorous direct scan of the exact arithmetic symbol\ngave",
+      "after": "candidate. A historical non-rigorous direct scan, whose original script\nand output are not archived, reported for the exact arithmetic symbol"
+    },
+    {
+      "before": "\\end{abstract}",
+      "after": "\\end{abstract}\n\\paragraph{Evidence availability (NS-38, September 22, 2026).}\nThe original $\\lambda=5$ computational evidence (v1.27--v1.28) and\noriginal concentration-era companion evidence (v1.31--v1.34) are\n\\emph{not archived}, except for one recovered v1.31 report. The v1.29\ncapacity and v1.30 continuum companion artifacts are also not archived.\nAffected numerical assertions and archival descriptions are explicitly\nmarked below; historical verification accounts are not currently\nreplayable certificates. Complete analytic proofs printed here remain\navailable independently of missing companion reviews. The scientific\nv1.35 files are available under \\path{evidence/v135/} and match their\nrecorded hashes. See \\path{evidence/MISSING.md} for per-group disposition.\nThis disclosure alone does not change the manuscript version."
+    }
+  ]
+}

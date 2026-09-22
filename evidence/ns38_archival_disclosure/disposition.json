@@ -1,0 +1,13 @@
+{
+  "classification": "availability disclosure; no certificate",
+  "build_pages": 246,
+  "undefined_or_duplicate_reference_messages": 0,
+  "original_numerical_gates_replayed": 0,
+  "original_artifacts_recovered": 0,
+  "changes": 49,
+  "group_dispositions": {
+    "lambda5": "NOT ARCHIVED; disclosure complete, recovery open",
+    "v131_v134": "NOT ARCHIVED except one report; disclosure complete, recovery open"
+  },
+  "v135_scientific_files_matching_legacy_hashes": 5
+}

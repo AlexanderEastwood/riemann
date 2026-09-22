@@ -1,0 +1,128 @@
+{
+  "135": [
+    {
+      "path": "evidence/v135/README.md",
+      "sha256": "a1b1a6861c48483ed0b111b27a0f520fb4ae64257d32d5495c266d0c98d9cf00",
+      "recorded_hash_matches": []
+    },
+    {
+      "path": "evidence/v135/adversarial_review.md",
+      "sha256": "0ef74b1216885ed376d2cb8394f5bd8b95743d54291baccc8c69cfac70e56daa",
+      "recorded_hash_matches": [
+        "g2_growing_radical/adversarial_review.md"
+      ]
+    },
+    {
+      "path": "evidence/v135/check_growing_radical.py",
+      "sha256": "e80eed3e2344a524e08d9695b8860f54506c3ec6d2c06411202aed412dd56039",
+      "recorded_hash_matches": [
+        "g2_growing_radical/check_growing_radical.py"
+      ]
+    },
+    {
+      "path": "evidence/v135/diagnostic_results.json",
+      "sha256": "28b31c0ef411bd11c4d23a9c518047fe12eaae5de04b1b4805358768d7b0d1d3",
+      "recorded_hash_matches": [
+        "g2_growing_radical/diagnostic_results.json"
+      ]
+    },
+    {
+      "path": "evidence/v135/new_section.tex",
+      "sha256": "95b12e631f5f55c987ca8ddfdb1c8712b2a40bbaa01967ec29157742769b77fa",
+      "recorded_hash_matches": [
+        "g2_growing_radical/new_section.tex"
+      ]
+    },
+    {
+      "path": "evidence/v135/research_report.md",
+      "sha256": "540e31af4eb9e583494d99435ac9e7e1539e46982d56efae6d662e8ad504c464",
+      "recorded_hash_matches": [
+        "g2_growing_radical/research_report.md"
+      ]
+    }
+  ],
+  "136": [
+    {
+      "path": "evidence/v136/README.md",
+      "sha256": "048fa8fec4c957f8ef0c31fa3b610924501134f634d07a25fc0a9138596cab18",
+      "recorded_hash_matches": []
+    },
+    {
+      "path": "evidence/v136/adversarial_review.md",
+      "sha256": "2075651e73d84fc3b3c698853e96914ac29a2a301324f750c1aeba40230d2cbd",
+      "recorded_hash_matches": [
+        "g2_radical_topology/adversarial_review.md"
+      ]
+    },
+    {
+      "path": "evidence/v136/check_topology_countermodels.py",
+      "sha256": "a8980de0add208a76907f20d841696bfb3ad46b81762738e12b7defcb667cfbf",
+      "recorded_hash_matches": [
+        "g2_radical_topology/check_topology_countermodels.py"
+      ]
+    },
+    {
+      "path": "evidence/v136/countermodel_results.json",
+      "sha256": "4589ad0a60ac31f9199dae7eefcf28dff747b1dd1af4be75cd07fae9052d3f36",
+      "recorded_hash_matches": [
+        "g2_radical_topology/countermodel_results.json"
+      ]
+    },
+    {
+      "path": "evidence/v136/new_section.tex",
+      "sha256": "78e5f6cb2fe60bff4b6edd41594e8499d815cf4cd20b9d96eb0dec7b628828a3",
+      "recorded_hash_matches": [
+        "g2_radical_topology/new_section.tex"
+      ]
+    },
+    {
+      "path": "evidence/v136/research_report.md",
+      "sha256": "41cd82141527731b9c66500bb385cd04286d347004dc4af8a137fe82d91df9f9",
+      "recorded_hash_matches": [
+        "g2_radical_topology/research_report.md"
+      ]
+    }
+  ],
+  "137": [
+    {
+      "path": "evidence/v137/README.md",
+      "sha256": "53da81e2e23d2b71e415997917eab2859e577c83b2e3e28e5431267cae32ef83",
+      "recorded_hash_matches": []
+    },
+    {
+      "path": "evidence/v137/adversarial_review.md",
+      "sha256": "afb57288a707b191ccf0a40f5df63c6513bc5419ef820b0c0b24f5fae863676e",
+      "recorded_hash_matches": [
+        "g2_scalar_budget_no_go/adversarial_review.md"
+      ]
+    },
+    {
+      "path": "evidence/v137/check_probe.py",
+      "sha256": "ae2ffc7f7bfefb7548b6fa5276559ce8bc85e4162fdb3b1ab64dcbbc290127af",
+      "recorded_hash_matches": [
+        "g2_scalar_budget_no_go/check_probe.py"
+      ]
+    },
+    {
+      "path": "evidence/v137/new_section.tex",
+      "sha256": "edd2217cc5a875ec77f3a4081d52ec933d0c51a376d185a68ad9a758e9c106cf",
+      "recorded_hash_matches": [
+        "g2_scalar_budget_no_go/new_section.tex"
+      ]
+    },
+    {
+      "path": "evidence/v137/probe_results.json",
+      "sha256": "298e8a9c68e92df0ba2300667b6864ad4225602a1e4029ca93eada7b1207b7b5",
+      "recorded_hash_matches": [
+        "g2_scalar_budget_no_go/probe_results.json"
+      ]
+    },
+    {
+      "path": "evidence/v137/research_report.md",
+      "sha256": "ef0bd3a664896a95126ea27fce04b8779a40702583e5562c8ecb7bc631cef427",
+      "recorded_hash_matches": [
+        "g2_scalar_budget_no_go/research_report.md"
+      ]
+    }
+  ]
+}

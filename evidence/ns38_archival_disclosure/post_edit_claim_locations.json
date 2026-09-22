@@ -1,0 +1,18 @@
+{
+  "source_sha256": "c3d1ed3f0d36f0a292613aa9956eef807ba69ff2a2570baf4dd87f81927bb5df",
+  "locations": {
+    "sec:v127-transfer": 7991,
+    "prop:v127-metric-fails": 8006,
+    "sec:v128-test": 8159,
+    "prop:v128-dyadic-fails": 8212,
+    "prop:v132-global-index": 9710,
+    "app:v128-test": 16946,
+    "app:v127-transfer": 16964,
+    "Source-weighted capacity candidate audit": 16818,
+    "Weighted-concentration and Schatten no-go audit": 16834,
+    "Continuum-cancellation and local no-go audit": 16857,
+    "Concentration commutator reproduction and scope": 17232,
+    "Disjoint-channel and primitive-transport reproduction": 17245
+  },
+  "line_numbers": "NS38 disclosure commit, before subsequent v1.51 insertion; labels remain stable"
+}

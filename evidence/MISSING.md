@@ -1,6 +1,7 @@
 # Evidence availability ledger
 
-Updated 2026-09-21. **Two of the four tracked evidence groups remain OPEN.**
+Updated 2026-09-22 (NS-38). **Both remaining groups are explicitly NOT ARCHIVED.**
+The manuscript archival overclaims are corrected by disclosure; original recovery remains OPEN.
 Recovery of the original v1.26 bundle resolved the two λ=4 evidence gaps;
 it did not resolve the later λ=5 or concentration-evidence gaps.
 
@@ -8,8 +9,8 @@ it did not resolve the later λ=5 or concentration-evidence gaps.
 | --- | --- | --- |
 | v1.25 complete even λ=4 certificate: `g2_simultaneous` | RESTORED | [58 original files](v126/g2_simultaneous/), including frozen witnesses, verifiers and saved complete residual ingredients, restored from the original v1.26 bundle. These files also match the original v1.25 bundle. |
 | v1.26 complete odd λ=4 certificate: `g2_odd_complement` | RESTORED | [51 original files](v126/g2_odd_complement/), including complement and directional witnesses, verifiers, saved reports and the exact shared-head check. |
-| λ=5 disproof evidence through v1.28 | OPEN | `g2_lambda5_transfer` and `g2_block_metric` remain absent. Recover the original frozen protocols, exact dyadic counterwitnesses, 320/448-bit reports and independent signed-index verifiers. The unchanged `10^-8 D` metric failure is the v1.27 checkpoint; the separate signed-block comparison failure is v1.28. Neither is restored by the v1.26 bundle. |
-| v1.31–v1.34 concentration evidence and diagnostics | OPEN | The original [v1.31 weighted-concentration report](v131/g2_weighted_concentration_report.md) is partially restored with [provenance](v131/recovery_provenance.json). Its scripts, saved outputs and complete adversarial evidence remain absent; so do the original `g2_schatten_no_go`, `g2_nested_commutator` and `g2_primitive_transport` evidence sets. Recover their original scripts, saved outputs, candidate/proof reports and adversarial reviews, including `certify_beta4_negative.py`, `certify_scaled_commutator.py` and `test_primitive_transport.py`. The finite diagnostics and the claimed rigorous interval/rational checks must retain their distinct scopes. |
+| λ=5 disproof evidence through v1.28 | NOT ARCHIVED; disclosure complete, recovery OPEN | `g2_lambda5_transfer` and `g2_block_metric` remain absent. Recover the original frozen protocols, exact dyadic counterwitnesses, 320/448-bit reports and independent signed-index verifiers. The unchanged `10^-8 D` metric failure is the v1.27 checkpoint; the separate signed-block comparison failure is v1.28. Neither is restored by the v1.26 bundle. |
+| v1.31–v1.34 concentration evidence and diagnostics | NOT ARCHIVED; disclosure complete, recovery OPEN | The original [v1.31 weighted-concentration report](v131/g2_weighted_concentration_report.md) is partially restored with [provenance](v131/recovery_provenance.json). Its scripts, saved outputs and complete adversarial evidence remain absent; so do the original `g2_schatten_no_go`, `g2_nested_commutator` and `g2_primitive_transport` evidence sets. Recover their original scripts, saved outputs, candidate/proof reports and adversarial reviews, including `certify_beta4_negative.py`, `certify_scaled_commutator.py` and `test_primitive_transport.py`. The finite diagnostics and the claimed rigorous interval/rational checks must retain their distinct scopes. |
 
 ## What the recovery establishes
 
@@ -81,3 +82,46 @@ The public repository already contained v1.43 at the time of this search.
 This follow-up changes only the recovery ledger and task status. It does
 not close MAJOR M1, change the manuscript, regenerate historical evidence,
 or claim a new verification. G2 and RH remain open.
+
+
+## September 22 disposition (NS-38)
+
+**Classification: evidence-availability disclosure, not recovery or a new certificate.**
+For **each of the two original groups**, the chosen action is explicit disclosure.
+No original witness, verifier or output was recovered or regenerated. Earlier OPEN
+entries above describe the search history; they are not a claim of archive availability.
+
+- **λ=5 group:** the abstract, both reported computational propositions, their
+  verification accounts, downstream route summaries and both appendices now state
+  that originals are not archived. The integer Rayleigh arithmetic printed in v1.28
+  is available; its comparison to actual blocks still depends on missing witnesses.
+  Recorded hashes are historical metadata, not checks against retrieved originals.
+- **Concentration group:** local diagnostic discussions and each reproduction appendix
+  state that original scripts, outputs and reviews are not archived. The reported
+  rational β(log 4, 1) enclosure is separated from the analytic negative-index
+  implication conditional on it. The stronger degree-four commutator check is marked
+  unavailable; the printed degree-two proof remains the actual available argument.
+  The v1.31 report-only recovery is preserved and is not described as full recovery.
+
+The same sweep records **additional companion gaps**: the v1.29
+`g2_capacity_candidate` register/review/recomputation artifacts and v1.30
+`g2_continuum_cancellation` report, `test_continuum_symbol.py` and output
+are **NOT ARCHIVED**. The underlying v1.24 λ=3 source certificate and complete
+v1.29/v1.30 manuscript identities are present; they do not stand in for the missing
+companion artifacts. V1.50 uses the printed identities, not those absent files.
+
+**V1.35 is not an absent scientific evidence set.** All five original scientific
+files under `evidence/v135/` match hashes in the legacy v1.35 manifest. The same is
+true of the five scientific files in each of v1.36 and v1.37; obsolete directory
+names in the manuscript now point to these actual paths. The legacy v1.35 manifest
+still lists two unavailable publication snapshots (`fixed_space_prime_action_v1_35.tex`
+and `v1_35_revision_notes.md`) and a changed mutable research log. These historical
+metadata gaps are distinct from the available proof, review, script and diagnostic
+files. Historical manifests are not rewritten to hide their status.
+
+The [claim-by-claim changes](ns38_archival_disclosure/claim_changes.json),
+[present-file hash comparison](ns38_archival_disclosure/present_proof_hashes.json)
+and [versioned report](ns38_archival_disclosure/ns38-archival-disclosure-2026-09-22-v1.html)
+record this disposition. Recovery remains an open input. The archival overclaim
+is corrected; availability has not been restored. No manuscript version bump is
+made for NS-38 alone, and no original numerical gate was replayed.
