@@ -123,3 +123,61 @@ cost is at the float floor.)
 5. Caveats: even head, N=256, float; `c` on 20 bins (a finer partition can only
    lower `c`); grid `D` at λ ≥ 6; the source constraint is not imposed (the
    states here are not projected off `u_a`, which can only raise `Q_min`).
+
+## 6. The level-set-measure-weighted hypothesis (`weighted_level_lp.py` → `weighted_level_lp_output.txt`)
+
+Item 4 of §5, tested. Let `m̃(B) = |{ξ ∈ [0,X] : β_a(ξ) ∈ B}| / X` be the
+symbol's own level distribution on the head range and `φ_- = m̃([−D,0))` the
+negative fraction. The weighted hypothesis is
+
+    μ_g(B) ≥ c' m̃(B)   for every Borel B ⊂ [−D, 0]        (WLH)
+
+(a state with `|Fg|² ≥ b/X` on `[0,X]` has it with `c' = 2b`; `c' φ_- ≤ 1`).
+For a `K`-level minorant the loss is then at least `c' · QC_K(m̃)`, where
+`QC_K(m̃)` is the one-sided `K`-level quantization cost of `m̃` (levels
+`−D = ℓ_1 < … < ℓ_K`, cost `Σ_j ∫_{[ℓ_j,ℓ_{j+1})} (t − ℓ_j) dm̃`), computed
+exactly by dynamic programming on 200 levels; the crude bound is
+`QC_K ≥ φ_-² / (2K ρ̃_max)` with `ρ̃_max` the sup of the level density.
+
+| | λ=3 | λ=4 | λ=6 | λ=8 |
+|--|--:|--:|--:|--:|
+| `φ_-` | 0.050 | 0.091 | 0.157 | 0.207 |
+| `ρ̃_max` (uniform would be `φ_-/D`) | 0.092 (0.021) | 0.077 (0.027) | 0.079 (0.028) | 0.110 (0.033) |
+| `φ_-²/ρ̃_max` | 0.028 | 0.109 | 0.312 | 0.390 |
+| `QC_1(m̃)` | 0.084 | 0.223 | 0.648 | 0.943 |
+| `QC_8(m̃)` | 0.0067 | 0.0170 | 0.0444 | 0.0689 |
+| `QC_16(m̃)` | 0.0031 | 0.0082 | 0.0208 | 0.0328 |
+| `QC_32(m̃)` | 0.0015 | 0.0041 | 0.0102 | 0.0159 |
+| `Q_min^w(c'=0.5)` | 1.2e-10 | ≤ 1e-15 | 8.8e-4 | 1.4e-5 |
+| `Q_min^w(c'=1)` | 2.4e-9 | ≤ 1e-15 | 1.8e-3 | 5.0e-5 |
+| `Q_min^w(c'=2)` | 2.8e-8 – 4.7e-8 | ≤ 1e-14 | 7.0e-4 (dual) | 2.0e-4 |
+| `c' = 4`: | feasible, 4.5e-7 | feasible, 8e-15 | infeasible | infeasible |
+| largest `K` (of 1..32) with `c' QC_K > Q_min^w`, `c'=1` | ≥ 32 | ≥ 32 | ≥ 32 | ≥ 32 |
+
+(`QC_K ≈ QC_1/(1.8K)` empirically; at λ=8, `c'=1`, the bound keeps content up
+to `K ≈ 0.5/5e-5 ≈ 10⁴`; at λ=6 to `K ≈ 180`.)
+
+**Reading.**
+
+1. **The weighted hypothesis is cheap where the uniform one was expensive.**
+   At `c' = 1` (the state's level mass everywhere at least the symbol's own
+   level distribution) the minimum energy is 2e-9 / ≤1e-15 / 1.8e-3 / 5e-5,
+   against 5e-4 / 1e-3 / 0.29 / 0.13 for the uniform constant 0.3 in §4. The
+   deepest bins now ask for mass `c' m̃(deep) ~ 1e-4`, not `0.1c`, and the
+   near-null space supplies it.
+2. **The bound then has content far beyond the minorants' level counts.**
+   `c' QC_K(m̃) − Q_min^w` stays positive up to hundreds (λ=6) or thousands
+   (λ=8) of levels, against 13–15 levels for the NS-22 minorants at `η ≤ 0.5`.
+   Numerically the obstruction now reads: a minorant with `K` levels loses at
+   least `c' QC_K(m̃) ≈ c' QC_1(m̃)/(1.8K)`, with `QC_1(m̃) = φ_- D − mean(β_a⁻)`
+   growing 0.08 → 0.94 across the four windows.
+3. **What the cofinal inputs become.** Under WLH with `c' ≥ c_0` and `Q ≤ Q_*`
+   along a cofinal family, bounded loss forces `K ≥ c_0 φ_-²/(2 ρ̃_max (η+Q_*))`.
+   So the zero-distribution input ZLD of v1.47 (a lower bound on **every** level
+   band) is replaced by the single scalar `φ_-(a)²/ρ̃_max(a) → ∞` (measured
+   0.028 → 0.39, growing), and the packet-coverage input by the existence of an
+   admissible state with WLH constant `c_0` and bounded energy, which the head
+   states here achieve with `Q → 0`. Both remain open inputs; neither is
+   proved here; the source constraint is not imposed on the LP states.
+4. Same caveats as §5: even head, N=256, float, 20 bins for the constraint
+   (a finer partition tightens the demand), grid `D` at λ ≥ 6.
