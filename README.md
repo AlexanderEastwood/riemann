@@ -217,7 +217,7 @@ The corrected cofinal input is Exact Level Quantization Growth (QG), plus
 admissible bounded-energy weighted packets; a QC_1/K law needs a separate
 shape hypothesis. Both inputs remain open. No new computation, window or
 tail metric. G2 and RH remain open. See [v1.49](evidence/v149/) and the
-[PR #14 review](audits/2026-09-21-v1.48-pr14-v2.html).
+[PR #14 review](audits/2026-09-21-v1.48-pr14-v3.html).
 
 ## New in v1.47
 

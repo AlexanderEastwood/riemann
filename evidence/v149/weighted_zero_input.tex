@@ -1,10 +1,12 @@
 \subsection*{The exact weighted cost, not a histogram peak (NS-32/33)}
 
-The review of the v1.48 candidate (PR~14, head \texttt{9b2b900})
-retains its weighted-cost implication but rejects the claimed cofinal
-biconditional and the use of a histogram peak as a bounded continuous
-level density. The candidate is not merged by this review. The audit is
-archived as \path{audits/2026-09-21-v1.48-pr14-v2.html}.
+The review of the v1.48 candidate (PR~14, revised head \texttt{f3611ef})
+retains its weighted-cost implication and concentration-function approach,
+but rejects its two displayed rearrangements for $K$ and its identification
+of aligned-bin maxima with the full concentration function. The saved
+$\lambda=4$ optimizer also fails its own bin constraint. The candidate
+is not merged by this review; the audit is
+\path{audits/2026-09-21-v1.48-pr14-v3.html}.
 This subsection gives a self-contained corrected formulation and answers
 the zero-statement question. None of the diagnostic optimizations is rerun.
 
@@ -183,6 +185,37 @@ $R$ costs at least $m_j^2/(2R)$. Summing at most $K$ gaps and using
 Cauchy--Schwarz gives $\varphi_-^2/(2KR)$. For uniform density, equal
 gaps attain this value, proving the constant exactly.
 \end{proof}
+
+\paragraph{A finite alternative to the peak.}
+For $\varphi_->0$ and $0<h\le D$, define the \emph{full} concentration
+function $M(h)=\sup_{I\subset[-D,0],\,|I|=h}\widetilde m_a(I)>0$.
+Then, without a bounded density,
+\begin{equation}\label{eq:v149-concentration-cost}
+ \mathrm{QC}_K\ge\frac{h\varphi_-^2}{2KM(h)}-\frac{h\varphi_-}{2}.
+\end{equation}
+Indeed, partition each level gap into consecutive blocks of length $h$.
+Each block (including a final shorter one) has mass at most $M=M(h)$.
+For gap mass $m=M(n+\theta)$, $n\ge0$ integer and $0\le\theta<1$, filling
+blocks from the left minimizes the block-index cost and gives
+\[
+ \int_{\rm gap}(t-\ell)\,d\widetilde m_a
+ \ge hM\left(\frac{n(n-1)}2+n\theta\right)
+ \ge h\left(\frac{m^2}{2M}-\frac m2\right).
+\]
+The last inequality uses $\theta(1-\theta)\ge0$. Sum the gaps and apply
+Cauchy--Schwarz to prove \eqref{eq:v149-concentration-cost}.
+With uniform packet bounds $c'\ge c_0>0$, $Q\le Q_*$ and loss $\eta\le C$,
+the correct rearrangement is
+\begin{equation}\label{eq:v149-concentration-rearrangement}
+ K\ge\frac{c_0h\varphi_-^2}
+ {2M(h)(C+Q_*+c_0h\varphi_-/2)}.
+\end{equation}
+If $D$ is split into aligned bins of width $h=D/n$ and $b$ is their
+largest \emph{exact} mass, then $b\le M(h)\le2b$, since any interval
+of length $h$ meets at most two bins, up to massless endpoints.
+The archived midpoint bin maximum is neither the full $M(h)$ nor a
+certified upper bound for it. Replacing a denominator by that lower
+estimate cannot certify a lower cost bound.
 
 \paragraph{The one-level cost is an exact zero functional.}
 Put $\mathcal Z_a^-=\max(-\mathcal Z_a,0)$, and keep the global

@@ -1,0 +1,21 @@
+{
+  "build_command": "./manuscript/build.sh",
+  "pages": 242,
+  "undefined_references": 0,
+  "duplicate_references": 0,
+  "overfull_boxes": 0,
+  "bibliography_items": 48,
+  "duplicate_bibliography_keys": 0,
+  "label_count": 698,
+  "duplicate_label_keys": 0,
+  "missing_reference_targets": [],
+  "missing_citation_keys": [],
+  "manuscript_sha256": "1345d80449896e67ebb42bee59e2c3e0840ac6b7b8dabb0bd491d35978df7941",
+  "version": "v1.49",
+  "date": "2026-09-21",
+  "classification": "Build metadata for analytic work; no numerical proof gate",
+  "visual_review": "Rendered and inspected new proof pages 157-160: equations and text legible, no clipping or overfull boxes.",
+  "numerical_scope": "No new window, head calculation, tail metric, optimizer, zero bound or source projection.",
+  "G2": "open",
+  "RH": "open"
+}

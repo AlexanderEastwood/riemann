@@ -2,11 +2,14 @@
 
 ## 2026-09-21 — v1.49 / NS-32 and NS-33: audit and exact weighted zero input
 
-PR #14 at 9b2b900 is held, not merged or tagged: MAJOR findings are the
-false cofinal biconditional, the continuous-peak/histogram identification,
-and the lambda=4 c'=1 returned state's failed feasibility (ratio 0.636).
-The weighted-cost implication and the uniform constant c=c'*phi pass.
-The exact PR head builds to 238 pages with 0 undefined/duplicate references.
+PR #14 was re-reviewed at revised head f3611ef and remains held, not merged
+or tagged. Its revision resolves the false biconditional and acknowledges
+unbounded critical-level density, but three MAJOR findings remain: the new
+K rearrangements are invalid; the lambda=4 c'=1 returned state still fails
+bin feasibility (ratio 0.636); aligned-bin maxima are identified with the
+full concentration function in the wrong bound direction. The exact
+weighted-cost implication and uniform constant c=c'*phi pass. Revised PR
+head builds to 239 pages, 0 undefined/duplicate; audit v3 preserves v1/v2.
 
 What had to change: the crude peak-density scalar is vacuous for any range
 containing a negative critical value. The exact density has an integrable
@@ -14,7 +17,8 @@ unbounded singularity there; a histogram peak is not an upper bound. For a
 finite R, phi^2/R can grow only if R=o(phi^2); bounded above does not exclude
 R->0. The bounded fraction phi alone is not an impossibility argument.
 
-The correct surviving quantity is QC_K. QC_1=phi*D-mean(beta^-) is an exact
+The concentration-function proof is repaired, with edge correction -h*phi/2
+and its correctly rearranged denominator. The surviving quantity is QC_K. QC_1=phi*D-mean(beta^-) is an exact
 zero functional, but its growth alone does not control fixed K: a continuous-
 measure full-support countermodel has QC_1~D/2 and QC_2->0. Named input QG
 requires QC_K->infinity for every fixed K, together with independent
@@ -28,7 +32,7 @@ NS-28 raw files are preserved and its report receives a correction notice.
 This is failure of the proposed bound and diagnostic interpretation, not
 of the physical form. Both cofinal inputs remain open; the route stays
 blocked. No new window, tail metric, optimizer or zero enclosure. G2/RH
-and NS-1's two evidence groups remain open. Final build: 241 pages,
+and NS-1's two evidence groups remain open. Final build: 242 pages,
 0 undefined references, 0 duplicate references, 0 overfull boxes.
 
 ## 2026-09-21 — v1.47 / NS-29: level distribution as a zero statement

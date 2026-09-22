@@ -1,0 +1,44 @@
+{
+ "manuscript_revision": "v1.49",
+ "base_commit": "618fb227c60aad2d3ec77e852670a971c23412a3",
+ "files": [
+  {
+   "path": "evidence/v149/README.md",
+   "size_bytes": 3743,
+   "sha256": "358128d566677bb47fb96e4e573854c4156d6efd45349137fa9508596ece5c23"
+  },
+  {
+   "path": "evidence/v149/build_report.json",
+   "size_bytes": 818,
+   "sha256": "2e0e00384adfb8fd63c23815a388536f47329d54af106b5a7c70c5d1d0a26290"
+  },
+  {
+   "path": "evidence/v149/pr14_build_report.json",
+   "size_bytes": 1542,
+   "sha256": "0b316bdd85b922cb5068a0d3053da8258482d877c003c7132eb44d2e9b9830ac"
+  },
+  {
+   "path": "evidence/v149/provenance.json",
+   "size_bytes": 3535,
+   "sha256": "29cf1a321e3e9f4c697ba7cb4979c403739005f5cb4cbae6dc7a8adc669fbc49"
+  },
+  {
+   "path": "evidence/v149/research-report-2026-09-21-v1.html",
+   "size_bytes": 5423,
+   "sha256": "e4f907d14a299765f4cd62a6aad911d834301071daae0e9b70d9b61510b06ad5"
+  },
+  {
+   "path": "evidence/v149/scope_review.md",
+   "size_bytes": 5491,
+   "sha256": "94bfb4769731f10990d02232ec93630c6906c6e44ee7c802738c63f161d7c879"
+  },
+  {
+   "path": "evidence/v149/weighted_zero_input.tex",
+   "size_bytes": 18215,
+   "sha256": "519624d6d0b2352098fffcf3c694d4f2213d91481e45aeb47581c3168c4f0e42"
+  }
+ ],
+ "file_count": 7,
+ "total_bytes": 38767,
+ "note": "NS-32/33: revised PR14 audit and analytic exact weighted zero input; no numerical experiment; G2 and RH open."
+}

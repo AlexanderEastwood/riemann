@@ -3,14 +3,15 @@
 **Exact identities, proved implications and countermodels, plus named open
 inputs. No new numerical experiment or certificate. G2 and RH remain open.**
 
-Task A is NS-32 after a concurrent task-ID reconciliation. PR #14 at 9b2b900
-is left unmerged for three MAJOR findings: the false “exactly when” claim;
-identification of a finite histogram peak with the continuous density cap;
-and the claimed cheap lambda=4 c'=1 state, whose saved bin ratio is only
-0.636. Its main weighted-cost implication, monotonicity argument, measure
-domination step and uniform-density constant pass. The exact PR head builds
-to 238 pages with 0 undefined/duplicate references; all four artifacts verify.
-The versioned audit is `audits/2026-09-21-v1.48-pr14-v2.html`.
+Task A is NS-32 after a concurrent task-ID reconciliation. PR #14 was
+re-reviewed at f3611ef after its density correction. Three MAJOR findings
+remain: two invalid K rearrangements; a lambda=4 c'=1 state failing its
+bin constraint (0.636<1); aligned-bin maxima identified with the full
+concentration function. Its core weighted-cost implication, monotonicity,
+Borel domination and uniform-density constant pass. Revised head builds
+to 239 pages, 0 undefined/duplicate references; all four artifacts verify.
+The current audit is `audits/2026-09-21-v1.48-pr14-v3.html`; prior versions
+are preserved. PR #14 remains unmerged and untagged.
 
 Task B is NS-33. The v1.49 manuscript is based on v1.47 main and is
 self-contained: it does not merge the rejected v1.48 wording. Its findings:
@@ -28,7 +29,8 @@ self-contained: it does not merge the rejected v1.48 wording. Its findings:
   other for general level measures. No arithmetic independence is claimed.
 - The exact weighted bound eta >= [c' QC_K - Q]+ requires no bounded
   density. The density packing estimate is retained conditionally, and
-  uniform density recovers c=c'*phi exactly.
+  uniform density recovers c=c'*phi exactly. A density-free concentration
+  bound is proved with correction -h*phi/2 and the proper K denominator.
 - QC_1 = phi*D - mean(beta^-) is the averaged gap above the deepest negative
   value. Its growth alone is insufficient: an absolutely continuous,
   full-support countermodel has QC_1~D/2 but QC_2->0.
@@ -46,7 +48,7 @@ No source-projection calculation was run. The audit names the missing
 lambda=3 overlap, complete-energy/cross-term and projected-constraint
 checks; a small source residual alone gives no constant-factor guarantee.
 NS-28 raw scripts and outputs are unchanged; its report gets a correction
-notice, preserving the original text below it.
+notice, preserving the current main correction and text below it.
 
 ## Incremental record
 

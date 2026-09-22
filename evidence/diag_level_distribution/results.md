@@ -15,7 +15,11 @@
 > between scalar growth and necessary level complexity. Corollary v1.37
 > gives depth divergence only. QC_1 growth alone does not force fixed-K
 > growth; v1.49 states the missing QG/shape assumptions explicitly.
-> See `audits/2026-09-21-v1.48-pr14-v2.html` and `evidence/v149/`.
+> The later main correction is preserved below. Its twenty-bin maximum is
+> only a lower estimate of the full concentration function M(h), not M(h)
+> itself; exact aligned bin masses would give M(h) <= twice their maximum.
+> The rho values printed by the script use 200 bins, not twenty.
+> See `audits/2026-09-21-v1.48-pr14-v3.html` and `evidence/v149/`.
 
 
 Even head, N=256 window modes (reach `ξ < 2πN/L` = 732 / 580 / 449 / 387 at

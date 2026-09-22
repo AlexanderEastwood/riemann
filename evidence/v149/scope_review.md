@@ -7,8 +7,10 @@ No new numerical computation or independent adversarial certification.
 1. The review is NS-32; the follow-up is NS-33. Original local NS-31/32
    claims were renumbered when NS-31 was assigned concurrently to a different
    audit. Claim history and both delivered audit versions are preserved.
-2. PR #14's head 9b2b900 was built, not merged. Its exact weighted-cost
-   implication passes; the biconditional does not. No v1.48 tag is created.
+2. Both PR #14 heads 9b2b900 and revised f3611ef were built, not merged.
+   Revision recognizes the density issue; its new K rearrangements and
+   bin-maximum substitution are invalid, and failed feasibility persists.
+   Its core weighted-cost implication passes. No v1.48 tag is created.
 3. The density is normalized by X, has mass phi<=1, and is not normalized
    to be a probability conditional on beta<0. The coarea integral uses
    counting measure H^0. There is no extra reflection factor in m_tilde.
@@ -66,3 +68,14 @@ No new numerical computation or independent adversarial certification.
 18. The outcome is wrong crude scalar for critical-level measures, plus
     named exact-cost and packet inputs. No unconditional cofinal result,
     new window, tail metric, zero enclosure, optimization, G2 or RH claim.
+
+19. The full concentration function M(h) is a supremum over translated
+    intervals. Exact aligned-bin maxima b satisfy b<=M(h)<=2b; the sampled
+    b is not a certified upper bound. For m=M(n+theta), including the
+    partially filled block yields cost >=h*(m^2/(2M)-m/2) for all n>=0.
+    Cauchy-Schwarz gives h*phi^2/(2K M)-h*phi/2. The K denominator is
+    C+Q*+c0*h*phi/2, not C+Q* with the edge term in the numerator.
+20. A supremum of K*QC_K/QC_1 supplies an upper, not lower shape comparison.
+    The desired lower obstruction needs an infimum bounded below, stated
+    here as the separate kappa hypothesis. Original/main corrections are
+    preserved and the revised-head audit is delivered as a new v3 file.

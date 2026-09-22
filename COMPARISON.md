@@ -366,8 +366,11 @@ histogram. A negative critical value makes the continuous coarea density
 essentially unbounded; v1.47's absolute continuity never asserted a bounded
 peak. The exact weighted quantization implication survives without that
 assumption, with the uniform case giving c=c'*phi exactly. PR #14's v1.48
-candidate is held for this interpretation gap, a false biconditional and
-an infeasible lambda=4 diagnostic vector (minimum bin ratio 0.636 at c'=1).
+revised candidate f3611ef recognizes the peak problem but remains held for
+incorrect K rearrangements, a bin maximum identified with the full
+concentration function, and an infeasible lambda=4 diagnostic vector
+(minimum bin ratio 0.636 at c'=1). The concentration-function bound is
+proved here with its correct rearrangement.
 
 QC_1=phi*D-mean(beta^-) is an exact corrected-zero functional, but its
 growth alone is insufficient: even full-support absolutely continuous
