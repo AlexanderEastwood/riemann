@@ -1,0 +1,26 @@
+{
+  "classification": "actual integrated manuscript build and analytic artifact integrity; no numerical certificate",
+  "pages": 269,
+  "undefined_reference_messages": 0,
+  "multiply_defined_reference_messages": 0,
+  "overfull_boxes": 0,
+  "duplicate_labels": [],
+  "duplicate_bibliography_keys": [],
+  "bibliography_items": 48,
+  "manuscript_sha256": "1a392824d45047f8f2d607a0ff9cee7083b62b605172a1102a87f2606d3100c1",
+  "integrated_fragment_sha256": "3690b9c5d584f3f2078759f9067d02c1aa1e0c29846af63c6608d632b4893384",
+  "integrated_fragment_matches": true,
+  "source_fragments_match": {
+    "evidence/ns46_radical_block/coordinator/finite_arc_gram.tex": true,
+    "evidence/ns46_radical_block/astra2/complete_block_bounds.tex": true
+  },
+  "new_numerical_experiments": false,
+  "certified_finite_threshold": false,
+  "prior_manifests": {
+    "v150": "6/6",
+    "v151": "6/6",
+    "v152": "9/9"
+  },
+  "prior_v152_supporting_artifacts": "33/33, integration and certificate bindings pass",
+  "publication": "local v1.53 draft only; no push, merge or tag"
+}

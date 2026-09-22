@@ -1,0 +1,63 @@
+% Astra-2 / assisting-agent fixed-spacing standalone companion.
+% Not integrated in the proposed v1.53 section and not a dense-block proof dependency.
+\subsection*{Fixed translate spacing: conditioning and the remaining complement}
+\label{ns46-a2-sec-lattice}
+Let $\phi$ be the normalized even Gaussian arithmetic radical above,
+with unitary Fourier transform $\widehat\phi(t)=c\Xi(t)$, $c\ne0$.
+For fixed $d>0$, put
+\[
+ S_d(\theta)=\frac{2\pi}{d}\sum_{k\in\mathbb Z}
+       \left|\widehat\phi\left(\frac{\theta+2\pi k}{d}\right)\right|^2.
+\]
+\begin{proposition}[Every fixed-spacing lattice has a positive Gram floor]
+\label{ns46-a2-prop-lattice}
+The continuous periodic function $S_d$ is strictly positive.
+For every finitely supported coefficient vector,
+\[
+ \left\|\sum_jc_j\phi(\cdot-jd)\right\|^2
+ =\frac1{2\pi}\int_0^{2\pi}S_d(\theta)
+             \left|\sum_jc_je^{-ij\theta}\right|^2\,d\theta.
+\]
+Consequently all finite lattice Grams lie between
+$(\min S_d)I$ and $(\max S_d)I$, with $\min S_d>0$.
+No quantitative lower bound as $d\downarrow0$ is asserted.
+\end{proposition}
+\begin{proof}
+The identity is Plancherel followed by partitioning frequency into
+intervals of length $2\pi/d$. Schwartz decay makes the periodization
+uniformly convergent. If $S_d(\theta)=0$, all its summands vanish,
+so $\zeta(1/2+i(\theta/d+2\pi k/d))=0$ for all integers $k$.
+The gamma and elementary factors of $\Xi$ have no zeros on this
+line. Li--Radziwi\l\l's unconditional Theorem 4
+\cite{ns46-LiRadziwill2015} gives a positive asymptotic proportion
+of nonzero zeta values on every fixed progression of this form,
+a contradiction. Compactness of the circle gives the positive minimum.
+\end{proof}
+
+\paragraph{Exact incompleteness.}
+This infinite lattice nevertheless spans a proper subspace of
+$L^2(\mathbb R)$. Put $\omega=2\pi/d$ and choose a measurable set
+$E\subset(0,\omega)$ of positive measure. Set
+\[
+ \widehat v(t)=\widehat\phi(t+\omega),\quad
+ \widehat v(t+\omega)=-\widehat\phi(t)\quad(t\in E),
+ \qquad \widehat v=0\ \hbox{elsewhere}.
+\]
+The transform $\widehat\phi$ is real on the real axis and nonzero
+almost everywhere, so $v\ne0$. Its pairing with every lattice
+translate cancels between these two frequency bands, since
+$e^{ijd\omega}=1$. Multiplication of both pieces by arbitrary
+$L^2(E)$ functions gives an infinite-dimensional orthogonal complement.
+Adding or subtracting the reflected construction gives nonzero even
+and odd orthogonal vectors separately, since the positive and negative
+frequency supports are disjoint. Thus both parity complements remain
+infinite-dimensional.
+
+For every fixed $d$ the v1.35 expanding central lattice construction
+can therefore use this positive Gram floor, with constants depending
+on $d$. It changes the coefficient of its $O(a)$ rank, not its order.
+The fixed-$d$ nonvanishing theorem gives no justified constant for a
+spacing $d=d(a)\to0$; the dense finite block instead uses the explicit
+finite-arc estimate. None of these facts estimates the signed Weil
+form on the remaining complement. Incompleteness is not a proof that
+all problematic spectral directions escape the lattice span.

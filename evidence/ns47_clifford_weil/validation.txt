@@ -1,0 +1,59 @@
+NS-47 validation record — 2026-09-21 (America/Los_Angeles)
+
+Classification: exact identities and analytic implications, not a numerical
+certificate. No new window, tail metric, G2 claim or RH claim.
+The uniform-floor task is not complete.
+
+Integration base: 24f4ab55f623a894b3d1bc532ba0b3cedac3f286
+Claim commit: 9608ca4
+Branch: codex/ns47-clifford-weil
+Base live manuscript SHA256:
+b172e7b16112f791a415559709d50723be90b6d940ed2a97277fc6c929b8e4de
+Final representation.tex SHA256:
+17cd8b66d82f3927d3257cf495b83e2daa68cd649630e379b34df6ac22e732f3
+
+Actual base build:
+  ./manuscript/build.sh
+  pages: 265
+  undefined references: 0
+  undefined citations: 0
+  duplicate labels: 0
+  build.sh combined undefined/duplicate-reference count: 0
+  output archived: baseline-build-output.txt
+
+Actual isolated fragment build:
+  evidence/ns47_clifford_weil/validate.sh
+  pages: 270
+  undefined references: 0
+  undefined citations: 0
+  duplicate labels: 0
+  build.sh combined undefined/duplicate-reference count: 0
+  output archived: integration-build-output.txt
+  The temporary copy inserts the fragment before the bibliography and its
+  one new bibitem before the bibliography end. The existing Douglas item
+  is reused. No live manuscript source was edited. The location/appendix
+  numbers are validation-only, not a proposed integration anchor.
+
+Reference counts are from the final LaTeX logs, not first-pass messages in
+the archived multi-pass build output. Existing non-reference layout warnings
+are not represented as zero. Proof pages 263–267 and adjacent references
+were rendered with Poppler and visually inspected: no clipping or overlap.
+The PDF is a local validation artifact, not committed, per repository policy.
+
+Exact symbolic check:
+  Maxima 5.50.0, --no-init --quit-on-error --very-quiet
+  batch: evidence/ns47_clifford_weil/algebra-checks.mac
+  seven checks returned true; output archived in algebra-checks-output.txt.
+  No numerical accuracy or interval claim is inferred from these checks.
+
+Build tool: Latexmk 4.88 (9 March 2026), TeX Live 2026.
+Independent mathematical review: no MAJOR; two MINOR findings and one
+wording NOTE repaired. See review-2026-09-21-v1.html for scope and hashes.
+No external refereeing or publication-readiness claim.
+
+Scope: owned evidence directory and NS-47 board row only. No dependence on
+NS-46, no new manuscript version, no public push in this task checkpoint.
+RH and G2 remain open.
+
+Archival normalization: trailing spaces/tabs were removed from recorded
+command-output lines; their content and ordering were otherwise preserved.

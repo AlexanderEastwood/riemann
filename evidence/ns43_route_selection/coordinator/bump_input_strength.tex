@@ -1,0 +1,91 @@
+\subsection*{A restricted prime-discrepancy input can already carry the full zero obstruction}
+\label{sec:ns43-bump-strength}
+The two-dimensional test family in the channel analysis is concrete,
+but its uniform discrepancy estimate must not be advertised as a
+weaker arithmetic foothold without checking its strength.
+
+\begin{proposition}[What bounded translated-bump discrepancy excludes]
+\label{prop:ns43-bump-strength}
+Let $\phi\in C_c^\infty(-b,b)$ be real and even, put
+\[
+ P(s)=\int e^{sx}\phi(x)\,dx,\qquad
+ R(v)=\int\phi(x+v)\phi(x)\,dx,\qquad C=P(1/2),
+\]
+and define
+\[
+ F(u)=e^{u/2}C^2-
+        \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}R(\log n-u).
+\]
+If $F$ is bounded for $u\ge u_0$, every nontrivial zero $\rho$ of
+$\zeta$ with $\Re\rho>1/2$ must obey $P(\rho-1/2)=0$.
+There are explicit nonnegative even smooth compactly supported probes
+$\phi$ for which all zeros of $P$ lie on the imaginary axis. For
+such a probe, the asserted boundedness would exclude every zero off
+the critical line. This is a conditional implication, not a proved
+bound for $F$ and not a new RH claim. For an arbitrary preassigned
+pair of bumps, the matrix input forces common transform zeros at
+any off-line zero; no conclusion without that qualification is asserted.
+\end{proposition}
+\begin{proof}
+The correlation is supported in $[-2b,2b]$ and satisfies
+$\int e^{sv}R(v)\,dv=P(s)^2$ by evenness. For $\Re s>1/2$,
+absolute convergence of the von Mangoldt Dirichlet series gives
+\begin{equation}\label{eq:ns43-bump-laplace}
+ \int_{u_0}^{\infty}e^{-su}F(u)\,du
+ =\frac{C^2}{s-1/2}+P(s)^2\frac{\zeta'}{\zeta}(s+1/2)+H(s),
+\end{equation}
+where
+\begin{align*}
+ H(s)={}&C^2\frac{e^{-(s-1/2)u_0}-1}{s-1/2}\\
+ &+\sum_{\log n\le u_0+2b}\frac{\Lambda(n)}{\sqrt n}
+       \int_{-\infty}^{u_0}e^{-su}R(\log n-u)\,du.
+\end{align*}
+This correction is entire: the quotient is removable and only
+finitely many compactly supported integrals occur. The usual
+identity $-\zeta'/\zeta(s)=\sum\Lambda(n)n^{-s}$ is used only in
+its half-plane of absolute convergence. The pole at $s=1/2$ in
+\eqref{eq:ns43-bump-laplace} cancels because $C=P(1/2)$.
+Boundedness of $F$ makes the left side holomorphic on $\Re s>0$.
+Uniqueness of meromorphic continuation therefore forces the residue
+at $s=\rho-1/2$ to vanish. That residue is
+$\operatorname{mult}(\rho)P(\rho-1/2)^2$, proving the first assertion.
+For a matrix of two bumps apply this argument to each diagonal;
+all off-line zeros must then be common zeros of their transforms.
+
+Here is a zero-independent choice of probe. Fix $0<B<b$ and set
+$b_k=B/(\zeta(2)k^2)$. Let $\mu$ be the distribution of
+$\sum_{k\ge1}U_k$, where the $U_k$ are independent uniform variables
+on $[-b_k,b_k]$. The sum converges absolutely since $\sum b_k=B$.
+Its measure is nonnegative, even, supported in $[-B,B]$, and has
+entire bilateral transform
+\[
+ P_0(s)=\prod_{k\ge1}\frac{\sinh(b_ks)}{b_ks}.
+\]
+The product converges uniformly on compact sets, since each factor
+is $1+O(b_k^2)$ there and $\sum b_k^2<\infty$. It is nonzero away
+from the zeros of its factors. Those zeros are exactly imaginary
+points $i\pi m/b_k$, $m\ne0$.
+For every integer $M>0$,
+\[
+ |P_0(i\xi)|\le
+ \left(\prod_{k=1}^M b_k^{-1}\right)|\xi|^{-M},
+\]
+since all remaining sinc factors have modulus at most one. Thus
+Fourier inversion gives a $C^\infty$ density supported in $[-B,B]$.
+It is nonnegative and nonzero because it is the density of $\mu$;
+normalizing it in $L^2$ does not change its transform zeros. This is
+the required $\phi\in C_c^\infty(-b,b)$. If an orthonormal pair is
+desired, take the second even smooth bump supported in
+$\{B<|x|<b\}$ and normalize it; disjoint supports give orthogonality.
+For the first probe no zero with $\Re(\rho-1/2)>0$ can be masked.
+The functional-equation symmetry supplies the corresponding exclusion
+on the other side of the critical line, conditional on the unproved
+boundedness of $F$.
+\end{proof}
+
+For the proposed matrix in the channel analysis, $F(u)=E_{11}(u/2)$
+for this first probe. Hence even this restricted uniform estimate can
+already contain the full off-line-zero obstruction. Nothing above
+proves that estimate or asserts the converse. The useful outcome of
+this check is a limit on the advertised strength of a proposed next
+lemma, not a new positivity argument.

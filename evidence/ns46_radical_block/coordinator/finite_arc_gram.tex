@@ -1,0 +1,100 @@
+% NS-46 analytic proof draft. No numerical or cofinal sign claim.
+\subsection*{Finite fine-lattice Grams without an infinite-lattice assumption}
+
+\begin{lemma}[An elementary finite-arc Gram lower bound]
+\label{lem:ns46-finite-arc}
+Let $\phi\in L^2(\mathbb R)$ have unitary Fourier transform satisfying
+$|\widehat\phi(\xi)|^2\ge c_0>0$ on $[-r,r]$, with $r>0$.
+Let $m\ge2$, $\delta>0$ and $0<r\delta\le\pi/2$.
+The Gram matrix of the $m$ translates
+$\phi(\cdot-t_0-j\delta)$, $0\le j<m$, obeys
+\begin{equation}\label{eq:ns46-gram-bound}
+ \Gamma_{m,\delta}\succeq\gamma_{m,\delta}I,
+ \qquad
+ \gamma_{m,\delta}:=\frac{c_0r}{m}
+       \left(\frac{r\delta}{4\pi e}\right)^{2(m-1)}.
+\end{equation}
+No positive lower bound for an infinite-lattice Gram is assumed.
+The displayed bound is allowed to deteriorate with both $m$ and $\delta$.
+\end{lemma}
+\begin{proof}
+For coefficients $c_j$ put $P(z)=\sum_{j=0}^{m-1}c_jz^j$ and
+$\theta_0=r\delta$, $\ell=\theta_0/m$. The uncut physical norm is at least
+\[
+ \frac{c_0}{\delta}\int_{-\theta_0}^{\theta_0}
+                      |P(e^{i\theta})|^2\,d\theta.
+\]
+The sign of the phase and the common shift do not affect this inequality.
+Write $I_P$ for the integral. For each $0\le k<m$, the interval
+\[
+ B_k=[-\theta_0+2k\ell,-\theta_0+(2k+1)\ell]
+\]
+has length $\ell$, and lies inside the integration arc. Choose
+$\theta_k\in B_k$ with
+$|P(e^{i\theta_k})|\le\sqrt{I_P/\ell}$, which is possible by averaging.
+For $j\ne k$ the angles satisfy
+\[
+ |\theta_j-\theta_k|\ge |j-k|\ell,
+ \qquad |\theta_j-\theta_k|\le2\theta_0\le\pi.
+\]
+Thus, with $z_k=e^{i\theta_k}$,
+$|z_j-z_k|\ge(2\ell/\pi)|j-k|$.
+
+Lagrange interpolation at these distinct nodes is exact for $P$.
+On the full unit circle its numerator factors have modulus at most two,
+so
+\begin{align*}
+ |P(z)|
+ &\le\sqrt{I_P/\ell}
+   \sum_{k=0}^{m-1}
+   \frac{2^{m-1}}{(2\ell/\pi)^{m-1}k!(m-1-k)!}\\
+ &=\sqrt{I_P/\ell}\,
+   \frac{(2\pi/\ell)^{m-1}}{(m-1)!}.
+\end{align*}
+Parseval on the full circle bounds $\sum_j|c_j|^2$ by the square
+of this supremum. Therefore
+\[
+ I_P\ge\ell
+ \left((m-1)!\left(\frac{\ell}{2\pi}\right)^{m-1}\right)^2
+ \sum_j|c_j|^2.
+\]
+The elementary factorial bound
+$(m-1)!\ge((m-1)/e)^{m-1}$ and $(m-1)/m\ge1/2$ give
+\[
+ (m-1)!\left(\frac{r\delta}{2\pi m}\right)^{m-1}
+ \ge\left(\frac{r\delta}{4\pi e}\right)^{m-1}.
+\]
+Multiplying by $c_0/\delta$ proves the lemma, for complex coefficients
+as well as real ones. The result uses only a finite polynomial and a
+single fixed Fourier interval; it makes no assertion about the zeros
+of the transform on any infinite arithmetic progression.
+\end{proof}
+
+\paragraph{Application data for the actual source.}
+The Gaussian arithmetic radical in v1.35 is real, even, smooth and
+nonnegative, and not zero, as made explicit in v1.50. Its normalized
+version $\phi$ has $\widehat\phi(0)>0$. Continuity therefore supplies
+fixed $r,c_0>0$ as in the lemma. Their existence is analytic; no numerical
+value or certified effective threshold is asserted here.
+
+For $a=\log\lambda$ sufficiently large, take
+\[
+ J_a=\left\lfloor\frac{\lambda^2}{40000a}\right\rfloor,
+ \qquad m_a=2J_a+1,\qquad \delta_a=1/J_a,
+ \qquad t_{a,j}=j\delta_a\quad(-J_a\le j\le J_a).
+\]
+All centers are in the fixed interval $[-1,1]$.
+The lemma applies after a common shift to the indices $0,\ldots,m_a-1$.
+For sufficiently large $a$,
+\[
+ m_a\le\frac{\lambda^2}{10000a},\qquad
+ \log\left(\frac{4\pi e}{r\delta_a}\right)\le3a.
+\]
+Consequently its uncut Gram lower bound satisfies
+\begin{equation}\label{eq:ns46-gram-asymptotic}
+ \gamma_a\ge\frac{c_0r}{m_a}
+       \exp\left(-\frac{6\lambda^2}{10000}\right).
+\end{equation}
+This is a lower bound for the smallest ordinary Gram eigenvalue,
+not for a Weil eigenvalue. In particular the conditioning is explicitly
+paid for, not silently assumed uniform.

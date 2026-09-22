@@ -1,0 +1,1125 @@
+\section{Signed comparison obstructions and complete-space selection (v1.52)}
+\label{sec:v152-route-selection}
+The new material has three classifications: exact identities and proved
+implications with stated hypotheses; two certified computations at an
+already studied window; and explicit open inputs. No diagnostic is used
+as a lower bound. A blocked parent route is not declared impossible
+merely because one of its sufficient comparisons fails.
+
+The direct uniform ordinary lower floor remains the weakest sufficient
+cofinal target established here. CAE and unrestricted exact adaptive
+concentration express that target in other coordinates. The additional
+CCM problem is selection of a specific complete ground profile, with
+entire-transform control. The following results remove specified
+shortcuts and identify the estimates still missing; they do not supply
+a new cofinal signed floor, G2 or RH.
+
+
+
+\subsection*{Fresh certificates for two existing comparison failures}
+
+The following computations use the existing $\lambda=5$ window and
+the already stipulated metrics and partition. They introduce neither a
+new window nor a replacement tail metric. The frozen vectors are new;
+the original v1.27--v1.28 evidence is still not archived. In particular,
+the historical displayed witness ratios and four-block tables are not
+claimed to have been recovered or replayed.
+
+\begin{proposition}[Fresh failure of the stipulated $10^{-8}D$ tail comparison]
+\label{prop:v152-tail-comparison}
+At $\lambda=5$, in each parity there is an exact dyadic vector supported
+on $17\le n\le128$ with strictly positive Weil energy, but with
+\[
+ 0<\frac{v^*\mathsf W_5v}{v^*Dv}
+ <\begin{cases}7\cdot10^{-18},&\text{even},\\
+               12\cdot10^{-18},&\text{odd}.
+   \end{cases}
+\]
+Here $D=\operatorname{diag}(a_n)$ is the stipulated positive
+archimedean metric, not the complete diagonal of $\mathsf W_5$.
+Consequently $Q_{16}\mathsf W_5Q_{16}\succeq10^{-8}Q_{16}DQ_{16}$
+is false in both parities. No negative Weil direction is asserted.
+\end{proposition}
+\begin{proof}[Certified verification]
+The integer coordinates and common denominator $2^{60}$ are frozen in
+\path{evidence/ns44_metric_replay/witnesses.json}. With those identical
+vectors, fresh Arb coefficient enclosures at $320$ and $448$ bits,
+including the analytic $96$-term series remainder, prove positive norm,
+positive $D$ energy, positive Weil energy, and
+$v^*(\mathsf W_5-10^{-8}D)v<0$ in each parity.
+The respective ratio balls are contained in the displayed rational
+intervals; rounded display values are
+$6.4235244156530\cdot10^{-18}$ and
+$1.1127922753304\cdot10^{-17}$.
+The shifted energies are respectively approximately
+$-2.4267798261306\cdot10^{-8}$ and
+$-2.4549167289288\cdot10^{-8}$; the signs are decided by the
+archived balls, not these rounded values.
+
+A separate expansion into the normalized $+n,-n$ Fourier coordinates
+verifies the same signs and overlaps the parity assembly. This checks
+signs and indexing independently while sharing the analytic coefficient
+enclosures; it is not a second derivation of the kernel. A further
+reviewer replay and direct four-sign double sum reproduce the gates.
+All coefficients are freshly assembled with an empty temporary cache.
+The float proposal is used only to choose frozen vectors; no midpoint
+solve enters a proof gate. The complete ball strings, source hashes,
+verifier and independent review are archived and indexed in
+\path{evidence/v152/}.
+\end{proof}
+
+\begin{proposition}[Fresh obstruction for the existing dyadic block comparison]
+\label{prop:v152-block-comparison}
+For the $\lambda=5$, $N=25$ dyadic partition, the signed block
+norm-comparison criterion fails in both parities for every admissible
+choice $0<M_j\preceq T_{jj}$ and every positive scalar row weighting.
+The first three blocks
+\[
+ I_0=\{26,\ldots,50\},\quad I_1=\{51,\ldots,100\},\quad
+ I_2=\{101,\ldots,200\}
+\]
+already suffice. This closes this partition's sufficient comparison,
+not all signed block methods or the sign of the complete Weil form.
+\end{proposition}
+\begin{proof}[Certified pairings and exact comparison argument]
+For each of the three pairs in each parity, separate frozen dyadic
+vectors $x,y$ satisfy, at both $320$ and $448$ bits,
+\[
+ X=x^*T_{jj}x>0,\qquad Y=y^*T_{kk}y>0,\qquad
+ |x^*T_{jk}y|^2-H_{jk}^2XY>0.
+\]
+The zero-diagonal symmetric rational matrices $H$ have entries
+\[
+ (H_{01},H_{02},H_{12})=
+ \begin{cases}(997,568,481)/1000,&\text{even},\\
+              (997,484,612)/1000,&\text{odd}.
+ \end{cases}
+\]
+The same fresh coefficient and independent signed-index checks are
+used for both energies and the cross pairing. The exact Rayleigh
+quotients on $(1,1,1)$ are
+\[
+ \frac{341}{250}=1.364>1\quad\text{and}\quad
+ \frac{2093}{1500}>1,
+\]
+respectively. The frozen witnesses and strict interval gates are in
+\path{evidence/ns45_block_replay/}; an independent rerun gives a
+byte-identical certificate. Pair witnesses need not be one common
+physical vector because they lower-bound separate operator norms.
+
+If admissible positive metrics exist, then each $T_{jj}$ is positive
+definite. The verified quotients lower-bound the normalized coupling
+norms for $T$, and Lemma~\ref{lem:v128-comparison-obstruction} gives
+$\beta_{jk}(M)\ge\beta_{jk}(T)>H_{jk}$. If the metrics do not exist,
+the criterion already fails its prerequisite. Thus no unconditional
+full-block inertia assertion is needed. A positive row weighting making
+every comparison row sum below one would, by diagonal similarity and
+the row-sum norm, force the spectral radius of $H$ below one, contrary
+to its exact Rayleigh quotient. An infinite continuation adds only
+nonnegative norm terms, so it cannot repair these first three rows.
+This proves precisely the stated comparison failure.
+\end{proof}
+
+
+\subsection*{Prime-channel retention for the explicit Gaussian weight}
+
+% NS-43 working proof fragment. Exact identities and proved implications only.
+% Not a manuscript/version change. No numerical certificate is asserted.
+
+\paragraph{Notation and the comparison being ruled out.}
+Write $C_0=(2\pi-3)/(4\pi)$ and retain the unnormalized Gaussian weight
+$h$ of \eqref{eq:v150-weight}. For a prime power $n=p^k\ge2$, put
+$\ell_n=\log n$, $w_n=\Lambda(n)/\sqrt n$, and
+\[
+ J^{(n)}_{a,h}[g]
+ =w_n\int_{-a}^{a-\ell_n}h(x)h(x+\ell_n)
+                 |g(x+\ell_n)-g(x)|^2\,dx
+\]
+when $\ell_n<2a$, and set it to zero otherwise. The global channel
+$J^{(n)}_h$ has the same integral over $\mathbb R$. With $g=f/h$ on
+$I_a$ and zero outside, $J^{(n)}_h\ge J^{(n)}_{a,h}$.
+
+For $0\le\varepsilon_{n,a}\le1$, a coefficientwise loss is
+$L_a[g]=\sum_n\varepsilon_{n,a}J^{(n)}_h[g]$ in the global comparison,
+or the corresponding sum of interior channels in the local comparison.
+Any additional discarded nonnegative energy can be included in $L_a$.
+The two comparisons at issue are, respectively,
+\begin{align*}
+ J_h[g]-L_a[g]&\ge\tfrac23\operatorname{Var}_\nu(g)
+       +2|\langle f,s\rangle|^2-\eta_a\|f\|^2,\\
+ \int(r_a)_-|f|^2&\le J_{a,h}[g]-L_a[g]+\Pi[f]
+                                  +\eta_a\|f\|^2.
+\end{align*}
+They require, respectively, $q_a[f]-L_a[g]\ge-\eta_a\|f\|^2$
+and $q_a[f]-\int(r_a)_+|f|^2-L_a[g]\ge-\eta_a\|f\|^2$.
+Thus both imply $\eta_a\ge L_a[g]-q_a[f]$ on every admissible unit test.
+No compensating change in the potential, variance, pole or retained
+coefficients is part of this statement.
+
+\begin{proposition}[Every fixed nonzero prime-power channel has a critical coefficient]
+\label{prop:ns43-fixed-channel}
+Fix a prime power $n\ge2$, let $b=(\log2)/16$, and put
+\[
+ \kappa_n=C_0\Lambda(n)n^{-5},\qquad
+ \gamma_n=\pi(1-n^{-2})e^{-6b}.
+\]
+Choose two fixed real even orthonormal functions
+$\phi_1,\phi_2\in C_c^\infty(-b,b)$, and define
+\[
+ A_b=2\sum_{j=1}^2\int_{\mathbb R}
+    |\Re\psi(1/4+i\xi/2)-\log\pi|\,|\widehat\phi_j(\xi)|^2\,d\xi,
+ \qquad B_{a,b}=A_b+(8a+1)e^a+2a.
+\]
+For every sufficiently large $a$, each of the even actual-source
+complement and the odd sector contains a unit smooth test satisfying
+\[
+ J^{(n)}_{a,h}[f/h]\ge\kappa_n\exp(\gamma_n e^{2a}),
+ \qquad q_a[f]\le B_{a,b}.
+\]
+Consequently either comparison above, if valid on the indicated sector
+with $\eta_a\ge0$, must obey
+\[
+ \eta_a\ge
+ [\varepsilon_{n,a}\kappa_n\exp(\gamma_n e^{2a})-B_{a,b}]_+.
+\]
+In particular, deleting this channel, or decreasing its coefficient by
+any fixed positive amount along a cofinal subfamily, is incompatible
+with a uniform finite ordinary-norm error. This concerns the comparison,
+not the sign of $q_a$ or the unmodified coefficient-one comparison.
+\end{proposition}
+\begin{proof}
+The existing two-sided bounds for $h$ give, for $x\ge\ell_n$,
+\[
+ \frac{h(x-\ell_n)}{h(x)}
+ \ge C_0 n^{-9/2}
+             \exp\!\bigl(\pi(1-n^{-2})e^{2x}\bigr).
+\]
+The restriction $x\ge\ell_n$ is required here: both weight bounds
+are being applied at nonnegative arguments.
+
+Put $t=a-2b$ and
+$F_{j,t}^{\pm}=2^{-1/2}(\phi_j(\cdot-t)\pm\phi_j(\cdot+t))$.
+For $a>3b+\ell_n$, their support bands
+$B_+\subset(a-3b,a-b)$ and $B_-=-B_+$ are disjoint and inside $I_a$.
+The two $F_{j,t}^+$ are orthonormal; a unit vector in their complex
+span can be chosen exactly orthogonal to the actual $u_a$, by the
+kernel of the single linear functional $f\mapsto\langle f,u_a\rangle$.
+This argument does not identify $u_a$ with $h$, approximate its
+coefficients or require a source error estimate. The two odd functions
+are orthonormal and every vector in their span is source-orthogonal.
+
+For every unit vector in either span, an endpoint $x\in B_+$ has
+$x-\ell_n\ge0$, remains inside the window, and is outside both support
+bands, since $\ell_n\ge\log2>2b$. Select the edge from $x-\ell_n$ to
+$x$, and use its reflected inward edge for $x\in B_-$. These selected
+edges are distinct; no selected edge has two nonzero endpoints. Hence
+\[
+ J^{(n)}_{a,h}[f/h]
+ \ge w_n\inf_{x\in(a-3b,a-b)}\frac{h(x-\ell_n)}{h(x)}
+             \int_{B_+\cup B_-}|f(x)|^2dx
+ \ge\kappa_n\exp\!\bigl(\pi(1-n^{-2})e^{2(a-3b)}\bigr).
+\]
+All interference between $\phi_1$ and $\phi_2$ is retained inside
+$|f|^2$; its integral is the ordinary norm, exactly one.
+
+The archimedean contribution is at most $A_b$: translation/reflection
+multipliers have modulus at most $\sqrt2$, and Cauchy--Schwarz in the
+two-dimensional coefficient vector gives the displayed bound uniformly
+for every unit mixture. Prime correlations have total absolute value
+at most $2\sum_{m<e^{2a}}\Lambda(m)/\sqrt m\le8ae^a$.
+The even pole is at most $2a+2\sinh a\le2a+e^a$; the odd pole is
+nonpositive. These estimates give $q_a[f]\le B_{a,b}$ including all
+cross terms. The preceding comparison identities finish the proof.
+Exterior edges were retained in those identities; the lower bound uses
+only interior edges, so adding the exterior part cannot weaken it.
+\end{proof}
+
+\begin{proposition}[Uniform obstruction for moving omitted channels away from the endpoint]
+\label{prop:ns43-moving-channel}
+Fix $0<\theta<1$. Let
+\[
+ b_\theta=\frac{\min(\log2,-\log\theta)}{16},\qquad
+ d_\theta=\min(\log2,-\log\theta-6b_\theta),
+\]
+\[
+ \gamma_\theta=\pi(1-e^{-2d_\theta})e^{-6b_\theta}>0,
+ \qquad c_\theta=C_0(\log2)\theta^{-1/2}e^{9b_\theta/2}>0.
+\]
+For all sufficiently large $a$, the same two parity spaces built with
+$b=b_\theta$, $t=a-2b_\theta$, satisfy, for every unit vector and
+\emph{simultaneously for every prime power} $2\le n\le\theta e^{2a}$,
+\[
+ J^{(n)}_{a,h}[f/h]\ge
+ c_\theta e^{-11a/2}\exp(\gamma_\theta e^{2a}).
+\]
+Thus either comparison, with $\eta_a\ge0$, and an omitted channel
+$n=n(a)$ in this range, even when it varies with $a$, forces
+\[
+ \eta_a\ge
+ [\varepsilon_{n(a),a}c_\theta e^{-11a/2}
+             \exp(\gamma_\theta e^{2a})-B_{a,b_\theta}]_+.
+\]
+The same statement holds on any cofinal subfamily satisfying these
+hypotheses. No conclusion is asserted merely because an omitted
+channel exists at each window if its ratio $n(a)/e^{2a}$ tends to one.
+\end{proposition}
+\begin{proof}
+Here $d_\theta\ge10b_\theta>2b_\theta$. For $x\in(a-3b,a-b)$ and
+$\log2\le\ell_n\le2a+\log\theta$, one has
+\[
+ \ell_n\ge d_\theta,\qquad 2x-\ell_n\ge d_\theta,
+ \quad\text{hence}\quad |x-\ell_n|\le x-d_\theta.
+\]
+For large $a$ these inward endpoints lie inside the window and outside
+both support bands, since
+$|x-\ell_n|\le a-b-d_\theta<a-3b$. Unlike the fixed-channel proof,
+$x-\ell_n$ need not be nonnegative. Use evenness of $h$ and apply its
+bounds to $|x-\ell_n|$ and $x$, rather than incorrectly applying the
+previous ratio formula past its range. They give
+\begin{align*}
+ \frac{h(x-\ell_n)}{h(x)}
+ &\ge C_0\exp\!\left(\tfrac92(|x-\ell_n|-x)
+                   +\pi(e^{2x}-e^{2|x-\ell_n|})\right)\\
+ &\ge C_0e^{-9(a-b)/2}
+                \exp\!\left(\pi(1-e^{-2d_\theta})e^{2(a-3b)}\right).
+\end{align*}
+Also $w_n\ge(\log2)\theta^{-1/2}e^{-a}$. The same distinct selected
+inward edges and norm-one integration prove the claimed bound. The
+source kernel and the original-form upper budget are exactly as above,
+with fixed $b_\theta$ independent of $a$ and $n$.
+\end{proof}
+
+\paragraph{Truncations actually covered.}
+With every retained channel coefficient at most one and all other
+signed terms unchanged, the following shortcuts require unbounded error:
+(i) any fixed finite set of retained prime-power channels; (ii) any
+fixed finite set of retained primes, even retaining all of their powers;
+(iii) a uniformly bounded number of retained channels (or primes),
+although their labels may vary with the window; and (iv) a cutoff
+retaining only $n\le M(a)$ with $M(a)=o(e^{2a})$.
+For (iii), take more fixed prime powers (respectively primes) than the
+retained count: one is omitted, and all lie in the uniform range for
+large $a$. For (iv), if $M(a)\ge1$, the first power of $2$ exceeding
+$M(a)$ is at most $2M(a)$ and is eventually at most $\theta e^{2a}$;
+if $M(a)<1$, take $n=2$ instead. The same proof covers
+$\limsup M(a)e^{-2a}<1/2$ by choosing $\theta$ between twice that
+limsup and one. No prime-gap theorem is being used.
+
+A fixed coefficient loss in any of those omitted channels is covered.
+A loss tending sufficiently rapidly to zero is only subject to the
+necessary displayed rate; it is not excluded categorically. Merely
+saying ``finitely many channels at each window'' is insufficient:
+the full local sum itself is finite. A cutoff approaching the strict
+endpoint, compensating changes in the signed diagonal/pole, coefficients
+larger than one in other channels, and a different positive weight are
+not ruled out by these propositions.
+
+\paragraph{One specific surviving signed, cofinal next input.}
+This is a proposed \emph{open input on a restricted test family}, not
+a theorem and not a restatement of CAE on all tests. For fixed real even
+$\phi_1,\phi_2\in C_c^\infty(-b,b)$ as above, set
+\[
+ R_{jk}(u)=\int\phi_j(z+u)\phi_k(z)\,dz,\qquad
+ C_j=\int\cosh(x/2)\phi_j(x)\,dx,
+\]
+and consider the explicit real symmetric two-by-two matrix
+\[
+ E_{jk}(t)=e^t C_jC_k-
+       \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+                          R_{jk}(\log n-2t),\qquad t>2b.
+\]
+Only $e^{2t-2b}<n<e^{2t+2b}$ contribute. The candidate next lemma is
+\[
+ \sup_{t\ge t_0}\|E(t)\|_{\mathrm{op}}<\infty
+ \quad\text{for this specified pair of bumps.}
+\]
+This asks for a signed, smoothly weighted prime--continuum cancellation
+at cofinal multiplicative locations, not separate absolute estimates
+of Gaussian transformed channels.
+
+Its limited consequence is checkable. Let
+$D_{jk}=q(\phi_j,\phi_k)$ and
+$C_{jk}(t)=q(\phi_j(\cdot-t),\phi_k(\cdot+t))$ for the polarized
+physical form. For $a=t+2b$ the complete prime and pole formula gives
+\[
+ C_{jk}(t)=E_{jk}(t)+e^{-t}C_jC_k+A_{jk}(t),
+ \qquad A_{jk}(t)=O_b(e^{-t}),
+\]
+where the last term is the off-diagonal archimedean form. Indeed its
+kernel on disjoint supports is $-\rho(|x-y|)$, so the decay follows
+from $\rho(s)=O(e^{-s/2})$. The pole is
+$2C_jC_k\cosh t=(e^t+e^{-t})C_jC_k$; precisely one orientation of
+the prime shift connects the separated supports, giving the sum above
+without an extra factor two. The parity matrices are exactly
+$D+C(t)$ and $D-C(t)$, with all cross terms present. The candidate
+bound therefore supplies a uniform floor only on these two-dimensional
+parity spaces, including their actual-source-orthogonal even vectors.
+It does not cover arbitrary physical tests, does not establish CAE,
+and is not asserted to be weaker than RH or presently provable.
+
+
+\subsection*{A restricted prime-discrepancy input can already carry the full zero obstruction}
+\label{sec:ns43-bump-strength}
+The two-dimensional test family in the channel analysis is concrete,
+but its uniform discrepancy estimate must not be advertised as a
+weaker arithmetic foothold without checking its strength.
+
+\begin{proposition}[What bounded translated-bump discrepancy excludes]
+\label{prop:ns43-bump-strength}
+Let $\phi\in C_c^\infty(-b,b)$ be real and even, put
+\[
+ P(s)=\int e^{sx}\phi(x)\,dx,\qquad
+ R(v)=\int\phi(x+v)\phi(x)\,dx,\qquad C=P(1/2),
+\]
+and define
+\[
+ F(u)=e^{u/2}C^2-
+        \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}R(\log n-u).
+\]
+If $F$ is bounded for $u\ge u_0$, every nontrivial zero $\rho$ of
+$\zeta$ with $\Re\rho>1/2$ must obey $P(\rho-1/2)=0$.
+There are explicit nonnegative even smooth compactly supported probes
+$\phi$ for which all zeros of $P$ lie on the imaginary axis. For
+such a probe, the asserted boundedness would exclude every zero off
+the critical line. This is a conditional implication, not a proved
+bound for $F$ and not a new RH claim. For an arbitrary preassigned
+pair of bumps, the matrix input forces common transform zeros at
+any off-line zero; no conclusion without that qualification is asserted.
+\end{proposition}
+\begin{proof}
+The correlation is supported in $[-2b,2b]$ and satisfies
+$\int e^{sv}R(v)\,dv=P(s)^2$ by evenness. For $\Re s>1/2$,
+absolute convergence of the von Mangoldt Dirichlet series gives
+\begin{equation}\label{eq:ns43-bump-laplace}
+ \int_{u_0}^{\infty}e^{-su}F(u)\,du
+ =\frac{C^2}{s-1/2}+P(s)^2\frac{\zeta'}{\zeta}(s+1/2)+H(s),
+\end{equation}
+where
+\begin{align*}
+ H(s)={}&C^2\frac{e^{-(s-1/2)u_0}-1}{s-1/2}\\
+ &+\sum_{\log n\le u_0+2b}\frac{\Lambda(n)}{\sqrt n}
+       \int_{-\infty}^{u_0}e^{-su}R(\log n-u)\,du.
+\end{align*}
+This correction is entire: the quotient is removable and only
+finitely many compactly supported integrals occur. The usual
+identity $-\zeta'/\zeta(s)=\sum\Lambda(n)n^{-s}$ is used only in
+its half-plane of absolute convergence (\href{https://dlmf.nist.gov/27.4.E12}{DLMF 27.4.12}). The pole at $s=1/2$ in
+\eqref{eq:ns43-bump-laplace} cancels because $C=P(1/2)$.
+Boundedness of $F$ makes the left side holomorphic on $\Re s>0$.
+Uniqueness of meromorphic continuation therefore forces the residue
+at $s=\rho-1/2$ to vanish. That residue is
+$\operatorname{mult}(\rho)P(\rho-1/2)^2$, proving the first assertion.
+For a matrix of two bumps apply this argument to each diagonal;
+all off-line zeros must then be common zeros of their transforms.
+
+Here is a zero-independent choice of probe. Fix $0<B<b$ and set
+$b_k=B/(\zeta(2)k^2)$. Let $\mu$ be the distribution of
+$\sum_{k\ge1}U_k$, where the $U_k$ are independent uniform variables
+on $[-b_k,b_k]$. The sum converges absolutely since $\sum b_k=B$.
+Its measure is nonnegative, even, supported in $[-B,B]$, and has
+entire bilateral transform
+\[
+ P_0(s)=\prod_{k\ge1}\frac{\sinh(b_ks)}{b_ks}.
+\]
+The product converges uniformly on compact sets, since each factor
+is $1+O(b_k^2)$ there and $\sum b_k^2<\infty$. It is nonzero away
+from the zeros of its factors. Those zeros are exactly imaginary
+points $i\pi m/b_k$, $m\ne0$.
+For every integer $M>0$,
+\[
+ |P_0(i\xi)|\le
+ \left(\prod_{k=1}^M b_k^{-1}\right)|\xi|^{-M},
+\]
+since all remaining sinc factors have modulus at most one. Thus
+Fourier inversion gives a $C^\infty$ density supported in $[-B,B]$.
+It is nonnegative and nonzero because it is the density of $\mu$;
+normalizing it in $L^2$ does not change its transform zeros. This is
+the required $\phi\in C_c^\infty(-b,b)$. If an orthonormal pair is
+desired, take the second even smooth bump supported in
+$\{B<|x|<b\}$ and normalize it; disjoint supports give orthogonality.
+For the first probe no zero with $\Re(\rho-1/2)>0$ can be masked.
+The functional-equation symmetry supplies the corresponding exclusion
+on the other side of the critical line, conditional on the unproved
+boundedness of $F$.
+\end{proof}
+
+For the proposed matrix in the channel analysis, $F(u)=E_{11}(u/2)$
+for this first probe. Hence even this restricted uniform estimate can
+already contain the full off-line-zero obstruction. Nothing above
+proves that estimate or asserts the converse. The useful outcome of
+this check is a limit on the advertised strength of a proposed next
+lemma, not a new positivity argument.
+
+
+% NS-43 concentration subtask. Analytic working fragment, not a version claim.
+% All conclusions are explicitly scoped. No numerical or RH claim.
+\subsection*{Adaptive concentration: completeness is not an estimate (NS-43)}
+\label{ns43-conc-sec}
+
+\paragraph{Objects and source constraint.}
+Fix $a>0$. Let $\mathcal H_a=L^2(-a,a)$, let $\mathcal F_a$ mean
+zero extension followed by the unitary Fourier transform, and let
+$\beta_a$ be the exact complete symbol, including its endpoint and pole
+terms. Put $D_a=\| (\beta_a)_-\|_\infty$.
+Use either of the closed spaces
+\[
+ S_a^{\rm ev}=\{f\in L^2_{\rm ev}(-a,a):\langle f,u_a\rangle=0\},
+ \qquad S_a^{\rm odd}=L^2_{\rm odd}(-a,a),
+\]
+where $u_a$ is the actual normalized repaired source.
+In this subsection $S_a$ denotes one of these spaces and $P_{S_a}$
+its orthogonal projection. All operator lower bounds act on the
+\emph{whole} $S_a$, not on a head or on individual pencil directions.
+For an even Borel set $G$ put
+\[
+ C_{a,S}(G)=P_{S_a}\mathcal F_a^*1_G\mathcal F_aP_{S_a}|_{S_a}.
+\]
+The complete form is
+$q_a[f]=\int\beta_a|\mathcal F_af|^2$, with form domain given by
+$\int(\beta_a+D_a)|\mathcal F_af|^2<\infty$.
+
+\begin{proposition}[Exact adaptive hierarchy and the original lower edge]
+\label{ns43-conc-prop-adaptive}
+Suppose $\beta_a$ is continuous, even, bounded below, and tends to
+$+\infty$ at both frequency ends. Assume also that
+$S_a\cap\mathcal D(q_a)$ contains a nonzero vector.
+These hypotheses hold for the manuscript's fixed-window symbol:
+$\beta_a(\xi)=O_a(\log(2+|\xi|))$ puts every compactly supported
+smooth physical test in the form domain. In the even sector, a
+nonzero linear combination of two independent even smooth tests
+can satisfy the one source constraint; in the odd sector any
+nonzero odd smooth test suffices. For integers $n\ge1$ define
+\begin{align*}
+ \delta_n&=2^{-n},\qquad J_n=n2^n,\\
+ m_{a,n}(\xi)&=-D_a+
+ \delta_n\sum_{j=1}^{J_n}
+       1_{\{\beta_a(\xi)+D_a\ge j\delta_n\}}.
+\end{align*}
+These are finite step minorants with positive weights, and
+$m_{a,n}\uparrow\beta_a$ pointwise. Their exact compressed lower
+edges obey
+\begin{equation}\label{ns43-conc-eq-edge-limit}
+ \lambda_{a,n}:=\inf_{\substack{f\in S_a\\\|f\|=1}}
+   \int m_{a,n}|\mathcal F_af|^2
+ \ \uparrow\
+ \lambda_a:=\inf_{\substack{f\in S_a\cap\mathcal D(q_a)\\\|f\|=1}}
+   q_a[f].
+\end{equation}
+Consequently the following two existence statements on any prescribed
+cofinal family are equivalent:
+\begin{enumerate}[label=(\alph*)]
+\item the complete even source complement and complete odd sector
+have one common finite lower floor $-C$, independent of $a$;
+\item one may choose finite indices $n_{\rm ev}(a),n_{\rm odd}(a)$
+so that the corresponding exact signed concentration sums
+\[
+ -D_a I_{S_a}+\delta_n\sum_{j=1}^{J_n}
+ C_{a,S}\bigl(\{\beta_a+D_a\ge j\delta_n\}\bigr)
+\]
+have a common finite lower floor independent of $a$.
+\end{enumerate}
+More precisely, (a) yields a floor $-C-\varepsilon$ in (b) for any
+fixed $\varepsilon>0$; (b) yields its stated floor in (a).
+This equivalence supplies no effective choice of $n(a)$ and no
+arithmetic lower estimate for any of the sums.
+\end{proposition}
+\begin{proof}
+The formula is lower dyadic rounding of
+$\min(\beta_a+D_a,n)$, minus $D_a$. Refinement of the grid and
+increase of the cap prove monotonicity and pointwise convergence.
+Each $m_{a,n}$ is bounded. Thus its compressed form is a bounded
+self-adjoint operator, and $\lambda_{a,n}\le\lambda_a$.
+The numbers increase to some finite $\ell\le\lambda_a$; finiteness
+above follows by testing one fixed unit vector in
+$S_a\cap\mathcal D(q_a)$, and below by $-D_a$.
+
+Choose unit $f_n\in S_a$ with
+$\int m_{a,n}|\mathcal F_af_n|^2\le\lambda_{a,n}+1/n$.
+The integrals against $m_{a,n}+D_a$ are uniformly bounded by some
+$B<\infty$. Given $R\ge1$, choose $M_R$ with
+$\beta_a(\xi)+D_a\ge2R$ for $|\xi|>M_R$.
+For sufficiently large $n$, lower rounding gives
+$m_{a,n}+D_a\ge R$ there. Hence
+\[
+ \int_{|\xi|>M_R}|\mathcal F_af_n|^2\le B/R.
+\]
+Restriction of $\mathcal F_a$ to $[-M_R,M_R]$ is a compact map:
+its integral kernel has finite square integral on the product of
+the two bounded intervals. This fact and the uniform frequency-tail
+bound make $(\mathcal F_af_n)$, after discarding finitely many
+terms for each $R$, relatively compact in $L^2(\mathbb R)$.
+Take a strongly convergent subsequence. Its physical limit $f$ is
+in the closed space $S_a$ and has norm one.
+
+For each fixed $k$, boundedness of $m_{a,k}$ and monotonicity give
+\[
+ \int m_{a,k}|\mathcal F_af|^2
+ =\lim_n\int m_{a,k}|\mathcal F_af_n|^2\le\ell.
+\]
+Monotone convergence applied after adding $D_a$ gives
+$f\in\mathcal D(q_a)$ and $q_a[f]\le\ell$.
+Thus $\lambda_a\le\ell$, proving \eqref{ns43-conc-eq-edge-limit}.
+Choose the two finite indices separately at each window to within
+$\varepsilon$ of their limits. Conversely a pointwise minorant's
+operator lower bound transfers immediately to $q_a$.
+\end{proof}
+
+\paragraph{What this closes.}
+The proposal ``allow arbitrary adaptive levels and assert that their
+exact signed operator sums have a uniform lower floor'' is an
+equivalent restatement of the unknown complement-floor target.
+It is not a weaker arithmetic input. This closes only that claimed
+logical shortcut. It does not close a method that proves a specific
+operator comparison from additional arithmetic structure.
+The finite level count is allowed to grow without restriction here.
+Therefore the statement does not evade a proved obstruction by
+silently retaining bounded complexity.
+
+\begin{proposition}[All scalar set bounds can still lose the signed floor]
+\label{ns43-conc-prop-scalar}
+Even exact upper and lower concentration bounds for every measurable
+set do not in general determine the signed operator lower edge.
+This failure occurs already for commuting positive operator-valued
+measures with three outcomes, after an exact rank-one source has
+been removed.
+\end{proposition}
+\begin{proof}
+On $\mathbb C^3$ define two three-outcome positive operator-valued
+measures by making outcome operator $C_i$ diagonal, with its three
+diagonal entries the $i$th column of the following arrays:
+\[
+ A=\frac1{10}
+ \begin{pmatrix}0&7&3\\3&0&7\\7&3&0\end{pmatrix},
+ \qquad
+ B=\frac1{10}
+ \begin{pmatrix}7&0&3\\3&7&0\\0&3&7\end{pmatrix}.
+\]
+Each row sums to one, so in both models $\sum_iC_i=I$.
+For every singleton $E$, the exact lower and upper scalar bounds are
+$p(E)=0$, $c(E)=7/10$. For every two-element set they are
+$p(E)=3/10$, $c(E)=1$. Empty and full sets have their usual values.
+These list \emph{all} subsets; hence all scalar data coincide.
+
+For symbol values $b=(-1/2,1/2,3/2)$, the exact signed operators have
+diagonal entries
+\[
+ \sum_i b_i C_i^A=\operatorname{diag}(4/5,9/10,-1/5),
+ \qquad
+ \sum_i b_i C_i^B=\operatorname{diag}(1/10,1/5,6/5).
+\]
+Thus their bottoms are $-1/5$ and $1/10$ despite identical scalar
+concentration data for every set.
+
+The usual scalar certification rule cannot recover the positive
+bottom in model $B$, even after optimizing over all sets and weights.
+Indeed the probability vector $z=(7/10,3/10,0)$ satisfies every
+scalar constraint $p(E)\le z(E)\le c(E)$ in model $B$.
+For any pointwise minorant
+$\alpha+\sum_jw_j1_{G_j}\le b$ with $w_j\ge0$, one therefore has
+\[
+ \alpha+\sum_jw_jp(G_j)
+ \le\alpha+\sum_jw_jz(G_j)\le\sum_i b_i z_i=-1/5.
+\]
+This upper bound on the certifiable lower bound is attained by
+$b=-1/2+1_{\{2,3\}}+1_{\{3\}}$.
+Multiplying $b$ by any $t>0$ gives an exact best scalar lower bound
+$-t/5$, while the actual model-$B$ operator is at least $(t/10)I$.
+The scalar loss therefore diverges along $t\to\infty$ even though
+the true signed floor is nonnegative.
+
+To add an exact source, take an orthogonal direct sum with one unit
+vector $u$ and give the three outcome operators on that vector the
+values $(1/2,1/2,0)$. Their signed sum annihilates $u$ and has no
+cross terms with $u^\perp$. Compression off this same exact source
+returns the two arrays above. The countermodel is finite and
+nonarithmetic: it does not assert that either array arises from
+physical Paley--Wiener concentration or from the corrected zero field.
+\end{proof}
+
+\paragraph{Relation to the existing obstructions.}
+The negative-only and primitive scalar estimates discard signed
+physical information; v1.37 closes its stated pointwise and primitive
+uniform-budget proposals. The signed operators in
+Proposition~\ref{ns43-conc-prop-adaptive} retain the positive regions
+and all cross terms, so those scalar no-go proofs do not apply to them.
+This is a distinction in hypotheses, not a proof that their lower
+edges meet the target.
+
+The QG growth clause in Assumption~\ref{ass:v149-qg}, together with
+its \emph{separate} source-admissible unit packet satisfying the
+all-Borel domination and uniform upper energy assumptions, gives
+\[
+ \eta(m_a)\ge
+ [c_0\,\mathrm{QC}_{K(a)}(\widetilde m_a)-Q_*]_+.
+\]
+It obstructs a bounded level count under those two open inputs.
+For every fixed bound $K_0$, the cost diverges, so a successful
+bounded-loss family would have $K(a)\to\infty$.
+Neither QG alone, a finite-bin packet test, nor the conditional
+obstruction proves failure of unrestricted adaptive comparison.
+In particular there is no contradiction with
+Proposition~\ref{ns43-conc-prop-adaptive}: its indices are unrestricted
+and its existence is conditional on the original floor.
+
+The odd sector requires no source projection. In the even sector,
+the actual source must be removed before every concentration or
+packet comparison. For a raw unit $f$ with
+$r=|\langle f,u_a\rangle|<1$, its normalized projection $g$ obeys
+the already proved pointwise and energy estimates
+\[
+ |\mathcal F_ag(\xi)|\ge
+ \frac{[|\mathcal F_af(\xi)|-r|\mathcal F_au_a(\xi)|]_+}
+ {\sqrt{1-r^2}},\qquad
+ |(1-r^2)q_a[g]-q_a[f]|
+ \le(2r+r^2)\|\mathsf W_{e^a}u_a\|.
+\]
+Thus raw packet coverage or a raw pencil ratio cannot be substituted
+for the source-compressed hypotheses. The repaired-source residual
+is used only in the subsequent complement-to-full-floor transfer;
+it does not supply the missing signed comparison or packet coverage.
+
+\paragraph{Disposition and missing input.}
+The full signed concentration route remains open. The proposed
+unrestricted exact hierarchy is classified as an \emph{exact
+reformulation}; completeness of optimization from individual scalar
+set bounds is a \emph{proved-false general simplification}, with no
+arithmetic impossibility claim. A productive next input must estimate
+joint signed operators using actual arithmetic structure, with a
+cofinal uniform error on both complete parity obligations. No such
+estimate is proved here. QG is an obstruction-investigation input,
+not a positivity mechanism; CAE is already the same floor in another
+coordinate system. These statements add no numerical window, tail
+metric, certificate, G2 conclusion, or RH conclusion.
+
+
+% NS-43 analytic working note. No numerical computation or certificate.
+% Scope: additional complete-space inputs for CCM step (b).
+
+\subsection*{CCM selection requires a relative estimate, not another absolute residual}
+
+\paragraph{Status.}
+The fixed-window simple ground and its real-zero transform do not identify
+Riemann's $\Xi$. The known source limit and complete residual are useful
+prerequisites. The new input would be a cofinal \emph{complete spectral
+selection estimate}, with a rate compatible with the transform topology.
+The propositions below are conditional elementary functional analysis;
+none establishes the hypotheses for the arithmetic Weil family.
+
+Put $H=L^2(\mathbb R)$, $I_a=(-a,a)$ and let $J_a$ denote zero extension.
+Let $A_a$ be the complete lower-bounded self-adjoint even-sector operator
+on $L^2(I_a)$, with compact resolvent. If the global ground is used,
+its evenness and ordering below the odd sector must also be supplied.
+In the following selection lemmas assume the selected ground is simple,
+with unit vector $v_a$, eigenvalue $\mu_a$, and complete next-level
+separation $g_a>0$:
+\[
+ q_a[f]-\mu_a\|f\|^2\ge g_a\|f\|^2
+ \quad(f\in\mathcal D(q_a),\ f\perp v_a).
+\]
+This is an ordinary complete spectral separation, not an LDL pivot,
+finite-compression gap, or a source-complement estimate inferred from
+separate diagonal blocks.
+
+Let $h$ be the explicit positive Gaussian arithmetic radical of
+\eqref{eq:v150-weight}, and $\phi=h/\|h\|_2$. Use exactly the fixed
+boundary profile of \ref{prop:v135-growing-radical}: fix one smooth
+$\vartheta$ with $0\le\vartheta\le1$, $\vartheta(t)=1$ for $t\le-1$,
+and $\vartheta(t)=0$ for $t\ge-1/2$. For $a\ge2$ set
+$\chi_a(x)=\vartheta(|x|-a)$. This is smooth (it is constant near zero),
+even, supported in $I_a$, equal to one on $[-a+1,a-1]$, and has
+uniformly bounded derivatives of every fixed order. Define
+\[
+ p_a=\chi_a\phi/\|\chi_a\phi\|_2,\qquad
+ \alpha_a=q_a[p_a],\qquad E_a=\alpha_a-\mu_a\ge0.
+\]
+For large $a$, these vectors lie in the complete operator domain.
+The double-exponential tail from v1.35 implies, for every fixed $R\ge0$,
+\[
+ \int_{\mathbb R}e^{R|x|}|J_ap_a(x)-\phi(x)|\,dx\longrightarrow0.
+\]
+The vector $p_a$ is the normalized $j=0$ column of the growing block.
+Thus \ref{prop:v135-growing-radical}, specifically
+\eqref{eq:v135-block-residual}, gives the complete estimate
+\[
+ \|A_ap_a\|\le\varepsilon_a:=Ca\exp(-e^a/100),\qquad
+ |\alpha_a|\le\varepsilon_a,
+\]
+with constants for this fixed source and profile. No residual estimate
+is asserted for arbitrary cutoffs whose derivatives may grow with $a$.
+The cutoff $p_a$ here is explicit and is not silently identified with
+the different repaired prolate source $u_a$.
+
+\begin{proposition}[A complete relative selection estimate]
+\label{prop:ns43-ccm-rayleigh-selection}
+Choose the phase of $v_a$ so that $\langle p_a,v_a\rangle\ge0$.
+If $E_a/g_a\to0$, then $\|J_av_a-\phi\|_2\to0$.
+Define
+\[
+ C_R(a)=\begin{cases}
+ \sqrt{(e^{2Ra}-1)/(2\pi R)},&R>0,\\
+ \sqrt{a/\pi},&R=0.
+ \end{cases}
+\]
+If, in addition, for every fixed $R>0$,
+\[
+ C_R(a)\sqrt{E_a/g_a}\longrightarrow0,
+ \tag{S1}
+\]
+then the unitary Fourier transforms of $J_av_a$ converge locally
+uniformly on $\mathbb C$ to $\widehat\phi$.
+\end{proposition}
+\begin{proof}
+Write $p_a=\kappa_a v_a+e_a$, where $e_a\perp v_a$ and
+$\kappa_a\ge0$. The spectral projection preserves the form domain,
+and the cross term is exactly zero because $v_a$ is an eigenvector.
+Consequently
+\[
+ E_a=q_a[e_a]-\mu_a\|e_a\|^2\ge g_a\|e_a\|^2,
+ \quad \kappa_a^2=1-\|e_a\|^2,
+ \quad \|p_a-v_a\|^2=2(1-\kappa_a)\le2E_a/g_a.
+\]
+This proves the ordinary-norm conclusion. For $|\Im z|\le R$,
+Cauchy--Schwarz gives
+\[
+ |\widehat{J_a(v_a-p_a)}(z)|
+ \le (2\pi)^{-1/2}\left(\int_{-a}^a e^{2R|x|}\,dx\right)^{1/2}
+       \|v_a-p_a\|
+ \le C_R(a)\sqrt{2E_a/g_a}.
+\]
+The weighted cutoff convergence above controls
+$\widehat{J_ap_a}-\widehat\phi$ on the same strip. Combining the
+bounds proves the assertion. No compactness hypothesis is hidden:
+(S1) supplies a direct quantitative topology upgrade.
+\end{proof}
+
+\begin{proposition}[A residual-to-separator version]
+\label{prop:ns43-ccm-residual-selection}
+Let $p_a\in\mathcal D(A_a)$ be unit, put
+$\alpha_a=\langle A_ap_a,p_a\rangle$ and
+$\rho_a=\|(A_a-\alpha_a)p_a\|$. Suppose an independent complete
+second-eigenvalue lower bound $\beta_a>\alpha_a$ is established,
+with eigenvalues counted with multiplicity. Then the ground is simple and
+\[
+ \|v_a-p_a\|\le\frac{\sqrt2\,\rho_a}{\beta_a-\alpha_a}.
+\]
+Thus the cofinal condition
+\[
+ C_R(a)\frac{\rho_a}{\beta_a-\alpha_a}\longrightarrow0
+ \quad\text{for every fixed }R>0 \tag{S1r}
+\]
+selects the entire transform of the explicit cutoff radical.
+\end{proposition}
+\begin{proof}
+The variational upper bound is $\mu_a\le\alpha_a<\beta_a$, so
+exactly one eigenvalue lies below $\beta_a$ and it is simple.
+On its orthogonal complement the spectrum of $A_a-\alpha_a$ lies
+above $\beta_a-\alpha_a$. Spectral expansion gives
+$\rho_a^2\ge(\beta_a-\alpha_a)^2\|e_a\|^2$.
+The preceding phase/norm identity and Fourier estimate complete the proof.
+\end{proof}
+This formulation does not require a lower ground-energy estimate matching
+$\alpha_a$ to high relative precision. The missing arithmetic input is
+the complete cofinal separator at the correct relative scale. A finite
+matrix's second eigenvalue supplies no such lower bound without its full
+tail and coupling comparison. An even-sector separator still needs the
+separate odd ordering if the real-zero theorem requires the global ground.
+
+\paragraph{A weaker alternative to the evaluator rate.}
+Ordinary selection $E_a/g_a\to0$ also gives locally uniform entire
+convergence if the selected grounds satisfy the independently proved
+weighted tightness condition
+\[
+ \lim_{K\to\infty}\sup_a\int_{|x|>K}e^{R|x|}|J_av_a(x)|\,dx=0
+ \quad\text{for every }R>0. \tag{S2}
+\]
+Indeed the integral on $[-K,K]$ converges by ordinary $L^2$ convergence
+and Cauchy--Schwarz, while (S2) and the known tail of $\phi$ control
+the exterior. A sufficient explicit condition for (S2) is
+$\sup_a\int e^{2(R+1)|x|}|J_av_a|^2<\infty$ for each $R$.
+No such ground-tail statement follows from the current residual bound.
+
+\begin{proposition}[Complete evaluator-dual alternative]
+\label{prop:ns43-ccm-evaluator-selection}
+In the preceding setting suppose $E_a/g_a\to0$. Suppose further that,
+for every fixed $R>0$, a complete complement estimate is established:
+\[
+ \sup_{|z|\le R}|\widehat{J_ae}(z)|^2
+ \le D_{a,R}\bigl(q_a[e]-\mu_a\|e\|^2\bigr)
+ \quad(e\in\mathcal D(q_a),\ e\perp v_a),
+ \qquad D_{a,R}E_a\to0. \tag{S3}
+\]
+Then the same locally uniform entire convergence follows.
+\end{proposition}
+\begin{proof}
+For the orthogonal error above,
+$\widehat p_a=\kappa_a\widehat v_a+\widehat e_a$ and
+$\kappa_a\to1$. Thus, on the disk,
+\[
+ |\widehat v_a-\widehat p_a|
+ \le \kappa_a^{-1}\sqrt{D_{a,R}E_a}
+       +(\kappa_a^{-1}-1)|\widehat p_a|\to0.
+\]
+The explicit cutoff transforms are uniformly bounded on each disk
+and converge to $\widehat\phi$. This proves the assertion.
+\end{proof}
+The shift by $\mu_a$ and the complete complement in (S3) are part of
+its hypotheses. The fixed-window v1.43 evaluator comparison for one
+real zero is not a cofinal bound of this kind, nor a bound on every
+complex compact set. Its scalar resolution floor is not a no-go
+result for (S1)--(S3).
+
+\begin{proposition}[A source-relative block condition sufficient for selection]
+\label{prop:ns43-ccm-source-separation}
+Let $p_a\in\mathcal D(A_a)$ be unit, $P_a=|p_a\rangle\langle p_a|$,
+$Q_a=I-P_a$, $\alpha_a=\langle A_ap_a,p_a\rangle$, and
+$r_a=Q_aA_ap_a$. Suppose the \emph{complete compressed form} satisfies
+\[
+ q_a[f]\ge(\alpha_a+\delta_a)\|f\|^2
+ \quad(f\in\mathcal D(q_a)\cap p_a^\perp),\qquad \delta_a>0.
+ \tag{S4}
+\]
+Then $A_a$ has exactly one eigenvalue below $\alpha_a+\delta_a$,
+it is simple, and, for its phase-aligned ground $v_a$,
+\[
+ \alpha_a-\|r_a\|^2/\delta_a\le\mu_a\le\alpha_a,
+ \qquad \|v_a-p_a\|\le\sqrt2\,\|r_a\|/\delta_a.
+\]
+For the explicit cutoff source, the cofinal rate
+$C_R(a)\|r_a\|/\delta_a\to0$ for every $R>0$ therefore implies
+entire-transform selection.
+\end{proposition}
+\begin{proof}
+The restriction to $p_a^\perp$ is a closed lower-bounded form,
+because subtracting its component along the fixed operator-domain
+vector preserves the form domain continuously. The min--max principle
+places the second eigenvalue at least $\alpha_a+\delta_a$; the trial
+$p_a$ puts the lowest at most $\alpha_a$. For $f=tp_a+y$, $y\perp p_a$,
+\[
+ q_a[f]-\alpha_a\|f\|^2
+ =q_a[y]-\alpha_a\|y\|^2+2\Re(t\langle A_ap_a,y\rangle)
+ \ge\delta_a\|y\|^2-2|t|\|r_a\|\|y\|
+ \ge-\|r_a\|^2|t|^2/\delta_a.
+\]
+This handles the full cross term and proves the lower edge bound.
+Writing $v_a=tp_a+y$, the weak projected eigen-equation is
+$(Q_aA_aQ_a-\mu_a)y=-tr_a$. Its inverse has norm at most
+$1/(\alpha_a+\delta_a-\mu_a)\le1/\delta_a$, so
+$\|y\|\le|t|\|r_a\|/\delta_a$. Phase alignment then gives
+$\|v_a-p_a\|^2=2(1-|t|)\le2\|y\|^2$.
+\end{proof}
+Condition (S4) is a new, source-specific signed spectral estimate,
+not an algebraic reformulation of the bounded-floor target. It asks for information beyond a floor: it separates one named source
+from its whole complement and controls the relative error. No reverse
+implication from RH or from a uniform floor to (S4) is claimed. In this
+arithmetic family, with the known vanishing source residual, a successful
+cofinal condition of this strength gives a uniform floor in the sector
+where it is imposed. To use v1.36 one must impose it on the full space
+or separately control the odd sector by a uniform floor; those additional
+hypotheses would imply RH. Even-sector selection does not silently supply
+the odd estimate. It is not an unconditional shortcut.
+
+For clarity, the floor consequence itself needs no relative-rate
+condition: in the displayed cross-term formula,
+$2|t|\|y\|\le |t|^2+\|y\|^2$ and $\delta_a>0$ give
+\[
+ q_a[tp_a+y]\ge(\alpha_a-\|r_a\|)(|t|^2+\|y\|^2).
+\]
+Thus the known $\alpha_a\to0$ and $\|r_a\|\to0$ give the asserted
+sector floor from (S4) alone. The stronger relative-rate condition
+is needed for selection of the Gaussian profile and its transform,
+not for this floor deduction.
+
+The v1.35 even reflected near-radical block has dimension $J_a+1$,
+so eventually it contains a unit vector orthogonal to $p_a$. Its complete
+residual is at most $\varepsilon_a$, hence (S4) forces
+$\delta_a\le\varepsilon_a-\alpha_a\le\varepsilon_a+|\alpha_a|$.
+The explicit cutoff source also has $|\alpha_a|=O(\varepsilon_a)$.
+This rules out a uniform positive $\delta_a$ or a polynomial lower scale.
+A source-selecting separation must shrink and must still dominate the
+source error in the relative sense above. The existence of a growing
+near-zero block does not logically exclude such a hierarchy. Neither
+that hierarchy nor its required rate is in the archive.
+
+\paragraph{Identification of the limit.}
+By \eqref{eq:v150-mellin}, with
+$\Xi(z)=\xi(1/2+iz)$ and the even functional equation,
+\[
+ \widehat\phi(z)=\frac{2}{\sqrt{6\pi}\,\|h\|_2}\,\Xi(z).
+\]
+In particular $\widehat\phi(0)>0$. Once either selection criterion is
+proved, $\widehat v_a(0)\ne0$ eventually and
+\[
+ \frac{\widehat v_a(z)}{\widehat v_a(0)}
+ \longrightarrow\frac{\Xi(z)}{\Xi(0)}
+ \quad\text{locally uniformly on }\mathbb C.
+\]
+The scalar is fixed by the stated $L^2$ normalization and then by the
+value at zero; phase/scale and translations must not be left free.
+If the real-zero-ground-transform theorem's complete hypotheses hold
+cofinally as well, this convergence rules out a nonreal zero of $\Xi$:
+a small closed disk about such a zero, disjoint from the real axis and
+with zero-free boundary, would by uniform convergence and the argument
+principle eventually contain the same positive number of zeros of
+$\widehat v_a$, a contradiction. This is a conditional implication,
+not a new RH proof. Cofinal simplicity/evenness and applicability of
+that theorem are themselves additional to the single $\lambda=4$ result.
+
+\subsection*{An exact abstract nonselection model}
+
+The next construction tests precisely the proposed \emph{abstract}
+premises: complete compact-resolvent operators on increasing intervals;
+simple even nonnegative ground functions; entire ground transforms with only real
+zeros; monotone positive ground energies tending to zero; a fixed
+candidate with vanishing full residual; dense fixed tests with vanishing
+residual; ordinary strong-resolvent collapse; and even uniformly bounded
+support of the ground functions. It does \emph{not} impose the
+support-consistent arithmetic Weil form, the prime identities, the
+CvS distribution representation, or a positivity-improving semigroup.
+Its ground functions are nonnegative, not strictly positive on all of
+the increasing interval. It cannot disprove an arithmetic
+selection theorem using those additional structures.
+
+\begin{proposition}[Abstract nonselection despite fast absolute residuals]
+\label{prop:ns43-ccm-nonselection}
+There is a family satisfying all the abstract properties just listed,
+including uniformly tight ground supports and the explicit Gaussian
+cutoff candidate, whose phase-fixed normalized ground transforms have
+two different subsequential limits. The absolute residual rate can be
+made arbitrarily fast by a positive scalar rescaling.
+\end{proposition}
+\begin{proof}
+Let $b=1_{[-1/4,1/4]}$ and let $g_1=b*b*b*b/\|b*b*b*b\|_2$.
+Then $g_1$ is nonnegative and even, lies in $H^2(\mathbb R)$, and is
+supported in $[-1,1]$. Put $g_2(x)=2^{-1/2}g_1(x/2)$, supported in
+$[-2,2]$. Both are unit vectors, distinct and not scalar multiples.
+Their entire transforms are nonzero constants times
+$\operatorname{sinc}(z/4)^4$ and $\operatorname{sinc}(z/2)^4$,
+respectively, where $\operatorname{sinc}z=\sin z/z$. Every zero is real.
+Their normalized transforms have distinct zero sets.
+
+For integers $n\ge3$, let $D_n=-d^2/dx^2$ be the Dirichlet Laplacian
+on $H_n=L^2(-n,n)$, with domain $H^2(-n,n)\cap H_0^1(-n,n)$.
+Its unit first eigenvector is
+$h_n(x)=n^{-1/2}\cos(\pi x/(2n))$.
+Let $j(n)=1$ for even $n$ and $2$ for odd $n$. Define
+\[
+ w_n=\frac{h_n-g_{j(n)}}{\|h_n-g_{j(n)}\|},\qquad
+ U_n=I-2|w_n\rangle\langle w_n|,\qquad
+ A_n=n^{-1}U_n(I+D_n)U_n.
+\]
+The denominator is nonzero; its square is
+$2-2\langle h_n,g_{j(n)}\rangle\to2$.
+Thus $U_n$ is an even-parity-preserving unitary involution with
+$U_nh_n=g_{j(n)}$. Because $w_n\in\mathcal D(D_n)$, it preserves
+that domain. The complete $A_n$ is positive, self-adjoint with compact
+resolvent, and its simple even ground is exactly $g_{j(n)}$ with
+\[
+ \mu_n=\frac1n\left(1+\frac{\pi^2}{4n^2}\right)\downarrow0,
+ \qquad \lambda_{2,n}-\mu_n=\frac{3\pi^2}{4n^3}>0.
+\]
+All ground transforms have only real zeros, but the normalized ground
+functions and their normalized entire transforms alternate between two
+different limits. Positivity and a fixed positive phase do not repair this.
+
+For each fixed $f\in C_c^\infty(\mathbb R)$ and all sufficiently large
+$n$, $f\in\mathcal D(D_n)$. Moreover
+$\|(I+D_n)w_n\|$ is uniformly bounded: the $g_j$ have fixed finite
+$H^2$ norms, while $\|D_nh_n\|=\pi^2/(4n^2)$ and the denominators
+are bounded away from zero. Consequently
+\[
+ \|A_nf\|\le\frac1n\left(\|f-f''\|
+        +2\|f\|\,\|(I+D_n)w_n\|\right)\longrightarrow0.
+\]
+The same estimate holds for the fixed candidate $g_1$. It also holds
+uniformly for the explicit Gaussian cutoff candidate $p_n$ used above:
+its $H^2$ norms are uniformly bounded, its cutoff normalization stays
+away from zero, and $\|p_n\|=1$. Thus $\|A_np_n\|=O(1/n)$ while
+$p_n\to\phi$ in every exponentially weighted $L^1$ norm. Even the
+known explicit Gaussian candidate and its transform identity do not
+select the alternating grounds of this abstract operator family.
+Let $\widetilde A_n=A_n\oplus0$ on $L^2(\mathbb R)$ by zero extension.
+For every nonreal $z$ and every such fixed $f$,
+\[
+ \|(\widetilde A_n-z)^{-1}f+z^{-1}f\|
+ \le\frac{\|\widetilde A_nf\|}{|z||\Im z|}\to0.
+\]
+Density of $C_c^\infty$ and the uniform self-adjoint resolvent bound
+extend this to all of $H$. Thus the ordinary strong-resolvent limit
+is zero. This model meets every listed abstract premise, including
+weighted tightness of the grounds, yet supplies no unique selection.
+Its ground multiplicity is one at every $n$; the failure is not caused
+by a degenerate eigenspace at a fixed window.
+The scalar $1/n$ can be replaced throughout by any positive sequence
+$\theta_n\downarrow0$. The eigenvalues and residuals are rescaled,
+the ground functions are unchanged, and the residual estimate becomes
+$O(\theta_n)$. Thus even an arbitrarily prescribed rapid absolute
+residual rate cannot replace the missing relative estimate. This
+rescaling does not restore arithmetic support consistency.
+\end{proof}
+
+
+\paragraph{Ordinary norm is also the wrong transform topology by itself.}
+Even if a selection estimate gives $f_a\to\phi$ in $L^2$, locally
+uniform entire convergence still needs a rate or a tail condition.
+For any fixed $R>0$, add to the positive cutoff source a positive even
+unit bump supported near $\pm(a-1)$ with coefficient $e^{-Ra/2}$,
+and renormalize. The resulting compactly supported unit functions
+converge to $\phi$ in $L^2$, while their transforms at $iR$ grow like
+a positive constant times $e^{Ra/2}$. This is a separate topology
+counterexample; it does not claim the real-zero property or the
+arithmetic ground equation.
+
+\subsection*{A restriction on renormalized profile selection}
+
+A possible alternative is to renormalize the shrinking spectrum and
+prove a nonzero profile form with a unique selected direction.
+The ordinary zero-resolvent limit cannot provide this profile.
+\emph{Scope reset for this subsection only:} $q_a$ now denotes the
+\emph{full both-parity} physical Weil form on $L^2(I_a)$, not merely
+the even-sector form used for the preceding selection statements.
+Here $J_a$ is zero extension into the full $H=L^2(\mathbb R)$;
+$\alpha_a$ remains the Rayleigh value of the even cutoff $p_a$.
+Thus the use of all real translates and their density in full $H$
+is exactly the setting of \ref{lem:v136-total-radicals}.
+Here is a precise obstruction to choosing too coarse a scale.
+\begin{proposition}[A coarse rescaled liminf cannot select one radical]
+\label{prop:ns43-ccm-coarse-profile}
+Let $s_a>0$ and suppose
+\[
+ \varepsilon_a/s_a\to0,\quad |\alpha_a|/s_a\to0,
+ \qquad \varepsilon_a=Ca e^{-e^a/100},
+\]
+where each fixed finite translate combination may have its own constant
+$C$, as in v1.35--v1.36. Suppose a nonnegative lower-semicontinuous
+quadratic form $\mathcal E$ on $H$ satisfies the proposed strong
+liminf inequality
+\[
+ \mathcal E(f)\le\liminf_a
+ \frac{q_a[f_a]-\alpha_a\|f_a\|^2}{s_a}
+ \quad\text{whenever }J_af_a\to f.
+ \tag{S5}
+\]
+Then $\mathcal E\equiv0$ on $H$.
+\end{proposition}
+\begin{proof}
+For every fixed $f$ in the dense translated-radical span, insert its
+smooth cutoff $f_a$. The complete residual implies the right side is
+zero, so $\mathcal E(f)=0$. Lower semicontinuity and density then imply
+$\mathcal E\equiv0$ on $H$. Therefore no such coarse rescaled limit
+can have one-dimensional kernel $\mathbb C\phi$.
+\end{proof}
+This is a scoped implication about (S5), not a prohibition on finer
+scales, different compactness mechanisms, or arithmetic ground selection.
+
+Finally, in the actual support-consistent Weil family, write
+$\mu_a^{\mathrm{full}}=\inf\sigma(\mathsf W_{e^a})
+=\min(\mu_a^{\mathrm{even}},\mu_a^{\mathrm{odd}})$ on the full
+$L^2(I_a)$. A uniform lower bound on this \emph{complete, both-parity}
+ground energy is already the bounded-floor
+target of v1.36, and $\mu_a^{\mathrm{full}}\to0$ is equivalent to
+full both-parity positivity
+via monotonicity and the known source upper bound. Those must not be
+rebranded as weak new selection assumptions. Neither conclusion alone
+has been shown here to identify the Gaussian ground profile. The
+abstract countermodel establishes no arithmetic nonimplication.
+

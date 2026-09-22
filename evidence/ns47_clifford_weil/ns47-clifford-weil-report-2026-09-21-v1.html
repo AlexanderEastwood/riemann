@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NS-47 — Geometric representation of the Weil form</title></head>
+<body style="margin:0;background:#f3f5f7;color:#202a35;font-family:Georgia,serif;line-height:1.6;">
+<main style="max-width:680px;margin:36px auto;padding:38px 34px;background:#fff;border-top:5px solid #214c64;">
+<p style="margin:0 0 10px;color:#547184;font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.3px;">RIEMANN RESEARCH RECORD · NS-47 · 21 SEPTEMBER 2026 · VERSION 1</p>
+<h1 style="font-size:31px;line-height:1.2;margin:0 0 24px;font-weight:normal;">An exact geometric representation.<br>A uniform bound still missing.</h1>
+<p style="font-size:19px;"><strong>The complete Weil form has an explicit Clifford representation, but this construction does not yet yield a lower bound uniform across growing windows.</strong> The work proves a precise obstruction to obtaining that bound from one global ordinary-closable Dirac square.</p>
+<p>This is an analytic research checkpoint. No new window, tail metric or numerical certificate was computed. G2 and RH remain open. The task remains open at the uniform-bound objective.</p>
+
+<h2 style="font-size:22px;margin-top:30px;font-weight:normal;">What was constructed</h2>
+<p>Using the positive arithmetic weight already proved in v1.50, define <em>D</em> to collect every continuous and prime-shift squared difference. Define <em>N</em> to collect the centered variance and the negative odd-sector pole. On every compact smooth test, the exact identity is</p>
+<p style="padding:16px;background:#edf3f6;text-align:center;font-size:22px;">q[f] = ‖Df‖² − ‖Nf‖².</p>
+<p>The proof gives an explicit Cl(1,1) module for this signed pairing and a self-adjoint graded Dirac operator for the positive edge energy. Its square represents that positive energy; the negative channel remains part of the complete Weil form. The coefficient space is infinite dimensional.</p>
+<p>All exterior edges remain in the representation. Even tests retain their actual source constraint. Odd tests retain their negative pole. The centering in the variance is not substituted for source orthogonality.</p>
+
+<h2 style="font-size:22px;margin-top:30px;font-weight:normal;">The precise missing estimate</h2>
+<p>The target becomes one inequality, with the same finite constant <em>C</em> for the growing windows:</p>
+<p style="padding:16px;background:#edf3f6;text-align:center;font-size:21px;">‖Nf‖² ≤ ‖Df‖² + C‖f‖².</p>
+<p>Equivalently, the negative channel must factor through <span style="white-space:nowrap;">(Df, √C f)</span> by a contraction. This equivalence is proved, but the required contraction is not constructed. It is exactly the existing critical arithmetic energy comparison (CAE) in new coordinates.</p>
+<p>The negative channel itself is unbounded as the window grows: the archived v1.50 admissible tests give ‖N<sub>a</sub>‖² ≥ [κ exp(γλ²) − B<sub>a</sub>]<sub>+</sub>, with explicit κ, γ &gt; 0 and B<sub>a</sub> = O(λ log λ). The same tests exclude a uniform strict contraction factor below one. Local contraction norms may be below one, but their deficits must vanish at the displayed rate. The remaining problem is the exact cancellation, not a separate bound on the negative channel.</p>
+
+<h2 style="font-size:22px;margin-top:30px;font-weight:normal;">What had to change</h2>
+<p><strong>A single global positive square plus a bounded remainder is unavailable if the square factor is closable in ordinary L².</strong> More precisely, no Hilbert-valued linear map <em>T</em>, closable on the compact smooth core, and bounded self-adjoint <em>B</em> satisfy</p>
+<p style="padding:16px;background:#f6f2eb;text-align:center;font-size:21px;">q[f] = ‖Tf‖² + ⟨Bf, f⟩.</p>
+<p>The argument uses the already proved dense family of cutoff radicals. For each vector in that dense span, compact approximants converge in ordinary norm while their complete Weil energy tends to zero. A bounded remainder therefore bounds the images under <em>T</em>. Weak closure of the graph and density force <em>T</em> to be bounded on the whole ordinary space. The proposed identity would then bound q above. But normalized cosine and sine modulations on a single fixed compact support have q[f<sub>R</sub>] = log R + O(1), a contradiction.</p>
+<p>The proof works separately in both complete parity spaces. A weaker one-sided comparison, q[f] ≥ ‖Tf‖² − C‖f‖², also forces any ordinary-closable <em>T</em> to be bounded, with norm at most √C. Thus an unbounded global Dirac factor cannot provide even this lower comparison.</p>
+<p>This is a failure of the specified construction, <strong>not a negative Weil direction or a disproof of the lower bound</strong>. Fixed-window factors, families that do not combine into one global ordinary-closable factor, and different metric completions are outside the obstruction. They still require the uniform estimate and an explicit transfer to the ordinary norm. A successful full global contraction factor would necessarily give a positive square that is nonclosable in ordinary L².</p>
+
+<h2 style="font-size:22px;margin-top:30px;font-weight:normal;">Claim classification and review</h2>
+<table style="width:100%;border-collapse:collapse;font-size:14px;">
+<thead><tr><th style="text-align:left;padding:9px;border-bottom:2px solid #c6d3db;">Statement</th><th style="text-align:left;padding:9px;border-bottom:2px solid #c6d3db;">Category</th></tr></thead>
+<tbody>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Signed Clifford lift and coefficients</td><td style="padding:9px;border-bottom:1px solid #ddd;">Exact identity</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Closed positive edge operator; contraction equivalence</td><td style="padding:9px;border-bottom:1px solid #ddd;">Proved implication</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Ordinary closable-square obstruction, under archived dense-radical hypotheses</td><td style="padding:9px;border-bottom:1px solid #ddd;">Proved implication</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Uniform critical Clifford domination / CAE</td><td style="padding:9px;border-bottom:1px solid #ddd;">Open input</td></tr>
+</tbody></table>
+<p>An independent assisting-agent review found no MAJOR issues. Two MINOR issues were repaired: the maximal edge domain now has a direct identification with the fixed-window logarithmic form domain, and the statement distinguishes global norm one from local contraction norms approaching one. The additive/subtracted remainder sign was also made explicit. This is internal mathematical review, not external refereeing.</p>
+
+<h2 style="font-size:22px;margin-top:30px;font-weight:normal;">Validation and repository state</h2>
+<p>The unchanged integration-base manuscript builds to <strong>265 pages</strong>. The isolated manuscript with the NS-47 fragment builds to <strong>270 pages</strong>, with <strong>0 undefined references and 0 duplicate references</strong>. Seven exact symbolic algebra checks pass. The compiled proof pages were visually inspected. The algebra checks verify identities only; they do not certify the missing estimate.</p>
+<p>The work is on <code style="font-size:13px;">codex/ns47-clifford-weil</code>, based on <code style="font-size:13px;">24f4ab5</code>, with separate ownership claim <code style="font-size:13px;">9608ca4</code>. The proof is retained as a standalone evidence fragment pending coordinated integration. No new manuscript version or release is assigned here, and the shared live manuscript is unchanged.</p>
+<p><a href="representation.tex" style="color:#215574;">Full proof fragment</a> · <a href="validation.txt" style="color:#215574;">Build record</a> · <a href="review-2026-09-21-v1.html" style="color:#215574;">Independent review</a></p>
+
+<h2 style="font-size:22px;margin-top:30px;font-weight:normal;">References and next viable work</h2>
+<p>The block operator is a standard construction; see <a href="https://doi.org/10.1007/s11785-021-01090-x" style="color:#215574;">Holzmann (2021), Appendix A, Proposition A.1</a>. The range-contraction argument is the elementary mechanism behind <a href="https://doi.org/10.1090/S0002-9939-1966-0203464-1" style="color:#215574;">Douglas (1966)</a>. The arithmetic identity, source-admissible tests, and dense cutoff radicals come from the repository’s v1.50 and v1.36 proofs. No worldwide novelty is claimed for the general operator constructions.</p>
+<p>The next viable attempt must work at the critical coefficient: construct a window-dependent or globally nonclosable cancellation factor and prove its ordinary error is uniformly bounded. Repackaging the same signed identity, or proving that the positive edge block is self-adjoint, is insufficient. This checkpoint narrows the allowable construction; it does not settle the arithmetic estimate.</p>
+<p style="margin-top:28px;padding-top:16px;border-top:1px solid #c6d3db;color:#526371;">G2 and RH remain open.</p>
+</main></body></html>

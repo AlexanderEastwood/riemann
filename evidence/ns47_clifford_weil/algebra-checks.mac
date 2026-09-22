@@ -1,0 +1,20 @@
+/* Exact algebra checks only. No window, numerical gate, or RH assumption. */
+display2d:false$
+ep:matrix([1,0],[0,-1])$
+em:matrix([0,1],[-1,0])$
+id2:ident(2)$
+zero2:zeromatrix(2,2)$
+checks:[is(ep.ep=id2),is(em.em=-id2),is(ep.em+em.ep=zero2),
+        is(transpose(ep)=ep)]$
+/* Picone's real two-point identity; complex case follows on real/imag parts. */
+picone:expand((hx*gx-hy*gy)^2-hx*hy*(gx-gy)^2
+             -(hx-hy)*(hx*gx^2-hy*gy^2))$
+checks:endcons(is(picone=0),checks)$
+/* I_h^2=1/3 gives the variance coefficient 2/3. */
+checks:endcons(is(ratsimp(2*(1/sqrt(3))^2-2/3)=0),checks)$
+/* Shifted energy and the contraction deficit. */
+checks:endcons(is(expand((d-n)+c-(d+c-n))=0),checks)$
+print("Exact checks:",checks)$
+if not every(identity,checks) then error("An exact algebra check failed")$
+print("PASS: all 7 exact checks; this is not a numerical certificate.")$
+quit();

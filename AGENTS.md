@@ -73,6 +73,25 @@ both unarchived evidence groups; recovery remains open, while the five v1.35
 scientific originals are present and hash-matched. NS-41/42 are separate diagnostics,
 not bounds. G2 and RH remain open.
 
+Version 1.52 adds fresh 320/448-bit certificates for the existing
+lambda=5 stipulated 1e-8D tail comparison and N=25 dyadic norm comparison.
+Both comparisons fail in both parities; the tail witness Weil energies are
+positive. Historical original recovery remains OPEN. NS-43 extends scoped
+prime-channel-loss closures, proves exact adaptive concentration equivalent
+to the complement-floor target, and specifies complete CCM relative-selection
+and entire-transform inputs. Abstract nonselection is not arithmetic
+nonselection. Only scoped comparison/inference nodes close; CCM step (b)
+remains sole gold, circle open. No new window, tail metric, G2 or RH claim.
+
+Version 1.53 (NS-46 with Astra-2) uses closely spaced radical
+translates in a fixed interval. A finite Gram interpolation bound and complete
+cutoff residual give rank ~lambda²/(20000 log lambda), residual at most
+C exp(-lambda²/2000), and exact parity counts. A uniform or polynomial positive gap after
+removing o(lambda²/log lambda) directions is excluded. Constants and the
+starting threshold are analytic, not finite numerical certificates. The
+complete complementary signed floor remains open; gap-free transfer was
+already in v1.18/v1.36. No new window, tail metric, G2 or RH claim.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

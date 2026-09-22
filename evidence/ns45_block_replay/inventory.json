@@ -1,0 +1,19 @@
+{
+  "classification": "integrity inventory, not a separate mathematical gate",
+  "python": "3.14.6",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "python-flint": "0.9.0"
+  },
+  "artifact_sha256": {
+    "README.md": "24ba8dc6e1cc25f4a656e417d3b579230447a4233e75c9223ce84099d3094b76",
+    "block-comparison-replay-2026-09-22-v1.html": "686f8dcc15bbeb8a6fdd7ca78ff35d1f16a2e7f43ca266b35be66c53be99b362",
+    "certificate.json": "ee9b6a526ec79a6501f426957e847940d7052f0da39bb8c86690b7237aa19114",
+    "pyright-output.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+    "replay-output.txt": "c1fb4c741c897904a99544b83ff8d2e4db6bdbb22a877053f1afcd9e905214b2",
+    "replay.py": "77aa0b462347380193594473504e0c299fe036ab813a7e4c1690f4300527435e",
+    "verification-output.txt": "be6766b0f091b487ae39d8c2bd565e6c6c258e624c8fa172a4654dd09156406e",
+    "witnesses.json": "2a8725849e1cb8b363bd0d79bdb07b1d0b17b22a856f0fdd01fb72145a1e1a64"
+  }
+}
