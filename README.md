@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.53 (local draft)**.
+Alexander Eastwood's complete working manuscript, **v1.53**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -241,7 +241,7 @@ graph LR
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
 
-## New in v1.53 (local draft)
+## New in v1.53
 
 [NS-46, jointly with Astra-2](evidence/v153/), proves a larger complete near-zero
 block: dimension asymptotic to **lambda²/(20000 log lambda)** and full operator
@@ -256,8 +256,8 @@ sign and gives no certified finite starting window. The gap-free uniform-floor
 route remains open. No new numerical window, tail metric, G2 or RH claim.
 
 [Assessment, proof and review scope](evidence/v153/ns46-fine-block-2026-09-22-v1.html).
-This local draft is based on [PR #21](https://github.com/AlexanderEastwood/riemann/pull/21),
-which is open and based on PR #20. It is not pushed, merged or tagged.
+The joint result is reviewed in [PR #24](https://github.com/AlexanderEastwood/riemann/pull/24)
+and builds on the merged v1.52. Archived reports retain their prepublication checkpoint status.
 
 ## New in v1.52 (PR #21)
 
@@ -278,7 +278,7 @@ shortcuts close only under their stated hypotheses. CCM step (b) stays the sole
 gold node; the circle lane remains open. No G2 or RH result.
 
 [Route assessment and scope](evidence/v152/ns43-route-assessment-2026-09-22-v1.html).
-That reviewed snapshot is published in PR #21, based on PR #20; neither is merged or tagged.
+The v1.52 change is reviewed in PR #21 and builds on the merged v1.51 work in PR #20. Archived reports retain their prepublication checkpoint status.
 
 ## New in v1.51
 

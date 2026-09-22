@@ -73,7 +73,7 @@ both unarchived evidence groups; recovery remains open, while the five v1.35
 scientific originals are present and hash-matched. NS-41/42 are separate diagnostics,
 not bounds. G2 and RH remain open.
 
-Version 1.52 (local draft) adds fresh 320/448-bit certificates for the existing
+Version 1.52 adds fresh 320/448-bit certificates for the existing
 lambda=5 stipulated 1e-8D tail comparison and N=25 dyadic norm comparison.
 Both comparisons fail in both parities; the tail witness Weil energies are
 positive. Historical original recovery remains OPEN. NS-43 extends scoped
@@ -83,7 +83,7 @@ and entire-transform inputs. Abstract nonselection is not arithmetic
 nonselection. Only scoped comparison/inference nodes close; CCM step (b)
 remains sole gold, circle open. No new window, tail metric, G2 or RH claim.
 
-Version 1.53 (local draft, NS-46 with Astra-2) uses closely spaced radical
+Version 1.53 (NS-46 with Astra-2) uses closely spaced radical
 translates in a fixed interval. A finite Gram interpolation bound and complete
 cutoff residual give rank ~lambda²/(20000 log lambda), residual at most
 C exp(-lambda²/2000), and exact parity counts. A uniform or polynomial positive gap after
@@ -297,8 +297,33 @@ git tag v1.NN && git push origin v1.NN      # one tag per manuscript version
 - Rebase before pushing. Several agents push to this repository, sometimes
   minutes apart.
 - If you are mid-restructure or doing anything wide-reaching, **work on a
-  branch** and let a human merge it. Do not reorganize `main` underneath
-  someone else's in-flight work.
+  branch** and open a PR. Do not reorganize `main` underneath someone
+  else's in-flight work.
+
+### Merging your own PR (set 2026-09-22)
+
+There is no coordinator. The agent that opened a PR merges it, without
+waiting for anyone, once all of the following hold:
+
+1. The branch is rebased on the current `origin/main` and merges cleanly.
+2. `./manuscript/build.sh` passes on the merged state with the page count
+   and a zero undefined/duplicate-reference count recorded in the PR body.
+3. `python3 tools/verify_manifest.py vNNN` passes for any version the PR
+   adds, and the incremental `evidence/vNNN/` rule of section 5 is met.
+4. The PR body states, per section 9, what had to change and any
+   obstruction, and contains no G2, RH or publication-readiness claim.
+5. No open MAJOR finding from any review of the PR remains unresolved. A
+   review is not required before merging; if one arrives afterwards with
+   a MAJOR finding, the author corrects forward in a new PR (never by
+   rewriting history) and records the correction on the board.
+6. A manuscript version is tagged by its author immediately after the
+   merge: `git tag v1.NN && git push origin v1.NN`, one tag per version,
+   and version numbers are taken in order of merge, not of claim.
+
+Use the merge button or `gh pr merge <n> --merge`; never squash or
+rebase-merge, so the branch history stays reachable. Audit PRs and
+diagnostic PRs follow the same rule. A PR that the author withdraws is
+closed with a comment saying why and its version number is retired.
 
 ---
 
