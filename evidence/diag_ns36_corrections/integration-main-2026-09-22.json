@@ -1,0 +1,11 @@
+{
+  "classification": "branch integration check; no new measurement or certificate",
+  "merged_main": "a0e916a426420e3c5abab7651696e52a865c93de",
+  "preserved_circle_note": "measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained",
+  "only_live_node": "stepb",
+  "actual_build_pages": 246,
+  "undefined_or_duplicate_references": 0,
+  "overfull_boxes": 0,
+  "manifest_v150": "6/6",
+  "prior_report": "circle-lane-current-reading-2026-09-22-v1.html preserved; original measurements unchanged"
+}

@@ -198,7 +198,7 @@
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "Valid sufficient criterion (prop:v131). Blocked on the named open inputs of v1.46-v1.49 (QG: exact K-level quantization growth of the symbol's level distribution; an admissible bounded-energy packet with the weighted level hypothesis), not on any diagnostic: the NS-22 finite-head losses are restricted-family upper bounds and its tail charge was not a global minorant (NS-31). Not proved closed.",
+      "note": "Valid sufficient criterion (prop:v131); a cofinal uniform finite concentration floor remains unproved. Separately, QG plus an admissible bounded-energy weighted packet would obstruct bounded level complexity; these are open inputs for that proposed no-go, not a positivity mechanism. NS-22 grid-family losses and its invalid sampled tail charge prove no closure (NS-31/36).",
       "evidence": "evidence/v146"
     },
     {
@@ -411,7 +411,7 @@
       "prop": "prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg",
       "branch": "codex/weighted-level-review",
       "evidence": "evidence/v149",
-      "note": "NS-32/33: PR14 held for major findings. Exact density is unbounded at negative critical values; histogram peak is not a cap. Weighted QC_K bound survives. QC_1 growth alone is insufficient; fixed-K exact-cost growth plus admissible bounded-energy WLH remain open. No closed physical route or G2/RH claim."
+      "note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim."
     },
     {
       "id": "capacityweight",
