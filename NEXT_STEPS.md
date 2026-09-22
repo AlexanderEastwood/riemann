@@ -66,6 +66,8 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 | NS-38 | Resolve archival overclaims for the two NS-1 evidence groups: recover originals or explicitly mark every unsupported archival assertion and update evidence/MISSING.md | Codex (Astra Main) | completed by disclosure (no version bump) | Both NS-1 groups explicitly NOT ARCHIVED at affected manuscript claims and evidence/MISSING.md; original recovery remains OPEN. V1.29/v1.30 companion gaps also disclosed; five v1.35 scientific files verified present against legacy hashes. No original numerical gate replayed. |
 | NS-39 | Express CAE through the corrected zero field and compare fixed-window/cofinal ZLD, QG and CAE with every hypothesis explicit | Codex (Astra Main) | claimed | v1.51 proposition gives the exact coordinate translation and justified implications or precise missing inputs; distinguish a bounded-floor reformulation from new arithmetic content; no unsupported nonimplication, G2 or RH claim. |
 
+| NS-41 | Odd-sector weighted-bin feasibility at c'=1 on existing windows lambda=3,4,6,8; save every constraint slack and recheck fixed-witness energies at high precision | Codex (NS-41 measurement) | claimed | Diagnostic finite-head/grid primal witnesses and separately labelled dual values; no source constraint in odd parity, no all-Borel/cofinal or certified claim; evidence/diag_ns41_odd_feasibility/. |
+
 ## Lanes
 
 ```
