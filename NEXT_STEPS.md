@@ -69,6 +69,8 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 
 | NS-41 | Odd-sector weighted-bin feasibility at c'=1 on existing windows lambda=3,4,6,8; save every constraint slack and recheck fixed-witness energies at high precision | Codex (NS-41 measurement) | done (diagnostic 2026-09-22; no version bump) | Four fixed pure odd N=256 witnesses pass all 20 weighted bins on original/refined grids; selected energies 4.2549055e-9, 1.5286030e-18, 2.0533131e-3, 5.7198372e-5, not minima. All primal/dual-eigenvector slacks printed separately; 80/120-digit fixed-energy replays and independent direct-transform checks. Odd parity needs no even-source projection. evidence/diag_ns41_odd_feasibility/; build 246 pages, 0 undefined/duplicate. No certificate, all-Borel/cofinal, G2 or RH claim. |
 
+| NS-43 | Prioritize remaining complete-space routes and prove or delimit specific blocked-node closures: capacity comparison, CCM ground selection and source-sensitive concentration | Codex Astra Main with assisting agents | claimed | Concrete analytic next-step attempt, independently reviewed; close only precisely proved subroutes, distinguish missing evidence from no-go results, no estimated probability of solving RH, new window or tail metric. |
+
 ## Lanes
 
 ```
