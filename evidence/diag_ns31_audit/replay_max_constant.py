@@ -31,7 +31,8 @@ def run(lam: int) -> dict[str,Any]:
             print(lam,it,lower,upper,flush=True)
         if gap<1e-6 or (upper<.5 and lower>.49) or it==499:
             return {'lambda':lam,'lower':lower,'upper':upper,'dual_y':y.tolist(),
-                'mixture_weights':lp.x[:-1].tolist(),'mixture_vectors':dic.T.tolist(),
+                'dictionary_size':nd, 'mixture_weights':lp.x[:-1][lp.x[:-1]>0].tolist(),
+                'mixture_vectors':dic[:,lp.x[:-1]>0].T.tolist(),
                 'constraint_slack':(md@lp.x[:-1]-lower).tolist(),'iterations':it}
         dic=np.column_stack([dic,v]); md=np.column_stack([md,np.array([v@M@v for M in Ms])])
     return {'lambda':lam,'lower':lower,'upper':upper,'dual_y':y.tolist(),'iterations':it}

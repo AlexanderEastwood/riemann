@@ -1,6 +1,6 @@
 DIAGNOSTIC, NOT A CERTIFICATE. NS-31 adversarial audit replays.
 
-The delivered report is [the versioned HTML audit](../../audits/circle-symbol-lane-2026-09-22-v1.html).
+The delivered report is [the versioned HTML audit](../../audits/circle-symbol-lane-2026-09-22-v2.html).
 This directory contains numerical illustrations used to audit definitions and claims.
 No interval certificate, complete-space positivity, G2 or RH claim is made.
 
