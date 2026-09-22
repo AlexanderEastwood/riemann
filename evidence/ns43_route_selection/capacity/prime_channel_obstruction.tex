@@ -1,0 +1,233 @@
+% NS-43 working proof fragment. Exact identities and proved implications only.
+% Not a manuscript/version change. No numerical certificate is asserted.
+
+\paragraph{Notation and the comparison being ruled out.}
+Write $C_0=(2\pi-3)/(4\pi)$ and retain the unnormalized Gaussian weight
+$h$ of \eqref{eq:v150-weight}. For a prime power $n=p^k\ge2$, put
+$\ell_n=\log n$, $w_n=\Lambda(n)/\sqrt n$, and
+\[
+ J^{(n)}_{a,h}[g]
+ =w_n\int_{-a}^{a-\ell_n}h(x)h(x+\ell_n)
+                 |g(x+\ell_n)-g(x)|^2\,dx
+\]
+when $\ell_n<2a$, and set it to zero otherwise. The global channel
+$J^{(n)}_h$ has the same integral over $\mathbb R$. With $g=f/h$ on
+$I_a$ and zero outside, $J^{(n)}_h\ge J^{(n)}_{a,h}$.
+
+For $0\le\varepsilon_{n,a}\le1$, a coefficientwise loss is
+$L_a[g]=\sum_n\varepsilon_{n,a}J^{(n)}_h[g]$ in the global comparison,
+or the corresponding sum of interior channels in the local comparison.
+Any additional discarded nonnegative energy can be included in $L_a$.
+The two comparisons at issue are, respectively,
+\begin{align*}
+ J_h[g]-L_a[g]&\ge\tfrac23\operatorname{Var}_\nu(g)
+       +2|\langle f,s\rangle|^2-\eta_a\|f\|^2,\\
+ \int(r_a)_-|f|^2&\le J_{a,h}[g]-L_a[g]+\Pi[f]
+                                  +\eta_a\|f\|^2.
+\end{align*}
+They require, respectively, $q_a[f]-L_a[g]\ge-\eta_a\|f\|^2$
+and $q_a[f]-\int(r_a)_+|f|^2-L_a[g]\ge-\eta_a\|f\|^2$.
+Thus both imply $\eta_a\ge L_a[g]-q_a[f]$ on every admissible unit test.
+No compensating change in the potential, variance, pole or retained
+coefficients is part of this statement.
+
+\begin{proposition}[Every fixed nonzero prime-power channel has a critical coefficient]
+\label{prop:ns43-fixed-channel}
+Fix a prime power $n\ge2$, let $b=(\log2)/16$, and put
+\[
+ \kappa_n=C_0\Lambda(n)n^{-5},\qquad
+ \gamma_n=\pi(1-n^{-2})e^{-6b}.
+\]
+Choose two fixed real even orthonormal functions
+$\phi_1,\phi_2\in C_c^\infty(-b,b)$, and define
+\[
+ A_b=2\sum_{j=1}^2\int_{\mathbb R}
+    |\Re\psi(1/4+i\xi/2)-\log\pi|\,|\widehat\phi_j(\xi)|^2\,d\xi,
+ \qquad B_{a,b}=A_b+(8a+1)e^a+2a.
+\]
+For every sufficiently large $a$, each of the even actual-source
+complement and the odd sector contains a unit smooth test satisfying
+\[
+ J^{(n)}_{a,h}[f/h]\ge\kappa_n\exp(\gamma_n e^{2a}),
+ \qquad q_a[f]\le B_{a,b}.
+\]
+Consequently either comparison above, if valid on the indicated sector
+with $\eta_a\ge0$, must obey
+\[
+ \eta_a\ge
+ [\varepsilon_{n,a}\kappa_n\exp(\gamma_n e^{2a})-B_{a,b}]_+.
+\]
+In particular, deleting this channel, or decreasing its coefficient by
+any fixed positive amount along a cofinal subfamily, is incompatible
+with a uniform finite ordinary-norm error. This concerns the comparison,
+not the sign of $q_a$ or the unmodified coefficient-one comparison.
+\end{proposition}
+\begin{proof}
+The existing two-sided bounds for $h$ give, for $x\ge\ell_n$,
+\[
+ \frac{h(x-\ell_n)}{h(x)}
+ \ge C_0 n^{-9/2}
+             \exp\!\bigl(\pi(1-n^{-2})e^{2x}\bigr).
+\]
+The restriction $x\ge\ell_n$ is required here: both weight bounds
+are being applied at nonnegative arguments.
+
+Put $t=a-2b$ and
+$F_{j,t}^{\pm}=2^{-1/2}(\phi_j(\cdot-t)\pm\phi_j(\cdot+t))$.
+For $a>3b+\ell_n$, their support bands
+$B_+\subset(a-3b,a-b)$ and $B_-=-B_+$ are disjoint and inside $I_a$.
+The two $F_{j,t}^+$ are orthonormal; a unit vector in their complex
+span can be chosen exactly orthogonal to the actual $u_a$, by the
+kernel of the single linear functional $f\mapsto\langle f,u_a\rangle$.
+This argument does not identify $u_a$ with $h$, approximate its
+coefficients or require a source error estimate. The two odd functions
+are orthonormal and every vector in their span is source-orthogonal.
+
+For every unit vector in either span, an endpoint $x\in B_+$ has
+$x-\ell_n\ge0$, remains inside the window, and is outside both support
+bands, since $\ell_n\ge\log2>2b$. Select the edge from $x-\ell_n$ to
+$x$, and use its reflected inward edge for $x\in B_-$. These selected
+edges are distinct; no selected edge has two nonzero endpoints. Hence
+\[
+ J^{(n)}_{a,h}[f/h]
+ \ge w_n\inf_{x\in(a-3b,a-b)}\frac{h(x-\ell_n)}{h(x)}
+             \int_{B_+\cup B_-}|f(x)|^2dx
+ \ge\kappa_n\exp\!\bigl(\pi(1-n^{-2})e^{2(a-3b)}\bigr).
+\]
+All interference between $\phi_1$ and $\phi_2$ is retained inside
+$|f|^2$; its integral is the ordinary norm, exactly one.
+
+The archimedean contribution is at most $A_b$: translation/reflection
+multipliers have modulus at most $\sqrt2$, and Cauchy--Schwarz in the
+two-dimensional coefficient vector gives the displayed bound uniformly
+for every unit mixture. Prime correlations have total absolute value
+at most $2\sum_{m<e^{2a}}\Lambda(m)/\sqrt m\le8ae^a$.
+The even pole is at most $2a+2\sinh a\le2a+e^a$; the odd pole is
+nonpositive. These estimates give $q_a[f]\le B_{a,b}$ including all
+cross terms. The preceding comparison identities finish the proof.
+Exterior edges were retained in those identities; the lower bound uses
+only interior edges, so adding the exterior part cannot weaken it.
+\end{proof}
+
+\begin{proposition}[Uniform obstruction for moving omitted channels away from the endpoint]
+\label{prop:ns43-moving-channel}
+Fix $0<\theta<1$. Let
+\[
+ b_\theta=\frac{\min(\log2,-\log\theta)}{16},\qquad
+ d_\theta=\min(\log2,-\log\theta-6b_\theta),
+\]
+\[
+ \gamma_\theta=\pi(1-e^{-2d_\theta})e^{-6b_\theta}>0,
+ \qquad c_\theta=C_0(\log2)\theta^{-1/2}e^{9b_\theta/2}>0.
+\]
+For all sufficiently large $a$, the same two parity spaces built with
+$b=b_\theta$, $t=a-2b_\theta$, satisfy, for every unit vector and
+\emph{simultaneously for every prime power} $2\le n\le\theta e^{2a}$,
+\[
+ J^{(n)}_{a,h}[f/h]\ge
+ c_\theta e^{-11a/2}\exp(\gamma_\theta e^{2a}).
+\]
+Thus either comparison, with $\eta_a\ge0$, and an omitted channel
+$n=n(a)$ in this range, even when it varies with $a$, forces
+\[
+ \eta_a\ge
+ [\varepsilon_{n(a),a}c_\theta e^{-11a/2}
+             \exp(\gamma_\theta e^{2a})-B_{a,b_\theta}]_+.
+\]
+The same statement holds on any cofinal subfamily satisfying these
+hypotheses. No conclusion is asserted merely because an omitted
+channel exists at each window if its ratio $n(a)/e^{2a}$ tends to one.
+\end{proposition}
+\begin{proof}
+Here $d_\theta\ge10b_\theta>2b_\theta$. For $x\in(a-3b,a-b)$ and
+$\log2\le\ell_n\le2a+\log\theta$, one has
+\[
+ \ell_n\ge d_\theta,\qquad 2x-\ell_n\ge d_\theta,
+ \quad\text{hence}\quad |x-\ell_n|\le x-d_\theta.
+\]
+For large $a$ these inward endpoints lie inside the window and outside
+both support bands, since
+$|x-\ell_n|\le a-b-d_\theta<a-3b$. Unlike the fixed-channel proof,
+$x-\ell_n$ need not be nonnegative. Use evenness of $h$ and apply its
+bounds to $|x-\ell_n|$ and $x$, rather than incorrectly applying the
+previous ratio formula past its range. They give
+\begin{align*}
+ \frac{h(x-\ell_n)}{h(x)}
+ &\ge C_0\exp\!\left(\tfrac92(|x-\ell_n|-x)
+                   +\pi(e^{2x}-e^{2|x-\ell_n|})\right)\\
+ &\ge C_0e^{-9(a-b)/2}
+                \exp\!\left(\pi(1-e^{-2d_\theta})e^{2(a-3b)}\right).
+\end{align*}
+Also $w_n\ge(\log2)\theta^{-1/2}e^{-a}$. The same distinct selected
+inward edges and norm-one integration prove the claimed bound. The
+source kernel and the original-form upper budget are exactly as above,
+with fixed $b_\theta$ independent of $a$ and $n$.
+\end{proof}
+
+\paragraph{Truncations actually covered.}
+With every retained channel coefficient at most one and all other
+signed terms unchanged, the following shortcuts require unbounded error:
+(i) any fixed finite set of retained prime-power channels; (ii) any
+fixed finite set of retained primes, even retaining all of their powers;
+(iii) a uniformly bounded number of retained channels (or primes),
+although their labels may vary with the window; and (iv) a cutoff
+retaining only $n\le M(a)$ with $M(a)=o(e^{2a})$.
+For (iii), take more fixed prime powers (respectively primes) than the
+retained count: one is omitted, and all lie in the uniform range for
+large $a$. For (iv), if $M(a)\ge1$, the first power of $2$ exceeding
+$M(a)$ is at most $2M(a)$ and is eventually at most $\theta e^{2a}$;
+if $M(a)<1$, take $n=2$ instead. The same proof covers
+$\limsup M(a)e^{-2a}<1/2$ by choosing $\theta$ between twice that
+limsup and one. No prime-gap theorem is being used.
+
+A fixed coefficient loss in any of those omitted channels is covered.
+A loss tending sufficiently rapidly to zero is only subject to the
+necessary displayed rate; it is not excluded categorically. Merely
+saying ``finitely many channels at each window'' is insufficient:
+the full local sum itself is finite. A cutoff approaching the strict
+endpoint, compensating changes in the signed diagonal/pole, coefficients
+larger than one in other channels, and a different positive weight are
+not ruled out by these propositions.
+
+\paragraph{One specific surviving signed, cofinal next input.}
+This is a proposed \emph{open input on a restricted test family}, not
+a theorem and not a restatement of CAE on all tests. For fixed real even
+$\phi_1,\phi_2\in C_c^\infty(-b,b)$ as above, set
+\[
+ R_{jk}(u)=\int\phi_j(z+u)\phi_k(z)\,dz,\qquad
+ C_j=\int\cosh(x/2)\phi_j(x)\,dx,
+\]
+and consider the explicit real symmetric two-by-two matrix
+\[
+ E_{jk}(t)=e^t C_jC_k-
+       \sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+                          R_{jk}(\log n-2t),\qquad t>2b.
+\]
+Only $e^{2t-2b}<n<e^{2t+2b}$ contribute. The candidate next lemma is
+\[
+ \sup_{t\ge t_0}\|E(t)\|_{\mathrm{op}}<\infty
+ \quad\text{for this specified pair of bumps.}
+\]
+This asks for a signed, smoothly weighted prime--continuum cancellation
+at cofinal multiplicative locations, not separate absolute estimates
+of Gaussian transformed channels.
+
+Its limited consequence is checkable. Let
+$D_{jk}=q(\phi_j,\phi_k)$ and
+$C_{jk}(t)=q(\phi_j(\cdot-t),\phi_k(\cdot+t))$ for the polarized
+physical form. For $a=t+2b$ the complete prime and pole formula gives
+\[
+ C_{jk}(t)=E_{jk}(t)+e^{-t}C_jC_k+A_{jk}(t),
+ \qquad A_{jk}(t)=O_b(e^{-t}),
+\]
+where the last term is the off-diagonal archimedean form. Indeed its
+kernel on disjoint supports is $-\rho(|x-y|)$, so the decay follows
+from $\rho(s)=O(e^{-s/2})$. The pole is
+$2C_jC_k\cosh t=(e^t+e^{-t})C_jC_k$; precisely one orientation of
+the prime shift connects the separated supports, giving the sum above
+without an extra factor two. The parity matrices are exactly
+$D+C(t)$ and $D-C(t)$, with all cross terms present. The candidate
+bound therefore supplies a uniform floor only on these two-dimensional
+parity spaces, including their actual-source-orthogonal even vectors.
+It does not cover arbitrary physical tests, does not establish CAE,
+and is not asserted to be weaker than RH or presently provable.

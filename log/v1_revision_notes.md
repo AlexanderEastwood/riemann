@@ -1,5 +1,27 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.52 local draft — NS-43/44/45 (2026-09-22)
+
+Fresh exact dyadic witnesses at the existing lambda=5 window close two precise
+comparison criteria: the stipulated 1e-8D tail lower bound, and the tested N25
+dyadic norm comparison. Arb320/448 replay, independent signed-index assemblies,
+and reviews pass. The tail witnesses have positive Weil energies. These are
+new certificates, not recovered historical artifacts; both NS-1 original
+recovery groups stay OPEN.
+
+NS-43 proves fixed/moving prime-channel loss obstructions, unrestricted exact
+adaptive concentration equivalence, a scalar-set countermodel, and scoped CCM
+nonselection/coarse-profile results. Complete relative-selection and entire
+transform criteria identify the missing input. A bounded discrepancy for one
+explicit smooth bump would already exclude off-line zeros; it is unproved and
+is not promoted as a weaker route. Direct uniform complete lower-floor work
+remains the priority; QG+packet investigates bounded-complexity failure only.
+
+The substantive draft is based on PR20/a89a581 and is not merged or tagged.
+See evidence/v152/ for proofs, validation, provenance and versioned assessment.
+No new window, tail metric, G2 or RH claim.
+
+
 ## 2026-09-22 — v1.51 / NS-39, NS-38 disclosures and delegated measurements
 
 Classification: exact identities, proved implications and named open arithmetic

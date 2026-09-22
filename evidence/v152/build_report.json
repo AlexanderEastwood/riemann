@@ -1,0 +1,33 @@
+{
+  "classification": "actual integrated manuscript build and artifact checks; not source validation alone",
+  "pages": 265,
+  "undefined_reference_messages": 0,
+  "multiply_defined_reference_messages": 0,
+  "overfull_boxes": 0,
+  "duplicate_labels": [],
+  "duplicate_bibliography_keys": [],
+  "bibliography_items": 48,
+  "manuscript_sha256": "b172e7b16112f791a415559709d50723be90b6d940ed2a97277fc6c929b8e4de",
+  "integrated_fragment_sha256": "d1673ceed4912cad67cb6c7fe79ca15c3ea0d24dc0aec7d27c2458e611cc39d5",
+  "integrated_fragment_matches": true,
+  "independent_reviews": "review_record.md and indexed review files; final findings resolved",
+  "new_certificates": {
+    "ns44": "fresh320/448; separate signed assembly; independent four-sign sum and final replay",
+    "ns45": "fresh320/448; separate energy/cross signed assembly; independent byte-identical replay"
+  },
+  "python_diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "files": [
+      "evidence/ns44_metric_replay/replay.py",
+      "evidence/ns45_block_replay/replay.py",
+      "evidence/v152/verify_artifacts.py"
+    ]
+  },
+  "prior_manifests": {
+    "v150": "6/6",
+    "v151": "6/6"
+  },
+  "external_artifact_count": 33,
+  "publication": "local draft only; no new tag or remote branch"
+}
