@@ -1,5 +1,32 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-22 — v1.51 / NS-39, NS-38 disclosures and delegated measurements
+
+Classification: exact identities, proved implications and named open arithmetic
+inputs. NS-39 is one analytic proposition, not a substituted measurement.
+The potential is r_a=(F^{-1}(Z_a F h_a)-2 I_(h,a)c)/h on I_a, with the complete
+corrected field, finite window pole mass and exterior edges retained. ZLD gives
+QC_K >= kappa theta² D/(2K) on the same rule; the bounded-energy packet clause
+remains separate. CAE is exactly the existing uniform complement floor. Abstract
+measure countermodels do not prove independence of actual arithmetic assertions.
+The universal-head QG demand is false by excessive cutoff dilution regardless
+of CAE truth. No new signed estimate has been proved.
+
+NS-38 selected disclosure for BOTH original NS-1 groups, not recovery: all local
+archival assertions and historical numerical accounts are qualified. Original
+recovery remains open. Five v1.35 scientific files match the old hashes; v129/v130
+companion artifacts remain absent. The unavailable v128 numerical closure is
+marked blocked; printed analytic proofs remain unchanged. No separate version
+bump was made for the disclosure. NS40 is Astra-2's separate PR19.
+
+NS41/42 were delegated and reviewed independently. The odd finite-bin records
+print every constraint slack and distinguish dual minima from feasible primal
+states. The 12 transformed-energy records separate direct J, variance, signed
+potential, pole and exterior terms. Quadrature does not resolve tiny matrix q.
+These remain diagnostic records under evidence/diag_*, never proof bounds.
+No new window, tail metric, G2 or RH claim.
+
+
 ## 2026-09-21 — v1.50 / NS-34: explicit capacity weight and a scoped loss obstruction
 
 Classification: exact identities, proved scoped implications, and named

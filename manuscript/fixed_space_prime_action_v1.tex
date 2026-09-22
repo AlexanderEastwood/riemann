@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.50},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.51},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,10 +35,10 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.50\\
+\large Complete working manuscript, version 1.51\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
-\date{September 21, 2026}
+\date{September 22, 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -82,14 +82,16 @@ entire Fourier transform of this complete ground. This is a fixed-window
 statement, with no convergence to Riemann's $\Xi$ asserted. The present scalar far
 majorant requires exponentially growing cutoffs as the window grows;
 polynomial-rank repairs of that unsigned comparison cannot remove
-this cost. The unchanged tail metric is false at $\lambda=5$ in both
-parities. Source-$L^2$ transport through the fixed point-value repair
+this cost. Historical computations report failure of the unchanged
+tail metric at $\lambda=5$ in both parities; the original witnesses
+and verifiers are not archived, so that report is not presently replayable. Source-$L^2$ transport through the fixed point-value repair
 is nonclosable, so physical concentration blocks require explicit
 finite image Grams. Signed infinite block metrics provide a sufficient
-alternative. At $\lambda=5$, its first four dyadic blocks above
-$N=\lambda^2$ already violate the criterion in both parities, even
-with the largest admissible block metrics and arbitrary positive row
-reweighting. This obstruction concerns the selected block comparison;
+alternative. A second historical computation reports that at $\lambda=5$
+its first four dyadic blocks above $N=\lambda^2$ violate the criterion
+in both parities, including all admissible block metrics and positive
+row reweightings. Its original evidence is not archived either.
+The reported obstruction concerns the selected block comparison;
 other signed estimates and growing-window positivity remain open.
 An exact source-weighted jump transform now gives a project-new
 candidate for the remaining complement estimate.  In the even sector,
@@ -109,7 +111,8 @@ time--frequency hierarchy now gives exact sufficient concentration
 tests for that multiplier. Its scalar trace and generic thick-set
 specializations lose the favorable spectral mass and do not close the
 estimate, while the full weighted operator test survives explicit
-compactly supported wave-packet falsification attempts.
+compactly supported wave-packet falsification attempts reported in v1.31
+(the original scripts and outputs are not archived; only a report survives).
 An exact source-compressed Hilbert--Schmidt identity sharpens the
 negative-level trace bound, but a scale-invariant Dirichlet model proves
 that this entire negative-only Schatten hierarchy need not vanish even
@@ -135,7 +138,8 @@ signed-primitive transport estimate is proved and optimized exactly.
 Its strongest scalar error is $a\Delta_a$, where $\Delta_a$ is the
 largest negative interval integral of the exact symbol.  A positive
 Dirichlet model with an exact null source has $a\Delta_a=\pi^3/6$;
-numerical arithmetic stress tests also fail to show decay.  The method
+historical numerical arithmetic stress tests also reported no decay,
+but their original script and output are not archived.  The method
 is therefore recorded as a rejected scalar candidate, not as the live
 G2 mechanism.
 The same continuum symbol now represents both complex parity sectors.
@@ -181,9 +185,35 @@ source complement. Every complete eigenfunction has zero physical
 endpoint. A cofinal complete-Weil lower error tending to zero would
 imply RH directly, but remains unproved.
 \end{abstract}
+\paragraph{Evidence availability (NS-38, September 22, 2026).}
+The original $\lambda=5$ computational evidence (v1.27--v1.28) and
+original concentration-era companion evidence (v1.31--v1.34) are
+\emph{not archived}, except for one recovered v1.31 report. The v1.29
+capacity and v1.30 continuum companion artifacts are also not archived.
+Affected numerical assertions and archival descriptions are explicitly
+marked below; historical verification accounts are not currently
+replayable certificates. Complete analytic proofs printed here remain
+available independently of missing companion reviews. The scientific
+v1.35 files are available under \path{evidence/v135/} and match their
+recorded hashes. See \path{evidence/MISSING.md} for per-group disposition.
+This disclosure alone does not change the manuscript version.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.51 compares the three open inputs in one proposition,
+\ref{prop:v151-input-comparison}. The positive-weight potential is an
+inverse multiplier of the complete corrected zero field, with the finite
+window pole mass and exterior contribution retained. ZLD implies the
+quantization-growth clause of QG on the same prescribed family, with
+lower bound $\kappa\theta^2D_a/(2K)$; the separate packet input is not
+supplied. CAE is exactly the uniform complement-floor target in these
+coordinates, not a new estimate. General measure countermodels do not
+prove arithmetic independence. Universal-head QG is false by cutoff
+dilution, whether or not CAE holds; no converse for a specified natural
+rule is established. All three arithmetic inputs remain unproved.
+NS-38 separately makes the missing historical evidence explicit, without
+claiming recovery. No new window, tail metric, G2 or RH claim is made.
+
 Version 1.50 tests the explicit positive Gaussian arithmetic radical in
 the physical prime-shift capacity identity. Its exact transformed form
 retains both poles and exterior edges. A scoped obstruction proves that
@@ -361,7 +391,8 @@ $a\Delta_a$, with $\Delta_a$ the maximum negative primitive drawdown.
 The scale-invariant Dirichlet model gives the exact obstruction
 $a\Delta_a=\pi^3/6$ despite complete positivity and an exact null
 source.  Arithmetic diagnostics at $\lambda=3,4,5,6$ likewise increase
-from about $2.54$ to $5.51$; they are not proof evidence.  The scalar
+from about $2.54$ to $5.51$; their original script and output are not
+archived, and they are not proof evidence.  The scalar
 candidate is rejected, while the full signed weighted concentration
 inequality remains the live conditional even-sector mechanism.  No G2
 sign gap is closed.
@@ -394,9 +425,9 @@ Proposition~\ref{prop:v132-flat-top} proves that a nontrivial positive
 frequency smoothing cannot preserve every form on the physical
 difference interval.  A signed flat-top extension remains possible in
 principle, but positivity of such an extension is an additional sign
-problem, not a consequence of smoothing.  Numerical tests at
-$\lambda=3,4,5$ agree with these obstructions and are used only as
-falsification diagnostics.  The full signed weighted-superlevel
+problem, not a consequence of smoothing. Historical numerical tests
+at $\lambda=3,4,5$ reported agreement; their original scripts and outputs
+are not archived, and those reports are only falsification diagnostics.  The full signed weighted-superlevel
 criterion of Proposition~\ref{prop:v131-concentration} remains the live
 conditional even-sector mechanism.  Its cofinal arithmetic inequality
 and the odd sector remain open.
@@ -406,12 +437,14 @@ source-compressed time--frequency concentration hierarchy.
 Proposition~\ref{prop:v131-concentration} proves both a rigorous
 negative-level layer-cake bound and a sharper weighted superlevel
 operator criterion. The scalar trace specialization is finite and
-correct, but numerical diagnostics at $\lambda=3,4,5$ show that it
-discards most favorable symbol mass. Generic Logvinenko--Sereda
+correct, but historical numerical diagnostics at $\lambda=3,4,5$
+reported that it discards most favorable symbol mass; the original
+scripts and outputs are not archived (only the v1.31 report survives). Generic Logvinenko--Sereda
 constants likewise do not meet the necessary signed budget. Explicit
 even packets centred at the deepest located wells nevertheless retain
-positive complete signed energy, including under an independent
-physical-space calculation. Thus the scalar shortcuts fail, while the
+positive complete signed energy in that historical report, including
+a reported independent physical-space calculation whose script and
+output are not archived. Those numerical reports do not close a route; the
 weighted concentration operator remains a live conditional mechanism.
 Its required cofinal arithmetic concentration inequality and the odd
 sector remain open.
@@ -424,8 +457,9 @@ operator. Proposition~\ref{prop:v130-remainder} isolates the complete
 arithmetic discrepancy as a scalar Fourier multiplier and states the
 ordinary-error estimate sufficient for the gap-free route. The Green
 operator is compact, so this produces no hidden spectral gap. A
-stronger pointwise multiplier criterion is numerically false at already
-certified positive fixed windows.
+stronger pointwise multiplier criterion was reported numerically false
+at already certified positive fixed windows; the original v1.30
+diagnostic script and output are not archived.
 The arithmetic remainder estimate and the odd sector remain open.
 
 Version 1.29 isolates a new candidate mechanism for G2.6 after screening
@@ -435,23 +469,25 @@ ground-state transform and gives an exact capacity-absorption condition
 for asymptotic nonnegativity on the source complement.  The mechanism
 uses the simultaneous signs of the physical jump kernel and is not a
 new Schur solve, block metric, finite-rank repair or scalar prime-norm
-bound.  A finite $\lambda=3$, $N=64$ diagnostic falsifies the stronger
-pointwise-supersolution shortcut; it neither proves nor disproves the
+bound. A historical finite $\lambda=3$, $N=64$ diagnostic reports
+falsification of the stronger pointwise-supersolution shortcut; its
+recomputation script and output are not archived; it neither proves nor disproves the
 complete capacity condition.  The odd pole has the opposite sign and
 is explicitly outside this candidate's present scope.
 
 Version 1.28 tested the signed block-metric criterion at $\lambda=5$
 with the explicitly chosen polynomial cutoff $N=\lambda^2=25$.
-The first four dyadic blocks are individually positive, but certified
-coupling lower bounds disprove the criterion for this partition in
-both parities. The obstruction survives every admissible smaller
-block metric and every positive scalar row reweighting. It is a
-failure of that sufficient comparison, not a negative Weil direction,
-and supplies no conclusion about other cutoffs or partitions.
+The historical computation reports individually positive first four
+dyadic blocks and coupling lower bounds contradicting the criterion in
+both parities. Its original witnesses, verifiers and outputs are not
+archived. Conditional on those reported gates, the obstruction survives
+every admissible smaller block metric and positive scalar row reweighting.
+It concerns that sufficient comparison, not a negative Weil direction
+or other cutoffs and partitions.
 Complete positivity at $\lambda=4$, weak G1, all 72 historical
 dispositions, the physical endpoint and the sampler's explicit graph
 defect are retained. The unchanged $10^{-8}D$ metric at $\lambda=5$
-remains disproved; no complete $\lambda=5$ positivity margin or
+is historically reported to fail; its original evidence is not archived; no complete $\lambda=5$ positivity margin or
 successful growing-window tuning rule is asserted. No G2 sign gap
 is closed, and RH is not proved.
 
@@ -7970,19 +8006,24 @@ made here. No G2 gap or RH claim follows.
 
 
 
-\subsection*{The unchanged construction fails at $\lambda=5$}
+\subsection*{Reported failure of the unchanged construction at $\lambda=5$}
 \label{sec:v127-transfer}
+\paragraph{Availability (NS-38).} The original frozen protocols, dyadic
+witnesses, coefficient enclosures and $320/448$-bit verification outputs
+for this subsection are \emph{not archived}. The following numerical
+assertions and verification account are historical reports, not currently
+replayable certified computations. See \path{evidence/MISSING.md}.
 The transfer protocol was frozen before testing, including the exact
 energy-scaling rule, CG depths, preconditioner, support choices, Young
 parameters and moment orders. The successful $\lambda=4$ code specifies
 literal sizes; it supplies no general window-dependent support rule.
 Importing the separate finite-resolution probe's $\lambda^2$ head rule
-would therefore be a modification. The frozen protocol is recorded in
-Appendix~\ref{app:v127-transfer}.
+would therefore be a modification. The surviving protocol description is recorded in
+Appendix~\ref{app:v127-transfer}; the original protocol file is not archived.
 
-\begin{proposition}[A counterexample to the stipulated tail metric]
+\begin{proposition}[Reported counterexample; original evidence not archived]
 \label{prop:v127-metric-fails}
-Let $D=\operatorname{diag}(a_n)$ be the actual archimedean diagonal
+The historical computation reports the following assertion. Let $D=\operatorname{diag}(a_n)$ be the actual archimedean diagonal
 at $\lambda=5$. In each parity the complete inequality
 \[
  Q_{16}\mathsf W_5Q_{16}\succeq10^{-8}Q_{16}DQ_{16}
@@ -7999,38 +8040,40 @@ parity indices $17,\ldots,128$, satisfy respectively
 \end{align*}
 Both denominators and both Weil numerators are strictly positive.
 \end{proposition}
-\begin{proof}
-Use the exact coefficient formula and analytic coefficient enclosures
-of Proposition~\ref{prop:v114-weil-core}. The outward verifier forms
+\begin{proof}[Historical verification account; original evidence not archived]
+The historical account uses the exact coefficient formula and analytic
+coefficient enclosures of Proposition~\ref{prop:v114-weil-core}.
+It reports that the outward verifier forms
 \[
  W_{nm}^{\pm}=W_{nm}\pm W_{n,-m},\qquad
  W_{nn}=d_n,\quad
  W_{nm}=\frac{b_n-b_m}{n-m}\ (n\ne m),\quad b_{-n}=-b_n.
 \]
 The metric diagonal is $a_n$, not the full arithmetic diagonal $d_n$.
-At $320$ and $448$ bits the frozen vectors give the stated strict
+At $320$ and $448$ bits the frozen vectors reportedly give the stated strict
 intervals and negative values of $QW_5(v,v)-10^{-8}\ip{Dv}{v}$.
 A separate signed-index quadratic assembly expands each parity vector
 to coefficients $v_n/\sqrt2$ at $+n$ and $\pm v_n/\sqrt2$ at $-n$,
-and reproduces the intervals at $448$ bits. The odd expansion differs
+and reportedly reproduces the intervals at $448$ bits. The odd expansion differs
 from real-sine coordinates only by a common unit phase. Witness hashes,
-coefficient enclosures and the independent verifier are included in
-Appendix~\ref{app:v127-transfer}. Each vector has literal finite support,
+coefficient enclosures and the independent verifier are described in
+Appendix~\ref{app:v127-transfer}; only the descriptions and recorded
+hashes survive here. The underlying files are not archived. Each vector has literal finite support,
 so its complete quadratic form is exactly this finite sum: no remote
-row contributes to the pairing. The ratios are below $10^{-8}$,
-proving the assertion on the complete tail.
+row contributes to the pairing. If the reported ratio enclosures hold,
+they are below $10^{-8}$ and imply the asserted complete-tail failure.
 \end{proof}
 
 The first remote-weight gate already fails at the frozen even
-$N=512$ and odd $N=1536$: its certified lower weights are approximately
-$-1.0764504091$ and $-1.5489108675$. Fresh evaluation of the same
-weight formula gives first positive cutoffs $1502$ and $7224$.
+$N=512$ and odd $N=1536$: its historically reported certified lower weights are approximately
+$-1.0764504091$ and $-1.5489108675$. The same historical evaluation
+of the weight formula reports first positive cutoffs $1502$ and $7224$.
 These changes alone cannot repair Proposition~\ref{prop:v127-metric-fails}:
-that proposition disproves the required metric itself, independently
-of the verification cutoff. More CG steps, greater moment order, or
+the reported witnesses, if recovered and verified, disprove the required
+metric itself, independently of the verification cutoff. More CG steps, greater moment order, or
 larger remote support cannot make that fixed inequality true.
 
-The necessary change is to the outer head or the tail metric. Keeping
+The necessary change is to the outer head or the tail metric. Conditional on the reported witness bounds, keeping
 $Q_{16}$ and a common scalar $cD$ forces
 $c<2.0806767456\cdot10^{-18}$, a necessary ceiling only, not a certified
 admissible coefficient. No modified construction was run after this
@@ -8038,8 +8081,8 @@ obstruction, and no successful tuning rule has been established.
 In particular, no positive $\lambda=5$ tail metric or structured
 inverse factors are asserted. The complete certificate margin
 $1-\lambda_{\max}(\mathcal U,K)$ is unavailable; a finite-prefix value
-or a resolution margin cannot replace it. These are counterexamples
-to the frozen metric, not negative Weil vectors.
+or a resolution margin cannot replace it. These reported witnesses
+would be counterexamples to the frozen metric, not negative Weil vectors.
 
 \subsection*{What a non-scalar metric must change}
 A change of coordinates alone cannot turn a negative lower comparison
@@ -8127,14 +8170,19 @@ prime operator is not Hilbert--Schmidt
 (Proposition~\ref{prop:v120-not-schatten}), so a global squared-entry
 budget cannot be inserted in place of the missing estimate.
 No such uniform block certificate is proved here. The next subsection
-tests its natural $N=\lambda^2$ instance at $\lambda=5$ and proves
-failure on that particular partition. The abstract implication remains
+records the historical test of its natural $N=\lambda^2$ instance at
+$\lambda=5$, whose original evidence is not archived. The abstract implication remains
 valid, but does not supply a solution for the Weil operator.
 
 
 \subsection*{Testing the signed block criterion at a polynomial cutoff}
 \label{sec:v128-test}
-The new test fixes $\lambda=5$, $N=\lambda^2=25$ and the literal
+\paragraph{Availability (NS-38).} The original proposals, dyadic
+witnesses, congruence factors, $320/448$-bit outputs and independent
+verifier are \emph{not archived}. The numerical failure below is a
+historical report, not a currently replayable certificate. The intervening
+comparison lemma is analytic and is proved in full here.
+The historical test fixes $\lambda=5$, $N=\lambda^2=25$ and the literal
 parity blocks
 \[
  I_0=\{26,\ldots,50\},\quad I_1=\{51,\ldots,100\},\quad
@@ -8142,7 +8190,7 @@ parity blocks
 \]
 They begin the proposed infinite dyadic partition. This is a new
 signed-block construction, not a continuation of the unchanged
-$Q_{16}$ metric already disproved in Proposition~\ref{prop:v127-metric-fails}.
+$Q_{16}$ metric reported to fail in Proposition~\ref{prop:v127-metric-fails}.
 The rule uses the actual signed diagonal blocks as metrics,
 $M_j=T_{jj}$. The next lemma shows that this is the most favorable
 choice among the metrics allowed by Proposition~\ref{prop:v127-block-metric}.
@@ -8180,22 +8228,23 @@ eigenvalues, contradicting $\lambda_{\max}(H)>1$. Adding further
 nonnegative norm terms cannot remove this obstruction.
 \end{proof}
 
-\begin{proposition}[The tested dyadic comparison fails in both parities]
+\begin{proposition}[Reported dyadic failure; original evidence not archived]
 \label{prop:v128-dyadic-fails}
-For the four blocks above, each actual signed $T_{jj}$ is strictly
+The historical computation reports the following assertion. For the four blocks above, each actual signed $T_{jj}$ is strictly
 positive in each parity. Nevertheless
 Proposition~\ref{prop:v127-block-metric} fails for this partition,
 for all metrics $0\prec M_j\preceq T_{jj}$. It still fails after
 any positive scalar row reweighting.
 \end{proposition}
-\begin{proof}
-Reconstruct the exact coefficients at $320$ and $448$ bits, with the
+\begin{proof}[Historical verification account; original evidence not archived]
+The historical account reconstructs exact coefficients at $320$ and
+$448$ bits, with the
 same $96$-term analytic archimedean enclosure used above. Frozen
-dyadic inverse-Cholesky proposals $C_j$ satisfy the outward
+dyadic inverse-Cholesky proposals $C_j$ reportedly satisfy the outward
 Gershgorin certificates $C_jT_{jj}C_j^*\succ(99/100)I$ in every
 block. In particular each $C_j$ is invertible and $T_{jj}\succ0$.
 Numerical singular vectors are used only to propose exact dyadic
-pairs $(x_{jk},y_{jk})$. Direct interval evaluation proves positive
+pairs $(x_{jk},y_{jk})$. The missing interval evaluation reportedly proves positive
 block energies and lower bounds on
 \[
  r_{jk}=\frac{|\ip{T_{jk}y_{jk}}{x_{jk}}|}
@@ -8203,7 +8252,7 @@ block energies and lower bounds on
               \ip{T_{kk}y_{jk}}{y_{jk}}}}
  \le\beta_{jk}(T).
 \]
-The following are exact integer numerators of strict lower bounds
+The following are exact integer numerators of the reported strict lower bounds
 $H_{jk}$ with denominator $10^6$, in the order indicated:
 \begin{center}
 \begin{tabular}{lrrrrrr}
@@ -8226,18 +8275,21 @@ Rayleigh lower bounds
  \frac{{\bf1}^tH_-{\bf1}}4
  =\frac{6405686}{4000000}=1.6014215>1.
 \end{align*}
+Conditional on the asserted block comparisons,
 Lemma~\ref{lem:v128-comparison-obstruction} proves the assertion.
-Both precision replays use identical frozen witnesses and give
+Both precision replays reportedly use identical frozen witnesses and give
 identical rational lower matrices. Each pairing is a complete
 finite-support pairing in the actual operator; no remote row is
 missing from it. Every uncomputed block would add nonnegative terms
-to the norm comparison, so these finite obstructions settle failure
-of the infinite criterion on this partition. The witness files,
-congruence factors and independent check are recorded in
-Appendix~\ref{app:v128-test}.
+to the norm comparison, so verified versions of these reported finite
+obstructions would settle failure of the infinite criterion on this partition. The witness files,
+congruence factors and independent check are described in
+Appendix~\ref{app:v128-test}, but are not archived. The integer
+Rayleigh arithmetic displayed here is exact; the missing step is
+replaying the asserted lower comparison with the actual blocks.
 \end{proof}
 
-These numbers are lower bounds for a norm-comparison eigenvalue,
+These reported numbers concern lower bounds for a norm-comparison eigenvalue,
 not values of $1-\lambda_{\max}(\mathcal U,K)$ and not resolution
 margins. No complete $\lambda=5$ positivity margin is obtained.
 The ordinary block eigenvalues and proposed singular values are not
@@ -8257,7 +8309,8 @@ directions. This exact illustrative example is not an asserted
 factorization of the actual Weil blocks. A subsequent signed
 criterion must preserve such information, or change the partition;
 merely shrinking the admissible block metrics, rotating coordinates
-inside them, or reweighting scalar rows cannot fix the present test.
+inside them, or reweighting scalar rows could not fix a test with the
+reported certified lower comparisons.
 
 \subsection*{A complete simple even ground and its real-zero transform at $\lambda=4$}
 
@@ -9301,8 +9354,9 @@ $\eta I$ yields a negative error relative to the unbounded $D$-energy,
 not the required ordinary norm. No cofinal decay or complementary sign
 is established here. Proposition~\ref{prop:v127-block-metric} is one
 sufficient signed mechanism, but Proposition~\ref{prop:v128-dyadic-fails}
-now rules out its tested $\lambda=5$, $N=25$ dyadic instance, even
-after admissible metric changes and scalar row reweighting. Its
+reports failure of its tested $\lambda=5$, $N=25$ dyadic instance,
+including admissible metric changes and scalar row reweighting; the
+original numerical evidence is not archived. Its
 uniform hypotheses remain unproved.
 
 \subsection*{A source-weighted nonlocal capacity target}
@@ -9456,14 +9510,17 @@ metrics and shared-channel common-Gram factorization.
 Two adversarial checks delimit the claim. First, $W_\lambda h\ge0$
 pointwise is not enough: replacing $H_\lambda h/h$ by
 $W_\lambda h/h$ creates a negative weighted variance term. Second,
-the saved $\lambda=3$, $N=64$ compression gives a projected ratio with
+the historically reported calculation from the saved $\lambda=3$, $N=64$
+compression gives a projected ratio with
 minimum about $-0.414$ and negative values on about $44.95\%$ of a
 dense grid (about $32.33\%$ in $h^2dx$ mass). This falsifies the
 stronger finite pointwise-supersolution surrogate, but does not
 evaluate the complete physical ratio, which has positive logarithmic
 endpoint growth. The transformed finite absorption ratio is one to
 binary64 resolution, so it supplies no margin. These are numerical
-diagnostics, not certificates.
+diagnostics, not certificates. The v1.29 recomputation script, output
+and companion review are not archived; the underlying source compression
+is available, but does not reproduce these derived values by itself.
 
 Thus the exact remaining lemma is a uniform proof of
 \eqref{eq:v129-capacity}, for an explicit zero-free $h_\lambda$ and the
@@ -9667,23 +9724,26 @@ generic constant would not prove \eqref{eq:v130-constrained}.
 Numerical wells are diagnostic only. The odd sector remains separate.
 No G2 sign gap is closed.
 
-The failure of a global conditional-positive-definiteness shortcut can
-be made rigorous at a certified positive physical window.
+A historical rational computation reports failure of a global
+conditional-positive-definiteness shortcut at a certified positive physical
+window. Its original verifier and output are not archived; the analytic
+negative-index implication below is conditional on the reported enclosure.
 
-\begin{proposition}[Global negative index does not model the physical window]
+\begin{proposition}[Negative-index implication of a reported enclosure]
 \label{prop:v132-global-index}
-At $a=\log4$ the exact symbol in \eqref{eq:v130-beta} satisfies
+The unarchived rational computation reports that at $a=\log4$ the
+exact symbol in \eqref{eq:v130-beta} satisfies
 \[
  -0.64784909<\beta_a(1)<-0.6321938<-\frac35.
 \]
-Consequently the full-line multiplier by $\beta_a$ has infinite
+If this reported enclosure holds, the full-line multiplier by $\beta_a$ has infinite
 negative index, even on the even sector and after imposing any fixed
 finite number of linear constraints. This does not contradict the
 proved positivity of the physical $\lambda=4$ form.
 \end{proposition}
 \begin{proof}
-The displayed enclosure follows from exact rational interval
-arithmetic: Machin's formula encloses $\pi$, the atanh series encloses
+The historical account attributes the displayed enclosure to exact
+rational interval arithmetic (the code and output are not archived): Machin's formula encloses $\pi$, the atanh series encloses
 $\log2$ and all prime weights below the strict cutoff $16$, and the
 convergent digamma series at $5/4+i/2$ has its positive tail bounded by
 the corresponding integral. All remainders are outward rational
@@ -9792,8 +9852,10 @@ Finally, Plancherel and \eqref{eq:v131-step-minorant} yield
 Equation \eqref{eq:v131-weighted-concentration} proves the claim.
 \end{proof}
 
-The scalar layer-cake estimate is rigorous but too lossy in the first
-tests.  On grids truncated at $|\xi|\le5000$, its already accumulated
+The scalar layer-cake estimate is rigorous. Historical first tests
+reported the following diagnostic losses; their original scripts and
+outputs are not archived. The surviving v1.31 report alone is available
+at \path{evidence/v131/g2_weighted_concentration_report.md}.  On grids truncated at $|\xi|\le5000$, its already accumulated
 coefficients are about $2.1363$, $3.2440$ and $4.5622$ for
 $\lambda=3,4,5$ respectively; these are lower diagnostics for the
 complete scalar upper bounds, not certificates.  They are large
@@ -9815,8 +9877,8 @@ bounded, but the generic constants from
 budget.  This is a failure of that scalar sufficient estimate, not a
 no-go for \eqref{eq:v131-weighted-concentration}.
 
-An adversarial wave-packet test also did not falsify the weighted
-mechanism.  For the even packets
+A historical adversarial wave-packet test also reported no falsification
+of the weighted mechanism; its original script and output are not archived.  For the even packets
 $\cos(\pi x/(2a))\cos(\omega x)$ centred at the deepest located wells,
 the numerical complete Rayleigh quotients were approximately
 $0.951081$, $2.757308$ and $3.683514$ at $\lambda=3,4,5$, although the
@@ -11505,6 +11567,189 @@ exact identities, proved implications or the named open input CAE.
 No RH assumption, new window, tail metric or numerical certificate
 enters. G2 and RH remain open.
 
+\subsection*{Corrected zero field, quantization, and the critical energy target (NS-39)}
+\label{sec:v151-input-comparison}
+The three named inputs concern different quantities. ZLD is a lower
+level-band measure, QG is growth of a one-sided quantization cost, and
+CAE is a signed physical-form bound. The following proposition gives
+what follows from their stated definitions. It does not assert logical
+independence of unproved assertions about the actual zeta function.
+
+\begin{proposition}[Zero-field potential and the implications actually supplied]
+\label{prop:v151-input-comparison}
+Let $a>0$, $I_a=(-a,a)$, $h$ be the positive weight of
+\eqref{eq:v150-weight}, $h_a=1_{I_a}h$ on $\mathbb R$, and
+$I_{h,a}=\int_{I_a}c(x)h(x)\,dx$, where $c(x)=\cosh(x/2)$.
+Use the complete corrected field $\mathcal Z_a=\beta_a$ of
+\eqref{eq:v147-corrected-zero-field}, including its endpoint, trivial
+zeros and prescribed symmetric-height limit. Put
+\[
+ Y_a=\mathcal F^{-1}(\mathcal Z_a\widehat h_a),
+\]
+with the unitary Fourier transform. Let $u_a$ denote the actual normalized
+even source. Then the following statements hold.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Exact identity, fixed window.} The product defining $Y_a$
+is in $L^2(\mathbb R)$, and almost everywhere on $I_a$,
+\begin{align}
+ r_a(x)&=\frac{Y_a(x)-2I_{h,a}c(x)}{h(x)},
+       \label{eq:v151-zero-potential}\\
+ T_a(x)&=Y_a(x)+2(I_h-I_{h,a})c(x).
+       \label{eq:v151-zero-exterior}
+\end{align}
+In particular, the global $I_h$ cannot replace $I_{h,a}$ in
+\eqref{eq:v151-zero-potential}. For each $f$ in the complete physical
+form domain, writing $g=f/h$ on $I_a$ and zero outside,
+\begin{align}
+ \mathcal J_h[g]-\tfrac23\operatorname{Var}_{\nu}(g)
+              -2|\langle f,s\rangle|^2
+ &=q_a[f]
+ =\int_{\mathbb R}\mathcal Z_a(\xi)
+                   |\widehat{\widetilde f}(\xi)|^2\,d\xi,
+ \label{eq:v151-zero-energy}
+\end{align}
+where $s(x)=\sinh(x/2)$ and $\widetilde f$ is zero extension.
+The identities retain all exterior edges and both parity poles.
+
+\item \emph{Proved implication, identical cutoff rule.} At a fixed
+window with $D_a>0$, suppose the band inequality in
+\eqref{eq:v147-zld} holds with constants $\kappa>0$, $0<\theta\le1$ for the
+prescribed $N(a)$ and $X_a=2\pi N(a)/L$. Then, for each $K\ge1$,
+\begin{equation}\label{eq:v151-zld-qg}
+ \mathrm{QC}_K(\widetilde m_a)
+       \ge\frac{\kappa\theta^2D_a}{2K}.
+\end{equation}
+On a cofinal family, uniform $\kappa,\theta>0$ and $D_a\to\infty$
+therefore imply the quantization-growth clause
+\eqref{eq:v149-qg} of QG. For the actual symbol, the required global
+depth growth is Corollary~\ref{cor:v137-scalar-no-go}. This does
+\emph{not} supply the independent source-admissible, bounded-energy
+packet clause of Assumption~\ref{ass:v149-qg}. At one window QG
+has no growth assertion: only the finite cost inequality is applicable.
+
+\item \emph{Exact equivalence; the open arithmetic input.} At any
+fixed window and for any specified $C\ge0$, the CAE inequality is
+equivalent to
+\begin{equation}\label{eq:v151-zero-floor}
+ \int\mathcal Z_a|\widehat{\widetilde f}|^2
+       \ge-C\|f\|^2
+\end{equation}
+for every even $f\perp u_a$ and every odd $f$ in the complete form
+domain. A window-dependent $C=D_a$ is automatic. On a cofinal family,
+a single finite $C$ independent of $a$ is precisely CAE and precisely
+the uniform complement-floor target. No additional signed estimate is
+obtained by either change of coordinates. The source residual and
+both parity requirements in Corollary~\ref{cor:v136-complement-floor}
+are still the hypotheses for transferring that target to a full floor.
+
+\item \emph{Limits of these implications.} On families with $D\to\infty$, the quantization-growth clause is
+strictly less restrictive than uniform ZLD for general level measures, and
+neither level-measure property alone forces a uniform signed physical
+floor. The countermodels in the proof establish only these general
+statements; they are not arithmetic counterexamples. CAE itself does
+not refer to $N(a)$. For the actual symbol there is a prescribed integer head rule with
+every fixed-$K$ cost tending to zero, whether or not CAE holds. This
+refutes QG uniformly over all head rules; it also rules out uniform
+ZLD on that diluting rule. CAE and the physical form are unchanged
+by the choice of rule. No converse for a particular fixed
+arithmetic rule, and no further implication between actual arithmetic
+QG and CAE, is proved here.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+The compact function $h_a$ has bounded variation, so
+$\widehat h_a(\xi)=O_a((1+|\xi|)^{-1})$. The finite prime sum and
+archimedean asymptotic give
+$\mathcal Z_a(\xi)=O_a(\log(2+|\xi|))$; hence
+$\mathcal Z_a\widehat h_a\in L^2$. Equivalently, $Y_a$ is the
+$L^2$ limit of the inverse transforms of
+$e^{-\varepsilon|\xi|}\mathcal Z_a\widehat h_a$ as
+$\varepsilon\downarrow0$.
+Compression of the full symbol multiplier to $I_a$ is the physical
+operator $H_a+\Pi$ in both parities, with
+$\Pi=2|c\rangle\langle c|-2|s\rangle\langle s|$.
+On the even $h_a$, $\Pi h_a=2I_{h,a}c$. The local jump differences
+of $h/h=1$ vanish, so the v1.29 identity gives $H_a h=h r_a$.
+Consequently $Y_a|_{I_a}=h r_a+2I_{h,a}c$. Combining this with
+$h r_a=T_a-2I_hc$ proves (i). These are restricted $L^2$ identities;
+endpoint singularities are permitted. The positive minimum of $h$
+controls division only at each fixed window, not uniformly in $a$.
+Equation~\eqref{eq:v151-zero-energy} combines the existing complete
+symbol and energy identities and extends on their physical form domain.
+No finite zero prefix has been substituted for $\mathcal Z_a$, and
+no interchange of its height limit with the inverse transform or
+quadratic integral is asserted. Such a substitution would require its
+Perron remainder, not just the small correction $C_a$.
+
+For (ii), ZLD says that $\widetilde m_a$ dominates
+$(\kappa/D_a)\,dt$ on $[-\theta D_a,0]$ (first on intervals,
+then on Borel sets). An admissible set of at most $K$ minorant levels
+contains the compulsory level $-D_a$. Its gaps clipped to that interval
+have total length $\theta D_a$ and number at most $K$. On a clipped
+gap of length $\Delta$, its one-sided distance to the preceding
+level has integral at least $\Delta^2/2$. Thus its cost is at least
+\[
+ \frac{\kappa}{2D_a}\sum\Delta^2
+ \ge\frac{\kappa\theta^2D_a}{2K}.
+\]
+Taking the infimum gives \eqref{eq:v151-zld-qg}. Equation
+\eqref{eq:v151-zero-energy} proves (iii); $\mathcal Z_a\ge-D_a$
+and Plancherel give the automatic local bound. Neither statement
+makes $\sup_aD_a$ finite.
+
+For the first limitation in (iv), let $U_J$ denote the uniform
+probability measure on $J$, and take $D>1$ and
+\[
+ \mu_D=\tfrac12\bigl[(1-D^{-2})U_{[-D,-D/2]}
+                         +D^{-2}U_{[-D,0]}\bigr].
+\]
+It has mass $1/2$, full support and
+$\mathrm{QC}_K(\mu_D)\ge(1-D^{-2})D/(8K)$ by the same gap
+argument. Nevertheless its density on $(-D/2,0)$ is only
+$1/(2D^3)$, contradicting every fixed positive ZLD constant on
+$[-\theta D,0]$ for any fixed $\theta>0$ eventually. Thus QG need
+not give uniform all-band control for general level measures.
+
+For failure of a general implication to a signed floor, take the
+nonarithmetic, even analytic multiplier $b_D(\xi)=\xi^2-D$ and
+$X_D=\sqrt D$. Its normalized negative-level density is
+\[
+ \frac{1}{2\sqrt D\sqrt{D+t}}\ge\frac1{2D},
+              \qquad -D<t<0.
+\]
+It satisfies ZLD with $\theta=1$, $\kappa=1/2$ and hence QG, yet
+for every fixed nonzero odd compact smooth test $f$,
+\[
+ \int b_D|\widehat f|^2=\|f'\|^2-D\|f\|^2\longrightarrow-\infty.
+\]
+The test is admissible on all sufficiently large physical windows
+and orthogonal to every even source. This is not the Weil multiplier
+or its Gaussian-radical identity; it shows exactly why signed
+energy control cannot be inferred from level-distribution data alone.
+
+Finally put $\ell_a=|\{\beta_a<0\}\cap[0,\infty)|<\infty$.
+For the actual field the compulsory one-level minorant gives
+\begin{equation}\label{eq:v151-cutoff-dilution}
+ 0\le\mathrm{QC}_K(\widetilde m_a)
+ \le\mathrm{QC}_1(\widetilde m_a)\le D_a\ell_a/X_a.
+\end{equation}
+A prescribed integer rule with $X_a\ge a(1+D_a\ell_a)$ makes
+this at most $1/a$. Choosing such a rule changes only the frequency
+averaging range, not CAE or the physical operator. Thus QG uniformly over every rule is false, whether or not CAE
+holds. This does not prove a logical nonimplication from actual
+arithmetic CAE, whose truth is unknown, or disprove QG for a
+particular natural rule.
+\end{proof}
+
+\paragraph{Disposition.}
+CAE is the bounded-floor target rewritten in positive-weight coordinates.
+ZLD implies the QG growth clause on the same prescribed family; the
+converse fails for general level measures. Neither hypothesis alone
+supplies the missing signed arithmetic estimate. Whether a special
+property of the actual corrected zero field yields any further
+implication remains open. No assertion here proves CAE, G2 or RH.
+
+
 \subsection*{Source-compressed Schatten refinement and two no-go tests}
 
 There is a sharper scalar consequence of the concentration hierarchy,
@@ -12010,8 +12255,8 @@ Paley--Wiener derivative bound, and introduces no auxiliary spectral
 gap.  Its ingredients are classical, and worldwide novelty is not
 claimed.  The exact drawdown optimization is new within this project.
 It does not survive the present falsification threshold as a live
-candidate.  A non-rigorous direct scan of the exact arithmetic symbol
-gave $a\Delta(\beta_a)$ approximately $2.5448,3.4002,4.9148,5.5052$
+candidate. A historical non-rigorous direct scan, whose original script
+and output are not archived, reported for the exact arithmetic symbol $a\Delta(\beta_a)$ approximately $2.5448,3.4002,4.9148,5.5052$
 at $\lambda=3,4,5,6$, respectively.  These finite values prove neither
 failure nor success of \eqref{eq:v134-open-lemma}; they show no trace of
 the required decay.  The candidate register therefore marked the scalar
@@ -15885,20 +16130,21 @@ that cost, or improve the signed far estimate before constructing
 the growing inner heads. Finite-only scaling diagnostics in the
 research log do not provide the missing complete witnesses.
 
-The rigid transfer test now disproves the unchanged $10^{-8}D$
-tail metric at $\lambda=5$ in both parities
+The historical rigid transfer test reports failure of the unchanged
+$10^{-8}D$ tail metric at $\lambda=5$ in both parities; its original
+witnesses and verifiers are not archived
 (Proposition~\ref{prop:v127-metric-fails}). Its complete certificate
-margin is unavailable, and changing remote cutoffs alone cannot fix
-that false prerequisite. A successful head or metric adaptation rule
+margin is unavailable. Conditional on the reported counterwitness
+bounds, changing remote cutoffs alone cannot repair that prerequisite. A successful head or metric adaptation rule
 remains to be proved. Proposition~\ref{prop:v127-rank-barrier} rules
 out polynomial-rank repairs of the old unsigned diagonal comparison;
 Proposition~\ref{prop:v127-block-metric} identifies a genuinely signed
 infinite-block alternative, without claiming its hypotheses hold.
 The actual $\lambda=5$, $N=\lambda^2$ test in
-Proposition~\ref{prop:v128-dyadic-fails} now rules out this dyadic
+Proposition~\ref{prop:v128-dyadic-fails} reports failure of this dyadic
 partition under every admissible smaller block metric and every
-positive scalar row reweighting. A finite norm-comparison obstruction
-already settles that failure; it does not settle the Weil sign.
+positive scalar row reweighting, but its original evidence is not archived.
+The reported finite norm-comparison obstruction would settle that failure; it does not settle the Weil sign.
 The physical G2.6 spaces now require finite image Grams, since
 Proposition~\ref{prop:v127-nonclosable} excludes bounded transport
 through the fixed point-value repair. The precise remaining ordinary
@@ -16105,7 +16351,7 @@ The original v1.38 source was checked in draft mode. The current
 complete manuscript uses the actual build gate described above.
 
 \subsection*{Actual arithmetic scalar-budget obstruction (v1.37)}
-The directory \texttt{g2\_scalar\_budget\_no\_go/} contains the proof,
+The relocated directory \path{evidence/v137/} contains the proof,
 candidate and literature audit, independent adversarial review, and a
 standard-library probe diagnostic. Lemma~\ref{lem:v137-probe} proves its
 constants analytically; the script separately checks the rational gate
@@ -16124,7 +16370,7 @@ Lemma~\ref{lem:v136-total-radicals},
 Propositions~\ref{prop:v136-resolvent-collapse},
 \ref{prop:v136-bounded-floor}, \ref{prop:v136-positive-comparison}, and
 Corollary~\ref{cor:v136-complement-floor} are analytic results. The directory
-\texttt{g2\_radical\_topology/} contains their proof excerpt, candidate and
+\path{evidence/v136/} contains their proof excerpt, candidate and
 literature audit, independent adversarial review, and exact countermodel
 checks. The exact-rational script in that directory checks the support-consistent forms
 $q_\pm[x]=\pm|\sum x_k|^2$. It verifies dense-radical approximation,
@@ -16137,7 +16383,7 @@ No finite-window numerical positivity result is added in this revision.
 The analytic proofs are Propositions~\ref{prop:v135-both-parities} and
 \ref{prop:v135-growing-radical}, and
 Corollary~\ref{cor:v135-coercivity-obstruction}.  The accompanying directory
-\texttt{g2\_growing\_radical/} contains the proof excerpt, novelty and
+\path{evidence/v135/} contains the proof excerpt, novelty and
 scope report, independent adversarial review, and
 \texttt{check\_growing\_radical.py}.  Its double-precision diagnostics check
 the Gaussian source moments and Poisson symmetry, and the complete pole
@@ -16776,64 +17022,56 @@ open. These checks close the continuum endpoint question and improve
 the formulation of the growing-window target, without closing G2.
 
 \subsection*{Source-weighted capacity candidate audit}
-The bundle directory \texttt{g2\_capacity\_candidate} contains the
-candidate register, the complete formula-level novelty comparison and
-the adversarial review of Proposition~\ref{prop:v129-capacity}. The
-finite projected-source values quoted after that proposition were
-recomputed from the archived $\lambda=3$, $N=64$ interval midpoints
-only as a falsification diagnostic. They are not interval certificates
-and are not used in the proof of the Picone identity.
-
-The review independently expands the archimedean constant, checks both
-prime orientation factors, preserves the zero-extension killing terms
-and verifies the first-slot-linear pole sign. It also records the
-two-coordinate counterexample to the tempting claim that
-$W_\lambda h\ge0$ pointwise alone proves positivity. The only rigorous
-new implication is therefore the conditional capacity reduction.
-The arithmetic capacity estimate, its cofinal error and the odd sector
-remain open.
+The original \texttt{g2\_capacity\_candidate} companion directory is
+\emph{not archived}: its candidate register, novelty comparison,
+adversarial review and recomputation outputs are absent. The complete
+analytic proof of Proposition~\ref{prop:v129-capacity} is printed in this
+manuscript and does not depend on that missing review. The finite
+projected-source values following it were historically reported as
+recomputed from the available $\lambda=3$, $N=64$ interval midpoints;
+the recomputation script and output are not archived. Those values are
+falsification diagnostics, not interval certificates or proof inputs.
+The historical review was described as checking the archimedean constant,
+prime orientation factors, exterior killing terms, pole sign and the
+two-coordinate counterexample. This is a description of an unavailable
+review, not a claim of current independent verification. The arithmetic
+capacity estimate, its cofinal error and the odd sector remain open.
 
 \subsection*{Weighted-concentration and Schatten no-go audit}
-The bundle directories \texttt{g2\_weighted\_concentration} and
-\texttt{g2\_schatten\_no\_go} contain the proofs, candidate register,
-adversarial review and diagnostics for
-Propositions~\ref{prop:v131-concentration}--%
-\ref{prop:v132-flat-top}. The Hilbert--Schmidt identity and interlacing
-bounds are analytic. The dilation countermodel uses the sharp
-Dirichlet Poincar\'e inequality and exact unitary scaling; no numerical
-concentration eigenvalue is used in its proof.
+The original \texttt{g2\_weighted\_concentration} and
+\texttt{g2\_schatten\_no\_go} evidence sets are \emph{not archived}.
+Only \path{evidence/v131/g2_weighted_concentration_report.md} survives,
+with its recovery provenance. The original scripts, outputs, candidate
+register and complete adversarial reviews are absent. The analytic
+Hilbert--Schmidt, interlacing, dilation and positive flat-top arguments
+are proved in the manuscript and do not rely on those diagnostics.
 
-\texttt{certify\_beta4\_negative.py} uses exact rational interval
-arithmetic and proved series remainders. It certifies
-$\beta_{\log4}(1)<-3/5$ without a floating-point proof step. The
-global negative-index consequence applies to unrestricted Schwartz
-tests, not to the compact physical window. The positive flat-top no-go
-is likewise analytic and does not assume a particular smoothing
-window.
+The original \texttt{certify\_beta4\_negative.py} and its output are
+\emph{not archived}. The historical account reports exact rational
+interval arithmetic proving $\beta_{\log4}(1)<-3/5$; that numerical
+claim cannot presently be replayed. Proposition~\ref{prop:v132-global-index}
+now explicitly separates the reported enclosure from the analytic
+negative-index implication conditional on it. The implication concerns
+unrestricted Schwartz tests, not the compact physical window.
 
-The finite cosine-compression and trapezoidal-flat-top scripts run only
-at $\lambda=3,4,5$. They are adversarial diagnostics, not certificates
-of the physical form or a cofinal trend. Their purpose is to try to
-falsify scalar simplifications before promoting them. The surviving
-signed weighted-superlevel inequality remains conditional, and its
-cofinal arithmetic constants and the odd sector remain open.
+Finite cosine-compression and trapezoidal-flat-top tests were reported
+only for $\lambda=3,4,5$. Their original scripts and outputs are not
+archived; they were diagnostics, not certificates or cofinal evidence.
+The signed weighted-superlevel implication remains analytic and
+conditional; its cofinal arithmetic constants remain open.
 
 \subsection*{Continuum-cancellation and local no-go audit}
-The bundle subdirectory \texttt{g2\_continuum\_cancellation} contains
-the exact proof report and the non-rigorous symbol diagnostic for
-Propositions~\ref{prop:v130-continuum-cancellation}--%
-\ref{prop:v130-local-no-go}. The continuum identity was checked both
-as a kernel factorization and by its positive Fourier multiplier.
-The six-bump proof is algebraic: its strict support separation, sole
-prime--$2$ correlation and two vanishing Laplace moments use no
-quadrature or endpoint approximation.
-
-The script \texttt{test\_continuum\_symbol.py} scans only the already
-studied windows $\lambda=3,4,5$. It is a falsification diagnostic for
-the stronger pointwise criterion, not a sign certificate. The exact
-normal form retains the physical support constraint; replacing it by
-arbitrary frequency localization would contradict the certified
-positive fixed windows and is not done here.
+The original \texttt{g2\_continuum\_cancellation} proof report and
+\texttt{test\_continuum\_symbol.py}, including its saved output, are
+\emph{not archived}. The complete analytic proofs of
+Propositions~\ref{prop:v130-continuum-cancellation}--\ref{prop:v130-local-no-go}
+are printed in this manuscript. Kernel factorization, the positive
+Fourier multiplier and the six-bump algebraic argument require no
+numerical diagnostic or absent companion review.
+The missing script was reported to scan $\lambda=3,4,5$ as a
+falsification diagnostic, not a sign certificate. The exact normal
+form retains the physical support constraint; arbitrary frequency
+localization is not substituted for it.
 
 \subsection*{Prime norm recurrence and growing-window scale}
 Propositions~\ref{prop:v119-prime-essential}--\ref{prop:v119-prime-scale}
@@ -16910,42 +17148,31 @@ do not rely on the success of a numerical positivity gate.
 
 
 
-\subsection*{Signed-block criterion test and certified failure}
+\subsection*{Signed-block test: original evidence not archived}
 \label{app:v128-test}
-The directory \texttt{g2\_block\_metric} contains the protocol frozen
-before the test, the original numerical proposals, exact dyadic pair
-and congruence witnesses, and outward $320$- and $448$-bit certificates.
-The primary cutoff is explicitly $N=\lambda^2=25$ with four blocks
-$26{:}50$, $51{:}100$, $101{:}200$, $201{:}400$. The metrics are the
-full actual signed diagonal blocks; no scalar tail certificate is
-substituted for them.
+The original \texttt{g2\_block\_metric} directory is \emph{not archived}.
+Its frozen protocol, numerical proposals, exact dyadic pair and congruence
+witnesses, $320/448$-bit outputs, \nolinkurl{certify_block_failure.py}
+and independent signed-index verifier are absent. The manuscript preserves
+only their historical description: $N=\lambda^2=25$, blocks $26{:}50$,
+$51{:}100$, $101{:}200$, $201{:}400$, and actual signed block metrics.
 
-\nolinkurl{certify_block_failure.py} verifies all four positive blocks
-and all six normalized coupling lower bounds in each parity. It
-then checks the integer Rayleigh numerators of the comparison
-matrices, so no eigensolver accuracy is used in the failure gate.
-Every dyadic proposal is reconstructed exactly. The accompanying
-independent verifier checks all six block pairings in each parity
-using signed Fourier coordinates. The first three blocks alone
-already give a comparison Rayleigh value above one in both parities. Both verifiers use the
-same audited analytic coefficient enclosures and Arb arithmetic.
-This is internal adversarial verification, not a separately derived
-analytic kernel or external certification.
-
-The infinite tail is not replaced by zero. A finite positive prefix
-could not certify the proposed infinite criterion, but these certified
-lower bounds disprove it because additional norm terms cannot decrease
-the comparison. The successful gates establish a route obstruction;
-there is no complete $\lambda=5$ sign certificate, no generalized
-positivity margin, and no new $\lambda=8$ calculation in this run.
+The historical account reports positive-block Gershgorin gates and six
+normalized coupling lower bounds per parity, followed by integer
+Rayleigh checks. The displayed integer arithmetic is reproducible from
+the text; its asserted relation to the actual blocks is not replayable
+without the missing witnesses and verifiers. These are reported gates,
+not currently available certificates. If those gates hold, additional
+nonnegative norm terms cannot repair the finite comparison obstruction.
+No complete $\lambda=5$ sign certificate or positivity margin follows.
 
 \subsection*{Rigid $\lambda=5$ transfer and the stopped certificate}
 \label{app:v127-transfer}
-The bundle directory \texttt{g2\_lambda5\_transfer} contains the frozen
-protocol, both dyadic counterwitnesses, $320$- and $448$-bit replays,
-and one obstruction report per parity. These are not positive tail
-certificates or inverse factors. The parameter record precedes the
-tests and has SHA256
+The original \texttt{g2\_lambda5\_transfer} directory is \emph{not
+archived}: the protocol, dyadic counterwitnesses, $320/448$-bit outputs
+and obstruction reports are absent. What follows is surviving historical
+metadata, not an available certificate. The parameter record was reported
+to precede the tests and to have SHA256
 \begin{quote}\small\nolinkurl{6de75f0e5121fb4a452de7f0518418820c2acb113b9c02915c450f42875dff1e}.\end{quote}
 Its tail start is $16$, $c=10^{-8}$, with even $(N,M,J,r)=(512,1024,4096,48)$
 and odd $(1536,2048,4096,64)$, remote Young parameter $10^{-6}$,
@@ -16962,18 +17189,21 @@ $1/20$ and threshold $1/1000$. The odd directional rule freezes a
 proposed top generalized direction and uses support $8192$, $24$ steps,
 and the same square-root optimization of its scalar Young parameter.
 Those outer steps were not executed at $\lambda=5$, because the
-stipulated tail prerequisite was disproved.
+stipulated tail prerequisite was reported to fail.
 
-The counterwitness files have hashes
+The absent counterwitness files have historically recorded hashes
 \begin{quote}\small
 Even: \nolinkurl{747e401533af131a98d5ccac241c5145c87d34245efaf3b8f1d6015f18926976}.\\
 Odd: \nolinkurl{105c49f88128480f8d471e614ba91da589d61d87169d692e0a49c55ce2deaa6b}.
 \end{quote}
-\nolinkurl{falsify_fixed_tail_metric.py} replays the complete finite-support
-quadratics. \nolinkurl{audit_l5_tail_metric_expanded.py} independently
-reassembles them in signed Fourier indices using the same audited
-analytic coefficient enclosures and Arb arithmetic. Thus it checks
-parity factors and signs, not an independently derived analytic kernel.
+\nolinkurl{falsify_fixed_tail_metric.py} and
+\nolinkurl{audit_l5_tail_metric_expanded.py} are \emph{not archived}.
+The historical account describes complete finite-support quadratic
+replay and an independent signed-index assembly using the same analytic
+coefficient enclosures and Arb arithmetic. The asserted agreement is
+not currently replayable; it was a parity/sign check, not an independent
+analytic kernel derivation. None of the recorded hashes above has been
+revalidated against its absent original in NS-38.
 No remote enclosure is necessary for the finite-support negative
 shifted quadratics. No new $\lambda=8$ computation is part of this run.
 
@@ -17206,39 +17436,29 @@ the stated sign gates and perturbation margins are interval-certified.
 No growing-window convergence or new G2 sign conclusion follows.
 
 \subsection*{Concentration commutator reproduction and scope}
-The cumulative bundle's \texttt{g2\_nested\_commutator} directory
-contains the complete independent adverse review,
-\texttt{certify\_scaled\_commutator.py}, and its machine-readable
-certificate.  The script performs exact rational polynomial integration
-for a degree-four Taylor kernel and uses only rational enclosures for
-$\pi$ and $\sqrt5$ in its final comparison.  It certifies the stronger
-check
-\[
- \norm{[C_{1/10},C_{1/5}]}>1.198\cdot10^{-5}.
-\]
-The main proof uses the shorter degree-two estimate exceeding
-$9\cdot10^{-6}$; neither bound is inferred from an eigensolver.  The
-passage to the actual source is analytic and depends explicitly on
-Lemma~\ref{lem:v115-source-mass}.  No calculation above
-$\lambda=5$ was made.  The result is a no-go for an automatic
-approximate-commutation simplification, not a negative result for the
-arithmetic superlevel hierarchy and not a G2 sign estimate.
+The original \texttt{g2\_nested\_commutator} directory, adverse review,
+\texttt{certify\_scaled\_commutator.py} and machine-readable certificate
+are \emph{not archived}. The historical account reports exact rational
+integration of a degree-four Taylor kernel and a stronger lower check
+$\norm{[C_{1/10},C_{1/5}]}>1.198\cdot10^{-5}$. That check is not
+presently replayable and is not used here as an available bound.
+The complete main proof instead uses its printed degree-two estimate
+exceeding $9\cdot10^{-6}$. Its passage to the actual source is analytic,
+with Lemma~\ref{lem:v115-source-mass} explicit. This scoped obstruction
+to automatic approximate commutation does not require the missing
+stronger check and does not close the arithmetic hierarchy.
 
 \subsection*{Disjoint-channel and primitive-transport reproduction}
-The cumulative bundle's \texttt{g2\_primitive\_transport} directory
-contains two independent adverse reviews and
-\texttt{test\_primitive\_transport.py}.  The disjoint-channel lower
-bound in Proposition~\ref{prop:v134-disjoint} is analytic and uses only
-$\sin t/t\ge1-t^2/6$ and the proved strong source limit.  No numerical
-singular-value estimate enters it.  The primitive-transport review
-derives the exact drawdown optimization and the Dirichlet-model value
-$\pi^3/6$ independently.  The script evaluates the arithmetic drawdown
-on a finite frequency grid for $\lambda=3,4,5,6$; its output is explicitly
-diagnostic, not interval-certified and not used in a proof.  No
-$\lambda=8$ calculation was made.  The reports also record why direct
-Cotlar regrouping is algebraically the existing joint-channel target
-rather than a new candidate.
-
+The original \path{g2_primitive_transport} directory, its two adverse
+reviews, \path{test_primitive_transport.py} and saved output are
+\emph{not archived}. The disjoint-channel lower bound in
+Proposition~\ref{prop:v134-disjoint}, exact drawdown optimization and
+Dirichlet-model value $\pi^3/6$ are proved analytically in the manuscript.
+They do not use a numerical singular-value estimate or the missing review.
+The historical account reports finite-grid drawdown diagnostics at
+$\lambda=3,4,5,6$, not interval certificates; the outputs are unavailable
+and are not proof inputs. No $\lambda=8$ run was reported. The exact
+joint-channel regrouping identity is likewise printed in the manuscript.
 
 \section{Integration ledger for the complete previous manuscript}\label{app:ledger}
 The table accounts for all 72 numbered theorems, lemmas, propositions and

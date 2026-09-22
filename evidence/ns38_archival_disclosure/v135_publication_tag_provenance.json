@@ -1,0 +1,24 @@
+{
+  "classification": "existing archived content located at original immutable version tag; no numerical replay",
+  "tag_commit": "f06ba5a3aebb3c96e0ab64b71bf83dc44afae750",
+  "files": [
+    {
+      "legacy_path": "fixed_space_prime_action_v1_35.tex",
+      "git_reference": "v1.35:fixed_space_prime_action_v1.tex",
+      "sha256": "822a1808e380893d4094ada54c05790cd323882617d8229d4d720e650baca97e",
+      "matches_legacy_manifest": true
+    },
+    {
+      "legacy_path": "v1_35_revision_notes.md",
+      "git_reference": "v1.35:v1_revision_notes.md",
+      "sha256": "86e0cd436fc5bd031eb05ed8594343cfc2261e2542cae4b00f3b216a0392d0f8",
+      "matches_legacy_manifest": true
+    },
+    {
+      "legacy_path": "RH_G1_G2_research_log.md",
+      "git_reference": "v1.35:RH_G1_G2_research_log.md",
+      "sha256": "f689d7b05ce323b1e52977695d1032e384a1944f7b8a73c81f5ef60261e5ab6c",
+      "matches_legacy_manifest": true
+    }
+  ]
+}

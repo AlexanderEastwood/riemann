@@ -64,6 +64,15 @@ stays blocked, not closed. No new window/tail metric. G2/RH remain open.
 
 ---
 
+Version 1.51 records NS-39's exact corrected-zero-field potential and comparison
+of ZLD, QG and CAE. ZLD implies only QG's growth clause on the same prescribed
+family; packet feasibility is independent. CAE is exactly the uniform complement
+floor in positive-weight coordinates, not a new estimate. General level-measure
+countermodels do not prove arithmetic independence. NS-38 explicitly discloses
+both unarchived evidence groups; recovery remains open, while the five v1.35
+scientific originals are present and hash-matched. NS-41/42 are separate diagnostics,
+not bounds. G2 and RH remain open.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:
