@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.49},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.50},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.49\\
+\large Complete working manuscript, version 1.50\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 21, 2026}
@@ -184,6 +184,16 @@ imply RH directly, but remains unproved.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.50 tests the explicit positive Gaussian arithmetic radical in
+the physical prime-shift capacity identity. Its exact transformed form
+retains both poles and exterior edges. A scoped obstruction proves that
+no fixed fraction of its positive transformed energy, or its prime-2
+channel alone, can be discarded with a uniform ordinary-norm error.
+The full critical energy comparison remains an equivalent named open
+input for the bounded-floor target, not a new sign theorem. No new
+window, tail metric or numerical experiment. G2 and RH remain open.
+
+
 Version 1.49 records the review of the unmerged v1.48 candidate and
 replaces its peak-density interpretation by an exact quantization input.
 The level density has an integrable unbounded singularity at any negative
@@ -11190,6 +11200,305 @@ interpretation, not a failure of the physical form or the valid weighted
 concentration criterion. No new window, tail metric, optimization or zero
 enclosure is computed. The route remains blocked. G2 and RH remain open.
 
+
+\subsection*{A positive arithmetic weight and the critical capacity budget (NS-34)}
+
+The bounded-error target of Proposition~\ref{prop:v136-bounded-floor}
+allows a fixed ordinary-norm error, but it does not automatically allow
+relative slack in a ground-state transform. Here one explicit weight is
+chosen from the archived Gaussian arithmetic radical. The resulting
+identities are exact; the obstruction below concerns a weakened
+\emph{sufficient bound}, not a negative direction of the Weil form.
+No new window, tail metric or numerical experiment is used.
+
+Put $\ell=\log2$, and use the unnormalized positive weight
+\begin{equation}\label{eq:v150-weight}
+ h(x)=e^{x/2}\sum_{n\ge1}H(ne^x),\qquad
+ H(u)=\frac{4\pi}{\sqrt3}u^2(2\pi u^2-3)e^{-\pi u^2}.
+\end{equation}
+Thus $h(x)=f_\infty(e^x)$ from Lemma~\ref{lem:v115-source-mass}.
+Its restriction to each $I_a=(-a,a)$ is the comparison weight; it is
+\emph{not} identified with the actual repaired source $u_a$. Dividing
+it by its norm on $I_a$ changes none of the identities for a fixed
+$f=hg$, by homogeneity.
+
+\begin{lemma}[Explicit positive weight and normalization]
+\label{lem:v150-weight}
+The function $h$ is smooth, even and strictly positive, and has a positive
+minimum on every closed finite interval. Write $c(x)=\cosh(x/2)$ and
+$s(x)=\sinh(x/2)$. Then
+\begin{equation}\label{eq:v150-pole-mass}
+ I_h:=\int_{\mathbb R}c(x)h(x)\,dx=\frac1{\sqrt3},
+ \qquad d\nu(x)=I_h^{-1}c(x)h(x)\,dx
+\end{equation}
+defines an even probability measure. For $x\ge0$,
+\begin{equation}\label{eq:v150-weight-bounds}
+ A_-e^{9x/2-\pi e^{2x}}\le h(x)\le A_+e^{9x/2-\pi e^{2x}},
+ \quad A_-=\frac{4\pi(2\pi-3)}{\sqrt3},\quad
+ A_+=\frac{16\pi^2}{\sqrt3}.
+\end{equation}
+In particular, for $x\ge\ell$,
+\begin{equation}\label{eq:v150-weight-ratio}
+ \frac{h(x-\ell)}{h(x)}\ge
+ \frac{2\pi-3}{4\pi}\,2^{-9/2}
+             \exp\!\left(\frac{3\pi}{4}e^{2x}\right).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Poisson summation and the two zero moments of the Fourier-invariant
+$H$ give evenness, as in Lemma~\ref{lem:v115-source-mass}.
+For $x\ge0$ every summand is positive. The $n=1$ term gives the lower
+bound. For the upper bound use
+\[
+ h(x)\le\frac{8\pi^2}{\sqrt3}e^{9x/2-\pi e^{2x}}
+ \left(1+\sum_{n\ge2}n^4e^{-\pi(n^2-1)e^{2x}}\right)
+ \le A_+e^{9x/2-\pi e^{2x}}.
+\]
+Indeed $4\log n\le n^2-1$ for $n\ge2$, and $\pi>3$ bounds the sum
+by $\sum_{n\ge2}e^{-2(n^2-1)}\le\sum_{n\ge2}e^{-2n}<1$.
+Evenness gives the same decay at the other end. Smoothness and strict
+positivity then give the fixed-interval minimum. Taking the ratio of
+the two bounds proves \eqref{eq:v150-weight-ratio}.
+
+For $\Re z>1$, absolute convergence and a Gaussian integral give
+\[
+ \int_0^\infty H(u)u^{z-1}\,du
+ =\frac{z(z-1)}{\sqrt3}\pi^{-z/2}\Gamma(z/2),
+\]
+\begin{equation}\label{eq:v150-mellin}
+ \int_{\mathbb R}h(x)e^{(z-1/2)x}\,dx
+ =\frac{z(z-1)}{\sqrt3}\pi^{-z/2}\Gamma(z/2)\zeta(z).
+\end{equation}
+The decay just proved makes the left side entire in $z$; the identity
+continues through the removable singularities on the right. Letting
+$z\to1$ gives $\int e^{x/2}h=1/\sqrt3$, and evenness gives
+\eqref{eq:v150-pole-mass}. This is the classical completed-zeta kernel,
+not a new zero-free function or a use of RH.
+\end{proof}
+
+\begin{proposition}[Exact full and windowed energy identities]
+\label{prop:v150-critical-energy}
+For $f=hg\in C_c^\infty(\mathbb R)$ define
+\begin{align}
+ \mathcal J_h[g]={}&\frac12\iint_{\mathbb R^2}
+       \rho(|x-y|)h(x)h(y)|g(x)-g(y)|^2\,dx\,dy\notag\\
+ &+\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+       \int_{\mathbb R}h(x)h(x+\log n)
+                    |g(x+\log n)-g(x)|^2\,dx,
+ \label{eq:v150-global-energy}
+\end{align}
+where $\rho(t)=e^{t/2}/(2\sinh t)$ as in v1.29. All displayed
+nonnegative terms have a finite total for such $f$. Then
+\begin{equation}\label{eq:v150-critical-identity}
+ q[f]=\mathcal J_h[g]-\frac23\operatorname{Var}_{\nu}(g)
+                 -2\left|\int_{\mathbb R}s(x)h(x)g(x)\,dx\right|^2,
+ \qquad
+ \operatorname{Var}_{\nu}(g)=\int|g|^2d\nu-\left|\int g\,d\nu\right|^2.
+\end{equation}
+For even $g$ the last square vanishes. For odd $g$ the mean in the
+variance vanishes but the last square must be retained.
+
+For the finite window let $\mathcal J_{a,h}$ be
+\eqref{eq:v150-global-energy} with both endpoints of every edge inside
+$I_a$, equivalently \eqref{eq:v129-transformed-energy}. Put
+\begin{align}
+ T_a(x)={}&\int_{\mathbb R\setminus I_a}\rho(|x-y|)h(y)\,dy\notag\\
+ &+\sum_{n\ge2}\frac{\Lambda(n)}{\sqrt n}
+ \bigl[1_{I_a^c}(x+\log n)h(x+\log n)
+       +1_{I_a^c}(x-\log n)h(x-\log n)\bigr],\label{eq:v150-exterior}\\
+ r_a(x)={}&\frac{T_a(x)-2I_hc(x)}{h(x)},\qquad x\in I_a.
+ \label{eq:v150-potential}
+\end{align}
+For $f$ supported in $I_a$, with $g=0$ outside, the exact identities are
+\begin{align}
+ \mathcal J_h[g]&=\mathcal J_{a,h}[g]
+                +\int_{I_a}\frac{T_a}{h}|f|^2\,dx,\label{eq:v150-edge-split}\\
+ q_a[f]&=\mathcal J_{a,h}[g]+\int_{I_a}r_a|f|^2\,dx+\Pi[f],
+ \quad \Pi[f]=2|\langle f,c\rangle|^2-2|\langle f,s\rangle|^2.
+ \label{eq:v150-local-identity}
+\end{align}
+They extend to the physical form domain on each fixed window.
+The potential $r_a$ is exactly $H_a h/h$ from v1.29, with the pole
+removed; no exterior term has been discarded.
+\end{proposition}
+\begin{proof}
+The known Gaussian arithmetic radical has zero pairing with every
+compact smooth Weil test (the radical input of v1.35, originating in
+\cite[Section~3]{ConnesConsani2023}). Equivalently, its full pointwise
+archimedean-minus-prime expression is $-2I_hc$. This last statement
+also follows distributionally by taking the v1.35 smooth cutoffs of
+$h$: their complete operator residual tends to zero, while their pole
+moments and the absolutely convergent prime and archimedean expressions
+converge against each fixed compact test. Smooth local convergence then
+gives the pointwise identity. No global positive realization is assumed.
+
+Apply the elementary Picone identity from
+Proposition~\ref{prop:v129-picone} to all archimedean and prime edges.
+The potential is $-2I_hc/h$ and the full pole is $\Pi[f]$, by
+Proposition~\ref{prop:v135-both-parities}. Thus
+\[
+ q[f]=\mathcal J_h[g]-2I_h\int ch|g|^2
+               +2\left|\int chg\right|^2-2\left|\int shg\right|^2,
+\]
+which gives \eqref{eq:v150-critical-identity} because $I_h^2=1/3$.
+The Gaussian decay gives absolute convergence of the prime terms when
+one endpoint is in a fixed compact set; the continuous kernel's local
+singularity is integrable after the squared difference. These facts
+justify the edge identity without subtracting divergent positive sums.
+
+Separating edges crossing $I_a^c$ gives \eqref{eq:v150-edge-split}
+with $T_a\ge0$, hence \eqref{eq:v150-local-identity}.
+For interior $x$, every prime shift with $n\ge e^{2a}$ is exterior,
+so this is precisely the strict-cutoff finite form. Endpoint equalities
+are irrelevant on the open interval. At each fixed $a$, $h$ and $1/h$
+are bounded and smooth, while $c/h$ is bounded. Closing the identity on
+the physical smooth core extends it to the form domain. The exterior
+energy is a nonnegative part of $\mathcal J_h$, so its integral, and
+then those of $(r_a)_\pm$, are finite there. This argument makes no
+claim for noncompact $f/h$ with infinite separate transformed energies.
+\end{proof}
+
+\paragraph{The exact capacity demand, including the source.}
+For $0\le\delta_a\le1$ and $\eta_a\ge0$, the proposed strict absorption test is
+\begin{equation}\label{eq:v150-capacity-demand}
+ \int_{I_a}(r_a)_-|f|^2\le
+ (1-\delta_a)\mathcal J_{a,h}[f/h]+\Pi[f]+\eta_a\|f\|^2.
+\end{equation}
+Use even $f\perp u_a$ and all odd $f$, with $u_a$ the actual normalized
+even source. In the even sector the constraint is
+$\int_{I_a}h g\overline{u_a}=0$, not $\int g\,d\nu=0$.
+In the odd sector the negative pole can instead be placed on the left
+as $2|\langle f,s\rangle|^2$. Uniform finite $\eta_a$ in both sectors,
+together with the archived vanishing source residual, would suffice
+by Corollary~\ref{cor:v136-complement-floor}.
+The form actually lower-bounded by this test is
+\begin{equation}\label{eq:v150-budget-form}
+ \mathcal B_{a,\delta}[f]
+ =q_a[f]-\int_{I_a}(r_a)_+|f|^2
+                  -\delta_a\mathcal J_{a,h}[f/h].
+\end{equation}
+This identity isolates both losses of the sufficient criterion.
+
+\begin{proposition}[No fixed relative slack for the Gaussian arithmetic weight]
+\label{prop:v150-capacity-slack}
+Set $b=\ell/16$ and
+\[
+ \kappa=\frac{(2\pi-3)\log2}{128\pi}>0,\qquad
+ \gamma=\frac{3\pi}{4}e^{-4\ell-2b}>0.
+\]
+There are $A<\infty$ and $a_0$, independent of $a$, such that every
+valid \eqref{eq:v150-capacity-demand} on either the even source
+complement or the odd sector, for $a\ge a_0$, must satisfy
+\begin{equation}\label{eq:v150-slack-budget}
+ \eta_a\ge\left[\delta_a\kappa\exp(\gamma e^{2a})-B_a\right]_+,
+ \qquad B_a=A+(8a+1)e^a+2a.
+\end{equation}
+In particular no fixed $\delta_a\ge\delta_0>0$ permits a uniform
+finite $\eta_a$. If $\eta_a\le C$, necessarily
+\begin{equation}\label{eq:v150-slack-rate}
+ \delta_a\le\frac{C+B_a}{\kappa}e^{-\gamma e^{2a}}
+       =O(\lambda\log\lambda\,e^{-\gamma\lambda^2}).
+\end{equation}
+Also, retaining the coefficient one on every other transformed edge
+but deleting the prime-$2$ energy alone forces
+$\eta_a\ge[\kappa\exp(\gamma e^{2a})-B_a]_+$.
+These are failures of the indicated lower comparisons, not of $q_a$.
+\end{proposition}
+\begin{proof}
+Choose two fixed real even orthonormal smooth bumps
+$\phi_1,\phi_2\in C_c^\infty(-b,b)$. Put $t=a-2\ell$ and
+\[
+ F_{j,t}^{\pm}(x)=2^{-1/2}\bigl(\phi_j(x-t)\pm\phi_j(x+t)\bigr).
+\]
+For large $a$ these give orthonormal pairs in the even and odd sectors,
+respectively. The even two-dimensional span contains a unit vector
+$f_a^{\rm ev}\perp u_a$, regardless of the source coefficients. Every
+odd vector is source-orthogonal. All estimates below hold for every
+unit vector in either span, hence include both admissible choices.
+
+The support bands and their shifts by $\ell$ are disjoint. For $x$ in
+the positive support band the edge to $x-\ell$ stays inside $I_a$ and
+has $f(x-\ell)=0$; for the negative band use the reflected edge. The
+prime-$2$ part $\mathcal J^{(2)}_{a,h}$ therefore satisfies
+\begin{align*}
+ \mathcal J_{a,h}[f/h]\ge\mathcal J^{(2)}_{a,h}[f/h]
+ &\ge\frac{\log2}{\sqrt2}
+       \inf_{t-b\le x\le t+b}\frac{h(x-\ell)}{h(x)}\|f\|^2\\
+ &\ge\kappa\exp\!\left(\frac{3\pi}{4}e^{2(t-b)}\right)
+ =\kappa\exp(\gamma e^{2a}),
+\end{align*}
+using \eqref{eq:v150-weight-ratio}. No cross term between the bumps
+has been dropped: the endpoint opposite every selected nonzero endpoint
+lies outside the support.
+
+The original form on these same unit vectors has the elementary upper
+bound $q_a[f]\le B_a$. For the archimedean multiplier
+$\alpha(\xi)=\Re\psi(1/4+i\xi/2)-\log\pi$, one may take
+\[
+ A=2\sum_{j=1}^2\int_{\mathbb R}|\alpha(\xi)|
+                      |\widehat\phi_j(\xi)|^2\,d\xi<\infty,
+\]
+since the translated parity factors have absolute value at most
+$\sqrt2$. The prime correlation norm is at most $2P_\lambda$, and
+\[
+ P_\lambda\le 2a\sum_{n<e^{2a}}n^{-1/2}\le4ae^a.
+\]
+The even pole is at most $2\|c\|_{L^2(I_a)}^2
+=2a+2\sinh a\le2a+e^a$; the odd pole is nonpositive and does not
+increase this upper bound. Thus all terms, including mixed terms within
+the chosen two-dimensional space, are covered by $B_a$.
+
+From \eqref{eq:v150-budget-form} and $(r_a)_+\ge0$,
+\[
+ -\mathcal B_{a,\delta}[f]\ge
+       \delta_a\mathcal J_{a,h}[f/h]-q_a[f]
+ \ge\delta_a\kappa\exp(\gamma e^{2a})-B_a.
+\]
+The capacity demand requires $\mathcal B_{a,\delta}\ge-\eta_a$ on
+these unit vectors, proving \eqref{eq:v150-slack-budget} and its
+rearrangement. Deleting only the prime-$2$ energy subtracts
+$\mathcal J^{(2)}_{a,h}$ in place of $\delta_a\mathcal J_{a,h}$ and
+has the same lower obstruction. No eigenvalue or sign of the physical
+form has been inferred from a negative comparison form.
+\end{proof}
+
+\begin{assumption}[Critical arithmetic energy comparison, CAE]
+\label{ass:v150-cae}
+For some finite $C$ independent of the window, prove on a cofinal family
+\begin{equation}\label{eq:v150-cae}
+ \mathcal J_h[f/h]\ge
+ \frac23\operatorname{Var}_{\nu}(f/h)
+       +2\left|\int s(x)f(x)\,dx\right|^2-C\|f\|^2
+\end{equation}
+for every even source-admissible $f$ and every odd $f$ in the complete
+physical form domain. Both parity statements and all exterior edges
+are required. This is a named open input.
+\end{assumption}
+By \eqref{eq:v150-critical-identity}, CAE is the existing uniform
+complement-floor target in explicit positive-weight coordinates, not
+an independent positivity theorem. The archived source residual and
+v1.36 would then give the conditional RH implication. They do not
+prove CAE. The unweakened local capacity demand with $\delta_a=0$
+is a stronger sufficient condition because it also discards $(r_a)_+$;
+its uniform error remains unproved as well.
+
+\paragraph{Finding and limits.}
+The explicit weight exists and its identities include the complete
+arithmetic shifts and both poles. What had to change is the proposed
+use of a generic strict absorption estimate: even one fixed fraction
+of transformed energy, or the entire prime-$2$ channel, cannot be
+sacrificed with a uniform ordinary error for this weight. Edge ratios
+amplify that loss like $\exp(\gamma\lambda^2)$ on admissible tests.
+The remaining critical comparison CAE is an equivalent form of the
+missing arithmetic bound; this calculation has not made it easier
+by proof. A different weight is not excluded. The complete capacity
+route stays blocked, while the specified fixed-slack shortcut is closed.
+The general ground-state method is classical
+\cite{FrankSeiringer2008}; no worldwide novelty is claimed for it or
+for the Gaussian completed-zeta kernel. All new statements here are
+exact identities, proved implications or the named open input CAE.
+No RH assumption, new window, tail metric or numerical certificate
+enters. G2 and RH remain open.
 
 \subsection*{Source-compressed Schatten refinement and two no-go tests}
 
