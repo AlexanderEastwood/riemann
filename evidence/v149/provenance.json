@@ -1,0 +1,89 @@
+{
+  "classification": "Analytic work, archived inputs and review provenance; no diagnostic promoted to a certificate",
+  "base_main": "06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5",
+  "claim_commit": "d895fce",
+  "original_claim_before_rebase": "070fe7f",
+  "task_ids": {
+    "NS-32": "PR14 review",
+    "NS-33": "v149 exact weighted zero input"
+  },
+  "reviewed_pr": {
+    "url": "https://github.com/AlexanderEastwood/riemann/pull/14",
+    "head": "f3611ef2c3464fa30e50408c62e339697def6c38",
+    "fragment_sha256": "8185db9b5a545f6be485de41c04c8d2597081996078cdcc0e9d6f6b1edf6020d",
+    "disposition": "MAJOR findings; left open and unmerged"
+  },
+  "files": [
+    {
+      "path": "evidence/diag_level_distribution/min_energy_lp_output.txt",
+      "sha256": "0efe072a92e1513cd2decea200e567a497f1841a0e7e1deaf49a1328f61cd5ba",
+      "size_bytes": 3120,
+      "unchanged_from_base": true
+    },
+    {
+      "path": "evidence/diag_level_distribution/level_dist.py",
+      "sha256": "6ce5423d8c8974917860f6644094c94c6e7f9133b4786ef4a37cc06e56d87993",
+      "size_bytes": 5161,
+      "unchanged_from_base": true
+    },
+    {
+      "path": "evidence/diag_level_distribution/weighted_level_lp.py",
+      "sha256": "17967616df2703087ddb4d84beb6b11b3056b2a11ee97155c9832a26adb585ad",
+      "size_bytes": 4633,
+      "unchanged_from_base": true
+    },
+    {
+      "path": "evidence/diag_level_distribution/level_dist_output.txt",
+      "sha256": "2d58022a118122c3c32b83fca3acd93b32d6862acd140b861e17a4f09da6b41e",
+      "size_bytes": 7882,
+      "unchanged_from_base": true
+    },
+    {
+      "path": "evidence/diag_level_distribution/min_energy_lp.py",
+      "sha256": "95fc2fccaed49bc1a583f820963c27e475aeae560b072305abcb9011a3153bcb",
+      "size_bytes": 4648,
+      "unchanged_from_base": true
+    },
+    {
+      "path": "evidence/diag_level_distribution/weighted_level_lp_output.txt",
+      "sha256": "8d4a891e9aebc4958f5fae38afcd040f3b120fd19105f7d66dc22737784be3b3",
+      "size_bytes": 3894,
+      "unchanged_from_base": true
+    },
+    {
+      "path": "evidence/v146/beta_lattice_identity.tex",
+      "sha256": "ac18164e177e1786692d40cf07ed911369fe30e6ddf4d147500365862ff7f459",
+      "size_bytes": 7689,
+      "unchanged_from_base": true
+    },
+    {
+      "path": "evidence/v146/step_minorant_scope.tex",
+      "sha256": "af3c1937f099d7f52561e6d1756e8f1bd41180bdf9beae7092decb52327ad352",
+      "size_bytes": 11904,
+      "unchanged_from_base": true
+    },
+    {
+      "path": "audits/2026-09-21-v1.48-pr14-v1.html",
+      "sha256": "a60e3db0cf940dcd0c618ca375b14ae8336bf72dda1665198d34e2c24a9f28e9",
+      "size_bytes": 10318,
+      "role": "versioned review report; preserved"
+    },
+    {
+      "path": "audits/2026-09-21-v1.48-pr14-v2.html",
+      "sha256": "1631b1b9b68422358aae5da26c1d126c918d866d0362e6279d7b8a221055763b",
+      "size_bytes": 10515,
+      "role": "versioned review report; preserved"
+    },
+    {
+      "path": "audits/2026-09-21-v1.48-pr14-v3.html",
+      "sha256": "52b42e56e95200b3e66a267d6c844ed9f3bc598c911b66e4d75937f7626c1478",
+      "size_bytes": 8804,
+      "role": "versioned review report; preserved"
+    }
+  ],
+  "diagnostic_report_change": "Correction notice only over origin/main; preserves main concentration-function correction and all original body text. Raw code/output unchanged.",
+  "external_theorems": "No new external result invoked; Taylor inversion, coarea already in v147, elementary measure packing and explicit countermodels.",
+  "numerical_runs": [],
+  "G2": "open",
+  "RH": "open"
+}

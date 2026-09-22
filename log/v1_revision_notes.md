@@ -1,5 +1,40 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-21 — v1.49 / NS-32 and NS-33: audit and exact weighted zero input
+
+PR #14 was re-reviewed at revised head f3611ef and remains held, not merged
+or tagged. Its revision resolves the false biconditional and acknowledges
+unbounded critical-level density, but three MAJOR findings remain: the new
+K rearrangements are invalid; the lambda=4 c'=1 returned state still fails
+bin feasibility (ratio 0.636); aligned-bin maxima are identified with the
+full concentration function in the wrong bound direction. The exact
+weighted-cost implication and uniform constant c=c'*phi pass. Revised PR
+head builds to 239 pages, 0 undefined/duplicate; audit v3 preserves v1/v2.
+
+What had to change: the crude peak-density scalar is vacuous for any range
+containing a negative critical value. The exact density has an integrable
+unbounded singularity there; a histogram peak is not an upper bound. For a
+finite R, phi^2/R can grow only if R=o(phi^2); bounded above does not exclude
+R->0. The bounded fraction phi alone is not an impossibility argument.
+
+The concentration-function proof is repaired, with edge correction -h*phi/2
+and its correctly rearranged denominator. The surviving quantity is QC_K. QC_1=phi*D-mean(beta^-) is an exact
+zero functional, but its growth alone does not control fixed K: a continuous-
+measure full-support countermodel has QC_1~D/2 and QC_2->0. Named input QG
+requires QC_K->infinity for every fixed K, together with independent
+source-admissible bounded-energy WLH packets. A QC_1/K lower law needs a
+separate shape hypothesis; linear growth in D needs QC_1>=d0*D as well.
+
+No limit of phi or growth of negative-set measure follows from v1.37's
+pointwise depth divergence. No claim of equivalence/independence with RH
+is made. The source overlap/energy/projection check is named, not run;
+NS-28 raw files are preserved and its report receives a correction notice.
+This is failure of the proposed bound and diagnostic interpretation, not
+of the physical form. Both cofinal inputs remain open; the route stays
+blocked. No new window, tail metric, optimizer or zero enclosure. G2/RH
+and NS-1's two evidence groups remain open. Final build: 242 pages,
+0 undefined references, 0 duplicate references, 0 overfull boxes.
+
 ## 2026-09-21 — v1.47 / NS-29: level distribution as a zero statement
 
 Actual build: 237 pages, 0 undefined references, 0 duplicate references,

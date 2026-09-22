@@ -1,0 +1,41 @@
+{
+  "classification": "Independent actual builds of both reviewed PR heads",
+  "builds": [
+    {
+      "build_command": "./manuscript/build.sh",
+      "pages": 238,
+      "undefined_references": 0,
+      "duplicate_references": 0,
+      "overfull_boxes": 0,
+      "bibliography_items": 48,
+      "duplicate_bibliography_keys": 0,
+      "label_count": 686,
+      "duplicate_label_keys": 0,
+      "missing_reference_targets": [],
+      "missing_citation_keys": [],
+      "manuscript_sha256": "f5df406a446144ea2197d5a425a3d3858d3d96e43ae2836d549ba680b328c740",
+      "head": "9b2b900a06cf3a321f0729e337d3d1d02f4335f3",
+      "version": "v1.48",
+      "manifest": "4 ok, 0 missing, 0 mismatched",
+      "disposition": "Not merged or tagged; MAJOR findings. Original report superseded by revised-head audit v3."
+    },
+    {
+      "build_command": "./manuscript/build.sh",
+      "pages": 239,
+      "undefined_references": 0,
+      "duplicate_references": 0,
+      "overfull_boxes": 0,
+      "bibliography_items": 48,
+      "duplicate_bibliography_keys": 0,
+      "label_count": 686,
+      "duplicate_label_keys": 0,
+      "missing_reference_targets": [],
+      "missing_citation_keys": [],
+      "manuscript_sha256": "427e04d3e62a730f907543067216017b97948a5606efbcabe31837d4ac3484be",
+      "head": "f3611ef2c3464fa30e50408c62e339697def6c38",
+      "version": "v1.48",
+      "manifest": "4 ok, 0 missing, 0 mismatched",
+      "disposition": "Not merged or tagged; MAJOR findings. Original report superseded by revised-head audit v3."
+    }
+  ]
+}

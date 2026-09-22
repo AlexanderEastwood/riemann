@@ -357,3 +357,26 @@ Both arithmetic distribution and bounded-energy coverage remain open.
 This is a gap in the proposed minorant obstruction, not an object failure;
 the route remains blocked and the weighted criterion valid. G2 and RH
 remain open. See evidence/v147/ and its primary-source bibliography.
+
+
+## Weighted zero input after review (NS-32/33, v1.49)
+
+The proposed peak-density scalar is not a bound justified by the finite
+histogram. A negative critical value makes the continuous coarea density
+essentially unbounded; v1.47's absolute continuity never asserted a bounded
+peak. The exact weighted quantization implication survives without that
+assumption, with the uniform case giving c=c'*phi exactly. PR #14's v1.48
+revised candidate f3611ef recognizes the peak problem but remains held for
+incorrect K rearrangements, a bin maximum identified with the full
+concentration function, and an infeasible lambda=4 diagnostic vector
+(minimum bin ratio 0.636 at c'=1). The concentration-function bound is
+proved here with its correct rearrangement.
+
+QC_1=phi*D-mean(beta^-) is an exact corrected-zero functional, but its
+growth alone is insufficient: even full-support absolutely continuous
+measures can have QC_1~D/2 and QC_2->0. The named cofinal input QG is growth
+of QC_K for every fixed K, plus separate admissible bounded-energy weighted
+packets. A QC_1/K law requires an additional quantization-shape hypothesis.
+Neither input is established; depth divergence gives no fraction limit.
+The failure is of the crude bound and diagnostic interpretation, not of
+the valid concentration criterion or physical form. G2 and RH remain open.
