@@ -1,5 +1,43 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-21 — v1.46 / NS-26 and NS-27: explicit formula and scoped obstruction
+
+Actual build: 232 pages, 0 undefined references, 0 duplicate references,
+0 overfull boxes. New diagnostic scripts: pyright 0 errors, 0 warnings.
+
+NS-26 is an exact unconditional shifted Perron identity. The functional
+equation cancels the archimedean block; the strict integer endpoint,
+trivial zeros and finite-prefix remainder remain. The lattice has varying
+cosine/sine envelopes, not exact equal crests or quarter-point zeros.
+The naive sum is an amplitude contribution, not a crest-minus-trough.
+Forty low and fourteen deep/centroid locations were reproduced at two
+precisions. With Gaussian epsilon=.025 and exact desmoothing, sufficient
+positive-zero counts are 83/83/80/80 for lambda=3/4/6/8 low samples, and
+530/609 for the selected lambda=4/8 deep samples. All corresponding
+residuals are below 1.5e-7. These are numerical illustrations and empirical
+sufficient counts, not interval certificates; the reference prefix has
+1200 positive zeros and a 1000-to-1200 stability check. The sharp sum's
+symmetric-height convention and finite Perron remainder are explicit.
+A centroid is not a trough location; two have positive beta. This is the
+explicit formula restated, with no new cofinal density or sign content.
+
+NS-27 proves eta >= [(b+B)c-B]+ and eta >= [c*delta-Q]+, retaining
+positive spill and the original packet energy. It proves explicit full-
+and half-cell packet concentration and handles source projection and odd
+parity. The 0.6-0.8 diagnostic concerns the entire negative set, not a
+single half-cell (whose even concentration norm is <0.509 at the stated
+carrier scale). A conditional level-count theorem gives
+eta >= [c D_a/(2K)-Q]+, but uniform arithmetic level mass and bounded
+packet energy remain unproved. For J-trough floors eta>=d_(J+1); v1.37
+proves only d_1=D_a grows, not the requisite cofinal multiplicity.
+A two-level countermodel shows that depth/concentration alone are not
+sufficient premises. The actual arithmetic route remains blocked, not
+closed; the concentration proposition remains a valid sufficient criterion.
+This is a gap in the proposed bound/obstruction, not failure of the object.
+
+No new window, head, Weil-tail metric, or v1.43 zero-enclosure refinement.
+G2, RH and the two NS-1 evidence groups remain open.
+
 ## 2026-09-21 — v1.44 / NS-24: pencil demands and cofinal quantifiers
 
 Actual build: 225 pages, 0 undefined references, 0 duplicate references,

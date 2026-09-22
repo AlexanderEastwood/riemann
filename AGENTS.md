@@ -51,6 +51,17 @@ remains cofinal; uniformly bounded errors suffice under v1.36's hypotheses.
 No diagnostic threshold is certified and no concentration no-go follows.
 No new numerical run, tail metric or enclosure refinement. G2/RH stay open.
 
+
+Version 1.46 records NS-26's unconditional explicit formula for beta_a,
+with strict integer endpoint, trivial zeros, Perron remainder and varying
+lattice envelopes. The Gaussian/desmoothed numerical illustration checks
+40 low and 14 deep/centroid samples; zero-prefix counts are convention-
+specific, not sharp-sum certificates. NS-27 proves packet bounds with
+positive spill and source projection, and a conditional linear distinct-
+level obstruction. Uniform arithmetic level mass and bounded packet energy
+are still missing; D_a->infinity alone does not close that gap. The route
+stays blocked, not closed. No new window/tail metric. G2/RH remain open.
+
 ---
 
 ## 2. Claim discipline — the non-negotiable part

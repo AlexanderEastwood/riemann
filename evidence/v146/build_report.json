@@ -1,0 +1,16 @@
+{
+  "version": "v1.46",
+  "date": "2026-09-21",
+  "build_command": "./manuscript/build.sh",
+  "classification": "build metadata; no numerical proof gate",
+  "pages": 232,
+  "undefined_references": 0,
+  "duplicate_references": 0,
+  "overfull_boxes": 0,
+  "manuscript_sha256": "5052a39cae689072194401f7ceefe8a9655167e1711f67339022435ebe92e69c",
+  "python_diagnostics": "pyright: 0 errors, 0 warnings on both new diagnostic scripts",
+  "visual_review": "PDF pages 145-149 rendered and inspected; no clipping or table overflow",
+  "numerical_scope": "54 existing-window sample locations, numerical illustration only; 192/256-bit zero inputs, 45/65 decimal digits; epsilon=.025 for the count/deep follow-up",
+  "G2": "open",
+  "RH": "open"
+}

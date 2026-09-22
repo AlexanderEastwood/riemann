@@ -1,0 +1,65 @@
+{
+  "classification": "source and diagnostic provenance; diagnostic output is not certificate evidence",
+  "files": [
+    {
+      "path": "evidence/diag_beta_lattice_identity/verify_deep.py",
+      "sha256": "41998d3471eeb7fd78b0d202f6a667ca07bdb5df3d13ddb67652b3fb9e92f999",
+      "size_bytes": 7323
+    },
+    {
+      "path": "evidence/diag_beta_lattice_identity/verify_identity.py",
+      "sha256": "74bf56ac54c11732d8d6e8344e5dd706932cf422fe5c45e85bf65404682ee389",
+      "size_bytes": 7995
+    },
+    {
+      "path": "evidence/diag_beta_lattice_identity/check_b192.json",
+      "sha256": "0d9257210baddabeb16a7f685a6f4310541be1549bf1dd6d879ffa50a5f66e4f",
+      "size_bytes": 51905
+    },
+    {
+      "path": "evidence/diag_beta_lattice_identity/check_b256.json",
+      "sha256": "05263999c53c6c57b4867b39e2d988786899b4913642f4179ed7ae1b57ba0027",
+      "size_bytes": 51867
+    },
+    {
+      "path": "evidence/diag_beta_lattice_identity/deep_b192.json",
+      "sha256": "927cfb6e3a482761b5a62bbfc5b92010292ed442d871705dcb4f6acee68b115f",
+      "size_bytes": 92417
+    },
+    {
+      "path": "evidence/diag_beta_lattice_identity/deep_b256.json",
+      "sha256": "4f929e6431f9cbf0a291b15955ecf23b7b5398eb612a548ecf4f67ff71649442",
+      "size_bytes": 92453
+    },
+    {
+      "path": "evidence/diag_beta_lattice_identity/results.md",
+      "sha256": "ca4546dcc1bef574b3f30ea24a7d855fe3d88415230d41cda5f495e8edf0e489",
+      "size_bytes": 13558
+    },
+    {
+      "path": "evidence/diag_true_symbol/beta_true.py",
+      "sha256": "7e0990bb585eed25dd7a95b36f44c8903fa052966b53360dd9f8dc4e6c0ec4c0",
+      "size_bytes": 2538
+    },
+    {
+      "path": "evidence/diag_true_symbol/selfsim_output.txt",
+      "sha256": "e4e7927f0b9aabdacb3218add41344e3148a0bb9ded6062b7c2a2b7786399522",
+      "size_bytes": 1253
+    },
+    {
+      "path": "evidence/v124/g2_schur_cancellation/assembly_general.py",
+      "sha256": "4da2e6805e92a2850fe28bd51cd2450d1f2ef0566e9f4f5b5b5fb50db2825b58",
+      "size_bytes": 2978
+    },
+    {
+      "path": "evidence/diag_comb_minorant/comb_minorant_l3_4_6_8.json",
+      "sha256": "2c795d2d88cfa8ff33112c9ece294147f179b6c038cce83c845b4d0fd2350b0a",
+      "size_bytes": 76907
+    },
+    {
+      "path": "evidence/diag_comb_minorant/results.md",
+      "sha256": "960cb4f0efeb0fe15a8cb10a55e27e776df956f6044a01811e558cb26b0270fd",
+      "size_bytes": 18446
+    }
+  ]
+}
