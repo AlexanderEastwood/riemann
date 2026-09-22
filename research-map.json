@@ -201,7 +201,7 @@
       "parent": "uniform",
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
-      "note": "Valid sufficient criterion; the missing positivity input is a complete joint signed operator lower bound with a uniform cofinal error. QG plus a separate admissible bounded-energy packet would obstruct bounded level count, not supply this positivity input. NS-31 diagnostic losses do not close the route. NS-43 proves unrestricted exact adaptive levels are equivalent to the floor target; a nonarithmetic countermodel refutes general completeness of scalar set bounds. Specific arithmetic operator estimates remain open.",
+      "note": "Valid sufficient criterion; the missing positivity input is a complete joint signed operator lower bound with a uniform cofinal error. QG plus a separate admissible bounded-energy packet would obstruct bounded level count, not supply this positivity input. NS-22 grid-family losses and its invalid sampled tail charge prove no closure (NS-31/36). NS-43 proves unrestricted exact adaptive levels are equivalent to the floor target; a nonarithmetic countermodel refutes general completeness of scalar set bounds. Specific arithmetic operator estimates remain open.",
       "evidence": "evidence/v152"
     },
     {
@@ -414,7 +414,7 @@
       "prop": "prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg",
       "branch": "codex/weighted-level-review",
       "evidence": "evidence/v149",
-      "note": "NS-32/33: PR14 held for major findings. Exact density is unbounded at negative critical values; histogram peak is not a cap. Weighted QC_K bound survives. QC_1 growth alone is insufficient; fixed-K exact-cost growth plus admissible bounded-energy WLH remain open. No closed physical route or G2/RH claim."
+      "note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim."
     },
     {
       "id": "capacityweight",

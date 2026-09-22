@@ -1,0 +1,24 @@
+{
+  "reviewer": "Astra-2",
+  "task": "NS-36 independent read-only peer review",
+  "thread": "01a0c6d7-304d-74b2-b284-2c78481e7ac0",
+  "major_findings": 0,
+  "minor_findings": [
+    {
+      "issue": "internal overlaps smaller than saved 80-digit replay permits",
+      "resolution": "source JSON distinguishes internal and exported overlaps; verify_saved_witnesses rechecks saved coefficients"
+    },
+    {
+      "issue": "mass screen omitted explicit decimal-basis Gram normalization",
+      "resolution": "mass screen now whitens by the basis Gram, as does high-precision energy recheck; both remain numerical"
+    }
+  ],
+  "scope_qualifications": [
+    "head-preserving projection differs from full physical P_a projection",
+    "actual-source orthogonality needs enclosed head coefficients including PSWF truncation and repair",
+    "no source Fourier-tail estimate required merely for head-witness orthogonality",
+    "mixed feasibility implies no common feasible pure component",
+    "twenty gapped finite quadrature bins are not all-Borel WLH",
+    "high-precision midpoint energy is a witness value, not a certified optimum"
+  ]
+}
