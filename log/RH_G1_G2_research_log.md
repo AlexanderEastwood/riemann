@@ -32,9 +32,16 @@ not excluded. The map closes only fixed-slack/prime-2-deletion for this
 weight and leaves the full capacity route blocked. G2 and RH remain open;
 NS-1's two original evidence groups remain OPEN.
 
-Build and independent review: see evidence/v150/build_report.json and the
-NS-37 audit. The general Picone method and completed-zeta kernel are
-classical; no worldwide novelty or publication readiness is claimed.
+Actual build: 246 pages, 0 undefined references, 0 duplicate references,
+48 bibliography items, 0 duplicate bibliography keys and 0 overfull boxes.
+New proof pages 160-164 rendered and inspected. Independent NS-37 review
+has no unresolved MAJOR/MINOR; both clarifications are integrated and the
+reviewed fragment hash matches. See evidence/v150/build_report.json and
+audits/ns37-capacity-weight-2026-09-21-v2.html. The remaining NS-31 goals
+sentence was corrected to the weighted strict-cutoff amplitude already
+proved in eq:v146-amplitude; historical diagnostics are unchanged.
+The general Picone method and completed-zeta kernel are classical; no
+worldwide novelty or publication readiness is claimed.
 
 
 ## 2026-09-21 — v1.49 / NS-32 and NS-33: audit and exact weighted zero input

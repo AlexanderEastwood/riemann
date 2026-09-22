@@ -64,7 +64,9 @@ physical Weil form or the full capacity route.
 - `provenance.json`: source hashes and reviewed mathematical ancestry.
 - `build_report.json`: actual manuscript build and reference counts.
 - `research-report-2026-09-21-v1.html`: user-facing report.
-- NS-37: independent review is recorded separately under `audits/`.
+- NS-37: `audits/ns37-capacity-weight-2026-09-21-v2.html` records no unresolved MAJOR/MINOR; the reviewed fragment hash matches exactly.
+- Actual manuscript build: 246 pages, 0 undefined/duplicate references, 48 bibliography items, no duplicate keys or overfull boxes.
+- The audited goals sentence about the symbol amplitude now agrees with the weighted strict-cutoff formula already proved in v1.46; historical diagnostic artifacts are untouched.
 
 No new window, tail metric, numerical optimizer, source projection run,
 or zero enclosure. NS-1's two evidence groups remain OPEN. Existing
