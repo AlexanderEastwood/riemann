@@ -1,0 +1,245 @@
+% NS-40 / Astra-2. Analytic fragment; no manuscript-version claim.
+% Insert after the NS-32/33 subsection; append bibliography_additions.tex
+% inside the existing thebibliography. All new labels begin ns40-.
+\subsection*{Quantization growth for the complete corrected zero field (NS-40)}
+\label{ns40-sec-qg}
+
+\paragraph{Status and object.}
+The outcome is a precise unresolved input, together with proved sufficient
+conditions and a proved cutoff obstruction. QG is not established for an
+arithmetic cofinal family. No hypothesis below is asserted to be weaker
+than RH, and no logical independence from zero statistics is claimed.
+Keep the complete field $\mathcal Z_a=\beta_a$ of
+\eqref{eq:v147-corrected-zero-field}, the global depth
+$D_a=\|(\beta_a)_-\|_\infty$, and a specified cofinal rule
+$X_a=\pi N(a)/a$. The negative pushforward $\widetilde m_a$ and
+$\mathrm{QC}_K$ are exactly \eqref{eq:v149-measures} and
+\eqref{eq:v149-qc}. The head range is an observation interval, not a
+truncation of the symbol. All nontrivial zeros with multiplicity, the
+strict endpoint, the trivial zeros, and the Perron limiting convention
+remain part of the object. In particular the global depth is not a
+head minimum or a zero-prefix minimum.
+
+\begin{proposition}[Separated bands suffice for fixed-level growth]
+\label{ns40-prop-bands}
+Let $\nu$ be a finite positive measure on $[-D,0]$, $D>0$, and
+use the same admissible level sets as in \eqref{eq:v149-qc}.
+If $K+1$ Borel intervals $J_1,\ldots,J_{K+1}\subset[-D,0]$ have
+pairwise distance at least $2h>0$ and $\nu(J_j)\ge m>0$ for every
+$j$, then
+\begin{equation}\label{ns40-eq-band-cost}
+                 \mathrm{QC}_K(\nu)\ge hm.
+\end{equation}
+Consequently, fix a cofinal family and its rule $N(a)$. Suppose that
+for every fixed $K$ there exist constants $d_K,m_K>0$ and, eventually,
+$K+1$ intervals $J_{a,j}\subset[-D_a,0]$ with
+\begin{equation}\label{ns40-eq-band-input}
+ \operatorname{dist}(J_{a,i},J_{a,j})\ge2d_KD_a\quad(i\ne j),
+ \qquad \widetilde m_a(J_{a,j})\ge m_K.
+\end{equation}
+Then $\mathrm{QC}_K(\widetilde m_a)\ge d_Km_KD_a\to\infty$ for
+every fixed $K$, using the unconditional depth growth of
+Corollary~\ref{cor:v137-scalar-no-go}. The constants may depend on $K$;
+no estimate uniform in growing $K$ is asserted.
+\end{proposition}
+\begin{proof}
+For an admissible $\mathcal L$ the set where
+$t-p_{\mathcal L}(t)<h$ is contained in
+$\bigcup_{\ell\in\mathcal L}[\ell,\ell+h)$.
+Each of these at most $K$ intervals meets at most one $J_j$, by
+the separation hypothesis. At least one entire $J_j$ is missed.
+The nonnegative loss is at least $h$ on that interval and its
+integral is at least $hm$. Taking the infimum proves the assertion;
+attainment of an optimizer is unnecessary.
+\end{proof}
+
+Condition~\eqref{ns40-eq-band-input} is an \emph{open sufficient input}
+about values of the corrected field, not a theorem about its zeros.
+It does not require a bounded density and is compatible with the
+critical-value peaks in Proposition~\ref{prop:v149-critical-density}.
+ZLD with any fixed $\theta>0$ implies it by choosing finitely many
+separated subintervals of $[-\theta D_a,0]$ for each $K$.
+The converse and necessity for QG are not asserted. More generally,
+the first part suffices with varying $h_{a,K},m_{a,K}$ whenever
+$h_{a,K}m_{a,K}\to\infty$; linear growth in $D_a$ is not required
+by QG itself.
+
+\begin{corollary}[A limiting-shape sufficient condition]
+\label{ns40-cor-shape}
+Let $\widehat m_a$ be the pushforward of $\widetilde m_a$ under
+$t\mapsto t/D_a$, a measure of mass at most one on $[-1,0]$.
+If, along the specified entire cofinal family, $\widehat m_a$
+converges weakly to a finite positive measure with infinite support,
+then \eqref{ns40-eq-band-input} and QG hold.
+\end{corollary}
+\begin{proof}
+For each fixed $K$, choose $K+1$ distinct points of the limiting
+support and small, relatively open interval neighborhoods whose
+closures are positively separated. Each has positive limiting mass.
+The lower bound for open sets under weak convergence gives a
+common positive eventual lower mass bound for these finitely many
+neighborhoods. Rescale them by $D_a$ and apply
+Proposition~\ref{ns40-prop-bands}. This argument also permits atoms;
+the support, not a density bound, is what matters.
+\end{proof}
+Neither existence nor infinite support of this limiting measure is
+proved for the arithmetic family. Convergence on just one subsequence
+would give only a conclusion on that subsequence.
+
+\begin{proposition}[Cutoff dilution of the exact cost]
+\label{ns40-prop-cutoff}
+Fix $a$ with $D_a>0$ and put
+$\ell_a=|\{\xi\ge0:\beta_a(\xi)<0\}|<\infty$.
+Write $\mathrm{QC}_K^{X}$ for the exact cost observed on $[0,X]$,
+always using the same global depth. Then
+\begin{equation}\label{ns40-eq-cutoff-upper}
+ 0\le\mathrm{QC}_K^{X}\le\mathrm{QC}_1^{X}
+ \le D_a\min(1,\ell_a/X).
+\end{equation}
+If $0<X\le Y$ and the entire positive-frequency negative set is
+contained in $[0,X]$, then the exact identity
+\begin{equation}\label{ns40-eq-cutoff-scaling}
+                  \mathrm{QC}_K^{Y}=\frac X Y\mathrm{QC}_K^{X}
+\end{equation}
+holds for every $K$. Given any prescribed positive function
+$\delta_a\to0$, the integer rule
+\begin{equation}\label{ns40-eq-diluting-rule}
+ N(a)=\max\left(1,\left\lceil
+             \frac{aD_a\ell_a}{\pi\delta_a}\right\rceil\right)
+\end{equation}
+gives $\mathrm{QC}_K^{X_a}\le\delta_a$ for all $K\ge1$.
+One may increase this rule to meet any additional prescribed lower
+bound on the head size without losing that upper bound.
+\end{proposition}
+\begin{proof}
+For each fixed window, $\beta_a$ tends to $+\infty$ at infinity,
+so its negative set is bounded. The one-level loss is
+$D_a+\beta_a(\xi)\in[0,D_a]$ there. This proves
+\eqref{ns40-eq-cutoff-upper}. Once the negative set has been included,
+the unnormalized integral is identical for $X$ and $Y$ for every
+admissible $\mathcal L$; its infimum therefore scales exactly by
+$X/Y$. Finally \eqref{ns40-eq-diluting-rule} gives
+$X_a\ge D_a\ell_a/\delta_a$, proving the last assertion.
+\end{proof}
+
+This disproves QG asserted uniformly over all head rules, even for
+the actual corrected field. It does not disprove QG for a particular
+different rule. The displayed diluting rule is an analytic existence
+construction, not an effective estimate of $\ell_a$ or $D_a$.
+On any family satisfying QG it is necessary that
+$D_a\ell_a/X_a\to\infty$, and more sharply
+$D_a\widetilde m_a([-D_a,0])\to\infty$; neither is sufficient.
+Changing $N(a)$ after forming a diagnostic changes the normalized
+arithmetic demand. It does not change the complete Weil form.
+
+\begin{lemma}[What a zero-prefix transfer would require]
+\label{ns40-lem-prefix}
+Let $F_a$ be a measurable real approximation on $[0,X_a]$, and
+suppose $|F_a-\mathcal Z_a|\le r_a$ outside a measurable exceptional
+set of length at most $\epsilon_aX_a$, with $r_a,\epsilon_a\ge0$.
+For $-D_a\le u<v\le0$ one has
+\begin{equation}\label{ns40-eq-prefix-band}
+ \widetilde m_a((u,v))\ge
+ \frac1{X_a}|\{\xi\in[0,X_a]:u+r_a<F_a(\xi)<v-r_a\}|
+ -\epsilon_a.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Outside the exceptional set, membership in the inner band implies
+$u<\mathcal Z_a<v$. Subtracting its possible exceptional mass proves
+the inequality. An empty inner band gives no positive lower bound.
+\end{proof}
+For the finite symmetric zero sum plus the full correction $C_a$,
+the missing error is exactly $-2\Re R_{x,T}(1/2-i\xi)$ from
+Proposition~\ref{prop:v146-beta-explicit}. To use this lemma one
+must bound that real remainder on the prescribed growing head,
+at a height admissible for that Perron formula (in particular $T>X_a$),
+and prove the inner-band masses. Merely choosing $T>X_a$ is not a
+remainder estimate. The small bound on $C_a$ in
+\eqref{eq:v147-correction-size} bounds a different term.
+For fixed separated normalized bands, $r_a=o(D_a)$ and an
+exceptional fraction tending to zero would permit transfer of
+positive inner-band masses; these error and mass inputs are absent.
+The lemma does not replace the global depth by a prefix depth.
+
+\paragraph{Primary-source assessment.}
+Here each statement concerns the cited theorem in its stated range;
+failure to derive QG is not a theorem that zero theory cannot imply it.
+
+\emph{Counts.} Riemann--von Mangoldt gives
+$N(T)=T\log(T/(2\pi e))/(2\pi)+O(\log T)$.
+Hasanalizade--Shen--Wong give an explicit error
+$0.1038\log T+0.2573\log\log T+9.3675$ for $T\ge e$
+\cite[Corollary 1.2]{HasanalizadeShenWong2022}.
+For widths of order $1/a$ at large height, the differenced main term
+is of order $(\log T)/a$ but the available error is of order
+$\log T$. This does not furnish local lower counts at that scale,
+much less signed level-band masses of a sum with moving phases.
+
+\emph{Density, including Ingham.} The classical bound is
+$N(\sigma,T)\ll T^{3(1-\sigma)/(2-\sigma)}\log^5T$
+\cite{Ingham1940}; the explicit version
+\cite[Corollary 1]{ChourasiyaSimonic2025} has logarithmic exponent
+$(7-5\sigma)/(2-\sigma)$, an additional logarithmic error, and
+specified constants on its listed $\sigma$ intervals for
+$T\ge3\cdot10^{12}$. These are upper counts. An off-line summand
+here also carries $e^{2a(\Re\rho-1/2)}$. Its signed contribution
+cannot be replaced by that of a critical-line zero. Even imposing
+RH removes only this modulus issue, leaving value distribution and
+global-depth normalization unproved. No QG implication from the
+classical density hypothesis is established either.
+
+\emph{Landau--Gonek.} The integer-$x>1$ uniform formula recalled in
+\cite[Introduction, (1.1)]{Aryan2019} is
+\[
+ \sum_{0<\Im\rho<T}x^\rho=-\frac{T}{2\pi}\Lambda(x)
+       +O\bigl(x\log(2xT)\log\log(3x)\bigr).
+\]
+This stated simplification must not be used for arbitrary real
+$x=e^{2a}$. Even on integer-$x$ subfamilies it estimates a linear
+sum, not the value distribution of its moving resolvent. The partial
+summation identity in the NS-29 discussion shows the loss near the
+moving ordinate if one takes absolute errors. Removable real
+singularities are not poles of $\beta_a$. Uniform signed cancellation,
+remainder control, and several negative band masses still need proof.
+
+\emph{Montgomery.} The original theorem assumes RH and establishes
+its normalized correlation asymptotic for fixed $0\le\alpha<1$,
+uniformly on $[0,1-\epsilon]$ \cite[Section 1]{Montgomery1973}.
+Use the corrected unconditional extension
+\cite[Section 3, MT, (3.1)--(3.2)]{ns40-BGSTB2026}, not the old
+multiplicative-error statement. With all zeros counted with
+multiplicity, it gives, uniformly for $1\le x\le T$, $T\ge3$,
+\begin{align*}
+ \mathcal F(x,T)&:=\sum_{T<\Im\rho,\Im\rho'\le2T}
+       x^{\rho-\rho'}\frac4{4-(\rho-\rho')^2},\\
+ \mathcal F(x,T)&=\frac{T\log^2T}{2\pi x^2}
+       \bigl(1+O((\log T)^{-1/2})\bigr)
+       +\frac T{2\pi}\log x+O(T\sqrt{\log T}).
+\end{align*}
+It controls a quadratic correlation average with its particular
+kernel. Taking $x=e^{2a}$ already restricts direct use to $T\ge e^{2a}$.
+No comparison to the complete field's one-sided level cost on
+$[0,X_a]$, with controlled errors in all growing parameters, is
+provided by this formula. A variance estimate alone would not settle
+the sign, separated-band masses, or scale relative to $D_a$.
+
+\paragraph{The unresolved obstruction and its scope.}
+The missing arithmetic statement is quantitative resistance of the
+negative value distribution to approximation by any fixed number
+of lower levels, on one declared cofinal family and head rule.
+One sufficient route is \eqref{ns40-eq-band-input}; a zero-prefix
+approach additionally needs \eqref{ns40-eq-prefix-band} with effective
+errors and inner-band lower masses. None of the cited theorems supplies
+this reduction here, and no established weaker-than-RH sufficient
+hypothesis has been justified. This is a gap in the proposed argument,
+not a counterexample for a chosen arithmetic family or a proof of
+logical independence. The unconditional cutoff result only rejects
+an assertion uniform over all head rules.
+
+Even a future proof of QG would leave the separate source-admissible
+bounded-energy all-Borel packet domination in
+Assumption~\ref{ass:v149-qg}. Only with that input does
+Proposition~\ref{prop:v149-weighted-cost} obstruct bounded level count.
+No concentration no-go, negative Weil direction, positivity transfer,
+new finite-window certificate, G2, or RH conclusion is obtained here.
