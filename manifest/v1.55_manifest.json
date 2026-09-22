@@ -1,6 +1,6 @@
 {
  "manuscript_revision": "v1.55",
- "base_commit": "a3c4fb6287a5962f03f1e42e3bf72cb1f21ee927",
+ "base_commit": "793e15b16ed96811913a643e2839b31f6454d3d0",
  "files": [
   {
    "path": "evidence/v155/README.md",
@@ -38,17 +38,22 @@
    "sha256": "a7336984b68917d218e0ae48cfe50aa3a4e781396bd0eba4948f608a47024e1a"
   },
   {
+   "path": "evidence/v155/post-rebase-build.txt",
+   "size_bytes": 287,
+   "sha256": "fa25bc14e513e2c15c728c2d9bc8981215a6f43834766aab2a3c7fa4453b6b6d"
+  },
+  {
    "path": "evidence/v155/proof.tex",
    "size_bytes": 23791,
    "sha256": "aa94567cd00321e710b902975183ed1e8676786646771d7c2bc5dbf8da173ead"
   },
   {
    "path": "evidence/v155/validation.json",
-   "size_bytes": 1248,
-   "sha256": "31e5b6524d8d1c1c6824d3d501b689f40efa452977dbfd58f7d3b376424f8a17"
+   "size_bytes": 1640,
+   "sha256": "62932f69305f02a7c4e253e69ae09b349fbf332ff4f345b7aad640d36008ff2e"
   }
  ],
- "file_count": 9,
- "total_bytes": 225162,
+ "file_count": 10,
+ "total_bytes": 225841,
  "note": "NS-55 exact scoped local uniqueness results. No full-window kernel, uniform floor, G2 or RH claim."
 }

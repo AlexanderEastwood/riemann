@@ -1,0 +1,8 @@
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Latexmk: Nothing to do for 'fixed_space_prime_action_v1.tex'.
+Latexmk: All targets (fixed_space_prime_action_v1.pdf) are up-to-date
+
+--- pages: 285
+--- undefined/duplicate references: 0

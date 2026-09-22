@@ -33,5 +33,16 @@
   "uniform_floor_proved": false,
   "RH_or_G2_claim": false,
   "open_input": "API: full-window arithmetic affine-potential injectivity. No new signed prime/pole overlap estimate.",
-  "scope": "Local-patch counterexamples are not whole-window nullvectors; ordinary-cone semigroup nonpositivity does not assert negative diagonal Weil energy."
+  "scope": "Local-patch counterexamples are not whole-window nullvectors; ordinary-cone semigroup nonpositivity does not assert negative diagonal Weil energy.",
+  "integration_main": "56f4caf697b18cc50211ea4481915dce338e85ec",
+  "prepublication_commit": "793e15b16ed96811913a643e2839b31f6454d3d0",
+  "post_rebase_build": {
+    "pages": 285,
+    "undefined_references": 0,
+    "duplicate_references": 0,
+    "overfull_boxes": 0,
+    "manuscript_unchanged_by_rebase": true,
+    "NS54_and_NS55_retained": true,
+    "task_artifact_hashes_verified": 12
+  }
 }
