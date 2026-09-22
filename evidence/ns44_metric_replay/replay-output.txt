@@ -1,0 +1,11 @@
+320 even q/D [6.4235244156530e-18 +/- 1.95e-32] q-1e-8D [-2.4267798261306e-8 +/- 4.51e-22]
+320 odd q/D [1.1127922753304e-17 +/- 1.43e-31] q-1e-8D [-2.4549167289288e-8 +/- 4.31e-22]
+448 even q/D [6.4235244156530e-18 +/- 1.95e-32] q-1e-8D [-2.4267798261306e-8 +/- 4.51e-22]
+448 odd q/D [1.1127922753304e-17 +/- 1.43e-31] q-1e-8D [-2.4549167289288e-8 +/- 4.31e-22]
+
+HARDENING CHECKS
+Normal --verify: PASS at 320/448 bits, both parities.
+Python -O --verify: rejected before proof gates.
+Imported verify() under Python -O: rejected before proof gates.
+All certificate quantities and metadata unchanged except the replay.py source hash.
+Frozen witness SHA256 unchanged: 3ec8f56770f2b8afacc12b1d4e9b6ad78ae7dfbe5b71ae32b8a1532a22776767

@@ -1,0 +1,451 @@
+% NS-43 analytic working note. No numerical computation or certificate.
+% Scope: additional complete-space inputs for CCM step (b).
+
+\subsection*{CCM selection requires a relative estimate, not another absolute residual}
+
+\paragraph{Status.}
+The fixed-window simple ground and its real-zero transform do not identify
+Riemann's $\Xi$. The known source limit and complete residual are useful
+prerequisites. The new input would be a cofinal \emph{complete spectral
+selection estimate}, with a rate compatible with the transform topology.
+The propositions below are conditional elementary functional analysis;
+none establishes the hypotheses for the arithmetic Weil family.
+
+Put $H=L^2(\mathbb R)$, $I_a=(-a,a)$ and let $J_a$ denote zero extension.
+Let $A_a$ be the complete lower-bounded self-adjoint even-sector operator
+on $L^2(I_a)$, with compact resolvent. If the global ground is used,
+its evenness and ordering below the odd sector must also be supplied.
+In the following selection lemmas assume the selected ground is simple,
+with unit vector $v_a$, eigenvalue $\mu_a$, and complete next-level
+separation $g_a>0$:
+\[
+ q_a[f]-\mu_a\|f\|^2\ge g_a\|f\|^2
+ \quad(f\in\mathcal D(q_a),\ f\perp v_a).
+\]
+This is an ordinary complete spectral separation, not an LDL pivot,
+finite-compression gap, or a source-complement estimate inferred from
+separate diagonal blocks.
+
+Let $h$ be the explicit positive Gaussian arithmetic radical of
+\textup{eq:v150-weight}, and $\phi=h/\|h\|_2$. Use exactly the fixed
+boundary profile of \textup{prop:v135-growing-radical}: fix one smooth
+$\vartheta$ with $0\le\vartheta\le1$, $\vartheta(t)=1$ for $t\le-1$,
+and $\vartheta(t)=0$ for $t\ge-1/2$. For $a\ge2$ set
+$\chi_a(x)=\vartheta(|x|-a)$. This is smooth (it is constant near zero),
+even, supported in $I_a$, equal to one on $[-a+1,a-1]$, and has
+uniformly bounded derivatives of every fixed order. Define
+\[
+ p_a=\chi_a\phi/\|\chi_a\phi\|_2,\qquad
+ \alpha_a=q_a[p_a],\qquad E_a=\alpha_a-\mu_a\ge0.
+\]
+For large $a$, these vectors lie in the complete operator domain.
+The double-exponential tail from v1.35 implies, for every fixed $R\ge0$,
+\[
+ \int_{\mathbb R}e^{R|x|}|J_ap_a(x)-\phi(x)|\,dx\longrightarrow0.
+\]
+The vector $p_a$ is the normalized $j=0$ column of the growing block.
+Thus \textup{prop:v135-growing-radical}, specifically
+\textup{eq:v135-block-residual}, gives the complete estimate
+\[
+ \|A_ap_a\|\le\varepsilon_a:=Ca\exp(-e^a/100),\qquad
+ |\alpha_a|\le\varepsilon_a,
+\]
+with constants for this fixed source and profile. No residual estimate
+is asserted for arbitrary cutoffs whose derivatives may grow with $a$.
+The cutoff $p_a$ here is explicit and is not silently identified with
+the different repaired prolate source $u_a$.
+
+\begin{proposition}[A complete relative selection estimate]
+\label{prop:ns43-ccm-rayleigh-selection}
+Choose the phase of $v_a$ so that $\langle p_a,v_a\rangle\ge0$.
+If $E_a/g_a\to0$, then $\|J_av_a-\phi\|_2\to0$.
+Define
+\[
+ C_R(a)=\begin{cases}
+ \sqrt{(e^{2Ra}-1)/(2\pi R)},&R>0,\\
+ \sqrt{a/\pi},&R=0.
+ \end{cases}
+\]
+If, in addition, for every fixed $R>0$,
+\[
+ C_R(a)\sqrt{E_a/g_a}\longrightarrow0,
+ \tag{S1}
+\]
+then the unitary Fourier transforms of $J_av_a$ converge locally
+uniformly on $\mathbb C$ to $\widehat\phi$.
+\end{proposition}
+\begin{proof}
+Write $p_a=\kappa_a v_a+e_a$, where $e_a\perp v_a$ and
+$\kappa_a\ge0$. The spectral projection preserves the form domain,
+and the cross term is exactly zero because $v_a$ is an eigenvector.
+Consequently
+\[
+ E_a=q_a[e_a]-\mu_a\|e_a\|^2\ge g_a\|e_a\|^2,
+ \quad \kappa_a^2=1-\|e_a\|^2,
+ \quad \|p_a-v_a\|^2=2(1-\kappa_a)\le2E_a/g_a.
+\]
+This proves the ordinary-norm conclusion. For $|\Im z|\le R$,
+Cauchy--Schwarz gives
+\[
+ |\widehat{J_a(v_a-p_a)}(z)|
+ \le (2\pi)^{-1/2}\left(\int_{-a}^a e^{2R|x|}\,dx\right)^{1/2}
+       \|v_a-p_a\|
+ \le C_R(a)\sqrt{2E_a/g_a}.
+\]
+The weighted cutoff convergence above controls
+$\widehat{J_ap_a}-\widehat\phi$ on the same strip. Combining the
+bounds proves the assertion. No compactness hypothesis is hidden:
+(S1) supplies a direct quantitative topology upgrade.
+\end{proof}
+
+\begin{proposition}[A residual-to-separator version]
+\label{prop:ns43-ccm-residual-selection}
+Let $p_a\in\mathcal D(A_a)$ be unit, put
+$\alpha_a=\langle A_ap_a,p_a\rangle$ and
+$\rho_a=\|(A_a-\alpha_a)p_a\|$. Suppose an independent complete
+second-eigenvalue lower bound $\beta_a>\alpha_a$ is established,
+with eigenvalues counted with multiplicity. Then the ground is simple and
+\[
+ \|v_a-p_a\|\le\frac{\sqrt2\,\rho_a}{\beta_a-\alpha_a}.
+\]
+Thus the cofinal condition
+\[
+ C_R(a)\frac{\rho_a}{\beta_a-\alpha_a}\longrightarrow0
+ \quad\text{for every fixed }R>0 \tag{S1r}
+\]
+selects the entire transform of the explicit cutoff radical.
+\end{proposition}
+\begin{proof}
+The variational upper bound is $\mu_a\le\alpha_a<\beta_a$, so
+exactly one eigenvalue lies below $\beta_a$ and it is simple.
+On its orthogonal complement the spectrum of $A_a-\alpha_a$ lies
+above $\beta_a-\alpha_a$. Spectral expansion gives
+$\rho_a^2\ge(\beta_a-\alpha_a)^2\|e_a\|^2$.
+The preceding phase/norm identity and Fourier estimate complete the proof.
+\end{proof}
+This formulation does not require a lower ground-energy estimate matching
+$\alpha_a$ to high relative precision. The missing arithmetic input is
+the complete cofinal separator at the correct relative scale. A finite
+matrix's second eigenvalue supplies no such lower bound without its full
+tail and coupling comparison. An even-sector separator still needs the
+separate odd ordering if the real-zero theorem requires the global ground.
+
+\paragraph{A weaker alternative to the evaluator rate.}
+Ordinary selection $E_a/g_a\to0$ also gives locally uniform entire
+convergence if the selected grounds satisfy the independently proved
+weighted tightness condition
+\[
+ \lim_{K\to\infty}\sup_a\int_{|x|>K}e^{R|x|}|J_av_a(x)|\,dx=0
+ \quad\text{for every }R>0. \tag{S2}
+\]
+Indeed the integral on $[-K,K]$ converges by ordinary $L^2$ convergence
+and Cauchy--Schwarz, while (S2) and the known tail of $\phi$ control
+the exterior. A sufficient explicit condition for (S2) is
+$\sup_a\int e^{2(R+1)|x|}|J_av_a|^2<\infty$ for each $R$.
+No such ground-tail statement follows from the current residual bound.
+
+\begin{proposition}[Complete evaluator-dual alternative]
+\label{prop:ns43-ccm-evaluator-selection}
+In the preceding setting suppose $E_a/g_a\to0$. Suppose further that,
+for every fixed $R>0$, a complete complement estimate is established:
+\[
+ \sup_{|z|\le R}|\widehat{J_ae}(z)|^2
+ \le D_{a,R}\bigl(q_a[e]-\mu_a\|e\|^2\bigr)
+ \quad(e\in\mathcal D(q_a),\ e\perp v_a),
+ \qquad D_{a,R}E_a\to0. \tag{S3}
+\]
+Then the same locally uniform entire convergence follows.
+\end{proposition}
+\begin{proof}
+For the orthogonal error above,
+$\widehat p_a=\kappa_a\widehat v_a+\widehat e_a$ and
+$\kappa_a\to1$. Thus, on the disk,
+\[
+ |\widehat v_a-\widehat p_a|
+ \le \kappa_a^{-1}\sqrt{D_{a,R}E_a}
+       +(\kappa_a^{-1}-1)|\widehat p_a|\to0.
+\]
+The explicit cutoff transforms are uniformly bounded on each disk
+and converge to $\widehat\phi$. This proves the assertion.
+\end{proof}
+The shift by $\mu_a$ and the complete complement in (S3) are part of
+its hypotheses. The fixed-window v1.43 evaluator comparison for one
+real zero is not a cofinal bound of this kind, nor a bound on every
+complex compact set. Its scalar resolution floor is not a no-go
+result for (S1)--(S3).
+
+\begin{proposition}[A source-relative block condition sufficient for selection]
+\label{prop:ns43-ccm-source-separation}
+Let $p_a\in\mathcal D(A_a)$ be unit, $P_a=|p_a\rangle\langle p_a|$,
+$Q_a=I-P_a$, $\alpha_a=\langle A_ap_a,p_a\rangle$, and
+$r_a=Q_aA_ap_a$. Suppose the \emph{complete compressed form} satisfies
+\[
+ q_a[f]\ge(\alpha_a+\delta_a)\|f\|^2
+ \quad(f\in\mathcal D(q_a)\cap p_a^\perp),\qquad \delta_a>0.
+ \tag{S4}
+\]
+Then $A_a$ has exactly one eigenvalue below $\alpha_a+\delta_a$,
+it is simple, and, for its phase-aligned ground $v_a$,
+\[
+ \alpha_a-\|r_a\|^2/\delta_a\le\mu_a\le\alpha_a,
+ \qquad \|v_a-p_a\|\le\sqrt2\,\|r_a\|/\delta_a.
+\]
+For the explicit cutoff source, the cofinal rate
+$C_R(a)\|r_a\|/\delta_a\to0$ for every $R>0$ therefore implies
+entire-transform selection.
+\end{proposition}
+\begin{proof}
+The restriction to $p_a^\perp$ is a closed lower-bounded form,
+because subtracting its component along the fixed operator-domain
+vector preserves the form domain continuously. The min--max principle
+places the second eigenvalue at least $\alpha_a+\delta_a$; the trial
+$p_a$ puts the lowest at most $\alpha_a$. For $f=tp_a+y$, $y\perp p_a$,
+\[
+ q_a[f]-\alpha_a\|f\|^2
+ =q_a[y]-\alpha_a\|y\|^2+2\Re(t\langle A_ap_a,y\rangle)
+ \ge\delta_a\|y\|^2-2|t|\|r_a\|\|y\|
+ \ge-\|r_a\|^2|t|^2/\delta_a.
+\]
+This handles the full cross term and proves the lower edge bound.
+Writing $v_a=tp_a+y$, the weak projected eigen-equation is
+$(Q_aA_aQ_a-\mu_a)y=-tr_a$. Its inverse has norm at most
+$1/(\alpha_a+\delta_a-\mu_a)\le1/\delta_a$, so
+$\|y\|\le|t|\|r_a\|/\delta_a$. Phase alignment then gives
+$\|v_a-p_a\|^2=2(1-|t|)\le2\|y\|^2$.
+\end{proof}
+Condition (S4) is a new, source-specific signed spectral estimate,
+not an algebraic reformulation of the bounded-floor target. It asks for information beyond a floor: it separates one named source
+from its whole complement and controls the relative error. No reverse
+implication from RH or from a uniform floor to (S4) is claimed. In this
+arithmetic family, with the known vanishing source residual, a successful
+cofinal condition of this strength gives a uniform floor in the sector
+where it is imposed. To use v1.36 one must impose it on the full space
+or separately control the odd sector by a uniform floor; those additional
+hypotheses would imply RH. Even-sector selection does not silently supply
+the odd estimate. It is not an unconditional shortcut.
+
+For clarity, the floor consequence itself needs no relative-rate
+condition: in the displayed cross-term formula,
+$2|t|\|y\|\le |t|^2+\|y\|^2$ and $\delta_a>0$ give
+\[
+ q_a[tp_a+y]\ge(\alpha_a-\|r_a\|)(|t|^2+\|y\|^2).
+\]
+Thus the known $\alpha_a\to0$ and $\|r_a\|\to0$ give the asserted
+sector floor from (S4) alone. The stronger relative-rate condition
+is needed for selection of the Gaussian profile and its transform,
+not for this floor deduction.
+
+The v1.35 even reflected near-radical block has dimension $J_a+1$,
+so eventually it contains a unit vector orthogonal to $p_a$. Its complete
+residual is at most $\varepsilon_a$, hence (S4) forces
+$\delta_a\le\varepsilon_a-\alpha_a\le\varepsilon_a+|\alpha_a|$.
+The explicit cutoff source also has $|\alpha_a|=O(\varepsilon_a)$.
+This rules out a uniform positive $\delta_a$ or a polynomial lower scale.
+A source-selecting separation must shrink and must still dominate the
+source error in the relative sense above. The existence of a growing
+near-zero block does not logically exclude such a hierarchy. Neither
+that hierarchy nor its required rate is in the archive.
+
+\paragraph{Identification of the limit.}
+By \textup{eq:v150-mellin}, with
+$\Xi(z)=\xi(1/2+iz)$ and the even functional equation,
+\[
+ \widehat\phi(z)=\frac{2}{\sqrt{6\pi}\,\|h\|_2}\,\Xi(z).
+\]
+In particular $\widehat\phi(0)>0$. Once either selection criterion is
+proved, $\widehat v_a(0)\ne0$ eventually and
+\[
+ \frac{\widehat v_a(z)}{\widehat v_a(0)}
+ \longrightarrow\frac{\Xi(z)}{\Xi(0)}
+ \quad\text{locally uniformly on }\mathbb C.
+\]
+The scalar is fixed by the stated $L^2$ normalization and then by the
+value at zero; phase/scale and translations must not be left free.
+If the real-zero-ground-transform theorem's complete hypotheses hold
+cofinally as well, this convergence rules out a nonreal zero of $\Xi$:
+a small closed disk about such a zero, disjoint from the real axis and
+with zero-free boundary, would by uniform convergence and the argument
+principle eventually contain the same positive number of zeros of
+$\widehat v_a$, a contradiction. This is a conditional implication,
+not a new RH proof. Cofinal simplicity/evenness and applicability of
+that theorem are themselves additional to the single $\lambda=4$ result.
+
+\subsection*{An exact abstract nonselection model}
+
+The next construction tests precisely the proposed \emph{abstract}
+premises: complete compact-resolvent operators on increasing intervals;
+simple even nonnegative ground functions; entire ground transforms with only real
+zeros; monotone positive ground energies tending to zero; a fixed
+candidate with vanishing full residual; dense fixed tests with vanishing
+residual; ordinary strong-resolvent collapse; and even uniformly bounded
+support of the ground functions. It does \emph{not} impose the
+support-consistent arithmetic Weil form, the prime identities, the
+CvS distribution representation, or a positivity-improving semigroup.
+Its ground functions are nonnegative, not strictly positive on all of
+the increasing interval. It cannot disprove an arithmetic
+selection theorem using those additional structures.
+
+\begin{proposition}[Abstract nonselection despite fast absolute residuals]
+\label{prop:ns43-ccm-nonselection}
+There is a family satisfying all the abstract properties just listed,
+including uniformly tight ground supports and the explicit Gaussian
+cutoff candidate, whose phase-fixed normalized ground transforms have
+two different subsequential limits. The absolute residual rate can be
+made arbitrarily fast by a positive scalar rescaling.
+\end{proposition}
+\begin{proof}
+Let $b=1_{[-1/4,1/4]}$ and let $g_1=b*b*b*b/\|b*b*b*b\|_2$.
+Then $g_1$ is nonnegative and even, lies in $H^2(\mathbb R)$, and is
+supported in $[-1,1]$. Put $g_2(x)=2^{-1/2}g_1(x/2)$, supported in
+$[-2,2]$. Both are unit vectors, distinct and not scalar multiples.
+Their entire transforms are nonzero constants times
+$\operatorname{sinc}(z/4)^4$ and $\operatorname{sinc}(z/2)^4$,
+respectively, where $\operatorname{sinc}z=\sin z/z$. Every zero is real.
+Their normalized transforms have distinct zero sets.
+
+For integers $n\ge3$, let $D_n=-d^2/dx^2$ be the Dirichlet Laplacian
+on $H_n=L^2(-n,n)$, with domain $H^2(-n,n)\cap H_0^1(-n,n)$.
+Its unit first eigenvector is
+$h_n(x)=n^{-1/2}\cos(\pi x/(2n))$.
+Let $j(n)=1$ for even $n$ and $2$ for odd $n$. Define
+\[
+ w_n=\frac{h_n-g_{j(n)}}{\|h_n-g_{j(n)}\|},\qquad
+ U_n=I-2|w_n\rangle\langle w_n|,\qquad
+ A_n=n^{-1}U_n(I+D_n)U_n.
+\]
+The denominator is nonzero; its square is
+$2-2\langle h_n,g_{j(n)}\rangle\to2$.
+Thus $U_n$ is an even-parity-preserving unitary involution with
+$U_nh_n=g_{j(n)}$. Because $w_n\in\mathcal D(D_n)$, it preserves
+that domain. The complete $A_n$ is positive, self-adjoint with compact
+resolvent, and its simple even ground is exactly $g_{j(n)}$ with
+\[
+ \mu_n=\frac1n\left(1+\frac{\pi^2}{4n^2}\right)\downarrow0,
+ \qquad \lambda_{2,n}-\mu_n=\frac{3\pi^2}{4n^3}>0.
+\]
+All ground transforms have only real zeros, but the normalized ground
+functions and their normalized entire transforms alternate between two
+different limits. Positivity and a fixed positive phase do not repair this.
+
+For each fixed $f\in C_c^\infty(\mathbb R)$ and all sufficiently large
+$n$, $f\in\mathcal D(D_n)$. Moreover
+$\|(I+D_n)w_n\|$ is uniformly bounded: the $g_j$ have fixed finite
+$H^2$ norms, while $\|D_nh_n\|=\pi^2/(4n^2)$ and the denominators
+are bounded away from zero. Consequently
+\[
+ \|A_nf\|\le\frac1n\left(\|f-f''\|
+        +2\|f\|\,\|(I+D_n)w_n\|\right)\longrightarrow0.
+\]
+The same estimate holds for the fixed candidate $g_1$. It also holds
+uniformly for the explicit Gaussian cutoff candidate $p_n$ used above:
+its $H^2$ norms are uniformly bounded, its cutoff normalization stays
+away from zero, and $\|p_n\|=1$. Thus $\|A_np_n\|=O(1/n)$ while
+$p_n\to\phi$ in every exponentially weighted $L^1$ norm. Even the
+known explicit Gaussian candidate and its transform identity do not
+select the alternating grounds of this abstract operator family.
+Let $\widetilde A_n=A_n\oplus0$ on $L^2(\mathbb R)$ by zero extension.
+For every nonreal $z$ and every such fixed $f$,
+\[
+ \|(\widetilde A_n-z)^{-1}f+z^{-1}f\|
+ \le\frac{\|\widetilde A_nf\|}{|z||\Im z|}\to0.
+\]
+Density of $C_c^\infty$ and the uniform self-adjoint resolvent bound
+extend this to all of $H$. Thus the ordinary strong-resolvent limit
+is zero. This model meets every listed abstract premise, including
+weighted tightness of the grounds, yet supplies no unique selection.
+Its ground multiplicity is one at every $n$; the failure is not caused
+by a degenerate eigenspace at a fixed window.
+The scalar $1/n$ can be replaced throughout by any positive sequence
+$\theta_n\downarrow0$. The eigenvalues and residuals are rescaled,
+the ground functions are unchanged, and the residual estimate becomes
+$O(\theta_n)$. Thus even an arbitrarily prescribed rapid absolute
+residual rate cannot replace the missing relative estimate. This
+rescaling does not restore arithmetic support consistency.
+\end{proof}
+
+
+\paragraph{Ordinary norm is also the wrong transform topology by itself.}
+Even if a selection estimate gives $f_a\to\phi$ in $L^2$, locally
+uniform entire convergence still needs a rate or a tail condition.
+For any fixed $R>0$, add to the positive cutoff source a positive even
+unit bump supported near $\pm(a-1)$ with coefficient $e^{-Ra/2}$,
+and renormalize. The resulting compactly supported unit functions
+converge to $\phi$ in $L^2$, while their transforms at $iR$ grow like
+a positive constant times $e^{Ra/2}$. This is a separate topology
+counterexample; it does not claim the real-zero property or the
+arithmetic ground equation.
+
+\subsection*{A restriction on renormalized profile selection}
+
+A possible alternative is to renormalize the shrinking spectrum and
+prove a nonzero profile form with a unique selected direction.
+The ordinary zero-resolvent limit cannot provide this profile.
+\emph{Scope reset for this subsection only:} $q_a$ now denotes the
+\emph{full both-parity} physical Weil form on $L^2(I_a)$, not merely
+the even-sector form used for the preceding selection statements.
+Here $J_a$ is zero extension into the full $H=L^2(\mathbb R)$;
+$\alpha_a$ remains the Rayleigh value of the even cutoff $p_a$.
+Thus the use of all real translates and their density in full $H$
+is exactly the setting of \textup{lem:v136-total-radicals}.
+Here is a precise obstruction to choosing too coarse a scale.
+\begin{proposition}[A coarse rescaled liminf cannot select one radical]
+\label{prop:ns43-ccm-coarse-profile}
+Let $s_a>0$ and suppose
+\[
+ \varepsilon_a/s_a\to0,\quad |\alpha_a|/s_a\to0,
+ \qquad \varepsilon_a=Ca e^{-e^a/100},
+\]
+where each fixed finite translate combination may have its own constant
+$C$, as in v1.35--v1.36. Suppose a nonnegative lower-semicontinuous
+quadratic form $\mathcal E$ on $H$ satisfies the proposed strong
+liminf inequality
+\[
+ \mathcal E(f)\le\liminf_a
+ \frac{q_a[f_a]-\alpha_a\|f_a\|^2}{s_a}
+ \quad\text{whenever }J_af_a\to f.
+ \tag{S5}
+\]
+Then $\mathcal E\equiv0$ on $H$.
+\end{proposition}
+\begin{proof}
+For every fixed $f$ in the dense translated-radical span, insert its
+smooth cutoff $f_a$. The complete residual implies the right side is
+zero, so $\mathcal E(f)=0$. Lower semicontinuity and density then imply
+$\mathcal E\equiv0$ on $H$. Therefore no such coarse rescaled limit
+can have one-dimensional kernel $\mathbb C\phi$.
+\end{proof}
+This is a scoped implication about (S5), not a prohibition on finer
+scales, different compactness mechanisms, or arithmetic ground selection.
+
+\paragraph{Recommended node readings.}
+\begin{itemize}
+\item CCM step (b): retain the map status \textbf{live} (the sole gold
+node), as explicitly requested by the user; its mathematical target remains
+\textbf{open}. A finite-window real-zero ground and
+one fixed-window zero enclosure are retained; cofinal function selection
+and its entire-transform topology are missing.
+\item Gaussian source identity and residual: \textbf{proved prerequisite}.
+The identity selects an explicit candidate, not the operator's ground.
+\item Absolute-residual / ordinary-resolvent inference to a unique
+Gaussian ground: \textbf{closed as an inference from the listed abstract
+premises}, by the exact countermodel. Do not label the arithmetic CCM
+route closed.
+\item Complete relative spectral/evaluator selection, (S1) or (S3), or
+the stronger source block condition (S4): \textbf{blocked/open input}.
+No cofinal separation, Rayleigh-excess comparison, or ground-tail rate
+is presently available.
+\item Coarse renormalized single-profile limit satisfying (S5):
+\textbf{closed only under its explicit scale and liminf hypotheses}.
+Finer renormalized selection remains open.
+\end{itemize}
+Finally, in the actual support-consistent Weil family, write
+$\mu_a^{\mathrm{full}}=\inf\sigma(\mathsf W_{e^a})
+=\min(\mu_a^{\mathrm{even}},\mu_a^{\mathrm{odd}})$ on the full
+$L^2(I_a)$. A uniform lower bound on this \emph{complete, both-parity}
+ground energy is already the bounded-floor
+target of v1.36, and $\mu_a^{\mathrm{full}}\to0$ is equivalent to
+full both-parity positivity
+via monotonicity and the known source upper bound. Those must not be
+rebranded as weak new selection assumptions. Neither conclusion alone
+has been shown here to identify the Gaussian ground profile. The
+abstract countermodel establishes no arithmetic nonimplication.

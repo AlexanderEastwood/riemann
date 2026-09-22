@@ -1,6 +1,6 @@
 # Evidence availability ledger
 
-Updated 2026-09-22 (NS-38). **Both remaining groups are explicitly NOT ARCHIVED.**
+Updated 2026-09-22 (NS-38; fresh NS-44/45 distinction). **Both remaining groups are explicitly NOT ARCHIVED.**
 The manuscript archival overclaims are corrected by disclosure; original recovery remains OPEN.
 Recovery of the original v1.26 bundle resolved the two λ=4 evidence gaps;
 it did not resolve the later λ=5 or concentration-evidence gaps.
@@ -129,3 +129,15 @@ and [versioned report](ns38_archival_disclosure/ns38-archival-disclosure-2026-09
 record this disposition. Recovery remains an open input. The archival overclaim
 is corrected; availability has not been restored. No manuscript version bump is
 made for NS-38 alone, and no original numerical gate was replayed.
+
+## Fresh replacement certificates (NS-44/45, v1.52)
+
+New exact dyadic witnesses and fresh 320/448-bit verifiers now establish failure
+of the stipulated lambda=5 `10^-8 D` tail comparison and the N=25 tested dyadic
+block-norm comparison in both parities. See [NS-44](ns44_metric_replay/) and
+[NS-45](ns45_block_replay/), indexed by [v1.52](v152/). These are replacement
+certificates, not recovered v1.27/v1.28 artifacts; the historical displayed
+ratios, four-block tables, and original protocols remain unarchived. The first
+evidence group therefore remains **recovery OPEN**, while these two precisely
+scoped mathematical comparison closures now have current replayable evidence.
+The concentration-era group is unchanged and remains **recovery OPEN**.
