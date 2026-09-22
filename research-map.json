@@ -6,7 +6,8 @@
     "live": "current route (gold): being worked now",
     "closed": "closed route (red): proved insufficient or impossible; kept deliberately",
     "blocked": "attempted; obstruction found",
-    "open": "target, not yet attacked"
+    "open": "target, not yet attacked",
+    "wall": "dashed edge: the named open input this blocked node terminates on; edges into \"uniform finite floor\" all end on inputs that v1.51 relates to the bounded-floor target (CAE is that target restated)"
   },
   "nodes": [
     {
@@ -202,7 +203,12 @@
       "prop": "prop:v131-concentration",
       "branch": "lane/concentration",
       "note": "Valid sufficient criterion; the missing positivity input is a complete joint signed operator lower bound with a uniform cofinal error. QG plus a separate admissible bounded-energy packet would obstruct bounded level count, not supply this positivity input. NS-22 grid-family losses and its invalid sampled tail charge prove no closure (NS-31/36). NS-43 proves unrestricted exact adaptive levels are equivalent to the floor target; a nonarithmetic countermodel refutes general completeness of scalar set bounds. Specific arithmetic operator estimates remain open.",
-      "evidence": "evidence/v152"
+      "evidence": "evidence/v152",
+      "wall": {
+        "input": "QG + WLH packet",
+        "to": "floor",
+        "src": "ass:v149-qg; ZLD implies the QC_K bound at a fixed window (prop:v151-input-comparison ii); CAE = target"
+      }
     },
     {
       "id": "weaken",
@@ -394,7 +400,12 @@
       "prop": "prop:v146-packet-loss; prop:v146-level-complexity",
       "branch": "codex/beta-lattice-identity",
       "evidence": "evidence/v146",
-      "note": "NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure. NS-29 makes the missing value-distribution statement ZLD explicit; cumulative size and arbitrary positive-fraction spread are insufficient."
+      "note": "NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure. NS-29 makes the missing value-distribution statement ZLD explicit; cumulative size and arbitrary positive-fraction spread are insufficient.",
+      "wall": {
+        "input": "ZLD + packet",
+        "to": "floor",
+        "src": "prop:v146-level-complexity inputs, named as ZLD in v1.47"
+      }
     },
     {
       "id": "zeroleveldistribution",
@@ -404,7 +415,12 @@
       "prop": "prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet",
       "branch": "codex/level-density-zero-statement",
       "evidence": "evidence/v147",
-      "note": "NS-29: conditional reduction requires lower measures for every level band and source-admissible bounded-energy packet coverage of those bands. Zero theorems assessed do not provide the input. D->infinity gives no uniform band measure; broad pulses cost log X. No closure or RH-equivalence claim."
+      "note": "NS-29: conditional reduction requires lower measures for every level band and source-admissible bounded-energy packet coverage of those bands. Zero theorems assessed do not provide the input. D->infinity gives no uniform band measure; broad pulses cost log X. No closure or RH-equivalence claim.",
+      "wall": {
+        "input": "ZLD + packet",
+        "to": "floor",
+        "src": "ass:v147-zld; packet coverage eq:v147-packet-coverage"
+      }
     },
     {
       "id": "weightedexactcost",
@@ -414,7 +430,12 @@
       "prop": "prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg",
       "branch": "codex/weighted-level-review",
       "evidence": "evidence/v149",
-      "note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim."
+      "note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim.",
+      "wall": {
+        "input": "QG + WLH packet",
+        "to": "floor",
+        "src": "ass:v149-qg"
+      }
     },
     {
       "id": "capacityweight",
@@ -424,7 +445,12 @@
       "prop": "lem:v150-weight; prop:v150-critical-energy; ass:v150-cae",
       "branch": "codex/bounded-capacity-weight",
       "evidence": "evidence/v150",
-      "note": "NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open. NS-43 extends the loss obstruction to any fixed prime-power channel and moving omitted channels bounded away from the endpoint, with unchanged other signed terms. Full coefficient-one or compensated estimates remain open."
+      "note": "NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open. NS-43 extends the loss obstruction to any fixed prime-power channel and moving omitted channels bounded away from the endpoint, with unchanged other signed terms. Full coefficient-one or compensated estimates remain open.",
+      "wall": {
+        "input": "CAE",
+        "to": "floor",
+        "src": "ass:v150-cae; CAE is the bounded-floor target in positive-weight coordinates (v1.51)"
+      }
     },
     {
       "id": "capacityslack",
@@ -489,7 +515,12 @@
       "parent": "stepb",
       "prop": "prop:ns43-ccm-rayleigh-selection; prop:ns43-ccm-residual-selection",
       "evidence": "evidence/v152",
-      "note": "Missing cofinal complete separator relative to the explicit cutoff residual, or Rayleigh-excess/gap plus evaluator/weighted-tightness control. Global-ground use additionally needs odd ordering. No fixed-head replacement or polynomial positive separator."
+      "note": "Missing cofinal complete separator relative to the explicit cutoff residual, or Rayleigh-excess/gap plus evaluator/weighted-tightness control. Global-ground use additionally needs odd ordering. No fixed-head replacement or polynomial positive separator.",
+      "wall": {
+        "input": "cofinal separator",
+        "to": "g2",
+        "src": "prop:ns43-ccm-rayleigh-selection: missing cofinal complete separator relative to the cutoff residual"
+      }
     },
     {
       "id": "absoluteselection",
