@@ -1,16 +1,16 @@
-Diagnostic (2026-09-21, Claude); not a certificate. See results.md.
-Correct version of the retracted "line symbol" experiment: the manuscript's β_a
-validated against the assembled matrix to 2e-7 (§1), its negative set (§2),
-the ground-state level split at λ=3 and λ=4 (§3–4), the ground's lattice-cell
-distribution across λ (§5, selfsim.py), the lobe of β_a nearest the first zeta
-ordinate against the ground's mass there (§6, nearzero.py), and the level
-pencil W v = ν (W + W⁻) v showing the cancellation is a whole deep block, not
-one direction (§7, pencil.py; wminus_tail.py bounds the neglected tail), and the
-layer-cake constant η_a^op of prop:v131-concentration on the head, ~0.35 D_a and
-growing with the window (§8, layercake.py), and the overlap of the pencil directions
-with the certified lambda=3 source: the ground direction is the source, the rest of the
-deep block is admissible to ~1% (§9, source_overlap.py); the odd sector validated and
-its pencil, same block structure (§10, pencil_odd.py).
-Run from the repo root with .venv/bin/python; beta_true.py runs the validation
-when executed directly (~5 min); pencil.py takes cases as "lam,N,bits"
-arguments. cert.py holds the Arb-to-mpmath midpoint conversion the scripts share.
+DIAGNOSTIC, NOT A CERTIFICATE.
+
+Current interpretation: [NS-36 current reading](../diag_ns36_corrections/circle-lane-current-reading-2026-09-22-v1.html).
+The historical [results](results.md), scripts and outputs are retained for replay.
+Their correction notice supersedes the withdrawn conclusions below it; script
+comments and printed conclusions are historical too.
+
+The correct symbol and centering sign reproduce assembled entries. Deep-block
+cancellation is a finite-head observation in both parities, with different
+counts. The lambda=3 ground/source overlap is approximate. No global tail bound,
+blanket relative-pencil accuracy, cofinal layer-cake obstruction or absence of
+a limiting shape is established. In particular, wminus_tail.py samples two
+entries; it does not bound the omitted operator tail.
+
+Run archived scripts from the repository root with the project environment.
+cert.py converts Arb balls to midpoints; it is not a certificate checker.

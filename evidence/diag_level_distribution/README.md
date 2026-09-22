@@ -1,8 +1,15 @@
-Diagnostic (2026-09-21, Claude); not a certificate. See results.md.
-NS-28: measures the two inputs of prop:v146-level-complexity on the even head
-(N=256): the achievable level-distribution constant c and the minimum energy
-Q_min(c) a state must pay for it (SDP dual = pure-state primal). c ~ 0.2-0.3 is
-available at every window; Q_min(c) grows three orders of magnitude from
-lambda=4 to 6, so the conditional bound has content only for K <= 2 (lambda 6)
-or K <= 7-16 (lambda 8) levels, below what the NS-22 minorants use.
-Run from the repo root with .venv/bin/python; min_energy_lp.py needs scipy.
+DIAGNOSTIC, NOT A CERTIFICATE.
+
+Current interpretation: [NS-36 current reading](../diag_ns36_corrections/circle-lane-current-reading-2026-09-22-v1.html).
+The historical [results](results.md), scripts and outputs are retained for replay.
+Their correction notices supersede the original conclusions; the archived
+scripts still print some withdrawn interpretations.
+
+These are N=256, twenty-bin, float-matrix problems. A dual value is a lower
+estimate; the minimizing eigenvector supplies an upper estimate only after all
+constraints pass. Several original vectors fail. The c=0.5 infeasibility claim
+is false for mixed states at lambda=4 and 8. Histogram maxima are not continuous
+density caps or the sliding concentration function. The DP uses fixed bin edges.
+No all-Borel, source-admissible, cofinal or level-complexity conclusion follows
+from the original tables. The NS-36 replay separately checks new lambda=4
+witnesses and distinguishes raw, approximate-source and source-independent cases.

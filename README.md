@@ -34,8 +34,8 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | CCM finite benchmark | Eight local lambda=3, N=120 root discrepancies certified at 768/1024 bits; broader reproduction remains diagnostic ([v1.41](evidence/v141/)) |
 | Finite floors | `W_λ >= -8·I` at λ = 5, 6, 8, both parities, full infinite tail (`prop:v138-three-floors`) |
 | Certified window | half-width `a = log 4 = 1.386`; 1.73× the published Zhu window, 4× the classical range |
-| Live mechanism | signed weighted concentration, even sector (`prop:v131-concentration`) |
-| Routes proved closed | 15 map nodes; unavailable v1.28 numerical closure separately blocked |
+| Live mechanism | CCM step (b): identify a limit mechanism for the complete ground |
+| Routes proved closed | 21 scoped map nodes; unavailable v1.28 numerical closure separately blocked |
 | Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |

@@ -6,7 +6,8 @@
     "evidence/v141/*.py",
     "evidence/v142/*.py",
     "evidence/v143/*.py",
-    "evidence/diag_beta_lattice_identity/*.py"
+    "evidence/diag_beta_lattice_identity/*.py",
+    "evidence/diag_ns36_corrections/*.py"
   ],
   "exclude": [
     "node_modules",
