@@ -1,0 +1,59 @@
+{
+  "classification": [
+    "exact identity",
+    "proved implication",
+    "open input"
+  ],
+  "date_utc": "2026-09-22",
+  "manuscript_version": "v1.54",
+  "starting_main": "939b0a0583764a37bc363959294d9fdcc98b9aa6",
+  "actual_build_command": "./manuscript/build.sh",
+  "pages": 278,
+  "undefined_reference_warning_count": 0,
+  "duplicate_reference_warning_count": 0,
+  "overfull_box_count": 0,
+  "live_manuscript_sha256": "db6f5106ce070346a498a5ca939df596423b493aa7d5ad7158581b8b3eb1f126",
+  "integrated_proof_sha256": "039eed8b6867440ba77bbe8ecc2aafe01ad9d40de5b47a1e4572d8612823cbe2",
+  "release_proof_verbatim_in_manuscript": true,
+  "new_numerical_window": false,
+  "new_tail_metric": false,
+  "RH_or_G2_claim": false,
+  "independent_reviews": {
+    "NS51": "0 MAJOR, 0 MINOR; 2 scope notes retained",
+    "NS52": "0 mathematical MAJOR; two mechanical typesetting corrections fixed",
+    "NS53": "0 mathematical MAJOR/MINOR"
+  },
+  "open_inputs": [
+    "API: arithmetic affine-potential injectivity on the complete form domain",
+    "Full signed heat transport; unmatched-real-zero hypothesis of specific comparison obstruction unverified",
+    "RBC: sufficient asymptotic corrected residual block-correlation bound"
+  ],
+  "proof_sources": [
+    {
+      "path": "evidence/ns51_kernel/proof.tex",
+      "sha256": "ee27a3cd7a43df40605eccb468588854bafe05bb2a91b6e47c7af1e3f3c20cba",
+      "verbatim_in_release": true
+    },
+    {
+      "path": "evidence/ns52_heat_pairs/proof.tex",
+      "sha256": "b7f3df5788d9d69051560e84c71cef9835d21e34bc8a18de9bb4b73cffbd5893",
+      "verbatim_in_release": true
+    },
+    {
+      "path": "evidence/ns53_nb_blocks/proof.tex",
+      "sha256": "36de7fe507f8957a361f14ae430c6a96a812cb90c3dd8de20c22057f1a10b7d5",
+      "verbatim_in_release": true
+    }
+  ],
+  "integration_main": "f0178e032c6f9ed46b8fa3dbf0c97b54d12e6417",
+  "prepublication_result_commit": "e405e84ba5b6123c6c65882b24a46de677b4724f",
+  "post_rebase_actual_build": {
+    "pages": 278,
+    "undefined_reference_count": 0,
+    "duplicate_reference_count": 0,
+    "overfull_box_count": 0
+  },
+  "integration_review": "0 MAJOR; 1 MINOR map-scope issue corrected; no unresolved MINOR.",
+  "preserved_upstream": "PR22 audit, PR25 NS50 checkpoint, all task rows, map wall annotations; proof and manuscript bytes unchanged by rebase.",
+  "task_artifact_hashes_verified": 13
+}

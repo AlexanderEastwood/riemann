@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NS-52 · Heat-zero pairs · 22 September 2026</title></head>
+<body style="margin:0;background:#f3f0e8;color:#202822;font-family:Georgia,'Times New Roman',serif;line-height:1.6;">
+<main style="max-width:680px;margin:40px auto;padding:36px;background:#fffefa;border-top:5px solid #365747;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;color:#557060;">RIEMANN RESEARCH RECORD · NS-52 · 22 SEPTEMBER 2026</p>
+<h1 style="font-size:31px;line-height:1.2;font-weight:normal;">The collision singularity cancels.<br>The uniform comparison does not follow.</h1>
+<p style="font-size:19px;">The finite calculation succeeds: grouping colliding zeros removes the divergent individual velocities. It also exposes an extra term and a separate obstacle that the proposed heat comparison must address.</p>
+<p style="padding:14px 18px;background:#edf3ee;border-left:3px solid #557060;"><strong>Status:</strong> exact identities and conditional implications. No new numerical window or certificate. G2 and RH remain open.</p>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:30px;">The exact calculation</h2>
+<p>Write Z<sub>t</sub>(w)=8H<sub>t</sub>(2w), so Z<sub>0</sub>(w)=Ξ(w). In this coordinate the heat equation is ∂<sub>t</sub>Z=−κZ″ with <strong>κ=¼</strong>. Use the nonunitary Fourier transform F<sub>f</sub>(w)=∫f(x)e<sup>−iwx</sup>dx and its analytic product Ψ(w)=F<sub>f</sub>(w)·overline(F<sub>g</sub>(overline(w))). At time zero its multiplicity-counted zero sum is exactly the existing Weil form.</p>
+<p>For a double zero c, factor Z(w)=(w−c)²A(w), with A(c)≠0. The contribution S of the complete local pair obeys</p>
+<p style="padding:16px;background:#f5f2e9;text-align:center;font-size:20px;">S′ = 2κ Ψ″(c) + 4κ [A′(c)/A(c)] Ψ′(c).</p>
+<p>The inverse-gap singularities have disappeared. The second term remains: it records interaction with zeros outside this pair. A collision at a nonzero real c also has its reflected collision at −c; a complete symmetry contribution must include both.</p>
+<p>The proof uses a contour integral, so it counts multiplicities correctly without differentiating singular individual root branches. It also gives the formula for a cluster of any finite size.</p>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:30px;">Why this is not yet a uniform estimate</h2>
+<p>On a test supported in [−a,a], elementary Fourier estimates bound the pair derivative by</p>
+<p style="padding:14px;background:#f5f2e9;text-align:center;">16κ(a³ + Ba²)e<sup>2aY</sup> ‖f‖₂ ‖g‖₂,</p>
+<p>where Y bounds the imaginary part of the collision and B bounds |A′/A|. The cubic support dependence can occur exactly for an individual real-collision contribution. This is conditional on a collision; no such arithmetic collision is asserted here.</p>
+<p>The complete zero form converges absolutely for smooth compactly supported tests and is continuous in nonnegative time. Differentiating the entire infinite sum still needs a justified limit and a signed estimate uniform in support. Finite pair cancellation supplies neither.</p>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:30px;">A necessary compatibility test</h2>
+<p>There is a sharper conditional obstruction. Suppose the positive-time function has all real zeros and one of them, c, is not an original Ξ zero. Then the comparison</p>
+<p style="padding:14px;background:#f5f2e9;text-align:center;">q<sub>a</sub>[f] ≥ q<sub>a,t₀</sub>[f] − C‖f‖₂²</p>
+<p><strong>cannot hold with a fixed C for every growing window.</strong> Finite combinations of translated arithmetic radicals have bounded ordinary norm and original Weil energy tending to zero after cutoff, yet their Fourier value at c can grow like √M. The positive-time zero sum charges the square of that value.</p>
+<p>The proof first lets the cutoff grow for each fixed finite combination, then increases M. It assumes no uniform cutoff rate and no global closability. An unmatched zero at a specified time has not been proved or certified in this checkpoint, so this is a conditional obstruction, not a closure of the arithmetic heat route.</p>
+
+<h2 style="font-size:22px;font-weight:normal;margin-top:30px;">What must change next</h2>
+<p>A heat argument would need a different comparison, or a constructed transport of tests that respects the original radical. Simply comparing the same test against a shifted real-zero set is subject to the obstruction above. No such transport is supplied.</p>
+<p>The finding concerns the proposed bound. It does not produce a negative Weil direction, and it does not settle RH.</p>
+
+<p style="border-top:1px solid #d4d8cd;padding-top:20px;font-size:14px;">Primary sources: <a style="color:#315641;" href="https://doi.org/10.1007/s40687-019-0193-1">Polymath15, Research in the Mathematical Sciences 6, 31 (2019)</a>, equations (1)–(4), Proposition 3.1 and Theorem 3.2; <a style="color:#315641;" href="https://doi.org/10.1017/fmp.2020.6">Rodgers–Tao, Forum of Mathematics, Pi 8, e6 (2020)</a>. The finite contour and radical-comparison derivations are supplied in the accompanying proof. The radical cutoff input is the repository’s v1.36 result.</p>
+<p style="font-family:Arial,sans-serif;font-size:12px;color:#617065;">Evidence checkpoint · version 1 of this report · manuscript integration and build reported separately by the parent task</p>
+</main></body></html>

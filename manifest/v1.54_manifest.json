@@ -1,0 +1,38 @@
+{
+ "manuscript_revision": "v1.54",
+ "base_commit": "e405e84ba5b6123c6c65882b24a46de677b4724f",
+ "files": [
+  {
+   "path": "evidence/v154/README.md",
+   "size_bytes": 1033,
+   "sha256": "befd7c4baf9d551bcaebfb6188a791caed5efc5b6378cd45a6e5521c271aca5f"
+  },
+  {
+   "path": "evidence/v154/artifact-index.json",
+   "size_bytes": 2512,
+   "sha256": "463dd9b746e7298e86d7d5b1cfc9fa0c9db68e5109ce04d5497041b63682d322"
+  },
+  {
+   "path": "evidence/v154/integration-review-2026-09-22-v1.html",
+   "size_bytes": 6978,
+   "sha256": "732031ffb20d476bfe0598ebab18291e3232087172ab8da02212657bcc18e4ac"
+  },
+  {
+   "path": "evidence/v154/new-routes-2026-09-22-v1.html",
+   "size_bytes": 5071,
+   "sha256": "f87133883bdece12ebf74845e04c4f887494d2118a29e344c8b7dcaf1ab92ec4"
+  },
+  {
+   "path": "evidence/v154/proof.tex",
+   "size_bytes": 32403,
+   "sha256": "039eed8b6867440ba77bbe8ecc2aafe01ad9d40de5b47a1e4572d8612823cbe2"
+  },
+  {
+   "path": "evidence/v154/validation.json",
+   "size_bytes": 2374,
+   "sha256": "6d652dcbb872c18b783c1a425266b6279e33706700fab9f2fe8659a3af6207a1"
+  }
+ ],
+ "file_count": 6,
+ "total_bytes": 50371
+}

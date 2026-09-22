@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>v1.54 integration review — 22 September 2026</title></head>
+<body style="margin:0;background:#f5f2eb;color:#242722;font-family:Georgia,serif;line-height:1.6;">
+<main style="max-width:680px;margin:36px auto;padding:32px;background:#fffdf8;border-top:5px solid #36584d;">
+<p style="margin:0;color:#52655b;font-size:13px;letter-spacing:1px;">RIEMANN RESEARCH RECORD · PREPUBLICATION REVIEW</p>
+<h1 style="font-size:28px;line-height:1.2;margin:12px 0;">v1.54: integration and claim audit</h1>
+<p style="color:#62675f;">NS-51–53 · 22 September 2026 UTC · review v1</p>
+<p style="padding:15px;background:#eaf0e8;border-left:4px solid #36584d;"><strong>Disposition: 0 MAJOR; 1 MINOR found and corrected; 0 unresolved MINOR; 2 NOTE.</strong> The integrated statements preserve their hypotheses and open inputs. G2 and RH remain open.</p>
+
+<h2 style="font-size:21px;">Scope and identity of the reviewed result</h2>
+<p>This is a bounded integration and claim audit. It builds on this reviewer’s independent NS-51 domain derivation and checks the integration of the separately reviewed NS-52 and NS-53 fragments. It does not represent an independent rederivation of every heat-flow or approximation result, an audit of the entire historical manuscript, a numerical certificate, or verification of the eventual publication state.</p>
+<p>The release proof <code>evidence/v154/proof.tex</code> has SHA-256 <code style="font-size:12px;overflow-wrap:anywhere;">039eed8b6867440ba77bbe8ecc2aafe01ad9d40de5b47a1e4572d8612823cbe2</code>. Each final source fragment occurs byte-for-byte exactly once in that release proof and exactly once in the live manuscript. The entire release proof also occurs byte-for-byte exactly once in the manuscript.</p>
+<table style="width:100%;border-collapse:collapse;font-size:13px;">
+<tr><th style="text-align:left;border-bottom:1px solid #adb9b0;padding:8px;">Fragment</th><th style="text-align:left;border-bottom:1px solid #adb9b0;padding:8px;">SHA-256</th></tr>
+<tr><td style="padding:8px;vertical-align:top;">NS-51 kernel</td><td style="padding:8px;overflow-wrap:anywhere;">ee27a3cd7a43df40605eccb468588854bafe05bb2a91b6e47c7af1e3f3c20cba</td></tr>
+<tr><td style="padding:8px;vertical-align:top;">NS-52 heat</td><td style="padding:8px;overflow-wrap:anywhere;">b7f3df5788d9d69051560e84c71cef9835d21e34bc8a18de9bb4b73cffbd5893</td></tr>
+<tr><td style="padding:8px;vertical-align:top;">NS-53 approximation</td><td style="padding:8px;overflow-wrap:anywhere;">36de7fe507f8957a361f14ae430c6a96a812cb90c3dd8de20c22057f1a10b7d5</td></tr>
+</table>
+
+<h2 style="font-size:21px;">Checks performed</h2>
+<p><strong>Complete domain and regularity.</strong> The release retains the intersection with the complete physical form domain, the local nature of the affine equation, both parity constants, and the distinction from ordinary square-integrable screw-operator injectivity. The rank-one torsion countermodel concerns the general logarithmic-principal-plus-bounded-perturbation class. Neither the release nor its new public summaries claims an arithmetic nullvector or arithmetic regularity failure. API remains an open input.</p>
+<p><strong>Heat transport.</strong> The normalization, analytic off-real product, exterior-cluster contribution and multiplicities survive integration. The full smooth-core zero sum is not promoted to a justified termwise differentiated sum. The single-cluster support-growth example is conditional and is not a lower bound on the full arithmetic derivative. The same-test comparison obstruction explicitly requires an unmatched real deformed zero; this checkpoint does not establish that hypothesis. No general heat-route closure is filed.</p>
+<p><strong>Arithmetic approximation.</strong> The residualized Schur complement and corrected correlation vector survive integration. The harmonic-trace inequality is a finite unconditional bound; its numerator is not claimed to have a proved asymptotic lower bound. RBC is sufficient and unproved, not asserted equivalent to RH or known under RH. The raw Möbius-prefix penalty is not applied to the optimal distance. The established criterion requires convergence at any rate.</p>
+<p><strong>Public status and internal record.</strong> The changed README, COMPARISON, AGENTS, generated research map, underlying map data, NS-51–53 board rows and both new log entries preserve these scopes. The reports state what changed and what is missing; they distinguish failure of a proposed inference or conditional comparison from failure of the original Weil or approximation object. The component cross-reviews match the final statements. Their two heat typesetting corrections are present in the final fragment.</p>
+<p><strong>Build evidence.</strong> This reviewer inspected the completed full manuscript log directly: <strong>278 pages, 0 undefined/duplicate-reference warning lines, 0 overfull boxes.</strong> The integrating author ran the full build. This is not a substitute fragment build and is not described as an independently repeated build by this reviewer.</p>
+
+<h2 style="font-size:21px;">MINOR M1 — corrected before publication</h2>
+<p>The rewritten comparison correctly limited the old Li assessment to direct identification of rational Li transforms with finite-window entire test transforms. The generated map initially retained a red node naming the entire “Li / Keiper coefficients” route and saying no window could certify any coefficient. That was broader than the revised text supported.</p>
+<p>The author renamed the red node “Direct rational Li / entire window-test identification” and limited its note to that direct identification, explicitly retaining indirect inequalities and other Li approaches. The corrected map data and regenerated README/map were rechecked. <strong>Resolved.</strong></p>
+
+<h2 style="font-size:21px;">Notes retained</h2>
+<p><strong>NOTE 1 — the new mechanisms remain open.</strong> A compact integral representation is not injectivity; finite collision cancellation is not a support-uniform complete transport estimate; finite block-gain identities are not convergence. The reviewed release says so consistently.</p>
+<p><strong>NOTE 2 — review and publication limits.</strong> This review pins the mathematical assembly above and the described claim surface. Final artifact inventories, manifest verification, rebasing or merging against moving main, and publication/tag state remain the integrating author’s checks. Historical nodes outside this changed scope have not been re-audited.</p>
+
+<p style="padding-top:20px;border-top:1px solid #ccd4ce;">No unresolved mathematical or integration finding was identified within this review’s stated scope. The remaining repository checks still apply. No uniform floor, G2, RH, or publication-readiness claim is made.</p>
+</main></body></html>

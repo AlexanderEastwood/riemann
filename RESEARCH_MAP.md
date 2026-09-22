@@ -33,13 +33,13 @@ graph LR
   floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small><br/><small>&#128193; evidence/v138</small>"]
   shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small><br/><small>&#128193; evidence/v138</small>"]
   metablind["Scoped information-loss obstructions<br/><small>thm:v139-probe-relaxation; thm:v139-protected-orbit</small><br/><small>&#128193; evidence/v139</small>"]
-  altroutes["Alternative criteria (classical RH equivalents; no finite bridge proved)"]
+  altroutes["Alternative mechanisms: distinct missing inputs"]
   circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_true_symbol</small>"]
   debranges["de Branges / Hermite-Biehler<br/><small><b>wall: screw-kernel positivity = RH; no fixed-window bridge</b></small>"]
   f1["function field / Hodge / F_1<br/><small><b>wall: no intersection form supplied for this window (missing construction)</b></small>"]
-  nb["Nyman-Beurling-Baez-Duarte<br/><small>&#128193; evidence/diag_routes/nb</small><br/><small><b>wall: d_N -> 0 = RH; no finite bridge from W_4 to d_N</b></small>"]
-  li["Li / Keiper coefficients<br/><small>&#128193; evidence/diag_routes/li</small><br/><small><b>wall: all Li coefficients >= 0 = RH; windowed coefficients are different objects</b></small>"]
-  dbn["de Bruijn-Newman (Lambda = 0 iff RH)<br/><small>&#128193; evidence/diag_routes/dbn</small><br/><small><b>wall: Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved</b></small>"]
+  nb["Nyman-Beurling-Baez-Duarte<br/><small>prop:ns53-nb-block-gain; eq:ns53-nb-rbc</small><br/><small>&#128193; evidence/ns53_nb_blocks</small><br/><small><b>wall: RBC: corrected arithmetic residual block correlations (open sufficient input)</b></small>"]
+  li["Direct rational Li / entire window-test identification<br/><small>&#128193; evidence/diag_routes/li</small><br/><small><b>wall: direct rational-Li / entire-window classes intersect only at zero</b></small>"]
+  dbn["de Bruijn–Newman: paired transport<br/><small>prop:ns52-cluster; prop:ns52-unmatched</small><br/><small>&#128193; evidence/ns52_heat_pairs</small><br/><small><b>wall: complete signed transport with uniform support control (open)</b></small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
   simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
   stepb["CCM step (b): finite-compression zeros track zeta zeros (numerical)<br/><small>&#128193; evidence/diag_ns2_semantic_lock</small>"]
@@ -62,6 +62,8 @@ graph LR
   absoluteselection["Absolute residual/resolvent data alone select ground: abstract inference<br/><small>prop:ns43-ccm-nonselection</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: abstract inference false: countermodel family with alternating profiles</b></small>"]
   coarseprofile["Single profile from the specified coarse rescaled liminf<br/><small>prop:ns43-ccm-coarse-profile</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: under the explicit coarse scale the limit form is zero; finer scales open</b></small>"]
   fineradicalrank["Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions<br/><small>lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank</small><br/><small>&#128193; evidence/v153</small><br/><small><b>wall: positive-gap strategy must remove rank >= lambda^2/(20000 log lambda)</b></small>"]
+  kernelapi["Exact kernel exclusion: affine-potential injectivity<br/><small>prop:ns51-affine-potential; eq:ns51-api</small><br/><small>&#128193; evidence/ns51_kernel</small><br/><small><b>wall: API: actual arithmetic affine-potential injectivity (open)</b></small>"]
+  generic_h1["Generic H¹ bootstrap from a zero eigenvalue<br/><small>prop:ns51-no-generic-bootstrap</small><br/><small>&#128193; evidence/ns51_kernel</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -119,16 +121,18 @@ graph LR
   stepb --> absoluteselection
   stepb --> coarseprofile
   gapfree --> fineradicalrank
+  altroutes --> kernelapi
+  kernelapi --> generic_h1
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
-  nb -. "d_N -> 0 = RH; no finite bridge from W_4 to d_N" .-> rh
-  li -. "all Li coefficients >= 0 = RH; windowed coefficients are different objects" .-> rh
-  dbn -. "Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved" .-> rh
+  nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
+  dbn -. "complete signed transport with uniform support control (open)" .-> rh
   minorantlevels -. "ZLD + packet" .-> floor
   zeroleveldistribution -. "ZLD + packet" .-> floor
   weightedexactcost -. "QG + WLH packet" .-> floor
   capacityweight -. "CAE" .-> floor
   relativeselection -. "cofinal separator" .-> g2
+  kernelapi -. "API: actual arithmetic affine-potential injectivity (open)" .-> rh
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -149,9 +153,9 @@ graph LR
   click shiftbarrier "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v138/" "evidence: evidence/v138" _blank
   click metablind "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v139/" "evidence: evidence/v139" _blank
   click circle "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_true_symbol/" "evidence: evidence/diag_true_symbol" _blank
-  click nb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/nb/" "evidence: evidence/diag_routes/nb" _blank
+  click nb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns53_nb_blocks/" "evidence: evidence/ns53_nb_blocks" _blank
   click li "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/li/" "evidence: evidence/diag_routes/li" _blank
-  click dbn "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_routes/dbn/" "evidence: evidence/diag_routes/dbn" _blank
+  click dbn "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns52_heat_pairs/" "evidence: evidence/ns52_heat_pairs" _blank
   click simpleeven4 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v140/" "evidence: evidence/v140" _blank
   click stepb "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/diag_ns2_semantic_lock/" "evidence: evidence/diag_ns2_semantic_lock" _blank
   click semanticlock "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v141/" "evidence: evidence/v141" _blank
@@ -173,17 +177,19 @@ graph LR
   click absoluteselection "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v152/" "evidence: evidence/v152" _blank
   click coarseprofile "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v152/" "evidence: evidence/v152" _blank
   click fineradicalrank "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v153/" "evidence: evidence/v153" _blank
+  click kernelapi "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns51_kernel/" "evidence: evidence/ns51_kernel" _blank
+  click generic_h1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns51_kernel/" "evidence: evidence/ns51_kernel" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
-  class stepb live;
+  class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1 closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class concentration,debranges,f1,nb,li,dbn,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
+  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
-  class rh,fixedspace,g2,uniform,altroutes,circle open;
+  class rh,fixedspace,g2,uniform,altroutes,circle,debranges,f1,nb,dbn open;
   subgraph Legend
     direction LR
     lg_live["current route (gold)"]:::live
@@ -199,22 +205,24 @@ graph LR
 | status | count | meaning |
 |---|---:|---|
 | `proved` | 22 | established result |
-| `live` | 1 | current route (gold): being worked now |
-| `closed` | 17 | closed route (red): proved insufficient or impossible; kept deliberately |
-| `blocked` | 11 | attempted; obstruction found |
-| `open` | 6 | target, not yet attacked |
+| `live` | 2 | current route (gold): being worked now |
+| `closed` | 19 | closed route (red): proved insufficient or impossible; kept deliberately |
+| `blocked` | 6 | attempted; obstruction found |
+| `open` | 10 | target, not yet attacked |
 | `wall` | 0 | wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge |
 
 ## Nodes
 
 - [ ] **RH** — via Weil positivity
-  - [ ] **Alternative criteria (classical RH equivalents; no finite bridge proved)** — Each child is a classical RH criterion. The record proved structural obstructions to specific bridges, not that every bridge fails; 'all equivalent; same wall' withdrawn per audit PR #22.
-    - [!] **Li / Keiper coefficients** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · **wall: all Li coefficients >= 0 = RH; windowed coefficients are different objects** → `rh` (Li class ∩ finite-window Paley-Wiener class = {0} blocks direct identification; that every transfer reduces to prop:v121 is argued, not proved) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. What is proved: the canonical rational Li-transform class meets the fixed-window entire class trivially.
-    - [!] **Nyman-Beurling-Baez-Duarte** — evidence: [`evidence/diag_routes/nb/`](evidence/diag_routes/nb/) · **wall: d_N -> 0 = RH; no finite bridge from W_4 to d_N** → `rh` (Burnol's zero-evaluator/co-Poisson dictionary is structural, not a bound for a specified d_N; the report's sharp-rate necessity claim is false (audit A3)) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. The earlier 'a proof must attain the sharp C/log N rate' sentence is withdrawn (audit A3).
+  - [ ] **Alternative mechanisms: distinct missing inputs** — Logical RH equivalence does not establish equal proof difficulty or a universal route closure. NS-51–53 test explicit first lemmas.
+    - [X] **Direct rational Li / entire window-test identification** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · **wall: direct rational-Li / entire-window classes intersect only at zero** → `None` (Scoped direct-identification obstruction; no statement excluding indirect Li inequalities) · The specified rational Li-transform class has trivial intersection with the finite-window entire Paley–Wiener class. This closes direct identification only; it does not exclude indirect inequalities or all Li approaches.
+    - [~] **Exact kernel exclusion: affine-potential injectivity** — `prop:ns51-affine-potential; eq:ns51-api` · `codex/ns51-new-routes` · evidence: [`evidence/ns51_kernel/`](evidence/ns51_kernel/) · **wall: API: actual arithmetic affine-potential injectivity (open)** → `rh` (eq:ns51-api; prop:ns51-sign-continuation) · Complete form-domain reduction is exact in both parities. API remains open; no uniform positive gap is required.
+      - [X] **Generic H¹ bootstrap from a zero eigenvalue** — `prop:ns51-no-generic-bootstrap` · evidence: [`evidence/ns51_kernel/`](evidence/ns51_kernel/) · Rank-one bounded perturbation of the same logarithmic principal operator has a non-H¹ nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted.
+    - [ ] **Nyman-Beurling-Baez-Duarte** — `prop:ns53-nb-block-gain; eq:ns53-nb-rbc` · evidence: [`evidence/ns53_nb_blocks/`](evidence/ns53_nb_blocks/) · **wall: RBC: corrected arithmetic residual block correlations (open sufficient input)** → `rh` (eq:ns53-nb-rbc; exact convergence criterion is prior art, and RBC is not proved or claimed equivalent to RH) · Reopened: any d_N→0 suffices. Exact residualized block gain and trace lower bound proved; the sufficient arithmetic residual block-correlation input is open. Finite distances do not prove it.
     - [ ] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_true_symbol/`](evidence/diag_true_symbol/) · measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained
-    - [!] **de Branges / Hermite-Biehler** — **wall: screw-kernel positivity = RH; no fixed-window bridge** → `rh` (Suzuki Thm 1.5 (arXiv 2606.09096); the shifted finite-window construction sits strictly below the spectral bottom and does not determine its sign; fixed-window determinacy equivalence not proved) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Structural statement only: existence of the shifted de Branges structure does not decide the unshifted sign.
-    - [!] **de Bruijn-Newman (Lambda = 0 iff RH)** — evidence: [`evidence/diag_routes/dbn/`](evidence/diag_routes/dbn/) · **wall: Lambda <= 0 = RH; positive-time barrier reproduced, no-bridge not proved** → `rh` (Rodgers-Tao Lambda >= 0; the record reproduced a specified positive-time barrier, not a theorem excluding all transfer arguments (audit A4); v1.46 exact zero expansion postdates the route report) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Blanket 'no bridge' withdrawn (audit A4); the route was closed before the v1.46 exact zero expansion existed.
-    - [!] **function field / Hodge / F_1** — **wall: no intersection form supplied for this window (missing construction)** → `None` (RESEARCH_MAP note supplied no number-field intersection form, transfer map, or impossibility proof; function-field RH is a theorem for different objects) · audit PR #22 (2026-09-22-conclusions-review.md §4): classical RH criterion; no finite bridge to window positivity proved in either direction; 'closed' withdrawn. Not an RH-equivalent criterion here: a missing construction, so no dashed edge.
+    - [ ] **de Branges / Hermite-Biehler** — **wall: screw-kernel positivity = RH; no fixed-window bridge** → `rh` (Suzuki Thm 1.5 (arXiv 2606.09096); the shifted finite-window construction sits strictly below the spectral bottom and does not determine its sign; fixed-window determinacy equivalence not proved) · Shifted fixed-window structures do not determine the unshifted sign; arbitrary extension uniqueness is not established. NS-51 gives a complete-domain nullvector reduction; arithmetic injectivity remains open.
+    - [ ] **de Bruijn–Newman: paired transport** — `prop:ns52-cluster; prop:ns52-unmatched` · evidence: [`evidence/ns52_heat_pairs/`](evidence/ns52_heat_pairs/) · **wall: complete signed transport with uniform support control (open)** → `rh` (prop:ns52-cluster; prop:ns52-unmatched gives only a conditional obstruction to one same-test comparison) · Finite-cluster singularities cancel; external interaction and support growth remain. Same-test uniform comparison fails IF an unmatched real deformed zero exists; that hypothesis is not verified here. General heat route open.
+    - [ ] **function field / Hodge / F_1** — **wall: no intersection form supplied for this window (missing construction)** → `None` (RESEARCH_MAP note supplied no number-field intersection form, transfer map, or impossibility proof; function-field RH is a theorem for different objects) · No number-field intersection form and quantified positivity transfer are supplied here. A missing construction is not an impossibility theorem.
   - [ ] **Fixed-space / Burnol Sonine route** — `lane/fixed-space` · needs evaluator estimates + closed-operator realization
   - [x] **G1 (weak)** — `thm:v14-radical` · `lane/g1` · evidence: [`evidence/v124/g2_source_certificate/`](evidence/v124/g2_source_certificate/) · closed for the repaired prolate source
   - [ ] **G2: cofinal -o(1)** — `prop:v121-cofinal-rh` · eps_lambda -> 0 cofinally IS RH

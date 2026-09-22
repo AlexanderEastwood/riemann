@@ -1,0 +1,18 @@
+{
+  "task": "NS-52",
+  "claim_type": "exact identities and conditional implications; not a numerical certificate",
+  "fragment": "proof.tex",
+  "build_command": "latexmk -pdf -interaction=nonstopmode -halt-on-error ns52-check.tex",
+  "build_directory": "/private/tmp/ns52-proof-check-owsmc_23",
+  "existing_manuscript_labels_imported": true,
+  "pages": 4,
+  "undefined_or_duplicate_reference_warning_lines": 0,
+  "overfull_boxes": 0,
+  "full_manuscript_build": "Parent integration responsibility; not represented by this fragment check",
+  "numerical_experiment": false,
+  "new_window": false,
+  "new_tail_metric": false,
+  "unmatched_arithmetic_zero_verified": false,
+  "G2": "open",
+  "RH": "open"
+}
