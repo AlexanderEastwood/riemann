@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.52 (local draft)**.
+Alexander Eastwood's complete working manuscript, **v1.52**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -238,7 +238,7 @@ graph LR
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
 
-## New in v1.52 (local draft)
+## New in v1.52
 
 [NS-43/44/45](evidence/v152/) add two fresh, narrowly scoped comparison
 certificates and complete analytic proofs for route selection. At the existing
@@ -257,7 +257,7 @@ shortcuts close only under their stated hypotheses. CCM step (b) stays the sole
 gold node; the circle lane remains open. No G2 or RH result.
 
 [Route assessment and scope](evidence/v152/ns43-route-assessment-2026-09-22-v1.html).
-This draft is based on PR #20; it is not merged or tagged.
+The v1.52 change is reviewed in PR #21 and builds on the merged v1.51 work in PR #20. Archived reports retain their prepublication checkpoint status.
 
 ## New in v1.51
 

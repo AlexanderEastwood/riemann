@@ -73,7 +73,7 @@ both unarchived evidence groups; recovery remains open, while the five v1.35
 scientific originals are present and hash-matched. NS-41/42 are separate diagnostics,
 not bounds. G2 and RH remain open.
 
-Version 1.52 (local draft) adds fresh 320/448-bit certificates for the existing
+Version 1.52 adds fresh 320/448-bit certificates for the existing
 lambda=5 stipulated 1e-8D tail comparison and N=25 dyadic norm comparison.
 Both comparisons fail in both parities; the tail witness Weil energies are
 positive. Historical original recovery remains OPEN. NS-43 extends scoped
