@@ -279,7 +279,11 @@ No such estimate is archived, and the frozen trial's transform value
 `1.0641...e-40` at gamma_1 would still prevent that transfer alone from
 giving the desired gamma-centered enclosure. The direct energy bound
 instead requires an upper-energy improvement; a lower bound is not a
-substitute for it.
+substitute for that improvement in the direct formula. It can improve
+the separate transfer enclosure toward its frozen-trial floor
+`abs(fhat(gamma_1))/d = 1.064123340460...e-40/0.0016`, about `6.65e-38`.
+This is a floor of that enclosure formula, not of the actual discrepancy;
+attainment is not asserted.
 
 The finite N=120 discrepancy `(2.9250,2.9251)e-71` is separately certified.
 Its scale lies below the resolution of the displayed archived estimates;

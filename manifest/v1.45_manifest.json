@@ -1,0 +1,28 @@
+{
+ "manuscript_revision": "v1.45",
+ "base_commit": "00a3246e5373c57d2b1c91a68d4318ea4300b340",
+ "files": [
+  {
+   "path": "evidence/v145/README.md",
+   "size_bytes": 850,
+   "sha256": "73f3c18c18d1523a84db8836233d299d9e3c9d8aa0295032bbc1a9e22f7adc4a"
+  },
+  {
+   "path": "evidence/v145/audit_corrections.patch",
+   "size_bytes": 7701,
+   "sha256": "cae38193e63f88e6715f9fb5c94c8b920dd5ea35c708eddc413957ad5f3caca3"
+  },
+  {
+   "path": "evidence/v145/build_report.json",
+   "size_bytes": 571,
+   "sha256": "06a516fc8e89a3b8604892145df0c4a3774d5b2d850c23ba2ebf0f7b8f437da4"
+  },
+  {
+   "path": "evidence/v145/research-report-2026-09-21-v1.html",
+   "size_bytes": 1798,
+   "sha256": "41ed755acabd0b3176d8b9215a3fcc0ad80fd1b2641f3532f883f205ef28a464"
+  }
+ ],
+ "file_count": 4,
+ "total_bytes": 10920
+}

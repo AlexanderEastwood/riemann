@@ -27,7 +27,11 @@ projection error; all archived tail cross terms remain. The direct limit
 is C_ell*rho. A hypothetical lower-energy transfer would require
 rho-l about 3.2032e-153 (relative 1.3055e-78); this is missing and the
 frozen trial is not centered for a gamma-based 1e-71 enclosure. A lower
-bound alone does not improve the direct upper-energy bound.
+bound alone does not improve the direct upper-energy formula, but can
+improve the separate transfer enclosure toward the frozen-trial floor
+abs(fhat(gamma_1))/d = 1.064123340460...e-40/0.0016, about 6.65e-38.
+This is a floor of that formula, not of the actual discrepancy; attainment
+is not asserted.
 
 The separately certified finite N=120 discrepancy ~+2.92504e-71 remains
 finite. Resolution failure is scoped to the displayed bounds, not the

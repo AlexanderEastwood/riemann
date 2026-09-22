@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.44},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.45},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.44\\
+\large Complete working manuscript, version 1.45\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 21, 2026}
@@ -184,6 +184,13 @@ imply RH directly, but remains unproved.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.45 makes only the v1.43 audit's MINOR M1/M2 wording corrections:
+the first-zero proposition now distinguishes new $1024/1280$-bit gates
+from inherited $320/768/896$-bit ingredients, and the limitation of the
+direct bound is paired with the separate transfer enclosure's frozen-trial
+floor, approximately $6.65\cdot10^{-38}$. No bound is sharpened. G2 and RH
+remain open.
+
 Version 1.44 records the exact pencil-direction demand of the weighted
 concentration criterion (Proposition~\ref{prop:v144-pencil-concentration}).
 The admissible directional loss is at most
@@ -8699,8 +8706,12 @@ of Lemma~\ref{lem:v143-evaluator-dual} hold with the constants below.
 Let $f$ be the normalized exact column $16$ of the archived $4097$-row
 trial, $\rho=q_W[f]$, and $h=P_{\xi_4}f$. Assume the archived local
 endpoint gates and $\widehat h'>d=0.0016$ throughout
-$[\gamma_1-0.1,\gamma_1+0.1]$. All these hypotheses and the earlier-zero
-exclusion below are verified at $1024$ and $1280$ bits.
+$[\gamma_1-0.1,\gamma_1+0.1]$. The new gates, including the earlier-zero
+exclusion below, are verified at $1024$ and $1280$ bits. The tail floor
+$\delta$ is inherited from the $320$-bit v1.26 certificate; $K$ and the
+Schur margin $\kappa$ use the v1.25/v1.26 ingredients at $768/896$ bits,
+with only their small final gates replayed. These inherited full
+assemblies are not recomputed at $1024/1280$ bits.
 Then the first positive zero $z_1(4)$ of the complete ground transform
 is simple and
 \begin{equation}\label{eq:v143-first-zero-absolute}
@@ -8785,8 +8796,10 @@ In this formula the limiting energy input is the \emph{upper} budget
 $q_W[h]\le\rho$, multiplied by the complete evaluator constant
 $C_\ell$. It is not the ordinary projection error
 $\sqrt{\rho/b}=1.5664027417\ldots\cdot10^{-4}$.
-A lower bound on the ground energy alone does not reduce
-\eqref{eq:v143-direct-budget}.
+A lower bound on the ground energy alone does not reduce the direct
+formula \eqref{eq:v143-direct-budget}, but can improve the separate
+transfer enclosure toward its frozen-trial floor
+$|\widehat f(\gamma_1)|/d\simeq6.65\cdot10^{-38}$, as quantified below.
 
 If an additional certified lower bound $0\le\underline\mu\le\mu_0$
 is supplied, set $\Delta=\rho-\underline\mu$ and $e=f-h$. Then
@@ -8825,6 +8838,15 @@ value, since the resulting bound is
  \frac{|\widehat f(\gamma_1)|+
        \sqrt{C_\ell b\Delta/(b-\underline\mu)}}d.
 \]
+Even if its transfer-error term vanished, this last estimate would
+retain the frozen-trial floor
+\[
+ \frac{|\widehat f(\gamma_1)|}{d}
+ =\frac{1.064123340460\ldots\cdot10^{-40}}{0.0016}
+ =6.650770877876\ldots\cdot10^{-38}.
+\]
+This is a floor of that enclosure formula, not a lower bound on the
+actual zero discrepancy, and does not assert that the floor is attainable.
 A Temple--Lehmann-type lower-energy estimate is therefore a missing
 \emph{transfer} direction, not by itself a solution of the original
 $\gamma_1$-centered discrepancy problem.
@@ -8834,7 +8856,9 @@ The direct bound is the preceding proposition. To make its right-hand
 side at most $10^{-71}$ without changing the evaluator constant would
 need an upper ground-energy budget of at most
 $(d\varepsilon)^2/C_\ell=3.2032007355\ldots\cdot10^{-153}$;
-a lower energy estimate does not provide this.
+a lower energy estimate does not provide this upper-energy improvement,
+but can improve the transfer enclosure, whose frozen-trial floor is
+$|\widehat f(\gamma_1)|/d\simeq6.65\cdot10^{-38}$.
 For the transfer alternative, spectral orthogonality gives
 $\rho=\mu_0\norm h^2+q_W[e]$ and $q_W[e]\ge b\norm e^2$.
 As $\norm h^2=1-\norm e^2$,
