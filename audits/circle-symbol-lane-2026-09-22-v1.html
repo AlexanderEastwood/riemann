@@ -1,0 +1,559 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NS-31 — Adversarial circle/symbol lane audit</title></head><body style="margin:0;padding:32px 20px;background:#edf0f3;color:#17212b;font-family:Georgia,serif;line-height:1.58;"><main style="max-width:680px;margin:0 auto;background:white;padding:32px;">
+<p style="font:12px Arial,sans-serif;letter-spacing:1.4px;color:#556474;">RIEMANN RESEARCH RECORD · 22 SEPTEMBER 2026 · VERSION 1</p><h1 style="font-size:32px;line-height:1.17;margin:12px 0 20px;">NS-31: adversarial review of the circle/symbol lane</h1>
+<p style="margin:12px 0;"><strong>Diagnostic audit, not a certificate.</strong> The total symbol and the finite deep-block phenomenon survive. Several claimed bounds, feasibility statements and closures do not. This report records <strong>9 MAJOR and 6 MINOR findings</strong>, with independent replays and all 20 constraint slacks for every optimization cell. G2 and RH remain open.</p>
+<p style="margin:12px 0;">Reviewed all scripts and results in <code>diag_true_symbol</code> (§§1–10), <code>diag_level_distribution</code> (§§1–6), <code>diag_comb_minorant</code>, <code>diag_lobe_mass</code> and <code>diag_pencil_arithmetic</code>; also the cited map nodes and the original retractions. Main snapshot: <code>06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5</code>. The NS-30 <code>weightedlevels</code> node is reviewed at <code>f3611ef2c3464fa30e50408c62e339697def6c38</code> on <code>result/v148-weighted-levels</code>, where it existed when this audit began. Original reports and scripts are preserved. No new window was computed.</p>
+<h2 style="font-family:Georgia,serif;font-size:23px;margin:30px 0 12px;border-bottom:1px solid #c7ced5;padding-bottom:8px;">Ranked findings</h2>
+<h3 id="M1" style="font-size:18px;margin:25px 0 8px;color:#9b1c1c;">MAJOR M1 — A dual minimizing eigenvector is not automatically a feasible upper bound</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/results.md#L24">evidence/diag_level_distribution/results.md:24</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/results.md#L82">evidence/diag_level_distribution/results.md:82</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/results.md#L151">evidence/diag_level_distribution/results.md:151</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/weighted_level_lp.py#L58">evidence/diag_level_distribution/weighted_level_lp.py:58</a></p>
+<p style="margin:12px 0;">The universal assertion that the dual’s minimizing eigenvector supplies a pure-state upper bound is <strong>false</strong>. It must satisfy every primal constraint. At λ=4, c′=1, the saved and replayed vector has minimum achieved/requested mass ratio <strong>0.636096731</strong> (approximately 0.636 in the original output), while its energy is 3.030×10<sup>−17</sup>. It is infeasible. The stated Q<sub>min</sub><sup>w</sup>(1)≤10<sup>−15</sup> is not established. At λ=4, c′=4 the achieved constant is 1.845, not 4; “feasible, 8×10<sup>−15</sup>” is false as a statement about the returned vector. At λ=3, c′=2 the vector achieves 1.659, so 4.746×10<sup>−8</sup> is not an upper bound either.</p>
+<p style="margin:12px 0;">This also affects the uniform table: λ=3, c=0.01 achieves c=0.00885907, an 11.4% shortfall, although dual and pure energies round alike. At λ=4, c=0.03 the vector achieves only 0.00412635; the archived dictionary LP gives 1.532×10<sup>−13</sup>, not the table’s ≤10<sup>−15</sup>. At c=0.05 it achieves 0.0374998 and the dictionary LP gives 3.845×10<sup>−13</sup>. Numerical equality of objective values does not replace feasibility. Small residual violations in otherwise converged cells must also be reported rather than called exact upper bounds.</p>
+<p style="margin:12px 0;">The weighted script computes K<sub>max</sub> using the <em>dual lower bound</em> Q<sub>l</sub>. From Q<sub>min</sub>≥Q<sub>l</sub> and c′QC<sub>K</sub>&gt;Q<sub>l</sub>, one cannot infer c′QC<sub>K</sub>&gt;Q<sub>min</sub>. A feasible energy upper bound is required. Thus its blanket “≥32” column and extrapolated hundreds/thousands are not established by that calculation. The finite SDP dual itself is correct; the error is the interpretation of its output. The replay appendix prints the minimum slack and all 20 slacks for every cell.</p>
+<h3 id="M2" style="font-size:18px;margin:25px 0 8px;color:#9b1c1c;">MAJOR M2 — “c=0.5 infeasible at every window” is false</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/results.md#L88">evidence/diag_level_distribution/results.md:88</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/results.md#L96">evidence/diag_level_distribution/results.md:96</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/NEXT_STEPS.md#L44">NEXT_STEPS.md:44</a></p>
+<p style="margin:12px 0;">The script <code>min_energy_lp.py</code> does not even run c=0.5. Independent column generation for the same N=256, same grid and same 20-bin SDP constructs feasible density matrices with <strong>c≥0.5293364 at λ=4</strong> and <strong>c≥0.537509 at λ=8</strong>. Both exceed 0.5. These are direct counterexamples to the report’s claim about that SDP. Mixture weights, vectors, dual multipliers and all bin slacks are archived in <code>max_constant.json</code>.</p>
+<p style="margin:12px 0;">This is a failure of the reported feasibility claim, not evidence against the level hypothesis. The definition of Q<sub>min</sub> explicitly allows density matrices, so restricting the rebuttal to pure states would change the stated problem. For λ=3 and 6 the separate diagnostic dual-ray test gives positive infeasibility gaps 0.00259939 and 0.00219558 in density units; those two windows do not rescue the “every window” sentence. No interval certification is claimed for either side.</p>
+<h3 id="M3" style="font-size:18px;margin:25px 0 8px;color:#9b1c1c;">MAJOR M3 — The charged tail is not a global minorant</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_comb_minorant/results.md#L42">evidence/diag_comb_minorant/results.md:42</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_comb_minorant/results.md#L278">evidence/diag_comb_minorant/results.md:278</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_comb_minorant/comb_minorant.py#L37">evidence/diag_comb_minorant/comb_minorant.py:37</a></p>
+<p style="margin:12px 0;">The claim “with tail (a valid global minorant)” is <strong>false</strong>. The code takes the largest sampled depth on a finite interval ending at 40000 and charges that constant on the entire remaining half-line. Independent 50-digit mpmath evaluations give <strong>β₈(130060.42500058559)=−8.8120135161190587</strong>, below the charged approximately −8.050. The minorant exceeds β there by about <strong>0.762</strong>. Likewise <strong>β₆(152359.72500188358)=−6.4358688610510901</strong>, below the approximately −5.808 charge by <strong>0.628</strong>. These are pointwise counterexamples, not merely missing error bars.</p>
+<p style="margin:12px 0;">The code actually charges −max(D<sub>grid</sub>,D<sub>tail</sub>)T, not −D<sub>tail</sub>T as the prose says. This distinction does not fix λ=6 or 8. A finite scan, even with no violation at its samples, supplies no global tail floor or between-sample guarantee. The alleged “head floor” with this charge is the eigenvalue of an artificial tail-substituted operator, not the compression of Op(β). Retain the numbers as outputs of that artificial model; withdraw their global-minorant interpretation.</p>
+<h3 id="M4" style="font-size:18px;margin:25px 0 8px;color:#9b1c1c;">MAJOR M4 — The lattice comb is implemented with the monotonicity reversed</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_comb_minorant/comb_minorant.py#L145">evidence/diag_comb_minorant/comb_minorant.py:145</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_comb_minorant/results.md#L126">evidence/diag_comb_minorant/results.md:126</a></p>
+<p style="margin:12px 0;">For positive weights on centered nested sets G(ρ)={dist(u,ℤ)≤ρ}, the radial profile must be <strong>nonincreasing</strong> as distance from an integer grows. The code uses a suffix minimum, <code>minimum.accumulate(rmin[::-1])[::-1]</code>, which is nondecreasing. At λ=4 its profile rises from <strong>−3.4194373 to −2.7780183</strong>; expressing it using the claimed centered sets requires a weight as negative as <strong>−0.12963835</strong>.</p>
+<p style="margin:12px 0;">The correct largest nonincreasing grid profile is the <em>prefix</em> minimum. With all other finite-head and tail-charge choices fixed, the replay changes η from <strong>3.3322596862 to 3.1566617362</strong> at λ=4. The original remains a grid minorant of a different shape, but it did not measure the specified positive-weight centered comb. The qualitative observation that this particular family is costly survives this spot check; its advertised construction and optimum do not.</p>
+<h3 id="M5" style="font-size:18px;margin:25px 0 8px;color:#9b1c1c;">MAJOR M5 — Finite-head measurements do not establish the claimed asymptotic closures</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L147">evidence/diag_true_symbol/results.md:147</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L305">evidence/diag_true_symbol/results.md:305</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L324">evidence/diag_true_symbol/results.md:324</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_comb_minorant/results.md#L294">evidence/diag_comb_minorant/results.md:294</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/results.md#L98">evidence/diag_level_distribution/results.md:98</a></p>
+<p style="margin:12px 0;">The conclusions η<sup>op</sup><sub>a</sub>→∞, “every bounded-complexity step minorant loses a fixed fraction,” and a necessary level count growing linearly with D<sub>a</sub> are <strong>not established</strong>. The displayed layer-cake ratios are four grid/head observations, approximately 0.36, 0.35, 0.34, 0.34. An unconditional D<sub>a</sub>→∞ theorem does not make that observed ratio a uniform positive lower bound. The optimized D1 losses are explicitly <em>upper bounds on the best loss within a restricted grid family</em>; they cannot prove a lower bound on all minorants or a necessary complexity. The existing NS-27 conditional theorem names the missing level-mass and bounded-energy inputs precisely.</p>
+<p style="margin:12px 0;">Nor do the four mass profiles prove “there is no λ-independent limiting picture” or rule out a self-similar argument. Variation at λ=3,4,6,8 is compatible with convergence later. “No limiting shape” is an unsupported closure, whereas “the four displayed shapes differ” is measured. Section 6’s statement that the lobe nearest γ₁ deepens like a also does not follow from a theorem about the global infimum of β; the table shows depths 0.668, 0.550, 1.442, 2.130, not a proved local asymptotic.</p>
+<p style="margin:12px 0;">The uniform-energy discussion makes the same error: values 0.000535, an unresolved interval at λ=4, 0.288, 0.125 neither grow monotonically nor establish the cofinal hypothesis Q≤Q<sub>*</sub> “trivially.” The claimed Q→0 for the weighted head states is also unsupported by four samples. These are failures of inference. They do not show failure of the actual concentration criterion, an admissible source complement, or a cofinal bound.</p>
+<h3 id="M6" style="font-size:18px;margin:25px 0 8px;color:#9b1c1c;">MAJOR M6 — NS-21 has not killed an arbitrary uniform-constant lobe bound</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_lobe_mass/results.md#L179">evidence/diag_lobe_mass/results.md:179</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_lobe_mass/results.md#L189">evidence/diag_lobe_mass/results.md:189</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/NEXT_STEPS.md#L33">NEXT_STEPS.md:33</a></p>
+<p style="margin:12px 0;">The headline “counterexample (kills every variant)” and the conclusion that uniformity fails are <strong>unsupported</strong>. The λ=8, N=48 ground requires C≈10<sup>97.7</sup> for mass≤Cν, C≈10<sup>45.3</sup> for mass≤C√ν and C≈10<sup>104.1</sup> for the maximum-lobe variant. Those numbers refute constants below those thresholds. They do not refute existence of an arbitrary finite uniform constant. In fact, <strong>C=10<sup>105</sup> covers all the displayed finite samples</strong> of A and C; C=10<sup>46</sup> covers B.</p>
+<p style="margin:12px 0;">Nonmonotonic mass as k varies cannot disprove mass≤Cν<sup>p</sup>; an upper bound need not be attained or vary monotonically with the data. A finite set of positive ratios always has a finite maximum, as the report itself acknowledges before contradicting that fact. Divergence along a specified cofinal family, or a stated numerical candidate C with an actual violation, is needed. “The object fails” and the board’s “closed — no angle” disposition are not justified by this experiment. What stands is that ordinary-sized constants are disastrously incompatible with these samples, and the proposed simple scaling law has no numerical support.</p>
+<h3 id="M7" style="font-size:18px;margin:25px 0 8px;color:#9b1c1c;">MAJOR M7 — The blanket six-relative-digit promise is not established</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L196">evidence/diag_true_symbol/results.md:196</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/pencil.py#L4">evidence/diag_true_symbol/pencil.py:4</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_pencil_arithmetic/results.md#L57">evidence/diag_pencil_arithmetic/results.md:57</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_lobe_mass/results.md#L252">evidence/diag_lobe_mass/results.md:252</a></p>
+<p style="margin:12px 0;">The correct perturbation argument is favorable but conditional. Write B=W+W⁻, normalize v*Bv=1, and hold W fixed. For a simple eigenvalue, differentiating Wv=νBv gives <strong>δν=−ν v*(δW⁻)v</strong>. Thus δν/ν=−v*(δW⁻)v. If −εW⁻≤δW⁻≤εW⁻ as quadratic forms and W≥0, then |δν|/|ν|≤ε(1−ν). More generally the relative error is controlled by ‖B<sup>−1/2</sup>δW⁻B<sup>−1/2</sup>‖. A small ν, including 10<sup>−100</sup>, does <em>not</em> itself amplify a denominator perturbation by 1/ν.</p>
+<p style="margin:12px 0;">But entry spot checks of the <em>signed full-symbol</em> quadrature do not bound that denominator norm, and the tail script checks only two entries over a finite range. Its replay finds a λ=8 W⁻[0,1] omitted-tail contribution <strong>2.85×10<sup>−6</sup>, or 3.3×10<sup>−4</sup> relative</strong>; W⁻[0,0] is missing 4.2×10<sup>−5</sup> relative. These do not prove a comparable error in each deep Rayleigh denominator—cancellation can make its error smaller—but they defeat the stated uniform 10<sup>−6</sup> matrix-accuracy premise. For a normwise counterexample, W=diag(10<sup>−112</sup>,1), W⁻=diag(10<sup>−12</sup>,1), δW⁻=diag(10<sup>−6</sup>,0) has a 10<sup>−6</sup> relative operator perturbation of W⁻ yet changes its tiny generalized eigenvalue from about 10<sup>−100</sup> to 10<sup>−106</sup>. Relative <em>form</em> control is the missing qualification.</p>
+<p style="margin:12px 0;">Finally W is not numerically exact in the solve: <code>tomp</code> drops the Arb radius and serializes dps−5 digits. At 120 digits the λ=6, N=96 ν₀ is −5.238×10<sup>−116</sup>; at 180 digits it is +6.58024×10<sup>−135</sup>. The “however small” guarantee is false below that arithmetic floor. The floor explanation and the 10<sup>−30</sup> counts do survive the independent replay, documented below. The corrected Wq tail-factor line does not enter the pencil and therefore does not change its eigenvalues.</p>
+<h3 id="M8" style="font-size:18px;margin:25px 0 8px;color:#9b1c1c;">MAJOR M8 — The revised concentration-function table still measures the wrong scalar</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/results.md#L139">evidence/diag_level_distribution/results.md:139</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/results.md#L145">evidence/diag_level_distribution/results.md:145</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/weighted_level_lp.py#L17">evidence/diag_level_distribution/weighted_level_lp.py:17</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/weighted_level_lp.py#L37">evidence/diag_level_distribution/weighted_level_lp.py:37</a></p>
+<p style="margin:12px 0;">M(h) is the <em>supremum over all level intervals of length h</em>, not the largest bin in one fixed partition. At λ=3, h=D/20, the printed fixed-bin mass is <strong>0.0072175</strong>, whereas sliding the interval gives <strong>0.00831375</strong> on the same grid, on [−0.28518347,−0.16627553]. Using the smaller quantity in a denominator would overstate the resulting lower bound. At λ=4 the corresponding numbers are 0.010760 and 0.01121875. The repair from an infinite density supremum to M(h) is mathematically sensible; this table has not computed M(h) as claimed.</p>
+<p style="margin:12px 0;">The row labelled “20-bin peak” is also wrong: its λ=3 value 0.0914573 is the <strong>200-bin</strong> histogram peak produced by NL=200. The actual 20-bin peak is <strong>0.0606982</strong>. The report retracts the finite sup-density interpretation, but the executable docstring and printed “crude” lower-bound columns still use it without a warning. Those columns are not valid lower bounds for the continuous distribution.</p>
+<p style="margin:12px 0;">The dynamic program exactly solves a <em>grid-restricted, bin-midpoint model</em>: levels are bin lower edges, and mass is moved to midpoints. It does not compute the exact continuous QC<sub>K</sub>. Even its claim to unrestricted discrete optimality is too broad: take bins [−2,−1], [−1,0] with unit mass at each midpoint and K=2. The code costs 1; choosing levels −2 and −0.5 costs only 0.5. No discretization enclosure is supplied. Claims of content at K≈180 or 10⁴ extrapolate beyond the six tested K values 1,2,4,8,16,32, and also use the wrong side of the energy bound described in M1.</p>
+<h3 id="M9" style="font-size:18px;margin:25px 0 8px;color:#9b1c1c;">MAJOR M9 — Small prime terms are negligible for the O(1) budget, not for the surplus</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_pencil_arithmetic/results.md#L248">evidence/diag_pencil_arithmetic/results.md:248</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_pencil_arithmetic/results.md#L290">evidence/diag_pencil_arithmetic/results.md:290</a></p>
+<p style="margin:12px 0;">“Only the prime powers with log m&lt;1.7 enter the net value at all,” “which primes carry the surplus,” and “the cancellation is therefore a three-to-five-term balance … summing to 10<sup>−38</sup>…10<sup>−92</sup>” are false at the claimed residual scale. The report’s own λ=3 ground has <strong>P₈=−1.66×10<sup>−25</sup></strong>, about <strong>3.9×10<sup>12</sup></strong> times q=4.242×10<sup>−38</sup>; P₇=−9.36×10<sup>−19</sup> is about 2.2×10<sup>19</sup> times q. At λ=6 the listed P₃₂≈−7.76×10<sup>−69</sup> is about <strong>7.4×10<sup>23</sup></strong> times q≈1.054×10<sup>−92</sup>.</p>
+<p style="margin:12px 0;">The small primes dominate the <em>size of the net prime sum</em> to a few percent or an absolute 10<sup>−4</sup> threshold. They do not determine the tiny final surplus without the remaining terms and continuum cancellations. The full assembled decomposition sums correctly; deleting small terms changes the quantity under discussion. The super-exponential-in-lag description is an observed finite list, not an asymptotic theorem, and the claimed window-independent locality does not follow from an absolute 10<sup>−6</sup> running-remainder tolerance.</p>
+<h3 id="m1" style="font-size:18px;margin:25px 0 8px;color:#815c15;">MINOR m1 — The √2 conversion is right; its stated reason and exact-source language are wrong</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/source_overlap.py#L19">evidence/diag_true_symbol/source_overlap.py:19</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L348">evidence/diag_true_symbol/results.md:348</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/v124/g2_source_certificate/certify_pswf_source.py#L85">evidence/v124/g2_source_certificate/certify_pswf_source.py:85</a></p>
+<p style="margin:12px 0;">The certificate’s stored coₙ are positive complex-Fourier coefficients. Its own norm is co₀²+2Σ<sub>n≥1</sub>coₙ² (lines 89–91), so orthonormal real-even coordinates are (co₀,√2co₁,…). Dividing only co₀ by √2 and then normalizing produces exactly the same unit direction. The constant mode is already normalized; the factor comes from combining the ±n modes, not from an “unnormalized constant mode.”</p>
+<p style="margin:12px 0;">Independent high-precision replay gives sine 0.000215892075138182; leaving the conversion out gives 0.169320113721104. The corrected overlap is <strong>0.9999999766953057</strong>, not 1. “The ground is the source” must mean close at λ=3, N=64, not equality. The extension “loses one member per window” has no source replay at λ=4,6,8. A 1% ordinary overlap is also not an operator-norm error bound for the mixture inequality on ker b. Source projection is analyzed explicitly below.</p>
+<h3 id="m2" style="font-size:18px;margin:25px 0 8px;color:#815c15;">MINOR m2 — The arithmetic “sum of primes” level rows are copied from the wrong columns</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_pencil_arithmetic/results.md#L155">evidence/diag_pencil_arithmetic/results.md:155</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_pencil_arithmetic/results.md#L173">evidence/diag_pencil_arithmetic/results.md:173</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_pencil_arithmetic/results.md#L200">evidence/diag_pencil_arithmetic/results.md:200</a></p>
+<p style="margin:12px 0;">All three rows put the net prime sum in the “pos” column and the actual positive-level sum in the “neg” column. For λ=3,v₀ the report prints (−0.0552,−0.5460); the raw output correctly gives <strong>(−0.546001,+0.490828)</strong>, net −0.055173. For λ=4,v₀ the correct pair is <strong>(−0.664473,+0.598184)</strong>; for λ=6,v₀ it is <strong>(−1.089090,+0.999652)</strong>. The corresponding v₁ and v₂ entries are similarly shifted. The total-level rows come from the correct script and need not be recomputed; the report tables need correction.</p>
+<h3 id="m3" style="font-size:18px;margin:25px 0 8px;color:#815c15;">MINOR m3 — Parity and zero-support sentences contradict their own numbers</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L58">evidence/diag_true_symbol/results.md:58</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L169">evidence/diag_true_symbol/results.md:169</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L411">evidence/diag_true_symbol/results.md:411</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/results.md#L58">evidence/diag_level_distribution/results.md:58</a></p>
+<p style="margin:12px 0;">The odd/even cancellation blocks exist, but “the same count” is false: the report itself gives λ=3 counts 6/4/1 even versus 5/3/1 odd, and λ=4 12/10/7 versus 12/9/6. The sentence “shifted up by three to four decades” then compares an odd 10<sup>−61</sup> finite N=48 value with an even 10<sup>−75</sup> value from a different cutoff—14 decades. At matched N=48 the displayed pencil values 1.2×10<sup>−61</sup> versus 2.9×10<sup>−65</sup> differ by 3.62 decades. Keep that matched comparison.</p>
+<p style="margin:12px 0;">“Nothing beyond,” “no mass,” “support,” and “all energy at ξ&lt;20” are false as literal statements for these nonzero compactly supported functions, whose transforms are analytic. They mean below the printed resolution. The “empty bin” code tests density&lt;10<sup>−12</sup>; it does not measure exact c=0. The λ=3 lobe energy 5.6×10<sup>−5</sup> is only about 3.2 orders below 0.0898, not the claimed five to six; the 10<sup>−7</sup> wording applies to the later windows. The manuscript’s explicit “negligible at diagnostic resolution, not proved zero” qualification is the correct version.</p>
+<h3 id="m4" style="font-size:18px;margin:25px 0 8px;color:#815c15;">MINOR m4 — The first lobe is assigned the wrong interval</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_lobe_mass/results.md#L134">evidence/diag_lobe_mass/results.md:134</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_lobe_mass/results.md#L184">evidence/diag_lobe_mass/results.md:184</a></p>
+<p style="margin:12px 0;">At λ=8 the first negative lobe in the archived JSON is <strong>[0.378,1.135]</strong>, with mass 0.1937245332. The report assigns that mass to [0,π/L]=[0,0.755], which ends near the lobe’s center. The u=1/2 lobe is approximately u∈[1/4,3/4], not [0,1/2]. This is a location error in the prose; the script’s lobe integration uses the correct interval.</p>
+<h3 id="m5" style="font-size:18px;margin:25px 0 8px;color:#815c15;">MINOR m5 — Retractions are present, but the original pages still contain superseded explanations</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_circle_split/results.md#L42">evidence/diag_circle_split/results.md:42</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_circle_split/results.md#L164">evidence/diag_circle_split/results.md:164</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_ns14_zeros/results.md#L3">evidence/diag_ns14_zeros/results.md:3</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_ns14_zeros/results-v2.md#L5">evidence/diag_ns14_zeros/results-v2.md:5</a></p>
+<p style="margin:12px 0;">The false off-grid-symbol/KMS conclusions are explicitly withdrawn at the end of <code>diag_circle_split/results.md</code>, with the decisive −0.42 and −0.39 wrong-form integrals retained. The sinc-lattice conclusion is flagged at the top of <code>diag_ns14_zeros/results.md</code>, and <code>results-v2.md</code> gives the decisive missing (−1)ⁿ phase. Thus both retractions exist at the original locations or in a same-directory correction.</p>
+<p style="margin:12px 0;">However, the original NS-14 page still blames only eigenvector accuracy, whereas v2 shows it reconstructed the wrong function. Add a direct v2 notice to prevent that wrong causal explanation from continuing to circulate. The circle page’s opening “literally T(φ)±H(φ)” is also not explicitly corrected there: a divided difference (bₙ−bₘ)/(n−m) is not generally a Toeplitz matrix depending only on n−m. The live manuscript expressly rejects that identification. I found no reuse of the withdrawn −0.674/−0.628 level energies or sinc-lattice zero counts in the five audited reports or current map notes; their new sign-aware transforms are different code paths.</p>
+<h3 id="m6" style="font-size:18px;margin:25px 0 8px;color:#815c15;">MINOR m6 — Some script outputs are narrower than the prose describes</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/level_dist.py#L46">evidence/diag_level_distribution/level_dist.py:46</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_comb_minorant/comb_minorant.py#L165">evidence/diag_comb_minorant/comb_minorant.py:165</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/levels_true.py#L7">evidence/diag_true_symbol/levels_true.py:7</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/manuscript/fixed_space_prime_action_v1.tex#L15302">manuscript/fixed_space_prime_action_v1.tex:15302</a></p>
+<p style="margin:12px 0;">The natural packet rows of <code>level_dist.py</code> integrate <em>continuous cosine packets</em> on ξ≤800; they do not project those packets onto N=256, and their Q is the truncated signed grid integral. The normalized sums are normalized on that grid, not on all ℝ. The introductory “N=256 head, W from Arb” description applies to the separate optimization script, not to every row of §§2–3.</p>
+<p style="margin:12px 0;">D3’s matrix uses the lower edge of each of 240 β bins before binary quantization, whereas its reported pointwise check uses β itself. These are two different minorants; the matrix’s extra downward rounding contributes to the apparent high-bit saturation. D1 has J+1 distinct values, so comparing its J directly to a theorem’s K without accounting for the floor is off by one. Also <code>levels_true.py</code> reads <code>ground_l3_N120.json</code> from the working directory although the committed file is in its own directory; that root-run reproduction needs the explicit path.</p>
+<p style="margin:12px 0;">The live manuscript still relates the alternating train to the unweighted ψ(λ²)−λ² in its diagnostic paragraph. The corrected report identifies the weighted ΣΛ(m)/√m−2(λ−1). This is stale wording, not a false total-symbol formula. The manuscript does <em>not</em> identify the raw code’s pole-inclusive pieces with the shifted symbol’s terms (i) and (iii).</p>
+<h2 style="font-family:Georgia,serif;font-size:23px;margin:30px 0 12px;border-bottom:1px solid #c7ced5;padding-bottom:8px;">Checks that survive, and their exact scope</h2>
+<h3 id="N1" style="font-size:18px;margin:25px 0 8px;color:#24556b;">NOTE N1 — Independent even and odd quadrature confirms the object and basis sign</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L7">evidence/diag_true_symbol/results.md:7</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/pencil_odd.py#L28">evidence/diag_true_symbol/pencil_odd.py:28</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_pencil_arithmetic/decomp.py#L172">evidence/diag_pencil_arithmetic/decomp.py:172</a></p>
+<p style="margin:12px 0;">An independently written mpmath integrand uses Re ψ(5/4+iξ/2)−log π, the strict m&lt;16 prime sum, the closed continuum integral and exact sinc transforms. Adaptive Gauss–Legendre integration is used below ξ=64 and 128; the tail retains all oscillatory prime and continuum terms via inverse-power expansions and incomplete-gamma integrals. Replaying orders 12 and 18 and both cutoffs is a numerical stability check, not an enclosure. No original grid quadrature helper is used.</p>
+<p style="margin:12px 0;">At λ=4, <strong>W<sub>even</sub>[0,1]=0.04724261489153464862952933401935</strong> and <strong>W<sub>odd</sub>[1,2]=0.001152589284878156257331763245609</strong>. Before the (−1)<sup>n+m</sup> conversion, both integrals have the opposite sign. At cutoff 128 the signed finite parts are 0.03706040787844879846 and 0.001150078610587951705; tails add 0.01018220701308585017 and 0.000002510674290204552475. Order-18 residuals against assembly are approximately 3.8×10<sup>−35</sup> and 1.7×10<sup>−31</sup>. The even tail is O(log X/X), the odd tail O(log X/X³): “no odd tail” means omitted as small, not identically zero. Section 1’s six-entry λ=3 comparison, the all-head even tests, and the odd tests cover different entries and truncations; their different quoted errors are not a normalization contradiction.</p>
+<p style="margin:12px 0;">NS-20’s folding statement is correct. Digamma recurrence moves R(ξ)=1/(1/4+ξ²) from the code’s e<sup>t/2</sup>+e<sup>−t/2</sup> term into the shifted digamma term. In the constant mode at λ=4 the moved quadratic form is <strong>1.835957438666554889</strong>, so treating the raw code pieces as the shifted symbol’s pieces would be a large error. <code>decomp.py</code> applies the move. Its individual “exact” terms are still midpoint computations, with L and some lag checks converted through floats; adding and subtracting the same Lorentzian makes their total agree algebraically even if an individual term has O(10<sup>−16</sup>) roundoff. The manuscript’s explicit e<sup>t/2</sup>+e<sup>−t/2</sup> identity at lines 14583–14587 is consistent.</p>
+<h3 id="N2" style="font-size:18px;margin:25px 0 8px;color:#24556b;">NOTE N2 — The SDP dual and density/mass normalizations are correct</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/min_energy_lp.py#L33">evidence/diag_level_distribution/min_energy_lp.py:33</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_level_distribution/weighted_level_lp.py#L47">evidence/diag_level_distribution/weighted_level_lp.py:47</a></p>
+<p style="margin:12px 0;">For any X≥0 with tr X=1 and tr(M<sub>b</sub>X)≥r<sub>b</sub>, and any y<sub>b</sub>≥0, tr(WX)=tr[(W−Σy<sub>b</sub>M<sub>b</sub>)X]+Σy<sub>b</sub>tr(M<sub>b</sub>X)≥λ<sub>min</sub>(W−Σy<sub>b</sub>M<sub>b</sub>)+Σy<sub>b</sub>r<sub>b</sub>. This algebraic dual lower bound holds for every feasible pure or mixed state in the specified head. No strong-duality or rank-one assumption is needed. Floating eigenvalues remain numerical estimates of that bound.</p>
+<p style="margin:12px 0;">In §4, bin width is Δ=D/20, M<sub>b</sub>=(two-sided level mass matrix)/Δ and r<sub>b</sub>=c/D; equivalently each bin must carry c/20 mass. In §6, M<sub>b</sub> is the mass matrix and r<sub>b</sub>=c′m̃<sub>b</sub>, with m̃<sub>b</sub> the one-sided length divided by X=800. The factor 2 is consistently in the physical Fourier mass. The printed c and c′ definitions therefore match the code. Meeting these <em>20 bin constraints</em> does not imply the for-every-Borel-set uniform or weighted hypothesis. Finite-bin constants are relaxations, and finer bins can only tighten the problem.</p>
+<h3 id="N3" style="font-size:18px;margin:25px 0 8px;color:#24556b;">NOTE N3 — Source projection preserves the cheap λ=3 numerical example after a feasibility repair</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/manuscript/fixed_space_prime_action_v1.tex#L10771">manuscript/fixed_space_prime_action_v1.tex:10771</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/v124/g2_source_certificate/certify_pswf_source.py#L89">evidence/v124/g2_source_certificate/certify_pswf_source.py:89</a></p>
+<p style="margin:12px 0;">The certificate identifies the finite projected source and bounds its normalization error; the exact mode conversion is established in m1. For a unit v, r=|⟨v,u⟩| and g=(v−⟨v,u⟩u)/√(1−r²), the displayed pointwise triangle inequality also gives the bin estimate μ<sub>g</sub>(b)≥[√μ<sub>v</sub>(b)−r√μ<sub>u</sub>(b)]<sub>+</sub>²/(1−r²). The energy identity bounds q[g] by [q[v]+(2r+r²)‖W<sub>N</sub>u‖]/(1−r²) on the same finite head.</p>
+<p style="margin:12px 0;">For λ=3, c′=1 the raw candidate has <strong>r=1.97110025×10<sup>−7</sup></strong>; the high-precision finite residual is <strong>‖W<sub>256</sub>u‖=2.57239238×10<sup>−19</sup></strong>. Its energy changes from <strong>2.42998634514181565×10<sup>−9</sup></strong> to <strong>2.42998634514191006×10<sup>−9</sup></strong>, only 9.44×10<sup>−23</sup>. But its initial active-bin shortfall persists: minimum ratio 0.999999992285. Simply projecting it is not a feasibility proof.</p>
+<p style="margin:12px 0;">The audit repairs that defect explicitly. A normalized superposition of the two projected candidates at c′=1 and c′=4, with coefficient +10<sup>−7</sup> on the second, has <strong>q=2.42999221193792968×10<sup>−9</sup></strong>, minimum bin ratio <strong>1.000000208796845</strong>, and residual source overlap 2.82×10<sup>−31</sup> after saved-coordinate rounding. Every bin slack is positive. The raw dual estimate is 2.42999135630623×10<sup>−9</sup>. Thus the replay brackets the possible projection increase at about 10<sup>−15</sup>, with a conservative allowance of order <strong>10<sup>−14</sup></strong> for the float dual’s numerical error; it does not permit an order-one increase in this finite 20-bin problem. This is a diagnostic upper witness and numerical comparison, not a certified bracket or the continuous WLH. An independently feasible projected mixture, checked with the bin triangle bound, is also archived (energy 2.43043885×10<sup>−9</sup>).</p>
+<h3 id="N4" style="font-size:18px;margin:25px 0 8px;color:#24556b;">NOTE N4 — The precision floor and cancellation counts survive replay</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L229">evidence/diag_true_symbol/results.md:229</a></p>
+<p style="margin:12px 0;">At fixed N=96, using exactly the original quadrature W⁻ and recomputing the solve at 120 and 180 digits, λ=6 changes ν₀ from −5.23827×10<sup>−116</sup> to +6.58024184546×10<sup>−135</sup>; λ=8 changes it from −3.68097×10<sup>−115</sup> to +5.45550541882×10<sup>−165</sup>. The old negative values are arithmetic-floor artifacts. Counts below 10<sup>−8</sup>, 10<sup>−16</sup>, 10<sup>−30</sup> remain <strong>30/26/22</strong> and <strong>41/37/31</strong>.</p>
+<p style="margin:12px 0;">The neighbors of 10<sup>−30</sup> are <strong>2.12521266×10<sup>−31</sup> and 3.10451797×10<sup>−28</sup></strong> at λ=6, and <strong>1.02756277×10<sup>−32</sup> and 4.34750697×10<sup>−30</sup></strong> at λ=8, unchanged at the displayed precision. These counts are robust against the observed arithmetic floor. They remain approximate finite-pencil counts; the original quadrature’s operator error has not been enclosed. Cutoff dependence at fixed λ is a change of problem. At λ=4, even the 10<sup>−8</sup> count changes 12→13 from N=48 to 96, so “the block is converged” is too strong if read literally.</p>
+<h3 id="N5" style="font-size:18px;margin:25px 0 8px;color:#24556b;">NOTE N5 — Head, source complement and tail have different inequality directions</h3>
+<p style="margin:12px 0;"><a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_true_symbol/results.md#L284">evidence/diag_true_symbol/results.md:284</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/evidence/diag_comb_minorant/results.md#L288">evidence/diag_comb_minorant/results.md:288</a> · <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/06746f2d0910dfeb5fa6e91d4292fd0c9afb7fd5/research-map.json#L195">research-map.json:195</a></p>
+<p style="margin:12px 0;">Sections 8 and the NS-22 matrices act on the <strong>full even head</strong>; there is no source compression. Section 10’s odd sector has no even-source constraint and supplies pencil values, not an η table. The following directions hold for exact operators with the same sets/minorant; quadrature and the 80-level left Riemann sum add separate errors.</p>
+<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:13px;margin:15px 0;"><thead><tr>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Reported object</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">What comparison is valid?</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">What it does not establish</th>
+</tr></thead><tbody>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">Layer-cake, full head, ξ≤800</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">Upper for the corresponding source-compressed <em>same head and truncated sets</em>; lower for the uncompressed complete-space norm integral with those sets.</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">No ordering against the actual complete source-compressed η. Omitted ξ&gt;800 increases full negative-set operators. The left t-sum overestimates the truncated t-integral, so the printed approximation is not literally a certified lower bound either.</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">Chosen minorant η<sub>N</sub>=max(0,−λ<sub>min</sub>)</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">Upper for the same-head source restriction; lower for the same-minorant uncompressed complete-space loss. D1’s heuristic value is upper for the best loss in its grid family.</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">No necessary lower bound for all minorants; no ordering with the complete source-compressed criterion. A positive or negative floor on one compression is not the complete problem.</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">NS-22 charged-tail model</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">Adding a genuinely valid global negative tail floor would conservatively lower the head operator and increase its loss.</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">Its actual sampled charge is invalid globally (M3). It is only an artificial finite-head model.</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">Grid-only signed minorant</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">Exact loss of the model setting m=0 off-grid, subject to quadrature.</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">The model is not a minorant where β&lt;0 outside the grid; for a signed symbol tail omission has no one-sided ordering.</td>
+</tr>
+</tbody></table></div>
+<p style="margin:12px 0;">A hard spectral reach at ξ=2πN/L is also not present: individual Fourier modes have tails. NS-22’s own ‖I−C([−800,800])‖≈0.258,0.172,0.124,0.104 demonstrates significant head combinations beyond 800. The reported η values therefore do not decide the complete source-compressed criterion.</p>
+<p style="margin:12px 0;">Map dispositions: <code>circle</code> stands as finite diagnostic evidence, but “all energy at ξ&lt;20” and “not self-similar” need the qualifications above. <code>concentration</code> can remain <strong>blocked</strong> because the required cofinal inequality is missing; “blocked after NS-22” cannot mean NS-22 proved impossibility. <code>minorantlevels</code> and <code>zeroleveldistribution</code> correctly retain open arithmetic/packet hypotheses and no closure. The NS-30 <code>weightedlevels</code> node correctly names open exact-cost and coverage inputs; its cited Q<sub>min</sub> figures inherit the infeasible λ=4 cell and 20-bin limitation. Its “cheap” label needs window-by-window feasible witnesses. <a style="color:#165582;overflow-wrap:anywhere;" href="https://github.com/AlexanderEastwood/riemann/blob/f3611ef2c3464fa30e50408c62e339697def6c38/research-map.json#L408">research-map.json:408</a>. No map node should be closed on the reported η trend.</p>
+<h2 style="font-family:Georgia,serif;font-size:23px;margin:30px 0 12px;border-bottom:1px solid #c7ced5;padding-bottom:8px;">Optimization replay: constraint slacks</h2>
+<p style="margin:12px 0;">Each row uses the same N=256 grid and optimizer starts as the archived experiment. “Ratio” is min<sub>b</sub> achieved/requested; values below 1 fail at least one constraint. Uniform slacks have density units; weighted slacks have mass units. A tiny negative slack may be optimization roundoff, but it is still not an exact feasible upper witness. Large negative slacks identify substantive failures. All vectors, multipliers, required masses and full slack arrays are also retained in the linked JSON files. Expand any window to see the 20 signed slacks for every cell.</p>
+<h3 style="font-size:18px;">λ=3</h3>
+<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:13px;margin:15px 0;"><thead><tr>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">c or c′</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Dual</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Pure energy</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Min ratio</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Min slack</th>
+</tr></thead><tbody>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.01</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.29228e-10</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.29131e-10</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.885907371</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.000479752</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.03</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">5.66213e-08</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">5.66213e-08</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999956</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-5.60685e-10</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.27101e-07</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.27101e-07</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999357</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-1.35192e-08</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-1.00221e-16</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.51104e-16</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.04621633e-05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.0420485</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.2</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">6.0839e-05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">6.0839e-05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999997</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-2.62605e-10</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.3</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000535361</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000535361</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+2.31482e-14</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">4.52364e-12</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">4.70601e-12</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.663097597</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-2.89315e-05</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.2</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.45503e-11</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">3.29735e-11</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.981920913</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-3.10508e-06</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.5</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.15625e-10</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.15632e-10</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.951353298</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-2.08877e-05</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 1.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.42999e-09</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.42999e-09</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999992</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-6.6254e-12</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 2.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.77585e-08</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">4.7461e-08</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.829669986</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.000292542</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 4.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">4.54926e-07</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">4.54935e-07</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999991793</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-8.53166e-08</td>
+</tr>
+</tbody></table></div>
+<details style="border:1px solid #c7ced5;padding:10px;margin:12px 0;"><summary style="cursor:pointer;">All 20 constraint slacks, deepest to shallowest</summary>
+<p style="margin:12px 0;"><strong>uniform 0.01</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.2219998e-02, +2.5404241e-03, +1.1671930e-03, +1.9254350e-04, -2.2539171e-04, -4.7975192e-04, +2.1143342e-01, +1.5174317e-01, +4.0520296e-01, +2.2928923e-01, +1.8029796e-01, +8.4273707e-01, +5.0295682e-01, +3.8067004e-01, +4.4180358e-01, +3.5850589e-01, +3.0684844e-01, +3.2729392e-01, +3.1266591e-01, +2.8947717e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.03</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+4.1958975e-02, +9.7593323e-03, +5.1693128e-03, +1.9258822e-03, +9.7070261e-04, -5.6068480e-10, +8.6608429e-02, +5.4884947e-02, +2.5395554e-01, +1.3380194e-01, +1.0525882e-01, +1.1119745e+00, +6.2527414e-01, +4.5420708e-01, +3.7829537e-01, +3.2524252e-01, +2.8286775e-01, +3.5198775e-01, +3.4648042e-01, +2.9442253e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.05</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+6.8645741e-02, +1.5712316e-02, +8.1513994e-03, +2.8190430e-03, +1.7244636e-03, -1.3519195e-08, +4.5042447e-02, +2.6526820e-02, +1.8371264e-01, +9.2536282e-02, +7.5069196e-02, +1.1921891e+00, +6.5922799e-01, +4.7238484e-01, +3.8740161e-01, +3.3217883e-01, +2.8789707e-01, +3.1147583e-01, +2.9313636e-01, +2.5529653e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.1</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-4.2045499e-02, -4.2047761e-02, -4.2048083e-02, -4.2048311e-02, -4.2048416e-02, -4.2048475e-02, +2.9005790e-01, +1.7879905e-01, +1.1675875e-01, +9.2692056e-02, +7.5584696e-02, +6.3755094e-02, +5.7402814e-02, +5.4319554e-02, +3.0483304e-01, +2.0857719e-01, +1.6459027e-01, +6.5811321e-01, +8.3355997e-01, +6.5335293e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.2</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+2.3647291e-01, +4.6949230e-02, +1.9704135e-02, +6.1357487e-04, +9.4233936e-03, -2.6260484e-10, +1.0517069e-01, +6.1602723e-02, +4.5325585e-02, +2.4469597e-02, +4.5954213e-02, +6.3571352e-01, +3.4641557e-01, +2.4027387e-01, +2.7101057e-01, +2.0829025e-01, +1.6902614e-01, +2.3723296e-01, +2.5448063e-01, +2.1846365e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.3</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+3.5216235e-01, +6.9239970e-02, +2.8493662e-02, +2.3148150e-14, +3.3449659e-02, +1.4346412e-02, +6.8871540e-02, +3.1469677e-02, +3.0916533e-02, +5.3627404e-03, +5.4094838e-02, +4.7916516e-01, +2.5717030e-01, +1.7185645e-01, +1.6489981e-01, +1.2599339e-01, +1.0056242e-01, +1.2290635e-01, +1.2569046e-01, +1.0011263e-01</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.1</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+2.1209251e-04, +8.0234473e-05, -3.0584412e-06, +1.1737450e-06, -1.6360826e-05, -2.8931494e-05, +3.3930264e-02, +2.4726303e-02, +3.3886940e-02, +2.2438225e-02, +1.8501651e-02, +3.6695021e-02, +2.5512995e-02, +2.1347605e-02, +4.0430716e-02, +3.1625903e-02, +2.7304788e-02, +7.0149602e-02, +7.7809473e-02, +6.3788963e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.2</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+6.6557538e-04, +2.5948246e-04, +7.2631962e-05, +6.6753114e-05, +2.5931203e-05, -3.1050831e-06, +3.1661638e-02, +2.3126182e-02, +4.0765028e-02, +2.5116704e-02, +2.0179638e-02, +5.8836370e-02, +3.7549956e-02, +2.9864038e-02, +4.6239094e-02, +3.6431101e-02, +3.1097057e-02, +5.6167898e-02, +5.9551883e-02, +5.0791562e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.5</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.6049538e-03, +6.2412019e-04, +1.6167400e-04, +1.5042089e-04, +5.1333738e-05, -2.0887678e-05, +2.5730044e-02, +1.8587766e-02, +4.7317847e-02, +2.6762921e-02, +2.0670901e-02, +9.4821809e-02, +5.6417904e-02, +4.2953212e-02, +5.1380445e-02, +4.1182196e-02, +3.4682110e-02, +3.7896675e-02, +3.5951489e-02, +3.3220688e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 1.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+3.3767737e-03, +1.3155692e-03, +3.7587892e-04, +3.4329979e-04, +1.4983096e-04, -6.6254015e-12, +1.4327207e-02, +9.3304629e-03, +3.5698169e-02, +1.8759706e-02, +1.3729202e-02, +1.1934349e-01, +6.7169770e-02, +4.9525688e-02, +4.1962976e-02, +3.5353094e-02, +2.9672102e-02, +4.0727708e-02, +4.0362915e-02, +3.3654676e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 2.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+5.3883972e-03, +2.0686783e-03, +3.0210785e-04, +3.1773612e-04, -6.1633292e-06, -2.9254180e-04, +9.1769328e-03, +5.8049973e-03, +2.8954678e-02, +1.4050231e-02, +9.1914599e-03, +1.2751194e-01, +6.9511984e-02, +5.0645683e-02, +4.1328964e-02, +3.4153412e-02, +2.7441024e-02, +3.1166509e-02, +2.7966011e-02, +2.3718993e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 4.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.2938484e-02, +5.0165212e-03, +1.2963811e-03, +1.1983423e-03, +6.4795447e-04, +3.5301782e-08, +2.7839494e-03, +1.5591185e-03, +1.1477290e-02, +3.6047395e-03, -8.5316581e-08, +1.3533616e-01, +6.9843390e-02, +4.9962145e-02, +3.8735208e-02, +3.0486216e-02, +2.1913802e-02, +1.1425739e-02, +3.1349274e-03, +4.0916724e-03</span></p>
+</details>
+<p style="margin:12px 0;"><a href="../evidence/diag_ns31_audit/lp_l3.json">Replay vectors, multipliers and constraints — λ=3</a></p>
+<h3 style="font-size:18px;">λ=4</h3>
+<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:13px;margin:15px 0;"><thead><tr>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">c or c′</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Dual</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Pure energy</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Min ratio</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Min slack</th>
+</tr></thead><tbody>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.01</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-3.41931e-15</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">6.0553e-18</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.20658573</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+0.00352861</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.03</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-4.74603e-16</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.80225e-18</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.137544865</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.00756664</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-2.52426e-15</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-6.38689e-18</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.749996827</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.00365562</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-6.55787e-16</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">3.82095e-17</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.414338026</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.0171274</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.2</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">4.2965e-08</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">4.2965e-08</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+6.60201e-13</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.3</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000468414</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00102686</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.672717816</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.0287137</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-3.41931e-15</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">6.0553e-18</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">4.30973776</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+0.000847293</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.2</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-3.41931e-15</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">6.0553e-18</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.15486888</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+0.000591293</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.5</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-4.51167e-16</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">6.0553e-18</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.861947552</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.000176707</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 1.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-1.60619e-15</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">3.03048e-17</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.636096731</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.000827494</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 2.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">3.21468e-16</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-2.62166e-19</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.02195995</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.0049346</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 4.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">6.99193e-15</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">8.3403e-15</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.461262869</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.00551667</td>
+</tr>
+</tbody></table></div>
+<details style="border:1px solid #c7ced5;padding:10px;margin:12px 0;"><summary style="cursor:pointer;">All 20 constraint slacks, deepest to shallowest</summary>
+<p style="margin:12px 0;"><strong>uniform 0.01</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+2.4994903e-02, +1.3146794e-02, +8.2066017e-03, +6.6723580e-03, +5.5030792e-03, +4.0354269e-03, +3.9807600e-03, +3.5286090e-03, +5.0368662e-03, +1.1301688e-01, +7.5032181e-02, +1.4135310e-01, +1.5598676e-01, +3.0342725e-01, +3.9874119e-01, +3.1849472e-01, +4.2427227e-01, +4.7708536e-01, +3.7924429e-01, +3.9562764e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.03</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-3.9559277e-03, -5.9960927e-03, -6.8490833e-03, -7.1150728e-03, -7.3103144e-03, -7.5666409e-03, -5.9166510e-03, -5.1962733e-03, +3.2609486e-02, +1.0320153e-01, +6.4009254e-02, +6.1309793e-02, +6.8134247e-02, +2.0999035e-01, +2.8396131e-01, +4.0369145e-01, +5.0834264e-01, +4.2920797e-01, +4.0342495e-01, +4.0141115e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.05</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+3.3653628e-02, +1.3162681e-02, +4.6202887e-03, +1.9683695e-03, -5.8483519e-05, -2.5944695e-03, -2.7328420e-03, -3.6556186e-03, +2.2931335e-02, +5.7795719e-02, +3.1027318e-02, +1.6428530e-01, +1.0141317e-01, +9.3877471e-02, +2.0144750e-01, +2.9007701e-01, +4.7661104e-01, +4.6647631e-01, +4.5866837e-01, +4.5139575e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.1</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.9492557e-02, -1.2050808e-03, -9.8348930e-03, -1.2514771e-02, -1.4564111e-02, -1.7127437e-02, -1.2781775e-02, -1.2983007e-02, +2.0453468e-01, +2.4765214e-01, +1.5320434e-01, +1.5156215e-01, +1.2860403e-01, +1.5897861e-01, +2.9412536e-01, +1.9278493e-01, +2.1873676e-01, +2.6017472e-01, +2.5426413e-01, +2.3597699e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.2</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.7482333e-01, +7.5909017e-02, +3.4445185e-02, +2.2753538e-02, +1.2606277e-02, +6.6020106e-13, +2.0526989e-02, +2.3005617e-02, +6.2967719e-02, +6.0334128e-02, +3.6044395e-02, +3.6493822e-02, +3.8932742e-02, +6.3771213e-02, +6.5193320e-02, +5.5198722e-02, +3.4654195e-01, +4.1132727e-01, +2.9998121e-01, +3.1600534e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.3</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-2.8713688e-02, +1.6880140e-02, -2.6975261e-02, +8.7282832e-02, +7.3434543e-02, +1.9220803e-02, +2.3046620e-01, +1.7524061e-01, +1.1060309e-01, +9.8707924e-02, +7.0440429e-02, +4.7631345e-02, +4.6371777e-02, +6.1109122e-02, +7.2759300e-02, +5.8269548e-02, +1.3946629e-01, +1.0837678e-01, +1.3259564e-01, +1.0849271e-01</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.1</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+4.7076751e-03, +2.6609819e-03, +1.8430980e-03, +1.5339105e-03, +1.3506217e-03, +1.0559445e-03, +9.8034797e-04, +8.4729287e-04, +1.0741624e-03, +1.9390957e-02, +1.2949767e-02, +2.4219778e-02, +2.6676472e-02, +5.1884523e-02, +6.8107274e-02, +5.4089011e-02, +7.2051122e-02, +8.1001298e-02, +6.4295979e-02, +6.7065195e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.2</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+4.6419251e-03, +2.5742319e-03, +1.7830980e-03, +1.4270355e-03, +1.2603717e-03, +9.2194446e-04, +7.8009797e-04, +5.9129287e-04, +7.8716240e-04, +1.8959207e-02, +1.2571142e-02, +2.3772153e-02, +2.6183597e-02, +5.1391523e-02, +6.7541024e-02, +5.3224386e-02, +7.1063622e-02, +7.9934423e-02, +6.3251854e-02, +6.5989195e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.5</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+4.4446751e-03, +2.3139819e-03, +1.6030980e-03, +1.1064105e-03, +9.8962172e-04, +5.1994446e-04, +1.7934797e-04, -1.7670713e-04, -7.3837599e-05, +1.7663957e-02, +1.1435267e-02, +2.2429278e-02, +2.4704972e-02, +4.9912523e-02, +6.5842274e-02, +5.0630511e-02, +6.8101122e-02, +7.6733798e-02, +6.0119479e-02, +6.2761195e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 1.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+2.7231867e-03, +1.0844122e-03, +7.5395387e-04, +9.8487052e-05, +1.3031869e-04, -4.8763038e-04, -5.2622299e-04, -8.2749420e-04, +4.9161008e-03, +1.5774887e-02, +1.0295384e-02, +4.4141443e-02, +2.6664169e-02, +2.4737309e-02, +2.3498877e-02, +4.9067950e-02, +6.1770278e-02, +6.4036006e-02, +5.0425084e-02, +4.8066056e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 2.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-1.0773281e-03, -1.5984893e-03, -1.1055173e-03, -2.0559218e-03, -1.7338292e-03, -2.6211473e-03, -3.8713715e-03, -4.9346037e-03, +1.4507828e-02, +4.2626286e-02, +2.2461383e-02, +1.4565238e-02, +1.3878854e-02, +2.3554128e-02, +1.6963389e-02, +3.1549283e-02, +6.2177967e-02, +4.3360378e-02, +3.5505835e-02, +3.5106784e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 4.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.6560142e-02, +7.5628250e-03, +5.2363252e-03, +2.3116524e-03, +2.1564204e-03, -5.9741715e-04, -2.6774483e-03, -5.5166682e-03, +1.8180007e-02, +1.1864157e-02, +5.6941215e-03, +7.3130668e-03, +1.1115664e-03, -1.5276345e-04, +1.2828089e-02, -1.7364929e-03, +2.7880950e-02, +3.5961115e-02, +2.0323035e-02, +2.4280963e-02</span></p>
+</details>
+<p style="margin:12px 0;"><a href="../evidence/diag_ns31_audit/lp_l4.json">Replay vectors, multipliers and constraints — λ=4</a></p>
+<h3 style="font-size:18px;">λ=6</h3>
+<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:13px;margin:15px 0;"><thead><tr>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">c or c′</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Dual</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Pure energy</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Min ratio</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Min slack</th>
+</tr></thead><tbody>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.01</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000396645</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">3.72847e-18</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">2.4577485e-17</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.00180614</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.03</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.0283468</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.0283468</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.99999999</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-5.34963e-11</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.0472831</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.0472831</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.00000016</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+1.41466e-09</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.0946759</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.094676</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.00000107</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+1.94114e-08</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.2</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.189822</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.189822</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999999</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-4.48356e-11</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.3</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.287632</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.287632</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-7.59139e-12</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00017467</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00017467</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.00000004</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+4.07932e-13</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.2</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000350726</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000350725</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.99999723</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-5.19293e-11</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.5</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000879992</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000879992</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.00000001</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+3.29655e-13</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 1.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00175288</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00176849</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.00291001</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+2.72814e-07</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 2.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000704393</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-4.49219e-18</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.1263683e-16</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.00207531</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 4.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.84854e+36</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.533122</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00052658499</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.0409302</td>
+</tr>
+</tbody></table></div>
+<details style="border:1px solid #c7ced5;padding:10px;margin:12px 0;"><summary style="cursor:pointer;">All 20 constraint slacks, deepest to shallowest</summary>
+<p style="margin:12px 0;"><strong>uniform 0.01</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-1.8061371e-03, -1.8061371e-03, -4.9878268e-04, -1.0968763e-03, -1.2635686e-03, -4.8577492e-04, +6.4170990e-05, +3.1747148e-03, +9.7874979e-03, +2.4221303e-02, +4.7926219e-02, +4.9277715e-02, +5.5237997e-02, +1.0737339e-01, +9.6664611e-02, +1.0177234e-01, +1.1944486e-01, +3.6016089e-01, +4.9154037e-01, +3.7131965e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.03</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+7.7653321e-03, -5.3496280e-11, +1.8187321e-02, +1.6448093e-02, +9.5339521e-03, +1.7071635e-02, +2.9973801e-02, +4.1378791e-02, +4.0751135e-02, +4.8938389e-02, +8.3037018e-02, +2.1150086e-01, +2.4959454e-01, +1.9738738e-01, +1.8376940e-01, +1.6882952e-01, +1.6390549e-01, +1.4978649e-01, +1.4444953e-01, +1.3520318e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.05</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.2941956e-02, +1.4146619e-09, +1.6477887e-02, +1.4412524e-02, +7.7813740e-03, +1.6025568e-02, +2.3678996e-02, +3.8201889e-02, +4.1964041e-02, +4.2390514e-02, +8.3430690e-02, +1.9542021e-01, +2.2162115e-01, +1.8383383e-01, +1.7709684e-01, +1.6482245e-01, +1.6217895e-01, +1.4695529e-01, +1.4422440e-01, +1.3472044e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.1</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+2.5883284e-02, +1.9411403e-08, +1.4539676e-02, +1.1326983e-02, +4.6841761e-03, +1.2417446e-02, +2.0836838e-02, +3.7772150e-02, +4.5858285e-02, +3.2952354e-02, +7.6879336e-02, +1.6591188e-01, +1.6917288e-01, +1.5245958e-01, +1.5856087e-01, +1.4655441e-01, +1.4961887e-01, +1.3273159e-01, +1.3256666e-01, +1.2336727e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.2</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+5.1764932e-02, +3.5470536e-11, +1.5097976e-02, +6.8115781e-03, -4.4835607e-11, +2.3131184e-03, +4.0675443e-02, +3.9329209e-02, +4.3426099e-02, +3.4475706e-02, +4.9914720e-02, +1.6166041e-01, +1.1018362e-01, +9.6827049e-02, +1.1252193e-01, +9.1459434e-02, +1.0809124e-01, +8.8839978e-02, +8.5409065e-02, +7.8161992e-02</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.3</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+7.7645925e-02, -7.5913859e-12, +2.6248864e-02, +8.7011073e-03, +7.8106133e-12, +7.2510470e-12, +2.1478992e-02, +2.0842363e-02, +1.7491284e-02, +1.0799276e-02, +1.8641203e-02, +1.1190125e-01, +7.2778568e-02, +6.0808191e-02, +7.4887438e-02, +5.2729883e-02, +8.3240500e-02, +5.8905160e-02, +5.1246198e-02, +4.4146194e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.1</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+3.1211742e-07, +4.0793248e-13, +1.0060280e-02, +8.8019618e-03, +5.5528976e-03, +1.0983729e-02, +1.3437616e-02, +1.7366014e-02, +1.2427656e-02, +1.8817556e-02, +1.7773510e-02, +4.6792987e-02, +6.7691082e-02, +5.2029908e-02, +5.0610068e-02, +4.4835366e-02, +4.6022710e-02, +4.2792988e-02, +4.1835853e-02, +3.8068394e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.2</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+6.2379063e-07, -5.1929292e-11, +1.0195023e-02, +8.9538472e-03, +5.5841801e-03, +1.0554321e-02, +1.3533487e-02, +1.7464328e-02, +1.2052030e-02, +1.8133408e-02, +1.6728579e-02, +4.6227993e-02, +6.8388191e-02, +5.1557544e-02, +4.9315647e-02, +4.2891635e-02, +4.3956844e-02, +4.0653721e-02, +3.9005997e-02, +3.5566681e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.5</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.5589500e-06, +3.2965454e-13, +1.0261435e-02, +9.0856946e-03, +5.4773578e-03, +9.4780779e-03, +1.3354595e-02, +1.7174247e-02, +1.0922945e-02, +1.6296651e-02, +1.4214566e-02, +4.4473560e-02, +6.8434298e-02, +4.9359692e-02, +4.5250269e-02, +3.7541091e-02, +3.8302597e-02, +3.4737346e-02, +3.1516306e-02, +2.8890853e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 1.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+3.7829400e-06, +2.7281358e-07, +1.0019036e-02, +8.9615492e-03, +5.0872744e-03, +7.9190408e-03, +1.2557715e-02, +1.6069312e-02, +9.0387401e-03, +1.3455055e-02, +1.0676916e-02, +4.1429755e-02, +6.6292492e-02, +4.4858855e-02, +3.8276011e-02, +2.9139255e-02, +2.9467812e-02, +2.5425245e-02, +2.0127407e-02, +1.8671730e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 2.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-4.5000000e-04, -1.8750000e-04, -3.0292378e-04, -3.5329882e-04, -1.4229054e-03, -2.0753106e-03, -1.6661814e-03, -3.0157828e-05, -1.4952631e-03, +1.9195040e-04, +1.4759815e-02, +3.6271974e-02, +3.6401481e-02, +2.9151482e-02, +1.2502682e-02, +1.2874000e-02, +2.4918075e-02, +2.3258064e-02, +2.8907207e-02, +1.8113055e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 4.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-8.9952607e-04, -3.7475432e-04, -1.6232491e-03, -1.2730968e-03, -3.2674596e-03, -6.2563368e-03, +1.3759385e-02, +1.3126639e-03, -3.0524133e-03, -7.0882466e-03, -1.5731592e-02, -2.0265498e-02, -2.3492575e-02, -3.1418740e-02, -4.0930163e-02, +8.7527220e-02, +1.2248400e-02, -5.9700444e-03, -2.3978792e-02, -2.1280871e-02</span></p>
+</details>
+<p style="margin:12px 0;"><a href="../evidence/diag_ns31_audit/lp_l6.json">Replay vectors, multipliers and constraints — λ=6</a></p>
+<h3 style="font-size:18px;">λ=8</h3>
+<div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:13px;margin:15px 0;"><thead><tr>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">c or c′</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Dual</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Pure energy</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Min ratio</th>
+<th style="text-align:left;border-bottom:2px solid #758595;padding:7px 5px;">Min slack</th>
+</tr></thead><tbody>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.01</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000336927</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000336927</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999961</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-6.3359e-11</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.03</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00199607</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00199607</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-4.52843e-13</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00518131</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00518131</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999712</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-2.31212e-09</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.018894</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.018894</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999808</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-3.08942e-09</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.2</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.0637719</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.0637719</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999933</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-2.14191e-09</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">uniform 0.3</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.125178</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.125177</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999997657</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-1.12975e-07</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.22003e-06</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.22003e-06</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999898877</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-1.76965e-09</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.2</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">3.68942e-06</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">3.68942e-06</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999999</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-3.69968e-14</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 0.5</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.40352e-05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.40352e-05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999952</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-4.33393e-12</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 1.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">5.03278e-05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">5.03278e-05</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">+4.66053e-14</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 2.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00020024</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.00020024</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.999999425</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-1.47005e-08</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">weighted 4.0</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">1.77945e+52</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.0223203</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">0.000897426538</td>
+<td style="border-bottom:1px solid #dde2e7;padding:7px 5px;vertical-align:top;">-0.0665417</td>
+</tr>
+</tbody></table></div>
+<details style="border:1px solid #c7ced5;padding:10px;margin:12px 0;"><summary style="cursor:pointer;">All 20 constraint slacks, deepest to shallowest</summary>
+<p style="margin:12px 0;"><strong>uniform 0.01</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-6.3358968e-11, +8.9607984e-03, +1.3261982e-02, +7.9407999e-03, +1.0808905e-02, +5.6085896e-02, +4.8116494e-02, +4.4151372e-02, +6.4075723e-02, +1.7987329e-01, +1.4375184e-01, +1.8973299e-01, +1.3895110e-01, +1.4611051e-01, +1.6263635e-01, +1.3202533e-01, +1.1698520e-01, +1.1868851e-01, +1.1331515e-01, +1.0171487e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.03</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-4.5284349e-13, +3.4479182e-03, +6.6352482e-03, +3.3195368e-03, +3.0710020e-03, +4.1401159e-02, +4.1639671e-02, +2.7805887e-02, +2.4162577e-02, +1.5083400e-01, +1.4816217e-01, +2.1832733e-01, +1.5242467e-01, +1.4855192e-01, +1.6752747e-01, +1.4053254e-01, +1.2090542e-01, +1.1994654e-01, +1.1413516e-01, +1.0003330e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.05</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+3.2427429e-09, +1.0239698e-10, +2.6752751e-03, -2.3121191e-09, +1.3233082e-03, +3.4922954e-02, +3.5713570e-02, +2.3374045e-02, +2.1028541e-02, +1.2927926e-01, +1.4289237e-01, +2.1352751e-01, +1.5128396e-01, +1.4513738e-01, +1.6479021e-01, +1.4199629e-01, +1.2160732e-01, +1.1920958e-01, +1.1528925e-01, +1.0044673e-01</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.1</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.2967339e-09, -9.0612292e-10, +3.2380708e-03, -3.0894188e-09, -1.3293846e-09, +2.7128041e-02, +2.6837871e-02, +1.4787318e-02, +2.2330600e-02, +1.0483816e-01, +1.2977859e-01, +2.0380566e-01, +1.3953383e-01, +1.3613351e-01, +1.5277782e-01, +1.3452501e-01, +1.0878071e-01, +1.0787460e-01, +1.0401785e-01, +8.9705544e-02</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.2</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+1.4899355e-09, -2.1419128e-09, +3.8622844e-03, -5.1137177e-10, +9.1694408e-10, +1.3242923e-02, +1.1025191e-02, +9.2658519e-04, +2.3412505e-02, +6.2936610e-02, +9.3913165e-02, +1.5590987e-01, +1.0756067e-01, +1.0827525e-01, +1.3524258e-01, +1.1649317e-01, +8.8871233e-02, +8.9408240e-02, +8.6785520e-02, +7.0973269e-02</span></p>
+<p style="margin:12px 0;"><strong>uniform 0.3</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-1.1297541e-07, +6.7808997e-08, +3.8391928e-03, +5.5881343e-08, +6.0658707e-08, +1.0989792e-02, -4.6009305e-09, +1.0117913e-08, +4.2314322e-03, +1.4369924e-02, +4.2980639e-02, +6.6875564e-02, +5.7699206e-02, +5.6090056e-02, +1.3236081e-01, +1.0743068e-01, +7.8449248e-02, +8.1202168e-02, +8.1339113e-02, +6.3346726e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.1</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-5.8342677e-11, -1.7696513e-09, +2.2291955e-04, +1.3823559e-03, +6.6224641e-04, +1.2685029e-02, +9.1749588e-03, +8.1042091e-03, +4.5529004e-02, +4.6506617e-02, +4.1058613e-02, +4.2438375e-02, +4.3985164e-02, +4.1760043e-02, +5.5903405e-02, +4.3021777e-02, +4.0593185e-02, +3.8642454e-02, +3.6182787e-02, +3.2570319e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.2</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-3.6996753e-14, +8.4398538e-05, +4.0879418e-04, +9.8910838e-04, +7.9892901e-04, +1.3918327e-02, +9.8292815e-03, +8.0070724e-03, +4.5033685e-02, +5.1757602e-02, +4.1861992e-02, +4.1835420e-02, +4.1790599e-02, +3.8001023e-02, +5.2243375e-02, +3.9851925e-02, +3.6198648e-02, +3.5381473e-02, +3.1599321e-02, +2.7440507e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 0.5</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-4.3339350e-12, +1.3729155e-03, +2.2538707e-03, +9.6845995e-04, +2.6281930e-03, +1.6366813e-02, +1.1401368e-02, +1.0728060e-02, +3.6546203e-02, +5.5520358e-02, +3.9623540e-02, +4.1107148e-02, +3.5240493e-02, +3.2593483e-02, +4.2146815e-02, +3.1961079e-02, +2.7156391e-02, +2.7593220e-02, +2.3140593e-02, +1.7567711e-02</span></p>
+<p style="margin:12px 0;"><strong>weighted 1.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">+4.6605271e-14, +2.6583429e-03, +3.6838975e-03, +1.4730883e-03, +3.4377621e-03, +1.5454941e-02, +1.0713975e-02, +1.1693268e-02, +2.3372496e-02, +4.7585057e-02, +3.2800712e-02, +3.9566402e-02, +2.7646943e-02, +2.7491815e-02, +3.1502484e-02, +2.3032644e-02, +1.8512702e-02, +1.7996968e-02, +1.3887270e-02, +6.5679660e-03</span></p>
+<p style="margin:12px 0;"><strong>weighted 2.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-2.0857460e-10, +2.7370891e-03, +3.1186542e-03, +5.7349984e-04, +8.4252092e-04, +1.1206053e-02, +6.5531913e-03, +4.9795978e-03, +1.0165042e-02, +3.7251532e-02, +2.1677131e-02, +3.0838328e-02, +1.1976242e-02, +7.7990615e-03, +9.1492982e-03, +2.8702176e-03, +2.1596011e-03, -1.4700493e-08, +2.1449328e-08, +2.1468697e-07</span></p>
+<p style="margin:12px 0;"><strong>weighted 4.0</strong><br><span style="font:11px monospace;overflow-wrap:anywhere;">-7.2434937e-04, -6.9913481e-04, -2.7202215e-03, -4.5455580e-03, -5.8421735e-03, -1.1893778e-02, -1.5591189e-02, -1.7136591e-02, -2.0344458e-02, -2.7079661e-02, -3.6754293e-02, -4.2239450e-02, -5.0934655e-02, -3.8475999e-03, -4.0570914e-02, -3.9239828e-02, -4.4811376e-02, -5.6300125e-02, -6.6541739e-02, +2.3615681e-01</span></p>
+</details>
+<p style="margin:12px 0;"><a href="../evidence/diag_ns31_audit/lp_l8.json">Replay vectors, multipliers and constraints — λ=8</a></p>
+<h2 style="font-family:Georgia,serif;font-size:23px;margin:30px 0 12px;border-bottom:1px solid #c7ced5;padding-bottom:8px;">Reproduction and validation</h2>
+<p style="margin:12px 0;">New audit computations are in <a href="../evidence/diag_ns31_audit/results.md">evidence/diag_ns31_audit/</a>. Seven annotated replay scripts cover adaptive object quadrature, all optimization cells, source projection and feasible repair, arithmetic precision, tail/comb/histogram checks, c=0.5 dual tests, and independent maximum-constant column generation. The archived scripts were read in full; the costly comb optimization and all historical ground eigensolves were not repeated. Their claims were checked against source, saved output and focused counterexamples. No substitute was presented as a rerun of those complete experiments.</p>
+<p style="margin:12px 0;">The original λ=3/4/6/8 windows and finite head sizes were reused. The adaptive identity run uses mpmath at 40 digits with two cutoffs and two tail orders; the scalar tail violations were independently reevaluated at 50 digits; the precision-floor replay uses 120/180 digits. These are numerical illustrations, not Arb certificates. The diagnostic SHA-256 inventory records every committed replay input/output and the reviewed source hashes. Caches can be regenerated by the scripts and are not evidence of a new certified result.</p>
+<p style="margin:12px 0;"><strong>Actual manuscript build:</strong> <code>./manuscript/build.sh</code> completed: <strong>237 pages, 0 undefined/duplicate references</strong> on the reviewed v1.47 base. The v1.47 manifest verifies. Pyright reports <strong>0 errors, 0 warnings</strong> on the new replay scripts. No manuscript version is created by this audit. The requested branch is <code>audit/2026-09-22-circle-lane</code>; delivery is a review PR, without merge.</p>
+<h2 style="font-family:Georgia,serif;font-size:23px;margin:30px 0 12px;border-bottom:1px solid #c7ced5;padding-bottom:8px;">Verdict</h2>
+<p style="margin:12px 0;"><strong>Right symbol:</strong> stands, with the (−1)ⁿ convention, nonzero tails and the Lorentzian transfer between raw code pieces made explicit. <strong>Deep block, not one direction:</strong> stands as finite-head numerical evidence; the counts survive the precision replay, while complete-space lower-bound wording and six-digit promises require error control. <strong>Ground is the source:</strong> stands only as close alignment at the tested λ=3 source, not equality or a statement at every window. <strong>Cancellation is a block in both parities:</strong> stands at the matched finite cutoffs, with different counts. <strong>Layer-cake loss forces an asymptotic obstruction or necessary level growth:</strong> falls; full-head/grid losses, an invalid global tail charge and heuristic upper bounds do not establish that conclusion. <strong>Weighted level hypothesis cheap, uniform one expensive:</strong> stands with substantial qualification as a comparison of tested finite-bin problems; λ=3 remains cheap after source projection and a feasible pure repair, while several other upper bounds are infeasible, c=0.5 is feasible at λ=4 and 8, and neither Borel-set coverage nor a cofinal energy statement was measured. The lane retains useful numerical geometry and exact identities; its claimed closures and universal conclusions must be withdrawn. G2 and RH remain open.</p>
+</main></body></html>
