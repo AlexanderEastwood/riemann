@@ -88,6 +88,10 @@ Task-ID reconciliation, 2026-09-21: local claim 070fe7f used NS-31/32 for PR #14
 
 Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this audit. The existing unmerged `codex/ns43-route-selection` uses those IDs for different work. Coordinator assigned this audit NS-48/49 because NS-43/44/45 are already used by PR #21, NS-46 by the growing-radical task and NS-47 by the separate factorization task. NS-43/44 remain aliases from the user request only; no existing task is overwritten. Audit base is v1.51 at `b0baadf`, branch `audit/2026-09-22-conclusions`.
 
+| NS-51 | Derive the complete-domain nullvector equation and test the screw-operator injectivity reduction, including endpoint regularity and both parities | Codex Astra RH1; parallel independent review | claimed | Exact weak reduction or precise failed regularity step; explicit open arithmetic input. No new window/tail metric or G2/RH claim. |
+| NS-52 | Derive symmetry-paired zero contributions under heat deformation and test cancellation at a collision, with support dependence retained | Codex Astra RH1; heat-route assisting agent | claimed | Exact finite-cluster identities, domain/normalization dictionary and quantified missing passage to the infinite zero form. No new window/tail metric or G2/RH claim. |
+| NS-53 | Reopen constructive Nyman–Beurling approximation: exact arithmetic block residual update and sufficient convergence condition without imposing the sharp rate | Codex Astra RH1; approximation-route assisting agent | claimed | Exact block-gain identity and first arithmetic estimate proved or explicitly left open; no diagnostic substituted for convergence. No G2/RH claim. |
+
 ## Lanes
 
 ```
