@@ -113,15 +113,19 @@ companion artifacts. V1.50 uses the printed identities, not those absent files.
 **V1.35 is not an absent scientific evidence set.** All five original scientific
 files under `evidence/v135/` match hashes in the legacy v1.35 manifest. The same is
 true of the five scientific files in each of v1.36 and v1.37; obsolete directory
-names in the manuscript now point to these actual paths. The legacy v1.35 manifest
-still lists two unavailable publication snapshots (`fixed_space_prime_action_v1_35.tex`
-and `v1_35_revision_notes.md`) and a changed mutable research log. These historical
-metadata gaps are distinct from the available proof, review, script and diagnostic
-files. Historical manifests are not rewritten to hide their status.
+names in the manuscript now point to these actual paths. The legacy v1.35 manifest checker also reports two publication paths missing and
+a mutable research log mismatch in the current tree. **Their exact original bytes
+are already archived in tag `v1.35`**: `fixed_space_prime_action_v1.tex`,
+`v1_revision_notes.md` and `RH_G1_G2_research_log.md` each match the corresponding
+legacy manifest hash. See the [tag provenance](ns38_archival_disclosure/v135_publication_tag_provenance.json).
+These are path/relocation findings, not unavailable historical content. V1/v2 of
+the NS-38 report incorrectly called the two snapshots unavailable; v3 corrects
+that statement after checking the tag. Historical manifests are not rewritten.
+
 
 The [claim-by-claim changes](ns38_archival_disclosure/claim_changes.json),
 [present-file hash comparison](ns38_archival_disclosure/present_proof_hashes.json)
-and [versioned report](ns38_archival_disclosure/ns38-archival-disclosure-2026-09-22-v2.html)
+and [versioned report](ns38_archival_disclosure/ns38-archival-disclosure-2026-09-22-v3.html)
 record this disposition. Recovery remains an open input. The archival overclaim
 is corrected; availability has not been restored. No manuscript version bump is
 made for NS-38 alone, and no original numerical gate was replayed.

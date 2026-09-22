@@ -11,5 +11,7 @@
   },
   "v135_scientific_files_matching_legacy_hashes": 5,
   "additional_changes": "historical proof headings; map unavailable block-metric closure marked blocked",
-  "review": "Astra RH1 read-only review; front-matter and historical-proof wording corrected"
+  "review": "Astra RH1 read-only review; front-matter and historical-proof wording corrected",
+  "v135_publication_files_matching_tag_hashes": 3,
+  "report_version": 3
 }
