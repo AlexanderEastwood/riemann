@@ -1,6 +1,6 @@
 {
  "manuscript_revision": "v1.54",
- "base_commit": "fa9fa34aa357b33d91eb0fc89b32d3556b00a60a",
+ "base_commit": "e405e84ba5b6123c6c65882b24a46de677b4724f",
  "files": [
   {
    "path": "evidence/v154/README.md",
@@ -29,10 +29,10 @@
   },
   {
    "path": "evidence/v154/validation.json",
-   "size_bytes": 1798,
-   "sha256": "b196427855b185fb563da1ed3e1f0bc0cf3c9e78f4d18b9b74f2079d2bc8b9ae"
+   "size_bytes": 2374,
+   "sha256": "6d652dcbb872c18b783c1a425266b6279e33706700fab9f2fe8659a3af6207a1"
   }
  ],
  "file_count": 6,
- "total_bytes": 49795
+ "total_bytes": 50371
 }

@@ -44,5 +44,16 @@
       "sha256": "36de7fe507f8957a361f14ae430c6a96a812cb90c3dd8de20c22057f1a10b7d5",
       "verbatim_in_release": true
     }
-  ]
+  ],
+  "integration_main": "f0178e032c6f9ed46b8fa3dbf0c97b54d12e6417",
+  "prepublication_result_commit": "e405e84ba5b6123c6c65882b24a46de677b4724f",
+  "post_rebase_actual_build": {
+    "pages": 278,
+    "undefined_reference_count": 0,
+    "duplicate_reference_count": 0,
+    "overfull_box_count": 0
+  },
+  "integration_review": "0 MAJOR; 1 MINOR map-scope issue corrected; no unresolved MINOR.",
+  "preserved_upstream": "PR22 audit, PR25 NS50 checkpoint, all task rows, map wall annotations; proof and manuscript bytes unchanged by rebase.",
+  "task_artifact_hashes_verified": 13
 }
