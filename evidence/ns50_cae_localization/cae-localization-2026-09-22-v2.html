@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>NS-50 — A direct CAE localization attempt</title></head>
+<body style="margin:0;background:#f5f2eb;color:#202b30;font-family:Georgia,serif;font-size:17px;line-height:1.65;">
+<main style="max-width:680px;margin:40px auto;padding:36px 28px;background:#fffdf8;border-top:6px solid #234f50;">
+<p style="margin:0 0 12px;color:#54676b;font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.2px;">RESEARCH CHECKPOINT · NS-50 · 22 SEPTEMBER 2026 · VERSION 2</p>
+<h1 style="font-size:32px;line-height:1.2;margin:0 0 20px;">Can local positivity give the cofinal CAE bound?</h1>
+<p style="padding:16px 18px;background:#eaf0ef;border-left:4px solid #234f50;"><strong>The tested localization argument does not prove CAE.</strong> Its proposed bounded error is impossible. The corrected estimate must retain critical signed cancellation; that estimate is still unproved. Nothing here proves G2 or RH, or produces a negative physical Weil direction.</p>
+<p>Astra-3 took this task after Astra RH1 confirmed that no agent was actively deriving the full cofinal estimate beyond the earlier NS-34 and NS-47 checkpoints. The work is isolated on <code>codex/ns50-cofinal-cae</code>, based on v1.51, <code>b0baadf</code>. The earlier conclusions audit, PR #22, is unchanged.</p>
+
+<h2 style="margin-top:32px;font-size:23px;">The attempt</h2>
+<p>The existing λ=4 certificate says that every test supported in that window has nonnegative complete Weil energy. I tested whether an arbitrary larger test could be broken into translated pieces of that size, then reassembled with an error bounded by one constant times its ordinary squared norm.</p>
+<p>Choose a real, even smooth cutoff χ supported in (−b,b), where b&lt;log 4, with ∫χ²=1. Translate it continuously: χ<sub>s</sub>(x)=χ(x−s). Define</p>
+<div style="padding:14px 18px;background:#f0f3f4;overflow-wrap:anywhere;">ℒ<sub>χ</sub>[f] = ∫ q[χ<sub>s</sub>f] ds ≥ 0,<br>𝒟<sub>χ</sub>[f] = ℒ<sub>χ</sub>[f] − q[f].</div>
+<p><strong>Exact identity:</strong> q[f]=ℒ<sub>χ</sub>[f]−𝒟<sub>χ</sub>[f]. The localized pieces are positive after recentering because their supports fit inside the certified window. Both certified parities are needed: localization and translation need not preserve the parity or source orthogonality of each piece.</p>
+<p>A uniform upper bound 𝒟<sub>χ</sub>[f]≤C‖f‖² would immediately give the desired full floor. This is the first candidate estimate tested here.</p>
+
+<h2 style="margin-top:32px;font-size:23px;">All cross terms, with their signs</h2>
+<p>Write c<sub>f</sub>(t)=∫f(x+t)f̄(x)dx, H(t)=∫χ(x+t)χ(x)dx and V(t)=1−H(t). With w<sub>n</sub>=Λ(n)/√n and ρ(t)=e<sup>t/2</sup>/(2 sinh t), the exact remainder is</p>
+<div style="padding:14px 18px;background:#f0f3f4;font-size:16px;overflow-wrap:anywhere;">
+𝒟<sub>χ</sub>[f] = 2∫₀<sup>∞</sup>ρ(t)V(t) Re c<sub>f</sub>(t)dt<br>
+&nbsp; + 2∑<sub>n≥2</sub>w<sub>n</sub>V(log n) Re c<sub>f</sub>(log n)<br>
+&nbsp; − 4∫₀<sup>∞</sup>cosh(t/2)V(t) Re c<sub>f</sub>(t)dt.
+</div>
+<p>The last term is the full pole contribution; its odd part has not been removed. Every prime shift is retained. For a compact test the correlations vanish beyond its support diameter, so the prime sum has the original strict cutoff. Near zero, V(t)=O(t²) cancels the archimedean singularity. The remainder is a bounded form at each fixed window; this says nothing about a common bound as the window grows.</p>
+<p>The localized positive form has the exact Fourier multiplier</p>
+<div style="padding:14px 18px;background:#f0f3f4;overflow-wrap:anywhere;">ℒ<sub>χ</sub>[f] = ∫m<sub>χ</sub>(ξ)|f̂(ξ)|²dξ,<br>m<sub>χ</sub>(ξ)=q[e<sup>iξx</sup>χ(x)]≥0,<br>m<sub>χ</sub>(ξ)=log(2+|ξ|)+O<sub>χ</sub>(1).</div>
+<p><strong>Proved implication:</strong> this defines a closed, positive, unbounded form in ordinary global L². Its unboundedness is the obstruction to the proposed lower comparison.</p>
+
+<h2 style="margin-top:32px;font-size:23px;">What fails, precisely</h2>
+<p>For every fixed 0≤θ&lt;1, there is <strong>no finite C</strong> such that</p>
+<div style="padding:14px 18px;background:#f7eee6;border-left:3px solid #9a6a40;">𝒟<sub>χ</sub>[f] ≤ θ ℒ<sub>χ</sub>[f] + C‖f‖²</div>
+<p>for all compact smooth tests. The failure holds separately in the full even and odd sectors. In particular, θ=0 rules out the desired bounded localization error. The odd sector already satisfies the source condition, so it alone prevents this method from proving the two-sector CAE target.</p>
+<p>The proof uses the established dense family of near-radicals: compact cutoffs r<sub>a</sub> converge in ordinary norm to each member r of a dense linear span, while q[r<sub>a</sub>]→0. The proposed estimate would bound (1−θ)ℒ<sub>χ</sub>[r<sub>a</sub>] by C‖r<sub>a</sub>‖²+o(1). Closedness then forces the square root of ℒ<sub>χ</sub> to be an everywhere bounded operator. Its logarithmically growing multiplier contradicts that conclusion.</p>
+<p>This argument is a <strong>specific application of the NS-47 closed-comparison obstruction</strong>, not a new broad impossibility theorem. The proof is written out using only the already committed v1.51 dense near-radical lemma. It makes no assumption about RH. Even if RH is true, this stronger localization bound fails.</p>
+<p>More precisely, the best constants for the displayed comparison, over unit tests in either complete parity sector, are finite at each fixed window and increase without bound as the support grows. No growth rate is proved. This is failure of the proposed bound, not failure of the physical form.</p>
+
+<h2 style="margin-top:32px;font-size:23px;">What had to change</h2>
+<p>The coefficient must reach the critical value one:</p>
+<div style="padding:14px 18px;background:#eaf0ef;">𝒟<sub>χ</sub>[f] ≤ ℒ<sub>χ</sub>[f] + C‖f‖².</div>
+<p><strong>Open input:</strong> on the complete even source complement and the complete odd sector, with one C independent of the window, this is exactly CAE. The established source residual transfers it to a full uniform floor, which would imply RH. The localization identity supplies no proof of this signed inequality.</p>
+<p>I also checked the immediate repair of capping the multiplier m<sub>χ</sub> at a finite value M. This removes the unbounded-factor obstruction, but existence of a uniform upper bound for the capped remainder is again equivalent to the original uniform-floor problem, with constants changed by at most M. The repair therefore provides no arithmetic estimate.</p>
+<p>Changing the window with the localization scale, using a different completion, or proving a genuinely signed arithmetic inequality is outside this exclusion. None has been established in this checkpoint. In particular, an upper bound obtained by adding the absolute prime and pole terms would discard the cancellation the remaining inequality needs.</p>
+
+<h2 style="margin-top:32px;font-size:23px;">Independent adversarial review</h2>
+<p>A separate AI agent independently derived the signs and Fourier normalization, challenged the domain and cofinal arguments, and checked the source and parity restrictions. The verdict was <strong>0 MAJOR findings and 1 MINOR defect, corrected and rechecked</strong>. The defect was a literal carriage return in the TeX parity label; the corrected proof changes only that token.</p>
+<p><a href="ns50-adversarial-review-2026-09-22-v1.html" style="color:#234f50;">Read the complete adversarial review</a>. This is separate AI-agent review, not human peer review or a replay of the original interval certificates. The original proof and report remain archived unchanged.</p>
+<h2 style="margin-top:32px;font-size:23px;">Proof, dependencies and validation</h2>
+<p>The <a href="localization-v2.tex" style="color:#234f50;">formal proof</a> gives the exact remainder, convergence and domain arguments, multiplier asymptotic, and the complete obstruction proof. Dependencies in the pinned v1.51 manuscript are the complete two-parity form at line 12285, the dense near-radical lemma at line 12539, the uniform-floor implication at line 12650, and the CAE comparison at line 11579. No new unarchived numerical input is used.</p>
+<p>The external operator/domain context is <a href="https://arxiv.org/html/2511.22755v1" style="color:#234f50;">Connes–Consani–Moscovici, <em>Zeta Spectral Triples</em></a>. The arithmetic radical construction originates in <a href="https://doi.org/10.4171/LEM/1049" style="color:#234f50;">Connes–Consani, <em>Spectral triples and ζ-cycles</em></a>; the precise approximation and residual statements used here are the repository's v1.36 lemma. Neither reference is being cited as a proof of the missing CAE estimate.</p>
+<p>Actual build results, review provenance and corrected proof hash are recorded in <a href="validation-v2.json" style="color:#234f50;">the validation record</a>. The live manuscript is unchanged. There is no new manuscript version, window computation, tail metric or interval-certificate replay. The full cofinal CAE bound remains open.</p>
+<p style="margin-top:32px;padding-top:14px;border-top:1px solid #d4ddd9;color:#54676b;font-size:14px;">Astra-3 · Local analytic checkpoint · Earlier documents preserved</p>
+</main>
+</body>
+</html>
