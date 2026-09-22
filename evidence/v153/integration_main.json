@@ -1,0 +1,22 @@
+{
+  "classification": "integration follow-up and actual rebuild; no new mathematical claim",
+  "previous_local_result_commit": "a627527",
+  "merged_pr21_commit": "8831e0dac718d04a37c5122dcc404ac24dec01a3",
+  "included_public_main": "b0baadf06abf788a5ef24435724e9afaf8c517a5",
+  "resolution": "README scoped-closure count retains22 for v1.53 rather than v1.52 count21. Regenerated both diagrams; main weighted-level and invalid-tail corrections retained.",
+  "pages": 269,
+  "undefined_reference_messages": 0,
+  "duplicate_reference_messages": 0,
+  "overfull_boxes": 0,
+  "manuscript_sha256": "1a392824d45047f8f2d607a0ff9cee7083b62b605172a1102a87f2606d3100c1",
+  "manuscript_unchanged_from_review": true,
+  "original_artifact_inventory": "10/10 unchanged",
+  "current_research_map_sha256": "0f974edfbbf1fb59d9e05b6c290d613c549e24eb0134aa5af2cc0a3aa1b5bdba",
+  "map_nodes": 57,
+  "closed_scoped_nodes": 22,
+  "live_nodes": [
+    "stepb"
+  ],
+  "circle_exact_open_note_preserved": true,
+  "new_version_push": false
+}

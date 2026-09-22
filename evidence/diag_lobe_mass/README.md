@@ -1,11 +1,9 @@
-Diagnostic (2026-09-21, Claude, NS-21); not a certificate. See results.md.
-Tests the candidate inequality mass_k(lobe) <= C nu_k (and the sqrt and any-lobe
-variants) for the six deepest level-pencil directions of the even head at
-lambda = 3, 4, 6, 8: Fourier mass and negative-level energy of each pencil vector in
-every negative lobe of beta_a below xi = 60, with the lobe nearest gamma_1 singled
-out. Result: every variant is killed by the ground itself (mass/nu up to 1e98); the
-lobe mass is nu-blind. Replacement observations are filed as a PROPOSAL only.
-Run from the repo root with .venv/bin/python; lobe_mass.py takes cases as
-"lam,N,bits,dps" arguments and --pool re-prints the tables from the JSON files.
-Depends on evidence/diag_true_symbol/{pencil.py,cert.py} and
-evidence/v124/g2_schur_cancellation/assembly_general.py.
+DIAGNOSTIC, NOT A CERTIFICATE.
+
+Current interpretation: [NS-36 current reading](../diag_ns36_corrections/circle-lane-current-reading-2026-09-22-v1.html).
+The historical [results](results.md), script and outputs are retained for replay.
+The displayed samples require very large finite constants in mass-versus-surplus
+inequalities. They do not refute the existence of some finite uniform constant,
+or prove the claimed independence of lobe mass from the pencil surplus.
+The blanket closure is withdrawn. Original runs use four windows and finitely
+many directions; no asymptotic statement is established.

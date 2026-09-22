@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NS-40 — Quantization growth and the corrected zero field</title>
+</head>
+<body style="margin:0;padding:36px 22px;background:#f6f4ef;color:#25312f;font-family:Georgia,'Times New Roman',serif;line-height:1.65;">
+<main style="max-width:680px;margin:0 auto;background:#fff;padding:36px 32px;border-top:5px solid #476854;">
+<p style="margin:0 0 10px;color:#476854;font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.5px;">RIEMANN RESEARCH RECORD · ASTRA-2 · NS-40</p>
+<h1 style="font-size:32px;line-height:1.2;margin:0 0 16px;">Quantization growth remains an open arithmetic input</h1>
+<p style="font-size:14px;color:#626a64;margin:0 0 24px;">September 21, 2026 · Assessment v1 · Based on manuscript v1.50</p>
+<p style="font-size:19px;line-height:1.5;">The cited zero theorems do not yet give a justified route to QG for a prescribed cofinal family. This assessment supplies a proved finite-band sufficient condition, a precise cutoff obstruction, and the error budget a finite zero sum would have to satisfy.</p>
+<p>No implication from RH, no sufficient hypothesis proved weaker than RH, and no logical independence from zero statistics is established. The unresolved issue is a gap in the proposed argument, not a counterexample to QG for a chosen arithmetic family. G2 and RH remain open.</p>
+
+<h2 style="font-size:23px;margin:30px 0 10px;">The exact object</h2>
+<p>Use the complete corrected field <strong>𝒵<sub>a</sub> = β<sub>a</sub></strong> from <em>eq:v147-corrected-zero-field</em>: all nontrivial zeros with multiplicity, the strict endpoint contribution, trivial-zero terms, and the stated Perron limit. Its global negative depth is D<sub>a</sub>. The prescribed head rule gives X<sub>a</sub> = πN(a)/a.</p>
+<p>The measure m̃<sub>a</sub> records the fraction of [0, X<sub>a</sub>] at each negative value. QC<sub>K</sub> is the least average error when those values are approximated from below using at most K levels, including −D<sub>a</sub>. QG requires this error to tend to infinity for <em>every fixed K</em>. One-level growth alone is insufficient, as v1.49 already proves.</p>
+
+<h2 style="font-size:23px;margin:30px 0 10px;">A proved sufficient condition</h2>
+<p style="font-family:Arial,sans-serif;font-size:12px;color:#476854;">PROVED IMPLICATION · ns40-prop-bands</p>
+<p>Suppose K+1 negative level intervals are separated from each other by at least 2h and each carries measure at least m. Then</p>
+<p style="padding:15px 20px;background:#eff4ef;font-size:21px;text-align:center;">QC<sub>K</sub> ≥ hm.</p>
+<p><strong>Proof.</strong> Values approximated with error less than h lie in the union of at most K intervals [ℓ, ℓ+h), one per chosen level. Each such interval can meet at most one of the K+1 separated bands. One entire band remains, with error at least h on mass at least m. Taking the infimum over all level choices preserves the bound.</p>
+<p>Thus QG follows if, for each fixed K, eventually K+1 bands have separations at least 2d<sub>K</sub>D<sub>a</sub> and masses at least m<sub>K</sub>, for positive constants independent of a. The bound becomes d<sub>K</sub>m<sub>K</sub>D<sub>a</sub>, and the existing unconditional depth theorem supplies divergence. Constants may depend on K; this is not a rate for growing K.</p>
+<p>A second sufficient condition is weak convergence of the depth-normalized negative measures on [−1, 0] to a measure with infinite support along the entire cofinal family. Finitely many separated support neighborhoods then supply the bands for each K. Atoms are allowed. Convergence of the arithmetic measures and the required limiting support are both <strong>open inputs</strong>.</p>
+<p>These conditions tolerate the unbounded density peaks already proved at critical negative values. They ask for finite band masses, not a finite peak density. ZLD on any fixed positive fraction of the depth implies the band condition. Necessity for QG is not claimed.</p>
+
+<h2 style="font-size:23px;margin:30px 0 10px;">Why the head rule cannot be omitted</h2>
+<p style="font-family:Arial,sans-serif;font-size:12px;color:#476854;">PROVED IMPLICATION AND EXACT IDENTITY · ns40-prop-cutoff</p>
+<p>For fixed a, let ℓ<sub>a</sub> be the length of the entire negative set on the positive frequency axis. It is finite because β<sub>a</sub> tends to +∞. With the same global depth for every observation interval,</p>
+<p style="padding:15px 20px;background:#eff4ef;font-size:19px;text-align:center;">0 ≤ QC<sub>K</sub><sup>X</sup> ≤ QC<sub>1</sub><sup>X</sup> ≤ D<sub>a</sub> min(1, ℓ<sub>a</sub>/X).</p>
+<p>Once [0, X] contains that entire negative set, increasing the interval to [0, Y] gives the exact identity QC<sub>K</sub><sup>Y</sup> = (X/Y) QC<sub>K</sub><sup>X</sup>. For any positive δ<sub>a</sub> tending to zero, the integer rule</p>
+<p style="padding:15px 20px;background:#f7f5f0;font-size:17px;text-align:center;">N(a) = max(1, ⌈aD<sub>a</sub>ℓ<sub>a</sub>/(πδ<sub>a</sub>)⌉)</p>
+<p>makes every QC<sub>K</sub> at most δ<sub>a</sub>. This is an analytic existence construction using the actual field, not an effective estimate of its negative-set length. It refutes QG asserted uniformly over all head rules. It does not refute QG on a different, specified rule, and it does not alter the complete Weil form.</p>
+
+<h2 style="font-size:23px;margin:30px 0 10px;">What the literature leaves to prove</h2>
+<p style="margin-bottom:8px;"><strong>Zero counts.</strong> The explicit Riemann–von Mangoldt bound counts ordinates. Differencing its error does not yield the required small-scale lower counts, and it gives no signed level-band mass for the corrected field. <a href="https://arxiv.org/abs/2107.06506" style="color:#315c78;">Hasanalizade–Shen–Wong, Corollary 1.2</a>.</p>
+<p style="margin-bottom:8px;"><strong>Zero density and Ingham.</strong> These are upper counts off vertical lines. Turning them into a lower distribution of signed values needs additional cancellation and depth control; the factors exp(2a(Re ρ−½)) must remain. <a href="https://arxiv.org/abs/2507.15184v2" style="color:#315c78;">Chourasiya–Simonič, Introduction and Corollary 1</a>.</p>
+<p style="margin-bottom:8px;"><strong>Landau–Gonek.</strong> The linear sum estimate is not a distribution theorem for a moving resolvent. The convenient integer-x form cannot silently be used for all real x = exp(2a). <a href="https://arxiv.org/abs/1902.05473" style="color:#315c78;">Aryan, Introduction (1.1)</a>.</p>
+<p style="margin-bottom:8px;"><strong>Montgomery.</strong> The original theorem assumes RH. The corrected unconditional extension is a quadratic correlation estimate in a specified range, with an additive error. Neither supplies the missing comparison to the one-sided cost here. <a href="https://websites.umich.edu/~hlm/paircor1.pdf" style="color:#315c78;">Montgomery, §1</a>; <a href="https://arxiv.org/abs/2501.14545v3" style="color:#315c78;">Baluyot et al., v3, §3, MT</a>.</p>
+<p>The source formulas, their parameter restrictions, and the correction to the older Montgomery statement are recorded in the accompanying TeX. This assessment concerns those stated results, not all possible future consequences of zero theory.</p>
+
+<h2 style="font-size:23px;margin:30px 0 10px;">A precise finite-prefix demand</h2>
+<p style="font-family:Arial,sans-serif;font-size:12px;color:#476854;">PROVED IMPLICATION · ns40-lem-prefix</p>
+<p>If a real approximation F differs from the complete field by at most r outside a fraction ε of the head, then the exact mass of a band (u, v) is at least the observed mass where u+r &lt; F &lt; v−r, minus ε. Both endpoints must be moved inward.</p>
+<p>For a finite zero sum plus the full correction, the missing error is the real Perron remainder. One needs a bound on the growing head, an admissible zero height, and lower masses in the shrunken bands. Choosing a height beyond X<sub>a</sub> does not itself bound the remainder. The small explicit endpoint/trivial-zero correction is a different term. No such cofinal error and band-mass estimates are supplied here.</p>
+
+<h2 style="font-size:23px;margin:30px 0 10px;">Scope and verification</h2>
+<p>Even a proof of QG would leave the separate source-admissible, bounded-energy packet domination on <em>all Borel sets</em>. Only the two inputs together give the v1.49 obstruction to bounded level count. No failure of the complete concentration criterion or of the physical form is proved.</p>
+<ul style="padding-left:23px;">
+<li>Analytic argument only; no numerical illustration, interval computation, new window, or tail refinement.</li>
+<li>Independent bounded review by Astra: no MAJOR or MINOR findings in the four analytic arguments or their scope. The reviewer also checked the corrected BGSTB citation directly.</li>
+<li>Actual baseline build: 246 pages; zero undefined or duplicate references. Existing v1.50 manifest: 6/6 entries verified.</li>
+<li>Temporary build with this fragment and bibliography appended: 250 pages; zero undefined or duplicate references and zero overfull boxes. This validates the fragment, not a released manuscript version.</li>
+<li>The live manuscript and research map are unchanged by this assessment. Integration belongs to the NS-39 coordinator.</li>
+</ul>
+<p style="margin-top:26px;padding-top:18px;border-top:1px solid #d9ded9;font-size:14px;">Reviewable artifacts: <a href="../evidence/ns40_qg/qg_zero_field.tex" style="color:#315c78;">TeX fragment with proofs</a> · <a href="../evidence/ns40_qg/bibliography_additions.tex" style="color:#315c78;">bibliography addition</a> · <a href="../evidence/ns40_qg/sources.md" style="color:#315c78;">source and integration notes</a>.</p>
+</main>
+</body>
+</html>

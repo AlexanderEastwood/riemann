@@ -1,0 +1,1 @@
+{"status": "diagnostic normalization check against archived lambda=3 intervals", "maximum_midpoint_difference": "4.9860532007548226501e-61"}
