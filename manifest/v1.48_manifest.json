@@ -1,16 +1,16 @@
 {
  "manuscript_revision": "v1.48",
- "base_commit": "71fa6844d86cac669c9f9f6185a122e704a203b6",
+ "base_commit": "9b2b900a06cf3a321f0729e337d3d1d02f4335f3",
  "files": [
   {
    "path": "evidence/v148/README.md",
-   "size_bytes": 1950,
-   "sha256": "d2d6ddb2106d6b95649bef628d4b12ceb235f3945087aabd6988c30f3abe118d"
+   "size_bytes": 2521,
+   "sha256": "5fd2daf4d2dcaa64b449793c8b8e0d5d3a770a8d1b854c1616ca0109806d38fa"
   },
   {
    "path": "evidence/v148/build_report.json",
-   "size_bytes": 302,
-   "sha256": "8afc2ba4264b67533219c22841d33dcda56eabdddd491f3a4b983ca333f4771b"
+   "size_bytes": 388,
+   "sha256": "0ab1cd94ee23d3c58bcb7ed2bddf2eb02f463eeb7c6e700993f47a2e8a326078"
   },
   {
    "path": "evidence/v148/provenance.json",
@@ -19,11 +19,11 @@
   },
   {
    "path": "evidence/v148/weighted_levels.tex",
-   "size_bytes": 6392,
-   "sha256": "737e70862dfdff18a9626834030929940c4f88aabaeb4aa3a5d84443603cb8a5"
+   "size_bytes": 8848,
+   "sha256": "8185db9b5a545f6be485de41c04c8d2597081996078cdcc0e9d6f6b1edf6020d"
   }
  ],
  "file_count": 4,
- "total_bytes": 10088,
- "note": "v1.48: level-measure-weighted level-count bound (NS-30); analytic; diagnostics cited as illustrations"
+ "total_bytes": 13201,
+ "note": "v1.48: level-measure-weighted level-count bound (NS-30), revised after review; analytic; diagnostics cited as illustrations"
 }

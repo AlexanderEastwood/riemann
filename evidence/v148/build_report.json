@@ -1,10 +1,10 @@
 {
   "version": "1.48",
-  "pages": 238,
+  "pages": 239,
   "undefined_references": 0,
   "multiply_defined": 0,
   "overfull_boxes": 0,
   "builder": "./manuscript/build.sh (latexmk)",
   "date": "2026-09-22",
-  "note": "analytic addition only: prop:v148-weighted-levels and its scope paragraphs; no numerical certificate"
+  "note": "analytic addition only: prop:v148-weighted-levels and its scope paragraphs; no numerical certificate; revised after review: sup-density bound replaced by the concentration-function bound"
 }

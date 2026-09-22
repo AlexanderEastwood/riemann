@@ -411,7 +411,7 @@
       "prop": "prop:v148-weighted-levels",
       "branch": "result/v148-weighted-levels",
       "evidence": "evidence/v148",
-      "note": "NS-30 (v1.48): normalizing the packet's level mass against the symbol's own level distribution replaces ZLD (every band) by the scalar phi_-^2/rho~_max -> infinity and packet coverage by one admissible state with bounded energy; NS-28 measures the weighted hypothesis as cheap (Q_min 2e-9..1.8e-3 at c'=1) where the uniform one costs 0.13-0.29. Both inputs open; blocked, not closed."
+      "note": "NS-30 (v1.48): normalizing the packet's level mass against the symbol's own level distribution replaces ZLD (every band) by growth of the quantization cost QC_1(m~) = phi_- D - mean(beta^-) (with K QC_K >= kappa_0 QC_1) and packet coverage by one admissible state with bounded energy; the level density is unbounded at trough levels, so the crude bound uses the concentration function M(h), not a sup-density. NS-28 measures the weighted hypothesis as cheap (Q_min 2e-9..1.8e-3 at c'=1). Both inputs open; blocked, not closed."
     }
   ]
 }

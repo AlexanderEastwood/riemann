@@ -189,7 +189,9 @@ normalized against the symbol's own level distribution on the head range
 (Proposition~\ref{prop:v148-weighted-levels}). The loss of a $K$-level
 minorant is then at least $c'$ times the one-sided $K$-level quantization
 cost of that distribution, and the cofinal zero input reduces from a bound
-on every level band to the single scalar $\varphi_-^{\,2}/\widetilde\rho_{\max}$.
+on every level band to the growth of that cost, bounded below through the
+concentration function of the level distribution (its density is
+unbounded at trough levels, so no sup-density constant exists).
 Head diagnostics (NS-28) show the weighted hypothesis is satisfied by
 states of negligible energy where the uniform one is not. Both inputs
 remain open; nothing is closed. G2 and RH remain open.
@@ -10866,20 +10868,38 @@ $K$ distinct values satisfies
 \begin{equation}\label{eq:v148-weighted-loss}
  \eta(m)\ge\bigl[c'\,\mathrm{QC}_K(\widetilde m)-Q\bigr]_+ .
 \end{equation}
-If $\widetilde m$ has a density bounded by $\widetilde\rho_{\max}$ on
-$[-D,0]$, then
+For $0<h\le D$ let $M(h)=\sup\{\widetilde m(I):I\subset[-D,0]
+\hbox{ an interval of length }h\}$ be the concentration function of
+$\widetilde m$; it is finite, at most $\varphi_-$, and nonincreasing as
+$h\downarrow0$. Then for every such $h$,
 \begin{equation}\label{eq:v148-qc-lower}
- \mathrm{QC}_K(\widetilde m)\ge\frac{\varphi_-^{\,2}}{2K\,\widetilde\rho_{\max}},
+ \mathrm{QC}_K(\widetilde m)\ge
+ \frac{h\,\varphi_-^{\,2}}{2K\,M(h)}-\frac32\,h\,\varphi_- .
 \end{equation}
-and when the level distribution is uniform on $[-D,0]$ this reproduces
-\eqref{eq:v146-level-lower} with $c=c'\varphi_-$. Consequently, along a
-cofinal family on which \eqref{eq:v148-wlh} holds with $c'\ge c_0>0$ and
-$Q\le Q_*<\infty$, a bounded loss $\eta(m)\le C$ forces
+If $\widetilde m$ has a bounded density $\widetilde\rho$ on $[-D,0]$ then
+$M(h)\le h\sup\widetilde\rho$ and letting $h\downarrow0$ gives
+$\mathrm{QC}_K\ge\varphi_-^{\,2}/(2K\sup\widetilde\rho)$; for uniform
+density this reproduces \eqref{eq:v146-level-lower} with $c=c'\varphi_-$.
+The density of the arithmetic level measure is \emph{not} bounded: by the
+coarea formula it is $(1/X)\sum_{\beta_a(\xi)=t}1/|\beta_a'(\xi)|$, which
+diverges like the inverse square root of the distance to every local
+extremum level of $\beta_a$. The concentration function is the correct
+finite substitute, and \eqref{eq:v148-weighted-loss} itself uses neither.
+Consequently, along a cofinal family on which \eqref{eq:v148-wlh} holds
+with $c'\ge c_0>0$ and $Q\le Q_*<\infty$, a bounded loss $\eta(m)\le C$
+forces
 \[
- K\ge\frac{c_0\,\varphi_-^{\,2}}{2\,\widetilde\rho_{\max}\,(C+Q_*)} .
+ K\ge\frac{c_0\,\mathrm{QC}_1(\widetilde m)}{C+Q_*}\Big/
+     \sup_{K'}\frac{K'\,\mathrm{QC}_{K'}(\widetilde m)}{\mathrm{QC}_1(\widetilde m)}
+ \quad\hbox{and, for every }h,\quad
+ K\ge\frac{c_0}{C+Q_*}\Bigl[\frac{h\,\varphi_-^{\,2}}{2M(h)}-\frac32h\varphi_-\Bigr]_+ .
 \]
-The level count is unbounded along the family exactly when
-$\varphi_-(a)^2/\widetilde\rho_{\max}(a)\to\infty$.
+The level count is unbounded along the family if
+$\mathrm{QC}_K(\widetilde m)\ge\kappa_0\,\mathrm{QC}_1(\widetilde m)/K$
+with $\kappa_0>0$ fixed and $\mathrm{QC}_1(\widetilde m)\to\infty$, or if
+$h(a)\varphi_-(a)^2/M_a(h(a))\to\infty$ for some choice $h(a)$ with
+$h(a)\varphi_-(a)$ bounded. These are sufficient conditions; no converse
+is claimed.
 \end{proposition}
 \begin{proof}
 A packet with $|\mathcal F_ag|^2\ge b/X$ almost everywhere on $[0,X]$
@@ -10904,24 +10924,41 @@ $-\ip{T_mg}{g}=\int(\beta_a-m)|\mathcal F_ag|^2-q_a[g]$ of
 Proposition~\ref{prop:v146-packet-loss} and $q_a[g]\le Q$ give
 \eqref{eq:v148-weighted-loss}.
 
-For \eqref{eq:v148-qc-lower}, let $m_j=\widetilde m([\ell_j,\ell_{j+1}))$.
-A measure of density at most $\widetilde\rho_{\max}$ and mass $m_j$ on
-$[\ell_j,\ell_{j+1})$ has $\int(t-\ell_j)\,d\widetilde m\ge m_j^2/(2\widetilde\rho_{\max})$,
-attained by packing the mass against $\ell_j$. Then
-$\sum_jm_j^2\ge(\sum_jm_j)^2/K=\varphi_-^{\,2}/K$ by Cauchy--Schwarz.
-Under uniform density $\widetilde\rho_{\max}=\varphi_-/D$, and the right side
-of \eqref{eq:v148-qc-lower} is $\varphi_-D/(2K)$. The cofinal statements
-follow by rearranging \eqref{eq:v148-weighted-loss}.
+For \eqref{eq:v148-qc-lower}, fix $h$ and a gap $[\ell_j,\ell_{j+1})$ of
+mass $m_j$; cut it into consecutive blocks $B_k=[\ell_j+(k-1)h,\ell_j+kh)$,
+$k\ge1$. Each block is an interval of length $h$, so
+$x_k:=\widetilde m(B_k\cap[\ell_j,\ell_{j+1}))\le M:=M(h)$, and
+$\int_{[\ell_j,\ell_{j+1})}(t-\ell_j)\,d\widetilde m\ge h\sum_k(k-1)x_k$.
+Minimizing $\sum_k(k-1)x_k$ over $0\le x_k\le M$, $\sum_kx_k=m_j$, fills the
+blocks in order: with $n=\lfloor m_j/M\rfloor$ full blocks the minimum is
+at least $M\,n(n-1)/2$, and $n\ge m_j/M-1$ gives
+$M\,n(n-1)/2\ge(m_j-M)(m_j-2M)/(2M)\ge m_j^2/(2M)-\tfrac32m_j$. Hence
+$\int(t-\ell_j)\,d\widetilde m\ge h\,m_j^2/(2M)-\tfrac32h\,m_j$. Summing over
+the at most $K$ gaps and using $\sum_jm_j^2\ge(\sum_jm_j)^2/K=\varphi_-^{\,2}/K$
+(Cauchy--Schwarz) and $\sum_jm_j=\varphi_-$ proves \eqref{eq:v148-qc-lower}.
+When $\widetilde m$ has a bounded density, $M(h)\le h\sup\widetilde\rho$,
+and $h\downarrow0$ removes the edge term; under uniform density
+$\sup\widetilde\rho=\varphi_-/D$ and the bound is $\varphi_-D/(2K)$, which
+is \eqref{eq:v146-level-lower} with $c=c'\varphi_-$. The coarea expression
+for the density follows from Proposition~\ref{prop:v147-depth-measure} and
+\eqref{eq:v147-coarea}; near a nondegenerate local minimum $t_0$ of $\beta_a$
+the preimage measure of $[t_0,t_0+s)$ is of order $\sqrt s$, so the density
+is of order $s^{-1/2}$ and unbounded. The cofinal statements are
+\eqref{eq:v148-weighted-loss} rearranged, with the displayed sufficient
+conditions.
 \end{proof}
 
 \paragraph{What changes in the open inputs.}
 The zero-distribution input ZLD of Assumption~\ref{ass:v147-zld} asks for
 a lower bound on the measure of \emph{every} band of levels. Under
 \eqref{eq:v148-wlh} the only property of the symbol that enters is the
-scalar $\varphi_-^{\,2}/\widetilde\rho_{\max}$, the negative fraction of the
-head range squared over the peak level density; by
-Proposition~\ref{prop:v146-beta-explicit} it is a functional of the
-corrected zero field on $[0,X]$. The packet input changes from coverage of
+quantization cost $\mathrm{QC}_K(\widetilde m)$ of its level distribution,
+bounded below through the concentration function $M(h)$; by
+Proposition~\ref{prop:v146-beta-explicit} both are functionals of the
+corrected zero field on $[0,X]$. The sharper cofinal input is the growth
+of $\mathrm{QC}_1(\widetilde m)=\varphi_-D-\frac1X\int_0^X\beta_a^-\,d\xi$
+together with $K\,\mathrm{QC}_K\ge\kappa_0\mathrm{QC}_1$; the concentration
+function gives a cruder route. The packet input changes from coverage of
 every band with bounded energy to the existence of one admissible state
 whose level mass is at least a fixed multiple of the symbol's own level
 distribution, with bounded energy. Neither input is proved here; both are
@@ -10940,8 +10977,11 @@ $13$--$15$ levels the measured minorants of
 \path{evidence/diag_comb_minorant/} use. Under \eqref{eq:v148-wlh} with
 $c'=1$ the minimum energy is $2\cdot10^{-9}$, below $10^{-15}$,
 $1.8\cdot10^{-3}$ and $5\cdot10^{-5}$, the exact quantization costs are
-$\mathrm{QC}_{16}(\widetilde m)=0.0031,\,0.0082,\,0.021,\,0.033$, and
-$\varphi_-^{\,2}/\widetilde\rho_{\max}=0.028,\,0.11,\,0.31,\,0.39$. These
+$\mathrm{QC}_1(\widetilde m)=0.084,\,0.22,\,0.65,\,0.94$ and
+$\mathrm{QC}_{16}(\widetilde m)=0.0031,\,0.0082,\,0.021,\,0.033$ (so
+$K\,\mathrm{QC}_K/\mathrm{QC}_1\approx0.55$ across $K\le32$), and the
+twenty-bin concentration function at $h=D/20$ gives
+$M(h)=0.0072,\,0.011,\,0.020,\,0.027$. These
 are head-resolved midpoint numbers; the source constraint is not imposed
 on the minimizing states; they certify nothing and are recorded only to
 show which shape of hypothesis the actual states satisfy. The route

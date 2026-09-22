@@ -11,10 +11,14 @@ levels are rare on the head range (a few parts in 1e4 of the frequency
 measure below -0.9 D), so that shape forces mass onto the most expensive
 levels. Normalizing against the symbol's own level distribution m~ gives
 eta >= c' QC_K(m~) - Q, QC_K the one-sided K-level quantization cost, with
-QC_K >= phi_-^2 / (2 K rho~_max); uniform density recovers v1.46 exactly.
+QC_K >= h phi_-^2/(2K M(h)) - (3/2) h phi_- through the concentration function
+M(h) (the level density is unbounded at trough levels, so the first draft's
+sup-density constant did not exist; Astra's review caught it); uniform
+density recovers v1.46 exactly.
 
 What the inputs become: ZLD (lower measure of every level band) is replaced
-by the scalar phi_-^2 / rho~_max -> infinity along the family; packet
+by growth of QC_1(m~) = phi_- D - mean(beta_a^-) with K QC_K >= kappa_0 QC_1
+along the family (measured QC_1 = 0.084 .. 0.94, K QC_K/QC_1 ~ 0.55); packet
 coverage of every band is replaced by one admissible state with level mass
 >= c' m~ and bounded energy. Both open. NS-28 (diag_level_distribution
 sections 4-6) measures the weighted hypothesis as satisfied by states of
