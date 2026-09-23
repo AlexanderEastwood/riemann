@@ -172,6 +172,18 @@ The selected numerator and true-energy ratios have no cofinal estimate.
 Complete Arb 256/384 and cutoff replays, exact Maxima checks, local self-review
 only. No new Weil window, floor, G2 or RH proof.
 
+Version 1.61 (NS-72–74) identifies the complete positive local differential
+energy of the repaired model and a size-independent comparison with discrete
+curvature. Direction selection is linear in N after the actual correlations
+are supplied; computing those correlations is separate. The diagonal rule
+retains 97.63% of full gain at N=256, versus 83.66% for the optimized span
+of three prescribed Mobius/log-taper templates. All finite energies use the
+complete arithmetic Gram. A unitary altered family preserves every Gram
+entry and permits arbitrarily close finite statistics while having a known
+positive floor. This is not an error floor for the original family. Cofinal
+arithmetic control, the original Weil floor, G2 and RH remain open. Two
+precisions, cutoff replay, exact Maxima checks and local self-review only.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

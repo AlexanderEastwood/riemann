@@ -1,0 +1,31 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v161/ns73/exact-checks.mac")
+display2d:false
+scalarmatrixp:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+check("Backward telescoping",n*ss-(n/(n+1))*((n+1)*(ss-aa/n))-aa)
+v1:(N+1)*(a1/(N+1)+a2/(N+2)+a3/(N+3))
+v2:(N+2)*(a2/(N+2)+a3/(N+3))
+v3:a3
+check("First physical coefficient",v1-((N+1)/(N+2))*v2-a1)
+check("Second physical coefficient",v2-((N+2)/(N+3))*v3-a2)
+check("Last physical coefficient",v3-a3)
+expr:v1*(s1-(N/(N+1))*s0)+v2*(s2-((N+1)/(N+2))*s1)+v3*(s3-((N+2)/(N+3))*s2)
+check("Complete old boundary term",expr-(a1*s1+a2*s2+a3*s3+(-N/(N+1))*v1*s0))
+G:matrix([g11,g12,g13],[g12,g22,g23],[g13,g23,g33])
+b:matrix([b1],[b2],[b3])
+y:matrix([y1],[y2],[y3])
+Gi:invert(G)
+for i thru 3 do check(sconcat("Full Gram inverse row ",i),(G . Gi . b-b)[i,1])
+check("Span stationary residual",
+      (transpose(y) . G . y-2*transpose(b) . y+transpose(b) . Gi . b
+                           +(-transpose(y-Gi . b)) . G . (y-Gi . b))[
+       1,1])
+check("Projected span norm",
+      (transpose(Gi . b) . G . Gi . b-transpose(b) . Gi . b)[1,1])
+print("PASS:",length(checks),"exact checks; no asymptotic Mobius exclusion.")
+PASS: 10 exact checks; no asymptotic Mobius exclusion. 
+"/private/tmp/riemann-ns72/evidence/v161/ns73/exact-checks.mac"

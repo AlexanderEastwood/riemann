@@ -1,0 +1,64 @@
+{
+  "classification": "certified finite model-curvature and selected-direction comparisons; no cofinal arithmetic estimate",
+  "precision_bits": 384,
+  "finite_series_cutoff": 256,
+  "bernoulli_order": 24,
+  "source_sha256": "bdd12e937263e662ea26983ba9be9dd1e0a2f758d7bf42adddd53830f7d442d6",
+  "kernel_source_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+  "projection_source_sha256": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+  "rows": [
+    {
+      "N": 256,
+      "seconds": 385.318,
+      "quantities": {
+        "energy": "[1.414241673909017965604410325187231472063e-5 +/- 8.58e-45]",
+        "full_relative_gain": "[0.0832680987052332706639099387285212045 +/- 2.86e-38]",
+        "model_numerator": "[1.084512193934892386486732425726161581e-5 +/- 3.98e-42]",
+        "bending_energy": "[1.43332333917765730321472267261932521e-6 +/- 3.77e-42]",
+        "local_curvature_sum": "[7.1400264117582573803873031833608532e-7 +/- 5.14e-42]",
+        "bending_to_model_ratio": "[0.132162952818187072200251359019950476 +/- 3.19e-37]",
+        "certified_numerator_lower_fraction": "[0.062038702616178653737687312302763437 +/- 4.91e-37]",
+        "curvature_lower_over_residual": "[0.047574421489911969204615813907841284 +/- 5.57e-37]",
+        "local_lower_over_residual": "[0.0473979062054452690979224706400147673 +/- 7.60e-38]",
+        "RKHS_upper_over_residual": "[65.321041067696156930826083403258824 +/- 4.42e-34]",
+        "A": "[0.13033070075390631147707369136441642434031780566782161341426792304 +/- 3.32e-67]",
+        "B": "[0.53258267518847657786926842284110410608507945141695540335356698076 +/- 8.31e-68]",
+        "causal_rate": "[2.0214832737846360876662762309955560844549429093982476145402494511 +/- 4.99e-65]"
+      },
+      "directions": {
+        "spline_curvature": {
+          "fraction_of_full_gain": "[0.97257393620237313584264840781 +/- 2.64e-30]",
+          "relative_gain": "[0.080984382517836452098385450945 +/- 3.65e-31]",
+          "raw_lower_relative_gain": "[0.0199598327095552574488898638450 +/- 7.36e-32]",
+          "numerator": "[1.4333233391776573032147226726193e-6 +/- 7.95e-38]",
+          "true_projected_cost": "[1.79375630063357760061118556092e-6 +/- 5.56e-36]"
+        },
+        "diagonal_curvature": {
+          "fraction_of_full_gain": "[0.976306879136636993558119560657 +/- 6.81e-31]",
+          "relative_gain": "[0.0812952175785477381152279923503 +/- 6.07e-32]",
+          "raw_lower_relative_gain": "[0.0261455263041904994527460114226 +/- 5.14e-32]",
+          "numerator": "[7.140026411758257380387303183361e-7 +/- 2.38e-38]",
+          "true_projected_cost": "[4.43415640922345331698940229716e-7 +/- 3.89e-37]"
+        },
+        "repaired_model": {
+          "fraction_of_full_gain": "[0.9705889000772677704145424527576608 +/- 2.03e-35]",
+          "relative_gain": "[0.08081909233383772475069804115732393 +/- 4.47e-36]",
+          "raw_lower_relative_gain": "[0.019909486520979105787354612943304522 +/- 7.88e-37]",
+          "numerator": "[1.084512193934892386486732425726161581e-5 +/- 3.98e-42]",
+          "true_projected_cost": "[0.00010290376851669593428931186832555288 +/- 1.90e-39]"
+        }
+      },
+      "minimum_accuracy_bits": 97,
+      "gates": {
+        "complete_actual_gram": true,
+        "full_projection": true,
+        "normalized_interpolation_data": true,
+        "positive_tridiagonal_pivots": true,
+        "tridiagonal_residuals_contain_zero": true,
+        "adjoint_bending_identity": true,
+        "uniform_model_curvature_comparison": true,
+        "selected_gains_below_optimum": true
+      }
+    }
+  ]
+}

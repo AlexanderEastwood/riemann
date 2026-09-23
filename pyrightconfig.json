@@ -21,7 +21,11 @@
     "evidence/v160/ns68/*.py",
     "evidence/v160/ns69/*.py",
     "evidence/v160/ns70/*.py",
-    "evidence/v160/ns71/*.py"
+    "evidence/v160/ns71/*.py",
+    "evidence/v161/*.py",
+    "evidence/v161/ns72/*.py",
+    "evidence/v161/ns73/*.py",
+    "evidence/v161/ns74/*.py"
   ],
   "exclude": [
     "node_modules",
@@ -35,6 +39,8 @@
     "evidence/v124/g2_schur_cancellation",
     "evidence/diag_ns59_nb_budget",
     "evidence/v159/ns61",
-    "evidence/v160/ns67"
+    "evidence/v160/ns67",
+    "evidence/v160/ns71",
+    "evidence/v161/ns72"
   ]
 }

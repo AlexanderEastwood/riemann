@@ -1,0 +1,270 @@
+{
+  "classification": "certified finite comparison of prescribed Mobius directions and their span; no asymptotic exclusion",
+  "precision_bits": 256,
+  "finite_series_cutoff": 128,
+  "bernoulli_order": 24,
+  "source_sha256": "528b74437dd265187318bac2a1dd4658c1169d452fece880e8c95e0a7be8dfe5",
+  "dependency_sha256": {
+    "kernel": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+    "projection": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+    "sieve": "2c4c14202df2e733063c62658f882bd4f7a488008e077b786aabb809c11e6bde",
+    "curvature": "bdd12e937263e662ea26983ba9be9dd1e0a2f758d7bf42adddd53830f7d442d6"
+  },
+  "rows": [
+    {
+      "N": 16,
+      "seconds": 0.636,
+      "quantities": {
+        "energy": "[3.194767768109205273935131839275966013e-5 +/- 5.63e-42]",
+        "full_relative_gain": "[0.237284828329962843680199877406439284 +/- 5.57e-37]",
+        "three_direction_span_fraction": "[0.60231381215440710233992076129202994 +/- 3.74e-36]",
+        "three_direction_span_relative_gain": "[0.1429199295178239769670363990319134000 +/- 8.83e-38]",
+        "curvature_energy_fraction_in_span": "[0.536879327515618073388938946561747 +/- 8.16e-34]"
+      },
+      "directions": {
+        "sharp_mobius": {
+          "numerator": "[9.3594850802716602184011001913228554663e-5 +/- 3.87e-43]",
+          "true_projected_cost": "[0.00541412815411234590298632904598501345749 +/- 7.64e-42]",
+          "fraction_of_full_gain": "[0.213435234757646720929764531791112078 +/- 4.76e-37]",
+          "relative_gain": "[0.05064494303903352086276732555053315796 +/- 5.42e-39]"
+        },
+        "linear_log_taper": {
+          "numerator": "[7.1162466691544717890770388791094086937e-6 +/- 3.02e-44]",
+          "true_projected_cost": "[1.4234565626123821947700201049236081853e-5 +/- 6.03e-43]",
+          "fraction_of_full_gain": "[0.46929778343250467897598848772817426 +/- 2.40e-36]",
+          "relative_gain": "[0.1113572439774139535142164816841828053 +/- 4.04e-38]"
+        },
+        "quadratic_log_taper": {
+          "numerator": "[2.4986879462445779818619555228554256101e-6 +/- 3.18e-44]",
+          "true_projected_cost": "[4.5048320695955780127869546295671129550e-6 +/- 7.00e-44]",
+          "fraction_of_full_gain": "[0.182825248480340512638500052278379431 +/- 5.54e-37]",
+          "relative_gain": "[0.04338165770004039880797060784427259664 +/- 5.46e-39]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[4.821212396013633417655825557975127e-6 +/- 4.28e-40]",
+          "true_projected_cost": "[3.293829635545640189343145324088743e-6 +/- 5.80e-40]",
+          "fraction_of_full_gain": "[0.930898072868598894402749936411478 +/- 3.45e-34]",
+          "relative_gain": "[0.2208879894133187305594874930553082 +/- 7.97e-35]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[0.01379424572778094533802700101646085930 +/- 3.84e-39]",
+        "[0.460340121543838111515786635600930745 +/- 5.50e-37]",
+        "[-0.000401964960789261093030990959591788 +/- 2.36e-37]"
+      ],
+      "minimum_accuracy_bits": 109,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    },
+    {
+      "N": 32,
+      "seconds": 2.019,
+      "quantities": {
+        "energy": "[2.43669784669931395762958244676788980e-5 +/- 1.43e-41]",
+        "full_relative_gain": "[0.18912807038823539269388365966485304 +/- 8.43e-36]",
+        "three_direction_span_fraction": "[0.762719994805291894345819665669284 +/- 5.34e-34]",
+        "three_direction_span_relative_gain": "[0.1442517608640497784629781895069025 +/- 5.67e-35]",
+        "curvature_energy_fraction_in_span": "[0.796809998766598576893481276417 +/- 3.78e-31]"
+      },
+      "directions": {
+        "sharp_mobius": {
+          "numerator": "[-4.3645929853695565709963725553277531e-7 +/- 4.30e-42]",
+          "true_projected_cost": "[0.000604966359046196885261575628735149531 +/- 4.02e-40]",
+          "fraction_of_full_gain": "[6.832798357648561303257268762696145e-5 +/- 7.89e-39]",
+          "relative_gain": "[1.29227396873397629114154448052330753e-5 +/- 5.84e-41]"
+        },
+        "linear_log_taper": {
+          "numerator": "[7.070939781379956727434124704184730748e-6 +/- 4.77e-43]",
+          "true_projected_cost": "[1.60871922574176429484230308771616642e-5 +/- 6.22e-41]",
+          "fraction_of_full_gain": "[0.6743981248854840901949366207175912 +/- 5.50e-35]",
+          "relative_gain": "[0.127547616033035797841208996681888919 +/- 5.22e-37]"
+        },
+        "quadratic_log_taper": {
+          "numerator": "[3.631500231644290072134871334250385789e-6 +/- 5.60e-43]",
+          "true_projected_cost": "[5.06253596967170456030429970018886105e-6 +/- 4.65e-42]",
+          "fraction_of_full_gain": "[0.5652575337660327429506073647334703 +/- 5.92e-35]",
+          "relative_gain": "[0.106906066633582584825886400646795635 +/- 3.48e-37]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[2.7196019523173049454533928073775e-6 +/- 4.05e-38]",
+          "true_projected_cost": "[1.7752823267556205137586341788200e-6 +/- 8.99e-38]",
+          "fraction_of_full_gain": "[0.9040357142881961847874087425900 +/- 6.90e-32]",
+          "relative_gain": "[0.1709785302053766287561794324590 +/- 5.37e-32]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[-0.04362577055635472892200550434258415 +/- 7.17e-36]",
+        "[0.7883229430333040008864281361288902 +/- 3.68e-35]",
+        "[-0.572282871628162267734563518324997 +/- 2.09e-34]"
+      ],
+      "minimum_accuracy_bits": 100,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    },
+    {
+      "N": 64,
+      "seconds": 8.764,
+      "quantities": {
+        "energy": "[1.9758498848339044931093888638682217e-5 +/- 3.85e-40]",
+        "full_relative_gain": "[0.165203189369659992753117494535513 +/- 1.80e-34]",
+        "three_direction_span_fraction": "[0.95127886805908814202632812602493 +/- 6.64e-33]",
+        "three_direction_span_relative_gain": "[0.157154302983321340967750664205698 +/- 2.39e-34]",
+        "curvature_energy_fraction_in_span": "[0.9020086151155692001347506649 +/- 5.83e-29]"
+      },
+      "directions": {
+        "sharp_mobius": {
+          "numerator": "[1.73642567142576584092319658247700883e-5 +/- 5.20e-41]",
+          "true_projected_cost": "[0.0001001631701718558125121313321681321 +/- 4.14e-38]",
+          "fraction_of_full_gain": "[0.92221453052800242227529774360924 +/- 3.16e-33]",
+          "relative_gain": "[0.1523527817262696706314048510185119 +/- 1.30e-35]"
+        },
+        "linear_log_taper": {
+          "numerator": "[5.20472478818735989974515468939132850e-6 +/- 4.12e-42]",
+          "true_projected_cost": "[1.2951871156613946731224266364189747e-5 +/- 8.60e-40]",
+          "fraction_of_full_gain": "[0.64075300464025952359929753337194 +/- 2.22e-33]",
+          "relative_gain": "[0.10585443996476342213808130651529248 +/- 7.00e-36]"
+        },
+        "quadratic_log_taper": {
+          "numerator": "[1.97395845416235422066810214658484618e-6 +/- 5.79e-42]",
+          "true_projected_cost": "[3.009518841331922471232101454416971e-6 +/- 6.28e-40]",
+          "fraction_of_full_gain": "[0.396649193576179998716710904848353 +/- 8.75e-34]",
+          "relative_gain": "[0.06552771183968858824891714566382729 +/- 4.76e-36]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[2.05340648747558439821476365835e-6 +/- 5.15e-36]",
+          "true_projected_cost": "[1.3203055143128728628105856161e-6 +/- 6.90e-35]",
+          "fraction_of_full_gain": "[0.9783698235019345826038774358 +/- 2.01e-29]",
+          "relative_gain": "[0.16162981522555092258113845615 +/- 7.43e-30]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[0.1427747478751846686307028981779703 +/- 7.81e-35]",
+        "[0.103998686582961315315800951764392 +/- 3.54e-34]",
+        "[0.042894113558242760126297820167571 +/- 4.36e-34]"
+      ],
+      "minimum_accuracy_bits": 93,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    },
+    {
+      "N": 128,
+      "seconds": 41.04,
+      "quantities": {
+        "energy": "[1.649433182143668081417340126620132e-5 +/- 4.84e-39]",
+        "full_relative_gain": "[0.14258929114605661299429183200771 +/- 8.30e-33]",
+        "three_direction_span_fraction": "[0.89033035983887472000381939794 +/- 1.84e-30]",
+        "three_direction_span_relative_gain": "[0.126951574895238657367223237317 +/- 4.65e-31]",
+        "curvature_energy_fraction_in_span": "[0.8700283552239702128613154 +/- 7.40e-26]"
+      },
+      "directions": {
+        "sharp_mobius": {
+          "numerator": "[1.1240365746623985992578281023590221e-5 +/- 6.07e-40]",
+          "true_projected_cost": "[0.000182583731819222807386843852150211 +/- 5.64e-37]",
+          "fraction_of_full_gain": "[0.2942233724483734343040958413541 +/- 5.92e-32]",
+          "relative_gain": "[0.041953102116015771344223569151176 +/- 4.30e-34]"
+        },
+        "linear_log_taper": {
+          "numerator": "[3.3675040059599884625681509735060837e-6 +/- 9.53e-41]",
+          "true_projected_cost": "[1.16520435870042726837121483554892e-5 +/- 8.17e-38]",
+          "fraction_of_full_gain": "[0.4138019228095472996559112628559 +/- 5.81e-32]",
+          "relative_gain": "[0.059003722848288584784988802689639 +/- 4.52e-34]"
+        },
+        "quadratic_log_taper": {
+          "numerator": "[1.1809268954770945088871428263940479e-6 +/- 7.75e-41]",
+          "true_projected_cost": "[2.03884099583745554951343045396049e-6 +/- 8.47e-39]",
+          "fraction_of_full_gain": "[0.2908312251101629935644498738195 +/- 4.45e-32]",
+          "relative_gain": "[0.041469418231597361839363315540588 +/- 2.34e-34]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[1.453395289665033172395765465e-6 +/- 4.87e-34]",
+          "true_projected_cost": "[9.1154433282793285842822736e-7 +/- 8.19e-33]",
+          "fraction_of_full_gain": "[0.9852990502825881598192362 +/- 1.47e-26]",
+          "relative_gain": "[0.14049309314667703742438684 +/- 4.99e-27]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[0.2941702707371791098156564322950 +/- 9.04e-32]",
+        "[-1.144905053062316793812028508781 +/- 4.73e-31]",
+        "[2.237964373120834992576975873697 +/- 6.91e-31]"
+      ],
+      "minimum_accuracy_bits": 82,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    },
+    {
+      "N": 256,
+      "seconds": 241.616,
+      "quantities": {
+        "energy": "[1.41424167390901796560441032518723e-5 +/- 8.92e-38]",
+        "full_relative_gain": "[0.083268098705233270663909938729 +/- 6.24e-31]",
+        "three_direction_span_fraction": "[0.8366203763115116150646967026 +/- 9.46e-29]",
+        "three_direction_span_relative_gain": "[0.0696637880735163519815838991 +/- 2.30e-29]",
+        "curvature_energy_fraction_in_span": "[0.752594766771344253053 +/- 1.97e-22]"
+      },
+      "directions": {
+        "sharp_mobius": {
+          "numerator": "[5.78096921040684756892010563414771e-6 +/- 9.10e-39]",
+          "true_projected_cost": "[0.0002772311959172404660697510674609 +/- 5.35e-35]",
+          "fraction_of_full_gain": "[0.102366283300503915631756740264 +/- 6.21e-31]",
+          "relative_gain": "[0.008523845781954232273931614103119 +/- 6.94e-34]"
+        },
+        "linear_log_taper": {
+          "numerator": "[2.64255152770818916844124025426749e-6 +/- 5.45e-39]",
+          "true_projected_cost": "[1.748807848683841148764375255946e-5 +/- 3.35e-36]",
+          "fraction_of_full_gain": "[0.33908029808028445099720240767 +/- 4.99e-30]",
+          "relative_gain": "[0.02823457172954904516636375363678 +/- 3.88e-33]"
+        },
+        "quadratic_log_taper": {
+          "numerator": "[1.38968771537761417343649771778969e-6 +/- 5.19e-39]",
+          "true_projected_cost": "[3.780058731841593415232451493061e-6 +/- 7.80e-37]",
+          "fraction_of_full_gain": "[0.43384401467706833733414700590 +/- 4.43e-30]",
+          "relative_gain": "[0.03612536623680479809450706238700 +/- 6.44e-33]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[7.14002641175825738038730e-7 +/- 4.62e-31]",
+          "true_projected_cost": "[4.4341564092234533169894e-7 +/- 2.52e-30]",
+          "fraction_of_full_gain": "[0.97630687913663699355812 +/- 5.87e-24]",
+          "relative_gain": "[0.081295217578547738115228 +/- 4.60e-25]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[0.18996004404263650330968667829 +/- 5.90e-30]",
+        "[-0.8089342146013000081082271655 +/- 5.25e-29]",
+        "[1.4569543063142362351499787271 +/- 5.35e-29]"
+      ],
+      "minimum_accuracy_bits": 72,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    }
+  ]
+}

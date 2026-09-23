@@ -1,0 +1,309 @@
+\section{Local differential geometry of the repaired model (NS-72)}
+\label{sec:ns72-local-geometry}
+
+\paragraph{Scope.}
+The repaired kernel in NS-70 has a positive local differential-energy
+representation. This makes its selected numerator uniformly comparable
+to an explicit discrete curvature energy, and supplies two directions
+that can be selected in a linear number of scalar operations once the
+actual correlation vector is known. These are statements about the
+model geometry. Every arithmetic gain below is measured with the
+complete actual Gram. No cofinal arithmetic estimate is supplied.
+
+Put
+\[
+ a_0=K_1-\tfrac32>0,\qquad b_0=K_1/4+\tfrac18=a_0/4+\tfrac12,
+ \qquad \alpha_0=\sqrt{b_0/a_0}>\tfrac12.
+\]
+The normalized stationary kernel is
+\[
+ \phi_0(r)=e^{-|r|/2}(2K_1+K_1|r|+r^2/4),\qquad
+ K_0(u,v)=\frac{\phi_0(\log u-\log v)}{\sqrt{uv}}.
+\]
+Its complete Fourier density is
+\begin{equation}
+ w_0(t)=\frac{a_0t^2+b_0}{(t^2+1/4)^3}
+       =\frac{a_0}{(t^2+1/4)^2}
+                       +\frac{1/2}{(t^2+1/4)^3}.
+ \label{eq:ns72-positive-split}
+\end{equation}
+
+\begin{proposition}[A causal factor and a local positive energy]
+\label{prop:ns72-local-energy}
+With Fourier convention $\widehat f(t)=\int f(r)e^{-itr}dr$, define
+\[
+ h_0(r)=\sqrt{a_0}\,e^{-r/2}
+       \left\{r+\frac{\alpha_0-1/2}{2}r^2\right\}
+       \mathbf1_{r\geq0}.
+\]
+Then $h_0\geq0$ and
+\[
+ \widehat h_0(t)=\frac{\sqrt{a_0}(\alpha_0+it)}{(1/2+it)^3},
+ \qquad \phi_0(r)=\int_{\mathbb R}h_0(u+r)h_0(u)\,du.
+\]
+Let $\mathcal H_0$ be the real Hilbert space with norm
+\[
+ \|f\|_{\mathcal H_0}^2=
+       \frac1{2\pi}\int_{\mathbb R}\frac{|\widehat f(t)|^2}{w_0(t)}\,dt.
+\]
+As a set it is exactly $H^2(\mathbb R)$, and $\phi_0(r-\cdot)$
+is its point-evaluation representer. If $z\in H^3(\mathbb R)$ is the
+unique solution of $z'+\alpha_0z=f$, then
+\begin{equation}
+ \|f\|_{\mathcal H_0}^2
+ =\frac1{a_0}\left\{
+ \|z'''\|_2^2+\frac34\|z''\|_2^2
+               +\frac3{16}\|z'\|_2^2+\frac1{64}\|z\|_2^2\right\}.
+ \label{eq:ns72-local-functional}
+\end{equation}
+In particular, with $L_0=-d^2/dr^2+1/4$,
+\begin{equation}
+ \frac1{4b_0}\|L_0f\|_2^2\leq\|f\|_{\mathcal H_0}^2
+                 \leq\frac1{a_0}\|L_0f\|_2^2.
+ \label{eq:ns72-sobolev-comparison}
+\end{equation}
+All these are whole-line statements; no boundary or remote tail is omitted.
+\end{proposition}
+\begin{proof}
+The elementary transforms of $r e^{-r/2}$ and $r^2e^{-r/2}/2$ on
+$r\geq0$ give the displayed causal factor. Its squared modulus is
+exactly~\eqref{eq:ns72-positive-split}, proving the autocorrelation
+identity. In particular this factorization includes the complete model,
+not just its large-frequency term.
+
+The positive rational weight $1/w_0$ is comparable to $(1+t^2)^2$.
+Point evaluation is continuous because $\int w_0(t)dt<\infty$;
+Fourier inversion gives its stated representer. The multiplier
+$(\alpha_0+it)^{-1}$ is an isomorphism from $H^2$ to $H^3$.
+It is also the causal convolution with
+$e^{-\alpha_0r}\mathbf1_{r\geq0}$; thus there is no unspecified
+homogeneous solution. Plancherel gives
+$\|f\|_{\mathcal H_0}^2=a_0^{-1}\|(d/dr+1/2)^3z\|_2^2$.
+Expanding $(t^2+1/4)^3$ gives~\eqref{eq:ns72-local-functional}.
+Equivalently one may use density of compact smooth functions in $H^3$;
+no integration-by-parts boundary term survives that limit.
+Finally
+\[
+ \frac1{w_0(t)}=(t^2+1/4)^2\frac{t^2+1/4}{a_0t^2+b_0},
+ \qquad \frac1{4b_0}\leq\frac{t^2+1/4}{a_0t^2+b_0}\leq\frac1{a_0},
+\]
+which proves~\eqref{eq:ns72-sobolev-comparison}.
+\end{proof}
+
+\paragraph{The corresponding differential equation.}
+For prescribed values $f(r_j)=y_j$, the minimum-norm interpolant is
+$f=\sum_j\lambda_j\phi_0(r-r_j)$. In terms of its $z$, it satisfies
+in distributions
+\begin{equation}
+ \frac1{a_0}L_0^3z
+     =\sum_j\lambda_j\{\alpha_0\delta_{r_j}-\delta'_{r_j}\}.
+ \label{eq:ns72-local-equation}
+\end{equation}
+Thus between sample points $L_0^3z=0$: its pieces are combinations
+of $e^{r/2}$ and $e^{-r/2}$ times quadratic polynomials.
+The whole-line Sobolev condition fixes the decaying tails.
+The derivatives through order three are continuous, while the jumps are
+$[z^{(4)}]_{r_j}=a_0\lambda_j$ and
+$[z^{(5)}]_{r_j}=-a_0\alpha_0\lambda_j$.
+These signs follow directly from~\eqref{eq:ns72-local-equation}.
+This is a positive local model problem with explicit matching conditions;
+its coefficients contain no zeta-zero information.
+
+\begin{proposition}[The actual selected numerator is a model interpolation energy]
+\label{prop:ns72-interpolation}
+Fix $N\geq2$ and the actual optimized correlations $g_n$,
+$N<n\leq2N$, from NS-71. Put $r_j=\log j$ and define
+\begin{equation}
+ y_j=0\quad(j\leq N),\qquad
+ y_j=\frac1{\sqrt j}\sum_{k=N+1}^j k g_k\quad(N<j\leq2N).
+ \label{eq:ns72-data}
+\end{equation}
+Then the numerator for the projected repaired model is exactly
+\begin{equation}
+ m_N=g^TH_{0,N}^{-1}g
+       =\min\{\|f\|_{\mathcal H_0}^2:
+                          f(r_j)=y_j,\ 1\leq j\leq2N\}.
+ \label{eq:ns72-interpolation-numerator}
+\end{equation}
+This equality holds for every real vector $g$, not just the arithmetic one.
+For the actual vector, $y_j=\sqrt j\langle R_N,\sigma_j\rangle$.
+\end{proposition}
+\begin{proof}
+Write $q_j=\langle R_N,\sigma_j\rangle$.
+Old-space orthogonality gives $q_j=0$ for $j\leq N$.
+The exact difference relation is
+$g_j=q_j-(j-1)q_{j-1}/j$; telescoping gives
+$q_j=j^{-1}\sum_{k=N+1}^jkg_k$, with no endpoint error.
+
+Let $\Phi_{ij}=\phi_0(r_i-r_j)$ and
+$\mathsf D=\operatorname{diag}(\sqrt1,\ldots,\sqrt{2N})$.
+The full model Gram is $\mathsf D^{-1}\Phi\mathsf D^{-1}$.
+The invertible change from old atoms and new atoms to old atoms and
+new differences sends the load data to $(0,g)$.
+The complete block-inverse identity therefore gives
+$y^T\Phi^{-1}y=g^TH_{0,N}^{-1}g$.
+For completeness, the minimum-norm interpolant lies in the span of
+the evaluation representers: subtracting its component orthogonal to
+that span preserves all values and lowers its squared norm.
+Its coefficients are $\Phi^{-1}y$, proving the remaining equality.
+Every old/new cross term is retained in this argument.
+\end{proof}
+
+For arbitrary data~\eqref{eq:ns72-data}, write
+\[
+ h_j=r_{j+1}-r_j,\qquad
+ d_i=\frac{y_{i+1}-y_i}{h_i}-\frac{y_i-y_{i-1}}{h_{i-1}}
+       \quad(2\leq i\leq2N-1).
+\]
+Let $T$ be the positive tridiagonal matrix indexed by those interior
+points, with
+\[
+ T_{ii}=\frac{h_{i-1}+h_i}{3},\qquad T_{i,i+1}=\frac{h_i}{6}.
+\]
+Define the complete bending energy and the local curvature sum by
+\[
+ \mathcal C_N=d^TT^{-1}d,\qquad
+ \mathcal W_N=\sum_{i=2}^{2N-1}\frac{d_i^2}{h_{i-1}+h_i}.
+\]
+They vanish only when $g=0$: zero curvature would make all data affine
+in $r$, and the two old zero values force that affine function to vanish.
+
+\begin{proposition}[Uniform comparison with discrete curvature, within the model]
+\label{prop:ns72-curvature}
+For every $N\geq2$ and every real $g$,
+\begin{equation}
+ 2\mathcal W_N\leq\mathcal C_N\leq6\mathcal W_N,
+ \qquad
+ \frac{\mathcal C_N}{4b_0}\leq m_N
+                         \leq\frac{84}{a_0}\mathcal C_N.
+ \label{eq:ns72-curvature-comparison}
+\end{equation}
+The constants are independent of $N$; the upper constant is deliberately
+not optimized. These are uniform comparisons for the model numerator,
+not comparisons between the model Gram and the actual arithmetic Gram.
+\end{proposition}
+\begin{proof}
+Let $\psi_i$ be the standard tent function, equal to one at $r_i$
+and zero at $r_{i-1},r_{i+1}$, with support between those two endpoints.
+Integration by parts on each interval gives
+$d_i=\int f''\psi_i$ for any $H^2$ interpolant. The complete Gram of
+the tents is exactly $T$. Minimizing $\|f''\|_{L^2(r_1,r_{2N})}^2$
+therefore gives $d^TT^{-1}d$. Conversely a minimizing second derivative
+in the tent span integrates, with its affine part chosen to match the
+first two data, to the natural cubic spline through every sample.
+Thus this is an equality for the finite interval, not merely an
+uncertified spline approximation. Moreover the off-diagonal row sum
+of $T$ is at most half its diagonal. Applying
+$2|uv|\leq u^2+v^2$ to its cross terms shows
+\[
+ \tfrac16\operatorname{diag}(h_{i-1}+h_i)
+ \leq T\leq\tfrac12\operatorname{diag}(h_{i-1}+h_i),
+\]
+and inversion proves the first pair of bounds.
+The left side of~\eqref{eq:ns72-sobolev-comparison} bounds every
+whole-line interpolant below by $\mathcal C_N/(4b_0)$.
+
+For the uniform upper bound let $F$ be the natural spline on
+$[r_1,r_{2N}]$, and set $E=\|F''\|_2^2=\mathcal C_N$ there.
+All old nodal values vanish. On an old interval of length $h\leq\log2<1$,
+$F'$ has mean zero. Elementary one-dimensional estimates give
+$\|F'\|_2^2\leq h^2\|F''\|_2^2$ and
+$\|F\|_2^2\leq h^4\|F''\|_2^2$ on that interval.
+The derivatives at $r_1$ and $r_N$ have squared magnitudes at most
+$E/3$: integrate $F''$ against the endpoint linear weight on an
+adjacent zero-data interval. The new interval $[r_N,r_{2N}]$ has
+length $\log2<1$, starts at value zero, and hence
+\[
+ \|F'\|_{L^2(r_N,r_{2N})}^2,\quad
+ \|F\|_{L^2(r_N,r_{2N})}^2,\quad
+ |F(r_{2N})|^2,\quad |F'(r_{2N})|^2\ \leq\frac83 E.
+\]
+Combining old and new intervals yields
+$\|F'\|_2^2,\|F\|_2^2\leq11E/3$ on the full finite interval.
+For any interval $I$ define the positive local functional
+\[
+ \mathcal J_I(F)=\int_I\left(|F''|^2+\tfrac12|F'|^2
+                                      +\tfrac1{16}|F|^2\right)dr.
+\]
+Consequently $\mathcal J_{[r_1,r_{2N}]}(F)\leq49E/16<4E$.
+Only after summing over the complete extension below do we use
+$\mathcal J_{\mathbb R}(F)=\|L_0F\|_2^2$. On a finite piece the
+two expressions can differ by an endpoint term; none is discarded.
+
+Extend to the left over an interval of length one by the cubic with
+zero value and derivative at its outer endpoint and value zero,
+derivative $F'(r_1)$ at $r_1$. Its local $\mathcal J$ energy is
+$(6833/1680)|F'(r_1)|^2<2E$.
+On the right use $y(1-3t^2+2t^3)+w(t-2t^2+t^3)$,
+$0\leq t\leq1$, where $y=F(r_{2N})$, $w=F'(r_{2N})$,
+and then extend by zero. Its local $\mathcal J$ energy matrix has entries
+\[
+ A_{00}=7069/560,\quad A_{01}=20339/3360,\quad A_{11}=6833/1680.
+\]
+They are positive and $A_{00}+2A_{01}+A_{11}<29$.
+Since $y^2,w^2,|yw|\leq8E/3$, the right extension costs at most
+$232E/3$. The resulting compactly supported function is $C^1$
+and belongs to $H^2(\mathbb R)$; jumps in its second derivative
+are allowed. Its total $L_0$ energy is less than
+$(4+2+232/3)E<84E$.
+The upper side of~\eqref{eq:ns72-sobolev-comparison} proves the result.
+The extensions explicitly control both tails and all joining conditions.
+\end{proof}
+
+\paragraph{Two local coefficient rules.}
+Let $\mathsf S_N$ be the exact linear map $g\mapsto d$ defined above,
+and put $D_h=\operatorname{diag}(h_{i-1}+h_i)$. The choices
+\begin{equation}
+ v_{\rm spline}=\mathsf S_N^TT^{-1}\mathsf S_Ng,
+ \qquad v_{\rm diagonal}=\mathsf S_N^TD_h^{-1}\mathsf S_Ng
+ \label{eq:ns72-local-directions}
+\end{equation}
+have exact numerators $g^Tv_{\rm spline}=\mathcal C_N$ and
+$g^Tv_{\rm diagonal}=\mathcal W_N$.
+Both directions are nonzero for $g\ne0$.
+Cumulative sums construct $y$, local differences construct $d$, a
+positive-pivot tridiagonal solve computes $T^{-1}d$, and weighted suffix
+sums apply the transpose. Thus direction selection takes $O(N)$ scalar
+operations after the actual $g$ has been supplied. Computing that
+arithmetic vector and its true energy is a separate task.
+
+For either direction the actual gain remains
+\[
+ Q_N(v)=\frac{(g^Tv)^2}{v^TH_Nv}.
+\]
+A cofinal lower bound for $\mathcal C_N/E_N$ (or $\mathcal W_N/E_N$)
+and an upper bound for the corresponding selected true cost, giving a
+nonsummable relative contraction, would suffice for RH by the same
+argument as NS-71. The geometric equivalence does not establish these
+arithmetic bounds. In particular no inequality in
+\eqref{eq:ns72-curvature-comparison} includes the actual Gram $H_N$.
+
+\paragraph{Certified finite outcome.}
+The following outward intervals enclose each direction's fraction of the
+full actual projected gain. Direction selection uses the displayed rule
+without fitting its coefficients to the actual Gram.
+\[
+\begin{array}{c|ccc}
+ N&\text{repaired model}&\text{spline curvature}&\text{diagonal curvature}\\ \hline
+16&(.8390,.8391)&(.8529,.8530)&(.9308,.9310)\\
+32&(.8252,.8254)&(.8334,.8335)&(.9040,.9041)\\
+64&(.9577,.9578)&(.9602,.9603)&(.9783,.9785)\\
+128&(.9781,.9782)&(.9795,.9796)&(.9852,.9854)\\
+256&(.9705,.9707)&(.9725,.9727)&(.9763,.9764)
+\end{array}
+\]
+The simpler diagonal rule outperforms the repaired-kernel solve at all
+five checked sizes. This does not assert monotonicity or asymptotic
+optimality. The uniform numerator minorant $\mathcal C_N/(4b_0)$ captures
+between $6.19\%$ and $6.26\%$ of the exact model numerator on these blocks;
+its constant is conservative. Every complete actual Gram, tail and
+old-space correction is retained.
+
+Arb runs at 256 and 384 bits match all 140 recorded scalar enclosures.
+Doubling the Gram-series cutoff at $N=256$ matches another 28 quantities;
+25 overlapping quantities match the published NS-71 calculation.
+The minimum recorded accuracy is 73 bits. At $N=16$ an independent
+dense solve also encloses all entries of the tridiagonal solution.
+The 41 exact Maxima checks include the causal factor, actual Green-function
+jumps, normalization, tent Grams and the full extension energies.
+No finite computation supplies the missing cofinal arithmetic bound.

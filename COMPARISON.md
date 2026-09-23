@@ -502,3 +502,21 @@ the repaired kernel only to select coefficients, measuring every energy
 with the actual full Gram. Its efficiency does not establish the asymptotic
 numerator/cost estimate needed for convergence. Existing certified Weil
 windows and comparison claims are unchanged.
+
+## v1.61: local model energy and the limits of finite efficiency
+
+The rational repaired kernel yields a whole-line Sobolev energy, a cubic
+spline curvature comparison and two explicit coefficient rules. These are
+model identities and bounds; every finite gain retains the actual arithmetic
+Gram. No priority claim is made for the spline or Hardy-space mechanisms.
+The Mobius/log-taper test has prior motivation in
+[Bettin–Conrey–Farmer, Theorem 1](https://arxiv.org/pdf/1211.5191), whose q=1
+asymptotic assumes RH and an additional inverse-derivative moment bound.
+Our q=2 projected block comparison neither uses nor disproves that theorem.
+
+The inserted Blaschke factor is an explicit altered-family control: identical
+Grams and close finite statistics do not imply zero limiting error. The
+classical inner-factor role in NB approximation is explained by
+[Burnol's projection formula](https://arxiv.org/html/math/9910055).
+No zero or positive limiting error is inferred for the original zeta family.
+The original cofinal arithmetic contraction remains unproved.

@@ -124,6 +124,12 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-71 | Test the repaired elementary Gram only as a preconditioner for the actual optimized residual, retaining the true projected energy in every gain quotient | Codex, Continue solving toward RH | done (v1.60; arithmetic input open) | Repaired projected-kernel direction captures 97.06% of optimal gain at N=256 versus 38.41% for raw correlation; squared error reduction 8.08% versus optimum 8.33%. Complete 256/384-bit and doubled-cutoff checks. Cofinal numerator/cost input remains open. |
 
+| NS-72 | Derive a complete local differential-energy representation of the repaired elementary kernel and a curvature minorant for the actual selected numerator | Codex, Continue solving toward RH | done (v1.61; cofinal arithmetic bound open) | Whole-line causal factor and local energy; exact model interpolation; uniform curvature comparison. Linear direction rule captures 97.63% of full gain at N=256. Complete Arb replays and 41 exact checks. |
+
+| NS-73 | Test whether the successful curvature direction has a simple signed Mobius/log-taper coefficient explanation, using complete projected arithmetic energies | Codex, Continue solving toward RH | done (v1.61; finite template control) | Three physical Mobius/log-taper directions and their complete optimized span retain 83.66% of gain at N=256 versus 97.63% for curvature. Ten exact checks; no asymptotic template exclusion. |
+
+| NS-74 | Construct a nearby unitary deformation with the same full Gram geometry and an explicit nonzero approximation floor; test what finite gain efficiency can distinguish | Codex, Continue solving toward RH | done (v1.61; altered-family control) | Explicit unitary Blaschke deformation preserves all complete Gram entries and has positive floor (2 beta-1)(1-beta)^2/beta^6. Finite statistics approach the original as beta decreases to 1/2. Sixteen exact checks and complete finite replay; no original-family error floor. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
@@ -164,6 +170,16 @@ given on September 23; check the latest remote state and PRs before work.
 
 Claim a separate row before taking either target forward. No bounded
 cofinal canonical subsequence or asymptotic NB contraction is established.
+
+## Open continuation after NS-74
+
+Geometry now supplies an explicit curvature functional and a local coefficient
+rule, but its actual numerator and selected cost still lack cofinal bounds.
+The same-Gram control shows that no finite efficiency threshold repairs this
+missing arithmetic step. A further attempt must use information that the
+inserted inner-factor control changes, or prove a genuinely cofinal estimate.
+Do not replace this with larger finite blocks or another uniform all-vector
+Gram comparison. The three tested Mobius templates are a finite control only.
 
 ## Lanes
 

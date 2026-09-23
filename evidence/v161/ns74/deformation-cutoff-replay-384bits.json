@@ -1,0 +1,68 @@
+{
+  "classification": "certified finite altered-family control; no error floor asserted for original arithmetic atoms",
+  "precision_bits": 384,
+  "finite_series_cutoff": 256,
+  "bernoulli_order": 24,
+  "beta_offset_denominators": [
+    1000000,
+    10000000000
+  ],
+  "source_sha256": "4608853ade376e8a822daaf9e3beabb4bf8a5cf2c00f147f261ddaf93ccddae7",
+  "dependency_sha256": {
+    "kernel": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+    "projection": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+    "curvature": "bdd12e937263e662ea26983ba9be9dd1e0a2f758d7bf42adddd53830f7d442d6"
+  },
+  "rows": [
+    {
+      "N": 256,
+      "seconds": 386.527,
+      "families": {
+        "original": {
+          "beta": "0.50000000000000000000000000000000000000000000000000000000000000000",
+          "energy": "[1.414241673909017965604410325187231472063e-5 +/- 8.58e-45]",
+          "next_energy": "[1.2964804586129075333606421315531260105e-5 +/- 1.43e-43]",
+          "positive_floor": "0",
+          "floor_fraction_of_energy": "0",
+          "full_relative_gain": "[0.0832680987052332706639099387285212045 +/- 2.86e-38]",
+          "curvature_relative_gain": "[0.0812952175785477381152279923503 +/- 6.07e-32]",
+          "curvature_fraction_of_full_gain": "[0.976306879136636993558119560657 +/- 6.81e-31]",
+          "curvature_numerator": "[7.140026411758257380387303183361e-7 +/- 2.38e-38]",
+          "curvature_true_cost": "[4.43415640922345331698940229716e-7 +/- 3.89e-37]"
+        },
+        "beta_half_plus_1_over_1000000": {
+          "beta": "[0.50000100000000000000000000000000000000000000000000000000000000000 +/- 3e-70]",
+          "energy": "[4.614240010411926231452258181516138613002e-5 +/- 8.42e-45]",
+          "next_energy": "[4.4964750366558335045014777248043686695e-5 +/- 4.30e-43]",
+          "positive_floor": "[3.1999488004351973376132607426562236407939099303848050959776980929e-5 +/- 1.87e-70]",
+          "floor_fraction_of_energy": "[0.693494225097651319384853843043859367471 +/- 2.25e-40]",
+          "full_relative_gain": "[0.02552207373052957323303967738816328019 +/- 4.13e-39]",
+          "curvature_relative_gain": "[0.0249173787051092627078672284197 +/- 3.59e-32]",
+          "curvature_fraction_of_full_gain": "[0.976306979134811733203452559585 +/- 7.69e-31]",
+          "curvature_numerator": "[7.140251812141644347323229841937e-7 +/- 1.61e-38]",
+          "curvature_true_cost": "[4.43429439467201825886067290539e-7 +/- 3.64e-37]"
+        },
+        "beta_half_plus_1_over_10000000000": {
+          "beta": "[0.50000000010000000000000000000000000000000000000000000000000000000 +/- 3e-70]",
+          "energy": "[1.414561678789032429810096503590051470618e-5 +/- 6.14e-45]",
+          "next_energy": "[1.2968004631170783836696057053982488073e-5 +/- 4.63e-43]",
+          "positive_floor": "[3.1999999948800000043519999973376000013260799994265600002236415999e-9 +/- 1.94e-74]",
+          "floor_fraction_of_energy": "[0.000226218484698343623434218182430663710600 +/- 3.16e-43]",
+          "full_relative_gain": "[0.0832492619005246929524289766211246884 +/- 3.05e-38]",
+          "curvature_relative_gain": "[0.0812768270773622654734573427454 +/- 4.20e-32]",
+          "curvature_fraction_of_full_gain": "[0.976306879146636663868862168100 +/- 4.16e-31]",
+          "curvature_numerator": "[7.140026434298144717641757154395e-7 +/- 4.55e-38]",
+          "curvature_true_cost": "[4.43415642302190242845850774724e-7 +/- 6.34e-37]"
+        }
+      },
+      "minimum_accuracy_bits": 100,
+      "gates": {
+        "identical_complete_gram": true,
+        "exact_analytic_loads": true,
+        "complete_old_projection": true,
+        "positive_floor_below_both_errors": true,
+        "curvature_gain_positive_below_full_gain": true
+      }
+    }
+  ]
+}

@@ -83,6 +83,9 @@ graph LR
   nbcriticalrenewalenergy["Finite total critical renewal energy<br/><small>cor:ns68-critical-energy</small><br/><small>&#128193; evidence/v160/ns68</small><br/><small><b>wall: critical-line Mellin pole contradicts finite weighted L2 energy</b></small>"]
   nbrepairedbounds["Uniform comparison with the repaired elementary Gram<br/><small>prop:ns70-cusp; prop:ns70-repaired-background</small><br/><small>&#128193; evidence/v160/ns70</small><br/><small><b>wall: pointwise Mellin-density comparison forced by all-coefficient localization</b></small>"]
   nbselectedpreconditioner["Repaired-kernel selection measured with true energy<br/><small>prop:ns71-selected-input</small><br/><small>&#128193; evidence/v160/ns71</small><br/><small><b>wall: cofinal lower numerator and upper selected cost with nonsummable relative gain</b></small>"]
+  nblocalgeometry["Complete local energy and discrete curvature<br/><small>prop:ns72-local-energy; prop:ns72-interpolation; prop:ns72-curvature</small><br/><small>&#128193; evidence/v161/ns72</small>"]
+  nbcurvaturearithmetic["Cofinal arithmetic curvature and selected cost<br/><small>eq:ns72-local-directions</small><br/><small>&#128193; evidence/v161/ns72</small><br/><small><b>wall: actual curvature lower bound and selected true cost giving nonsummable relative contraction</b></small>"]
+  nbsamegramcontrol["Infer convergence from shared Gram geometry and finite efficiency<br/><small>prop:ns74-same-gram; cor:ns74-finite-indistinguishability</small><br/><small>&#128193; evidence/v161/ns74</small><br/><small><b>wall: explicit inserted inner-factor control; scope is this finite-statistics inference</b></small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -161,6 +164,9 @@ graph LR
   nbrenewalforcing --> nbcriticalrenewalenergy
   nbsmoothedcorrelation --> nbrepairedbounds
   nbsmoothedcorrelation --> nbselectedpreconditioner
+  nbselectedpreconditioner --> nblocalgeometry
+  nblocalgeometry --> nbcurvaturearithmetic
+  nblocalgeometry --> nbsamegramcontrol
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -175,6 +181,7 @@ graph LR
   nbcanonicalgrowth -. "direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)" .-> rh
   nbrenewalforcing -. "independent square-root-plus-epsilon bound for the signed forcing" .-> rh
   nbselectedpreconditioner -. "cofinal lower numerator and upper selected cost with nonsummable relative gain" .-> rh
+  nbcurvaturearithmetic -. "actual curvature lower bound and selected true cost giving nonsummable relative contraction" .-> rh
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -240,15 +247,18 @@ graph LR
   click nbcriticalrenewalenergy "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/ns68/" "evidence: evidence/v160/ns68" _blank
   click nbrepairedbounds "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/ns70/" "evidence: evidence/v160/ns70" _blank
   click nbselectedpreconditioner "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/ns71/" "evidence: evidence/v160/ns71" _blank
+  click nblocalgeometry "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v161/ns72/" "evidence: evidence/v161/ns72" _blank
+  click nbcurvaturearithmetic "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v161/ns72/" "evidence: evidence/v161/ns72" _blank
+  click nbsamegramcontrol "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v161/ns74/" "evidence: evidence/v161/ns74" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds,nbsamegramcontrol closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth,nbrenewalforcing,nbselectedpreconditioner blocked;
+  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth,nbrenewalforcing,nbselectedpreconditioner,nbcurvaturearithmetic blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes,circle,debranges,f1,nb,dbn open;
   subgraph Legend
@@ -265,10 +275,10 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 28 | established result |
+| `proved` | 29 | established result |
 | `live` | 2 | current route (gold): being worked now |
-| `closed` | 28 | closed route (red): proved insufficient or impossible; kept deliberately |
-| `blocked` | 10 | attempted; obstruction found |
+| `closed` | 29 | closed route (red): proved insufficient or impossible; kept deliberately |
+| `blocked` | 11 | attempted; obstruction found |
 | `open` | 10 | target, not yet attacked |
 | `wall` | 0 | wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge |
 
@@ -287,6 +297,9 @@ graph LR
       - [x] **Fixed smoothed NB: positive averages and N^(-2) trace** — `prop:ns61-rh-equivalence; prop:ns61-average-budget` · evidence: [`evidence/v159/`](evidence/v159/) · One fixed Mellin integration preserves the RH criterion. Trace <= 3*kappa/(8*N^2), and scaled trace tends to that constant. Every Gram cross term and transformed numerator remains.
         - [!] **Actual optimized smoothed residual correlations** — `eq:ns61-open-correlation; eq:ns61-endpoint-correlation; prop:ns69-remainder; prop:ns71-selected-input` · evidence: [`evidence/v160/`](evidence/v160/) · **wall: non-summable lower contraction for the actual optimized residual (open sufficient input)** → `rh` (prop:ns61-gain; no necessity or equivalence claim for this sufficient estimate) · The complete signed endpoint remainder exceeds the leading model at N=64,128. Repaired-kernel directions recover 97.06% of full finite gain at N=256, using the actual complete energy. No cofinal numerator/cost estimate is proved.
           - [!] **Repaired-kernel selection measured with true energy** — `prop:ns71-selected-input` · evidence: [`evidence/v160/ns71/`](evidence/v160/ns71/) · **wall: cofinal lower numerator and upper selected cost with nonsummable relative gain** → `rh` (prop:ns71-selected-input; sufficient, not asserted necessary) · Certified finite gain fractions above 97% at N=128,256 for the projected repaired direction. Exact selected numerator/cost criterion avoids the excluded uniform comparison.
+            - [x] **Complete local energy and discrete curvature** — `prop:ns72-local-energy; prop:ns72-interpolation; prop:ns72-curvature` · evidence: [`evidence/v161/ns72/`](evidence/v161/ns72/) · Uniform model-only curvature comparison and local direction rules. No cofinal actual arithmetic estimate.
+              - [!] **Cofinal arithmetic curvature and selected cost** — `eq:ns72-local-directions` · evidence: [`evidence/v161/ns72/`](evidence/v161/ns72/) · **wall: actual curvature lower bound and selected true cost giving nonsummable relative contraction** → `rh` (NS-72; finite efficiency is insufficient) · Diagonal curvature retains 97.63% of finite optimal gain at N=256. The prescribed three-template span is weaker on all five blocks.
+              - [X] **Infer convergence from shared Gram geometry and finite efficiency** — `prop:ns74-same-gram; cor:ns74-finite-indistinguishability` · evidence: [`evidence/v161/ns74/`](evidence/v161/ns74/) · **wall: explicit inserted inner-factor control; scope is this finite-statistics inference** → `None` (cor:ns74-finite-indistinguishability) · A unitary altered family preserves every Gram entry and has arbitrarily close finite statistics but a positive floor. No original-family error floor.
           - [X] **Uniform comparison with the repaired elementary Gram** — `prop:ns70-cusp; prop:ns70-repaired-background` · evidence: [`evidence/v160/ns70/`](evidence/v160/ns70/) · **wall: pointwise Mellin-density comparison forced by all-coefficient localization** → `None` (prop:ns70-repaired-background) · Subtracting d/max repairs the adjacent n^-2 cusp to n^-3. Uniform lower and upper all-coefficient comparisons still fail, respectively by critical zeros and unbounded zeta values. Selected directions remain outside the exclusion.
         - [!] **Canonical smoothed norm: subpolynomial growth** — `prop:ns66-growth-bounds; cor:ns66-growth-exponent; prop:ns67-polynomial-cutoff; prop:ns67-abel-conditioning` · evidence: [`evidence/v160/`](evidence/v160/) · **wall: direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)** → `rh` (cor:ns66-growth-exponent) · Fixed-order exponent equals beta_star-1/2 by local zero evaluation and conditional Bochner-Abel bounds. Exact reformulation, with no improved arithmetic estimate. A bounded cofinal subsequence is sufficient but not asserted necessary. Exact cells through N^2 retain the exponent; centered whole Abel vectors have a uniform conditioning bound, so internal arithmetic remains the target.
           - [x] **Complete canonical divisor cells and full tail** — `prop:ns67-cells; lem:ns67-remainder; prop:ns67-polynomial-cutoff` · evidence: [`evidence/v160/ns67/`](evidence/v160/ns67/) · Exact signed cells and a full Stirling remainder <=1/(6z). Tail norm beyond N^2 is O(log N), so the growing finite norm has the same RH-equivalent exponent; no subpolynomial estimate.

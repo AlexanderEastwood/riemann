@@ -1,0 +1,552 @@
+\section{Local differential geometry of the repaired model (NS-72)}
+\label{sec:ns72-local-geometry}
+
+\paragraph{Scope.}
+The repaired kernel in NS-70 has a positive local differential-energy
+representation. This makes its selected numerator uniformly comparable
+to an explicit discrete curvature energy, and supplies two directions
+that can be selected in a linear number of scalar operations once the
+actual correlation vector is known. These are statements about the
+model geometry. Every arithmetic gain below is measured with the
+complete actual Gram. No cofinal arithmetic estimate is supplied.
+
+Put
+\[
+ a_0=K_1-\tfrac32>0,\qquad b_0=K_1/4+\tfrac18=a_0/4+\tfrac12,
+ \qquad \alpha_0=\sqrt{b_0/a_0}>\tfrac12.
+\]
+The normalized stationary kernel is
+\[
+ \phi_0(r)=e^{-|r|/2}(2K_1+K_1|r|+r^2/4),\qquad
+ K_0(u,v)=\frac{\phi_0(\log u-\log v)}{\sqrt{uv}}.
+\]
+Its complete Fourier density is
+\begin{equation}
+ w_0(t)=\frac{a_0t^2+b_0}{(t^2+1/4)^3}
+       =\frac{a_0}{(t^2+1/4)^2}
+                       +\frac{1/2}{(t^2+1/4)^3}.
+ \label{eq:ns72-positive-split}
+\end{equation}
+
+\begin{proposition}[A causal factor and a local positive energy]
+\label{prop:ns72-local-energy}
+With Fourier convention $\widehat f(t)=\int f(r)e^{-itr}dr$, define
+\[
+ h_0(r)=\sqrt{a_0}\,e^{-r/2}
+       \left\{r+\frac{\alpha_0-1/2}{2}r^2\right\}
+       \mathbf1_{r\geq0}.
+\]
+Then $h_0\geq0$ and
+\[
+ \widehat h_0(t)=\frac{\sqrt{a_0}(\alpha_0+it)}{(1/2+it)^3},
+ \qquad \phi_0(r)=\int_{\mathbb R}h_0(u+r)h_0(u)\,du.
+\]
+Let $\mathcal H_0$ be the real Hilbert space with norm
+\[
+ \|f\|_{\mathcal H_0}^2=
+       \frac1{2\pi}\int_{\mathbb R}\frac{|\widehat f(t)|^2}{w_0(t)}\,dt.
+\]
+As a set it is exactly $H^2(\mathbb R)$, and $\phi_0(r-\cdot)$
+is its point-evaluation representer. If $z\in H^3(\mathbb R)$ is the
+unique solution of $z'+\alpha_0z=f$, then
+\begin{equation}
+ \|f\|_{\mathcal H_0}^2
+ =\frac1{a_0}\left\{
+ \|z'''\|_2^2+\frac34\|z''\|_2^2
+               +\frac3{16}\|z'\|_2^2+\frac1{64}\|z\|_2^2\right\}.
+ \label{eq:ns72-local-functional}
+\end{equation}
+In particular, with $L_0=-d^2/dr^2+1/4$,
+\begin{equation}
+ \frac1{4b_0}\|L_0f\|_2^2\leq\|f\|_{\mathcal H_0}^2
+                 \leq\frac1{a_0}\|L_0f\|_2^2.
+ \label{eq:ns72-sobolev-comparison}
+\end{equation}
+All these are whole-line statements; no boundary or remote tail is omitted.
+\end{proposition}
+\begin{proof}
+The elementary transforms of $r e^{-r/2}$ and $r^2e^{-r/2}/2$ on
+$r\geq0$ give the displayed causal factor. Its squared modulus is
+exactly~\eqref{eq:ns72-positive-split}, proving the autocorrelation
+identity. In particular this factorization includes the complete model,
+not just its large-frequency term.
+
+The positive rational weight $1/w_0$ is comparable to $(1+t^2)^2$.
+Point evaluation is continuous because $\int w_0(t)dt<\infty$;
+Fourier inversion gives its stated representer. The multiplier
+$(\alpha_0+it)^{-1}$ is an isomorphism from $H^2$ to $H^3$.
+It is also the causal convolution with
+$e^{-\alpha_0r}\mathbf1_{r\geq0}$; thus there is no unspecified
+homogeneous solution. Plancherel gives
+$\|f\|_{\mathcal H_0}^2=a_0^{-1}\|(d/dr+1/2)^3z\|_2^2$.
+Expanding $(t^2+1/4)^3$ gives~\eqref{eq:ns72-local-functional}.
+Equivalently one may use density of compact smooth functions in $H^3$;
+no integration-by-parts boundary term survives that limit.
+Finally
+\[
+ \frac1{w_0(t)}=(t^2+1/4)^2\frac{t^2+1/4}{a_0t^2+b_0},
+ \qquad \frac1{4b_0}\leq\frac{t^2+1/4}{a_0t^2+b_0}\leq\frac1{a_0},
+\]
+which proves~\eqref{eq:ns72-sobolev-comparison}.
+\end{proof}
+
+\paragraph{The corresponding differential equation.}
+For prescribed values $f(r_j)=y_j$, the minimum-norm interpolant is
+$f=\sum_j\lambda_j\phi_0(r-r_j)$. In terms of its $z$, it satisfies
+in distributions
+\begin{equation}
+ \frac1{a_0}L_0^3z
+     =\sum_j\lambda_j\{\alpha_0\delta_{r_j}-\delta'_{r_j}\}.
+ \label{eq:ns72-local-equation}
+\end{equation}
+Thus between sample points $L_0^3z=0$: its pieces are combinations
+of $e^{r/2}$ and $e^{-r/2}$ times quadratic polynomials.
+The whole-line Sobolev condition fixes the decaying tails.
+The derivatives through order three are continuous, while the jumps are
+$[z^{(4)}]_{r_j}=a_0\lambda_j$ and
+$[z^{(5)}]_{r_j}=-a_0\alpha_0\lambda_j$.
+These signs follow directly from~\eqref{eq:ns72-local-equation}.
+This is a positive local model problem with explicit matching conditions;
+its coefficients contain no zeta-zero information.
+
+\begin{proposition}[The actual selected numerator is a model interpolation energy]
+\label{prop:ns72-interpolation}
+Fix $N\geq2$ and the actual optimized correlations $g_n$,
+$N<n\leq2N$, from NS-71. Put $r_j=\log j$ and define
+\begin{equation}
+ y_j=0\quad(j\leq N),\qquad
+ y_j=\frac1{\sqrt j}\sum_{k=N+1}^j k g_k\quad(N<j\leq2N).
+ \label{eq:ns72-data}
+\end{equation}
+Then the numerator for the projected repaired model is exactly
+\begin{equation}
+ m_N=g^TH_{0,N}^{-1}g
+       =\min\{\|f\|_{\mathcal H_0}^2:
+                          f(r_j)=y_j,\ 1\leq j\leq2N\}.
+ \label{eq:ns72-interpolation-numerator}
+\end{equation}
+This equality holds for every real vector $g$, not just the arithmetic one.
+For the actual vector, $y_j=\sqrt j\langle R_N,\sigma_j\rangle$.
+\end{proposition}
+\begin{proof}
+Write $q_j=\langle R_N,\sigma_j\rangle$.
+Old-space orthogonality gives $q_j=0$ for $j\leq N$.
+The exact difference relation is
+$g_j=q_j-(j-1)q_{j-1}/j$; telescoping gives
+$q_j=j^{-1}\sum_{k=N+1}^jkg_k$, with no endpoint error.
+
+Let $\Phi_{ij}=\phi_0(r_i-r_j)$ and
+$\mathsf D=\operatorname{diag}(\sqrt1,\ldots,\sqrt{2N})$.
+The full model Gram is $\mathsf D^{-1}\Phi\mathsf D^{-1}$.
+The invertible change from old atoms and new atoms to old atoms and
+new differences sends the load data to $(0,g)$.
+The complete block-inverse identity therefore gives
+$y^T\Phi^{-1}y=g^TH_{0,N}^{-1}g$.
+For completeness, the minimum-norm interpolant lies in the span of
+the evaluation representers: subtracting its component orthogonal to
+that span preserves all values and lowers its squared norm.
+Its coefficients are $\Phi^{-1}y$, proving the remaining equality.
+Every old/new cross term is retained in this argument.
+\end{proof}
+
+For arbitrary data~\eqref{eq:ns72-data}, write
+\[
+ h_j=r_{j+1}-r_j,\qquad
+ d_i=\frac{y_{i+1}-y_i}{h_i}-\frac{y_i-y_{i-1}}{h_{i-1}}
+       \quad(2\leq i\leq2N-1).
+\]
+Let $T$ be the positive tridiagonal matrix indexed by those interior
+points, with
+\[
+ T_{ii}=\frac{h_{i-1}+h_i}{3},\qquad T_{i,i+1}=\frac{h_i}{6}.
+\]
+Define the complete bending energy and the local curvature sum by
+\[
+ \mathcal C_N=d^TT^{-1}d,\qquad
+ \mathcal W_N=\sum_{i=2}^{2N-1}\frac{d_i^2}{h_{i-1}+h_i}.
+\]
+They vanish only when $g=0$: zero curvature would make all data affine
+in $r$, and the two old zero values force that affine function to vanish.
+
+\begin{proposition}[Uniform comparison with discrete curvature, within the model]
+\label{prop:ns72-curvature}
+For every $N\geq2$ and every real $g$,
+\begin{equation}
+ 2\mathcal W_N\leq\mathcal C_N\leq6\mathcal W_N,
+ \qquad
+ \frac{\mathcal C_N}{4b_0}\leq m_N
+                         \leq\frac{84}{a_0}\mathcal C_N.
+ \label{eq:ns72-curvature-comparison}
+\end{equation}
+The constants are independent of $N$; the upper constant is deliberately
+not optimized. These are uniform comparisons for the model numerator,
+not comparisons between the model Gram and the actual arithmetic Gram.
+\end{proposition}
+\begin{proof}
+Let $\psi_i$ be the standard tent function, equal to one at $r_i$
+and zero at $r_{i-1},r_{i+1}$, with support between those two endpoints.
+Integration by parts on each interval gives
+$d_i=\int f''\psi_i$ for any $H^2$ interpolant. The complete Gram of
+the tents is exactly $T$. Minimizing $\|f''\|_{L^2(r_1,r_{2N})}^2$
+therefore gives $d^TT^{-1}d$. Conversely a minimizing second derivative
+in the tent span integrates, with its affine part chosen to match the
+first two data, to the natural cubic spline through every sample.
+Thus this is an equality for the finite interval, not merely an
+uncertified spline approximation. Moreover the off-diagonal row sum
+of $T$ is at most half its diagonal. Applying
+$2|uv|\leq u^2+v^2$ to its cross terms shows
+\[
+ \tfrac16\operatorname{diag}(h_{i-1}+h_i)
+ \leq T\leq\tfrac12\operatorname{diag}(h_{i-1}+h_i),
+\]
+and inversion proves the first pair of bounds.
+The left side of~\eqref{eq:ns72-sobolev-comparison} bounds every
+whole-line interpolant below by $\mathcal C_N/(4b_0)$.
+
+For the uniform upper bound let $F$ be the natural spline on
+$[r_1,r_{2N}]$, and set $E=\|F''\|_2^2=\mathcal C_N$ there.
+All old nodal values vanish. On an old interval of length $h\leq\log2<1$,
+$F'$ has mean zero. Elementary one-dimensional estimates give
+$\|F'\|_2^2\leq h^2\|F''\|_2^2$ and
+$\|F\|_2^2\leq h^4\|F''\|_2^2$ on that interval.
+The derivatives at $r_1$ and $r_N$ have squared magnitudes at most
+$E/3$: integrate $F''$ against the endpoint linear weight on an
+adjacent zero-data interval. The new interval $[r_N,r_{2N}]$ has
+length $\log2<1$, starts at value zero, and hence
+\[
+ \|F'\|_{L^2(r_N,r_{2N})}^2,\quad
+ \|F\|_{L^2(r_N,r_{2N})}^2,\quad
+ |F(r_{2N})|^2,\quad |F'(r_{2N})|^2\ \leq\frac83 E.
+\]
+Combining old and new intervals yields
+$\|F'\|_2^2,\|F\|_2^2\leq11E/3$ on the full finite interval.
+For any interval $I$ define the positive local functional
+\[
+ \mathcal J_I(F)=\int_I\left(|F''|^2+\tfrac12|F'|^2
+                                      +\tfrac1{16}|F|^2\right)dr.
+\]
+Consequently $\mathcal J_{[r_1,r_{2N}]}(F)\leq49E/16<4E$.
+Only after summing over the complete extension below do we use
+$\mathcal J_{\mathbb R}(F)=\|L_0F\|_2^2$. On a finite piece the
+two expressions can differ by an endpoint term; none is discarded.
+
+Extend to the left over an interval of length one by the cubic with
+zero value and derivative at its outer endpoint and value zero,
+derivative $F'(r_1)$ at $r_1$. Its local $\mathcal J$ energy is
+$(6833/1680)|F'(r_1)|^2<2E$.
+On the right use $y(1-3t^2+2t^3)+w(t-2t^2+t^3)$,
+$0\leq t\leq1$, where $y=F(r_{2N})$, $w=F'(r_{2N})$,
+and then extend by zero. Its local $\mathcal J$ energy matrix has entries
+\[
+ A_{00}=7069/560,\quad A_{01}=20339/3360,\quad A_{11}=6833/1680.
+\]
+They are positive and $A_{00}+2A_{01}+A_{11}<29$.
+Since $y^2,w^2,|yw|\leq8E/3$, the right extension costs at most
+$232E/3$. The resulting compactly supported function is $C^1$
+and belongs to $H^2(\mathbb R)$; jumps in its second derivative
+are allowed. Its total $L_0$ energy is less than
+$(4+2+232/3)E<84E$.
+The upper side of~\eqref{eq:ns72-sobolev-comparison} proves the result.
+The extensions explicitly control both tails and all joining conditions.
+\end{proof}
+
+\paragraph{Two local coefficient rules.}
+Let $\mathsf S_N$ be the exact linear map $g\mapsto d$ defined above,
+and put $D_h=\operatorname{diag}(h_{i-1}+h_i)$. The choices
+\begin{equation}
+ v_{\rm spline}=\mathsf S_N^TT^{-1}\mathsf S_Ng,
+ \qquad v_{\rm diagonal}=\mathsf S_N^TD_h^{-1}\mathsf S_Ng
+ \label{eq:ns72-local-directions}
+\end{equation}
+have exact numerators $g^Tv_{\rm spline}=\mathcal C_N$ and
+$g^Tv_{\rm diagonal}=\mathcal W_N$.
+Both directions are nonzero for $g\ne0$.
+Cumulative sums construct $y$, local differences construct $d$, a
+positive-pivot tridiagonal solve computes $T^{-1}d$, and weighted suffix
+sums apply the transpose. Thus direction selection takes $O(N)$ scalar
+operations after the actual $g$ has been supplied. Computing that
+arithmetic vector and its true energy is a separate task.
+
+For either direction the actual gain remains
+\[
+ Q_N(v)=\frac{(g^Tv)^2}{v^TH_Nv}.
+\]
+A cofinal lower bound for $\mathcal C_N/E_N$ (or $\mathcal W_N/E_N$)
+and an upper bound for the corresponding selected true cost, giving a
+nonsummable relative contraction, would suffice for RH by the same
+argument as NS-71. The geometric equivalence does not establish these
+arithmetic bounds. In particular no inequality in
+\eqref{eq:ns72-curvature-comparison} includes the actual Gram $H_N$.
+
+\paragraph{Certified finite outcome.}
+The following outward intervals enclose each direction's fraction of the
+full actual projected gain. Direction selection uses the displayed rule
+without fitting its coefficients to the actual Gram.
+\[
+\begin{array}{c|ccc}
+ N&\text{repaired model}&\text{spline curvature}&\text{diagonal curvature}\\ \hline
+16&(.8390,.8391)&(.8529,.8530)&(.9308,.9310)\\
+32&(.8252,.8254)&(.8334,.8335)&(.9040,.9041)\\
+64&(.9577,.9578)&(.9602,.9603)&(.9783,.9785)\\
+128&(.9781,.9782)&(.9795,.9796)&(.9852,.9854)\\
+256&(.9705,.9707)&(.9725,.9727)&(.9763,.9764)
+\end{array}
+\]
+The simpler diagonal rule outperforms the repaired-kernel solve at all
+five checked sizes. This does not assert monotonicity or asymptotic
+optimality. The uniform numerator minorant $\mathcal C_N/(4b_0)$ captures
+between $6.19\%$ and $6.26\%$ of the exact model numerator on these blocks;
+its constant is conservative. Every complete actual Gram, tail and
+old-space correction is retained.
+
+Arb runs at 256 and 384 bits match all 140 recorded scalar enclosures.
+Doubling the Gram-series cutoff at $N=256$ matches another 28 quantities;
+25 overlapping quantities match the published NS-71 calculation.
+The minimum recorded accuracy is 73 bits. At $N=16$ an independent
+dense solve also encloses all entries of the tridiagonal solution.
+The 41 exact Maxima checks include the causal factor, actual Green-function
+jumps, normalization, tent Grams and the full extension energies.
+No finite computation supplies the missing cofinal arithmetic bound.
+
+\section{Testing explicit arithmetic coefficient templates (NS-73)}
+\label{sec:ns73-mobius-templates}
+
+\paragraph{Question and scope.}
+The successful curvature rule depends on the actual optimized residual.
+We test whether three prescribed M\"obius templates can replace that
+information on the same finite blocks. This is a finite control, not an
+asymptotic exclusion of M\"obius coefficients. Logarithmic tapers have
+established prior motivation: Bettin--Conrey--Farmer's Theorem~1
+in~\cite{BettinConreyFarmer2013} proves an optimal $q=1$ asymptotic under
+RH and an additional inverse-zeta-derivative moment hypothesis. Neither
+hypothesis is used here. Our $q=2$ projected block test is a different
+problem from their full canonical approximant.
+
+For $p=0,1,2$, prescribe physical new-atom coefficients
+\[
+ a^{(p)}_n=-\mu(n)\log^p(2N/n),\qquad N<n\leq2N,
+\]
+where $p=0$ means the constant taper, including at $n=2N$.
+No coefficient is fitted when selecting these three individual templates.
+Define their adjacent-difference coordinates by
+\begin{equation}
+ v^{(p)}_n=n\sum_{k=n}^{2N}\frac{a^{(p)}_k}{k}.
+ \label{eq:ns73-coordinate-change}
+\end{equation}
+Direct backward telescoping gives
+\[
+ \sum_{n=N+1}^{2N}v^{(p)}_n\varepsilon_n
+ =\sum_{n=N+1}^{2N}a^{(p)}_n\sigma_n
+                  -\frac{N}{N+1}v^{(p)}_{N+1}\sigma_N.
+\]
+Thus applying the complete old-space orthogonal complement gives exactly
+the intended physical new direction; the boundary term lies in the old
+space and is removed, not silently dropped before projection.
+
+\begin{proposition}[Complete finite template and span gains]
+\label{prop:ns73-span}
+For any real new-atom templates converted by
+\eqref{eq:ns73-coordinate-change}, let $V$ collect their difference
+coordinate vectors, $\Gamma=V^TH_NV$, and $\ell=V^Tg$.
+If the projected templates are independent, then $\Gamma>0$ and
+\[
+ \max_{v\in\operatorname{ran}V\setminus\{0\}}
+       \frac{(g^Tv)^2}{v^TH_Nv}=\ell^T\Gamma^{-1}\ell.
+\]
+For any nonzero direction $w$, the fraction of its actual projected
+energy lying in that span is
+\[
+ \frac{(V^TH_Nw)^T\Gamma^{-1}(V^TH_Nw)}{w^TH_Nw}\in[0,1].
+\]
+These formulae keep every cross term and the complete old-space correction.
+The maximizing span coefficients are fitted using the actual Gram; this
+span control is stronger than any fixed combination of the three templates.
+\end{proposition}
+\begin{proof}
+The coordinate relation follows from
+$v_n-nv_{n+1}/(n+1)=a_n$, with $v_{2N+1}=0$.
+The remaining claims are finite-dimensional orthogonal projection in the
+positive $H_N$ metric. Equivalently apply Cauchy--Schwarz to
+$\Gamma^{1/2}b$ and $\Gamma^{-1/2}\ell$. This also covers $\ell=0$,
+when every gain is zero. The second expression is the usual squared norm
+of the metric projection, divided by the original squared norm.
+\end{proof}
+
+\paragraph{Certified finite comparison.}
+The outward intervals below enclose fractions of the same full arithmetic
+block gain. The last column permits the best actual-Gram combination of
+all three M\"obius templates, not merely their individual scalings.
+\[
+\begin{array}{c|cccc}
+N& p=0&p=1&p=2&\text{three-template span}\\ \hline
+16&(.2134,.2135)&(.4692,.4694)&(.1828,.1829)&(.6023,.6024)\\
+32&(.0000683,.0000684)&(.6743,.6745)&(.5652,.5654)&(.7627,.7628)\\
+64&(.9222,.9223)&(.6407,.6409)&(.3966,.3967)&(.9512,.9514)\\
+128&(.2942,.2943)&(.4138,.4139)&(.2908,.2909)&(.8903,.8904)\\
+256&(.1023,.1025)&(.3390,.3392)&(.4338,.4339)&(.8366,.8367)
+\end{array}
+\]
+The curvature rule exceeds even this fitted span at all five sizes.
+Thus the three proposed templates do not explain its finite performance.
+The comparison does not rule out other arithmetic templates, larger
+families, or any asymptotic M\"obius approximation theorem.
+Two-precision and doubled-cutoff enclosures, the positive restricted Gram
+and all cross terms are retained in the archived evidence. Ten exact
+Maxima checks verify the coordinate and span algebra. No new cofinal
+estimate results from this test.
+
+\section{A same-Gram control with a positive error floor (NS-74)}
+\label{sec:ns74-same-gram-control}
+
+\paragraph{Scope.}
+The finite efficiency of a direction is a fraction of the available
+improvement, not an asymptotic convergence test. The following explicit
+altered family preserves every complete Gram entry, can approximate any
+fixed finite list of the original loads arbitrarily closely, and has an
+unconditional nonzero error floor. It is a control on that inference.
+It supplies neither an off-line zeta zero nor an error floor for the
+original arithmetic family.
+
+Fix $1/2<\beta<1$, set $a=\beta-1/2$, and put
+\[
+ B_\beta(s)=\frac{s-\beta}{s-(1-\beta)},\qquad
+ b_\beta=\frac{1-\beta}{\beta},\qquad
+ c_\beta=\frac{2\beta-1}{\beta^2}.
+\]
+Let $\mathcal U:L^2(0,\infty;dx)\to L^2(\mathbb R;dt)$ be
+$(\mathcal Uf)(t)=e^{-t/2}f(e^{-t})$. On this latter space define
+\[
+ (V_\beta u)(t)=u(t)-2a\int_{-\infty}^t
+                                      e^{-a(t-r)}u(r)\,dr,
+ \qquad U_\beta=\mathcal U^{-1}V_\beta\mathcal U.
+\]
+The convolution is a bounded $L^2$ operator, since its kernel is in
+$L^1$. Its Fourier multiplier is $(it-a)/(it+a)$, of modulus one,
+so $U_\beta$ is unitary. Define the altered atoms
+$\sigma_n^{(\beta)}=U_\beta\sigma_n$, keeping the original target
+$\tau$ and norm fixed.
+
+\begin{proposition}[Identical geometry, altered loads, and an explicit floor]
+\label{prop:ns74-same-gram}
+For every $m,n\geq1$ the complete altered Gram satisfies
+\[
+ \langle\sigma_m^{(\beta)},\sigma_n^{(\beta)}\rangle=G(m,n).
+\]
+The target loads are exactly
+\begin{equation}
+ b_n^{(\beta)}=\langle\tau,\sigma_n^{(\beta)}\rangle
+ =b_\beta b_n-\frac{c_\beta}{n}
+                    \left(\log n+2-\gamma+\frac1\beta\right).
+ \label{eq:ns74-loads}
+\end{equation}
+For every finite coefficient vector, including optimized coefficients,
+\begin{equation}
+ \left\|\tau-\sum_n q_n\sigma_n^{(\beta)}\right\|_2^2
+ \geq F_\beta:=\frac{(2\beta-1)(1-\beta)^2}{\beta^6}>0.
+ \label{eq:ns74-floor}
+\end{equation}
+All actual and elementary-model Gram matrices, old-space Schur
+complements, and geometric preconditioners are unchanged. The loads
+and residuals are changed.
+\end{proposition}
+\begin{proof}
+Unitarity proves the Gram equality on the complete space. In logarithmic
+coordinates $\mathcal U\tau=t e^{-t/2}\mathbf1_{t>0}$.
+Evaluating the adjoint anti-causal convolution gives
+\[
+ U_\beta^*\tau(x)=
+ \begin{cases}
+ b_\beta(-\log x)-c_\beta,&0<x<1,\\
+ -c_\beta x^{-\beta},&x>1.
+ \end{cases}
+\]
+Both pieces are retained. Since $\sigma_n(x)=1/(nx)$ for $x>1$ and
+\[
+ \int_0^1\sigma_n(x)\,dx=\frac{\log n+2-\gamma}{n},
+ \qquad \int_1^\infty x^{-\beta}\sigma_n(x)\,dx=\frac1{n\beta},
+\]
+the load formula follows. The first integral follows from Fubini in
+$\sigma_n=J\rho_n$: its interior contribution is
+$(\log n+1-\gamma)/n$ and its exterior contribution is $1/n$.
+
+All original atoms lie in the closed tail space
+\[
+ \mathcal T=L^2(0,1)\oplus
+              \operatorname{span}\{x^{-1}\mathbf1_{x>1}\}.
+\]
+Projecting the exterior piece of $U_\beta^*\tau$ onto that one-dimensional
+tail leaves squared distance
+\[
+ c_\beta^2\left(\frac1{2\beta-1}-\frac1{\beta^2}\right)
+ =F_\beta.
+\]
+The original approximation span is contained in $\mathcal T$, so its
+distance is at least this value. Applying the unitary $U_\beta$ proves
+\eqref{eq:ns74-floor}. No assumption about density of the original span
+in $\mathcal T$, or about RH, is made.
+\end{proof}
+
+\paragraph{The corresponding explicit dual obstruction.}
+The altered atoms still have exterior tail $b_\beta/(nx)$: integrate the
+causal convolution against $e^{t/2}/n$ for $t<0$.
+Their Mellin transforms, for $1-\beta<\Re s<1$, are
+\[
+ \widehat{\sigma_n^{(\beta)}}(s)
+     =-B_\beta(s)\frac{\zeta(s)}{s^2n^s}.
+\]
+This identity follows either by absolutely convergent convolution in a
+smaller strip and continuation, or directly from the physical formula.
+Thus the deliberately inserted zero at $s=\beta$ annihilates every atom.
+On $\mathcal T$, evaluation at $\beta$ is represented by
+\[
+ w_\beta(x)=x^{\beta-1}\mathbf1_{0<x<1}
+          +\frac{x^{-1}}{1-\beta}\mathbf1_{x>1},
+ \quad
+ \|w_\beta\|_2^2=\frac1{2\beta-1}+\frac1{(1-\beta)^2}.
+\]
+Since $\langle\tau,w_\beta\rangle=1/\beta^2$, Cauchy--Schwarz
+recovers precisely $F_\beta$. This is a zero of the inserted factor,
+not an asserted real or nonreal zero of $\zeta$.
+
+\begin{corollary}[Finite efficiency cannot distinguish convergence]
+\label{cor:ns74-finite-indistinguishability}
+For any fixed finite set of block sizes with nonzero original gain,
+the altered optimized energies, full gains, and either curvature
+rule's gain fractions converge to their original values as
+$\beta\downarrow1/2$. Nevertheless every fixed $\beta>1/2$ has the
+positive floor~\eqref{eq:ns74-floor} at all sizes. Consequently no
+strict finite collection of successful gain-fraction inequalities,
+together with the shared Gram geometry, implies convergence to zero.
+\end{corollary}
+\begin{proof}
+The loads~\eqref{eq:ns74-loads} converge entrywise to $b_n$.
+At each fixed size all Gram matrices are unchanged and positive
+definite. Hence their solved coefficients, projected loads and errors
+are continuous in $\beta$. Each curvature direction is a fixed linear
+map of those loads, and the positive gain denominators stay nonzero
+near the limit. Continuity proves the statement for each block and
+therefore for a finite list. The floor is strictly positive for every
+fixed parameter. There is no interchange of the limits $N\to\infty$
+and $\beta\downarrow1/2$.
+\end{proof}
+
+\paragraph{Certified control.}
+For $\beta=1/2+10^{-6}$ at $N=256$, the complete squared residual is
+in $(.00004614,.00004615)$, while the unconditional floor is in
+$(.00003199,.00003200)$. Thus more than $69.34\%$ of this finite error
+cannot be removed by any further approximation in the altered family.
+Nevertheless its diagonal curvature direction captures a fraction in
+$(.9763,.9764)$ of the available full block improvement, essentially
+the same finite efficiency as the original family. Its relative squared
+error reduction is only in $(.02491,.02493)$, compared with the original
+fraction in $(.08129,.08130)$: the distinction between gain fraction and
+error reduction matters.
+
+The parameter $\beta=1/2+10^{-10}$ gives the further exact positive floor
+$F_\beta\in(3.1999,3.2001)\cdot10^{-9}$ and still closer finite statistics.
+Both parameters and the original control are checked at all five sizes,
+at 256/384 bits and with the doubled cutoff at $N=256$. Sixteen exact
+Maxima checks cover the complete norm, tail, multiplier, dual functional
+and limiting identities. The original family's limiting error remains
+unknown; the positive floors in this paragraph belong only to the
+explicitly altered families.

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "groups": {
+    "ns73": {
+      "precision_enclosure_matches": 120,
+      "doubled_cutoff_matches": 24,
+      "NS72_overlap_matches": 20,
+      "source_sha256": "528b74437dd265187318bac2a1dd4658c1169d452fece880e8c95e0a7be8dfe5",
+      "minimum_nonzero_serialized_accuracy_bits": 71,
+      "conclusion": "curvature exceeds even the optimized three-template span at all five sizes; no asymptotic exclusion"
+    },
+    "ns74": {
+      "precision_enclosure_matches": 150,
+      "doubled_cutoff_matches": 30,
+      "NS72_overlap_matches": 20,
+      "source_sha256": "4608853ade376e8a822daaf9e3beabb4bf8a5cf2c00f147f261ddaf93ccddae7",
+      "minimum_nonzero_serialized_accuracy_bits": 75,
+      "largest_block_altered_family": {
+        "beta": "[0.50000100000000000000000000000000000000000000000000000000000000000 +/- 3e-70]",
+        "energy": "[4.61424001041192623145225818151614e-5 +/- 8.84e-38]",
+        "next_energy": "[4.496475036655833504501477724804e-5 +/- 5.66e-36]",
+        "positive_floor": "[3.1999488004351973376132607426562236407939099303848050959776980929e-5 +/- 1.87e-70]",
+        "floor_fraction_of_energy": "[0.69349422509765131938485384304386 +/- 1.76e-33]",
+        "full_relative_gain": "[0.0255220737305295732330396773882 +/- 8.11e-32]",
+        "curvature_relative_gain": "[0.024917378705109262707867 +/- 3.67e-25]",
+        "curvature_fraction_of_full_gain": "[0.97630697913481173320345 +/- 7.99e-24]",
+        "curvature_numerator": "[7.14025181214164434732323e-7 +/- 1.59e-31]",
+        "curvature_true_cost": "[4.4342943946720182588607e-7 +/- 5.00e-30]"
+      }
+    }
+  },
+  "cofinal_arithmetic_bound": false,
+  "manuscript_table_intervals_verified": {
+    "ns72": 15,
+    "ns73": 20
+  }
+}
