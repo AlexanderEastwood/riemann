@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "precision_enclosure_matches": 20,
+  "source_sha256": "da5ce84f7c3b7fa9f71eca6b2da1a14a445f1f3a0066ec04905403b080bd79cf",
+  "exact_cutoffs_rechecked": 4,
+  "comparator_assembled": false,
+  "cutoff_replay": "not applicable: all discarded remainder is bounded analytically; scalar certificates only",
+  "cofinal_error_decay": false,
+  "independent_review": false
+}

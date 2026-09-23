@@ -220,6 +220,15 @@ Small-prefix inverse-trace and scalar tail certificates replay at 256/384
 bits, with exact Maxima checks and local self-review. The original cofinal
 arithmetic decay, Weil floor, G2 and RH remain open.
 
+Version 1.65 (NS-82) retains the logarithmic physical tail as an exact
+rank-two form and bounds its complete Bernoulli remainder. This different
+comparator has sufficient cutoff O(N^(7/3) log^(1/3)(2N)), projected
+condition <=9, and ten ideal steps capture >98.84% of available block gain.
+Total atom count 512 needs cutoff 8435244. Only scalar cutoff certificates
+were evaluated; no millions-cell comparator or descent iteration was run.
+Two precisions, exact Maxima checks and local self-review only. No practical
+solver, cofinal decay, original Weil floor, G2 or RH claim.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

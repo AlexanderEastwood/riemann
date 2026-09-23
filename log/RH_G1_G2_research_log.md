@@ -1,5 +1,26 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.65: retain the tail as a rank-two form (NS-82)
+
+Keeping the exact logarithmic main tail gives a different, physical-cell
+comparator with sufficient cutoff **O(N^(7/3) log^(1/3)(2N))** and projected
+condition ratio at most nine. For a 256-to-512 block the sufficient cutoff
+is **8,435,244**, versus over 10^21 for the previous truncated-sample
+construction. Both are sufficient bounds, not necessary computational costs.
+
+The complete Bernoulli remainder and all cross terms are bounded in norm.
+Ten ideal exact-line-search steps capture over **98.84% of available block
+gain**. Only scalar cutoffs and constants were checked at 256/384 bits;
+the millions of physical cells and those iterations were not evaluated.
+No practical solver or cofinal approximation-error decay is claimed.
+The original Weil floor, G2 and RH remain open.
+
+[Readable update](../evidence/v165/research-update-2026-09-23-v1.html) ·
+[Proof and finite checks](../evidence/v165/).
+
+Validation: `evidence/v165/validation.json`; local self-review only.
+
+
 ## v1.64: ordinary conditioning and an effective finite comparator (NS-81)
 
 Exact coefficient recovery from a finite reciprocal-sample prefix gives an

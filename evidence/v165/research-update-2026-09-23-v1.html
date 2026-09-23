@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A smaller finite construction, with the full tail retained</title></head>
+<body style="margin:0;background:#f4f2ed;color:#192d35;font-family:Georgia,serif;font-size:17px;line-height:1.65;"><main style="max-width:680px;margin:32px auto;padding:36px 28px;background:#fff;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;color:#526971;">RIEMANN PROJECT · 23 SEPTEMBER 2026 · v1.65</p><h1 style="font-size:32px;line-height:1.2;">A smaller finite construction, with the full tail retained</h1>
+<p><strong>The latest improvement is computational, not a proof of RH.</strong> Keeping the known logarithmic part of the infinite tail exactly reduces our sufficient finite-comparator cutoff substantially. For the block extending 256 atoms to 512, it is now <strong>8,435,244 cells</strong>, compared with over 10<sup>21</sup> under the previous construction.</p>
+<p>The construction has changed: it uses exact physical-cell integrals plus a tail described by two coefficient sums. The remainder beyond the cutoff is bounded all the way to infinity. The bound retains its interaction with the main tail, so no mixed term is dropped.</p>
+<h2 style="font-size:23px;">What the theorem gives</h2>
+<p>The complete comparison is uniform over coefficient vectors and remains valid after optimizing the old coordinates. Its condition ratio is at most nine. With exact application of this comparator and exact line searches, ten steps capture more than <strong>98.84% of the available gain in a fixed block</strong>.</p>
+<p>This is a guarantee about available improvement. It does not say how large that improvement is compared with the entire error, and therefore does not prove that the error tends to zero.</p>
+<h2 style="font-size:23px;">What was actually checked</h2>
+<p>Exact rational arithmetic selects the cutoff, and 256/384-bit ball arithmetic verifies the scalar constants at 16, 64, 256 and 512 total atoms. All 20 enclosure comparisons and 12 Maxima checks pass. Python diagnostics show no errors or warnings. The manuscript builds to 353 pages with no reference, LaTeX, PDF or box warnings; the new pages were visually reviewed.</p>
+<p><strong>The millions-cell comparator and the ten iterations were not executed.</strong> The published result is a finite construction with a complete analytic error bound, not an implemented fast solver. Both the old and new cutoffs are sufficient upper bounds, not necessary costs.</p>
+<h2 style="font-size:23px;">Where the project stands</h2>
+<p>The earlier corrected-kernel experiment survived at size 256: it captured <strong>97.06%</strong> of full block improvement, and the simpler curvature direction captured <strong>97.63%</strong>, reducing squared error by <strong>8.13%</strong> in that tested step. Those finite results do not establish an asymptotic rate.</p>
+<p>The next mathematical priority is a bound on the complete signed arithmetic residual that forces its norm toward zero, or a lower bound on available block gain relative to total error. More finite efficiency tests alone cannot supply that argument. The original Weil floor, G2 and RH remain open.</p>
+<p><a href="proof.tex" style="color:#155c68;">Exact argument</a> · <a href="validation.json" style="color:#155c68;">Validation record</a></p>
+
+<p style="border-top:1px solid #d5dedc;margin-top:32px;padding-top:18px;font-size:14px;color:#526971;">Exact implications and certified scalar computations are distinguished from open arithmetic inputs. Local self-review only.</p></main></body></html>

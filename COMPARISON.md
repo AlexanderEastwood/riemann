@@ -566,3 +566,11 @@ The statement is specific to the displayed q=2 physical-coordinate Gram.
 The explicit large-cutoff construction is an upper bound on sufficient work,
 not a necessary cutoff, complexity lower bound, or practical implementation.
 It does not resolve the original cofinal approximation input.
+
+## v1.65: physical-tail compression
+
+NS82 applies an elementary norm-perturbation estimate to the complete
+Stirling remainder already retained in NS78. It changes the comparator:
+finite physical integrals plus a rank-two logarithmic tail, instead of
+truncated reciprocal samples. The cutoff improvement is a sufficient
+construction bound; no priority, necessary complexity or convergence claim.

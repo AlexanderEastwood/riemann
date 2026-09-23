@@ -1,0 +1,59 @@
+{
+  "classification": "certified scalar full-tail bounds; no comparator assembly or cofinal error estimate",
+  "precision_bits": 384,
+  "source_sha256": "da5ce84f7c3b7fa9f71eca6b2da1a14a445f1f3a0066ec04905403b080bd79cf",
+  "rows": [
+    {
+      "total_atoms": 16,
+      "cutoff": 2198,
+      "cutoff_selection": "exact rational comparison and integer binary search",
+      "values": {
+        "coefficient_constant": "[11964210.586213786213786213786213786213786213786213786213786213786 +/- 2.14e-58]",
+        "relative_remainder_squared_upper_bound": "[0.24970590065273109669650600823874334177180791846648553775220182573 +/- 2.92e-66]",
+        "relative_remainder_norm_upper_bound": "[0.49970581410739168694660518179753026845571179999275253059645110984 +/- 1.46e-66]",
+        "projected_condition_upper_bound": "[8.9858929130114616925075853252175086279925600347955557762492524766 +/- 7.64e-66]",
+        "ten_step_gain_fraction_lower_bound": "[0.98847078495393153024000000000000000000000000000000000000000000000 +/- 3e-70]"
+      },
+      "comparator_assembled": false
+    },
+    {
+      "total_atoms": 64,
+      "cutoff": 59327,
+      "cutoff_selection": "exact rational comparison and integer binary search",
+      "values": {
+        "coefficient_constant": "[3939669477.4093909260728108537402761033219848752733174851814505789 +/- 4.34e-56]",
+        "relative_remainder_squared_upper_bound": "[0.24999460815114272488367521676411754730904690441731864956917022633 +/- 1.17e-66]",
+        "relative_remainder_norm_upper_bound": "[0.49999460812207037727572258114819540151588729892550559586427430650 +/- 4.08e-67]",
+        "projected_condition_upper_bound": "[8.9997411945108835014426202895911109700874303506644988586945045458 +/- 3.69e-66]",
+        "ten_step_gain_fraction_lower_bound": "[0.98847078495393153024000000000000000000000000000000000000000000000 +/- 3e-70]"
+      },
+      "comparator_assembled": false
+    },
+    {
+      "total_atoms": 256,
+      "cutoff": 1618746,
+      "cutoff_selection": "exact rational comparison and integer binary search",
+      "values": {
+        "coefficient_constant": "[1272449291583.4536081864881077621768742492998979530744466429273190 +/- 3.77e-53]",
+        "relative_remainder_squared_upper_bound": "[0.24999987413337836951369519559637253775505815023206424165502714241 +/- 4.76e-66]",
+        "relative_remainder_norm_upper_bound": "[0.49999987413336252710326646198415147610145441602051273821422677028 +/- 6.74e-67]",
+        "projected_condition_upper_bound": "[8.9999939584039360857320619856274261841651356784002519388346292884 +/- 2.62e-65]",
+        "ten_step_gain_fraction_lower_bound": "[0.98847078495393153024000000000000000000000000000000000000000000000 +/- 3e-70]"
+      },
+      "comparator_assembled": false
+    },
+    {
+      "total_atoms": 512,
+      "cutoff": 8435244,
+      "cutoff_selection": "exact rational comparison and integer binary search",
+      "values": {
+        "coefficient_constant": "[22572347718759.956740937395019083234700276627447920318093687679636 +/- 2.94e-53]",
+        "relative_remainder_squared_upper_bound": "[0.24999996691962487962427570747199909689786897679561745987496452156 +/- 2.70e-66]",
+        "relative_remainder_norm_upper_bound": "[0.49999996691962378531298520224160935156050659334090723982053158548 +/- 1.63e-66]",
+        "projected_condition_upper_bound": "[8.9999984121421167848135528431638679137218445450755298122764401936 +/- 1.15e-65]",
+        "ten_step_gain_fraction_lower_bound": "[0.98847078495393153024000000000000000000000000000000000000000000000 +/- 3e-70]"
+      },
+      "comparator_assembled": false
+    }
+  ]
+}

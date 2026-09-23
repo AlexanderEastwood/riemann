@@ -1,0 +1,84 @@
+{
+ "manuscript_revision": "v1.65",
+ "base_commit": "9877d876297ea5ba7607f46c5185f53dbad921cc",
+ "files": [
+  {
+   "path": "evidence/v165/README.md",
+   "size_bytes": 1191,
+   "sha256": "410993f6a8bbcf66374a5b0a99429355e526bc1de375b90cf30eda06dd0c259a"
+  },
+  {
+   "path": "evidence/v165/integration-review-2026-09-23-v1.html",
+   "size_bytes": 2693,
+   "sha256": "403c09f71b56280d38d61af380522bbcd0bd2bc274f79c9eb5998327c483b401"
+  },
+  {
+   "path": "evidence/v165/ns82/certify_tail.py",
+   "size_bytes": 2199,
+   "sha256": "da5ce84f7c3b7fa9f71eca6b2da1a14a445f1f3a0066ec04905403b080bd79cf"
+  },
+  {
+   "path": "evidence/v165/ns82/exact-checks-output.txt",
+   "size_bytes": 1268,
+   "sha256": "61af12aeb23259f2d2b8043699db484340d3ed46017a73b371d5a13101eb082b"
+  },
+  {
+   "path": "evidence/v165/ns82/exact-checks.mac",
+   "size_bytes": 1023,
+   "sha256": "38ece4dd05b5c6be75383eb6b2c6dbae957379ae568bd3e497d95c9b198675b2"
+  },
+  {
+   "path": "evidence/v165/ns82/proof.tex",
+   "size_bytes": 3812,
+   "sha256": "ef4d009fb8607892fc2a515817de3bbbbe33f67312827eebecae7c78b604b84c"
+  },
+  {
+   "path": "evidence/v165/ns82/tail-256bits.json",
+   "size_bytes": 3631,
+   "sha256": "e7e7ca0b2b453078540f1ced6b4f5afb68e4508778e90b03a89fdef6f6605705"
+  },
+  {
+   "path": "evidence/v165/ns82/tail-384bits.json",
+   "size_bytes": 3631,
+   "sha256": "c61f3944bb2b61b29631d23f6687e1aa238ef41227292d732015c7bc4145b046"
+  },
+  {
+   "path": "evidence/v165/proof.tex",
+   "size_bytes": 3812,
+   "sha256": "ef4d009fb8607892fc2a515817de3bbbbe33f67312827eebecae7c78b604b84c"
+  },
+  {
+   "path": "evidence/v165/replay-validation.json",
+   "size_bytes": 431,
+   "sha256": "241f72712376d26554d3f8072dbd1481ce830616c39c52aeb985e04d7e8c862e"
+  },
+  {
+   "path": "evidence/v165/requirements-replay.txt",
+   "size_bytes": 36,
+   "sha256": "5f764ecba3d52e47ae436189de3a3d8fa03039fedbc1cf1ea1662f8177b91444"
+  },
+  {
+   "path": "evidence/v165/research-update-2026-09-23-v1.html",
+   "size_bytes": 3668,
+   "sha256": "501a146a7ca82c30c3f97fcbc81b6009b13186e885d2dec67d8d8eb0a79a0ba1"
+  },
+  {
+   "path": "evidence/v165/runtime-provenance.json",
+   "size_bytes": 137,
+   "sha256": "d81afe77c3db5a0cd755f4604d12e557d35b86c869acbbbea45b12e4c8bb9a63"
+  },
+  {
+   "path": "evidence/v165/validation.json",
+   "size_bytes": 3635,
+   "sha256": "96ea71f633e1afe3a0aa1a3aaf3104819c0e6bd97020f11ea3c55338741d311c"
+  },
+  {
+   "path": "evidence/v165/verify_replays.py",
+   "size_bytes": 2052,
+   "sha256": "4f37c53579b5ad1e10152424bf3f560ece018537baa7c8a207b06321e12877be"
+  }
+ ],
+ "file_count": 15,
+ "total_bytes": 33219,
+ "note": "NS82: complete physical-tail compression with exact rank-two main tail; scalar cutoff certificates only; no assembled comparator or cofinal decay."
+}

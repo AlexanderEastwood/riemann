@@ -93,6 +93,7 @@ graph LR
   nbbalancedfeedback["Tail-balanced divisor feedback control<br/><small>prop:ns79-balance</small><br/><small>&#128193; evidence/v163/ns79</small>"]
   nbarithmeticpreconditioner["Uniform efficiency using the full arithmetic sampling Gram<br/><small>prop:ns80-uniform-efficiency</small><br/><small>&#128193; evidence/v163/ns80</small>"]
   nbfiniteconditioning["Polynomial ordinary Gram conditioning and an effective finite comparator<br/><small>prop:ns81-conditioning; prop:ns81-finite-comparator</small><br/><small>&#128193; evidence/v164/ns81</small>"]
+  nbcompressedtail["Finite physical comparator with an exact rank-two tail<br/><small>prop:ns82-tail-compression</small><br/><small>&#128193; evidence/v165/ns82</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -181,6 +182,7 @@ graph LR
   nbarithmeticsampling --> nbbalancedfeedback
   nbarithmeticsampling --> nbarithmeticpreconditioner
   nbarithmeticpreconditioner --> nbfiniteconditioning
+  nbfiniteconditioning --> nbcompressedtail
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -271,9 +273,10 @@ graph LR
   click nbbalancedfeedback "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns79/" "evidence: evidence/v163/ns79" _blank
   click nbarithmeticpreconditioner "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns80/" "evidence: evidence/v163/ns80" _blank
   click nbfiniteconditioning "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v164/ns81/" "evidence: evidence/v164/ns81" _blank
+  click nbcompressedtail "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v165/ns82/" "evidence: evidence/v165/ns82" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -296,7 +299,7 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 36 | established result |
+| `proved` | 37 | established result |
 | `live` | 2 | current route (gold): being worked now |
 | `closed` | 29 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 11 | attempted; obstruction found |
@@ -325,6 +328,7 @@ graph LR
                     - [x] **Tail-balanced divisor feedback control** — `prop:ns79-balance` · evidence: [`evidence/v163/ns79/`](evidence/v163/ns79/) · Preserves exterior coefficient but leaves final jump. Endpoint-augmented span captures 71.18% at N=256; no uniform raw descent.
                     - [x] **Uniform efficiency using the full arithmetic sampling Gram** — `prop:ns80-uniform-efficiency` · evidence: [`evidence/v163/ns80/`](evidence/v163/ns80/) · Projected condition ratio <=21, one-step capture >=21/121, twenty-step capture >97.79%. Complete comparator inverse assumed; no fast inverse or cofinal relative contraction.
                       - [x] **Polynomial ordinary Gram conditioning and an effective finite comparator** — `prop:ns81-conditioning; prop:ns81-finite-comparator` · evidence: [`evidence/v164/ns81/`](evidence/v164/ns81/) · Condition O(N^4 log² N); sufficient cutoff 2^16(N+1)^6 with full tail bound. Enormous comparator not assembled; no practical solver or cofinal decay.
+                        - [x] **Finite physical comparator with an exact rank-two tail** — `prop:ns82-tail-compression` · evidence: [`evidence/v165/ns82/`](evidence/v165/ns82/) · Sufficient cutoff O(N^(7/3) log^(1/3)(2N)); projected condition <=9. Scalar constants certified; comparator not assembled; no cofinal decay.
               - [X] **Infer convergence from shared Gram geometry and finite efficiency** — `prop:ns74-same-gram; cor:ns74-finite-indistinguishability` · evidence: [`evidence/v161/ns74/`](evidence/v161/ns74/) · **wall: explicit inserted inner-factor control; scope is this finite-statistics inference** → `None` (cor:ns74-finite-indistinguishability) · A unitary altered family preserves every Gram entry and has arbitrarily close finite statistics but a positive floor. No original-family error floor.
                 - [x] **Exact continuous inner-factor defect and strict closure separation** — `prop:ns76-continuous-distance; prop:ns76-strict-closure` · evidence: [`evidence/v162/ns76/`](evidence/v162/ns76/) · Continuous defect depends on B(1), B′(1), B″(1). Integer closure strictly smaller; target distances not proved different.
                   - [x] **Complete continuous zero-tail budget** — `prop:ns77-tail-budget` · evidence: [`evidence/v162/ns77/`](evidence/v162/ns77/) · Published finite-height information implies continuous squared distance <2.08e-32; not an integer upper bound or zero-distance proof.
