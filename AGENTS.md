@@ -120,6 +120,14 @@ objective; exact scalar compensation and a conditional spectral limit follow
 from v1.36. These are controls and implications, not a new arithmetic sign
 estimate. API, the original floor, G2 and RH remain open.
 
+Version 1.57 (NS-58) derives the full translated-radical exterior pairing
+on the complete form domain. Its homogeneous vanishing is exactly equivalent
+to the original nullvector equation, not an independent sign estimate.
+Finite prime-weight changes produce an explicit, necessarily nonzero forcing
+profile for nonzero tests. Its compactness rules out a uniform inverse bound
+on the entire fixed-window parity space, not on a particular finite kernel.
+NS-58 stops at its stated condition; API, the uniform floor, G2 and RH remain open.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

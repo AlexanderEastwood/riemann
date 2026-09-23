@@ -1,0 +1,46 @@
+batch("evidence/v157/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+check("Two-pole kernel decomposition",
+      exponentialize(2*cosh((x-y)/2)-2*cosh(x/2)*cosh(y/2)
+                                    +2*sinh(x/2)*sinh(y/2)))
+check("Even pole reflection",
+      exponentialize(2*cosh((x-y)/2)+2*cosh((x+y)/2)
+                                    +(-4)*cosh(x/2)*cosh(y/2)))
+check("Odd pole reflection",
+      exponentialize(2*cosh((x-y)/2)-2*cosh((x+y)/2)+4*sinh(x/2)*sinh(y/2)))
+check("Changed prime row preserves forcing sign",
+      -rr-dd*(um+up)-(-(rr-dd*(rm+rp))-dd*((um+rm)+(up+rp))))
+ww:matrix([1,-1,0],[-1,2,-1],[0,-1,1])
+hh:matrix([1],[1],[1])
+check("Finite radical bookkeeping",sum((ww . hh)[j,1]^2,j,1,3))
+bb:matrix([0,1-sqrt(2),0],[1-sqrt(2),0,0],[0,0,0])
+aa:matrix([1,-sqrt(2)],[-sqrt(2),2])
+ff:matrix([sqrt(2)],[1])
+check("Altered interior block has a nullvector",sum((aa . ff)[j,1]^2,j,1,2))
+rext:matrix([0],[-1])
+forcing:matrix([(bb . hh)[1,1]],[(bb . hh)[2,1]])
+check("Altered boundary equals forcing",
+      sum(ff[j,1]*(rext[j,1]-forcing[j,1]),j,1,2))
+check("Forcing is explicitly nonzero",sum(ff[j,1]*forcing[j,1],j,1,2)+1)
+check("Homogeneous boundary would be false in this block",
+      sum(ff[j,1]*rext[j,1],j,1,2)+1)
+print(checks)
+[["Two-pole kernel decomposition",true],["Even pole reflection",true],
+ ["Odd pole reflection",true],
+ ["Changed prime row preserves forcing sign",true],
+ ["Finite radical bookkeeping",true],
+ ["Altered interior block has a nullvector",true],
+ ["Altered boundary equals forcing",true],
+ ["Forcing is explicitly nonzero",true],
+ ["Homogeneous boundary would be false in this block",true]]
+
+print("PASS:",length(checks),
+      "exact checks; analytic domain and injectivity arguments are not certified by these checks.")
+PASS: 9
+     exact checks; analytic domain and injectivity arguments are not certified by these checks.
+
+quit()

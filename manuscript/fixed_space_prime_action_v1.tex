@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.56},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.57},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.56\\
+\large Complete working manuscript, version 1.57\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 22, 2026}
@@ -206,6 +206,17 @@ new witnesses; they do not recover the original evidence.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.57 completes the bounded translated-radical boundary test.
+The full exterior pairing is defined on the complete form domain, with
+both poles and every prime row retained. Its vanishing for every translate
+is exactly equivalent to the original nullvector equation. Finite
+prime-weight changes give an explicit forcing profile, necessarily nonzero
+for nonzero tests; compactness supplies no uniform inverse estimate on the
+whole fixed-window space. No independent arithmetic sign or uniqueness
+estimate emerged. NS-58 stops at its stated condition; API, the uniform
+floor, G2 and RH remain open. Section~\ref{sec:ns58-boundary} gives the
+precise identities and scope.
+
 Version 1.56 adds complete-operator controls for proposed uniqueness
 arguments. Every nonzero finite change to prime-shift coefficients gives
 negative compact tests in both parities and a finite first-zero window,
@@ -18484,13 +18495,13 @@ Fix an integer $q\geq2$, $N_j=q^j$, and real numbers
 $0\leq\alpha_j<1$ for $j\geq j_0$, with $\sum_j\alpha_j=\infty$.
 Use the actual optimal coefficients $c^{(N_j)}=G_{N_j}^{-1}b_{N_j}$.
 Suppose the following \emph{residual block-correlation input} holds:
-\begin{equation}
+\begin{equation*}
  \sum_{n=N_j+1}^{qN_j}
  \left|\frac{\log n+1-\gamma}{n}
        -\sum_{m\leq N_j}c_m^{(N_j)}G_{mn}\right|^2
  \geq\kappa\log q\,\alpha_j E_{N_j}.
  \tag{RBC}\label{eq:ns53-nb-rbc}
-\end{equation}
+\end{equation*}
 Then $E_N\to0$. For example, the hypothetical bound (RBC) with
 $\alpha_j=1/(2(j+1))$ would give
 $E_{q^j}=O(j^{-1/2})$, hence $E_N=O((\log N)^{-1/2})$.
@@ -19348,6 +19359,270 @@ analytic lemmas, not on these checks. No new numerical window, tail metric,
 effective threshold, actual arithmetic lower bound, API, G2 or RH proof is
 obtained. Integration and local audit details are archived with this version;
 no independent review is claimed.
+
+\section{The translated-radical boundary test and its exact limitation (NS-58)}
+\label{sec:ns58-boundary}
+
+\paragraph{Classification and outcome.}
+The statements below are exact identities and proved implications from
+the archived radical and complete-domain inputs. The proposed boundary
+test is equivalent to the original nullvector equation; it supplies no
+independent sign or uniqueness estimate. This completes the bounded
+NS-58 attempt at its stated stop condition. API, the uniform finite
+floor, G2 and RH remain open. No numerical window is added.
+
+Use the real even normalized Gaussian arithmetic radical $\phi$ of
+Lemma~\ref{lem:v136-total-radicals}, its translates
+$\phi_t(x)=\phi(x-t)$, and $I_a=(-a,a)$. The inputs used here are
+global distributional radicality $\mathcal W\phi_t=0$, the
+double-exponential bounds for every derivative of $\phi$, and the
+nonzero entire Fourier transform of $\phi$. These are the archived
+v1.35--v1.36 inputs, not a new radical construction. Let $E_a$ denote
+zero extension, $P_a$ restriction to $I_a$, $V_a$ the full physical
+form domain, and $A_a$ its self-adjoint operator. No source projection
+or $H^1$ hypothesis is imposed. Inner products are linear in the first slot.
+
+\subsection*{A sharp cut with every exterior contribution retained}
+
+Write
+\[
+ u_t=\phi_t|_{I_a},\qquad r_t=\mathbf1_{I_a^c}\phi_t,
+ \qquad \ell_n=\log n,\quad w_n=\frac{\Lambda(n)}{\sqrt n},
+ \qquad \rho(s)=\frac{e^{-s/2}}{1-e^{-2s}}\quad(s>0).
+\]
+Define the two exterior pole moments
+\[
+ C_t=\int_{I_a^c}\cosh(y/2)\phi_t(y)\,dy,\qquad
+ S_t=\int_{I_a^c}\sinh(y/2)\phi_t(y)\,dy.
+\]
+For almost every $x\in I_a$ put
+\begin{align}
+ R_{a,t}(x)={}&-\int_{I_a^c}\rho(|x-y|)\phi_t(y)\,dy
+       +2\cosh(x/2)C_t-2\sinh(x/2)S_t\notag\\
+ &-\sum_{n\ge2}w_n\{r_t(x-\ell_n)+r_t(x+\ell_n)\}.
+ \label{eq:ns58-exterior-row}
+\end{align}
+The prime sum is infinite: the exterior rows with $n\ge e^{2a}$
+must not be removed. Values assigned at the two cut points do not
+affect any of the following $L^2$ identities.
+
+\begin{proposition}[Exact boundary pairing on the complete form domain]
+\label{prop:ns58-boundary-identity}
+For each fixed $a>0$ and $t\in\mathbb R$,
+$u_t\in\mathcal D(A_a)$ and $R_{a,t}\in L^2(I_a)$, and
+\begin{equation}\label{eq:ns58-row-action}
+ A_a u_t=-R_{a,t}.
+\end{equation}
+For every $f\in V_a$ the full exterior pairing is therefore
+\begin{equation}\label{eq:ns58-boundary-pairing}
+ \mathcal B_a f(t):=\langle f,R_{a,t}\rangle
+                  =-q_a(f,u_t).
+\end{equation}
+Each integral and series obtained by inserting
+\eqref{eq:ns58-exterior-row} into this pairing is absolutely convergent.
+\end{proposition}
+\begin{proof}
+The zero extension of $u_t$ is piecewise smooth with two possible
+jumps. Its Fourier transform is bounded by
+$C_{a,t}(1+|\xi|)^{-1}$, using integration by parts on $I_a$.
+Consequently it belongs to $H^s(\mathbb R)$ for $0<s<1/2$, and applying the
+full archimedean multiplier
+$\alpha(\xi)=\operatorname{Re}\psi(1/4+i\xi/2)-\log\pi$
+to that zero extension gives an $L^2$ function. The finite interior prime and pole operators are
+bounded. The form representation, or
+Proposition~\ref{prop:v118-log-dirichlet}, therefore gives
+$u_t\in\mathcal D(A_a)$ without requiring a zero boundary trace.
+
+On the open interval, $r_t$ vanishes. Thus the local diagonal terms
+in $\mathcal W r_t$ vanish, the archimedean off-diagonal kernel is
+$-\rho$, and the pole kernel is $2\cosh((x-y)/2)$. This gives
+exactly \eqref{eq:ns58-exterior-row}, including both pole signs.
+Near an endpoint, the archimedean integral is bounded in absolute
+value by
+\[
+ C_{a,t}\{1+|\log(a-x)|+|\log(a+x)|\}.
+\]
+Indeed $\rho(s)=O(s^{-1})$ at zero, $\rho$ decays at infinity,
+and $\phi_t$ is bounded and rapidly decreasing. This bound is in
+$L^2(I_a)$. Also $|r_t(y)|\le C_t' e^{-2|y|}$, so uniformly on
+$I_a$ the prime sum is bounded by
+\[
+ 2C_t'e^{2a}\sum_{n\ge2}\frac{\Lambda(n)}{n^{5/2}}<\infty.
+\]
+Both pole integrals converge absolutely. These estimates give the
+$L^2$ claim and, by Cauchy--Schwarz with $f\in L^2(I_a)$,
+absolute convergence of all paired terms, including the double integral.
+
+The global identity $\mathcal W\phi_t=0$ and the decomposition
+$\phi_t=E_a u_t+r_t$ give \eqref{eq:ns58-row-action} in distributions
+on $I_a$. Both sides are in $L^2(I_a)$, hence are equal there.
+The representation theorem for the closed form gives
+$q_a(f,u_t)=\langle f,A_a u_t\rangle$, proving the pairing formula.
+No globally closed Weil operator or ordinary global form norm is used.
+\end{proof}
+
+\subsection*{Testing every translate recovers exactly the kernel equation}
+
+\begin{proposition}[No additional exclusion from the vanishing pairing alone]
+\label{prop:ns58-equivalence}
+For $f\in V_a$,
+\begin{equation}\label{eq:ns58-equivalence}
+ f\in\ker A_a
+ \quad\Longleftrightarrow\quad
+ \mathcal B_a f(t)=0\quad\hbox{for every }t\in\mathbb R.
+\end{equation}
+For $\sigma\in\{1,-1\}$ and $f(-x)=\sigma f(x)$ the same
+equivalence holds using only
+\[
+ u_t^\sigma=\tfrac12(u_t+\sigma u_{-t}),\qquad
+ R_{a,t}^\sigma=\tfrac12(R_{a,t}+\sigma R_{a,-t}).
+\]
+For these parity rows the exterior odd pole moment vanishes when
+$\sigma=1$, and the exterior even pole moment vanishes when
+$\sigma=-1$. The remaining odd pole has its negative sign.
+\end{proposition}
+\begin{proof}
+The forward implication follows from
+\eqref{eq:ns58-boundary-pairing}. For the converse, define a linear
+distribution on smooth test functions on the line by
+\[
+ D_f(\psi)=q_a(f,\overline{\psi}|_{I_a}).
+\]
+It is supported in $[-a,a]$ and has finite order. To check this rather
+than assume density in an unspecified global form norm, integration
+by parts gives
+\[
+ \|\psi|_{I_a}\|_{V_a}
+ \le C_a\bigl(\|\psi\|_{L^\infty(I_a)}
+                +\|\psi'\|_{L^\infty(I_a)}\bigr),
+\]
+where the norm on $V_a$ is the ordinary norm plus the logarithmically
+weighted Fourier norm of its zero extension. The endpoint jumps are
+included in the Fourier bound. Form continuity then bounds $D_f$
+by the same seminorm, multiplied by a constant depending on $f$.
+In particular $D_f$ is a compactly supported distribution of order
+at most one, acting also on noncompact smooth functions by a cutoff.
+
+The assumed vanishing and the reality and evenness of $\phi$ give
+\[
+ (D_f*\phi)(t)=D_f(\phi_t)=q_a(f,u_t)=0\quad(t\in\mathbb R).
+\]
+Fourier transformation of this convolution is legitimate for a
+compactly supported distribution and a Schwartz function. It gives
+$\widehat D_f\,\widehat\phi=0$. The first factor is a smooth
+function on the real line; the second is a nonzero entire function
+with isolated real zeros. Hence $\widehat D_f=0$ first off those
+zeros and then everywhere by continuity. Fourier uniqueness implies
+$D_f=0$. In particular $q_a(f,v)=0$ for every
+$v\in C_c^\infty(I_a)$. This is a form core, so form continuity
+and the representation theorem give $f\in\mathcal D(A_a)$ and
+$A_af=0$.
+
+Reflection sends $u_t$ to $u_{-t}$ and commutes with $A_a$.
+For a vector of parity $\sigma$, pairing against $u_t^\sigma$
+is the same as pairing against $u_t$. The preceding proof therefore
+applies in either sector. The assertions about pole moments follow
+by integrating odd functions over the symmetric exterior set.
+\end{proof}
+
+This result does not assert that the exterior rows form a total family
+in $L^2(I_a)$. Proving the needed separation of all nonzero $V_a$
+vectors would itself prove the still-open kernel exclusion. Ordinary
+translation density of $\phi$ cannot be transferred through the
+unbounded operator $A_a$ while silently assuming that exclusion.
+Nor has an endpoint derivative of $f$ been introduced: the formula
+contains actual exterior interactions, not an assumed local boundary flux.
+
+\subsection*{The altered-weight controls acquire an explicit forcing term}
+
+Use NS-57's real finite coefficient change $\delta\ne0$ and the
+bounded self-adjoint whole-line operator
+\[
+ B_\delta=-\sum_n\delta_n(T_{\ell_n}+T_{-\ell_n}),\qquad
+ A_a^\delta=A_a+P_a B_\delta E_a,
+\]
+where $(T_s h)(x)=h(x-s)$. Put
+\[
+ R_{a,t}^\delta=R_{a,t}+P_aB_\delta r_t,
+ \qquad d_{a,t}^\delta=P_aB_\delta\phi_t.
+\]
+Thus the added terms in the first expression are
+$-\sum_n\delta_n\{r_t(x-\ell_n)+r_t(x+\ell_n)\}$, and the
+same expression with $\phi_t$ replaces $r_t$ in the forcing term.
+
+\begin{proposition}[Forced pairing and a necessarily visible defect]
+\label{prop:ns58-forced-pairing}
+For every $f\in V_a$,
+\begin{equation}\label{eq:ns58-forced-pairing}
+ \langle f,R_{a,t}^\delta\rangle-
+ \langle f,d_{a,t}^\delta\rangle=-q_a^\delta(f,u_t).
+\end{equation}
+Vanishing of the left side for all $t$ is equivalent to
+$f\in\ker A_a^\delta$, also in either parity sector.
+For every nonzero $f\in L^2(I_a)$ the forcing profile
+\[
+ F_\delta f(t)=\langle f,d_{a,t}^\delta\rangle
+\]
+is not identically zero. In particular every nonzero altered-weight
+nullvector has a nonzero forcing profile. Nevertheless this profile
+has no uniform positive $L^2$ lower bound over the whole unit sphere
+of either fixed-window parity space.
+\end{proposition}
+\begin{proof}
+The exact decomposition $E_a u_t+r_t=\phi_t$ gives
+\[
+ A_a^\delta u_t=-R_{a,t}^\delta+d_{a,t}^\delta,
+\]
+which proves \eqref{eq:ns58-forced-pairing}. The equivalence proof
+above applies with $q_a^\delta$ in place of $q_a$: the added operator
+is bounded and preserves the form domain and its continuity estimates.
+
+Self-adjointness gives
+$F_\delta f(t)=\langle B_\delta E_a f,\phi_t\rangle$.
+If this vanishes for every $t$, the ordinary translation-density
+lemma implies $B_\delta E_a f=0$. Its multiplier is
+\[
+ b_\delta(\xi)=-2\sum_n\delta_n\cos(\xi\ell_n).
+\]
+By Lemma~\ref{lem:ns57-symbol-signs} this is not identically zero.
+It is real analytic, so its real zero set has measure zero; its
+multiplication operator is injective on $L^2(\mathbb R)$.
+Thus $f=0$, a contradiction. The same argument uses reflected
+translates in either parity sector, since $B_\delta$ commutes
+with reflection.
+
+For clarity this injectivity supplies no uniform inverse estimate.
+With the unitary Fourier convention, Plancherel gives exactly
+\[
+ \|F_\delta f\|_{L^2(dt)}^2
+   =2\pi\int_{\mathbb R}|b_\delta(\xi)|^2
+                |\widehat{E_a f}(\xi)|^2|\widehat\phi(\xi)|^2\,d\xi.
+\]
+Its integral kernel is $B_\delta\phi(x-t)$ for $x\in I_a$,
+so its squared Hilbert--Schmidt norm is
+$2a\|B_\delta\phi\|_2^2<\infty$. It is compact, also on
+each infinite-dimensional parity space. An orthonormal sequence
+there converges weakly to zero, and its image under this compact
+map converges to zero in norm. This precludes a positive lower
+bound on the whole unit sphere. No lower bound restricted to the
+finite-dimensional kernel of a particular altered operator is excluded.
+\end{proof}
+
+\paragraph{Disposition and remaining input.}
+The original family has a homogeneous boundary pairing; the altered
+families have a forced one. The forcing is necessarily visible, so
+the original arithmetic radical identity really does distinguish the
+controls. But homogeneity for the original family is already equivalent
+to its null equation. Neither that distinction nor ordinary density
+establishes the missing sign. The first-zero assumptions add the
+previous support saturation and variational inequalities, but no
+independent bound on the signed expression above has been obtained.
+NS-58 therefore stops as specified, with the boundary test fully
+derived and its logical strength identified. The whole API and
+bounded-floor routes remain open. Finite exact algebra checks in
+\texttt{evidence/v157/} check signs and the forcing bookkeeping only;
+the complete-domain arguments are the analytic proofs above.
+
 
 \appendix
 \section{Reproducible finite checks}\label{app:numerics}

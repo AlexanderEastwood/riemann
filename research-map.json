@@ -731,6 +731,16 @@
       "prop": "lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability",
       "evidence": "evidence/v156",
       "note": "NS-57: q+B+cI is nonnegative on every compact test iff RH and B+cI>=0, for a fixed bounded self-adjoint B. Under RH the perturbed ground bottom tends to inf sigma(B); otherwise to -infinity. Consequences of v1.36; no new arithmetic lower estimate. Failure of exact positivity under finite coefficient changes does not obstruct a robust bounded-floor method."
+    },
+    {
+      "id": "radicalboundarytest",
+      "title": "Translated-radical boundary test: exact kernel equivalence and forced controls",
+      "status": "proved",
+      "parent": "kernelapi",
+      "prop": "prop:ns58-boundary-identity; prop:ns58-equivalence; prop:ns58-forced-pairing",
+      "branch": "codex/ns58-radical-boundary",
+      "evidence": "evidence/v157",
+      "note": "NS-58 stop condition: homogeneous vanishing is exactly the original null equation, with no independent sign estimate. Altered weights produce a necessarily nonzero forcing profile; compactness excludes only a uniform lower bound on the whole fixed-window space. API and the uniform floor remain open."
     }
   ]
 }
