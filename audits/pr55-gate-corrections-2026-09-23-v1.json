@@ -1,0 +1,557 @@
+{
+  "classification": "Process and numerical-software correction; no new RH lemma",
+  "reviewed_main": "87dc761045af688fc96130cc41f78d2932527aec",
+  "reviewed_PR55_head": "51f21b57d75eee84db8fb0ceea078430560fe5c0",
+  "review_comment": "https://github.com/AlexanderEastwood/riemann/pull/55#issuecomment-5804069503",
+  "authorization": "Alex: merge and then continue using this new framework",
+  "node_review": [
+    {
+      "id": "rh",
+      "status": "open",
+      "record_sha256": "a6064b1210f9c9659f6674a3c86f8636957d37b31b92fe1a25fb7820a086b351"
+    },
+    {
+      "id": "g1",
+      "status": "proved",
+      "record_sha256": "acd3798349e3f24c841620212371a6786326678e89d0687fbdd8d25a527c2612"
+    },
+    {
+      "id": "fixedspace",
+      "status": "open",
+      "record_sha256": "1c213ba6f5b9c4af744d6f0cd3a3e4e1cfe33cbb0022cba165b881be0e6c2c96"
+    },
+    {
+      "id": "g2",
+      "status": "open",
+      "record_sha256": "9e1d91e43c553c320cc35a297abb7a3db194f5c6ecc34a5ca0783d478fc37930"
+    },
+    {
+      "id": "windows",
+      "status": "proved",
+      "record_sha256": "313aca50d66a946ed5a300deaeba59fe67e3651a7f15de6424eb15b371559487"
+    },
+    {
+      "id": "w3",
+      "status": "proved",
+      "record_sha256": "77e96c1427481ffcdc807f20a5224963df465a72babc14a70dc62aad2d9f0480"
+    },
+    {
+      "id": "w4e",
+      "status": "proved",
+      "record_sha256": "08d3c623e69a0d0b5d42519b1a4868a9f5ef590fb664db47320a926c54fafc4d"
+    },
+    {
+      "id": "w4o",
+      "status": "proved",
+      "record_sha256": "f7f405cfde213fe5b008fcf497d4d7a9f02b8fc63bfa2e158415a61f7fd8a7b0"
+    },
+    {
+      "id": "w4",
+      "status": "proved",
+      "record_sha256": "a9af870f45cc123e8643a37307dea08dbdd7577ad6859c56ec906c5bc230957c"
+    },
+    {
+      "id": "w5",
+      "status": "closed",
+      "record_sha256": "0f46e7fabd72b0f5497e5e973feaf6743237a01f2d6c01f785ca5b2b10396025"
+    },
+    {
+      "id": "uniform",
+      "status": "open",
+      "record_sha256": "4a32ddf87af2d4c08d784723665bd4ce74501581c6937acfad444fcf8dba6a41"
+    },
+    {
+      "id": "primenorm",
+      "status": "closed",
+      "record_sha256": "5cbcd6e8b4484204f0c63e608bbb7e7a0169480d3728c58cd8a8094ff061f899"
+    },
+    {
+      "id": "normcontr",
+      "status": "closed",
+      "record_sha256": "62c71328c2627bbcc0a57d4751e1a74a6e4080eb507638a6408ae62c624f9d9e"
+    },
+    {
+      "id": "schatten",
+      "status": "closed",
+      "record_sha256": "25b540b69e245e0a0f5292e98d2aa87ffdf82bce0c276c773ba3a2160e5a35fe"
+    },
+    {
+      "id": "sampling",
+      "status": "closed",
+      "record_sha256": "db8658666829a5d5b940a56b22a4ed2e47f6f0db31002456e1663d469d514354"
+    },
+    {
+      "id": "farmaj",
+      "status": "closed",
+      "record_sha256": "c4db88ea5626d9edabbf8bed460c61b845bb685271b95e28ac967c65246dafd5"
+    },
+    {
+      "id": "blockmetric",
+      "status": "closed",
+      "record_sha256": "4e884da768e0fda4a88840e4db362f9e171507ee4809cb011b0d09e2dffe15d4"
+    },
+    {
+      "id": "flattop",
+      "status": "closed",
+      "record_sha256": "39be1f550704085a90c993517c84b367796bf29070b8534dfa854f4abd565b8f"
+    },
+    {
+      "id": "recipband",
+      "status": "closed",
+      "record_sha256": "92cf1b88e4ca26b841282a9f3133ab8c99042ecea1e36378a9dbc6ae3105a5d2"
+    },
+    {
+      "id": "cotlar",
+      "status": "closed",
+      "record_sha256": "5ace06c6dc627c98aacf1a990d9f44f812463578938432c2468081943f1a5a15"
+    },
+    {
+      "id": "scalarprim",
+      "status": "closed",
+      "record_sha256": "848d50065d63dc6f3f5da7605266d1b64961726a295057c2b371bab351ed8f56"
+    },
+    {
+      "id": "concentration",
+      "status": "blocked",
+      "record_sha256": "d6affa3a6f79c237f79021d8e0402e4d90db13cffbd5826bb616548a46d0dd48"
+    },
+    {
+      "id": "weaken",
+      "status": "proved",
+      "record_sha256": "02c6c0591b77512a2924cb8942ef11c0763f7afc1f9899533e97c22e2c0b4db3"
+    },
+    {
+      "id": "floor",
+      "status": "proved",
+      "record_sha256": "cd70d0a4ec1df2f7f085cf0d2b1e4803832a03f818a3df19ac343b20ae99f767"
+    },
+    {
+      "id": "gapfree",
+      "status": "proved",
+      "record_sha256": "6299834ba31c3fa8b8d240cd20825589d33642e03390b1b50b23673c09977c67"
+    },
+    {
+      "id": "floortest",
+      "status": "proved",
+      "record_sha256": "b34c42f92d658ac2ace922a395ab852c72c3ada0b155dee050df8fc6af0431e3"
+    },
+    {
+      "id": "shiftbarrier",
+      "status": "proved",
+      "record_sha256": "deb8265a58e88e93865e777f403e06fe4e635f72ab9333a4f48b9dbec50afc1e"
+    },
+    {
+      "id": "metablind",
+      "status": "proved",
+      "record_sha256": "0d55ce6cb403a94f3b6d18b119f49e975727471fa17aeb4fea5d977633c3bbd9"
+    },
+    {
+      "id": "altroutes",
+      "status": "open",
+      "record_sha256": "9192f6b378abec5403593d1041f7ca44e57dd27d8a2d30f8c6cb179d6173b03e"
+    },
+    {
+      "id": "circle",
+      "status": "open",
+      "record_sha256": "5b80e434fc9b475f795ab7dc60a05299d75f8dc06e1bd03fe696bf5ee457193a"
+    },
+    {
+      "id": "debranges",
+      "status": "open",
+      "record_sha256": "51c86873430eefa3f445d92959d78e8cb3da1e02358506f13589ef9fe3056701"
+    },
+    {
+      "id": "f1",
+      "status": "open",
+      "record_sha256": "ce3cf6f4686750291c242cbb7d87005698ae008b9e000707c1f3ef985799971f"
+    },
+    {
+      "id": "nb",
+      "status": "open",
+      "record_sha256": "cf85f02af7913757f9aeac97b3ed9a9d980c9b4f5fdac6a1f15dbaf5f331ccf5"
+    },
+    {
+      "id": "li",
+      "status": "closed",
+      "record_sha256": "6d1f13081447c2dbf3c573437fd04216ba6f97be8463a04a6425ea312f4a896d"
+    },
+    {
+      "id": "dbn",
+      "status": "open",
+      "record_sha256": "24dbacaa60d5c4e6dd677735c289b612e43960e5ed16a5c0b63767d5db40d3b8"
+    },
+    {
+      "id": "ccmmu",
+      "status": "proved",
+      "record_sha256": "9aafd7b83e2f9c2ff8664d1023761225d4ccc7fd09f730dee2ffbca9f5876e0d"
+    },
+    {
+      "id": "simpleeven4",
+      "status": "proved",
+      "record_sha256": "0d2c8c58f3d12b803210c596b53f49ac4d4e30891d325e73c8a056448040d701"
+    },
+    {
+      "id": "stepb",
+      "status": "live",
+      "record_sha256": "f13c8ab5a7a227b656356ec171924f2fc7496c20fdaaa7809db6c38f5005f92b"
+    },
+    {
+      "id": "semanticlock",
+      "status": "proved",
+      "record_sha256": "13d6c4dc8d711f21927d3f500fc78ab1be5376ef7fb3d5ef918f634c160bf5ba"
+    },
+    {
+      "id": "groundzero4",
+      "status": "proved",
+      "record_sha256": "3a4a3a88bc3fad460c510521458bbf08c77890c6c8b9bea535544ad93a5da26f"
+    },
+    {
+      "id": "groundzero4resolution",
+      "status": "proved",
+      "record_sha256": "88bf69b311102ecd532ffde0aeb4a08dffc3030d8642a9e972edde5becb5413a"
+    },
+    {
+      "id": "pencilconcentration",
+      "status": "proved",
+      "record_sha256": "b5341b9692a436b5680478d89a0139bd0b47ea7fa7ec14f8876ea9f5fc205227"
+    },
+    {
+      "id": "betaexplicit",
+      "status": "proved",
+      "record_sha256": "ca76d4acef321e36ba9e280312da2c0ae09066e7085971526b7f1412ba3c88b9"
+    },
+    {
+      "id": "minorantlevels",
+      "status": "blocked",
+      "record_sha256": "90007016528e40d1ab5ef45a50ea4215d11ae1af88da880ca43a45ad303a3d11"
+    },
+    {
+      "id": "zeroleveldistribution",
+      "status": "blocked",
+      "record_sha256": "36cdf7878dcc07a92a35c52e2cb2d911699e2d4697337680b3a8973a3dd82b8d"
+    },
+    {
+      "id": "weightedexactcost",
+      "status": "blocked",
+      "record_sha256": "e2e09995b09218f4eddd0b7100cfd04c7f2d2286ac992c4d72dc26938f11a776"
+    },
+    {
+      "id": "capacityweight",
+      "status": "blocked",
+      "record_sha256": "7804b871543eb1d3de914bad1460654e0c3cb949b3e93fabf2ff546d055a7e2d"
+    },
+    {
+      "id": "capacityslack",
+      "status": "closed",
+      "record_sha256": "d32fdcee5274ebd8b957eab8a75db3e9a4b05993f7ade3ee7a529d929afc8306"
+    },
+    {
+      "id": "inputcomparison",
+      "status": "proved",
+      "record_sha256": "6c43d5b5db5e9262d89f7578422a566a4f64af5f25a87e58540ba22cb6095a6e"
+    },
+    {
+      "id": "capacitychannels",
+      "status": "closed",
+      "record_sha256": "fd73d7508107d41db385fa41271d00f7162e0a1a3153c019373c82a7f4d7a581"
+    },
+    {
+      "id": "bumpstrength",
+      "status": "proved",
+      "record_sha256": "33462bf70b2aa6a4a7b0befd68a8a2d380e6a61a419b9c7a60b4f797d6b44922"
+    },
+    {
+      "id": "adaptiveidentity",
+      "status": "proved",
+      "record_sha256": "33654a920ffc0cd87df9f9f53206824af38599aeab90b43d5561f28730a772c3"
+    },
+    {
+      "id": "scalarsetshortcut",
+      "status": "closed",
+      "record_sha256": "362ad96b64f39a6414f0784ab4b6c27709ebadcafd06b972b090f66ed6821836"
+    },
+    {
+      "id": "relativeselection",
+      "status": "blocked",
+      "record_sha256": "1eff551738e7ab44d72ce51ac49bfb9e29fb12cc55d0f3877a9d4f2ef470d9c3"
+    },
+    {
+      "id": "absoluteselection",
+      "status": "closed",
+      "record_sha256": "b96962a81d1a2473982a0d628e69226de898167994ac0fc73a7ade7ae419ee9b"
+    },
+    {
+      "id": "coarseprofile",
+      "status": "closed",
+      "record_sha256": "5fac5febb11e2fc2f1efb2e8b153e5940901c22c8bec3a1d7c8bdd3655a56d2d"
+    },
+    {
+      "id": "fineradicalrank",
+      "status": "closed",
+      "record_sha256": "bbd2917051f0ea7d8bf9f406e1b17475c7b416abd0452b253afc797bdaff2ec3"
+    },
+    {
+      "id": "kernelapi",
+      "status": "live",
+      "record_sha256": "9aaa8950f6e892cdd604c4144432f2828a2b4c69256c6fd5c525b1caf982551a"
+    },
+    {
+      "id": "generic_h1",
+      "status": "closed",
+      "record_sha256": "4b5e6d4bad586e24925c14471356ea79d0d6fdf4ac8e3b5a164d2efa4efb6eb8"
+    },
+    {
+      "id": "localucp",
+      "status": "closed",
+      "record_sha256": "2d9001806b811ad8b99048fd7acae362c3a1d29669e08b9660defd8363f76c4c"
+    },
+    {
+      "id": "fullpositivecone",
+      "status": "closed",
+      "record_sha256": "463c0d33f274a677ba04f3f3564f8124f4ff86013fa8ee1d135576f9d4c76b52"
+    },
+    {
+      "id": "finiteweightcontrols",
+      "status": "proved",
+      "record_sha256": "c5554135eb6d1ca8471f822ed539406130482fd296b7a9e8ad50e889c611c3e8"
+    },
+    {
+      "id": "boundedfloorstability",
+      "status": "proved",
+      "record_sha256": "599b0aab151212b028ca5bd660ca4c6c4422ce29e4bd4b025b226ab6dea69c4e"
+    },
+    {
+      "id": "radicalboundarytest",
+      "status": "proved",
+      "record_sha256": "f1734c2f7a77863ae1629a2d95f6c0d8f1bc769945cf1389316714b3a9d85c14"
+    },
+    {
+      "id": "nbdifference",
+      "status": "proved",
+      "record_sha256": "7b2a9e85a0a8e227546f057e509d6878e1812fa2c658c1e7181df1c5db49d334"
+    },
+    {
+      "id": "nbrawlog",
+      "status": "closed",
+      "record_sha256": "64d4887e7e08bdbff5a88af1ee08dbee6206f1f5880c3f8d5375fbb3f77da0b2"
+    },
+    {
+      "id": "nbeulergrid",
+      "status": "closed",
+      "record_sha256": "40e33b4decb6bca43559f1c1f63e39910072162a62b955a6a39c374342e6fd02"
+    },
+    {
+      "id": "nbsmoothedbudget",
+      "status": "proved",
+      "record_sha256": "29de6141146fe943200963294f9b8ce5ede3a2bff88b9d04367600be8ecf7f68"
+    },
+    {
+      "id": "nbsmoothedcorrelation",
+      "status": "blocked",
+      "record_sha256": "356fdd6273c2a613fcb954d8fb464db08b01ed5f871d2c630fd12b5e2e7e8eac"
+    },
+    {
+      "id": "nbsharpintegrated",
+      "status": "closed",
+      "record_sha256": "7fd7eaf684df237436d5c4ca665f8451676b073cf20e4b739f5a3e37ed0a876d"
+    },
+    {
+      "id": "nbchangingnorm",
+      "status": "closed",
+      "record_sha256": "8f650392614d9d7790512df0395807ab6b5328d0dec1015a21a5d3ca379607de"
+    },
+    {
+      "id": "nbcanonicalgrowth",
+      "status": "blocked",
+      "record_sha256": "32a91d0ff565e7b15fd872b2d7a523feedffdbc218576d1b882ef63a37718355"
+    },
+    {
+      "id": "nbcanonicalcells",
+      "status": "proved",
+      "record_sha256": "519ba4b9f44ba88ffcdb9410934feb5ce77dac4d9713bb9d87d6c4b7595f9eae"
+    },
+    {
+      "id": "nbabelwholegain",
+      "status": "closed",
+      "record_sha256": "296dbab57619a22caef098e4dadf2e89b2c80d81bce2b3f65666c21e6307db0b"
+    },
+    {
+      "id": "nbrenewalforcing",
+      "status": "blocked",
+      "record_sha256": "7b403abd8d45582cd38f9c0784d14cd203ee36b11243e78a68ddd9eef9cad0e3"
+    },
+    {
+      "id": "nbcriticalrenewalenergy",
+      "status": "closed",
+      "record_sha256": "8096f5f89664b9da3157847ab533a6a97abc07a8fc735e16c75c967fc23e8d3d"
+    },
+    {
+      "id": "nbrepairedbounds",
+      "status": "closed",
+      "record_sha256": "a8119c617eec75783de3cdc6c952c1bd546da7a9dddd3985788e11521516c7fc"
+    },
+    {
+      "id": "nbselectedpreconditioner",
+      "status": "blocked",
+      "record_sha256": "a70b5a50300ed274a2b52489f4eeb8ab5af36a3325974ac984acee3dadc2de5f"
+    },
+    {
+      "id": "nblocalgeometry",
+      "status": "proved",
+      "record_sha256": "82ba2335d65144a9631a0378272a18c5a55af393fc159e91215fc9fc3fb7b809"
+    },
+    {
+      "id": "nbcurvaturearithmetic",
+      "status": "blocked",
+      "record_sha256": "685eaca0d72790e3131e33aacf7754b11c775f7ae16d6e0d913dc67c8dc62258"
+    },
+    {
+      "id": "nbsamegramcontrol",
+      "status": "closed",
+      "record_sha256": "def71b0d3d7490c9a42298130ae8e143c0ad2aa9e53ac16f289b320fbef8d8f9"
+    },
+    {
+      "id": "nbdivisorfeedback",
+      "status": "proved",
+      "record_sha256": "c9d84cf2e8e5c4f7164eb5d14f6b1ae6267268cd6c531682dd1c55002ed004e1"
+    },
+    {
+      "id": "nbcontinuousdefect",
+      "status": "proved",
+      "record_sha256": "f03a574281d050024b486e4a377310e063e7d4233e5de73a943612289c2d5147"
+    },
+    {
+      "id": "nbcontinuoustail",
+      "status": "proved",
+      "record_sha256": "f2ef62e2462b945de169c1e735d490bef1f047e9a64d66eee3788d5863522277"
+    },
+    {
+      "id": "nbarithmeticsampling",
+      "status": "proved",
+      "record_sha256": "668c5707937c755cf0190fa2318862b161bb9f2c356e7e34171546376f75bac2"
+    },
+    {
+      "id": "nbbalancedfeedback",
+      "status": "proved",
+      "record_sha256": "97afc502cb80fa008ce81c2e5b2c70bb3f55a5ce2fbbd209f3252f4b7d4bda20"
+    },
+    {
+      "id": "nbarithmeticpreconditioner",
+      "status": "proved",
+      "record_sha256": "dc5f77cf927538a9adbcfb00dc5f75ebbbc5d80ed953f90251954a235c43c8f4"
+    },
+    {
+      "id": "nbfiniteconditioning",
+      "status": "proved",
+      "record_sha256": "d4468bb517489af2bf35abd225cc11bfaf26d64c912a001dd4a3a7798296d8e0"
+    },
+    {
+      "id": "nbcompressedtail",
+      "status": "proved",
+      "record_sha256": "d275e3cad1d154ca6b94f676161c22fa1b7d3bd051b5c6990e2a247fd1893d67"
+    },
+    {
+      "id": "nbcriticalfloor",
+      "status": "proved",
+      "record_sha256": "31fa0c7153b8b087a7be034f03335b18cc82ad3dd0fbbc437fe4a7625672efa5"
+    },
+    {
+      "id": "nbuniformrelativecontraction",
+      "status": "closed",
+      "record_sha256": "336e948afd311592e4fc52c5058eba5fee0bad3180544a69632e6dec5e2e2b04"
+    },
+    {
+      "id": "nboptimizedpotential",
+      "status": "proved",
+      "record_sha256": "a626fba3d5f06921b7ab39247e36f875792ce23c33c8c903b6f79634176bdeef"
+    },
+    {
+      "id": "nbconvolutioncontrol",
+      "status": "proved",
+      "record_sha256": "e66c30e4d1122c58fa9e5e588af2bef52792922fa912b7740015ef1dea6773ed"
+    },
+    {
+      "id": "nbjointlocalization",
+      "status": "proved",
+      "record_sha256": "580fcb094c4a356c1cd0520ef486a945dcf84d573f894fb37390e87251ac8aa3"
+    },
+    {
+      "id": "nbdilationenvelope",
+      "status": "proved",
+      "record_sha256": "555e2bff9f7988f888f6da7e8e19e18a9157754d4b1e7d072cefe0b5745b065f"
+    },
+    {
+      "id": "nbdilationstrongnumerator",
+      "status": "closed",
+      "record_sha256": "92b64f30623c59d940e5f9e75ae482144e37a77b5a5902156eeb6ed6b524c9a9"
+    },
+    {
+      "id": "nbnormalizedupper",
+      "status": "proved",
+      "record_sha256": "1088799d43600af7fa73b8787747996921ed3955724f8ac580cbf94d8f0d66d7"
+    },
+    {
+      "id": "nbmobiusjointcancellation",
+      "status": "proved",
+      "record_sha256": "b66eb899450efd095ee2090d2fcfce821f19fb30e396fbbe5f9838fbb713cd28"
+    },
+    {
+      "id": "nbjointabelbound",
+      "status": "proved",
+      "record_sha256": "bab7d8c720cbe6e5dc1dde50f7346083d184758f82b087a40766ee83b79c35fe"
+    },
+    {
+      "id": "nbarithmeticcostbudget",
+      "status": "proved",
+      "record_sha256": "cb29c36f51453fb5e9e7f5b271ebf900421999339e0ab77302ea2cb2e479b682"
+    },
+    {
+      "id": "nbaveragedabsolutecost",
+      "status": "closed",
+      "record_sha256": "c2f60662137ebc3845f81df65741a4944fee8c7cf33177572a621075106f3a26"
+    },
+    {
+      "id": "circlecountinference",
+      "status": "closed",
+      "record_sha256": "d20ab8a68807e305e189224de71737141c48d65e8dcf9877d2b5ffebd0050325"
+    },
+    {
+      "id": "nbsquareproductrestriction",
+      "status": "proved",
+      "record_sha256": "e32574ac04fd4a5e00fe8c57d8d2851797341f5ffe3bf72a54de4cc76656ad6d"
+    },
+    {
+      "id": "nblcmsquarecone",
+      "status": "proved",
+      "record_sha256": "294705913f61df1c41344f51bde929403bc2d73eb0b79e436865f3bd3224f428"
+    }
+  ],
+  "conclusions_review": "All 104 recorded scopes and 14 continuation groups reviewed against the previous complete assessment and unchanged source records. No independent replay of historical proofs.",
+  "resolved_findings": [
+    "Public real kernel evaluates on the stable positive half-line via analytic reflection; moderate raw-formula reciprocity diagnostic remains independent.",
+    "Control API returns sampled outcomes and never universal validity; requires domain and applicability metadata.",
+    "Conductor/gamma/theta hypothesis mismatch and separate v139 scope explicitly retained.",
+    "PR body required before claim; no failure-only version, including no weekly exception.",
+    "Entire xi evaluator handles s=0,1 and negative even integers by continuation/reflection; controls added to pyright include."
+  ],
+  "freezes": "All four NS99 families adopted in NEXT_STEPS; fourth family uses ten distinct subgroup demands; counts are indexed work, not failure counts; mathematical statuses unchanged.",
+  "validation": {
+    "regression_tests_passed": 5,
+    "pyright_errors": 0,
+    "side_by_side_example": "same sample minima; explicitly diagnostic outcomes",
+    "manuscript_pages": 358,
+    "undefined_duplicate_references": 0,
+    "manifest_v166_ok": 16,
+    "manifest_missing_mismatched": 0,
+    "full_DH_replay": "Prior reviewed head replay matched original JSON exactly. Root/contour routines unchanged; correction leaves raw moderate diagnostic formulas unchanged."
+  },
+  "wall_check": {
+    "label": "Same open gap",
+    "closest": "NS99\u2013101",
+    "change": "Screening reliability and pre-claim workflow only; no arithmetic bound"
+  },
+  "missing_original_groups": "Both OPEN",
+  "new_version": false,
+  "new_research_row": false,
+  "open_review_findings": 0
+}

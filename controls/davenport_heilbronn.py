@@ -7,12 +7,11 @@ combination of the two Dirichlet L-functions for the odd characters mod 5.
 Its completion Lambda(s) is real on the critical line, satisfies the same
 shape of functional equation as Riemann's xi, and its theta-type kernel
 phi_f is even with double-exponential decay -- yet f has zeros with
-Re s != 1/2. Any argument that establishes positivity for Riemann's kernel
-using only evenness, decay and the modular completion of the kernel would
-apply verbatim here and would prove a false statement.
+Re s != 1/2. Transfer requires matching every hypothesis: the conductor,
+gamma factor and theta relation here differ from Riemann's original data.
 
 Use: evaluate a candidate inequality or identity on F_f and phi_f before
-proving it for xi. If it holds here, it cannot imply RH.
+proving it for xi. A sampled pass is not a proof that it holds everywhere.
 
     python controls/davenport_heilbronn.py             # run the three checks
     from controls.davenport_heilbronn import phi, F     # use in your own screen
@@ -21,7 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from typing import Any, Callable
+from typing import Any, Callable, Sequence
 
 import mpmath as mp
 
@@ -86,8 +85,8 @@ def theta_twisted(y: Any, conj: bool = False, terms: int | None = None) -> Any:
     return total
 
 
-def phi(t: Any) -> Any:
-    """Even theta-type kernel with F(z) = int_R phi(t) e^{zt} dt.
+def phi_raw(t: Any) -> Any:
+    """Raw theta formula; cancellation makes large negative t unreliable.
 
     Lambda(s) = int_0^inf theta_f(y) y^{(s+1)/2} dy/y with s = 1/2 + z and
     y = e^{2t} gives phi(t) = 2 e^{3t/2} theta_f(e^{2t}).
@@ -100,14 +99,27 @@ def phi(t: Any) -> Any:
     return mp.re(val)
 
 
-def check_evenness(points=(-1.5, -0.7, -0.2, 0.3, 1.1)) -> dict:
-    """phi(-t) == phi(t) and Lambda(s) == Lambda(1-s): the modular/functional-equation input."""
+def phi(t: Any) -> Any:
+    """Stable real-t kernel, using its analytic reflection identity.
+
+    The odd-character theta transformation gives phi(-t)=phi(t).
+    This evaluator uses that identity; check_evenness independently compares
+    the raw formulas only on a moderate range. No interval bound is claimed.
+    """
+    t = mp.mpmathify(t)
+    if mp.im(t) != 0:
+        raise ValueError("phi requires a real argument")
+    return phi_raw(abs(mp.re(t)))
+
+
+def check_evenness(points: Sequence[float] = (-1.5, -0.7, -0.2, 0.3, 1.1)) -> dict[str, Any]:
+    """Independent moderate-range raw-kernel and completion diagnostics."""
     rows = []
     for t in points:
         t = mp.mpf(t)
-        rows.append({"t": float(t), "phi(t)": mp.nstr(phi(t), 20),
-                     "phi(-t)": mp.nstr(phi(-t), 20),
-                     "abs_diff": mp.nstr(abs(phi(t) - phi(-t)), 5)})
+        rows.append({"t": float(t), "phi(t)": mp.nstr(phi_raw(t), 20),
+                     "phi(-t)": mp.nstr(phi_raw(-t), 20),
+                     "abs_diff": mp.nstr(abs(phi_raw(t) - phi_raw(-t)), 5)})
     s_pts = [C('0.3', '7.1'), C('0.9', '40.2'), C('1.6', '85.7')]
     fe = [{"s": str(s), "abs(Lambda(s)-Lambda(1-s))": mp.nstr(abs(Lambda(s) - Lambda(1 - s)), 5),
            "abs(Lambda(s))": mp.nstr(abs(Lambda(s)), 5)} for s in s_pts]
@@ -156,13 +168,37 @@ def check_lagarias_failure(rho: Any = None) -> dict:
     return {"z0": str(z0), "samples": samples, "negative_found": bool(negative)}
 
 
-def screen(candidate: Callable[[Callable, Callable], bool], name: str = "candidate") -> dict:
-    """Run a caller-supplied predicate candidate(F, phi) on the Davenport-Heilbronn pair.
+def screen(
+    candidate: Callable[[Callable[..., Any], Callable[..., Any]], bool | None],
+    name: str,
+    *,
+    sample_domain: str,
+    applicability: str,
+    applicable: bool | None = True,
+    observations: dict[str, str] | None = None,
+) -> dict[str, Any]:
+    """Record a diagnostic predicate, never a universal theorem or closure.
 
-    Returns {"holds_on_known_false_analogue": bool}. True means the candidate
-    cannot imply RH as stated.
+    The caller must describe hypothesis matching, domain and observations.
+    None or evaluation failure is inconclusive. No automatic result means
+    proved-control-obstruction; that requires a separate full-scope argument.
     """
-    return {"name": name, "holds_on_known_false_analogue": bool(candidate(F, phi))}
+    out: dict[str, Any] = {
+        "name": name, "classification": "diagnostic, not a certificate",
+        "sample_domain": sample_domain, "dps": mp.mp.dps,
+        "applicability": applicability, "observations": observations or {},
+        "proved_control_obstruction": False,
+    }
+    if applicable is not True:
+        out["outcome"] = "not-applicable" if applicable is False else "inconclusive"
+        return out
+    try:
+        result = candidate(F, phi)
+        out["outcome"] = ("inconclusive" if result is None else
+                          "sampled-pass" if result else "sampled-failure")
+    except (ArithmeticError, ValueError) as exc:
+        out.update(outcome="inconclusive", error=str(exc))
+    return out
 
 
 def main() -> None:
@@ -183,11 +219,15 @@ def main() -> None:
             fh.write(text + "\n")
 
 
+def F_xi(z: Any) -> Any:
+    """Entire xi(1/2+z)/2, reflecting canceled gamma poles to the right."""
+    s = mp.mpf(1) / 2 + z
+    if mp.re(s) < mp.mpf(1) / 2:
+        s = 1 - s
+    if s == 1:
+        return mp.mpf(1) / 4
+    return s * (s - 1) / 4 * mp.power(mp.pi, -s / 2) * mp.gamma(s / 2) * mp.zeta(s)
+
+
 if __name__ == "__main__":
     main()
-
-
-def F_xi(z: Any) -> Any:
-    """Riemann side for side-by-side screens: F(z) = xi(1/2+z)/2, xi(s) = s(s-1)/2 pi^{-s/2} Gamma(s/2) zeta(s)."""
-    s = mp.mpf(1) / 2 + z
-    return s * (s - 1) / 4 * mp.power(mp.pi, -s / 2) * mp.gamma(s / 2) * mp.zeta(s)

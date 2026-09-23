@@ -1,36 +1,43 @@
-# Proposal gate (fill in before claiming a task row)
+# Proposal gate (fill in before claiming a research row)
 
-Copy this block into the PR body or the task's `evidence/nsNNN/README.md`
-**before** the row in `NEXT_STEPS.md` is claimed. A proposal that cannot
-fill every field is not started. See `AGENTS.md` section "Proposal gate".
+Put the completed block in a draft PR body **before** claiming a row in
+`NEXT_STEPS.md`. A task README may mirror it. Screen the actual candidate
+first; no proof or certification work starts before this gate. A rejection
+may be archived in audits without a research claim. Process/audit work is
+exempt, but cannot be used to disguise an unscreened research attempt.
 
 ```
-Proposal: <one sentence: what estimate, identity or construction>
+Proposal: <precise candidate estimate, identity or construction; quantifiers>
 
-Shared-input group: <one of the 14 ids in RESEARCH_MAP.md "Shared
-  continuation inputs", e.g. WEIL-FLOOR, NB-GAIN, ZERO-GEOMETRY>
-  or DISTINCT with the closest recorded node named.
-Status of that group: <frozen / open; attempts so far: NS-..>
+Shared-input group: <id from RESEARCH_MAP or DISTINCT + closest node>
+Status: <frozen/open; indexed NS tasks; exact thaw condition if frozen>
 
 Arithmetic input beyond the functional equation:
-  <what the argument uses that Davenport-Heilbronn does not have:
-   Euler product, multiplicativity of coefficients, nonnegativity of
-   Lambda(n), a specific prime-sum estimate, ... or NONE>
-  If NONE: stop. The proposal is arithmetic-blind (AGENTS.md 3.5).
+  <specific original coefficient identity, Euler-product input or estimate;
+   where it enters; why applicable controls do not supply it>
+  If NONE: stop. A property name alone is not an estimate.
 
-Control screen (run before any proof or certificate):
-  Davenport-Heilbronn   controls/davenport_heilbronn.py   holds / fails / n.a.
-  Log-concave order-2   evidence/ns100_reassessment       holds / fails / n.a.
-  Reciprocal dilation   evidence/ns101_theta_factorization holds / fails / n.a.
-  A candidate that HOLDS on a known-false analogue cannot imply RH as
-  stated. Say what hypothesis it would need to add, or stop.
+Control screen (actual candidate, before proof/certification):
+  Davenport-Heilbronn: <sampled-pass / sampled-failure / inconclusive /
+    not-applicable; complete hypothesis match or explicit mismatch>
+  NS100 log-concave order-2: <same fields>
+  NS101 reciprocal dilation: <same fields>
+  Additional control, if needed: <same fields>
+  Command/artifact, precision, sample domain, values/residuals:
+    <reproducible record; do not infer universal truth from sampled passes>
+  Full-scope obstruction, if any: <separate analytic/certified argument;
+    all premises and quantifiers matched; otherwise NONE ESTABLISHED>
+  If the full condition holds on a control with off-axis zeros, stop that
+  generic implication or explicitly add a missing hypothesis. A diagnostic
+  alone may reject a proposal for now, but does not prove a route closed.
 
 Wall check: <Known wall / Same open gap / Distinct test>
   Closest result: <NS/PR>
-  What changes: <specific input or hypothesis, or explicitly nothing>
+  What changes: <specific arithmetic input; or explicitly nothing>
 
-What success changes: <which group closes, or which prediction is tested>
-What failure changes: <what gets recorded; frozen? closed?>
-
-Budget: <hours / one PR>   Version bump expected: <no / yes because ...>
+What success changes: <specific open input or falsifiable intermediate claim>
+What failure changes: <scoped stop/audit; no manuscript version>
+Budget: <hours / one PR>
+Disposition before claim: <admit / reject / defer, with reason>
+Version bump expected: <no / yes, with substantive justification>
 ```

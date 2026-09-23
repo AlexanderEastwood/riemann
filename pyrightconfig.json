@@ -53,7 +53,8 @@
     "evidence/ns96_lcm_square/*.py",
     "evidence/ns98_projected_cost/*.py",
     "tools/make_map.py",
-    "evidence/ns100_reassessment/*.py"
+    "evidence/ns100_reassessment/*.py",
+    "controls/*.py"
   ],
   "exclude": [
     "node_modules",

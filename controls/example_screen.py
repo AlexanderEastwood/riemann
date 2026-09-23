@@ -2,8 +2,8 @@
 
 Candidate: "Re(F'(z) conj F(z)) >= 0 on a small sample in Re z > 0".
 For xi this is a Lagarias-criterion sample and is expected to hold under RH.
-For the Davenport-Heilbronn pair it fails. A candidate that held on BOTH
-would be useless as an RH mechanism; this one at least discriminates.
+For the Davenport-Heilbronn pair it fails on this sample. Neither sample
+agreement nor disagreement proves a global inequality or an RH mechanism.
 
     .venv/bin/python controls/example_screen.py
 """
@@ -12,14 +12,15 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from typing import Any, Callable
 
 import mpmath as mp
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from controls.davenport_heilbronn import C, F, F_xi, GUESS, f  # noqa: E402
+from controls.davenport_heilbronn import C, F, F_xi, GUESS, f, screen  # noqa: E402
 
 
-def sample_min(Fun, z0) -> mp.mpf:
+def sample_min(Fun: Callable[[Any], Any], z0: Any) -> Any:
     vals = []
     for dz in (C("0.02"), C("-0.02"), C(0, "0.02"), C(0, "-0.02")):
         z = z0 + dz
@@ -31,17 +32,23 @@ def main() -> None:
     mp.mp.dps = 20
     rho = mp.findroot(f, C(*GUESS))
     z0 = rho - mp.mpf(1) / 2
-    out = {
+    xi_min, dh_min = sample_min(F_xi, z0), sample_min(F, z0)
+    out: dict[str, Any] = {
+        "classification": "diagnostic, not a certificate",
         "candidate": "Re(F' conj F) >= 0 at four points around z0, Re z0 > 0",
         "z0": str(z0),
-        "xi": {"min_sample": mp.nstr(sample_min(F_xi, z0), 6)},
-        "davenport_heilbronn": {"min_sample": mp.nstr(sample_min(F, z0), 6)},
+        "xi": {"min_sample": mp.nstr(xi_min, 6),
+               "outcome": "sampled-pass" if xi_min >= 0 else "sampled-failure"},
+        "davenport_heilbronn": screen(
+            lambda _F, _phi: dh_min >= 0, "horizontal growth sample",
+            sample_domain="z0 plus/minus 0.02 and plus/minus 0.02i",
+            applicability="Same derivative expression; no transfer of original arithmetic hypotheses asserted",
+            observations={"min_sample": mp.nstr(dh_min, 6)},
+        ),
     }
-    out["xi"]["holds"] = mp.mpf(out["xi"]["min_sample"]) >= 0
-    out["davenport_heilbronn"]["holds"] = mp.mpf(out["davenport_heilbronn"]["min_sample"]) >= 0
-    out["verdict"] = ("discriminates: fails on the known-false analogue"
-                      if out["xi"]["holds"] and not out["davenport_heilbronn"]["holds"]
-                      else "does not discriminate or fails on xi; stop or add a hypothesis")
+    out["verdict"] = ("sampled distinction only; universal statement untested"
+                      if xi_min >= 0 and dh_min < 0 else
+                      "no sampled distinction; global conclusion inconclusive")
     print(json.dumps(out, indent=2))
 
 

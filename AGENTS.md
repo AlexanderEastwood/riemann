@@ -67,27 +67,37 @@ says "continue".
 
 ### Proposal gate (Claude, 2026-09-23; NS-102)
 
-The per-turn wall check runs after work starts. By 2026-09-23 the board held
-100 rows, 36 of which ended in "no new estimate", and the NS-99 audit reduced
-all 104 conclusions to 14 shared inputs. The wall was being found after the
-work, one full cycle each time. So the check now also runs **before** a row
-is claimed, using `PROPOSAL_TEMPLATE.md`:
+The wall check must run before work starts and before a research row is
+claimed. NS99 indexed 14 continuation groups and annotated 63 of 104
+registered nodes; it did not turn existing proved conclusions into open
+assumptions. Use `PROPOSAL_TEMPLATE.md` to prevent repeated unestimated inputs:
 
-1. **Name the shared-input group** from `RESEARCH_MAP.md` ("Shared
-   continuation inputs") that the proposal would discharge, or DISTINCT
-   with the closest node named. A group marked *frozen* on the board takes
-   no new attempt unless the proposal names a new input for it.
-2. **Name the arithmetic input beyond the functional equation.** If the
-   answer is NONE, do not start: see 3.5 below.
-3. **Run the control screen first.** Evaluate the candidate inequality or
-   identity on the known-false analogues in `controls/` (and the controls
-   recorded in NS-100/NS-101) before any proof, certificate or scan. A
-   candidate that holds on a known-false analogue cannot imply RH as
-   stated; record that and stop, or say what hypothesis must be added.
-4. Fill the wall-check fields, the success/failure consequences, and a
-   budget. Put the filled template in the PR body or the task README.
+1. **Name the shared-input group** from `RESEARCH_MAP.md`, or DISTINCT with
+   the closest node named. A frozen group needs a specific new input that
+   satisfies its stated thaw condition; a new formula or larger table is
+   insufficient.
+2. **Name the original arithmetic input beyond the functional equation.**
+   Examples include exact theta coefficients, Euler-product coefficients,
+   or a specific prime-sum estimate. If NONE, do not start research.
+3. **Run the candidate's control screen first.** Use
+   `controls/davenport_heilbronn.py` or `controls/example_screen.py` with
+   the actual candidate, plus applicable NS100/101 controls, before proof,
+   certification or a wider scan. Record hypotheses, quantifiers, domain,
+   precision and observations. Merely running the unchanged example does
+   not screen a different proposal. Mark a control not-applicable with a
+   concrete hypothesis mismatch; do not silently skip it.
+   A sampled pass or failure is diagnostic, not a theorem. A full-scope
+   control satisfying all premises but violating the proposed conclusion
+   excludes only that stated implication. If the full candidate condition
+   holds on such an analogue, it cannot by itself force critical-line zeros.
+   Stop that inference or explicitly add a hypothesis; do not claim RH or
+   impossibility from finite samples.
+4. **Put the filled template in a draft PR body before claiming a row.**
+   Include the wall check, success/failure consequences and a budget. A task
+   README may mirror the PR, but is not a substitute. A rejected screen may
+   be recorded in audits without claiming a research row.
 
-A row claimed without a filled template is reverted to `open`. Audits
+A row claimed without a filled PR template is reverted to `open`. Audits
 and process changes are exempt; research tasks are not.
 
 ## 1. What this project is
@@ -385,16 +395,17 @@ different operators. Always state which you mean.
 
 ---
 
-**3.5 Arithmetic-blind arguments cannot close.** The Davenport-Heilbronn
-function (Titchmarsh 10.25) has a completed function even about 1/2, a
-theta-type kernel that is even with double-exponential decay, the full
-modular completion, and zeros off the critical line (one near
-0.8085 + 85.699i; `controls/davenport_heilbronn.py`). Any positivity
-argument that uses only evenness, decay, the functional equation or the
-modular structure of the kernel applies to it verbatim and is therefore
-false. The step where the Euler product, multiplicativity or nonnegativity
-of the coefficients enters must be visible in the proposal. This is the
-concrete form of the v1.39 meta-obstruction (`thm:v139-probe-relaxation`).
+**3.5 Match the control's actual hypotheses.** Davenport-Heilbronn
+(Titchmarsh 10.25) has an even completed function, a real even theta-type
+kernel with double-exponential decay, and off-line zeros. The control uses
+an odd-character conductor-5 completion and weight-3/2 theta relation;
+these are not Riemann's original gamma factor, coefficients or every
+modular identity. It refutes a generic positivity implication only when
+all the proposed hypotheses transfer. Show precisely where original
+arithmetic or theta data absent from the applicable controls enter.
+The `controls/` computations are diagnostics, not certificates of universal
+claims. The v1.39 probe-relaxation theorem is a separate, explicitly scoped
+density obstruction; it is not a universal arithmetic-blindness theorem.
 
 ## 4. Numerical standards
 
@@ -610,15 +621,14 @@ When something fails, report:
 "Source validation passed" is not a build. Run `./manuscript/build.sh` and
 report the page count and the undefined-reference count.
 
-Do not produce a new version number to show motion. A version that only
-records a failure is fine and normal here. A version that overstates is not.
+Do not produce a new version number to show motion.
 
-**Version-bump policy (2026-09-23).** Nine manuscript versions landed on one
-day (v1.58 to v1.66), each recording a failure in an already-registered
-input group; the manuscript became unreviewable and the certified results
-were buried. Bump a manuscript version only when a shared-input group in
-`RESEARCH_MAP.md` changes status (a new bound, a closure, a corrected
-error) or a certified computation is added. Failed attempts, reformulations,
-controls and audits go in `evidence/nsNNN/` or `audits/` with a board row
-and a research-map annotation, and no version. One failure-only version a
-week is normal; one a day is churn.
+**Version-bump policy (Alex, 2026-09-23).** No manuscript version for
+failure-only work. Failed attempts, equivalent reformulations, controls and
+audits go in `evidence/nsNNN/` or `audits/`, with an appropriate board/map
+record and no version. Rejected pre-claim screens need no research row.
+There is no weekly exception. A new substantive bound, a precisely scoped
+proved closure, a correction to a mathematical result or a genuinely new
+certified computation can justify a version after review; a failed screen
+alone cannot. Historical v1.58–v1.66 contain positive results and certificates
+as well as failures; do not relabel them as nine failure-only releases.
