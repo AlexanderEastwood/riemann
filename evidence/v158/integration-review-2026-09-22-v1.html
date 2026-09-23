@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NS-59 local integration review, version 1</title></head>
+<body style="margin:0;background:#f3f1eb;color:#242b31;font-family:Georgia,serif;line-height:1.6;"><main style="max-width:680px;margin:36px auto;padding:36px 32px;background:#fff;border-top:6px solid #264c57;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.4px;color:#506970;">SEPTEMBER 22, 2026 · VERSION 1 · LOCAL SELF-REVIEW</p>
+<h1 style="font-size:30px;line-height:1.2;">NS-59 integration review</h1>
+<p>This is a local self-review by the implementing agent. No independent review, RH proof, G2 proof or publication-readiness assessment is claimed.</p>
+<h2 style="font-size:21px;">Mathematical scope checked</h2>
+<ul style="padding-left:22px;">
+<li>The adjacent norm estimate includes the complete infinite integral. Its period calculation covers both sets of intervals, including the zero-length last interval, and its tail bound uses the global periodic supremum.</li>
+<li>The coordinate change transforms the correlations and the full Schur complement. The old ρ<sub>N</sub> term is retained in the raw difference Gram and vanishes only after orthogonal projection.</li>
+<li>The Mellin identity uses the exact factor (1−s)/s, whose modulus is one on the critical line. The full frequency integral is retained.</li>
+<li>The fractional Sobolev argument handles cell jumps and the zero exterior. Its endpoint powers are integrable only for θ &lt; 1/2; no unproved H¹ regularity is used.</li>
+<li>The converse packet construction has coefficient norm squared O(N²), uniform Fourier error O((1+|τ|)/N), and a nonzero Fourier lower bound on a unit interval. The use of N comparable to T² respects the range |τ| ≤ √N.</li>
+<li>The cited short-interval point bound is Huxley–Ivić equation (2.1). Soundararajan’s unconditional Theorem 1 contradicts every fixed logarithmic upper bound. Neither source is used as an RH-dependent input.</li>
+<li>The equivalence and obstruction concern the raw all-coefficient Gram only. There is no unsupported transfer to the projected matrix, the residual direction, or the full NB approximation route.</li>
+</ul>
+<h2 style="font-size:21px;">Reproducibility checked</h2>
+<p>Arb ran the identical finite matrices through index 512 at 256 and 384 bits. All 161 saved numerical enclosures overlap across precisions. The finite table intervals and the two raw-trace losses below 1/400 of actual gain were checked at both precisions. The minimum internal accuracy among reported block quantities is 188 bits at 256-bit working precision and 250 bits at 384-bit working precision.</p>
+<p>A separate positive-cell integral calculation checked seven selected Gram entries, including off-diagonal entries, with the complete remaining integral bounded by 1/65536. Both precisions passed. Thirteen exact Maxima checks passed; they verify finite algebra rather than the asymptotic proofs. Python diagnostics report zero errors and warnings on all touched Python files.</p>
+<h2 style="font-size:21px;">Integration checked</h2>
+<p>The proof fragment is present verbatim once in the live manuscript. The full manuscript builds to 298 pages, with zero undefined or duplicate references, zero overfull or underfull boxes, and zero duplicate PDF destination warnings. Pages 271–274 were rendered and visually inspected. The difference functions use δ<sub>n</sub> to avoid confusing them with the previously defined scalar approximation distance d<sub>N</sub>.</p>
+<p>The research map records only the raw logarithmic comparison as closed. The NB route remains blocked on a lower-correlation input. Diagnostic floats are stored separately from certificate evidence. Original historical missing-evidence disclosures are preserved.</p>
+<h2 style="font-size:21px;">Remaining limitation</h2>
+<p>No asymptotic lower bound for the actual corrected correlations is proved. Constants in the Weyl-based operator estimate are not numerically instantiated. Finite gains cannot be extrapolated into convergence. No unresolved major issue was found in this local review, subject to those explicit limits.</p>
+</main></body></html>

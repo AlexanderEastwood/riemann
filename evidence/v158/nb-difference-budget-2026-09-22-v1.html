@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RH project — NB difference budgets, v1.58</title></head>
+<body style="margin:0;background:#f3f1eb;color:#242b31;font-family:Georgia,serif;line-height:1.65;">
+<main style="max-width:680px;margin:36px auto;padding:36px 32px;background:#fff;border-top:6px solid #264c57;">
+<p style="margin:0;color:#506970;font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.5px;">RIEMANN PROJECT · NS-59 · SEPTEMBER 22, 2026 · VERSION 1</p>
+<h1 style="font-size:32px;line-height:1.2;margin:16px 0;">An improved block bound, with an arithmetic limit</h1>
+<p style="font-size:19px;">We have an unconditional estimate for a complete Nyman–Beurling block. Its remaining lower-correlation requirement is open. RH is not proved.</p>
+<h2 style="font-size:22px;margin-top:30px;">What the calculation uncovered</h2>
+<p>The existing raw-trace estimate loses most of the available improvement on some finite blocks. At N = 128 and N = 256, it captures less than one four-hundredth of the true gain. Both statements were checked with interval arithmetic at two precisions, retaining all interactions with the previous approximation.</p>
+<p>Adjacent dilation differences have much smaller individual norms. We proved, for every n ≥ 2,</p>
+<p style="padding:16px;background:#edf3f3;text-align:center;">H<sub>n−1</sub>/n² − (n−1)/n³ ≤ ‖δ<sub>n</sub>‖² ≤ H<sub>n−1</sub>/n²,<br><span style="font-size:15px;">where δ<sub>n</sub> = ρ<sub>n</sub> − (n−1)ρ<sub>n−1</sub>/n.</span></p>
+<p>The coordinate change also changes the correlations. Keeping that change is essential: at N = 256 the new trace bound is actually smaller than the original trace bound. The smaller denominator alone gives the wrong impression.</p>
+<h2 style="font-size:22px;margin-top:30px;">A complete asymptotic estimate</h2>
+<p>An exact Mellin-transform identity expresses the energy of the entire difference block as a zeta-weighted integral. A fractional Sobolev estimate accounts for every jump of the corresponding step function. The classical Weyl bound then gives</p>
+<p style="padding:16px;background:#edf3f3;text-align:center;">‖𝒟<sub>N</sub>‖ ≤ C<sub>ε</sub>N<sup>−5/3+ε</sup>.</p>
+<p>This is an analytic bound with an unspecified constant. It is stronger than the elementary trace budget asymptotically, but it still needs a lower estimate for the actual residual correlations.</p>
+<h2 style="font-size:22px;margin-top:30px;">Where uniform bounds run into arithmetic</h2>
+<p>For the raw block, a bound C<sub>ε</sub>N<sup>−2+ε</sup> for every ε &gt; 0 is equivalent to the Lindelöf hypothesis. A bound C(log N)<sup>B</sup>/N² for any fixed B is false: it would contradict established large values of zeta. These assertions hold even when only dyadic blocks are used.</p>
+<p>The scope matters. These conclusions concern the raw Gram matrix over every possible coefficient vector. They do not establish the same obstruction for the projected matrix or for the particular direction selected by the optimal residual.</p>
+<h2 style="font-size:22px;margin-top:30px;">Finite comparisons</h2>
+<p style="font-size:14px;color:#59636b;">Each entry below is an outward enclosure of the gain divided by E<sub>N</sub>, checked at both 256 and 384 bits.</p>
+<table style="width:100%;border-collapse:collapse;font-size:14px;">
+<tr style="background:#edf3f3;"><th style="padding:9px;text-align:left;">N</th><th style="padding:9px;text-align:left;">Actual gain</th><th style="padding:9px;text-align:left;">Raw trace</th><th style="padding:9px;text-align:left;">Difference trace budget</th></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">128</td><td style="padding:9px;border-bottom:1px solid #ddd;">(.14752, .14753)</td><td style="padding:9px;border-bottom:1px solid #ddd;">(.0003503, .0003505)</td><td style="padding:9px;border-bottom:1px solid #ddd;">(.0004286, .0004289)</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">256</td><td style="padding:9px;border-bottom:1px solid #ddd;">(.10289, .10290)</td><td style="padding:9px;border-bottom:1px solid #ddd;">(.0002135, .0002137)</td><td style="padding:9px;border-bottom:1px solid #ddd;">(.0001328, .0001331)</td></tr>
+</table>
+<p>The full directional quotient does better on these blocks, but finite values supply no convergence theorem.</p>
+<h2 style="font-size:22px;margin-top:30px;">Next arithmetic question</h2>
+<p>Can the actual residual direction be controlled more strongly than arbitrary coefficient vectors, while its corrected correlations are bounded below often enough to force convergence? This checkpoint supplies the denominator estimate and identifies a false uniform shortcut. The lower-correlation input remains missing.</p>
+<p style="border-top:1px solid #ddd;padding-top:20px;font-size:14px;">The <a href="proof.tex" style="color:#245368;">analytic proof</a> includes the complete formulas and quantifiers. The <a href="README.md" style="color:#245368;">evidence guide</a> lists the two-precision certificates, independent positive-cell checks and Maxima worksheet. No independent review or novelty priority claim is made.</p>
+<p style="font-size:14px;">Primary inputs: <a href="https://arxiv.org/abs/math/0306251" style="color:#245368;">Báez-Duarte, Balazard, Landreau and Saias</a>; <a href="https://arxiv.org/abs/math/0611809v3" style="color:#245368;">Huxley and Ivić</a>; <a href="https://arxiv.org/abs/0708.3990v2" style="color:#245368;">Soundararajan</a>.</p>
+<p style="font-size:14px;color:#59636b;">The Nyman–Beurling convergence target, the uniform Weil floor, G2 and RH remain open.</p>
+</main></body></html>

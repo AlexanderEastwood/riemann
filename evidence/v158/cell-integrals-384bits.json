@@ -1,0 +1,72 @@
+{
+  "classification": "certified finite formula cross-check, not convergence",
+  "precision_bits": 384,
+  "cutoff": 65536,
+  "rows": [
+    {
+      "m": 1,
+      "n": 1,
+      "partial_integral": "[1.2606563152641943235208865533205147 +/- 4.43e-35]",
+      "tail_upper_bound": "1.5258789062500000000000000000000000e-5",
+      "cotangent_value": "[1.2606614015078126229541473827288328 +/- 4.87e-35]",
+      "both_strict_containment_gates": true,
+      "minimum_margin_accuracy_bits": 332
+    },
+    {
+      "m": 1,
+      "n": 2,
+      "partial_integral": "[0.77220480553983365726581926976918042 +/- 1.68e-36]",
+      "tail_upper_bound": "1.5258789062500000000000000000000000e-5",
+      "cotangent_value": "[0.77220925599087313986130250668208049 +/- 4.50e-36]",
+      "both_strict_containment_gates": true,
+      "minimum_margin_accuracy_bits": 333
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "partial_integral": "[0.44109948264480990484261217162457644 +/- 4.61e-37]",
+      "tail_upper_bound": "1.5258789062500000000000000000000000e-5",
+      "cotangent_value": "[0.44110350927940217632733592046936916 +/- 4.78e-36]",
+      "both_strict_containment_gates": true,
+      "minimum_margin_accuracy_bits": 335
+    },
+    {
+      "m": 7,
+      "n": 11,
+      "partial_integral": "[0.12121705886805316137805173894719836 +/- 7.86e-37]",
+      "tail_upper_bound": "1.5258789062500000000000000000000000e-5",
+      "cotangent_value": "[0.12122089003456463035165970883259815 +/- 2.31e-37]",
+      "both_strict_containment_gates": true,
+      "minimum_margin_accuracy_bits": 339
+    },
+    {
+      "m": 64,
+      "n": 65,
+      "partial_integral": "[0.019071164336251216999410015299264345 +/- 1.28e-37]",
+      "tail_upper_bound": "1.5258789062500000000000000000000000e-5",
+      "cotangent_value": "[0.019074986622711856766435131459517947 +/- 3.08e-37]",
+      "both_strict_containment_gates": true,
+      "minimum_margin_accuracy_bits": 345
+    },
+    {
+      "m": 127,
+      "n": 256,
+      "partial_integral": "[0.0059864608426436766643032936951664379 +/- 4.86e-38]",
+      "tail_upper_bound": "1.5258789062500000000000000000000000e-5",
+      "cotangent_value": "[0.0059902689306013397600913694851796158 +/- 2.8e-41]",
+      "both_strict_containment_gates": true,
+      "minimum_margin_accuracy_bits": 346
+    },
+    {
+      "m": 256,
+      "n": 512,
+      "partial_integral": "[0.0030119993711203122529628573297407962 +/- 1.87e-38]",
+      "tail_upper_bound": "1.5258789062500000000000000000000000e-5",
+      "cotangent_value": "[0.0030164424062143482025832129167268769 +/- 3.17e-38]",
+      "both_strict_containment_gates": true,
+      "minimum_margin_accuracy_bits": 350
+    }
+  ],
+  "cell_source_sha256": "aff7f043f0b2a56ae7ed52405df0daea0c9e06c88f5b97716e2a3b874163edfa",
+  "gram_source_sha256": "5fd26b63a9b5071b3d841f5c7590e32305a69a453522d5371fde12f608a3379f"
+}

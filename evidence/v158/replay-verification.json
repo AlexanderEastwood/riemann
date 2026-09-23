@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "matching_ball_enclosures": 161,
+  "same_finite_problem_at_bits": [
+    256,
+    384
+  ],
+  "table_intervals_checked_at_both_precisions": true,
+  "source_sha256": "5fd26b63a9b5071b3d841f5c7590e32305a69a453522d5371fde12f608a3379f"
+}

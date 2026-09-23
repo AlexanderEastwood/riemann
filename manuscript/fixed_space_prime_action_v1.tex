@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.57},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.58},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.57\\
+\large Complete working manuscript, version 1.58\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 22, 2026}
@@ -206,6 +206,17 @@ new witnesses; they do not recover the original evidence.
 
 \clearpage
 \paragraph{Status of this version.}
+Version 1.58 supplies an unconditional adjacent-difference block bound
+for the Nyman--Beurling problem, retaining the full projection and every
+cross term. The raw operator norm is $O_\varepsilon(N^{-5/3+\varepsilon})$.
+A bound $O_\varepsilon(N^{-2+\varepsilon})$ for all exponents is equivalent
+to Lindel\"of, and every fixed logarithmic $N^{-2}$ raw norm bound is false.
+These statements do not apply automatically to the projected Gram or its
+actual residual direction. Two-precision finite checks expose the loss in
+the old trace bound and the cost of transforming the numerator. The
+asymptotic lower correlation input is still missing; RH and G2 remain open.
+See Section~\ref{sec:v158-nb-difference}.
+
 Version 1.57 completes the bounded translated-radical boundary test.
 The full exterior pairing is defined on the complete form domain, with
 both poles and every prime row retained. Its vanishing for every translate
@@ -19624,6 +19635,313 @@ bounded-floor routes remain open. Finite exact algebra checks in
 the complete-domain arguments are the analytic proofs above.
 
 
+\section{Nyman--Beurling difference budgets and their arithmetic limits (NS-59)}
+\label{sec:v158-nb-difference}
+
+\paragraph{Status.}
+This section gives exact identities, proved implications, and separately
+labelled finite certificates. It supplies an unconditional asymptotic upper
+bound for a complete block Gram matrix. It does not supply the lower
+correlation estimate needed for Nyman--Beurling convergence. An almost
+scale-invariant bound for the \emph{unprojected} difference Gram is equivalent
+to Lindel\"of; every fixed logarithmic version of that bound is false.
+Neither assertion is transferred to the projected Gram or the particular
+residual direction without an additional argument. No priority claim is made
+for these consequences of the cited classical zeta estimates.
+
+Use the Hilbert space, $\rho_n$, $P_N$, $r_N$, $E_N$, $h$ and $S$ from
+Section~\ref{sec:ns53-nb-blocks}. In this section the new block is
+$N<n\leq 2N$, and its indices always retain their integer values.
+For $n\geq2$ put
+\begin{equation}
+ \delta_n=\rho_n-\frac{n-1}{n}\rho_{n-1},\qquad
+ H_k=\sum_{j=1}^k\frac1j,\qquad
+ L_N=\sum_{n=N+1}^{2N}\frac{H_{n-1}}{n^2}.
+ \label{eq:v158-difference-def}
+\end{equation}
+
+\begin{proposition}[An elementary adjacent-dilation budget]
+\label{prop:v158-adjacent-budget}
+For every integer $n\geq2$,
+\begin{equation}
+ \frac{H_{n-1}}{n^2}-\frac{n-1}{n^3}
+ \leq \norm{\delta_n}_H^2
+ \leq\frac{H_{n-1}}{n^2}.
+ \label{eq:v158-adjacent-norm}
+\end{equation}
+In particular $\norm{\delta_n}_H^2=(\log n+O(1))/n^2$ and
+$L_N\leq H_{2N-1}/(2N)$.
+\end{proposition}
+\begin{proof}
+Write $a=n-1$ and $t=1/x$. The function
+\[
+ \delta_n(1/t)=\frac{a}{n}\left\lfloor\frac{t}{a}\right\rfloor
+              -\left\lfloor\frac{t}{n}\right\rfloor
+\]
+has period $an$. On $[ka,kn)$, $1\leq k\leq a$, its value is
+$1-k/n$; on $[kn,(k+1)a)$, $1\leq k\leq a-1$, its value is $-k/n$.
+It vanishes on $[0,a)$. Thus, including the zero-length last interval,
+\begin{align*}
+ \int_0^{an}\frac{|\delta_n(1/t)|^2}{t^2}\,dt
+ &=\sum_{k=1}^a\left\{
+ \frac{(n-k)^2}{k a n^3}
+ +\frac{k(a-k)}{(k+1)a n^3}\right\}\\
+ &=\frac{H_a}{n^2}-\frac{a}{n^3}.
+\end{align*}
+Periodicity and the displayed values give $|\delta_n(1/t)|\leq a/n$ everywhere.
+The remaining nonnegative integral is at most
+$(a/n)^2\int_{an}^{\infty}t^{-2}\,dt=a/n^3$.
+Finally $\sum_{N<n\leq2N}n^{-2}\leq\int_N^{2N}u^{-2}\,du=1/(2N)$.
+\end{proof}
+
+Let $T_N$ be the upper bidiagonal matrix whose column indexed by $n$
+has diagonal entry $1$ and, when $n>N+1$, preceding entry $-(n-1)/n$.
+The first column represents $(I-P_N)\delta_{N+1}=(I-P_N)\rho_{N+1}$;
+the old $\rho_N$ term is not discarded before projection. Define
+\begin{equation}
+ \mathcal D_N=(\langle \delta_m,\delta_n\rangle)_{N<m,n\leq2N},\quad
+ K_N=T_N^*S T_N,\quad g=T_N^*h.
+ \label{eq:v158-difference-gram}
+\end{equation}
+Here $\mathcal D_N$ is the raw difference Gram and $K_N$ is its
+orthogonally projected Gram. In coordinates,
+$g_n=h_n-(n-1)h_{n-1}/n$, with $h_N=0$.
+
+\begin{proposition}[Complete difference-block gains]
+\label{prop:v158-difference-gain}
+The following identities and inequalities retain all old/new cross terms:
+\begin{align}
+ E_N-E_{2N}&=g^*K_N^{-1}g, & 0<K_N&\leq\mathcal D_N,
+ \label{eq:v158-exact-difference-gain}\\
+ E_N-E_{2N}&\geq\frac{\norm{g}_2^2}{L_N},&
+ E_N-E_{2N}&\geq
+ \frac{\norm{g}_2^4}{g^*K_Ng}\quad(g\ne0).
+ \label{eq:v158-difference-bounds}
+\end{align}
+Replacing the old denominator by $L_N$ while keeping the old numerator
+$\norm{h}_2^2$ is not justified by these formulas.
+\end{proposition}
+\begin{proof}
+The invertible matrix $T_N$ changes the projected spanning family, so the
+first identity follows from Proposition~\ref{prop:ns53-nb-block-gain}.
+Orthogonal projection is contractive, hence $K_N\leq\mathcal D_N$.
+Proposition~\ref{prop:v158-adjacent-budget} bounds
+$\operatorname{tr}\mathcal D_N$ by $L_N$. The first lower bound follows
+from $K_N\leq L_N I$, and the second is the variational gain formula
+applied to the coefficient direction $g$. If $g=0$, the gain is zero.
+\end{proof}
+
+\begin{proposition}[Mellin multiplier and an unconditional block norm]
+\label{prop:v158-mellin-budget}
+For complex coefficients $a=(a_n)_{N<n\leq2N}$ set
+\[
+ F_a(u)=\sum_{n=N+1}^{2N}\frac{a_n}{n}\mathbf1_{(n-1,n]}(u),
+ \qquad q_a(v)=e^{v/2}F_a(e^v).
+\]
+With $\widehat q(t)=\int_{\mathbb R}q(v)e^{-itv}\,dv$,
+\begin{equation}
+ a^*\mathcal D_Na
+ =\frac1{2\pi}\int_{\mathbb R}
+       |\zeta(\tfrac12+it)|^2|\widehat q_a(t)|^2\,dt,
+ \qquad
+ \norm{q_a}_2^2=\sum_{N<n\leq2N}\frac{|a_n|^2}{n^2}.
+ \label{eq:v158-mellin-identity}
+\end{equation}
+If $0<\theta<1/2$ and
+$|\zeta(1/2+it)|\leq A_\theta(1+|t|)^\theta$ for all real $t$, then
+\begin{equation}
+ \norm{\mathcal D_N}_{\rm op}
+ \leq C_\theta A_\theta^2 N^{-2+2\theta},
+ \qquad \norm{K_N}_{\rm op}\leq\norm{\mathcal D_N}_{\rm op}.
+ \label{eq:v158-zeta-budget}
+\end{equation}
+Consequently, for every $\varepsilon>0$,
+\begin{equation}
+ \norm{\mathcal D_N}_{\rm op}\ll_\varepsilon N^{-5/3+\varepsilon}.
+ \label{eq:v158-weyl-budget}
+\end{equation}
+This is an analytic bound with an unspecified constant, not a numerical
+certificate for a finite cutoff or a claim of the best available exponent.
+\end{proposition}
+\begin{proof}
+For $0<\Re s<1$ the usual fractional-part Mellin identity gives
+$\mathcal M\rho_n(s)=-n^{-s}\zeta(s)/s$. Also
+\[
+ n^{-s}-\frac{n-1}{n}(n-1)^{-s}
+ =\frac{1-s}{n}\int_{n-1}^n u^{-s}\,du.
+\]
+On $s=1/2+it$ the factor $(1-s)/s$ has modulus one. Mellin Plancherel
+therefore gives~\eqref{eq:v158-mellin-identity}, including the entire
+frequency integral. The norm identity follows by changing variables
+$u=e^v$.
+
+Here is the needed inverse estimate, including the discontinuities of
+$q_a$. Its support is $[\log N,\log(2N)]$, partitioned into intervals
+$I_n=(\log(n-1),\log n]$ of lengths between $1/(2N)$ and $1/N$.
+On each interval $q_a(v)$ is a constant times $e^{v/2}$. For
+$0<\theta<1/2$,
+\begin{equation}
+ \int_{\mathbb R}(1+|t|)^{2\theta}|\widehat q_a(t)|^2\,dt
+ \leq C_\theta N^{2\theta}\norm{q_a}_2^2.
+ \label{eq:v158-inverse-sobolev}
+\end{equation}
+To check this, use the Fourier identity between the homogeneous
+$H^\theta$ seminorm and
+$\iint |q(v)-q(w)|^2|v-w|^{-1-2\theta}\,dv\,dw$.
+On a single cell, $q'=q/2$ bounds the integral by a constant times its
+$L^2$ mass. For different cells, including the zero exterior, use
+$|q(v)-q(w)|^2\leq2(|q(v)|^2+|q(w)|^2)$.
+For $v\in I=(b,c)$, integration outside $I$ gives
+$((v-b)^{-2\theta}+(c-v)^{-2\theta})/(2\theta)$.
+Since $|q|^2$ varies by at most $e^{|I|}\leq2$ on a cell, its integral
+against these endpoint powers is at most
+$C_\theta |I|^{-2\theta}\int_I|q|^2$.
+The powers are integrable exactly for $2\theta<1$. Summing gives
+\eqref{eq:v158-inverse-sobolev}; thus no $H^1$ regularity is assumed.
+Combining with~\eqref{eq:v158-mellin-identity} proves the operator bound.
+The classical Weyl estimate
+$\zeta(1/2+it)\ll_\delta(1+|t|)^{1/6+\delta}$
+from~\cite[Section 2]{HuxleyIvic2007} gives
+\eqref{eq:v158-weyl-budget} by taking $\theta=1/6+\varepsilon/2$
+for small $\varepsilon$; larger $\varepsilon$ follow at once.
+\end{proof}
+
+\begin{proposition}[A sharp raw norm would already encode Lindel\"of]
+\label{prop:v158-lindelof-budget}
+The assertion
+\begin{equation}
+ \text{for every }\varepsilon>0,\qquad
+ \norm{\mathcal D_N}_{\rm op}\ll_\varepsilon N^{-2+\varepsilon}
+ \quad(N=2^j)
+ \label{eq:v158-near-scale-budget}
+\end{equation}
+is equivalent to the Lindel\"of hypothesis. Moreover, for every fixed
+$B\geq0$,
+\begin{equation}
+ \norm{\mathcal D_N}_{\rm op}
+ \ne O\left(\frac{(\log N)^B}{N^2}\right)
+ \quad\text{even when }N\text{ is restricted to powers of two}.
+ \label{eq:v158-no-log-budget}
+\end{equation}
+Both statements concern the raw Gram $\mathcal D_N$ uniformly over
+\emph{all} coefficient vectors. They assert neither such an equivalence
+nor such an obstruction for $K_N$ or for $g^*K_Ng$.
+\end{proposition}
+\begin{proof}
+Lindel\"of and Proposition~\ref{prop:v158-mellin-budget} imply
+\eqref{eq:v158-near-scale-budget}. For the converse we first show that,
+with an absolute constant and all sufficiently large $N$,
+\begin{equation}
+ \int_{\tau-1}^{\tau+1}|\zeta(\tfrac12+it)|^2\,dt
+ \leq C N^2\norm{\mathcal D_N}_{\rm op}
+ \qquad(|\tau|\leq\sqrt N).
+ \label{eq:v158-local-zeta-test}
+\end{equation}
+Fix a nonzero nonnegative smooth function $w$ compactly supported in
+$(0,\log2)$. Its Fourier transform satisfies
+$|\widehat w(t)|\geq\cos(\log2)\int w>0$ for $|t|\leq1$.
+Put $v_n=\log(n-1/2)$ and choose
+\[
+ a_n=n e^{-v_n/2}w(v_n-\log N)
+                      e^{i\tau(v_n-\log N)}.
+\]
+The associated $q_a$ approximates
+$q(v)=w(v-\log N)e^{i\tau(v-\log N)}$ with
+\[
+ \norm{q_a-q}_{L^1}\leq C_w\frac{1+|\tau|}{N},
+ \qquad \norm{a}_2^2\leq C_w N^2.
+\]
+These estimates follow cell by cell from the mean value theorem and
+$|v-v_n|\leq C/N$; the constants are independent of $N$ and $\tau$.
+For $|\tau|\leq\sqrt N$, the Fourier error tends uniformly to zero.
+Hence $|\widehat q_a(t)|$ is bounded below by a fixed positive constant
+on $[\tau-1,\tau+1]$ for all sufficiently large $N$.
+Equation~\eqref{eq:v158-mellin-identity} proves
+\eqref{eq:v158-local-zeta-test}. Complex coefficients are harmless:
+$\mathcal D_N$ is real symmetric, and its operator norm is the same
+over real or complex vectors.
+
+The classical short-interval inequality
+\cite[Eq. (2.1)]{HuxleyIvic2007} is
+\begin{equation}
+ |\zeta(\tfrac12+iT)|^2\ll\log T
+ \left(1+\int_{T-\log^2T}^{T+\log^2T}
+                      |\zeta(\tfrac12+it)|^2\,dt\right)
+ \quad(T\geq T_0).
+ \label{eq:v158-short-interval}
+\end{equation}
+Choose a power of two $N$ with $4T^2\leq N<8T^2$.
+For large $T$ the integration interval can be covered by
+$O(\log^2T)$ intervals in~\eqref{eq:v158-local-zeta-test}.
+Consequently
+\begin{equation}
+ |\zeta(\tfrac12+iT)|^2
+ \ll\log T+(\log T)^3 N^2\norm{\mathcal D_N}_{\rm op}.
+ \label{eq:v158-budget-to-zeta}
+\end{equation}
+Assertion~\eqref{eq:v158-near-scale-budget}, with arbitrarily small
+exponents, now implies Lindel\"of.
+If the big-$O$ estimate excluded in~\eqref{eq:v158-no-log-budget}
+held, the same formula would give
+$|\zeta(1/2+iT)|^2\ll(\log T)^{B+3}$.
+This contradicts the unconditional large values in
+\cite[Theorem 1]{Soundararajan2008}.
+\end{proof}
+
+\paragraph{Certified finite comparison; no extrapolation.}
+The exact rational-cotangent formula for the Gram entries is taken from
+\cite[Proposition 89]{BaezDuarteAutocorrelation2003}. With
+$V(p,q)=\sum_{k=1}^{q-1}\{kp/q\}\cot(\pi k/q)$, $d=(m,n)$ and
+$\kappa=\log(2\pi)-\gamma$, its scaling to the current conventions is
+\begin{equation}
+ G_{mn}=\frac\kappa2\left(\frac1m+\frac1n\right)
+ +\frac{n-m}{2mn}\log\frac mn
+ -\frac{\pi d}{2mn}\{V(m/d,n/d)+V(n/d,m/d)\}.
+ \label{eq:v158-cot-gram}
+\end{equation}
+All entries, cross terms and solves in \texttt{evidence/v158/nb\_certify.py}
+are evaluated as Arb balls, independently at 256 and 384 bits, for the
+same matrices through index 512. The program also checks
+\eqref{eq:v158-adjacent-norm} for $2\leq n\leq512$ as a finite replay
+of the analytic estimate. At the displayed blocks, the following numbers
+are outward-rounded enclosing intervals; all ratios are relative to $E_N$:
+\begin{center}
+\begin{tabular}{rcccc}
+\toprule
+$N$ & actual gain & raw-trace bound & difference budget & difference direction\\
+\midrule
+128 & $(.14752,.14753)$ & $(.0003503,.0003505)$
+    & $(.0004286,.0004289)$ & $(.08380,.08381)$\\
+256 & $(.10289,.10290)$ & $(.0002135,.0002137)$
+    & $(.0001328,.0001331)$ & $(.05955,.05956)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The raw-trace bound is less than $1/400$ of the actual gain at both
+blocks. At $N=256$ the smaller adjacent-difference denominator produces
+an even smaller trace bound after transforming the numerator correctly.
+The full directional quotient performs better on these two finite blocks;
+this is not an asymptotic lower bound. The floating scan through index
+2048 is separately labelled a numerical illustration in
+\texttt{evidence/diag\_ns59\_nb\_budget/}.
+
+\paragraph{What remains missing.}
+The unconditional bound~\eqref{eq:v158-weyl-budget} supplies a denominator,
+so it gives $E_N-E_{2N}\geq C_\varepsilon^{-1}
+N^{5/3-\varepsilon}\norm{g}_2^2$ for a suitable constant.
+To use it for convergence one still needs, for example, a cofinal lower
+bound $\norm{g}_2^2\geq C_\varepsilon N^{-5/3+\varepsilon}
+\alpha_j E_N$ at $N=2^j$, with $0\leq\alpha_j<1$ and
+$\sum_j\alpha_j=\infty$. No such estimate is proved here.
+The nonsummability of the \emph{exact} relative gain is simply the known
+convergence criterion, not an independent arithmetic input.
+Uniform logarithmic control of $\mathcal D_N$ is ruled out, while control
+restricted to the actual residual direction remains open. The raw RBC
+input of Section~\ref{sec:ns53-nb-blocks} is neither disproved by the
+finite losses nor established by the new denominator estimates.
+RH, G2 and the uniform Weil floor remain open.
+
+
 \appendix
 \section{Reproducible finite checks}\label{app:numerics}
 
@@ -21219,6 +21537,25 @@ B. Harrach, Y.-H. Lin, and T. Weth,
 \emph{The Calder\'on problem for the logarithmic Schr\"odinger equation},
 Journal of Differential Equations \textbf{444} (2025), 113665,
 \url{https://doi.org/10.1016/j.jde.2025.113665}.
+
+
+\bibitem{BaezDuarteAutocorrelation2003}
+L. B\'aez-Duarte, M. Balazard, B. Landreau, and E. Saias,
+\emph{Sur l'autocorr\'elation multiplicative de la fonction
+``partie fractionnaire''}, arXiv:math/0306251v1 (2003), Proposition 89.
+\url{https://arxiv.org/abs/math/0306251}.
+
+\bibitem{HuxleyIvic2007}
+M. N. Huxley and A. Ivi\'c,
+\emph{Subconvexity for the Riemann zeta-function and the divisor problem},
+Bulletin CXXXIV de l'Acad\'emie Serbe des Sciences et des Arts,
+Sciences math\'ematiques 32 (2007), 13--32; Section 2, especially Eq. (2.1).
+\url{https://arxiv.org/abs/math/0611809v3}.
+
+\bibitem{Soundararajan2008}
+K. Soundararajan, \emph{Extreme values of zeta and $L$-functions},
+Math. Ann. 342 (2008), 467--486, Theorem 1.
+\url{https://arxiv.org/abs/0708.3990v2}.
 
 \end{thebibliography}
 

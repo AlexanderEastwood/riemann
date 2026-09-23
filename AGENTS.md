@@ -128,6 +128,15 @@ profile for nonzero tests. Its compactness rules out a uniform inverse bound
 on the entire fixed-window parity space, not on a particular finite kernel.
 NS-58 stops at its stated condition; API, the uniform floor, G2 and RH remain open.
 
+Version 1.58 (NS-59) supplies an adjacent-dilation difference budget and a
+complete Mellin multiplier identity for its raw Gram. Classical Weyl bounds
+imply raw operator norm O_epsilon(N^(-5/3+epsilon)). Near-N^(-2) power
+control is equivalent to Lindelof; every fixed logarithmic N^(-2) raw norm
+bound is false. These are raw, all-coefficient claims, not obstructions to
+the projected Gram or actual residual direction. Arb 256/384-bit checks
+show finite raw-trace loss and transformed-numerator cost. No asymptotic
+lower correlation bound is supplied. NB convergence, G2 and RH remain open.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

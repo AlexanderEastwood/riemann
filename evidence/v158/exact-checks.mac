@@ -1,0 +1,38 @@
+/* Exact finite algebra only; the analytic estimates are in proof.tex. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+
+check("First cell integral",
+ (1-k/n)^2*(1/(k*(n-1))-1/(k*n))
+ -(n-k)^2/(k*(n-1)*n^3))$
+check("Second cell integral",
+ (k/n)^2*(1/(k*n)-1/((k+1)*(n-1)))
+ -k*(n-1-k)/((k+1)*(n-1)*n^3))$
+check("Harmonic telescoping summand",
+ (n-k)^2/(k*(n-1)*n^3)+k*(n-1-k)/((k+1)*(n-1)*n^3)
+ -(n/k-1-1/(k+1))/((n-1)*n^2))$
+check("First period harmonic sum",
+ (n*hh-(n-1)-(hh+1/n-1))/((n-1)*n^2)
+ -(hh/n^2-(n-1)/n^3))$
+check("Whole tail bound",((n-1)/n)^2/(n*(n-1))-(n-1)/n^3)$
+check("Period preserves the difference",(n-1)/n*(aa+n)-(bb+n-1)-((n-1)/n*aa-bb))$
+check("Mellin primitive",diff(u^(1-s)/(1-s),u)-u^(-s))$
+check("Critical line factor has modulus one",(1-1/2)^2+t^2-((1/2)^2+t^2))$
+check("Weyl exponent",-2+2*(1/6+ee/2)-(-5/3+ee))$
+check("Exact n=2 norm anchor",kap/2+kap/4-(3*kap/4-log(2)/4)-log(2)/4)$
+
+ss:matrix([s11,s12],[s12,s22])$
+tt:matrix([1,-aa],[0,1])$
+hhv:matrix([h1],[h2])$
+gg:transpose(tt).hhv$
+kk:transpose(tt).ss.tt$
+check("Transformed correlations",gg[2,1]-(h2-aa*h1))$
+check("Congruence determinant",determinant(kk)-determinant(ss))$
+check("Full gain coordinate invariance",
+ (transpose(gg).invert(kk).gg)[1,1]-(transpose(hhv).invert(ss).hhv)[1,1])$
+print(checks)$
+print("PASS:",length(checks),"exact checks; these do not certify the analytic Sobolev or asymptotic arguments.")$
+quit();

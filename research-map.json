@@ -364,7 +364,7 @@
       "title": "Nyman-Beurling-Baez-Duarte",
       "status": "open",
       "parent": "altroutes",
-      "note": "Reopened: any d_N→0 suffices. Exact residualized block gain and trace lower bound proved; the sufficient arithmetic residual block-correlation input is open. Finite distances do not prove it.",
+      "note": "Any E_N→0 suffices. NS-53 exact projected gains and RBC remain; NS-59 supplies unconditional difference denominators and scoped raw-norm limits. An asymptotic lower bound for the actual corrected correlations or a selected block quotient is still missing; finite gains do not prove it.",
       "evidence": "evidence/ns53_nb_blocks",
       "wall": {
         "input": "RBC: corrected arithmetic residual block correlations (open sufficient input)",
@@ -741,6 +741,29 @@
       "branch": "codex/ns58-radical-boundary",
       "evidence": "evidence/v157",
       "note": "NS-58 stop condition: homogeneous vanishing is exactly the original null equation, with no independent sign estimate. Altered weights produce a necessarily nonzero forcing profile; compactness excludes only a uniform lower bound on the whole fixed-window space. API and the uniform floor remain open."
+    },
+    {
+      "id": "nbdifference",
+      "title": "NB adjacent-difference norm budget",
+      "status": "proved",
+      "parent": "nb",
+      "prop": "prop:v158-adjacent-budget; prop:v158-mellin-budget",
+      "evidence": "evidence/v158",
+      "note": "Complete basis change transforms both Gram and correlations. Raw Gram norm O_epsilon(N^(-5/3+epsilon)); no lower correlation estimate. Near-N^(-2) power control of the raw all-coefficient norm is equivalent to Lindelof, not a proved estimate."
+    },
+    {
+      "id": "nbrawlog",
+      "title": "NB uniform logarithmic raw norm",
+      "status": "closed",
+      "parent": "nb",
+      "prop": "prop:v158-lindelof-budget",
+      "evidence": "evidence/v158",
+      "note": "For every fixed B, the raw difference Gram is not O((log N)^B/N^2), even on dyadic blocks. Projected Grams and the actual residual direction are outside this obstruction.",
+      "wall": {
+        "input": "known zeta large values contradict every fixed logarithmic N^(-2) raw norm bound",
+        "to": null,
+        "src": "prop:v158-lindelof-budget; closure of this all-coefficient raw comparison only"
+      }
     }
   ]
 }
