@@ -108,6 +108,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-63 | Check fixed versus increasing Mellin smoothing: retain the RH zero obstruction at fixed order and test whether relative errors can vanish for a fixed finite span when the order grows | Codex, Continue solving toward RH | done (local v1.59 draft; fixed-order criterion retained) | evidence/v159/ns63/: every fixed smoothing order preserves the RH criterion. Increasing the order lets one fixed atom achieve relative squared error ~D0^2/(8r) unconditionally, while absolute squared error diverges. Arb finite controls at two precisions and full tails; moving-norm convergence is not RH evidence. |
 
+| NS-64 | Construct an explicit dual separator for the positive smoothed-difference cone and quantify its finite local gap, keeping the claim separate from signed NB approximation | Codex, Continue solving toward RH | claimed (local investigation) | Build the six-function restricted Gram with exact cell integrals; validate a dual witness at two precisions; stop at a scoped cone-distance certificate, not an RH inference. |
+
 ## Lanes
 
 ```
