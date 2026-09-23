@@ -154,7 +154,7 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-86 | Derive complete optimized-residual optimality in arithmetic potential coordinates; test a signed identity for aggregate gain and retain the exact remainder | Codex, Continue solving toward RH | done (finite control; cofinal input open) | Exact optimized Muntz quadrature and full observation-tail bound; raw convolution-square correction fails the unit-step test at N=4,16. At N=16, damping plus old-space refitting captures 27.31% of full N-to-N^2 gain. All tails retained; no asymptotic estimate or manuscript version bump. |
 
-| NS-87 | Localize the optimized arithmetic observations jointly and certify their implication for full block gain | Codex, Continue solving toward RH | in progress | Keep the old-space projection, complete coupled tail and actual energy metric. Derive a finite arithmetic lower-gain certificate, test its usefulness at fixed sizes, and distinguish localization from the still-open cofinal lower estimate. |
+| NS-87 | Localize the optimized arithmetic observations jointly and certify their implication for full block gain | Codex, Continue solving toward RH | done (localization; arithmetic lower bound open) | Joint complete-tail gain certificate and explicit safe step; T=N^6 preserves the logarithmic relative-gain scale by NS81/83. Finite N=32 certificate retains >95.98% of available gain. No new arithmetic lower bound, effective onset, fast inverse or manuscript version. |
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
@@ -251,6 +251,17 @@ A genuinely estimated actual-residual gain of size a/j, 0<a<=1, or a weaker
 nonsummable scale remains a possible sufficient target. Merely restating
 its sufficiency is already covered by NS53/59. No pointwise upper bound
 on each individual block gain, asymptotic equality, or decay is established.
+
+## Open continuation after NS-87
+
+The complete observation tail can now be removed from the logarithmic
+relative-gain target at a sufficient polynomial physical cutoff N^6.
+Prove a lower bound for the resulting signed finite arithmetic observation
+energy of the actual optimized residual, relative to its full error.
+All old-space projection terms and the actual Gram remain. A positive lower
+liminf of j*A_(N^6)/E_N on N=2^j would suffice; it is unproved and not
+asserted necessary. Repeating this sufficiency or another finite efficiency
+table would not supply the missing arithmetic estimate.
 
 ## Lanes
 

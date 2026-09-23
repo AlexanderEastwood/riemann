@@ -3389,3 +3389,25 @@ At the large sampler shell cutoff, the graph-correction norm is comparable to ex
 ### Instructions for subsequent research sessions
 
 Continue from the latest full manuscript and this log. Keep a clear distinction between exact identities, proved implications with explicit hypotheses, failed attempts, numerical illustrations, and open inputs. Integrate substantive results throughout the full manuscript, compile and inspect the PDF, and update the existing deliverables and this log. Preserve the same finite D, W, endpoint, cutoff, and first-slot-linear convention in every comparison. Do not infer a norm bound from form convergence. Do not claim RH, positivity transfer, or publication readiness without the complete missing arguments. The user has authorized continued research and hourly attempts, but not publication or messages to other people.
+
+
+## 2026-09-23 — NS87: joint arithmetic observation localization
+
+Reviewed all 93 registered conclusions at main 4890f3a, current checkpoints,
+NS84/86 reviews and the missing-evidence ledger; scope/dependency review only.
+No newly invalid mathematical claim identified; both original gaps stay open.
+
+Derived finite-potential quadrature and a joint tail bound in the complete
+projected Gram metric. The safe damped finite-observation step achieves
+(sqrt(A_T)-sqrt(B_T))_+^2. NS81 coefficient control plus NS83's asymptotic
+critical-zero lower bound makes T=N^(5+epsilon) sufficient to preserve the
+1/log N relative-gain scale; N^6 is a simple choice. No effective onset,
+fast inverse, lower arithmetic gain or convergence theorem is supplied.
+
+Arb 256/384 at N=8,16,32, four physical cutoffs each; N32 doubled analytic
+Gram cutoff at 384. At N32/T4096 the guaranteed share exceeds 95.98%,
+removing >18.15% of that finite old error. At T64 naive omission overstates
+available gain by >15.99%. 132 precision and 44 cutoff scalar overlaps,
+576 potential/physical pairing checks, 14 Maxima checks; pyright clean.
+Local author review only. Manuscript v1.66 unchanged, 358-page build clean.
+See evidence/ns87_joint_tail and the versioned HTML report in audits.

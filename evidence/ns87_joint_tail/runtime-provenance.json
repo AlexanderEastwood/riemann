@@ -1,0 +1,19 @@
+{
+  "python": "3.14.6",
+  "python_flint": "0.9.0",
+  "maxima": "5.50.0",
+  "pyright": "1.1.411",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "certified_kernel": "evidence/v159/ns61/certify_smoothed.py",
+  "kernel_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+  "precisions_bits": [
+    256,
+    384
+  ],
+  "analytic_Gram_cutoffs": [
+    128,
+    256
+  ],
+  "physical_observation_cutoffs": "M,4M,16M,64M with M=2N and N=8,16,32",
+  "analytic_polynomial_cutoff": "T=N^6 proved sufficient asymptotically; not assembled"
+}

@@ -1,0 +1,12 @@
+{
+  "classification": "Finite certified replay consistency; not an asymptotic estimate",
+  "same_problem_precision_overlaps": 132,
+  "same_problem_kernel_cutoff_overlaps": 44,
+  "physical_potential_pairing_checks_per_precision": 224,
+  "additional_cutoff_potential_pairing_checks": 128,
+  "finite_cases_per_precision": 12,
+  "additional_cutoff_cases": 4,
+  "Maxima_exact_checks": 14,
+  "finite_threshold_gates": true,
+  "bound_endpoint_policy": "Only fixed mathematical quantities require interval overlap. Outward-rounded tail budgets and dyadic step scalars may tighten between runs; each run separately certifies its step."
+}

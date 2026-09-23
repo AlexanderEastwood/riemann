@@ -1,0 +1,430 @@
+{
+  "classification": "Certified finite localized gain bounds; no cofinal lower bound",
+  "precision_bits": 256,
+  "kernel_cutoff": 128,
+  "kernel_order": 24,
+  "source_sha256": "6dacade79a924b9167b72c174aa4b89979c5949b24d451eae6ad1ff229aa7ec6",
+  "kernel_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+  "rows": [
+    {
+      "N": 8,
+      "M": 16,
+      "seconds": 0.227,
+      "potential_pairing_checks": 32,
+      "rows": [
+        {
+          "T": 16,
+          "values": {
+            "universal_tail_majorant": "[183685045.19065114169765446060783169353108573839723726844356823042 +/- 2.75e-57]",
+            "E_N": "[0.000109108926650572928841985847206361636015 +/- 1.73e-43]",
+            "full_gain": "[7.716124896948087610263452881360198e-5 +/- 4.95e-39]",
+            "full_relative_gain": "[0.70719464793741240503655122535129772 +/- 8.68e-36]",
+            "tail_energy": "[1.7784092385524816511530288106307769210e-5 +/- 3.88e-43]",
+            "tail_energy_fraction": "[0.16299392663332952501273211344844407116 +/- 5.31e-39]",
+            "tail_trace": "[3.8478764284195036761135105359798174 +/- 4.47e-35]",
+            "tail_operator_bound": "1.0000000000000000000000000000000000000000000000000000000000000000",
+            "finite_observation_gain": "[5.694467607339533939923685526851539e-5 +/- 6.57e-39]",
+            "actual_tail_metric": "[3.181782401512587980599298028778422e-6 +/- 5.47e-40]",
+            "tail_metric_budget": "[1.7784092385524816511530288106307769210213295783863276163156226351e-5 +/- 1.99e-70]",
+            "safe_step_scalar": "[0.44115767672482067784255521745742453513704373529141500728888161555 +/- 3.15e-67]",
+            "safe_step_actual_gain": "[4.667561228595038395190574785019902e-5 +/- 7.48e-39]",
+            "safe_step_guaranteed_gain": "[1.1082578308902621251576858373529272e-5 +/- 5.73e-40]",
+            "safe_step_guaranteed_fraction": "[0.1436288092392859876591901453283853 +/- 2.45e-35]",
+            "safe_step_actual_fraction": "[0.6049100151866606987160702190931314 +/- 5.06e-35]",
+            "certified_gain_lower": "[1.108257830890262125157685837352927e-5 +/- 3.36e-39]",
+            "certified_relative_gain_lower": "[0.1015735251836466200762224382792316 +/- 1.60e-35]",
+            "certified_fraction_of_full_gain": "[0.1436288092392859876591901453283853 +/- 3.85e-35]",
+            "finite_gain_over_actual_gain": "[0.7379957794088885734178502379708712 +/- 3.80e-35]",
+            "complete_Stirling_tail": "[+/- 8.50e-4]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        },
+        {
+          "T": 64,
+          "values": {
+            "universal_tail_majorant": "[67514701.827296366334313224443521322322340448885805222766086750303 +/- 3.12e-58]",
+            "E_N": "[0.000109108926650572928841985847206361636015 +/- 1.73e-43]",
+            "full_gain": "[7.716124896948087610263452881360198e-5 +/- 4.95e-39]",
+            "full_relative_gain": "[0.70719464793741240503655122535129772 +/- 8.68e-36]",
+            "tail_energy": "[1.308236821734891250359972054004062437e-5 +/- 4.32e-42]",
+            "tail_energy_fraction": "[0.1199019055447762233458288306438581130 +/- 1.12e-38]",
+            "tail_trace": "[0.6506156425008346877645253321030340 +/- 9.21e-35]",
+            "tail_operator_bound": "[0.65061564250083468776452533210303409206721302486429899584375159908 +/- 1.79e-66]",
+            "finite_observation_gain": "[5.68638165832349497314980303106394e-5 +/- 2.46e-38]",
+            "actual_tail_metric": "[2.27278836166389682425133994491812e-6 +/- 3.06e-39]",
+            "tail_metric_budget": "[8.5115934031629620478878519597727253663517644096564245671868345692e-6 +/- 3.15e-71]",
+            "safe_step_scalar": "[0.61311006466806007114103676879547140941822137369956731250795708205 +/- 4.91e-66]",
+            "safe_step_actual_gain": "[5.94033138436022383617049628713713e-5 +/- 1.57e-38]",
+            "safe_step_guaranteed_gain": "[2.137533334516778573411451576756106e-5 +/- 3.99e-39]",
+            "safe_step_guaranteed_fraction": "[0.2770216090413757110475985155251107 +/- 6.15e-35]",
+            "safe_step_actual_fraction": "[0.769859413072715725128091653750590 +/- 6.50e-34]",
+            "certified_gain_lower": "[2.137533334516778573411451576756106e-5 +/- 5.01e-39]",
+            "certified_relative_gain_lower": "[0.1959081992770711971472516614454695 +/- 4.91e-35]",
+            "certified_fraction_of_full_gain": "[0.2770216090413757110475985155251107 +/- 6.15e-35]",
+            "finite_gain_over_actual_gain": "[0.736947850672115902271845333407140 +/- 6.02e-34]",
+            "complete_Stirling_tail": "[+/- 4.60e-5]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        },
+        {
+          "T": 256,
+          "values": {
+            "universal_tail_majorant": "[23862296.954555126502952433158654844846040362757316995168337054865 +/- 3.36e-58]",
+            "E_N": "[0.000109108926650572928841985847206361636015 +/- 1.73e-43]",
+            "full_gain": "[7.716124896948087610263452881360198e-5 +/- 4.95e-39]",
+            "full_relative_gain": "[0.70719464793741240503655122535129772 +/- 8.68e-36]",
+            "tail_energy": "[8.01924700479592574319391360178395908e-6 +/- 2.98e-42]",
+            "tail_energy_fraction": "[0.0734976252720181702370188836719757949 +/- 4.63e-38]",
+            "tail_trace": "[0.108619296596298914111475849360637 +/- 6.75e-34]",
+            "tail_operator_bound": "[0.10861929659629891411147584936063673671312941784289448159209217900 +/- 4.54e-66]",
+            "finite_observation_gain": "[6.45320814418813614083846310105465e-5 +/- 5.70e-38]",
+            "actual_tail_metric": "[8.3184747074639541560908873222785e-7 +/- 5.60e-39]",
+            "tail_metric_budget": "[8.7104496889291035884551537029413951639207552172261773753497500642e-7 +/- 1.14e-72]",
+            "safe_step_scalar": "[0.88381971120112430499141148098507098281494882430102093311592712968 +/- 3.31e-66]",
+            "safe_step_actual_gain": "[7.40877404785836062970317865804027e-5 +/- 9.91e-38]",
+            "safe_step_guaranteed_gain": "[5.04084146933535852822461028672706e-5 +/- 4.49e-38]",
+            "safe_step_guaranteed_fraction": "[0.653286660941573429274300244730984 +/- 6.01e-34]",
+            "safe_step_actual_fraction": "[0.96016771978233638881765382437692 +/- 5.01e-33]",
+            "certified_gain_lower": "[5.04084146933535852822461028672706e-5 +/- 4.49e-38]",
+            "certified_relative_gain_lower": "[0.462000830186783728951756568527734 +/- 5.30e-34]",
+            "certified_fraction_of_full_gain": "[0.653286660941573429274300244730984 +/- 6.50e-34]",
+            "finite_gain_over_actual_gain": "[0.836327590645990538153351666812821 +/- 5.04e-34]",
+            "complete_Stirling_tail": "[+/- 1.05e-5]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        },
+        {
+          "T": 1024,
+          "values": {
+            "universal_tail_majorant": "[8056287.3609149470133016390288356531909826760670400586264827686390 +/- 8.30e-60]",
+            "E_N": "[0.000109108926650572928841985847206361636015 +/- 1.73e-43]",
+            "full_gain": "[7.716124896948087610263452881360198e-5 +/- 4.95e-39]",
+            "full_relative_gain": "[0.70719464793741240503655122535129772 +/- 8.68e-36]",
+            "tail_energy": "[3.79922482356358046855732426693742150e-6 +/- 5.67e-42]",
+            "tail_energy_fraction": "[0.0348204765658707065398580257533588804 +/- 4.64e-38]",
+            "tail_trace": "[0.048449995891108282289876793602710 +/- 4.92e-34]",
+            "tail_operator_bound": "[0.048449995891108282289876793602710325196410613940067374512014027823 +/- 9.21e-69]",
+            "finite_observation_gain": "[7.10531086024637416406472426448326e-5 +/- 4.12e-38]",
+            "actual_tail_metric": "[1.8380377056277242813535400516389e-7 +/- 2.02e-39]",
+            "tail_metric_budget": "[1.8407242709105206244250243708180255001722914962535660427510845957e-7 +/- 4.02e-72]",
+            "safe_step_scalar": "[0.94910175267022161076854066631978827871381732163890411802854374592 +/- 4.68e-66]",
+            "safe_step_actual_gain": "[7.6491834422475859988986548742007e-5 +/- 3.37e-37]",
+            "safe_step_guaranteed_gain": "[6.40042236391591856323331692455055e-5 +/- 6.38e-38]",
+            "safe_step_guaranteed_fraction": "[0.829486620472854069194125833392447 +/- 5.62e-34]",
+            "safe_step_actual_fraction": "[0.99132447237511946422605567286660 +/- 2.58e-33]",
+            "certified_gain_lower": "[6.40042236391591856323331692455055e-5 +/- 6.38e-38]",
+            "certified_relative_gain_lower": "[0.586608498534094054389352515827644 +/- 4.60e-34]",
+            "certified_fraction_of_full_gain": "[0.829486620472854069194125833392447 +/- 5.62e-34]",
+            "finite_gain_over_actual_gain": "[0.920839275561324176868411754747289 +/- 6.04e-34]",
+            "complete_Stirling_tail": "[4e-6 +/- 3.97e-7]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        }
+      ]
+    },
+    {
+      "N": 16,
+      "M": 32,
+      "seconds": 1.019,
+      "potential_pairing_checks": 64,
+      "rows": [
+        {
+          "T": 32,
+          "values": {
+            "universal_tail_majorant": "[4102721015.7522739082897885838665719931525646337135772541564185373 +/- 2.78e-56]",
+            "E_N": "[3.194767768109205273935131839275966013e-5 +/- 5.63e-42]",
+            "full_gain": "[7.580699214098913163055493925081e-6 +/- 3.08e-37]",
+            "full_relative_gain": "[0.23728482832996284368019987740644 +/- 2.89e-33]",
+            "tail_energy": "[4.50053854775843821166835592016614142e-6 +/- 7.02e-42]",
+            "tail_energy_fraction": "[0.140872165816986493933150344211843872 +/- 4.68e-37]",
+            "tail_trace": "[9.6214232607794202061694153048982 +/- 6.76e-32]",
+            "tail_operator_bound": "1.0000000000000000000000000000000000000000000000000000000000000000",
+            "finite_observation_gain": "[8.388168409245203951898979338235e-6 +/- 5.51e-37]",
+            "actual_tail_metric": "[9.80378824243998561407913886450e-7 +/- 2.17e-37]",
+            "tail_metric_budget": "[4.5005385477584382116683559201661414206978386818729038925682728446e-6 +/- 2.36e-71]",
+            "safe_step_scalar": "[0.26751510661759599498750281414366846731993862344775557451236880192 +/- 2.53e-66]",
+            "safe_step_actual_gain": "[3.409353507963514652905667232162e-6 +/- 2.69e-37]",
+            "safe_step_guaranteed_gain": "[6.002936711643969197981861679434e-7 +/- 2.61e-38]",
+            "safe_step_guaranteed_fraction": "[0.07918711113718174126231472338647 +/- 6.09e-33]",
+            "safe_step_actual_fraction": "[0.4497412984837402781716482792050 +/- 4.42e-32]",
+            "certified_gain_lower": "[6.002936711643969197981861679434e-7 +/- 4.56e-38]",
+            "certified_relative_gain_lower": "[0.01878990007213185825381336566291 +/- 3.91e-33]",
+            "certified_fraction_of_full_gain": "[0.07918711113718174126231472338648 +/- 7.89e-33]",
+            "finite_gain_over_actual_gain": "[1.1065164534749676600890951804599 +/- 3.14e-32]",
+            "complete_Stirling_tail": "[+/- 8.70e-4]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        },
+        {
+          "T": 128,
+          "values": {
+            "universal_tail_majorant": "[1454303312.5254903765897837010001143778854706044061425176430203278 +/- 3.55e-56]",
+            "E_N": "[3.194767768109205273935131839275966013e-5 +/- 5.63e-42]",
+            "full_gain": "[7.580699214098913163055493925081e-6 +/- 3.08e-37]",
+            "full_relative_gain": "[0.23728482832996284368019987740644 +/- 2.89e-33]",
+            "tail_energy": "[3.252167836468726245917873254619582e-7 +/- 4.90e-41]",
+            "tail_energy_fraction": "[0.010179668985434558484332181349874545 +/- 8.35e-37]",
+            "tail_trace": "[3.289017175957511260842688913668 +/- 5.66e-31]",
+            "tail_operator_bound": "1.0000000000000000000000000000000000000000000000000000000000000000",
+            "finite_observation_gain": "[7.33336759820903841515280417740e-6 +/- 3.25e-36]",
+            "actual_tail_metric": "[5.4912787560799037799119453147e-8 +/- 4.79e-37]",
+            "tail_metric_budget": "[3.2521678364687262459178732546195817508822418953527502699788243516e-7 +/- 9.81e-73]",
+            "safe_step_scalar": "[0.78941145327567506536105352851695373941078358792448389627797757389 +/- 4.27e-66]",
+            "safe_step_actual_gain": "[7.16004844147102408209719834333e-6 +/- 5.05e-36]",
+            "safe_step_guaranteed_gain": "[4.569937931651721819421985465332e-6 +/- 6.13e-37]",
+            "safe_step_guaranteed_fraction": "[0.6028385776278200119202015963663 +/- 9.27e-32]",
+            "safe_step_actual_fraction": "[0.944510293741038487456441975136 +/- 4.11e-31]",
+            "certified_gain_lower": "[4.569937931651721819421985465332e-6 +/- 8.50e-37]",
+            "certified_relative_gain_lower": "[0.1430444484030962508976453991429 +/- 3.01e-32]",
+            "certified_fraction_of_full_gain": "[0.602838577627820011920201596366 +/- 4.24e-31]",
+            "finite_gain_over_actual_gain": "[0.967373508840731118544716823295 +/- 1.06e-31]",
+            "complete_Stirling_tail": "[+/- 1.70e-5]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        },
+        {
+          "T": 512,
+          "values": {
+            "universal_tail_majorant": "[499904398.91791167049700986967352598323522770359987078745500923192 +/- 3.57e-57]",
+            "E_N": "[3.194767768109205273935131839275966013e-5 +/- 5.63e-42]",
+            "full_gain": "[7.580699214098913163055493925081e-6 +/- 3.08e-37]",
+            "full_relative_gain": "[0.23728482832996284368019987740644 +/- 2.89e-33]",
+            "tail_energy": "[1.591351052391905019806507974864835e-7 +/- 6.99e-41]",
+            "tail_energy_fraction": "[0.00498111652520437160095554222747820 +/- 1.27e-36]",
+            "tail_trace": "[0.160632679329219441718418882435 +/- 6.53e-31]",
+            "tail_operator_bound": "[0.16063267932921944171841888243506814089194926974315621339478067309 +/- 1.19e-66]",
+            "finite_observation_gain": "[7.45922513914051873923918697627e-6 +/- 3.81e-36]",
+            "actual_tail_metric": "[1.6414240352682465375227846848e-8 +/- 2.95e-37]",
+            "tail_metric_budget": "[2.5562298329908476629154876580445754191862016057006809127405817934e-8 +/- 4.42e-73]",
+            "safe_step_scalar": "[0.94145994963043523547750469644176560190495887029081710145606685561 +/- 3.94e-66]",
+            "safe_step_actual_gain": "[7.53257246740668569968154026582e-6 +/- 7.05e-36]",
+            "safe_step_guaranteed_gain": "[6.61146060674400780369285776957e-6 +/- 1.86e-36]",
+            "safe_step_guaranteed_fraction": "[0.872143903882603155809667087300 +/- 6.14e-31]",
+            "safe_step_actual_fraction": "[0.993651410597756041727150748036 +/- 7.13e-31]",
+            "certified_gain_lower": "[6.61146060674400780369285776957e-6 +/- 2.04e-36]",
+            "certified_relative_gain_lower": "[0.2069465165118071046420087075806 +/- 5.26e-32]",
+            "certified_fraction_of_full_gain": "[0.872143903882603155809667087300 +/- 6.14e-31]",
+            "finite_gain_over_actual_gain": "[0.983975874582588414662026078375 +/- 7.23e-31]",
+            "complete_Stirling_tail": "[+/- 7.24e-7]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        },
+        {
+          "T": 2048,
+          "values": {
+            "universal_tail_majorant": "[165283060.72427366770311212731173492737381525981589089741276384539 +/- 1.87e-57]",
+            "E_N": "[3.194767768109205273935131839275966013e-5 +/- 5.63e-42]",
+            "full_gain": "[7.580699214098913163055493925081e-6 +/- 3.08e-37]",
+            "full_relative_gain": "[0.23728482832996284368019987740644 +/- 2.89e-33]",
+            "tail_energy": "[7.60716368527441375721052671823695e-8 +/- 9.04e-41]",
+            "tail_energy_fraction": "[0.00238113197497815171008928751918631 +/- 4.32e-36]",
+            "tail_trace": "[0.049472903487233141844454757624 +/- 7.12e-31]",
+            "tail_operator_bound": "[0.049472903487233141844454757624640699462383055420397329679328023026 +/- 1.23e-67]",
+            "finite_observation_gain": "[7.52108735898078127552819270357e-6 +/- 8.32e-36]",
+            "actual_tail_metric": "[3.683959886533037845362720674e-9 +/- 5.70e-37]",
+            "tail_metric_budget": "[3.7634847481316586309363556682891494366254132799896185231072284980e-9 +/- 2.24e-74]",
+            "safe_step_scalar": "[0.97763057794644086396343147362502590285113156402972266095193918865 +/- 3.38e-67]",
+            "safe_step_actual_gain": "[7.5720006947712455944269968456e-6 +/- 4.58e-35]",
+            "safe_step_guaranteed_gain": "[7.18836608885945387967001709392e-6 +/- 4.00e-36]",
+            "safe_step_guaranteed_fraction": "[0.948245786548319827528838034017 +/- 6.24e-31]",
+            "safe_step_actual_fraction": "[0.99885254393005203462763965296 +/- 4.95e-30]",
+            "certified_gain_lower": "[7.18836608885945387967001709392e-6 +/- 4.15e-36]",
+            "certified_relative_gain_lower": "[0.225004338675728660201421432868 +/- 4.51e-31]",
+            "certified_fraction_of_full_gain": "[0.948245786548319827528838034017 +/- 6.44e-31]",
+            "finite_gain_over_actual_gain": "[0.992136364544412582141097236788 +/- 7.15e-31]",
+            "complete_Stirling_tail": "[+/- 1.11e-7]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        }
+      ]
+    },
+    {
+      "N": 32,
+      "M": 64,
+      "seconds": 6.684,
+      "potential_pairing_checks": 128,
+      "rows": [
+        {
+          "T": 64,
+          "values": {
+            "universal_tail_majorant": "[90834058041.802772335903477454673285078018796449943527676111533705 +/- 1.19e-55]",
+            "E_N": "[2.43669784669931395762958244676788980e-5 +/- 1.43e-41]",
+            "full_gain": "[4.6084796186540946452019358290e-6 +/- 5.29e-35]",
+            "full_relative_gain": "[0.18912807038823539269388365966 +/- 6.89e-30]",
+            "tail_energy": "[1.8805283888599191125504133650002169e-6 +/- 9.05e-41]",
+            "tail_energy_fraction": "[0.07717528011966000674315458889361482 +/- 6.20e-36]",
+            "tail_trace": "[21.504053424078941099303282665 +/- 2.18e-28]",
+            "tail_operator_bound": "1.0000000000000000000000000000000000000000000000000000000000000000",
+            "finite_observation_gain": "[5.345651637013794083729778334e-6 +/- 7.08e-34]",
+            "actual_tail_metric": "[1.463177549441463445676325545e-7 +/- 6.96e-35]",
+            "tail_metric_budget": "[1.8805283888599191125504133650002169904508485008047279936241413381e-6 +/- 4.88e-73]",
+            "safe_step_scalar": "[0.40688402664251287566258817276707484117444972767369492831580608327 +/- 2.08e-66]",
+            "safe_step_actual_gain": "[3.105645371694525322806413257e-6 +/- 4.25e-34]",
+            "safe_step_guaranteed_gain": "[8.849972780387513486428512441e-7 +/- 9.00e-35]",
+            "safe_step_guaranteed_fraction": "[0.1920367130314475794578203498 +/- 4.21e-29]",
+            "safe_step_actual_fraction": "[0.673898037678970640713487077 +/- 2.11e-28]",
+            "certified_gain_lower": "[8.84997278038751348642851244e-7 +/- 2.53e-34]",
+            "certified_relative_gain_lower": "[0.03631953297933697870443590574 +/- 5.56e-30]",
+            "certified_fraction_of_full_gain": "[0.1920367130314475794578203498 +/- 7.33e-29]",
+            "finite_gain_over_actual_gain": "[1.159959917230791691703699055 +/- 3.54e-28]",
+            "complete_Stirling_tail": "[+/- 1.02e-3]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        },
+        {
+          "T": 256,
+          "values": {
+            "universal_tail_majorant": "[31242975462.310884339313118113684421452245096123278865778948099464 +/- 1.47e-55]",
+            "E_N": "[2.43669784669931395762958244676788980e-5 +/- 1.43e-41]",
+            "full_gain": "[4.6084796186540946452019358290e-6 +/- 5.29e-35]",
+            "full_relative_gain": "[0.18912807038823539269388365966 +/- 6.89e-30]",
+            "tail_energy": "[1.06595574926651325592423650471273e-7 +/- 2.10e-40]",
+            "tail_energy_fraction": "[0.00437459141973810392595262207875059 +/- 8.79e-36]",
+            "tail_trace": "[11.126907779415279093866567218 +/- 7.11e-28]",
+            "tail_operator_bound": "1.0000000000000000000000000000000000000000000000000000000000000000",
+            "finite_observation_gain": "[4.370105283255948398678233884e-6 +/- 7.95e-34]",
+            "actual_tail_metric": "[1.70728267355279600018881350e-8 +/- 7.45e-35]",
+            "tail_metric_budget": "[1.0659557492665132559242365047127314738526685122609258725511943505e-7 +/- 1.73e-72]",
+            "safe_step_scalar": "[0.84382064023668092303224754357445180656753983129626963092994048822 +/- 1.08e-66]",
+            "safe_step_actual_gain": "[4.45024848905433102503304796e-6 +/- 3.49e-33]",
+            "safe_step_guaranteed_gain": "[3.111660367708175354451713652e-6 +/- 7.58e-34]",
+            "safe_step_guaranteed_fraction": "[0.675203239505035504546408466 +/- 4.69e-28]",
+            "safe_step_actual_fraction": "[0.965665220920305386272261002 +/- 4.06e-28]",
+            "certified_gain_lower": "[3.111660367708175354451713652e-6 +/- 9.44e-34]",
+            "certified_relative_gain_lower": "[0.1276998858074729150937582986 +/- 2.79e-29]",
+            "certified_fraction_of_full_gain": "[0.675203239505035504546408466 +/- 5.09e-28]",
+            "finite_gain_over_actual_gain": "[0.948274842220575250508148182 +/- 6.28e-28]",
+            "complete_Stirling_tail": "[+/- 1.77e-5]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        },
+        {
+          "T": 1024,
+          "values": {
+            "universal_tail_majorant": "[10487674276.487892745566219804333841494336531887792294642131509832 +/- 8.28e-56]",
+            "E_N": "[2.43669784669931395762958244676788980e-5 +/- 1.43e-41]",
+            "full_gain": "[4.6084796186540946452019358290e-6 +/- 5.29e-35]",
+            "full_relative_gain": "[0.18912807038823539269388365966 +/- 6.89e-30]",
+            "tail_energy": "[3.8081931925372170171914597884737e-8 +/- 7.67e-40]",
+            "tail_energy_fraction": "[0.0015628499847429561889059635795347 +/- 5.27e-35]",
+            "tail_trace": "[1.57919589741132195764156241 +/- 5.01e-27]",
+            "tail_operator_bound": "1.0000000000000000000000000000000000000000000000000000000000000000",
+            "finite_observation_gain": "[4.51337767603535605306288038e-6 +/- 4.48e-33]",
+            "actual_tail_metric": "[3.887839886562081691269153e-9 +/- 5.26e-34]",
+            "tail_metric_budget": "[3.8081931925372170171914597884736984437956414140527197074544331863e-8 +/- 3.78e-73]",
+            "safe_step_scalar": "[0.90814376344701475516428460451777700939404256949726790030318085093 +/- 3.09e-66]",
+            "safe_step_actual_gain": "[4.55813126264462529006958103e-6 +/- 4.98e-33]",
+            "safe_step_guaranteed_gain": "[3.72229583303499528488952300e-6 +/- 5.18e-33]",
+            "safe_step_guaranteed_fraction": "[0.807705825141978360327369867 +/- 4.61e-28]",
+            "safe_step_actual_fraction": "[0.98907484459610703881284489 +/- 3.49e-27]",
+            "certified_gain_lower": "[3.72229583303499528488952300e-6 +/- 5.18e-33]",
+            "certified_relative_gain_lower": "[0.1527598441504398314756133294 +/- 7.69e-29]",
+            "certified_fraction_of_full_gain": "[0.807705825141978360327369867 +/- 5.15e-28]",
+            "finite_gain_over_actual_gain": "[0.979363705497625029876340915 +/- 7.19e-28]",
+            "complete_Stirling_tail": "[+/- 4.72e-7]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        },
+        {
+          "T": 4096,
+          "values": {
+            "universal_tail_majorant": "[3404954441.1387951185407574772430816292902997121636242408929540271 +/- 5.70e-57]",
+            "E_N": "[2.43669784669931395762958244676788980e-5 +/- 1.43e-41]",
+            "full_gain": "[4.6084796186540946452019358290e-6 +/- 5.29e-35]",
+            "full_relative_gain": "[0.18912807038823539269388365966 +/- 6.89e-30]",
+            "tail_energy": "[1.722125652261644303648551558698e-8 +/- 4.28e-39]",
+            "tail_energy_fraction": "[0.0007067456700035213114891956933518 +/- 5.52e-35]",
+            "tail_trace": "[0.06382638199900638311306398 +/- 6.12e-27]",
+            "tail_operator_bound": "[0.063826381999006383113063976590163436139350070249357581879766715341 +/- 3.95e-67]",
+            "finite_observation_gain": "[4.56386087635352175960024271e-6 +/- 3.88e-33]",
+            "actual_tail_metric": "[8.331622149172184764183345e-10 +/- 8.02e-35]",
+            "tail_metric_budget": "[1.0991704973153974014328356173670755612857925464113044339720748157e-9 +/- 1.70e-74]",
+            "safe_step_scalar": "[0.98448090709613249261235952008140326605826725234698133364318277966 +/- 2.62e-66]",
+            "safe_step_actual_gain": "[4.6058677734566630080141026e-6 +/- 5.47e-32]",
+            "safe_step_guaranteed_gain": "[4.42330608496992419083193908e-6 +/- 5.64e-33]",
+            "safe_step_guaranteed_fraction": "[0.959818953536296567160063730 +/- 5.98e-28]",
+            "safe_step_actual_fraction": "[0.99943325230584519196719034 +/- 5.10e-27]",
+            "certified_gain_lower": "[4.42330608496992419083193908e-6 +/- 5.64e-33]",
+            "certified_relative_gain_lower": "[0.181528706604375133035804806 +/- 5.20e-28]",
+            "certified_fraction_of_full_gain": "[0.959818953536296567160063730 +/- 6.04e-28]",
+            "finite_gain_over_actual_gain": "[0.990318120943843128361738989 +/- 6.85e-28]",
+            "complete_Stirling_tail": "[+/- 3.72e-8]"
+          },
+          "gates": {
+            "complete_tail_metric": true,
+            "finite_potential_matches_physical_pairings": true,
+            "Stirling_tail_overlap": true,
+            "certifies_positive_gain": true,
+            "lower_and_upper_contain_actual_gain": true
+          }
+        }
+      ]
+    }
+  ]
+}

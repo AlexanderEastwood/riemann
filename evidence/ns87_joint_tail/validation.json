@@ -1,0 +1,29 @@
+{
+  "classification": "Current branch checks; unchanged manuscript v1.66",
+  "reviewed_base": "4890f3ae50b88f65d67c873913b09f90adc1d38c",
+  "manuscript_build": {
+    "pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "latex_pdf_or_box_warnings": 0
+  },
+  "pyright": {
+    "files": [
+      "certify.py",
+      "verify_replays.py"
+    ],
+    "errors": 0,
+    "warnings": 0
+  },
+  "inherited_manifests": {
+    "v159": 69,
+    "v163": 26,
+    "v164": 15,
+    "v166": 16
+  },
+  "relative_report_links": 4,
+  "diff_check": "passed",
+  "proof_review": "author only; exact Hilbert proof and NS81/83 implication checked; no independent review",
+  "new_manuscript_version": false,
+  "g2": "open",
+  "rh": "open"
+}

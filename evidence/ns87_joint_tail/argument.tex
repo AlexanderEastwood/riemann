@@ -1,0 +1,184 @@
+\section{Joint arithmetic localization of optimized block gain (NS-87)}
+\paragraph{Scope.}
+This is a localization theorem and a certified finite descent prescription,
+not a new arithmetic lower estimate. The Hilbert-space inequality is generic;
+the finite observations below use the original arithmetic atoms. The
+polynomial-cutoff conclusion uses the already established NS-81 coefficient
+bound and NS-83 critical-zero lower bound. It supplies neither an effective
+asymptotic onset nor decay of the optimized error.
+
+Use the fixed $q=2$ setting of NS-86 in reciprocal coordinates,
+$\mathcal H=L^2((0,\infty),dt/t^2)$, with target
+$\tau(t)=\boldsymbol1_{t\ge1}\log t$ and atoms
+$a_n(t)=A(t/n)$, where $A(z)=\int_0^z\{u\}\,du/u$.
+Let $V_N=\operatorname{span}(a_1,\ldots,a_N)$, $\Pi_N$ its orthogonal
+projection, $r_N=(I-\Pi_N)\tau$, and $E_N=\|r_N\|^2$.
+For $M>N$, set $\phi_n=(I-\Pi_N)a_n$, $N<n\le M$, with positive definite
+Gram $H=(\langle\phi_i,\phi_j\rangle)$. Let
+$h=(\langle r_N,\phi_n\rangle)$ and $\Delta=E_N-E_M=h^TH^{-1}h$.
+All transposes are real; the Hermitian version is identical.
+
+\subsection{Finite arithmetic observations}
+For any $T\ge1$, put
+\[
+ P_T(t)=\int_t^T\log(u/t)r_N(u)\frac{du}{u^2}\quad(0<t\le T),
+ \qquad P_T(t)=0\quad(t>T).
+\]
+These are truncated potentials, not the full $P_N$ of NS-86. Then
+\begin{equation}
+ q_n(T):=\langle\boldsymbol1_{t\le T}r_N,a_n\rangle
+ =\frac1n\int_0^T P_T(t)\,dt-\sum_{1\le k\le T/n}P_T(kn).
+ \label{eq:ns87-finite-quadrature}
+\end{equation}
+To prove it, use $(tP_T')'=r_N/t^2$ and
+$(ta_n')'=1/n-\sum_{k\ge1}\delta_{kn}$. Integrating twice by parts
+has zero upper boundary terms, since $P_T(T)=P_T'(T)=0$; the lower
+ones vanish as $O(t(1+\log^2t))$. This also treats nonaligned $T$;
+a summand at $kn=T$ is zero. No infinite sum or divergent integral is
+separated. Equivalently,
+\[
+ \int_0^T P_T(t)\,dt=\int_0^T r_N(u)\,du/u
+\]
+by Fubini, since $\int_0^u\log(u/t)\,dt=u$.
+If $D$ is the coefficient matrix of the projected atoms, the finite
+observation vector is $\widehat h_T=D^T(q_1(T),\ldots,q_M(T))^T$.
+One must keep the old-coordinate rows of $D$: the truncated residual is
+not orthogonal to $V_N$, even though the full residual is.
+
+\subsection{Coupled tail, complete gain and an explicit safe step}
+Let
+\[
+ e_T=\int_T^\infty r_N(t)^2\frac{dt}{t^2},\qquad
+ K_T=\left(\int_T^\infty\phi_i(t)\phi_j(t)\frac{dt}{t^2}\right),
+ \quad b_T=\min\{1,\operatorname{tr}(H^{-1}K_T)\}.
+\]
+The trace is nonnegative. Any certified scalar upper bounds
+$\overline e_T\ge e_T$, $\overline b_T\ge b_T$ can replace these quantities;
+in particular $\overline b_T=1$ always works. Write $B_T=\overline b_T\overline e_T$
+and $A_T=\widehat h_T^TH^{-1}\widehat h_T$. Then
+\begin{align}
+ (h-\widehat h_T)^TH^{-1}(h-\widehat h_T)&\le B_T,
+ \label{eq:ns87-tail-metric}\\
+ (\sqrt{A_T}-\sqrt{B_T})_+^2
+ &\le\Delta\le(\sqrt{A_T}+\sqrt{B_T})^2.
+ \label{eq:ns87-gain-interval}
+\end{align}
+Proof: the synthesis $U:x\mapsto\sum x_n\phi_n$ obeys $U^*U=H$,
+so $Z=UH^{-1/2}$ is an isometry. If $Q_T$ is multiplication by
+$\boldsymbol1_{t>T}$, the omitted vector is $U^*Q_Tr_N$. Its squared
+$H^{-1}$ norm is at most $\|Z^*Q_T\|^2e_T$.
+The squared operator norm is the largest eigenvalue of
+$H^{-1/2}K_TH^{-1/2}$, bounded by both one and its trace. The ordinary
+triangle and reverse triangle inequalities then give the gain interval.
+This joint argument avoids replacing the tail by unrelated entrywise errors.
+It still uses the complete arithmetic Gram; it does not construct its fast inverse.
+
+Moreover the lower bound is constructive. For $A_T>B_T$, set
+\[
+ v_T=H^{-1}\widehat h_T,\quad
+ W_T=\sum(v_T)_n\phi_n,\quad
+ \theta_T=1-\sqrt{B_T/A_T}.
+\]
+The corrected residual $r_N-\theta_TW_T$ is admissible at size $M$ and
+\begin{equation}
+ E_N-\|r_N-\theta_TW_T\|^2
+ \ge(\sqrt{A_T}-\sqrt{B_T})^2.
+ \label{eq:ns87-safe-step}
+\end{equation}
+Indeed $\|W_T\|^2=A_T$ and
+$\langle r_N,W_T\rangle\ge A_T-\sqrt{A_TB_T}$.
+If $A_T\le B_T$, take the zero step. An exact dyadic
+$0\le\theta\le1-\sqrt{B_T/A_T}$ guarantees at least $\theta^2A_T$;
+this is the outward-rounded prescription in the verifier.
+The complete new coefficients include the old-coordinate correction $Dv_T$.
+No claim of unit-step descent or of preserving NS-86's convolution identity is made.
+
+\subsection{The observation tail is negligible at a polynomial cutoff}
+This is an asymptotic localization result, not a convergence theorem.
+Let $\mathsf H_N=\sum_{n\le N}1/n$ and
+$C_N=48\mathsf H_NN^3(N+2)$ from NS-81. If
+$r_N=\tau-\sum c_na_n$, orthogonal projection and NS-81 give
+\[
+ \|c\|_{\ell^2}^2\le16C_N\|\Pi_N\tau\|^2\le32C_N.
+\]
+For every $T\ge N$, define
+\[
+ a=\tfrac12\log(2\pi T)+\frac{N}{6T},\qquad
+ F_N(T)=\frac{2((\log T)^2+2\log T+2)
+                 +64NC_N(a^2+a+\tfrac12)}{T}.
+\]
+Then the full residual tail satisfies $e_T\le F_N(T)$.
+Indeed, the complete Stirling bound gives
+$0\le A(t/n)\le a+\tfrac12\log(t/T)$ for $t\ge T$ and $n\le N$.
+Cauchy--Schwarz over coefficients gives
+$(\sum c_na_n(t))^2\le32NC_N(a+\tfrac12\log(t/T))^2$.
+Apply $(x-y)^2\le2x^2+2y^2$ and integrate. The target integral is
+$((\log T)^2+2\log T+2)/T$ and the latter integral is
+$(a^2+a+1/2)/T$, proving the stated bound with every tail term retained.
+
+Fix any $\varepsilon>0$ and put $T_N=\lceil N^{5+\varepsilon}\rceil$.
+Then $F_N(T_N)=O_\varepsilon(N^{-\varepsilon}\log^3N)$.
+NS-83 gives $E_N\ge c/\log N$ for all sufficiently large $N$, for some
+$c>0$, unconditionally from known critical-line zeros. Thus
+\begin{equation}
+ \frac{F_N(T_N)}{E_N}
+ =O_\varepsilon(N^{-\varepsilon}\log^4N).
+ \label{eq:ns87-relative-tail}
+\end{equation}
+This use of NS-83 supplies no explicit onset. We never apply its
+asymptotic lower bound at one of the tested finite sizes.
+
+For any $M=M(N)>N$, take $B_T=F_N(T_N)$ in the preceding theorem.
+Write $\gamma_N=(E_N-E_M)/E_N\le1$ and
+$L_N=(\sqrt{A_{T_N}}-\sqrt{F_N(T_N)})_+^2$.
+Putting $\epsilon_N=\sqrt{F_N(T_N)/E_N}$ yields
+\[
+ \left|\frac{A_{T_N}}{E_N}-\gamma_N\right|
+ \le2\epsilon_N+\epsilon_N^2,\qquad
+ 0\le\gamma_N-\frac{L_N}{E_N}\le4\epsilon_N.
+\]
+For the first inequality use
+$|\sqrt{A/E}-\sqrt\gamma|\le\epsilon_N$ and $\sqrt\gamma\le1$.
+For the second, the square roots of $\gamma$ and $L/E$ differ by at most
+$2\epsilon_N$, and both lie in $[0,1]$.
+Consequently
+\begin{equation}
+ \log N\left(\frac{A_{T_N}}{E_N}-\gamma_N\right)\longrightarrow0,
+ \qquad
+ \log N\left(\gamma_N-\frac{L_N}{E_N}\right)\longrightarrow0.
+ \label{eq:ns87-log-scale-localization}
+\end{equation}
+The simple choice $T_N=N^6$ is sufficient. No matrices or sums at that
+asymptotic cutoff were assembled for this assertion: it is an analytic bound.
+No sufficiency claim for $T=N^2$ follows.
+
+\paragraph{The remaining arithmetic target.}
+For $N=2^j$, $M=2N$, it is now enough to establish, for the actual optimized
+coefficients, $\liminf_{j\to\infty}jA_{N^6}/E_N>0$.
+The localization proves the same positive lower liminf for $j\gamma_N$,
+so the product of successive error factors vanishes. This is an open sufficient
+estimate, not a proved estimate or a newly discovered RH criterion.
+The corresponding positive liminf need not be necessary for convergence.
+NS-83 excludes eventual $\gamma_N\ge a/j$ with $a>1$; it does not
+exclude $0<a\le1$ or weaker nonsummable lower scales. Equations above transfer
+such leading-scale statements without a hidden infinite observation tail.
+The Gram, optimized coefficients, and growing signed sums remain arithmetic
+objects requiring an independent bound. The generic Hilbert argument alone
+cannot distinguish the NS-74 altered-family control.
+
+\subsection{Finite validation}
+The verifier evaluates $N=8,16,32$, $M=2N$, at $T=M,4M,16M,64M$.
+It uses complete Gram entries with their analytic Bernoulli remainder,
+interval old-space solves, exact physical cells and a second finite-potential
+calculation. No midpoint solve is used. Each cell is a combination of
+$t$, $\log t$ and $1$, and the exterior $0<t<1$ is retained.
+For every case the full physical tail $e_T=E_N-\int_0^Tr_N^2dt/t^2$
+is enclosed via the complete Gram and separately checked against the
+Stirling tail interval. At $N=32,T=4096$, the safe step guarantees more
+than $95.98\%$ of full available gain; this is more than $18.15\%$ of
+that finite old error, not a uniform fraction at all sizes.
+At $N=32,T=64$, $A_T$ exceeds full gain by more than $15.99\%$;
+discarding the tail would therefore overstate the guaranteed reduction.
+Two arithmetic precisions and a doubled analytic Gram cutoff replay the same
+finite problems. Changing the physical observation cutoff is a different
+localized observation problem and is not called a precision replay.

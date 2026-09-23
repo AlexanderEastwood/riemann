@@ -1,0 +1,23 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental NS87 evidence and versioned HTML report; excludes this inventory",
+  "files": {
+    "audits/joint-tail-localization-2026-09-23-v1.html": "752dcddf5fbc9e8fd56762050da75ef5db12b520bd810c10e4b9637e89d24c58",
+    "evidence/ns87_joint_tail/README.md": "7c8c644a6c525808454ecea8f2ebf91f87713e7cebfe8fd83e7d6728ad28a109",
+    "evidence/ns87_joint_tail/argument.tex": "b163dcd18c485ec937d7bf1657337de60ac9ec604e2137f4385f7e077f0e47e3",
+    "evidence/ns87_joint_tail/certify.py": "6dacade79a924b9167b72c174aa4b89979c5949b24d451eae6ad1ff229aa7ec6",
+    "evidence/ns87_joint_tail/check-256bits.json": "2a0a38363c601cec70e89ad4ea956fb6b90ed1d212938f53de3abc3f12ef7dcc",
+    "evidence/ns87_joint_tail/check-384bits.json": "6a3271b2ebd085eb4d8f56e88d68d14c61194e6f3d8fac9fc6bf5e048d1c0397",
+    "evidence/ns87_joint_tail/check-cutoff-384bits.json": "4bcade9baf4a96fdd0de31fbb08c0443e7d315063103def4efa996890365eb11",
+    "evidence/ns87_joint_tail/exact-checks-output.txt": "8786379fb532522efaaa1f60c02cff265e13028110ddb2f3117de3bfbedb5390",
+    "evidence/ns87_joint_tail/exact-checks.mac": "bf89a00ed7914eef5ab05486b8f43c8a5ab6447e612b3336380fad48f640660d",
+    "evidence/ns87_joint_tail/literature-inputs.json": "5830c3c0db902bb190ff8d382ddf2f6b0736e45caf334ff68afb04ccaad993d2",
+    "evidence/ns87_joint_tail/replay-validation.json": "436c1d4147c976fcbe645094026887825d6debbf7f1a6b53ef80f46e259a578a",
+    "evidence/ns87_joint_tail/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "evidence/ns87_joint_tail/runtime-provenance.json": "a8dd2e60c2d11c22d33b499e61fbbb7a443073ed85bf940499bd081c5f0f829a",
+    "evidence/ns87_joint_tail/self-review.json": "996b058a72c2cc2f16bf12f78e5069e973f25468c04042c0e9768da1e86050b7",
+    "evidence/ns87_joint_tail/turn-review.json": "8c1f2192d7c9f593686f726855eb3706f417cc0e7b6cd77c97c7a0a0d41f39b6",
+    "evidence/ns87_joint_tail/validation.json": "7d37819b21449196e8bb71b62e348048cca367bad286864c44dd198d3e65661a",
+    "evidence/ns87_joint_tail/verify_replays.py": "fe9e7078170f1c1e8025a4870fda4aeadc3726fa504d765c0c55e190d621e106"
+  }
+}

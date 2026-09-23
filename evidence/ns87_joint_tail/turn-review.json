@@ -1,15 +1,20 @@
 {
-  "title": "Riemann project research map",
-  "updated": "2026-09-23",
-  "legend": {
-    "proved": "established result",
-    "live": "current route (gold): being worked now",
-    "closed": "closed route (red): proved insufficient or impossible; kept deliberately",
-    "blocked": "attempted; obstruction found",
-    "open": "target, not yet attacked",
-    "wall": "wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge"
+  "classification": "Full-register scope and dependency review; not independent reproof or historical numerical replay",
+  "date": "2026-09-23",
+  "reviewed_main_commit": "4890f3ae50b88f65d67c873913b09f90adc1d38c",
+  "registered_conclusions_reviewed": 93,
+  "open_pull_requests_at_start": 0,
+  "changed_since_previous_review": "PR41: optimized potential identity, observation-tail bounds and finite convolution control; README scope correction",
+  "findings": [],
+  "missing_original_groups": "Both historical original groups remain open; no recovery this turn",
+  "dependency_review": {
+    "NS86": "P_N(1)=E_N requires optimization. Observation-tail bounds are upper bounds for individual correlations; they do not prove decay.",
+    "NS53": "Full block gain uses the actual old-space Schur complement.",
+    "NS78/82": "Physical cells and exact logarithmic tails remain available; this task localizes observations rather than replacing the full Gram.",
+    "NS83": "No eventual fixed fraction at each doubling; a/j with 0<a<=1 remains a possible sufficient lower bound, not established.",
+    "NS74": "Shared Gram geometry and finite efficiency do not settle arithmetic convergence."
   },
-  "nodes": [
+  "conclusions": [
     {
       "id": "rh",
       "title": "RH",
@@ -97,7 +102,7 @@
       "wall": {
         "input": "stipulated 1e-8 D tail comparison fails: positive q/D < 7e-18 (lambda=5)",
         "to": null,
-        "src": "prop:v152-tail-comparison; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v152-tail-comparison; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -118,7 +123,7 @@
       "wall": {
         "input": "cost: prime norm ~ lambda survives finite removal; exponential cutoff (estimate, not route)",
         "to": null,
-        "src": "prop:v119-prime-essential; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v119-prime-essential; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -132,7 +137,7 @@
       "wall": {
         "input": "specific estimate: violated by a POSITIVE direction, q/D > 2.05 at lambda=4",
         "to": null,
-        "src": "prop:v120-norm-counterexample; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v120-norm-counterexample; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -146,7 +151,7 @@
       "wall": {
         "input": "scoped: remainder outside finite Schatten classes; negative-only penalty stays a constant (does not obstruct v136)",
         "to": null,
-        "src": "prop:v132-schatten; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v132-schatten; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -160,7 +165,7 @@
       "wall": {
         "input": "estimate counterexample: source-complement vector with tiny q despite O(1) cancellation",
         "to": null,
-        "src": "prop:v121-complement-cancellation; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v121-complement-cancellation; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -175,7 +180,7 @@
       "wall": {
         "input": "cost of one estimate: N > L exp(M_phi/(1-c)); not every method",
         "to": null,
-        "src": "prop:v125-cutoff-cost; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v125-cutoff-cost; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -190,7 +195,7 @@
       "wall": {
         "input": "fixed-partition comparison fails: Rayleigh 341/250, 2093/1500 > 1 (lambda=5, N=25)",
         "to": null,
-        "src": "prop:v152-block-comparison; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v152-block-comparison; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -204,7 +209,7 @@
       "wall": {
         "input": "construction class: form-exact positive smoothing = point mass; signed smoothing not covered",
         "to": null,
-        "src": "prop:v132-flat-top; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v132-flat-top; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -218,7 +223,7 @@
       "wall": {
         "input": "generic mechanism: persistent source-compressed commutator > 9e-6; not every band choice",
         "to": null,
-        "src": "v1.33; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "v1.33; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -232,7 +237,7 @@
       "wall": {
         "input": "shortcut: cross norm >= 73/(375 pi) cofinally; not all Cotlar arguments",
         "to": null,
-        "src": "v1.34; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "v1.34; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -247,7 +252,7 @@
       "wall": {
         "input": "genuine closure of the scalar route: a Delta(beta_a) -> infinity, unconditional",
         "to": null,
-        "src": "cor:v137-scalar-no-go; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "cor:v137-scalar-no-go; scope per audit PR #22 \u00a72 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -324,7 +329,7 @@
       "title": "Alternative mechanisms: distinct missing inputs",
       "status": "open",
       "parent": "rh",
-      "note": "Logical RH equivalence does not establish equal proof difficulty or a universal route closure. NS-51–53 test explicit first lemmas."
+      "note": "Logical RH equivalence does not establish equal proof difficulty or a universal route closure. NS-51\u201353 test explicit first lemmas."
     },
     {
       "id": "circle",
@@ -378,7 +383,7 @@
       "title": "Direct rational Li / entire window-test identification",
       "status": "closed",
       "parent": "altroutes",
-      "note": "The specified rational Li-transform class has trivial intersection with the finite-window entire Paley–Wiener class. This closes direct identification only; it does not exclude indirect inequalities or all Li approaches.",
+      "note": "The specified rational Li-transform class has trivial intersection with the finite-window entire Paley\u2013Wiener class. This closes direct identification only; it does not exclude indirect inequalities or all Li approaches.",
       "evidence": "evidence/diag_routes/li",
       "wall": {
         "input": "direct rational-Li / entire-window classes intersect only at zero",
@@ -388,7 +393,7 @@
     },
     {
       "id": "dbn",
-      "title": "de Bruijn–Newman: paired transport",
+      "title": "de Bruijn\u2013Newman: paired transport",
       "status": "open",
       "parent": "altroutes",
       "note": "Finite-cluster singularities cancel; external interaction and support growth remain. Same-test uniform comparison fails IF an unmatched real deformed zero exists; that hypothesis is not verified here. General heat route open.",
@@ -557,7 +562,7 @@
       "prop": "prop:v151-input-comparison",
       "branch": "codex/ns38-ns39-integration",
       "evidence": "evidence/v151",
-      "note": "NS-39: exact inverse corrected-zero-field formula for the potential, including finite-window pole mass. ZLD implies QG growth with kappa theta² D/(2K) on the same prescribed family; no packet input supplied. CAE equals the uniform complement floor. General measure countermodels are not arithmetic independence. All three arithmetic inputs remain open; no new positivity conclusion."
+      "note": "NS-39: exact inverse corrected-zero-field formula for the potential, including finite-window pole mass. ZLD implies QG growth with kappa theta\u00b2 D/(2K) on the same prescribed family; no packet input supplied. CAE equals the uniform complement floor. General measure countermodels are not arithmetic independence. All three arithmetic inputs remain open; no new positivity conclusion."
     },
     {
       "id": "capacitychannels",
@@ -649,12 +654,12 @@
     },
     {
       "id": "fineradicalrank",
-      "title": "Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions",
+      "title": "Uniform or polynomial positive gap after o(lambda\u00b2/log lambda) removed directions",
       "status": "closed",
       "parent": "gapfree",
       "prop": "lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank",
       "evidence": "evidence/v153",
-      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda²/(20000 log lambda), exact even/odd counts and residual C exp(-lambda²/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods.",
+      "note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda\u00b2/(20000 log lambda), exact even/odd counts and residual C exp(-lambda\u00b2/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods.",
       "wall": {
         "input": "positive-gap strategy must remove rank >= lambda^2/(20000 log lambda)",
         "to": null,
@@ -678,12 +683,12 @@
     },
     {
       "id": "generic_h1",
-      "title": "Generic H¹ bootstrap from a zero eigenvalue",
+      "title": "Generic H\u00b9 bootstrap from a zero eigenvalue",
       "status": "closed",
       "parent": "kernelapi",
       "prop": "prop:ns51-no-generic-bootstrap",
       "evidence": "evidence/ns51_kernel",
-      "note": "Rank-one bounded perturbation of the same logarithmic principal operator has a non-H¹ nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted."
+      "note": "Rank-one bounded perturbation of the same logarithmic principal operator has a non-H\u00b9 nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted."
     },
     {
       "id": "localucp",
@@ -976,7 +981,7 @@
       "parent": "nbsamegramcontrol",
       "prop": "prop:ns76-continuous-distance; prop:ns76-strict-closure",
       "evidence": "evidence/v162/ns76",
-      "note": "Continuous defect depends on B(1), B′(1), B″(1). Integer closure strictly smaller; target distances not proved different."
+      "note": "Continuous defect depends on B(1), B\u2032(1), B\u2033(1). Integer closure strictly smaller; target distances not proved different."
     },
     {
       "id": "nbcontinuoustail",
@@ -1021,7 +1026,7 @@
       "parent": "nbarithmeticpreconditioner",
       "prop": "prop:ns81-conditioning; prop:ns81-finite-comparator",
       "evidence": "evidence/v164/ns81",
-      "note": "Condition O(N^4 log² N); sufficient cutoff 2^16(N+1)^6 with full tail bound. Enormous comparator not assembled; no practical solver or cofinal decay."
+      "note": "Condition O(N^4 log\u00b2 N); sufficient cutoff 2^16(N+1)^6 with full tail bound. Enormous comparator not assembled; no practical solver or cofinal decay."
     },
     {
       "id": "nbcompressedtail",
@@ -1065,14 +1070,6 @@
       "parent": "nboptimizedpotential",
       "evidence": "evidence/ns86_optimized_arithmetic",
       "note": "NS86: raw defect-convolution square holds through N^2, retaining signed normalization sums and omitted forcing. Unit step raises error at N=4,16 and lowers it at N=8; damped old-space-refitted direction captures 27.31% of available gain at N=16. Modified coefficients generally lose the exact defect-square identity. No eventual failure or general route closure."
-    },
-    {
-      "id": "nbjointlocalization",
-      "title": "Joint finite arithmetic observations preserve logarithmic gain scale",
-      "status": "proved",
-      "parent": "nboptimizedpotential",
-      "evidence": "evidence/ns87_joint_tail",
-      "note": "NS87: complete coupled-tail bound and explicit safe step. NS81/83 imply T=N^(5+epsilon) preserves relative gain up to o(1/log N), with no effective onset or arithmetic lower estimate. Finite N=32 to 64, T=4096 certificate retains >95.98% of available gain. Full Gram/inverse retained; no fast solver or cofinal decay."
     }
   ]
 }
