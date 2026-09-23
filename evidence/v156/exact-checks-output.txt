@@ -1,0 +1,54 @@
+batch("evidence/v156/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+lorentz(u,v):=sum(u[i]*v[i],i,1,4)-u[5]*v[5]
+embed(v):=block([r2:sum(v[i]^2,i,1,3)],append(v,[(r2-1)/2,(r2+1)/2]))
+xx:[x1,x2,x3]
+yy:[y1,y2,y3]
+fx:embed(xx)
+fy:embed(yy)
+np:[0,0,0,1,1]
+check("Conformal point is null",lorentz(fx,fx))
+check("Conformal point normalization",lorentz(fx,np)+1)
+check("Conformal pairing is minus half squared distance",
+      lorentz(fx,fy)+sum((xx[i]-yy[i])^2,i,1,3)/2)
+kk:matrix([k11,k12,k13],[k12,k22,k23],[k13,k23,k33])
+ff:[f1,f2,f3]
+mm:[m1,m2,m3]
+qmf:sum(sum(kk[i,j]*mm[i]*ff[i]*mm[j]*ff[j],j,1,3),i,1,3)
+afm2f:sum(sum(kk[i,j]*ff[j]*mm[i]^2*ff[i],j,1,3),i,1,3)
+edge:sum(sum(kk[i,j]*ff[i]*ff[j]*(mm[i]-mm[j])^2,j,1,3),i,1,3)/2
+check("Signed multiplier identity",qmf-afm2f+edge)
+aa:matrix([3/4,-1,1/4],[-1,2,-1],[1/4,-1,3/4])
+ones:matrix([1],[1],[1])
+check("Signed example nullvector",sum((aa . ones)[i,1]^2,i,1,3))
+check("Signed example eigenvalues 0, 1/2, 3",
+      determinant(aa-z*ident(3))+z*(z-1/2)*(z-3))
+bb:-2*d2*cos(t)-2*d4*cos(2*t)
+check("Perturbation symbol mean zero",integrate(bb,t,-%pi,%pi))
+check("Perturbation symbol positive mean square",
+      integrate(trigreduce(expand(bb^2)),t,-%pi,%pi)/(2*%pi)-2*(d2^2+d4^2))
+check("Single-shift symbol at zero",subst(t = 0,-2*d*cos(t))+2*d)
+check("Single-shift symbol at pi",subst(t = %pi,-2*d*cos(t))-2*d)
+assume(a > 0)
+even_corr:integrate(cos((%pi*(x+a/2))/(2*a))*cos((%pi*x)/(2*a)),x,-a,a/2)
+odd_corr:integrate(sin((%pi*(x+a/2))/a)*sin((%pi*x)/a),x,-a,a/2)
+check("Even cosine shift correlation",even_corr-a*sqrt(2)*(3/8+1/(2*%pi)))
+check("Odd sine shift correlation",odd_corr-a/(2*%pi))
+print(checks)
+[["Conformal point is null",true],["Conformal point normalization",true],
+ ["Conformal pairing is minus half squared distance",true],
+ ["Signed multiplier identity",true],["Signed example nullvector",true],
+ ["Signed example eigenvalues 0, 1/2, 3",true],
+ ["Perturbation symbol mean zero",true],
+ ["Perturbation symbol positive mean square",true],
+ ["Single-shift symbol at zero",true],["Single-shift symbol at pi",true],
+ ["Even cosine shift correlation",true],["Odd sine shift correlation",true]]
+
+print("PASS:",length(checks),
+      "exact algebra checks; no interval or RH certificate.")
+PASS: 12 exact algebra checks; no interval or RH certificate.
+quit()

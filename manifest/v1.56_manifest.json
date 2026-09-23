@@ -1,0 +1,54 @@
+{
+ "manuscript_revision": "v1.56",
+ "base_commit": "e8a2383659f940a0ad522b20ef5654eac7353807",
+ "files": [
+  {
+   "path": "evidence/v156/README.md",
+   "size_bytes": 2285,
+   "sha256": "59c403a5c615b9973c082b01e28fe36a9db06eae3505bc306d51565510573c63"
+  },
+  {
+   "path": "evidence/v156/build-output.txt",
+   "size_bytes": 150184,
+   "sha256": "38584aea8faa74d7f214fbba6386f554f4dcf9655d8b1f14147e52634721a669"
+  },
+  {
+   "path": "evidence/v156/exact-checks-output.txt",
+   "size_bytes": 2487,
+   "sha256": "cc9998866c85f9c9785c4af9a2a9aa90f336c97700eb1d9c762444f4cbbe79a8"
+  },
+  {
+   "path": "evidence/v156/exact-checks.mac",
+   "size_bytes": 2335,
+   "sha256": "4b56bd6d11e579b7f53f5750b676824ecd20b101f81285192b489a70941da5ee"
+  },
+  {
+   "path": "evidence/v156/integration-review-2026-09-22-v1.html",
+   "size_bytes": 5173,
+   "sha256": "f04a50bc7b428ffefbb2e6116f333eceac31c3801885cf9a956301aeea0a9570"
+  },
+  {
+   "path": "evidence/v156/prime-weight-rigidity-2026-09-22-v2.html",
+   "size_bytes": 11287,
+   "sha256": "885592e87c6877460abe6e0c184d5ec4014e4c6f8219519498ba48e0f8b3e238"
+  },
+  {
+   "path": "evidence/v156/proof.tex",
+   "size_bytes": 14754,
+   "sha256": "c6ebe402b4555ec18384457f6a24222170a20599ec889dd9848b9d2019b8a384"
+  },
+  {
+   "path": "evidence/v156/standalone-checkpoint-2026-09-22-v1.tex",
+   "size_bytes": 15057,
+   "sha256": "4de2f20c2861066a8a261ffc69f9bf8d159a2aa80d28cae52053ed2069d25f63"
+  },
+  {
+   "path": "evidence/v156/validation.json",
+   "size_bytes": 3430,
+   "sha256": "78e41463b42f0b5d6f2db3a0976d89a5f90c08585ee96cf8fb5113dcc6a6803c"
+  }
+ ],
+ "file_count": 9,
+ "total_bytes": 206992,
+ "note": "NS-57 incremental finite prime-weight controls and bounded-floor stability. Complete manuscript: 291 pages, zero undefined/duplicate references; 12 exact Maxima checks. Local self-review only. RH and G2 remain open."
+}

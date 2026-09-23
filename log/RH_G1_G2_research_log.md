@@ -1,5 +1,31 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## September 22, 2026 — NS-57 / v1.56 finite prime-weight controls
+
+Classification: exact identities, proved implications, and open input. The
+September 22 standalone checkpoint is integrated on top of v1.55; its prior
+versioned report remains unchanged in the working archive. No private email
+or personal correspondence is included in the public repository.
+
+What changed: generic geometric discrimination is replaced by actual complete
+operator families whose finite prime-shift weights are perturbed. Their
+negative tests occur in both parities and their first-zero vectors satisfy
+the same support geometry and a modified affine-potential equation. The
+original arithmetic near-radical identity does not survive the perturbation.
+A fixed-pattern sensitivity upper bound follows from the complete v1.53
+residual. These controls do not refute the original arithmetic operator.
+
+A separate exact result preserves the bounded-floor objective under every
+fixed bounded self-adjoint perturbation and identifies scalar compensation
+and the RH-conditional perturbed lower-edge limit. This is a consequence of
+the v1.36 reduction, not an additional signed estimate. NS-58 records a bounded
+next attempt using the exact arithmetic radical and exterior pairing; a mere
+restatement of the null equation does not count as progress on that input.
+
+Validation, the local (not independent) review, twelve Maxima checks, and
+incremental evidence are in evidence/v156/. API, uniform floor, G2 and RH
+remain open.
+
 ## v1.55 — NS-55 arithmetic kernel mechanism tests (2026-09-22)
 
 What changed: a local logarithmic unique-continuation argument must retain the

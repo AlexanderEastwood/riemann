@@ -712,6 +712,25 @@
         "to": null,
         "src": "prop:ns55-nonpositive-semigroup"
       }
+    },
+    {
+      "id": "finiteweightcontrols",
+      "title": "Finite prime-weight changes: negative tests and first-zero controls",
+      "status": "proved",
+      "parent": "kernelapi",
+      "prop": "cor:ns57-finite-weight-negative; thm:ns57-first-zero-controls; cor:ns57-fixed-direction-sensitivity",
+      "branch": "codex/ns57-prime-weight-rigidity",
+      "evidence": "evidence/v156",
+      "note": "NS-57: every nonzero finite coefficient change gives negative compact tests in both parities and finite first-zero windows. Translation/reflection geometry, endpoint saturation and the modified affine-potential equation survive; the original arithmetic radical identity does not. Fixed-pattern lambda_* = O(sqrt(log(1/epsilon))) is an analytic upper bound, not a certified threshold. No negative original Weil direction or API closure."
+    },
+    {
+      "id": "boundedfloorstability",
+      "title": "Bounded perturbations preserve the finite-floor objective",
+      "status": "proved",
+      "parent": "floor",
+      "prop": "lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability",
+      "evidence": "evidence/v156",
+      "note": "NS-57: q+B+cI is nonnegative on every compact test iff RH and B+cI>=0, for a fixed bounded self-adjoint B. Under RH the perturbed ground bottom tends to inf sigma(B); otherwise to -infinity. Consequences of v1.36; no new arithmetic lower estimate. Failure of exact positivity under finite coefficient changes does not obstruct a robust bounded-floor method."
     }
   ]
 }

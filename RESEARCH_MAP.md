@@ -66,6 +66,8 @@ graph LR
   generic_h1["Generic H¹ bootstrap from a zero eigenvalue<br/><small>prop:ns51-no-generic-bootstrap</small><br/><small>&#128193; evidence/ns51_kernel</small>"]
   localucp["Local open-set UCP for the full prime-shift operator<br/><small>prop:ns55-local-ucp-counterexample; prop:ns55-parity-ucp-counterexample</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: local f=A_a f=0 does not force f=0; whole-window API is not refuted</b></small>"]
   fullpositivecone["Ordinary-cone positivity for the full Weil semigroup<br/><small>prop:ns55-nonpositive-semigroup</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: order-preservation shortcut fails; quadratic-form positivity is a different property</b></small>"]
+  finiteweightcontrols["Finite prime-weight changes: negative tests and first-zero controls<br/><small>cor:ns57-finite-weight-negative; thm:ns57-first-zero-controls; cor:ns57-fixed-direction-sensitivity</small><br/><small>&#128193; evidence/v156</small>"]
+  boundedfloorstability["Bounded perturbations preserve the finite-floor objective<br/><small>lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability</small><br/><small>&#128193; evidence/v156</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -127,6 +129,8 @@ graph LR
   kernelapi --> generic_h1
   kernelapi --> localucp
   kernelapi --> fullpositivecone
+  kernelapi --> finiteweightcontrols
+  floor --> boundedfloorstability
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -185,9 +189,11 @@ graph LR
   click generic_h1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns51_kernel/" "evidence: evidence/ns51_kernel" _blank
   click localucp "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v155/" "evidence: evidence/v155" _blank
   click fullpositivecone "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v155/" "evidence: evidence/v155" _blank
+  click finiteweightcontrols "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v156/" "evidence: evidence/v156" _blank
+  click boundedfloorstability "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v156/" "evidence: evidence/v156" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -210,7 +216,7 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 22 | established result |
+| `proved` | 24 | established result |
 | `live` | 2 | current route (gold): being worked now |
 | `closed` | 21 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 6 | attempted; obstruction found |
@@ -223,6 +229,7 @@ graph LR
   - [ ] **Alternative mechanisms: distinct missing inputs** — Logical RH equivalence does not establish equal proof difficulty or a universal route closure. NS-51–53 test explicit first lemmas.
     - [X] **Direct rational Li / entire window-test identification** — evidence: [`evidence/diag_routes/li/`](evidence/diag_routes/li/) · **wall: direct rational-Li / entire-window classes intersect only at zero** → `None` (Scoped direct-identification obstruction; no statement excluding indirect Li inequalities) · The specified rational Li-transform class has trivial intersection with the finite-window entire Paley–Wiener class. This closes direct identification only; it does not exclude indirect inequalities or all Li approaches.
     - [~] **Exact kernel exclusion: affine-potential injectivity** — `prop:ns51-affine-potential; eq:ns51-api` · `codex/ns55-arithmetic-kernel` · evidence: [`evidence/ns51_kernel/`](evidence/ns51_kernel/) · **wall: API: actual arithmetic affine-potential injectivity (open)** → `rh` (eq:ns51-api; prop:ns51-sign-continuation) · Complete form-domain reduction is exact in both parities. NS-55 rules out importing local UCP or ordinary-cone semigroup positivity; first-zero nullvectors must reach both endpoints. API remains open, with no signed arithmetic overlap estimate and no required uniform positive gap.
+      - [x] **Finite prime-weight changes: negative tests and first-zero controls** — `cor:ns57-finite-weight-negative; thm:ns57-first-zero-controls; cor:ns57-fixed-direction-sensitivity` · `codex/ns57-prime-weight-rigidity` · evidence: [`evidence/v156/`](evidence/v156/) · NS-57: every nonzero finite coefficient change gives negative compact tests in both parities and finite first-zero windows. Translation/reflection geometry, endpoint saturation and the modified affine-potential equation survive; the original arithmetic radical identity does not. Fixed-pattern lambda_* = O(sqrt(log(1/epsilon))) is an analytic upper bound, not a certified threshold. No negative original Weil direction or API closure.
       - [X] **Generic H¹ bootstrap from a zero eigenvalue** — `prop:ns51-no-generic-bootstrap` · evidence: [`evidence/ns51_kernel/`](evidence/ns51_kernel/) · Rank-one bounded perturbation of the same logarithmic principal operator has a non-H¹ nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted.
       - [X] **Local open-set UCP for the full prime-shift operator** — `prop:ns55-local-ucp-counterexample; prop:ns55-parity-ucp-counterexample` · evidence: [`evidence/v155/`](evidence/v155/) · **wall: local f=A_a f=0 does not force f=0; whole-window API is not refuted** → `None` (prop:ns55-local-ucp-counterexample) · Exact local-patch counterexamples, in each parity for a>log2 and after finitely many linear constraints. They do not solve A_a f=0 on the whole window and give no negative diagonal Weil energy. Prime-shift-free exterior-cell uniqueness remains valid under its explicit support hypothesis.
       - [X] **Ordinary-cone positivity for the full Weil semigroup** — `prop:ns55-nonpositive-semigroup` · evidence: [`evidence/v155/`](evidence/v155/) · **wall: order-preservation shortcut fails; quadratic-form positivity is a different property** → `None` (prop:ns55-nonpositive-semigroup) · Positive off-diagonal pole-minus-archimedean cross terms for disjoint nonnegative tests show that the full real-space semigroup is not positivity preserving. A bounded positive multiplication conjugation cannot repair the cone property. No separate parity-cone claim, negative q direction, or API closure.
@@ -253,6 +260,7 @@ graph LR
       - [x] **no uniform positive gap exists** — `prop:v135-growing-radical` · evidence: [`evidence/v135/`](evidence/v135/) · dense radical family; same fact as the floor reduction
         - [X] **Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions** — `lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank` · evidence: [`evidence/v153/`](evidence/v153/) · **wall: positive-gap strategy must remove rank >= lambda^2/(20000 log lambda)** → `None` (lem:ns46-finite-arc; ns46-a2-cor-rank) · NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda²/(20000 log lambda), exact even/odd counts and residual C exp(-lambda²/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods.
       - [x] **uniform finite floor suffices** — `prop:v136-bounded-floor` · evidence: [`evidence/v136/`](evidence/v136/) · decay not required; dichotomy inf spec -> -inf or RH
+        - [x] **Bounded perturbations preserve the finite-floor objective** — `lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability` · evidence: [`evidence/v156/`](evidence/v156/) · NS-57: q+B+cI is nonnegative on every compact test iff RH and B+cI>=0, for a fixed bounded self-adjoint B. Under RH the perturbed ground bottom tends to inf sigma(B); otherwise to -infinity. Consequences of v1.36; no new arithmetic lower estimate. Failure of exact positivity under finite coefficient changes does not obstruct a robust bounded-floor method.
         - [x] **W_lambda >= -8 I at lambda=5,6,8** — `prop:v138-three-floors` · `result/v138-three-floors` · evidence: [`evidence/v138/`](evidence/v138/) · both parities, full infinite tail, Z=0; margin 0.84 -> 0.10 (odd) as lambda grows; not cofinal
         - [x] **bounded shift keeps the exp cutoff barrier** — `prop:v138-shifted-floor` · evidence: [`evidence/v138/`](evidence/v138/) · N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi
         - [!] **positive arithmetic weight: critical capacity input** — `lem:v150-weight; prop:v150-critical-energy; ass:v150-cae` · `codex/bounded-capacity-weight` · evidence: [`evidence/v150/`](evidence/v150/) · **wall: CAE** → `floor` (ass:v150-cae; CAE is the bounded-floor target in positive-weight coordinates (v1.51)) · NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open. NS-43 extends the loss obstruction to any fixed prime-power channel and moving omitted channels bounded away from the endpoint, with unchanged other signed terms. Full coefficient-one or compensated estimates remain open.

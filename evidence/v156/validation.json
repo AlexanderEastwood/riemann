@@ -1,0 +1,78 @@
+{
+  "version": "v1.56",
+  "task": "NS-57",
+  "date_local": "2026-09-22",
+  "classification": [
+    "exact identity",
+    "proved implication",
+    "open input"
+  ],
+  "provenance": {
+    "starting_main": "36c8b0f6c39ac218594872043051883368a21a69",
+    "claim_commit": "e8a2383659f940a0ad522b20ef5654eac7353807",
+    "branch": "codex/ns57-prime-weight-rigidity",
+    "independent_review": false,
+    "inherited_analytic_inputs": "v1.36 total near-radicals and bounded-floor criterion; v1.53 complete residual; v1.54 weak-domain screw equation; v1.55 first-zero support analysis"
+  },
+  "source": {
+    "manuscript_path": "manuscript/fixed_space_prime_action_v1.tex",
+    "manuscript_sha256": "4f74ca78af340691b21037e7783726b7e9da692cf966f2a6a67711cc8726cac9",
+    "fragment_sha256": "c6ebe402b4555ec18384457f6a24222170a20599ec889dd9848b9d2019b8a384",
+    "verbatim_fragment_occurrences": 1
+  },
+  "manuscript_build": {
+    "command": "./manuscript/build.sh",
+    "exit_code": 0,
+    "pages": 291,
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "visually_inspected_pdf_pages": [
+      4,
+      263,
+      264,
+      265,
+      266,
+      267
+    ],
+    "output": "evidence/v156/build-output.txt",
+    "reference_count_scope": "Final converged LaTeX pass; the complete capture retains intermediate-pass diagnostics."
+  },
+  "maxima": {
+    "command": "maxima --no-init --quit-on-error --very-quiet --batch=evidence/v156/exact-checks.mac",
+    "exit_code": 0,
+    "exact_checks_passed": 12,
+    "scope": "Finite exact algebra only, not a numerical certificate or validation of the complete-domain analytic arguments.",
+    "output": "evidence/v156/exact-checks-output.txt"
+  },
+  "local_review": {
+    "report": "evidence/v156/integration-review-2026-09-22-v1.html",
+    "outstanding_major_identified": 0,
+    "outstanding_minor_identified": 0,
+    "independent": false
+  },
+  "limitations": [
+    "No original arithmetic sign estimate, uniform floor, API, G2 or RH proof.",
+    "No new numerical window, tail metric, interval certificate or effective sensitivity threshold.",
+    "Earlier numerical certificates were not replayed.",
+    "The first-zero sensitivity bound is only an upper bound for a fixed perturbation pattern.",
+    "Altered prime weights lose the original arithmetic near-radical identity.",
+    "No prior-art priority claim; these are implications of the explicitly cited project lemmas."
+  ],
+  "next_task": {
+    "id": "NS-58",
+    "status": "open, unassigned",
+    "target": "Derive the exact polarized radical-to-boundary pairing for a hypothetical first-zero nullvector and seek an independently justified arithmetic sign or rigidity estimate.",
+    "stop_condition": "If the pairing only restates the null equation, record that and stop without a new sign claim."
+  },
+  "output_normalization": {
+    "build-output.txt": {
+      "captured_sha256_before_whitespace_normalization": "c136001c1c42eace9505fe58fdf58146e0b07e6f23ccca328509b06ff0e4b7e9",
+      "normalization": "Trailing whitespace removed; lines, diagnostics and numerical/algebraic content retained."
+    },
+    "exact-checks-output.txt": {
+      "captured_sha256_before_whitespace_normalization": "52a8693ef3863e18f3358688e5381b8d76c55ed5b11dfcdcdac391952e6332f4",
+      "normalization": "Trailing whitespace removed; lines, diagnostics and numerical/algebraic content retained."
+    }
+  }
+}
