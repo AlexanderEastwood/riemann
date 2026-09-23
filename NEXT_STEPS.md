@@ -154,6 +154,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-86 | Derive complete optimized-residual optimality in arithmetic potential coordinates; test a signed identity for aggregate gain and retain the exact remainder | Codex, Continue solving toward RH | done (finite control; cofinal input open) | Exact optimized Muntz quadrature and full observation-tail bound; raw convolution-square correction fails the unit-step test at N=4,16. At N=16, damping plus old-space refitting captures 27.31% of full N-to-N^2 gain. All tails retained; no asymptotic estimate or manuscript version bump. |
 
+| NS-87 | Localize the optimized arithmetic observations jointly and certify their implication for full block gain | Codex, Continue solving toward RH | in progress | Keep the old-space projection, complete coupled tail and actual energy metric. Derive a finite arithmetic lower-gain certificate, test its usefulness at fixed sizes, and distinguish localization from the still-open cofinal lower estimate. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
