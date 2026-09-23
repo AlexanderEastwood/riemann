@@ -102,6 +102,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-60 | Test explicit old-space corrections for the NB adjacent-difference blocks, distinguishing raw norm obstructions from projected and actual-residual bounds | Codex, Continue solving toward RH | claimed | Derive the exact dilation/grid correction and retain every projection cross term. Test a specified denominator prediction; obtain an independent estimate or identify its missing arithmetic input. Stop if only the exact convergence condition is restated. Finite scaling is diagnostic only. |
 
+| NS-61 | Test one additional Mellin integration in NB: prove the smoothed criterion with its tail space, derive an unconditional difference-block budget, and examine the transformed correlation requirement | Codex, Continue solving toward RH | claimed | Retain the exact target and full Gram projection. Verify that smoothing has not discarded the off-line-zero obstruction. Attempt an independent lower-correlation estimate; stop at a named missing input if none follows. Finite smoothed distances are not convergence evidence. |
+
 ## Lanes
 
 ```
