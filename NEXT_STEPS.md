@@ -156,6 +156,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-87 | Localize the optimized arithmetic observations jointly and certify their implication for full block gain | Codex, Continue solving toward RH | done (localization; arithmetic lower bound open) | Joint complete-tail gain certificate and explicit safe step; T=N^6 preserves the logarithmic relative-gain scale by NS81/83. Finite N=32 certificate retains >95.98% of available gain. No new arithmetic lower bound, effective onset, fast inverse or manuscript version. |
 
+| NS-88 | Test whether optimized multiplicative normal equations force an energy-scale arithmetic numerator | Codex, Continue solving toward RH | in progress | Derive the exact potential/autocorrelation defect for dilated optimized approximants, keep the true projected cost and full tails, and test any proposed cofinal lower bound against the existing critical-zero gain budget. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
