@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Are we revisiting an existing wall? — RH project audit</title></head>
+<body style="margin:0;background:#f5f3ee;color:#24313a;font-family:Georgia,serif;line-height:1.65;">
+<main style="max-width:680px;margin:36px auto;padding:36px;background:#fff;border-top:5px solid #315c60;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:1px;color:#52666b;">RIEMANN PROJECT · SEPTEMBER 23, 2026 · AUDIT VERSION 1</p>
+<h1 style="font-size:30px;line-height:1.2;margin:12px 0 24px;">Yes, the central obstacle was already there.</h1>
+<p><strong>NS96 does not establish a new fundamental barrier or advance the missing arithmetic lower bound.</strong> It gives exact results for a different coefficient class. That distinction should have been clearer in the progress report.</p>
+<p>The central target remains open, rather than disproved: show that the actual optimized residual must lose enough error as the approximation grows. The tail estimates are available. The required estimate for the signed arithmetic sums is not.</p>
+<h2 style="font-size:21px;margin-top:30px;">What was already known, and what NS96 added</h2>
+<table style="border-collapse:collapse;width:100%;font-size:14px;">
+<thead><tr><th style="text-align:left;padding:9px;border-bottom:2px solid #315c60;">Item</th><th style="text-align:left;padding:9px;border-bottom:2px solid #315c60;">Audit finding</th></tr></thead>
+<tbody>
+<tr><td style="padding:9px;vertical-align:top;border-bottom:1px solid #ddd;">Positive coefficients can fail</td><td style="padding:9px;border-bottom:1px solid #ddd;">NS62/64 already prove this for adjacent differences. NS96 treats a different LCM coefficient class; the two cones must not be identified.</td></tr>
+<tr><td style="padding:9px;vertical-align:top;border-bottom:1px solid #ddd;">The complete rule c=+q cannot converge</td><td style="padding:9px;border-bottom:1px solid #ddd;">Its c₁≥0 already conflicts with NS78’s necessary limit c₁→−1. NS96 adds an explicit uniform constant, not a new qualitative obstruction.</td></tr>
+<tr><td style="padding:9px;vertical-align:top;border-bottom:1px solid #ddd;">The complete rule c=−q has an error floor</td><td style="padding:9px;border-bottom:1px solid #ddd;">NS74 already displays the same Mellin separator and floor function; 3087/4096 is that function at 4/7. NS96 applies it to a different sign-constrained LCM class. The hypothesis changes; the tool and constant formula were already present.</td></tr>
+<tr><td style="padding:9px;vertical-align:top;border-bottom:1px solid #ddd;">Refitting defeats automatic positivity</td><td style="padding:9px;border-bottom:1px solid #ddd;">NS95 already exhibits the sign problem for ordinary-product pairings. NS96 proves a distinct exact equality for projected LCM mixtures, using elementary rank-one pairs.</td></tr>
+<tr><td style="padding:9px;vertical-align:top;border-bottom:1px solid #ddd;">Actual arithmetic lower gain</td><td style="padding:9px;border-bottom:1px solid #ddd;">Unchanged. Neither NS95 nor NS96 proves or refutes it. No worldwide novelty claim is made by this comparison.</td></tr>
+</tbody></table>
+<h2 style="font-size:21px;margin-top:30px;">One proposed escape also repeats the problem</h2>
+<p>A trace normalization on the positive matrix is ineffective if we still optimize a free step size. Dividing the matrix by its trace shrinks the direction; multiplying the step by that trace restores exactly the same update.</p>
+<p style="padding:14px 18px;background:#edf3f2;text-align:center;">Best line gain = ⟨residual, direction⟩² / ‖direction‖²</p>
+<p>This ratio is unchanged by scaling the direction. Trace-one rank-one pairs still give both signs of each available individual LCM observation. A bound on the <em>actual total update</em>, with no scale subsequently restored, is a different restriction. No estimate for that restricted construction is proved here.</p>
+<h2 style="font-size:21px;margin-top:30px;">What changes in the work plan</h2>
+<p>Stop treating positivity rephrasings and free-scale normalizations as new directions. Before pursuing a variation, compare it with the nearest recorded result and identify the particular arithmetic term for which a stronger estimate is proposed.</p>
+<p>The existing primary target is a lower bound on the complete joint observation energy of the actual optimized residual. A gain comparable to a/j after j doublings is a possible sufficient scale; an eventual fixed fraction at every doubling is already excluded. Restating this target is not itself progress.</p>
+<p>This audit supplies no new cofinal estimate. It corrects the description and screens out a redundant continuation. It adds no theorem node or manuscript version, and preserves the earlier proof records.</p>
+<h2 style="font-size:21px;margin-top:30px;">A wall check on every turn</h2>
+<p>At Alex’s request, each future research turn must identify itself as <strong>Known wall</strong>, <strong>Same open gap</strong>, or <strong>Distinct test</strong>, cite the closest recorded result and state what changes. The check appears before extending the research and in the final update, including when the instruction is simply “continue.”</p>
+<p><strong>This turn: Same open gap.</strong> The PR42/NS87 lower-bound input is unchanged. The work is an overlap audit and a correction to future route selection.</p>
+<h2 style="font-size:21px;margin-top:30px;">Review scope</h2>
+<p>All 104 registered conclusions, current checkpoints, the evidence-gap ledger and relevant proofs were reviewed at main 6c50142. This was a scope and dependency review, not a numerical replay of every historical result. The scale identity has nine exact Maxima checks. Author review only.</p>
+<p>RH, G2 and both missing-original evidence groups remain open.</p>
+<p style="border-top:1px solid #ddd;padding-top:18px;font-size:14px;"><a style="color:#225e68;" href="../evidence/ns97_novelty_audit/findings.json">Claim-by-claim findings</a> · <a style="color:#225e68;" href="../evidence/ns97_novelty_audit/normalization-note.tex">Scaling argument</a> · <a style="color:#225e68;" href="../evidence/ns97_novelty_audit/README.md">Audit scope and checks</a></p>
+</main></body></html>

@@ -3631,3 +3631,29 @@ not establish it by extrapolation. No new Gram solve, physical cutoff,
 best error or manuscript version. Author review only. RH/G2 and both
 missing-original groups remain open. Evidence: evidence/ns96_lcm_square;
 report: audits/lcm-square-obstruction-2026-09-23-v1.html.
+
+
+## 2026-09-23 — NS97: user-requested overlap audit
+
+The central signed-arithmetic obstacle predates NS96. The new LCM class
+is distinct from NS62/64's positive-difference cone, but its formulas did
+not advance the actual cofinal lower-gain estimate. In particular c=+q
+already fails qualitatively by NS78's necessary c1 -> -1. The explicit
+constant is an application, not a new fundamental barrier. The c=-q
+Mellin application and projected LCM cone equality are scoped statements
+for a different class. NS74 already contains the same Mellin evaluator and
+floor function; NS96 substitutes its sign inequality for the earlier
+annihilation hypothesis. No new separating tool or worldwide novelty claim.
+
+Screened the suggested trace variation: normalizing Gamma changes no
+correction rays or best line gain if its step scale stays free. A bound on
+the actual total update is a different restriction and is not excluded.
+Nine Maxima checks supplement the elementary proof. Author audit only; no
+new optimized fit, arithmetic lower estimate, theorem node or version.
+
+What had to change: distinguish a new scoped coefficient calculation
+from progress on the unchanged central problem, and stop the unconstrained
+PSD/normalization detour. Updated forward summaries and continuation gate;
+prior NS96 evidence and reports preserved. Full 104-node scope review at
+6c50142 recorded in evidence/ns97_novelty_audit. Both missing-original
+groups and RH/G2 remain open.

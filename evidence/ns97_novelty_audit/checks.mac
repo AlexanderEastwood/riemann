@@ -1,0 +1,14 @@
+kill(all)$ checks:0$ scalarmatrixp:false$
+check(name,expr):=block([v:ratsimp(expr)],if v#0 then error(name,v),checks:checks+1,print("PASS",name))$
+gain(t):=2*t*b-t^2*k$
+check("optimal signed line step",subst(b/k,t,diff(gain(t),t)))$
+check("complete optimized gain",gain(b/k)-b^2/k)$
+check("gain invariant under positive scaling",(a*b)^2/(a^2*k)-b^2/k)$
+check("normalized direction and rescaled step",2*(t*g)*(b/g)-(t*g)^2*(k/g^2)-gain(t))$
+gp:matrix([1/2,1/2],[1/2,1/2])$ gm:matrix([1/2,-1/2],[-1/2,1/2])$
+check("plus trace",gp[1,1]+gp[2,2]-1)$
+check("minus trace",gm[1,1]+gm[2,2]-1)$
+check("plus rank one",determinant(gp))$
+check("minus rank one",determinant(gm))$
+check("both numerator signs survive trace one",sum(sum((gp[i,j]+gm[i,j])*matrix([0,h],[h,0])[i,j],j,1,2),i,1,2))$
+print("PASS:",checks,"exact checks")$ quit()$

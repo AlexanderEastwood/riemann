@@ -1,0 +1,39 @@
+\section*{NS97 audit note: a trace normalization does not change free-step rays}
+\paragraph{Classification.}
+This is elementary homogeneity applied to NS96, recorded to screen a
+suggested continuation. It is not a new arithmetic estimate or a new
+research-map theorem. The complete NS96 proof and its prior report are
+preserved unchanged.
+
+Use NS96's linear map $T_N$ and old-space projection $P=I-\Pi_N$.
+For $\Gamma\succeq0$, set $v=P T_N(\Gamma)$. For a fixed actual residual
+$r_N$ and $v\ne0$, the best real line step has gain
+\[
+ \sup_{t\in\mathbb R}\{2t\langle r_N,v\rangle-t^2\|v\|^2\}
+ =\frac{\langle r_N,v\rangle^2}{\|v\|^2}.
+\]
+For any $a>0$ this quotient is unchanged when $v$ is replaced by $av$.
+If $\Gamma\ne0$, PSD implies $g=\operatorname{tr}\Gamma>0$.
+Replacing $\Gamma$ by $\Gamma/g$ makes its trace one and replaces $v$
+by $v/g$; multiplying the line step by $g$ recovers the same correction.
+Consequently a trace-one constraint (or a positive trace upper bound)
+does not restrict achievable correction rays when a free step scale is
+retained. Even a nonnegative free scale suffices for the unrestricted
+PSD-mixture class: NS96 proves its projected cone is a linear space.
+
+For a concrete pair $[i,j]>N$, the two matrices
+\[
+ \frac12(e_i\pm e_j)(e_i\pm e_j)^T
+\]
+are PSD of trace one, and project to $\pm\phi_{[i,j]}$.
+Thus normalization also fails to force a numerator sign, including for
+these single rank-one choices. This does not identify the full single-
+rank-one class with the full signed span.
+
+If the trace budget instead constrains the \emph{actual total update}
+after the step size is absorbed, the scaling argument does not remove
+it. The same is true of a prescribed step size, a genuine restriction on
+coefficient ratios, or an independently prescribed residual-dependent
+choice. Those are different hypotheses. None is supplied with a cofinal
+arithmetic numerator/cost estimate here. A trace bound alone should not
+be advertised as a new direction under free line optimization.

@@ -27,6 +27,44 @@ replacement certificate or the publication text is available. Correct stale
 summaries before building further conclusions on them. Preserve earlier
 reviews and documents; record corrections forward.
 
+Before pursuing a proposed variation, identify the closest existing result
+and compare its hypotheses and conclusion with the proposal. State the new
+arithmetic estimate being attempted, if any. A new coefficient class,
+explicit constant, normalization or equivalent formula may be useful, but
+must not be reported as progress on an unchanged cofinal input. Check for
+scale invariance before proposing a norm/trace normalization when the step
+size is free. Record overlap audits as audits; do not add a theorem node or
+manuscript version merely to count them as mathematical advances.
+
+### Per-turn wall check (Alex, 2026-09-23)
+
+On every RH research turn, after the mandatory review and before extending
+the research, include a short user-facing **Wall check**. Repeat its final
+classification in the final update. Use one of these three labels:
+
+- **Known wall:** a recorded result excludes the proposal under its current
+  hypotheses. Name that result and the matching hypothesis. Stop that
+  variation unless a concrete changed hypothesis escapes its stated scope.
+- **Same open gap:** the expression, coefficient class, geometry or
+  normalization changes, but the missing arithmetic estimate is unchanged.
+  Name the existing open input. If continuing, identify the specific new
+  estimate or audit question being attempted; do not call the reformulation
+  a new route or an RH advance.
+- **Distinct test:** identify a concrete new input or changed hypothesis,
+  the closest recorded result, and why that result does not settle this
+  test. A new name, parameter, finite size or presentation is insufficient.
+  This label is not a novelty claim or evidence that the test will succeed.
+
+Use the compact form: **Wall check: [label].** Closest result: [NS/PR].
+What changes: [specific input/hypothesis, or explicitly nothing]. Say what
+success or failure would change when proposing a substantive new test.
+If the assessment changes during the work, say so. Record the same fields
+in the turn's working record. An unproved input is not a proved wall;
+an audit, sharper restatement or finite replay is not a newly established
+cofinal estimate. Apply this check to route assessments and proposed next
+steps as well as calculations. Do not suppress it because the user only
+says "continue".
+
 ## 1. What this project is
 
 A research record for an attempt on the Riemann Hypothesis via Weil

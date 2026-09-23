@@ -1,0 +1,17 @@
+{
+  "base": "6c50142e877e3c73ddb5600384fe24a15efd4462",
+  "scope": "Unchanged proof and status sources; hash checks do not replay proofs",
+  "sha256": {
+    "evidence/v159/ns62/proof.tex": "6274901f6393aeb3d7bd0c67a9a744b395555e7972be3303e3221c53f8a2cf37",
+    "evidence/v159/ns64/proof.tex": "dda8644f97238d321338ba958bb4872b02807cbb82eefec5d7464bd085066f4d",
+    "evidence/v163/ns78/proof.tex": "3dac51b901eb8590d4640e39dcbdaf5cd8ccf2276bf748e4430cde7de2ec5dcc",
+    "evidence/ns87_joint_tail/argument.tex": "b163dcd18c485ec937d7bf1657337de60ac9ec604e2137f4385f7e077f0e47e3",
+    "evidence/ns93_averaged_cost/argument.tex": "879c567b2aef66c78ed4b6d6178c0661116e41d961909e154ba1c6d23ef37a8a",
+    "evidence/ns95_square_product/argument.tex": "bb2d4ff84ada634e951d538080f217c86c4a8216d815f3c72d7322bc0da6704a",
+    "evidence/ns96_lcm_square/argument.tex": "75ebd5259d12fe66bdda4efad1cb1d7f4b3fb8dd8268e60ebee1a231cc138151",
+    "evidence/ns96_lcm_square/self-review.json": "6ce813b3950b28788f24ddf8fb305e38e66dfd7e8ff96db80bcedb211612deab",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "manuscript/fixed_space_prime_action_v1.tex": "8e494729b436099efc41bedf391e7ecf1c4ff7548176ec0692bb2843a6c2aeab",
+    "evidence/v161/ns74/proof.tex": "6366fb5efadb25b097989de42aedb5ae5cff015b2b122ad69706b5b4bb68f62f"
+  }
+}
