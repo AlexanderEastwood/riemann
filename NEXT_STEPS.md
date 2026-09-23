@@ -104,6 +104,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-61 | Test one additional Mellin integration in NB: prove the smoothed criterion with its tail space, derive an unconditional difference-block budget, and examine the transformed correlation requirement | Codex, Continue solving toward RH | claimed | Retain the exact target and full Gram projection. Verify that smoothing has not discarded the off-line-zero obstruction. Attempt an independent lower-correlation estimate; stop at a named missing input if none follows. Finite smoothed distances are not convergence evidence. |
 
+| NS-62 | Test whether Mellin smoothing repairs the canonical sharp Mobius interpolant; retain the exact target and use a localized dual witness | Codex, Continue solving toward RH | claimed | Derive the dilation-invariant unitary and Laguerre witness completely. Distinguish failure of this fixed coefficient rule from optimal smoothed approximation. Verify all Mellin factors and endpoint moments; stop after the scoped result. |
+
 ## Lanes
 
 ```
