@@ -158,7 +158,7 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-88 | Test whether optimized multiplicative normal equations force an energy-scale arithmetic numerator | Codex, Continue solving toward RH | done (upper envelope; arithmetic growth open) | Exact successive-increment identity, complete next-size and cumulative upper-error bounds. Eventual energy/j^p numerator lower bound excluded for p<1; p=1 remains possible only at coefficient <=1/sqrt(2). Finite defect changes sign and gain capture dips to 0.3256%. No cofinal lower growth or error-decay theorem. |
 
-| NS-89 | Test whether multiple integer dilations of one frozen optimized seed carry a shared Mellin obstruction; identify what reseeding must change | Codex, Continue solving toward RH | claimed | Work with the actual optimized coefficients and complete norm; certify any seed zero before inferring a floor. Scope any obstruction to a fixed seed, not the original family or the updated-seed NS88 construction. No finite table supplies cofinal growth. |
+| NS-89 | Construct the optimal tail-normalized upper certificate and quantify its complete error cost | Codex, Continue solving toward RH | claimed; redirected by Alex to upper bounds | Original fixed-seed obstruction test stopped before publication. Focus on explicit approximants, complete upper error, and what remains missing for the logarithmic upper-rate candidate. No new lower-bound result or cofinal decay inferred. |
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
