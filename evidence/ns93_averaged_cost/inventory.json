@@ -1,0 +1,23 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental evidence and versioned HTML report; excludes this inventory",
+  "files": {
+    "audits/averaged-arithmetic-cost-2026-09-23-v1.html": "59d29f722ad09737a8754ef26f555b8c4d50fd746cec077ff9dc07dbc8ecf36a",
+    "evidence/ns93_averaged_cost/README.md": "5b640cac9596de09e9a673ea2f3a3adce5bcf178671f2dfe6df3d6c7c14c2120",
+    "evidence/ns93_averaged_cost/argument.tex": "879c567b2aef66c78ed4b6d6178c0661116e41d961909e154ba1c6d23ef37a8a",
+    "evidence/ns93_averaged_cost/build-summary.txt": "ee813b7abbae221bacb293e61260206b425cd835dae9a0a35a070d81c144f77e",
+    "evidence/ns93_averaged_cost/check_cost.py": "8302e03109144225a5bcfd5624afd16844a0476263249a11fd70e5ed1a68cd4d",
+    "evidence/ns93_averaged_cost/checks-output.txt": "e39224183a6d7a9babbf4e6001b636d2b01a5885fba47ad1f3af5b7fa03cf382",
+    "evidence/ns93_averaged_cost/checks.mac": "66ce4d606689831bd1835d2cff73cfe7f5d4a51fcd28c4a683e63e5fb684d59e",
+    "evidence/ns93_averaged_cost/cost-256bits.json": "d2548cce8f4eaabb5f02744852c7f41ac6f27aff26f824f3b49d38dae7168fa4",
+    "evidence/ns93_averaged_cost/cost-384bits.json": "5da6fdc90b012a3e6035937b67c019113f92370b8b6e588e91265f33192619db",
+    "evidence/ns93_averaged_cost/cost-sieve-replay.json": "2af53ed357752209fca56eb5beff60a539e6b040791a8cd75de963487dabd054",
+    "evidence/ns93_averaged_cost/dependency-validation.json": "e24e870704a753fc48560697f13cec571e879d8b707e6254e8c095a0d8b2c331",
+    "evidence/ns93_averaged_cost/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "evidence/ns93_averaged_cost/runtime-provenance.json": "b5bf5cafeb556f6bdef770e661529265a3bbe3ff38bd6101be3751c719e182b2",
+    "evidence/ns93_averaged_cost/self-review.json": "3d148077846853f299d9956626a73487d02344ae07b074d327fcab526b5b3a19",
+    "evidence/ns93_averaged_cost/turn-review.json": "a77e91cfea087f959ee2bae71fcda42e7f83d5e4fbe51ad6bc29de0a92da08da",
+    "evidence/ns93_averaged_cost/validation.json": "21b956bddc74473edc32a1291876a49cb497c266922af7f5c6725d6feb827a3e",
+    "evidence/ns93_averaged_cost/verify.py": "86a44b8b939fae25121f93868a20c1edb5f28f12285d71dfd6958d2c0a1189b5"
+  }
+}

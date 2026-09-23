@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "scope": "Finite identities, complete analytic inequality audited by author only; no cofinal gain",
+  "checks": {
+    "precision_overlaps": 112,
+    "sieve_overlaps": 112,
+    "independent_NS92_overlaps": 7
+  },
+  "arithmetic_Maxima_checks": 8,
+  "geometry_Maxima_checks": 23,
+  "direct_quadratic_sizes": [
+    16,
+    32,
+    64
+  ],
+  "no_physical_cutoff": true,
+  "no_new_Gram_solve": true,
+  "source_sha256": "86a44b8b939fae25121f93868a20c1edb5f28f12285d71dfd6958d2c0a1189b5"
+}

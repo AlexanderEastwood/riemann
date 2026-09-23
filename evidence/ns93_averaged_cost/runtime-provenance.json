@@ -1,0 +1,9 @@
+{
+  "Python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "python_flint": "0.9.0",
+  "matplotlib_for_illustration_only": "3.11.2",
+  "Maxima": "5.50.0",
+  "pyright": "1.1.411",
+  "venv": "/Users/alex/riemann/.venv",
+  "no_new_dependency_install": true
+}

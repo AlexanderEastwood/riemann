@@ -1182,3 +1182,10 @@ python check_weil_action.py
 Validation: the PDF compiles with all references resolved, no duplicate labels, and no LaTeX overflow/underflow warnings. Rendered inspection covers the full 100-page manuscript and higher-resolution views of the new Section 19 argument. `v1_validation.json` records the final source/PDF hashes and validation scope.
 
 The bundle includes the final PDF, standalone source, this revision record, the research log, reproducibility scripts and results, the final validation record, and the three historical audit documents in an `audits/` folder. Historical audits describe their own review stage; the integrated v1 ledger gives the current disposition of each claim.
+
+## 2026-09-23 — NS93/94 research checkpoint (v1.66 unchanged)
+
+Added the scoped averaged absolute-cost obstruction and exact tangent-circle
+review, with finite replays, Maxima worksheets and two versioned HTML notes.
+No cofinal arithmetic estimate, general geometry closure, or manuscript change.
+Actual build: 358 pages, zero undefined/duplicate references.

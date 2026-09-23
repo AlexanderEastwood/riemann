@@ -165,6 +165,9 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 | NS-91 | Preserve joint arithmetic cancellation by a first primitive and endpoint correction; test a uniform route beyond the finite bound | Codex, Continue on PR42 grouped lower gain | done (finite bound and attempt recorded; uniform estimate open) | Joint first-primitive dyadic bound includes every omitted interval; old-space correction removes 0<t<N. Certifies relative gain >0.02821 at N256, on the known NS73 direction. Grouped tail negligible at N^6. NS78 inversion plus normal equations reduces the proposed quadratic rewrite to the same missing numerator. No cofinal lower gain; see evidence/ns91_joint_abel. |
 | NS-92 | Derive and test a direct arithmetic upper bound on the selected true cost, retaining the signed gain condition | Codex, Continue on PR42 after NS91 | done (complete cost bound and finite step; uniform input open) | NS61 average gives a scalar upper budget from signed Mobius tails and a feasible endpoint-only step. At N256 the physical 1/16 step reduces full error by >1.57%; the cheap budget certifies >0.0443% for 1/512. Seven scalar checks through N65536 are not a uniform bound. Elementary oscillation control gives only O(N); no cofinal gain or new best error. See evidence/ns92_arithmetic_cost. |
 
+| NS-93 | Test a concrete averaged arithmetic estimate for the selected cost and gain, retaining all signed correlations and projection losses | Codex | done (signed estimate remains open; manuscript unchanged) | Bounded diagonal; complete absolute-product cost grows at least linearly for dyadic N>=2048, so averaging does not repair that bound. Signed averaged cost and actual numerator remain unproved. Two-precision finite decomposition and eight Maxima checks; evidence/ns93_averaged_cost. |
+| NS-94 | Check the tangent-circle inversion and exterior similarity-point proposal in ordinary coordinates and Maxima | Codex | done (exact geometric check; no RH inference) | Read the linked Zhao handout, which does not define exterior similarity. Separate and successive inversions checked; equal counts and infinity persist in a symmetric off-line control. Nonnegative power-product statistic still requires an arithmetic vanishing proof. 23 Maxima checks; evidence/ns94_circle_inversion. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
@@ -347,6 +350,27 @@ projected cost. Its eventual failure would not close PR42's full route.
 The explicit endpoint-only finite step is a feasible certificate, not a
 cofinal algorithm or a new best approximation. Both historical original
 evidence gaps remain open; manuscript v1.66 unchanged.
+
+## Open continuation after NS-93/94
+
+Averaged descent would follow from a positive mean actual numerator margin
+and a bounded mean signed cost on growing ranges of doubling indices.
+This is an application of the existing criterion, not a new theorem of
+arithmetic cancellation. The scalar cost diagonal is uniformly bounded;
+the needed upper bound for its signed off-diagonal Mobius correlations
+remains open. Full productwise absolute separation is now excluded as a
+way to prove that bounded average: its majorant grows at least linearly.
+This does not exclude signed estimates, the smaller projected cost or the
+full PR42 joint observation route. Do not extrapolate the finite averages.
+
+The tangent-circle geometry detects off-line locations but cannot turn
+reflection symmetry or equal counts into their absence. The exterior
+similarity point depends only on the circle parameters. The nonnegative
+power-product zero sum is a possible coordinate language, not an arithmetic
+estimate: vanishing at every finite height is still RH-equivalent. A future
+geometric argument must supply a special property of zeta beyond the
+symmetries shared by the exact polynomial control. No broad geometric
+impossibility is claimed. Both historical evidence gaps remain open.
 
 ## Lanes
 

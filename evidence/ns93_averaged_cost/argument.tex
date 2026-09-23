@@ -1,0 +1,84 @@
+\section*{NS93: averaged cost and the signed correlation that remains}
+\paragraph{Scope.} This is an attempted averaged estimate, not a proof of
+persistent gain. The descent criterion is prior work. We separate a bounded
+diagonal from the actual signed off-diagonal cost and prove that taking
+absolute values of all arithmetic products cannot yield the proposed bounded
+average. This does not exclude the actual signed sum, the smaller projected
+cost, or PR42's full observation route.
+
+Put $N=2^j$, $w_n=\log(2N/n)/n$ and
+$T_N(x)=-\sum_{x<n\le2N}\mu(n)w_n$. NS92 gives
+$K_N\le U_N\le\kappa\alpha S_N$, where $\alpha=\log2$,
+$\kappa=\log(2\pi)-\gamma$, and $S_N=\int_N^{2N}T_N(x)^2dx$.
+Finite expansion gives the exact identity
+\[
+ S_N=D_N+C_N,\quad D_N=\sum_{N<n\le2N}\mu(n)^2w_n^2(n-N),
+\]
+\[
+ C_N=2\sum_{N<m<n\le2N}\mu(m)\mu(n)w_mw_n(m-N).
+\]
+Since $(n-N)/n^2\le1/(4N)$ and there are $N$ indices,
+\[
+ 0\le D_N\le \alpha^2/4.
+\]
+Thus an upper bound $\sum_{j=J}^{2J-1} C_{2^j}\le C_*J$ would
+supply the cost half of a bounded-average argument. This signed upper bound
+is unproved. The diagonal bound supplies no upper bound for $C_N$.
+
+\paragraph{A precise sufficient averaged input, still open.}
+Let $b_N$ be NS91's complete one-sided lower numerator, and put
+$r_j=(b_{2^j}/E_{2^j})_+$. Where $S_{2^j}>0$, descent gives
+\[
+ \gamma_j:=\frac{E_{2^j}-E_{2^{j+1}}}{E_{2^j}}
+ \ge\frac{r_j^2 E_{2^j}}{\kappa\alpha S_{2^j}}.
+\]
+A zero direction contributes zero. NS83 supplies $E_{2^j}\ge c/(\alpha j)$
+eventually, with $c>0$ and no effective onset here. Consequently
+\[
+ \sum_{j=J}^{2J-1}\gamma_j
+ \ge\frac{c}{2\kappa\alpha^2J}
+       \frac{(\sum_{j=J}^{2J-1}r_j)^2}
+            {\sum_{j=J}^{2J-1}S_{2^j}}.
+\]
+This uses weighted Cauchy--Schwarz, retaining the varying actual residuals.
+The two hypotheses $\sum r_j\ge\varepsilon J$ and
+$\sum S_{2^j}\le C J$, for fixed positive constants on all sufficiently
+large dyadic $J$, would therefore give a positive constant per growing
+index block and force $E_N\to0$. Neither hypothesis is proved. This is a
+less rigid sufficient input than pointwise bounds, not a new convergence
+criterion. The index range corresponds to sizes $N$ through $N^2$; it is
+not a fixed number of doublings. NS83 still restricts achievable constants.
+
+\paragraph{Absolute products cannot prove that cost hypothesis.}
+Define the fully separated majorant
+\[
+ A_N=\sum_{N<m,n\le2N}|\mu(m)\mu(n)|w_mw_n(\min(m,n)-N).
+\]
+It is the square integral of the unsigned suffix. For every dyadic
+$N\ge2048$,
+\[
+ A_N\ge\frac{\log^2(4/3)}{9216}N.
+\]
+Indeed, the interval $(5N/4,3N/2]$ contains exactly $N/4$ integers.
+Every nonsquarefree integer is divisible by $k^2$ for some
+$2\le k\le\sqrt{3N/2}$. The union bound and
+$\sum_{k=2}^\infty k^{-2}\le1/4+\int_2^\infty x^{-2}dx=3/4$
+leave at least $N/16-\sqrt{3N/2}\ge N/32$ squarefree integers.
+On them $w_n\ge2\log(4/3)/(3N)$; the common overlap length is
+at least $N/4$. Taking only these pairs proves the displayed bound.
+In particular the absolute off-diagonal allowance $A_N-D_N$ is at least
+$N\log^2(4/3)/9216-\alpha^2/4$.
+
+Across a growing dyadic-index block, $\sum_{j=J}^{2J-1}A_{2^j}/J$
+therefore diverges. Even the last summand supplies a lower bound proportional
+to $2^{2J-1}/J$. Averaging does not repair this particular absolute-product
+estimate. No claim of divergence of the signed $S_N$ follows. This is a
+failure of a bound, not of the selected direction or of RH.
+
+\paragraph{Finite verification.} Finite suffix and diagonal sums are replayed
+at 256/384 bits. A separate direct quadratic expansion checks small sizes;
+a doubled sieve limit checks independence from the Mobius table boundary.
+There is no physical or infinite tail in these finite identities. Values
+and block averages are finite certificates only, not evidence of a uniform
+estimate. No optimized residual, new Gram solve, or new lower numerator is
+computed in this task.

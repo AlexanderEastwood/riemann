@@ -3535,3 +3535,35 @@ independently establish NS91's much closer lower bound; direct physical
 step improvement is certified instead. No new Gram solves or independent
 review. Uniform cost and signed numerator inputs remain open. Manuscript
 v1.66 is unchanged; no new theorem version or tag.
+
+## 2026-09-23 — NS93 averaged arithmetic attempt and NS94 tangent circles
+
+Reviewed the full 100-node register and current scopes at main 3bf0495;
+no replay of all historical evidence is claimed. Separate task claim 5843b52.
+Both original-evidence recovery gaps remain open.
+
+NS93 writes the complete scalar cost as bounded diagonal plus signed
+Mobius pair correlations. A squarefree-count argument proves the fully
+absolute product majorant >=N log(4/3)^2/9216 for dyadic N>=2048; its
+mean over growing dyadic-index groups diverges. The signed cost is not
+shown to diverge. Averaged numerator and signed-cost estimates remain open.
+The sufficient averaged gain implication is existing descent and weighted
+Cauchy-Schwarz, not a new convergence criterion. At N65536, signed S is
+about .00223001 and the absolute majorant about 218.643, finite only.
+
+NS94 reads the supplied Zhao power-of-a-point PDF and derives ordinary
+inversion formulas, treating separate and successive inversions distinctly.
+The exterior similarity point depends on circle parameters. An exact
+symmetric off-line polynomial control has equal interior counts and the
+same infinity phenomenon. A nonnegative power-product statistic detects
+displacement, but all-height vanishing is still an unproved RH-equivalent
+target. No actual off-line zeta zero, new functional equation, or general
+geometric impossibility is asserted. A plain-language note and standalone
+Maxima worksheet are supplied; no message was sent to anyone.
+
+Validation: 256/384 bits, 112 precision overlaps, 112 doubled-sieve overlaps,
+seven prior NS92 overlaps, direct quadratic checks at N16/32/64, eight
+arithmetic and 23 geometric Maxima checks. No physical cutoff in these
+finite sums. Python diagnostics clean. Author self-review only. Actual
+unchanged manuscript build: 358 pages, zero undefined/duplicate references.
+Manuscript stays v1.66; no new version or tag.

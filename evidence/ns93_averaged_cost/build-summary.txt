@@ -1,0 +1,5 @@
+Actual ./manuscript/build.sh completed successfully on the candidate tree.
+Manuscript source unchanged from main 3bf0495636e0abf4b09e096b8f788afed4aae5a4.
+Pages: 358
+Undefined or duplicate references: 0
+No new manuscript version or tag.
