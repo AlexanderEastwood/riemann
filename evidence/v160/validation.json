@@ -1,0 +1,166 @@
+{
+  "classification": "local integration validation; no independent review or RH proof",
+  "version": "v1.60",
+  "date": "2026-09-23",
+  "tasks": [
+    "NS-67",
+    "NS-68",
+    "NS-69",
+    "NS-70",
+    "NS-71"
+  ],
+  "publication_base_commit": "5b7ed34a172a45aeca10627b454288315793ce9c",
+  "manuscript": {
+    "pages": 330,
+    "warning_counts": {
+      "undefined_or_duplicate_references": 0,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0,
+      "latex_warnings": 0,
+      "pdftex_warnings": 0,
+      "duplicate_pdf_destinations": 0
+    },
+    "proof_fragment_integrated_verbatim_once": true,
+    "proof_sha256": "f58a7dc2dfc2a789d1f384341996b5aa62362099c078cc826a722e0e77b95029",
+    "main_tex_sha256": "a9ec242d4cb78d94f1ad0b83510bee0d9450b7efd49deecbf92d421951ad0a2b",
+    "pdf_sha256": "3821ae86c3ed2c3fc3cd679cd2356403306478b667f24d8ed977f8d39c7d7cfd",
+    "new_section_visual_review_pages": [
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305
+    ]
+  },
+  "maxima_exact_checks": {
+    "NS-67": 54,
+    "NS-68": 41,
+    "NS-69": 20,
+    "NS-70": 14,
+    "NS-71": 8
+  },
+  "maxima_total": 137,
+  "arb_precisions_bits": [
+    256,
+    384
+  ],
+  "replays": {
+    "ns67": {
+      "status": "PASS",
+      "precision_bits": [
+        256,
+        384
+      ],
+      "physical_precision_enclosure_matches": 175,
+      "doubled_cutoff_enclosure_matches": 28,
+      "independent_gram_precision_matches": 9,
+      "independent_gram_minimum_accuracy_bits": 139,
+      "physical_spot_checks_per_precision": 25,
+      "uniform_centered_conditioning_bound": "1+2*norm(sigma_1) < 4.617",
+      "source_sha256": "2c4c14202df2e733063c62658f882bd4f7a488008e077b786aabb809c11e6bde",
+      "inherited_kernel_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5"
+    },
+    "ns68_to_ns70": {
+      "status": "PASS",
+      "precision_bits": [
+        256,
+        384
+      ],
+      "groups": {
+        "ns68": {
+          "precision_enclosure_matches": 74,
+          "doubled_cutoff_matches": 0,
+          "source_sha256": "dfe0a811764274e81cd38b5eac5c5180d262576b46f1b6a97fb3c52cde33b3ee"
+        },
+        "ns69": {
+          "precision_enclosure_matches": 192,
+          "doubled_cutoff_matches": 48,
+          "source_sha256": "1ad4e3ac9d520d0b775b1ea966bba4e58d80f86364651f75487242f86a6d8b49",
+          "minimum_recorded_accuracy_bits": 77
+        },
+        "ns70": {
+          "precision_enclosure_matches": 34,
+          "doubled_cutoff_matches": 34,
+          "source_sha256": "2049d3b85986d462d0c0297739144caa917bde3bb83769b526c6a550df8bfc60",
+          "minimum_recorded_accuracy_bits": 130
+        }
+      }
+    },
+    "ns71": {
+      "status": "PASS",
+      "precision_bits": [
+        256,
+        384
+      ],
+      "precision_enclosure_matches": 115,
+      "doubled_cutoff_matches": 23,
+      "independent_NS69_overlap_matches": 16,
+      "minimum_accuracy_bits": 88,
+      "source_sha256": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+      "kernel_source_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+      "largest_block_open_input_values": {
+        "N": 256,
+        "model_numerator_over_energy": "[0.76685068326211833984434538722 +/- 8.57e-30]",
+        "selected_true_model_ratio": "[9.48848423209833083088540950 +/- 6.12e-27]"
+      },
+      "finite_prediction": "both repaired directions outperform the unmodified correlation at every tested size",
+      "cofinal_estimate_obtained": false
+    }
+  },
+  "python_diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "scope": "all new scientific Python and the separate canonical diagnostic"
+  },
+  "html_checks": {
+    "balanced_nesting": true,
+    "local_links_resolve": true,
+    "inline_styles_only": true,
+    "browser_visual_review": false,
+    "preview": "Use the allowed Codex file preview; local file browser navigation was previously rejected."
+  },
+  "source_sha256": {
+    "ns67/certify_cells.py": "2c4c14202df2e733063c62658f882bd4f7a488008e077b786aabb809c11e6bde",
+    "ns67/check_gram.py": "6c9406b8a404377f13d693adf5f2145f9031f75937e1523216f12e148c33c256",
+    "ns67/exact-checks.mac": "ab6fef3010b0d6fc089b4647bfcc5b39f8668452c52c87f71aa39d8c1a461fa7",
+    "ns67/proof.tex": "3e9b0e4359a37d983a460c453964181db818f235045e21fc01ff65e336f7ec32",
+    "ns67/verify_replays.py": "3d9649ad92443a456f99b4947c83f64be867e3123721ad296f42e44f84b2c279",
+    "ns68/certify_renewal.py": "dfe0a811764274e81cd38b5eac5c5180d262576b46f1b6a97fb3c52cde33b3ee",
+    "ns68/exact-checks.mac": "4cfe9076c59306ce443416a481a57e49d90cb9180ae93b4f5bb44f31e311574a",
+    "ns68/proof.tex": "5e9d068933ade69f1b036522bd9deee1116ccd4304beb37880613033f70de57c",
+    "ns69/certify_endpoint.py": "1ad4e3ac9d520d0b775b1ea966bba4e58d80f86364651f75487242f86a6d8b49",
+    "ns69/exact-checks.mac": "d23ad4dabf90e5c8c7c7e9b1317dfcba7c2e105d5ae8e46c262bfd92ea8eff26",
+    "ns69/proof.tex": "96306bf4a94e47067e7a16857db1ff3e1353392756cf86298d1a6a76ebc351fc",
+    "ns70/certify_background.py": "2049d3b85986d462d0c0297739144caa917bde3bb83769b526c6a550df8bfc60",
+    "ns70/exact-checks.mac": "588623fda95257180913c1752d1698220c5aeca22ebf9f6f23dd6c256588c207",
+    "ns70/proof.tex": "fb98b07eb310e5f3987baae55fbfde41476ce957d3e6a0914e9fc49460614599",
+    "ns71/certify_preconditioner.py": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+    "ns71/exact-checks.mac": "86e66226a26d77cf72151882322c6eef19f1cd911c4707fe4209cbb1da41ca21",
+    "ns71/proof.tex": "cf02071d20c5db2f4b529d866e8d938a7957edfbe5debb83dc4aeef0851f4c40",
+    "ns71/verify_replays.py": "5cd76496c3efd266ddb35a32ad202ff9ba155c44c5eb61d65d988a68b398bb5a",
+    "proof.tex": "f58a7dc2dfc2a789d1f384341996b5aa62362099c078cc826a722e0e77b95029",
+    "verify_replays.py": "8fa117807aee145de288e9c115d9fe04156d7d45ee40ac6534c313e67c7a7f78"
+  },
+  "independent_review": false,
+  "publication_authorization": "User requested making PRs, then explicitly allowed the merge/tag workflow after the approval-review block was explained.",
+  "open_inputs": [
+    "Selected model numerator lower bound and true-energy upper cost yielding a nonsummable cofinal contraction",
+    "Internal signed canonical cancellation sufficient for subpolynomial norm growth or a bounded cofinal subsequence",
+    "Original arithmetic uniform Weil floor, API, G2 and RH"
+  ],
+  "limits": [
+    "All-coefficient kernel exclusions do not exclude the actual optimized residual direction",
+    "Critical weighted total-energy divergence is not divergence of the canonical norm",
+    "97.06% is a fraction of finite block improvement, not removal of 97.06% of the entire error",
+    "No finite table provides a cofinal arithmetic estimate"
+  ],
+  "raw_log_whitespace": "Preserved as produced; source-only whitespace checks are separate."
+}

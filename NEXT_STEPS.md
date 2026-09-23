@@ -114,7 +114,17 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-66 | Test a weaker norm-growth target for the once-smoothed canonical interpolant: combine its exact exterior matching with Abel summation and zero evaluation | Codex, Continue solving toward RH | done (local v1.59 draft; subpolynomial bound open) | evidence/v159/ns66/: for each fixed r>=1, log(1+canonical error norm)/log N tends to beta_star-1/2. Complete support lower bound and Bochner-Abel upper bound prove the reformulation. A bounded cofinal subsequence suffices for RH; none is proved. 29 exact checks, including complete physical Abel identities and exterior interpolation. |
 
-## Open continuation targets after NS-66 (not yet claimed)
+| NS-67 | Test direct cancellation in the fixed once-smoothed canonical error, retaining the complete boundary/integral identity and seeking an independent growth estimate | Codex, Continue solving toward RH | done (v1.60; arithmetic input open) | Complete divisor cells, full tails, polynomial-cutoff growth equivalence and centered Abel conditioning <4.617. Two precisions, independent Gram checks and cutoff replay; internal arithmetic growth remains open. |
+
+| NS-68 | Test a single multiplicative-annulus response and its positive renewal equation as a possible independent canonical growth estimate | Codex, Continue solving toward RH | done (v1.60; arithmetic input open) | Exact positive renewal with weighted q_theta<1; integer scalar forcing bound remains RH-equivalent. Critical weighted total energy is infinite, not D_N. Two-precision finite checks through 2,097,152 Mobius coefficients. |
+
+| NS-69 | Test the actual signed endpoint remainder for optimized smoothed NB residuals, rather than its absolute coefficient-mass budget | Codex, Continue solving toward RH | done (v1.60; arithmetic input open) | Exact signed optimized remainder and factor-18 smaller allowance. Actual remainder exceeds model at N=64,128; two endpoint directions retain only 3.3% of gain at N=128. Complete cross terms and projected finite gains certified. |
+
+| NS-70 | Test whether the elementary q=2 Gram background admits a uniformly small arithmetic correction; repair any diagonal-regularity mismatch before judging the comparison | Codex, Continue solving toward RH | done (v1.60; arithmetic input open) | Explicit d/max cusp correction repairs adjacent power and is exactly diagonal in difference coordinates. Both uniform all-coefficient comparisons remain impossible; selected actual directions remain open. Complete two-precision constants and cutoff replay. |
+
+| NS-71 | Test the repaired elementary Gram only as a preconditioner for the actual optimized residual, retaining the true projected energy in every gain quotient | Codex, Continue solving toward RH | done (v1.60; arithmetic input open) | Repaired projected-kernel direction captures 97.06% of optimal gain at N=256 versus 38.41% for raw correlation; squared error reduction 8.08% versus optimum 8.33%. Complete 256/384-bit and doubled-cutoff checks. Cofinal numerator/cost input remains open. |
+
+## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
    fixed and use the complete identity in `eq:ns66-bochner-abel`. Attempt a
@@ -133,10 +143,27 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
    those optimized signed correlations. Stop if no independent arithmetic
    estimate survives the complete remainder.
 
-These are two open arithmetic targets, not achieved results or assigned
-work. Claim a new row before taking either one forward. The existing
-local v1.58/v1.59 checkpoints remain unpublished pending explicit
-branch-specific approval; recheck remote work and version order first.
+The scoped tests above are now recorded in NS-67–71. The underlying
+arithmetic estimates remain open. Publication and merge/tag approval were
+given on September 23; check the latest remote state and PRs before work.
+
+## Open continuation targets after NS-71 (not yet claimed)
+
+1. **Selected arithmetic numerator and cost.** Use the explicit repaired
+   kernel only to choose coefficients. Bound the actual model-inverted
+   numerator relative to E_N and the true energy on that chosen direction,
+   as in `prop:ns71-selected-input`. A nonsummable contraction along dyadic
+   blocks suffices. The certified 97.06% finite gain fraction at N=256 does
+   not provide either cofinal estimate. Do not assume the all-coefficient
+   comparison excluded in NS-70.
+2. **Internal canonical cancellation.** The two complete Abel vectors have
+   a uniform conditioning bound after explicit centering. A useful new
+   estimate must act inside the signed integral or divisor-cell response.
+   The positive renewal inverse transfers the same forcing power; it cannot
+   manufacture the still-missing RH-equivalent arithmetic bound.
+
+Claim a separate row before taking either target forward. No bounded
+cofinal canonical subsequence or asymptotic NB contraction is established.
 
 ## Lanes
 

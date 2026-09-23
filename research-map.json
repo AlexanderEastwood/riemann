@@ -1,6 +1,6 @@
 {
   "title": "Riemann project research map",
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "legend": {
     "proved": "established result",
     "live": "current route (gold): being worked now",
@@ -793,9 +793,9 @@
       "title": "Actual optimized smoothed residual correlations",
       "status": "blocked",
       "parent": "nbsmoothedbudget",
-      "prop": "eq:ns61-open-correlation; eq:ns61-endpoint-correlation",
-      "evidence": "evidence/v159",
-      "note": "Exact endpoint moments and a complete coefficient-mass remainder. No independent cofinal lower bound; finite bounds are below 1/50 of exact gain on two checked blocks.",
+      "prop": "eq:ns61-open-correlation; eq:ns61-endpoint-correlation; prop:ns69-remainder; prop:ns71-selected-input",
+      "evidence": "evidence/v160",
+      "note": "The complete signed endpoint remainder exceeds the leading model at N=64,128. Repaired-kernel directions recover 97.06% of full finite gain at N=256, using the actual complete energy. No cofinal numerator/cost estimate is proved.",
       "wall": {
         "input": "non-summable lower contraction for the actual optimized residual (open sufficient input)",
         "to": "rh",
@@ -835,13 +835,92 @@
       "title": "Canonical smoothed norm: subpolynomial growth",
       "status": "blocked",
       "parent": "nbsmoothedbudget",
-      "prop": "prop:ns66-growth-bounds; cor:ns66-growth-exponent",
-      "evidence": "evidence/v159",
-      "note": "Fixed-order exponent equals beta_star-1/2 by local zero evaluation and conditional Bochner-Abel bounds. Exact reformulation, with no improved arithmetic estimate. A bounded cofinal subsequence is sufficient but not asserted necessary.",
+      "prop": "prop:ns66-growth-bounds; cor:ns66-growth-exponent; prop:ns67-polynomial-cutoff; prop:ns67-abel-conditioning",
+      "evidence": "evidence/v160",
+      "note": "Fixed-order exponent equals beta_star-1/2 by local zero evaluation and conditional Bochner-Abel bounds. Exact reformulation, with no improved arithmetic estimate. A bounded cofinal subsequence is sufficient but not asserted necessary. Exact cells through N^2 retain the exponent; centered whole Abel vectors have a uniform conditioning bound, so internal arithmetic remains the target.",
       "wall": {
         "input": "direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)",
         "to": "rh",
         "src": "cor:ns66-growth-exponent"
+      }
+    },
+    {
+      "id": "nbcanonicalcells",
+      "title": "Complete canonical divisor cells and full tail",
+      "status": "proved",
+      "parent": "nbcanonicalgrowth",
+      "prop": "prop:ns67-cells; lem:ns67-remainder; prop:ns67-polynomial-cutoff",
+      "evidence": "evidence/v160/ns67",
+      "note": "Exact signed cells and a full Stirling remainder <=1/(6z). Tail norm beyond N^2 is O(log N), so the growing finite norm has the same RH-equivalent exponent; no subpolynomial estimate."
+    },
+    {
+      "id": "nbabelwholegain",
+      "title": "Power gain solely between the two complete Abel vectors",
+      "status": "closed",
+      "parent": "nbcanonicalgrowth",
+      "prop": "prop:ns67-abel-conditioning",
+      "evidence": "evidence/v160/ns67",
+      "note": "After explicit centering, their triangle norm is between D_N and (1+2||sigma_1||)D_N. Cancellation inside the integral and exact cells is still unestimated.",
+      "wall": {
+        "input": "uniform conditioning excludes an exponent improvement in this whole-vector split",
+        "to": null,
+        "src": "prop:ns67-abel-conditioning; no obstruction to internal arithmetic cancellation"
+      }
+    },
+    {
+      "id": "nbrenewalforcing",
+      "title": "Positive renewal with signed arithmetic forcing",
+      "status": "blocked",
+      "parent": "nbcanonicalgrowth",
+      "prop": "prop:ns68-weighted-inversion; prop:ns68-scalar-criterion",
+      "evidence": "evidence/v160/ns68",
+      "note": "Positive weighted inverse exists with q_theta<1; it transfers the same power. The integer first-annulus square-root-plus-epsilon bound remains RH-equivalent.",
+      "wall": {
+        "input": "independent square-root-plus-epsilon bound for the signed forcing",
+        "to": "rh",
+        "src": "prop:ns68-scalar-criterion; equivalence is not a new estimate"
+      }
+    },
+    {
+      "id": "nbcriticalrenewalenergy",
+      "title": "Finite total critical renewal energy",
+      "status": "closed",
+      "parent": "nbrenewalforcing",
+      "prop": "cor:ns68-critical-energy",
+      "evidence": "evidence/v160/ns68",
+      "note": "Both critical weighted total integrals diverge by any known critical-line zero. Logarithmic or subpolynomial growth remains possible; this does not assert divergence of D_N.",
+      "wall": {
+        "input": "critical-line Mellin pole contradicts finite weighted L2 energy",
+        "to": null,
+        "src": "cor:ns68-critical-energy; scope is these total integrals"
+      }
+    },
+    {
+      "id": "nbrepairedbounds",
+      "title": "Uniform comparison with the repaired elementary Gram",
+      "status": "closed",
+      "parent": "nbsmoothedcorrelation",
+      "prop": "prop:ns70-cusp; prop:ns70-repaired-background",
+      "evidence": "evidence/v160/ns70",
+      "note": "Subtracting d/max repairs the adjacent n^-2 cusp to n^-3. Uniform lower and upper all-coefficient comparisons still fail, respectively by critical zeros and unbounded zeta values. Selected directions remain outside the exclusion.",
+      "wall": {
+        "input": "pointwise Mellin-density comparison forced by all-coefficient localization",
+        "to": null,
+        "src": "prop:ns70-repaired-background"
+      }
+    },
+    {
+      "id": "nbselectedpreconditioner",
+      "title": "Repaired-kernel selection measured with true energy",
+      "status": "blocked",
+      "parent": "nbsmoothedcorrelation",
+      "prop": "prop:ns71-selected-input",
+      "evidence": "evidence/v160/ns71",
+      "note": "Certified finite gain fractions above 97% at N=128,256 for the projected repaired direction. Exact selected numerator/cost criterion avoids the excluded uniform comparison.",
+      "wall": {
+        "input": "cofinal lower numerator and upper selected cost with nonsummable relative gain",
+        "to": "rh",
+        "src": "prop:ns71-selected-input; sufficient, not asserted necessary"
       }
     }
   ]

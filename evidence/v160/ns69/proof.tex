@@ -1,0 +1,123 @@
+\section{The optimized endpoint remainder is not a small correction on the tested blocks (NS-69)}
+\label{sec:ns69-actual-remainder}
+
+\paragraph{Scope.}
+The coefficients in this section minimize the actual smoothed NB error.
+They are not canonical M\"obius coefficients. We retain the complete
+Gram, the old-space projection and the signed arithmetic remainder.
+The finite certificates show a limitation of the two-moment model;
+they neither prove an asymptotic obstruction to that model nor supply
+the missing cofinal correlation estimate.
+
+Use $R_N=\tau-\sum_{m\leq N}c_m\sigma_m$, $E_N=\|R_N\|^2$,
+and $g_n=\langle R_N,\epsilon_n\rangle$, $N<n\leq2N$.
+The $c_m$ solve the complete normal equations. Write
+\[
+ L_{N,n}=\frac{a_N\{\tfrac12\Delta_n(\log^2)
+                  +(2-\gamma)\Delta_n\log\}
+                   +\ell_N\Delta_n\log}{n},
+ \qquad g_n=L_{N,n}+r_{N,n},
+\]
+with the exact $a_N,\ell_N$ from
+\eqref{eq:ns61-residual-endpoint}. Thus $L$ denotes the endpoint
+model and $r$ its signed error, rather than an independent substitute
+for the actual correlation vector.
+
+\begin{proposition}[Complete signed remainder and improved absolute allowance]
+\label{prop:ns69-remainder}
+With the complete arithmetic function $S_2$ from Ehm's Gram formula,
+\begin{equation}
+ r_{N,n}=-\sum_{m\leq N}\frac{c_m}{m}
+       \left\{S_2(n/m)-\frac{n-1}{n}S_2((n-1)/m)\right\}.
+ \label{eq:ns69-signed-remainder}
+\end{equation}
+For every $n>N$,
+\begin{equation}
+ |r_{N,n}|\leq
+ \frac{\pi^2\sum_{m\leq N}m|c_m|}{144n^2(n-1)}.
+ \label{eq:ns69-remainder-bound}
+\end{equation}
+This improves the earlier elementary allowance by a factor of $18$.
+It does not assert that the allowance is small relative to $L$ or $g$.
+\end{proposition}
+\begin{proof}
+Subtract the two complete Gram columns at $n,n-1$ with weights
+$1,-(n-1)/n$. Their $K_2$ terms cancel exactly. Combining their
+remaining polynomial terms with the exact target-load difference
+gives $L_{N,n}$, while their $S_2$ terms give
+\eqref{eq:ns69-signed-remainder}. This retains every old coefficient.
+Alternatively, Lemma~\ref{lem:ns67-remainder} gives the physical
+error bound
+$|R_N(x)-a_N\log(1/x)-\ell_N|\leq x\sum m|c_m|/6$
+on the support of $\epsilon_n$. Its nonnegativity and exact moment
+$\int x\epsilon_n(x)dx=\pi^2/[24n^2(n-1)]$ give
+\eqref{eq:ns69-remainder-bound}. Both derivations apply to the
+complete functions, with no finite physical cutoff.
+\end{proof}
+
+Let $H_N$ be the complete projected Gram of the new differences, so
+the full improvement is $\Delta E_N=g^T H_N^{-1}g=E_N-E_{2N}$.
+For any nonzero real column $v$, restricting the new correction to
+that column gives the exact improvement
+\begin{equation}
+ Q_N(v)=\frac{(v^Tg)^2}{v^TH_Nv}\leq\Delta E_N.
+ \label{eq:ns69-selected-gain}
+\end{equation}
+For a two-column matrix $W$ it gives
+$(W^Tg)^T(W^TH_NW)^{-1}(W^Tg)$. We use the fixed columns
+\[
+ W_{n,0}=\frac{N^2\Delta_n\log}{n},\qquad
+ W_{n,1}=\frac{N^2\{\tfrac12\Delta_n(\log^2)
+                                      -\log N\Delta_n\log\}}{n}.
+\]
+Their span contains $L$ exactly. They are independent for $N\geq2$:
+the ratio of the second to the first is
+$\tfrac12\log(n(n-1))-\log N$, strictly increasing in $n$.
+The old projection is subtracted before evaluating every quotient.
+
+\paragraph{Certified finite comparisons.}
+Arb calculations at 256 and 384 bits use the complete Bernoulli/Hurwitz
+tail enclosure of Section~\ref{sec:ns61-gram-remainder}. All solves
+retain ball errors. The table gives outward decimal intervals; the
+archived JSON files retain the narrower balls. The final two columns
+are fractions of the full improvement, not relative errors.
+\begin{center}\small
+\begin{tabular}{rcccc}
+\toprule
+$N$ & $\|r\|_2/\|L\|_2$ & $\cos(L,g)$ & two-column fraction
+ & $Q_N(g)/\Delta E_N$\\
+\midrule
+16 & $(.6074,.6076)$ & $(.8477,.8479)$ & $(.1204,.1205)$ & $(.2332,.2333)$\\
+32 & $(.9250,.9252)$ & $(.7982,.7983)$ & $(.2036,.2037)$ & $(.3258,.3259)$\\
+64 & $(2.0203,2.0205)$ & $(.5966,.5968)$ & $(.0806,.0807)$ & $(.2723,.2724)$\\
+128 & $(3.1748,3.1750)$ & $(.4592,.4594)$ & $(.0330,.0331)$ & $(.2946,.2948)$\\
+\bottomrule
+\end{tabular}\end{center}
+Here $\|\cdot\|_2$ is the Euclidean norm of the finite correlation
+vector, while $E_N$ is the physical Hilbert-space squared error.
+The exact vector identity
+$\|g\|_2^2=\|L\|_2^2+2L^Tr+\|r\|_2^2$ is checked;
+no mixed term is omitted. At $N=64$ the optimized logarithmic
+coefficient satisfies
+$-.000554<a_N<-.000553$, whereas it is positive at the other
+three displayed sizes. Positivity of this coefficient is therefore
+not available for all optimized blocks.
+
+The smaller absolute allowance is still loose: its vector norm divided
+by the actual remainder norm lies between $216$ and $541$ on these
+four blocks. But the failure to treat the remainder as small is not
+only a failure of that allowance: the actual remainder norm exceeds
+the model norm at $N=64,128$. Conversely, the mixed term is positive
+at those two sizes, so this is not evidence of universal destructive
+cancellation. At the isolated far index $n=16N$, the relative scalar
+remainders are below $.017$ in all four cases. This finite far-field
+observation provides no uniform or cofinal estimate.
+
+\paragraph{What had to change.}
+A lower bound obtained by treating the leading endpoint terms as the
+whole residual is unsupported. Even allowing both endpoint directions
+captures only about $3.3\%$ of the full block improvement at $N=128$.
+The actual-correlation direction captures about $29.5\%$ there, and
+must retain its arithmetic remainder. These are finite comparisons,
+not a convergence theorem. The open input is still an independently
+proved, nonsummable relative contraction along a cofinal sequence.

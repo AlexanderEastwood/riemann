@@ -1,0 +1,53 @@
+{
+  "classification": "certified finite selected-direction experiment; no cofinal estimate",
+  "precision_bits": 384,
+  "finite_series_cutoff": 256,
+  "bernoulli_order": 24,
+  "source_sha256": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+  "kernel_source_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+  "rows": [
+    {
+      "N": 256,
+      "seconds": 410.875,
+      "energy": "[1.414241673909017965604410325187231472063e-5 +/- 8.58e-45]",
+      "full_relative_gain": "[0.0832680987052332706639099387285212045 +/- 2.86e-38]",
+      "directions": {
+        "actual_correlation": {
+          "fraction_of_full_gain": "[0.3840904502555803373299224983895983041 +/- 6.79e-38]",
+          "relative_gain": "[0.031982481523619153040177769266586689526 +/- 5.35e-40]",
+          "relative_raw_lower_gain": "[0.00225942982515423304722300752042881065389 +/- 4.90e-42]",
+          "selected_projected_gram_ratio": "[4.0622347511150656292006308516210915887 +/- 6.85e-38]",
+          "old_projection_cost_factor": "[14.1551116868327464124430368840261861651 +/- 8.39e-38]",
+          "numerator": "[6.632241641861537114267586745000397693866e-14 +/- 7.98e-54]",
+          "denominator": "[9.7248943955541474573136775108163354105e-21 +/- 5.86e-59]"
+        },
+        "raw_repaired_inverse": {
+          "fraction_of_full_gain": "[0.9597639596132221460497088497790078 +/- 5.53e-35]",
+          "relative_gain": "[0.07991772012279930005641489029057667 +/- 3.98e-36]",
+          "relative_raw_lower_gain": "[0.04073958453202111101058505964493475 +/- 3.65e-36]",
+          "selected_projected_gram_ratio": "[9.543327412020121988729573149195928 +/- 5.20e-34]",
+          "old_projection_cost_factor": "[1.961672438264174470025650175682776 +/- 2.76e-34]",
+          "numerator": "[1.077855626096927464158297386969588332e-5 +/- 7.00e-42]",
+          "denominator": "[0.00010279085285191560814689985605891232 +/- 2.92e-39]"
+        },
+        "projected_repaired_inverse": {
+          "fraction_of_full_gain": "[0.9705889000772677704145424527576608 +/- 2.03e-35]",
+          "relative_gain": "[0.08081909233383772475069804115732393 +/- 4.47e-36]",
+          "relative_raw_lower_gain": "[0.019909486520979105787354612943304522 +/- 7.88e-37]",
+          "selected_projected_gram_ratio": "[9.488484232098330830885409500138104 +/- 6.15e-34]",
+          "old_projection_cost_factor": "[4.059325801731586564567248350153867 +/- 5.82e-34]",
+          "numerator": "[1.084512193934892386486732425726161581e-5 +/- 3.98e-42]",
+          "denominator": "[0.00010290376851669593428931186832555288 +/- 1.90e-39]"
+        }
+      },
+      "minimum_accuracy_bits": 112,
+      "gates": {
+        "complete_gram_tail": true,
+        "certified_model_and_actual_solves": true,
+        "all_selected_energies_positive": true,
+        "gains_below_full_projection_gain": true,
+        "complete_old_projection_retained": true
+      }
+    }
+  ]
+}

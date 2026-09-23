@@ -14,7 +14,14 @@
     "evidence/diag_ns61_smoothed_nb/*.py",
     "evidence/v159/ns61/*.py",
     "evidence/v159/ns63/*.py",
-    "evidence/v159/ns64/*.py"
+    "evidence/v159/ns64/*.py",
+    "evidence/v160/ns67/*.py",
+    "evidence/diag_ns67_canonical_cells/*.py",
+    "evidence/v160/*.py",
+    "evidence/v160/ns68/*.py",
+    "evidence/v160/ns69/*.py",
+    "evidence/v160/ns70/*.py",
+    "evidence/v160/ns71/*.py"
   ],
   "exclude": [
     "node_modules",
@@ -27,6 +34,7 @@
     "evidence/diag_true_symbol",
     "evidence/v124/g2_schur_cancellation",
     "evidence/diag_ns59_nb_budget",
-    "evidence/v159/ns61"
+    "evidence/v159/ns61",
+    "evidence/v160/ns67"
   ]
 }

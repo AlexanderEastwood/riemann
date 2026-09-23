@@ -1,0 +1,42 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v160/ns70/exact-checks.mac")
+display2d:false
+assume(k1 > 3/2)
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+basic:(2*a)/(a^2+t^2)
+rough:subst(1/2,a,k2*basic-k1*diff(basic,a)+diff(basic,a,2)/4)
+check("Complete rough Fourier density",
+      rough-((k2-2*k1)*t^4+(k2/2-3/2)*t^2+k2/16+k1/8+1/8)/(t^2+1/4)^3)
+check("Repaired Fourier density",
+      subst(2*k1,k2,rough)-((k1-3/2)*t^2+k1/4+1/8)/(t^2+1/4)^3)
+check("Removed cusp density",
+      rough-subst(2*k1,k2,rough)+(-(k2-2*k1))/(t^2+1/4))
+check("Cusp derivative",
+      subst(0,r,diff(exp(-r/2)*(k2+k1*r+r^2/4),r))+(k2-2*k1)/2)
+check("Repaired first derivative",
+      subst([r = 0,k2 = 2*k1],diff(exp(-r/2)*(k2+k1*r+r^2/4),r)))
+diag:k2/n+(((n-1)^2/n^2)*k2)/(n-1)+(((-2*(n-1))/n)*(k2+k1*h+h^2/4))/n
+check("Exact adjacent quadratic",n^2*diag-(k2-2*k1*(n-1)*h+(-(n-1)*h^2)/2))
+check("Exact removed adjacent quadratic",
+      diag-subst(2*k1,k2,diag)+(-(k2-2*k1))/n^2)
+check("Cusp old-new difference vanishes",1/n-((n-1)/n)/(n-1))
+check("Cusp adjacent diagonal",
+      1/n+((n-1)^2/n^2)/(n-1)+(-2*(n-1))/n^2+(-1)/n^2)
+check("Cusp adjacent off diagonal",
+      1/n-(m-1)/(m*n)+(-(n-1)/n)/(n-1)+(((m-1)*(n-1))/(m*n))/(n-1))
+hh:log(1+z)
+check("Rough adjacent limit",
+      limit(k2-(2*k1*hh)/z+(-hh^2)/(2*z),z,0)-(k2-2*k1))
+check("Repaired adjacent limit",
+      limit(((1+z)/z)*(2*k1-(2*k1*hh)/z+(-hh^2)/(2*z)),z,0)-(k1-1/2))
+check("Repaired rational density quotient",
+      (1/(t^2+1/4)^2)/subst(2*k1,k2,rough)-(t^2+1/4)/((k1-3/2)*t^2+k1/4+1/8))
+check("Large-frequency quotient",
+      limit((t^2+1/4)/((k1-3/2)*t^2+k1/4+1/8),t,inf)-1/(k1-3/2))
+print("PASS:",length(checks),
+      "exact checks; no optimized-residual estimate is implied.")
+PASS: 14 exact checks; no optimized-residual estimate is implied. 
+"/private/tmp/riemann-ns67/evidence/v160/ns70/exact-checks.mac"

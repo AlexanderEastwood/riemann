@@ -1,0 +1,118 @@
+\section{Using the repaired kernel to select a direction (NS-71)}
+\label{sec:ns71-selected-preconditioner}
+
+\paragraph{Question and scope.}
+NS-70 excludes a uniform comparison over every coefficient vector.
+It does not exclude using the repaired kernel to choose one direction,
+then measuring that direction with the true complete Gram. The finite
+prediction tested here is that such a choice captures more of the
+optimized improvement than the unmodified correlation vector. A good
+finite direction is a computational finding, not a cofinal estimate.
+
+On the new block $N<n\leq2N$, let $D_N$ and $H_N$ denote the raw
+and old-space-projected actual difference Grams. Let $D_{0,N}$ and
+$H_{0,N}$ be the corresponding Grams for the repaired kernel $K_0$.
+All four matrices are strictly positive definite. In defining $H_{0,N}$,
+both the old projection and the new block use $K_0$ consistently;
+this is not the actual Hilbert-space projection.
+For the actual optimized correlation vector $g$, consider
+\[
+ v_{\rm raw}=D_{0,N}^{-1}g,\qquad
+ v_{\rm projected}=H_{0,N}^{-1}g.
+\]
+Both are only rules for selecting coefficients. Every reported energy
+uses $H_N$ or $D_N$, with the complete arithmetic remainder retained.
+
+\begin{proposition}[Selected-direction improvement and the precise open input]
+\label{prop:ns71-selected-input}
+For either positive model matrix $A_N\in\{D_{0,N},H_{0,N}\}$ put
+\[
+ v=A_N^{-1}g,\quad m_N=g^TA_N^{-1}g,\quad
+ C_N=\frac{v^TH_Nv}{v^TA_Nv},\quad
+ C_N^{\rm raw}=\frac{v^TD_Nv}{v^TA_Nv}.
+\]
+Whenever $g\ne0$, all denominators are positive, and
+\begin{equation}
+ E_N-E_{2N}\geq Q_N(v)=\frac{m_N}{C_N}
+                  \geq\frac{m_N}{C_N^{\rm raw}}>0.
+ \label{eq:ns71-selected-ratio}
+\end{equation}
+If along $N_j=2^jN_0$ independently justified estimates give
+\[
+ \frac{m_{N_j}}{E_{N_j}}\geq\alpha_j>0,
+ \qquad C_{N_j}\leq B_j,
+ \qquad \sum_j\frac{\alpha_j}{B_j}=\infty,
+\]
+then $E_{N_j}\to0$ and RH follows by the fixed smoothed NB criterion.
+The same statement holds using $C_{N_j}^{\rm raw}$ in place of $C_{N_j}$.
+No such infinite sequence of estimates is proved here.
+\end{proposition}
+\begin{proof}
+Since $A_Nv=g$, $v^Tg=v^TA_Nv=m_N$. Substitute in
+\eqref{eq:ns69-selected-gain}. Orthogonal projection gives
+$H_N\leq D_N$, proving the second inequality with all old-space
+cross terms accounted for. The assumed bounds yield
+$E_{2N_j}\leq(1-\alpha_j/B_j)E_{N_j}$.
+The exact gain ensures $0<\alpha_j/B_j\leq1$; if equality occurs,
+the error vanishes already. Otherwise the divergent sum makes the
+product of contraction factors tend to zero. Monotonicity extends
+convergence from the dyadic sequence to all $N$. The criterion in
+Proposition~\ref{prop:ns61-rh-equivalence} then applies.
+This uses a selected scalar ratio, not a uniform matrix comparison.
+\end{proof}
+
+For its geometric meaning, let $u=H_N^{-1/2}g$ and
+$z=H_N^{1/2}v$. Then the exact fraction of the full improvement is
+\[
+ \frac{Q_N(v)}{E_N-E_{2N}}=
+       \frac{(u^Tz)^2}{\|u\|_2^2\|z\|_2^2}.
+\]
+Thus the finite experiment measures an angle in the actual projected
+energy, including the arithmetic terms. A Euclidean angle or a small
+entrywise kernel remainder would not be a substitute.
+
+\paragraph{Certified finite outcome.}
+The table gives outward intervals for the fraction of the full
+improvement $E_N-E_{2N}$, using the actual projected energy throughout.
+\begin{center}\small
+\begin{tabular}{rccc}
+\toprule
+$N$ & $v=g$ & $v=D_{0,N}^{-1}g$ & $v=H_{0,N}^{-1}g$\\
+\midrule
+16 & $(.2332,.2333)$ & $(.7167,.7169)$ & $(.8390,.8391)$\\
+32 & $(.3258,.3259)$ & $(.8580,.8581)$ & $(.8252,.8254)$\\
+64 & $(.2723,.2724)$ & $(.9593,.9594)$ & $(.9577,.9578)$\\
+128 & $(.2946,.2948)$ & $(.9729,.9730)$ & $(.9781,.9782)$\\
+256 & $(.3840,.3842)$ & $(.9597,.9598)$ & $(.9705,.9707)$\\
+\bottomrule
+\end{tabular}\end{center}
+Both rules outperform $v=g$ at every checked size. The projected
+rule captures more than $97\%$ of the full improvement at $N=128,256$;
+neither efficiency is asserted monotone. At $N=256$ it reduces the
+squared residual by a fraction in $(.08081,.08083)$, compared with
+the full optimum in $(.08326,.08328)$. The corresponding numerator
+and selected ratio in Proposition~\ref{prop:ns71-selected-input}
+satisfy
+\[
+ .7668< m_{256}/E_{256}<.7669,\qquad
+ 9.4884<C_{256}<9.4886.
+\]
+These two finite bounds make explicit where the remaining arithmetic
+problem sits; no size-independent bound is inferred.
+
+All five sizes were evaluated at 256 and 384 bits with the full
+Bernoulli/Hurwitz Gram tail. A doubled series cutoff at $N=256$
+replays the largest problem. The verifier matches $115$ quantities
+between precisions, $23$ at the doubled cutoff, and $16$ overlapping
+quantities against the separate NS-69 implementation. The minimum
+recorded accuracy is $88$ bits. All model and actual solves retain
+their ball enclosures. The Maxima checks concern the exact quotient
+and projection algebra, not the missing arithmetic estimates.
+
+\paragraph{Stop condition.}
+The model inversion is explicit and numerically useful on the checked
+blocks. The arithmetic numerator $m_N/E_N$ and the selected true-energy
+ratio still need cofinal estimates. Finite efficiency, by itself,
+does not control either quantity as $N\to\infty$. NS-70's obstruction
+to all-coefficient comparisons is respected throughout; no new
+zero-free region, uniform Weil floor, G2 or RH proof follows.

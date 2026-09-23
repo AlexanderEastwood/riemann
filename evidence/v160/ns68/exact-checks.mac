@@ -1,0 +1,49 @@
+/* Exact first-annulus and positive-renewal identities; no growth bound. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+v:log(2)$
+q(th):=(1-v)*2^(-th)+(1-2^(-th))/th$
+check("Renewal total mass",1-v+v-1)$
+check("Weighted mass at zero",limit(q(th),th,0)-1)$
+check("Power forcing coefficient",2^th-(1-v)-(2^th-1)/th-2^th*(1-q(th)))$
+check("Weighted density primitive",diff(-exp(-th*u)/th,u)-exp(-th*u))$
+check("Mass decreases with interval length",diff((1-w)*exp(-th*w)+(1-exp(-th*w))/th,w)
+ +th*(1-w)*exp(-th*w))$
+HH(s):=v/(s-1)+(2^s-1-s*v)/s^2$
+check("Mellin numerator",s^2*(s-1)*HH(s)-((s-1)*(2^s-1)+s*v))$
+check("Mellin renewal multiplier",(2^s-(1-v)-(2^s-1)/s)/(s*(s-1))-HH(s))$
+check("Mellin compact kernel primitive",diff(exp(s*u)*((v-u)/s+1/s^2),u)
+ -(v-u)*exp(s*u))$
+check("Mellin compact kernel value",radcan((2^s-1-s*v)/s^2
+ -(exp(s*v)/s^2-v/s-1/s^2)))$
+check("Critical energy eta primitive",diff(ss^2*x-2*ss*mm*log(x)-mm^2/x,x)
+ -(ss-mm/x)^2)$
+prim(x,aa,bb,cc):=aa^2*x+aa*bb*log(x)^2+2*aa*cc*log(x)
+ -bb^2*(log(x)^2+2*log(x)+2)/x-2*bb*cc*(log(x)+1)/x-cc^2/x$
+check("Critical forcing primitive",diff(prim(x,aa,bb,cc),x)-(aa*x+bb*log(x)+cc)^2/x^2)$
+check("Critical measure scaling",(1/2)*(2/t)^2*(1/2)-1/t^2)$
+mu:[1,-1,-1,0,-1,1,-1,0,0,1,-1,0,-1,1,1,0,-1,0,-1,0,1,1,-1,0]$
+MM(x):=if x<1 then 0 else sum(mu[k],k,1,floor(x))$
+SS(x):=if x<1 then 0 else sum(mu[k]/k,k,1,floor(x))$
+PP(x):=x*SS(x)-MM(x)$
+FF(x):=x*SS(x)*v+sum(mu[k]*log(2*x/k),k,floor(x)+1,floor(2*x))$
+IP(x):=block([cuts:[x,2*x],out:0,lo,hi,md],
+ for j:floor(x)+1 thru ceiling(2*x)-1 do cuts:endcons(j,cuts),
+ cuts:sort(listify(setify(cuts))),
+ for j:1 thru length(cuts)-1 do (lo:cuts[j],hi:cuts[j+1],md:(lo+hi)/2,
+  out:out+SS(md)*(hi-lo)-MM(md)*log(hi/lo)),out)$
+IM(x):=block([cuts:[x,2*x],out:0,lo,hi,md],
+ for j:floor(x)+1 thru ceiling(2*x)-1 do cuts:endcons(j,cuts),
+ cuts:sort(listify(setify(cuts))),
+ for j:1 thru length(cuts)-1 do (lo:cuts[j],hi:cuts[j+1],md:(lo+hi)/2,
+  out:out+MM(md)*log(hi/lo)),out)$
+for xx in [1/4,1/2,3/4,1,5/4,7/4,2,11/4,3,13/4,6,11] do (
+ check(sconcat("Real endpoint renewal ",xx),radcan(FF(xx)-PP(2*xx)+(1-v)*PP(xx)+IP(xx))),
+ check(sconcat("Complete Mertens integral ",xx),radcan(FF(xx)-v*PP(xx)-IM(xx))))$
+AA(z):=block([kk:floor(z)],z-kk*log(z)+log(kk!))$
+for nn in [1,2,3,6,12] do check(sconcat("Canonical scalar sample ",nn),
+ radcan(log(2*nn)+sum(mu[k]*AA(2*nn/k),k,1,nn)-nn*SS(nn)*AA(2)-FF(nn)))$
+print("PASS:",length(checks),"exact checks; the signed forcing bound remains open.")$

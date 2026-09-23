@@ -482,3 +482,23 @@ norm-growth exponent using the classical zero-free/Mobius-series implication
 in [Baez-Duarte, math/0202141v2, Lemma 2.1](https://arxiv.org/abs/math/0202141v2).
 This is a reformulation of zero location, not an independently improved
 Mertens estimate or zero-free region. No priority claim is made.
+
+## v1.60: complete arithmetic and selected-direction geometry
+
+The complete q=2 Gram formula remains Ehm's prior work. This checkpoint
+checks its elementary/remainder split at the quadratic-form level. The
+small entrywise correction cancels an explicit diagonal cusp; the repaired
+background is positive definite but cannot be uniformly comparable to the
+actual Gram on all finite integer coefficients. The lower exclusion uses
+known critical-line zeros; the upper uses unbounded critical-line zeta
+values, for example [Soundararajan, Theorem 1](https://arxiv.org/html/0708.3990v2).
+These are scoped comparisons, not negative Weil directions or failure of
+optimized approximation.
+
+The canonical cell, renewal and norm-growth calculations are exact
+reformulations and bounds with their arithmetic input explicit; no priority
+claim or new zero-free region is asserted. The finite preconditioner uses
+the repaired kernel only to select coefficients, measuring every energy
+with the actual full Gram. Its efficiency does not establish the asymptotic
+numerator/cost estimate needed for convergence. Existing certified Weil
+windows and comparison claims are unchanged.

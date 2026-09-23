@@ -1,0 +1,38 @@
+{
+  "classification": "independent complete-Gram replay of finite physical cells",
+  "precision_bits": 384,
+  "inherited_kernel_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+  "source_sha256": "6c9406b8a404377f13d693adf5f2145f9031f75937e1523216f12e148c33c256",
+  "rows": [
+    {
+      "N": 8,
+      "all_three_gram_balls_inside_physical_enclosures": true,
+      "minimum_accuracy_bits": 143,
+      "balls": {
+        "full_energy": "[0.0005536135800473595325775673172008206181034461 +/- 7.31e-47]",
+        "cross_sigma": "[0.010672097687225915819275800040159824913278292299 +/- 2.99e-49]",
+        "cross_tau": "[0.02279187913922271613395576485130539381766764565568301924386478142913063 +/- 2.59e-72]"
+      }
+    },
+    {
+      "N": 16,
+      "all_three_gram_balls_inside_physical_enclosures": true,
+      "minimum_accuracy_bits": 140,
+      "balls": {
+        "full_energy": "[0.0001180835771867306714695221743162747251196377 +/- 7.72e-47]",
+        "cross_sigma": "[0.002607766027013114485065173552869926951295831981 +/- 9.17e-49]",
+        "cross_tau": "[0.006646863696243617034060622235047877152988686822251581565160673292698925 +/- 1.09e-73]"
+      }
+    },
+    {
+      "N": 64,
+      "all_three_gram_balls_inside_physical_enclosures": true,
+      "minimum_accuracy_bits": 139,
+      "balls": {
+        "full_energy": "[8.61261573509392539691280850286381408037059e-5 +/- 6.58e-47]",
+        "cross_sigma": "[-0.000485604059225440207100509045047976801435001846 +/- 7.67e-49]",
+        "cross_tau": "[-0.001610369578283166902076019015407765171335463866635905348348739588353138 +/- 2.87e-74]"
+      }
+    }
+  ]
+}
