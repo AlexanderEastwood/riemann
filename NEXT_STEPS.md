@@ -176,6 +176,9 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-98 | Bound the fixed Mobius/logarithmic direction after old-space refitting, retaining cancellation before estimating its complete cost | Codex | done (attempt stopped; no new arithmetic estimate) | Full subtraction retained, but the projected signed cross term remains unestimated. Bounded-diagonal separation repeats NS93; contractivity returns exactly to NS92. Two complete finite decompositions reproduce NS73 costs and establish no cofinal sign or bound. Same open gap; no new theorem node/version. [Attempt](evidence/ns98_projected_cost/) |
 
+| NS-99 | Audit which nodes share NS98’s exact cost input, which share the broader NB gain input, and which have different missing hypotheses; update the research map without over-closing routes | Codex root | claimed | Node-level dependency inventory, scoped map annotations and readable shared-gap guide; preserve proved finite results and distinguish logical equivalence from identical estimates. |
+| NS-100 | Independently reassess the repository and propose concrete research tests, including the tangent-circle/core geometry suggestion, screened against existing walls and primary literature | Assisting agent, requested by Alex | claimed | At most three ranked proposals with closest prior result, precise new input, first falsifiable lemma and stop condition; novelty claims qualified. No new RH claim or automatic reopening of closed comparisons. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
