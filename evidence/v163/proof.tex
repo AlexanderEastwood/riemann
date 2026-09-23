@@ -1,0 +1,421 @@
+\section{A complete norm from reciprocal-integer samples (NS-78)}
+\label{sec:ns78-sampling}
+
+\paragraph{Purpose.}
+NS-75 identifies the signed divisor defects but shows that cancelling
+individual jumps need not decrease the norm. Here we retain the entire
+residual through its reciprocal-integer values, with constants independent
+of the number and size of the coefficients. This is an exact geometric
+reduction and a complete physical-space replay, not the missing arithmetic
+estimate. The infinite sample sum is not replaced by a finite prefix.
+
+For arbitrary real $\alpha,c_1,\ldots,c_N$, put
+\[
+ R=\alpha\tau-\sum_{n\leq N}c_n\sigma_n,\qquad
+ \eta=\sum_{n\leq N}\frac{c_n}{n},\qquad
+ z_m=R(1/m),\qquad w_m=\frac1{m(m+1)}.
+\]
+Define the complete nonnegative arithmetic quantity
+\begin{equation}
+ \mathcal S(c)=\eta^2+
+       \sum_{m=1}^\infty w_m(z_m^2+z_{m+1}^2).
+ \label{eq:ns78-sampling-functional}
+\end{equation}
+Its samples are explicitly
+\[
+ z_m=-\eta m+\sum_{k\leq m}
+ \left(\alpha\mathbf1_{k=1}+\sum_{\substack{n\mid k\\n\leq N}}c_n\right)
+                    \log(m/k).
+\]
+All cancellation inside each displayed sample is retained before squaring.
+
+\begin{proposition}[Uniform complete sampling comparison]
+\label{prop:ns78-sampling}
+For every real $\alpha$ and finite real coefficient vector,
+\begin{equation}
+ \frac1{16}\mathcal S(c)\leq\|R\|_2^2
+                 \leq\frac{21}{16}\mathcal S(c).
+ \label{eq:ns78-sampling-comparison}
+\end{equation}
+Both sides include the exterior tail and every reciprocal cell. The
+infinite series in~\eqref{eq:ns78-sampling-functional} converges.
+\end{proposition}
+\begin{proof}
+Change variables to $t=1/x$ and write $r(t)=R(1/t)$, with measure
+$dt/t^2$. On $0<t<1$, $r(t)=-\eta t$, so the complete exterior
+energy is exactly $\eta^2$. By NS-75, on $m\leq t\leq m+1$,
+\[
+ r(t)=-\eta t+D_m\log t-L_m,
+\quad D_m=\sum_{k\leq m}\delta_k,
+\quad L_m=\sum_{k\leq m}\delta_k\log k.
+\]
+Here $\delta_k=\alpha\mathbf1_{k=1}+\sum_{n\mid k,\,n\leq N}c_n$
+is the signed divisor defect.
+Let $h_m=\log(1+1/m)$, $\theta=\log(t/m)/h_m$, and set
+\[
+ p(t)=(1-\theta)z_m+\theta z_{m+1},\qquad
+ b(t)=\theta-(t-m).
+\]
+Exactly $r(t)=p(t)+\eta b(t)$ on every cell.
+Under $t=m e^{h_m\theta}$ the measure is
+$(h_m/m)e^{-h_m\theta}d\theta$. Its density divided by $w_m$
+is between $m h_m$ and $(m+1)h_m$, hence between $1/2$ and $2$.
+Also
+\[
+ \int_0^1((1-\theta)a+\theta d)^2d\theta
+       =\frac{a^2+ad+d^2}{3}
+       \in\left[\frac{a^2+d^2}{6},\frac{a^2+d^2}{2}\right].
+\]
+Thus, writing $V=\int_1^\infty p(t)^2dt/t^2$ and
+$S=\sum_{m\geq1}w_m(z_m^2+z_{m+1}^2)$, we get
+$S/12\leq V\leq S$, initially for finite unions of cells.
+
+Concavity of $\log(m+v)$ for $0\leq v\leq1$, and its second
+derivative bound, give
+\[
+ 0\leq b(m+v)\leq\frac{v(1-v)}{2m^2h_m}
+       \leq\frac1{8m^2h_m}\leq\frac1{4m}.
+\]
+Consequently
+\[
+ \Gamma:=\int_1^\infty b(t)^2\frac{dt}{t^2}
+ \leq\frac1{16}\sum_{m\geq1}\frac{w_m}{m^2}
+ \leq\frac1{16},
+\]
+since $\sum w_m=1$. The original finite combination lies in $L^2$,
+so $p=r-\eta b$ is square integrable. Monotone passage through the
+finite-cell estimates now proves finiteness of $S$ and their complete
+versions; no convergence of $S$ was assumed.
+
+Cauchy--Schwarz and Young's inequality give
+\[
+ |2\eta\langle p,b\rangle|
+       \leq\eta^2/4+4\Gamma V\leq(\eta^2+V)/4.
+\]
+Using the exact identity
+$\|R\|_2^2=\eta^2+V+2\eta\langle p,b\rangle+\eta^2\Gamma$,
+we obtain
+\[
+ \frac34(\eta^2+V)\leq\|R\|_2^2
+ \leq\frac{21}{16}\eta^2+\frac54V
+ \leq\frac{21}{16}(\eta^2+V).
+\]
+Inserting $S/12\leq V\leq S$ proves the proposition.
+\end{proof}
+
+\paragraph{The arithmetic input in explicit coordinates.}
+Specialize to $\alpha=1$. By the fixed-order smoothed Nyman--Beurling
+criterion in NS-61, RH is
+equivalent to the existence of coefficient vectors, of unbounded allowed
+length, with $\mathcal S(c)\to0$. For the actual optimized coefficients,
+this is equivalent to $E_N\to0$. Boundedness of $\mathcal S(c)$ alone
+does not suffice; it is not the bounded-Weil-floor criterion.
+The local geometric comparison is unconditional, but no sequence with
+vanishing complete $\mathcal S$ has been produced. A finite collection
+of small samples cannot replace its infinite sum or its cofinal limit.
+
+The case $\alpha=0$ also bounds the complete energy of any finite
+correction vector. Its comparison quantity still contains all signed
+arithmetic samples; this is not an all-vector comparison with the
+smooth repaired model excluded in NS-70.
+
+\paragraph{Exact inversion and the remaining arithmetic constraint.}
+The samples also recover the coefficients without a Gram solve. Put
+$D_0=0$. Continuity at every reciprocal knot gives
+\[
+ \eta=-z_1,\qquad
+ D_m=\frac{z_{m+1}-z_m+\eta}{\log(1+1/m)},\qquad
+ \delta_m=D_m-D_{m-1}.
+\]
+M\"obius inversion then gives, extending $c_n=0$ beyond $N$,
+\begin{equation}
+ c_n=\sum_{d\mid n}\mu(n/d)\delta_d-\alpha\mu(n).
+ \label{eq:ns78-sample-inverse}
+\end{equation}
+For $n>N$ the right-hand side must therefore vanish. These infinitely
+many arithmetic compatibility conditions distinguish admissible sample
+sequences from arbitrary small knot values.
+
+In particular, norm convergence of residuals with $\alpha=1$ forces
+$c_n\to-\mu(n)$ at each fixed index $n$. Indeed
+$|z_m|\leq4\sqrt{m(m+1)}\,\|R\|_2$ follows from the complete
+sampling comparison, while $|\eta|\leq\|R\|_2$ follows from the
+exterior tail. The finite formulas above then force $D_m,\delta_m\to0$
+for every fixed $m$, and~\eqref{eq:ns78-sample-inverse} gives the claim.
+This necessary coefficientwise limit supplies neither a uniform growing-index
+bound nor a norm-convergent sharp M\"obius truncation; the latter was
+excluded in NS-62/66. No interchange of those two limits is made.
+
+\subsection{Complete cell integrals and explicit tails}
+\label{subsec:ns78-tails}
+For $m\geq1$, put $a=\log m$, $d=\log(m+1)$ and
+\[
+ I_{1,m}=\frac{a+1}{m}-\frac{d+1}{m+1},\qquad
+ I_{2,m}=\frac{a^2+2a+2}{m}-\frac{d^2+2d+2}{m+1}.
+\]
+The exact cell contribution is
+\begin{equation}
+ \int_m^{m+1}\frac{r(t)^2}{t^2}dt
+ =\eta^2+D_m^2I_{2,m}+L_m^2w_m
+ -\eta D_m(d^2-a^2)+2\eta L_m(d-a)-2D_mL_mI_{1,m}.
+ \label{eq:ns78-exact-cell}
+\end{equation}
+The signed cross terms are evaluated before accumulating cell energies.
+
+We also need a complete tail, since $m$ extends indefinitely even when
+$c$ has finite support. Write
+\[
+ u=\alpha-\tfrac12\sum c_n,\qquad
+ v=\tfrac12\sum c_n\log n-\tfrac12\log(2\pi)\sum c_n,
+ \qquad D=\tfrac16\sum n|c_n|.
+\]
+For $t\geq N$,
+\begin{equation}
+ r(t)=u\log t+v+e(t),\qquad |e(t)|\leq D/t.
+ \label{eq:ns78-complete-asymptotic}
+\end{equation}
+Indeed $A'(z)=\{z\}/z$ almost everywhere and Stirling's formula at
+integer endpoints identifies the limiting constant
+$A(z)-\tfrac12\log z\to\tfrac12\log(2\pi)$.
+Using the periodic Bernoulli polynomials,
+\[
+ A(z)-\tfrac12\log(2\pi z)
+ =-\int_z^\infty\frac{B_1(\{t\})}{t}dt
+ =\frac{B_2(\{z\})}{2z}
+       -\frac12\int_z^\infty\frac{B_2(\{t\})}{t^2}dt.
+\]
+The first integral is an improper convergent integral; the second is
+absolutely convergent. Since $|B_2|\leq1/6$, the remainder is at most
+$1/(6z)$. The periodic $B_2$ is continuous at integer joins, so no
+endpoint mass is discarded. Summing this bound gives
+\eqref{eq:ns78-complete-asymptotic}.
+
+Fix an integer $M\geq N$ and put $q=u\log M+v$. The complete
+main-tail energy and remainder budget are
+\[
+ T_M=\frac{q^2+2uq+2u^2}{M},\qquad
+ U_M=\frac{D^2}{3M^3}.
+\]
+Thus the actual integral from $M$ to infinity differs from $T_M$ by
+at most $2\sqrt{T_MU_M}+U_M$. For the infinite sample tail, set
+$Q=|q|+(D+|u|)/M$. Then
+\begin{equation}
+ \sum_{m\geq M}w_m(z_m^2+z_{m+1}^2)
+ \leq \frac{2(Q^2+2|u|Q+2u^2)}{M}.
+ \label{eq:ns78-sampling-tail}
+\end{equation}
+To verify this last bound, on each $m\leq t\leq m+1$ both endpoint
+values have absolute value at most $Q+|u|\log(t/M)$:
+use~\eqref{eq:ns78-complete-asymptotic} and
+$\log((m+1)/t)\leq1/M$. Integrating the square with measure $dt/t^2$
+and summing all cells proves~\eqref{eq:ns78-sampling-tail}.
+These are bounds on the complete tails, not estimates based on a zero
+prefix or an unmeasured remainder.
+
+\paragraph{Independent complete physical-space check.}
+For the actual optimized coefficients at $N=16,64,256$, the interval
+calculation accumulates every cell through $M=65536$ and encloses the
+entire remaining physical and sample tails by the formulas above.
+At both 256 and 384 bits, the resulting complete physical norm encloses
+the independently evaluated full Gram norm. The complete ratios satisfy
+\[
+ \mathcal S(c_{16})/E_{16}\in(3.323,3.325),\qquad
+ \mathcal S(c_{64})/E_{64}\in(2.9002,2.9004),\qquad
+ \mathcal S(c_{256})/E_{256}\in(2.644,2.646).
+\]
+The analytic physical-tail uncertainty divided by $E_N$ is below
+$1.64\cdot10^{-6}$, $5.20\cdot10^{-6}$ and $2.38\cdot10^{-4}$,
+respectively. Replaying $N=256$ with $M=131072$ and the doubled complete
+Gram-kernel cutoff reduces that tail ratio below $4.17\cdot10^{-5}$.
+All solves retain Arb balls. The precise finite part, main tail and
+remainder radius are archived separately; the printed combined decimal
+balls may be wider due to decimal serialization. Thirty exact Maxima
+checks cover the cell, mass, interpolation and tail identities.
+This is an independent norm evaluation on finite coefficient vectors,
+not a cofinal estimate of their sample sums.
+
+\section{Balancing the exterior tail of divisor feedback (NS-79)}
+\label{sec:ns79-balanced-feedback}
+
+The sampling norm isolates the exterior coefficient $\eta$. We therefore
+test whether removing its change repairs the failed NS-75 step. This is
+an explicitly modified correction, not a reinterpretation of that test.
+Let $a_n^{(p)}=-r_N(n)\log^p(2N/n)$ be the three original new-block
+physical directions, with the constant convention for $p=0$. Define
+\begin{equation}
+ \widetilde a_n^{(p)}=a_n^{(p)}\quad(N<n<2N),\qquad
+ \widetilde a_{2N}^{(p)}=-2N\sum_{n=N+1}^{2N-1}\frac{a_n^{(p)}}n.
+ \label{eq:ns79-balance}
+\end{equation}
+
+\begin{proposition}[Exact tail balance and its scope]
+\label{prop:ns79-balance}
+Each raw correction $f_p=\sum_{n=N+1}^{2N}\widetilde a_n^{(p)}\sigma_n$
+vanishes for $x>1/(N+1)$. Thus the held-old step preserves $\eta$.
+For $p=0$ it cancels the new derivative jumps for $N<m<2N$, leaving
+the jump at $m=2N$ unconstrained. It is not an exact cancellation of
+the entire next block.
+
+The original three-direction span augmented by the physical endpoint
+atom $\sigma_{2N}$ equals the balanced three-direction span augmented
+by that atom. This identity persists after the complete old-space
+projection. No assertion of norm descent follows from these identities.
+\end{proposition}
+\begin{proof}
+The weighted coefficient sum in~\eqref{eq:ns79-balance} is zero.
+For $x>1/(N+1)$ every new atom equals $1/(nx)$, proving vanishing
+and tail preservation. In the open block each proper divisor is old,
+so the NS-75 jump argument applies at every index except the modified
+last one. More explicitly, for $N<t<2N$ the held-old updated residual
+has one formula $-\eta t+D_N\log t-L_N$, with $D_N,L_N$ from NS-78;
+no new jumps occur inside this open interval.
+
+The difference between each original and balanced physical vector is
+a multiple of the same endpoint coordinate. Hence augmenting either
+span by that coordinate gives the same space; applying any linear
+old-space projection preserves this equality. In adjacent-difference
+coordinates the endpoint atom has vector $v_n=n/(2N)$, modulo its
+old boundary term. The transformation is retained exactly in the
+finite calculation.
+\end{proof}
+
+Old-space reoptimization can change $\eta$ again. The projected gains
+below therefore do not preserve the raw tail balance. Conversely,
+repeating only raw tail-preserving steps with a fixed nonzero initial
+$\eta$ can never reduce squared error below $\eta^2$, because the
+exterior tail remains unchanged. This observation does not exclude
+initialization with $\eta=0$ or algorithms that reoptimize old coefficients.
+
+\paragraph{Certified finite outcome.}
+At 256/384 bits, with a doubled complete-kernel cutoff at $N=256$,
+the fractions of full projected gain have the following strict enclosures.
+\begin{center}
+\begin{tabular}{rccc}
+\hline
+$N$&Balanced three-span&Endpoint-augmented four-span&Diagonal curvature\\
+\hline
+16&(.5960,.5961)&(.8542,.8543)&(.9308,.9310)\\
+32&(.6580,.6581)&(.8240,.8241)&(.9040,.9041)\\
+64&(.8978,.8979)&(.9192,.9193)&(.9783,.9784)\\
+128&(.8809,.8810)&(.8810,.8811)&(.9852,.9854)\\
+256&(.5996,.5997)&(.7118,.7119)&(.9763,.9764)\\
+\hline
+\end{tabular}
+\end{center}
+Thus removing the tail change improves the $N=256$ three-span fraction
+from $56.02\%$ to $59.97\%$, and the full four-span reaches $71.18\%$;
+both remain below curvature's $97.63\%$. The raw untapered unit step
+at $N=256$ still increases squared error by a factor in $(53.07,53.09)$,
+although this is smaller than NS-75's factor above $1495$.
+Thirteen of the fifteen raw balanced unit steps increase error. The two
+exceptions are the linear and quadratic tapers at $N=128$, whose error
+ratios lie in $(.9643,.9645)$ and $(.9890,.9893)$. This is neither a
+uniform-descent theorem nor an exclusion of all balanced feedback.
+Sixteen exact Maxima checks cover endpoint compensation, coordinate
+conversion and the complete exterior floor. The four-dimensional span
+keeps all cross terms; no mixed term is discarded to claim positivity.
+
+\section{A uniform preconditioner that retains arithmetic (NS-80)}
+\label{sec:ns80-arithmetic-preconditioner}
+
+The complete sampling comparison also bounds every finite Gram matrix.
+Its comparator retains the arithmetic values $A(m/n)$ at \emph{all}
+integer knots; it is not the smooth model from NS-70. This gives a
+uniform finite-block efficiency theorem, but neither a fast inverse
+nor the cofinal lower bound on available gain needed for RH.
+
+Define the complete arithmetic sampling Gram
+\begin{equation}
+ Q_{ij}=\frac1{ij}+\sum_{m=1}^\infty\frac{
+ A(m/i)A(m/j)+A((m+1)/i)A((m+1)/j)}{m(m+1)}.
+ \label{eq:ns80-sampling-gram}
+\end{equation}
+The series converges by NS-78 and Cauchy--Schwarz. For any finite
+coefficient vector, its quadratic form is exactly the complete
+sampling quantity for the corresponding pure atom combination.
+Thus on every finite index set,
+\begin{equation}
+ \frac1{16}Q\preceq G\preceq\frac{21}{16}Q.
+ \label{eq:ns80-full-comparison}
+\end{equation}
+Both matrices are positive definite: zero physical norm forces zero
+samples and exterior coefficient, and the exact inversion in NS-78
+then forces every coefficient to vanish.
+
+\begin{proposition}[Uniform efficiency with the full arithmetic comparator]
+\label{prop:ns80-uniform-efficiency}
+Use the ordered basis consisting of the old $N$ atoms and the new
+adjacent differences. Let $H_G,H_Q$ be the respective Schur complements
+of the old blocks in their complete Grams. Then
+\[
+ \frac1{16}H_Q\preceq H_G\preceq\frac{21}{16}H_Q.
+\]
+For any nonzero \emph{actual} residual correlation vector $g$, set
+$v=H_Q^{-1}g$. Its optimally scaled true gain satisfies
+\begin{equation}
+ \frac{(g^Tv)^2}{v^TH_Gv}
+ \geq\frac{21}{121}\,g^TH_G^{-1}g.
+ \label{eq:ns80-gain-fraction}
+\end{equation}
+This is uniform in $N$ and $g$. All old projections and all cross terms
+are included. It is a fraction of the full available block gain, not
+of the current residual energy.
+\end{proposition}
+\begin{proof}
+The full comparison survives the invertible change to adjacent
+coordinates. For each new vector $v$, the Schur quadratic form is the
+minimum of the complete quadratic form over old coordinates. Taking
+those minima on both sides preserves the same two constants; the old
+minimizers need not agree.
+
+More generally put $a=1/16$, $b=21/16$ and
+$M=H_Q^{-1/2}H_GH_Q^{-1/2}$. Its eigenvalues lie in $[a,b]$.
+With $s=H_Q^{-1/2}g$, normalize its squared spectral coordinates to
+probability weights and write $x=\mathbb E\lambda$,
+$y=\mathbb E\lambda^{-1}$. For $a\leq\lambda\leq b$,
+\[
+ \lambda+\frac{ab}{\lambda}\leq a+b,
+ \qquad x+aby\leq a+b,
+ \qquad xy\leq\frac{(a+b)^2}{4ab}.
+\]
+The final inequality follows from $(x-aby)^2\geq0$.
+The ratio of the selected gain to the full gain is precisely
+$1/(xy)$, hence is at least $4ab/(a+b)^2=21/121$.
+This is the usual elementary Kantorovich argument, displayed here
+to make every hypothesis and normalization explicit.
+\end{proof}
+
+\paragraph{Repeated steps within a fixed finite block.}
+Start at $x_0=0$ and minimize the exact block quadratic
+$\Phi(x)=x^TH_Gx-2g^Tx$. At each step use the current residual
+$r_k=g-H_Gx_k$, direction $p_k=H_Q^{-1}r_k$, and the exact line search
+\[
+ x_{k+1}=x_k+\frac{r_k^Tp_k}{p_k^TH_Gp_k}p_k,
+\]
+with termination if $r_k=0$. The remaining block gain is
+$r_k^TH_G^{-1}r_k$, so Proposition~\ref{prop:ns80-uniform-efficiency}
+reduces it by at least $21/121$ each time. After $k$ steps the captured
+fraction of full gain is therefore at least
+\[
+ 1-(100/121)^k.
+\]
+In particular twenty ideal steps capture more than $97.79\%$, uniformly
+in block size. This statement assumes application of the complete
+$H_Q^{-1}$ and the true $H_G$; no implementation or complexity bound for
+that infinite-sample comparator is asserted. Truncating its sum without
+a certified tail would invalidate the theorem's premises.
+
+For completeness, minimizing the full sampling objective over the first
+$N$ coefficients gives a residual with squared error at most $21E_N$:
+apply both bounds of NS-78 before and after the two minimizations.
+This uniform approximation factor is also not a decay estimate for $E_N$.
+
+\paragraph{The remaining obstruction.}
+Even perfect capture of every block gain does not prove that the limiting
+error is zero. The full block gains telescope to $E_N-E_\infty$, and
+NS-76 exhibits a component invisible to all of them. A lower estimate
+for available gain relative to the entire current error remains essential.
+The present theorem preserves arithmetic in its comparator and supplies a
+uniform finite-block efficiency guarantee; it does not provide that lower
+estimate, a fast computable replacement for $H_Q$, a bound for the earlier
+smooth curvature rule, G2 or RH.

@@ -1,0 +1,42 @@
+/* Reciprocal-knot norm geometry, exact integrals and complete tail primitives. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+h:log(m+1)-log(m)$
+th:(log(t)-log(m))/h$
+left:-et*m+dd*log(m)-ll$
+right:-et*(m+1)+dd*log(m+1)-ll$
+check("Exact log-linear reconstruction",(1-th)*left+th*right+et*(th-(t-m))-(-et*t+dd*log(t)-ll))$
+check("Uniform mass integral",integrate(((1-y)*a+y*d)^2,y,0,1)-(a^2+a*d+d^2)/3)$
+check("Lower mass slack",(a^2+a*d+d^2)/3-(a^2+d^2)/6-(a+d)^2/6)$
+check("Upper mass slack",(a^2+d^2)/2-(a^2+a*d+d^2)/3-(a-d)^2/6)$
+check("Change of measure",diff(m*exp(h*y),y)/(m*exp(h*y))^2-h*exp(-h*y)/m)$
+check("Concavity second derivative",diff(log(m+y)/h,y,2)+1/(h*(m+y)^2))$
+check("Cell weights telescope",1/(m*(m+1))-(1/m-1/(m+1)))$
+check("Young square",et^2/4+4*gg*vv-2*et*z-(et/2-2*z)^2-4*(gg*vv-z^2))$
+check("Upper constant",1+1/16+1/4-21/16)$
+check("Lower constant",(3/4)*(1/12)-1/16)$
+P0:-1/t$
+P1:-(log(t)+1)/t$
+P2:-(log(t)^2+2*log(t)+2)/t$
+for j:0 thru 2 do check(sconcat("Cell log moment primitive ",j),diff([P0,P1,P2][j+1],t)-log(t)^j/t^2)$
+primitive:et^2*t+dd^2*P2+ll^2*P0-et*dd*log(t)^2+2*et*ll*log(t)-2*dd*ll*P1$
+check("Complete cell primitive including cross terms",diff(primitive,t)-(-et*t+dd*log(t)-ll)^2/t^2)$
+check("Bernoulli derivative",diff(y^2-y+1/6,y)-2*(y-1/2))$
+check("Bernoulli maximum slack",1/6-(y^2-y+1/6)-y*(1-y))$
+check("Bernoulli minimum slack",(y^2-y+1/6)+1/12-(y-1/2)^2)$
+tailprimitive:-((q+u*log(t/M))^2+2*u*(q+u*log(t/M))+2*u^2)/t$
+check("Complete main tail primitive",diff(tailprimitive,t)-(q+u*log(t/M))^2/t^2)$
+check("Complete main tail endpoint",-subst(M,t,tailprimitive)-(q^2+2*u*q+2*u^2)/M)$
+check("Tail endpoint at infinity",limit(tailprimitive,t,inf))$
+check("Complete squared remainder primitive",diff(-D^2/(3*t^3),t)-D^2/t^4)$
+check("Exact sample-to-slope inverse",(right-left+et)/h-dd)$
+mutab:[1,-1,-1,0,-1,1,-1,0]$
+defect(k):=block([ans:if k=1 then alpha else 0],
+ for j:1 thru k do if mod(k,j)=0 then ans:ans+concat(c,j),ans)$
+for n:1 thru 8 do block([ans:0],
+ for d:1 thru n do if mod(n,d)=0 then ans:ans+mutab[n/d]*defect(d),
+ check(sconcat("Exact divisor inversion n=",n),ans-alpha*mutab[n]-concat(c,n)))$
+print("PASS:",length(checks),"exact checks; infinite tails are retained analytically.")$

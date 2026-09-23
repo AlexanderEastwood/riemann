@@ -986,6 +986,33 @@
       "prop": "prop:ns77-tail-budget",
       "evidence": "evidence/v162/ns77",
       "note": "Published finite-height information implies continuous squared distance <2.08e-32; not an integer upper bound or zero-distance proof."
+    },
+    {
+      "id": "nbarithmeticsampling",
+      "title": "Complete reciprocal-knot norm and exact divisor inversion",
+      "status": "proved",
+      "parent": "nbdivisorfeedback",
+      "prop": "prop:ns78-sampling; eq:ns78-sample-inverse",
+      "evidence": "evidence/v163/ns78",
+      "note": "S/16 <= squared norm <=21 S/16, all cells and tails retained. No cofinal vanishing sample sum."
+    },
+    {
+      "id": "nbbalancedfeedback",
+      "title": "Tail-balanced divisor feedback control",
+      "status": "proved",
+      "parent": "nbarithmeticsampling",
+      "prop": "prop:ns79-balance",
+      "evidence": "evidence/v163/ns79",
+      "note": "Preserves exterior coefficient but leaves final jump. Endpoint-augmented span captures 71.18% at N=256; no uniform raw descent."
+    },
+    {
+      "id": "nbarithmeticpreconditioner",
+      "title": "Uniform efficiency using the full arithmetic sampling Gram",
+      "status": "proved",
+      "parent": "nbarithmeticsampling",
+      "prop": "prop:ns80-uniform-efficiency",
+      "evidence": "evidence/v163/ns80",
+      "note": "Projected condition ratio <=21, one-step capture >=21/121, twenty-step capture >97.79%. Complete comparator inverse assumed; no fast inverse or cofinal relative contraction."
     }
   ]
 }

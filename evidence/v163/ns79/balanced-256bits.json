@@ -1,0 +1,314 @@
+{
+  "classification": "certified finite tail-balanced divisor feedback and endpoint-augmented span; no cofinal estimate",
+  "precision_bits": 256,
+  "finite_series_cutoff": 128,
+  "bernoulli_order": 24,
+  "source_sha256": "32991a98a54f834243e2c28c2b1bfde6f2908bf35eb4366c1b4f868016597122",
+  "dependency_sha256": {
+    "kernel": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+    "projection": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+    "curvature": "bdd12e937263e662ea26983ba9be9dd1e0a2f758d7bf42adddd53830f7d442d6"
+  },
+  "rows": [
+    {
+      "N": 16,
+      "seconds": 0.625,
+      "quantities": {
+        "energy": "[3.194767768109205273935131839275966013e-5 +/- 5.63e-42]",
+        "full_relative_gain": "[0.237284828329962843680199877406439284 +/- 5.57e-37]",
+        "three_direction_span_fraction": "[0.596058436941955821117539889160000 +/- 6.32e-34]",
+        "three_direction_span_relative_gain": "[0.1414356238843979698504170648338046 +/- 5.45e-35]",
+        "curvature_energy_fraction_in_span": "[0.554416237250633045408925572300 +/- 4.04e-31]",
+        "endpoint_augmented_span_fraction": "[0.854216358087657246999278615726264 +/- 7.54e-34]"
+      },
+      "directions": {
+        "balanced_divisor_cancellation": {
+          "numerator": "[-3.96518635710770916370697068333480627007e-5 +/- 8.24e-44]",
+          "true_projected_cost": "[0.00260743280928075653431782297733441685662 +/- 5.45e-42]",
+          "fraction_of_full_gain": "[0.079543521784983527871403985153213485 +/- 3.62e-37]",
+          "relative_gain": "[0.01887447091151047603831039406683524097 +/- 4.34e-39]",
+          "held_old_unit_step_error_ratio": "[708.8052739032636236830579392087108037 +/- 4.45e-35]",
+          "held_old_optimal_step_relative_gain": "[0.0021840400007875671568619518672949556481 +/- 8.98e-41]"
+        },
+        "balanced_linear_defect": {
+          "numerator": "[-2.94141978186161986130435322665943661700e-5 +/- 8.25e-44]",
+          "true_projected_cost": "[0.00114396560181947763289037930129889728392 +/- 4.84e-42]",
+          "fraction_of_full_gain": "[0.099768119598578625068423160642187734 +/- 3.75e-37]",
+          "relative_gain": "[0.02367346113175193054521056251083001480 +/- 2.50e-39]",
+          "held_old_unit_step_error_ratio": "[307.7557509905556083840408843903598490 +/- 2.53e-35]",
+          "held_old_optimal_step_relative_gain": "[0.002780081716078931081073808852835058391 +/- 4.05e-40]"
+        },
+        "balanced_quadratic_defect": {
+          "numerator": "[-2.02685548636465644349462465456450817859e-5 +/- 7.86e-44]",
+          "true_projected_cost": "[0.00051236098908867394342457006959300000544 +/- 5.20e-42]",
+          "fraction_of_full_gain": "[0.105769450777711361238842994514089381 +/- 4.17e-37]",
+          "relative_gain": "[0.02509748597034369533831129611239496088 +/- 4.31e-39]",
+          "held_old_unit_step_error_ratio": "[137.02727998991139143869167009291877832 +/- 8.81e-36]",
+          "held_old_optimal_step_relative_gain": "[0.002986833879598600255359853010419321227 +/- 2.43e-40]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[4.821212396013633417655825557975127e-6 +/- 4.28e-40]",
+          "true_projected_cost": "[3.293829635545640189343145324088743e-6 +/- 5.80e-40]",
+          "fraction_of_full_gain": "[0.930898072868598894402749936411478 +/- 3.45e-34]",
+          "relative_gain": "[0.2208879894133187305594874930553082 +/- 7.97e-35]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[0.63125397412371947339958804759276725 +/- 7.26e-36]",
+        "[-0.0724528242349818189932885280050380 +/- 2.72e-35]",
+        "[-1.3527256711206335076060104671301337 +/- 6.32e-35]"
+      ],
+      "minimum_accuracy_bits": 102,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "all_but_last_raw_new_jumps_cancel": true,
+        "raw_tail_coefficient_preserved": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    },
+    {
+      "N": 32,
+      "seconds": 2.012,
+      "quantities": {
+        "energy": "[2.43669784669931395762958244676788980e-5 +/- 1.43e-41]",
+        "full_relative_gain": "[0.18912807038823539269388365966485304 +/- 8.43e-36]",
+        "three_direction_span_fraction": "[0.658010414586066146826210954292 +/- 5.87e-31]",
+        "three_direction_span_relative_gain": "[0.1244482400060254709450644860196 +/- 3.64e-32]",
+        "curvature_energy_fraction_in_span": "[0.583338118834708756144495528 +/- 3.73e-28]",
+        "endpoint_augmented_span_fraction": "[0.824020506177217139599520894336 +/- 6.01e-31]"
+      },
+      "directions": {
+        "balanced_divisor_cancellation": {
+          "numerator": "[3.895790153900335402126756424596513328e-5 +/- 5.70e-42]",
+          "true_projected_cost": "[0.002031972249447203749045523373045985335 +/- 3.59e-40]",
+          "fraction_of_full_gain": "[0.16207486466330111532590337051075266 +/- 8.89e-36]",
+          "relative_gain": "[0.0306529064122045384988002822260400144 +/- 6.62e-38]",
+          "held_old_unit_step_error_ratio": "[761.243612240327935642453363354933827 +/- 5.11e-34]",
+          "held_old_optimal_step_relative_gain": "[0.00334820586588184053024618645993212682 +/- 3.66e-39]"
+        },
+        "balanced_linear_defect": {
+          "numerator": "[2.570790745068104648776158211072544102e-5 +/- 4.28e-42]",
+          "true_projected_cost": "[0.000971482215472621386030689964198918563 +/- 5.29e-40]",
+          "fraction_of_full_gain": "[0.14761854821229209490474352878781520 +/- 7.60e-36]",
+          "relative_gain": "[0.0279188111769034992196911965964310232 +/- 3.46e-38]",
+          "held_old_unit_step_error_ratio": "[357.883502320060824093725433833080102 +/- 5.16e-34]",
+          "held_old_optimal_step_relative_gain": "[0.00310058352069785704902703541764790265 +/- 4.20e-39]"
+        },
+        "balanced_quadratic_defect": {
+          "numerator": "[1.6972033933508261105821330670922074410e-5 +/- 6.67e-43]",
+          "true_projected_cost": "[0.0004518330187091195486195713767143596243 +/- 5.03e-41]",
+          "fraction_of_full_gain": "[0.1383350230895343859629835264745300 +/- 3.12e-35]",
+          "relative_gain": "[0.0261630359840356276282970113169280397 +/- 5.41e-38]",
+          "held_old_unit_step_error_ratio": "[164.166281127989360214782201208667046 +/- 2.23e-34]",
+          "held_old_optimal_step_relative_gain": "[0.00294809821910889996429224965657148095 +/- 4.32e-39]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[2.7196019523173049454533928073775e-6 +/- 4.05e-38]",
+          "true_projected_cost": "[1.7752823267556205137586341788200e-6 +/- 8.99e-38]",
+          "fraction_of_full_gain": "[0.9040357142881961847874087425900 +/- 6.90e-32]",
+          "relative_gain": "[0.1709785302053766287561794324590 +/- 5.37e-32]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[0.14486116779911120973076766759344 +/- 5.94e-33]",
+        "[2.3750558868384600955585668311806 +/- 2.12e-32]",
+        "[-3.7513934220221218911218749579334 +/- 4.31e-32]"
+      ],
+      "minimum_accuracy_bits": 91,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "all_but_last_raw_new_jumps_cancel": true,
+        "raw_tail_coefficient_preserved": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    },
+    {
+      "N": 64,
+      "seconds": 8.816,
+      "quantities": {
+        "energy": "[1.9758498848339044931093888638682217e-5 +/- 3.85e-40]",
+        "full_relative_gain": "[0.165203189369659992753117494535513 +/- 1.80e-34]",
+        "three_direction_span_fraction": "[0.8978281028649903694802853100397 +/- 4.74e-32]",
+        "three_direction_span_relative_gain": "[0.14832406609900757549104897426383 +/- 5.97e-33]",
+        "curvature_energy_fraction_in_span": "[0.847965284677347249573609660 +/- 6.04e-28]",
+        "endpoint_augmented_span_fraction": "[0.9192552001882468703638313297575 +/- 7.23e-32]"
+      },
+      "directions": {
+        "balanced_divisor_cancellation": {
+          "numerator": "[4.95401014173808042756797320660872416e-6 +/- 8.89e-42]",
+          "true_projected_cost": "[1.254392439325546986771705961224507e-5 +/- 4.34e-39]",
+          "fraction_of_full_gain": "[0.599387913865904700706239859055370 +/- 7.28e-34]",
+          "relative_gain": "[0.09902079504027450682273792159624670 +/- 7.16e-36]",
+          "held_old_unit_step_error_ratio": "[3.726504435622011916583386876333138 +/- 5.86e-34]",
+          "held_old_optimal_step_relative_gain": "[0.019475009165060077704776285792396963 +/- 7.98e-37]"
+        },
+        "balanced_linear_defect": {
+          "numerator": "[1.84814331522632208268281416085081086e-6 +/- 4.44e-42]",
+          "true_projected_cost": "[3.918396603689267716597638777707341e-6 +/- 2.77e-40]",
+          "fraction_of_full_gain": "[0.267048736048388410834500352254444 +/- 7.04e-34]",
+          "relative_gain": "[0.04411730291233025761287805598766934 +/- 4.07e-36]",
+          "held_old_unit_step_error_ratio": "[2.0480390854633080511297337733729923 +/- 5.86e-35]",
+          "held_old_optimal_step_relative_gain": "[0.007083647472139552080053457581923786 +/- 4.05e-37]"
+        },
+        "balanced_quadratic_defect": {
+          "numerator": "[7.6835618053112267303162706807668540e-7 +/- 2.28e-42]",
+          "true_projected_cost": "[1.5801211296097787232180368607627453e-6 +/- 6.43e-41]",
+          "fraction_of_full_gain": "[0.114462288320426367595705509320952 +/- 3.45e-34]",
+          "relative_gain": "[0.018909535093084018437530869125389033 +/- 5.50e-37]",
+          "held_old_unit_step_error_ratio": "[1.3841809438870984326275517639110046 +/- 5.10e-35]",
+          "held_old_optimal_step_relative_gain": "[0.0032735347772401872275054243113066148 +/- 8.89e-38]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[2.05340648747558439821476365835e-6 +/- 5.15e-36]",
+          "true_projected_cost": "[1.3203055143128728628105856161e-6 +/- 6.90e-35]",
+          "fraction_of_full_gain": "[0.9783698235019345826038774358 +/- 2.01e-29]",
+          "relative_gain": "[0.16162981522555092258113845615 +/- 7.43e-30]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[0.35257313371833464657187796072062 +/- 5.74e-33]",
+        "[2.1414979892360311535015793371022 +/- 6.10e-32]",
+        "[-3.6100252130549865904255261532144 +/- 3.65e-32]"
+      ],
+      "minimum_accuracy_bits": 89,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "all_but_last_raw_new_jumps_cancel": true,
+        "raw_tail_coefficient_preserved": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    },
+    {
+      "N": 128,
+      "seconds": 41.092,
+      "quantities": {
+        "energy": "[1.649433182143668081417340126620132e-5 +/- 4.84e-39]",
+        "full_relative_gain": "[0.14258929114605661299429183200771 +/- 8.30e-33]",
+        "three_direction_span_fraction": "[0.880935433013003080343957357359 +/- 7.42e-31]",
+        "three_direction_span_relative_gain": "[0.1256119589387685486196000031517 +/- 5.83e-32]",
+        "curvature_energy_fraction_in_span": "[0.8667942778254073290314569 +/- 5.40e-26]",
+        "endpoint_augmented_span_fraction": "[0.88101103564753866983781050048 +/- 5.74e-30]"
+      },
+      "directions": {
+        "balanced_divisor_cancellation": {
+          "numerator": "[2.2595129312310014937982003237485971e-6 +/- 9.29e-41]",
+          "true_projected_cost": "[3.0322922921165136317587430976329e-6 +/- 5.38e-38]",
+          "fraction_of_full_gain": "[0.7158746159950486733148521099858 +/- 7.52e-32]",
+          "relative_gain": "[0.10207605404418947157928148355773 +/- 2.61e-33]",
+          "held_old_unit_step_error_ratio": "[1.05241916041624020245987446415019 +/- 3.94e-33]",
+          "held_old_optimal_step_relative_gain": "[0.057493471118069724305097233453733 +/- 4.57e-34]"
+        },
+        "balanced_linear_defect": {
+          "numerator": "[6.218579680023012106365657040021355e-7 +/- 4.32e-41]",
+          "true_projected_cost": "[4.1038266526061761204737628569046e-7 +/- 5.75e-39]",
+          "fraction_of_full_gain": "[0.4006561024734926851948532578674 +/- 3.81e-32]",
+          "relative_gain": "[0.057129269645037141578392574428129 +/- 5.85e-34]",
+          "held_old_unit_step_error_ratio": "[0.964392966448411486094449500088100 +/- 6.58e-34]",
+          "held_old_optimal_step_relative_gain": "[0.035717246930640696687648331778554 +/- 3.23e-34]"
+        },
+        "balanced_quadratic_defect": {
+          "numerator": "[2.174981798493720315564303484064969e-7 +/- 4.78e-41]",
+          "true_projected_cost": "[7.2251395525562117503455345068896e-8 +/- 6.97e-40]",
+          "fraction_of_full_gain": "[0.2783834269323807238120706074434 +/- 5.17e-32]",
+          "relative_gain": "[0.039694495513098212801917414336579 +/- 7.83e-34]",
+          "held_old_unit_step_error_ratio": "[0.989132318898650950461529639153760 +/- 7.21e-34]",
+          "held_old_optimal_step_relative_gain": "[0.0112143935141450751021370853276698 +/- 4.64e-35]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[1.453395289665033172395765465e-6 +/- 4.87e-34]",
+          "true_projected_cost": "[9.1154433282793285842822736e-7 +/- 8.19e-33]",
+          "fraction_of_full_gain": "[0.9852990502825881598192362 +/- 1.47e-26]",
+          "relative_gain": "[0.14049309314667703742438684 +/- 4.99e-27]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[1.070814412758877291308304952128 +/- 4.19e-31]",
+        "[-1.748759059183440662367627921805 +/- 9.76e-31]",
+        "[3.401619611167886116622004596345 +/- 7.06e-31]"
+      ],
+      "minimum_accuracy_bits": 84,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "all_but_last_raw_new_jumps_cancel": true,
+        "raw_tail_coefficient_preserved": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    },
+    {
+      "N": 256,
+      "seconds": 241.49,
+      "quantities": {
+        "energy": "[1.41424167390901796560441032518723e-5 +/- 8.92e-38]",
+        "full_relative_gain": "[0.083268098705233270663909938729 +/- 6.24e-31]",
+        "three_direction_span_fraction": "[0.599658935307357816667021835 +/- 8.83e-28]",
+        "three_direction_span_relative_gain": "[0.049932459414648163028941543 +/- 4.29e-28]",
+        "curvature_energy_fraction_in_span": "[0.53813093248680362011 +/- 4.18e-21]",
+        "endpoint_augmented_span_fraction": "[0.7118431635549616251500689 +/- 5.34e-26]"
+      },
+      "directions": {
+        "balanced_divisor_cancellation": {
+          "numerator": "[2.64662071443205210295303686697121e-6 +/- 6.47e-39]",
+          "true_projected_cost": "[6.894827103694947469024764779905e-5 +/- 4.78e-36]",
+          "fraction_of_full_gain": "[0.086269594255545168042346064567 +/- 3.30e-31]",
+          "relative_gain": "[0.007183505089731160211663115781801 +/- 4.10e-34]",
+          "held_old_unit_step_error_ratio": "[53.079398177902392823403558400566 +/- 5.73e-31]",
+          "held_old_optimal_step_relative_gain": "[0.00066766743703172911506105699804183 +/- 8.45e-36]"
+        },
+        "balanced_linear_defect": {
+          "numerator": "[1.50166915708100729730829006092046e-6 +/- 4.13e-39]",
+          "true_projected_cost": "[3.394854289842324616343186279381e-5 +/- 5.21e-36]",
+          "fraction_of_full_gain": "[0.056405974150196846482809193080 +/- 3.25e-31]",
+          "relative_gain": "[0.004696818223103427367148791235444 +/- 5.41e-34]",
+          "held_old_unit_step_error_ratio": "[26.767432528767969720200377491886 +/- 2.46e-31]",
+          "held_old_optimal_step_relative_gain": "[0.00043397580490305606723978358269020 +/- 7.74e-36]"
+        },
+        "balanced_quadratic_defect": {
+          "numerator": "[9.9355174046560093326773715878341e-7 +/- 2.00e-39]",
+          "true_projected_cost": "[1.9861490908884527455471876888058e-5 +/- 4.28e-37]",
+          "fraction_of_full_gain": "[0.042205286447265643035736765069 +/- 1.35e-31]",
+          "relative_gain": "[0.003514353957773559596845087591933 +/- 4.85e-34]",
+          "held_old_unit_step_error_ratio": "[15.423453432100533779976660803143 +/- 5.62e-31]",
+          "held_old_optimal_step_relative_gain": "[0.00033888647472773705936497392720420 +/- 4.71e-36]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[7.14002641175825738038730e-7 +/- 4.62e-31]",
+          "true_projected_cost": "[4.4341564092234533169894e-7 +/- 2.52e-30]",
+          "fraction_of_full_gain": "[0.97630687913663699355812 +/- 5.87e-24]",
+          "relative_gain": "[0.081295217578547738115228 +/- 4.60e-25]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[0.0847394269913842471445386064 +/- 9.27e-29]",
+        "[2.879526847568788099766263169 +/- 4.25e-28]",
+        "[-3.867140452227527567039870110 +/- 7.88e-28]"
+      ],
+      "minimum_accuracy_bits": 69,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "all_but_last_raw_new_jumps_cancel": true,
+        "raw_tail_coefficient_preserved": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    }
+  ]
+}

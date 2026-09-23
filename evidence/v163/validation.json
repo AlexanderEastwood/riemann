@@ -1,0 +1,131 @@
+{
+  "classification": "local integration validation; no independent review or RH proof",
+  "version": "v1.63",
+  "date": "2026-09-23",
+  "tasks": [
+    "NS-78",
+    "NS-79",
+    "NS-80"
+  ],
+  "publication_base_commit": "827e5b40727f6aaae719142e66925baf94fb0bd8",
+  "manuscript": {
+    "pages": 350,
+    "warning_counts": {
+      "undefined_or_duplicate_references": 0,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0,
+      "latex_warnings": 0,
+      "pdftex_warnings": 0,
+      "duplicate_pdf_destinations": 0
+    },
+    "proof_fragment_integrated_verbatim_once": true,
+    "proof_sha256": "c48e75b3d964b6f906eb1a07a49f1993c49f3ab9ce26ec2a24580dfb5f8d7367",
+    "main_tex_sha256": "e41f3436420df23ca4e87de762dd68c5533dcd17a5dce120414a26370323a2ea",
+    "pdf_sha256": "644fd65009e5cc60a23362ca35b8ad81edbbbd6401262b8c47f1f7143e479b82",
+    "new_section_visual_review_pages": [
+      10,
+      11,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326
+    ]
+  },
+  "maxima_exact_checks": {
+    "NS-78": 30,
+    "NS-79": 16,
+    "NS-80": 10
+  },
+  "maxima_total": 56,
+  "arb_precisions_bits": [
+    256,
+    384
+  ],
+  "replays": {
+    "status": "PASS",
+    "precision_bits": [
+      256,
+      384
+    ],
+    "groups": {
+      "ns78": {
+        "precision_enclosure_matches": 45,
+        "complete_cutoff_overlap_matches": 9,
+        "published_gram_overlap_checks": 7,
+        "complete_reconstructed_norm_contains_gram_checks": 7,
+        "source_sha256": "2b425911e1421097f498eecd2eec5feaae7edd61bca644ed4353ffd508db92c5",
+        "largest_complete_tail_radius_over_energy": "[4.16647715002060010355442590137314643126e-5 +/- 4.86e-44]"
+      },
+      "ns79": {
+        "precision_enclosure_matches": 155,
+        "doubled_cutoff_matches": 31,
+        "published_overlap_matches": 20,
+        "source_sha256": "32991a98a54f834243e2c28c2b1bfde6f2908bf35eb4366c1b4f868016597122",
+        "table_intervals_verified": 15,
+        "raw_unit_increases": 13,
+        "raw_unit_decreases": [
+          [
+            128,
+            "balanced_linear_defect"
+          ],
+          [
+            128,
+            "balanced_quadratic_defect"
+          ]
+        ],
+        "minimum_nonzero_serialized_accuracy_bits": 66
+      }
+    },
+    "cofinal_arithmetic_bound": false,
+    "independent_review": false
+  },
+  "python_diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "scope": "all new v163 scientific Python"
+  },
+  "source_sha256": {
+    "ns78/certify_cells.py": "2b425911e1421097f498eecd2eec5feaae7edd61bca644ed4353ffd508db92c5",
+    "ns78/exact-checks.mac": "c25495174b58a355cbfb80a5056d1ab23d750c79a1c9c18589562a07fef6d5aa",
+    "ns78/proof.tex": "3dac51b901eb8590d4640e39dcbdaf5cd8ccf2276bf748e4430cde7de2ec5dcc",
+    "ns79/certify_balanced.py": "32991a98a54f834243e2c28c2b1bfde6f2908bf35eb4366c1b4f868016597122",
+    "ns79/exact-checks.mac": "5f597058f2a823fa131ac92b689e1a042dbcbc699b3b357cfe67388dfce3c6b7",
+    "ns79/proof.tex": "9318ac76a43c5031a6474f12f40cdb9052584db87831bc0e5b6c8c387dce4afd",
+    "ns80/exact-checks.mac": "25a41223d58105bd7526d9d5ad7543133862744400a2276fa61dbe7634796388",
+    "ns80/proof.tex": "fa6a558bb246e2fc01df68d4f0b9a69f95f0e8ac363d7ff04be9dd6e495fdd39",
+    "proof.tex": "c48e75b3d964b6f906eb1a07a49f1993c49f3ab9ce26ec2a24580dfb5f8d7367",
+    "verify_replays.py": "cbcea24856efa2ac8837a33b67fd86dc7988f97532192cfaff1f71e05fe86a9c"
+  },
+  "independent_review": false,
+  "open_inputs": [
+    "Cofinal decay of the complete signed arithmetic sample sum",
+    "Available block gain relative to the entire residual energy",
+    "Effective complete arithmetic sampling inverse",
+    "Original arithmetic Weil floor, API, G2 and RH"
+  ],
+  "limits": [
+    "All reciprocal cells and both tails retained in the sampling comparison",
+    "Exact inverse preserves infinitely many finite-support arithmetic constraints",
+    "Fixed-index coefficient limits do not justify sharp Mobius norm convergence",
+    "Thirteen balanced raw steps increase error; two decrease it at N128",
+    "Old-space projection need not preserve raw tail balance",
+    "Uniform block efficiency assumes the complete arithmetic comparator inverse",
+    "Available block gain is not the entire residual energy"
+  ],
+  "literature_scope": {
+    "Baez_Duarte_strengthening": "https://arxiv.org/pdf/math/0202141",
+    "general_strong_criterion_hypotheses_not_applied_directly": "https://arxiv.org/pdf/math/0505453"
+  },
+  "publication_authorization": "User requested PRs and subsequently explicitly allowed validated merges and version tags.",
+  "html_checks": {
+    "balanced_nesting": true,
+    "local_links_resolve": true,
+    "inline_styles_only": true,
+    "browser_visual_review": false,
+    "preview": "Codex file preview; prior local browser restriction respected"
+  }
+}

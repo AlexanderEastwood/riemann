@@ -1,0 +1,23 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v163/ns79/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+for N in [2,3,4] do
+    block([a,b,original,balanced,mass],a:makelist(concat(a,k),k,N+1,2*N),
+          mass:sum(a[k-N]/k,k,N+1,2*N),b:copylist(a),
+          b[N]:-2*N*sum(a[k-N]/k,k,N+1,2*N-1),
+          check(sconcat("Exact tail balance N=",N),sum(b[k-N]/k,k,N+1,2*N)),
+          check(sconcat("Endpoint compensation N=",N),b[N]-a[N]+2*N*mass),
+          original:makelist(k*sum(a[j-N]/j,j,k,2*N),k,N+1,2*N),
+          balanced:makelist(k*sum(b[j-N]/j,j,k,2*N),k,N+1,2*N),
+          for k from N+1 thru 2*N do
+              check(sconcat("Difference-coordinate compensation N=",N," k=",
+                            k),balanced[k-N]-original[k-N]+k*mass))
+check("Complete exterior floor",integrate(et^2/x^2,x,1,inf)-et^2)
+print("PASS:",length(checks),
+      "exact checks; old reoptimization need not preserve tail balance.")
+PASS: 16 exact checks; old reoptimization need not preserve tail balance. 
+"/private/tmp/riemann-ns78/evidence/v163/ns79/exact-checks.mac"

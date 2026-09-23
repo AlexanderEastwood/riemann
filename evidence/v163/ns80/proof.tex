@@ -1,0 +1,104 @@
+\section{A uniform preconditioner that retains arithmetic (NS-80)}
+\label{sec:ns80-arithmetic-preconditioner}
+
+The complete sampling comparison also bounds every finite Gram matrix.
+Its comparator retains the arithmetic values $A(m/n)$ at \emph{all}
+integer knots; it is not the smooth model from NS-70. This gives a
+uniform finite-block efficiency theorem, but neither a fast inverse
+nor the cofinal lower bound on available gain needed for RH.
+
+Define the complete arithmetic sampling Gram
+\begin{equation}
+ Q_{ij}=\frac1{ij}+\sum_{m=1}^\infty\frac{
+ A(m/i)A(m/j)+A((m+1)/i)A((m+1)/j)}{m(m+1)}.
+ \label{eq:ns80-sampling-gram}
+\end{equation}
+The series converges by NS-78 and Cauchy--Schwarz. For any finite
+coefficient vector, its quadratic form is exactly the complete
+sampling quantity for the corresponding pure atom combination.
+Thus on every finite index set,
+\begin{equation}
+ \frac1{16}Q\preceq G\preceq\frac{21}{16}Q.
+ \label{eq:ns80-full-comparison}
+\end{equation}
+Both matrices are positive definite: zero physical norm forces zero
+samples and exterior coefficient, and the exact inversion in NS-78
+then forces every coefficient to vanish.
+
+\begin{proposition}[Uniform efficiency with the full arithmetic comparator]
+\label{prop:ns80-uniform-efficiency}
+Use the ordered basis consisting of the old $N$ atoms and the new
+adjacent differences. Let $H_G,H_Q$ be the respective Schur complements
+of the old blocks in their complete Grams. Then
+\[
+ \frac1{16}H_Q\preceq H_G\preceq\frac{21}{16}H_Q.
+\]
+For any nonzero \emph{actual} residual correlation vector $g$, set
+$v=H_Q^{-1}g$. Its optimally scaled true gain satisfies
+\begin{equation}
+ \frac{(g^Tv)^2}{v^TH_Gv}
+ \geq\frac{21}{121}\,g^TH_G^{-1}g.
+ \label{eq:ns80-gain-fraction}
+\end{equation}
+This is uniform in $N$ and $g$. All old projections and all cross terms
+are included. It is a fraction of the full available block gain, not
+of the current residual energy.
+\end{proposition}
+\begin{proof}
+The full comparison survives the invertible change to adjacent
+coordinates. For each new vector $v$, the Schur quadratic form is the
+minimum of the complete quadratic form over old coordinates. Taking
+those minima on both sides preserves the same two constants; the old
+minimizers need not agree.
+
+More generally put $a=1/16$, $b=21/16$ and
+$M=H_Q^{-1/2}H_GH_Q^{-1/2}$. Its eigenvalues lie in $[a,b]$.
+With $s=H_Q^{-1/2}g$, normalize its squared spectral coordinates to
+probability weights and write $x=\mathbb E\lambda$,
+$y=\mathbb E\lambda^{-1}$. For $a\leq\lambda\leq b$,
+\[
+ \lambda+\frac{ab}{\lambda}\leq a+b,
+ \qquad x+aby\leq a+b,
+ \qquad xy\leq\frac{(a+b)^2}{4ab}.
+\]
+The final inequality follows from $(x-aby)^2\geq0$.
+The ratio of the selected gain to the full gain is precisely
+$1/(xy)$, hence is at least $4ab/(a+b)^2=21/121$.
+This is the usual elementary Kantorovich argument, displayed here
+to make every hypothesis and normalization explicit.
+\end{proof}
+
+\paragraph{Repeated steps within a fixed finite block.}
+Start at $x_0=0$ and minimize the exact block quadratic
+$\Phi(x)=x^TH_Gx-2g^Tx$. At each step use the current residual
+$r_k=g-H_Gx_k$, direction $p_k=H_Q^{-1}r_k$, and the exact line search
+\[
+ x_{k+1}=x_k+\frac{r_k^Tp_k}{p_k^TH_Gp_k}p_k,
+\]
+with termination if $r_k=0$. The remaining block gain is
+$r_k^TH_G^{-1}r_k$, so Proposition~\ref{prop:ns80-uniform-efficiency}
+reduces it by at least $21/121$ each time. After $k$ steps the captured
+fraction of full gain is therefore at least
+\[
+ 1-(100/121)^k.
+\]
+In particular twenty ideal steps capture more than $97.79\%$, uniformly
+in block size. This statement assumes application of the complete
+$H_Q^{-1}$ and the true $H_G$; no implementation or complexity bound for
+that infinite-sample comparator is asserted. Truncating its sum without
+a certified tail would invalidate the theorem's premises.
+
+For completeness, minimizing the full sampling objective over the first
+$N$ coefficients gives a residual with squared error at most $21E_N$:
+apply both bounds of NS-78 before and after the two minimizations.
+This uniform approximation factor is also not a decay estimate for $E_N$.
+
+\paragraph{The remaining obstruction.}
+Even perfect capture of every block gain does not prove that the limiting
+error is zero. The full block gains telescope to $E_N-E_\infty$, and
+NS-76 exhibits a component invisible to all of them. A lower estimate
+for available gain relative to the entire current error remains essential.
+The present theorem preserves arithmetic in its comparator and supplies a
+uniform finite-block efficiency guarantee; it does not provide that lower
+estimate, a fast computable replacement for $H_Q$, a bound for the earlier
+smooth curvature rule, G2 or RH.

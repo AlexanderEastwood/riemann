@@ -536,3 +536,23 @@ calibration takes the published finite-height result of
 bound of [Hasanalizade–Shen–Wong](https://arxiv.org/pdf/2107.06506) as external
 inputs. Only scalar evaluation is replayed here. No new zero verification,
 integer error upper bound, or RH conclusion is asserted.
+
+## v1.63: reciprocal cells, arithmetic sampling and classical descent
+
+The norm comparison uses elementary logarithmic interpolation on every
+reciprocal cell; its comparator retains the actual arithmetic samples.
+The projected condition bound follows by minimizing over old coordinates,
+and the gain guarantee uses the classical Kantorovich inequality, proved
+explicitly. No novelty claim is made for mass-matrix norm equivalence,
+Mobius inversion, Schur monotonicity or preconditioned steepest descent.
+No numerical implementation of the complete infinite sampling inverse is
+claimed. Its uniform guarantee does not apply to the smooth curvature rule.
+
+The distinction between integer and continuous closure already appears in
+[Baez-Duarte's strengthening](https://arxiv.org/pdf/math/0202141); NS76 gives
+an explicit q=2 separating witness, not a new general observation about
+these two kinds of closure. The related
+[general strong criterion](https://arxiv.org/pdf/math/0505453) states smooth
+kernel hypotheses. Our logarithmic target is unbounded at zero, so we do
+not apply that theorem directly to it: the relevant fixed-order criterion
+is the separately justified bounded-integration argument in NS61.

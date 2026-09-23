@@ -1,0 +1,32 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v163/ns80/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+check("Complete old minimization retains cross term",
+      subst((-B*v)/A,u,A*u^2+2*B*u*v+C*v^2)-(C-B^2/A)*v^2)
+check("Spectral interval inequality slack",
+      a+b-la+(-a*b)/la+(-(la-a)*(b-la))/la)
+check("Averaged Kantorovich square",(x+a*b*y)^2-4*a*b*x*y-(x-a*b*y)^2)
+a0:1/16
+b0:21/16
+check("Condition ratio",b0/a0-21)
+check("Uniform gain fraction",(4*a0*b0)/(a0+b0)^2-21/121)
+check("Remaining fraction",1-21/121+(-100)/121)
+check("Optimal line search",
+      subst(nu/cost,t,EE-2*t*nu+t^2*cost)-(EE-nu^2/cost))
+check("Sampling minimizer factor",(21/16)*16-21)
+check("One-step capture",1-100/121+(-21)/121)
+if not is(1-(100/121)^20 > 9779/10000)
+    then error("Twenty-step guarantee failed")
+checks:endcons(["Twenty steps exceed 97.79 percent",true],checks)
+print("Exact twenty-step guarantee:",1-(100/121)^20)
+Exact twenty-step guarantee: 
+                            442592555681759518058893560348969204658401
+                             /452592555681759518058893560348969204658401 
+print("PASS:",length(checks),
+      "exact checks; no fast comparator inverse or RH contraction assumed.")
+PASS: 10 exact checks; no fast comparator inverse or RH contraction assumed. 
+"/private/tmp/riemann-ns78/evidence/v163/ns80/exact-checks.mac"
