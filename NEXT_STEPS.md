@@ -122,6 +122,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-70 | Test whether the elementary q=2 Gram background admits a uniformly small arithmetic correction; repair any diagonal-regularity mismatch before judging the comparison | Codex, Continue solving toward RH | claimed | Keep complete Gram cross terms, distinguish all-coefficient comparisons from the optimized residual, and give an analytic proof or a complete two-precision witness for any failed comparison. State what the repair changes and what arithmetic input remains. |
 
+| NS-71 | Test the repaired elementary Gram only as a preconditioner for the actual optimized residual, retaining the true projected energy in every gain quotient | Codex, Continue solving toward RH | claimed | Test the finite prediction that the repaired kernel selects a more effective direction than the raw correlation vector. Derive the complete selected-direction identity and stop if a cofinal estimate still requires an unproved arithmetic-weight bound; do not reuse the excluded all-coefficient comparison. |
+
 ## Open continuation targets after NS-66 (not yet claimed)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
