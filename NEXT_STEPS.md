@@ -140,6 +140,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-79 | Test tail-balanced divisor feedback suggested by the complete sampling norm, with separate raw and projected gains | Codex, Continue solving toward RH | claimed | Preserve the exterior coefficient by compensating at the last new atom, retain the deliberately uncancelled last jump and the entire tail, and compare three balanced directions plus the original span augmented by that endpoint. No cofinal conclusion from the finite test. |
 
+| NS-80 | Transfer the complete arithmetic sampling norm to a uniform projected-Gram preconditioner bound and quantify its finite-block descent guarantee | Codex, Continue solving toward RH | claimed | Use the full infinite arithmetic sampling Gram, preserve old-space Schur complements, and distinguish a uniform fraction of block gain from cofinal RH contraction. No fast inverse or comparison with the smooth model is assumed. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
