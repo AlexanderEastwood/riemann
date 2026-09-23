@@ -132,6 +132,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-75 | Test correction coefficients from the actual optimized residual divisor sums; retain exact derivative jumps and full projected energy | Codex, Continue solving toward RH | claimed | Compare constant and logarithmic tapers of the actual divisor defect with the fixed Mobius templates and curvature rule. Distinguish raw jump cancellation from old-space reoptimization, and stop at the missing cofinal arithmetic bound. |
 
+| NS-76 | Identify the complete continuous-dilation relaxation in Hardy space and derive its exact q=2 inner-factor distance, retaining the distinction from integer dilation closure | Codex, Continue solving toward RH | claimed | Use the classical Burnol/Beurling factorization with attribution, keep the full one-dimensional exterior tail, and test the derived distance against explicit finite Blaschke controls. No unknown zero data or unconditional integer/continuous closure equality is assumed. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
