@@ -106,6 +106,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-62 | Test whether Mellin smoothing repairs the canonical sharp Mobius interpolant; retain the exact target and use a localized dual witness | Codex, Continue solving toward RH | claimed | Derive the dilation-invariant unitary and Laguerre witness completely. Distinguish failure of this fixed coefficient rule from optimal smoothed approximation. Verify all Mellin factors and endpoint moments; stop after the scoped result. |
 
+| NS-63 | Check fixed versus increasing Mellin smoothing: retain the RH zero obstruction at fixed order and test whether relative errors can vanish for a fixed finite span when the order grows | Codex, Continue solving toward RH | claimed | Keep the target norm explicit. Derive the one-atom asymptotic or identify its missing input; do not treat a changing metric as NB convergence. This is a validation of the smoothed route, not a new window. |
+
 ## Lanes
 
 ```
