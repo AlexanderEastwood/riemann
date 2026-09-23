@@ -136,6 +136,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-77 | Bound the continuous q=2 inner-factor defect in terms of hypothetical off-critical zero tails, and determine the scope of finite-height information | Codex, Continue solving toward RH | done (v1.62; complete continuous tail bound) | D_cont^2 <= (8/3) S2^3 + 5 S4. Published zero verification and complete counting tail imply D_cont^2 < 2.08e-32. External input only; no integer upper bound, new verified height, or zero-distance proof. |
 
+| NS-78 | Derive a complete norm comparison with reciprocal-integer residual samples and independently replay the actual optimized norm through divisor cells | Codex, Continue solving toward RH | claimed | Retain the exterior tail and all reciprocal cells, prove constants independent of coefficient count, and bound the infinite sampling and physical tails. No finite prefix substitutes for the cofinal signed arithmetic estimate. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
