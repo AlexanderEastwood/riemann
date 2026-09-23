@@ -1,5 +1,25 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.60 local draft — complete cancellation and selected directions (September 23, 2026)
+
+Version 1.60 local draft (NS-67–71) gives complete canonical cells and
+an O(log N) tail beyond N^2, retaining the exact growth criterion.
+Centered complete Abel terms have conditioning at most 1+2*||sigma_1||<4.617;
+whole-term cancellation cannot change the power exponent. Positive renewal
+transfers the same forcing power; its critical weighted total energy is
+unconditionally infinite, not the canonical norm itself. The actual optimized
+endpoint remainder exceeds its model at N=64,128. Repairing the elementary
+Gram cusp subtracts d/max(u,v), exactly diagonal in adjacent differences;
+no uniform all-coefficient comparison survives zeta zeros and large values.
+The repaired kernel still selects efficient finite directions: at N=256,
+97.06% of full gain, versus 38.41% for the unmodified correlation direction.
+The selected numerator and true-energy ratios have no cofinal estimate.
+Complete Arb 256/384 and cutoff replays, exact Maxima checks, local self-review
+only. No new Weil window, floor, G2 or RH proof.
+
+Validation details and exact source hashes are in `evidence/v160/validation.json`.
+The user authorized PR publication, then explicitly allowed merges and version tags.
+
 ## v1.59 local draft — fixed smoothing and arithmetic correlation (NS-60–66)
 
 Classification: exact identities, proved implications and scoped obstructions,

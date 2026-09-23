@@ -1,0 +1,29 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v160/ns71/exact-checks.mac")
+display2d:false
+scalarmatrixp:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+aa:matrix([a,b],[b,d])
+hh:matrix([h,j],[j,k])
+gg:matrix([x],[y])
+vv:invert(aa) . gg
+mm:(transpose(gg) . vv)[1,1]
+check("Selected model energy",(transpose(vv) . aa . vv)[1,1]-mm)
+cc:(transpose(vv) . hh . vv)[1,1]/mm
+check("True-energy quotient",
+      (transpose(gg) . vv)[1,1]^2/(transpose(vv) . hh . vv)[1,1]-mm/cc)
+check("One-step complete square",
+      E-2*t*mm+t^2*den-(E-mm^2/den+den*(t-mm/den)^2))
+check("Projected raw remainder",raw-(raw-cx^2/p)-cx^2/p)
+check("Model inverse solves first row",(aa . vv-gg)[1,1])
+check("Model inverse solves second row",(aa . vv-gg)[2,1])
+check("Squared cosine gain ratio",(num^2/den)/fullgain-num^2/(den*fullgain))
+check("Rank-one cross-term identity",
+      (u1*z1+u2*z2)^2-(u1^2*z1^2+2*u1*u2*z1*z2+u2^2*z2^2))
+print("PASS:",length(checks),
+      "exact checks; cofinal arithmetic input remains open.")
+PASS: 8 exact checks; cofinal arithmetic input remains open. 
+"/private/tmp/riemann-ns67/evidence/v160/ns71/exact-checks.mac"

@@ -1,0 +1,191 @@
+\section{The elementary Gram background requires a structural correction (NS-70)}
+\label{sec:ns70-background}
+
+\paragraph{Scope.}
+The endpoint model in NS-69 comes from the elementary part of Ehm's
+complete $q=2$ Gram formula. Its scalar correction is small in some
+entries, but that does not make it a small quadratic-form perturbation.
+We first identify and repair a mismatch in diagonal regularity. Even
+after that repair, a uniform comparison on all coefficient vectors is
+excluded. None of these statements is a lower bound or obstruction
+for the actual optimized residual direction.
+
+For positive real $u,v$ let $G(u,v)=\langle\sigma_u,\sigma_v\rangle$.
+With $K_1,K_2$ from Section~\ref{sec:ns61-gram-remainder}, define
+\[
+ K(u,v)=\frac{K_2+K_1|\log(u/v)|+\tfrac14\log^2(u/v)}{\max(u,v)},
+ \qquad S(u,v)=G(u,v)-K(u,v).
+\]
+At integer indices this is the full arithmetic remainder of the Ehm
+formula. Set $d=K_2-2K_1$. The constants are certified below; in
+particular $d>0$ and $K_1>3/2$.
+
+\begin{proposition}[A small entrywise correction cancels the diagonal cusp]
+\label{prop:ns70-cusp}
+Both $G$ and $K$ are positive definite on every finite collection of
+distinct positive dilations. For the adjacent coefficient vector
+corresponding to
+$\epsilon_n=\sigma_n-(n-1)\sigma_{n-1}/n$, write $G[\epsilon_n]$
+and $K[\epsilon_n]$ for its two quadratic forms. Then
+\begin{equation}
+ G[\epsilon_n]\sim\frac\kappa{n^3},\qquad
+ K[\epsilon_n]\sim\frac d{n^2},\qquad
+ \frac{S[\epsilon_n]}{K[\epsilon_n]}\longrightarrow-1.
+ \label{eq:ns70-cusp-asymptotic}
+\end{equation}
+Consequently no fixed $c>0$ can satisfy $G\geq cK$ on all finite
+integer coefficient vectors. In particular, no relative remainder
+bound $|S[a]|\leq\delta K[a]$ with a fixed $\delta<1$ can hold
+on that class. This follows from local regularity and does not use
+an assumption about the location of zeta zeros.
+\end{proposition}
+\begin{proof}
+Write $r=\log(v/u)\geq0$. Normalizing by $\sqrt{uv}$ turns $K$
+into the translation kernel
+\[
+ \phi(r)=e^{-|r|/2}(K_2+K_1|r|+r^2/4).
+\]
+Its Fourier density, with
+$\phi(r)=(2\pi)^{-1}\int\widehat\phi(t)e^{itr}dt$, is
+\begin{equation}
+ w_K(t)=\frac{d t^4+(K_2/2-3/2)t^2
+                         +K_2/16+K_1/8+1/8}{(t^2+1/4)^3}>0.
+ \label{eq:ns70-background-symbol}
+\end{equation}
+This is obtained by differentiating
+$\int e^{-a|r|}e^{-itr}dr=2a/(a^2+t^2)$ twice in $a$ and then
+putting $a=1/2$. The three numerator coefficients are positive by
+the recorded constant enclosures. Hence $K$ is strictly positive
+definite; $G$ is already a Gram of independent dilations.
+
+For $h_n=\log(n/(n-1))$ direct evaluation gives
+\begin{equation}
+ n^2K[\epsilon_n]
+ =K_2-2K_1(n-1)h_n-\tfrac12(n-1)h_n^2\longrightarrow d.
+ \label{eq:ns70-exact-adjacent-background}
+\end{equation}
+NS-61 gives $n^3G[\epsilon_n]\to\kappa$ and its complete upper
+bound. Thus the ratio $G[\epsilon_n]/K[\epsilon_n]$ tends to zero,
+proving all assertions. The cusp is explicit:
+$\phi'(0^+)=K_1-K_2/2=-d/2$, while the actual smoothed Gram
+has the additional order of cancellation in
+\eqref{eq:ns70-cusp-asymptotic}.
+\end{proof}
+
+\paragraph{The cusp correction is exactly diagonal in adjacent differences.}
+For $B(u,v)=1/\max(u,v)$, direct evaluation gives
+\[
+ B[\epsilon_m,\epsilon_n]=\frac{\mathbf1_{m=n}}{n^2},
+ \qquad B[\sigma_j,\epsilon_n]=0\quad(j<n).
+\]
+Indeed for $j<n$ the right difference is
+$1/n-((n-1)/n)/(n-1)=0$, including $j=n-1$.
+The diagonal difference equals $1/n^2$. Consequently the repair
+subtracts exactly $d\,\operatorname{diag}(n^{-2})$ from the raw
+new-difference Gram and leaves every elementary old/new cross column
+unchanged. In particular it cannot improve the endpoint model $L$
+in NS-69: the correction cancels from those correlations identically.
+Its role is to repair the energy assigned to correction directions.
+The old model Gram also changes, so a projected model must still
+recompute its complete Schur complement.
+
+\begin{proposition}[Repairing the cusp still leaves the zeta-weight comparison]
+\label{prop:ns70-repaired-background}
+The corrected elementary kernel
+\begin{equation}
+ K_0(u,v)=K(u,v)-\frac d{\max(u,v)}
+ =\frac{2K_1+K_1|\log(u/v)|+\tfrac14\log^2(u/v)}{\max(u,v)}
+ \label{eq:ns70-repair}
+\end{equation}
+is strictly positive definite and has no first-derivative cusp.
+It satisfies
+\[
+ K_0[\epsilon_n]\sim\frac{K_1-1/2}{n^3},\qquad
+ \frac{G[\epsilon_n]}{K_0[\epsilon_n]}
+                \longrightarrow\frac\kappa{K_1-1/2}.
+\]
+Nevertheless there are no constants $c>0$ or $C<\infty$ such that,
+on all finite integer coefficient vectors, respectively
+\[
+ G\geq cK_0\qquad\text{or}\qquad G\leq CK_0.
+\]
+Both failures are unconditional. They exclude uniform all-coefficient
+comparisons, not selected-direction estimates, finite-block inequalities
+with size-dependent constants, or the optimized NB criterion.
+\end{proposition}
+\begin{proof}
+The Fourier density of the repaired kernel is
+\begin{equation}
+ w_0(t)=\frac{(K_1-3/2)t^2+K_1/4+1/8}{(t^2+1/4)^3}>0.
+ \label{eq:ns70-repaired-symbol}
+\end{equation}
+This proves strict positivity and the cancellation of the cusp.
+In~\eqref{eq:ns70-exact-adjacent-background} replace $K_2$ by
+$2K_1$ and use
+$(n-1)h_n=1-1/(2(n-1))+O(n^{-2})$ and
+$(n-1)h_n^2=1/(n-1)+O(n^{-2})$.
+This gives the displayed adjacent asymptotic.
+
+The complete Gram has Mellin density
+\[
+ w_G(t)=\frac{|\zeta(1/2+it)|^2}{(t^2+1/4)^2}.
+\]
+For clarity, a uniform quadratic-form inequality on all finite integer
+coefficients would force the corresponding pointwise inequality between
+$w_G$ and $w_0$. Here is the full localization argument. Both densities
+are continuous, even and integrable. Their homogeneous kernels extend
+to all positive real dilation parameters. Replace any finite set of real
+parameters $u_j$ by integers nearest to $D u_j$ and multiply both forms
+by $D$; kernel continuity lets $D\to\infty$. Thus an integer inequality
+extends to all real parameters. Riemann sums then extend it to compactly
+supported real coefficient densities in $r=\log u$. Choose long real
+cosine packets in $r$. Their squared Fourier transforms form approximate
+identities at the paired frequencies $\pm t_0$. Continuity near the
+frequencies and integrability away from them give the pointwise inequality.
+This reasoning retains all quadratic cross terms and uses arbitrary
+finite real coefficients, not an arithmetic coefficient rule.
+
+A known critical-line zero makes $w_G(t_0)=0$ while $w_0(t_0)>0$,
+so the lower comparison is impossible. For the upper comparison,
+\[
+ \frac{w_G(t)}{w_0(t)}
+ =|\zeta(1/2+it)|^2\,
+   \frac{t^2+1/4}{(K_1-3/2)t^2+K_1/4+1/8}.
+\]
+The rational factor tends to the positive constant $(K_1-3/2)^{-1}$.
+Known unbounded critical-line values, for example
+\cite[Theorem 1]{Soundararajan2008}, therefore exclude any finite $C$.
+The lower failure uses zeros on the line, not hypothetical off-line zeros.
+Neither failure says that the actual Gram, or an original Weil form, has
+negative energy.
+\end{proof}
+
+\paragraph{Complete constant and adjacent-vector certificates.}
+Arb at 256 and 384 bits encloses every numerator coefficient in
+\eqref{eq:ns70-background-symbol} and
+\eqref{eq:ns70-repaired-symbol} strictly above zero, with
+$.0091604<d<.0091605$. Complete two-vector Gram comparisons give
+\begin{center}\small
+\begin{tabular}{rcc}
+\toprule
+$n$ & $G[\epsilon_n]/K[\epsilon_n]$
+    & $G[\epsilon_n]/K_0[\epsilon_n]$\\
+\midrule
+256 & $(.36207,.36209)$ & $(1.11185,1.11187)$\\
+1024 & $(.11987,.11989)$ & $(1.11423,1.11425)$\\
+4096 & $(.03260,.03262)$ & $(1.11498,1.11500)$\\
+\bottomrule
+\end{tabular}\end{center}
+The true quadratic energy stays positive. The Bernoulli/Hurwitz
+remainder is retained; a doubled series cutoff gives overlapping
+values for all $34$ constants and quantities. The asymptotic assertions
+follow from the proofs, not from this finite table.
+
+\paragraph{What had to change.}
+The elementary background had the wrong local regularity; removing
+$d/\max(u,v)$ repairs that mismatch and recovers the correct adjacent
+power $n^{-3}$. This repair is real but insufficient: the complete
+arithmetic factor is still neither uniformly above nor uniformly below
+the repaired background. A useful next bound must keep the particular
+residual direction or supply an additional arithmetic estimate. The
+finite endpoint remainder in NS-69 is not silently discarded.

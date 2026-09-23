@@ -1,0 +1,61 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v160/ns67/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+I0(h):=1-exp(-h)
+I1(h):=1-(h+1)*exp(-h)
+I2(h):=2-(h^2+2*h+2)*exp(-h)
+check("Zeroth cell moment",diff(I0(h),h)-exp(-h))
+check("First cell moment",diff(I1(h),h)-h*exp(-h))
+check("Second cell moment",diff(I2(h),h)-h^2*exp(-h))
+check("All moments start at zero",I0(0)+I1(0)+I2(0))
+cell_energy(h):=(ff^2*I0(h)+2*ff*aa*I1(h)+aa^2*I2(h))/jj
+check("Complete cell energy",diff(cell_energy(h),h)-((ff+aa*h)^2*exp(-h))/jj)
+cell_sigma(h):=
+           (ff*ss*I0(h)+(aa*ss-ff*kk)*I1(h)+(-aa)*kk*I2(h)
+                       +(jj/nn)*(ff*(h-I0(h))+aa*(h^2/2-I1(h))))/jj
+check("Complete mixed sigma cell",
+      diff(cell_sigma(h),h)-((ff+aa*h)*(ss+(jj/nn)*(exp(h)-1)+(-kk)*h)
+                                      *exp(-h))
+                            /jj)
+cell_tau(h):=(ff*ll*I0(h)+(ff+aa*ll)*I1(h)+aa*I2(h))/jj
+check("Complete mixed target cell",
+      diff(cell_tau(h),h)-((ff+aa*h)*(ll+h)*exp(-h))/jj)
+primitive(t):=-((aa*log(t)+bb)^2+2*aa*(aa*log(t)+bb)+2*aa^2)/t
+check("Complete logarithmic tail",diff(primitive(t),t)-(aa*log(t)+bb)^2/t^2)
+check("Remainder squared tail",diff(-cc^2/(108*t^3),t)-cc^2/(36*t^4))
+check("Bernoulli primitive derivative",diff((u^2-u+1/6)/2,u)-(u-1/2))
+check("Bernoulli lower bound",u^2-u+1/6-((u-1/2)^2-1/12))
+check("Bernoulli upper bound",1/6-(u^2-u+1/6)+(-u)*(1-u))
+check("Centered vector difference",(uu-kk*ss)-(ww-kk)*ss-(uu-ww*ss))
+check("Target and integral square",
+      (ee+ww*ss)^2-ee^2+(-2)*ww*ee*ss+(-ww^2)*ss^2)
+mu:[1,-1,-1,0,-1,1,-1,0,0,1,-1,0]
+AA(z):=block([kk:floor(z)],z-kk*log(z)+log(kk!))
+for nn in [2,3,6,12] do
+    block([bn,coeff,initial],bn:nn*sum(mu[k]/k,k,1,nn),
+          coeff:makelist(mu[k]-(if k = nn then bn else 0),k,1,nn),
+          check(sconcat("Exact tail cancellation ",nn),
+                sum(coeff[k]/k,k,1,nn)),
+          initial:radcan(log(nn)+sum(coeff[k]*AA(nn/k),k,1,nn)),
+          check(sconcat("Initial endpoint ",nn),initial),
+          for jj in [nn,nn+1,2*nn,3*nn] do
+              block([slope,atj,att,expression,kn],
+                    slope:1-sum(coeff[k]*floor(jj/k),k,1,nn),
+                    atj:log(jj)+sum(coeff[k]*AA(jj/k),k,1,nn),
+                    expression:log(t),
+                    for k thru nn do
+                        (kn:floor(jj/k),
+                         expression:expression
+                                    +coeff[k]*(t/k-kn*log(t/k)+log(kn!))),
+                    check(sconcat("Entire cell ",nn,",",jj),
+                          radcan(expression-atj+(-slope)*log(t/jj))),
+                    att:log(jj+1)+sum(coeff[k]*AA((jj+1)/k),k,1,nn),
+                    check(sconcat("Endpoint recurrence ",nn,",",jj),
+                          radcan(att-atj+(-slope)*log((jj+1)/jj)))))
+print("PASS:",length(checks),"exact checks; no cofinal bound is claimed.")
+PASS: 54 exact checks; no cofinal bound is claimed. 
+"/private/tmp/riemann-ns67/evidence/v160/ns67/exact-checks.mac"

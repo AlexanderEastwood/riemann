@@ -1,0 +1,4 @@
+# Optional numerical illustrations only; these are not certificate dependencies.
+numpy==2.5.3
+scipy==1.18.1
+mpmath==1.4.1

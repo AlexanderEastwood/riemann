@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "groups": {
+    "ns68": {
+      "precision_enclosure_matches": 74,
+      "doubled_cutoff_matches": 0,
+      "source_sha256": "dfe0a811764274e81cd38b5eac5c5180d262576b46f1b6a97fb3c52cde33b3ee"
+    },
+    "ns69": {
+      "precision_enclosure_matches": 192,
+      "doubled_cutoff_matches": 48,
+      "source_sha256": "1ad4e3ac9d520d0b775b1ea966bba4e58d80f86364651f75487242f86a6d8b49",
+      "minimum_recorded_accuracy_bits": 77
+    },
+    "ns70": {
+      "precision_enclosure_matches": 34,
+      "doubled_cutoff_matches": 34,
+      "source_sha256": "2049d3b85986d462d0c0297739144caa917bde3bb83769b526c6a550df8bfc60",
+      "minimum_recorded_accuracy_bits": 130
+    }
+  }
+}

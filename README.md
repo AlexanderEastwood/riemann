@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.59 (local draft)**.
+Alexander Eastwood's complete working manuscript, **v1.60**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -40,7 +40,33 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | G2 | open |
 | RH | open, and not claimed |
 
-## v1.59 local draft: a fixed smoothing gives an elementary block bound (NS-60–66)
+## v1.60: keep arithmetic in the chosen direction (NS-67–71)
+
+The repaired elementary kernel selects a direction capturing **97.06% of
+full optimal block improvement at N=256**, versus **38.41%** for the
+unmodified correlation direction. That is an **8.08% reduction in squared
+residual error**, versus the full optimum's **8.33%**. These are certified
+finite results at 256/384 bits, with a doubled-cutoff replay; they do not
+supply the required cofinal lower contraction.
+
+Exact cell energies retain the weaker canonical growth target. Centering
+the two complete Abel terms proves that cancellation between those whole
+vectors cannot change their power exponent; internal arithmetic remains
+open. The positive renewal operator transfers a forcing bound without
+improving its exponent, and its critical weighted total energy diverges.
+The actual optimized endpoint remainder exceeds the leading model at
+N=64 and N=128. An explicit cusp correction fixes the elementary Gram's
+adjacent scaling, but uniform all-coefficient comparison is still false.
+Using that repaired kernel only to choose coefficients avoids assuming
+such a comparison: all gains are measured with the complete actual Gram.
+
+[Readable research update](evidence/v160/research-update-2026-09-23-v1.html) ·
+[Proofs, Maxima checks, finite certificates and validation](evidence/v160/).
+No new Weil window, uniform floor, G2 or RH proof. The next input is an
+arithmetic lower bound for the selected numerator together with a bound
+for its true-energy cost along a cofinal sequence.
+
+## v1.59: a fixed smoothing gives an elementary block bound (NS-60–66)
 
 One extra Mellin integration keeps convergence equivalent to RH and gives
 an unconditional complete difference-block trace bound `3*kappa/(8*N^2)`.
@@ -67,7 +93,7 @@ no new zero-free region.
 
 [Readable report](evidence/v159/research-update-2026-09-22-v2.html) ·
 [Proofs, exact Maxima checks and finite certificates](evidence/v159/).
-This version is local and unpublished. RH, G2 and the original Weil floor remain open.
+Published through PR #32. RH, G2 and the original Weil floor remain open.
 
 ## v1.58: an arithmetic limit on uniform NB block bounds (NS-59)
 
@@ -232,10 +258,16 @@ graph LR
   nbrawlog["NB uniform logarithmic raw norm<br/><small>prop:v158-lindelof-budget</small><br/><small>&#128193; evidence/v158</small><br/><small><b>wall: known zeta large values contradict every fixed logarithmic N^(-2) raw norm bound</b></small>"]
   nbeulergrid["Uniform logarithmic norm after explicit Euler-grid correction<br/><small>prop:ns60-growing-euler-obstruction</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: zeta large values exceed the allowed finite Euler-product loss</b></small>"]
   nbsmoothedbudget["Fixed smoothed NB: positive averages and N^(-2) trace<br/><small>prop:ns61-rh-equivalence; prop:ns61-average-budget</small><br/><small>&#128193; evidence/v159</small>"]
-  nbsmoothedcorrelation["Actual optimized smoothed residual correlations<br/><small>eq:ns61-open-correlation; eq:ns61-endpoint-correlation</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: non-summable lower contraction for the actual optimized residual (open sufficient input)</b></small>"]
+  nbsmoothedcorrelation["Actual optimized smoothed residual correlations<br/><small>eq:ns61-open-correlation; eq:ns61-endpoint-correlation; prop:ns69-remainder; prop:ns71-selected-input</small><br/><small>&#128193; evidence/v160</small><br/><small><b>wall: non-summable lower contraction for the actual optimized residual (open sufficient input)</b></small>"]
   nbsharpintegrated["Strong convergence of the smoothed canonical sharp Mobius sequence<br/><small>prop:ns62-smoothed-obstruction; prop:ns62-positive-cone; prop:ns64-cone-distance; prop:ns65-cesaro-obstruction</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: a surviving weighted-Mertens witness for this coefficient rule</b></small>"]
   nbchangingnorm["Relative convergence with increasing Mellin smoothing<br/><small>prop:ns63-one-atom</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: one-atom unconditional control refutes this convergence inference</b></small>"]
-  nbcanonicalgrowth["Canonical smoothed norm: subpolynomial growth<br/><small>prop:ns66-growth-bounds; cor:ns66-growth-exponent</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)</b></small>"]
+  nbcanonicalgrowth["Canonical smoothed norm: subpolynomial growth<br/><small>prop:ns66-growth-bounds; cor:ns66-growth-exponent; prop:ns67-polynomial-cutoff; prop:ns67-abel-conditioning</small><br/><small>&#128193; evidence/v160</small><br/><small><b>wall: direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)</b></small>"]
+  nbcanonicalcells["Complete canonical divisor cells and full tail<br/><small>prop:ns67-cells; lem:ns67-remainder; prop:ns67-polynomial-cutoff</small><br/><small>&#128193; evidence/v160/ns67</small>"]
+  nbabelwholegain["Power gain solely between the two complete Abel vectors<br/><small>prop:ns67-abel-conditioning</small><br/><small>&#128193; evidence/v160/ns67</small><br/><small><b>wall: uniform conditioning excludes an exponent improvement in this whole-vector split</b></small>"]
+  nbrenewalforcing["Positive renewal with signed arithmetic forcing<br/><small>prop:ns68-weighted-inversion; prop:ns68-scalar-criterion</small><br/><small>&#128193; evidence/v160/ns68</small><br/><small><b>wall: independent square-root-plus-epsilon bound for the signed forcing</b></small>"]
+  nbcriticalrenewalenergy["Finite total critical renewal energy<br/><small>cor:ns68-critical-energy</small><br/><small>&#128193; evidence/v160/ns68</small><br/><small><b>wall: critical-line Mellin pole contradicts finite weighted L2 energy</b></small>"]
+  nbrepairedbounds["Uniform comparison with the repaired elementary Gram<br/><small>prop:ns70-cusp; prop:ns70-repaired-background</small><br/><small>&#128193; evidence/v160/ns70</small><br/><small><b>wall: pointwise Mellin-density comparison forced by all-coefficient localization</b></small>"]
+  nbselectedpreconditioner["Repaired-kernel selection measured with true energy<br/><small>prop:ns71-selected-input</small><br/><small>&#128193; evidence/v160/ns71</small><br/><small><b>wall: cofinal lower numerator and upper selected cost with nonsummable relative gain</b></small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -308,6 +340,12 @@ graph LR
   nbsmoothedbudget --> nbsharpintegrated
   nbsmoothedbudget --> nbchangingnorm
   nbsmoothedbudget --> nbcanonicalgrowth
+  nbcanonicalgrowth --> nbcanonicalcells
+  nbcanonicalgrowth --> nbabelwholegain
+  nbcanonicalgrowth --> nbrenewalforcing
+  nbrenewalforcing --> nbcriticalrenewalenergy
+  nbsmoothedcorrelation --> nbrepairedbounds
+  nbsmoothedcorrelation --> nbselectedpreconditioner
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -320,6 +358,8 @@ graph LR
   kernelapi -. "API: actual arithmetic affine-potential injectivity (open)" .-> rh
   nbsmoothedcorrelation -. "non-summable lower contraction for the actual optimized residual (open sufficient input)" .-> rh
   nbcanonicalgrowth -. "direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)" .-> rh
+  nbrenewalforcing -. "independent square-root-plus-epsilon bound for the signed forcing" .-> rh
+  nbselectedpreconditioner -. "cofinal lower numerator and upper selected cost with nonsummable relative gain" .-> rh
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -375,19 +415,25 @@ graph LR
   click nbrawlog "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v158/" "evidence: evidence/v158" _blank
   click nbeulergrid "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
   click nbsmoothedbudget "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
-  click nbsmoothedcorrelation "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
+  click nbsmoothedcorrelation "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/" "evidence: evidence/v160" _blank
   click nbsharpintegrated "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
   click nbchangingnorm "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
-  click nbcanonicalgrowth "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
+  click nbcanonicalgrowth "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/" "evidence: evidence/v160" _blank
+  click nbcanonicalcells "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/ns67/" "evidence: evidence/v160/ns67" _blank
+  click nbabelwholegain "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/ns67/" "evidence: evidence/v160/ns67" _blank
+  click nbrenewalforcing "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/ns68/" "evidence: evidence/v160/ns68" _blank
+  click nbcriticalrenewalenergy "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/ns68/" "evidence: evidence/v160/ns68" _blank
+  click nbrepairedbounds "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/ns70/" "evidence: evidence/v160/ns70" _blank
+  click nbselectedpreconditioner "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v160/ns71/" "evidence: evidence/v160/ns71" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth blocked;
+  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth,nbrenewalforcing,nbselectedpreconditioner blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes,circle,debranges,f1,nb,dbn open;
   subgraph Legend

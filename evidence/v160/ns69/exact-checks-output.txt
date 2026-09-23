@@ -1,0 +1,36 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v160/ns69/exact-checks.mac")
+display2d:false
+scalarmatrixp:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+kk1:(lp-gg+2)/2
+target:(rr^2-ll^2)/2+(2-gg)*(rr-ll)
+old:kk1*(rr-ll)+((rr-mm)^2-(ll-mm)^2)/4
+check("One old coefficient in endpoint formula",
+      -old+target/2+(-(mm-lp)*(rr-ll))/2)
+check("Two endpoint basis coordinates",
+      aa*target+ee*(rr-ll)+(-(aa*(log(nn)+2-gg)+ee))*(rr-ll)
+               +(-aa)*((rr^2-ll^2)/2-log(nn)*(rr-ll)))
+check("Endpoint column ratio",((rr^2-ll^2)/2-ln*(rr-ll))/(rr-ll)-(rr+ll)/2+ln)
+check("Factor eighteen remainder improvement",(1/6)*(1/24)-1/144)
+check("Old to new allowance",(1/8)/18-1/144)
+check("Complete vector energy",
+      (l1+r1)^2+(l2+r2)^2-(l1^2+l2^2)+(-2)*(l1*r1+l2*r2)-(r1^2+r2^2))
+hh:matrix([a,b],[b,d])
+vv:matrix([x],[y])
+inv:invert(hh)
+check("Two-direction inverse quotient",
+      (transpose(vv) . inv . vv)[1,1]-(d*x^2-2*b*x*y+a*y^2)/(a*d-b^2))
+check("Complete square for one-direction restriction",
+      e-2*t*c+t^2*q-(e-c^2/q+q*(t-c/q)^2))
+check("Projected Gram scalar identity",q-2*z*h+z^2*p-(q-h^2/p+p*(z-h/p)^2))
+for nn from 2 thru 12 do
+    check(sconcat("Adjacent first moment budget ",nn),
+          %pi^2/(6*24*nn^2*(nn-1))-%pi^2/(144*nn^2*(nn-1)))
+print("PASS:",length(checks),
+      "exact checks; all asymptotic lower correlations remain open.")
+PASS: 20 exact checks; all asymptotic lower correlations remain open. 
+"/private/tmp/riemann-ns67/evidence/v160/ns69/exact-checks.mac"

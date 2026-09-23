@@ -1,0 +1,242 @@
+\section{A positive renewal equation retains the arithmetic forcing (NS-68)}
+\label{sec:ns68-renewal}
+
+\paragraph{Status.}
+The first multiplicative interval of the canonical response gives a
+particularly simple signed arithmetic quantity. Its exact renewal
+operator is positive and contractive in every strictly positive power
+weight. This controls inversion of the operator but does not improve
+the growth exponent of its forcing. The required arithmetic estimate
+is still RH-equivalent. The argument below is a direct calculation;
+no claim of priority for these reformulations is made.
+
+For real $x>0$ put
+\[
+ M(x)=\sum_{n\leq x}\mu(n),\quad s(x)=\sum_{n\leq x}\frac{\mu(n)}n,
+ \quad p(x)=x s(x)-M(x),
+\]
+where all three are zero for $x<1$. Then $p$ is continuous, including
+at integers, and $p(x)=x\eta(x)$ for $x\geq1$.
+Let $v=\log2$ and define
+\begin{equation}
+ f(x)=x s(x)v+\sum_{x<n\leq2x}\mu(n)\log\frac{2x}{n}.
+ \label{eq:ns68-forcing}
+\end{equation}
+In particular $f(x)=0$ for $x<1/2$.
+
+\begin{proposition}[Exact first-interval response and renewal identity]
+\label{prop:ns68-renewal}
+For each integer $N\geq1$,
+\begin{equation}
+ f(N)=F_N(2N)=e_N(1/(2N)).
+ \label{eq:ns68-canonical-sample}
+\end{equation}
+For every real $x>0$,
+\begin{equation}
+ f(x)=v p(x)+\int_x^{2x}\frac{M(u)}u\,du
+     =p(2x)-(1-v)p(x)-\int_x^{2x}\frac{p(u)}u\,du.
+ \label{eq:ns68-renewal-identity}
+\end{equation}
+The coefficients in the corresponding average have total mass
+$(1-v)+v=1$, and both are nonnegative.
+\end{proposition}
+\begin{proof}
+On $N<m<2N$, every proper divisor of $m$ is at most $N$, so
+$q_N(m)=-\mu(m)$. The endpoint $m=2N$ has zero logarithmic weight.
+Equation~\eqref{eq:ns67-divisor-response} therefore gives
+\eqref{eq:ns68-canonical-sample}. It also holds for $N=1$ directly.
+Partial summation gives
+\[
+ \sum_{x<n\leq2x}\mu(n)\log\frac{2x}{n}
+       =\int_x^{2x}\frac{M(u)-M(x)}u\,du,
+\]
+including integer endpoints, since the coefficient vanishes at $2x$.
+This proves the first identity. The continuous, piecewise differentiable
+function $p$ satisfies $u p'(u)-p(u)=M(u)$ almost everywhere. Integrate
+$p'(u)-p(u)/u$ from $x$ to $2x$ to get the second identity. These
+identities also apply when the interval crosses $1$.
+\end{proof}
+
+\begin{proposition}[Weighted causal inversion, with no power gain]
+\label{prop:ns68-weighted-inversion}
+For $\theta>0$ define
+\[
+ q_\theta=(1-v)2^{-\theta}+\frac{1-2^{-\theta}}\theta<1.
+\]
+Write $P_\theta(t)=e^{-\theta t}p(e^t)$ and
+$G_\theta(t)=e^{-\theta t}f(e^{t-v})$, both zero for $t<0$.
+Then
+\begin{equation}
+ P_\theta(t)=(1-v)2^{-\theta}P_\theta(t-v)
+       +\int_0^v e^{-\theta u}P_\theta(t-u)\,du+G_\theta(t).
+ \label{eq:ns68-causal}
+\end{equation}
+For every $1\leq a\leq\infty$ and every $T>0$,
+\begin{equation}
+ (1-q_\theta)\|P_\theta\|_{L^a(0,T)}
+ \leq\|G_\theta\|_{L^a(0,T)}
+ \leq(1+q_\theta)\|P_\theta\|_{L^a(0,T)}.
+ \label{eq:ns68-two-sided}
+\end{equation}
+These bounds also apply on $(0,\infty)$ whenever either side is
+finite. In particular, a bound $|f(x)|\leq Cx^\theta$ on $x>0$
+implies
+\begin{equation}
+ |p(x)|\leq\frac{2^{-\theta}C}{1-q_\theta}\,x^\theta.
+ \label{eq:ns68-sup-transfer}
+\end{equation}
+No smaller power follows from this renewal identity for general forcing.
+\end{proposition}
+\begin{proof}
+Substitute $x=e^{t-v}$ in~\eqref{eq:ns68-renewal-identity}. The
+convolution kernel in~\eqref{eq:ns68-causal} is the positive measure
+\[
+ K_\theta=(1-v)2^{-\theta}\delta_v
+              +e^{-\theta u}\mathbf1_{(0,v)}(u)\,du.
+\]
+Its mass is $q_\theta$. At $\theta=0$ the mass is one; for
+$\theta>0$ all its mass is strictly damped at positive delays, so
+$q_\theta<1$. Extend a restriction to $(0,T)$ by zero. Causality
+makes its convolution agree with the original convolution on $(0,T)$.
+Young's inequality and the triangle inequality give both sides of
+\eqref{eq:ns68-two-sided}. The finite-interval estimate followed by
+$T\to\infty$ justifies the assertion without assuming an unknown
+infinite norm is finite. For the supremum bound,
+$|G_\theta|\leq2^{-\theta}C$.
+
+For an explicit scope check, take the nonarithmetic continuous function
+$p_\theta(x)=(x^\theta-1)\mathbf1_{x\geq1}$ and define its forcing
+by the renewal identity. For $x\geq1$ that forcing is exactly
+\[
+ f_\theta(x)=\left\{2^\theta-(1-v)
+                  -\frac{2^\theta-1}{\theta}\right\}x^\theta
+            =2^\theta(1-q_\theta)x^\theta.
+\]
+The coefficient is positive. Thus the inverse preserves this power,
+which excludes a generic power improvement by positivity alone. This
+is a test of the operator class, not a counterexample concerning the
+actual M\"obius coefficients.
+\end{proof}
+
+\begin{proposition}[The single sample retains every nontrivial-zero obstruction]
+\label{prop:ns68-scalar-criterion}
+The following two statements are equivalent to RH:
+\[
+ \forall\varepsilon>0,\quad p(x)=O_\varepsilon(x^{1/2+\varepsilon}),
+ \qquad
+ \forall\varepsilon>0,\quad f(N)=O_\varepsilon(N^{1/2+\varepsilon}).
+\]
+The second assertion is only over integer $N$. No such bound is
+proved here.
+\end{proposition}
+\begin{proof}
+RH implies $M(x)=O_\delta(x^{1/2+\delta})$. The complete tail
+formula for $\eta$ in NS-66 then bounds $p$ at the same power.
+Conversely the Mellin identity
+\begin{equation}
+ \int_1^\infty p(x)x^{-s-1}\,dx
+             =\frac1{(s-1)s\zeta(s)},\qquad \Re s>1,
+ \label{eq:ns68-p-transform}
+\end{equation}
+continues analytically to $\Re s>1/2$ if all the stated power bounds
+hold. A zero there would give a genuine pole, a contradiction.
+The apparent singularity at $s=1$ is removable. The functional equation
+then gives RH.
+
+The renewal identity and~\eqref{eq:ns68-sup-transfer} transfer these
+power bounds in both directions between $p$ and $f$ for real $x$.
+For the discrete-to-continuous step, the exact divisor identity gives
+$|s(x)|\leq1+1/x$ for $x\geq1$. Off the discrete breakpoints,
+\[
+ f'(x)=v s(x)+\frac{M(2x)-M(x)}x,
+ \qquad |f'(x)|\leq2v+2<4.
+\]
+The sums defining $f$ match continuously at integers and half-integers:
+a term entering at $2x=n$ has coefficient zero, and a term leaving
+at $x=n$ is exactly replaced by the change in $xs(x)v$.
+Therefore $f$ is globally $4$-Lipschitz on $[1,\infty)$.
+Its integer values suffice for every displayed power bound. Compact
+initial intervals change only the constant.
+\end{proof}
+
+For an independent analytic check, termwise integration on $\Re s>1$
+gives the exact Mellin response
+\begin{equation}
+ \int_0^\infty f(x)x^{-s-1}\,dx
+  =\frac{H(s)}{\zeta(s)},\qquad
+ H(s)=\frac{v}{s-1}+\frac{2^s-1-sv}{s^2}.
+ \label{eq:ns68-forcing-transform}
+\end{equation}
+The factor $H$ has no zero on $\Re s>0$ (and has a pole at $1$).
+Indeed the unweighted probability kernel has Laplace transform
+\[
+ \widehat K(s)=(1-v)2^{-s}+\frac{1-2^{-s}}s,
+ \qquad H(s)=\frac{2^s\{1-\widehat K(s)\}}{s(s-1)}.
+\]
+For $\sigma=\Re s>0$, positivity of that kernel gives
+$|\widehat K(s)|\leq q_\sigma<1$. Hence the numerator never
+vanishes in this half-plane. The apparent pole of $H/\zeta$ at
+$s=1$ is removable, as in~\eqref{eq:ns68-p-transform}.
+Thus no nontrivial-zeta-zero contribution is removed by this scalar
+sampling kernel. This is the same weighted contraction in Mellin
+coordinates, not an additional arithmetic estimate.
+
+\begin{corollary}[Critical weighted total energy cannot be finite]
+\label{cor:ns68-critical-energy}
+Put $q=q_{1/2}$. For every $X\geq1$,
+\begin{equation}
+ (1-q)^2\int_1^X\eta(x)^2\,dx
+ \leq\frac12\int_{1/2}^{X/2}\frac{f(x)^2}{x^2}\,dx
+ \leq(1+q)^2\int_1^X\eta(x)^2\,dx.
+ \label{eq:ns68-finite-energy-comparison}
+\end{equation}
+Both integrals diverge as $X\to\infty$, unconditionally. Finiteness
+of this particular critical weighted total energy is therefore not a
+possible sufficient estimate to pursue. This does not exclude a
+logarithmic or subpolynomial growth bound for these integrals, and is
+not a claim that the canonical norm $D_{N,1}$ diverges.
+\end{corollary}
+\begin{proof}
+Use~\eqref{eq:ns68-two-sided} with $a=2$, $\theta=1/2$ and
+$T=\log X$, and change variables. Here
+$\|P_{1/2}\|^2=\int_1^X\eta(x)^2\,dx$ and
+$\|G_{1/2}\|^2=\tfrac12\int_{1/2}^{X/2}f(x)^2x^{-2}\,dx$.
+
+If $\int_1^\infty\eta(x)^2dx$ were finite, Cauchy--Schwarz would
+make~\eqref{eq:ns68-p-transform} analytic on $\Re s>1/2$ and give,
+for $s=1/2+\delta+i\gamma$,
+\[
+ \left|\int_1^\infty p(x)x^{-s-1}dx\right|
+       \leq\frac{\|\eta\|_2}{\sqrt{2\delta}}.
+\]
+At any known critical-line zero $1/2+i\gamma$ its meromorphic
+continuation has a pole of integer order at least one. Along the
+horizontal approach that grows at least as $\delta^{-1}$, contradicting
+the displayed bound. The positive lower factor in
+\eqref{eq:ns68-finite-energy-comparison} transfers divergence to the
+forcing energy. No assumption on simplicity or RH is needed.
+\end{proof}
+
+\paragraph{Finite verification.}
+Exact Maxima checks retain integer and noninteger endpoints, the physical
+canonical sample, the Mellin response and both energy primitives.
+Arb replays at 256 and 384 bits verify the complete renewal identity
+and finite energy comparison for
+$N=16,64,512,4096,65536,1048576$, using every M\"obius coefficient
+through $2N$. There is no omitted tail in these finite identities.
+The critical kernel mass and supremum-transfer constant satisfy
+\[
+ .8027641<q_{1/2}<.8027642,\qquad
+ 3.58508<\frac{2^{-1/2}}{1-q_{1/2}}<3.58509.
+\]
+The archive matches $74$ cross-precision quantities. No growth bound
+is inferred from these six values.
+
+\paragraph{Stop condition.}
+The averaging geometry yields an explicit inverse bound, not a new
+arithmetic estimate. A square-root-plus-epsilon estimate for its signed
+forcing is exactly strong enough for RH and is still absent. Bounding
+all critical weighted energy by a finite constant is actually false.
+The remaining permissible objectives are growth estimates with an
+explicit rate; neither positivity of the renewal kernel nor the finite
+checks supply them.

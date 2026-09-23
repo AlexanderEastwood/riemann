@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "physical_precision_enclosure_matches": 175,
+  "doubled_cutoff_enclosure_matches": 28,
+  "independent_gram_precision_matches": 9,
+  "independent_gram_minimum_accuracy_bits": 139,
+  "physical_spot_checks_per_precision": 25,
+  "uniform_centered_conditioning_bound": "1+2*norm(sigma_1) < 4.617",
+  "source_sha256": "2c4c14202df2e733063c62658f882bd4f7a488008e077b786aabb809c11e6bde",
+  "inherited_kernel_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5"
+}

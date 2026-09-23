@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "precision_enclosure_matches": 115,
+  "doubled_cutoff_matches": 23,
+  "independent_NS69_overlap_matches": 16,
+  "minimum_accuracy_bits": 88,
+  "source_sha256": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+  "kernel_source_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+  "largest_block_open_input_values": {
+    "N": 256,
+    "model_numerator_over_energy": "[0.76685068326211833984434538722 +/- 8.57e-30]",
+    "selected_true_model_ratio": "[9.48848423209833083088540950 +/- 6.12e-27]"
+  },
+  "finite_prediction": "both repaired directions outperform the unmodified correlation at every tested size",
+  "cofinal_estimate_obtained": false
+}

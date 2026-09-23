@@ -155,7 +155,22 @@ sequence. Its fixed-order smoothed norm-growth exponent is exactly
 beta_star-1/2 (NS-66); no unconditional subpolynomial bound or bounded
 cofinal subsequence is obtained. This reopens a weaker growth target,
 not the false strong-convergence goal.
-No new Weil window, floor, G2 or RH proof. Publication is pending.
+No new Weil window, floor, G2 or RH proof. Published through PR #32.
+
+Version 1.60 (NS-67–71) gives complete canonical cells and
+an O(log N) tail beyond N^2, retaining the exact growth criterion.
+Centered complete Abel terms have conditioning at most 1+2*||sigma_1||<4.617;
+whole-term cancellation cannot change the power exponent. Positive renewal
+transfers the same forcing power; its critical weighted total energy is
+unconditionally infinite, not the canonical norm itself. The actual optimized
+endpoint remainder exceeds its model at N=64,128. Repairing the elementary
+Gram cusp subtracts d/max(u,v), exactly diagonal in adjacent differences;
+no uniform all-coefficient comparison survives zeta zeros and large values.
+The repaired kernel still selects efficient finite directions: at N=256,
+97.06% of full gain, versus 38.41% for the unmodified correlation direction.
+The selected numerator and true-energy ratios have no cofinal estimate.
+Complete Arb 256/384 and cutoff replays, exact Maxima checks, local self-review
+only. No new Weil window, floor, G2 or RH proof.
 
 ## 2. Claim discipline — the non-negotiable part
 
