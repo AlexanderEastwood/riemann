@@ -160,6 +160,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-89 | Construct the optimal tail-normalized upper certificate and quantify its complete error cost | Codex, Continue solving toward RH | done (constructive upper certificate; decay open) | Original fixed-seed obstruction test stopped before publication. Focus on explicit approximants, complete upper error, and what remains missing for the logarithmic upper-rate candidate. No new lower-bound result or cofinal decay inferred. |
 
+| NS-90 | Test a signed Mobius inversion estimate for the actual optimized finite arithmetic observations and its complete gain cost | Codex, Continue on PR42 arithmetic lower gain | claimed | Keep all old-space projection terms, the complete prime-sum remainder and true direction cost. Seek an independent lower gain; do not count another finite efficiency table or sufficient-condition restatement as the missing theorem. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
