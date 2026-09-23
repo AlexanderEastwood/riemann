@@ -1160,6 +1160,14 @@
       "parent": "nbjointlocalization",
       "evidence": "evidence/ns95_square_product",
       "note": "NS95: free signed divisor-product weights force b_(mp) independent of prime p>N for mp<=N^2. Exact complementary gain retained; an invisible arithmetic vector refutes the all-residual comparison under the stated prime-pair hypothesis, not the actual-target bound. Free lift captures 99.83% of finite N16-to-256 gain versus 27.31% for NS86, with complete costs and tails. Product-pairing matrix indefinite on tested blocks. Reweighting generally loses the defect-square prescription; no cofinal lower estimate or new best error."
+    },
+    {
+      "id": "nblcmsquarecone",
+      "title": "LCM divisor squares: complete-rule floors and signed refit equivalence",
+      "status": "proved",
+      "parent": "nbsquareproductrestriction",
+      "evidence": "evidence/ns96_lcm_square",
+      "note": "NS96: for the entire coefficient sequence c=-q grouped from any PSD matrix, E>=3087/4096 uniformly in size; c=+q gives E>1/32. Complete real Mellin exterior retained. After unrestricted old refitting, the projected PSD cone equals the signed LCM span; a nonzero old-orthogonal residual pairing matrix is indefinite. No floor for unrestricted/refitted error, actual cofinal gain bound, or general sieve no-go. Single rank-one squares and extra trace/diagonal constraints are outside the cone equality."
     }
   ]
 }

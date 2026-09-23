@@ -1,0 +1,14 @@
+{
+  "reviewed_base": "604cb9cbf5bb09c6bd42f504fc698738dd53577b",
+  "scope": "Unchanged normalization and scope sources; no inherited numerical certificate is needed for the new analytic proof. Hash verification is not a numerical replay.",
+  "sha256": {
+    "evidence/ns86_optimized_arithmetic/argument.tex": "2d42567894aea0fc07e185387f3889f6aebbe265e9ce55bbd745185193783972",
+    "evidence/ns87_joint_tail/argument.tex": "b163dcd18c485ec937d7bf1657337de60ac9ec604e2137f4385f7e077f0e47e3",
+    "evidence/ns95_square_product/argument.tex": "bb2d4ff84ada634e951d538080f217c86c4a8216d815f3c72d7322bc0da6704a",
+    "evidence/ns95_square_product/self-review.json": "737c62225618a381c137ba4c59a519663e3fee6162e8071db59b25776e0e1493",
+    "evidence/v159/ns61/proof.tex": "e8d435301626c9097e4f18582bff9458762ddb6cfcb0c825858ce3f008692298",
+    "evidence/v163/ns78/proof.tex": "3dac51b901eb8590d4640e39dcbdaf5cd8ccf2276bf748e4430cde7de2ec5dcc",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "manuscript/fixed_space_prime_action_v1.tex": "8e494729b436099efc41bedf391e7ecf1c4ff7548176ec0692bb2843a6c2aeab"
+  }
+}

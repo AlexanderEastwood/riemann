@@ -170,6 +170,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-95 | Test the N-to-N^2 product-index grouping against the complete joint arithmetic gain, retaining old-space projection, missing indices and complete costs | Codex | done (construction tested; cofinal lower bound open) | Free signed lift captures 99.83% of full gain at N16 to 256 versus NS86's 27.31%; its large-prime coefficient restriction and missing gain are exact. All-residual comparison fails under a prime-pair hypothesis; actual-target bound remains open. Complete 256/384-bit and cutoff replays, physical norms and 18 Maxima checks; evidence/ns95_square_product. |
 
+| NS-96 | Test a genuine LCM divisor-square positivity replacement for square-scale signed gain, including complete real Mellin moments and the old-space refit | Codex | complete; scoped result, v1.66 unchanged | Both complete signs have fixed error floors. After unrestricted old refitting the projected PSD cone equals the signed LCM span; nonzero residual-pairing matrix indefinite. Extra rank/trace constraints not covered. Actual cofinal lower gain remains open. [Proof and checks](evidence/ns96_lcm_square/) |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
@@ -391,6 +393,24 @@ refuted here, or substitute another larger efficiency table. The exact
 square identity is not retained after arbitrary reweighting and old refit.
 A compatible small fixed gain per squaring remains a sufficient unproved
 target; fixed gain every doubling is excluded. No new manuscript version.
+
+## Open continuation after NS-96
+
+The pointwise-positive LCM replacement cannot serve as the entire
+coefficient rule with either global sign. Free old-space refitting removes
+those particular floors, but then PSD mixtures generate the full signed
+LCM span. Do not infer a positive numerator from the matrix constraint,
+or carry the pure-rule floors over to refitted approximants.
+
+Retain the full signed PR42 observation problem or the explicitly
+restricted NS95 actual-target problem. A useful estimate must jointly
+control the actual numerator and complete projected cost relative to E_N.
+If imposing an additional trace, diagonal or rank constraint on an LCM
+square, first show that it survives the old refit and quantify the cost
+of the cancellation. NS96 does not exclude such constrained constructions,
+and provides no uniform lower gain for them. No further finite efficiency
+table is prescribed. The tail and original historical evidence gaps have
+exactly their prior status; no new manuscript version.
 
 ## Lanes
 

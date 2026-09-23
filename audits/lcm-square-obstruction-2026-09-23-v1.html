@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Divisor squares and the signed lower bound — NS96</title></head>
+<body style="margin:0;background:#f5f3ee;color:#24313a;font-family:Georgia,serif;line-height:1.65;">
+<main style="max-width:680px;margin:36px auto;padding:36px;background:#fff;border-top:5px solid #315c60;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.2px;color:#52666b;">RIEMANN PROJECT · SEPTEMBER 23, 2026 · VERSION 1</p>
+<h1 style="font-size:30px;line-height:1.2;margin:12px 0 24px;">What positivity gives us—and what refitting removes</h1>
+<p><strong>The positive divisor-square proposal does not supply the missing lower gain.</strong> Used as the entire coefficient rule, it leaves a fixed error floor. Once the old coefficients are free to change, its positive mixtures generate exactly a signed linear space. This identifies where the proposed positivity argument stops.</p>
+<p>The result concerns one precisely defined construction. The actual optimized approximation, the arithmetic lower-gain target, G2 and RH remain open.</p>
+<h2 style="font-size:21px;margin-top:30px;">A genuine square uses least common multiples</h2>
+<p>If a divisor sum is squared pointwise, its coefficients group at lcm(i,j). This differs from the ordinary-product convolution square tested earlier. For a positive semidefinite matrix Γ, define q<sub>ℓ</sub> by summing Γ<sub>ij</sub> over lcm(i,j)=ℓ. Then every divisor sum ∑<sub>ℓ|m</sub>q<sub>ℓ</sub> is nonnegative, although individual coefficients can be signed.</p>
+<p>This is classical <a style="color:#225e68;" href="https://www.math.tau.ac.il/~rudnick/courses/sieves2015/SelbergSieve_lecture_2.pdf">Selberg-sieve algebra</a>. The new project test asks what happens when it is used in our fixed approximation space.</p>
+<h2 style="font-size:21px;margin-top:30px;">Complete coefficient rules have fixed error floors</h2>
+<table style="border-collapse:collapse;width:100%;font-size:15px;">
+<thead><tr><th style="text-align:left;padding:10px;border-bottom:2px solid #315c60;">Entire coefficient sequence</th><th style="text-align:left;padding:10px;border-bottom:2px solid #315c60;">Complete squared error</th></tr></thead>
+<tbody><tr><td style="padding:10px;border-bottom:1px solid #ddd;">c = −q</td><td style="padding:10px;border-bottom:1px solid #ddd;">At least 3087/4096 ≈ 0.75366</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #ddd;">c = +q</td><td style="padding:10px;border-bottom:1px solid #ddd;">At least 0.037771925… &gt; 1/32</td></tr></tbody></table>
+<p>Both bounds hold at every size. The first uses a complete real Mellin moment, including the exterior interval. The second follows from the exact residual on the first two physical cells. These are bounds on the two restricted constructions, <strong>not on the unrestricted optimized error</strong>.</p>
+<h2 style="font-size:21px;margin-top:30px;">After refitting, both signs return</h2>
+<p>For indices i,j already in the old fit, the two rank-one positive matrices made from e<sub>i</sub>+e<sub>j</sub> and e<sub>i</sub>−e<sub>j</sub> give the functions</p>
+<p style="padding:14px 18px;background:#edf3f2;text-align:center;">a<sub>i</sub> + a<sub>j</sub> ± 2a<sub>lcm(i,j)</sub>.</p>
+<p>The old-space projection removes the first two terms. Positive mixtures can therefore realize either sign of every available new direction. With unrestricted old refitting, their projected cone is exactly the signed span of those directions.</p>
+<p>Consequently the matrix of pairings with an old-orthogonal residual is either zero or indefinite. Positivity of Γ alone forces no sign for the numerator. A fixed trace budget, a normalized square, or a single rank-one square is an additional restriction and is not covered by the equality of cones.</p>
+<h2 style="font-size:21px;margin-top:30px;">Where the project should go next</h2>
+<p>Return to the joint signed arithmetic estimate for the actual optimized residual: a lower bound on its available improvement relative to its current error. Keep the complete projected energy and the old-coefficient cancellation in the same estimate. The tail is already controlled at the required scale.</p>
+<p>A square-based alternative would need a quantified restriction that survives refitting and still gives the required numerator and cost bounds. Positivity by itself, or another finite efficiency table, does not meet that requirement.</p>
+<h2 style="font-size:21px;margin-top:30px;">Checks and limits</h2>
+<p>All 103 prior conclusions were reviewed for scope and dependencies. The new argument has 17 Maxima identity checks, exact finite divisor checks, and scalar replays at 256 and 384 bits. No new finite optimization or physical cutoff was used. Author review only; no independent proof audit is claimed.</p>
+<p>The unchanged v1.66 manuscript builds to 358 pages with zero undefined or duplicate references; its 16-file manifest verifies. Both groups of missing historical originals remain open.</p>
+<p style="border-top:1px solid #ddd;padding-top:18px;font-size:14px;"><a style="color:#225e68;" href="../evidence/ns96_lcm_square/argument.tex">Complete derivation</a> · <a style="color:#225e68;" href="../evidence/ns96_lcm_square/README.md">Replay instructions and scope</a> · <a style="color:#225e68;" href="../evidence/ns96_lcm_square/self-review.json">Author review</a></p>
+</main></body></html>
