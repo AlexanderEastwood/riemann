@@ -1,0 +1,97 @@
+{
+  "classification": "DIAGNOSTIC consistency and provenance checks, not a historical certificate replay",
+  "paired_arb_fields_overlapping": 647,
+  "both_reports": {
+    "64_sign_changes": true,
+    "64_values_exclude_zero": true,
+    "64_slopes_exclude_zero": true,
+    "all_dependency_hashes_match": true
+  },
+  "same_exact_witness": true,
+  "inherited_ingredient_precisions": [
+    768,
+    896
+  ],
+  "ordinary_projection_error": "[0.0001566402741732515405759257990885063797821 +/- 8.36e-45]",
+  "ordinary_transform_error": "[0.0002608231651118932055220138992040906838405 +/- 4.57e-45]",
+  "ordinary_derivative_error": "[0.0002087569726384490717318007480789161412493 +/- 1.42e-44]",
+  "derivative_allowance_exceeds_gamma2_slope": true,
+  "first_sqrt_rho_scale_divided_by_linearized_shift": "[465.4911896646395652999539306778889989090 +/- 2.86e-38]",
+  "scope": "No omitted-zero tail, unique-root enclosure or new complete-ground transfer. Saved intervals agree; this does not validate every historical computation.",
+  "review": {
+    "reviewed_main": "d92264127a6bf40cbfb85899e1db676576457546",
+    "registered_nodes": 104,
+    "node_objects_unchanged": true,
+    "continuation_groups": 14,
+    "updated_interpretations": [
+      "WEIL-FLOOR",
+      "CCM-LIMIT",
+      "ZERO-GEOMETRY"
+    ],
+    "scope": "All recorded conclusions and affected dependencies reviewed; not a replay of all historical proofs. Local author review only.",
+    "missing_original_groups": "Both OPEN; ledger unchanged.",
+    "pre_registration_commit": "0513e84c22f2ed15408daae5bf61a362885fe9f3",
+    "claim_commit": "605bbe7647a1b7d949ba3363d8872c2ba99500e0"
+  },
+  "validation": {
+    "arb_precisions": [
+      1024,
+      1280
+    ],
+    "pyright": "0 errors, 0 warnings, 0 informations on both new Python files",
+    "manuscript_build": {
+      "pages": 358,
+      "undefined_duplicate_references": 0,
+      "visual_review": "Rendered physical pages9 and10 inspected; new paragraph readable, no clipping or overlap."
+    },
+    "manifest_v166": {
+      "ok": 16,
+      "missing": 0,
+      "mismatched": 0
+    },
+    "git_diff_check": "passed",
+    "new_version": false,
+    "new_theorem_nodes": 0
+  },
+  "wall_check": {
+    "classification": "Same open gap for CCM-LIMIT and WEIL-FLOOR; distinct bounded diagnostic prediction",
+    "closest": [
+      "NS43",
+      "NS46",
+      "v1.40–1.43",
+      "NS103"
+    ],
+    "new_cofinal_input": "NONE",
+    "outcome": "Finite trial near-zero pattern supported; complete-ground extension and proposed cause unproved; no thaw."
+  },
+  "artifacts": [
+    {
+      "path": "evidence/diag_ns104_ground_mechanism/evaluate_trial.py",
+      "sha256": "8d3754c46186749842500c90f96ed8f9283350f882f1e185ea9203b500a5e540"
+    },
+    {
+      "path": "evidence/diag_ns104_ground_mechanism/validate_results.py",
+      "sha256": "5891d2d30baa704df964f326c2a75dcb4289ac7ab85e580d7ea7deb8141d2cf5"
+    },
+    {
+      "path": "evidence/diag_ns104_ground_mechanism/trial-1024bits.json",
+      "sha256": "ff8fd773c2c72570996982143573ff886e2c8911ea5bd2ca6efa74547153f2f4"
+    },
+    {
+      "path": "evidence/diag_ns104_ground_mechanism/trial-1280bits.json",
+      "sha256": "e66a569213b3d78d5bfa08c2e79826af4aa5528c53d9449a55d6b1679ff94171"
+    },
+    {
+      "path": "evidence/diag_ns104_ground_mechanism/results.md",
+      "sha256": "472ed45e5c45ebfb4fa415f2c67a557a038a48b1f6e7a268d935a5df58042238"
+    },
+    {
+      "path": "audits/ground-mechanism-check-2026-09-23-v1.html",
+      "sha256": "966205b54ab901d3a6cf85eb149d6c17f8e29cc94bcb1a93aa81a9ef685c845b"
+    },
+    {
+      "path": "manuscript/fixed_space_prime_action_v1.tex",
+      "sha256": "ced60aca8c0bfbc8d941edf5b730a9119f791074a02b5d04c5f6d6c023afdd77"
+    }
+  ]
+}

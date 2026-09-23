@@ -5,6 +5,27 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 archived ground interpretation check (NS-104)
+
+**The finite trial supports the predicted near-zero pattern; its explanation
+and complete-ground extension remain unproved.** At 1024/1280 bits, the
+unchanged 4097-coefficient trial has tiny values at the first 64 zeta
+ordinates and opposite signs at each pair of endpoints gamma_j +/- 0.01.
+The first linearized trial shift is about -3.42e-38. The complete-ground
+9e-33 radius from v1.43 is an upper bound, not a measured displacement.
+
+The manuscript's multiplicative lambda=4 means support [-log4,log4].
+NS103 uses lambda for the logarithmic half-width; its proposed crossover
+is a heuristic, not a sharp detection limit. The uniform negative-floor
+target does not require resolving each tiny positive eigenvalue.
+
+**Wall check: Same open gap.** Closest NS43/46 and v1.40–1.43.
+This bounded diagnostic supplies no new cofinal arithmetic estimate and
+thaws no input group. No manuscript version or theorem node is added.
+
+[Results and reproducible scan](evidence/diag_ns104_ground_mechanism/) ·
+[Readable interpretation audit](audits/ground-mechanism-check-2026-09-23-v1.html).
+
 ## September 23 theta-factorization feasibility test (NS-101)
 
 **The short test stopped without a new positivity estimate.** The actual
