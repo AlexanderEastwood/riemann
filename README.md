@@ -5,6 +5,26 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 projected-cost attempt (NS-98)
+
+**No new scale-independent cost bound was obtained.** Retaining the exact
+old-coefficient subtraction leaves an unestimated signed projected cross
+term. Its diagonal is bounded by the elementary method already used in
+NS93. A direct contractivity/triangle estimate reproduces NS92's previous
+budget; no new arithmetic input follows from the projection identity.
+
+Two complete finite decompositions reproduce the NS73 costs at N=16,32;
+their negative cross sums are not extrapolated. Two precisions, a doubled
+series cutoff and seven exact Maxima checks pass. This is an attempt/audit,
+not a new theorem node, manuscript version or RH advance.
+
+**Wall check: Same open gap.** Closest NS92/93; actual projected-cost and
+compatible numerator estimates remain open. Another formula or larger
+finite table is not the next step without an independent arithmetic bound.
+
+[Attempt and stop condition](evidence/ns98_projected_cost/) ·
+[Readable report](audits/projected-cost-attempt-2026-09-23-v1.html).
+
 ## September 23 overlap audit (NS-97)
 
 The signed-arithmetic bottleneck predates NS96. Its LCM class gives new

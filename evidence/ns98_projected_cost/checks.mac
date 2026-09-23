@@ -1,0 +1,20 @@
+kill(all)$ checks:0$ scalarmatrixp:false$
+check(name,expr):=block([v:ratsimp(expr)],if v#0 then error(name,v),checks:checks+1,print("PASS",name))$
+g:matrix([g11,g12],[g12,g22])$
+c:matrix([c11,c12],[c21,c22])$
+dd:matrix([d11,d12],[d12,d22])$
+w:matrix([u],[v])$ q:transpose(c).invert(g).c$ hh:dd-q$
+f:-invert(g).c.w$
+raw:(transpose(w).dd.w)[1,1]$ removed:(transpose(w).q.w)[1,1]$
+cost:(transpose(w).hh.w)[1,1]$
+check("complete Schur subtraction",cost-raw+removed)$
+check("full correction including cross terms",(transpose(f).g.f+2*transpose(f).c.w+transpose(w).dd.w)[1,1]-cost)$
+check("first old normal equation",(g.f+c.w)[1,1])$
+check("second old normal equation",(g.f+c.w)[2,1])$
+check("projected diagonal and signed cross",cost-u^2*hh[1,1]-v^2*hh[2,2]-2*u*v*hh[1,2])$
+z:matrix([z1],[z2])$
+endpoint_raw:raw+2*(transpose(z).c.w)[1,1]+(transpose(z).g.z)[1,1]$
+endpoint_p:c.w+g.z$
+check("arbitrary old correction leaves cost unchanged",endpoint_raw-(transpose(endpoint_p).invert(g).endpoint_p)[1,1]-cost)$
+check("full projection cost nonnegative square identity",removed-(transpose(invert(g).c.w).g.(invert(g).c.w))[1,1])$
+print("PASS:",checks,"exact checks")$ quit()$

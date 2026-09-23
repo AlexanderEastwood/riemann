@@ -1,0 +1,107 @@
+\section*{NS98: projected-cost attempt and stop record}
+
+\paragraph{Outcome and overlap.}
+No scale-independent average cost bound was obtained. The complete Schur
+complement is already NS53/61/73, the signed-suffix budget is NS92, and
+bounded-diagonal separation is already the method of NS93. This note
+applies those identities to the actual projected cost, identifies the
+unchanged missing estimate, and records two finite checks. It is an
+attempt/audit, not a new arithmetic theorem or a new RH route.
+
+\paragraph{Fixed normalization and complete cost.}
+Use the notation of NS92, with
+\[
+ a_n(t)=A(t/n),\quad d_n=-\mu(n)\log(2N/n)\quad(N<n\le2N),
+ \quad K_N=\|(I-\Pi_N)\sum_{n=N+1}^{2N}d_na_n\|^2.
+\]
+The prescription is not rescaled. Let $G$ be the old Gram, $C$ its
+old/new block and $D$ the new Gram, all in the complete space
+$L^2((0,\infty),dt/t^2)$. Set $Q=C^TG^{-1}C$ and $H=D-Q$.
+The exact old correction is $-G^{-1}Cd$, so
+\[
+ K_N=d^THd=d^TDd-d^TQd.
+\]
+Both matrices $Q$ and $H$ are positive semidefinite; here $H$ is positive
+definite by finite independence. This does not assign signs to their
+individual off-diagonal entries or to their signed off-diagonal sums.
+The displayed identity itself is not progress on a bound.
+
+\paragraph{The signed term that remains.}
+In physical-atom coordinates put
+\[
+ D_N^{\rm proj}=\sum_n d_n^2H_{nn},\qquad
+ C_N^{\rm proj}=2\sum_{m<n}d_md_nH_{mn},\qquad
+ K_N=D_N^{\rm proj}+C_N^{\rm proj}.
+\]
+Writing $\alpha=\log2$, $\kappa=\log(2\pi)-\gamma$,
+NS61 gives $\|a_1\|^2\le4\kappa$ by $\|J\|=2$ and
+$\|\rho_1\|^2=\kappa$. Dilation gives $\|a_n\|^2=\|a_1\|^2/n$.
+Thus, for every integer $N\ge1$,
+\[
+ 0\le D_N^{\rm proj}\le
+ \sum_n d_n^2D_{nn}\le
+ 4\kappa\alpha^2\sum_{n=N+1}^{2N}\frac1n
+ \le4\kappa\alpha^3.
+\]
+This is an elementary diagonal bound, not an upper bound for $K_N$.
+In particular, the desired bounded means of $K_{2^j}$ on
+$J\le j<2J$ are equivalent to bounded upper means of
+$C_{2^j}^{\rm proj}$. That observation supplies no estimate of either.
+These are not NS93's scalar $D_N,C_N$: the kernel $H$ includes the full
+old refit. No equality between the two signed cross terms is asserted.
+
+The new estimate attempted was an upper bound independent of $J$ for
+\[
+ \frac2J\sum_{j=J}^{2J-1}
+ \sum_{2^j<m<n\le2^{j+1}}
+ \mu(m)\mu(n)\log(2^{j+1}/m)\log(2^{j+1}/n)
+ \left(D_{mn}-(C^TG^{-1}C)_{mn}\right).
+\]
+It remains unproved, including when $J$ runs only through sufficiently
+large powers of two. Refitting gives a nonnegative subtraction from the
+\emph{full} raw cost, but does not compare that subtraction to the raw
+signed cross terms. A nonpositive projected cross sum would be one
+stronger sufficient estimate. The finite tests below do not prove it.
+
+\paragraph{Why the direct norm estimate returns to NS92.}
+Let $F_N$ and $T_N$ be NS92's endpoint-corrected direction and signed
+suffix. Boundedness of $I-\Pi_N$ permits the exact strong integral
+\[
+ (I-\Pi_N)F_N
+ =\int_N^{2N}T_N(x)(I-\Pi_N)h(\,\cdot/x)\,dx.
+\]
+Replacing the projected generator norm by $\sqrt{\kappa/x}$ and applying
+Minkowski gives precisely $K_N\le U_N\le\kappa\alpha S_N$ again.
+This is a valid but previously established bound. Taking every Mobius
+product's absolute value in the final $S_N$ returns to NS93's growing
+majorant. NS93 does not prove divergence of $K_N$, nor does it exclude
+an estimate that retains the projected signed kernel.
+
+\paragraph{Finite scope.}
+Complete Arb replays at 256 and 384 bits, with Bernoulli/Hurwitz tail
+cutoff 128 and a separate cutoff-256 replay, give
+\[
+\begin{array}{c|ccc}
+N&K_N&D_N^{\rm proj}&C_N^{\rm proj}\\\hline
+16&(1.4234,1.4235)10^{-5}&(2.5649,2.5650)10^{-4}&(-2.4227,-2.4226)10^{-4}\\
+32&(1.6087,1.6088)10^{-5}&(2.3465,2.3466)10^{-4}&(-2.1857,-2.1856)10^{-4}
+\end{array}
+\]
+The projected costs overlap the prior NS73 enclosures. No new residual
+target solve, gain fraction, best error or larger-size efficiency table
+is supplied. The two negative cross sums are finite certificates only.
+They establish no eventual sign, bounded average, asymptotic cancellation
+or RH evidence. Complete Gram costs are also checked by direct assembly
+of the old-corrected coefficient vector and by endpoint-correction
+invariance; no infinite Gram tail is dropped.
+
+\paragraph{Stop condition and next-step restriction.}
+The attempt reached the same unestimated signed arithmetic input.
+Do not continue this variant merely by renaming $C_N^{\rm proj}$,
+enlarging the finite table, or invoking positive semidefiniteness to
+discard cross terms. A further cost attempt needs an independent estimate
+for the displayed signed quantity. Even such an estimate would still
+need a compatible lower bound for the actual residual numerator, as in
+NS91/93. This turn proves neither failure nor success of bounded projected
+cost, and no impossibility of the PR42/NS87 route. Manuscript v1.66, RH/G2
+and both historical missing-original evidence groups retain their status.

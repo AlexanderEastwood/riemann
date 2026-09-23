@@ -1,0 +1,18 @@
+{
+  "classification": "Limited source search; no external theorem applied",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/0812.1689",
+      "authors": "Balazard and de Roton",
+      "scope_read": "Abstract returned by search",
+      "finding": "The abstract explicitly assumes RH for its distance estimate; no unconditional projected-cost estimate imported."
+    },
+    {
+      "url": "https://arxiv.org/abs/1812.04309",
+      "author": "Balazard",
+      "scope_read": "Abstract returned by search",
+      "finding": "Concerns limiting coefficient arithmetic and an RH equivalence. No claim that it proves or disproves the projected-cost target."
+    }
+  ],
+  "external_estimates_used": []
+}

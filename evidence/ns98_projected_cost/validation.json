@@ -1,0 +1,7 @@
+{
+  "classification": "Finite replay validation, not a cofinal estimate",
+  "precision_overlaps": 20,
+  "cutoff_overlaps": 20,
+  "NS73_cost_overlaps": 2,
+  "source_bindings": 2
+}

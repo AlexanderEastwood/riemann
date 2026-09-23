@@ -1,0 +1,64 @@
+{
+  "classification": "Certified finite projected-cost decomposition; no averaged or cofinal bound",
+  "precision_bits": 384,
+  "series_cutoff": 256,
+  "bernoulli_order": 24,
+  "source_sha256": "d83534dd67aead17dc4030f757fbff8d557c98bf1e9a54c0c6d1d08e8c573be3",
+  "kernel_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+  "rows": [
+    {
+      "N": 16,
+      "seconds": 0.901,
+      "values": {
+        "raw_cost": "[0.0890919496272825962344008775599244547255871821184305913 +/- 7.34e-56]",
+        "removed_old_cost": "[0.08907771506165647241245317735887521864373377357 +/- 5.54e-48]",
+        "projected_cost": "[1.423456562612382194770020104923608185340855e-5 +/- 7.11e-48]",
+        "raw_diagonal": "[0.1948305417013101295628168966224988162322112393081460278 +/- 7.36e-56]",
+        "projected_diagonal": "[0.00025649561341918421863605402490534662638135103 +/- 4.08e-48]",
+        "projected_signed_off_diagonal": "[-0.00024226104779306039668835382385611054452794249 +/- 6.31e-48]",
+        "cost_over_projected_diagonal": "[0.0554963316384699161800512565204966241440281 +/- 2.88e-44]",
+        "uniform_diagonal_upper": "[1.67932529805206158570984575087087115718738515999787348506891 +/- 3.89e-60]",
+        "endpoint_cost": "[6.40739816010574954004099529044090680160906456055581e-5 +/- 7.37e-56]",
+        "endpoint_removed_old_cost": "[4.9839415974933673452709751855172986162682099277e-5 +/- 1.39e-52]"
+      },
+      "off_diagonal_sign": "negative",
+      "minimum_accuracy_bits": 140,
+      "gates": {
+        "full_tail_in_Gram": true,
+        "old_normal_equation_residuals": true,
+        "retained_projection_subtraction": true,
+        "direct_full_correction_cost": true,
+        "independent_off_diagonal_sum": true,
+        "endpoint_correction_invariance": true,
+        "uniform_diagonal_bound": true
+      }
+    },
+    {
+      "N": 32,
+      "seconds": 2.891,
+      "values": {
+        "raw_cost": "[0.204271111492848584024105059843049078418224161403446808 +/- 3.78e-55]",
+        "removed_old_cost": "[0.204255024300591166381156636812171916753978704 +/- 9.42e-46]",
+        "projected_cost": "[1.6087192257417642948423030877161664245458e-5 +/- 5.66e-46]",
+        "raw_diagonal": "[0.2512800453565704822377841974728208889106357510011112397 +/- 8.28e-56]",
+        "projected_diagonal": "[0.0002346560573303680085595710656264719609540321 +/- 6.98e-47]",
+        "projected_signed_off_diagonal": "[-0.000218568865072950365611148034749310296708574 +/- 7.08e-46]",
+        "cost_over_projected_diagonal": "[0.06855647555165719266542999551626898202611 +/- 3.48e-42]",
+        "uniform_diagonal_upper": "[1.67932529805206158570984575087087115718738515999787348506891 +/- 3.89e-60]",
+        "endpoint_cost": "[5.7313252802716123118716586528999537751715089274773e-5 +/- 6.67e-55]",
+        "endpoint_removed_old_cost": "[4.122606054529848017029355565183787350625719964e-5 +/- 7.39e-51]"
+      },
+      "off_diagonal_sign": "negative",
+      "minimum_accuracy_bits": 134,
+      "gates": {
+        "full_tail_in_Gram": true,
+        "old_normal_equation_residuals": true,
+        "retained_projection_subtraction": true,
+        "direct_full_correction_cost": true,
+        "independent_off_diagonal_sum": true,
+        "endpoint_correction_invariance": true,
+        "uniform_diagonal_bound": true
+      }
+    }
+  ]
+}
