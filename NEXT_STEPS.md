@@ -126,6 +126,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-72 | Derive a complete local differential-energy representation of the repaired elementary kernel and a curvature minorant for the actual selected numerator | Codex, Continue solving toward RH | claimed | Retain whole-line domains, interpolation normalization and all boundary terms. Test whether the positive geometry yields a usable lower numerator estimate on the certified blocks, while distinguishing that finite minorant from an unproved cofinal arithmetic bound. |
 
+| NS-73 | Test whether the successful curvature direction has a simple signed Mobius/log-taper coefficient explanation, using complete projected arithmetic energies | Codex, Continue solving toward RH | claimed | Compare three explicit physical new-atom directions and their full three-dimensional span against the optimal and curvature gains on the same blocks. No fitted asymptotic law or RH assumption; retain old-space correction and every cross term. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
