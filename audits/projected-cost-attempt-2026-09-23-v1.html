@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Projected-cost attempt — 23 September 2026</title></head>
+<body style="margin:0;background:#f4f1e9;color:#252b2b;font-family:Georgia,serif;line-height:1.65;">
+<main style="max-width:680px;margin:36px auto;padding:32px;background:#fffefb;border-top:5px solid #315a55;">
+<p style="font:13px Arial,sans-serif;letter-spacing:1px;color:#586665;">RIEMANN PROJECT · NS98 · 23 SEPTEMBER 2026 · VERSION 1</p>
+<h1 style="font-size:30px;line-height:1.2;">The projected-cost bound remains unproved</h1>
+<p style="font-size:19px;">Keeping the old-coefficient cancellation did not produce the scale-independent average bound we were seeking. This attempt reached the same missing signed arithmetic estimate.</p>
+<p style="padding:14px;background:#edf2ee;"><strong>Wall check: Same open gap.</strong> Closest results: NS92–93; the exact projection formula already appears in NS53/61/73. The attempted change was to bound the smaller, fully refitted cost of the fixed Möbius direction. No new estimate was obtained.</p>
+<h2 style="font-size:22px;">What was checked</h2>
+<p>The true cost is the full new-direction energy minus the energy reproduced by the old coefficients. Both terms and every cross term were retained. In the resulting projected matrix, the diagonal contribution has an elementary bound independent of size. The remaining signed cross-term sum has no upper estimate here.</p>
+<p>This diagonal separation repeats the method of NS93 with a different, fully projected kernel. It is not a new arithmetic theorem. If we bound the projected generator by its original norm and apply the triangle inequality, we recover NS92’s previous budget exactly. Taking absolute values of all Möbius products at that point returns to NS93’s already failed majorant.</p>
+<h2 style="font-size:22px;">The finite checks do not establish persistence</h2>
+<p>At sizes 16 and 32 the projected signed cross sums are negative. The complete costs agree with the existing NS73 certificates. These two signs do not prove an eventual sign or a bounded average. No new best error or gain-efficiency result is claimed.</p>
+<p>Verification used complete interval arithmetic at 256 and 384 bits, a doubled series cutoff with its full remainder, direct assembly of the refitted vector, agreement with the prior costs, and seven exact Maxima checks. The touched Python files have no reported type errors. Author review only; no independent review is claimed.</p>
+<h2 style="font-size:22px;">Where this leaves the project</h2>
+<p>The cost target remains an average bounded independently of scale across successive doubling indices. A further attempt needs an independent estimate for the signed projected cross term displayed in the argument. Another equivalent formula or larger finite table would not supply it.</p>
+<p>Even a successful cost estimate would still need the compatible lower bound on the actual residual’s correlation. The full PR42/NS87 lower-gain problem remains open. This attempt disproves neither the cost bound nor that route.</p>
+<p>No theorem node or manuscript version is added. The unchanged manuscript builds to 358 pages with zero undefined or duplicate references; all 16 current-version manifest entries verify. Both historical missing-original evidence groups, G2 and RH remain open.</p>
+<p style="border-top:1px solid #d7ddd8;padding-top:16px;font-size:14px;"><a style="color:#315a55;" href="../evidence/ns98_projected_cost/argument.tex">Exact argument and stop condition</a> · <a style="color:#315a55;" href="../evidence/ns98_projected_cost/README.md">Replay instructions</a> · <a style="color:#315a55;" href="../evidence/ns98_projected_cost/turn-review.json">Conclusion review</a></p>
+</main></body></html>

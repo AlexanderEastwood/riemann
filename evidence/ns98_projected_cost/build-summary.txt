@@ -1,0 +1,7 @@
+Actual ./manuscript/build.sh: 358 pages; 0 undefined/duplicate references.
+Live manuscript source unchanged.
+python3 tools/verify_manifest.py v166: 16 ok, 0 relocated, 0 missing, 0 mismatched.
+pyright on both touched Python files: 0 errors, 0 warnings.
+Maxima: 7 exact checks.
+Arb replays: 256/384 bits at cutoff 128; 384 bits at cutoff 256, order 24.
+No new theorem node or manuscript version.

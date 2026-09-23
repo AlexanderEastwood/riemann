@@ -1,0 +1,17 @@
+{
+  "classification": "Current source hashes, not historical numerical replay",
+  "sha256": {
+    "AGENTS.md": "c3ff3bdb3234f1283149a4f32112120991b28ee776417a581a9604cf8a1223c5",
+    "research-map.json": "f166651409bab7def2d1f8032b9537bed0a3bb0f4c2f611ee8173790af965c7b",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "evidence/v159/ns61/proof.tex": "e8d435301626c9097e4f18582bff9458762ddb6cfcb0c825858ce3f008692298",
+    "evidence/v159/ns61/certify_smoothed.py": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+    "evidence/v159/ns61/gram-tail-proof.tex": "e33e4129fb81d0cdcb001e9177dc7f33ef044a746f1fa273b602286bf438ff15",
+    "evidence/v161/ns73/proof.tex": "8fdd6ab8bf3f68b4ec23d8236c3bccaba7365beb771f1e963fbcf193d72fb078",
+    "evidence/v161/ns73/mobius-384bits.json": "4e25a1bb66697d3984f26ee35d77f974a207e013b62b23be2e8f86d1fd0223a4",
+    "evidence/ns92_arithmetic_cost/argument.tex": "7e0727e2a0ea4682285e1830aa5d63120d293b95c33d2c5378fc14aa47a3f4d7",
+    "evidence/ns93_averaged_cost/argument.tex": "879c567b2aef66c78ed4b6d6178c0661116e41d961909e154ba1c6d23ef37a8a",
+    "evidence/ns97_novelty_audit/normalization-note.tex": "07d816d43a603f26ff8f0ffc609b1d3e6e879d44fdb57df7abb827e767087396",
+    "evidence/ns97_novelty_audit/self-review.json": "a19e32dfb1629eed20b0840166547b5e3feeb1125fc4a11918808732f0b527c1"
+  }
+}

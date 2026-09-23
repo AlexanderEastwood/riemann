@@ -1,0 +1,23 @@
+{
+  "classification": "Incremental NS98 artifact hashes; no historical proof replay",
+  "sha256": {
+    "evidence/ns98_projected_cost/README.md": "c7f785b853ffa3d7ba3dcbb9ad43cd6ff8e0d5653aac86b767329bbc00959443",
+    "evidence/ns98_projected_cost/argument.tex": "40f78654017c7c8e14ce5d2444b560cfe65d3a5d98c619573d96fed986ed3085",
+    "evidence/ns98_projected_cost/build-summary.txt": "9337cfa6fcfdc3c282a8fdb3dbb2d6f196d10768ab5a372896981bbaf2212a58",
+    "evidence/ns98_projected_cost/certify_cost.py": "d83534dd67aead17dc4030f757fbff8d557c98bf1e9a54c0c6d1d08e8c573be3",
+    "evidence/ns98_projected_cost/checks-output.txt": "85cb288a1a00c9bdc286ffcc1042b664eb3542c7d49ded479135b2f7d7c8bb03",
+    "evidence/ns98_projected_cost/checks.mac": "ce091fc194675cf23d723d85693db072a2bc72341d82fd1a5881610b0ce580bc",
+    "evidence/ns98_projected_cost/cost-256bits.json": "20dce025c0300178e9e528132b8132ccced42d12381ea7c7cf3152f264dc5473",
+    "evidence/ns98_projected_cost/cost-384bits.json": "5966a885e7f587bd857967393e305641e0249c767546803df0e3c1d2f8010496",
+    "evidence/ns98_projected_cost/cost-cutoff-384bits.json": "e7fbe900ba075c3acbb3d68ee7f74c3df2e15f9b8442ba1d20de3dc6fe12218b",
+    "evidence/ns98_projected_cost/literature-screen.json": "b7311d9a04f31d18c68fe38e1aad6b1314af57d49177f8bee327f9ef80b0c1bd",
+    "evidence/ns98_projected_cost/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "evidence/ns98_projected_cost/runtime-provenance.json": "b476a8a0d0e916ee966202e4018b97edd35b77f9da62540367634b19dd0eb7a3",
+    "evidence/ns98_projected_cost/self-review.json": "9bbdbdf7ff60b1b5dd5229b43102449d787052aa5481c5aefd34f0e9b5bd8a88",
+    "evidence/ns98_projected_cost/source-bindings.json": "58f6c655ea1a76eedfdbece8983e7cca8b72106b20926a6bc691a099a1c24e5f",
+    "evidence/ns98_projected_cost/turn-review.json": "7853fdbf9b69984ad9ed53c81a002f134ec5ca20d9f4fa262623438e0fa61a20",
+    "evidence/ns98_projected_cost/validation.json": "4f1f799b29ffb134dacc971ad91b52f38a19a78e25e4c1cdefa5716885760157",
+    "evidence/ns98_projected_cost/verify.py": "bba4c8c3cea1fef4b662aa2bf9bf7bf5d37f306f21448be23a1a6f6b1986ef36",
+    "audits/projected-cost-attempt-2026-09-23-v1.html": "393b8821de091d8a8bc313b8ea711461bebf9ab4198189dde6a720523bdcf083"
+  }
+}

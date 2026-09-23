@@ -1,0 +1,30 @@
+{
+  "classification": "Author mathematical and implementation review; not independent review",
+  "open_major_findings": 0,
+  "checks": [
+    "Complete Schur matrix and endpoint-correction invariant cost retained; no raw/model Gram substituted.",
+    "Projection positivity gives a nonnegative total removed cost, not a sign for the projected off-diagonal sum.",
+    "Diagonal bound uses only |mu|<=1, fixed log taper, dilation norm, ||J||=2 and harmonic-sum upper bound.",
+    "Projected signed cross term is distinguished from NS93 scalar cross term. Its bounded upper mean is still unestimated.",
+    "Reapplying projected-generator contractivity and triangle inequality yields the existing NS92 bound; this is explicitly not a new result.",
+    "NS93 absolute-majorant growth not carried over to actual K. No failure of the proposed mean cost is proved.",
+    "Finite costs overlap NS73; no new residual optimization or gain fraction computed. Negative cross sums not extrapolated.",
+    "New Python functions annotated; pyright found zero errors/warnings. No callable LSP diagnostics tool was available.",
+    "All Gram tails certified by unchanged inherited Bernoulli/Hurwitz kernel; two precisions and doubled series cutoff pass.",
+    "No new theorem node/version or novelty claim; task recorded as an unsuccessful estimate attempt."
+  ],
+  "what_had_to_change": "Retain the full old-projection subtraction before estimating; this changes the exact kernel but does not supply a new inequality for its signed Mobius cross term.",
+  "bound_or_object": "No cofinal bound was proved and the object was not disproved. Only the already known absolute majorant failure is invoked.",
+  "validation": {
+    "precision_overlaps": 20,
+    "cutoff_overlaps": 20,
+    "NS73_cost_overlaps": 2,
+    "Maxima_exact_checks": 7,
+    "pyright_errors": 0,
+    "pyright_warnings": 0,
+    "manuscript_pages": 358,
+    "undefined_duplicate_references": 0,
+    "v166_manifest_ok": 16
+  },
+  "HTML_review": "Source, scope and links reviewed. Existing local-browser URL policy block respected; app file preview requested for durable copy. No browser visual review claimed."
+}

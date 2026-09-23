@@ -174,7 +174,7 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-97 | Audit NS96 against existing walls and screen its suggested continuations for mere reformulation | Codex | done (audit; no new arithmetic estimate) | Recorded overlap with NS62/64/74/78/95; positive complete-rule failure follows qualitatively from NS78; the Mellin separator/floor function already appear in NS74. Trace normalization leaves correction rays unchanged if step scale is free. Core lower-gain target remains open; no new theorem node/version. [Audit](evidence/ns97_novelty_audit/) |
 
-| NS-98 | Bound the fixed Mobius/logarithmic direction after old-space refitting, retaining cancellation before estimating its complete cost | Codex | claimed | Attempt a scale-independent growing-index average of the actual projected cost. Closest NS92/93; same open gap. Stop if only the prior scalar absolute budget or Schur identity remains; keep the independent lower numerator open. |
+| NS-98 | Bound the fixed Mobius/logarithmic direction after old-space refitting, retaining cancellation before estimating its complete cost | Codex | done (attempt stopped; no new arithmetic estimate) | Full subtraction retained, but the projected signed cross term remains unestimated. Bounded-diagonal separation repeats NS93; contractivity returns exactly to NS92. Two complete finite decompositions reproduce NS73 costs and establish no cofinal sign or bound. Same open gap; no new theorem node/version. [Attempt](evidence/ns98_projected_cost/) |
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
@@ -434,6 +434,25 @@ establish a stronger estimate for the actual residual or test a clearly
 different concrete hypothesis. Renaming the full observation energy,
 normalizing a freely scalable direction, or enlarging a finite table is
 insufficient. No new successful cofinal estimate is recorded in this audit.
+
+## Stop record after NS-98
+
+The proposed direct projected-cost estimate was attempted without changing
+the Mobius/logarithmic normalization. The complete Schur subtraction and
+signed cross terms were retained, but no scale-independent average bound
+was proved. Its bounded diagonal is elementary; the signed projected
+cross-term mean remains unestimated. This repeats the NS93 separation
+method on the true projected kernel, not a new arithmetic estimate.
+
+Contractivity and the norm triangle inequality yield the prior NS92 budget
+again. Full productwise absolute values at that point encounter NS93's
+known majorant failure. That does not prove failure of the smaller projected
+cost. The two negative finite cross sums at N=16,32 have no asymptotic
+force. Stop this variation unless a concrete independent inequality for
+the displayed signed projected term is supplied; another equivalent
+formula or larger table is not sufficient. A compatible lower numerator
+would still be needed. PR42/NS87, RH/G2 and both original-evidence gaps
+remain open. No theorem node or manuscript version was added.
 
 ## Lanes
 
