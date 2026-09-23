@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.61**.
+Alexander Eastwood's complete working manuscript, **v1.62**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -39,6 +39,26 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |
+
+## v1.62: divisor feedback and the continuous relaxation (NS-75–77)
+
+Cancelling the actual residual's next derivative jumps is exact locally,
+but its held-old unit step increases the full error on all five checked
+blocks. At N=256 its optimized three-direction span captures **56.02%** of
+full gain, versus **97.63%** for curvature. This is a finite control, not
+an asymptotic exclusion of all arithmetic feedback.
+
+The continuous-dilation relaxation has an exact distance formula in terms
+of the classical unknown inner factor. Its closure is strictly larger than
+the integer closure; a certified explicit witness separates the two.
+A complete positive zero-tail budget, combined with published finite-height
+zero verification, gives continuous squared distance **below 2.08e-32**.
+This is not an upper bound for integer error, a new zero verification, or a
+proof of zero distance. The original cofinal arithmetic input remains open.
+
+[Readable update](evidence/v162/research-update-2026-09-23-v1.html) ·
+[Proofs and complete finite replays](evidence/v162/).
+No new Weil window, uniform floor, G2 or RH proof.
 
 ## v1.61: local geometry and an arithmetic control (NS-72–74)
 
@@ -291,6 +311,9 @@ graph LR
   nblocalgeometry["Complete local energy and discrete curvature<br/><small>prop:ns72-local-energy; prop:ns72-interpolation; prop:ns72-curvature</small><br/><small>&#128193; evidence/v161/ns72</small>"]
   nbcurvaturearithmetic["Cofinal arithmetic curvature and selected cost<br/><small>eq:ns72-local-directions</small><br/><small>&#128193; evidence/v161/ns72</small><br/><small><b>wall: actual curvature lower bound and selected true cost giving nonsummable relative contraction</b></small>"]
   nbsamegramcontrol["Infer convergence from shared Gram geometry and finite efficiency<br/><small>prop:ns74-same-gram; cor:ns74-finite-indistinguishability</small><br/><small>&#128193; evidence/v161/ns74</small><br/><small><b>wall: explicit inserted inner-factor control; scope is this finite-statistics inference</b></small>"]
+  nbdivisorfeedback["Exact divisor feedback and finite unit-step failure<br/><small>prop:ns75-divisor-cells</small><br/><small>&#128193; evidence/v162/ns75</small>"]
+  nbcontinuousdefect["Exact continuous inner-factor defect and strict closure separation<br/><small>prop:ns76-continuous-distance; prop:ns76-strict-closure</small><br/><small>&#128193; evidence/v162/ns76</small>"]
+  nbcontinuoustail["Complete continuous zero-tail budget<br/><small>prop:ns77-tail-budget</small><br/><small>&#128193; evidence/v162/ns77</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -372,6 +395,9 @@ graph LR
   nbselectedpreconditioner --> nblocalgeometry
   nblocalgeometry --> nbcurvaturearithmetic
   nblocalgeometry --> nbsamegramcontrol
+  nbcurvaturearithmetic --> nbdivisorfeedback
+  nbsamegramcontrol --> nbcontinuousdefect
+  nbcontinuousdefect --> nbcontinuoustail
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -455,9 +481,12 @@ graph LR
   click nblocalgeometry "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v161/ns72/" "evidence: evidence/v161/ns72" _blank
   click nbcurvaturearithmetic "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v161/ns72/" "evidence: evidence/v161/ns72" _blank
   click nbsamegramcontrol "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v161/ns74/" "evidence: evidence/v161/ns74" _blank
+  click nbdivisorfeedback "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v162/ns75/" "evidence: evidence/v162/ns75" _blank
+  click nbcontinuousdefect "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v162/ns76/" "evidence: evidence/v162/ns76" _blank
+  click nbcontinuoustail "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v162/ns77/" "evidence: evidence/v162/ns77" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;

@@ -1,0 +1,420 @@
+\section{Divisor-defect feedback from the actual residual (NS-75)}
+\label{sec:ns75-divisor-feedback}
+
+\paragraph{Question.}
+The fixed M\"obius templates in NS-73 do not use the optimized old
+coefficients. We now test a correction that does: cancel the next block
+of derivative jumps of the actual residual. This yields an exact
+arithmetic construction, but removing those local jumps is not a
+norm-descent theorem.
+
+Write the complete residual as
+$R_N=\tau-\sum_{n\leq N}c_n\sigma_n$, with the actual optimized $c_n$,
+and put
+\[
+ \eta_c=\sum_{n\leq N}\frac{c_n}{n},\qquad
+ r_N(m)=\mathbf1_{m=1}+\sum_{\substack{n\mid m\\n\leq N}}c_n.
+\]
+The following statements also hold for arbitrary fixed real old coefficients.
+
+\begin{proposition}[Complete divisor-log cells and derivative jumps]
+\label{prop:ns75-divisor-cells}
+For every $x>0$,
+\begin{equation}
+ R_N(x)=-\frac{\eta_c}{x}
+       +\sum_{m\leq1/x}r_N(m)\log\frac1{mx}.
+ \label{eq:ns75-divisor-cells}
+\end{equation}
+At $x=1/m$ the function is continuous and the right-minus-left jump of
+its first derivative is $m r_N(m)$. In distributions on $(0,\infty)$,
+\begin{equation}
+ R_N''=\frac1{x^2}\sum_{m\leq1/x}r_N(m)
+           -\frac{2\eta_c}{x^3}
+           +\sum_{m\geq1}m r_N(m)\delta_{1/m}.
+ \label{eq:ns75-jump-measure}
+\end{equation}
+The atomic sum is locally finite away from zero. The complete exterior
+tail is $R_N(x)=-\eta_c/x$ for $x>1$.
+\end{proposition}
+\begin{proof}
+The exact identity
+$A(z)=z-\sum_{k\leq z}\log(z/k)$ gives
+\[
+ \sum_{n\leq N}c_n\sigma_n(x)
+ =\frac{\eta_c}{x}-\sum_{m\leq1/x}
+       \left(\sum_{\substack{n\mid m\\n\leq N}}c_n\right)
+       \log\frac1{mx}.
+\]
+For each fixed $x$ both sums are finite, so this rearrangement requires
+no limiting interchange. The target is exactly the term $m=1$ in the
+logarithmic sum. A term entering at $1/m$ has value zero there, proving
+continuity. Between endpoints, differentiation gives
+$R_N'=\eta_c/x^2-x^{-1}\sum_{m\leq1/x}r_N(m)$.
+The stated jump and second-derivative distribution follow, including
+the target endpoint $m=1$.
+\end{proof}
+
+\paragraph{An exact local cancellation step.}
+For $N<n\leq2N$ choose physical new coefficients
+\[
+ a_n^{(p)}=-r_N(n)\log^p(2N/n),\qquad p=0,1,2,
+\]
+with the constant taper convention for $p=0$.
+With $p=0$, append these coefficients while holding all old coefficients
+fixed. For $N<m\leq2N$, every proper divisor of $m$ is at most $N$.
+Consequently the updated divisor defect is exactly
+$r_N(m)+a_m^{(0)}=0$ throughout this next block. The old defects are
+unchanged. Other cells, the regular part of~\eqref{eq:ns75-jump-measure}
+and both tails remain in the norm calculation. No smallness follows
+from cancellation of the displayed atomic part alone.
+
+If the old coefficients happen to be $c_n=-\mu(n)$, then
+$r_N(m)=\mu(m)$ on this next block, so the constant rule specializes
+to NS-73's sharp M\"obius template. This is a specialization, not an
+assumption about the optimized old coefficients.
+
+For comparison with the optimum we also convert each $a^{(p)}$ to
+difference coordinates using~\eqref{eq:ns73-coordinate-change}, apply
+the complete old-space complement, and optimize its scalar step.
+The exact gain and the best three-direction span gain are then those
+of Proposition~\ref{prop:ns73-span}. This old-space reoptimization
+can change the local jumps again; we do not claim it preserves the
+raw cancellation property. We separately record the complete error
+of the held-old, unit-sized step:
+\[
+ \frac{\|R_N-\sum_{n=N+1}^{2N}a_n^{(p)}\sigma_n\|_2^2}{E_N}
+ =1+\frac{(a^{(p)})^TG_{\rm new,new}a^{(p)}
+                 -2(g^Tv^{(p)})}{E_N}.
+\]
+Old-space orthogonality justifies the numerator equality here;
+the raw physical Gram in this expression is not replaced by a
+projected or model Gram.
+
+\paragraph{Certified finite outcome.}
+The complete 256/384-bit replays and doubled-cutoff replay at $N=256$
+give the following strict enclosures for the fraction of full block gain.
+The single cancellation direction is optimally scaled \emph{after} old-space
+projection; its scalar is not constrained positive.
+\begin{center}
+\begin{tabular}{rccc}
+\hline
+$N$&Cancellation direction&Best three-direction span&Diagonal curvature\\
+\hline
+16&(.3110,.3111)&(.5836,.5837)&(.9308,.9310)\\
+32&(.4292,.4294)&(.8086,.8087)&(.9040,.9041)\\
+64&(.6954,.6956)&(.9063,.9065)&(.9783,.9784)\\
+128&(.0029,.0030)&(.7232,.7233)&(.9852,.9854)\\
+256&(.0010,.0011)&(.5602,.5603)&(.9763,.9764)\\
+\hline
+\end{tabular}
+\end{center}
+At $N=256$ the span retains $56.02048\%$ of full gain, versus
+$97.63068\%$ for curvature. The raw held-old cancellation step increases
+the complete squared error by a factor in $(1495.54,1495.55)$.
+Indeed all fifteen held-old unit steps tested here increase squared error.
+The cancellation direction's correlation at $N=256$ is negative, so its
+best scalar step reverses the prescribed sign. Merely cancelling derivative
+jumps is therefore not a descent principle even on these certified blocks.
+This is a finite failure of the proposed unit step and finite underperformance
+of its span, not an asymptotic exclusion of every divisor-feedback scheme.
+Eleven exact Maxima checks cover the identities and coordinate conversion;
+all finite gains retain complete tails, the true old projection and all
+three-direction cross terms.
+
+\section{The continuous relaxation and its exact inner-factor defect (NS-76)}
+\label{sec:ns76-inner-distance}
+
+\paragraph{Scope and prior work.}
+Burnol's quantitative Nyman formula identifies the $q=1$ continuous
+approximation defect through the off-critical Blaschke product
+\cite[Theorem 1.2 and Lemma 2.4]{BurnolNyman2001}. We apply the same
+classical Hardy-space mechanism to this project's $q=2$ target, keeping
+its full exterior tail. The calculation gives an exact distance for
+\emph{continuous} dilations and a lower bound for integer dilations.
+No unconditional equality of the two nonzero distances is assumed.
+This is an explicit reformulation of the unknown arithmetic inner
+factor, not a new zero-free estimate.
+
+Let $\mathcal T$ be the complete tail space from NS-74, and let
+$\mathbb H^2$ denote the Hardy space of $\Re s>1/2$, with boundary norm
+$(2\pi)^{-1}\int_{\mathbb R}|f(1/2+it)|^2dt$.
+Multiplication on the Mellin boundary by $(s-1)/s$ induces a unitary
+map $W$ on the full $L^2$ space. It maps $\mathcal T$ onto
+$L^2(0,1)$, whose Mellin image is $\mathbb H^2$.
+Indeed in logarithmic coordinates it is
+\[
+ (Wu)(t)=u(t)-\int_{-\infty}^t e^{-(t-r)/2}u(r)\,dr.
+\]
+For $t<0$ a tail vector is $C e^{t/2}$ and cancels exactly in this
+formula. Conversely the adjoint applied to a function supported on
+$t\geq0$ has on $t<0$ a constant multiple of $e^{t/2}$.
+Thus the map is onto, and the full tail has been accounted for.
+
+The transformed target and first atom have Mellin transforms
+\[
+ T(s)=\frac{s-1}{s^3},\qquad
+ F(s)=-\frac{(s-1)\zeta(s)}{s^3}.
+\]
+Write $B$ for the off-critical Blaschke product, normalized by $B(1)>0$:
+\[
+ B(s)=\prod_{\substack{\zeta(\rho)=0\\\Re\rho>1/2}}
+ \frac{s-\rho}{s-(1-\overline\rho)}
+ \frac{1-\overline\rho}{\rho}
+ \left|\frac{\rho}{1-\rho}\right|.
+\]
+Multiplicities are included. Burnol's factorization proves that the
+inner factor of $(s-1)\zeta(s)/s^2$ is exactly $B$: analytic
+continuation excludes a finite-boundary singular factor, and the
+real-axis asymptotic excludes an exponential factor. The additional
+factor $1/s$ is outer, so $F$ has the same inner factor. The product
+and its derivatives converge locally in $\Re s>1/2$ away from its
+zeros; $B(1)$ and its first two derivatives are real by conjugation
+symmetry.
+
+\begin{proposition}[Exact distance for the complete continuous family]
+\label{prop:ns76-continuous-distance}
+Let $\mathcal V_{\rm cont}$ be the closed span in the original Hilbert
+space of $\sigma_u$, for all real $u\geq1$. Its image under $W$ and
+Mellin transformation is $B\mathbb H^2$.
+Put $b=B(1)$, $d=B'(1)$ and $e=B''(1)$. Then
+\begin{equation}
+ D_{\rm cont}^2:=\operatorname{dist}(\tau,\mathcal V_{\rm cont})^2
+ =2-2b^2+2bd-d^2-\frac{e^2}{4}.
+ \label{eq:ns76-continuous-distance}
+\end{equation}
+This expression is nonnegative and at most every integer finite
+squared error $E_N$. It vanishes exactly when RH holds.
+The formula contains unknown off-critical zero information and
+provides no unconditional upper bound tending to zero.
+\end{proposition}
+\begin{proof}
+The normalized real dilations of $\sigma_1$ become the causal
+translation semigroup applied to $F$. The Beurling--Lax theorem gives
+that its closed generated subspace is the inner factor $B$ times
+$\mathbb H^2$. This use of the full continuous semigroup is the reason
+we do not replace it by the integer set without a separate argument.
+
+For $\Re z>1/2$, let $k_z(s)=1/(s+\overline z-1)$ be the evaluation
+kernel. Multiplication $M_B$ is an isometry and
+$M_B^*k_z=\overline{B(z)}k_z$.
+Differentiating at real $z=1$ is legitimate in the Hilbert norm,
+as is seen directly from the integrable kernel derivatives. Since
+$T=-\partial_z k_z|_1-\tfrac12\partial_z^2 k_z|_1$, it follows that
+\[
+ M_B^*T=-\frac{d+e/2}{s}+\frac{b+d}{s^2}-\frac{b}{s^3}.
+\]
+The complete boundary Gram for $(1/s,1/s^2,1/s^3)$ is
+\[
+ \begin{pmatrix}1&1&1\\1&2&3\\1&3&6\end{pmatrix};
+\]
+its entries follow by integrating the Laplace representatives
+$e^{-t/2}t^{j-1}/(j-1)!$ on $t>0$.
+Therefore $\|M_B^*T\|^2=2b^2-2bd+d^2+e^2/4$.
+The orthogonal projection is $B M_B^*T$, with that same norm, and
+$\|T\|^2=\|\tau\|^2=2$. This proves the distance identity and
+nonnegativity without any sign assumption on $d$ or $e$.
+
+The integer span is contained in the continuous span, giving
+$E_N\geq D_{\rm cont}^2$. If RH holds, the product is empty and
+$(b,d,e)=(1,0,0)$. Conversely, any off-critical zero $\rho$ gives a
+zero of $B$ in this half-plane, whereas $T(\rho)\ne0$ since
+$\rho\notin\{0,1\}$. Continuous evaluation in $\mathbb H^2$ then
+prevents $T$ from belonging to the closed subspace $B\mathbb H^2$,
+so its distance is positive.
+\end{proof}
+
+\begin{corollary}[The fixed component invisible to every block gain]
+\label{cor:ns76-invisible-component}
+Let $P_{\rm cont}$ and $P_N$ be the complete projections onto the
+continuous and finite integer spaces. Then exactly
+\[
+ R_N=(I-P_{\rm cont})\tau+(P_{\rm cont}\tau-P_N\tau),
+ \qquad
+ E_N=D_{\rm cont}^2+\|P_{\rm cont}\tau-P_N\tau\|^2.
+\]
+Every new correlation $g_n$ and every selected-direction gain depend
+only on the second component. The first is orthogonal to every real
+dilation, hence also to each projected new integer atom.
+\end{corollary}
+\begin{proof}
+The finite integer space is a subspace of $\mathcal V_{\rm cont}$,
+so $P_NP_{\rm cont}=P_N$. The two displayed components are
+orthogonal. Taking inner products with any old-projected new atom
+annihilates the first, proving the final statement.
+\end{proof}
+
+\begin{proposition}[The integer and continuous closures are strictly different]
+\label{prop:ns76-strict-closure}
+Let $\mathcal V_{\rm int}$ be the closed span of the integer atoms.
+Then $\mathcal V_{\rm int}\subsetneq\mathcal V_{\rm cont}$,
+unconditionally. More explicitly,
+\[
+ \operatorname{dist}(\sigma_{3/2},\mathcal V_{\rm int})^2>.00111713.
+\]
+This is a bound for $\sigma_{3/2}$, not for the target $\tau$.
+\end{proposition}
+\begin{proof}
+On $I=(1/2,1)$, the first integer atom is
+$\sigma_1=1/x+\log x$ and every integer atom with $n\geq2$
+is $1/(nx)$. Their restricted closed span lies in the closed
+two-dimensional space $\operatorname{span}\{1/x,\log x\}$.
+In contrast, $\sigma_u$ for $1<u<2$ has a nonzero derivative jump
+at the interior point $x=1/u$; it cannot equal an element of that
+analytic two-dimensional span, even almost everywhere. This already
+proves strict inclusion.
+
+For the quantitative bound, put $u=3/2$, $L=\log2$, $c=\log u$ and
+$h=L-c$. The complete local Gram, loads and squared norm are
+\[
+ G_I=\begin{pmatrix}1&-L^2/2\\-L^2/2&1-L-L^2/2\end{pmatrix},\qquad
+ b_I=\begin{pmatrix}
+ u^{-1}-h^2/2\\
+ (c+2-L^2/2)/u+c(L+1)/2-(L^2+2L+2)/2
+ \end{pmatrix},
+\]
+\[
+ q_I=u^{-2}-h^2/u+2/u-h^2/2-h-1.
+\]
+These follow by splitting only at $x=1/u$, with
+$\sigma_u=1/(ux)+\log(ux)$ on the left and $1/(ux)$ on the right.
+The Gram is positive definite. Its exact local projection error
+$q_I-b_I^TG_I^{-1}b_I$ lies in $(.00111713,.00111714)$ by independent
+256/384-bit enclosures; Maxima checks all complete elementary integrals.
+Restriction of a norm to $I$ can only decrease it, so this local
+minimum bounds the full-space distance below. No omitted tail is
+set to zero in the asserted full-space inequality.
+\end{proof}
+
+\paragraph{What the calculation does and does not resolve.}
+The $q=2$ continuous defect is now expressed through three values of the
+classical unknown inner factor. It is not estimated away. In particular,
+the integer limiting error may contain an additional approximation
+component. The closures are strictly different, but that fact alone
+does not decide whether their two distances from this particular target
+are different. No equality of positive target distances is supplied.
+The original sufficient cofinal contraction remains valid, because it
+would force the entire $E_N$ to zero, including this fixed component.
+Replacing $E_N$ by $E_N-D_{\rm cont}^2$ would remove exactly the part
+that must be ruled out and would not prove RH.
+
+\section{How a high zero tail can hide the continuous defect (NS-77)}
+\label{sec:ns77-continuous-tail}
+
+\paragraph{Scope.}
+We give a complete upper bound on the continuous defect in NS-76 using
+positive sums over hypothetical off-critical zeros. This quantifies a
+limitation of finite geometric evidence. It is not an upper bound on
+$E_N$ or its integer limit, not a new verified zero height, and not a
+proof that the defect is exactly zero.
+
+Suppose every off-critical zero in the upper half-plane has height
+$\gamma>H\geq1$. Index the conjugate pairs by $\rho=\beta+i\gamma$,
+with $1/2<\beta<1$, once per pair and with multiplicity, and put
+\[
+ S_2=\sum_\rho\frac{2\beta-1}{\gamma^2},\qquad
+ S_4=\sum_\rho\frac{2\beta-1}{\gamma^4}.
+\]
+These sums converge by the usual zero-counting bound. Empty sums are zero.
+
+\begin{proposition}[A complete positive zero-tail budget]
+\label{prop:ns77-tail-budget}
+For the continuous $q=2$ distance,
+\begin{equation}
+ 0\leq D_{\rm cont}^2\leq
+       \min\left\{2,\frac83S_2^3+5S_4\right\}.
+ \label{eq:ns77-tail-budget}
+\end{equation}
+If the total upper-half-plane zero count satisfies
+$N(t)\leq A t\log t$ for all $t\geq H\geq100$, then
+\begin{equation}
+ D_{\rm cont}^2\leq
+ \frac{\frac{64}{3}A^3(\log H+1)^3
+                  +20A(\log H/3+1/9)}{H^3}.
+ \label{eq:ns77-height-bound}
+\end{equation}
+No tail prefix is substituted for the complete zero sums.
+\end{proposition}
+\begin{proof}
+For one pair write $a=\beta$, $c=1-\beta$, $\delta=a-c=2\beta-1$,
+so $a+c=1$. Its real-normalized inner factor at $1$ is
+$B_\rho(1)=(\gamma^2+c^2)/(\gamma^2+a^2)$.
+Set $j_\rho=-\log B_\rho(1)$ and
+$\ell_\rho=(\log B_\rho)'(1)$. Exactly,
+\[
+ j_\rho=\int_{c^2}^{a^2}\frac{dt}{\gamma^2+t},\qquad
+ \ell_\rho=-\frac{2\delta(\gamma^2-ac)}
+                        {(\gamma^2+a^2)(\gamma^2+c^2)}.
+\]
+Thus $0\leq j_\rho\leq\delta/\gamma^2$ and
+\[
+ \ell_\rho+\frac{2\delta}{\gamma^2}
+ =\frac{2\delta\{\gamma^2(a^2+c^2+ac)+a^2c^2\}}
+        {\gamma^2(\gamma^2+a^2)(\gamma^2+c^2)}
+ \leq\frac{17\delta}{8\gamma^4},
+\]
+using $a^2+c^2+ac\leq1$, $a^2c^2\leq1/16$, and $\gamma\geq1$.
+In particular $\ell_\rho+2j_\rho\leq17\delta/(8\gamma^4)$.
+Absolute convergence permits summing these inequalities and the
+logarithmic derivatives. With
+\[
+ J=-\log B(1)\in[0,S_2],\qquad \ell=B'(1)/B(1),
+ \qquad \epsilon=\ell+2J,
+\]
+we have $\epsilon\leq17S_4/8$. There is no lower-sign assumption on
+$\epsilon$.
+
+Let $\ell_2=(\log B)''(1)$, a real number. Substituting
+$b=e^{-J}$, $d=b\ell$, $e=b(\ell^2+\ell_2)$ into
+\eqref{eq:ns76-continuous-distance} and discarding only the
+nonnegative square that is subtracted gives
+\begin{align*}
+ D_{\rm cont}^2
+ &\leq 2-e^{-2J}(2-2\ell+\ell^2)\\
+ &=2-e^{-2J}(2+4J+4J^2)
+       +(2+4J)e^{-2J}\epsilon-e^{-2J}\epsilon^2.
+\end{align*}
+The first term on the last line is zero at $J=0$ and has derivative
+$8J^2e^{-2J}$, so it is at most $8J^3/3$.
+Also $(2+4J)e^{-2J}\leq2$ for $J\geq0$. If $\epsilon\leq0$ its
+linear contribution is nonpositive; otherwise it is at most
+$17S_4/4<5S_4$. This proves~\eqref{eq:ns77-tail-budget}.
+
+For the second assertion, $0<2\beta-1<1$ and partial summation give,
+for $k=2,4$,
+\[
+ S_k\leq k\int_H^\infty\frac{N(t)}{t^{k+1}}\,dt
+ \leq kA H^{1-k}
+             \left(\frac{\log H}{k-1}+\frac1{(k-1)^2}\right).
+\]
+The endpoint at infinity vanishes and dropping the nonpositive lower
+endpoint term only enlarges the bound. Inserting these complete
+integrals proves~\eqref{eq:ns77-height-bound}.
+\end{proof}
+
+\paragraph{Calibration using published finite-height information.}
+The bound of Hasanalizade--Shen--Wong
+\cite[Corollary 1.2]{HasanalizadeShenWong2021} implies
+$N(t)\leq t\log t$ for $t\geq100$. Indeed its main term is at most
+$(t/6)\log t$, and its remainder is at most
+$.362\log t+10$; since $\log100>4$, their sum is less than
+$(t/6+3)\log t\leq t\log t$ on this range.
+Platt--Trudgian's published interval verification
+\cite[Theorem 1]{PlattTrudgian2021} supplies the absence of off-critical
+zeros up to $H=3\cdot10^{12}$. Taking $A=1$ in the analytic bound
+therefore gives the explicit consequence
+\begin{equation}
+ 0\leq D_{\rm cont}^2<2.08\cdot10^{-32}.
+ \label{eq:ns77-published-calibration}
+\end{equation}
+Only the final scalar evaluation is replayed here at 256/384 bits;
+the cited large zero verification is an external published input,
+not a new computation or an archived verification by this project.
+This bound is deliberately conservative.
+
+A small positive continuous defect remains compatible with this
+inequality. Moreover the integer and continuous closures are strictly
+different by Proposition~\ref{prop:ns76-strict-closure}, and no matching
+upper bound on the integer limiting error has been supplied.
+Thus the calibration explains why the relaxed problem can look
+extremely favorable without proving the original approximation target,
+a new zero-free region, G2 or RH.

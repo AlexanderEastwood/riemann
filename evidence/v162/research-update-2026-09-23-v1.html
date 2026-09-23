@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The useful geometry now has a clearer boundary.</title></head>
+<body style="margin:0;background:#f4f2ed;color:#192d35;font-family:Georgia,serif;font-size:17px;line-height:1.65;">
+<main style="max-width:680px;margin:32px auto;padding:36px 28px;background:#fff;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;color:#526971;margin:0 0 12px;">RIEMANN PROJECT · 23 SEPTEMBER 2026 · v1.62</p>
+<h1 style="font-size:32px;line-height:1.2;margin:0 0 24px;">The useful geometry now has a clearer boundary.</h1>
+
+<p style="font-size:20px;">The curvature rule still captures <strong>97.63% of the available improvement at size 256</strong>. A new correction built from the actual arithmetic residual performs substantially worse. We also proved why an extremely small error in the continuous relaxation does not settle the integer problem. RH and G2 remain open.</p>
+<h2 style="font-size:23px;margin-top:30px;">Testing feedback from the actual residual</h2>
+<p>The residual has an exact description through divisor sums of the optimized coefficients. Those sums determine its derivative jumps. We tested a correction that cancels the next block of jumps while keeping the old coefficients fixed.</p>
+<p>The cancellation works algebraically, but every tested full-sized step increases the complete squared error. At size 256, the untapered step increases it by a factor of about <strong>1,495.54</strong>. Cancelling local irregularities does not control the full norm.</p>
+<p>Allowing the best scalar step, reoptimizing the old coefficients, and combining three tapered versions improves matters. Even then, the best combination captures only <strong>56.02%</strong> of the full block improvement at size 256, compared with curvature’s <strong>97.63%</strong>. This is a finite test of these specific corrections, not a rejection of every arithmetic feedback method.</p>
+<h2 style="font-size:23px;margin-top:30px;">An exact description of the relaxed problem</h2>
+<p>When all real dilations are allowed, classical Hardy-space geometry gives an exact distance formula. Its unknown part is the zeta function’s off-critical inner factor. This makes a fixed component of the residual explicit: every block-improvement calculation is blind to it.</p>
+<p>We also proved that the integer and continuous approximation spaces are strictly different. One explicit real-dilation function has squared distance greater than <strong>0.00111713</strong> from every integer-dilation combination. That bound concerns the separating function, not our target.</p>
+<h2 style="font-size:23px;margin-top:30px;">What the very small bound actually says</h2>
+<p>A complete analytic bound on the zero tail, combined with <a href="https://arxiv.org/pdf/2004.09765" style="color:#155c68;">Platt and Trudgian’s published verification</a> up to height 3 trillion and the <a href="https://arxiv.org/pdf/2107.06506" style="color:#155c68;">Hasanalizade–Shen–Wong zero count</a>, gives continuous squared distance below <strong>2.08 × 10<sup>−32</sup></strong>.</p>
+<p>We checked the final scalar bound at two precisions. The huge zero verification is an external published input; we did not repeat it. A small positive distance is still possible, and this result gives no comparable upper bound on the integer error.</p>
+<h2 style="font-size:23px;margin-top:30px;">Where the project should go</h2>
+<p>The next useful estimate must control the actual integer residual across indefinitely growing sizes. Geometry has supplied a concrete curvature rule, but we still need an arithmetic lower bound for its numerator and an upper bound for its true cost strong enough to force the entire error to zero. Replacing that error by its removable component would discard the very obstruction RH requires us to eliminate.</p>
+<p>The new record includes 58 exact Maxima checks, 256/384-bit certified arithmetic, a doubled cutoff for the full divisor-feedback calculation, and a complete manuscript build with visual review of the new pages.</p>
+<p><a href="proof.tex" style="color:#155c68;">Complete new proofs</a> · <a href="validation.json" style="color:#155c68;">Validation record</a> · <a href="integration-review-2026-09-23-v1.html" style="color:#155c68;">Local self-review</a></p>
+
+<p style="border-top:1px solid #d5dedc;margin-top:32px;padding-top:18px;font-size:14px;color:#526971;">Exact identities, proved implications and certified finite computations are distinguished from open arithmetic inputs. Local self-review only; no independent review or publication-readiness claim.</p>
+</main></body></html>

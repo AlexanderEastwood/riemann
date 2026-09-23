@@ -1,5 +1,28 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.62: divisor feedback and the continuous relaxation (NS-75–77)
+
+Cancelling the actual residual's next derivative jumps is exact locally,
+but its held-old unit step increases the full error on all five checked
+blocks. At N=256 its optimized three-direction span captures **56.02%** of
+full gain, versus **97.63%** for curvature. This is a finite control, not
+an asymptotic exclusion of all arithmetic feedback.
+
+The continuous-dilation relaxation has an exact distance formula in terms
+of the classical unknown inner factor. Its closure is strictly larger than
+the integer closure; a certified explicit witness separates the two.
+A complete positive zero-tail budget, combined with published finite-height
+zero verification, gives continuous squared distance **below 2.08e-32**.
+This is not an upper bound for integer error, a new zero verification, or a
+proof of zero distance. The original cofinal arithmetic input remains open.
+
+[Readable update](../evidence/v162/research-update-2026-09-23-v1.html) ·
+[Proofs and complete finite replays](../evidence/v162/).
+No new Weil window, uniform floor, G2 or RH proof.
+
+Validation: `evidence/v162/validation.json`; local self-review only.
+
+
 ## v1.61: local geometry and an arithmetic control (NS-72–74)
 
 The repaired model has an explicit positive differential energy. Its

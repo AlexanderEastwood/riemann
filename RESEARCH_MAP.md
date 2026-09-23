@@ -86,6 +86,9 @@ graph LR
   nblocalgeometry["Complete local energy and discrete curvature<br/><small>prop:ns72-local-energy; prop:ns72-interpolation; prop:ns72-curvature</small><br/><small>&#128193; evidence/v161/ns72</small>"]
   nbcurvaturearithmetic["Cofinal arithmetic curvature and selected cost<br/><small>eq:ns72-local-directions</small><br/><small>&#128193; evidence/v161/ns72</small><br/><small><b>wall: actual curvature lower bound and selected true cost giving nonsummable relative contraction</b></small>"]
   nbsamegramcontrol["Infer convergence from shared Gram geometry and finite efficiency<br/><small>prop:ns74-same-gram; cor:ns74-finite-indistinguishability</small><br/><small>&#128193; evidence/v161/ns74</small><br/><small><b>wall: explicit inserted inner-factor control; scope is this finite-statistics inference</b></small>"]
+  nbdivisorfeedback["Exact divisor feedback and finite unit-step failure<br/><small>prop:ns75-divisor-cells</small><br/><small>&#128193; evidence/v162/ns75</small>"]
+  nbcontinuousdefect["Exact continuous inner-factor defect and strict closure separation<br/><small>prop:ns76-continuous-distance; prop:ns76-strict-closure</small><br/><small>&#128193; evidence/v162/ns76</small>"]
+  nbcontinuoustail["Complete continuous zero-tail budget<br/><small>prop:ns77-tail-budget</small><br/><small>&#128193; evidence/v162/ns77</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -167,6 +170,9 @@ graph LR
   nbselectedpreconditioner --> nblocalgeometry
   nblocalgeometry --> nbcurvaturearithmetic
   nblocalgeometry --> nbsamegramcontrol
+  nbcurvaturearithmetic --> nbdivisorfeedback
+  nbsamegramcontrol --> nbcontinuousdefect
+  nbcontinuousdefect --> nbcontinuoustail
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -250,9 +256,12 @@ graph LR
   click nblocalgeometry "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v161/ns72/" "evidence: evidence/v161/ns72" _blank
   click nbcurvaturearithmetic "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v161/ns72/" "evidence: evidence/v161/ns72" _blank
   click nbsamegramcontrol "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v161/ns74/" "evidence: evidence/v161/ns74" _blank
+  click nbdivisorfeedback "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v162/ns75/" "evidence: evidence/v162/ns75" _blank
+  click nbcontinuousdefect "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v162/ns76/" "evidence: evidence/v162/ns76" _blank
+  click nbcontinuoustail "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v162/ns77/" "evidence: evidence/v162/ns77" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -275,7 +284,7 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 29 | established result |
+| `proved` | 32 | established result |
 | `live` | 2 | current route (gold): being worked now |
 | `closed` | 29 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 11 | attempted; obstruction found |
@@ -299,7 +308,10 @@ graph LR
           - [!] **Repaired-kernel selection measured with true energy** — `prop:ns71-selected-input` · evidence: [`evidence/v160/ns71/`](evidence/v160/ns71/) · **wall: cofinal lower numerator and upper selected cost with nonsummable relative gain** → `rh` (prop:ns71-selected-input; sufficient, not asserted necessary) · Certified finite gain fractions above 97% at N=128,256 for the projected repaired direction. Exact selected numerator/cost criterion avoids the excluded uniform comparison.
             - [x] **Complete local energy and discrete curvature** — `prop:ns72-local-energy; prop:ns72-interpolation; prop:ns72-curvature` · evidence: [`evidence/v161/ns72/`](evidence/v161/ns72/) · Uniform model-only curvature comparison and local direction rules. No cofinal actual arithmetic estimate.
               - [!] **Cofinal arithmetic curvature and selected cost** — `eq:ns72-local-directions` · evidence: [`evidence/v161/ns72/`](evidence/v161/ns72/) · **wall: actual curvature lower bound and selected true cost giving nonsummable relative contraction** → `rh` (NS-72; finite efficiency is insufficient) · Diagonal curvature retains 97.63% of finite optimal gain at N=256. The prescribed three-template span is weaker on all five blocks.
+                - [x] **Exact divisor feedback and finite unit-step failure** — `prop:ns75-divisor-cells` · evidence: [`evidence/v162/ns75/`](evidence/v162/ns75/) · Exact local jump cancellation is not descent: every held-old unit step tested increases full error. No asymptotic exclusion of other feedback.
               - [X] **Infer convergence from shared Gram geometry and finite efficiency** — `prop:ns74-same-gram; cor:ns74-finite-indistinguishability` · evidence: [`evidence/v161/ns74/`](evidence/v161/ns74/) · **wall: explicit inserted inner-factor control; scope is this finite-statistics inference** → `None` (cor:ns74-finite-indistinguishability) · A unitary altered family preserves every Gram entry and has arbitrarily close finite statistics but a positive floor. No original-family error floor.
+                - [x] **Exact continuous inner-factor defect and strict closure separation** — `prop:ns76-continuous-distance; prop:ns76-strict-closure` · evidence: [`evidence/v162/ns76/`](evidence/v162/ns76/) · Continuous defect depends on B(1), B′(1), B″(1). Integer closure strictly smaller; target distances not proved different.
+                  - [x] **Complete continuous zero-tail budget** — `prop:ns77-tail-budget` · evidence: [`evidence/v162/ns77/`](evidence/v162/ns77/) · Published finite-height information implies continuous squared distance <2.08e-32; not an integer upper bound or zero-distance proof.
           - [X] **Uniform comparison with the repaired elementary Gram** — `prop:ns70-cusp; prop:ns70-repaired-background` · evidence: [`evidence/v160/ns70/`](evidence/v160/ns70/) · **wall: pointwise Mellin-density comparison forced by all-coefficient localization** → `None` (prop:ns70-repaired-background) · Subtracting d/max repairs the adjacent n^-2 cusp to n^-3. Uniform lower and upper all-coefficient comparisons still fail, respectively by critical zeros and unbounded zeta values. Selected directions remain outside the exclusion.
         - [!] **Canonical smoothed norm: subpolynomial growth** — `prop:ns66-growth-bounds; cor:ns66-growth-exponent; prop:ns67-polynomial-cutoff; prop:ns67-abel-conditioning` · evidence: [`evidence/v160/`](evidence/v160/) · **wall: direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)** → `rh` (cor:ns66-growth-exponent) · Fixed-order exponent equals beta_star-1/2 by local zero evaluation and conditional Bochner-Abel bounds. Exact reformulation, with no improved arithmetic estimate. A bounded cofinal subsequence is sufficient but not asserted necessary. Exact cells through N^2 retain the exponent; centered whole Abel vectors have a uniform conditioning bound, so internal arithmetic remains the target.
           - [x] **Complete canonical divisor cells and full tail** — `prop:ns67-cells; lem:ns67-remainder; prop:ns67-polynomial-cutoff` · evidence: [`evidence/v160/ns67/`](evidence/v160/ns67/) · Exact signed cells and a full Stirling remainder <=1/(6z). Tail norm beyond N^2 is O(log N), so the growing finite norm has the same RH-equivalent exponent; no subpolynomial estimate.

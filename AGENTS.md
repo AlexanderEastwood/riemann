@@ -184,6 +184,18 @@ positive floor. This is not an error floor for the original family. Cofinal
 arithmetic control, the original Weil floor, G2 and RH remain open. Two
 precisions, cutoff replay, exact Maxima checks and local self-review only.
 
+Version 1.62 (NS-75–77) records exact next-block divisor-jump cancellation
+but certifies failure of its held-old unit step on all five tested blocks.
+Its optimized three-direction span captures 56.02% of full gain at N=256,
+versus 97.63% for curvature. The continuous q=2 distance is expressed through
+B(1), B'(1), B''(1); the continuous closure strictly contains the integer
+closure. A complete positive zero-tail budget and published finite-height
+verification imply continuous squared distance below 2.08e-32. This does
+not upper-bound integer error, prove zero distance, or verify a new zero
+height. External literature inputs are explicit. Two-precision finite
+replays, doubled cutoff for NS75, exact Maxima checks and local self-review
+only. Cofinal arithmetic control, the original Weil floor, G2 and RH stay open.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

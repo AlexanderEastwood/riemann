@@ -1,0 +1,59 @@
+/* q=2 continuous Hardy distance and independent finite inner controls. */
+display2d:false$
+scalarmatrixp:false$
+declare([be,ga],real)$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+check("Tail-removing multiplier",1-1/s-(s-1)/s)$
+check("Unit modulus of tail map",((%i*t-1/2)/(%i*t+1/2))*((- %i*t-1/2)/(- %i*t+1/2))-1)$
+check("Target transform",(s-1)/s^3-(1/s^2-1/s^3))$
+check("Kernel derivative target",-subst(1,z,diff(1/(s+z-1),z)+diff(1/(s+z-1),z,2)/2)-(s-1)/s^3)$
+GG:matrix([1,1,1],[1,2,3],[1,3,6])$
+for i:1 thru 3 do for j:1 thru 3 do check(sconcat("Complete Hardy Gram ",i," ",j),
+ factorial(i+j-2)/(factorial(i-1)*factorial(j-1))-GG[i,j])$
+check("Target complete norm",(transpose(matrix([0],[1],[-1])).GG.matrix([0],[1],[-1]))[1,1]-2)$
+cc:matrix([-dv-ev/2],[bv+dv],[-bv])$
+check("Projected norm polynomial",(transpose(cc).GG.cc)[1,1]-(2*bv^2-2*bv*dv+dv^2+ev^2/4))$
+BB(s):=(s-be)/(s-(1-be))$
+bb:BB(1)$
+dd:subst(1,s,diff(BB(s),s))$
+ee:subst(1,s,diff(BB(s),s,2))$
+FF:ratsimp(2-2*bb^2+2*bb*dd-dd^2-ee^2/4)$
+check("Single factor recovers complete tail floor",FF-(2*be-1)*(1-be)^2/be^6)$
+check("Empty inner factor distance",2-2*1^2+2*1*0-0^2-0^2/4)$
+BP(s):=((s-be)^2+ga^2)/((s-1+be)^2+ga^2)$
+bb:BP(1)$
+dd:subst(1,s,diff(BP(s),s))$
+ee:subst(1,s,diff(BP(s),s,2))$
+FP:ratsimp(2-2*bb^2+2*bb*dd-dd^2-ee^2/4)$
+rho:be+%i*ga$
+rr:be-%i*ga$
+TK(s):=(s-1)/s^3$
+KK:matrix([1/(2*be-1),1/(2*rho-1)],[1/(2*rr-1),1/(2*be-1)])$
+vv:matrix([TK(rho)],[TK(rr)])$
+cvv:matrix([TK(rr),TK(rho)])$
+check("Pair kernel determinant",determinant(KK)-4*ga^2/((2*be-1)^2*((2*be-1)^2+4*ga^2)))$
+check("Pair dual interpolation equals inner projection",(cvv.invert(KK).vv)[1,1]-FP)$
+check("Pair high-height leading scale",limit(FP*ga^4,ga,inf)-2*(2*be-1))$
+for height in [1,10,100] do block([val:ratsimp(subst([be=3/4,ga=height],FP))],
+ if not is(val>0 and val<2) then error("Control positivity failed",height,val),
+ checks:endcons([sconcat("Positive exact pair control ",height),true],checks),
+ print("Exact pair control beta=3/4, height=",height,"distance squared=",val))$
+/* Complete finite local separator, all endpoints retained. */
+LL:log(2)$
+u:3/2$
+cu:log(u)$
+hh:LL-cu$
+leftatom:1/(u*x)+log(u*x)$
+rightatom:1/(u*x)$
+check("Local inverse-x Gram",integrate(1/x^2,x,1/2,1)-1)$
+check("Local cross Gram",radcan(integrate(log(x)/x,x,1/2,1)+LL^2/2))$
+check("Local log Gram",radcan(integrate(log(x)^2,x,1/2,1)-(1-LL-LL^2/2)))$
+check("Complete local first load",radcan(integrate(leftatom/x,x,1/2,1/u)+integrate(rightatom/x,x,1/u,1)-(1/u-hh^2/2)))$
+check("Complete local second load",radcan(integrate(leftatom*log(x),x,1/2,1/u)+integrate(rightatom*log(x),x,1/u,1)
+ -((cu+2-LL^2/2)/u+cu*(LL+1)/2-(LL^2+2*LL+2)/2)))$
+check("Complete local atom norm",radcan(integrate(expand(leftatom^2),x,1/2,1/u)+integrate(rightatom^2,x,1/u,1)
+ -(1/u^2-hh^2/u+2/u-hh^2/2-hh-1)))$
+print("PASS:",length(checks),"exact checks; unknown arithmetic inner factor is not evaluated.")$

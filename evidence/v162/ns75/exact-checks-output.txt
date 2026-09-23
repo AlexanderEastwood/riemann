@@ -1,0 +1,27 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v162/ns75/exact-checks.mac")
+display2d:false
+scalarmatrixp:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+R:-eta/x+ss*log(1/x)+cc
+check("Complete cell first derivative",diff(R,x)-eta/x^2+ss/x)
+check("Complete cell second derivative",diff(R,x,2)+(2*eta)/x^3+(-ss)/x^2)
+check("Entering log term is continuous",subst(1/m,x,rr*log(1/(m*x))))
+check("Right minus left derivative jump",
+      subst(1/m,x,-diff(rr*log(1/(m*x)),x))-m*rr)
+check("Exterior tail second derivative",diff(-eta/x,x,2)+(2*eta)/x^3)
+check("Factorial endpoint recurrence",minfactorial((k+1)!/k!)-k-1)
+check("New cell derivative contribution",
+      diff((z-(k+1)*log(z))-(z-k*log(z)),z)+1/z)
+check("Raw block divisor cancellation",rr-rr)
+check("Canonical specialization",-(-mu)-mu)
+check("Raw unit step energy",EE-2*nu+cost+(-EE)*(1+(cost-2*nu)/EE))
+check("Optimized raw scalar gain",
+      subst(nu/cost,al,EE-2*al*nu+al^2*cost)-(EE-nu^2/cost))
+print("PASS:",length(checks),
+      "exact checks; cancellation alone is not norm descent.")
+PASS: 11 exact checks; cancellation alone is not norm descent. 
+"/private/tmp/riemann-ns75/evidence/v162/ns75/exact-checks.mac"
