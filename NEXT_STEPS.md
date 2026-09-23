@@ -112,6 +112,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-65 | Test ordinary Cesaro averaging of the canonical sharp interpolant after Mellin integration; identify whether averaging removes the existing critical-zero obstruction | Codex, Continue solving toward RH | claimed (local investigation) | Keep the averaged target normalized and retain the localized dual witness. Prove or reject only a fixed number of arithmetic Cesaro averages, with no statement about growing logarithmic tapers. |
 
+| NS-66 | Test a weaker norm-growth target for the once-smoothed canonical interpolant: combine its exact exterior matching with Abel summation and zero evaluation | Codex, Continue solving toward RH | claimed (local investigation) | Derive complete upper bounds from stated Mertens hypotheses and lower bounds from a hypothetical off-line zero. Distinguish subpolynomial growth and bounded subsequences from the already excluded strong convergence. |
+
 ## Lanes
 
 ```
