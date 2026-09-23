@@ -17,6 +17,9 @@ evidence/
   MISSING.md                        ledger of cited-but-absent artifacts
   diag_<topic>/                     diagnostics that are NOT certificates, labeled as such
 NEXT_STEPS.md                       shared task board: claim before you start
+PROPOSAL_TEMPLATE.md                proposal gate: fill in before claiming a research row
+controls/
+  davenport_heilbronn.py            known-false analogue (diagnostic, not a certificate)
 manifest/
   v1.NN_manifest.json               sha256 of every artifact in that version
 audits/
