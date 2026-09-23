@@ -1,0 +1,27 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental NS88 evidence and versioned HTML report; excludes inventory",
+  "files": {
+    "audits/dilation-upper-envelope-2026-09-23-v1.html": "fd1486f239a9e690ad3afb6ba1d5bcabfcb228f1f26d8af7435bb00d77ab9a80",
+    "evidence/ns88_dilation_defect/README.md": "4bef3dc48a5c1577903f3ff76635b8b18108a000e2642ff9940998d1e9ad2f9b",
+    "evidence/ns88_dilation_defect/argument.tex": "c6d63b9e6f89cd0d26df3e9afdbaaf41b1769a14b94cd6e72440585a15c26b6a",
+    "evidence/ns88_dilation_defect/certify.py": "e15e4e91ced3f6f39ef5b952f4c9dab893c664413c9b785aaec7e636fdb05b07",
+    "evidence/ns88_dilation_defect/check-256bits.json": "01d0aff5f74af43adc6ffec539a6244052f823eb5089f7efbab4ca729ba6f80b",
+    "evidence/ns88_dilation_defect/check-384bits.json": "40c440f6ef07758aa67b7473499ce0744fb5dd7c8ce15dcde304dbcde95793a0",
+    "evidence/ns88_dilation_defect/check-cutoff-384bits.json": "4de3f4a09c1b84494f704b4172b5e343d9baa87f5a22763aaf1d44c2ce995491",
+    "evidence/ns88_dilation_defect/exact-checks-output.txt": "59f71ebda02d977e8f22bc0d41b0a288f7c15d74b543839f3b28dcc89d1cd6db",
+    "evidence/ns88_dilation_defect/exact-checks.mac": "5e1b72bcfd5227548f3a6be64d8d30f12825b3017a78795fa6eaffc984499614",
+    "evidence/ns88_dilation_defect/literature-inputs.json": "e35e10478ae05d9454c380a49ff485a829ce344ca3e0797a6e03d067e3c6267f",
+    "evidence/ns88_dilation_defect/physical-256bits.json": "616e8e94468a72fb2234ef01906b30ccc523565460e464e03f1a49335c56807b",
+    "evidence/ns88_dilation_defect/physical-384bits.json": "e35b3703b0cfbc6ad2d0031aafc5e47f27040602c0192a7657396bfca4cf3a69",
+    "evidence/ns88_dilation_defect/physical-cutoff-384bits.json": "94f735eea94e7ad1f48bca6b482d0e1ed0b3fd3cf98538f2fd7ca79f97b7fa78",
+    "evidence/ns88_dilation_defect/physical.py": "dd71e8cc4888f948cc67767f7e09cb1479e499f215b027cd3a552bdd1c58d551",
+    "evidence/ns88_dilation_defect/replay-validation.json": "0a86b94bcf635d3658d6379a788ca8f07dc92ddcae4580cd1e642af5356c8769",
+    "evidence/ns88_dilation_defect/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "evidence/ns88_dilation_defect/runtime-provenance.json": "ec582700853a1058eac41135a5c7de98d480ab95de8e8c73afccafa4e44b2dc7",
+    "evidence/ns88_dilation_defect/self-review.json": "23e6355fee7d49615a82236d8e007fea12401220b464756c0d89ef1d3fb2044c",
+    "evidence/ns88_dilation_defect/turn-review.json": "45d35b960647628b64038873b200e516f76246c54e6ca20a4c6a72c7e4d21aae",
+    "evidence/ns88_dilation_defect/validation.json": "3bbc1202c479c967cec9aafd7402563768f5300260cc68c14e6eb30f5d8c1096",
+    "evidence/ns88_dilation_defect/verify_replays.py": "248e3ff944244a616f9e854b0eb96d70981774271aa1888f50dee7afbd4d78f9"
+  }
+}

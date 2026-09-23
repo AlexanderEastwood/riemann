@@ -3411,3 +3411,25 @@ available gain by >15.99%. 132 precision and 44 cutoff scalar overlaps,
 576 potential/physical pairing checks, 14 Maxima checks; pyright clean.
 Local author review only. Manuscript v1.66 unchanged, 358-page build clean.
 See evidence/ns87_joint_tail and the versioned HTML report in audits.
+
+
+## 2026-09-23 — NS88: multiplicative normal equations and upper-error envelope
+
+Reviewed all 94 prior registered conclusions at main 99640fe, current
+checkpoints, NS84/87 audits and missing-evidence ledger. Scope/dependency
+review, not historical reproof; both original gaps remain open.
+
+The true dilation defect equals the overlap of successive optimized
+increments. It yields a next-error upper certificate and a cumulative
+whole-error envelope in terms of S_J. A lower arithmetic growth estimate
+for S_J remains missing; the generic identities also survive NS74 controls.
+The tempting energy/j^p lower defect is excluded for p<1 by NS83; p=1
+requires coefficient <=1/sqrt(2). This is a scoped estimate closure.
+
+N=8,16,32,64 finite defects change sign and the direction capture dips to
+0.3256% at N16. Arb 256/384, doubled Gram cutoff and physical tail cutoff,
+independent complete potential/autocorrelation integrations, and 13 Maxima
+checks pass. Cumulative envelope is weaker than known optimized finite
+bounds, not a new best numerical bound. Author review only. Manuscript
+v1.66 remains unchanged. See evidence/ns88_dilation_defect and the dated
+HTML report. RH, G2 and the arithmetic growth input remain open.

@@ -156,6 +156,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-87 | Localize the optimized arithmetic observations jointly and certify their implication for full block gain | Codex, Continue solving toward RH | done (localization; arithmetic lower bound open) | Joint complete-tail gain certificate and explicit safe step; T=N^6 preserves the logarithmic relative-gain scale by NS81/83. Finite N=32 certificate retains >95.98% of available gain. No new arithmetic lower bound, effective onset, fast inverse or manuscript version. |
 
+| NS-88 | Test whether optimized multiplicative normal equations force an energy-scale arithmetic numerator | Codex, Continue solving toward RH | done (upper envelope; arithmetic growth open) | Exact successive-increment identity, complete next-size and cumulative upper-error bounds. Eventual energy/j^p numerator lower bound excluded for p<1; p=1 remains possible only at coefficient <=1/sqrt(2). Finite defect changes sign and gain capture dips to 0.3256%. No cofinal lower growth or error-decay theorem. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
@@ -262,6 +264,18 @@ All old-space projection terms and the actual Gram remain. A positive lower
 liminf of j*A_(N^6)/E_N on N=2^j would suffice; it is unproved and not
 asserted necessary. Repeating this sufficiency or another finite efficiency
 table would not supply the missing arithmetic estimate.
+
+## Open continuation after NS-88
+
+The scalar dilation route has a complete upper-error envelope. The missing
+input is divergence of its cumulative normalized absolute defect S_J,
+or a lower growth S_J >= a log J - b with a>0 for a quantitative upper rate.
+Neither is proved or asserted necessary. Exact normal equations only
+supply an upper overlap bound, and the generic identities survive the
+NS74 control. A proof must use the original signed arithmetic expression.
+Do not assume an energy-size or energy/sqrt(j) lower defect: both are
+excluded for this construction. The finite envelope is not a new best
+finite error bound, and another finite table is not a substitute for growth.
 
 ## Lanes
 

@@ -40,6 +40,28 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | G2 | open |
 | RH | open, and not claimed |
 
+## September 23 whole-error envelope and dilation test (NS-88)
+
+The actual optimized dilation defect is exactly an overlap of successive
+orthogonal improvement increments. This gives a complete next-size upper
+certificate and the cumulative envelope `E_(2^(J+1)) <= K exp(-sqrt(2)*S_J)`,
+where `S_J` sums `abs(d_(2^j))/E_(2^(j-1))` from a fixed starting index.
+A positive logarithmic lower growth of this scalar arithmetic sum would
+imply a sufficient logarithmic whole-error upper rate. That growth is
+unproved; the envelope alone supplies no decay theorem or fast solver.
+
+The exact identity also excludes an eventual numerator lower bound
+`abs(d_(2^j))/E_(2^j) >= a/j^p` for `0<=p<1`; for `p=1`, `a>1/sqrt(2)`
+is excluded by NS83. This closes the specified stronger estimate only.
+Finite N=8,16,32,64 defects change sign, and gain capture dips to 0.3256%
+at N=16. No eventual lower bound is inferred. The cumulative finite
+envelope is looser than the existing directly optimized finite bounds.
+Two precisions, full Gram/physical cutoff replays and Maxima checks pass.
+Manuscript v1.66, RH/G2 and the missing arithmetic lower growth stay unchanged.
+
+[Readable report](audits/dilation-upper-envelope-2026-09-23-v1.html) ·
+[Proof, complete checks and Maxima](evidence/ns88_dilation_defect/).
+
 ## September 23 joint observation localization (NS-87)
 
 The optimized arithmetic observations now give a complete gain certificate:
@@ -468,6 +490,8 @@ graph LR
   nboptimizedpotential["Optimized arithmetic potential and complete observation tails<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
   nbconvolutioncontrol["Divisor-convolution correction from N to N squared: finite control<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
   nbjointlocalization["Joint finite arithmetic observations preserve logarithmic gain scale<br/><small>&#128193; evidence/ns87_joint_tail</small>"]
+  nbdilationenvelope["Multiplicative normal equations and a scalar whole-error upper envelope<br/><small>&#128193; evidence/ns88_dilation_defect</small>"]
+  nbdilationstrongnumerator["Eventual energy/j^p dilation-defect lower bound with p<1<br/><small>&#128193; evidence/ns88_dilation_defect</small><br/><small><b>wall: The proposed stronger numerator forces error decay contradicting the critical-zero lower bound</b></small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -562,6 +586,8 @@ graph LR
   nbarithmeticsampling --> nboptimizedpotential
   nboptimizedpotential --> nbconvolutioncontrol
   nboptimizedpotential --> nbjointlocalization
+  nboptimizedpotential --> nbdilationenvelope
+  nbdilationenvelope --> nbdilationstrongnumerator
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -655,13 +681,15 @@ graph LR
   click nboptimizedpotential "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns86_optimized_arithmetic/" "evidence: evidence/ns86_optimized_arithmetic" _blank
   click nbconvolutioncontrol "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns86_optimized_arithmetic/" "evidence: evidence/ns86_optimized_arithmetic" _blank
   click nbjointlocalization "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns87_joint_tail/" "evidence: evidence/ns87_joint_tail" _blank
+  click nbdilationenvelope "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns88_dilation_defect/" "evidence: evidence/ns88_dilation_defect" _blank
+  click nbdilationstrongnumerator "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns88_dilation_defect/" "evidence: evidence/ns88_dilation_defect" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds,nbsamegramcontrol,nbuniformrelativecontraction closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds,nbsamegramcontrol,nbuniformrelativecontraction,nbdilationstrongnumerator closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth,nbrenewalforcing,nbselectedpreconditioner,nbcurvaturearithmetic blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;

@@ -1,0 +1,185 @@
+\section{Multiplicative normal equations and a scalar upper-error bound (NS88)}
+\paragraph{Scope.}
+We test a concrete lower-numerator proposal using the actual optimized
+coefficients. The exact equations yield an upper-error envelope and exclude
+certain numerator scales. They do not prove the needed arithmetic growth,
+a uniform logarithmic upper bound, G2 or RH. The finite envelope is generally
+weaker than directly computed finite errors; its use is to isolate a scalar
+arithmetic input, not improve the existing finite upper certificates.
+
+Use the reciprocal-coordinate Hilbert space and fixed $q=2$ atoms of NS86/87:
+$\mathcal H=L^2((0,\infty),dt/t^2)$,
+$\tau(t)=\boldsymbol1_{t\ge1}\log t$, $a_n(t)=A(t/n)$.
+Let $F_N=\Pi_N\tau=\sum_{n\le N}c_{N,n}a_n$, $R_N=\tau-F_N$,
+$E_N=\|R_N\|^2$, where $\Pi_N$ projects onto $V_N=\operatorname{span}(a_1,\ldots,a_N)$.
+Write $(D_2f)(t)=f(t/2)$. Then $D_2a_n=a_{2n}$,
+$\|D_2f\|^2=\|f\|^2/2$, and $D_2V_{N/2}\subset V_N$ for even $N$.
+Define the actual signed dilation defect
+\begin{equation}
+ d_N=\langle R_N,D_2F_N\rangle
+     =P_N(2)-C_N(2),\qquad
+ C_N(2)=\int_0^\infty R_N(t)R_N(t/2)\frac{dt}{t^2},
+ \label{eq:ns88-defect}
+\end{equation}
+where $P_N(2)=\langle R_N,D_2\tau\rangle$ is the full NS86 potential.
+This is neither the coefficient-conditioning constant of NS81 nor the
+unoptimized canonical M\"obius residual. The sign of $d_N$ is not assumed.
+
+\subsection{Exactly what the normal equations supply}
+Put $N=2^j$, $e_j=E_{2^j}$, $u_j=F_{2^j}-F_{2^{j-1}}$, and
+$b_j=\|u_j\|^2=e_{j-1}-e_j$. Nested orthogonal projections give
+\begin{equation}
+ d_{2^j}=\langle u_{j+1},D_2u_j\rangle,\qquad
+ |d_{2^j}|^2\le\tfrac12b_jb_{j+1}.
+ \label{eq:ns88-two-increments}
+\end{equation}
+Indeed $D_2F_{N/2}\in V_N$, so its pairing with $R_N$ vanishes.
+After subtracting it, $D_2u_j\in V_{2N}$, so the pairing with
+$R_{2N}$ also vanishes. This proves the identity, and Cauchy--Schwarz
+proves its inequality. Every discarded term is zero by an exact normal equation.
+
+The actual new-space correction is $W_j=(I-\Pi_N)D_2F_N=(I-\Pi_N)D_2u_j$.
+Its complete cost $k_j=\|W_j\|^2$ satisfies
+\[
+ 0\le k_j\le b_j/2,
+ \qquad d_{2^j}^2/k_j\le b_{j+1}\quad(k_j>0).
+\]
+The quotient is its exact line-search gain, not the whole available gain.
+The normal equations therefore recycle only the most recent increment.
+They do not give a positive lower overlap of successive increments.
+A small numerator does not itself imply a poor direction: its projected
+cost can be small too. When $b_j>0$, the unprojected increment direction
+already gives the explicit complete upper bound
+\[
+ e_{j+1}\le e_j-\frac{2d_{2^j}^2}{b_j}.
+\]
+Indeed take the admissible correction $(2d_{2^j}/b_j)D_2u_j$, whose cost
+is exactly $b_j/2$. This upper certificate needs previous/current optimized
+fits and cross-loads, but no next-block inverse. Continuing the identity
+at the next size still requires the actual optimized fit.
+
+\subsection{An unconditional upper envelope, conditional logarithmic decay}
+For $J\ge a\ge1$, define a completely specified scalar arithmetic sum
+\[
+ S_{a,J}=\sum_{j=a}^J\frac{|d_{2^j}|}{e_{j-1}}.
+\]
+Then
+\begin{equation}
+ e_{J+1}\le\sqrt{e_{a-1}e_a}\,
+                \exp(-\sqrt2\,S_{a,J}).
+ \label{eq:ns88-upper-envelope}
+\end{equation}
+Proof: twice the geometric mean in \eqref{eq:ns88-two-increments} gives
+$e_{j-1}-e_{j+1}=b_j+b_{j+1}\ge2\sqrt2|d_{2^j}|$.
+Use $-\log x\ge1-x$ for $0<x\le1$ to obtain
+\[
+ \log\frac{e_{j-1}}{e_{j+1}}
+ \ge\frac{e_{j-1}-e_{j+1}}{e_{j-1}}
+ \ge2\sqrt2\frac{|d_{2^j}|}{e_{j-1}}.
+\]
+Summation telescopes to
+$\log(e_{a-1}e_a/(e_Je_{J+1}))\ge2\sqrt2 S_{a,J}$.
+Since $e_{J+1}^2\le e_Je_{J+1}$, the result follows.
+
+Consequently, the \emph{unproved} arithmetic estimate
+$S_{a,J}\ge A\log J-B$ with $A>0$ would give
+\[
+ E_N=O((\log N)^{-\sqrt2 A}).
+\]
+Monotonicity extends dyadic bounds to all $N$. Even divergence of $S_{a,J}$,
+without a rate, would suffice for convergence. Neither growth statement is
+proved or asserted necessary here. The criterion is a particular
+multiplicative observation route within the classical approximation criterion,
+not a new RH equivalence.
+
+NS83 gives $e_J\ge c/J$ for sufficiently large $J$, for some $c>0$,
+without an effective onset in this work. Combining this with
+\eqref{eq:ns88-upper-envelope} gives the unconditional upper budget
+\[
+ S_{a,J}\le\frac1{\sqrt2}\log J+O_a(1).
+\]
+Thus the desired lower growth must fit this budget. The matching-order
+candidate $E_N\le C/\log N$ is still unproved. A positive lower growth
+coefficient below $1/\sqrt2$ would already give a sufficient slower rate.
+
+\subsection{A tempting stronger numerator input is impossible}
+Suppose, for some $A>0$ and $0\le p\le1$, one proposed
+\begin{equation}
+ |d_{2^j}|/e_j\ge A/j^p\quad\hbox{for all sufficiently large }j.
+ \label{eq:ns88-proposed-numerator}
+\end{equation}
+The two-increment inequality forces
+\[
+ e_{j+1}\le\frac{e_{j-1}}{1+2\sqrt2 A/j^p}.
+\]
+For $p<1$, products along either parity yield
+$e_J\le C\exp(-c_AJ^{1-p})$, contradicting NS83's $c/J$ lower bound.
+For $p=1$, the same product yields $e_J=O(J^{-\sqrt2 A})$;
+NS83 therefore excludes $A>1/\sqrt2$. These are necessary restrictions,
+not a pointwise upper bound on every individual defect. Small positive
+$A$ at $p=1$ is not excluded and, if proved eventually, would suffice.
+
+In particular a uniform energy-size defect, or even an eventual
+$e_j/\sqrt j$ lower bound, is impossible for this specific dilated-approximant
+construction. Using only the crude cost $\|D_2F_N\|^2\le1$ conceals this
+obstruction: the exact normal equations force the available increment
+cost to shrink too. This does not close every multiplicative arithmetic
+construction, every fixed-size gain rule or the NB route.
+
+For completeness the simpler bound $|d_{2^j}|^2\le e_jb_j/2$ gives,
+for every fixed $\eta>0$,
+\[
+ \#\{a\le j\le J: |d_{2^j}|\ge\eta e_j\}
+ \le\frac{\log J+O_a(1)}{\log(1+2\eta^2)}.
+\]
+Indeed each such index costs at least $\log(1+2\eta^2)$ in the telescoping
+sum $\sum\log(e_{j-1}/e_j)\le\log J+O_a(1)$.
+This is a sparse-large-values statement, not pointwise convergence of the ratio.
+
+\subsection{The arithmetic quantity is explicit and fully checkable}
+The complete Gram and target loads give
+\[
+ d_N=\sum_{n\le N}c_{N,n}
+       \left(b_{2n}-\sum_{m\le N}c_{N,m}G(m,2n)\right).
+\]
+Terms with $2n\le N$ vanish exactly; no sign is assigned to the rest.
+There is also a short physical formula. Put
+\[
+ \eta_N=\sum c_{N,n}/n,\qquad
+ J_N(1)=1-\sum_{n\le N}\frac{c_{N,n}}n(\log n+2-\gamma),\quad \ell=\log2.
+\]
+Using $P_N(1)=E_N$ and the exact first cell
+$R_N(t)=-\eta_Nt+(1+c_{N,1})\log t$ for $1<t<2$ gives
+\begin{equation}
+ P_N(2)=E_N-\ell J_N(1)-\tfrac12\eta_N\ell^2
+                +(1+c_{N,1})(\tfrac32\ell-1).
+ \label{eq:ns88-potential-two}
+\end{equation}
+Subtracting the \emph{complete} autocorrelation gives $d_N$.
+No independent lower bound on this signed difference is established.
+
+The independent physical verifier retains every reciprocal cell, including
+$0<t<1$. For $T\ge2N$, write
+$R_N(t)=u\log t+v+\epsilon(t)$ with $|\epsilon(t)|\le D/t$,
+$D=\sum n|c_{N,n}|/6$. Put $q=u\log T+v$, $q_2=q-u\log2$.
+The autocorrelation main tail is
+\[
+ \frac{qq_2+u(q+q_2)+2u^2}{T}.
+\]
+With $M_i=(q_i^2+2uq_i+2u^2)/T$ and $U=D^2/(3T^3)$,
+its complete remainder is bounded by
+$2\sqrt{M_1U}+\sqrt{M_2U}+2U$.
+The potential main tail, with $L=\log(T/2)$, is
+$(qL+q+uL+2u)/T$, with remainder at most $D(L/2+1/4)/T^2$.
+All cross terms are retained by Cauchy--Schwarz; none of these tails is set to zero.
+
+\paragraph{Finite findings and stop condition.}
+At $N=8,16,32,64$, $j|d_N|/E_N$ is approximately
+$6.36169,0.116643,0.425205,0.530124$. The corresponding direction captures
+$74.714\%,0.3256\%,27.132\%,42.755\%$ of the full next-block gain.
+These irregular values supply no eventual lower bound. The $N=8$ value
+above $1/\sqrt2$ does not contradict an eventual restriction.
+Two precisions, a doubled complete Gram cutoff and independently integrated
+potential/autocorrelation tails check the stated identities.
+This investigation stops at the missing arithmetic lower growth of $S_{a,J}$;
+it does not promote the finite table to a logarithmic error upper bound.

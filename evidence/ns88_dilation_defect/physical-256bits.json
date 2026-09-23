@@ -1,0 +1,65 @@
+{
+  "classification": "Certified complete physical identity checks; no cofinal lower bound",
+  "precision_bits": 256,
+  "physical_stop": 65536,
+  "source_sha256": "dd71e8cc4888f948cc67767f7e09cb1479e499f215b027cd3a552bdd1c58d551",
+  "input_sha256": "01d0aff5f74af43adc6ffec539a6244052f823eb5089f7efbab4ca729ba6f80b",
+  "rows": [
+    {
+      "N": 8,
+      "values": {
+        "potential_at_two": "[0.00023120 +/- 3.89e-9]",
+        "autocorrelation_at_two": "[-1.72e-7 +/- 2.16e-10]",
+        "dilation_defect": "[0.00023137 +/- 6.11e-9]",
+        "correlation_tail_radius": "[1.2653020992466279221001987010494323497926e-10 +/- 5.37e-51]",
+        "potential_tail_radius": "[3.566203055586274565183670043385577179042782e-9 +/- 6.27e-52]"
+      },
+      "gates": {
+        "complete_physical_vs_Gram": true,
+        "physical_defect_nonzero": true
+      }
+    },
+    {
+      "N": 16,
+      "values": {
+        "potential_at_two": "[-9.0e-6 +/- 5.33e-8]",
+        "autocorrelation_at_two": "[-9.9734e-6 +/- 8.93e-11]",
+        "dilation_defect": "[9e-7 +/- 4.33e-8]",
+        "correlation_tail_radius": "[7.6131949926294501843539221744298668364e-11 +/- 5.33e-49]",
+        "potential_tail_radius": "[1.15197022654129973829624423889134943161910e-8 +/- 1.56e-50]"
+      },
+      "gates": {
+        "complete_physical_vs_Gram": true,
+        "physical_defect_nonzero": true
+      }
+    },
+    {
+      "N": 32,
+      "values": {
+        "potential_at_two": "[-1.12e-5 +/- 8.41e-8]",
+        "autocorrelation_at_two": "[-9.079e-6 +/- 3.76e-10]",
+        "dilation_defect": "[-2.1e-6 +/- 6.35e-8]",
+        "correlation_tail_radius": "[1.4294855259857783288060800676196481004e-10 +/- 7.18e-48]",
+        "potential_tail_radius": "[3.5521388393754857064265735269345355725967e-8 +/- 5.59e-49]"
+      },
+      "gates": {
+        "complete_physical_vs_Gram": true,
+        "physical_defect_nonzero": true
+      }
+    },
+    {
+      "N": 64,
+      "values": {
+        "potential_at_two": "[-1e-5 +/- 2.96e-7]",
+        "autocorrelation_at_two": "[-8.065e-6 +/- 2.06e-10]",
+        "dilation_defect": "[-2e-6 +/- 3.61e-7]",
+        "correlation_tail_radius": "[1.53695476689470772705193578762585241e-10 +/- 7.53e-46]",
+        "potential_tail_radius": "[1.058842996612900458171986013138214305388e-7 +/- 1.66e-47]"
+      },
+      "gates": {
+        "complete_physical_vs_Gram": true,
+        "physical_defect_nonzero": true
+      }
+    }
+  ]
+}
