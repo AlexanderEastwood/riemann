@@ -1,0 +1,114 @@
+\section*{NS94: tangent-circle inversions and what they can detect}
+\paragraph{Source and scope.} Yufei Zhao's four-page 2011 handout
+\emph{Power of a Point}, supplied by the user, defines power and radical
+axes and proves the radical-axis theorem. It does not define exterior
+similarity points or discuss zeta zeros. We derive the similarity formula
+below. No instructions in the handout are treated as project instructions.
+All controls below are exact geometric examples, not hypothetical zeros
+asserted to exist for zeta. RH remains open.
+
+\paragraph{A line under one inversion.}
+With real centre $c$ and radius $r>0$, ordinary circle inversion is
+$I_{c,r}(z)=c+r^2/(\bar z-c)$. The exceptional centre maps to infinity.
+For a vertical line $x=a$, $a\ne c$, its image is the circle of centre
+$m=c+r^2/[2(a-c)]$ and radius $R=r^2/[2|a-c|]$, with the limiting point
+$c$ supplied only by the point at infinity of the original line.
+More generally, for $z=x+iy\ne c$,
+\[
+ |I_{c,r}(z)-m|^2-R^2
+ =\frac{r^4(a-x)}{(a-c)((x-c)^2+y^2)}.
+\]
+This identity follows by expanding the two squares; the worksheet checks it.
+
+\paragraph{One inversion in each tangent circle.}
+Take $a=1/2$, centres $a-p,a+q$ and radii $p,q>0$. This is the externally tangent interpretation, with one circle on each side. Both circles
+are tangent to the critical line at $a$. The two image circles have centres
+$a-p/2,a+q/2$ and radii $p/2,q/2$, respectively. They lie within the
+original circles and touch them at $a$.
+For distinct image radii the exterior homothety centre is
+\[
+ e=\frac{R_Lm_R-R_Rm_L}{R_L-R_R}=a+\frac{pq}{p-q}.
+\]
+This follows by solving $m_R=e+(R_R/R_L)(m_L-e)$; it contains no zeros.
+For $p=q$ and distinct centres there is no finite exterior homothety centre;
+it is the point at infinity along their line of centres. This already
+happens with no marked points on either circle.
+Shrinking both radii does not determine a unique limit: for $p=t,q=2t$,
+$e=a-2t\to a$; for $p=t,q=t+t^2$, $e=a-1-t\to a-1$;
+for $p=t,q=t+t^3$, $e=a-t^{-1}-t\to-\infty$.
+All three paths use the same geometric construction, independently of zeros.
+For internally tangent circles on the same side, centres $a-p,a-q$ and
+radii $p,q$, the image centres are $a-p/2,a-q/2$ and the exterior
+homothety centre is simply $a$ when $p\ne q$. The proposed count
+dependence does not arise in that interpretation either.
+
+\paragraph{Two successive inversions: the other interpretation.}
+Write $u=z-a$. Applying the left inversion and then the right gives
+\[
+ I_R I_L(z)-a=\frac{u}{1+ku},\qquad k=p^{-1}+q^{-1}.
+\]
+Reversing the order gives $u/(1-ku)$. Each maps the critical line
+onto a circle (with its missing limiting point): centres $a\pm1/(2k)$,
+common radius $1/(2k)$. Thus doing both orders produces equal circles
+whose exterior similarity point is again at infinity, for every $p,q>0$.
+A single composition gives one image circle, not two.
+
+\paragraph{What an off-line point does.}
+Let $P_L,P_R$ denote powers relative to the two separately inverted image
+circles. Then
+\[
+ P_L(I_Lz)=\frac{p^3(a-x)}{(x-a+p)^2+y^2},\qquad
+ P_R(I_Rz)=\frac{q^3(x-a)}{(x-a-q)^2+y^2}.
+\]
+Off-line points therefore go inside one image circle and outside the other.
+This detects location; it does not imply an imbalance in zero counts.
+These are images of zero locations, not a claim that $\zeta(I(z))=0$
+whenever $\zeta(z)=0$. Inversion supplies no new zeta functional equation.
+The nontrivial zeta zeros are symmetric under $z\mapsto1-\bar z$,
+with multiplicities. Reflection supplies an opposite-side partner at the
+same height. Counts must use the same finite original height cutoff;
+comparing different image cutoffs compares different sets, and comparing
+two unqualified infinite counts is not a finite discrepancy test.
+
+An exact control is
+\[
+ P(s)=((s-a-\delta)^2+t^2)((s-a+\delta)^2+t^2),\quad
+ a=1/2,\quad\delta=1/4,\quad t=1.
+\]
+It is real and $P(1-s)=P(s)$, with four off-line roots
+$a\pm\delta\pm it$. For $p=q=1/2$, each image disc contains two
+of their transformed roots; each image boundary contains none. The
+exterior similarity point is infinite, just as for equal circles marked
+only with critical-line points. This refutes the proposed geometric
+count-imbalance inference. The polynomial lacks zeta's arithmetic data;
+it is not a counterexample to RH or a universal exclusion of geometry.
+
+\paragraph{A usable location statistic, but an unproved target.}
+For the same point, the product yields
+\[
+ -\frac{P_L(I_Lz)P_R(I_Rz)}{p^3q^3}
+ =\frac{(x-a)^2}{[(x-a+p)^2+y^2][(x-a-q)^2+y^2]}\ge0.
+\]
+For the actual nontrivial zeros within a fixed finite height $H$, summing
+this quantity with multiplicities gives a nonnegative number, zero exactly
+when every included zero lies on the critical line. It avoids cancellation
+between reflected off-line partners. Proving it zero for every height is
+an RH-equivalent target, not a consequence of inversion or symmetry.
+No arithmetic estimate for this statistic is supplied.
+
+\paragraph{The proposed variant at 0 and 1.}
+The tangency partners were not specified. Under the natural inward-facing
+choice of centres $r,1-r$ and equal radius $r<1/2$ (tangent to the vertical
+lines at 0 and 1), the critical-line image radii are
+$r^2/[2(1/2-r)]\to\infty$ as $r\uparrow1/2$. At the endpoint the
+critical line passes through both inversion centres and is preserved as a
+line. Under the outward-facing choice $-r,1+r$, they tend instead to
+$1/8$. These are explicitly stated interpretations, not an assertion about
+an unspecified construction.
+
+\paragraph{Relation to the earlier project.}
+Clifford algebra in NS47 represents the existing signed form; it did not
+supply its missing uniform lower bound. The complete first-zero enclosure
+is a fixed-window result, not control of all zeta zeros. The current NB
+work constructs approximations and seeks to prove their complete error
+tends to zero. No Clifford machinery is needed for this inversion check.

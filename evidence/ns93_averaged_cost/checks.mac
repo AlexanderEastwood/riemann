@@ -1,0 +1,11 @@
+kill(all)$ checks:0$
+check(name,expr):=block([v:ratsimp(expr)],if v#0 then error(name,v),checks:checks+1,print("PASS",name))$
+check("diagonal pointwise bound",1/(4*n)-(x-n)/x^2-(x-2*n)^2/(4*n*x^2))$
+check("squarefree density allowance",1/4-(1/4)*(3/4)-1/16)$
+check("squarefree threshold",1536/32-sqrt(3*1536/2))$
+check("lower cost constant",(n/4)*((n/32)*(2*l/(3*n)))^2-n*l^2/9216)$
+check("offdiagonal count",(a+b+c)^2-a^2-b^2-c^2-2*(a*b+a*c+b*c))$
+check("three-integer overlap",a^2+(a+b)^2+(a+b+c)^2-(3*a^2+2*b^2+c^2+4*a*b+2*a*c+2*b*c))$
+check("two-term weighted Cauchy difference",(r^2/s+t^2/u)*(s+u)-(r+t)^2-(r*u-t*s)^2/(s*u))$
+check("averaged gain constant",(c/(2*k*alpha^2*j))*(eps*j)^2/(cc*j)-c*eps^2/(2*k*alpha^2*cc))$
+print("PASS:",checks,"exact checks")$ quit()$

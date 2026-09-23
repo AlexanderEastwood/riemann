@@ -1,0 +1,82 @@
+batch("evidence/ns94_circle_inversion/checks.mac")
+kill(all)
+checks:0
+check(name,expr):=block([v:ratsimp(expr)],if v # 0 then error(name,v),
+      checks:checks+1,print("PASS",name))
+inv(x,y,c,r):=[c+(r^2*(x-c))/((x-c)^2+y^2),(r^2*y)/((x-c)^2+y^2)]
+powpt(v,m,rr):=(v[1]-m)^2+v[2]^2-rr
+v:inv(x,y,c,r)
+m:c+r^2/(2*(a-c))
+check("general power",
+      powpt(v,m,r^4/(4*(a-c)^2))-(r^4*(a-x))/((a-c)*((x-c)^2+y^2)))
+PASS general power 
+v:inv(a,y,c,r)
+check("critical line circle",powpt(v,m,r^4/(4*(a-c)^2)))
+PASS critical line circle 
+v:inv(x,y,a-p,p)
+check("left power",powpt(v,a-p/2,p^2/4)-(p^3*(a-x))/((x-a+p)^2+y^2))
+PASS left power 
+w:inv(x,y,a+q,q)
+check("right power",powpt(w,a+q/2,q^2/4)-(q^3*(x-a))/((x-a-q)^2+y^2))
+PASS right power 
+check("nonnegative product",
+      (-powpt(v,a-p/2,p^2/4)*powpt(w,a+q/2,q^2/4))/(p^3*q^3)
+       -(x-a)^2/(((x-a+p)^2+y^2)*((x-a-q)^2+y^2)))
+PASS nonnegative product 
+ee:ratsimp(((p/2)*(a+q/2)-(q/2)*(a-p/2))/((p-q)/2))
+check("exterior centre",ee-a+(-p*q)/(p-q))
+PASS exterior centre 
+check("homothety",ee+(q/p)*(a-p/2-ee)-(a+q/2))
+PASS homothety 
+check("shrink path finite a",subst([p = t,q = 2*t],ee)-(a-2*t))
+PASS shrink path finite a 
+check("shrink path finite a-1",subst([p = t,q = t+t^2],ee)-(a-1-t))
+PASS shrink path finite a-1 
+check("shrink path infinite",subst([p = t,q = t+t^3],ee)-(a-1/t-t))
+PASS shrink path infinite 
+v:inv(x,y,a-p,p)
+w:inv(v[1],v[2],a+q,q)
+k:1/p+1/q
+den:(1+k*(x-a))^2+k^2*y^2
+check("composition real",w[1]-a+(-((x-a)*(1+k*(x-a))+k*y^2))/den)
+PASS composition real 
+check("composition imaginary",w[2]-y/den)
+PASS composition imaginary 
+v:inv(a,y,a-p,p)
+w:inv(v[1],v[2],a+q,q)
+check("composition circle",powpt(w,a+1/(2*k),1/(4*k^2)))
+PASS composition circle 
+v:inv(a,y,a+q,q)
+w:inv(v[1],v[2],a-p,p)
+check("reverse circle",powpt(w,a-1/(2*k),1/(4*k^2)))
+PASS reverse circle 
+poly:((s-1/2+(-1)/4)^2+1)*((s-1/2+1/4)^2+1)
+check("reflection symmetry",subst(1-s,s,poly)-poly)
+PASS reflection symmetry 
+for root in [1/4+%i,1/4-%i,3/4+%i,3/4-%i] do
+    check("quartet root",subst(root,s,poly))
+PASS quartet root 
+PASS quartet root 
+PASS quartet root 
+PASS quartet root 
+insideL:0
+insideR:0
+for xx in [1/4,3/4] do
+    for yy in [-1,1] do
+        block([pl,pr],pl:ratsimp(powpt(inv(xx,yy,0,1/2),1/4,1/16)),
+              pr:ratsimp(powpt(inv(xx,yy,1,1/2),3/4,1/16)),
+              if pl < 0 then insideL:insideL+1,
+              if pr < 0 then insideR:insideR+1,
+              if pl = 0 or pr = 0 then error("unexpected boundary root"))
+check("two inside left",insideL-2)
+PASS two inside left 
+check("two inside right",insideR-2)
+PASS two inside right 
+check("inward radius coefficient",
+      limit(((1/2-r)*r^2)/(2*(1/2-r)),r,1/2,minus)-1/8)
+PASS inward radius coefficient 
+check("outward radius limit",limit(r^2/(2*(1/2+r)),r,1/2)-1/8)
+PASS outward radius limit 
+print("PASS:",checks,"exact checks")
+PASS: 23 exact checks 
+quit()

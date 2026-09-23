@@ -1126,6 +1126,32 @@
       "parent": "nbjointabelbound",
       "evidence": "evidence/ns92_arithmetic_cost",
       "note": "NS92 applies the prior NS61 complete average to signed Mobius tails. A finite scalar upper bounds the full projected cost and an endpoint-only direction without a new-block inverse. At N256 a 1/16 step has complete physical gain >1.57%; the cheaper scalar budget certifies >0.0443% for step 1/512. No new best error. Seven scalar budgets through N65536 are finite checks only; uniform arithmetic cost and numerator estimates remain open."
+    },
+    {
+      "id": "nbaveragedabsolutecost",
+      "title": "Averaging the fully separated absolute Mobius cost",
+      "status": "closed",
+      "parent": "nbarithmeticcostbudget",
+      "evidence": "evidence/ns93_averaged_cost",
+      "note": "NS93: signed suffix cost has diagonal <=(log 2)^2/4; its fully absolute product majorant is >=N log(4/3)^2/9216 for dyadic N>=2048. Its growing-block mean diverges. Actual signed cost, averaged numerator and full PR42 route remain open; finite means not extrapolated.",
+      "wall": {
+        "input": "productwise absolute values force a linear majorant even before averaging",
+        "to": null,
+        "src": "evidence/ns93_averaged_cost/argument.tex; scoped to this sufficient cost bound"
+      }
+    },
+    {
+      "id": "circlecountinference",
+      "title": "Tangent-circle similarity point and count imbalance infer RH",
+      "status": "closed",
+      "parent": "altroutes",
+      "evidence": "evidence/ns94_circle_inversion",
+      "note": "NS94: exact separate/successive inversion formulas. Similarity point depends only on circle parameters; a symmetric off-line polynomial has equal interior counts and infinite exterior similarity point. No actual zeta counterexample or general geometric closure. Nonnegative power-product defect detects displacement, but its all-height vanishing remains an RH-equivalent unproved target.",
+      "wall": {
+        "input": "exact symmetric off-line control preserves the proposed geometric count and infinity features",
+        "to": null,
+        "src": "evidence/ns94_circle_inversion/argument.tex; geometry and symmetry alone, not zeta arithmetic"
+      }
     }
   ]
 }

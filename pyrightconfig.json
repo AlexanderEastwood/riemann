@@ -46,7 +46,9 @@
     "evidence/ns89_upper_normalization/*.py",
     "evidence/ns90_mobius_gain/*.py",
     "evidence/ns91_joint_abel/*.py",
-    "evidence/ns92_arithmetic_cost/*.py"
+    "evidence/ns92_arithmetic_cost/*.py",
+    "evidence/ns93_averaged_cost/*.py",
+    "evidence/ns94_circle_inversion/*.py"
   ],
   "exclude": [
     "node_modules",
@@ -62,6 +64,7 @@
     "evidence/v159/ns61",
     "evidence/v160/ns67",
     "evidence/v160/ns71",
-    "evidence/v161/ns72"
+    "evidence/v161/ns72",
+    "evidence/ns92_arithmetic_cost"
   ]
 }

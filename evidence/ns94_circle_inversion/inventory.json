@@ -1,0 +1,16 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental evidence and versioned HTML report; excludes this inventory",
+  "files": {
+    "audits/tangent-circles-and-rh-2026-09-23-v1.html": "154d066aecf8aa03b0cd10d6e63d7eb66c21a6f444bf83848a2dc41121241bd9",
+    "evidence/ns94_circle_inversion/README.md": "c4342f517ba001c2a02068d7e0ca4ed80857f76cdbee824646f1f44e8d28a169",
+    "evidence/ns94_circle_inversion/argument.tex": "45f9bce1083fed8fe6184f0d59784a974c26980e58bdc7a7faa4f67f1018ed1a",
+    "evidence/ns94_circle_inversion/build-summary.txt": "ee813b7abbae221bacb293e61260206b425cd835dae9a0a35a070d81c144f77e",
+    "evidence/ns94_circle_inversion/checks-output.txt": "9f3749cb9334eb16b1440d4c8bdd890b0faffd5112d9af0f84f43791990482bb",
+    "evidence/ns94_circle_inversion/checks.mac": "bacb5eef5c80dfa16deb9b877071642853d9697d1c1821d8096762555b167ea1",
+    "evidence/ns94_circle_inversion/inversion-control.png": "906e28c74f07e10d16e9a6f18dae477e5fb0195886eed4a0872692a39453e084",
+    "evidence/ns94_circle_inversion/make_figure.py": "44fbaa62f479fe5096c914c03a9d93e83837bbac3ffed22c011a4ecf22a9c756",
+    "evidence/ns94_circle_inversion/requirements-figure.txt": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38",
+    "evidence/ns94_circle_inversion/sources.json": "056c9d63e27b795dfb6c7c68418f9a63b80425adba75f220ac280a9593799c5d"
+  }
+}

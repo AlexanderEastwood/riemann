@@ -1,0 +1,40 @@
+{
+  "classification": "Author mathematical and implementation review; not independent review",
+  "open_major_findings": 0,
+  "arithmetic_checks": [
+    "Expansion includes all ordered pairs; off-diagonal coefficient is 2.",
+    "Diagonal bound holds termwise and uses exactly N integer indices.",
+    "Squarefree union bound over all square divisors is conservative; dyadic threshold 2048 exceeds sufficient 1536.",
+    "Absolute majorant lower bound does not imply signed S divergence.",
+    "Growing index blocks run J to 2J-1, not a fixed number of doublings.",
+    "Weighted Cauchy-Schwarz keeps the varying actual residual and assumes both open averaged hypotheses.",
+    "No mean or finite interval is extrapolated; no new numerator was computed.",
+    "Finite sums need no physical cutoff. Doubled sieve and direct quadratic expansion are independent checks."
+  ],
+  "geometry_checks": [
+    "Source handout actually contains no exterior similarity definition; derived formula is not attributed to it.",
+    "Separate inversions and two successive orders distinguished.",
+    "Externally versus internally tangent interpretation disclosed.",
+    "Inversion centres, missing limiting circle points and equal-radius degeneracy retained.",
+    "Zero locations mapped; unchanged zeta is not asserted invariant under inversion.",
+    "Polynomial control preserves reflection/conjugation only, not zeta arithmetic.",
+    "Matched finite height counts, multiplicity and reflected off-line partners retained.",
+    "Power-product nonnegativity is exact; its vanishing is an unproved target.",
+    "The 0/1 variant interpretations are explicit rather than assumed unique."
+  ],
+  "what_had_to_change": "Retain signed Mobius pair correlations in the averaged cost. Replace circle-count imbalance by an actual off-line displacement detector, while leaving its arithmetic vanishing unproved.",
+  "obstruction": "No compatible averaged numerator and signed-cost bounds; geometry alone cannot distinguish the symmetric off-line control.",
+  "bound_or_object": "Only the absolute-product cost majorant and the geometry-only count/infinity inference fail; no failure of the actual signed cost, approximation family, RH, or all geometric routes.",
+  "verification": {
+    "precision_overlaps": 112,
+    "sieve_overlaps": 112,
+    "NS92_overlaps": 7,
+    "Maxima_checks": 31,
+    "pyright_errors": 0,
+    "pyright_warnings": 0,
+    "manuscript_pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "manuscript_unchanged": true
+  },
+  "document_review": "HTML source and embedded plot reviewed; plot visually inspected. Browser URL policy blocked local-file browser preview; requested app file preview instead."
+}

@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "title": "Power of a Point",
+      "author": "Yufei Zhao",
+      "date": "April 2011",
+      "url": "https://yufeizhao.com/olympiad/power_of_a_point.pdf",
+      "pages": 4,
+      "sha256": "3e2343e9de647eb8a23a8491b3724c7dd68cc2befa1f0cbfc512d1147e29f1b8",
+      "read_scope": "All four pages; page 2 power and radical-axis diagrams visually checked. No exterior similarity point definition or zeta discussion occurs in this handout."
+    },
+    {
+      "title": "DLMF 25.10(i), Distribution",
+      "url": "https://dlmf.nist.gov/25.10",
+      "use": "Nontrivial zero symmetry about real axis and critical line; RH statement."
+    },
+    {
+      "title": "DLMF 25.4, Reflection formulas",
+      "url": "https://dlmf.nist.gov/25.4",
+      "use": "Completed-function reflection supporting multiplicity-preserving zero symmetry."
+    }
+  ],
+  "not_assumed": "Inversion is not asserted to preserve zeros of the unchanged zeta function."
+}

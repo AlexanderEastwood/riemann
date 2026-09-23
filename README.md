@@ -5,6 +5,34 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 averaged-cost attempt and tangent-circle check (NS-93/94)
+
+The arithmetic cost splits into a uniformly bounded diagonal and signed
+Mobius pair correlations. Bounding the latter after taking every product's
+absolute value fails: the resulting majorant is at least
+`N*log(4/3)^2/9216` for every dyadic N>=2048. Its average over growing
+ranges of doubling indices also diverges. This is a scoped failure of an
+unsigned bound, not growth of the actual signed cost or an RH obstruction.
+Both averaged numerator and signed-cost estimates remain open.
+
+The tangent-circle proposal was checked from the supplied power-of-a-point
+handout, ordinary coordinates and Maxima. Inversions give the expected
+image circles, but their exterior similarity point depends on the circles,
+not zero counts. A symmetric off-line polynomial control has equal interior
+counts and an infinite exterior similarity point. A nonnegative product
+of the image powers detects off-line displacement, but proving its zero
+sum vanishes at every height is another unproved RH-equivalent target.
+No general geometric route is excluded.
+
+Arb 256/384-bit and doubled-sieve checks, independent finite quadratic sums,
+and 31 exact Maxima checks pass. Author review only. Manuscript v1.66 stays
+unchanged; both historical original-evidence gaps remain open.
+
+[Arithmetic report](audits/averaged-arithmetic-cost-2026-09-23-v1.html) ·
+[Plain-language geometry note](audits/tangent-circles-and-rh-2026-09-23-v1.html) ·
+[Arithmetic evidence](evidence/ns93_averaged_cost/) ·
+[Geometry and Maxima](evidence/ns94_circle_inversion/).
+
 ## September 23 direct arithmetic cost and feasible step (NS-92)
 
 Applying NS61's complete average to signed Mobius coefficient tails gives
@@ -581,6 +609,8 @@ graph LR
   nbmobiusjointcancellation["Exact Mobius cancellation; fixed-size absolute-bound loss<br/><small>&#128193; evidence/ns90_mobius_gain</small>"]
   nbjointabelbound["Joint first-primitive finite lower bound with complete grouped tail<br/><small>&#128193; evidence/ns91_joint_abel</small>"]
   nbarithmeticcostbudget["Complete scalar cost budget and a feasible endpoint-only update<br/><small>&#128193; evidence/ns92_arithmetic_cost</small>"]
+  nbaveragedabsolutecost["Averaging the fully separated absolute Mobius cost<br/><small>&#128193; evidence/ns93_averaged_cost</small><br/><small><b>wall: productwise absolute values force a linear majorant even before averaging</b></small>"]
+  circlecountinference["Tangent-circle similarity point and count imbalance infer RH<br/><small>&#128193; evidence/ns94_circle_inversion</small><br/><small><b>wall: exact symmetric off-line control preserves the proposed geometric count and infinity features</b></small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -681,6 +711,8 @@ graph LR
   nbjointlocalization --> nbmobiusjointcancellation
   nbmobiusjointcancellation --> nbjointabelbound
   nbjointabelbound --> nbarithmeticcostbudget
+  nbarithmeticcostbudget --> nbaveragedabsolutecost
+  altroutes --> circlecountinference
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -780,13 +812,15 @@ graph LR
   click nbmobiusjointcancellation "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns90_mobius_gain/" "evidence: evidence/ns90_mobius_gain" _blank
   click nbjointabelbound "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns91_joint_abel/" "evidence: evidence/ns91_joint_abel" _blank
   click nbarithmeticcostbudget "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns92_arithmetic_cost/" "evidence: evidence/ns92_arithmetic_cost" _blank
+  click nbaveragedabsolutecost "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns93_averaged_cost/" "evidence: evidence/ns93_averaged_cost" _blank
+  click circlecountinference "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns94_circle_inversion/" "evidence: evidence/ns94_circle_inversion" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound,nbarithmeticcostbudget proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds,nbsamegramcontrol,nbuniformrelativecontraction,nbdilationstrongnumerator closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds,nbsamegramcontrol,nbuniformrelativecontraction,nbdilationstrongnumerator,nbaveragedabsolutecost,circlecountinference closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth,nbrenewalforcing,nbselectedpreconditioner,nbcurvaturearithmetic blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
