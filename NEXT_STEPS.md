@@ -124,6 +124,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-71 | Test the repaired elementary Gram only as a preconditioner for the actual optimized residual, retaining the true projected energy in every gain quotient | Codex, Continue solving toward RH | done (v1.60; arithmetic input open) | Repaired projected-kernel direction captures 97.06% of optimal gain at N=256 versus 38.41% for raw correlation; squared error reduction 8.08% versus optimum 8.33%. Complete 256/384-bit and doubled-cutoff checks. Cofinal numerator/cost input remains open. |
 
+| NS-72 | Derive a complete local differential-energy representation of the repaired elementary kernel and a curvature minorant for the actual selected numerator | Codex, Continue solving toward RH | claimed | Retain whole-line domains, interpolation normalization and all boundary terms. Test whether the positive geometry yields a usable lower numerator estimate on the certified blocks, while distinguishing that finite minorant from an unproved cofinal arithmetic bound. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
