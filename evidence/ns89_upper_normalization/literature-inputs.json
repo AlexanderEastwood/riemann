@@ -1,0 +1,14 @@
+{
+  "classical_integer_criterion": {
+    "url": "https://arxiv.org/abs/math/0205003",
+    "scope": "Prior integer-dilation RH criterion; no novelty claim for that criterion."
+  },
+  "Mellin_context": {
+    "url": "https://arxiv.org/html/math/0505453v1",
+    "scope": "Classical dilation and Muntz/Mellin setting; the normalization proof is given in full locally."
+  },
+  "inherited_complete_Gram": "evidence/v159/ns61/gram-tail-proof.tex",
+  "inherited_complete_physical_cells": "evidence/v163/ns78",
+  "inherited_Stirling_remainder": "evidence/v160/ns67",
+  "scope": "No external new zero-free, error-decay, or arithmetic-growth theorem assumed."
+}

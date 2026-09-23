@@ -158,6 +158,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-88 | Test whether optimized multiplicative normal equations force an energy-scale arithmetic numerator | Codex, Continue solving toward RH | done (upper envelope; arithmetic growth open) | Exact successive-increment identity, complete next-size and cumulative upper-error bounds. Eventual energy/j^p numerator lower bound excluded for p<1; p=1 remains possible only at coefficient <=1/sqrt(2). Finite defect changes sign and gain capture dips to 0.3256%. No cofinal lower growth or error-decay theorem. |
 
+| NS-89 | Construct the optimal tail-normalized upper certificate and quantify its complete error cost | Codex, Continue solving toward RH | done (constructive upper certificate; decay open) | Original fixed-seed obstruction test stopped before publication. Focus on explicit approximants, complete upper error, and what remains missing for the logarithmic upper-rate candidate. No new lower-bound result or cofinal decay inferred. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
@@ -276,6 +278,19 @@ NS74 control. A proof must use the original signed arithmetic expression.
 Do not assume an energy-size or energy/sqrt(j) lower defect: both are
 excluded for this construction. The finite envelope is not a new best
 finite error bound, and another finite table is not a substitute for growth.
+
+## Open continuation after NS-89
+
+Stay on the upper-bound construction. Exact zero-exterior coefficients lose
+at most a factor 1.144579 compared with the unrestricted optimum for every
+N>=256. This permits searching within that normalized family without losing
+a logarithmic exponent. The explicit full certificate is the signed finite
+divisor-cell energy plus the complete main tail and remainder cross term.
+Prove an independent uniform upper estimate for it along an explicit family;
+do not substitute another lower-bound obstruction, a finite table, or the
+rate-transfer comparison itself for that missing decay theorem. Ordinary
+Gram solves still determine the optimized finite witnesses; no fast or
+closed-form cofinal coefficient rule is supplied.
 
 ## Lanes
 

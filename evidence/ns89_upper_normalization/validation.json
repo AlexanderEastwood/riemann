@@ -1,0 +1,29 @@
+{
+  "classification": "Branch validation; manuscript v1.66 unchanged",
+  "reviewed_base": "ba02640e47be4090c2fbff2b6b0de79ecaab6a5b",
+  "manuscript_build": {
+    "pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "latex_pdf_or_box_warnings": 0
+  },
+  "pyright": {
+    "files": [
+      "certify.py",
+      "physical.py",
+      "verify_replays.py"
+    ],
+    "errors": 0,
+    "warnings": 0
+  },
+  "inherited_manifests": {
+    "v159": 69,
+    "v163": 26,
+    "v166": 16
+  },
+  "relative_report_links": 4,
+  "review": "author only; no independent human or agent review",
+  "new_manuscript_version": false,
+  "RH": "open",
+  "G2": "open",
+  "cofinal_upper_decay": "unproved"
+}

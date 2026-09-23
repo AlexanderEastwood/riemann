@@ -1,0 +1,22 @@
+/* Finite exact algebra checks; not a machine proof of cofinal arithmetic decay. */
+kill(all)$
+checks:[]$
+check(name,expr):=block([r:ratsimp(expr)],if r#0 then error("FAILED",name,r),checks:endcons(name,checks))$
+g:matrix([3,1],[1,2])$ v:matrix([1],[1/2])$ b:matrix([1],[1])$
+c:invert(g).b$ d:invert(g).v$ q:transpose(v).d$ eta:transpose(v).c$
+a:c-eta*d/q$
+check("exact normalization",transpose(v).a)$
+check("normalization cost",transpose(a-c).g.(a-c)-eta^2/q)$
+check("constrained normal equations",(g.a-b+eta*v/q)[1,1])$
+check("second normal equation",(g.a-b+eta*v/q)[2,1])$
+h:matrix([-z/2],[z])$
+check("rounding cross term",transpose(h).(g.a-b))$
+check("upper transfer remainder",e/q-(e+y^2/q)-(e*(1-q)-y^2)/q)$
+check("exact rational first coefficient",(-a2/2-a3/3-a4/4)+a2/2+a3/3+a4/4)$
+check("cell primitive zero",diff(-1/t,t)-1/t^2)$
+check("cell primitive one",diff(-(log(t)+1)/t,t)-log(t)/t^2)$
+check("cell primitive two",diff(-(log(t)^2+2*log(t)+2)/t,t)-log(t)^2/t^2)$
+check("main tail primitive",diff(-((u*log(t)+w)^2+2*u*(u*log(t)+w)+2*u^2)/t,t)-(u*log(t)+w)^2/t^2)$
+check("remainder tail primitive",diff(-d0^2/(3*t^3),t)-d0^2/t^4)$
+print("PASS:",length(checks),"exact checks; no cofinal upper rate proved.")$
+quit()$

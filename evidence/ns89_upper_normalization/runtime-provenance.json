@@ -1,0 +1,19 @@
+{
+  "python": "3.14.6",
+  "python_flint": "0.9.0",
+  "maxima": "5.50.0",
+  "pyright": "1.1.411",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "Gram_cutoff": [
+    128,
+    256
+  ],
+  "physical_cutoff": [
+    262144,
+    524288
+  ],
+  "numerical_scope": "N=16,64,256, exact rational normalized trial coefficients; complete original Gram and independent physical norms"
+}

@@ -40,6 +40,26 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | G2 | open |
 | RH | open, and not claimed |
 
+## September 23 constructive upper certificates (NS-89)
+
+Requiring an exactly zero exterior on `x>1` preserves every possible upper
+error-decay rate. The normalized optimum obeys
+`E_N <= E_N^0 <= 1.144579 E_N` for **every N>=256**, by a finite projection
+certificate and monotonicity. This is a uniform comparison between two
+unknown errors, not a decay theorem.
+
+An explicit rational size-256 approximant has complete squared error
+**below 0.000014144**. Its normalization costs about 0.0088342% relative
+to the existing unrestricted optimum. The complete remote tail is included,
+with independent Gram and physical representations, two precisions and
+doubled cutoffs. These are constructive upper certificates, slightly above
+the prior unrestricted optimum. The `C/log N` upper-rate candidate and the
+needed uniform signed arithmetic estimate remain open. No new lower-bound
+result or manuscript version is added.
+
+[Readable report](audits/constructive-upper-2026-09-23-v1.html) ·
+[Exact coefficients, proof and verification](evidence/ns89_upper_normalization/).
+
 ## September 23 whole-error envelope and dilation test (NS-88)
 
 The actual optimized dilation defect is exactly an overlap of successive
@@ -492,6 +512,7 @@ graph LR
   nbjointlocalization["Joint finite arithmetic observations preserve logarithmic gain scale<br/><small>&#128193; evidence/ns87_joint_tail</small>"]
   nbdilationenvelope["Multiplicative normal equations and a scalar whole-error upper envelope<br/><small>&#128193; evidence/ns88_dilation_defect</small>"]
   nbdilationstrongnumerator["Eventual energy/j^p dilation-defect lower bound with p<1<br/><small>&#128193; evidence/ns88_dilation_defect</small><br/><small><b>wall: The proposed stronger numerator forces error decay contradicting the critical-zero lower bound</b></small>"]
+  nbnormalizedupper["Constructive zero-exterior upper certificates preserve every decay rate<br/><small>&#128193; evidence/ns89_upper_normalization</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -588,6 +609,7 @@ graph LR
   nboptimizedpotential --> nbjointlocalization
   nboptimizedpotential --> nbdilationenvelope
   nbdilationenvelope --> nbdilationstrongnumerator
+  nbsmoothedbudget --> nbnormalizedupper
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -683,9 +705,10 @@ graph LR
   click nbjointlocalization "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns87_joint_tail/" "evidence: evidence/ns87_joint_tail" _blank
   click nbdilationenvelope "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns88_dilation_defect/" "evidence: evidence/ns88_dilation_defect" _blank
   click nbdilationstrongnumerator "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns88_dilation_defect/" "evidence: evidence/ns88_dilation_defect" _blank
+  click nbnormalizedupper "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns89_upper_normalization/" "evidence: evidence/ns89_upper_normalization" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;

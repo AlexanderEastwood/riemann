@@ -42,7 +42,8 @@
     "evidence/ns85_taper_test/*.py",
     "evidence/ns86_optimized_arithmetic/*.py",
     "evidence/ns87_joint_tail/*.py",
-    "evidence/ns88_dilation_defect/*.py"
+    "evidence/ns88_dilation_defect/*.py",
+    "evidence/ns89_upper_normalization/*.py"
   ],
   "exclude": [
     "node_modules",
