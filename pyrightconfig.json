@@ -9,7 +9,11 @@
     "evidence/diag_beta_lattice_identity/*.py",
     "evidence/diag_ns36_corrections/*.py",
     "evidence/diag_ns59_nb_budget/*.py",
-    "evidence/v158/*.py"
+    "evidence/v158/*.py",
+    "evidence/diag_ns60_nb_corrections/*.py",
+    "evidence/diag_ns61_smoothed_nb/*.py",
+    "evidence/v159/ns61/*.py",
+    "evidence/v159/ns63/*.py"
   ],
   "exclude": [
     "node_modules",
@@ -20,6 +24,8 @@
   ],
   "extraPaths": [
     "evidence/diag_true_symbol",
-    "evidence/v124/g2_schur_cancellation"
+    "evidence/v124/g2_schur_cancellation",
+    "evidence/diag_ns59_nb_budget",
+    "evidence/v159/ns61"
   ]
 }

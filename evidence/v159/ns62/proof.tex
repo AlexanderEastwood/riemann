@@ -1,0 +1,180 @@
+\section{Smoothing does not repair the canonical sharp interpolant (NS-62)}
+\label{sec:ns62-sharp-interpolant}
+
+\paragraph{Status and scope.}
+The previous section changes the approximation norm and proves a smaller
+upper budget. It is natural to ask whether simply smoothing the canonical
+M\"obius interpolant now supplies convergence. It does not. The following
+localized dual test extends the classical sharp-interpolant obstruction
+in~\cite[Section 4]{BaezDuarte2000Arithmetic} through Mellin integration.
+The conclusion concerns this explicit coefficient rule, including its
+tail correction. It does not concern the optimized coefficients in
+Proposition~\ref{prop:ns61-gain}.
+
+Define
+\[
+ M(x)=\sum_{k\leq x}\mu(k),\quad
+ s_N=\sum_{k\leq N}\frac{\mu(k)}k,\quad
+ \eta_N=s_N-\frac{M(N)}N
+       =\sum_{k<N}\frac{M(k)}{k(k+1)},
+\]
+and let
+\begin{equation}
+ B_N=\sum_{k=1}^N\mu(k)\rho_k-Ns_N\rho_N.
+ \label{eq:ns62-natural-interpolant}
+\end{equation}
+The sign is chosen to match the classical notation: $B_N=-\chi$
+on $x>1/N$ (up to endpoints). The sum is zero on $x>1$.
+The smoothed target error is $J^r(\chi+B_N)$.
+
+\begin{proposition}[A localized witness survives any number of integrations]
+\label{prop:ns62-smoothed-obstruction}
+For every integer $N\geq1$ and integer $r\geq0$,
+\begin{equation}
+ \norm{J^r(\chi+B_N)}_H
+ \geq\frac{|N\eta_N-k_{N,r}|}{\sqrt N}
+ \geq\frac{|N\eta_N-2|}{\sqrt N}
+            -\frac{4\pi^2}{3^{r+2}N^{5/2}},
+ \label{eq:ns62-laguerre-lower}
+\end{equation}
+where
+\[
+ k_{N,r}=\frac N{r!}\int_0^{1/N}
+       \frac{\sin(2\pi x)}{\pi x}
+                    \left(\log\frac1{Nx}\right)^r dx.
+\]
+In particular, for every sequence of nonnegative integers $r_N$,
+$\norm{J^{r_N}(\chi+B_N)}_H$ does not tend to zero.
+For growing $r_N$ the target also changes with $N$; this assertion
+is only a failure of these particular approximants, not a new RH
+criterion for varying norms.
+The nonconvergence is for the full sequence of integers $N$. No
+exclusion of a selected subsequence, including the dyadic subsequence,
+is asserted without a corresponding lower bound for $\sqrt N|\eta_N|$
+on that subsequence.
+\end{proposition}
+\begin{proof}
+Use the dilation-invariant unitary $\mathcal V$ whose critical-line
+Mellin multiplier, away from the discrete zero set, is
+\[
+ v(s)=\frac{s\zeta(1-s)}{(1-s)\zeta(s)}.
+\]
+Its modulus is one on $\Re s=1/2$; define it arbitrarily with modulus
+one on the measure-zero exceptional set. Mellin identities and the
+functional equation give
+\[
+ \mathcal V\rho_k(x)=\frac{\{kx\}}{kx},\qquad
+ \mathcal V\chi(x)=k(x):=\frac{\sin(2\pi x)}{\pi x}.
+\]
+These are also the defining identities of the classical unitary in
+\cite[Section 4]{BaezDuarte2000Arithmetic}. Both $\mathcal V$ and $J$
+are Mellin multipliers, so they commute. For $0<x<1/N$,
+\begin{equation}
+ \mathcal V(\chi+B_N)(x)=k(x)+M(N)-Ns_N=k(x)-N\eta_N.
+ \label{eq:ns62-unitary-small-cell}
+\end{equation}
+
+Let $L_r(z)=\sum_{j=0}^r(-1)^j\binom rj z^j/j!$ be the ordinary
+Laguerre polynomial and put
+\[
+ \psi_{N,r}(x)=\sqrt N\,
+       L_r\left(\log\frac1{Nx}\right)\mathbf1_{(0,1/N)}(x).
+\]
+Laguerre orthogonality \cite[Table 18.3.1]{DLMFLaguerre} gives
+$\norm{\psi_{N,r}}=1$. The adjoint is
+$(J^*f)(x)=x^{-1}\int_0^x f(y)\,dy$. Repeated integration, or
+Rodrigues' formula and integration by parts, gives the complete
+identity
+\begin{equation}
+ (J^*)^r\psi_{N,r}(x)=
+ \frac{(-1)^r\sqrt N}{r!}
+       \left(\log\frac1{Nx}\right)^r\mathbf1_{(0,1/N)}(x).
+ \label{eq:ns62-adjoint-laguerre}
+\end{equation}
+There is no exterior term: at the $j$th integration, $j\leq r$,
+the potential exterior coefficient is a Laguerre moment of a
+polynomial of degree less than $r$, hence zero. On the interior,
+the polynomial identity follows by integrating monomials against
+$e^{-z}$; equivalently $(1-\partial_z)^{-r}L_r(z)=(-1)^rz^r/r!$.
+This also covers $r=0$ directly.
+
+Taking the inner product with $\psi_{N,r}$, moving $J^r$ to the
+adjoint, and using~\eqref{eq:ns62-unitary-small-cell} yields
+\[
+ \left|\left\langle J^r\mathcal V(\chi+B_N),\psi_{N,r}\right\rangle\right|
+       =\frac{|k_{N,r}-N\eta_N|}{\sqrt N}.
+\]
+The unitary norm and Cauchy--Schwarz prove the first inequality.
+For real $x$, $|k(x)-2|\leq4\pi^2x^2/3$. Since
+\[
+ \int_0^{1/N}x^2\left(\log\frac1{Nx}\right)^r dx
+        =\frac{r!}{3^{r+1}N^3},
+\]
+we have $|k_{N,r}-2|\leq4\pi^2/(3^{r+2}N^2)$, proving the second.
+
+For completeness, $\eta_N\ne o(N^{-1/2})$ follows from the known
+existence of a critical-line zeta zero. Indeed let
+$\eta(x)=\int_1^xM(t)t^{-2}\,dt$. For $\Re s>0$,
+\[
+ \int_1^\infty\eta(x)x^{-s-1}\,dx
+        =\frac1{s(s+1)\zeta(s+1)}.
+\]
+The right side has a genuine pole at $s=\rho-1$ for any
+critical-line zero $\rho$. If $\eta(x)=o(x^{-1/2})$, the integral
+would be analytic on $\Re s>-1/2$, and the usual Abelian boundary
+estimate would make $(\sigma+1/2)$ times its value at
+$\sigma+i\Im\rho$ tend to zero as $\sigma\downarrow-1/2$.
+This contradicts a pole of any positive order at that point.
+Also $\eta(N)=\eta_N$ and
+$\eta(x)-\eta(\lfloor x\rfloor)=O(1/x)$, so the discrete
+little-$o$ assertion would imply the continuous one. Thus
+$\limsup_N\sqrt N|\eta_N|>0$, whereas the error term in
+\eqref{eq:ns62-laguerre-lower} tends to zero uniformly in $r\geq0$.
+This proves the stated nonconvergence for every choice of $r_N$.
+No assumption about zeros off the critical line was made.
+\end{proof}
+
+\begin{proposition}[Positive smoothed differences still require signed coefficients]
+\label{prop:ns62-positive-cone}
+Every $\epsilon_n$, $n\geq2$, is nonnegative. Nevertheless $\tau$
+is not in the $H$-closure of the cone of finite nonnegative linear
+combinations of $\sigma_1,\epsilon_2,\epsilon_3,\ldots$.
+This is a restriction on that coefficient cone, not on their signed
+linear span or on the Weil form.
+\end{proposition}
+\begin{proof}
+Nonnegativity was proved in Proposition~\ref{prop:ns61-average-budget}.
+Its average identity also gives strict positivity on
+$(1/n,1/(n-1))$.
+
+Triangular telescoping gives
+\begin{equation}
+ -JB_N=\sum_{n=2}^{N}n s_{n-1}\epsilon_n.
+ \label{eq:ns62-pointwise-series}
+\end{equation}
+It equals $\tau$ on $x>1/N$, because $-B_N=\chi$ there and
+$Jf(x)$ uses only values at arguments at least $x$.
+For $N=6$ the coefficient of $\epsilon_6$ is
+$6s_5=6(1-1/2-1/3-1/5)=-1/5$.
+
+Restrict now to $x>1/6$. Every $\epsilon_n$ with $n\geq7$
+vanishes there. The restrictions of
+$\sigma_1,\epsilon_2,\ldots,\epsilon_6$ are linearly independent:
+first use $x>1$ for $\sigma_1$, then the successive intervals
+$(1/n,1/(n-1))$ for $n=2,\ldots,6$.
+Their finite-dimensional nonnegative cone is closed, but the unique
+representation of the restricted target has the negative coefficient
+$-1/5$. Thus the restricted target has positive distance from this
+cone. Restriction is contractive, proving the full-space claim.
+\end{proof}
+
+\paragraph{Consequences for the next attempt.}
+The positive shapes of the smoothed differences do not make the
+coefficient problem positive. The canonical pointwise interpolation
+coefficients are explicit, but their partial sums still fail in norm
+after smoothing. The optimized residual criterion from NS-61 remains
+open and is unaffected by this exclusion. A next attempt must obtain
+an independent estimate for those adaptive residuals, or a different
+coefficient rule with a complete norm bound; visual smoothness,
+pointwise exactness away from zero, and a small raw block norm do not
+supply it.

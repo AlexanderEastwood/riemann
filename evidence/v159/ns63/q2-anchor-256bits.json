@@ -1,0 +1,21 @@
+{
+  "classification": "certified finite normalization check, not RH evidence",
+  "precision_bits": 256,
+  "q2_gram_value": "[0.45312316523103841429728292154384421 +/- 3.51e-36]",
+  "independent_quadrature": {
+    "order": 1,
+    "cutoff": 64,
+    "relative_squared_error": "[0.5 +/- 0.0842]",
+    "absolute_squared_error": "[0.9 +/- 0.0809]",
+    "target_norm_squared": "2",
+    "leading_relative_asymptotic": "[1.8037721681126977099545422175791888 +/- 2.98e-35]",
+    "relative_tail_bound": "[0.037314553995767179089 +/- 2.76e-22]",
+    "relative_accuracy_bits": 2,
+    "gates": {
+      "finite_analytic_integral": true,
+      "imaginary_part_contains_zero": true,
+      "positive_error_below_target_norm": true
+    }
+  },
+  "strict_containment_gate": true
+}

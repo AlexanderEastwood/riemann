@@ -364,7 +364,7 @@
       "title": "Nyman-Beurling-Baez-Duarte",
       "status": "open",
       "parent": "altroutes",
-      "note": "Any E_N→0 suffices. NS-53 exact projected gains and RBC remain; NS-59 supplies unconditional difference denominators and scoped raw-norm limits. An asymptotic lower bound for the actual corrected correlations or a selected block quotient is still missing; finite gains do not prove it.",
+      "note": "Any fixed-order NB convergence suffices. NS-61 proves an elementary smoothed difference budget but leaves the actual optimized correlation input open. NS-60/62/63 exclude scoped correction, coefficient and changing-norm shortcuts. Finite gains are not cofinal bounds.",
       "evidence": "evidence/ns53_nb_blocks",
       "wall": {
         "input": "RBC: corrected arithmetic residual block correlations (open sufficient input)",
@@ -763,6 +763,71 @@
         "input": "known zeta large values contradict every fixed logarithmic N^(-2) raw norm bound",
         "to": null,
         "src": "prop:v158-lindelof-budget; closure of this all-coefficient raw comparison only"
+      }
+    },
+    {
+      "id": "nbeulergrid",
+      "title": "Uniform logarithmic norm after explicit Euler-grid correction",
+      "status": "closed",
+      "parent": "nb",
+      "prop": "prop:ns60-growing-euler-obstruction",
+      "evidence": "evidence/v159",
+      "note": "Only this explicit all-coefficient correction with Q_N <= N^alpha, fixed alpha < 1. Complete grid defect and cross terms retained; optimal projection and actual-residual estimates remain open.",
+      "wall": {
+        "input": "zeta large values exceed the allowed finite Euler-product loss",
+        "to": null,
+        "src": "prop:ns60-growing-euler-obstruction"
+      }
+    },
+    {
+      "id": "nbsmoothedbudget",
+      "title": "Fixed smoothed NB: positive averages and N^(-2) trace",
+      "status": "proved",
+      "parent": "nb",
+      "prop": "prop:ns61-rh-equivalence; prop:ns61-average-budget",
+      "evidence": "evidence/v159",
+      "note": "One fixed Mellin integration preserves the RH criterion. Trace <= 3*kappa/(8*N^2), and scaled trace tends to that constant. Every Gram cross term and transformed numerator remains."
+    },
+    {
+      "id": "nbsmoothedcorrelation",
+      "title": "Actual optimized smoothed residual correlations",
+      "status": "blocked",
+      "parent": "nbsmoothedbudget",
+      "prop": "eq:ns61-open-correlation; eq:ns61-endpoint-correlation",
+      "evidence": "evidence/v159",
+      "note": "Exact endpoint moments and a complete coefficient-mass remainder. No independent cofinal lower bound; finite bounds are below 1/50 of exact gain on two checked blocks.",
+      "wall": {
+        "input": "non-summable lower contraction for the actual optimized residual (open sufficient input)",
+        "to": "rh",
+        "src": "prop:ns61-gain; no necessity or equivalence claim for this sufficient estimate"
+      }
+    },
+    {
+      "id": "nbsharpintegrated",
+      "title": "Canonical sharp Mobius sequence after Mellin integration",
+      "status": "closed",
+      "parent": "nbsmoothedbudget",
+      "prop": "prop:ns62-smoothed-obstruction; prop:ns62-positive-cone",
+      "evidence": "evidence/v159",
+      "note": "Localized Laguerre witness preserves nonconvergence for the full integer sequence even if the number of integrations varies. Selected subsequences and optimal coefficients are outside the theorem. The nonnegative difference cone fails locally at its forced sixth coefficient -1/5.",
+      "wall": {
+        "input": "a surviving weighted-Mertens witness for this coefficient rule",
+        "to": null,
+        "src": "prop:ns62-smoothed-obstruction; not a general NB obstruction"
+      }
+    },
+    {
+      "id": "nbchangingnorm",
+      "title": "Relative convergence with increasing Mellin smoothing",
+      "status": "closed",
+      "parent": "nbsmoothedbudget",
+      "prop": "prop:ns63-one-atom",
+      "evidence": "evidence/v159",
+      "note": "One fixed atom has relative squared error ~D0^2/(8r) unconditionally, while its absolute squared error diverges. The fixed-order criterion remains valid; changing the norm is not RH evidence.",
+      "wall": {
+        "input": "one-atom unconditional control refutes this convergence inference",
+        "to": null,
+        "src": "prop:ns63-one-atom"
       }
     }
   ]

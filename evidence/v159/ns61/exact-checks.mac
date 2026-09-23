@@ -1,0 +1,33 @@
+/* Exact identities; no finite calculation proves the asymptotic claims. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+check("Unitary Mellin factor",(1-1/2)^2+t^2-((1/2)^2+t^2))$
+check("Primitive defining A",diff(z-k*log(z)+lf,z)-(z-k)/z)$
+check("Derivative of u sigma_u",aa-u*(rr/u)-(aa-rr))$
+check("Trace integrand primitive",diff(-1/(2*u^2),u)-u^(-3))$
+check("Sharp elementary trace integral",-1/(2*(2*n)^2)+1/(2*n^2)-3/(8*n^2))$
+check("Coefficient of load at s=1",coeff(expand((1/z+ga-g1*z)*(1-2*z+3*z^2)),z,1)-(3-2*ga-g1))$
+pp(v):=v^2/2+(2-ga)*v+3-2*ga-g1$
+check("Difference target load",pp(v)-pp(w)-((v^2-w^2)/2+(2-ga)*(v-w)))$
+check("Target moment of averaged h",diff(log(u)^2/2+(2-ga)*log(u),u)-(log(u)+2-ga)/u)$
+check("Homogeneous Gram-tail inverse",-diff(x^2*diff(x^(-ell)/(ell*(ell-1)),x),x)+x^(-ell))$
+cc(j):=(2*j-3-(j-1)*sum(1/k,k,1,j-1))/(j*(j-1))$
+check("First Bernoulli coefficient",cc(4)+1/24)$
+check("Second Bernoulli coefficient",cc(5)+1/15)$
+for j:2 thru 24 do check(sconcat("Bernoulli recurrence ",j),
+ -(j+2)*(j+1)*cc(j+2)+2*(j+1)*j*cc(j+1)-j*(j-1)*cc(j)-1/j)$
+check("Cell primitive log-square",diff(-(log(x)^2+2*log(x)+2)/x,x)-log(x)^2/x^2)$
+check("Cell primitive log",diff(-(log(x)+1)/x,x)-log(x)/x^2)$
+check("Physical tail main term",
+ diff(-((log(x)/2+aa)*(log(x)/2+bb)+(log(x)+aa+bb)/2+1/2)/x,x)
+ -(log(x)/2+aa)*(log(x)/2+bb)/x^2)$
+check("Physical tail first error integral",
+ diff(-((log(x)/2+aa)/2+1/8)/x^2,x)-(log(x)/2+aa)/x^3)$
+check("Positive first moment",(1/(n-1)-1/n)/n-1/(n^2*(n-1)))$
+check("Endpoint remainder constant",3*%pi^2/24-%pi^2/8)$
+print(checks)$
+print("PASS:",length(checks),"exact checks; analytic and interval obligations are separate.")$
+quit();

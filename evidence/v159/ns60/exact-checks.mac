@@ -1,0 +1,28 @@
+/* Finite exact bookkeeping only; asymptotic proofs are separate. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+check("Q=2 coarse first cell",-3/2*((5*x)/5+(6*x)/6)+3*x)$
+check("Q=2 coarse second cell",-4/2*((7*y)/7+(8*y)/8)+4*y)$
+check("Q=6 Euler factor",expand((1-x)*(1-y))-(1-x-y+x*y))$
+check("Q=30 Euler factor",expand((1-x)*(1-y)*(1-z))-(1-x-y-z+x*y+x*z+y*z-x*y*z))$
+check("Grid defect example norm",(1-1/2)^2*(3/2-1)+(0-1/2)^2*(2-3/2)-1/4)$
+check("Frequency/grid exponent",2*(alpha-1)/(1-alpha)+1+1)$
+check("New-step coefficients preserve the step value",n*(aa/n)-aa)$
+
+/* For a two-dimensional old space and two-dimensional new space. */
+gg:matrix([g11,g12],[g12,g22])$
+xx:matrix([x11,x12],[x21,x22])$
+dd:matrix([d11,d12],[d12,d22])$
+bb:matrix([b11,b12],[b21,b22])$
+corrected:dd+transpose(xx).bb+transpose(bb).xx+transpose(bb).gg.bb$
+schur:dd-transpose(xx).invert(gg).xx$
+defect:bb+invert(gg).xx$
+comparison:ratsimp(corrected-schur-transpose(defect).gg.defect)$
+for j:1 thru 2 do for k:1 thru 2 do
+ check(sconcat("Complete correction square ",j,",",k),comparison[j,k])$
+print(checks)$
+print("PASS:",length(checks),"exact checks; no numerical or asymptotic certificate is asserted.")$
+quit();

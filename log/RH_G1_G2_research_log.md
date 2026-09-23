@@ -1,5 +1,38 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.59 local draft — fixed smoothing and arithmetic correlation (NS-60–63)
+
+Classification: exact identities, proved implications and scoped obstructions,
+certified finite computations, and an open optimized-correlation input.
+One Mellin integration preserves the RH approximation criterion in its stated
+tail space. Its adjacent differences are positive averages, up to a unitary
+map, and their complete raw trace is at most 3*kappa/(8*N^2), with that
+constant as its scaled trace limit. The complete Schur complement remains.
+Explicit endpoint moments give a correlation formula with a full remainder;
+the coefficient-mass bound does not yield a lower correlation estimate.
+
+The explicit Euler-grid correction family still cannot satisfy a fixed-log
+N^(-2) all-coefficient norm bound when Q_N <= N^alpha for fixed alpha < 1.
+Optimal projections and selected residual directions are outside this result.
+A localized Laguerre witness shows the canonical sharp Mobius interpolant
+fails along the full integer sequence after any number of Mellin integrations.
+No selected-subsequence exclusion is asserted. Positive smoothed atoms still
+need signed coefficients: local matching forces the sixth coefficient -1/5.
+With increasing smoothing order, even one fixed atom has vanishing relative
+squared error while its absolute squared error diverges; this changing norm
+cannot replace fixed-order NB convergence.
+
+Validation: 312 exact Maxima checks. Complete q=2 Grams through index 64 at
+256/384 bits, a doubled series-tail cutoff replay, and seven independent
+positive-cell integrals at each precision. The finite trace lower bound is
+below 1/50 of the exact gain at N=16 and N=32. The endpoint error budget is
+more than 2000 times the leading norm on those blocks. A separate one-atom
+control has certified relative squared error about 0.01387563 at order 64,
+but absolute squared error above 1e35. These finite facts are not convergence.
+Full build: 312 pages, zero undefined/duplicate references or overfull boxes.
+Local self-review only; no independent review is claimed. No new Weil window,
+tail metric, uniform floor, G2 or RH proof. Local publication remains pending.
+
 ## September 22, 2026 — NS-59 / v1.58 NB difference budget
 
 Classification: exact identities, proved implications, certified finite

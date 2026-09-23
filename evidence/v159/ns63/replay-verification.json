@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "matching_ball_enclosures": 12,
+  "independent_q2_anchor_checks": 2,
+  "q2_anchor_is_coarse_full_tail_normalization_check": true,
+  "precision_bits": [
+    256,
+    384
+  ],
+  "orders": [
+    4,
+    16,
+    64
+  ],
+  "one_atom_index": 1,
+  "full_analytic_tail_included": true,
+  "source_sha256": "a599caf85318bbb199eeb9811edbc18acd09cb4f776c782aa058964705eb31ce"
+}

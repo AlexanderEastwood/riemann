@@ -1,0 +1,107 @@
+{
+  "classification": "local integration validation, not a proof of RH or an independent review",
+  "version": "v1.59 local provisional draft",
+  "session_date": "2026-09-22",
+  "prior_local_checkpoint_commit": "ec51bf8aa1236bcbe8f2f9680b8c2f37902992a8",
+  "latest_claim_commit": "ea7b72aee85ed3bc371b5003ca2161db0e4da6c2",
+  "manuscript": {
+    "pages": 312,
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "duplicate_pdf_destinations": 0,
+    "proof_fragment_integrated_verbatim": true,
+    "proof_sha256": "7ce6c58443710569ee346e70ff01dfe28fc91913e4aca8c7d06f3ac9df1f6e66",
+    "main_tex_sha256": "c439be6cd44c4eb89ed4e8da44a603f5c5794e3635c56c945f70070e94dddbcd",
+    "visual_review_pages": [
+      274,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287
+    ]
+  },
+  "exact_maxima_checks": {
+    "ns60": 11,
+    "ns61": 40,
+    "ns62": 206,
+    "ns63": 55
+  },
+  "exact_maxima_total": 312,
+  "smoothed_replay": {
+    "status": "PASS",
+    "physical_precision_enclosure_comparisons": 21,
+    "matching_ball_enclosures": 180,
+    "precision_replay_bits": [
+      256,
+      384
+    ],
+    "same_matrix_dimension": 64,
+    "independent_tail_cutoffs": [
+      128,
+      256
+    ],
+    "tail_order": 24,
+    "minimum_accuracy_bits": [
+      99,
+      99,
+      123
+    ],
+    "physical_cell_checks_per_precision": 7,
+    "source_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5"
+  },
+  "changing_norm_replay": {
+    "status": "PASS",
+    "matching_ball_enclosures": 12,
+    "independent_q2_anchor_checks": 2,
+    "q2_anchor_is_coarse_full_tail_normalization_check": true,
+    "precision_bits": [
+      256,
+      384
+    ],
+    "orders": [
+      4,
+      16,
+      64
+    ],
+    "one_atom_index": 1,
+    "full_analytic_tail_included": true,
+    "source_sha256": "a599caf85318bbb199eeb9811edbc18acd09cb4f776c782aa058964705eb31ce"
+  },
+  "python_diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "tool": "pyright",
+    "scope": "all new or modified scientific Python programs"
+  },
+  "source_sha256": {
+    "ns60/exact-checks.mac": "815ba4f99794dfea2021f1e71459be0855dd63ddc9eb9f498f1c64dec6f07fc7",
+    "ns61/certify_smoothed.py": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+    "ns61/check_physical_gram.py": "f4e2bb679702f75351bae5c000e95499e12df8fc8c542d9c6d4b2bd60d71d0c5",
+    "ns61/exact-checks.mac": "594b001d525b973efac9b4a0bfe9f52a9b5d7994575b6fcb521c42a36fa49c78",
+    "ns61/verify_replays.py": "d8e5520fb718b63d4c928b72fde913f0cbcc3966e30490ca82b1bb956c616ef5",
+    "ns62/exact-checks.mac": "82a2ac5deaf323a7b5670312d24824250353214500084cecd4b26306575c2525",
+    "ns63/certify_one_atom.py": "a599caf85318bbb199eeb9811edbc18acd09cb4f776c782aa058964705eb31ce",
+    "ns63/check_q2_anchor.py": "2d432a564bbe55047129ec2e6f2e1b4385b99027da31f763d1ee4d5ae299d979",
+    "ns63/exact-checks.mac": "a47457fd3ed8f93483db9b671bb96a70614f518d2f967c37265deb203a6c00b4",
+    "ns63/verify_replays.py": "48c02d0b64b320329afffc59fe611ab5ac2387415cf333950aa4340c897a7a03"
+  },
+  "independent_review": false,
+  "open_inputs": [
+    "A cofinal lower estimate for the optimized residual correlations in one fixed smoothing norm",
+    "Original arithmetic uniform Weil floor, API, G2 and RH"
+  ],
+  "publication": {
+    "state": "local only",
+    "reason": "branch-specific user approval required; prior v1.58 push rejected by automatic approval review",
+    "remote_mutations": false
+  },
+  "manifest_scope": "only new evidence in evidence/v159, with no diagnostic truncations"
+}

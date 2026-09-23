@@ -1,0 +1,143 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/ns62_smoothed_interpolant/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+lag(r):=sum(((-1)^j*binomial(r,j)*z^j)/j!,j,0,r)
+moment(pp):=block([out:0,poly:expand(pp)],
+       for jj from 0 thru hipow(poly,z) do out:out+coeff(poly,z,jj)*jj!,out)
+step_adjoint(pp):=block([out:0,poly:expand(pp)],
+             for jj from 0 thru hipow(poly,z) do
+                 out:out+coeff(poly,z,jj)
+                         *sum(binomial(jj,kk)*z^kk*(jj-kk)!,kk,0,jj),
+             expand(out))
+for rr from 0 thru 12 do
+    block([pol:lag(rr)],
+          check(sconcat("Laguerre unit norm ",rr),moment(pol^2)-1),
+          for jj from 0 thru rr-1 do
+              check(sconcat("Laguerre lower moment ",rr,",",jj),
+                    moment(pol*z^jj)),
+          for jj thru rr do
+              (check(sconcat("Exterior term vanishes ",rr,",",jj),
+                     moment(pol)),pol:step_adjoint(pol)),
+          check(sconcat("Repeated adjoint ",rr),pol-((-1)^rr*z^rr)/rr!))
+check("Canonical sixth coefficient",6*(1-1/2+(-1)/3+(-1)/5)+1/5)
+check("Triangular coefficient telescoping",n*ss-n*(ss+mm/n)+mm)
+check("Unitary small-cell value",mm-n*ss+n*(ss-mm/n))
+for j from 0 thru 20 do
+    check(sconcat("Taylor term ratio ",j),
+          (2*j+1)^2/((2*j+2)*(2*j+3)^3)-((2*j+1)!*(2*j+1)^2)
+                                        /((2*j+3)!*(2*j+3)^2))
+print(checks)
+[["Laguerre unit norm 0",true],["Repeated adjoint 0",true],
+ ["Laguerre unit norm 1",true],["Laguerre lower moment 1,0",true],
+ ["Exterior term vanishes 1,1",true],["Repeated adjoint 1",true],
+ ["Laguerre unit norm 2",true],["Laguerre lower moment 2,0",true],
+ ["Laguerre lower moment 2,1",true],["Exterior term vanishes 2,1",true],
+ ["Exterior term vanishes 2,2",true],["Repeated adjoint 2",true],
+ ["Laguerre unit norm 3",true],["Laguerre lower moment 3,0",true],
+ ["Laguerre lower moment 3,1",true],["Laguerre lower moment 3,2",true],
+ ["Exterior term vanishes 3,1",true],["Exterior term vanishes 3,2",true],
+ ["Exterior term vanishes 3,3",true],["Repeated adjoint 3",true],
+ ["Laguerre unit norm 4",true],["Laguerre lower moment 4,0",true],
+ ["Laguerre lower moment 4,1",true],["Laguerre lower moment 4,2",true],
+ ["Laguerre lower moment 4,3",true],["Exterior term vanishes 4,1",true],
+ ["Exterior term vanishes 4,2",true],["Exterior term vanishes 4,3",true],
+ ["Exterior term vanishes 4,4",true],["Repeated adjoint 4",true],
+ ["Laguerre unit norm 5",true],["Laguerre lower moment 5,0",true],
+ ["Laguerre lower moment 5,1",true],["Laguerre lower moment 5,2",true],
+ ["Laguerre lower moment 5,3",true],["Laguerre lower moment 5,4",true],
+ ["Exterior term vanishes 5,1",true],["Exterior term vanishes 5,2",true],
+ ["Exterior term vanishes 5,3",true],["Exterior term vanishes 5,4",true],
+ ["Exterior term vanishes 5,5",true],["Repeated adjoint 5",true],
+ ["Laguerre unit norm 6",true],["Laguerre lower moment 6,0",true],
+ ["Laguerre lower moment 6,1",true],["Laguerre lower moment 6,2",true],
+ ["Laguerre lower moment 6,3",true],["Laguerre lower moment 6,4",true],
+ ["Laguerre lower moment 6,5",true],["Exterior term vanishes 6,1",true],
+ ["Exterior term vanishes 6,2",true],["Exterior term vanishes 6,3",true],
+ ["Exterior term vanishes 6,4",true],["Exterior term vanishes 6,5",true],
+ ["Exterior term vanishes 6,6",true],["Repeated adjoint 6",true],
+ ["Laguerre unit norm 7",true],["Laguerre lower moment 7,0",true],
+ ["Laguerre lower moment 7,1",true],["Laguerre lower moment 7,2",true],
+ ["Laguerre lower moment 7,3",true],["Laguerre lower moment 7,4",true],
+ ["Laguerre lower moment 7,5",true],["Laguerre lower moment 7,6",true],
+ ["Exterior term vanishes 7,1",true],["Exterior term vanishes 7,2",true],
+ ["Exterior term vanishes 7,3",true],["Exterior term vanishes 7,4",true],
+ ["Exterior term vanishes 7,5",true],["Exterior term vanishes 7,6",true],
+ ["Exterior term vanishes 7,7",true],["Repeated adjoint 7",true],
+ ["Laguerre unit norm 8",true],["Laguerre lower moment 8,0",true],
+ ["Laguerre lower moment 8,1",true],["Laguerre lower moment 8,2",true],
+ ["Laguerre lower moment 8,3",true],["Laguerre lower moment 8,4",true],
+ ["Laguerre lower moment 8,5",true],["Laguerre lower moment 8,6",true],
+ ["Laguerre lower moment 8,7",true],["Exterior term vanishes 8,1",true],
+ ["Exterior term vanishes 8,2",true],["Exterior term vanishes 8,3",true],
+ ["Exterior term vanishes 8,4",true],["Exterior term vanishes 8,5",true],
+ ["Exterior term vanishes 8,6",true],["Exterior term vanishes 8,7",true],
+ ["Exterior term vanishes 8,8",true],["Repeated adjoint 8",true],
+ ["Laguerre unit norm 9",true],["Laguerre lower moment 9,0",true],
+ ["Laguerre lower moment 9,1",true],["Laguerre lower moment 9,2",true],
+ ["Laguerre lower moment 9,3",true],["Laguerre lower moment 9,4",true],
+ ["Laguerre lower moment 9,5",true],["Laguerre lower moment 9,6",true],
+ ["Laguerre lower moment 9,7",true],["Laguerre lower moment 9,8",true],
+ ["Exterior term vanishes 9,1",true],["Exterior term vanishes 9,2",true],
+ ["Exterior term vanishes 9,3",true],["Exterior term vanishes 9,4",true],
+ ["Exterior term vanishes 9,5",true],["Exterior term vanishes 9,6",true],
+ ["Exterior term vanishes 9,7",true],["Exterior term vanishes 9,8",true],
+ ["Exterior term vanishes 9,9",true],["Repeated adjoint 9",true],
+ ["Laguerre unit norm 10",true],["Laguerre lower moment 10,0",true],
+ ["Laguerre lower moment 10,1",true],["Laguerre lower moment 10,2",true],
+ ["Laguerre lower moment 10,3",true],["Laguerre lower moment 10,4",true],
+ ["Laguerre lower moment 10,5",true],["Laguerre lower moment 10,6",true],
+ ["Laguerre lower moment 10,7",true],["Laguerre lower moment 10,8",true],
+ ["Laguerre lower moment 10,9",true],["Exterior term vanishes 10,1",true],
+ ["Exterior term vanishes 10,2",true],["Exterior term vanishes 10,3",true],
+ ["Exterior term vanishes 10,4",true],["Exterior term vanishes 10,5",true],
+ ["Exterior term vanishes 10,6",true],["Exterior term vanishes 10,7",true],
+ ["Exterior term vanishes 10,8",true],["Exterior term vanishes 10,9",true],
+ ["Exterior term vanishes 10,10",true],["Repeated adjoint 10",true],
+ ["Laguerre unit norm 11",true],["Laguerre lower moment 11,0",true],
+ ["Laguerre lower moment 11,1",true],["Laguerre lower moment 11,2",true],
+ ["Laguerre lower moment 11,3",true],["Laguerre lower moment 11,4",true],
+ ["Laguerre lower moment 11,5",true],["Laguerre lower moment 11,6",true],
+ ["Laguerre lower moment 11,7",true],["Laguerre lower moment 11,8",true],
+ ["Laguerre lower moment 11,9",true],["Laguerre lower moment 11,10",true],
+ ["Exterior term vanishes 11,1",true],["Exterior term vanishes 11,2",true],
+ ["Exterior term vanishes 11,3",true],["Exterior term vanishes 11,4",true],
+ ["Exterior term vanishes 11,5",true],["Exterior term vanishes 11,6",true],
+ ["Exterior term vanishes 11,7",true],["Exterior term vanishes 11,8",true],
+ ["Exterior term vanishes 11,9",true],["Exterior term vanishes 11,10",true],
+ ["Exterior term vanishes 11,11",true],["Repeated adjoint 11",true],
+ ["Laguerre unit norm 12",true],["Laguerre lower moment 12,0",true],
+ ["Laguerre lower moment 12,1",true],["Laguerre lower moment 12,2",true],
+ ["Laguerre lower moment 12,3",true],["Laguerre lower moment 12,4",true],
+ ["Laguerre lower moment 12,5",true],["Laguerre lower moment 12,6",true],
+ ["Laguerre lower moment 12,7",true],["Laguerre lower moment 12,8",true],
+ ["Laguerre lower moment 12,9",true],["Laguerre lower moment 12,10",true],
+ ["Laguerre lower moment 12,11",true],["Exterior term vanishes 12,1",true],
+ ["Exterior term vanishes 12,2",true],["Exterior term vanishes 12,3",true],
+ ["Exterior term vanishes 12,4",true],["Exterior term vanishes 12,5",true],
+ ["Exterior term vanishes 12,6",true],["Exterior term vanishes 12,7",true],
+ ["Exterior term vanishes 12,8",true],["Exterior term vanishes 12,9",true],
+ ["Exterior term vanishes 12,10",true],["Exterior term vanishes 12,11",true],
+ ["Exterior term vanishes 12,12",true],["Repeated adjoint 12",true],
+ ["Canonical sixth coefficient",true],
+ ["Triangular coefficient telescoping",true],
+ ["Unitary small-cell value",true],["Taylor term ratio 0",true],
+ ["Taylor term ratio 1",true],["Taylor term ratio 2",true],
+ ["Taylor term ratio 3",true],["Taylor term ratio 4",true],
+ ["Taylor term ratio 5",true],["Taylor term ratio 6",true],
+ ["Taylor term ratio 7",true],["Taylor term ratio 8",true],
+ ["Taylor term ratio 9",true],["Taylor term ratio 10",true],
+ ["Taylor term ratio 11",true],["Taylor term ratio 12",true],
+ ["Taylor term ratio 13",true],["Taylor term ratio 14",true],
+ ["Taylor term ratio 15",true],["Taylor term ratio 16",true],
+ ["Taylor term ratio 17",true],["Taylor term ratio 18",true],
+ ["Taylor term ratio 19",true],["Taylor term ratio 20",true]]
+  
+print("PASS:",length(checks),
+      "exact checks; the all-order and nonconvergence arguments are analytic.")
+PASS: 206 
+     exact checks; the all-order and nonconvergence arguments are analytic. 
+quit()

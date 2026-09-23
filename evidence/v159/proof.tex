@@ -1,0 +1,1006 @@
+\section{Explicit old-space Euler corrections and the grid cost (NS-60)}
+\label{sec:ns60-euler-corrections}
+
+\paragraph{Status and scope.}
+The preceding raw-norm obstruction does not apply automatically after
+optimal projection. Here we test one explicit family of old-space
+corrections. We derive its exact grid error and prove that its full
+coefficient norm still cannot obey a fixed-logarithmic $N^{-2}$ bound,
+even with suitably growing Euler products. This closes only that uniform
+comparison for this correction family. It does not close the optimal
+projected comparison, tapered non-Euler mollifiers, or a bound for the
+actual residual direction. All results below are analytic; the separate
+finite scan is a numerical illustration, not proof evidence.
+
+Extend the difference notation by $\delta_1=\rho_1$. For a finitely
+supported integer step function $F$, with value $F_n$ on $(n-1,n]$, set
+\begin{equation}
+ \Psi F=\sum_{n\geq1}nF_n\delta_n.
+ \label{eq:ns60-step-map}
+\end{equation}
+The triangular change of basis gives
+$\operatorname{span}\{\delta_1,\ldots,\delta_N\}=V_N$.
+The Mellin identity in Proposition~\ref{prop:v158-mellin-budget} extends
+to the first cell because $\int_0^1u^{-s}\,du=(1-s)^{-1}$.
+
+For an integer $d\geq2$, define the old-grid averaging operator
+\begin{equation}
+ (J_dF)(u)=\int_{m-1}^{m}F(dv)\,dv
+ =\frac1d\sum_{d(m-1)<n\leq dm}F_n
+ \quad(m-1<u\leq m).
+ \label{eq:ns60-cell-average}
+\end{equation}
+If $F$ is supported in $(N,2N]$, then $J_dF$ is supported in $(0,N]$.
+For a squarefree positive integer $Q$ put
+\begin{equation}
+ \Phi_QF=F+\sum_{\substack{d\mid Q\\d>1}}\mu(d)J_dF,
+ \qquad
+ \mathcal C_{N,Q}=\text{Gram matrix of }a\longmapsto\Psi\Phi_QF_a,
+ \label{eq:ns60-euler-correction}
+\end{equation}
+where $F_a$ is the new-block step function in
+Proposition~\ref{prop:v158-mellin-budget}. When $Q=1$, this is the raw
+difference Gram $\mathcal D_N$.
+
+\begin{proposition}[A valid correction, with the grid error retained]
+\label{prop:ns60-grid-correction}
+The correction lies in $V_N$ and has the explicit old difference
+coefficients
+\begin{equation}
+ (B_{N,Q}a)_m
+ =m\sum_{\substack{d\mid Q\\d>1}}\frac{\mu(d)}d
+       \sum_{\substack{N<n\leq2N\\d(m-1)<n\leq dm}}\frac{a_n}{n}.
+ \label{eq:ns60-correction-matrix}
+\end{equation}
+Therefore
+\begin{equation}
+ 0<K_N\leq\mathcal C_{N,Q},\qquad
+ \mathcal C_{N,Q}
+ =\mathcal D_N+X^*B_{N,Q}+B_{N,Q}^*X+B_{N,Q}^*G_\delta B_{N,Q},
+ \label{eq:ns60-full-correction-gram}
+\end{equation}
+where $G_\delta$ is the old difference Gram and
+$X=(\langle\delta_m,\delta_n\rangle)_{m\leq N<n\leq2N}$.
+Every old/new cross term is present.
+Equivalently,
+\[
+ \mathcal C_{N,Q}-K_N
+ =(B_{N,Q}+G_\delta^{-1}X)^*G_\delta
+                         (B_{N,Q}+G_\delta^{-1}X).
+\]
+
+If $F$ is constant on each interval $(jQ,(j+1)Q]$ on the positive
+axis, then $J_dF=F(d\,\cdot)$ for $d\mid Q$. On this compatible
+subspace,
+\begin{equation}
+ \norm{\Psi\Phi_QF}_H^2
+ =\frac1{2\pi}\int_{\mathbb R}|\zeta(\tfrac12+it)|^2
+       \prod_{p\mid Q}|1-p^{-1/2-it}|^2
+       |\widehat q_F(t)|^2\,dt,
+ \qquad q_F(v)=e^{v/2}F(e^v).
+ \label{eq:ns60-compatible-euler}
+\end{equation}
+For general $F$, the missing term in this simplification is exactly
+\begin{equation}
+ R_QF=\sum_{\substack{d\mid Q\\d>1}}\mu(d)
+                   \{J_dF-F(d\,\cdot)\}.
+ \label{eq:ns60-grid-defect}
+\end{equation}
+Its Mellin transform and its cross term cannot be omitted.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:ns60-cell-average} gives
+\eqref{eq:ns60-correction-matrix}, and the old support gives membership
+in $V_N$. Applying $I-P_N$ to $\Psi\Phi_QF_a$ therefore gives the
+same projected new vector as applying it to $\Psi F_a$.
+Contractivity proves $K_N\leq\mathcal C_{N,Q}$; expanding the squared
+norm gives the complete Gram formula.
+
+For compatible $F$, every breakpoint of $F(d\,\cdot)$ is an integer
+because $d\mid Q$. Averaging leaves this function unchanged. Also
+\[
+ \int_0^\infty F(du)u^{-s}\,du
+       =d^{s-1}\int_0^\infty F(u)u^{-s}\,du,
+ \qquad
+ \sum_{d\mid Q}\mu(d)d^{s-1}=\prod_{p\mid Q}(1-p^{s-1}).
+\]
+On $\Re s=1/2$, the last product has the modulus of
+$\prod_{p\mid Q}(1-p^{-s})$. Mellin Plancherel gives
+\eqref{eq:ns60-compatible-euler}. This is a finite product identity;
+no convergence of an Euler product in the critical strip is assumed.
+For general $F$ the transformed
+quantity is instead
+\[
+ \prod_{p\mid Q}(1-p^{s-1})\widehat q_F(t)
+                           +\widehat q_{R_QF}(t).
+\]
+Its absolute square contains both the defect energy and the mixed term.
+All these finite step functions have finite weighted Mellin energy,
+by the fractional Sobolev argument already proved, so the displayed
+identities are Hilbert-space identities rather than formal expansions.
+\end{proof}
+
+The grid defect is already nonzero when $N=2$, $Q=2$ and
+$F=\mathbf1_{(2,3]}$: then
+$F(2u)=\mathbf1_{(1,3/2]}(u)$ whereas
+$J_2F=\tfrac12\mathbf1_{(1,2]}$.
+Their ordinary $L^2(du)$ distance squared is $1/4$.
+This elementary example concerns the grid functions, not a negative
+Weil direction or a convergence obstruction.
+
+\begin{lemma}[The smallest Euler multiplier for a bounded grid product]
+\label{lem:ns60-euler-minimum}
+Let $m_Q=\prod_{p\mid Q}(1-p^{-1/2})$, with $m_1=1$.
+For $L=\max(3,\log Q)$,
+\begin{equation}
+ 0\leq-\log m_Q\leq C\frac{\sqrt L}{\log L}
+ \label{eq:ns60-euler-minimum}
+\end{equation}
+with an absolute constant. Consequently, for $Q\leq N$ and sufficiently
+large $N$,
+$m_Q^{-2}\leq\exp(C\sqrt{\log N}/\log\log N)$.
+\end{lemma}
+\begin{proof}
+For primes $p\geq2$,
+$-\log(1-p^{-1/2})\leq C_0p^{-1/2}$.
+The elementary prime-counting upper bound
+$\pi(x)\ll x/\log x$ (for example
+\cite[Corollary 1, Eq. (3.6)]{RosserSchoenfeld1962}) and partial
+summation give $\sum_{p\leq L}p^{-1/2}\ll\sqrt L/\log L$.
+For primes dividing $Q$ that exceed $L$, use
+\[
+ \sum_{\substack{p\mid Q\\p>L}}p^{-1/2}
+ \leq\frac1{\sqrt L\log L}\sum_{p\mid Q}\log p
+ \leq\frac{\sqrt L}{\log L}.
+\]
+The last inequality also holds when $\log Q<3$. Increasing the absolute
+constant covers bounded $L$ and proves the result.
+\end{proof}
+
+\begin{proposition}[Growing Euler-grid corrections do not give a logarithmic norm]
+\label{prop:ns60-growing-euler-obstruction}
+Fix $0\leq\alpha<1$. For each dyadic $N$, let $Q_N$ be any squarefree
+positive integer with $Q_N\leq N^\alpha$. For every fixed $B\geq0$,
+\begin{equation}
+ \norm{\mathcal C_{N,Q_N}}_{\rm op}
+ \ne O\left(N^{-2}(\log N)^B\right)
+ \quad\text{as }N\to\infty\text{ through powers of two}.
+ \label{eq:ns60-growing-no-log}
+\end{equation}
+The excluded bound is uniform over all new coefficient vectors for the
+explicit correction~\eqref{eq:ns60-euler-correction}. It is not a lower
+bound for $K_N$, and it does not exclude such a bound restricted to the
+actual residual vector $g$.
+\end{proposition}
+\begin{proof}
+Use the fixed nonnegative smooth $w$ from the proof of
+Proposition~\ref{prop:v158-lindelof-budget}. Approximate
+\[
+ F(u)=u^{-1/2}w(\log(u/N))e^{i\tau\log(u/N)}
+\]
+by its midpoint values on the complete $Q$-cells contained in $(N,2N]$,
+and set the other cells to zero. Call the result $F_{N,Q,\tau}$ and set
+$a_n=n(F_{N,Q,\tau})_n$. Because $w$ has compact support away from the
+two endpoints, for sufficiently large $N$ and $Q\leq N^\alpha$ no
+nonzero part is lost in a partially intersecting endpoint cell.
+The mean value theorem gives, uniformly in this range,
+\begin{equation}
+ \norm{q_{F_{N,Q,\tau}}
+       -w(\,\cdot-\log N)e^{i\tau(\,\cdot-\log N)}}_{L^1}
+ \leq C_w\frac{Q(1+|\tau|)}N,
+ \qquad \norm{a}_2^2\leq C_wN^2.
+ \label{eq:ns60-packet-grid-error}
+\end{equation}
+Thus whenever $Q(1+|\tau|)/N$ tends uniformly to zero, the Fourier
+transform is bounded below by a fixed positive constant on
+$[\tau-1,\tau+1]$. On this compatible packet,
+\eqref{eq:ns60-compatible-euler} and
+$\prod_{p\mid Q}|1-p^{-1/2-it}|\geq m_Q$ imply
+\begin{equation}
+ \int_{\tau-1}^{\tau+1}|\zeta(\tfrac12+it)|^2\,dt
+ \leq C m_Q^{-2} N^2\norm{\mathcal C_{N,Q}}_{\rm op}.
+ \label{eq:ns60-corrected-local-test}
+\end{equation}
+
+Suppose the excluded big-$O$ bound held. For large $T$, choose a power
+of two $N$ with
+$T^{2/(1-\alpha)}\leq N<2T^{2/(1-\alpha)}$.
+Then $Q_N(1+2T)/N\leq(1+2T)/T^2\to0$, uniformly for
+$|\tau|\leq2T$. Cover the interval in
+\eqref{eq:v158-short-interval} by $O(\log^2T)$ unit intervals and use
+\eqref{eq:ns60-corrected-local-test}. Lemma~\ref{lem:ns60-euler-minimum}
+gives
+\[
+ |\zeta(\tfrac12+iT)|^2
+ \ll \log T+
+ \exp\left(C_\alpha\frac{\sqrt{\log T}}{\log\log T}\right)
+ (\log T)^{B+3}.
+\]
+The logarithm of the right side is
+$O_\alpha(\sqrt{\log T}/\log\log T)+(B+3)\log\log T$.
+It is $o(\sqrt{\log T/\log\log T})$, contradicting the unconditional
+large values in~\cite[Theorem 1]{Soundararajan2008}.
+No relation between the choices $Q_N$ at different $N$ is required.
+\end{proof}
+
+\paragraph{What changed and what remains open.}
+Downsampling does give an admissible old-space correction, but on a
+general new vector it requires a cell average. Replacing that average
+by an exact Euler multiplier loses~\eqref{eq:ns60-grid-defect} and its
+mixed term. Even on a compatible family where the replacement is exact,
+known zeta large values defeat the stated uniform norm goal whenever
+$Q_N\leq N^\alpha$ for fixed $\alpha<1$.
+Since $K_N\leq\mathcal C_{N,Q_N}$, this failure of the explicit upper
+comparison does not give a lower obstruction for the optimal projection.
+The range $Q_N=N^{1-o(1)}$, tapered non-Euler coefficients and
+actual-residual-only estimates are outside the proved exclusion.
+
+The separately labelled scan in
+\texttt{evidence/diag\_ns60\_nb\_corrections/} compares fixed Euler
+products $Q=2,6,30$ and tapered M\"obius lengths $4,16,64$ with the full
+projection on fixed blocks $32\leq N\leq512$. It tests the correction
+proposal only; its finite reductions and selected-direction values are
+not asymptotic bounds. The remaining RH-relevant input is still a
+cofinal gain estimate for the actual optimal residuals. No such estimate,
+NB convergence, G2 or RH proof is supplied.
+
+\section{One Mellin integration: an elementary block budget (NS-61)}
+\label{sec:ns61-smoothed-nb}
+
+\paragraph{Status and prior art.}
+The $q=2$ weighted Nyman--Beurling problem already appears in
+\cite{Ehm2024}; it is not a new RH criterion. We prove its equivalence
+here with the tail space stated, and use adjacent differences to obtain
+an unconditional $N^{-2}$ block budget. The numerator is transformed
+along with the norm. No asymptotic lower correlation estimate, NB
+convergence, G2 or RH proof follows from this upper budget.
+
+Let $H=L^2(0,\infty;dx)$ and retain $\rho_n$, $\chi$, $V_N$ and
+$\kappa=\log(2\pi)-\gamma$ from Section~\ref{sec:ns53-nb-blocks}.
+Define the bounded Mellin convolution
+\[
+ (Jf)(x)=\int_0^1f(x/u)\,\frac{du}{u},\qquad
+ \sigma_n=J\rho_n,\qquad \tau=J\chi=(-\log x)\mathbf1_{(0,1)}.
+\]
+On the Mellin line $\Re s=1/2$, $J$ has multiplier $1/s$, so
+$\norm J=2$ and $J$ is injective. Set
+\[
+ W_N=\operatorname{span}\{\sigma_1,\ldots,\sigma_N\},\quad
+ R_N=\tau-\Pi_N\tau,\quad E_N^{(2)}=\norm{R_N}^2,
+\]
+where $\Pi_N$ is the orthogonal projection onto $W_N$.
+The superscript is a smoothing label; $E_N^{(2)}$ is already a
+squared norm, and $\norm\tau^2=2$.
+
+\begin{proposition}[The smoothed target still detects an off-line zero]
+\label{prop:ns61-rh-equivalence}
+Every finite $E_N^{(2)}$ is positive, and
+\[
+ E_N^{(2)}\longrightarrow0\quad\Longleftrightarrow\quad\mathrm{RH}.
+\]
+If $\zeta(\beta+i\gamma_*)=0$ with $1/2<\beta<1$, put
+$z=\beta+i\gamma_*$. Then, for every $N$,
+\begin{equation}
+ E_N^{(2)}\geq
+ \frac{|z|^{-4}}{(2\beta-1)^{-1}+|1-z|^{-2}}>0.
+ \label{eq:ns61-zero-obstruction}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The original strong NB criterion and boundedness of $J$ give
+$E_N^{(2)}\leq4E_N$, proving the forward approximation under RH.
+For the converse, the functions $\tau$ and $\sigma_n$ belong to the
+closed space
+\[
+ \mathcal W=L^2(0,1)\oplus
+       \operatorname{span}\{x^{-1}\mathbf1_{(1,\infty)}\}.
+\]
+Indeed $\sigma_n(x)=1/(nx)$ for $x>1$. On this space the functional
+\[
+ L_z(f)=\int_0^1 f(x)x^{z-1}\,dx+\frac{c}{1-z},
+ \qquad f(x)=c/x\quad(x>1),
+\]
+is bounded with norm squared $(2\beta-1)^{-1}+|1-z|^{-2}$.
+The absolutely convergent Mellin identities on $0<\Re s<1$ are
+\[
+ \mathcal M\sigma_n(s)=-\frac{n^{-s}\zeta(s)}{s^2},
+ \qquad \mathcal M\tau(s)=\frac1{s^2}.
+\]
+Thus $L_z(\sigma_n)=0$ and $L_z(\tau)=z^{-2}$, which proves
+\eqref{eq:ns61-zero-obstruction}. If RH fails, the functional equation
+supplies a zero on the right of the critical line. This proves the
+converse without assuming a bounded inverse for $J$.
+Injectivity of $J$ also transfers finite linear independence and
+$\chi\notin V_N$ from the original finite problem, so $E_N^{(2)}>0$.
+\end{proof}
+
+\begin{proposition}[A unitary average identity and an elementary trace budget]
+\label{prop:ns61-average-budget}
+Put $U=J-I$ and $h=U\rho_1$. The operator $U$ is unitary on $H$,
+$\norm h^2=\kappa$, and $h$ is nonnegative and supported in $(0,1]$.
+For $n\geq2$ define
+\[
+ \epsilon_n=\sigma_n-\frac{n-1}{n}\sigma_{n-1}=J\delta_n.
+\]
+Then, as a Bochner integral in $H$,
+\begin{equation}
+ n\epsilon_n=\int_{n-1}^{n}h(u\,\cdot)\,du
+       =U\int_{n-1}^{n}\rho_1(u\,\cdot)\,du,
+ \qquad
+ \norm{\epsilon_n}^2\leq
+       \frac{\kappa}{n^2}\log\frac n{n-1}.
+ \label{eq:ns61-average}
+\end{equation}
+In particular $\epsilon_n$ is nonnegative and supported in
+$(0,1/(n-1)]$, with
+\begin{equation}
+ \int_0^\infty x\epsilon_n(x)\,dx
+             =\frac{\pi^2}{24n^2(n-1)}.
+ \label{eq:ns61-positive-first-moment}
+\end{equation}
+If $\mathcal D_N^{(2)}$ is the raw Gram of
+$\epsilon_{N+1},\ldots,\epsilon_{2N}$, then
+\begin{equation}
+ \norm{\mathcal D_N^{(2)}}_{\rm op}
+ \leq\operatorname{tr}\mathcal D_N^{(2)}\leq \mathfrak b_N,
+ \qquad \mathfrak b_N=\kappa\sum_{n=N+1}^{2N}
+          \frac{\log(n/(n-1))}{n^2}
+ \leq\frac{3\kappa}{8N^2}.
+ \label{eq:ns61-trace-budget}
+\end{equation}
+Moreover $N^2\operatorname{tr}\mathcal D_N^{(2)}\to3\kappa/8$.
+These are unconditional analytic bounds and a trace asymptotic, not
+an asymptotic formula for the residual gain.
+\end{proposition}
+\begin{proof}
+The Mellin multiplier of $U$ is $(1-s)/s$, which has modulus one on
+the critical line and is nonzero there. Hence $U$ is unitary.
+Writing
+\[
+ A(z)=\int_0^z\frac{\{v\}}v\,dv,
+ \qquad \sigma_u(x)=A(1/(ux))\quad(u>0),
+\]
+gives $u\partial_u\sigma_u=-\rho_u$ almost everywhere. Therefore
+$\partial_u(u\sigma_u)=\sigma_u-\rho_u=h(u\,\cdot)$.
+On compact positive $u$ intervals this is also the strong integral
+identity: dilations are strongly continuous in $H$, and integrating
+the displayed derivative recovers the pointwise formula and an
+$H$-integrable majorant. Since $\sigma_1(x)=\rho_1(x)=1/x$ for
+$x>1$, $h$ has the asserted support.
+For $z\in[k,k+1)$ with $k\geq1$, integration in the definition of
+$A$ gives $A(z)=z-k\log z+\log(k!)$, hence
+$h(1/z)=k-k\log z+\log(k!)>0$.
+Indeed monotonicity of $\log u$ gives
+$\int_1^{k+1}\log u\,du\leq\log((k+1)!)$, or
+$\log(k!)\geq k\log(k+1)-k$; use $z<k+1$.
+Positivity of $\epsilon_n$ follows from its average representation.
+The compactly supported $h$ has Mellin transform
+$-(1-s)\zeta(s)/s^2$, which extends analytically to $\Re s>0$.
+At $s=2$ it gives $\int xh(x)\,dx=\pi^2/24$. Integrating the
+average identity against $x\,dx$ proves
+\eqref{eq:ns61-positive-first-moment}.
+The Cauchy--Schwarz inequality for a unit-length Bochner integral gives
+\[
+ n^2\norm{\epsilon_n}^2\leq
+ \int_{n-1}^{n}\norm{h(u\,\cdot)}^2\,du
+ =\kappa\int_{n-1}^{n}\frac{du}{u}.
+\]
+For $n-1\leq u\leq n$, $1/(n^2u)\leq u^{-3}$, whence
+\[
+ \mathfrak b_N\leq\kappa\int_N^{2N}u^{-3}\,du
+       =\frac{3\kappa}{8N^2}.
+\]
+Finally, dilation continuity gives
+$n^3\norm{\epsilon_n}^2\to\kappa$: rescale $x=y/n$ in
+\eqref{eq:ns61-average}, then $h((u/n)y)\to h(y)$ strongly,
+uniformly for $n-1\leq u\leq n$. Summation on $N<n\leq2N$
+and $N^2\sum n^{-3}\to3/8$ prove the trace asymptotic.
+\end{proof}
+
+The associated exact Gram identity, which retains all off-diagonal
+entries, is
+\begin{equation}
+ \langle\epsilon_m,\epsilon_n\rangle
+ =\frac1{mn}\int_{m-1}^{m}\int_{n-1}^{n}
+        \langle\rho_u,\rho_v\rangle\,du\,dv.
+ \label{eq:ns61-averaged-full-gram}
+\end{equation}
+Thus smoothing converts the singular adjacent-difference budget into
+an average of the original complete Gram kernel. It does not diagonalize
+that kernel or remove the old-space projection.
+
+\begin{proposition}[Complete smoothed gain and its still-missing numerator]
+\label{prop:ns61-gain}
+Form the old Gram $G^{(2)}$, old/new block $C^{(2)}$, new Gram
+$D^{(2)}$, and target loads $b^{(2)}$ using $\sigma_n$ and $\tau$.
+Set
+\[
+ c=(G^{(2)})^{-1}b^{(2)},\quad
+ h^{(2)}=b_{\rm new}^{(2)}-(C^{(2)})^*c,\quad
+ S^{(2)}=D^{(2)}-(C^{(2)})^*(G^{(2)})^{-1}C^{(2)}.
+\]
+For the same triangular new-coordinate matrix $T_N$ as in
+Proposition~\ref{prop:v158-difference-gain}, put
+$g^{(2)}=T_N^*h^{(2)}$ and $K_N^{(2)}=T_N^*S^{(2)}T_N$.
+Then
+\begin{equation}
+ 0<K_N^{(2)}\leq\mathcal D_N^{(2)},\qquad
+ E_N^{(2)}-E_{2N}^{(2)}
+ =(g^{(2)})^*(K_N^{(2)})^{-1}g^{(2)}
+ \geq\frac{\norm{g^{(2)}}_2^2}{\mathfrak b_N}
+ \geq\frac{8N^2}{3\kappa}\norm{g^{(2)}}_2^2.
+ \label{eq:ns61-gain}
+\end{equation}
+Consequently the cofinal estimate
+\begin{equation}
+ N^2\norm{g_{2^j}^{(2)}}_2^2
+ \geq\frac{3\kappa}{8}\alpha_j E_{2^j}^{(2)},
+ \quad N=2^j,\quad 0\leq\alpha_j<1,\quad
+ \sum_j\alpha_j=\infty
+ \label{eq:ns61-open-correlation}
+\end{equation}
+for all sufficiently large $j$ would prove RH. This lower estimate
+is an open input; no necessity claim is made for it.
+\end{proposition}
+\begin{proof}
+The finite Gram matrices are positive definite by injectivity of $J$.
+Orthogonal projection, the complete Schur complement and the invertible
+coordinate change give the exact identities as in NS-53.
+The raw trace budget bounds the largest eigenvalue of the projected
+Gram. The resulting contraction
+$E_{2^{j+1}}^{(2)}\leq(1-\alpha_j)E_{2^j}^{(2)}$ proves the
+conditional conclusion. In particular, the unsmoothed residual
+correlation cannot be inserted in~\eqref{eq:ns61-gain}.
+\end{proof}
+
+\begin{proposition}[Explicit loads do not supply a projected lower bound]
+\label{prop:ns61-loads}
+Use the standard convention
+$\zeta(1+z)=z^{-1}+\gamma-\gamma_1z+O(z^2)$ for $\gamma_1$.
+Then
+\begin{equation}
+ b_n^{(2)}=\langle\tau,\sigma_n\rangle
+ =\frac{P(\log n)}n,
+ \quad P(v)=\tfrac12v^2+(2-\gamma)v+3-2\gamma-\gamma_1.
+ \label{eq:ns61-loads}
+\end{equation}
+In difference coordinates, for $n\geq2$,
+\[
+ \langle\tau,\epsilon_n\rangle
+ =\frac{P(\log n)-P(\log(n-1))}{n}
+ \sim\frac{\log n+2-\gamma}{n^2}.
+\]
+For the actual residual the exact expression is instead
+\begin{equation}
+ g_n^{(2)}=\frac{P(\log n)-P(\log(n-1))}{n}
+       -\sum_{m\leq N}c_m\langle\sigma_m,\epsilon_n\rangle,
+ \quad N<n\leq2N.
+ \label{eq:ns61-retained-cross}
+\end{equation}
+The sign and size of the second term are not controlled here.
+\end{proposition}
+\begin{proof}
+Since $\sigma_1(x)=1/x$ for $x>1$, the transform
+$-\zeta(s)/s^2-1/(1-s)$ is the Mellin transform of the restriction
+to $(0,1)$. Its value and derivative at $s=1$ give
+\[
+ \int_0^1\sigma_1(x)\,dx=2-\gamma,\qquad
+ \int_0^1(-\log x)\sigma_1(x)\,dx=3-2\gamma-\gamma_1.
+\]
+Change variables $u=nx$ in the load integral and split at $u=1$.
+The tail contribution is $(\log n)^2/(2n)$, giving
+\eqref{eq:ns61-loads}. Taking the adjacent difference and then
+subtracting the old projection gives the remaining identities.
+The loads agree, with the sign convention for $\sigma_n$ reversed,
+with the $q=2$ formula in~\cite{Ehm2024}.
+\end{proof}
+
+\paragraph{The exact point at which the lower-bound attempt stops.}
+Every new $\epsilon_n$ is supported in $(0,1/N]$, so the numerator
+only sees the small-$x$ part of $R_N$. The elementary formula
+\[
+ A(z)=z-k\log z+\log(k!),\qquad k=\lfloor z\rfloor,
+\]
+and Stirling's estimate imply, uniformly for $z\geq1$,
+$|A(z)-\tfrac12\log(2\pi z)|\leq3/z$; a complete elementary
+remainder is given in Section~\ref{sec:ns61-gram-remainder}.
+Thus for $0<x\leq1/N$,
+\begin{equation}
+ \begin{aligned}
+ R_N(x)&=a_N\log(1/x)+\ell_N+\mathcal R_N(x),\\
+ a_N&=1-\tfrac12\sum_{m\leq N}c_m,\qquad
+ \ell_N=\tfrac12\sum_{m\leq N}c_m\log\frac m{2\pi},\\
+ |\mathcal R_N(x)|&\leq3x\sum_{m\leq N}m|c_m|.
+ \end{aligned}
+ \label{eq:ns61-residual-endpoint}
+\end{equation}
+Writing $\Delta_n f=f(n)-f(n-1)$, the exact first two moments of
+$\epsilon_n$ give
+\begin{equation}
+ g_n^{(2)}=
+ \frac{a_N\{\tfrac12\Delta_n(\log^2)+(2-\gamma)\Delta_n\log\}
+              +\ell_N\Delta_n\log}{n}
+ +\mathcal E_{N,n},
+ \quad N<n\leq2N,
+ \label{eq:ns61-endpoint-correlation}
+\end{equation}
+where
+\[
+ |\mathcal E_{N,n}|\leq
+       \frac{\pi^2\sum_{m\leq N}m|c_m|}{8n^2(n-1)}.
+\]
+The two leading moments follow from $\int h=1$ and
+$\int(-\log x)h(x)\,dx=2-\gamma$, obtained by taking the value
+and derivative of $-(1-s)\zeta(s)/s^2$ at $s=1$.
+For the error, use nonnegativity and the exact first moment
+\eqref{eq:ns61-positive-first-moment}. Neither a lower bound for the displayed
+coefficient combination relative to $E_N^{(2)}$, nor a small enough
+bound for $\sum m|c_m|$, has been obtained. Replacing these optimized
+coefficients by the target loads would discard
+\eqref{eq:ns61-retained-cross}.
+
+The improvement is therefore a proved elementary denominator and an
+explicit description of the remaining arithmetic numerator. It bypasses
+the raw unsmoothed norm obstruction by changing both the functions and
+the target. It does not bypass the zero obstruction, certify a lower
+correlation, or establish convergence. This is the stop condition for
+NS-61 unless an independent estimate for the optimized residual is found.
+
+\subsection{A complete remainder for the smoothed Gram computation}
+\label{sec:ns61-gram-remainder}
+
+This subsection supplies the analytic tail used by the finite Arb replay;
+the diagnostic truncations do not enter that replay. Write
+$\widetilde B_j(x)=B_j(\{x\})$ and let $R_1,R_2,S_2$ be the
+functions in~\cite[Theorem 2.1]{Ehm2024}. For $r=p/q\geq1$ in lowest
+terms the Gram formula used is
+\[
+ G^{(2)}_{m,n}=\frac{K_2+K_1\log(n/m)+\tfrac14\log^2(n/m)}n
+                  +\frac{S_2(n/m)}m\quad(m\leq n),
+\]
+with
+\[
+ K_1=\frac{\log(2\pi)-\gamma+2}{2},\qquad
+ K_2=(1-\gamma/2)\log(2\pi)+\tfrac14\log^2(2\pi)
+       +\frac{\pi^2}{48}-\frac{\gamma^2}{4}-\gamma-\gamma_1+\frac32.
+\]
+The first $K$ terms of $S_2(r)=\sum_{k\geq1}R_2(kr)$ are evaluated
+by the finite formula in that theorem, retaining balls throughout.
+The rest is enclosed by the following lemma.
+
+\begin{lemma}[Bernoulli tail with an explicit remainder]
+\label{lem:ns61-r2-tail}
+For an integer $M\geq4$, let $c_2=c_3=0$ and, for $j\geq4$, let
+\[
+ c_j=\frac{2j-3-(j-1)H_{j-1}}{j(j-1)},\qquad
+ P_M(x)=\sum_{j=4}^{M+2}c_j\frac{\widetilde B_j(x)}{x^j}.
+\]
+Put
+\[
+ a_{M+1}=2(M+2)(M+1)c_{M+2}-(M+1)Mc_{M+1},\qquad
+ a_{M+2}=-(M+2)(M+1)c_{M+2}.
+\]
+For any constants $U_j\geq\sup_{0\leq x\leq1}|B_j(x)|$,
+\begin{equation}
+ |R_2(x)-P_M(x)|\leq
+ \frac{U_M}{M^2(M-1)x^M}
+ +\frac{|a_{M+1}|U_{M+1}}{M(M+1)x^{M+1}}
+ +\frac{|a_{M+2}|U_{M+2}}{(M+1)(M+2)x^{M+2}}.
+ \label{eq:ns61-r2-remainder}
+\end{equation}
+The rational constants
+$U_j=2j!\,(1+1/(j-1))/6^j$, $j\geq2$, are valid.
+For $r=p/q$ the Bernoulli part of the infinite sum is exactly
+\begin{equation}
+ \sum_{k>K}\frac{\widetilde B_j(kr)}{(kr)^j}
+ =p^{-j}\sum_{a=1}^{q}
+ B_j\left(\left\{\frac{(K+a)p}{q}\right\}\right)
+ \zeta\left(j,\frac{K+a}{q}\right).
+ \label{eq:ns61-hurwitz-tail}
+\end{equation}
+The sum of the three remainders in~\eqref{eq:ns61-r2-remainder}
+is bounded by replacing each $x^{-l}$ by
+$r^{-l}\zeta(l,K+1)$.
+\end{lemma}
+\begin{proof}
+From $R_1(x)=-\int_x^\infty\widetilde B_1(t)t^{-2}\,dt$,
+successive integrations by parts give the exact finite formula
+\[
+ R_1(x)=\sum_{j=2}^{M}\frac{\widetilde B_j(x)}{jx^j}
+            -\int_x^\infty\frac{\widetilde B_M(t)}{t^{M+1}}\,dt.
+\]
+The remainder is at most $U_M/(Mx^M)$. Also
+\cite[Proposition 5.2, Eq. (40)]{Ehm2024} gives
+$-(x^2R_2'(x))'=R_1(x)$ and the inverse formula
+\[
+ (\mathcal If)(x)=\int_x^\infty f(t)\left(\frac1t-\frac1x\right)dt.
+\]
+If $|f(t)|\leq At^{-l}$ with $l>1$, then
+$|\mathcal If(x)|\leq A x^{-l}/(l(l-1))$.
+For $\mathcal L=-(x^2\partial_x)'$ the coefficient of
+$\widetilde B_k(x)/x^k$ in $\mathcal LP_M$ is
+\[
+ -(k+2)(k+1)c_{k+2}+2(k+1)kc_{k+1}-k(k-1)c_k.
+\]
+It equals $1/k$ for $2\leq k\leq M$; the two remaining coefficients
+are $a_{M+1},a_{M+2}$. Periodic Bernoulli polynomials of orders at
+least four are twice continuously differentiable across integers, so
+no point masses are omitted in this differentiation. Apply
+$\mathcal I$ to $R_1-\mathcal LP_M$ and the preceding three bounds.
+The possible homogeneous terms $A+B/x$ vanish because both $R_2$
+and $P_M$ are $O(x^{-4})$. This proves~\eqref{eq:ns61-r2-remainder}.
+
+The absolutely convergent Bernoulli Fourier series
+\cite[Eq. (24.8.3)]{DLMFBernoulliFourier} gives
+$\sup|B_j|\leq2j!\zeta(j)/(2\pi)^j$.
+Using $2\pi>6$ and $\zeta(j)\leq1+1/(j-1)$ proves the rational
+upper bound. Finally write $k=K+a+q\ell$ and sum over $\ell\geq0$.
+The periodic numerator is constant in each such progression, giving
+\eqref{eq:ns61-hurwitz-tail}. Absolute convergence justifies every
+rearrangement and the sum of the absolute remainder bounds.
+\end{proof}
+
+\paragraph{An independent positive-cell convention check.}
+On a cell where $k=\lfloor t/m\rfloor$,
+$A(t/m)=t/m-k\log t+k\log m+\log(k!)$.
+Products of two such expressions divided by $t^2$ are integrated
+exactly between consecutive multiples of $m$ and $n$; the initial
+cell has constant integrand $1/(mn)$.
+For $z=k+r\geq1$, $0\leq r<1$, the elementary Stirling remainder
+\cite[\S5.11]{DLMFGammaBounds}
+$0<\log(k!)-(k+1/2)\log k+k-\tfrac12\log(2\pi)<1/(12k)$
+gives
+\[
+ \left|A(z)-\tfrac12\log(2\pi z)\right|
+ \leq\frac{13}{12k}\leq\frac{13}{6z}<\frac3z.
+\]
+Indeed $0\leq r-k\log(1+r/k)\leq r^2/(2k)$ and
+$0\leq\tfrac12\log(1+r/k)\leq r/(2k)$.
+For $T\geq\max(m,n)$ put $L_m=\tfrac12\log(2\pi T/m)$.
+The remaining physical integral is within
+\[
+ \frac3{T^2}\left[m\left(\frac{L_n}2+\frac18\right)
+                 +n\left(\frac{L_m}2+\frac18\right)\right]
+            +\frac{3mn}{T^3}
+\]
+of $(L_mL_n+(L_m+L_n)/2+1/2)/T$.
+This separate integral enclosure checks normalization and several
+off-diagonal entries of the series formula; it is not used to sharpen
+the block estimates.
+
+\paragraph{Certified finite checks, not a cofinal estimate.}
+The complete smoothed Grams through index 64 were enclosed at 256 and
+384 bits with the entire series tail retained. A separate replay doubles
+the finite series cutoff from 128 to 256 while keeping the same matrix.
+All 180 enclosure comparisons across the precision and cutoff replays pass; the minimum internal accuracies are
+99, 99 and 123 bits. Seven independent positive-cell Gram integrals
+also pass at both precisions.
+\begin{center}
+\begin{tabular}{rccc}
+\toprule
+$N$ & exact relative gain & trace-budget relative bound & bound/gain\\
+\midrule
+16 & $0.2372848\ldots$ & $0.003293361\ldots$ & $0.01387935\ldots$\\
+32 & $0.1891280\ldots$ & $0.003566353\ldots$ & $0.01885681\ldots$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The trace lower estimate is below $1/50$ of the exact gain on both
+blocks. The endpoint remainder budget is more than 2000 times the norm
+of its leading term there, so that particular triangle lower bound is
+vacuous, despite every individual remainder gate passing.
+These are finite statements, not a failure of
+\eqref{eq:ns61-open-correlation} or an asymptotic claim.
+
+\section{Smoothing does not repair the canonical sharp interpolant (NS-62)}
+\label{sec:ns62-sharp-interpolant}
+
+\paragraph{Status and scope.}
+The previous section changes the approximation norm and proves a smaller
+upper budget. It is natural to ask whether simply smoothing the canonical
+M\"obius interpolant now supplies convergence. It does not. The following
+localized dual test extends the classical sharp-interpolant obstruction
+in~\cite[Section 4]{BaezDuarte2000Arithmetic} through Mellin integration.
+The conclusion concerns this explicit coefficient rule, including its
+tail correction. It does not concern the optimized coefficients in
+Proposition~\ref{prop:ns61-gain}.
+
+Define
+\[
+ M(x)=\sum_{k\leq x}\mu(k),\quad
+ s_N=\sum_{k\leq N}\frac{\mu(k)}k,\quad
+ \eta_N=s_N-\frac{M(N)}N
+       =\sum_{k<N}\frac{M(k)}{k(k+1)},
+\]
+and let
+\begin{equation}
+ B_N=\sum_{k=1}^N\mu(k)\rho_k-Ns_N\rho_N.
+ \label{eq:ns62-natural-interpolant}
+\end{equation}
+The sign is chosen to match the classical notation: $B_N=-\chi$
+on $x>1/N$ (up to endpoints). The sum is zero on $x>1$.
+The smoothed target error is $J^r(\chi+B_N)$.
+
+\begin{proposition}[A localized witness survives any number of integrations]
+\label{prop:ns62-smoothed-obstruction}
+For every integer $N\geq1$ and integer $r\geq0$,
+\begin{equation}
+ \norm{J^r(\chi+B_N)}_H
+ \geq\frac{|N\eta_N-k_{N,r}|}{\sqrt N}
+ \geq\frac{|N\eta_N-2|}{\sqrt N}
+            -\frac{4\pi^2}{3^{r+2}N^{5/2}},
+ \label{eq:ns62-laguerre-lower}
+\end{equation}
+where
+\[
+ k_{N,r}=\frac N{r!}\int_0^{1/N}
+       \frac{\sin(2\pi x)}{\pi x}
+                    \left(\log\frac1{Nx}\right)^r dx.
+\]
+In particular, for every sequence of nonnegative integers $r_N$,
+$\norm{J^{r_N}(\chi+B_N)}_H$ does not tend to zero.
+For growing $r_N$ the target also changes with $N$; this assertion
+is only a failure of these particular approximants, not a new RH
+criterion for varying norms.
+The nonconvergence is for the full sequence of integers $N$. No
+exclusion of a selected subsequence, including the dyadic subsequence,
+is asserted without a corresponding lower bound for $\sqrt N|\eta_N|$
+on that subsequence.
+\end{proposition}
+\begin{proof}
+Use the dilation-invariant unitary $\mathcal V$ whose critical-line
+Mellin multiplier, away from the discrete zero set, is
+\[
+ v(s)=\frac{s\zeta(1-s)}{(1-s)\zeta(s)}.
+\]
+Its modulus is one on $\Re s=1/2$; define it arbitrarily with modulus
+one on the measure-zero exceptional set. Mellin identities and the
+functional equation give
+\[
+ \mathcal V\rho_k(x)=\frac{\{kx\}}{kx},\qquad
+ \mathcal V\chi(x)=k(x):=\frac{\sin(2\pi x)}{\pi x}.
+\]
+These are also the defining identities of the classical unitary in
+\cite[Section 4]{BaezDuarte2000Arithmetic}. Both $\mathcal V$ and $J$
+are Mellin multipliers, so they commute. For $0<x<1/N$,
+\begin{equation}
+ \mathcal V(\chi+B_N)(x)=k(x)+M(N)-Ns_N=k(x)-N\eta_N.
+ \label{eq:ns62-unitary-small-cell}
+\end{equation}
+
+Let $L_r(z)=\sum_{j=0}^r(-1)^j\binom rj z^j/j!$ be the ordinary
+Laguerre polynomial and put
+\[
+ \psi_{N,r}(x)=\sqrt N\,
+       L_r\left(\log\frac1{Nx}\right)\mathbf1_{(0,1/N)}(x).
+\]
+Laguerre orthogonality \cite[Table 18.3.1]{DLMFLaguerre} gives
+$\norm{\psi_{N,r}}=1$. The adjoint is
+$(J^*f)(x)=x^{-1}\int_0^x f(y)\,dy$. Repeated integration, or
+Rodrigues' formula and integration by parts, gives the complete
+identity
+\begin{equation}
+ (J^*)^r\psi_{N,r}(x)=
+ \frac{(-1)^r\sqrt N}{r!}
+       \left(\log\frac1{Nx}\right)^r\mathbf1_{(0,1/N)}(x).
+ \label{eq:ns62-adjoint-laguerre}
+\end{equation}
+There is no exterior term: at the $j$th integration, $j\leq r$,
+the potential exterior coefficient is a Laguerre moment of a
+polynomial of degree less than $r$, hence zero. On the interior,
+the polynomial identity follows by integrating monomials against
+$e^{-z}$; equivalently $(1-\partial_z)^{-r}L_r(z)=(-1)^rz^r/r!$.
+This also covers $r=0$ directly.
+
+Taking the inner product with $\psi_{N,r}$, moving $J^r$ to the
+adjoint, and using~\eqref{eq:ns62-unitary-small-cell} yields
+\[
+ \left|\left\langle J^r\mathcal V(\chi+B_N),\psi_{N,r}\right\rangle\right|
+       =\frac{|k_{N,r}-N\eta_N|}{\sqrt N}.
+\]
+The unitary norm and Cauchy--Schwarz prove the first inequality.
+For real $x$, $|k(x)-2|\leq4\pi^2x^2/3$. Since
+\[
+ \int_0^{1/N}x^2\left(\log\frac1{Nx}\right)^r dx
+        =\frac{r!}{3^{r+1}N^3},
+\]
+we have $|k_{N,r}-2|\leq4\pi^2/(3^{r+2}N^2)$, proving the second.
+
+For completeness, $\eta_N\ne o(N^{-1/2})$ follows from the known
+existence of a critical-line zeta zero. Indeed let
+$\eta(x)=\int_1^xM(t)t^{-2}\,dt$. For $\Re s>0$,
+\[
+ \int_1^\infty\eta(x)x^{-s-1}\,dx
+        =\frac1{s(s+1)\zeta(s+1)}.
+\]
+The right side has a genuine pole at $s=\rho-1$ for any
+critical-line zero $\rho$. If $\eta(x)=o(x^{-1/2})$, the integral
+would be analytic on $\Re s>-1/2$, and the usual Abelian boundary
+estimate would make $(\sigma+1/2)$ times its value at
+$\sigma+i\Im\rho$ tend to zero as $\sigma\downarrow-1/2$.
+This contradicts a pole of any positive order at that point.
+Also $\eta(N)=\eta_N$ and
+$\eta(x)-\eta(\lfloor x\rfloor)=O(1/x)$, so the discrete
+little-$o$ assertion would imply the continuous one. Thus
+$\limsup_N\sqrt N|\eta_N|>0$, whereas the error term in
+\eqref{eq:ns62-laguerre-lower} tends to zero uniformly in $r\geq0$.
+This proves the stated nonconvergence for every choice of $r_N$.
+No assumption about zeros off the critical line was made.
+\end{proof}
+
+\begin{proposition}[Positive smoothed differences still require signed coefficients]
+\label{prop:ns62-positive-cone}
+Every $\epsilon_n$, $n\geq2$, is nonnegative. Nevertheless $\tau$
+is not in the $H$-closure of the cone of finite nonnegative linear
+combinations of $\sigma_1,\epsilon_2,\epsilon_3,\ldots$.
+This is a restriction on that coefficient cone, not on their signed
+linear span or on the Weil form.
+\end{proposition}
+\begin{proof}
+Nonnegativity was proved in Proposition~\ref{prop:ns61-average-budget}.
+Its average identity also gives strict positivity on
+$(1/n,1/(n-1))$.
+
+Triangular telescoping gives
+\begin{equation}
+ -JB_N=\sum_{n=2}^{N}n s_{n-1}\epsilon_n.
+ \label{eq:ns62-pointwise-series}
+\end{equation}
+It equals $\tau$ on $x>1/N$, because $-B_N=\chi$ there and
+$Jf(x)$ uses only values at arguments at least $x$.
+For $N=6$ the coefficient of $\epsilon_6$ is
+$6s_5=6(1-1/2-1/3-1/5)=-1/5$.
+
+Restrict now to $x>1/6$. Every $\epsilon_n$ with $n\geq7$
+vanishes there. The restrictions of
+$\sigma_1,\epsilon_2,\ldots,\epsilon_6$ are linearly independent:
+first use $x>1$ for $\sigma_1$, then the successive intervals
+$(1/n,1/(n-1))$ for $n=2,\ldots,6$.
+Their finite-dimensional nonnegative cone is closed, but the unique
+representation of the restricted target has the negative coefficient
+$-1/5$. Thus the restricted target has positive distance from this
+cone. Restriction is contractive, proving the full-space claim.
+\end{proof}
+
+\paragraph{Consequences for the next attempt.}
+The positive shapes of the smoothed differences do not make the
+coefficient problem positive. The canonical pointwise interpolation
+coefficients are explicit, but their partial sums still fail in norm
+after smoothing. The optimized residual criterion from NS-61 remains
+open and is unaffected by this exclusion. A next attempt must obtain
+an independent estimate for those adaptive residuals, or a different
+coefficient rule with a complete norm bound; visual smoothness,
+pointwise exactness away from zero, and a small raw block norm do not
+supply it.
+
+\section{Fixed smoothing and a changing-norm control (NS-63)}
+\label{sec:ns63-changing-norm}
+
+\paragraph{Why this check is needed.}
+NS-61 uses one fixed extra Mellin integration. Increasing the smoothing
+order with the approximation size changes the problem. The following
+control shows that relative errors can then vanish with just one fixed
+dilation and a fixed coefficient, unconditionally. It is not convergence
+in a fixed NB norm.
+
+For an integer $r\geq0$ put
+\[
+ \tau_r=J^r\chi=\frac{(-\log x)^r}{r!}\mathbf1_{(0,1)},\quad
+ \sigma_{n,r}=J^r\rho_n,\quad
+ T_r=\norm{\tau_r}^2=\binom{2r}{r}.
+\]
+Let $E_{N,r}$ be the squared distance from $\tau_r$ to the span of
+$\sigma_{1,r},\ldots,\sigma_{N,r}$, so $E_{N,1}=E_N^{(2)}$.
+
+\begin{proposition}[Keep the smoothing order fixed in the RH criterion]
+\label{prop:ns63-fixed-order}
+For each fixed $r$, $E_{N,r}\to0$ if and only if RH. If
+$z=\beta+i\gamma_*$ is a zero with $1/2<\beta<1$, then
+\[
+ E_{N,r}\geq
+ \frac{|z|^{-2(r+1)}}{(2\beta-1)^{-1}+|1-z|^{-2}}.
+\]
+The lower obstruction itself depends on $r$. After division by $T_r$
+it tends to zero for every such $z$, since $|z|>1/2$; it gives no
+fixed positive obstruction for the relative error as $r\to\infty$.
+\end{proposition}
+\begin{proof}
+Boundedness of $J^r$ gives $E_{N,r}\leq4^rE_N$ under the original
+strong NB criterion. Every $\sigma_{n,r}$ has the same tail $1/(nx)$
+for $x>1$, whereas $\tau_r$ has zero tail. Thus the bounded functional
+$L_z$ in Proposition~\ref{prop:ns61-rh-equivalence} applies unchanged.
+Its value on the target is $z^{-(r+1)}$ and it annihilates the finite
+span. This proves the lower bound and the converse for fixed $r$.
+\end{proof}
+
+\begin{proposition}[One fixed atom has vanishing relative error as the norm changes]
+\label{prop:ns63-one-atom}
+Let $z_0=\zeta(1/2)$, $c_0=-1/z_0$, and
+\[
+ D_0=\frac{\zeta'(1/2)}{\zeta(1/2)}
+     =\frac12\left(\gamma+\frac\pi2+\log(8\pi)\right)>0.
+\]
+Unconditionally, as $r\to\infty$ through integers,
+\begin{equation}
+ \frac{\norm{\tau_r-c_0\sigma_{1,r}}^2}{T_r}
+    =\frac{D_0^2}{4(2r-1)}+O(r^{-2})
+    \sim\frac{D_0^2}{8r}\longrightarrow0.
+ \label{eq:ns63-relative-control}
+\end{equation}
+Nevertheless the absolute squared error for this fixed coefficient
+diverges:
+\begin{equation}
+ \norm{\tau_r-c_0\sigma_{1,r}}^2
+      \sim\frac{D_0^2}{8\sqrt\pi}\frac{4^r}{r^{3/2}}
+      \longrightarrow\infty.
+ \label{eq:ns63-absolute-control}
+\end{equation}
+Moreover $(J/2)^rf\to0$ in $H$ for every fixed $f\in H$.
+Neither this normalized convergence nor
+\eqref{eq:ns63-relative-control} tests RH.
+\end{proposition}
+\begin{proof}
+The alternating-series expression for zeta shows $z_0<0$: its
+numerator $\sum_{n\geq1}(-1)^{n-1}n^{-1/2}$ is positive and its
+denominator $1-\sqrt2$ is negative. Thus $c_0$ is well-defined.
+Mellin Plancherel writes the relative squared error as the average of
+\[
+ H(t)=\left|1-\frac{\zeta(1/2+it)}{z_0}\right|^2
+\]
+under the probability density proportional to
+$(1/4+t^2)^{-(r+1)}dt$. The exact second and fourth moments of this
+density are
+\[
+ \mathbb E_r(t^2)=\frac1{4(2r-1)},\qquad
+ \mathbb E_r(t^4)=\frac3{16(2r-1)(2r-3)}
+\]
+for $r\geq1$ and $r\geq2$, respectively. They follow directly
+from the beta integral. Near zero, conjugation symmetry and Taylor
+expansion give $H(t)=D_0^2t^2+O(t^4)$.
+Away from any fixed neighborhood of zero the normalized integral is
+exponentially small in $r$. To justify this without an unproved zeta
+estimate, use
+\[
+ \left|\frac{\zeta(1/2+it)}{1/2+it}\right|
+ \leq\int_0^\infty\rho_1(x)x^{-1/2}\,dx<4,
+\]
+or the integrability of the original Mellin square; either controls
+the entire exterior integral. The displayed moments then prove
+\eqref{eq:ns63-relative-control}. Differentiating the zeta functional
+equation at $1/2$, and using
+$\psi(1/2)=-\gamma-2\log2$ \cite[Eq. (5.4.13)]{DLMFGammaBounds},
+gives the stated value of $D_0$.
+Finally $T_r=\binom{2r}{r}\sim4^r/\sqrt{\pi r}$ proves
+\eqref{eq:ns63-absolute-control}.
+
+For the last assertion the Mellin multiplier of $(J/2)^r$ is
+$(2s)^{-r}$. Its modulus is at most one on $\Re s=1/2$ and tends
+to zero for every $t\ne0$. Dominated convergence in the Mellin
+$L^2$ norm applies to every fixed $f$. The exceptional point $t=0$
+has measure zero.
+\end{proof}
+
+\paragraph{Finite control and its full tail.}
+The companion Arb calculation integrates the analytic product
+\[
+ \frac{(1-\zeta(s)/z_0)(1-\zeta(1-s)/z_0)}
+             {\pi T_r\{s(1-s)\}^{r+1}},\qquad s=\tfrac12+it,
+\]
+over $0\leq t\leq A$. It uses reflection $1-s$, not complex
+conjugation of the integration variable, so the quadrature callback
+is meromorphic. The preceding elementary bound supplies the complete
+positive tail bound
+\begin{equation}
+ \frac1{\pi T_r}\left\{
+       \frac{2A^{-2r-1}}{2r+1}
+       +\frac{32A^{-2r+1}}{z_0^2(2r-1)}\right\},\qquad r\geq1.
+ \label{eq:ns63-quadrature-tail}
+\end{equation}
+The fixed-order interval results illustrate the control, not the
+asymptotic proof or any RH assertion.
+
+The useful research problem is therefore the fixed-order cofinal
+correlation estimate in~\eqref{eq:ns61-open-correlation}. Further
+smoothing cannot be credited as a convergence result without retaining
+one fixed norm and its target. The unsolved arithmetic estimate remains
+the one for the optimized coefficients as $N$ increases.

@@ -137,6 +137,19 @@ the projected Gram or actual residual direction. Arb 256/384-bit checks
 show finite raw-trace loss and transformed-numerator cost. No asymptotic
 lower correlation bound is supplied. NB convergence, G2 and RH remain open.
 
+Version 1.59 local draft (NS-60–63) retains the full Euler-grid correction
+and proves its scoped logarithmic-norm obstruction for Q_N <= N^alpha,
+alpha < 1. Fixed Mellin smoothing preserves the RH criterion and gives a
+positive average identity and raw trace <= 3*kappa/(8*N^2). No lower bound
+for the actual optimized correlations follows. The canonical sharp Mobius
+interpolant fails along the full integer sequence after any number of
+integrations; selected subsequences and optimal coefficients are not
+excluded. Nonnegative difference coefficients cannot approximate the
+smoothed target. Increasing the smoothing order can make one-atom relative
+error vanish while absolute error diverges. This is a changing-norm control,
+not RH evidence. Finite Arb checks and exact Maxima checks are in v159.
+No new Weil window, floor, G2 or RH proof. Publication is pending.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

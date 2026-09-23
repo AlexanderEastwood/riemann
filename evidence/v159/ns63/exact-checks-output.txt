@@ -1,0 +1,59 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v159/ns63/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+tt(r):=binomial(2*r,r)
+for r thru 20 do
+    check(sconcat("Normalized second moment ",r),
+          tt(r-1)/tt(r)-1/4+(-1)/(4*(2*r-1)))
+for r from 2 thru 20 do
+    check(sconcat("Normalized fourth moment ",r),
+          tt(r-2)/tt(r)-tt(r-1)/(2*tt(r))+1/16+(-3)/(16*(2*r-1)*(2*r-3)))
+for r from 0 thru 12 do
+    check(sconcat("Target squared norm ",r),(2*r)!/r!^2-tt(r))
+check("Logarithmic derivative constant",
+      (log(2)+log(%pi)+%pi/2+ga+2*log(2))/2-(ga+%pi/2+log(%pi)+3*log(2))/2)
+check("First quadrature tail primitive",
+      diff(-a^(-2*rr-1)/(2*rr+1),a)-a^(-2*rr-2))
+check("Second quadrature tail primitive",
+      diff(-a^(-2*rr+1)/(2*rr-1),a)-a^(-2*rr))
+print(checks)
+[["Normalized second moment 1",true],["Normalized second moment 2",true],
+ ["Normalized second moment 3",true],["Normalized second moment 4",true],
+ ["Normalized second moment 5",true],["Normalized second moment 6",true],
+ ["Normalized second moment 7",true],["Normalized second moment 8",true],
+ ["Normalized second moment 9",true],["Normalized second moment 10",true],
+ ["Normalized second moment 11",true],["Normalized second moment 12",true],
+ ["Normalized second moment 13",true],["Normalized second moment 14",true],
+ ["Normalized second moment 15",true],["Normalized second moment 16",true],
+ ["Normalized second moment 17",true],["Normalized second moment 18",true],
+ ["Normalized second moment 19",true],["Normalized second moment 20",true],
+ ["Normalized fourth moment 2",true],["Normalized fourth moment 3",true],
+ ["Normalized fourth moment 4",true],["Normalized fourth moment 5",true],
+ ["Normalized fourth moment 6",true],["Normalized fourth moment 7",true],
+ ["Normalized fourth moment 8",true],["Normalized fourth moment 9",true],
+ ["Normalized fourth moment 10",true],["Normalized fourth moment 11",true],
+ ["Normalized fourth moment 12",true],["Normalized fourth moment 13",true],
+ ["Normalized fourth moment 14",true],["Normalized fourth moment 15",true],
+ ["Normalized fourth moment 16",true],["Normalized fourth moment 17",true],
+ ["Normalized fourth moment 18",true],["Normalized fourth moment 19",true],
+ ["Normalized fourth moment 20",true],["Target squared norm 0",true],
+ ["Target squared norm 1",true],["Target squared norm 2",true],
+ ["Target squared norm 3",true],["Target squared norm 4",true],
+ ["Target squared norm 5",true],["Target squared norm 6",true],
+ ["Target squared norm 7",true],["Target squared norm 8",true],
+ ["Target squared norm 9",true],["Target squared norm 10",true],
+ ["Target squared norm 11",true],["Target squared norm 12",true],
+ ["Logarithmic derivative constant",true],
+ ["First quadrature tail primitive",true],
+ ["Second quadrature tail primitive",true]]
+  
+print("PASS:",length(checks),
+      "exact checks; the concentration and fixed-order implications are analytic.")
+PASS: 55 
+     exact checks; the concentration and fixed-order implications are analytic.
+      
+quit()

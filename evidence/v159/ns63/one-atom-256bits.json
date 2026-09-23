@@ -1,0 +1,56 @@
+{
+  "classification": "certified finite control, not RH evidence",
+  "precision_bits": 256,
+  "one_atom_index": 1,
+  "fixed_coefficient": "-1/zeta(1/2)",
+  "quadrature_tolerance_bits": 120,
+  "source_sha256": "a599caf85318bbb199eeb9811edbc18acd09cb4f776c782aa058964705eb31ce",
+  "elapsed_seconds": 3.2471792500000447,
+  "rows": [
+    {
+      "order": 4,
+      "cutoff": 32,
+      "relative_squared_error": "[0.180486541845 +/- 6.51e-13]",
+      "absolute_squared_error": "[12.6340579291 +/- 4.42e-11]",
+      "target_norm_squared": "70",
+      "leading_relative_asymptotic": "[0.25768173830181395856493460251131268 +/- 1.47e-36]",
+      "relative_tail_bound": "[2.8371451254318747423e-13 +/- 2.44e-33]",
+      "relative_accuracy_bits": 38,
+      "gates": {
+        "finite_analytic_integral": true,
+        "imaginary_part_contains_zero": true,
+        "positive_error_below_target_norm": true
+      }
+    },
+    {
+      "order": 16,
+      "cutoff": 8,
+      "relative_squared_error": "[0.0530593444590345669059853356877568 +/- 2.07e-35]",
+      "absolute_squared_error": "[31892931.4605808364993307589094778 +/- 3.69e-26]",
+      "target_norm_squared": "601080390",
+      "leading_relative_asymptotic": "[0.058186198971377345482404587663844799 +/- 4.09e-38]",
+      "relative_tail_bound": "[2.5932745657276348349e-38 +/- 4.24e-58]",
+      "relative_accuracy_bits": 110,
+      "gates": {
+        "finite_analytic_integral": true,
+        "imaginary_part_contains_zero": true,
+        "positive_error_below_target_norm": true
+      }
+    },
+    {
+      "order": 64,
+      "cutoff": 4,
+      "relative_squared_error": "[0.0138756311738391543683619851250838 +/- 3.75e-35]",
+      "absolute_squared_error": "[3.32337268668551580469837968269495e+35 +/- 9.70e+2]",
+      "target_norm_squared": "23951146041928082866135587776380551750",
+      "leading_relative_asymptotic": "[0.014202930457580296928775922973064479 +/- 4.94e-37]",
+      "relative_tail_bound": "[5.4686724662886467097e-116 +/- 2.38e-137]",
+      "relative_accuracy_bits": 107,
+      "gates": {
+        "finite_analytic_integral": true,
+        "imaginary_part_contains_zero": true,
+        "positive_error_below_target_norm": true
+      }
+    }
+  ]
+}
