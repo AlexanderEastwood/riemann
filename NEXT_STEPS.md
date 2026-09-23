@@ -130,6 +130,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-74 | Construct a nearby unitary deformation with the same full Gram geometry and an explicit nonzero approximation floor; test what finite gain efficiency can distinguish | Codex, Continue solving toward RH | done (v1.61; altered-family control) | Explicit unitary Blaschke deformation preserves all complete Gram entries and has positive floor (2 beta-1)(1-beta)^2/beta^6. Finite statistics approach the original as beta decreases to 1/2. Sixteen exact checks and complete finite replay; no original-family error floor. |
 
+| NS-75 | Test correction coefficients from the actual optimized residual divisor sums; retain exact derivative jumps and full projected energy | Codex, Continue solving toward RH | claimed | Compare constant and logarithmic tapers of the actual divisor defect with the fixed Mobius templates and curvature rule. Distinguish raw jump cancellation from old-space reoptimization, and stop at the missing cofinal arithmetic bound. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
