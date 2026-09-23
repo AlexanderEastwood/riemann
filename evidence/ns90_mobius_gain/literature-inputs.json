@@ -1,0 +1,19 @@
+{
+  "classical_taper": {
+    "url": "https://arxiv.org/abs/1211.5191",
+    "scope": "Bettin-Conrey-Farmer classical log taper; their asymptotic assumes RH and an inverse-zeta-derivative moment bound. Neither hypothesis imported."
+  },
+  "Mellin_context": {
+    "url": "https://arxiv.org/html/math/0505453v1",
+    "scope": "Classical Muntz/dilation context, not a new cofinal input."
+  },
+  "internal_dependencies": [
+    "evidence/v159/ns61",
+    "evidence/v160/ns67",
+    "evidence/v161/ns73",
+    "evidence/ns85_taper_test",
+    "evidence/ns87_joint_tail",
+    "evidence/ns89_upper_normalization"
+  ],
+  "external_new_arithmetic_estimate_assumed": false
+}

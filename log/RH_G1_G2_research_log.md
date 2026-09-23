@@ -3450,3 +3450,26 @@ uniform signed arithmetic upper estimate is absent. Two precisions, Gram
 and physical cutoff replays, Maxima, and author self-review are recorded in
 evidence/ns89_upper_normalization. Manuscript v1.66 unchanged; no new tag.
 Both original-evidence gaps, G2 and RH remain open.
+
+
+## 2026-09-23 — NS90 direct attempt on the PR42 arithmetic lower gain
+
+Reviewed all 97 conclusions at main 0a11971, including after compacted
+handoff; no remote delta. Scope/dependency review only; both original
+evidence gaps remain open. NS73 already supplied the selected template's
+finite efficiency, so this attempt instead tests an analytic numerator
+estimate. Orthogonality cancels the prime main terms exactly. The full
+finite divisor sum and complete pairing tail recover the inherited
+positive numerator at N16,256. The termwise absolute lower estimate is
+vacuous, below -186 E at N256 and -226 E with doubled physical cutoff.
+An exact fixed-N argument explains divergence of that absolute allowance
+when the residual has a nonzero logarithmic or constant tail; this does
+not exclude the cofinal N^6 cutoff or another signed bound.
+
+Two precisions, doubled physical and inherited Gram cutoffs, 38 precision
+scalar overlaps, 8 complete cutoff overlaps, 5 inherited Gram numerator
+overlaps and 15 Maxima checks pass. Original optimized coefficient balls
+and true projected costs are inherited with verified hashes; no new Gram
+solve or asymptotic efficiency claim. Author self-review only. Main target
+remains a cofinal lower bound for the joint signed arithmetic energy. No
+lower-gain theorem obtained; manuscript v1.66 unchanged.

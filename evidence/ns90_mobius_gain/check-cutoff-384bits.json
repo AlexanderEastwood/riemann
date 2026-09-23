@@ -1,0 +1,43 @@
+{
+  "classification": "Certified finite signed numerator decomposition; no cofinal lower gain",
+  "precision_bits": 384,
+  "cell_stop": 524288,
+  "input": "evidence/ns89_upper_normalization/check-cutoff-384bits.json",
+  "reference": "evidence/v161/ns73/mobius-cutoff-replay-384bits.json",
+  "input_sha256": "553bd8705cb234a374555c37855c8e64e2694b23eaceeeb0abcf286402958d1e",
+  "reference_sha256": "e0738000f1803fa1228f3d5b1bfd79132c10c8c7024427900fc541335b5700d4",
+  "source_sha256": "c5a1a1aad499b2354b3436828646e71776f4cb991870c52c4353c1a3b6fffeed",
+  "sieve_sha256": "2c4c14202df2e733063c62658f882bd4f7a488008e077b786aabb809c11e6bde",
+  "rows": [
+    {
+      "N": 256,
+      "values": {
+        "E_N": "[1.414241673909017965604410325187231472063e-5 +/- 8.59e-45]",
+        "log2_times_energy": "[9.80277628900413371115763368962947701565e-6 +/- 9.06e-45]",
+        "exterior_pairing": "[1.52984328946503788139990215194533697e-5 +/- 4.04e-41]",
+        "divisor_pairing_N_to_2N": "[4.2719580692962730359464453853133534e-6 +/- 6.44e-41]",
+        "divisor_pairing_2N_to_T": "[-1.24294947905461021180495027071800e-5 +/- 5.09e-38]",
+        "absolute_divisor_allowance": "[0.0031927774785992649382488813788440119 +/- 6.23e-38]",
+        "tail_main": "[1.932858267277848773445041219980262655403e-8 +/- 5.75e-48]",
+        "tail_radius": "[7.41564999185028339239129068899440468021466e-9 +/- 7.70e-51]",
+        "complete_tail": "[2e-8 +/- 8.09e-9]",
+        "complete_compensator": "[7.16e-6 +/- 7.65e-9]",
+        "complete_numerator": "[2.6e-6 +/- 5.00e-8]",
+        "inherited_numerator": "[2.642551527708189168441240254267486373045e-6 +/- 1.37e-46]",
+        "inherited_projected_cost": "[1.7488078486838411487643752559461481900e-5 +/- 3.07e-43]",
+        "numerator_over_E_N": "[0.187 +/- 6.72e-4]",
+        "compensator_over_E_N": "[0.506 +/- 8.19e-4]",
+        "triangle_lower_numerator": "[-0.0031983 +/- 1.50e-8]",
+        "triangle_lower_over_E_N": "[-226.149 +/- 5.92e-4]",
+        "omit_divisor_forcing_numerator": "[-5.5e-6 +/- 2.25e-8]",
+        "physical_cell_pairing": "[7.140896173400549731895964197586705e-6 +/- 2.78e-40]"
+      },
+      "gates": {
+        "complete_numerator_positive": true,
+        "full_Gram_numerator_overlap": true,
+        "direct_cell_pairing_overlap": true,
+        "triangle_bound_vacuous": true
+      }
+    }
+  ]
+}

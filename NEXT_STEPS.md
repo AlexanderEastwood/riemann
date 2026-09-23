@@ -160,7 +160,7 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-89 | Construct the optimal tail-normalized upper certificate and quantify its complete error cost | Codex, Continue solving toward RH | done (constructive upper certificate; decay open) | Original fixed-seed obstruction test stopped before publication. Focus on explicit approximants, complete upper error, and what remains missing for the logarithmic upper-rate candidate. No new lower-bound result or cofinal decay inferred. |
 
-| NS-90 | Test a signed Mobius inversion estimate for the actual optimized finite arithmetic observations and its complete gain cost | Codex, Continue on PR42 arithmetic lower gain | claimed | Keep all old-space projection terms, the complete prime-sum remainder and true direction cost. Seek an independent lower gain; do not count another finite efficiency table or sufficient-condition restatement as the missing theorem. |
+| NS-90 | Test a signed Mobius inversion estimate for the actual optimized finite arithmetic observations and its complete gain cost | Codex, Continue on PR42 arithmetic lower gain | done (attempt recorded; manuscript v1.66 unchanged) | Prime main terms cancel exactly after old-space orthogonality. Complete signed numerator is positive at N16,256, but the tested termwise absolute lower bound is negative; its divisor allowance diverges with cutoff at fixed N under the stated nonzero-tail hypothesis. No linked-cutoff or cofinal exclusion, lower gain, or new finite efficiency result. Full projected costs inherited from NS73. See evidence/ns90_mobius_gain. |
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
@@ -293,6 +293,19 @@ do not substitute another lower-bound obstruction, a finite table, or the
 rate-transfer comparison itself for that missing decay theorem. Ordinary
 Gram solves still determine the optimized finite witnesses; no fast or
 closed-form cofinal coefficient rule is supplied.
+
+## Open continuation after NS-90
+
+The primary target is still NS87/PR42: lower-bound the full joint signed
+finite arithmetic observation energy relative to the actual optimized
+error. The Mobius/log-taper test does not supply this lower bound. Its
+prime main terms cancel; exterior normalization and divisor forcing must
+be bounded together. Absolute-value separation is vacuous in the two
+certified tests and deteriorates with cutoff at fixed N under a nonzero
+residual-tail hypothesis. This does not exclude the direction, another
+combined estimate, or the cofinal cutoff N^6. Do not repeat NS73 efficiency
+tables or NS89 normalization as a new decay theorem.
+
 
 ## Lanes
 

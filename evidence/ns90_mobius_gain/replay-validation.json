@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": {
+    "precision_scalar_overlaps": 38,
+    "cutoff_complete_overlaps": 8,
+    "archived_Gram_numerator_overlaps": 5,
+    "negative_triangle_bounds": 5,
+    "wrong_sign_if_finite_divisor_sum_omitted": 5
+  },
+  "Maxima_exact_checks": 15,
+  "nonzero_actual_residual_tail_slopes": {
+    "16": "[0.00258586679862979311928764017714731663710 +/- 4.28e-42]",
+    "256": "[-0.0004835988380463783957366521424991716671447 +/- 7.97e-44]"
+  },
+  "cutoff_dependent_summands_not_compared_as_invariants": true,
+  "cofinal_lower_gain_proved": false,
+  "new_Gram_solves_performed": false,
+  "source_sha256": "4dfb0fb7f23edacd03399862d30238abb432ae49c6a176afd68615b6e4d0b883"
+}

@@ -1,0 +1,5 @@
+Command: ./manuscript/build.sh
+Manuscript: v1.66 unchanged
+Pages: 358
+Undefined or duplicate references: 0
+Manuscript source SHA256: 8e494729b436099efc41bedf391e7ecf1c4ff7548176ec0692bb2843a6c2aeab

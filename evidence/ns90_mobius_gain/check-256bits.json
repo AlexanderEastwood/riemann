@@ -1,0 +1,73 @@
+{
+  "classification": "Certified finite signed numerator decomposition; no cofinal lower gain",
+  "precision_bits": 256,
+  "cell_stop": 262144,
+  "input": "evidence/ns89_upper_normalization/check-256bits.json",
+  "reference": "evidence/v161/ns73/mobius-256bits.json",
+  "input_sha256": "f77d51839e4fb46dde098959d1f3a3c480250e4458dc16fb0475223b478c5b57",
+  "reference_sha256": "7e1b85c793e749dcb1f93875e17492779b1810d39a8c18acdac1bba5cf24f89c",
+  "source_sha256": "c5a1a1aad499b2354b3436828646e71776f4cb991870c52c4353c1a3b6fffeed",
+  "sieve_sha256": "2c4c14202df2e733063c62658f882bd4f7a488008e077b786aabb809c11e6bde",
+  "rows": [
+    {
+      "N": 16,
+      "values": {
+        "E_N": "[3.194767768109205273935131839275966013e-5 +/- 5.64e-42]",
+        "log2_times_energy": "[2.214444271008684794099373163634793735e-5 +/- 6.35e-42]",
+        "exterior_pairing": "[0.00014852471409851750724353941524137433 +/- 7.03e-39]",
+        "divisor_pairing_N_to_2N": "[-0.00016748404978314815081541385910794517 +/- 3.84e-39]",
+        "divisor_pairing_2N_to_T": "[3.39764059298775671353493161785e-5 +/- 3.04e-35]",
+        "absolute_divisor_allowance": "[0.0263397753173380201830162629025823 +/- 3.35e-35]",
+        "tail_main": "[1.11257956803513551829128271121717181285e-8 +/- 5.85e-47]",
+        "tail_radius": "[1.301755065919386767495060596776273339712e-11 +/- 6.20e-51]",
+        "complete_tail": "[1.11e-8 +/- 3.89e-11]",
+        "complete_compensator": "[1.50282e-5 +/- 1.70e-11]",
+        "complete_numerator": "[7.1162e-6 +/- 5.97e-11]",
+        "inherited_numerator": "[7.1162466691544717890770388791094086937e-6 +/- 3.03e-44]",
+        "inherited_projected_cost": "[1.4234565626123821947700201049236081853e-5 +/- 6.04e-43]",
+        "numerator_over_E_N": "[0.222747 +/- 4.93e-7]",
+        "compensator_over_E_N": "[0.470400 +/- 6.75e-7]",
+        "triangle_lower_numerator": "[-0.0264661667 +/- 2.76e-11]",
+        "triangle_lower_over_E_N": "[-828.422240 +/- 6.32e-7]",
+        "omit_divisor_forcing_numerator": "[-0.0001263914 +/- 1.59e-11]",
+        "physical_cell_pairing": "[1.50170702452469235634748723119492e-5 +/- 8.81e-38]"
+      },
+      "gates": {
+        "complete_numerator_positive": true,
+        "full_Gram_numerator_overlap": true,
+        "direct_cell_pairing_overlap": true,
+        "triangle_bound_vacuous": true
+      }
+    },
+    {
+      "N": 256,
+      "values": {
+        "E_N": "[1.41424167390901796560441032518723e-5 +/- 8.93e-38]",
+        "log2_times_energy": "[9.802776289004133711157633689629e-6 +/- 5.29e-37]",
+        "exterior_pairing": "[1.23634677414794112140657724134e-5 +/- 7.55e-35]",
+        "divisor_pairing_N_to_2N": "[4.235023993411606755524920776e-6 +/- 9.82e-34]",
+        "divisor_pairing_2N_to_T": "[-9.471265261119372798788323e-6 +/- 6.29e-31]",
+        "absolute_divisor_allowance": "[0.002632060710914637663632427774 +/- 3.00e-31]",
+        "tail_main": "[3.2998185048181067681203182755811e-8 +/- 3.22e-40]",
+        "tail_radius": "[2.769104631230434214471362317641547e-8 +/- 2.09e-42]",
+        "complete_tail": "[+/- 6.07e-8]",
+        "complete_compensator": "[7.2e-6 +/- 6.75e-8]",
+        "complete_numerator": "[2.6e-6 +/- 7.03e-8]",
+        "inherited_numerator": "[2.64255152770818916844124025426749e-6 +/- 5.46e-39]",
+        "inherited_projected_cost": "[1.748807848683841148764375255946e-5 +/- 3.36e-36]",
+        "numerator_over_E_N": "[0.19 +/- 5.11e-3]",
+        "compensator_over_E_N": "[0.51 +/- 5.67e-3]",
+        "triangle_lower_numerator": "[-0.0026347 +/- 7.33e-8]",
+        "triangle_lower_over_E_N": "[-186.29 +/- 6.46e-3]",
+        "omit_divisor_forcing_numerator": "[-2.6e-6 +/- 3.41e-8]",
+        "physical_cell_pairing": "[7.12722647377164517080237056e-6 +/- 4.25e-33]"
+      },
+      "gates": {
+        "complete_numerator_positive": true,
+        "full_Gram_numerator_overlap": true,
+        "direct_cell_pairing_overlap": true,
+        "triangle_bound_vacuous": true
+      }
+    }
+  ]
+}

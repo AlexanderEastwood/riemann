@@ -1,0 +1,24 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental NS90 evidence and versioned report; excludes this inventory",
+  "files": {
+    "evidence/ns90_mobius_gain/README.md": "5d60abda82af5ddf7bd41860ee0e0c38e09a68564b1e5a629ba27d610cde0e20",
+    "evidence/ns90_mobius_gain/argument.tex": "e52e49d6fc78ba07bbc4603d04113733ea3faa31db4702452e2dbee289be23f4",
+    "evidence/ns90_mobius_gain/build-summary.txt": "1e91af7c25b1e6078da73904b431b7ea8c6fc6b1456ed390766199ef899dce87",
+    "evidence/ns90_mobius_gain/certify.py": "c5a1a1aad499b2354b3436828646e71776f4cb991870c52c4353c1a3b6fffeed",
+    "evidence/ns90_mobius_gain/check-256bits.json": "7b0fd3a5a572b8e20f35a0d2952347090b2f2d3e40be478b471319d39706f1d3",
+    "evidence/ns90_mobius_gain/check-384bits.json": "61cac376a63b55fd97515d203ad75c026e4a7ef93bdc1760eea0398b3f503e62",
+    "evidence/ns90_mobius_gain/check-cutoff-384bits.json": "89254260fc15037be66c9974815842ee3da65c80b4dd1f458c47b752958b0f32",
+    "evidence/ns90_mobius_gain/exact-checks-output.txt": "29ad0c9a2225384d097764306d139710524992d3d99ca078e8c465bd7747cc9f",
+    "evidence/ns90_mobius_gain/exact-checks.mac": "1367a5533e8a48299f46af6dbfb69002ac51e2b7894b80bb4ed64980c1a1df7d",
+    "evidence/ns90_mobius_gain/literature-inputs.json": "c8c2bc69e24d31104492d3bb866ba3702c02d63c81f04d76fc93d9cfdb6b713f",
+    "evidence/ns90_mobius_gain/replay-validation.json": "4902a4484cf3bf69b4508f02ed28ce0d802045f15166406a8f21722addfe9b96",
+    "evidence/ns90_mobius_gain/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "evidence/ns90_mobius_gain/runtime-provenance.json": "daa809dc4a7b9ac00c304f38bdd786eb583546d947b9c5be9427fb8f60218cc7",
+    "evidence/ns90_mobius_gain/self-review.json": "83ded5dc7b6a8a5dc1c9493314cb47cfde8b4eb33af1edce2f21a6cf0af1063c",
+    "evidence/ns90_mobius_gain/turn-review.json": "e53229043f7a55da144561c001cf05cba81bfd543b4fc0fd1131b0df76ea9e74",
+    "evidence/ns90_mobius_gain/validation.json": "5f60a97f746a13196363107a39f747cf50bc9a3d615b747f34342cbf539ed7bc",
+    "evidence/ns90_mobius_gain/verify_replays.py": "4dfb0fb7f23edacd03399862d30238abb432ae49c6a176afd68615b6e4d0b883",
+    "audits/mobius-lower-gain-2026-09-23-v1.html": "1e2b19d71a34aa35552ec75c17d5cd0ba373cf43437c9bc7a404db4377f459f4"
+  }
+}
