@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.65},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.66},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -34,8 +34,13 @@
 \newcommand{\dd}{\mathrm d}
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
+% Reserve a clear page-number column for long contents entries.
+\makeatletter
+\renewcommand{\@pnumwidth}{3em}
+\renewcommand{\@tocrmarg}{4em}
+\makeatother
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.65\\
+\large Complete working manuscript, version 1.66\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 23, 2026}
@@ -206,7 +211,7 @@ new witnesses; they do not recover the original evidence.
 
 \clearpage
 \paragraph{Status of this version.}
-The latest checkpoint is v1.65 (NS-82), stated below; earlier version
+The latest checkpoint is v1.66 (NS-83), stated below; earlier version
 paragraphs record the historical scope and remain part of the audit trail.
 
 Version 1.58 supplies an unconditional adjacent-difference block bound
@@ -689,6 +694,16 @@ nine. A total of 512 atoms needs the sufficient cutoff 8435244, rather
 than the previous $10^{21}$-scale bound for a different comparator.
 Only scalar cutoff checks are executed; no large comparator or iteration
 is assembled. Cofinal arithmetic decay, the Weil floor, G2 and RH stay open.
+
+\paragraph{Version 1.66 checkpoint (NS-83).}
+Burnol's critical-zero construction extends to every fixed Hardy smoothing
+order: $\liminf (\log N)E_N^{(q)}\geq\sum_{\Re\rho=1/2}
+m_\rho^2/|\rho|^{2q}>0$. The first ten conjugate pairs give a certified
+$q=2$ subset constant above $7.2332433\cdot10^{-5}$, with no finite-$N$
+onset threshold. Cumulative relative gains through the $K$th doubling
+are at most $\log K+O(1)$; fixed-fraction contraction of the entire
+error is impossible. This is an asymptotic lower bound and a rate
+restriction, not the missing upper bound, cofinal decay, G2 or RH.
 
 \tableofcontents
 \clearpage
@@ -23960,6 +23975,257 @@ uniform over all vectors and projected blocks; its useful descent is
 still measured against available block gain, which may be smaller than
 the entire residual error. Cofinal arithmetic decay, G2 and RH remain open.
 
+\section{Critical zeros constrain every fixed smoothing order (NS-83)}
+\label{sec:ns83-critical-budget}
+
+\paragraph{Purpose and attribution.}
+Burnol's critical-zero dual vectors strengthen the classical
+Nyman--Beurling distance lower bound by counting squared multiplicities
+\cite[Sections 3--5]{BurnolLower2002}. We adapt that argument to each
+fixed number of Hardy integrations. The logarithmic obstruction survives;
+its constant changes. This is an application of the classical mechanism,
+not a new zero theorem or the still-missing upper estimate.
+
+For an integer $q\geq1$ fixed independently of $N$, put
+\[
+ \tau_q=J^{q-1}\chi,\qquad \sigma_{q,n}=J^{q-1}\rho_n,
+ \qquad E_N^{(q)}=\inf_{c\in\mathbb R^N}
+ \left\|\tau_q-\sum_{n\leq N}c_n\sigma_{q,n}\right\|_2^2.
+\]
+Thus $E_N^{(2)}=E_N$ is the present smoothed squared error.
+Let $\mathcal Z_c$ be the set of distinct zeta zeros on $\Re s=1/2$,
+including both signs of the ordinate; write $m_\rho$ for multiplicity.
+
+\begin{proposition}[Fixed-order critical-zero lower bound]
+\label{prop:ns83-log-floor}
+For every fixed integer $q\geq1$,
+\begin{equation}
+ \liminf_{N\to\infty}(\log N)E_N^{(q)}
+ \geq C_q:=\sum_{\rho\in\mathcal Z_c}
+                  \frac{m_\rho^2}{|\rho|^{2q}}>0.
+ \label{eq:ns83-log-floor}
+\end{equation}
+The series is finite. More precisely, every finite subset of
+$\mathcal Z_c$ supplies the corresponding finite-sum lower bound.
+This is an asymptotic assertion with no numerical onset threshold.
+It does not assert $E_N^{(q)}\geq C_q/\log N$ at any specified finite $N$.
+\end{proposition}
+
+\subsection{The complete dual-vector construction}
+Work first in the complexification of $L^2(0,\infty;dx)$, with inner
+product linear in the first argument. For real target and atoms,
+complex coefficients cannot improve the infimum: the squared norm is
+the sum of the real-residual and imaginary-combination squared norms.
+Use the Mellin convention $\widehat f(s)=\int_0^\infty f(x)x^{s-1}dx$.
+Let
+\[
+ (Mf)(x)=x^{-1}\int_0^x f(t)dt,\qquad C=M-I,\qquad W=I-J.
+\]
+Here $M=J^*$; $C$ and $W$ are unitary, with boundary multipliers
+$s/(1-s)$ and $(s-1)/s$ respectively. All commute with the normalized
+dilations $D_\theta f(x)=\theta^{-1/2}f(x/\theta)$.
+The transformed first atom $a_q=W\sigma_{q,1}$ and target $h_q=W\tau_q$
+are supported in $(0,1]$ and have transforms
+\begin{equation}
+ \widehat a_q(s)=\frac{(1-s)\zeta(s)}{s^{q+1}},\qquad
+ T_q(s):=\widehat h_q(s)=\frac{s-1}{s^{q+1}}.
+ \label{eq:ns83-transforms}
+\end{equation}
+Indeed the full exterior $1/x$ tail of each atom is cancelled by $W$,
+while $J$ preserves support in $(0,1]$. Explicitly, with $L_x=\log(1/x)$,
+\[
+ h_q(x)=\left(\frac{L_x^{q-1}}{(q-1)!}
+             -\frac{L_x^q}{q!}\right)\chi(x).
+\]
+Thus no tail-space identification or boundary regularity is presumed.
+
+Write
+\[
+ \gamma_+(s)=\pi^{1/2-s}\frac{\Gamma(s/2)}{\Gamma((1-s)/2)},
+ \quad U(s)=\frac{s}{1-s}\gamma_+(s),
+ \quad V_q(s)=\left(\frac{s}{1-s}\right)^{q+2}\gamma_+(s).
+\]
+These functions define unitary Mellin multipliers on the critical line.
+The functional equation identifies $\gamma_+(s)$ with
+$\zeta(1-s)/\zeta(s)$ by analytic continuation; the gamma expression is
+regular at the critical zeros. We never divide two numerical zero values.
+Since $a_q$ is real and
+$\widehat a_q(1-s)=V_q(s)\widehat a_q(s)$, one has
+\[
+ V_q a_q=\mathcal I a_q,\qquad
+ (\mathcal I f)(x)=x^{-1}f(1/x).
+\]
+In particular $V_qD_\theta a_q$ is supported in $[\theta,\infty)$.
+Let $Q_\lambda$ be multiplication by $\mathbf1_{[\lambda,\infty)}$.
+
+We spell out the analytic input from Burnol's construction to check that
+extra integrations do not change its domain. For
+$\psi_{z,k}(x)=\log^k(1/x)x^{-z}\chi(x)$, initially $\Re z<1/2$,
+his oscillatory-integral calculation
+\cite[Section 4, especially the expansion preceding Theorem 4.11]{BurnolLower2002}
+gives an extension $\Phi_{z,k}=U\psi_{z,k}$ to $0<\Re z<1$ with
+\[
+ \Phi_{z,k}(x)=\partial_z^k\{U(z)x^{-z}\}+O(x^2)
+                   \quad(0<x\leq1),\qquad
+ \Phi_{z,k}(x)=O(x^{-1})\quad(x\geq1).
+\]
+For any fixed $k$ these bounds are locally uniform in $z$ in the strip.
+The small-$x$ error follows directly from his convergent even-power
+series; the large-$x$ bound follows from integration by parts in its
+oscillatory integral. No RH assumption enters these estimates.
+
+Here $V_q=C^{q+1}U$. Applying $M$ to $x^{-z}$ multiplies it by
+$1/(1-z)$, and applying $M$ to $O(x^2)$ leaves $O(x^2)$ at zero.
+At infinity it sends $O((1+\log x)^r/x)$ to
+$O((1+\log x)^{r+1}/x)$, with the integral over $(0,1)$ finite.
+Differentiation in $z$ is legitimate on compact substrips. Therefore
+\begin{equation}
+ V_q\psi_{z,k}(x)=\partial_z^k\{V_q(z)x^{-z}\}+O(x^2)
+                      \quad(0<x\leq1),\qquad
+ V_q\psi_{z,k}(x)=O((1+\log x)^{q+1}/x)\quad(x\geq1).
+ \label{eq:ns83-dual-estimates}
+\end{equation}
+The expressions before truncation are generalized functions outside their
+initial $L^2$ domain; only the truncated objects below are asserted to be
+Hilbert-space vectors. Both the complete infinite tail and the singular
+endpoint have now been controlled.
+
+For $\Re w>1/2$ put
+\[
+ k_{w,k}(x)=\log^k(1/x)x^{\overline w-1}\chi(x),\qquad
+ Y^{\lambda,q}_{w,k}=V_q^{-1}Q_\lambda V_q k_{w,k}.
+\]
+Equation~\eqref{eq:ns83-dual-estimates}, with $z=1-\overline w$,
+proves that $Y^{\lambda,q}_{w,k}$ has an $L^2$ limit as $w$ approaches
+any fixed critical-line point $\rho$ from the right. Denote it by
+$Y^{\lambda,q}_{\rho,k}$. The estimates are uniform near that point,
+so this is norm convergence, not a formal boundary evaluation.
+
+If $\lambda\leq\theta\leq1$, the support identity above gives, in
+the initial domain,
+\[
+ \langle D_\theta a_q,Y^{\lambda,q}_{w,k}\rangle
+ =\langle D_\theta a_q,k_{w,k}\rangle
+ =(-1)^k\partial_w^k\{\theta^{w-1/2}\widehat a_q(w)\}.
+\]
+Pass to the norm limit at $w=\rho$. For $k<m_\rho$ the right side
+vanishes. Thus every such vector is exactly orthogonal to all
+transformed atoms whose dilation parameter lies in $[\lambda,1]$.
+In particular it is orthogonal to the first $N$ integer atoms when
+$\lambda=1/N$; scalar dilation normalizations do not change the span.
+
+Put $L=\log(1/\lambda)$ and
+$X^{\lambda,q}_{\rho,k}=L^{-k-1/2}Y^{\lambda,q}_{\rho,k}$.
+For a fixed finite set of zeros, the Gram matrix of these vectors tends
+to a block diagonal matrix with blocks
+\begin{equation}
+ \mathcal H_{m_\rho}=\left(\frac1{k+l+1}\right)_{0\leq k,l<m_\rho}.
+ \label{eq:ns83-hilbert-blocks}
+\end{equation}
+To see this, use unitarity of $V_q$. On $[\lambda,1]$ the leading
+term of $V_q k_{\rho,k}$ is
+$V_q(\rho)x^{\overline\rho-1}\log^k(1/x)$, of unit phase.
+For the same zero its squared-pair integral is
+$L^{k+l+1}/(k+l+1)$. Distinct zeros give an oscillatory integral
+$O(L^{k+l})$. Derivatives of the multiplier give lower logarithmic
+degrees; the $O(x^2)$ error and complete tail contribute bounded terms.
+After the displayed normalization all these other terms vanish.
+
+The target pairings require a separate endpoint check. Since
+$h_q=J^{q-1}h_1$ and $V_q=C^{q-1}V_1$, while $CJ=M$, one has
+\[
+ V_qh_q=M^{q-1}V_1h_1
+       =M^{q-1}(I-M)\frac{\sin(2\pi x)}{\pi x}.
+\]
+The last identity is Burnol's target calculation
+\cite[Theorem 5.4]{BurnolLower2002}. It is $O(x^2)$ at zero and
+$O((1+\log x)^{q-1}/x)$ at infinity. These bounds and
+\eqref{eq:ns83-dual-estimates} give an integrable majorant for the
+pairings, uniform as $w\to\rho$ and $\lambda\downarrow0$.
+Consequently
+\[
+ \lim_{\lambda\downarrow0}\langle h_q,Y^{\lambda,q}_{\rho,k}\rangle
+       =(-1)^k T_q^{(k)}(\rho),
+\]
+and hence
+\begin{equation}
+ \sqrt L\,\langle h_q,X^{\lambda,q}_{\rho,k}\rangle
+ \longrightarrow
+ \begin{cases}T_q(\rho),&k=0,\\0,&k\geq1.\end{cases}
+ \label{eq:ns83-target-pairings}
+\end{equation}
+
+\begin{proof}[Proof of Proposition~\ref{prop:ns83-log-floor}]
+Fix a finite subset of critical zeros and include $0\leq k<m_\rho$
+for each. The squared error is bounded below by the squared norm of the
+projection of $h_q$ onto their dual-vector span. The limiting Gram in
+\eqref{eq:ns83-hilbert-blocks} is positive definite, so its inverse
+converges. The elementary Cauchy-matrix formula gives
+$(\mathcal H_m^{-1})_{00}=m^2$. Using
+\eqref{eq:ns83-target-pairings}, the limiting lower bound after
+multiplication by $L$ is
+\[
+ \sum_\rho m_\rho^2|T_q(\rho)|^2
+ =\sum_\rho\frac{m_\rho^2}{|\rho|^{2q}},
+\]
+because $|\rho-1|=|\rho|$ on the critical line.
+Take $\lambda=1/N$ and then the supremum over finite zero sets.
+The classical zero-count estimate (for example \cite{HasanalizadeShenWong2021}) gives $O(\log(2+T))$ zeros with
+multiplicity in each unit-height interval and therefore the same bound
+on an individual multiplicity. Comparison with
+$\int_1^\infty \log^2(2+t)t^{-2q}dt$ proves convergence of the series.
+The existence of a critical zero makes it strictly positive. The entire
+argument uses actual critical zeros and no hypothesis about other zeros.
+\end{proof}
+
+\subsection{What relative contraction can still be sought}
+For the present $q=2$ problem set
+\[
+ \gamma_j=1-\frac{E_{2^{j+1}}}{E_{2^j}},\qquad j\geq1.
+\]
+Finite errors are positive (an exact finite identity would contradict a
+critical zero of $\zeta$), and the nested projection spaces give
+$0\leq\gamma_j<1$. For any fixed starting index $j_0$, telescoping and
+Proposition~\ref{prop:ns83-log-floor} imply
+\begin{equation}
+ \sum_{j=j_0}^{K-1}-\log(1-\gamma_j)
+ =\log\frac{E_{2^{j_0}}}{E_{2^K}}
+ \leq\log K+O(1),\qquad
+ \sum_{j=j_0}^{K-1}\gamma_j\leq\log K+O(1).
+ \label{eq:ns83-gain-budget}
+\end{equation}
+In particular no fixed positive fraction of the entire error can be
+removed at every sufficiently large doubling. Nor can one have
+$\gamma_j\geq a/j$ eventually for a fixed $a>1$.
+The same lower bound also shows that $E_N^{(q)}=O((\log N)^{-1-\varepsilon})$ is impossible
+for any fixed $q$ and $\varepsilon>0$; a power of $N$ is still faster.
+These statements do not give a pointwise bound $\gamma_j\leq1/j$:
+individual large gains and irregular blocks are allowed.
+
+A sufficient arithmetic estimate of the scale $a/j$ with $0<a\leq1$,
+or a weaker nonsummable scale, is not excluded. None is proved here.
+NS-80/82's uniform capture of \emph{available block gain} is fully
+consistent with this restriction on gain relative to the entire error.
+The calculation does not prove $E_N\to0$, an asymptotic equality, the
+original Weil floor, G2 or RH. The fixed-order qualification is essential;
+letting the smoothing order change with $N$ changes the target and norm.
+
+\paragraph{Certified constant, not a finite error bound.}
+At 256 and 384 bits, the first ten positive critical zeros and their
+conjugates give the partial-sum lower bound
+\[
+ C_2\geq2\sum_{j=1}^{10}(t_j^2+1/4)^{-2}
+ >7.2332433\cdot10^{-5}.
+\]
+Here $t_j$ denotes the $j$th positive zero ordinate. Each zero is
+counted with weight one, so unknown
+larger multiplicities could only increase the constant. All omitted
+critical-zero terms are nonnegative: this is a lower bound from a finite
+subset, not an approximation to the full sum with a missing tail.
+There is no numerical bound on the onset of
+\eqref{eq:ns83-log-floor}; the constant is not used as a certified bound
+on the current size-256 error.
+
 \appendix
 \section{Reproducible finite checks}\label{app:numerics}
 
@@ -25641,6 +25907,12 @@ Bull. London Math. Soc. \textbf{53} (2021), 792--797, Theorem 1;
 arXiv:2004.09765.
 \url{https://doi.org/10.1112/blms.12460}.
 \par\endgroup
+
+\bibitem{BurnolLower2002}
+J.-F. Burnol,
+\emph{A lower bound in an approximation problem involving the zeros of the Riemann zeta function},
+Advances in Mathematics \textbf{170} (2002), 56--70.
+\href{https://arxiv.org/abs/math/0103058}{arXiv:math/0103058}.
 
 \end{thebibliography}
 

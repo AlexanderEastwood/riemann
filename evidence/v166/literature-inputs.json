@@ -1,0 +1,16 @@
+{
+  "Burnol": {
+    "url": "https://arxiv.org/abs/math/0103058",
+    "version": "v2, 20 March 2001; published Advances in Mathematics 170 (2002), 56–70",
+    "used": "Sections 3–5: phase construction, oscillatory-integral expansion before Theorem 4.11, and target identity in Theorem 5.4",
+    "adaptation": "Extra Hardy operators, complete uniform endpoint/tail bounds, target pairing and fixed-order critical weight derived in NS83; no new-mechanism priority claim"
+  },
+  "FLINT": {
+    "url": "https://flintlib.org/doc/acb_dirichlet.html",
+    "used": "Certified nontrivial zero enclosures via python-flint acb.zeta_zero; only first ten positive ordinates and their conjugates contribute to a subset lower bound"
+  },
+  "zero_count": {
+    "manuscript_key": "HasanalizadeShenWong2021",
+    "used": "Unit-height zero count O(log T) and hence convergence of the positive weighted multiplicity series"
+  }
+}

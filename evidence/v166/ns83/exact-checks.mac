@@ -1,0 +1,23 @@
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],checks:endcons([label,answer],checks),if answer # true then error("Exact check failed",label,expr))$
+check("Hardy C multiplier",1/(1-s)-1-s/(1-s))$
+check("Hardy CJ=M",(s/(1-s))*(1/s)-1/(1-s))$
+check("W multiplier",1-1/s-(s-1)/s)$
+check("Critical modulus of W",((s-1)/s)*((-s)/(1-s))-1)$
+check("Critical modulus of C",(s/(1-s))*((1-s)/s)-1)$
+for q:1 thru 4 do (
+ check(concat("Target multiplier q",q),1/s^q-1/s^(q+1)-(s-1)/s^(q+1)),
+ check(concat("Atom phase q",q),((s/(1-s)^(q+1))/((1-s)/s^(q+1)))-(s/(1-s))^(q+2)),
+ check(concat("Squared target weight q",q),((s-1)/s^(q+1))*((-s)/(1-s)^(q+1))-1/(s*(1-s))^q)
+)$
+check("Hardy power at zero",diff(x^3/3,x)-x^2)$
+check("Critical modulus squared",(1/2+%i*t)*(1/2-%i*t)-(t^2+1/4))$
+check("Hilbert inverse corner m1",1-1^2)$
+for m:2 thru 8 do block([hh,ih],
+ hh:genmatrix(lambda([i,j],1/(i+j-1)),m,m),ih:invert(hh),
+ check(concat("Hilbert inverse corner m",m),ih[1,1]-m^2)
+)$
+for k:0 thru 4 do check(concat("Leading Gram primitive k",k),diff(L^(k+1)/(k+1),L)-L^k)$
+check("Target q2 physical derivative",diff(-log(x)-log(x)^2/2,x)+(1+log(x))/x)$
+print("PASS:",length(checks),"exact checks; fixed-order asymptotic lower bound only.")$

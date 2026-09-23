@@ -146,6 +146,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-82 | Retain the analytic logarithmic tail as a rank-two form to reduce the sufficient finite-comparator cutoff | Codex, Continue solving toward RH | done (v1.65; analytic tail retained) | Rank-two physical tail and full remainder yield projected condition <=9 and sufficient cutoff 8435244 for 512 total atoms. Scalar certificates only; comparator and iterations not run. No cofinal decay. |
 
+| NS-83 | Derive the critical-zero lower bound for fixed Mellin smoothing and test which cofinal relative-gain estimates remain possible | Codex, Continue solving toward RH | done (v1.66; fixed-order rate restriction) | Complete Burnol dual-vector adaptation gives positive logarithmic lower liminf at every fixed smoothing order. Constant relative contraction is excluded; weaker nonsummable arithmetic gain remains open. Certified zero-subset constant has no finite-N onset. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
@@ -232,6 +234,15 @@ The sharper finite comparator is still an algorithmic construction, not a
 convergence theorem. Prioritize cofinal signed arithmetic decay or a lower
 bound on available gain relative to the full error. An implementation may
 be useful later, but repeated finite efficiency tests alone cannot close RH.
+
+## Open continuation after NS-83
+
+Do not aim for a uniform fraction of the full error per doubling: the
+critical-zero lower bound excludes it even after any fixed smoothing order.
+A genuinely estimated actual-residual gain of size a/j, 0<a<=1, or a weaker
+nonsummable scale remains a possible sufficient target. Merely restating
+its sufficiency is already covered by NS53/59. No pointwise upper bound
+on each individual block gain, asymptotic equality, or decay is established.
 
 ## Lanes
 
