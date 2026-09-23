@@ -4,9 +4,9 @@
   "legend": {
     "proved": "established result",
     "live": "current route (gold): being worked now",
-    "closed": "closed route (red): proved insufficient or impossible; kept deliberately",
+    "closed": "scoped comparison, construction or inference excluded under its stated hypotheses",
     "blocked": "attempted; obstruction found",
-    "open": "target, not yet attacked",
+    "open": "unresolved target or route; may have prior partial work",
     "wall": "wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge"
   },
   "nodes": [
@@ -33,7 +33,14 @@
       "status": "open",
       "parent": "rh",
       "branch": "lane/fixed-space",
-      "note": "needs evaluator estimates + closed-operator realization"
+      "note": "needs evaluator estimates + closed-operator realization",
+      "continuation_inputs": [
+        {
+          "id": "OPERATOR-BRIDGES",
+          "relation": "distinct route-specific construction",
+          "detail": "Read the route-specific demand; this tag is an inventory grouping, not an equivalence between its members or with NS98."
+        }
+      ]
     },
     {
       "id": "g2",
@@ -263,14 +270,28 @@
         "input": "uniform complete signed operator floor remains unproved",
         "to": "floor",
         "src": "prop:v131-concentration; QG/ZLD plus packets concern minorant complexity, not a proof of this floor"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "same floor under stated domains",
+          "detail": "These continuations retain the complete signed floor. NS47 Clifford contraction and NS50 critical absorption share it; their coordinate change is not a new estimate."
+        }
+      ]
     },
     {
       "id": "weaken",
       "title": "Target weakening",
       "status": "proved",
       "parent": "g2",
-      "branch": "lane/bounded-floor"
+      "branch": "lane/bounded-floor",
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ]
     },
     {
       "id": "floor",
@@ -279,7 +300,14 @@
       "parent": "weaken",
       "prop": "prop:v136-bounded-floor",
       "note": "decay not required; dichotomy inf spec -> -inf or RH",
-      "evidence": "evidence/v136"
+      "evidence": "evidence/v136",
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ]
     },
     {
       "id": "gapfree",
@@ -333,7 +361,14 @@
       "parent": "altroutes",
       "branch": "lane/circle-toeplitz",
       "evidence": "evidence/diag_true_symbol",
-      "note": "measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained"
+      "note": "measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained",
+      "continuation_inputs": [
+        {
+          "id": "OPERATOR-BRIDGES",
+          "relation": "distinct route-specific construction",
+          "detail": "Read the route-specific demand; this tag is an inventory grouping, not an equivalence between its members or with NS98."
+        }
+      ]
     },
     {
       "id": "debranges",
@@ -345,7 +380,14 @@
         "input": "screw-kernel positivity = RH; no fixed-window bridge",
         "to": "rh",
         "src": "Suzuki Thm 1.5 (arXiv 2606.09096); the shifted finite-window construction sits strictly below the spectral bottom and does not determine its sign; fixed-window determinacy equivalence not proved"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "OPERATOR-BRIDGES",
+          "relation": "distinct route-specific construction",
+          "detail": "Read the route-specific demand; this tag is an inventory grouping, not an equivalence between its members or with NS98."
+        }
+      ]
     },
     {
       "id": "f1",
@@ -357,7 +399,14 @@
         "input": "no intersection form supplied for this window (missing construction)",
         "to": null,
         "src": "RESEARCH_MAP note supplied no number-field intersection form, transfer map, or impossibility proof; function-field RH is a theorem for different objects"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "OPERATOR-BRIDGES",
+          "relation": "distinct route-specific construction",
+          "detail": "Read the route-specific demand; this tag is an inventory grouping, not an equivalence between its members or with NS98."
+        }
+      ]
     },
     {
       "id": "nb",
@@ -371,7 +420,14 @@
         "to": "rh",
         "src": "eq:ns53-nb-rbc; exact convergence criterion is prior art, and RBC is not proved or claimed equivalent to RH"
       },
-      "prop": "prop:ns53-nb-block-gain; eq:ns53-nb-rbc"
+      "prop": "prop:ns53-nb-block-gain; eq:ns53-nb-rbc",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "full gain target",
+          "detail": "The actual cofinal arithmetic decrease remains open; complete tails and a gain identity do not force it."
+        }
+      ]
     },
     {
       "id": "li",
@@ -398,7 +454,14 @@
         "to": "rh",
         "src": "prop:ns52-cluster; prop:ns52-unmatched gives only a conditional obstruction to one same-test comparison"
       },
-      "prop": "prop:ns52-cluster; prop:ns52-unmatched"
+      "prop": "prop:ns52-cluster; prop:ns52-unmatched",
+      "continuation_inputs": [
+        {
+          "id": "HEAT-TRANSPORT",
+          "relation": "different arithmetic input",
+          "detail": "Pairing cancels internal singularities but leaves exterior interactions and support dependence."
+        }
+      ]
     },
     {
       "id": "ccmmu",
@@ -415,7 +478,14 @@
       "note": "NS-5 complete: mu0<2.454e-75, mu1>1e-73, 1024/1280-bit shifted inertia; CvS Thm6.1 applies; no Xi convergence or G2 claim",
       "prop": "prop:v140-ground4; cor:v140-real-zeros",
       "branch": "result/ns5-ground-state",
-      "evidence": "evidence/v140"
+      "evidence": "evidence/v140",
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "fixed-window support",
+          "detail": "The certified finite-window statement does not establish any cofinal ground-to-Xi limit."
+        }
+      ]
     },
     {
       "id": "stepb",
@@ -423,7 +493,14 @@
       "status": "live",
       "parent": "simpleeven4",
       "evidence": "evidence/diag_ns2_semantic_lock",
-      "note": "The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. v1.42 separately encloses one complete lambda=4 zero within 0.1 of gamma_1. High-accuracy discrepancy transfer and cofinal Xi convergence remain open. v1.43 certifies a complete first-positive-zero radius 8.752082e-33 and quantifies the archived bound resolution; no complete discrepancy sign or 1e-71 magnitude. NS-43 supplies precise complete relative-selection and entire-transform criteria; none is proved cofinally. Absolute residuals and ordinary resolvent collapse alone do not select the Gaussian, as an explicitly nonarithmetic countermodel shows."
+      "note": "The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. v1.42 separately encloses one complete lambda=4 zero within 0.1 of gamma_1. High-accuracy discrepancy transfer and cofinal Xi convergence remain open. v1.43 certifies a complete first-positive-zero radius 8.752082e-33 and quantifies the archived bound resolution; no complete discrepancy sign or 1e-71 magnitude. NS-43 supplies precise complete relative-selection and entire-transform criteria; none is proved cofinally. Absolute residuals and ordinary resolvent collapse alone do not select the Gaussian, as an explicitly nonarithmetic countermodel shows.",
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "same convergence continuation",
+          "detail": "Complete relative selection and transform control are both still required."
+        }
+      ]
     },
     {
       "id": "semanticlock",
@@ -432,7 +509,14 @@
       "parent": "windows",
       "prop": "lem:v141-centering; prop:v141-ccm-lock",
       "evidence": "evidence/v141",
-      "note": "Eight local root discrepancies reproduce CCM Figure 1 with 768/1024-bit interval gates. The zero benchmark cannot detect a common positive scale or identity shift. No new window, complete-ground transfer or cofinal statement."
+      "note": "Eight local root discrepancies reproduce CCM Figure 1 with 768/1024-bit interval gates. The zero benchmark cannot detect a common positive scale or identity shift. No new window, complete-ground transfer or cofinal statement.",
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "fixed-window support",
+          "detail": "The certified finite-window statement does not establish any cofinal ground-to-Xi limit."
+        }
+      ]
     },
     {
       "id": "groundzero4",
@@ -442,7 +526,14 @@
       "prop": "lem:v142-energy-projection; prop:v142-ground-zero",
       "branch": "codex/complete-ground-zero-transfer",
       "evidence": "evidence/v142",
-      "note": "1024/1280-bit complete even separator 1e-67 plus energy projection; unique simple local zero, no earlier-zero ordering, discrepancy sign or cofinal claim."
+      "note": "1024/1280-bit complete even separator 1e-67 plus energy projection; unique simple local zero, no earlier-zero ordering, discrepancy sign or cofinal claim.",
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "fixed-window support",
+          "detail": "The certified finite-window statement does not establish any cofinal ground-to-Xi limit."
+        }
+      ]
     },
     {
       "id": "groundzero4resolution",
@@ -452,7 +543,14 @@
       "prop": "prop:v143-first-zero-bound; prop:v143-resolution; prop:v143-fixed-window-meaning",
       "branch": "codex/complete-ground-zero-transfer",
       "evidence": "evidence/v143",
-      "note": "NS-19: 1024/1280-bit evaluator bound and earlier-zero exclusion. A lower-energy transfer at 1e-71 needs rho-l about 3.2032e-153 plus a suitable trial center. No complete sign, universal resolution no-go or cofinal claim."
+      "note": "NS-19: 1024/1280-bit evaluator bound and earlier-zero exclusion. A lower-energy transfer at 1e-71 needs rho-l about 3.2032e-153 plus a suitable trial center. No complete sign, universal resolution no-go or cofinal claim.",
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "fixed-window support",
+          "detail": "The certified finite-window statement does not establish any cofinal ground-to-Xi limit."
+        }
+      ]
     },
     {
       "id": "pencilconcentration",
@@ -462,7 +560,14 @@
       "prop": "prop:v144-pencil-concentration",
       "branch": "codex/complete-ground-zero-transfer",
       "evidence": "evidence/v144",
-      "note": "NS-24 exact translation: relative loss <= nu_k + eta_a ||v_k||^2/q+. Source constraint and mixture cross terms retained. Diagnostic thresholds not certified; fixed-head tests do not replace cofinal full-complement control. No new concentration bound."
+      "note": "NS-24 exact translation: relative loss <= nu_k + eta_a ||v_k||^2/q+. Source constraint and mixture cross terms retained. Diagnostic thresholds not certified; fixed-head tests do not replace cofinal full-complement control. No new concentration bound.",
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ]
     },
     {
       "id": "betaexplicit",
@@ -487,7 +592,14 @@
         "input": "ZLD + packet: conditional minorant-complexity obstruction only",
         "to": null,
         "src": "prop:v146-level-complexity inputs, named as ZLD in v1.47; no implication to the signed floor is established"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "LEVEL-PACKETS",
+          "relation": "complexity input only",
+          "detail": "Do not label this missing level/packet estimate as the signed positivity input."
+        }
+      ]
     },
     {
       "id": "zeroleveldistribution",
@@ -502,7 +614,14 @@
         "input": "ZLD + packet: conditional minorant-complexity obstruction only",
         "to": null,
         "src": "ass:v147-zld; packet coverage eq:v147-packet-coverage; no implication to the signed floor is established"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "LEVEL-PACKETS",
+          "relation": "complexity input only",
+          "detail": "Do not label this missing level/packet estimate as the signed positivity input."
+        }
+      ]
     },
     {
       "id": "weightedexactcost",
@@ -517,7 +636,14 @@
         "input": "QG + WLH packet: conditional minorant-complexity obstruction only",
         "to": null,
         "src": "ass:v149-qg; no implication to the signed floor is established"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "LEVEL-PACKETS",
+          "relation": "complexity input only",
+          "detail": "Do not label this missing level/packet estimate as the signed positivity input."
+        }
+      ]
     },
     {
       "id": "capacityweight",
@@ -532,7 +658,14 @@
         "input": "CAE",
         "to": "floor",
         "src": "ass:v150-cae; CAE is the bounded-floor target in positive-weight coordinates (v1.51)"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "same floor under stated domains",
+          "detail": "These continuations retain the complete signed floor. NS47 Clifford contraction and NS50 critical absorption share it; their coordinate change is not a new estimate."
+        }
+      ]
     },
     {
       "id": "capacityslack",
@@ -557,7 +690,14 @@
       "prop": "prop:v151-input-comparison",
       "branch": "codex/ns38-ns39-integration",
       "evidence": "evidence/v151",
-      "note": "NS-39: exact inverse corrected-zero-field formula for the potential, including finite-window pole mass. ZLD implies QG growth with kappa theta² D/(2K) on the same prescribed family; no packet input supplied. CAE equals the uniform complement floor. General measure countermodels are not arithmetic independence. All three arithmetic inputs remain open; no new positivity conclusion."
+      "note": "NS-39: exact inverse corrected-zero-field formula for the potential, including finite-window pole mass. ZLD implies QG growth with kappa theta² D/(2K) on the same prescribed family; no packet input supplied. CAE equals the uniform complement floor. General measure countermodels are not arithmetic independence. All three arithmetic inputs remain open; no new positivity conclusion.",
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ]
     },
     {
       "id": "capacitychannels",
@@ -589,7 +729,14 @@
       "parent": "concentration",
       "prop": "ns43-conc-prop-adaptive",
       "evidence": "evidence/v152",
-      "note": "Fixed-window compactness proves convergence of complete compressed lower edges. Cofinal uniform floor existence is equivalent; no effective complexity or new arithmetic bound. Growing adaptive level counts are unrestricted."
+      "note": "Fixed-window compactness proves convergence of complete compressed lower edges. Cofinal uniform floor existence is equivalent; no effective complexity or new arithmetic bound. Growing adaptive level counts are unrestricted.",
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "same floor under stated domains",
+          "detail": "These continuations retain the complete signed floor. NS47 Clifford contraction and NS50 critical absorption share it; their coordinate change is not a new estimate."
+        }
+      ]
     },
     {
       "id": "scalarsetshortcut",
@@ -617,7 +764,14 @@
         "input": "complete relative selection plus entire-transform control (both open)",
         "to": "g2",
         "src": "prop:ns43-ccm-rayleigh-selection: missing cofinal complete separator relative to the cutoff residual"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "same convergence continuation",
+          "detail": "Complete relative selection and transform control are both still required."
+        }
+      ]
     },
     {
       "id": "absoluteselection",
@@ -674,7 +828,14 @@
         "input": "API: actual arithmetic affine-potential injectivity (open)",
         "to": "rh",
         "src": "eq:ns51-api; prop:ns51-sign-continuation"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "same nullvector input",
+          "detail": "The complete-domain or boundary reformulation does not prove arithmetic injectivity."
+        }
+      ]
     },
     {
       "id": "generic_h1",
@@ -683,7 +844,14 @@
       "parent": "kernelapi",
       "prop": "prop:ns51-no-generic-bootstrap",
       "evidence": "evidence/ns51_kernel",
-      "note": "Rank-one bounded perturbation of the same logarithmic principal operator has a non-H¹ nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted."
+      "note": "Rank-one bounded perturbation of the same logarithmic principal operator has a non-H¹ nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted.",
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "scoped failed shortcut",
+          "detail": "This specific general mechanism is closed; full-window arithmetic injectivity remains open."
+        }
+      ]
     },
     {
       "id": "localucp",
@@ -697,7 +865,14 @@
         "input": "local f=A_a f=0 does not force f=0; whole-window API is not refuted",
         "to": null,
         "src": "prop:ns55-local-ucp-counterexample"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "scoped failed shortcut",
+          "detail": "This specific general mechanism is closed; full-window arithmetic injectivity remains open."
+        }
+      ]
     },
     {
       "id": "fullpositivecone",
@@ -711,7 +886,14 @@
         "input": "order-preservation shortcut fails; quadratic-form positivity is a different property",
         "to": null,
         "src": "prop:ns55-nonpositive-semigroup"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "scoped failed shortcut",
+          "detail": "This specific general mechanism is closed; full-window arithmetic injectivity remains open."
+        }
+      ]
     },
     {
       "id": "finiteweightcontrols",
@@ -730,7 +912,14 @@
       "parent": "floor",
       "prop": "lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability",
       "evidence": "evidence/v156",
-      "note": "NS-57: q+B+cI is nonnegative on every compact test iff RH and B+cI>=0, for a fixed bounded self-adjoint B. Under RH the perturbed ground bottom tends to inf sigma(B); otherwise to -infinity. Consequences of v1.36; no new arithmetic lower estimate. Failure of exact positivity under finite coefficient changes does not obstruct a robust bounded-floor method."
+      "note": "NS-57: q+B+cI is nonnegative on every compact test iff RH and B+cI>=0, for a fixed bounded self-adjoint B. Under RH the perturbed ground bottom tends to inf sigma(B); otherwise to -infinity. Consequences of v1.36; no new arithmetic lower estimate. Failure of exact positivity under finite coefficient changes does not obstruct a robust bounded-floor method.",
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ]
     },
     {
       "id": "radicalboundarytest",
@@ -740,7 +929,14 @@
       "prop": "prop:ns58-boundary-identity; prop:ns58-equivalence; prop:ns58-forced-pairing",
       "branch": "codex/ns58-radical-boundary",
       "evidence": "evidence/v157",
-      "note": "NS-58 stop condition: homogeneous vanishing is exactly the original null equation, with no independent sign estimate. Altered weights produce a necessarily nonzero forcing profile; compactness excludes only a uniform lower bound on the whole fixed-window space. API and the uniform floor remain open."
+      "note": "NS-58 stop condition: homogeneous vanishing is exactly the original null equation, with no independent sign estimate. Altered weights produce a necessarily nonzero forcing profile; compactness excludes only a uniform lower bound on the whole fixed-window space. API and the uniform floor remain open.",
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "same nullvector input",
+          "detail": "The complete-domain or boundary reformulation does not prove arithmetic injectivity."
+        }
+      ]
     },
     {
       "id": "nbdifference",
@@ -749,7 +945,14 @@
       "parent": "nb",
       "prop": "prop:v158-adjacent-budget; prop:v158-mellin-budget",
       "evidence": "evidence/v158",
-      "note": "Complete basis change transforms both Gram and correlations. Raw Gram norm O_epsilon(N^(-5/3+epsilon)); no lower correlation estimate. Near-N^(-2) power control of the raw all-coefficient norm is equivalent to Lindelof, not a proved estimate."
+      "note": "Complete basis change transforms both Gram and correlations. Raw Gram norm O_epsilon(N^(-5/3+epsilon)); no lower correlation estimate. Near-N^(-2) power control of the raw all-coefficient norm is equivalent to Lindelof, not a proved estimate.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "unsmoothed analogue",
+          "detail": "Its arithmetic correlation input has the same kind of role at a different smoothing order; no equality with q=2 quantities is asserted."
+        }
+      ]
     },
     {
       "id": "nbrawlog",
@@ -786,7 +989,14 @@
       "parent": "nb",
       "prop": "prop:ns61-rh-equivalence; prop:ns61-average-budget",
       "evidence": "evidence/v159",
-      "note": "One fixed Mellin integration preserves the RH criterion. Trace <= 3*kappa/(8*N^2), and scaled trace tends to that constant. Every Gram cross term and transformed numerator remains."
+      "note": "One fixed Mellin integration preserves the RH criterion. Trace <= 3*kappa/(8*N^2), and scaled trace tends to that constant. Every Gram cross term and transformed numerator remains.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ]
     },
     {
       "id": "nbsmoothedcorrelation",
@@ -800,7 +1010,14 @@
         "input": "non-summable lower contraction for the actual optimized residual (open sufficient input)",
         "to": "rh",
         "src": "prop:ns61-gain; no necessity or equivalence claim for this sufficient estimate"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "full gain target",
+          "detail": "The actual cofinal arithmetic decrease remains open; complete tails and a gain identity do not force it."
+        }
+      ]
     },
     {
       "id": "nbsharpintegrated",
@@ -814,7 +1031,14 @@
         "input": "a surviving weighted-Mertens witness for this coefficient rule",
         "to": null,
         "src": "prop:ns62-smoothed-obstruction; not a general NB obstruction"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "support or scoped exclusion",
+          "detail": "The stated exact cells/conditioning or excluded stronger target does not establish or refute subpolynomial canonical growth."
+        }
+      ]
     },
     {
       "id": "nbchangingnorm",
@@ -842,7 +1066,14 @@
         "input": "direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)",
         "to": "rh",
         "src": "cor:ns66-growth-exponent"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "canonical target",
+          "detail": "The missing bound acts inside the actual signed canonical response or forcing, not on the optimized Mobius direction."
+        }
+      ]
     },
     {
       "id": "nbcanonicalcells",
@@ -851,7 +1082,14 @@
       "parent": "nbcanonicalgrowth",
       "prop": "prop:ns67-cells; lem:ns67-remainder; prop:ns67-polynomial-cutoff",
       "evidence": "evidence/v160/ns67",
-      "note": "Exact signed cells and a full Stirling remainder <=1/(6z). Tail norm beyond N^2 is O(log N), so the growing finite norm has the same RH-equivalent exponent; no subpolynomial estimate."
+      "note": "Exact signed cells and a full Stirling remainder <=1/(6z). Tail norm beyond N^2 is O(log N), so the growing finite norm has the same RH-equivalent exponent; no subpolynomial estimate.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "support or scoped exclusion",
+          "detail": "The stated exact cells/conditioning or excluded stronger target does not establish or refute subpolynomial canonical growth."
+        }
+      ]
     },
     {
       "id": "nbabelwholegain",
@@ -865,7 +1103,14 @@
         "input": "uniform conditioning excludes an exponent improvement in this whole-vector split",
         "to": null,
         "src": "prop:ns67-abel-conditioning; no obstruction to internal arithmetic cancellation"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "support or scoped exclusion",
+          "detail": "The stated exact cells/conditioning or excluded stronger target does not establish or refute subpolynomial canonical growth."
+        }
+      ]
     },
     {
       "id": "nbrenewalforcing",
@@ -879,7 +1124,14 @@
         "input": "independent square-root-plus-epsilon bound for the signed forcing",
         "to": "rh",
         "src": "prop:ns68-scalar-criterion; equivalence is not a new estimate"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "canonical target",
+          "detail": "The missing bound acts inside the actual signed canonical response or forcing, not on the optimized Mobius direction."
+        }
+      ]
     },
     {
       "id": "nbcriticalrenewalenergy",
@@ -893,7 +1145,14 @@
         "input": "critical-line Mellin pole contradicts finite weighted L2 energy",
         "to": null,
         "src": "cor:ns68-critical-energy; scope is these total integrals"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "support or scoped exclusion",
+          "detail": "The stated exact cells/conditioning or excluded stronger target does not establish or refute subpolynomial canonical growth."
+        }
+      ]
     },
     {
       "id": "nbrepairedbounds",
@@ -921,7 +1180,14 @@
         "input": "cofinal lower numerator and upper selected cost with nonsummable relative gain",
         "to": "rh",
         "src": "prop:ns71-selected-input; sufficient, not asserted necessary"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "different selected direction",
+          "detail": "Numerator and true-cost estimates are missing for this direction. It is not NS73 p1 or NS98 K_N."
+        }
+      ]
     },
     {
       "id": "nblocalgeometry",
@@ -930,7 +1196,14 @@
       "parent": "nbselectedpreconditioner",
       "prop": "prop:ns72-local-energy; prop:ns72-interpolation; prop:ns72-curvature",
       "evidence": "evidence/v161/ns72",
-      "note": "Uniform model-only curvature comparison and local direction rules. No cofinal actual arithmetic estimate."
+      "note": "Uniform model-only curvature comparison and local direction rules. No cofinal actual arithmetic estimate.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ]
     },
     {
       "id": "nbcurvaturearithmetic",
@@ -944,7 +1217,14 @@
         "input": "actual curvature lower bound and selected true cost giving nonsummable relative contraction",
         "to": "rh",
         "src": "NS-72; finite efficiency is insufficient"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "different selected direction",
+          "detail": "Numerator and true-cost estimates are missing for this direction. It is not NS73 p1 or NS98 K_N."
+        }
+      ]
     },
     {
       "id": "nbsamegramcontrol",
@@ -967,7 +1247,14 @@
       "parent": "nbcurvaturearithmetic",
       "prop": "prop:ns75-divisor-cells",
       "evidence": "evidence/v162/ns75",
-      "note": "Exact local jump cancellation is not descent: every held-old unit step tested increases full error. No asymptotic exclusion of other feedback."
+      "note": "Exact local jump cancellation is not descent: every held-old unit step tested increases full error. No asymptotic exclusion of other feedback.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ]
     },
     {
       "id": "nbcontinuousdefect",
@@ -976,7 +1263,14 @@
       "parent": "nbsamegramcontrol",
       "prop": "prop:ns76-continuous-distance; prop:ns76-strict-closure",
       "evidence": "evidence/v162/ns76",
-      "note": "Continuous defect depends on B(1), B′(1), B″(1). Integer closure strictly smaller; target distances not proved different."
+      "note": "Continuous defect depends on B(1), B′(1), B″(1). Integer closure strictly smaller; target distances not proved different.",
+      "continuation_inputs": [
+        {
+          "id": "NB-CONTINUOUS",
+          "relation": "relaxation bridge",
+          "detail": "Continuous defect bounds cannot be promoted to integer-error upper bounds without an additional argument."
+        }
+      ]
     },
     {
       "id": "nbcontinuoustail",
@@ -985,7 +1279,14 @@
       "parent": "nbcontinuousdefect",
       "prop": "prop:ns77-tail-budget",
       "evidence": "evidence/v162/ns77",
-      "note": "Published finite-height information implies continuous squared distance <2.08e-32; not an integer upper bound or zero-distance proof."
+      "note": "Published finite-height information implies continuous squared distance <2.08e-32; not an integer upper bound or zero-distance proof.",
+      "continuation_inputs": [
+        {
+          "id": "NB-CONTINUOUS",
+          "relation": "relaxation bridge",
+          "detail": "Continuous defect bounds cannot be promoted to integer-error upper bounds without an additional argument."
+        }
+      ]
     },
     {
       "id": "nbarithmeticsampling",
@@ -994,7 +1295,14 @@
       "parent": "nbdivisorfeedback",
       "prop": "prop:ns78-sampling; eq:ns78-sample-inverse",
       "evidence": "evidence/v163/ns78",
-      "note": "S/16 <= squared norm <=21 S/16, all cells and tails retained. No cofinal vanishing sample sum."
+      "note": "S/16 <= squared norm <=21 S/16, all cells and tails retained. No cofinal vanishing sample sum.",
+      "continuation_inputs": [
+        {
+          "id": "NB-SAMPLES",
+          "relation": "upper-error route",
+          "detail": "The complete signed sum still needs a cofinal upper bound tending to zero; the norm equivalence/normalization alone supplies none."
+        }
+      ]
     },
     {
       "id": "nbbalancedfeedback",
@@ -1003,7 +1311,14 @@
       "parent": "nbarithmeticsampling",
       "prop": "prop:ns79-balance",
       "evidence": "evidence/v163/ns79",
-      "note": "Preserves exterior coefficient but leaves final jump. Endpoint-augmented span captures 71.18% at N=256; no uniform raw descent."
+      "note": "Preserves exterior coefficient but leaves final jump. Endpoint-augmented span captures 71.18% at N=256; no uniform raw descent.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ]
     },
     {
       "id": "nbarithmeticpreconditioner",
@@ -1012,7 +1327,14 @@
       "parent": "nbarithmeticsampling",
       "prop": "prop:ns80-uniform-efficiency",
       "evidence": "evidence/v163/ns80",
-      "note": "Projected condition ratio <=21, one-step capture >=21/121, twenty-step capture >97.79%. Complete comparator inverse assumed; no fast inverse or cofinal relative contraction."
+      "note": "Projected condition ratio <=21, one-step capture >=21/121, twenty-step capture >97.79%. Complete comparator inverse assumed; no fast inverse or cofinal relative contraction.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ]
     },
     {
       "id": "nbfiniteconditioning",
@@ -1021,7 +1343,14 @@
       "parent": "nbarithmeticpreconditioner",
       "prop": "prop:ns81-conditioning; prop:ns81-finite-comparator",
       "evidence": "evidence/v164/ns81",
-      "note": "Condition O(N^4 log² N); sufficient cutoff 2^16(N+1)^6 with full tail bound. Enormous comparator not assembled; no practical solver or cofinal decay."
+      "note": "Condition O(N^4 log² N); sufficient cutoff 2^16(N+1)^6 with full tail bound. Enormous comparator not assembled; no practical solver or cofinal decay.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ]
     },
     {
       "id": "nbcompressedtail",
@@ -1030,7 +1359,14 @@
       "parent": "nbfiniteconditioning",
       "prop": "prop:ns82-tail-compression",
       "evidence": "evidence/v165/ns82",
-      "note": "Sufficient cutoff O(N^(7/3) log^(1/3)(2N)); projected condition <=9. Scalar constants certified; comparator not assembled; no cofinal decay."
+      "note": "Sufficient cutoff O(N^(7/3) log^(1/3)(2N)); projected condition <=9. Scalar constants certified; comparator not assembled; no cofinal decay.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ]
     },
     {
       "id": "nbcriticalfloor",
@@ -1039,7 +1375,14 @@
       "parent": "nbsmoothedbudget",
       "prop": "prop:ns83-log-floor",
       "evidence": "evidence/v166/ns83",
-      "note": "Burnol construction adapted with complete endpoint and tail control. Positive lower liminf; no upper bound or finite onset."
+      "note": "Burnol construction adapted with complete endpoint and tail control. Positive lower liminf; no upper bound or finite onset.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "rate restriction",
+          "detail": "Eventual fixed-fraction whole-error contraction is excluded; slower nonsummable descent and available-gain capture are not."
+        }
+      ]
     },
     {
       "id": "nbuniformrelativecontraction",
@@ -1048,7 +1391,14 @@
       "parent": "nbcriticalfloor",
       "prop": "eq:ns83-gain-budget",
       "evidence": "evidence/v166/ns83",
-      "note": "Cumulative relative gains <=log K+O(1). Individual gains may fluctuate; capture of available block gain is not excluded."
+      "note": "Cumulative relative gains <=log K+O(1). Individual gains may fluctuate; capture of available block gain is not excluded.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "rate restriction",
+          "detail": "Eventual fixed-fraction whole-error contraction is excluded; slower nonsummable descent and available-gain capture are not."
+        }
+      ]
     },
     {
       "id": "nboptimizedpotential",
@@ -1056,7 +1406,14 @@
       "status": "proved",
       "parent": "nbarithmeticsampling",
       "evidence": "evidence/ns86_optimized_arithmetic",
-      "note": "NS86: exact joint-cutoff Muntz quadrature represents actual correlations; P_N(1)=E_N. Complete observation-tail bound and shared-tail cancellation are proved. Classical zero-evaluation obstruction remains; no cofinal lower bound or injectivity theorem."
+      "note": "NS86: exact joint-cutoff Muntz quadrature represents actual correlations; P_N(1)=E_N. Complete observation-tail bound and shared-tail cancellation are proved. Classical zero-evaluation obstruction remains; no cofinal lower bound or injectivity theorem.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ]
     },
     {
       "id": "nbconvolutioncontrol",
@@ -1064,7 +1421,14 @@
       "status": "proved",
       "parent": "nboptimizedpotential",
       "evidence": "evidence/ns86_optimized_arithmetic",
-      "note": "NS86: raw defect-convolution square holds through N^2, retaining signed normalization sums and omitted forcing. Unit step raises error at N=4,16 and lowers it at N=8; damped old-space-refitted direction captures 27.31% of available gain at N=16. Modified coefficients generally lose the exact defect-square identity. No eventual failure or general route closure."
+      "note": "NS86: raw defect-convolution square holds through N^2, retaining signed normalization sums and omitted forcing. Unit step raises error at N=4,16 and lowers it at N=8; damped old-space-refitted direction captures 27.31% of available gain at N=16. Modified coefficients generally lose the exact defect-square identity. No eventual failure or general route closure.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "restricted square-scale route",
+          "detail": "The N-to-N² class retains a restricted span and complementary gain. NS96 positivity after refitting does not bound the actual cofinal numerator."
+        }
+      ]
     },
     {
       "id": "nbjointlocalization",
@@ -1072,7 +1436,14 @@
       "status": "proved",
       "parent": "nboptimizedpotential",
       "evidence": "evidence/ns87_joint_tail",
-      "note": "NS87: complete coupled-tail bound and explicit safe step. NS81/83 imply T=N^(5+epsilon) preserves relative gain up to o(1/log N), with no effective onset or arithmetic lower estimate. Finite N=32 to 64, T=4096 certificate retains >95.98% of available gain. Full Gram/inverse retained; no fast solver or cofinal decay."
+      "note": "NS87: complete coupled-tail bound and explicit safe step. NS81/83 imply T=N^(5+epsilon) preserves relative gain up to o(1/log N), with no effective onset or arithmetic lower estimate. Finite N=32 to 64, T=4096 certificate retains >95.98% of available gain. Full Gram/inverse retained; no fast solver or cofinal decay.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "full gain target",
+          "detail": "The actual cofinal arithmetic decrease remains open; complete tails and a gain identity do not force it."
+        }
+      ]
     },
     {
       "id": "nbdilationenvelope",
@@ -1080,7 +1451,14 @@
       "status": "proved",
       "parent": "nboptimizedpotential",
       "evidence": "evidence/ns88_dilation_defect",
-      "note": "NS88: dilation defect equals the overlap of successive orthogonal increments. Complete next-size upper certificate and E_(2^(J+1))<=K exp(-sqrt(2) S_J). Lower growth or even divergence of S_J remains unproved; finite envelope is weaker than optimized finite errors. No RH decay or necessity claim."
+      "note": "NS88: dilation defect equals the overlap of successive orthogonal increments. Complete next-size upper certificate and E_(2^(J+1))<=K exp(-sqrt(2) S_J). Lower growth or even divergence of S_J remains unproved; finite envelope is weaker than optimized finite errors. No RH decay or necessity claim.",
+      "continuation_inputs": [
+        {
+          "id": "NB-DILATION",
+          "relation": "different sufficient scalar",
+          "detail": "Only the specified stronger pointwise demand is excluded; cumulative normalized absolute-defect growth is unestimated."
+        }
+      ]
     },
     {
       "id": "nbdilationstrongnumerator",
@@ -1093,7 +1471,14 @@
         "input": "The proposed stronger numerator forces error decay contradicting the critical-zero lower bound",
         "to": null,
         "src": "evidence/ns88_dilation_defect/argument.tex; scoped to the displayed dilated optimized approximant"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "NB-DILATION",
+          "relation": "different sufficient scalar",
+          "detail": "Only the specified stronger pointwise demand is excluded; cumulative normalized absolute-defect growth is unestimated."
+        }
+      ]
     },
     {
       "id": "nbnormalizedupper",
@@ -1101,7 +1486,14 @@
       "status": "proved",
       "parent": "nbsmoothedbudget",
       "evidence": "evidence/ns89_upper_normalization",
-      "note": "NS89: exact constrained optimum E_N^0=E_N+eta_N^2/q_N and E_N<=E_N^0<=1.144579 E_N for every N>=256. Explicit rational size-256 trial has complete squared error <0.000014144. Both errors may remain positive; no cofinal decay theorem or improved best finite bound. Remote physical tail is retained."
+      "note": "NS89: exact constrained optimum E_N^0=E_N+eta_N^2/q_N and E_N<=E_N^0<=1.144579 E_N for every N>=256. Explicit rational size-256 trial has complete squared error <0.000014144. Both errors may remain positive; no cofinal decay theorem or improved best finite bound. Remote physical tail is retained.",
+      "continuation_inputs": [
+        {
+          "id": "NB-SAMPLES",
+          "relation": "upper-error route",
+          "detail": "The complete signed sum still needs a cofinal upper bound tending to zero; the norm equivalence/normalization alone supplies none."
+        }
+      ]
     },
     {
       "id": "nbmobiusjointcancellation",
@@ -1109,7 +1501,19 @@
       "status": "proved",
       "parent": "nbjointlocalization",
       "evidence": "evidence/ns90_mobius_gain",
-      "note": "NS90 exact identity cancels the prime main terms. Under a nonzero residual logarithmic or constant tail, the termwise absolute divisor allowance diverges as cutoff grows at fixed N; no uniform-in-N conclusion at T=N^6. At N16,256 the certified triangle lower bound is vacuous despite positive full numerators. The direction and full joint arithmetic lower-gain target remain open; inherited NS73 efficiencies are not new results."
+      "note": "NS90 exact identity cancels the prime main terms. Under a nonzero residual logarithmic or constant tail, the termwise absolute divisor allowance diverges as cutoff grows at fixed N; no uniform-in-N conclusion at T=N^6. At N16,256 the certified triangle lower bound is vacuous despite positive full numerators. The direction and full joint arithmetic lower-gain target remain open; inherited NS73 efficiencies are not new results.",
+      "continuation_inputs": [
+        {
+          "id": "MOBIUS-COST",
+          "relation": "same selected cost",
+          "detail": "The old-space endpoint correction leaves K_N unchanged. NS98 retains the same unestimated signed projected cross term."
+        },
+        {
+          "id": "MOBIUS-MARGIN",
+          "relation": "companion sufficient input",
+          "detail": "A compatible lower signed numerator is still required, even if a cost bound is obtained. No cofinal margin follows from a finite positive gain."
+        }
+      ]
     },
     {
       "id": "nbjointabelbound",
@@ -1117,7 +1521,19 @@
       "status": "proved",
       "parent": "nbmobiusjointcancellation",
       "evidence": "evidence/ns91_joint_abel",
-      "note": "NS91: exact old-space correction removes 0<t<N without changing gain or true projected cost. Complete absolute dyadic-tail bound is negligible at T=N^6; finite N256 gain >0.02821 certifies the known NS73 direction, not a new best error. No uniform interior margin/cost estimate. The NS78 divisor-inversion quadratic rewrite reduces to the same numerator under normal equations; no independent positivity or route closure."
+      "note": "NS91: exact old-space correction removes 0<t<N without changing gain or true projected cost. Complete absolute dyadic-tail bound is negligible at T=N^6; finite N256 gain >0.02821 certifies the known NS73 direction, not a new best error. No uniform interior margin/cost estimate. The NS78 divisor-inversion quadratic rewrite reduces to the same numerator under normal equations; no independent positivity or route closure.",
+      "continuation_inputs": [
+        {
+          "id": "MOBIUS-COST",
+          "relation": "same selected cost",
+          "detail": "The old-space endpoint correction leaves K_N unchanged. NS98 retains the same unestimated signed projected cross term."
+        },
+        {
+          "id": "MOBIUS-MARGIN",
+          "relation": "companion sufficient input",
+          "detail": "A compatible lower signed numerator is still required, even if a cost bound is obtained. No cofinal margin follows from a finite positive gain."
+        }
+      ]
     },
     {
       "id": "nbarithmeticcostbudget",
@@ -1125,7 +1541,19 @@
       "status": "proved",
       "parent": "nbjointabelbound",
       "evidence": "evidence/ns92_arithmetic_cost",
-      "note": "NS92 applies the prior NS61 complete average to signed Mobius tails. A finite scalar upper bounds the full projected cost and an endpoint-only direction without a new-block inverse. At N256 a 1/16 step has complete physical gain >1.57%; the cheaper scalar budget certifies >0.0443% for step 1/512. No new best error. Seven scalar budgets through N65536 are finite checks only; uniform arithmetic cost and numerator estimates remain open."
+      "note": "NS92 applies the prior NS61 complete average to signed Mobius tails. A finite scalar upper bounds the full projected cost and an endpoint-only direction without a new-block inverse. At N256 a 1/16 step has complete physical gain >1.57%; the cheaper scalar budget certifies >0.0443% for step 1/512. No new best error. Seven scalar budgets through N65536 are finite checks only; uniform arithmetic cost and numerator estimates remain open.",
+      "continuation_inputs": [
+        {
+          "id": "MOBIUS-COST",
+          "relation": "stronger sufficient budget",
+          "detail": "Its signed suffix budget bounds K_N; failure to bound this larger budget would not refute bounded projected cost."
+        },
+        {
+          "id": "MOBIUS-MARGIN",
+          "relation": "companion sufficient input",
+          "detail": "A compatible lower signed numerator is still required, even if a cost bound is obtained. No cofinal margin follows from a finite positive gain."
+        }
+      ]
     },
     {
       "id": "nbaveragedabsolutecost",
@@ -1138,7 +1566,19 @@
         "input": "productwise absolute values force a linear majorant even before averaging",
         "to": null,
         "src": "evidence/ns93_averaged_cost/argument.tex; scoped to this sufficient cost bound"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "MOBIUS-COST",
+          "relation": "excluded majorant only",
+          "detail": "The fully absolute bound is closed. Actual projected K_N and signed suffix means remain open; this continuation does not reopen that majorant."
+        },
+        {
+          "id": "MOBIUS-MARGIN",
+          "relation": "companion sufficient input",
+          "detail": "A compatible lower signed numerator is still required, even if a cost bound is obtained. No cofinal margin follows from a finite positive gain."
+        }
+      ]
     },
     {
       "id": "circlecountinference",
@@ -1151,7 +1591,14 @@
         "input": "exact symmetric off-line control preserves the proposed geometric count and infinity features",
         "to": null,
         "src": "evidence/ns94_circle_inversion/argument.tex; geometry and symmetry alone, not zeta arithmetic"
-      }
+      },
+      "continuation_inputs": [
+        {
+          "id": "ZERO-GEOMETRY",
+          "relation": "closed count inference; separate continuation",
+          "detail": "Revisit geometry only with an actual zeta-specific rigidity input, not a different inversion parameter."
+        }
+      ]
     },
     {
       "id": "nbsquareproductrestriction",
@@ -1159,7 +1606,14 @@
       "status": "proved",
       "parent": "nbjointlocalization",
       "evidence": "evidence/ns95_square_product",
-      "note": "NS95: free signed divisor-product weights force b_(mp) independent of prime p>N for mp<=N^2. Exact complementary gain retained; an invisible arithmetic vector refutes the all-residual comparison under the stated prime-pair hypothesis, not the actual-target bound. Free lift captures 99.83% of finite N16-to-256 gain versus 27.31% for NS86, with complete costs and tails. Product-pairing matrix indefinite on tested blocks. Reweighting generally loses the defect-square prescription; no cofinal lower estimate or new best error."
+      "note": "NS95: free signed divisor-product weights force b_(mp) independent of prime p>N for mp<=N^2. Exact complementary gain retained; an invisible arithmetic vector refutes the all-residual comparison under the stated prime-pair hypothesis, not the actual-target bound. Free lift captures 99.83% of finite N16-to-256 gain versus 27.31% for NS86, with complete costs and tails. Product-pairing matrix indefinite on tested blocks. Reweighting generally loses the defect-square prescription; no cofinal lower estimate or new best error.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "restricted square-scale route",
+          "detail": "The N-to-N² class retains a restricted span and complementary gain. NS96 positivity after refitting does not bound the actual cofinal numerator."
+        }
+      ]
     },
     {
       "id": "nblcmsquarecone",
@@ -1167,7 +1621,181 @@
       "status": "proved",
       "parent": "nbsquareproductrestriction",
       "evidence": "evidence/ns96_lcm_square",
-      "note": "NS96: for the entire coefficient sequence c=-q grouped from any PSD matrix, E>=3087/4096 uniformly in size; c=+q gives E>1/32. Complete real Mellin exterior retained. After unrestricted old refitting, the projected PSD cone equals the signed LCM span; a nonzero old-orthogonal residual pairing matrix is indefinite. No floor for unrestricted/refitted error, actual cofinal gain bound, or general sieve no-go. Single rank-one squares and extra trace/diagonal constraints are outside the cone equality. NS97 audit: this does not advance the earlier arithmetic lower-gain input; positive-rule qualitative failure already follows from NS78. Trace normalization leaves the same rays when step scale is free. The Mellin separator and floor function already appear in NS74 under different hypotheses."
+      "note": "NS96: for the entire coefficient sequence c=-q grouped from any PSD matrix, E>=3087/4096 uniformly in size; c=+q gives E>1/32. Complete real Mellin exterior retained. After unrestricted old refitting, the projected PSD cone equals the signed LCM span; a nonzero old-orthogonal residual pairing matrix is indefinite. No floor for unrestricted/refitted error, actual cofinal gain bound, or general sieve no-go. Single rank-one squares and extra trace/diagonal constraints are outside the cone equality. NS97 audit: this does not advance the earlier arithmetic lower-gain input; positive-rule qualitative failure already follows from NS78. Trace normalization leaves the same rays when step scale is free. The Mellin separator and floor function already appear in NS74 under different hypotheses.",
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "restricted square-scale route",
+          "detail": "The N-to-N² class retains a restricted span and complementary gain. NS96 positivity after refitting does not bound the actual cofinal numerator."
+        }
+      ]
+    }
+  ],
+  "continuation_inputs": [
+    {
+      "id": "MOBIUS-COST",
+      "title": "Bound the actual projected cost of the fixed logarithmic Mobius direction",
+      "tasks": "NS73 p1; NS90–93,98",
+      "demand": "For d_n=-mu(n) log(2N/n), N<n<=2N, retain K_N=||(I-Pi_N) sum d_n a_n||². The NS93 sufficient averaged route asks for bounded means of K_(2^j) over J<=j<2J, together with MOBIUS-MARGIN on the same ranges. Pointwise bounded K_N is stronger. NS98 does not supply either bound.",
+      "scope": "This is the same direction and exact projected cost in NS73 p1 and NS90–93/98. It is not the full NS73 three-template span or the curvature direction. NS92 gives K_N<=U_N<=kappa log(2) S_N; bounding the signed suffix energy S_N is sufficient but stronger. NS93 excludes only the fully absolute product majorant. NS98 bounds the projected diagonal but leaves its signed cross term unestimated. A new decomposition, finite table or free trace rescaling alone does not change the input.",
+      "sources": [
+        "evidence/ns98_projected_cost/argument.tex",
+        "evidence/ns92_arithmetic_cost/argument.tex",
+        "evidence/ns93_averaged_cost/argument.tex"
+      ]
+    },
+    {
+      "id": "MOBIUS-MARGIN",
+      "title": "Force a compatible signed numerator for the same fixed direction",
+      "tasks": "NS90,91,93,98",
+      "demand": "With ell_N=<r_N,sum d_n a_n>, obtain a lower bound for its gain relative to E_N and the same projected cost K_N. The NS91 lower bound b_N retains the joint interior allowance and complete tail. NS93 gives a sufficient averaged criterion: positive lower means of (b_(2^j)/E_(2^j))_+ on the same ranges as the bounded cost means.",
+      "scope": "A cost upper bound alone does not prove descent. The averaged sufficient criterion is not claimed necessary; actual ell_N may admit bounds that b_N cannot detect. The N^6 grouped tail is controlled, but its interior margin remains open. The divisor-inversion quadratic rewrite under the old normal equations gives the same numerator.",
+      "sources": [
+        "evidence/ns91_joint_abel/argument.tex",
+        "evidence/ns93_averaged_cost/argument.tex"
+      ]
+    },
+    {
+      "id": "NB-GAIN",
+      "title": "Lower-bound actual residual gain along a cofinal sequence",
+      "tasks": "NS53,59,61,69,71–73,75,79–83,86,87,95–97",
+      "demand": "For a fixed smoothing order and actual optimized residual, prove a nonsummable sequence of relative gains. In q=2, the full block target is Delta_N/E_N, Delta_N=h_N^T H_N^(-1)h_N. NS87 localizes the actual arithmetic observations with complete tails at T=N^6; a positive lower liminf of j A_(2^j)/E_(2^j) is sufficient. This remains unproved.",
+      "scope": "Related selected-direction bounds are sufficient routes to this objective, not the same scalar cost. NS71 needs its model-inverted numerator and true-energy ratio; NS72 needs actual curvature and selected cost; NS95/96 use a restricted N-to-N² span and complementary gain. NS53/59 use the unsmoothed analogue, so their formulas are not identified with q=2. NS80–82 guarantee a fraction of available gain, not a fraction of total error. NS83 excludes eventual fixed-fraction whole-error contraction, not all nonsummable slower gains.",
+      "sources": [
+        "evidence/ns87_joint_tail/argument.tex",
+        "evidence/v160/ns71/proof.tex",
+        "evidence/ns95_square_product/argument.tex",
+        "evidence/ns96_lcm_square/argument.tex"
+      ]
+    },
+    {
+      "id": "NB-SAMPLES",
+      "title": "Make a complete signed arithmetic upper-error sum tend to zero",
+      "tasks": "NS78,89; NS85 fixed-template test",
+      "demand": "Construct integer approximants whose complete reciprocal-sample or zero-exterior error tends to zero. NS78 compares the complete sample sum with the full physical norm; NS89 preserves every decay rate under its optimal normalization. Neither result bounds the arithmetic sum cofinally.",
+      "scope": "This is an upper-error route to the same convergence objective, not the MOBIUS-COST scalar or a new lower-gain identity. A fixed-template failure does not exclude freely chosen coefficients; coefficientwise convergence is not norm convergence.",
+      "sources": [
+        "evidence/v163/ns78",
+        "evidence/ns89_upper_normalization"
+      ]
+    },
+    {
+      "id": "NB-GROWTH",
+      "title": "Control internal canonical arithmetic cancellation at fixed smoothing",
+      "tasks": "NS66–68",
+      "demand": "Prove subpolynomial growth of the canonical smoothed norm, or separately establish a useful bounded cofinal subsequence with its required implication. NS66 identifies the power-growth exponent; NS67 supplies complete cells and tail; NS68 transfers the forcing power through the positive renewal operator.",
+      "scope": "Different object from the optimized projected cost. Strong full-sequence convergence is already excluded; weaker growth targets are not. Cancellation merely between the two complete centered Abel terms cannot change the exponent. Renewal positivity cannot manufacture the missing forcing estimate.",
+      "sources": [
+        "evidence/v159",
+        "evidence/v160/ns67",
+        "evidence/v160/ns68"
+      ]
+    },
+    {
+      "id": "NB-DILATION",
+      "title": "Prove growth of the cumulative actual dilation defect",
+      "tasks": "NS88",
+      "demand": "Force divergence of the cumulative normalized absolute dilation defect appearing in NS88’s whole-error upper envelope.",
+      "scope": "A different scalar and sufficient route to convergence; no identity with the fixed Mobius cost. The eventual energy/j^p lower bound for p<1 is excluded; p=1 remains open within the stated constant restriction. Finite sign changes do not settle cumulative growth.",
+      "sources": [
+        "evidence/ns88_dilation_defect/argument.tex"
+      ]
+    },
+    {
+      "id": "NB-CONTINUOUS",
+      "title": "Bridge continuous zero-defect information to the integer problem",
+      "tasks": "NS76,77",
+      "demand": "Supply a valid additional bridge from the continuous dilation closure to integer approximation, or prove actual zero continuous defect by new arithmetic input.",
+      "scope": "The continuous closure is strictly larger. Its small certified upper bound is not an upper bound for integer error and is not zero. This does not share the projected-cost estimate.",
+      "sources": [
+        "evidence/v162/ns76",
+        "evidence/v162/ns77"
+      ]
+    },
+    {
+      "id": "WEIL-FLOOR",
+      "title": "One complete signed lower floor with a common cofinal constant",
+      "tasks": "NS24,34,39,43,47,50; v1.36",
+      "demand": "Prove q_a[f]>=-C||f||² with a common finite C on complete admissible domains: the actual even source complement and the odd sector, with the established source transfer to the full form. All prime, pole, exterior and cross terms must remain.",
+      "scope": "CAE, unrestricted exact adaptive concentration, critical Clifford domination and coefficient-one localization absorption are versions of this same floor under their stated domains. Their stronger fixed-slack or channel-deletion failures do not refute the floor. This is a second genuine shared-gap family, distinct from the NB selected numerator/cost. RH implications alone do not identify their estimates.",
+      "sources": [
+        "evidence/v151",
+        "evidence/v152",
+        "evidence/ns47_clifford_weil/representation.tex",
+        "evidence/ns50_cae_localization/localization-v2.tex"
+      ]
+    },
+    {
+      "id": "KERNEL-API",
+      "title": "Exclude full-window arithmetic nullvectors on the complete domain",
+      "tasks": "NS51,55,58",
+      "demand": "Establish arithmetic affine-potential injectivity (API), respecting parity, endpoints, all prime shifts and poles. The homogeneous translated-radical boundary test is exactly the null equation, not an independent rigidity estimate.",
+      "scope": "This is a different unresolved input. Local open-set UCP and ordinary-cone positivity are false for the actual operator; those controls are not full-window nullvectors. No generic Sobolev bootstrap or whole-space compact inverse supplies API.",
+      "sources": [
+        "evidence/v154",
+        "evidence/v155",
+        "evidence/v157"
+      ]
+    },
+    {
+      "id": "CCM-LIMIT",
+      "title": "Obtain complete relative ground selection and transform control",
+      "tasks": "NS5,14,18,19,43",
+      "demand": "Control the complete cutoff residual relative to a complete separator (or the stated Rayleigh-excess/gap variant) cofinally, plus entire-transform evaluator/tightness bounds. Global-ground claims also require the specified odd ordering.",
+      "scope": "Fixed-window real-zero transforms and proximity to the first zeta zero do not supply convergence to Xi. Absolute residual/resolvent data and a polynomial positive separator do not replace the named relative inputs. Distinct from the NB cost and API.",
+      "sources": [
+        "evidence/v152",
+        "evidence/v140",
+        "evidence/v143"
+      ]
+    },
+    {
+      "id": "LEVEL-PACKETS",
+      "title": "Supply arithmetic level mass and independent admissible packet coverage",
+      "tasks": "NS27,29,32–33,39,54",
+      "demand": "Verify the relevant ZLD/QG level-distribution hypothesis and separate bounded-energy source-admissible packet coverage needed for the stated minorant-complexity implication.",
+      "scope": "These hypotheses concern an obstruction to bounded minorant complexity, not a proof of the signed Weil floor. ZLD implies only the stated QG growth clause; packet feasibility does not follow. Do not merge this gap with WEIL-FLOOR.",
+      "sources": [
+        "evidence/v146",
+        "evidence/v147",
+        "evidence/v149",
+        "evidence/v151",
+        "audits/ns54-zero-picture-review-2026-09-22-v1.html"
+      ]
+    },
+    {
+      "id": "ZERO-GEOMETRY",
+      "title": "Find zeta-specific zero rigidity beyond reflection symmetry",
+      "tasks": "NS94; NS100 reassessment",
+      "demand": "A geometric revival must add a property of the actual xi/theta/Euler-product object that symmetric off-line controls do not share. The NS94 power-product detector still requires an all-height vanishing proof.",
+      "scope": "Equal inversion counts and an infinite exterior similarity point do not imply RH: the point depends on circle parameters. That inference is closed, not every geometric approach. A classical RH-equivalent radial-growth or disk-contraction criterion is not a new arithmetic estimate; any new proposed sufficient mechanism needs its own test and scope. NS100 tests a concrete stronger condition using the actual theta kernel: its p=0 slice cosine transform at frequency 40 is strictly negative, and continuity extends failure to small p>0. This closes only per-slice positivity; the full integrated kernel remains unestimated. Its classical associated-kernel criterion is not a novel mechanism.",
+      "sources": [
+        "evidence/ns94_circle_inversion",
+        "evidence/ns100_reassessment/argument.tex",
+        "evidence/ns100_reassessment/proposals.json",
+        "evidence/ns100_reassessment/sources.json"
+      ]
+    },
+    {
+      "id": "HEAT-TRANSPORT",
+      "title": "Control exterior-cluster transport and test-support costs",
+      "tasks": "NS52",
+      "demand": "Bound the external zero-cluster interactions and support dependence that survive symmetry-paired heat transport.",
+      "scope": "Internal inverse-gap cancellation alone is insufficient. The unmatched-real-zero obstruction is conditional and its hypothesis was not verified. This is not the NB projected-cost question.",
+      "sources": [
+        "evidence/v154"
+      ]
+    },
+    {
+      "id": "OPERATOR-BRIDGES",
+      "title": "Construct the route-specific operator or geometric transfer",
+      "tasks": "Fixed-space; circle/Toeplitz; de Branges; function-field/Hodge",
+      "demand": "These are separate unfinished constructions, grouped only to mark their independence from NS98: evaluator estimates and closed realization (fixed-space); actual structural/asymptotic transfer (circle/Toeplitz); a valid unshifted-sign/extension bridge (de Branges); number-field intersection construction and positivity transfer (Hodge/F_1).",
+      "scope": "No equivalence between these missing inputs is asserted. The old circle/Toeplitz measurement lane is not Dad’s tangent-circle zero-count proposal. Shifted finite-window data do not determine an unshifted sign; analogy with function fields does not construct a number-field intersection theory.",
+      "sources": [
+        "COMPARISON.md",
+        "evidence/diag_true_symbol"
+      ]
     }
   ]
 }

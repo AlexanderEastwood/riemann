@@ -1,0 +1,1446 @@
+{
+  "classification": "Conclusions/dependency audit; not a historical proof replay",
+  "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+  "all_registered_nodes": 104,
+  "annotated_nodes": 63,
+  "nodes": [
+    {
+      "id": "rh",
+      "status": "open",
+      "title": "RH",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "a6064b1210f9c9659f6674a3c86f8636957d37b31b92fe1a25fb7820a086b351",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "g1",
+      "status": "proved",
+      "title": "G1 (weak)",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "acd3798349e3f24c841620212371a6786326678e89d0687fbdd8d25a527c2612",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "fixedspace",
+      "status": "open",
+      "title": "Fixed-space / Burnol Sonine route",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "OPERATOR-BRIDGES",
+          "relation": "distinct route-specific construction",
+          "detail": "Read the route-specific demand; this tag is an inventory grouping, not an equivalence between its members or with NS98."
+        }
+      ],
+      "prior_record_sha256": "ac9c79bc96c80c507c56c483472249e6f00c1de9444c2c6268198436dcf4413a",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "g2",
+      "status": "open",
+      "title": "G2: cofinal -o(1)",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "9e1d91e43c553c320cc35a297abb7a3db194f5c6ecc34a5ca0783d478fc37930",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "windows",
+      "status": "proved",
+      "title": "Fixed-window certificates",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "313aca50d66a946ed5a300deaeba59fe67e3651a7f15de6424eb15b371559487",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "w3",
+      "status": "proved",
+      "title": "lambda=3",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "77e96c1427481ffcdc807f20a5224963df465a72babc14a70dc62aad2d9f0480",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "w4e",
+      "status": "proved",
+      "title": "lambda=4 even",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "08d3c623e69a0d0b5d42519b1a4868a9f5ef590fb664db47320a926c54fafc4d",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "w4o",
+      "status": "proved",
+      "title": "lambda=4 odd",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "f7f405cfde213fe5b008fcf497d4d7a9f02b8fc63bfa2e158415a61f7fd8a7b0",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "w4",
+      "status": "proved",
+      "title": "W_4 >= 0 both sectors",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "a9af870f45cc123e8643a37307dea08dbdd7577ad6859c56ec906c5bc230957c",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "w5",
+      "status": "closed",
+      "title": "lambda=5: stipulated 10^-8 D tail comparison",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "b58fe88a61b22b2f7e4eb77e4c8de0d13b03b5857367a034b2efcbd66a186776",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "uniform",
+      "status": "open",
+      "title": "Uniform mechanism for G2",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "4a32ddf87af2d4c08d784723665bd4ce74501581c6937acfad444fcf8dba6a41",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "primenorm",
+      "status": "closed",
+      "title": "unsigned prime-norm domination",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "c436d6374511cc096b00c00ad647eb47e7714e9433f47e33526d2a9a0971b727",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "normcontr",
+      "status": "closed",
+      "title": "norm contraction",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "16ce503a76646be95214b964cfaea8dfa11c1d3568c893a8b966f533e94555f8",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "schatten",
+      "status": "closed",
+      "title": "Schatten / Hilbert-Schmidt",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "23c5f2f6e4e068b04a6a882d4a731f9f692bfd63b123c0ddf73d93b6fe2abe3b",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "sampling",
+      "status": "closed",
+      "title": "basis / sampling dominance",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "d238a19552c63588f3fa628bffc79e84d9e24ad4d8f5527816f1a55355e7b916",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "farmaj",
+      "status": "closed",
+      "title": "scalar far majorant",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "922d397ae3886320001bad896200b0e64bb6b82457866e086de95a7970e3743b",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "blockmetric",
+      "status": "closed",
+      "title": "lambda=5 N=25: tested dyadic norm comparison",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "98fa7febdb22dee3387a1d24e2b6d98732620d900f8d093a48078fdc60dd2c81",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "flattop",
+      "status": "closed",
+      "title": "flat-top smoothing",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "e41742192591a5897cf491b34da8ce6545fbf9e20a6e7ce897d288a18a1421c7",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "recipband",
+      "status": "closed",
+      "title": "reciprocal-band commutation",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "914a3ab656ba5fda98156819211970473ce36c1c00946d3b04c63afb05ac9273",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "cotlar",
+      "status": "closed",
+      "title": "Cotlar cross terms / atomization",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "26760f64c87aa47b8d1bff350e23b0650cc60be33b721d2647032a3f520b9b60",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "scalarprim",
+      "status": "closed",
+      "title": "scalar signed primitive",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "e1e71fed5e9d0fd0a79bd99d3a9a7415113f980b5607798eaf3f5bfda8547eb2",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "concentration",
+      "status": "blocked",
+      "title": "signed weighted concentration",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "same floor under stated domains",
+          "detail": "These continuations retain the complete signed floor. NS47 Clifford contraction and NS50 critical absorption share it; their coordinate change is not a new estimate."
+        }
+      ],
+      "prior_record_sha256": "6694d6514f58efca095f7e007934f7dde56121e0979f66d6b7e37f47d552c029",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "weaken",
+      "status": "proved",
+      "title": "Target weakening",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ],
+      "prior_record_sha256": "4871d701affcb779af87fb2741c9a2be56769f4cdbe28b27a7271dc1c755feb8",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "floor",
+      "status": "proved",
+      "title": "uniform finite floor suffices",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ],
+      "prior_record_sha256": "ae211d399c9e39270af988b47607e6d23a9991b948b19179a5d17e0242d784e8",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "gapfree",
+      "status": "proved",
+      "title": "no uniform positive gap exists",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "6299834ba31c3fa8b8d240cd20825589d33642e03390b1b50b23673c09977c67",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "floortest",
+      "status": "proved",
+      "title": "W_lambda >= -8 I at lambda=5,6,8",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "b34c42f92d658ac2ace922a395ab852c72c3ada0b155dee050df8fc6af0431e3",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "shiftbarrier",
+      "status": "proved",
+      "title": "bounded shift keeps the exp cutoff barrier",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "deb8265a58e88e93865e777f403e06fe4e635f72ab9333a4f48b9dbec50afc1e",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "metablind",
+      "status": "proved",
+      "title": "Scoped information-loss obstructions",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "0d55ce6cb403a94f3b6d18b119f49e975727471fa17aeb4fea5d977633c3bbd9",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "altroutes",
+      "status": "open",
+      "title": "Alternative mechanisms: distinct missing inputs",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "fd489e30630bc43196bc08b403edfb3520e2e77e283230b802742fe181651656",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "circle",
+      "status": "open",
+      "title": "circle / Toeplitz-Hankel lens",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "OPERATOR-BRIDGES",
+          "relation": "distinct route-specific construction",
+          "detail": "Read the route-specific demand; this tag is an inventory grouping, not an equivalence between its members or with NS98."
+        }
+      ],
+      "prior_record_sha256": "2e6dacf27d5457cea9e0dd074a58dd6c77bf263eb83ff6d8fe2662ba318d38cc",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "debranges",
+      "status": "open",
+      "title": "de Branges / Hermite-Biehler",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "OPERATOR-BRIDGES",
+          "relation": "distinct route-specific construction",
+          "detail": "Read the route-specific demand; this tag is an inventory grouping, not an equivalence between its members or with NS98."
+        }
+      ],
+      "prior_record_sha256": "6019000b039d466d7bbc5322295258660a57d16358f774a8b6010a06848cc013",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "f1",
+      "status": "open",
+      "title": "function field / Hodge / F_1",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "OPERATOR-BRIDGES",
+          "relation": "distinct route-specific construction",
+          "detail": "Read the route-specific demand; this tag is an inventory grouping, not an equivalence between its members or with NS98."
+        }
+      ],
+      "prior_record_sha256": "e1dce9f68b6049b6388db911c83a9bf9c53e888ccaec05933623fc8f618c1dee",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nb",
+      "status": "open",
+      "title": "Nyman-Beurling-Baez-Duarte",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "full gain target",
+          "detail": "The actual cofinal arithmetic decrease remains open; complete tails and a gain identity do not force it."
+        }
+      ],
+      "prior_record_sha256": "ee4a199e105432417f6c730435607e26dd5ac1bb068d5b5d575b302e6d9d3afe",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "li",
+      "status": "closed",
+      "title": "Direct rational Li / entire window-test identification",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "08c24c85393301c646a38d6fb37abd108c3ee042cec0aa0f7afff837ae21b3cc",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "dbn",
+      "status": "open",
+      "title": "de Bruijn–Newman: paired transport",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "HEAT-TRANSPORT",
+          "relation": "different arithmetic input",
+          "detail": "Pairing cancels internal singularities but leaves exterior interactions and support dependence."
+        }
+      ],
+      "prior_record_sha256": "e699c8a31774d2b4154d5002075dae5549a6ecd899e274aa9bc8a8b753f052c1",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "ccmmu",
+      "status": "proved",
+      "title": "W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "9aafd7b83e2f9c2ff8664d1023761225d4ccc7fd09f730dee2ffbca9f5876e0d",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "simpleeven4",
+      "status": "proved",
+      "title": "complete W_4: simple even ground; real-zero transform",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "fixed-window support",
+          "detail": "The certified finite-window statement does not establish any cofinal ground-to-Xi limit."
+        }
+      ],
+      "prior_record_sha256": "7b6cdde1e658531f86645358715d293dfc60238e831bc1df173a60bc564205ab",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "stepb",
+      "status": "live",
+      "title": "CCM step (b): finite-compression zeros track zeta zeros (numerical)",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "same convergence continuation",
+          "detail": "Complete relative selection and transform control are both still required."
+        }
+      ],
+      "prior_record_sha256": "eef49bc018ec737ce1f5e95d92fbade6eba57070902dbac52cce5885713c9b5f",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "semanticlock",
+      "status": "proved",
+      "title": "CCM finite-compression semantic lock, lambda=3 N=120",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "fixed-window support",
+          "detail": "The certified finite-window statement does not establish any cofinal ground-to-Xi limit."
+        }
+      ],
+      "prior_record_sha256": "174df8f970f3254e3c8c0d5cade57bc274938c7bfcdc32c48f9701168109d253",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "groundzero4",
+      "status": "proved",
+      "title": "complete ground zero within 0.1 of gamma_1",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "fixed-window support",
+          "detail": "The certified finite-window statement does not establish any cofinal ground-to-Xi limit."
+        }
+      ],
+      "prior_record_sha256": "7abdfc6e237c159499cf40e91edbb7cbd2b94f1d1dcc0353057ebbb3b1118eee",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "groundzero4resolution",
+      "status": "proved",
+      "title": "first complete zero within 9e-33; archived resolution quantified",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "fixed-window support",
+          "detail": "The certified finite-window statement does not establish any cofinal ground-to-Xi limit."
+        }
+      ],
+      "prior_record_sha256": "fd78a0e0588d9654acd981240340affb45c3380b99671a86fc49eefc4ea2f8a0",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "pencilconcentration",
+      "status": "proved",
+      "title": "pencil loss budget; cofinal obligation retained",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ],
+      "prior_record_sha256": "00d61c3fea39e4e90f690a770172ed1c6ea5a540cc985f8de89d84d83d813066",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "betaexplicit",
+      "status": "proved",
+      "title": "exact lattice symbol; varying envelopes",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "ca76d4acef321e36ba9e280312da2c0ae09066e7085971526b7f1412ba3c88b9",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "minorantlevels",
+      "status": "blocked",
+      "title": "bounded-complexity minorants: arithmetic gap remains",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "LEVEL-PACKETS",
+          "relation": "complexity input only",
+          "detail": "Do not label this missing level/packet estimate as the signed positivity input."
+        }
+      ],
+      "prior_record_sha256": "36ebabc733f55102c0146cdd99dd787db47fad565a7a98f3733a2806e945a542",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "zeroleveldistribution",
+      "status": "blocked",
+      "title": "zero level distribution and packet coverage: open inputs",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "LEVEL-PACKETS",
+          "relation": "complexity input only",
+          "detail": "Do not label this missing level/packet estimate as the signed positivity input."
+        }
+      ],
+      "prior_record_sha256": "f07a21b9dff01482e7d4caac345a4c2a7de5f6e94452aaea1ee37a8fcefe75d4",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "weightedexactcost",
+      "status": "blocked",
+      "title": "weighted exact cost: peak bound fails at critical levels",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "LEVEL-PACKETS",
+          "relation": "complexity input only",
+          "detail": "Do not label this missing level/packet estimate as the signed positivity input."
+        }
+      ],
+      "prior_record_sha256": "7cb10ebc4211ed0caa0ec5d4a477eb7947999a74cd877803f35a7260770214e3",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "capacityweight",
+      "status": "blocked",
+      "title": "positive arithmetic weight: critical capacity input",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "same floor under stated domains",
+          "detail": "These continuations retain the complete signed floor. NS47 Clifford contraction and NS50 critical absorption share it; their coordinate change is not a new estimate."
+        }
+      ],
+      "prior_record_sha256": "d60603a2b70603e3cfceda6a9a741acd74576aa40513470e8fefeac6fcc78eea",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "capacityslack",
+      "status": "closed",
+      "title": "fixed energy loss for the Gaussian arithmetic weight",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "d32fdcee5274ebd8b957eab8a75db3e9a4b05993f7ade3ee7a529d929afc8306",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "inputcomparison",
+      "status": "proved",
+      "title": "ZLD to QG; CAE is the signed-floor target",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ],
+      "prior_record_sha256": "3305896bc278a9e1f04bb45a5c891b0c5a0bffbf6ca85e0520b4655e03fa8610",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "capacitychannels",
+      "status": "closed",
+      "title": "Fixed/sub-endpoint channel deletion with unchanged signed terms",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "fd73d7508107d41db385fa41271d00f7162e0a1a3153c019373c82a7f4d7a581",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "bumpstrength",
+      "status": "proved",
+      "title": "Restricted bump discrepancy can carry the full zero obstruction",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "33462bf70b2aa6a4a7b0befd68a8a2d380e6a61a419b9c7a60b4f797d6b44922",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "adaptiveidentity",
+      "status": "proved",
+      "title": "Unrestricted exact adaptive hierarchy = complement floor",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "same floor under stated domains",
+          "detail": "These continuations retain the complete signed floor. NS47 Clifford contraction and NS50 critical absorption share it; their coordinate change is not a new estimate."
+        }
+      ],
+      "prior_record_sha256": "bc6dd59bdae10e0bc74e8aa740b4521096764769d5cb9ff4ba72b820a0b3ab16",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "scalarsetshortcut",
+      "status": "closed",
+      "title": "Scalar set bounds alone determine signed floor: general inference",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "362ad96b64f39a6414f0784ab4b6c27709ebadcafd06b972b090f66ed6821836",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "relativeselection",
+      "status": "blocked",
+      "title": "Complete relative selection and entire-transform control",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "CCM-LIMIT",
+          "relation": "same convergence continuation",
+          "detail": "Complete relative selection and transform control are both still required."
+        }
+      ],
+      "prior_record_sha256": "b866ac8ac0277042208daa8d0bbd2a32ab79aa524948e98fc57c84a1dbfe0ede",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "absoluteselection",
+      "status": "closed",
+      "title": "Absolute residual/resolvent data alone select ground: abstract inference",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "b96962a81d1a2473982a0d628e69226de898167994ac0fc73a7ade7ae419ee9b",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "coarseprofile",
+      "status": "closed",
+      "title": "Single profile from the specified coarse rescaled liminf",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "5fac5febb11e2fc2f1efb2e8b153e5940901c22c8bec3a1d7c8bdd3655a56d2d",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "fineradicalrank",
+      "status": "closed",
+      "title": "Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "6f266c22ccabaec3703604fc55b10f450d683345a66047ca07cf687f24d613fd",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "kernelapi",
+      "status": "live",
+      "title": "Exact kernel exclusion: affine-potential injectivity",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "same nullvector input",
+          "detail": "The complete-domain or boundary reformulation does not prove arithmetic injectivity."
+        }
+      ],
+      "prior_record_sha256": "94ffb7a8f06848059ac6364347d1da370b7d31d08635dac0c6123e22f3c792f7",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "generic_h1",
+      "status": "closed",
+      "title": "Generic H¹ bootstrap from a zero eigenvalue",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "scoped failed shortcut",
+          "detail": "This specific general mechanism is closed; full-window arithmetic injectivity remains open."
+        }
+      ],
+      "prior_record_sha256": "cbfeb061c367f42989b13aebaa9392883ca85c56d6177f17594561179d9045c8",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "localucp",
+      "status": "closed",
+      "title": "Local open-set UCP for the full prime-shift operator",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "scoped failed shortcut",
+          "detail": "This specific general mechanism is closed; full-window arithmetic injectivity remains open."
+        }
+      ],
+      "prior_record_sha256": "839f57eaceb87520eff7e09d0f6df3717325ae0ad155d9f5534ec471054bcc61",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "fullpositivecone",
+      "status": "closed",
+      "title": "Ordinary-cone positivity for the full Weil semigroup",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "scoped failed shortcut",
+          "detail": "This specific general mechanism is closed; full-window arithmetic injectivity remains open."
+        }
+      ],
+      "prior_record_sha256": "244054c9ca8c0e4bc1576f8267b852593ca707146d8cea6a473632b4bfa27003",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "finiteweightcontrols",
+      "status": "proved",
+      "title": "Finite prime-weight changes: negative tests and first-zero controls",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "c5554135eb6d1ca8471f822ed539406130482fd296b7a9e8ad50e889c611c3e8",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "boundedfloorstability",
+      "status": "proved",
+      "title": "Bounded perturbations preserve the finite-floor objective",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "WEIL-FLOOR",
+          "relation": "supporting implication",
+          "detail": "The equivalence/transfer is proved as stated; existence of the common cofinal bound is not."
+        }
+      ],
+      "prior_record_sha256": "c9a10fd1a86d1be114976b15b0575d2c60f6cdf96571ad8f9e426178a885a2a5",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "radicalboundarytest",
+      "status": "proved",
+      "title": "Translated-radical boundary test: exact kernel equivalence and forced controls",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "KERNEL-API",
+          "relation": "same nullvector input",
+          "detail": "The complete-domain or boundary reformulation does not prove arithmetic injectivity."
+        }
+      ],
+      "prior_record_sha256": "3c5f6cf439a01962db6df1feb16e78849b2fcc7f20d46b5f1d1f7dea79af6992",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbdifference",
+      "status": "proved",
+      "title": "NB adjacent-difference norm budget",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "unsmoothed analogue",
+          "detail": "Its arithmetic correlation input has the same kind of role at a different smoothing order; no equality with q=2 quantities is asserted."
+        }
+      ],
+      "prior_record_sha256": "dd4900f42a0e5f8a38a5da2a290362ba9d7bc926005ccfc51d3a9d3185850b9b",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbrawlog",
+      "status": "closed",
+      "title": "NB uniform logarithmic raw norm",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "64d4887e7e08bdbff5a88af1ee08dbee6206f1f5880c3f8d5375fbb3f77da0b2",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "nbeulergrid",
+      "status": "closed",
+      "title": "Uniform logarithmic norm after explicit Euler-grid correction",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "40e33b4decb6bca43559f1c1f63e39910072162a62b955a6a39c374342e6fd02",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "nbsmoothedbudget",
+      "status": "proved",
+      "title": "Fixed smoothed NB: positive averages and N^(-2) trace",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ],
+      "prior_record_sha256": "1b97369086ce71ce42c5c4093d63fae28eb4031b88ee15716aa790809d4c9dc5",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbsmoothedcorrelation",
+      "status": "blocked",
+      "title": "Actual optimized smoothed residual correlations",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "full gain target",
+          "detail": "The actual cofinal arithmetic decrease remains open; complete tails and a gain identity do not force it."
+        }
+      ],
+      "prior_record_sha256": "4b326941c86b446dc0668c54c966f15dfc82a11aa596387d16f1fdb44ea5e7a1",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbsharpintegrated",
+      "status": "closed",
+      "title": "Strong convergence of the smoothed canonical sharp Mobius sequence",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "support or scoped exclusion",
+          "detail": "The stated exact cells/conditioning or excluded stronger target does not establish or refute subpolynomial canonical growth."
+        }
+      ],
+      "prior_record_sha256": "2f16798c2e593806246ba20b7c508430e2b91841e10cba04dbdce218dded354c",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbchangingnorm",
+      "status": "closed",
+      "title": "Relative convergence with increasing Mellin smoothing",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "8f650392614d9d7790512df0395807ab6b5328d0dec1015a21a5d3ca379607de",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "nbcanonicalgrowth",
+      "status": "blocked",
+      "title": "Canonical smoothed norm: subpolynomial growth",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "canonical target",
+          "detail": "The missing bound acts inside the actual signed canonical response or forcing, not on the optimized Mobius direction."
+        }
+      ],
+      "prior_record_sha256": "0e82d72838c83fcba87d895b5a389582c50ae939802c5e6edbcab959e2f9ccb8",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbcanonicalcells",
+      "status": "proved",
+      "title": "Complete canonical divisor cells and full tail",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "support or scoped exclusion",
+          "detail": "The stated exact cells/conditioning or excluded stronger target does not establish or refute subpolynomial canonical growth."
+        }
+      ],
+      "prior_record_sha256": "40580fc926ed91adb6e4d1037f6ae9fe4d2970b81f3e6b6b9cdd840ff21b783c",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbabelwholegain",
+      "status": "closed",
+      "title": "Power gain solely between the two complete Abel vectors",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "support or scoped exclusion",
+          "detail": "The stated exact cells/conditioning or excluded stronger target does not establish or refute subpolynomial canonical growth."
+        }
+      ],
+      "prior_record_sha256": "8afce220457e197b32c040d4092dce206f6430979c24918dba5b27c67f4dc58b",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbrenewalforcing",
+      "status": "blocked",
+      "title": "Positive renewal with signed arithmetic forcing",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "canonical target",
+          "detail": "The missing bound acts inside the actual signed canonical response or forcing, not on the optimized Mobius direction."
+        }
+      ],
+      "prior_record_sha256": "53ec3ed4e00c887a57e8e9dfd86aecb84633f5f42a482ca2bdc727a697de5af9",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbcriticalrenewalenergy",
+      "status": "closed",
+      "title": "Finite total critical renewal energy",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GROWTH",
+          "relation": "support or scoped exclusion",
+          "detail": "The stated exact cells/conditioning or excluded stronger target does not establish or refute subpolynomial canonical growth."
+        }
+      ],
+      "prior_record_sha256": "77801c7e7da8d8c53ae7406a5d82e62b5c3bed6093af970a1a2e8997bb458e7b",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbrepairedbounds",
+      "status": "closed",
+      "title": "Uniform comparison with the repaired elementary Gram",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "a8119c617eec75783de3cdc6c952c1bd546da7a9dddd3985788e11521516c7fc",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "nbselectedpreconditioner",
+      "status": "blocked",
+      "title": "Repaired-kernel selection measured with true energy",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "different selected direction",
+          "detail": "Numerator and true-cost estimates are missing for this direction. It is not NS73 p1 or NS98 K_N."
+        }
+      ],
+      "prior_record_sha256": "45c53cdea0fc67ab28a14b4f729f928d2741470598985f5b51de77418c150c5f",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nblocalgeometry",
+      "status": "proved",
+      "title": "Complete local energy and discrete curvature",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ],
+      "prior_record_sha256": "fd481e136f44a99653484566924cbdfb7196e4e233ec1309c11b106b1e3f96e1",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbcurvaturearithmetic",
+      "status": "blocked",
+      "title": "Cofinal arithmetic curvature and selected cost",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "different selected direction",
+          "detail": "Numerator and true-cost estimates are missing for this direction. It is not NS73 p1 or NS98 K_N."
+        }
+      ],
+      "prior_record_sha256": "52cce94497ad03b13d7b0dce14281dd6bf31800d2bc04e7b7f61692e387cc129",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbsamegramcontrol",
+      "status": "closed",
+      "title": "Infer convergence from shared Gram geometry and finite efficiency",
+      "classification": "retained_scope_no_new_dependency_claim",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [],
+      "prior_record_sha256": "def71b0d3d7490c9a42298130ae8e143c0ad2aa9e53ac16f289b320fbef8d8f9",
+      "assessment": "Existing claim, hypotheses, evidence label and any stated closure remain as recorded; no new equivalence with NS98 is asserted."
+    },
+    {
+      "id": "nbdivisorfeedback",
+      "status": "proved",
+      "title": "Exact divisor feedback and finite unit-step failure",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ],
+      "prior_record_sha256": "c6ed4a50f4d8aa1d9c861a8bbd155d488a18f3559befce2a8bcfe8e308f2f12d",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbcontinuousdefect",
+      "status": "proved",
+      "title": "Exact continuous inner-factor defect and strict closure separation",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-CONTINUOUS",
+          "relation": "relaxation bridge",
+          "detail": "Continuous defect bounds cannot be promoted to integer-error upper bounds without an additional argument."
+        }
+      ],
+      "prior_record_sha256": "10014fb283985256d935704e95ad33e8236265d5958f5d81de53d4e92175c2b0",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbcontinuoustail",
+      "status": "proved",
+      "title": "Complete continuous zero-tail budget",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-CONTINUOUS",
+          "relation": "relaxation bridge",
+          "detail": "Continuous defect bounds cannot be promoted to integer-error upper bounds without an additional argument."
+        }
+      ],
+      "prior_record_sha256": "e76646b75b5b607c69458ceb9779b1aaa969d50191efef9193e246f535ef024d",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbarithmeticsampling",
+      "status": "proved",
+      "title": "Complete reciprocal-knot norm and exact divisor inversion",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-SAMPLES",
+          "relation": "upper-error route",
+          "detail": "The complete signed sum still needs a cofinal upper bound tending to zero; the norm equivalence/normalization alone supplies none."
+        }
+      ],
+      "prior_record_sha256": "ee2c66e9e87943da961cb08d2cffda781e06ec1001a12e159dfed7b0bd709f80",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbbalancedfeedback",
+      "status": "proved",
+      "title": "Tail-balanced divisor feedback control",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ],
+      "prior_record_sha256": "34631f16a64c4e9223dede39d2f18af0f4027e24e3467454003b4cb769ebb582",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbarithmeticpreconditioner",
+      "status": "proved",
+      "title": "Uniform efficiency using the full arithmetic sampling Gram",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ],
+      "prior_record_sha256": "16ee5327bf477f89f9e44a674fef90bbe397970cbd03b26b7f4fdc7554ff4dea",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbfiniteconditioning",
+      "status": "proved",
+      "title": "Polynomial ordinary Gram conditioning and an effective finite comparator",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ],
+      "prior_record_sha256": "44521898d62369a96756e5529234b3a08d4588e3dd90391c76c36a5bb91c5b98",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbcompressedtail",
+      "status": "proved",
+      "title": "Finite physical comparator with an exact rank-two tail",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ],
+      "prior_record_sha256": "1db3dbf02de43e14703396dca514e615544c3fc95f51548f870f06cb3d19618d",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbcriticalfloor",
+      "status": "proved",
+      "title": "Critical-zero logarithmic lower bound at every fixed smoothing order",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "rate restriction",
+          "detail": "Eventual fixed-fraction whole-error contraction is excluded; slower nonsummable descent and available-gain capture are not."
+        }
+      ],
+      "prior_record_sha256": "27e1328e4c2c440c555047c213c731d3eaa245a62c9fc27e186dd0411b245375",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbuniformrelativecontraction",
+      "status": "closed",
+      "title": "Fixed-fraction contraction of the full error at every doubling",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "rate restriction",
+          "detail": "Eventual fixed-fraction whole-error contraction is excluded; slower nonsummable descent and available-gain capture are not."
+        }
+      ],
+      "prior_record_sha256": "acd76ed2ee9ce89333f3623fe21af7dbd91fdba1a1b5dc22c1dc9d60776b414b",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nboptimizedpotential",
+      "status": "proved",
+      "title": "Optimized arithmetic potential and complete observation tails",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "supporting result",
+          "detail": "The proved finite identity, norm comparison or efficiency statement remains unconditional as stated. Using it to obtain convergence requires new actual-residual arithmetic control."
+        }
+      ],
+      "prior_record_sha256": "439cc8fcbc09e72aca10cbfd363c53a0b6fea0af170d7e46da9119114e47cde4",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbconvolutioncontrol",
+      "status": "proved",
+      "title": "Divisor-convolution correction from N to N squared: finite control",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "restricted square-scale route",
+          "detail": "The N-to-N² class retains a restricted span and complementary gain. NS96 positivity after refitting does not bound the actual cofinal numerator."
+        }
+      ],
+      "prior_record_sha256": "a11e3d42b6079f0ceff432419813148092f61e327f202f557930de8ea131afbf",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbjointlocalization",
+      "status": "proved",
+      "title": "Joint finite arithmetic observations preserve logarithmic gain scale",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "full gain target",
+          "detail": "The actual cofinal arithmetic decrease remains open; complete tails and a gain identity do not force it."
+        }
+      ],
+      "prior_record_sha256": "67a5e9389cd15a8cae5cc70dfded226e704c6a3547dd69c685363f7587432c07",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbdilationenvelope",
+      "status": "proved",
+      "title": "Multiplicative normal equations and a scalar whole-error upper envelope",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-DILATION",
+          "relation": "different sufficient scalar",
+          "detail": "Only the specified stronger pointwise demand is excluded; cumulative normalized absolute-defect growth is unestimated."
+        }
+      ],
+      "prior_record_sha256": "c227f7d4cafa7793d5e25b6a989a71b4f90fda0a58339aceb7d7d7a7a8bb3e89",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbdilationstrongnumerator",
+      "status": "closed",
+      "title": "Eventual energy/j^p dilation-defect lower bound with p<1",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-DILATION",
+          "relation": "different sufficient scalar",
+          "detail": "Only the specified stronger pointwise demand is excluded; cumulative normalized absolute-defect growth is unestimated."
+        }
+      ],
+      "prior_record_sha256": "60ff38a9ef98d7a3705223a3d48b34fa2a649badd338b271acc7bec6f690a23e",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbnormalizedupper",
+      "status": "proved",
+      "title": "Constructive zero-exterior upper certificates preserve every decay rate",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-SAMPLES",
+          "relation": "upper-error route",
+          "detail": "The complete signed sum still needs a cofinal upper bound tending to zero; the norm equivalence/normalization alone supplies none."
+        }
+      ],
+      "prior_record_sha256": "ae40813877f93747ffc681ecfac50f6cd0003391f3cb8066524c3093069ae107",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbmobiusjointcancellation",
+      "status": "proved",
+      "title": "Exact Mobius cancellation; fixed-size absolute-bound loss",
+      "classification": "exact_selected_cost_or_companion_margin",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "MOBIUS-COST",
+          "relation": "same selected cost",
+          "detail": "The old-space endpoint correction leaves K_N unchanged. NS98 retains the same unestimated signed projected cross term."
+        },
+        {
+          "id": "MOBIUS-MARGIN",
+          "relation": "companion sufficient input",
+          "detail": "A compatible lower signed numerator is still required, even if a cost bound is obtained. No cofinal margin follows from a finite positive gain."
+        }
+      ],
+      "prior_record_sha256": "85a71753662bdd9b5e7f669f199253c958db826519b26443df259fc084456a66",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbjointabelbound",
+      "status": "proved",
+      "title": "Joint first-primitive finite lower bound with complete grouped tail",
+      "classification": "exact_selected_cost_or_companion_margin",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "MOBIUS-COST",
+          "relation": "same selected cost",
+          "detail": "The old-space endpoint correction leaves K_N unchanged. NS98 retains the same unestimated signed projected cross term."
+        },
+        {
+          "id": "MOBIUS-MARGIN",
+          "relation": "companion sufficient input",
+          "detail": "A compatible lower signed numerator is still required, even if a cost bound is obtained. No cofinal margin follows from a finite positive gain."
+        }
+      ],
+      "prior_record_sha256": "a486668176eedae171d11c78824d0e398065e41d6efc82e411cd2ee07f2d6215",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbarithmeticcostbudget",
+      "status": "proved",
+      "title": "Complete scalar cost budget and a feasible endpoint-only update",
+      "classification": "exact_selected_cost_or_companion_margin",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "MOBIUS-COST",
+          "relation": "stronger sufficient budget",
+          "detail": "Its signed suffix budget bounds K_N; failure to bound this larger budget would not refute bounded projected cost."
+        },
+        {
+          "id": "MOBIUS-MARGIN",
+          "relation": "companion sufficient input",
+          "detail": "A compatible lower signed numerator is still required, even if a cost bound is obtained. No cofinal margin follows from a finite positive gain."
+        }
+      ],
+      "prior_record_sha256": "ac6f537f0e3b1df6904f5c92b9420a93024e31b9335a74aaeed82861b52e20e4",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbaveragedabsolutecost",
+      "status": "closed",
+      "title": "Averaging the fully separated absolute Mobius cost",
+      "classification": "exact_selected_cost_or_companion_margin",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "MOBIUS-COST",
+          "relation": "excluded majorant only",
+          "detail": "The fully absolute bound is closed. Actual projected K_N and signed suffix means remain open; this continuation does not reopen that majorant."
+        },
+        {
+          "id": "MOBIUS-MARGIN",
+          "relation": "companion sufficient input",
+          "detail": "A compatible lower signed numerator is still required, even if a cost bound is obtained. No cofinal margin follows from a finite positive gain."
+        }
+      ],
+      "prior_record_sha256": "5596d950d6dea19045585cf1fb627e63c0939d1463b41a0354372a55418941c4",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "circlecountinference",
+      "status": "closed",
+      "title": "Tangent-circle similarity point and count imbalance infer RH",
+      "classification": "different_continuation_input_or_scoped_control",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "ZERO-GEOMETRY",
+          "relation": "closed count inference; separate continuation",
+          "detail": "Revisit geometry only with an actual zeta-specific rigidity input, not a different inversion parameter."
+        }
+      ],
+      "prior_record_sha256": "13d48fc2f9838ef4bcf0893e24437516435aaa496039d3a0e97bc322f78f64d9",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nbsquareproductrestriction",
+      "status": "proved",
+      "title": "Square-scale product restriction and complete gain split",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "restricted square-scale route",
+          "detail": "The N-to-N² class retains a restricted span and complementary gain. NS96 positivity after refitting does not bound the actual cofinal numerator."
+        }
+      ],
+      "prior_record_sha256": "8df66eb9bdd49ea0ac2be8bf50c036dc57ec8e9a86864df1dd25a42c1e0cad1f",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    },
+    {
+      "id": "nblcmsquarecone",
+      "status": "proved",
+      "title": "LCM divisor squares: complete-rule floors and signed refit equivalence",
+      "classification": "broader_actual_gain_target_or_support",
+      "prior_scope_and_evidence_retained": true,
+      "continuation_inputs": [
+        {
+          "id": "NB-GAIN",
+          "relation": "restricted square-scale route",
+          "detail": "The N-to-N² class retains a restricted span and complementary gain. NS96 positivity after refitting does not bound the actual cofinal numerator."
+        }
+      ],
+      "prior_record_sha256": "730dfce8a10317ce3da7ab475ab5400479d273d2246395909d507681e9653fcf",
+      "assessment": "Read the linked relation: this annotation concerns future use, not validity of the existing conclusion."
+    }
+  ]
+}

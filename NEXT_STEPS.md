@@ -176,8 +176,55 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-98 | Bound the fixed Mobius/logarithmic direction after old-space refitting, retaining cancellation before estimating its complete cost | Codex | done (attempt stopped; no new arithmetic estimate) | Full subtraction retained, but the projected signed cross term remains unestimated. Bounded-diagonal separation repeats NS93; contractivity returns exactly to NS92. Two complete finite decompositions reproduce NS73 costs and establish no cofinal sign or bound. Same open gap; no new theorem node/version. [Attempt](evidence/ns98_projected_cost/) |
 
-| NS-99 | Audit which nodes share NS98’s exact cost input, which share the broader NB gain input, and which have different missing hypotheses; update the research map without over-closing routes | Codex root | claimed | Node-level dependency inventory, scoped map annotations and readable shared-gap guide; preserve proved finite results and distinguish logical equivalence from identical estimates. |
-| NS-100 | Independently reassess the repository and propose concrete research tests, including the tangent-circle/core geometry suggestion, screened against existing walls and primary literature | Assisting agent, requested by Alex | claimed | At most three ranked proposals with closest prior result, precise new input, first falsifiable lemma and stop condition; novelty claims qualified. No new RH claim or automatic reopening of closed comparisons. |
+| NS-99 | Audit which nodes share NS98’s exact cost input, which share the broader NB gain input, and which have different missing hypotheses; update the research map without over-closing routes | Codex root | done (audit; no new bound) | All 104 conclusions reviewed; 63 nodes annotated against 14 scoped input groups, all prior statuses retained. Exact Mobius cost/margin, broader NB gain, shared Weil floor and different inputs separated. Generator exclusivity claim corrected; evidence/ns99_shared_gaps. |
+| NS-100 | Independently reassess the repository and propose concrete research tests, including the tangent-circle/core geometry suggestion, screened against existing walls and primary literature | Assisting agent, requested by Alex | done (independent assessment; one scoped control) | Two conditional tasks screened against primary literature; no established novel RH mechanism. Actual theta-slice positivity fails with complete 256/384-bit and doubled-cutoff/series replay, nine Maxima checks. Full weighted kernel remains unestimated. Evidence/ns100_reassessment; manuscript unchanged. |
+
+## Current dependency index (NS-99, September 23)
+
+Use the [shared-input register](RESEARCH_MAP.md#shared-continuation-inputs)
+before selecting a continuation. The older target lists below preserve
+research history; a new task must compare its proposed estimate with the
+latest result in its family.
+
+| Family | Tasks sharing it | What must actually change |
+|---|---|---|
+| Exact fixed-direction cost plus a compatible margin | NS73 p1; NS90–93/98 | Bound the signed projected cost, or a sufficient larger signed budget, together with the actual numerator. NS98's subtraction identity adds no bound. |
+| Broader NB actual-residual decrease | NS53/59 (unsmoothed analogue); NS61/69/71–73/75/79–83/86–87/95–97 | Lower-bound cofinal relative gain for the actual target. Curvature, full-block, square-scale and Mobius directions are not identical. Efficiency within available gain is insufficient. |
+| Complete signed Weil floor | NS24/34/39/43/47/50 | Estimate the same complete signed floor under the actual parity/source constraints. CAE, Clifford coordinates and critical localization do not change it. |
+| Distinct missing estimates | NS51/55/58 API; CCM relative selection/transform control; NS66–68 canonical growth; NS78/89 sample error; NS88 cumulative defect; NS76/77 continuous bridge; ZLD/QG plus packets; NS52 heat; NS94 geometry | Name the route's own new input. RH equivalence alone is not a dependency identification; no automatic closure follows from NS98. |
+
+**Do not restart** the fully absolute Mobius majorant, free trace
+normalization, equal-circle-count inference, ordinary local UCP or
+fixed-fraction whole-error contraction under their unchanged hypotheses.
+**Do not close** the corresponding signed-cost, full-kernel, geometric or
+slower-descent questions just because those shortcuts failed.
+
+The [NS99 review](evidence/ns99_shared_gaps/) covers every registered node
+and retains all existing statuses. NS47 and NS50 are additionally indexed
+here because their evidence is present without separate theorem nodes.
+NS100 independently screens proposed tests; it does not certify new routes
+merely by giving an equivalent criterion a geometric interpretation.
+
+## Bounded geometry continuation after NS-100
+
+The [independent reassessment](audits/independent-route-reassessment-2026-09-23-v1.html)
+returns no established novel RH route. If geometry is pursued next, first
+try to derive a coefficient-explicit factorization of the **full integrated
+theta-product kernel** from the Jacobi modular identity. A factor defined
+by the square root of an unproved positive Fourier transform is circular.
+A claim that every individual slice has positive transform is now excluded
+by the certified NS100 value and its continuity argument. A new inversion
+or the classical disk/logarithmic-derivative criterion alone is the same
+open zero-rigidity gap. Success at this stage means an independently derived
+candidate identity with domains and tails stated, ready for a falsification
+check; no such identity is supplied yet.
+
+The first Taylor-associated kernel is a possible smaller target, but its
+positivity alone is only a necessary condition for RH. The lower-priority
+Jensen idea requires an actual backward-shift interlacing rule at unbounded
+degree. Modest-degree scans would duplicate published results. Stop either
+search if it supplies only an equivalent criterion or an assumed sign.
+Claim a task row before starting this additional research.
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
@@ -202,7 +249,7 @@ The scoped tests above are now recorded in NS-67–71. The underlying
 arithmetic estimates remain open. Publication and merge/tag approval were
 given on September 23; check the latest remote state and PRs before work.
 
-## Open continuation targets after NS-71 (not yet claimed)
+## Historical continuation targets after NS-71 (later tested; inputs remain open)
 
 1. **Selected arithmetic numerator and cost.** Use the explicit repaired
    kernel only to choose coefficients. Bound the actual model-inverted

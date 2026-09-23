@@ -5,6 +5,53 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 shared-gap audit and independent reassessment (NS-99/100)
+
+**The same gap recurs in several places, but not in every route.** The map
+now labels unfinished continuations separately from established results:
+
+- **Exact selected cost:** NS73's p1 Mobius/log direction and NS90–93/98
+  share the same projected cost. NS92's signed suffix budget is a stronger
+  sufficient bound; NS93 closes only its fully absolute majorant. A
+  compatible signed numerator remains a separate missing input.
+- **Broader arithmetic decrease:** NS61/69/71–73/75/79–83/86–87/95–97
+  lead back to an actual-residual cofinal gain estimate, using different
+  directions, smoothing orders or block sizes where stated. Finite gain
+  capture and conditioning do not supply this decrease.
+- **A second exact family:** concentration/CAE, unrestricted adaptive
+  levels, NS47's critical Clifford contraction and NS50's coefficient-one
+  absorption return to the same complete signed Weil floor under their
+  stated domains. This is different from the NB projected cost.
+- **Different inputs:** API/kernel exclusion, CCM convergence, canonical
+  growth, sample-error decay, continuous-to-integer transfer, level mass
+  with packets, heat transport and zeta-specific geometric rigidity retain
+  their own obligations. Sharing an RH consequence does not identify them.
+
+All 104 node statuses are retained. New continuation tags on 63 nodes
+describe what further work needs; they do not make existing proofs
+conditional. The map's old claim that only a gold node was worth working on
+has been removed. Both historical original-evidence gaps remain open.
+
+**Wall check: Same open gap** for this dependency audit (closest NS92–98);
+no new arithmetic bound. The separately requested NS100 reassessment tests
+possible geometric mechanisms against controls and primary literature.
+
+NS100's first geometric test gives a **known wall for slice-by-slice theta
+positivity**: one complete cosine-transform value is strictly negative,
+replayed at two precisions and doubled series/physical cutoffs. This says
+nothing adverse about the sign of the full weighted integral or RH. The
+remaining integrated-kernel and disk criteria are classical, still open
+inputs. The suggested bounded continuation is to derive an explicit
+factorization from the actual theta modular identity; no such factor has
+been found. A Jensen interlacing idea is lower priority and also lacks a
+mechanism. Nine Maxima checks and Python diagnostics pass; no surviving new
+RH mechanism, theorem node or manuscript version is claimed.
+
+[Shared-input index](RESEARCH_MAP.md#shared-continuation-inputs) ·
+[Shared-gap guide](audits/shared-arithmetic-gaps-2026-09-23-v1.html) ·
+[Review record](evidence/ns99_shared_gaps/) ·
+[Independent reassessment](audits/independent-route-reassessment-2026-09-23-v1.html).
+
 ## September 23 projected-cost attempt (NS-98)
 
 **No new scale-independent cost bound was obtained.** Retaining the exact
@@ -601,7 +648,7 @@ certificates; the full version with a node-by-node list is
 graph LR
   rh["RH"]
   g1["G1 (weak)<br/><small>thm:v14-radical</small><br/><small>&#128193; evidence/v124/g2_source_certificate</small>"]
-  fixedspace["Fixed-space / Burnol Sonine route"]
+  fixedspace["Fixed-space / Burnol Sonine route<br/><small>continuation: OPERATOR-BRIDGES</small>"]
   g2["G2: cofinal -o(1)<br/><small>prop:v121-cofinal-rh</small>"]
   windows["Fixed-window certificates"]
   w3["lambda=3<br/><small>prop:v116-window-positive</small><br/><small>&#128193; evidence/v124/g2_certificate</small>"]
@@ -620,89 +667,89 @@ graph LR
   recipband["reciprocal-band commutation<br/><small>EVIDENCE MISSING</small><br/><small><b>wall: generic mechanism: persistent source-compressed commutator > 9e-6; not every band choice</b></small>"]
   cotlar["Cotlar cross terms / atomization<br/><small>EVIDENCE MISSING</small><br/><small><b>wall: shortcut: cross norm >= 73/(375 pi) cofinally; not all Cotlar arguments</b></small>"]
   scalarprim["scalar signed primitive<br/><small>cor:v137-scalar-no-go</small><br/><small>&#128193; evidence/v137</small><br/><small><b>wall: genuine closure of the scalar route: a Delta(beta_a) -> infinity, unconditional</b></small>"]
-  concentration["signed weighted concentration<br/><small>prop:v131-concentration</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: uniform complete signed operator floor remains unproved</b></small>"]
-  weaken["Target weakening"]
-  floor["uniform finite floor suffices<br/><small>prop:v136-bounded-floor</small><br/><small>&#128193; evidence/v136</small>"]
+  concentration["signed weighted concentration<br/><small>prop:v131-concentration</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: uniform complete signed operator floor remains unproved</b></small><br/><small>continuation: WEIL-FLOOR</small>"]
+  weaken["Target weakening<br/><small>continuation: WEIL-FLOOR</small>"]
+  floor["uniform finite floor suffices<br/><small>prop:v136-bounded-floor</small><br/><small>&#128193; evidence/v136</small><br/><small>continuation: WEIL-FLOOR</small>"]
   gapfree["no uniform positive gap exists<br/><small>prop:v135-growing-radical</small><br/><small>&#128193; evidence/v135</small>"]
   floortest["W_lambda >= -8 I at lambda=5,6,8<br/><small>prop:v138-three-floors</small><br/><small>&#128193; evidence/v138</small>"]
   shiftbarrier["bounded shift keeps the exp cutoff barrier<br/><small>prop:v138-shifted-floor</small><br/><small>&#128193; evidence/v138</small>"]
   metablind["Scoped information-loss obstructions<br/><small>thm:v139-probe-relaxation; thm:v139-protected-orbit</small><br/><small>&#128193; evidence/v139</small>"]
   altroutes["Alternative mechanisms: distinct missing inputs"]
-  circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_true_symbol</small>"]
-  debranges["de Branges / Hermite-Biehler<br/><small><b>wall: screw-kernel positivity = RH; no fixed-window bridge</b></small>"]
-  f1["function field / Hodge / F_1<br/><small><b>wall: no intersection form supplied for this window (missing construction)</b></small>"]
-  nb["Nyman-Beurling-Baez-Duarte<br/><small>prop:ns53-nb-block-gain; eq:ns53-nb-rbc</small><br/><small>&#128193; evidence/ns53_nb_blocks</small><br/><small><b>wall: RBC: corrected arithmetic residual block correlations (open sufficient input)</b></small>"]
+  circle["circle / Toeplitz-Hankel lens<br/><small>&#128193; evidence/diag_true_symbol</small><br/><small>continuation: OPERATOR-BRIDGES</small>"]
+  debranges["de Branges / Hermite-Biehler<br/><small><b>wall: screw-kernel positivity = RH; no fixed-window bridge</b></small><br/><small>continuation: OPERATOR-BRIDGES</small>"]
+  f1["function field / Hodge / F_1<br/><small><b>wall: no intersection form supplied for this window (missing construction)</b></small><br/><small>continuation: OPERATOR-BRIDGES</small>"]
+  nb["Nyman-Beurling-Baez-Duarte<br/><small>prop:ns53-nb-block-gain; eq:ns53-nb-rbc</small><br/><small>&#128193; evidence/ns53_nb_blocks</small><br/><small><b>wall: RBC: corrected arithmetic residual block correlations (open sufficient input)</b></small><br/><small>continuation: NB-GAIN</small>"]
   li["Direct rational Li / entire window-test identification<br/><small>&#128193; evidence/diag_routes/li</small><br/><small><b>wall: direct rational-Li / entire-window classes intersect only at zero</b></small>"]
-  dbn["de Bruijn–Newman: paired transport<br/><small>prop:ns52-cluster; prop:ns52-unmatched</small><br/><small>&#128193; evidence/ns52_heat_pairs</small><br/><small><b>wall: complete signed transport with uniform support control (open)</b></small>"]
+  dbn["de Bruijn–Newman: paired transport<br/><small>prop:ns52-cluster; prop:ns52-unmatched</small><br/><small>&#128193; evidence/ns52_heat_pairs</small><br/><small><b>wall: complete signed transport with uniform support control (open)</b></small><br/><small>continuation: HEAT-TRANSPORT</small>"]
   ccmmu["W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4"]
-  simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small>"]
-  stepb["CCM step (b): finite-compression zeros track zeta zeros (numerical)<br/><small>&#128193; evidence/diag_ns2_semantic_lock</small>"]
-  semanticlock["CCM finite-compression semantic lock, lambda=3 N=120<br/><small>lem:v141-centering; prop:v141-ccm-lock</small><br/><small>&#128193; evidence/v141</small>"]
-  groundzero4["complete ground zero within 0.1 of gamma_1<br/><small>lem:v142-energy-projection; prop:v142-ground-zero</small><br/><small>&#128193; evidence/v142</small>"]
-  groundzero4resolution["first complete zero within 9e-33; archived resolution quantified<br/><small>prop:v143-first-zero-bound; prop:v143-resolution; prop:v143-fixed-window-meaning</small><br/><small>&#128193; evidence/v143</small>"]
-  pencilconcentration["pencil loss budget; cofinal obligation retained<br/><small>prop:v144-pencil-concentration</small><br/><small>&#128193; evidence/v144</small>"]
+  simpleeven4["complete W_4: simple even ground; real-zero transform<br/><small>prop:v140-ground4; cor:v140-real-zeros</small><br/><small>&#128193; evidence/v140</small><br/><small>continuation: CCM-LIMIT</small>"]
+  stepb["CCM step (b): finite-compression zeros track zeta zeros (numerical)<br/><small>&#128193; evidence/diag_ns2_semantic_lock</small><br/><small>continuation: CCM-LIMIT</small>"]
+  semanticlock["CCM finite-compression semantic lock, lambda=3 N=120<br/><small>lem:v141-centering; prop:v141-ccm-lock</small><br/><small>&#128193; evidence/v141</small><br/><small>continuation: CCM-LIMIT</small>"]
+  groundzero4["complete ground zero within 0.1 of gamma_1<br/><small>lem:v142-energy-projection; prop:v142-ground-zero</small><br/><small>&#128193; evidence/v142</small><br/><small>continuation: CCM-LIMIT</small>"]
+  groundzero4resolution["first complete zero within 9e-33; archived resolution quantified<br/><small>prop:v143-first-zero-bound; prop:v143-resolution; prop:v143-fixed-window-meaning</small><br/><small>&#128193; evidence/v143</small><br/><small>continuation: CCM-LIMIT</small>"]
+  pencilconcentration["pencil loss budget; cofinal obligation retained<br/><small>prop:v144-pencil-concentration</small><br/><small>&#128193; evidence/v144</small><br/><small>continuation: WEIL-FLOOR</small>"]
   betaexplicit["exact lattice symbol; varying envelopes<br/><small>prop:v146-beta-explicit</small><br/><small>&#128193; evidence/v146</small>"]
-  minorantlevels["bounded-complexity minorants: arithmetic gap remains<br/><small>prop:v146-packet-loss; prop:v146-level-complexity</small><br/><small>&#128193; evidence/v146</small><br/><small><b>wall: ZLD + packet: conditional minorant-complexity obstruction only</b></small>"]
-  zeroleveldistribution["zero level distribution and packet coverage: open inputs<br/><small>prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet</small><br/><small>&#128193; evidence/v147</small><br/><small><b>wall: ZLD + packet: conditional minorant-complexity obstruction only</b></small>"]
-  weightedexactcost["weighted exact cost: peak bound fails at critical levels<br/><small>prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg</small><br/><small>&#128193; evidence/v149</small><br/><small><b>wall: QG + WLH packet: conditional minorant-complexity obstruction only</b></small>"]
-  capacityweight["positive arithmetic weight: critical capacity input<br/><small>lem:v150-weight; prop:v150-critical-energy; ass:v150-cae</small><br/><small>&#128193; evidence/v150</small><br/><small><b>wall: CAE</b></small>"]
+  minorantlevels["bounded-complexity minorants: arithmetic gap remains<br/><small>prop:v146-packet-loss; prop:v146-level-complexity</small><br/><small>&#128193; evidence/v146</small><br/><small><b>wall: ZLD + packet: conditional minorant-complexity obstruction only</b></small><br/><small>continuation: LEVEL-PACKETS</small>"]
+  zeroleveldistribution["zero level distribution and packet coverage: open inputs<br/><small>prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet</small><br/><small>&#128193; evidence/v147</small><br/><small><b>wall: ZLD + packet: conditional minorant-complexity obstruction only</b></small><br/><small>continuation: LEVEL-PACKETS</small>"]
+  weightedexactcost["weighted exact cost: peak bound fails at critical levels<br/><small>prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg</small><br/><small>&#128193; evidence/v149</small><br/><small><b>wall: QG + WLH packet: conditional minorant-complexity obstruction only</b></small><br/><small>continuation: LEVEL-PACKETS</small>"]
+  capacityweight["positive arithmetic weight: critical capacity input<br/><small>lem:v150-weight; prop:v150-critical-energy; ass:v150-cae</small><br/><small>&#128193; evidence/v150</small><br/><small><b>wall: CAE</b></small><br/><small>continuation: WEIL-FLOOR</small>"]
   capacityslack["fixed energy loss for the Gaussian arithmetic weight<br/><small>prop:v150-capacity-slack</small><br/><small>&#128193; evidence/v150</small><br/><small><b>wall: fixed-slack shortcut: eta >= delta kappa exp(gamma lambda^2) - O(lambda log lambda)</b></small>"]
-  inputcomparison["ZLD to QG; CAE is the signed-floor target<br/><small>prop:v151-input-comparison</small><br/><small>&#128193; evidence/v151</small>"]
+  inputcomparison["ZLD to QG; CAE is the signed-floor target<br/><small>prop:v151-input-comparison</small><br/><small>&#128193; evidence/v151</small><br/><small>continuation: WEIL-FLOOR</small>"]
   capacitychannels["Fixed/sub-endpoint channel deletion with unchanged signed terms<br/><small>prop:ns43-fixed-channel; prop:ns43-moving-channel</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: channel deletion: unbounded comparison error for the Gaussian weight</b></small>"]
   bumpstrength["Restricted bump discrepancy can carry the full zero obstruction<br/><small>prop:ns43-bump-strength</small><br/><small>&#128193; evidence/v152</small>"]
-  adaptiveidentity["Unrestricted exact adaptive hierarchy = complement floor<br/><small>ns43-conc-prop-adaptive</small><br/><small>&#128193; evidence/v152</small>"]
+  adaptiveidentity["Unrestricted exact adaptive hierarchy = complement floor<br/><small>ns43-conc-prop-adaptive</small><br/><small>&#128193; evidence/v152</small><br/><small>continuation: WEIL-FLOOR</small>"]
   scalarsetshortcut["Scalar set bounds alone determine signed floor: general inference<br/><small>ns43-conc-prop-scalar</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: general inference false: countermodels with equal scalar set extrema and opposite signed bottoms</b></small>"]
-  relativeselection["Complete relative selection and entire-transform control<br/><small>prop:ns43-ccm-rayleigh-selection; prop:ns43-ccm-residual-selection</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: complete relative selection plus entire-transform control (both open)</b></small>"]
+  relativeselection["Complete relative selection and entire-transform control<br/><small>prop:ns43-ccm-rayleigh-selection; prop:ns43-ccm-residual-selection</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: complete relative selection plus entire-transform control (both open)</b></small><br/><small>continuation: CCM-LIMIT</small>"]
   absoluteselection["Absolute residual/resolvent data alone select ground: abstract inference<br/><small>prop:ns43-ccm-nonselection</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: abstract inference false: countermodel family with alternating profiles</b></small>"]
   coarseprofile["Single profile from the specified coarse rescaled liminf<br/><small>prop:ns43-ccm-coarse-profile</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: under the explicit coarse scale the limit form is zero; finer scales open</b></small>"]
   fineradicalrank["Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions<br/><small>lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank</small><br/><small>&#128193; evidence/v153</small><br/><small><b>wall: positive-gap strategy must remove rank >= lambda^2/(20000 log lambda)</b></small>"]
-  kernelapi["Exact kernel exclusion: affine-potential injectivity<br/><small>prop:ns51-affine-potential; eq:ns51-api</small><br/><small>&#128193; evidence/ns51_kernel</small><br/><small><b>wall: API: actual arithmetic affine-potential injectivity (open)</b></small>"]
-  generic_h1["Generic H¹ bootstrap from a zero eigenvalue<br/><small>prop:ns51-no-generic-bootstrap</small><br/><small>&#128193; evidence/ns51_kernel</small>"]
-  localucp["Local open-set UCP for the full prime-shift operator<br/><small>prop:ns55-local-ucp-counterexample; prop:ns55-parity-ucp-counterexample</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: local f=A_a f=0 does not force f=0; whole-window API is not refuted</b></small>"]
-  fullpositivecone["Ordinary-cone positivity for the full Weil semigroup<br/><small>prop:ns55-nonpositive-semigroup</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: order-preservation shortcut fails; quadratic-form positivity is a different property</b></small>"]
+  kernelapi["Exact kernel exclusion: affine-potential injectivity<br/><small>prop:ns51-affine-potential; eq:ns51-api</small><br/><small>&#128193; evidence/ns51_kernel</small><br/><small><b>wall: API: actual arithmetic affine-potential injectivity (open)</b></small><br/><small>continuation: KERNEL-API</small>"]
+  generic_h1["Generic H¹ bootstrap from a zero eigenvalue<br/><small>prop:ns51-no-generic-bootstrap</small><br/><small>&#128193; evidence/ns51_kernel</small><br/><small>continuation: KERNEL-API</small>"]
+  localucp["Local open-set UCP for the full prime-shift operator<br/><small>prop:ns55-local-ucp-counterexample; prop:ns55-parity-ucp-counterexample</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: local f=A_a f=0 does not force f=0; whole-window API is not refuted</b></small><br/><small>continuation: KERNEL-API</small>"]
+  fullpositivecone["Ordinary-cone positivity for the full Weil semigroup<br/><small>prop:ns55-nonpositive-semigroup</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: order-preservation shortcut fails; quadratic-form positivity is a different property</b></small><br/><small>continuation: KERNEL-API</small>"]
   finiteweightcontrols["Finite prime-weight changes: negative tests and first-zero controls<br/><small>cor:ns57-finite-weight-negative; thm:ns57-first-zero-controls; cor:ns57-fixed-direction-sensitivity</small><br/><small>&#128193; evidence/v156</small>"]
-  boundedfloorstability["Bounded perturbations preserve the finite-floor objective<br/><small>lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability</small><br/><small>&#128193; evidence/v156</small>"]
-  radicalboundarytest["Translated-radical boundary test: exact kernel equivalence and forced controls<br/><small>prop:ns58-boundary-identity; prop:ns58-equivalence; prop:ns58-forced-pairing</small><br/><small>&#128193; evidence/v157</small>"]
-  nbdifference["NB adjacent-difference norm budget<br/><small>prop:v158-adjacent-budget; prop:v158-mellin-budget</small><br/><small>&#128193; evidence/v158</small>"]
+  boundedfloorstability["Bounded perturbations preserve the finite-floor objective<br/><small>lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability</small><br/><small>&#128193; evidence/v156</small><br/><small>continuation: WEIL-FLOOR</small>"]
+  radicalboundarytest["Translated-radical boundary test: exact kernel equivalence and forced controls<br/><small>prop:ns58-boundary-identity; prop:ns58-equivalence; prop:ns58-forced-pairing</small><br/><small>&#128193; evidence/v157</small><br/><small>continuation: KERNEL-API</small>"]
+  nbdifference["NB adjacent-difference norm budget<br/><small>prop:v158-adjacent-budget; prop:v158-mellin-budget</small><br/><small>&#128193; evidence/v158</small><br/><small>continuation: NB-GAIN</small>"]
   nbrawlog["NB uniform logarithmic raw norm<br/><small>prop:v158-lindelof-budget</small><br/><small>&#128193; evidence/v158</small><br/><small><b>wall: known zeta large values contradict every fixed logarithmic N^(-2) raw norm bound</b></small>"]
   nbeulergrid["Uniform logarithmic norm after explicit Euler-grid correction<br/><small>prop:ns60-growing-euler-obstruction</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: zeta large values exceed the allowed finite Euler-product loss</b></small>"]
-  nbsmoothedbudget["Fixed smoothed NB: positive averages and N^(-2) trace<br/><small>prop:ns61-rh-equivalence; prop:ns61-average-budget</small><br/><small>&#128193; evidence/v159</small>"]
-  nbsmoothedcorrelation["Actual optimized smoothed residual correlations<br/><small>eq:ns61-open-correlation; eq:ns61-endpoint-correlation; prop:ns69-remainder; prop:ns71-selected-input</small><br/><small>&#128193; evidence/v160</small><br/><small><b>wall: non-summable lower contraction for the actual optimized residual (open sufficient input)</b></small>"]
-  nbsharpintegrated["Strong convergence of the smoothed canonical sharp Mobius sequence<br/><small>prop:ns62-smoothed-obstruction; prop:ns62-positive-cone; prop:ns64-cone-distance; prop:ns65-cesaro-obstruction</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: a surviving weighted-Mertens witness for this coefficient rule</b></small>"]
+  nbsmoothedbudget["Fixed smoothed NB: positive averages and N^(-2) trace<br/><small>prop:ns61-rh-equivalence; prop:ns61-average-budget</small><br/><small>&#128193; evidence/v159</small><br/><small>continuation: NB-GAIN</small>"]
+  nbsmoothedcorrelation["Actual optimized smoothed residual correlations<br/><small>eq:ns61-open-correlation; eq:ns61-endpoint-correlation; prop:ns69-remainder; prop:ns71-selected-input</small><br/><small>&#128193; evidence/v160</small><br/><small><b>wall: non-summable lower contraction for the actual optimized residual (open sufficient input)</b></small><br/><small>continuation: NB-GAIN</small>"]
+  nbsharpintegrated["Strong convergence of the smoothed canonical sharp Mobius sequence<br/><small>prop:ns62-smoothed-obstruction; prop:ns62-positive-cone; prop:ns64-cone-distance; prop:ns65-cesaro-obstruction</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: a surviving weighted-Mertens witness for this coefficient rule</b></small><br/><small>continuation: NB-GROWTH</small>"]
   nbchangingnorm["Relative convergence with increasing Mellin smoothing<br/><small>prop:ns63-one-atom</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: one-atom unconditional control refutes this convergence inference</b></small>"]
-  nbcanonicalgrowth["Canonical smoothed norm: subpolynomial growth<br/><small>prop:ns66-growth-bounds; cor:ns66-growth-exponent; prop:ns67-polynomial-cutoff; prop:ns67-abel-conditioning</small><br/><small>&#128193; evidence/v160</small><br/><small><b>wall: direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)</b></small>"]
-  nbcanonicalcells["Complete canonical divisor cells and full tail<br/><small>prop:ns67-cells; lem:ns67-remainder; prop:ns67-polynomial-cutoff</small><br/><small>&#128193; evidence/v160/ns67</small>"]
-  nbabelwholegain["Power gain solely between the two complete Abel vectors<br/><small>prop:ns67-abel-conditioning</small><br/><small>&#128193; evidence/v160/ns67</small><br/><small><b>wall: uniform conditioning excludes an exponent improvement in this whole-vector split</b></small>"]
-  nbrenewalforcing["Positive renewal with signed arithmetic forcing<br/><small>prop:ns68-weighted-inversion; prop:ns68-scalar-criterion</small><br/><small>&#128193; evidence/v160/ns68</small><br/><small><b>wall: independent square-root-plus-epsilon bound for the signed forcing</b></small>"]
-  nbcriticalrenewalenergy["Finite total critical renewal energy<br/><small>cor:ns68-critical-energy</small><br/><small>&#128193; evidence/v160/ns68</small><br/><small><b>wall: critical-line Mellin pole contradicts finite weighted L2 energy</b></small>"]
+  nbcanonicalgrowth["Canonical smoothed norm: subpolynomial growth<br/><small>prop:ns66-growth-bounds; cor:ns66-growth-exponent; prop:ns67-polynomial-cutoff; prop:ns67-abel-conditioning</small><br/><small>&#128193; evidence/v160</small><br/><small><b>wall: direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)</b></small><br/><small>continuation: NB-GROWTH</small>"]
+  nbcanonicalcells["Complete canonical divisor cells and full tail<br/><small>prop:ns67-cells; lem:ns67-remainder; prop:ns67-polynomial-cutoff</small><br/><small>&#128193; evidence/v160/ns67</small><br/><small>continuation: NB-GROWTH</small>"]
+  nbabelwholegain["Power gain solely between the two complete Abel vectors<br/><small>prop:ns67-abel-conditioning</small><br/><small>&#128193; evidence/v160/ns67</small><br/><small><b>wall: uniform conditioning excludes an exponent improvement in this whole-vector split</b></small><br/><small>continuation: NB-GROWTH</small>"]
+  nbrenewalforcing["Positive renewal with signed arithmetic forcing<br/><small>prop:ns68-weighted-inversion; prop:ns68-scalar-criterion</small><br/><small>&#128193; evidence/v160/ns68</small><br/><small><b>wall: independent square-root-plus-epsilon bound for the signed forcing</b></small><br/><small>continuation: NB-GROWTH</small>"]
+  nbcriticalrenewalenergy["Finite total critical renewal energy<br/><small>cor:ns68-critical-energy</small><br/><small>&#128193; evidence/v160/ns68</small><br/><small><b>wall: critical-line Mellin pole contradicts finite weighted L2 energy</b></small><br/><small>continuation: NB-GROWTH</small>"]
   nbrepairedbounds["Uniform comparison with the repaired elementary Gram<br/><small>prop:ns70-cusp; prop:ns70-repaired-background</small><br/><small>&#128193; evidence/v160/ns70</small><br/><small><b>wall: pointwise Mellin-density comparison forced by all-coefficient localization</b></small>"]
-  nbselectedpreconditioner["Repaired-kernel selection measured with true energy<br/><small>prop:ns71-selected-input</small><br/><small>&#128193; evidence/v160/ns71</small><br/><small><b>wall: cofinal lower numerator and upper selected cost with nonsummable relative gain</b></small>"]
-  nblocalgeometry["Complete local energy and discrete curvature<br/><small>prop:ns72-local-energy; prop:ns72-interpolation; prop:ns72-curvature</small><br/><small>&#128193; evidence/v161/ns72</small>"]
-  nbcurvaturearithmetic["Cofinal arithmetic curvature and selected cost<br/><small>eq:ns72-local-directions</small><br/><small>&#128193; evidence/v161/ns72</small><br/><small><b>wall: actual curvature lower bound and selected true cost giving nonsummable relative contraction</b></small>"]
+  nbselectedpreconditioner["Repaired-kernel selection measured with true energy<br/><small>prop:ns71-selected-input</small><br/><small>&#128193; evidence/v160/ns71</small><br/><small><b>wall: cofinal lower numerator and upper selected cost with nonsummable relative gain</b></small><br/><small>continuation: NB-GAIN</small>"]
+  nblocalgeometry["Complete local energy and discrete curvature<br/><small>prop:ns72-local-energy; prop:ns72-interpolation; prop:ns72-curvature</small><br/><small>&#128193; evidence/v161/ns72</small><br/><small>continuation: NB-GAIN</small>"]
+  nbcurvaturearithmetic["Cofinal arithmetic curvature and selected cost<br/><small>eq:ns72-local-directions</small><br/><small>&#128193; evidence/v161/ns72</small><br/><small><b>wall: actual curvature lower bound and selected true cost giving nonsummable relative contraction</b></small><br/><small>continuation: NB-GAIN</small>"]
   nbsamegramcontrol["Infer convergence from shared Gram geometry and finite efficiency<br/><small>prop:ns74-same-gram; cor:ns74-finite-indistinguishability</small><br/><small>&#128193; evidence/v161/ns74</small><br/><small><b>wall: explicit inserted inner-factor control; scope is this finite-statistics inference</b></small>"]
-  nbdivisorfeedback["Exact divisor feedback and finite unit-step failure<br/><small>prop:ns75-divisor-cells</small><br/><small>&#128193; evidence/v162/ns75</small>"]
-  nbcontinuousdefect["Exact continuous inner-factor defect and strict closure separation<br/><small>prop:ns76-continuous-distance; prop:ns76-strict-closure</small><br/><small>&#128193; evidence/v162/ns76</small>"]
-  nbcontinuoustail["Complete continuous zero-tail budget<br/><small>prop:ns77-tail-budget</small><br/><small>&#128193; evidence/v162/ns77</small>"]
-  nbarithmeticsampling["Complete reciprocal-knot norm and exact divisor inversion<br/><small>prop:ns78-sampling; eq:ns78-sample-inverse</small><br/><small>&#128193; evidence/v163/ns78</small>"]
-  nbbalancedfeedback["Tail-balanced divisor feedback control<br/><small>prop:ns79-balance</small><br/><small>&#128193; evidence/v163/ns79</small>"]
-  nbarithmeticpreconditioner["Uniform efficiency using the full arithmetic sampling Gram<br/><small>prop:ns80-uniform-efficiency</small><br/><small>&#128193; evidence/v163/ns80</small>"]
-  nbfiniteconditioning["Polynomial ordinary Gram conditioning and an effective finite comparator<br/><small>prop:ns81-conditioning; prop:ns81-finite-comparator</small><br/><small>&#128193; evidence/v164/ns81</small>"]
-  nbcompressedtail["Finite physical comparator with an exact rank-two tail<br/><small>prop:ns82-tail-compression</small><br/><small>&#128193; evidence/v165/ns82</small>"]
-  nbcriticalfloor["Critical-zero logarithmic lower bound at every fixed smoothing order<br/><small>prop:ns83-log-floor</small><br/><small>&#128193; evidence/v166/ns83</small>"]
-  nbuniformrelativecontraction["Fixed-fraction contraction of the full error at every doubling<br/><small>eq:ns83-gain-budget</small><br/><small>&#128193; evidence/v166/ns83</small>"]
-  nboptimizedpotential["Optimized arithmetic potential and complete observation tails<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
-  nbconvolutioncontrol["Divisor-convolution correction from N to N squared: finite control<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
-  nbjointlocalization["Joint finite arithmetic observations preserve logarithmic gain scale<br/><small>&#128193; evidence/ns87_joint_tail</small>"]
-  nbdilationenvelope["Multiplicative normal equations and a scalar whole-error upper envelope<br/><small>&#128193; evidence/ns88_dilation_defect</small>"]
-  nbdilationstrongnumerator["Eventual energy/j^p dilation-defect lower bound with p<1<br/><small>&#128193; evidence/ns88_dilation_defect</small><br/><small><b>wall: The proposed stronger numerator forces error decay contradicting the critical-zero lower bound</b></small>"]
-  nbnormalizedupper["Constructive zero-exterior upper certificates preserve every decay rate<br/><small>&#128193; evidence/ns89_upper_normalization</small>"]
-  nbmobiusjointcancellation["Exact Mobius cancellation; fixed-size absolute-bound loss<br/><small>&#128193; evidence/ns90_mobius_gain</small>"]
-  nbjointabelbound["Joint first-primitive finite lower bound with complete grouped tail<br/><small>&#128193; evidence/ns91_joint_abel</small>"]
-  nbarithmeticcostbudget["Complete scalar cost budget and a feasible endpoint-only update<br/><small>&#128193; evidence/ns92_arithmetic_cost</small>"]
-  nbaveragedabsolutecost["Averaging the fully separated absolute Mobius cost<br/><small>&#128193; evidence/ns93_averaged_cost</small><br/><small><b>wall: productwise absolute values force a linear majorant even before averaging</b></small>"]
-  circlecountinference["Tangent-circle similarity point and count imbalance infer RH<br/><small>&#128193; evidence/ns94_circle_inversion</small><br/><small><b>wall: exact symmetric off-line control preserves the proposed geometric count and infinity features</b></small>"]
-  nbsquareproductrestriction["Square-scale product restriction and complete gain split<br/><small>&#128193; evidence/ns95_square_product</small>"]
-  nblcmsquarecone["LCM divisor squares: complete-rule floors and signed refit equivalence<br/><small>&#128193; evidence/ns96_lcm_square</small>"]
+  nbdivisorfeedback["Exact divisor feedback and finite unit-step failure<br/><small>prop:ns75-divisor-cells</small><br/><small>&#128193; evidence/v162/ns75</small><br/><small>continuation: NB-GAIN</small>"]
+  nbcontinuousdefect["Exact continuous inner-factor defect and strict closure separation<br/><small>prop:ns76-continuous-distance; prop:ns76-strict-closure</small><br/><small>&#128193; evidence/v162/ns76</small><br/><small>continuation: NB-CONTINUOUS</small>"]
+  nbcontinuoustail["Complete continuous zero-tail budget<br/><small>prop:ns77-tail-budget</small><br/><small>&#128193; evidence/v162/ns77</small><br/><small>continuation: NB-CONTINUOUS</small>"]
+  nbarithmeticsampling["Complete reciprocal-knot norm and exact divisor inversion<br/><small>prop:ns78-sampling; eq:ns78-sample-inverse</small><br/><small>&#128193; evidence/v163/ns78</small><br/><small>continuation: NB-SAMPLES</small>"]
+  nbbalancedfeedback["Tail-balanced divisor feedback control<br/><small>prop:ns79-balance</small><br/><small>&#128193; evidence/v163/ns79</small><br/><small>continuation: NB-GAIN</small>"]
+  nbarithmeticpreconditioner["Uniform efficiency using the full arithmetic sampling Gram<br/><small>prop:ns80-uniform-efficiency</small><br/><small>&#128193; evidence/v163/ns80</small><br/><small>continuation: NB-GAIN</small>"]
+  nbfiniteconditioning["Polynomial ordinary Gram conditioning and an effective finite comparator<br/><small>prop:ns81-conditioning; prop:ns81-finite-comparator</small><br/><small>&#128193; evidence/v164/ns81</small><br/><small>continuation: NB-GAIN</small>"]
+  nbcompressedtail["Finite physical comparator with an exact rank-two tail<br/><small>prop:ns82-tail-compression</small><br/><small>&#128193; evidence/v165/ns82</small><br/><small>continuation: NB-GAIN</small>"]
+  nbcriticalfloor["Critical-zero logarithmic lower bound at every fixed smoothing order<br/><small>prop:ns83-log-floor</small><br/><small>&#128193; evidence/v166/ns83</small><br/><small>continuation: NB-GAIN</small>"]
+  nbuniformrelativecontraction["Fixed-fraction contraction of the full error at every doubling<br/><small>eq:ns83-gain-budget</small><br/><small>&#128193; evidence/v166/ns83</small><br/><small>continuation: NB-GAIN</small>"]
+  nboptimizedpotential["Optimized arithmetic potential and complete observation tails<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small><br/><small>continuation: NB-GAIN</small>"]
+  nbconvolutioncontrol["Divisor-convolution correction from N to N squared: finite control<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small><br/><small>continuation: NB-GAIN</small>"]
+  nbjointlocalization["Joint finite arithmetic observations preserve logarithmic gain scale<br/><small>&#128193; evidence/ns87_joint_tail</small><br/><small>continuation: NB-GAIN</small>"]
+  nbdilationenvelope["Multiplicative normal equations and a scalar whole-error upper envelope<br/><small>&#128193; evidence/ns88_dilation_defect</small><br/><small>continuation: NB-DILATION</small>"]
+  nbdilationstrongnumerator["Eventual energy/j^p dilation-defect lower bound with p<1<br/><small>&#128193; evidence/ns88_dilation_defect</small><br/><small><b>wall: The proposed stronger numerator forces error decay contradicting the critical-zero lower bound</b></small><br/><small>continuation: NB-DILATION</small>"]
+  nbnormalizedupper["Constructive zero-exterior upper certificates preserve every decay rate<br/><small>&#128193; evidence/ns89_upper_normalization</small><br/><small>continuation: NB-SAMPLES</small>"]
+  nbmobiusjointcancellation["Exact Mobius cancellation; fixed-size absolute-bound loss<br/><small>&#128193; evidence/ns90_mobius_gain</small><br/><small>continuation: MOBIUS-COST, MOBIUS-MARGIN</small>"]
+  nbjointabelbound["Joint first-primitive finite lower bound with complete grouped tail<br/><small>&#128193; evidence/ns91_joint_abel</small><br/><small>continuation: MOBIUS-COST, MOBIUS-MARGIN</small>"]
+  nbarithmeticcostbudget["Complete scalar cost budget and a feasible endpoint-only update<br/><small>&#128193; evidence/ns92_arithmetic_cost</small><br/><small>continuation: MOBIUS-COST, MOBIUS-MARGIN</small>"]
+  nbaveragedabsolutecost["Averaging the fully separated absolute Mobius cost<br/><small>&#128193; evidence/ns93_averaged_cost</small><br/><small><b>wall: productwise absolute values force a linear majorant even before averaging</b></small><br/><small>continuation: MOBIUS-COST, MOBIUS-MARGIN</small>"]
+  circlecountinference["Tangent-circle similarity point and count imbalance infer RH<br/><small>&#128193; evidence/ns94_circle_inversion</small><br/><small><b>wall: exact symmetric off-line control preserves the proposed geometric count and infinity features</b></small><br/><small>continuation: ZERO-GEOMETRY</small>"]
+  nbsquareproductrestriction["Square-scale product restriction and complete gain split<br/><small>&#128193; evidence/ns95_square_product</small><br/><small>continuation: NB-GAIN</small>"]
+  nblcmsquarecone["LCM divisor squares: complete-rule floors and signed refit equivalence<br/><small>&#128193; evidence/ns96_lcm_square</small><br/><small>continuation: NB-GAIN</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -924,7 +971,7 @@ graph LR
   subgraph Legend
     direction LR
     lg_live["current route (gold)"]:::live
-    lg_closed["closed route"]:::closed
+    lg_closed["scoped exclusion"]:::closed
     lg_proved["proved"]:::proved
     lg_open["open"]:::open
     lg_blocked["blocked"]:::blocked

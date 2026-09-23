@@ -1,0 +1,50 @@
+{
+  "classification": "research screening, not new proof strategy established",
+  "proposals": [
+    {
+      "rank": 1,
+      "name": "Theta modular cancellation behind the circle map",
+      "status": "exploratory mechanism search only; first sufficient sublemma rejected",
+      "closest": [
+        "NS94 circle control",
+        "NS74 same-Gram control",
+        "NS76 inner factor",
+        "classical Lagarias and Csordas criteria"
+      ],
+      "wall_check": "Same open gap for the full radial-growth criterion; distinct first theta-slice test now failed",
+      "scope_comparison": "No dependence on the NS98 selected-direction cost. This concerns actual entire-function zero rigidity. Neither equal circle counts nor a Gram geometry controls the radial derivative.",
+      "new_input_required": "An explicit positive autocorrelation decomposition of the full integrated theta-product kernel, obtained from the actual Jacobi modular identity without presupposing Fourier positivity. The kernel is K_x(t)=integral_0^infinity p*sinh(2*x*p)*phi(p+t)*phi(p-t) dp.",
+      "first_falsifiable_test": "Test the stronger claim that every fixed-p slice has nonnegative cosine transform. A_0(20) is strictly negative, with complete tails and 256/384-bit/cutoff replay; continuity extends failure to some p>0.",
+      "next_bounded_task": "Before any numerical scan, attempt a symbolic modular-resummation factorization for the integrated kernel or its first x-Taylor coefficient K_1(t)=integral_R p^2*phi(p+t)*phi(p-t) dp. The K_1 criterion itself is classical, and proving it alone would be only a necessary-condition result.",
+      "continue_if": "A concrete candidate factor or signed identity is derived from theta data, rejects the off-line controls, and has a fully stated domain/tail argument. Then test that identity before attempting a cofinal proof.",
+      "stop_if": "Only the Cayley map, an RH-equivalent sign restatement, generic log-concavity, a square root of an unproved nonnegative Fourier transform, or per-slice positivity is offered.",
+      "novelty": "A possible new-to-repo mechanism search, not a new criterion; no surviving new inequality established."
+    },
+    {
+      "rank": 2,
+      "name": "A backward-in-shift Jensen interlacing mechanism",
+      "status": "deprioritized; no mechanism supplied and modest-degree scans are prior art",
+      "closest": [
+        "NS94 symmetric off-line control",
+        "NS78 fixed-coefficient/convergence distinction",
+        "classical Jensen-Polya criterion"
+      ],
+      "wall_check": "Same open gap in the classical hyperbolicity program; distinct from NS98 cost",
+      "scope_comparison": "This is not the closed direct rational-Li/finite-window identification. It uses the exact theta moments and their high-order relation.",
+      "new_input_required": "An arithmetic rule on gamma(n) that propagates real-rootedness from the known large-shift region to all lower shifts at unbounded degree, rather than positivity or log-concavity of a generic sequence.",
+      "first_falsifiable_test": "Write a coefficient-explicit interlacing or stability-preserving relation for J^(d,n) and J^(d,n+1); check it against exact non-real-rooted symmetric controls before a zeta calculation. No such relation is proved here.",
+      "continue_if": "A concrete unbounded-degree propagation inequality is identified that is not implied by the already known fixed-degree asymptotic.",
+      "stop_if": "The proposal only verifies modest degrees, invokes eventual fixed-degree hyperbolicity, or assumes the desired interlacing.",
+      "literature_screen": "The 2022 paper already proves n>=c*exp(d/2), and (using its cited finite-height verification) all n for d<=9.36e20. These are sufficient regions, not exact current global frontiers or RH.",
+      "novelty": "Classical program. No claim that a backward-shift strategy or this problem is globally new."
+    }
+  ],
+  "recommendation": "Do not announce a new RH route. If continuing geometry, require an explicit theta-specific integrated factorization first; the tested per-slice shortcut must stop.",
+  "excluded_repeats": [
+    "unrestricted PSD LCM cone or free trace normalization (NS96/97)",
+    "another projected-cost restatement or table (NS98)",
+    "Clifford coordinate changes without a CAE bound (NS47/50)",
+    "continuous closure substituted for integer closure (NS76)",
+    "absolute residual or finite ground-zero proximity substituted for CCM selection (NS43)"
+  ]
+}

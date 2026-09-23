@@ -1,0 +1,125 @@
+\section*{NS100: geometry reassessment and a complete theta-slice control}
+\paragraph{Status.} This is an independent route assessment with a bounded
+control, not a new RH criterion, a cofinal arithmetic bound, or a manuscript
+version. Lagarias's half-plane logarithmic-derivative criterion and the
+Jensen--P\'olya/Csordas associated-kernel program are prior art. No global
+novelty is claimed for the control or the proposed tests.
+
+\paragraph{A geometric observable that includes the function.}
+Let $F(z)=\xi(1/2+z)/2$ and, where $F\ne0$, let $L=F'/F$.
+The Cayley map $S=(L-1)/(L+1)$ satisfies
+\[
+ 1-|S|^2=\frac{4\Re L}{|L+1|^2}.
+\]
+Thus a disk picture can encode a genuine analytic positivity question;
+the picture does not prove the sign. The classical condition $\Re L(z)>0$
+throughout $\Re z>0$ is equivalent to RH. It includes absence of poles
+there. Merely drawing the image circle or imposing the functional equation
+supplies none of that condition. NS94's count/similarity control remains valid.
+
+\paragraph{Keep the full theta integral.}
+In the normalization used here, for $t\ge0$ put
+\[
+ \phi(t)=\sum_{n\ge1}(2\pi^2n^4e^{9t/2}-3\pi n^2e^{5t/2})
+                     e^{-\pi n^2e^{2t}},\qquad\phi(-t)=\phi(t).
+\]
+The classical theta identity gives $F(z)=\int_{\mathbb R}\phi(t)e^{zt}\,dt$.
+The even extension is the complete theta kernel, not termwise evenness
+of the individual exponentials. All derivatives and integrals below
+converge on compact $z$ sets by its double-exponential real tail.
+For $x>0$, $y\in\mathbb R$, set
+\[
+ A_p(y)=\int_0^\infty\phi(p+t)\phi(p-t)\cos(2yt)\,dt\quad(p\ge0).
+\]
+Changing variables $u=p+t,v=p-t$, and using evenness in $p,t$, gives
+\[
+ \Re\{F'(x+iy)\overline{F(x+iy)}\}
+     =8\int_0^\infty p\sinh(2xp)A_p(y)\,dp.                 \tag{1}
+\]
+All interchanges are absolute before the bounded cosine is introduced.
+The sufficient sublemma $A_p(y)\ge0$ for every $p>0,y$ would remove the
+signed cancellation in (1). It is \emph{false for the actual theta kernel}.
+It is not necessary for (1) to be positive.
+
+\paragraph{Complete one-point certificate.}
+The accompanying Arb script proves
+\[
+ -5.4320\cdot10^{-10}
+ < A_0(20)=\int_0^\infty\phi(t)^2\cos(40t)\,dt
+ < -5.4319\cdot10^{-10}.                                \tag{2}
+\]
+It is replayed at 256 and 384 bits with four theta terms and physical
+cutoff $L=2$, then at 384 bits with eight terms and $L=4$.
+This is one fixed transform value, not a scan, an off-line zeta zero,
+a failure of RH, or a sign of the weighted integral (1).
+
+Here are the complete error bounds. Every summand is positive for $t\ge0$.
+Dropping its negative term bounds it above by
+$2\pi^2n^4 e^{9t/2-\pi n^2e^{2t}}$. This expression decreases with $t$,
+since its logarithmic derivative is $9/2-2\pi n^2e^{2t}<0$.
+Writing $r=16e^{-3\pi}<1$, the decreasing successive ratios of
+$n^4e^{-\pi n^2}$ give
+\[
+ 0<\phi(t)\le C=\frac{2\pi^2e^{-\pi}}{1-r}<1,
+ \quad
+ 0\le\phi(t)-\phi_M(t)\le B_M=
+ \frac{2\pi^2(M+1)^4e^{-\pi(M+1)^2}}
+ {1-[(M+2)/(M+1)]^4e^{-\pi(2M+3)}}.
+\]
+Consequently the replacement of $\phi^2$ by $\phi_M^2$ on $[0,L]$
+costs at most $2LCB_M$. For $t\ge L$ we also have
+\[
+ \phi(t)\le C_0e^{9t/2-\pi e^{2t}},\qquad C_0=2\pi^2/(1-r).
+\]
+Using $e^{2t}\ge e^{2L}[1+2(t-L)]$ proves
+\[
+ \int_L^\infty\phi(t)^2dt
+ \le\frac{C_0^2e^{9L-2\pi e^{2L}}}{4\pi e^{2L}-9},
+\]
+for the positive denominator at both selected cutoffs. The series error
+at $(M,L)=(4,2)$ is below $3.277\cdot10^{-30}$ and the physical tail
+below $3.923\cdot10^{-142}$. Arb integrates the entire finite prefix;
+no midpoint solve or dropped exterior enters (2).
+
+For completeness, $A_p(20)$ is continuous at $p=0$. On a bounded $t$
+interval this follows from continuity and boundedness of the complete
+kernel. For $0\le p\le1$ and $t\ge2$, both $|p\pm t|\ge t-1$.
+The upper envelope $C_0e^{9u/2-\pi e^{2u}}$ is decreasing for $u\ge0$,
+so its square at $u=t-1$ is an integrable common majorant for the
+product. Dominated convergence applies. Thus (2) also implies
+$A_p(20)<0$ for all sufficiently small positive $p$, without asserting
+a numerical radius. The factor $p\sinh(2xp)$ in (1) does not rescue the
+claim that \emph{each} slice is nonnegative.
+
+\paragraph{Generic kernel convexity does not repair the argument.}
+Let
+\[
+ k(t)=\frac1{2\sqrt\pi}\{3e^{-t^2/4}+e^{-(t-1)^2/4}+e^{-(t+1)^2/4}\}.
+\]
+This kernel is positive, smooth, even and strongly log-concave. Indeed
+$\partial_t^2\log k=-1/2+\operatorname{Var}_t(c)/4\le-1/4$,
+where the tilted centers are $c\in\{-1,0,1\}$ with positive weights
+summing to one. Its bilateral Laplace transform is
+$F_k(z)=e^{z^2}(3+2\cosh z)$. At $z=\log2+i\pi$,
+\[
+ \Re(F_k'\overline{F_k})
+  =e^{2[(\log2)^2-\pi^2]}(\tfrac12\log2-\tfrac34)<0.
+\]
+Here $\log2<1$ is elementary. Its zeros include
+$z=\pm\operatorname{arcosh}(3/2)+(2m+1)i\pi$, off the imaginary axis.
+This is a control on positivity/evenness/ordinary log-concavity alone.
+The model is order two and has no zeta arithmetic or theta modular law;
+it does not refute a claim using those additional hypotheses. Nine
+Maxima identities check the elementary algebra, not the classical
+analytic criterion or the entire historical repository.
+
+\paragraph{What would be a genuinely additional input?}
+An explicit factorization of the \emph{integrated} kernel in (1) as an
+autocorrelation, derived from the actual theta modular identity, would
+supply information absent from the circle construction. Defining a
+factor by taking the square root of the unknown Fourier transform assumes
+the desired sign and is forbidden. Neither such a factor nor a signed
+lower bound has been found in this reassessment. The per-slice factorization
+is now excluded by (2). The broader integrated-kernel program is classical
+and remains open; it must not be labeled a novel RH approach merely
+because it is drawn in circle coordinates.

@@ -1,0 +1,86 @@
+{
+  "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "c3ff3bdb3234f1283149a4f32112120991b28ee776417a581a9604cf8a1223c5",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "research-map.json",
+      "sha256": "f166651409bab7def2d1f8032b9537bed0a3bb0f4c2f611ee8173790af965c7b",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "README.md",
+      "sha256": "c6254478798112b3f848e09f2d75609f99c843255570bf052dcac6bd7273fb08",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "NEXT_STEPS.md",
+      "sha256": "a447e9079d038d80306a2278c961076a5f3d3ff2018e04b6f592e866dc4a2229",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/MISSING.md",
+      "sha256": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/v161/ns74/proof.tex",
+      "sha256": "6366fb5efadb25b097989de42aedb5ae5cff015b2b122ad69706b5b4bb68f62f",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/v162/ns76/proof.tex",
+      "sha256": "8abbfbf5c11278c8adc84ef6dcdf8ec7c4f3c863b560484105341dfbcb8d22d5",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/ns94_circle_inversion/argument.tex",
+      "sha256": "45f9bce1083fed8fe6184f0d59784a974c26980e58bdc7a7faa4f67f1018ed1a",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/ns95_square_product/argument.tex",
+      "sha256": "bb2d4ff84ada634e951d538080f217c86c4a8216d815f3c72d7322bc0da6704a",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/ns96_lcm_square/argument.tex",
+      "sha256": "75ebd5259d12fe66bdda4efad1cb1d7f4b3fb8dd8268e60ebee1a231cc138151",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/ns97_novelty_audit/findings.json",
+      "sha256": "c988b9cc7b0a18edfb51ca91966e2f0dad23c21df5aafe5c2ceea7bfe38c8081",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/ns98_projected_cost/argument.tex",
+      "sha256": "40f78654017c7c8e14ce5d2444b560cfe65d3a5d98c619573d96fed986ed3085",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/ns47_clifford_weil/representation.tex",
+      "sha256": "17cd8b66d82f3927d3257cf495b83e2daa68cd649630e379b34df6ac22e732f3",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/ns50_cae_localization/localization-v2.tex",
+      "sha256": "f01a0f20eb9376d5e8957643dd3adfdf1cac5202e240db06be661f549a2fd992",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/ns51_kernel/proof.tex",
+      "sha256": "ee27a3cd7a43df40605eccb468588854bafe05bb2a91b6e47c7af1e3f3c20cba",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    },
+    {
+      "path": "evidence/ns43_route_selection/ccm/selection_note-v2.tex",
+      "sha256": "3c4135cdea011f07184a68afd54c45e389cb53f982ebb11cd33b0de08ebd9286",
+      "commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39"
+    }
+  ],
+  "note": "Hashes bind base scientific/source content; root concurrently edits current summaries. Hash binding is not numerical revalidation."
+}

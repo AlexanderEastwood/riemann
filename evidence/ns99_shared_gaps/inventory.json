@@ -1,0 +1,61 @@
+{
+  "classification": "NS99 audit and map hashes; no new manuscript-version manifest",
+  "files": [
+    {
+      "path": "NEXT_STEPS.md",
+      "sha256": "b2f9424075ceb12acfaab7393ebeaf84b842bbfc8a833c06af37c0326ae55545"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3a4396cb2a4f4054684fda5826a686fd1b0857157fb06434637d032e33446593"
+    },
+    {
+      "path": "RESEARCH_MAP.md",
+      "sha256": "9c28598ebd10522582316e45e904654777ac56de33dea3fbb8c64a1895d8c85f"
+    },
+    {
+      "path": "audits/shared-arithmetic-gaps-2026-09-23-v1.html",
+      "sha256": "4b6cefaf0cd927e8b6abaf19f4ceb9f5e243a7abe8570bb1b24fa5690db51f38"
+    },
+    {
+      "path": "evidence/ns99_shared_gaps/README.md",
+      "sha256": "b845abc53d07a22982230bd525523b35dade60c2d91d3ef2e4121f54ee0c4644"
+    },
+    {
+      "path": "evidence/ns99_shared_gaps/build-summary.txt",
+      "sha256": "c77fcf02bac6892dd9da1ac5e47f850fd93c9ca12e255071dfa71d159502dde6"
+    },
+    {
+      "path": "evidence/ns99_shared_gaps/integration-review.json",
+      "sha256": "18f302f721e7db1192a6745ccba13c771bd2434fce3f97980e459d2ffe11a667"
+    },
+    {
+      "path": "evidence/ns99_shared_gaps/node-inventory.json",
+      "sha256": "7a50331e45edcc6810cec1f926c19be242193de70e8fc0f6b518de754414dc22"
+    },
+    {
+      "path": "evidence/ns99_shared_gaps/source-bindings.json",
+      "sha256": "336a661c08911703d974e919a9decf5b34630388d799e790bf0960bbcdb8b23b"
+    },
+    {
+      "path": "evidence/ns99_shared_gaps/turn-review.json",
+      "sha256": "266cb0c1e567bda3c362e26c36707a74711e6854c73f0c6588ff973e8e7d03af"
+    },
+    {
+      "path": "evidence/ns99_shared_gaps/validation.json",
+      "sha256": "1329460b86e76370ceb1806e3ebcd7d1e512010e48a84637619b4c65c4830a68"
+    },
+    {
+      "path": "pyrightconfig.json",
+      "sha256": "d0a888b6749161cc2e59fce149ff38f7ff0c02aad236776bcfb7649fb26f6ee8"
+    },
+    {
+      "path": "research-map.json",
+      "sha256": "ab93d6fbf41db10e7c9adaf9052ab7c42f88eebbf13ba5f592a3a49f0129bd67"
+    },
+    {
+      "path": "tools/make_map.py",
+      "sha256": "0c3a998ac540eb53b66ada73a3d342355e7e8287a122d0387632ae13684350ba"
+    }
+  ]
+}
