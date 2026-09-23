@@ -368,7 +368,7 @@ a stronger sufficient bound does not disprove the smaller quantity it bounds.
 | [KERNEL-API](#input-kernel-api) | Exclude full-window arithmetic nullvectors on the complete domain | NS51,55,58 |
 | [CCM-LIMIT](#input-ccm-limit) | Obtain complete relative ground selection and transform control | NS5,14,18,19,43 |
 | [LEVEL-PACKETS](#input-level-packets) | Supply arithmetic level mass and independent admissible packet coverage | NS27,29,32–33,39,54 |
-| [ZERO-GEOMETRY](#input-zero-geometry) | Find zeta-specific zero rigidity beyond reflection symmetry | NS94; NS100 reassessment |
+| [ZERO-GEOMETRY](#input-zero-geometry) | Find zeta-specific zero rigidity beyond reflection symmetry | NS94; NS100 reassessment; NS101 bounded attempt |
 | [HEAT-TRANSPORT](#input-heat-transport) | Control exterior-cluster transport and test-support costs | NS52 |
 | [OPERATOR-BRIDGES](#input-operator-bridges) | Construct the route-specific operator or geometric transfer | Fixed-space; circle/Toeplitz; de Branges; function-field/Hodge |
 
@@ -476,9 +476,9 @@ Sources: [evidence/v146](evidence/v146) · [evidence/v147](evidence/v147) · [ev
 
 A geometric revival must add a property of the actual xi/theta/Euler-product object that symmetric off-line controls do not share. The NS94 power-product detector still requires an all-height vanishing proof.
 
-**Scope / stop:** Equal inversion counts and an infinite exterior similarity point do not imply RH: the point depends on circle parameters. That inference is closed, not every geometric approach. A classical RH-equivalent radial-growth or disk-contraction criterion is not a new arithmetic estimate; any new proposed sufficient mechanism needs its own test and scope. NS100 tests a concrete stronger condition using the actual theta kernel: its p=0 slice cosine transform at frequency 40 is strictly negative, and continuity extends failure to small p>0. This closes only per-slice positivity; the full integrated kernel remains unestimated. Its classical associated-kernel criterion is not a novel mechanism.
+**Scope / stop:** Equal inversion counts and an infinite exterior similarity point do not imply RH: the point depends on circle parameters. That inference is closed, not every geometric approach. A classical RH-equivalent radial-growth or disk-contraction criterion is not a new arithmetic estimate; any new proposed sufficient mechanism needs its own test and scope. NS100 tests a concrete stronger condition using the actual theta kernel: its p=0 slice cosine transform at frequency 40 is strictly negative, and continuity extends failure to small p>0. This closes only per-slice positivity; the full integrated kernel remains unestimated. Its classical associated-kernel criterion is not a novel mechanism. NS101 stops the proposed completion/factorization attempt without a new estimate. Its reciprocal positive-Gaussian dilation control retains a positive even differential kernel, order one and the usual zero strip but introduces off-axis zeros. It changes the single-lattice coefficients and does not claim monotonicity, log-concavity or all modular laws. The original full-sign question is not closed; reopening needs a specific additional arithmetic identity.
 
-Sources: [evidence/ns94_circle_inversion](evidence/ns94_circle_inversion) · [evidence/ns100_reassessment/argument.tex](evidence/ns100_reassessment/argument.tex) · [evidence/ns100_reassessment/proposals.json](evidence/ns100_reassessment/proposals.json) · [evidence/ns100_reassessment/sources.json](evidence/ns100_reassessment/sources.json).
+Sources: [evidence/ns94_circle_inversion](evidence/ns94_circle_inversion) · [evidence/ns100_reassessment/argument.tex](evidence/ns100_reassessment/argument.tex) · [evidence/ns100_reassessment/proposals.json](evidence/ns100_reassessment/proposals.json) · [evidence/ns100_reassessment/sources.json](evidence/ns100_reassessment/sources.json) · [evidence/ns101_theta_factorization/argument.tex](evidence/ns101_theta_factorization/argument.tex).
 
 <a id="input-heat-transport"></a>
 ### HEAT-TRANSPORT: Control exterior-cluster transport and test-support costs

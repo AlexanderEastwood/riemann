@@ -1,0 +1,47 @@
+[
+  {
+    "path": "AGENTS.md",
+    "commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+    "sha256": "c3ff3bdb3234f1283149a4f32112120991b28ee776417a581a9604cf8a1223c5"
+  },
+  {
+    "path": "README.md",
+    "commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+    "sha256": "3a4396cb2a4f4054684fda5826a686fd1b0857157fb06434637d032e33446593"
+  },
+  {
+    "path": "NEXT_STEPS.md",
+    "commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+    "sha256": "b2f9424075ceb12acfaab7393ebeaf84b842bbfc8a833c06af37c0326ae55545"
+  },
+  {
+    "path": "research-map.json",
+    "commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+    "sha256": "ab93d6fbf41db10e7c9adaf9052ab7c42f88eebbf13ba5f592a3a49f0129bd67"
+  },
+  {
+    "path": "evidence/MISSING.md",
+    "commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+    "sha256": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073"
+  },
+  {
+    "path": "evidence/ns99_shared_gaps/integration-review.json",
+    "commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+    "sha256": "18f302f721e7db1192a6745ccba13c771bd2434fce3f97980e459d2ffe11a667"
+  },
+  {
+    "path": "evidence/ns100_reassessment/argument.tex",
+    "commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+    "sha256": "1673593f001fc9be376e17fa36741c27b11e04731be887f7d6200d6ad05b6187"
+  },
+  {
+    "path": "evidence/ns100_reassessment/proposals.json",
+    "commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+    "sha256": "1b8562bc18ef6d947c8b07009bdab90d5733695d8c5f29efe68e0bde05b247c9"
+  },
+  {
+    "path": "evidence/ns100_reassessment/sources.json",
+    "commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+    "sha256": "3278bc3b8f2f97b024c277824e7da11bbaa9c3fc1eab59418f743d31af12ccb0"
+  }
+]

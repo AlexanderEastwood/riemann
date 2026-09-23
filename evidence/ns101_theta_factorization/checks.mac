@@ -1,0 +1,31 @@
+/* NS101 exact algebra, not a proof of the missing theta sign. */
+kill(all)$
+display2d:false$
+count:0$
+check(label,expr):=block([v:radcan(ratsimp(expand(expr)))],
+ if v # 0 then error(label,v), count:count+1, print("PASS",label))$
+ht:exp(t/2-q*exp(2*t))$
+check("Gaussian completion derivative",diff(ht,t,2)-ht/4-(4*q^2*exp(4*t)-6*q*exp(2*t))*ht)$
+check("paired n differential kernel",(4*q^2*exp(4*t)-6*q*exp(2*t))*exp(t/2)/2-(2*q^2*exp(9*t/2)-3*q*exp(5*t/2)))$
+check("homogeneous modes",diff(2*cosh(t/2),t,2)-2*cosh(t/2)/4)$
+check("diagonal Jacobian",determinant(matrix([1,1],[1,-1]))+2)$
+check("tilted product exponent",x*(p+t)+x*(p-t)-2*x*p)$
+check("cross derivative weight",(p+t)+(p-t)-2*p)$
+check("polarized autocorrelations",(1+u)*(1+v)-(1-u)*(1-v)-2*(u+v))$
+check("K normalization",subst([u=p+t,v=p-t],((1+u)*(1+v)-(1-u)*(1-v))/8)-p/2)$
+/* E=exp(a/2). Reciprocity exchanges the two scaled theta symbols. */
+check("paired dilation reciprocity",3*T0+Tplus/E*E^2+Tminus*E/E^2-(3*T0+Tminus/E+Tplus*E))$
+check("constant term one",(3+1/E+E)/(3+E+1/E)-1)$
+check("completion shift down",exp((t-a)/2)-exp(t/2)*exp(-a/2))$
+check("completion shift up",exp((t+a)/2)-exp(t/2)*exp(a/2))$
+check("Mellin shift down",z*(v+a)-z*v-a*z)$
+check("Mellin shift up",z*(v-a)-z*v+a*z)$
+check("normalization at half",(3+E+1/E)/(3+E+1/E)-1)$
+b:(3+sqrt(5))/2$
+check("root quadratic",b^2-3*b+1)$
+check("off axis zero multiplier",3-b-1/b)$
+check("Mellin gamma recurrence",(s/2)*(s/2+1)-(3/2)*(s/2)-s*(s-1)/4)$
+check("absolute integral power",(x/2+1/4)-((x+1/2)/2))$
+check("strict cosh lower margin",(1+1/2+1/24)-3/2-1/24)$
+print("CHECK COUNT",count)$
+quit();

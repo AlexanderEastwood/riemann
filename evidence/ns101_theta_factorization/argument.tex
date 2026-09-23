@@ -1,0 +1,172 @@
+\section*{NS101: the bounded modular-factorization attempt}
+\paragraph{Status and stop.}
+This is an exact-identity and control audit, not an RH proof or a new
+positivity criterion. The proposed factorization of the full signed kernel
+was not obtained. We record the actual completion calculation, the
+autocorrelation it does give, the missing derivative comparison, and a
+positive reciprocal-theta control that forbids inferring the comparison
+from the retained general properties alone. No global novelty is claimed.
+
+\paragraph{The actual modular completion.}
+Use the NS100 convention
+\[
+ \Theta(r)=\sum_{n\in\mathbb Z}e^{-\pi n^2r},\qquad
+ h(t)=e^{t/2}\Theta(e^{2t}),\qquad
+ F(z)=\xi(1/2+z)/2=\int_{\mathbb R}\phi(t)e^{zt}\,dt.
+\]
+Jacobi reciprocity $\Theta(r)=r^{-1/2}\Theta(1/r)$ says exactly that
+$h$ is even. Termwise differentiation on compact real $t$ intervals gives
+\[
+ \phi(t)=\tfrac14(\partial_t^2-\tfrac14)h(t).
+ \tag{1}
+\]
+Indeed the $n=0$ term is killed, and the two terms $n, -n$ give
+$(2\pi^2 n^4e^{9t/2}-3\pi n^2e^{5t/2})e^{-\pi n^2e^{2t}}$.
+This also verifies the even extension without declaring each summand even.
+
+Subtracting the homogeneous modes gives
+\[
+ g(t)=h(t)-2\cosh(t/2),\qquad
+ g(t)=-e^{-t/2}+2e^{t/2}\sum_{n\ge1}e^{-\pi n^2e^{2t}}quad(t\ge0).
+\]
+Thus $g$ and its first two derivatives have exponential tails of rate
+$1/2$, and $g$ is even. For $|\Re z|<1/2$, integration by parts with
+both boundary terms zero yields
+\[
+ F(z)=\tfrac14(z^2-\tfrac14)\int_{\mathbb R}g(t)e^{zt}\,dt. \tag{2}
+\]
+This completion retains the function exactly; it does not assign a sign
+to its logarithmic derivative. The strip restriction in (2) matters.
+
+\paragraph{Which autocorrelation is already positive?}
+For real $x$ set $f_x(u)=e^{xu}\phi(u)$ and
+\[
+ J_x(t)=\int_{\mathbb R}f_x(p+t)f_x(p-t)\,dp,
+ \qquad
+ K_x(t)=\int_0^\infty p\sinh(2xp)\phi(p+t)\phi(p-t)\,dp.
+\]
+The complete double-exponential tails justify every derivative and change
+of variables here, locally uniformly in $x$ and Fourier frequency $y$.
+Ordinary autocorrelation gives positive definiteness of $J_x$, with
+\[
+ \int_{\mathbb R}J_x(t)e^{2iyt}\,dt=\tfrac12|F(x+iy)|^2,
+ \qquad \partial_xJ_x=4K_x,
+ \qquad
+ \int_{\mathbb R}K_x(t)e^{2iyt}\,dt
+       =\tfrac14\Re(F'(x+iy)\overline{F(x+iy)}).             \tag{3}
+\]
+The factor $1/2$ is the Jacobian of $(p,t)\mapsto(p+t,p-t)$.
+The factor $4$ uses evenness of the product in $p$.
+Consequently positivity of the already factored $J_x$ does not establish
+the positive definiteness required of $K_x$. For real $v$ put
+$b_x(v)=v f_x(v)$ and write
+$\mathcal A[q](t)=\int q(p+t)q(p-t)\,dp$. Direct polarization gives
+\[
+ K_x=\tfrac18\{\mathcal A[f_x+b_x]-\mathcal A[f_x-b_x]\}.   \tag{4}
+\]
+This is a difference of two positive definite kernels. The missing
+comparison is precisely their Fourier-side domination, not a positive
+factor produced by the calculation. NS100's control already forbids a
+general inference from kernel positivity/log-concavity to this domination.
+The first Taylor coefficient at $x=0$ returns to the classical associated
+kernel $\int p^2\phi(p+t)\phi(p-t)\,dp$; it supplies no new estimate.
+
+\paragraph{An exact test of the reciprocal-symmetry input.}
+Let $a>0$, $B_a=3+2\cosh(a/2)$, and define a different theta sum by
+\[
+ \Theta_a(r)=\frac{3\Theta(r)+e^{-a/2}\Theta(e^{-2a}r)
+                         +e^{a/2}\Theta(e^{2a}r)}{B_a}.     \tag{5}
+\]
+All Gaussian coefficients are positive, the constant term is one, and
+pairing the two dilations gives exactly
+\[
+ \Theta_a(r)=r^{-1/2}\Theta_a(1/r).
+\]
+The corresponding completion and differential kernel are
+\[
+ h_a(t)=\frac{3h(t)+h(t-a)+h(t+a)}{B_a},\qquad
+ \phi_a(t)=\frac{3\phi(t)+\phi(t-a)+\phi(t+a)}{B_a}>0.     \tag{6}
+\]
+They retain evenness, real analyticity and double-exponential real tails
+for the kernel (with changed constants). Translating the complete
+bilateral integrals, without a cutoff, now yields
+\[
+ F_a(z)=\int_{\mathbb R}\phi_a(t)e^{zt}\,dt
+       =\frac{3+2\cosh(az)}{B_a}F(z).                      \tag{7}
+\]
+This is even, real under conjugation, and entire of order one. For example,
+the upper order bound follows from the finite exponential-type multiplier
+and the order-one bound for $F$; growth on the positive real axis gives
+the matching lower order. Also $F_a(1/2)=F(1/2)=1/4$.
+
+Take $a=2$, and put $\beta=\operatorname{arcosh}(3/2)>0$. The multiplier
+has the exact zeros
+\[
+ z=\pm\beta/2+(2m+1)i\pi/2,\qquad m\in\mathbb Z.        \tag{8}
+\]
+Since $\cosh 1>1+1/2=3/2$, we have $0<\beta/2<1/2$.
+These are off-axis zeros inside the same strip $|\Re z|<1/2$ as the
+zeros of the original completed zeta function. The existing zeros of $F$
+remain, so no unproved assumption about their locations on the axis is
+used. The extra zeros cannot be cancelled: (7) is a product of entire
+functions, not a quotient.
+
+The global radial nonnegativity cannot hold for $F_a$. Otherwise, along
+the horizontal line through a zero in (8), $|F_a(x+iy)|^2$ would be
+nondecreasing for $x>0$. Its value zero at a positive $x$ would force it
+to vanish on a preceding interval, contradicting the identity theorem.
+This argument does not require the zero of $F$ there to be simple or absent.
+
+\emph{Scope.} This is a control on an inference from reciprocal symmetry,
+positive Gaussian mixtures, positive even differential kernel, order one
+and the critical-strip zero bound. It is not the original one-lattice
+theta function, and it is not a modular form with every original
+transformation law. The dilated Gaussian frequencies and coefficients
+have changed. Monotonicity and log-concavity of $\phi_a$ are not asserted.
+Thus this control and NS100's log-concave order-two control address
+different hypothesis sets. Neither closes a proof using the exact original
+arithmetic, another additional condition, or a genuine factorization for
+the original $K_x$.
+
+\paragraph{A direct Gaussian-sum unfolding reaches the classical boundary.}
+Let $q_n(t)$ be the $n$th displayed summand of $\phi$. A substitution
+$v=\pi n^2e^{2t}$ gives, for $\Re z>-5/2$ and $s=z+1/2$,
+\[
+ \int_{\mathbb R}q_n(t)e^{zt}\,dt
+  =(\pi n^2)^{-s/2}
+    \{\Gamma(s/2+2)-\tfrac32\Gamma(s/2+1)\}
+  =\tfrac{s(s-1)}4(\pi n^2)^{-s/2}\Gamma(s/2).             \tag{9}
+\]
+At removable exceptional points the last expression is read by continuity.
+For real $x>-5/2$ the corresponding absolute integral is
+\[
+ \int_{\mathbb R}|q_n(t)|e^{xt}\,dt
+   =c(x)n^{-(x+1/2)},\quad
+ c(x)=\tfrac12\pi^{-(x+1/2)/2}
+       \int_0^\infty |2v-3|v^{x/2+1/4}e^{-v}\,dv>0.     \tag{10}
+\]
+Hence the sum of absolute integrals is finite exactly when $x>1/2$.
+The desired range $0<x\le1/2$ is not covered by termwise absolute
+unfolding. For $x>1/2$ summing (9) merely gives the usual Gamma--zeta
+formula for $F$. The endpoint provides an exact warning: at $z=1/2$
+each integral in (9) is zero, whereas
+\[
+ \int_{\mathbb R}\Big(\sum_{n\ge1}q_n(t)\Big)e^{t/2}\,dt
+     =F(1/2)=\xi(1)/2=1/4\ne0
+     =\sum_{n\ge1}\int_{\mathbb R}q_n(t)e^{t/2}\,dt.      \tag{11}
+\]
+Every individual integral exists; the invalid step is interchanging the
+infinite sum and the full integral. This is the classical absolute-convergence boundary,
+not a new obstruction to conditional summation, analytic continuation,
+modular resummation or a correlated estimate. On the original half-line,
+the fast convergent theta series remains valid; it retains the oscillatory
+cross terms and does not inherit termwise Fourier positivity.
+
+\paragraph{Disposition.}
+The attempted completion/factorization therefore stops: (1)--(4) do not
+control the signed comparison; (5)--(8) reject a proposed general-property
+shortcut; (9)--(10) explain why absolute unfolding does not fill the strip.
+A future continuation needs a specific identity or estimate using
+arithmetic information absent from (5), not another request to factor the
+unknown positive kernel. No such candidate was found here. This is an audit
+and a scoped control, with no new theorem node or manuscript version.
