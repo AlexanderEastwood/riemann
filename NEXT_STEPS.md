@@ -116,6 +116,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-67 | Test direct cancellation in the fixed once-smoothed canonical error, retaining the complete boundary/integral identity and seeking an independent growth estimate | Codex, Continue solving toward RH | claimed | Derive a useful independently bounded signed quantity, or identify exactly where the complete cancellation estimate still requires RH-level input. Keep finite diagnostics separate and do not infer a cofinal bound from a table. |
 
+| NS-68 | Test a single multiplicative-annulus response and its positive renewal equation as a possible independent canonical growth estimate | Codex, Continue solving toward RH | claimed | Retain the exact arithmetic forcing, prove any renewal bound with its weighted domain, and determine whether positivity gains an exponent or merely transfers an RH-equivalent input. Separate critical weighted-energy obstructions from the original canonical norm target. |
+
 ## Open continuation targets after NS-66 (not yet claimed)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
