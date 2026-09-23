@@ -144,6 +144,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-81 | Bound ordinary smoothed integer Gram conditioning from finite reciprocal samples and replace the infinite arithmetic comparator with an explicitly sufficient finite cutoff | Codex, Continue solving toward RH | done (v1.64; effective but impractical bound) | Coefficient recovery gives ordinary Gram condition O(N^4 log^2 N). Full sample-tail bound yields sufficient finite cutoff 2^16(N+1)^6 and projected condition <=42. Huge comparator not assembled; no cofinal decay or practical implementation. |
 
+| NS-82 | Retain the analytic logarithmic tail as a rank-two form to reduce the sufficient finite-comparator cutoff | Codex, Continue solving toward RH | claimed | Control the complete Bernoulli remainder in norm, retain cross terms, and distinguish a finite construction from a practical implementation or cofinal decay. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
