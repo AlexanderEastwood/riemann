@@ -1,0 +1,48 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v162/ns77/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+c:1-a
+delta:2*a-1
+BP(s):=((s-a)^2+g^2)/((s-c)^2+g^2)
+check("Real normalized pair value",BP(1)-(g^2+c^2)/(g^2+a^2))
+ell:subst(1,s,diff(BP(s),s)/BP(s))
+check("Pair logarithmic derivative",
+      ell+(2*delta*(g^2-a*c))/((g^2+a^2)*(g^2+c^2)))
+check("Pair derivative remainder",
+      ell+(2*delta)/g^2
+         +(-2*delta*(g^2*(a^2+c^2+a*c)+a^2*c^2))/(g^2*(g^2+a^2)*(g^2+c^2)))
+check("Pair integration length",a^2-c^2-delta)
+check("Pair quadratic bound",1-(a^2+c^2+a*c)+(-a)*c)
+check("Pair product bound",1/16-a^2*c^2+(-(a-1/2)^2)*(1/2-(a-1/2)^2))
+check("Pair remainder constant",2*(1+1/16)-17/8)
+check("Distance in logarithmic derivatives",
+      2-2*b^2+2*b*(b*l)-(b*l)^2+(-(b*(l^2+l2))^2)/4
+       -(2-b^2*(2-2*l+l^2)+(-b^2*(l^2+l2)^2)/4))
+check("Complete epsilon expansion",
+      2-exp(-2*J)*(2-2*(-2*J+ep)+(-2*J+ep)^2)
+       -(2-exp(-2*J)*(2+4*J+4*J^2)+(2+4*J)*exp(-2*J)*ep+(-exp(-2*J))*ep^2))
+AJ:2-exp(-2*J)*(2+4*J+4*J^2)
+check("Cubic majorant derivative",diff(AJ,J)-8*J^2*exp(-2*J))
+check("Cubic majorant origin",subst(0,J,AJ))
+check("Linear coefficient decreasing",diff((2+4*J)*exp(-2*J),J)+8*J*exp(-2*J))
+for k in [2,4] do
+    block([primitive:-t^(1-k)*(log(t)/(k-1)+1/(k-1)^2)],
+          check(sconcat("Complete counting-tail antiderivative ",k),
+                diff(primitive,t)-log(t)/t^k),
+          check(sconcat("Counting tail at infinity ",k),
+                limit(primitive,t,inf)))
+S2:(2*A*(log(H)+1))/H
+S4:(4*A*(log(H)/3+1/9))/H^3
+check("Full height bound",
+      (8*S2^3)/3+5*S4+(-((64/3)*A^3*(log(H)+1)^3+20*A*(log(H)/3+1/9)))/H^3)
+check("Counting remainder slack",362/1000-1038/10000+(-2573)/10000+(-9)/10000)
+print("PASS:",length(checks),
+      "exact identities; full zero tails bounded analytically, external zero verification not replayed.")
+PASS: 18 
+     exact identities; full zero tails bounded analytically, external zero verification not replayed.
+      
+"/private/tmp/riemann-ns75/evidence/v162/ns77/exact-checks.mac"

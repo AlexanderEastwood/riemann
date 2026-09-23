@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local review of the divisor and continuous-space results</title></head>
+<body style="margin:0;background:#f4f2ed;color:#192d35;font-family:Georgia,serif;font-size:17px;line-height:1.65;">
+<main style="max-width:680px;margin:32px auto;padding:36px 28px;background:#fff;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;color:#526971;margin:0 0 12px;">RIEMANN PROJECT · 23 SEPTEMBER 2026 · v1.62</p>
+<h1 style="font-size:32px;line-height:1.2;margin:0 0 24px;">Local review of the divisor and continuous-space results</h1>
+
+<p><strong>Scope:</strong> NS-75–77 proofs, complete finite evidence, literature inputs and manuscript integration. This is a self-review by the authoring task, not an independent audit.</p>
+<h2 style="font-size:23px;">What had to remain separate</h2>
+<p>The divisor cancellation holds for the raw step with old coefficients fixed. Old-space reoptimization can restore those jumps. Both steps are measured separately, and the held-old error retains the full physical Gram, the regular part of the second derivative and both tails. At size 256 the untapered direction has negative correlation, so its optimal scalar reverses its sign.</p>
+<p>The continuous Hardy-space theorem uses the full real translation semigroup. Applying it directly to integer dilations would be unjustified. The strict local separation proves these closures differ, but does not by itself prove that their distances from this particular target differ.</p>
+<h2 style="font-size:23px;">Tail and projection audit</h2>
+<p>The unitary multiplier maps the complete one-dimensional exterior-tail space onto the Hardy space. Both the forward tail cancellation and inverse range are accounted for. The target projection is checked using the full three-function Gram and an independent two-kernel calculation for a hypothetical conjugate zero pair.</p>
+<p>The local separating witness uses complete integrals on its stated interval. It supplies a full-space lower bound by norm restriction; no omitted tail is set to zero. The scalar tail theorem sums over every hypothetical off-critical conjugate pair with multiplicity. The full zero-counting integral includes the endpoint sign and its limit at infinity.</p>
+<p>The auxiliary epsilon in the tail proof is not assumed positive. Its negative and positive cases are bounded separately. This prevents an unjustified sign substitution in the cubic estimate.</p>
+<h2 style="font-size:23px;">External information and validation</h2>
+<p>The factorization is attributed to <a href="https://arxiv.org/html/math/9910055" style="color:#155c68;">Burnol’s classical argument</a>. The two published zero inputs are identified by theorem and corollary; no new zero computation or external archive recovery is implied.</p>
+<p>The replay audit checks generator and inherited-dependency hashes, two-precision enclosures, the doubled NS75 cutoff, published curvature overlaps, all table intervals, and the fifteen unit-step failures. Maxima passed 11, 29 and 18 exact checks. All solves retain ball enclosures. Python diagnostics, build warnings, page count and rendered-page review are recorded in <a href="validation.json" style="color:#155c68;">validation.json</a>.</p>
+<p>No unresolved issue was identified in this self-review. The original integer convergence estimate, uniform Weil floor, G2 and RH remain open.</p>
+
+<p style="border-top:1px solid #d5dedc;margin-top:32px;padding-top:18px;font-size:14px;color:#526971;">Exact identities, proved implications and certified finite computations are distinguished from open arithmetic inputs. Local self-review only; no independent review or publication-readiness claim.</p>
+</main></body></html>

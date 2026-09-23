@@ -25,7 +25,11 @@
     "evidence/v161/*.py",
     "evidence/v161/ns72/*.py",
     "evidence/v161/ns73/*.py",
-    "evidence/v161/ns74/*.py"
+    "evidence/v161/ns74/*.py",
+    "evidence/v162/*.py",
+    "evidence/v162/ns75/*.py",
+    "evidence/v162/ns76/*.py",
+    "evidence/v162/ns77/*.py"
   ],
   "exclude": [
     "node_modules",

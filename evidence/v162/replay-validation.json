@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "groups": {
+    "ns75": {
+      "precision_enclosure_matches": 150,
+      "doubled_cutoff_matches": 30,
+      "NS72_overlap_matches": 20,
+      "source_sha256": "a47c31423470d8dd24a5fef2194c764978eed78a0311c5ae6e77900012142a6e",
+      "table_intervals_verified": 15,
+      "all_fifteen_held_old_unit_steps_increase_error": true,
+      "minimum_nonzero_serialized_accuracy_bits": 69
+    },
+    "ns76": {
+      "precision_enclosure_matches": 6,
+      "source_sha256": "163584373552d705ee94935767a3ebf234b8ba7f0855540ea66eaf6a1ae50660",
+      "minimum_nonzero_serialized_accuracy_bits": 230,
+      "cutoff_replay": "not applicable: complete elementary finite expressions; zero tail handled analytically in NS77"
+    },
+    "ns77": {
+      "precision_enclosure_matches": 25,
+      "source_sha256": "5c957021526929eaea94d59734cc1ac82a15ec35b9b62e888f8e0c20530798ba",
+      "minimum_nonzero_serialized_accuracy_bits": 87,
+      "cutoff_replay": "not applicable: complete elementary finite expressions; zero tail handled analytically in NS77"
+    }
+  },
+  "cofinal_arithmetic_bound": false,
+  "independent_review": false
+}

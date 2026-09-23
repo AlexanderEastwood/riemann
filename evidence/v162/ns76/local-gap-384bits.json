@@ -1,0 +1,20 @@
+{
+  "classification": "certified local lower bound for the full distance of sigma_(3/2) to every integer dilation combination; not a target-tau bound",
+  "precision_bits": 384,
+  "source_sha256": "163584373552d705ee94935767a3ebf234b8ba7f0855540ea66eaf6a1ae50660",
+  "values": {
+    "dilation": "1.500000000000000000000000000000000000000000000000000000000000000000000",
+    "local_norm_squared": "[0.3935412347141531644102440163389383786408879640157384302440654901721030 +/- 3.30e-72]",
+    "local_gram_determinant": "[0.008917537835183115277342185936537753179644316702839246501848724385506909 +/- 2.75e-73]",
+    "full_space_squared_distance_lower_bound": "[0.001117133999839937210549044520911343966371414106753512148334110911114426 +/- 3.61e-73]",
+    "projection_coefficient_inverse_x": "[0.7218634319056701110530271785600109505062637567929328778404862853161255 +/- 1.33e-71]",
+    "projection_coefficient_log_x": "[0.4020257958482569888007427408995028896555658214285683755210901816938194 +/- 7.46e-72]"
+  },
+  "minimum_accuracy_bits": 365,
+  "gates": {
+    "complete_local_integrals": true,
+    "positive_local_gram": true,
+    "positive_gap": true,
+    "global_bound_by_norm_restriction": true
+  }
+}

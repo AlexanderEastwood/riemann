@@ -520,3 +520,19 @@ classical inner-factor role in NB approximation is explained by
 [Burnol's projection formula](https://arxiv.org/html/math/9910055).
 No zero or positive limiting error is inferred for the original zeta family.
 The original cofinal arithmetic contraction remains unproved.
+
+## v1.62: exact continuous defect and arithmetic feedback
+
+The q=2 distance extends the classical Hardy projection calculation in
+[Burnol, Theorem 1.2 and Lemma 2.4](https://arxiv.org/html/math/9910055).
+No novelty claim is made for inner-factor geometry or Beurling–Lax theory.
+The derivation preserves the complete exterior tail and proves a strict
+integer/continuous closure separation; the separation alone does not
+establish unequal distances for this particular target.
+
+The new positive tail budget uses the full convergent zero sums. Its numeric
+calibration takes the published finite-height result of
+[Platt–Trudgian](https://arxiv.org/pdf/2004.09765) and the explicit counting
+bound of [Hasanalizade–Shen–Wong](https://arxiv.org/pdf/2107.06506) as external
+inputs. Only scalar evaluation is replayed here. No new zero verification,
+integer error upper bound, or RH conclusion is asserted.

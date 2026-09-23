@@ -130,11 +130,11 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-74 | Construct a nearby unitary deformation with the same full Gram geometry and an explicit nonzero approximation floor; test what finite gain efficiency can distinguish | Codex, Continue solving toward RH | done (v1.61; altered-family control) | Explicit unitary Blaschke deformation preserves all complete Gram entries and has positive floor (2 beta-1)(1-beta)^2/beta^6. Finite statistics approach the original as beta decreases to 1/2. Sixteen exact checks and complete finite replay; no original-family error floor. |
 
-| NS-75 | Test correction coefficients from the actual optimized residual divisor sums; retain exact derivative jumps and full projected energy | Codex, Continue solving toward RH | claimed | Compare constant and logarithmic tapers of the actual divisor defect with the fixed Mobius templates and curvature rule. Distinguish raw jump cancellation from old-space reoptimization, and stop at the missing cofinal arithmetic bound. |
+| NS-75 | Test correction coefficients from the actual optimized residual divisor sums; retain exact derivative jumps and full projected energy | Codex, Continue solving toward RH  done (v1.62; finite control) | Complete divisor-log identity and jump measure; unit-step failure at all tested blocks. Optimized three-direction gain is 56.02% at N=256 versus curvature 97.63%. No general asymptotic feedback exclusion. |
 
-| NS-76 | Identify the complete continuous-dilation relaxation in Hardy space and derive its exact q=2 inner-factor distance, retaining the distinction from integer dilation closure | Codex, Continue solving toward RH | claimed | Use the classical Burnol/Beurling factorization with attribution, keep the full one-dimensional exterior tail, and test the derived distance against explicit finite Blaschke controls. No unknown zero data or unconditional integer/continuous closure equality is assumed. |
+| NS-76 | Identify the complete continuous-dilation relaxation in Hardy space and derive its exact q=2 inner-factor distance, retaining the distinction from integer dilation closure | Codex, Continue solving toward RH  done (v1.62; exact continuous relaxation) | Complete tail-to-Hardy unitary; exact q=2 Blaschke distance and invisible component. Strict integer/continuous closure separation with certified witness >0.00111713. No equality of positive target distances assumed. |
 
-| NS-77 | Bound the continuous q=2 inner-factor defect in terms of hypothetical off-critical zero tails, and determine the scope of finite-height information | Codex, Continue solving toward RH | claimed | Derive a complete bound from convergent positive zero sums using the NS-76 distance formula. Keep the bound conditional on the specified zero-height exclusion, distinguish continuous from integer approximation, and assert no new verified height or zero-free region. |
+| NS-77 | Bound the continuous q=2 inner-factor defect in terms of hypothetical off-critical zero tails, and determine the scope of finite-height information | Codex, Continue solving toward RH  done (v1.62; complete continuous tail bound) | D_cont^2 <= (8/3) S2^3 + 5 S4. Published zero verification and complete counting tail imply D_cont^2 < 2.08e-32. External input only; no integer upper bound, new verified height, or zero-distance proof. |
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
@@ -186,6 +186,16 @@ missing arithmetic step. A further attempt must use information that the
 inserted inner-factor control changes, or prove a genuinely cofinal estimate.
 Do not replace this with larger finite blocks or another uniform all-vector
 Gram comparison. The three tested Mobius templates are a finite control only.
+
+## Open continuation after NS-77
+
+The exact continuous defect is extremely small under existing published
+finite-height information, but can still be positive. Continuous and integer
+closures are strictly different, so an approximation theorem for the relaxed
+space does not transfer automatically. The actual integer limiting error
+and cofinal curvature contraction remain open. A useful next estimate must
+control the integer residual with complete signed arithmetic information;
+local cancellation of its derivative jumps did not provide descent.
 
 ## Lanes
 

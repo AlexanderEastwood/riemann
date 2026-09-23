@@ -1,0 +1,123 @@
+{
+  "classification": "local integration validation; no independent review or RH proof",
+  "version": "v1.62",
+  "date": "2026-09-23",
+  "tasks": [
+    "NS-75",
+    "NS-76",
+    "NS-77"
+  ],
+  "publication_base_commit": "b673865f73e842a852cd5f2cca1246a09ea11c37",
+  "manuscript": {
+    "pages": 344,
+    "warning_counts": {
+      "undefined_or_duplicate_references": 0,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0,
+      "latex_warnings": 0,
+      "pdftex_warnings": 0,
+      "duplicate_pdf_destinations": 0
+    },
+    "proof_fragment_integrated_verbatim_once": true,
+    "proof_sha256": "21d8d39188886eee4e330274c66fc6be4b00c4ec1e40785aeafd33cda5df8ba1",
+    "main_tex_sha256": "5d4500a8c8e156c0ba88d18df7d9c2d2428654dc54f4b5dfd6e7d508a6bc04f4",
+    "pdf_sha256": "a8fcca1f23d9315c7ba405e07646bb2e9fe077b03ef287a3839a786bd3a859a3",
+    "new_section_visual_review_pages": [
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      344
+    ]
+  },
+  "maxima_exact_checks": {
+    "NS-75": 11,
+    "NS-76": 29,
+    "NS-77": 18
+  },
+  "maxima_total": 58,
+  "arb_precisions_bits": [
+    256,
+    384
+  ],
+  "replays": {
+    "status": "PASS",
+    "precision_bits": [
+      256,
+      384
+    ],
+    "groups": {
+      "ns75": {
+        "precision_enclosure_matches": 150,
+        "doubled_cutoff_matches": 30,
+        "NS72_overlap_matches": 20,
+        "source_sha256": "a47c31423470d8dd24a5fef2194c764978eed78a0311c5ae6e77900012142a6e",
+        "table_intervals_verified": 15,
+        "all_fifteen_held_old_unit_steps_increase_error": true,
+        "minimum_nonzero_serialized_accuracy_bits": 69
+      },
+      "ns76": {
+        "precision_enclosure_matches": 6,
+        "source_sha256": "163584373552d705ee94935767a3ebf234b8ba7f0855540ea66eaf6a1ae50660",
+        "minimum_nonzero_serialized_accuracy_bits": 230,
+        "cutoff_replay": "not applicable: complete elementary finite expressions; zero tail handled analytically in NS77"
+      },
+      "ns77": {
+        "precision_enclosure_matches": 25,
+        "source_sha256": "5c957021526929eaea94d59734cc1ac82a15ec35b9b62e888f8e0c20530798ba",
+        "minimum_nonzero_serialized_accuracy_bits": 87,
+        "cutoff_replay": "not applicable: complete elementary finite expressions; zero tail handled analytically in NS77"
+      }
+    },
+    "cofinal_arithmetic_bound": false,
+    "independent_review": false
+  },
+  "python_diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "scope": "all new v162 scientific Python"
+  },
+  "source_sha256": {
+    "ns75/certify_divisor.py": "a47c31423470d8dd24a5fef2194c764978eed78a0311c5ae6e77900012142a6e",
+    "ns75/exact-checks.mac": "053e1877a3e51b3d9e6ea5c3496dfc5688b3fabdcf77a67d62abe2d2972461e6",
+    "ns75/proof.tex": "067b5b09b4a4d63654e6698c4a2fbedbbf2f78553faaa615a9460f444780f840",
+    "ns76/certify_local_gap.py": "163584373552d705ee94935767a3ebf234b8ba7f0855540ea66eaf6a1ae50660",
+    "ns76/exact-checks.mac": "86528ea0a26ef622cb627510f46fac2cca6211796dc479d6d94d40e5165549ad",
+    "ns76/proof.tex": "8abbfbf5c11278c8adc84ef6dcdf8ec7c4f3c863b560484105341dfbcb8d22d5",
+    "ns77/certify_tail.py": "5c957021526929eaea94d59734cc1ac82a15ec35b9b62e888f8e0c20530798ba",
+    "ns77/exact-checks.mac": "39dfa81d130f0648cb4d424d851f5b64ae62c89db1bb664348274719937e3383",
+    "ns77/proof.tex": "003cfdee4c2a503c822f6b4ba18c9d607819131cc03a3d89027af0b4e4f8fff1",
+    "proof.tex": "21d8d39188886eee4e330274c66fc6be4b00c4ec1e40785aeafd33cda5df8ba1",
+    "verify_replays.py": "318839b008cb19a5dfc75d1a39cce5947067c5a5ded8cdcda5afc6b0f235fb37"
+  },
+  "independent_review": false,
+  "open_inputs": [
+    "Cofinal actual integer curvature numerator and selected true-energy cost",
+    "Relation between positive integer and continuous target distances",
+    "Original arithmetic Weil floor, API, G2 and RH"
+  ],
+  "limits": [
+    "Raw local jump cancellation is not preserved by old-space reoptimization",
+    "All tested held-old unit steps increase complete error; no asymptotic feedback exclusion",
+    "Strictly different closures need not have different distances from this particular target",
+    "NS77 tiny continuous bound is not an integer error upper bound",
+    "Published zero verification is external, not replayed here"
+  ],
+  "external_primary_sources": {
+    "Burnol": "https://arxiv.org/html/math/9910055",
+    "Hasanalizade_Shen_Wong": "https://arxiv.org/pdf/2107.06506",
+    "Platt_Trudgian": "https://arxiv.org/pdf/2004.09765"
+  },
+  "publication_authorization": "User requested PRs and subsequently explicitly allowed validated merges and version tags.",
+  "html_checks": {
+    "balanced_nesting": true,
+    "local_links_resolve": true,
+    "inline_styles_only": true,
+    "browser_visual_review": false,
+    "preview": "Codex file preview; prior local browser restriction respected"
+  }
+}

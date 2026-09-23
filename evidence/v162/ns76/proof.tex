@@ -1,0 +1,175 @@
+\section{The continuous relaxation and its exact inner-factor defect (NS-76)}
+\label{sec:ns76-inner-distance}
+
+\paragraph{Scope and prior work.}
+Burnol's quantitative Nyman formula identifies the $q=1$ continuous
+approximation defect through the off-critical Blaschke product
+\cite[Theorem 1.2 and Lemma 2.4]{BurnolNyman2001}. We apply the same
+classical Hardy-space mechanism to this project's $q=2$ target, keeping
+its full exterior tail. The calculation gives an exact distance for
+\emph{continuous} dilations and a lower bound for integer dilations.
+No unconditional equality of the two nonzero distances is assumed.
+This is an explicit reformulation of the unknown arithmetic inner
+factor, not a new zero-free estimate.
+
+Let $\mathcal T$ be the complete tail space from NS-74, and let
+$\mathbb H^2$ denote the Hardy space of $\Re s>1/2$, with boundary norm
+$(2\pi)^{-1}\int_{\mathbb R}|f(1/2+it)|^2dt$.
+Multiplication on the Mellin boundary by $(s-1)/s$ induces a unitary
+map $W$ on the full $L^2$ space. It maps $\mathcal T$ onto
+$L^2(0,1)$, whose Mellin image is $\mathbb H^2$.
+Indeed in logarithmic coordinates it is
+\[
+ (Wu)(t)=u(t)-\int_{-\infty}^t e^{-(t-r)/2}u(r)\,dr.
+\]
+For $t<0$ a tail vector is $C e^{t/2}$ and cancels exactly in this
+formula. Conversely the adjoint applied to a function supported on
+$t\geq0$ has on $t<0$ a constant multiple of $e^{t/2}$.
+Thus the map is onto, and the full tail has been accounted for.
+
+The transformed target and first atom have Mellin transforms
+\[
+ T(s)=\frac{s-1}{s^3},\qquad
+ F(s)=-\frac{(s-1)\zeta(s)}{s^3}.
+\]
+Write $B$ for the off-critical Blaschke product, normalized by $B(1)>0$:
+\[
+ B(s)=\prod_{\substack{\zeta(\rho)=0\\\Re\rho>1/2}}
+ \frac{s-\rho}{s-(1-\overline\rho)}
+ \frac{1-\overline\rho}{\rho}
+ \left|\frac{\rho}{1-\rho}\right|.
+\]
+Multiplicities are included. Burnol's factorization proves that the
+inner factor of $(s-1)\zeta(s)/s^2$ is exactly $B$: analytic
+continuation excludes a finite-boundary singular factor, and the
+real-axis asymptotic excludes an exponential factor. The additional
+factor $1/s$ is outer, so $F$ has the same inner factor. The product
+and its derivatives converge locally in $\Re s>1/2$ away from its
+zeros; $B(1)$ and its first two derivatives are real by conjugation
+symmetry.
+
+\begin{proposition}[Exact distance for the complete continuous family]
+\label{prop:ns76-continuous-distance}
+Let $\mathcal V_{\rm cont}$ be the closed span in the original Hilbert
+space of $\sigma_u$, for all real $u\geq1$. Its image under $W$ and
+Mellin transformation is $B\mathbb H^2$.
+Put $b=B(1)$, $d=B'(1)$ and $e=B''(1)$. Then
+\begin{equation}
+ D_{\rm cont}^2:=\operatorname{dist}(\tau,\mathcal V_{\rm cont})^2
+ =2-2b^2+2bd-d^2-\frac{e^2}{4}.
+ \label{eq:ns76-continuous-distance}
+\end{equation}
+This expression is nonnegative and at most every integer finite
+squared error $E_N$. It vanishes exactly when RH holds.
+The formula contains unknown off-critical zero information and
+provides no unconditional upper bound tending to zero.
+\end{proposition}
+\begin{proof}
+The normalized real dilations of $\sigma_1$ become the causal
+translation semigroup applied to $F$. The Beurling--Lax theorem gives
+that its closed generated subspace is the inner factor $B$ times
+$\mathbb H^2$. This use of the full continuous semigroup is the reason
+we do not replace it by the integer set without a separate argument.
+
+For $\Re z>1/2$, let $k_z(s)=1/(s+\overline z-1)$ be the evaluation
+kernel. Multiplication $M_B$ is an isometry and
+$M_B^*k_z=\overline{B(z)}k_z$.
+Differentiating at real $z=1$ is legitimate in the Hilbert norm,
+as is seen directly from the integrable kernel derivatives. Since
+$T=-\partial_z k_z|_1-\tfrac12\partial_z^2 k_z|_1$, it follows that
+\[
+ M_B^*T=-\frac{d+e/2}{s}+\frac{b+d}{s^2}-\frac{b}{s^3}.
+\]
+The complete boundary Gram for $(1/s,1/s^2,1/s^3)$ is
+\[
+ \begin{pmatrix}1&1&1\\1&2&3\\1&3&6\end{pmatrix};
+\]
+its entries follow by integrating the Laplace representatives
+$e^{-t/2}t^{j-1}/(j-1)!$ on $t>0$.
+Therefore $\|M_B^*T\|^2=2b^2-2bd+d^2+e^2/4$.
+The orthogonal projection is $B M_B^*T$, with that same norm, and
+$\|T\|^2=\|\tau\|^2=2$. This proves the distance identity and
+nonnegativity without any sign assumption on $d$ or $e$.
+
+The integer span is contained in the continuous span, giving
+$E_N\geq D_{\rm cont}^2$. If RH holds, the product is empty and
+$(b,d,e)=(1,0,0)$. Conversely, any off-critical zero $\rho$ gives a
+zero of $B$ in this half-plane, whereas $T(\rho)\ne0$ since
+$\rho\notin\{0,1\}$. Continuous evaluation in $\mathbb H^2$ then
+prevents $T$ from belonging to the closed subspace $B\mathbb H^2$,
+so its distance is positive.
+\end{proof}
+
+\begin{corollary}[The fixed component invisible to every block gain]
+\label{cor:ns76-invisible-component}
+Let $P_{\rm cont}$ and $P_N$ be the complete projections onto the
+continuous and finite integer spaces. Then exactly
+\[
+ R_N=(I-P_{\rm cont})\tau+(P_{\rm cont}\tau-P_N\tau),
+ \qquad
+ E_N=D_{\rm cont}^2+\|P_{\rm cont}\tau-P_N\tau\|^2.
+\]
+Every new correlation $g_n$ and every selected-direction gain depend
+only on the second component. The first is orthogonal to every real
+dilation, hence also to each projected new integer atom.
+\end{corollary}
+\begin{proof}
+The finite integer space is a subspace of $\mathcal V_{\rm cont}$,
+so $P_NP_{\rm cont}=P_N$. The two displayed components are
+orthogonal. Taking inner products with any old-projected new atom
+annihilates the first, proving the final statement.
+\end{proof}
+
+\begin{proposition}[The integer and continuous closures are strictly different]
+\label{prop:ns76-strict-closure}
+Let $\mathcal V_{\rm int}$ be the closed span of the integer atoms.
+Then $\mathcal V_{\rm int}\subsetneq\mathcal V_{\rm cont}$,
+unconditionally. More explicitly,
+\[
+ \operatorname{dist}(\sigma_{3/2},\mathcal V_{\rm int})^2>.00111713.
+\]
+This is a bound for $\sigma_{3/2}$, not for the target $\tau$.
+\end{proposition}
+\begin{proof}
+On $I=(1/2,1)$, the first integer atom is
+$\sigma_1=1/x+\log x$ and every integer atom with $n\geq2$
+is $1/(nx)$. Their restricted closed span lies in the closed
+two-dimensional space $\operatorname{span}\{1/x,\log x\}$.
+In contrast, $\sigma_u$ for $1<u<2$ has a nonzero derivative jump
+at the interior point $x=1/u$; it cannot equal an element of that
+analytic two-dimensional span, even almost everywhere. This already
+proves strict inclusion.
+
+For the quantitative bound, put $u=3/2$, $L=\log2$, $c=\log u$ and
+$h=L-c$. The complete local Gram, loads and squared norm are
+\[
+ G_I=\begin{pmatrix}1&-L^2/2\\-L^2/2&1-L-L^2/2\end{pmatrix},\qquad
+ b_I=\begin{pmatrix}
+ u^{-1}-h^2/2\\
+ (c+2-L^2/2)/u+c(L+1)/2-(L^2+2L+2)/2
+ \end{pmatrix},
+\]
+\[
+ q_I=u^{-2}-h^2/u+2/u-h^2/2-h-1.
+\]
+These follow by splitting only at $x=1/u$, with
+$\sigma_u=1/(ux)+\log(ux)$ on the left and $1/(ux)$ on the right.
+The Gram is positive definite. Its exact local projection error
+$q_I-b_I^TG_I^{-1}b_I$ lies in $(.00111713,.00111714)$ by independent
+256/384-bit enclosures; Maxima checks all complete elementary integrals.
+Restriction of a norm to $I$ can only decrease it, so this local
+minimum bounds the full-space distance below. No omitted tail is
+set to zero in the asserted full-space inequality.
+\end{proof}
+
+\paragraph{What the calculation does and does not resolve.}
+The $q=2$ continuous defect is now expressed through three values of the
+classical unknown inner factor. It is not estimated away. In particular,
+the integer limiting error may contain an additional approximation
+component. The closures are strictly different, but that fact alone
+does not decide whether their two distances from this particular target
+are different. No equality of positive target distances is supplied.
+The original sufficient cofinal contraction remains valid, because it
+would force the entire $E_N$ to zero, including this fixed component.
+Replacing $E_N$ by $E_N-D_{\rm cont}^2$ would remove exactly the part
+that must be ruled out and would not prove RH.

@@ -1,0 +1,122 @@
+\section{Divisor-defect feedback from the actual residual (NS-75)}
+\label{sec:ns75-divisor-feedback}
+
+\paragraph{Question.}
+The fixed M\"obius templates in NS-73 do not use the optimized old
+coefficients. We now test a correction that does: cancel the next block
+of derivative jumps of the actual residual. This yields an exact
+arithmetic construction, but removing those local jumps is not a
+norm-descent theorem.
+
+Write the complete residual as
+$R_N=\tau-\sum_{n\leq N}c_n\sigma_n$, with the actual optimized $c_n$,
+and put
+\[
+ \eta_c=\sum_{n\leq N}\frac{c_n}{n},\qquad
+ r_N(m)=\mathbf1_{m=1}+\sum_{\substack{n\mid m\\n\leq N}}c_n.
+\]
+The following statements also hold for arbitrary fixed real old coefficients.
+
+\begin{proposition}[Complete divisor-log cells and derivative jumps]
+\label{prop:ns75-divisor-cells}
+For every $x>0$,
+\begin{equation}
+ R_N(x)=-\frac{\eta_c}{x}
+       +\sum_{m\leq1/x}r_N(m)\log\frac1{mx}.
+ \label{eq:ns75-divisor-cells}
+\end{equation}
+At $x=1/m$ the function is continuous and the right-minus-left jump of
+its first derivative is $m r_N(m)$. In distributions on $(0,\infty)$,
+\begin{equation}
+ R_N''=\frac1{x^2}\sum_{m\leq1/x}r_N(m)
+           -\frac{2\eta_c}{x^3}
+           +\sum_{m\geq1}m r_N(m)\delta_{1/m}.
+ \label{eq:ns75-jump-measure}
+\end{equation}
+The atomic sum is locally finite away from zero. The complete exterior
+tail is $R_N(x)=-\eta_c/x$ for $x>1$.
+\end{proposition}
+\begin{proof}
+The exact identity
+$A(z)=z-\sum_{k\leq z}\log(z/k)$ gives
+\[
+ \sum_{n\leq N}c_n\sigma_n(x)
+ =\frac{\eta_c}{x}-\sum_{m\leq1/x}
+       \left(\sum_{\substack{n\mid m\\n\leq N}}c_n\right)
+       \log\frac1{mx}.
+\]
+For each fixed $x$ both sums are finite, so this rearrangement requires
+no limiting interchange. The target is exactly the term $m=1$ in the
+logarithmic sum. A term entering at $1/m$ has value zero there, proving
+continuity. Between endpoints, differentiation gives
+$R_N'=\eta_c/x^2-x^{-1}\sum_{m\leq1/x}r_N(m)$.
+The stated jump and second-derivative distribution follow, including
+the target endpoint $m=1$.
+\end{proof}
+
+\paragraph{An exact local cancellation step.}
+For $N<n\leq2N$ choose physical new coefficients
+\[
+ a_n^{(p)}=-r_N(n)\log^p(2N/n),\qquad p=0,1,2,
+\]
+with the constant taper convention for $p=0$.
+With $p=0$, append these coefficients while holding all old coefficients
+fixed. For $N<m\leq2N$, every proper divisor of $m$ is at most $N$.
+Consequently the updated divisor defect is exactly
+$r_N(m)+a_m^{(0)}=0$ throughout this next block. The old defects are
+unchanged. Other cells, the regular part of~\eqref{eq:ns75-jump-measure}
+and both tails remain in the norm calculation. No smallness follows
+from cancellation of the displayed atomic part alone.
+
+If the old coefficients happen to be $c_n=-\mu(n)$, then
+$r_N(m)=\mu(m)$ on this next block, so the constant rule specializes
+to NS-73's sharp M\"obius template. This is a specialization, not an
+assumption about the optimized old coefficients.
+
+For comparison with the optimum we also convert each $a^{(p)}$ to
+difference coordinates using~\eqref{eq:ns73-coordinate-change}, apply
+the complete old-space complement, and optimize its scalar step.
+The exact gain and the best three-direction span gain are then those
+of Proposition~\ref{prop:ns73-span}. This old-space reoptimization
+can change the local jumps again; we do not claim it preserves the
+raw cancellation property. We separately record the complete error
+of the held-old, unit-sized step:
+\[
+ \frac{\|R_N-\sum_{n=N+1}^{2N}a_n^{(p)}\sigma_n\|_2^2}{E_N}
+ =1+\frac{(a^{(p)})^TG_{\rm new,new}a^{(p)}
+                 -2(g^Tv^{(p)})}{E_N}.
+\]
+Old-space orthogonality justifies the numerator equality here;
+the raw physical Gram in this expression is not replaced by a
+projected or model Gram.
+
+\paragraph{Certified finite outcome.}
+The complete 256/384-bit replays and doubled-cutoff replay at $N=256$
+give the following strict enclosures for the fraction of full block gain.
+The single cancellation direction is optimally scaled \emph{after} old-space
+projection; its scalar is not constrained positive.
+\begin{center}
+\begin{tabular}{rccc}
+\hline
+$N$&Cancellation direction&Best three-direction span&Diagonal curvature\\
+\hline
+16&(.3110,.3111)&(.5836,.5837)&(.9308,.9310)\\
+32&(.4292,.4294)&(.8086,.8087)&(.9040,.9041)\\
+64&(.6954,.6956)&(.9063,.9065)&(.9783,.9784)\\
+128&(.0029,.0030)&(.7232,.7233)&(.9852,.9854)\\
+256&(.0010,.0011)&(.5602,.5603)&(.9763,.9764)\\
+\hline
+\end{tabular}
+\end{center}
+At $N=256$ the span retains $56.02048\%$ of full gain, versus
+$97.63068\%$ for curvature. The raw held-old cancellation step increases
+the complete squared error by a factor in $(1495.54,1495.55)$.
+Indeed all fifteen held-old unit steps tested here increase squared error.
+The cancellation direction's correlation at $N=256$ is negative, so its
+best scalar step reverses the prescribed sign. Merely cancelling derivative
+jumps is therefore not a descent principle even on these certified blocks.
+This is a finite failure of the proposed unit step and finite underperformance
+of its span, not an asymptotic exclusion of every divisor-feedback scheme.
+Eleven exact Maxima checks cover the identities and coordinate conversion;
+all finite gains retain complete tails, the true old projection and all
+three-direction cross terms.

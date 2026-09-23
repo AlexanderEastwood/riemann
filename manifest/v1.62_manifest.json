@@ -1,0 +1,149 @@
+{
+ "manuscript_revision": "v1.62",
+ "base_commit": "a39ee87f4fa828f0a5036cbd6af9d477b7d1fd12",
+ "files": [
+  {
+   "path": "evidence/v162/README.md",
+   "size_bytes": 2017,
+   "sha256": "42a09a16cd0efa3ef8dbd2b0872586ea6b70e3322b07b77454212bddb5e444d8"
+  },
+  {
+   "path": "evidence/v162/integration-review-2026-09-23-v1.html",
+   "size_bytes": 3833,
+   "sha256": "d1486c86775ace04cf73e127281356144b83ff0feddcb1250a5edf10b5cb7720"
+  },
+  {
+   "path": "evidence/v162/ns75/certify_divisor.py",
+   "size_bytes": 7612,
+   "sha256": "a47c31423470d8dd24a5fef2194c764978eed78a0311c5ae6e77900012142a6e"
+  },
+  {
+   "path": "evidence/v162/ns75/divisor-256bits.json",
+   "size_bytes": 16985,
+   "sha256": "35115216ca9b4d377ed0d4740ff3ca6845df93acfc49947f548db00eee10e1e7"
+  },
+  {
+   "path": "evidence/v162/ns75/divisor-384bits.json",
+   "size_bytes": 16986,
+   "sha256": "05574a8d0caa52144229fae5a21104fcc9d6c17a77a247065dbf69176f1ef388"
+  },
+  {
+   "path": "evidence/v162/ns75/divisor-cutoff-replay-384bits.json",
+   "size_bytes": 3985,
+   "sha256": "1194e36e87ac6644c2f3d8979d528377137432e1df935ee64a0c9334a7bedfe0"
+  },
+  {
+   "path": "evidence/v162/ns75/exact-checks-output.txt",
+   "size_bytes": 1332,
+   "sha256": "8cd802794a61173398dbb4b621e859fcbe12f8bccd4be47ee9e614f61c315067"
+  },
+  {
+   "path": "evidence/v162/ns75/exact-checks.mac",
+   "size_bytes": 1175,
+   "sha256": "053e1877a3e51b3d9e6ea5c3496dfc5688b3fabdcf77a67d62abe2d2972461e6"
+  },
+  {
+   "path": "evidence/v162/ns75/proof.tex",
+   "size_bytes": 5297,
+   "sha256": "067b5b09b4a4d63654e6698c4a2fbedbbf2f78553faaa615a9460f444780f840"
+  },
+  {
+   "path": "evidence/v162/ns76/certify_local_gap.py",
+   "size_bytes": 1850,
+   "sha256": "163584373552d705ee94935767a3ebf234b8ba7f0855540ea66eaf6a1ae50660"
+  },
+  {
+   "path": "evidence/v162/ns76/exact-checks-output.txt",
+   "size_bytes": 3817,
+   "sha256": "82b20a92bb286b3d56d1a9b8bc320622c1afddc783613390e08b060373618bd4"
+  },
+  {
+   "path": "evidence/v162/ns76/exact-checks.mac",
+   "size_bytes": 3045,
+   "sha256": "86528ea0a26ef622cb627510f46fac2cca6211796dc479d6d94d40e5165549ad"
+  },
+  {
+   "path": "evidence/v162/ns76/local-gap-256bits.json",
+   "size_bytes": 1204,
+   "sha256": "8cb418a53c1b7d4289d4d22fadf42777e559c3c5b7ebac354969a81dde63f4ba"
+  },
+  {
+   "path": "evidence/v162/ns76/local-gap-384bits.json",
+   "size_bytes": 1204,
+   "sha256": "30a82c9f6bfeb04051358959f937825ec6b97f583201d0b3260b13b582428fa7"
+  },
+  {
+   "path": "evidence/v162/ns76/proof.tex",
+   "size_bytes": 7960,
+   "sha256": "8abbfbf5c11278c8adc84ef6dcdf8ec7c4f3c863b560484105341dfbcb8d22d5"
+  },
+  {
+   "path": "evidence/v162/ns77/certify_tail.py",
+   "size_bytes": 2610,
+   "sha256": "5c957021526929eaea94d59734cc1ac82a15ec35b9b62e888f8e0c20530798ba"
+  },
+  {
+   "path": "evidence/v162/ns77/exact-checks-output.txt",
+   "size_bytes": 2238,
+   "sha256": "43653dfc0c836c965aa9d259a16e1904afc59665d78ab31b5c80228ad879782f"
+  },
+  {
+   "path": "evidence/v162/ns77/exact-checks.mac",
+   "size_bytes": 1904,
+   "sha256": "39dfa81d130f0648cb4d424d851f5b64ae62c89db1bb664348274719937e3383"
+  },
+  {
+   "path": "evidence/v162/ns77/proof.tex",
+   "size_bytes": 4858,
+   "sha256": "003cfdee4c2a503c822f6b4ba18c9d607819131cc03a3d89027af0b4e4f8fff1"
+  },
+  {
+   "path": "evidence/v162/ns77/tail-256bits.json",
+   "size_bytes": 3489,
+   "sha256": "b10aa162aef8f96bf142d581fbfb44e33faec8e717fc037ef1911d4ea0335b56"
+  },
+  {
+   "path": "evidence/v162/ns77/tail-384bits.json",
+   "size_bytes": 3541,
+   "sha256": "c069203870f9608227f11a877429be45f19c69158543aa0f92509e4b9153c983"
+  },
+  {
+   "path": "evidence/v162/proof.tex",
+   "size_bytes": 18117,
+   "sha256": "21d8d39188886eee4e330274c66fc6be4b00c4ec1e40785aeafd33cda5df8ba1"
+  },
+  {
+   "path": "evidence/v162/replay-validation.json",
+   "size_bytes": 1184,
+   "sha256": "001dd1ecc8e1e9908f6746609b8415c37302044c25beaa9bbae31da2a63a70b9"
+  },
+  {
+   "path": "evidence/v162/requirements-replay.txt",
+   "size_bytes": 68,
+   "sha256": "ae60cd8c43ad1b7158c8e397652652255de087fb9ccf7d610283c22ded91b550"
+  },
+  {
+   "path": "evidence/v162/research-update-2026-09-23-v1.html",
+   "size_bytes": 4734,
+   "sha256": "76fad8384d2d19ad83e2ae6a3d48b3337564df27b7e3e901b4fd6a1447f57f6f"
+  },
+  {
+   "path": "evidence/v162/runtime-provenance.json",
+   "size_bytes": 199,
+   "sha256": "563834230bacbd8268c469224682c8efa66ea4e3c3cda4c090504539c4258e73"
+  },
+  {
+   "path": "evidence/v162/validation.json",
+   "size_bytes": 4839,
+   "sha256": "64e10dde8dedbd091ac51f27d77199d82b9399c93100fe13e9df41716a1b1e78"
+  },
+  {
+   "path": "evidence/v162/verify_replays.py",
+   "size_bytes": 7288,
+   "sha256": "318839b008cb19a5dfc75d1a39cce5947067c5a5ded8cdcda5afc6b0f235fb37"
+  }
+ ],
+ "file_count": 28,
+ "total_bytes": 133371,
+ "note": "NS75 divisor feedback, NS76 continuous inner-factor distance and strict closure separation, NS77 complete zero-tail budget. External published zero verification input; no integer upper bound or RH claim."
+}
