@@ -1,0 +1,130 @@
+\section{Constructive upper certificates after exact tail normalization (NS89)}
+
+\paragraph{Scope.}
+The target remains an upper estimate $E_N\le C/\log N$ (or any fixed
+positive logarithmic decay rate). No such cofinal estimate is proved here.
+We construct explicit rational trial coefficients and certify their full
+errors. The normalization argument below shows that this restricted search
+preserves every possible upper decay rate, up to a uniform constant. It is
+a Hilbert-space projection calculation in the classical Nyman--Beurling
+setting, not a new arithmetic decay theorem. The earlier proposed
+fixed-seed obstruction investigation was stopped when Alex redirected this
+turn to upper bounds; no new lower-bound result is included.
+
+Use $\mathcal H=L^2(0,\infty;dx)$, $\tau(x)=-\log x$ on $(0,1)$ and zero
+elsewhere, $\sigma_n(x)=A(1/(nx))$, and
+$A(t)=\int_0^t\{u\}\,du/u$. Let $G=G_N$ be the complete Gram,
+$b_n=\langle\tau,\sigma_n\rangle$, $c=G^{-1}b$, and
+$E_N=2-b^TG^{-1}b$. Every atom has exterior $1/(nx)$ for $x>1$.
+Write $e(x)=x^{-1}\mathbf1_{x>1}$, $v_n=1/n$, and
+\[
+ \eta_N=v^Tc,\qquad q_N=v^TG^{-1}v=\|\Pi_N e\|^2>0.
+\]
+
+\paragraph{Exact optimal normalization and upper-rate transfer.}
+The minimum error under the constraint $v^Ta=0$ is
+\begin{equation}
+ a_N^0=c-\frac{\eta_N}{q_N}G^{-1}v,\qquad
+ E_N^0=E_N+\frac{\eta_N^2}{q_N}.
+ \label{eq:ns89-optimal-normalization}
+\end{equation}
+Moreover, for every $N\ge1$,
+\begin{equation}
+ E_N\le E_N^0\le\frac{E_N}{q_N}\le G(1,1)E_N,
+ \qquad G(1,1)<3.270466.
+ \label{eq:ns89-upper-transfer}
+\end{equation}
+To prove the first formula, write $a=c+h$. Normal equations give the
+full error $E_N+h^TGh$. Cauchy--Schwarz in the Gram metric minimizes this
+under $v^Th=-\eta_N$, with the displayed optimizer. For the sharper upper
+bound, $R_N=\tau-\Pi_N\tau$ is orthogonal to $V_N$, and
+\[
+ -\eta_N=\langle R_N,e\rangle
+ =\langle R_N,(I-\Pi_N)e\rangle,
+ \qquad \eta_N^2\le E_N(1-q_N).
+\]
+Finally $q_N\ge q_1=1/G(1,1)$. These are complete-space statements:
+the exterior is removed by changing coefficients, never by deleting its
+positive contribution from an unchanged norm. Thus a bound
+$E_N^0\le C/\log N$ implies the desired original upper bound, and any
+original bound of this order implies one for the normalized optimum with
+constant at most $G(1,1)C$. The exponent is preserved. No assertion that
+$q_N\to1$, that $\eta_N$ has a sign, or that either error tends to zero is
+needed or made.
+
+The finite certificate gives $1/q_{256}<1.144579$. Since the subspaces
+are nested, $q_N$ is nondecreasing. Consequently the sharper comparison
+\[
+ E_N\le E_N^0\le1.144579\,E_N\qquad(N\ge256)
+\]
+holds at every later size. This is a cofinal comparison between two unknown
+errors, not an upper decay estimate for either error.
+
+\paragraph{Explicit rational witnesses.}
+For $n\ge2$ round the proposed entries of $a_N^0$ to rational dyadics with
+denominator $2^{64}$, then set
+$\widetilde a_1=-\sum_{n=2}^N\widetilde a_n/n$ exactly. The first coefficient
+is rational, not generally dyadic. The resulting vector has exactly zero
+exterior. Its proof certificate is a fresh evaluation of
+\[
+ U_N=2-2b^T\widetilde a+\widetilde a^TG\widetilde a,
+ \qquad E_N\le E_N^0\le U_N.
+\]
+The ball solve is never replaced by a midpoint inverse in a proof.
+Rounding only chooses a trial vector, whose original full energy is then
+recomputed. Since $v^T(\widetilde a-a_N^0)=0$, the constrained normal
+equations give the additional check
+\[
+ U_N-E_N^0=(\widetilde a-a_N^0)^TG(\widetilde a-a_N^0).
+\]
+
+\paragraph{A finite arithmetic upper certificate including the remote tail.}
+For any such zero-exterior coefficient vector $a$, put
+\[
+ \delta_m=\mathbf1_{m=1}+\sum_{n\mid m}a_n,\quad
+ A_m=\sum_{k\le m}\delta_k,\quad
+ B_m=\sum_{k\le m}\delta_k\log k,
+\]
+where $a_n=0$ for $n>N$. In reciprocal coordinates the exact residual on
+$m\le t<m+1$ is $r(t)=A_m\log t-B_m$; it vanishes for $t<1$.
+For $T>N$ an integer, define
+\[
+ H_T=\sum_{m=1}^{T-1}\int_m^{m+1}
+          \frac{(A_m\log t-B_m)^2}{t^2}\,dt.
+\]
+All signed cross terms remain in this nonnegative cell expression.
+The full Stirling estimate inherited from NS67/78 is
+\[
+ r(t)=u\log t+w+\epsilon(t),\quad |\epsilon(t)|\le D/t\quad(t\ge N),
+\]
+where $u=1-\tfrac12\sum a_n$,
+$w=\tfrac12\sum a_n\log(n/(2\pi))$, and
+$D=\tfrac16\sum n|a_n|$. With $L=\log T$, set
+\[
+ M_T=\frac{(uL+w)^2+2u(uL+w)+2u^2}{T},\qquad
+ V_T=\frac{D^2}{3T^3}.
+\]
+Cauchy--Schwarz for the complete main/remainder cross term yields the
+constructive upper certificate
+\begin{equation}
+ \|\tau-\sum a_n\sigma_n\|^2
+ \le \mathcal U_T(a):=H_T+M_T+2\sqrt{M_TV_T}+V_T.
+ \label{eq:ns89-physical-upper}
+\end{equation}
+This is a specialization and implementation of the already proved physical
+tail estimate, not a new asymptotic tail theorem. For fixed $a$, the
+certificate tends to its full error as $T\to\infty$.
+
+\paragraph{What remains.}
+The full upper-rate candidate would follow from an explicit family
+$a^{(N)}$, with $\sum a_n^{(N)}/n=0$, and an independent uniform estimate
+\[
+ \mathcal U_{T_N}(a^{(N)})\le C/\log N
+ \quad\hbox{for every sufficiently large }N.
+\]
+The finite certificates do not supply that estimate. In particular a small
+cost for normalizing an already optimized vector does not prove the
+optimized error decreases. The original signed divisor-cell sum $H_{T_N}$
+still requires arithmetic control. These finite upper bounds are slightly
+above the previously known unrestricted optima and are not advertised as
+improved best finite bounds. Manuscript v1.66, G2 and RH remain unchanged.

@@ -1,0 +1,21 @@
+{
+  "classification": "Local author mathematical and code review; no independent human or agent review",
+  "open_major_findings": 0,
+  "checked": [
+    "Normalization changes coefficients and retains the complete remote tail.",
+    "q_N is a projection norm, not an error estimate or asserted quantity tending to one.",
+    "The optimized correction satisfies its exact linear constraint and full constrained normal equations.",
+    "The residual is orthogonal to V_N, so eta_N squared <= E_N(1-q_N), retaining the missing projection term.",
+    "Monotonicity of q_N correctly propagates the finite comparison to all N>=256, without propagating a finite decay rate.",
+    "Rounding only proposes exact rational coefficients; the full original quadratic form is independently certified afterwards.",
+    "The first repaired coefficient is rational, not necessarily dyadic; zero exterior is exact.",
+    "Physical cell integrals retain signed cross terms and the remote tail keeps both main-remainder cross and remainder square.",
+    "No original-family error floor, additional lower-bound result, or cofinal logarithmic upper rate is claimed.",
+    "Finite normalized errors are above prior unrestricted optima; no best-finite-bound improvement is advertised."
+  ],
+  "development_notes": [
+    "User redirected the initial frozen-seed obstruction investigation to constructive upper bounds; unpublished prototype removed.",
+    "Pyright identified a possible None in proposal integer extraction; added an explicit guard and reran all certificates after that change.",
+    "A physical replay was initially requested before its input run completed; it exited without producing an output, then was rerun after completion."
+  ]
+}

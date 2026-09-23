@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RH project: constructive upper certificates — September 23, 2026</title></head>
+<body style="margin:0;background:#f4f2ec;color:#202a2d;font-family:Georgia,serif;line-height:1.6;">
+<main style="max-width:680px;margin:36px auto;padding:32px;background:#fff;border-top:6px solid #24605b;">
+<p style="color:#526765;font-size:14px;letter-spacing:1px;">RH RESEARCH · NS89 · SEPTEMBER 23, 2026 · VERSION 1</p>
+<h1 style="font-size:32px;line-height:1.2;margin:12px 0 24px;">Back to the upper bound</h1>
+<p style="font-size:20px;">The target remains <strong>E<sub>N</sub> ≤ C / log N</strong>. We have not proved this decay. This update supplies an explicit normalized approximation and a complete upper-error certificate.</p>
+<p>Alex redirected the work away from another lower-bound obstruction test. That proposed test was stopped. The final work concerns construction and upper bounds.</p>
+<h2 style="font-size:23px;margin-top:28px;">A restriction we can impose without losing the rate</h2>
+<p>We can require the approximating function to vanish exactly for x &gt; 1 by imposing the single coefficient constraint ∑c<sub>n</sub>/n = 0. This changes the approximation itself; it does not discard part of its error.</p>
+<p style="padding:18px;background:#eaf3ef;border-left:4px solid #24605b;">For <strong>every N ≥ 256</strong>, the best normalized squared error satisfies<br><strong>E<sub>N</sub> ≤ E<sub>N</sub><sup>0</sup> ≤ 1.144579 E<sub>N</sub>.</strong></p>
+<p>This preserves any possible logarithmic decay exponent. It compares two errors whose limiting behavior is unknown; it does not show that either tends to zero.</p>
+<p>The exact normalization cost is η<sub>N</sub><sup>2</sup>/q<sub>N</sub>, where η<sub>N</sub> = ∑c<sub>n</sub>/n and q<sub>N</sub> is the squared length of the exterior-tail function’s projection onto the first N atoms. Projection gives E<sub>N</sub><sup>0</sup> ≤ E<sub>N</sub>/q<sub>N</sub>. The q<sub>N</sub> increase with N, so the certified size-256 comparison holds at every later size.</p>
+<h2 style="font-size:23px;margin-top:28px;">An explicit complete upper certificate</h2>
+<p>The repository now contains exact rational coefficients for sizes 16, 64 and 256. Each vector satisfies the exterior constraint exactly. Rounding only proposes the coefficients; their complete original quadratic error is then verified afresh.</p>
+<table style="width:100%;border-collapse:collapse;font-size:15px;">
+<thead><tr><th style="text-align:left;padding:10px;border-bottom:2px solid #c7d8d4;">Size</th><th style="text-align:right;padding:10px;border-bottom:2px solid #c7d8d4;">Normalized squared error, approx.</th><th style="text-align:right;padding:10px;border-bottom:2px solid #c7d8d4;">Normalization cost</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px;border-bottom:1px solid #ddd;">16</td><td style="text-align:right;padding:10px;border-bottom:1px solid #ddd;">0.00003195291</td><td style="text-align:right;padding:10px;border-bottom:1px solid #ddd;">0.01636%</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #ddd;">64</td><td style="text-align:right;padding:10px;border-bottom:1px solid #ddd;">0.00001976097</td><td style="text-align:right;padding:10px;border-bottom:1px solid #ddd;">0.01248%</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #ddd;">256</td><td style="text-align:right;padding:10px;border-bottom:1px solid #ddd;">0.00001414367</td><td style="text-align:right;padding:10px;border-bottom:1px solid #ddd;">0.0088342%</td></tr>
+</tbody></table>
+<p>The percentages are relative to the unrestricted optimum at the same size. At size 256, independent complete Gram and physical calculations certify squared error <strong>below 0.000014144</strong>. These normalized errors are slightly above the previously certified unrestricted optima; they are not improved best finite bounds.</p>
+<h2 style="font-size:23px;margin-top:28px;">The remaining arithmetic estimate</h2>
+<p>The complete upper certificate consists of the exact signed divisor-cell energy up to a cutoff, followed by the logarithmic main tail and an explicit bound for the entire remainder, including its cross term. The remote region near x = 0 remains included.</p>
+<p>To prove the candidate upper rate, we still need an explicit family of coefficients and a uniform bound on that complete quantity by C / log N. The finite table and the normalization comparison do not provide this missing estimate. The present optimized coefficients still require complete Gram solves; no fast algorithm or closed-form family is supplied.</p>
+<h2 style="font-size:23px;margin-top:28px;">Checks and scope</h2>
+<p>Arb checks use 256 and 384 bits, a doubled analytic Gram cutoff, and a doubled physical cutoff. Twelve exact Maxima checks cover the normalization algebra and integration formulas. The physical calculation shares the exact rational coefficients with the Gram calculation but uses a different full-norm representation. Review is by the author only.</p>
+<p>All 96 prior registered conclusions were reviewed for scope and dependencies at main commit ba02640. This is not a new proof audit of all historical work. Both missing-original evidence groups remain open. The manuscript remains v1.66; RH and G2 remain open.</p>
+<p style="font-size:14px;color:#526765;">The classical setting is described in <a style="color:#24605b;" href="https://arxiv.org/abs/math/0205003">Báez-Duarte’s integer-dilation criterion</a> and <a style="color:#24605b;" href="https://arxiv.org/html/math/0505453v1">his generalized criterion and Mellin identity</a>. The rate comparison here is an elementary projection calculation, not a claim to a new RH criterion.</p>
+<p style="font-size:14px;"><a style="color:#24605b;" href="../evidence/ns89_upper_normalization/README.md">Reproduction guide</a> · <a style="color:#24605b;" href="../evidence/ns89_upper_normalization/argument.tex">Complete argument</a> · <a style="color:#24605b;" href="../evidence/ns89_upper_normalization/check-384bits.json">Exact rational coefficients</a> · <a style="color:#24605b;" href="../evidence/ns89_upper_normalization/exact-checks.mac">Maxima worksheet</a></p>
+</main></body></html>

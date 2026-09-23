@@ -101,6 +101,7 @@ graph LR
   nbjointlocalization["Joint finite arithmetic observations preserve logarithmic gain scale<br/><small>&#128193; evidence/ns87_joint_tail</small>"]
   nbdilationenvelope["Multiplicative normal equations and a scalar whole-error upper envelope<br/><small>&#128193; evidence/ns88_dilation_defect</small>"]
   nbdilationstrongnumerator["Eventual energy/j^p dilation-defect lower bound with p<1<br/><small>&#128193; evidence/ns88_dilation_defect</small><br/><small><b>wall: The proposed stronger numerator forces error decay contradicting the critical-zero lower bound</b></small>"]
+  nbnormalizedupper["Constructive zero-exterior upper certificates preserve every decay rate<br/><small>&#128193; evidence/ns89_upper_normalization</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -197,6 +198,7 @@ graph LR
   nboptimizedpotential --> nbjointlocalization
   nboptimizedpotential --> nbdilationenvelope
   nbdilationenvelope --> nbdilationstrongnumerator
+  nbsmoothedbudget --> nbnormalizedupper
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -292,9 +294,10 @@ graph LR
   click nbjointlocalization "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns87_joint_tail/" "evidence: evidence/ns87_joint_tail" _blank
   click nbdilationenvelope "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns88_dilation_defect/" "evidence: evidence/ns88_dilation_defect" _blank
   click nbdilationstrongnumerator "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns88_dilation_defect/" "evidence: evidence/ns88_dilation_defect" _blank
+  click nbnormalizedupper "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns89_upper_normalization/" "evidence: evidence/ns89_upper_normalization" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -317,7 +320,7 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 42 | established result |
+| `proved` | 43 | established result |
 | `live` | 2 | current route (gold): being worked now |
 | `closed` | 31 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 11 | attempted; obstruction found |
@@ -361,6 +364,7 @@ graph LR
           - [!] **Positive renewal with signed arithmetic forcing** — `prop:ns68-weighted-inversion; prop:ns68-scalar-criterion` · evidence: [`evidence/v160/ns68/`](evidence/v160/ns68/) · **wall: independent square-root-plus-epsilon bound for the signed forcing** → `rh` (prop:ns68-scalar-criterion; equivalence is not a new estimate) · Positive weighted inverse exists with q_theta<1; it transfers the same power. The integer first-annulus square-root-plus-epsilon bound remains RH-equivalent.
             - [X] **Finite total critical renewal energy** — `cor:ns68-critical-energy` · evidence: [`evidence/v160/ns68/`](evidence/v160/ns68/) · **wall: critical-line Mellin pole contradicts finite weighted L2 energy** → `None` (cor:ns68-critical-energy; scope is these total integrals) · Both critical weighted total integrals diverge by any known critical-line zero. Logarithmic or subpolynomial growth remains possible; this does not assert divergence of D_N.
           - [X] **Power gain solely between the two complete Abel vectors** — `prop:ns67-abel-conditioning` · evidence: [`evidence/v160/ns67/`](evidence/v160/ns67/) · **wall: uniform conditioning excludes an exponent improvement in this whole-vector split** → `None` (prop:ns67-abel-conditioning; no obstruction to internal arithmetic cancellation) · After explicit centering, their triangle norm is between D_N and (1+2||sigma_1||)D_N. Cancellation inside the integral and exact cells is still unestimated.
+        - [x] **Constructive zero-exterior upper certificates preserve every decay rate** — evidence: [`evidence/ns89_upper_normalization/`](evidence/ns89_upper_normalization/) · NS89: exact constrained optimum E_N^0=E_N+eta_N^2/q_N and E_N<=E_N^0<=1.144579 E_N for every N>=256. Explicit rational size-256 trial has complete squared error <0.000014144. Both errors may remain positive; no cofinal decay theorem or improved best finite bound. Remote physical tail is retained.
         - [x] **Critical-zero logarithmic lower bound at every fixed smoothing order** — `prop:ns83-log-floor` · evidence: [`evidence/v166/ns83/`](evidence/v166/ns83/) · Burnol construction adapted with complete endpoint and tail control. Positive lower liminf; no upper bound or finite onset.
           - [X] **Fixed-fraction contraction of the full error at every doubling** — `eq:ns83-gain-budget` · evidence: [`evidence/v166/ns83/`](evidence/v166/ns83/) · Cumulative relative gains <=log K+O(1). Individual gains may fluctuate; capture of available block gain is not excluded.
         - [X] **Relative convergence with increasing Mellin smoothing** — `prop:ns63-one-atom` · evidence: [`evidence/v159/`](evidence/v159/) · **wall: one-atom unconditional control refutes this convergence inference** → `None` (prop:ns63-one-atom) · One fixed atom has relative squared error ~D0^2/(8r) unconditionally, while its absolute squared error diverges. The fixed-order criterion remains valid; changing the norm is not RH evidence.

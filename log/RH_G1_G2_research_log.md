@@ -3433,3 +3433,20 @@ checks pass. Cumulative envelope is weaker than known optimized finite
 bounds, not a new best numerical bound. Author review only. Manuscript
 v1.66 remains unchanged. See evidence/ns88_dilation_defect and the dated
 HTML report. RH, G2 and the arithmetic growth input remain open.
+
+
+## 2026-09-23 — NS89 constructive upper normalization
+
+Reviewed all 96 conclusions at main ba02640; scope/dependency review only.
+Alex redirected the proposed frozen-seed obstruction test to upper bounds;
+that unpublished test was stopped. The final construction gives the exact
+zero-exterior constrained optimum E_N^0=E_N+eta_N^2/q_N and the uniform
+comparison E_N<=E_N^0<=1.144579 E_N for every N>=256. Explicit rational
+coefficients certify full squared error below 0.000014144 at N=256. Their
+normalization cost is about 0.0088342% of the existing unrestricted optimum.
+Every physical tail remains included. This is not a best finite bound or
+a cofinal error-decay theorem. C/log N remains a candidate; an independent
+uniform signed arithmetic upper estimate is absent. Two precisions, Gram
+and physical cutoff replays, Maxima, and author self-review are recorded in
+evidence/ns89_upper_normalization. Manuscript v1.66 unchanged; no new tag.
+Both original-evidence gaps, G2 and RH remain open.

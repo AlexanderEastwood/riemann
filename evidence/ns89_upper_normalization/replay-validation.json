@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checks": {
+    "Gram_precision_values": 33,
+    "Gram_cutoff_values": 11,
+    "physical_precision_values": 24,
+    "physical_Gram_energy_overlaps": 7,
+    "physical_cutoff_energy_overlaps": 1
+  },
+  "identical_exact_rational_witnesses_across_all_replays": true,
+  "N256_full_upper_below": "0.000014144",
+  "all_N_at_least_256_normalized_over_original_at_most": "1.144579",
+  "Maxima_exact_checks": 12,
+  "cofinal_upper_decay_proved": false,
+  "source_sha256": "c684907fb9b2556cf57e0de0e01ad91c2eecd0fba28053f27f30460a746eaf05"
+}

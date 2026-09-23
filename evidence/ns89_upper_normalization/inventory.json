@@ -1,0 +1,27 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental NS89 evidence and versioned HTML report; excludes inventory",
+  "files": {
+    "audits/constructive-upper-2026-09-23-v1.html": "a7cd4fd311ab13d7103511542050caf0ea903c1321401a4570b62f83a42ca6b8",
+    "evidence/ns89_upper_normalization/README.md": "86a0f41abb747484ad77a91fa9f0abb3ecfab3262f368f5117485e2049dffcc6",
+    "evidence/ns89_upper_normalization/argument.tex": "23258b41f5b9f3ee2264f274c0ce491b8e138be0a5150dace3e7d62b80ac59c6",
+    "evidence/ns89_upper_normalization/certify.py": "ab6f545a384426202051268b2c9b45629630e373d7a0cfbef8c386564af83d41",
+    "evidence/ns89_upper_normalization/check-256bits.json": "f77d51839e4fb46dde098959d1f3a3c480250e4458dc16fb0475223b478c5b57",
+    "evidence/ns89_upper_normalization/check-384bits.json": "16c5a3b975b4c8cb7499343fb152779601f42fdb399732b332380f489cbab75b",
+    "evidence/ns89_upper_normalization/check-cutoff-384bits.json": "553bd8705cb234a374555c37855c8e64e2694b23eaceeeb0abcf286402958d1e",
+    "evidence/ns89_upper_normalization/exact-checks-output.txt": "5fefe4b2fdb354f56a065f6af6268bf44cdf7a66273333146143d259a6b30fe7",
+    "evidence/ns89_upper_normalization/exact-checks.mac": "4d32f30bbe5581eb949445a731096a053f06fa7d34d84fe359be230d7bba3710",
+    "evidence/ns89_upper_normalization/literature-inputs.json": "ba7c17e9f155405c5cac6018a7823ff9d3f149e3682c8645564dcd505eaa50a8",
+    "evidence/ns89_upper_normalization/physical-256bits.json": "f8cf4b7a0ddc982ee665e4973dc3048a26b9b6db017b03b36b9df6f03bcddad1",
+    "evidence/ns89_upper_normalization/physical-384bits.json": "12ecdafc277ffb71455f349c36a9ef0c64c4ee3bf3f7a3058677e6695cbf0a0c",
+    "evidence/ns89_upper_normalization/physical-cutoff-384bits.json": "ddcc0dd015daf23f128af614c1e608054500baba3917787eebf5b07175f7e3fd",
+    "evidence/ns89_upper_normalization/physical.py": "b44e9330e1a3178990034fb5e10a0c631f29064537d54c2b777c4184d65dfdfc",
+    "evidence/ns89_upper_normalization/replay-validation.json": "193efd41604e1129f7a05dd2350316cbb98e9b3ee01aaf4373a6ef9098ef232a",
+    "evidence/ns89_upper_normalization/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "evidence/ns89_upper_normalization/runtime-provenance.json": "21413b48bfe5fc859126fcb95ed6360cc254d4a9a7456e31fa22ee3c9b152da1",
+    "evidence/ns89_upper_normalization/self-review.json": "57fb492d109a1c15ec006208a6c7a4d94daa8a143daefaa58fd6a60666a85814",
+    "evidence/ns89_upper_normalization/turn-review.json": "3560ef233fd1490faed4a330f936122697c780260aa2cb807ee29e66c438f739",
+    "evidence/ns89_upper_normalization/validation.json": "ebf1244f8d1fb2c075a3be61e67efa025dcafd0dee0554fc98afeb9f250bba80",
+    "evidence/ns89_upper_normalization/verify_replays.py": "c684907fb9b2556cf57e0de0e01ad91c2eecd0fba28053f27f30460a746eaf05"
+  }
+}
