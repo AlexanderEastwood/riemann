@@ -1,0 +1,23 @@
+{
+  "python": "3.14.6",
+  "python_flint": "0.9.0",
+  "maxima": "5.50.0",
+  "pyright": "1.1.411",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "physical_cutoffs": [
+    262144,
+    524288
+  ],
+  "inherited_Gram_cutoffs": [
+    128,
+    256
+  ],
+  "fresh_Gram_solves": false,
+  "sizes": [
+    16,
+    256
+  ]
+}

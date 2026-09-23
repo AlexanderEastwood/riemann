@@ -1,0 +1,21 @@
+{
+  "classification": "Local author proof and implementation review; no independent agent or human review",
+  "open_major_findings": 0,
+  "checked": [
+    "Target is improvement lower bound, not error lower bound.",
+    "Original optimized coefficient balls are used; NS89 normalized rational trials are not substituted.",
+    "Old normal equations remove old coefficients exactly; prime main terms cancel.",
+    "The omitted-divisor forcing beyond 2N is retained through the full cutoff.",
+    "The 0<t<1 contribution to I_T and direct pairing is included.",
+    "Both main-remainder cross terms and remainder product are included in the outer tail.",
+    "Certified complete numerator is positive and overlaps the prior full Gram at both precisions and doubled cutoffs.",
+    "Cutoff-dependent individual summands are not asserted invariant across cutoffs.",
+    "Full projected cost is inherited from NS73 with manifest/source hashes checked.",
+    "Absolute allowance divergence is only at fixed N under nonzero tail; it does not close the N^6 cofinal estimate.",
+    "The arithmetic progression 1+j*lcm(1,...,2N) gives defect -log2 for j>=1, without a prime-distribution assumption.",
+    "No new finite gain efficiency, cofinal decay theorem, independent review, or manuscript version is claimed."
+  ],
+  "what_had_to_change": "The proposed favorable prime term disappears after orthogonality; the entire signed compensator must be estimated jointly.",
+  "obstruction": "Termwise absolute estimates lose internal finite arithmetic cancellation and are vacuous in the certified tests.",
+  "bound_or_object": "Failure of the tested bound, not failure of the signed direction or full PR42 route."
+}

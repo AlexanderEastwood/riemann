@@ -1,0 +1,35 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/ns90_mobius_gain/exact-checks.mac")
+kill(all)
+checks:[]
+check(name,expr):=block([r:radcan(ratsimp(expr))],
+      if r # 0 then error("FAILED",name,r),checks:endcons(name,checks))
+check("prime main cancellation",(s2*t-psi+b2)-(s1*t-psi+b1)-((s2-s1)*t+b2-b1))
+check("old normal equations",(l2*e-q2)-(l1*e-q1)-((l2-l1)*e-(q2-q1)))
+check("cell pairing product",
+      expand(((-eta*t+a*log(t)-b)*(s*t+ad*log(t)-bd))/t^2)
+       -(-eta*s+((-eta*ad+s*a)*log(t))/t+(eta*bd-s*b)/t+(a*ad*log(t)^2)/t^2
+               +(-(a*bd+b*ad)*log(t))/t^2+(b*bd)/t^2))
+check("potential primitive zero",diff(-1/t,t)-1/t^2)
+check("potential primitive one",diff(-(log(t)+1)/t,t)-log(t)/t^2)
+check("potential primitive two",diff(-(log(t)^2+2*log(t)+2)/t,t)-log(t)^2/t^2)
+check("moment primitive",
+      diff(-eta*t+(a*log(t)^2)/2+(-b)*log(t),t)-(-eta*t+a*log(t)-b)/t)
+qr:ur*log(t)+vr
+qd:ud*log(t)+vd
+check("paired tail primitive",
+      diff(-(qr*qd+ur*qd+ud*qr+2*ur*ud)/t,t)-(qr*qd)/t^2)
+check("remainder square",diff(-bb^2/(3*t^3),t)-bb^2/t^4)
+check("exact line search",e-2*(ell/kk)*ell+(ell/kk)^2*kk-(e-ell^2/kk))
+d1:-log(2)
+d2:log(2)
+d3:log(4/3)
+d4:0
+check("divisor defect k1",log(2)+d1)
+check("divisor defect k2",d1+d2)
+check("divisor defect k3",d1+d3+log(3/2))
+check("divisor defect k4",d1+d2+d4)
+check("retained defect k6",d1+d2+d3-log(4/3))
+print("PASS:",length(checks),"exact checks; no cofinal lower gain proved.")
+PASS: 15 exact checks; no cofinal lower gain proved. 
+quit()

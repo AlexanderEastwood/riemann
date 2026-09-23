@@ -43,7 +43,8 @@
     "evidence/ns86_optimized_arithmetic/*.py",
     "evidence/ns87_joint_tail/*.py",
     "evidence/ns88_dilation_defect/*.py",
-    "evidence/ns89_upper_normalization/*.py"
+    "evidence/ns89_upper_normalization/*.py",
+    "evidence/ns90_mobius_gain/*.py"
   ],
   "exclude": [
     "node_modules",

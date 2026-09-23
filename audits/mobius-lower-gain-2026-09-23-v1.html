@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RH project: direct lower-gain attempt — September 23, 2026</title></head>
+<body style="margin:0;background:#f6f4ef;color:#232722;font-family:Georgia,serif;font-size:17px;line-height:1.6;">
+<main style="max-width:680px;margin:40px auto;padding:34px;background:#fff;">
+<p style="font-size:13px;letter-spacing:1px;color:#556859;">RIEMANN PROJECT · SEPTEMBER 23, 2026 · NS90 · VERSION 1</p>
+<h1 style="font-size:31px;line-height:1.2;margin:18px 0;">The lower-gain attempt still needs signed cancellation</h1>
+<p style="padding:16px;border-left:4px solid #806532;background:#f8f3e8;"><strong>No cofinal lower bound was obtained.</strong> This work tests a concrete estimate on the route in PR42. It does not change the manuscript version or claim progress on the missing theorem beyond diagnosing this estimate.</p>
+<p>We combined the actual optimized observations using Möbius coefficients and a logarithmic taper. Those coefficients had already been tested numerically in NS73. The new work asks whether their positive finite gain has an analytic lower-bound explanation.</p>
+<p>The exact algebra cancels the prime main terms when the old normal equations are used. What remains is a joint signed expression: the normalization term, the full finite divisor sum, and the complete outer tail.</p>
+<div style="padding:16px;background:#eef2ed;text-align:center;font-size:18px;">gain numerator = (log 2) × current error − joint signed remainder</div>
+<p>At size 256, evaluating this expression with all signs retained recovers the positive numerator. But the straightforward lower bound obtained by replacing each term with its absolute value is below <strong>−186 times the current error</strong>. Doubling the physical cutoff makes that bound worse, below <strong>−226 times the error</strong>. A negative lower bound cannot force improvement.</p>
+<p>There is an exact explanation for this loss: at any fixed size with a nonzero logarithmic or constant residual tail, the absolute divisor allowance grows without limit as the cutoff increases, while the signed expression converges. The proof uses an explicit arithmetic progression of nonzero divisor coefficients. It does not assume RH.</p>
+<p>This statement fixes the size before increasing the cutoff. It does <em>not</em> exclude a bound at PR42’s coupled cutoff N<sup>6</sup>, a different signed estimate, or the full joint observation method. The finite cutoffs tested here are not N<sup>6</sup>.</p>
+<h2 style="font-size:23px;margin-top:28px;">Where this leaves the project</h2>
+<p>The target remains a small persistent decrease in the actual optimized error, such as a/j after j doublings. The next estimate must control the normalization and divisor terms together, preserving their arithmetic cancellation. Tail control and normalization comparisons do not supply that estimate.</p>
+<p>The true projected direction cost is retained from NS73. Both its compatible cofinal bound and the needed signed numerator estimate remain unproved. The full joint route could succeed even if this selected direction does not.</p>
+<h2 style="font-size:23px;margin-top:28px;">Checks and scope</h2>
+<p>Arb calculations at 256 and 384 bits; doubled physical and inherited Gram cutoffs; 38 precision comparisons, 8 complete cutoff comparisons, 5 archived numerator comparisons; 15 exact Maxima checks. Original optimized coefficient enclosures were used. No new Gram solve was claimed. Python diagnostics are clean.</p>
+<p>All 97 previous registered conclusions were reviewed for scope and dependencies at main 0a11971. That was not a fresh proof audit of the entire archive. Both historical missing-original evidence groups remain open. Review of this attempt was by its author.</p>
+<p>The unchanged manuscript builds to 358 pages with zero undefined or duplicate references. RH, G2, and the arithmetic lower-gain estimate remain open.</p>
+<p style="border-top:1px solid #d8ddd6;padding-top:18px;font-size:14px;">Evidence: <a style="color:#315540;" href="../evidence/ns90_mobius_gain/README.md">reproduction notes</a> · <a style="color:#315540;" href="../evidence/ns90_mobius_gain/argument.tex">complete argument</a> · <a style="color:#315540;" href="../evidence/ns90_mobius_gain/exact-checks.mac">Maxima worksheet</a>.</p>
+</main></body></html>

@@ -1,0 +1,140 @@
+\section*{NS90: a signed M\"obius attempt on the PR42 lower gain}
+
+\paragraph{Scope.}
+This is an exact arithmetic identity, a proof about the loss from one
+absolute-value estimate, and a certified finite test of that estimate.
+It is not a lower-gain theorem. The coefficient direction itself was
+already tested in NS73; its finite efficiency is not a new result here.
+The full joint observation energy of NS87 remains the principal open target.
+
+Work in $L^2((0,\infty),dt/t^2)$, with
+$a_n(t)=A(t/n)$, $A(z)=\int_0^z\{u\}\,du/u$, and
+$\tau(t)=\mathbf1_{t\ge1}\log t$.
+Write $R=\tau-\Pi_N\tau$, $E=\|R\|^2$, $h_n=\langle R,a_n\rangle$;
+then $h_n=0$ for $n\le N$ and $\langle R,\tau\rangle=E$.
+
+\paragraph{Exact identity: the prime main terms cancel.}
+Define the unnormalized classical logarithmic taper and its residual by
+\[
+ F_X^\mu=-\sum_{n\le X}\mu(n)\log(X/n)a_n,
+ \qquad Q_X=(\log X)\tau-F_X^\mu,
+ \qquad S_X=\sum_{n\le X}\frac{\mu(n)}n\log(X/n).
+\]
+The divisor identity of NS85, now keeping every omitted divisor, gives
+\[
+ Q_X(t)=S_Xt-\Psi_1(t)+\sum_{X<k\le t}b_X(k)\log(t/k),
+ \qquad b_X(k)=\sum_{\substack{d\mid k\\d>X}}\mu(d)\log(X/d),
+ \qquad \Psi_1(t)=\sum_{k\le t}\Lambda(k)\log(t/k).
+\]
+For $t<1$ the two sums vanish. This follows from
+$\sum_{d\mid k}\mu(d)=\mathbf1_{k=1}$ and
+$\sum_{d\mid k}\mu(d)\log d=-\Lambda(k)$.
+At integer endpoints the newly entering logarithmic factor is zero.
+
+Set $V=F_{2N}^\mu-F_N^\mu$, $D=Q_{2N}-Q_N=(\log2)\tau-V$.
+The old normal equations remove the coefficients of $V$ below $N$:
+\begin{equation}\label{ns90-numerator}
+ \ell_N:=\sum_{N<n\le2N}-\mu(n)\log(2N/n)h_n
+       =(\log2)E-\langle R,D\rangle.
+\end{equation}
+The two identical $-\Psi_1$ terms cancel exactly in $D$.
+Thus they cannot be counted as an independent favorable main term in
+\eqref{ns90-numerator}.
+Explicitly, put $s=S_{2N}-S_N$ and
+\[
+ d_n=\begin{cases}-\mu(n)\log2&n\le N,\\
+                 -\mu(n)\log(2N/n)&N<n\le2N,\end{cases}
+ \qquad \delta_k=(\log2)\mathbf1_{k=1}+\sum_{n\mid k}d_n.
+\]
+Then $s=-\sum d_n/n$, $\delta_k=0$ through $N$, and
+$\delta_k=\mu(k)\log(k/N)$ for $N<k\le2N$.
+For all larger $k$ the complete divisor sum must be retained. Globally,
+\[
+ D(t)=st+\sum_{k\le t}\delta_k\log(t/k).
+\]
+
+\paragraph{Exact finite formula and complete tail.}
+For $T\ge2N$, define
+\[
+ I_T=\int_0^T R(t)\frac{dt}{t},\qquad
+ P_T(k)=\int_k^T\log(t/k)R(t)\frac{dt}{t^2},\qquad
+ Z_T=\int_T^\infty R(t)D(t)\frac{dt}{t^2}.
+\]
+Finite interchange, including $0<t<1$, yields
+\begin{equation}\label{ns90-finite}
+ \ell_N=(\log2)E-sI_T-\sum_{N<k\le T}\delta_kP_T(k)-Z_T.
+\end{equation}
+For a residual $r=\alpha\tau-\sum c_na_n$, the complete NS67 remainder is
+\[
+ r(t)=u\log t+v+\epsilon(t),\quad
+ u=\alpha-\tfrac12\sum c_n,\quad
+ v=\tfrac12\sum c_n\log(n/(2\pi)),\quad
+ |\epsilon(t)|\le B/t,\quad B=\tfrac16\sum n|c_n|
+\]
+when $t$ exceeds its coefficient support. With $q_i=u_i\log T+v_i$,
+\[
+ Z_0=\frac{q_Rq_D+u_Rq_D+u_Dq_R+2u_Ru_D}{T},\quad
+ M_i=\frac{q_i^2+2u_iq_i+2u_i^2}{T},\quad U_i=\frac{B_i^2}{3T^3},
+\]
+\[
+ |Z_T-Z_0|\le\sqrt{M_RU_D}+\sqrt{M_DU_R}+\sqrt{U_RU_D}.
+\]
+The two mixed terms are essential. All these are complete-space formulas.
+
+\paragraph{Proved implication: why termwise absolute values can get worse.}
+Fix $N\ge2$. If the actual residual's pair $(u_R,v_R)$ is nonzero, then
+\begin{equation}\label{ns90-absolute}
+ \sum_{N<k\le T}|\delta_kP_T(k)|\longrightarrow\infty
+ \quad (T\longrightarrow\infty).
+\end{equation}
+Here $N$ is fixed; this is not a uniform statement at $T=N^6$ as $N$ grows.
+To prove it, let $L=\operatorname{lcm}(1,\ldots,2N)$.
+For $k>1$, $\delta_k$ is periodic modulo $L$.
+At $k=1+jL$, $j\ge1$, no $n\in\{2,\ldots,2N\}$ divides $k$;
+hence $\delta_k=d_1=-\log2\ne0$ on this entire progression.
+The complete potential has the asymptotic, with explicit error,
+\[
+ P_\infty(k)=\frac{u_R\log k+2u_R+v_R}{k}+O(B_R/(4k^2)).
+\]
+If $u_R\ne0$, its absolute sum on this progression diverges like
+$(\log X)^2$; if $u_R=0$, $v_R\ne0$, it diverges like $\log X$.
+For $k\le\sqrt T$, the uniform tail bound
+$|P_\infty(k)-P_T(k)|=O_{R}(\log^2T/T)$ shows that the total replacement
+error on that progression is $O_R(\log^2T/\sqrt T)=o(1)$.
+Restrict the nonnegative sum to these indices to obtain
+\eqref{ns90-absolute}. No prime-distribution asymptotic or RH input is used.
+
+Consequently the elementary lower bound
+\[
+ L_T=(\log2)E-|sI_T|-\sum_{N<k\le T}|\delta_kP_T(k)|-|Z_T|
+\]
+tends to minus infinity under the stated fixed-$N$ hypothesis, even though
+the signed formula converges. It is the estimate that loses the
+cancellation, not an obstruction to the signed direction or full joint
+route. The finite certificates verify $u_R\ne0$ at the two tested sizes.
+The asymptotic argument does not provide uniform constants in $N$ or
+exclude a different bound at a coupled cutoff.
+
+\paragraph{Certified finite test.}
+The original optimized coefficient balls from NS89, not its normalized
+rational trial vectors, are integrated at $N=16,256$, $T=262144$, using
+256 and 384 bits. The $N=256$ replay doubles both the inherited Gram
+series cutoff and $T$. Every complete numerator overlaps the NS73
+full-Gram numerator and is positive. At $N=256$ and $T=262144$,
+$L_T/E<-186$; after doubling $T$, $L_T/E<-226$.
+At $N=16$ the first bound is below $-828E$.
+Dropping the finite divisor forcing gives a negative numerator at both
+sizes, whereas the complete numerator is positive. This diagnoses that
+particular omission; it is not an asymptotic lower estimate.
+
+\paragraph{Open input and actual cost.}
+With $W=(I-\Pi_N)V$ and $K_N=\|W\|^2$, exact line search gives
+$E_N-E_{2N}\ge\ell_N^2/K_N$ when $K_N>0$.
+The values of $K_N$ recorded here are the complete projected costs already
+certified in NS73; no raw or model cost is substituted. A useful cofinal
+argument still requires a one-sided signed estimate in
+\eqref{ns90-finite} together with a compatible true-cost bound, or a direct
+lower estimate for NS87's full joint observation energy. None is proved.
+In particular the finite positive numerators do not establish the needed
+nonsummable relative gain. RH, G2 and the original uniform Weil floor
+remain open. No manuscript version is added for this attempt.

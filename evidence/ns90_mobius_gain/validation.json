@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "manuscript_version": "1.66 unchanged",
+  "build_command": "./manuscript/build.sh",
+  "pages": 358,
+  "undefined_or_duplicate_references": 0,
+  "pyright_errors": 0,
+  "pyright_warnings": 0,
+  "prior_v161_manifest_entries_verified": 32,
+  "prior_NS89_inventory_entries_verified": 21,
+  "claim_scope": "No cofinal lower gain obtained"
+}
