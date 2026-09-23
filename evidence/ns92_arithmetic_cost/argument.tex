@@ -1,0 +1,135 @@
+\section*{NS92: a direct arithmetic budget for the selected cost}
+
+\paragraph{Scope and prior work.}
+The continuous average and complete norm of its generator are NS61; the
+selected Mobius/logarithmic direction is NS73, and the finite lower
+numerator is NS91. We apply that average to signed coefficient tails,
+obtaining an unconditional, computable upper cost and an endpoint-only
+feasible update. No uniform bound on the arithmetic sum or cofinal gain
+is proved. This is not a new RH criterion or new best finite error.
+
+Use $\mathcal H=L^2((0,\infty),dt/t^2)$, $a_x(t)=A(t/x)$,
+$A(z)=\int_0^z\{u\}\,du/u$, $\tau=\log_+t$, $R_N=\tau-\Pi_N\tau$,
+and $E_N=\|R_N\|^2$. Put
+\[
+ d_n=-\mu(n)\log(2N/n)\quad(N<n\le2N),\quad
+ \ell_N=\langle R_N,\sum d_na_n\rangle,\quad
+ K_N=\|(I-\Pi_N)\sum d_na_n\|^2.
+\]
+The old coefficients of NS90 have no effect on $\ell_N$ or $K_N$.
+Write $\alpha=\log2$ and $\kappa=\log(2\pi)-\gamma$.
+
+\paragraph{Exact complete-space average.}
+For $h(z)=A(z)-\{z\}$, NS61 proves the strong integral identity
+\[
+ \frac{d}{dx}(xa_x(t))=h(t/x),\quad
+ h(t/x)=0\ (t<x),\quad \|h(\,\cdot/x)\|^2=\kappa/x.
+\]
+Define
+\[
+ T_N(x)=\sum_{x<n\le2N}d_n/n\quad(N\le x\le2N),\qquad
+ F_N=\sum_{N<n\le2N}d_na_n-NT_N(N)a_N.
+\]
+Finite interchange gives the exact identity
+\begin{equation}\label{ns92-average}
+ F_N(t)=\int_N^{2N}T_N(x)h(t/x)\,dx.
+\end{equation}
+Each summand contributes $(d_n/n)\int_N^n h(t/x)dx
+=d_na_n-(Nd_n/n)a_N$. Thus $F_N=0$ on $0<t<N$, its weighted
+coefficient sum is zero, $\langle R_N,F_N\rangle=\ell_N$, and its
+old-space projection complement is the original selected direction.
+
+\paragraph{Proved complete cost inequalities.}
+Minkowski and weighted Cauchy--Schwarz give
+\begin{align}
+ K_N\le\|F_N\|^2
+ &\le U_N:=\kappa\left(\int_N^{2N}|T_N(x)|\frac{dx}{\sqrt x}\right)^2
+ \label{ns92-cost}\\
+ &\le\kappa\alpha S_N,\qquad S_N:=\int_N^{2N}T_N(x)^2dx.
+ \label{ns92-square}
+\end{align}
+All norms are over the whole half-line. No physical cutoff, model cost,
+truncated Gram, or omitted infinite tail enters these inequalities.
+For integer $N$, they are finite sums:
+\[
+ S_N=\sum_{m=N}^{2N-1}T_N(m)^2,\qquad
+ U_N=4\kappa\left(\sum_{m=N}^{2N-1}|T_N(m)|
+                    (\sqrt{m+1}-\sqrt m)\right)^2.
+\]
+Form each signed Mobius suffix before taking its absolute value.
+This is an upper bound, not an equality for the projected cost.
+
+\paragraph{Constructive step without a new-block inverse.}
+NS91 supplies a complete lower numerator $0<b_N\le\ell_N$ at the
+tested sizes. For any specified $\lambda\ge0$,
+\[
+ E_N-\|R_N-\lambda F_N\|^2
+ =2\lambda\ell_N-\lambda^2\|F_N\|^2
+ \ge2\lambda b_N-\lambda^2U_N.
+\]
+The exact step $\lambda=b_N/U_N$ guarantees
+$E_N-E_{2N}\ge b_N^2/U_N$. For a literal rational step the same
+inequality applies directly; the certificates use $\lambda=1/512$.
+Add $-\lambda NT_N(N)$ to the old coefficient at $N$, and
+$\lambda d_n$ at each new index. No refit or new-block Gram inverse is
+needed to execute the update. The starting optimized residual still uses
+inherited old-space coefficient enclosures; no fast cofinal rule for them
+is claimed.
+
+\paragraph{What an eventual estimate would require.}
+Let $M(x)=\sum_{n\le x}\mu(n)$ and
+$B_N=\sup_{N\le x\le y\le2N}|M(y)-M(x)|$.
+Partial summation with $f(x)=\log(2N/x)/x$, $f(2N)=0$, gives
+\[
+ T_N(x)=\int_x^{2N}(M(t)-M(x))f'(t)dt,\qquad
+ |T_N(x)|\le B_N f(x).
+\]
+Consequently
+\begin{equation}\label{ns92-oscillation}
+ S_N\le (1-\alpha)^2B_N^2/N,\qquad
+ U_N\le\kappa\alpha(1-\alpha)^2B_N^2/N,
+\end{equation}
+using $\int_1^2\log^2(2/u)\,du/u^2=(1-\alpha)^2$.
+The elementary $B_N\le N$ yields only $O(N)$. A square-root block
+oscillation estimate would give a bounded budget, but is neither proved
+nor assumed. The hypothesis $|M(x)|\le Cx^\theta$ gives only
+$U_N=O(N^{2\theta-1})$. An RH-dependent estimate, or an arbitrarily
+small positive power, must not be replaced by a bounded cost.
+
+If $b_N\ge\varepsilon E_N$ and $S_N\le C$ eventually on $N=2^j$,
+with fixed $\varepsilon,C>0$, then NS83's eventual $E_N\ge c/\log N$
+implies
+\[
+ \frac{E_N-E_{2N}}{E_N}\ge
+ \frac{\varepsilon^2c}{\kappa\alpha^2 C}\frac1j.
+\]
+Both eventual hypotheses remain open. This is a sufficient implication,
+not a necessity claim or a proof of the missing arithmetic theorem.
+The projected cost may be far smaller than $U_N$; failure of this budget
+would not exclude the original PR42 route.
+
+\paragraph{Finite checks and their limits.}
+At $N=16,64,256,1024,4096,16384,65536$, two-precision scalar sums give
+$0.00098<U_N<0.00220$ on this finite list. At $N=256$, $U_N<0.001063$,
+about $60.74$ times the inherited true projected cost. Combining it with
+NS91 yields $b_N^2/(U_NE_N)>0.000464$. The cheap budget certifies relative gain $>0.000443$ for $\lambda=1/512$.
+The separate complete physical calculation certifies gain $>0.0157$ for
+$\lambda=1/16$; this larger step uses its sharper physical cost, not the
+coarse scalar upper budget. Neither step refits the other old coefficients.
+No finite percentage or upper bound is extrapolated.
+
+Independent physical integration evaluates the old error, direction norm,
+and pairing on every unit cell through $T$, then adds their complete main
+tails and all main--remainder and remainder--remainder terms. For
+$r_i=u_i\log t+v_i+\epsilon_i$, $|\epsilon_i|\le B_i/t$, set
+$q_i=u_i\log T+v_i$, $M_i=(q_i^2+2u_iq_i+2u_i^2)/T$, and
+$V_i=B_i^2/(3T^3)$. The tail pairing main term is
+\[
+ (q_1q_2+u_1q_2+u_2q_1+2u_1u_2)/T
+\]
+with radius $\sqrt{M_1V_2}+\sqrt{M_2V_1}+\sqrt{V_1V_2}$.
+For a norm the radius is $2\sqrt{M_iV_i}+V_i$. The old residual's entire
+exterior interval $0<t<1$ is retained. Replays use 256/384 bits and a
+doubled physical cutoff with the inherited old-coefficient cutoff replay.
+They establish a finite feasible decrease, not a new best error, eventual
+gain, or proof of RH. Review is by the author only.

@@ -5,6 +5,28 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 direct arithmetic cost and feasible step (NS-92)
+
+Applying NS61's complete average to signed Mobius coefficient tails gives
+an explicit scalar upper bound on the true selected cost. It also bounds
+a feasible direction that changes only the old coefficient at N and the
+new block, without a new-block inverse or refit of the other old coefficients.
+The starting optimized old coefficients remain inherited inputs.
+
+At N=256 the cheap scalar budget certifies more than 0.0443% relative
+error reduction for a fixed step 1/512. Independent full physical integration
+certifies more than 1.57% for step 1/16, including the complete tail. These
+are weaker than full optimization and are not new best finite errors.
+
+Seven scalar budgets through N=65536 stay small on that finite list.
+No uniform bound follows: the elementary summatory-Mobius estimate gives
+only an O(N) budget. The compatible uniform cost and signed numerator
+estimates remain open. Two precisions, doubled physical/inherited coefficient
+cutoffs, 16 Maxima checks and author self-review pass. Manuscript stays v1.66.
+
+[Complete derivation and certificates](evidence/ns92_arithmetic_cost/) ·
+[Readable report](audits/arithmetic-cost-step-2026-09-23-v1.html).
+
 ## September 23 grouped lower-gain bound (NS-91)
 
 Combining the signed compensator before taking absolute values repairs
@@ -558,6 +580,7 @@ graph LR
   nbnormalizedupper["Constructive zero-exterior upper certificates preserve every decay rate<br/><small>&#128193; evidence/ns89_upper_normalization</small>"]
   nbmobiusjointcancellation["Exact Mobius cancellation; fixed-size absolute-bound loss<br/><small>&#128193; evidence/ns90_mobius_gain</small>"]
   nbjointabelbound["Joint first-primitive finite lower bound with complete grouped tail<br/><small>&#128193; evidence/ns91_joint_abel</small>"]
+  nbarithmeticcostbudget["Complete scalar cost budget and a feasible endpoint-only update<br/><small>&#128193; evidence/ns92_arithmetic_cost</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -657,6 +680,7 @@ graph LR
   nbsmoothedbudget --> nbnormalizedupper
   nbjointlocalization --> nbmobiusjointcancellation
   nbmobiusjointcancellation --> nbjointabelbound
+  nbjointabelbound --> nbarithmeticcostbudget
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -755,9 +779,10 @@ graph LR
   click nbnormalizedupper "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns89_upper_normalization/" "evidence: evidence/ns89_upper_normalization" _blank
   click nbmobiusjointcancellation "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns90_mobius_gain/" "evidence: evidence/ns90_mobius_gain" _blank
   click nbjointabelbound "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns91_joint_abel/" "evidence: evidence/ns91_joint_abel" _blank
+  click nbarithmeticcostbudget "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns92_arithmetic_cost/" "evidence: evidence/ns92_arithmetic_cost" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound,nbarithmeticcostbudget proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;

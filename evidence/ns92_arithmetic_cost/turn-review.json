@@ -1,0 +1,30 @@
+{
+  "classification": "Conclusion/scope/dependency review, not revalidation of all historical proofs",
+  "date": "2026-09-23",
+  "reviewed_main": "eb6ce3a8ead3cece9506ee9db421ea197084ecbd",
+  "claim_commit": "33f1590de3c3c977c8dcecc10551674156af29c6",
+  "conclusions_reviewed": 99,
+  "remote_delta": "PR46 merged; no subsequent changes or other open PRs at initial refresh",
+  "sources": [
+    "AGENTS.md",
+    "research-map.json, all 99 registered conclusions",
+    "README.md current status and checkpoints",
+    "NEXT_STEPS.md continuation instructions",
+    "evidence/MISSING.md",
+    "evidence/ns91_joint_abel/self-review.json",
+    "evidence/v159/ns61/proof.tex, complete average and norm",
+    "evidence/v161/ns73/proof.tex and coefficient conversion",
+    "evidence/ns90_mobius_gain/argument.tex",
+    "evidence/ns89_upper_normalization/physical.py"
+  ],
+  "findings": [
+    "NS91 repaired the finite numerator bound but did not bound its margin or cost uniformly.",
+    "The continuous average and complete kappa norm are prior NS61 work and are attributed.",
+    "The new bound estimates the true cost from above through a feasible endpoint correction; equality is not claimed.",
+    "Original optimized old coefficients are retained; no new old or new-block Gram solve was run.",
+    "NS83 prohibits extrapolating a fixed finite relative gain to every doubling.",
+    "NS74 excludes inference of convergence from finite statistics; the scalar cost screen is not such a claim.",
+    "No pointwise square-root Mobius bound, bounded canonical norm, or RH-dependent asymptotic is assumed.",
+    "Both historical missing-original evidence groups remain open."
+  ]
+}

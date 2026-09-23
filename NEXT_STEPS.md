@@ -163,6 +163,7 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 | NS-90 | Test a signed Mobius inversion estimate for the actual optimized finite arithmetic observations and its complete gain cost | Codex, Continue on PR42 arithmetic lower gain | done (attempt recorded; manuscript v1.66 unchanged) | Prime main terms cancel exactly after old-space orthogonality. Complete signed numerator is positive at N16,256, but the tested termwise absolute lower bound is negative; its divisor allowance diverges with cutoff at fixed N under the stated nonzero-tail hypothesis. No linked-cutoff or cofinal exclusion, lower gain, or new finite efficiency result. Full projected costs inherited from NS73. See evidence/ns90_mobius_gain. |
 
 | NS-91 | Preserve joint arithmetic cancellation by a first primitive and endpoint correction; test a uniform route beyond the finite bound | Codex, Continue on PR42 grouped lower gain | done (finite bound and attempt recorded; uniform estimate open) | Joint first-primitive dyadic bound includes every omitted interval; old-space correction removes 0<t<N. Certifies relative gain >0.02821 at N256, on the known NS73 direction. Grouped tail negligible at N^6. NS78 inversion plus normal equations reduces the proposed quadratic rewrite to the same missing numerator. No cofinal lower gain; see evidence/ns91_joint_abel. |
+| NS-92 | Derive and test a direct arithmetic upper bound on the selected true cost, retaining the signed gain condition | Codex, Continue on PR42 after NS91 | done (complete cost bound and finite step; uniform input open) | NS61 average gives a scalar upper budget from signed Mobius tails and a feasible endpoint-only step. At N256 the physical 1/16 step reduces full error by >1.57%; the cheap budget certifies >0.0443% for 1/512. Seven scalar checks through N65536 are not a uniform bound. Elementary oscillation control gives only O(N); no cofinal gain or new best error. See evidence/ns92_arithmetic_cost. |
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
@@ -327,6 +328,25 @@ solution. This does not close arithmetic estimates of the expression.
 The full PR42 joint-observation route remains the primary alternative to
 this single selected direction. Both historical original-evidence gaps
 remain open; manuscript v1.66 is unchanged.
+
+## Open continuation after NS-92
+
+The selected true cost now has a sufficient scalar upper budget from the
+signed Mobius suffixes T_N(x): U_N <= kappa*log(2)*integral(T_N(x)^2 dx).
+This is a proved full-space inequality; boundedness of its arithmetic
+factor is not proved. The elementary block-oscillation estimate gives
+only O(N), and square-root cancellation must not be assumed. The seven
+finite scalar checks are not a uniform estimate or evidence that RH holds.
+
+Compatible lower numerator and upper cost estimates are still required.
+For this stronger sufficient budget, b_N >= epsilon E_N and bounded
+integral(T_N^2) would give a/j relative gain via NS83. They are not asserted
+necessary. Preserve useful old-space cancellation when seeking a sharper
+cost estimate: at N256 the scalar budget is about 60.74 times the true
+projected cost. Its eventual failure would not close PR42's full route.
+The explicit endpoint-only finite step is a feasible certificate, not a
+cofinal algorithm or a new best approximation. Both historical original
+evidence gaps remain open; manuscript v1.66 unchanged.
 
 ## Lanes
 

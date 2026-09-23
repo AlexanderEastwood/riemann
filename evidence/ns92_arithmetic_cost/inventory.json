@@ -1,0 +1,28 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental NS92 evidence and versioned HTML report; excludes this inventory",
+  "files": {
+    "evidence/ns92_arithmetic_cost/README.md": "e5c912e4b255930f6cf24ebf83080c75ce7254ec13959151d673234cbb9b0033",
+    "evidence/ns92_arithmetic_cost/argument.tex": "7e0727e2a0ea4682285e1830aa5d63120d293b95c33d2c5378fc14aa47a3f4d7",
+    "evidence/ns92_arithmetic_cost/build-summary.txt": "5c27629e8401fddffa753a82f7466fecd541ed1bd80524d36e3df0f48637cac2",
+    "evidence/ns92_arithmetic_cost/certify_cost.py": "643154f283bfe173cc3ca60ae77316b651853f8e55cdc975332a39f16422fa9b",
+    "evidence/ns92_arithmetic_cost/cost-256bits.json": "d5ce4a400264113dd27eca8bb0f0a29b02a0a941f0e5613851395950a8217b03",
+    "evidence/ns92_arithmetic_cost/cost-384bits.json": "e86bf38a11648a9ed99adff8f84a0bcea5ba5fbc341badfe4516f4cd56ab9229",
+    "evidence/ns92_arithmetic_cost/cost-cutoff-384bits.json": "f9dff3a3165bf92dde9c982eb1e100ae04884e88dfe65c3337f61ac99a99cf17",
+    "evidence/ns92_arithmetic_cost/dependency-validation.json": "f2a024d302b8cb19d5308ebaed4d6d84a06945068c6916a4a0dd176fcf26696b",
+    "evidence/ns92_arithmetic_cost/exact-checks-output.txt": "add058fa6bd1c9f1348078164fb204f18becf7b0bd178c84a442312105a7a82d",
+    "evidence/ns92_arithmetic_cost/exact-checks.mac": "51a7873d1ad0a2c9d6f15b00fed59cf1f26dee5ec4bac580d883826446f1c801",
+    "evidence/ns92_arithmetic_cost/literature-inputs.json": "9cb326e30026dc7822bf5832477c7bf89ed1f64b32edd4aaa3edfe8c2061a502",
+    "evidence/ns92_arithmetic_cost/physical-256bits.json": "62b16a9ee8552a4fbab60d4c9deb4a78b30b617fa171e8ce248cd8952487bb6d",
+    "evidence/ns92_arithmetic_cost/physical-384bits.json": "fb0512684e92716255aaf25864145826de482141232aab60ad1f34dd20bf912d",
+    "evidence/ns92_arithmetic_cost/physical-cutoff-384bits.json": "72a9fb0bec127c27ab7d5bec2a4cdbcda124f64250a726230a2533c83910c605",
+    "evidence/ns92_arithmetic_cost/physical_step.py": "4ca3a4858a88bbc7898ff6dbfc00afc3a42a585c1623259538132ab7aadfdeb3",
+    "evidence/ns92_arithmetic_cost/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "evidence/ns92_arithmetic_cost/runtime-provenance.json": "13b7aa4ffdf5df112214a030b87890302685bca6085cfdffea2c53ca4cf3a88a",
+    "evidence/ns92_arithmetic_cost/self-review.json": "2086ae973bf38e1fe660c936fb5b8288346142b190f8cabca37e9bfb47da6432",
+    "evidence/ns92_arithmetic_cost/turn-review.json": "d91f5a9d80b2954c0007754ff564115f7f5fc074a497a577f901631269af16d5",
+    "evidence/ns92_arithmetic_cost/validation.json": "0359d97c9355b3203e1337fdca6e244323b63c4669ba0c5d56ca807b8a0c4066",
+    "evidence/ns92_arithmetic_cost/verify.py": "9f091bd5c35a757546dff55a5ec7ec0a1f3c4faae9fcf4d4a61ae69e3bb584c4",
+    "audits/arithmetic-cost-step-2026-09-23-v1.html": "b8b23b60149b68ce8d3ab6550e9f64d7c988c1809276b1084ae0b277ac90cda1"
+  }
+}

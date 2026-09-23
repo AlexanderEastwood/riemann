@@ -3504,3 +3504,34 @@ Gram cutoffs: 108 scalar and 114 grouped-integral precision overlaps,
 14 positive finite cases, and 32 exact Maxima checks. Author self-review
 only. Evidence and versioned HTML report are in evidence/ns91_joint_abel
 and audits/joint-abel-research-2026-09-23-v2.html. Manuscript v1.66 unchanged.
+
+## 2026-09-23 — NS92 direct arithmetic cost budget and an endpoint-only step
+
+Reviewed all 99 conclusions at main eb6ce3a for scope and dependencies;
+no fresh audit of all historical proofs is claimed. Both missing-original
+groups remain open. Claimed NS92 in its own commit before evidence edits.
+
+Applied NS61's existing complete average to NS73's signed Mobius tails.
+An exact correction to the old coefficient at N makes the feasible
+direction vanish before N. Minkowski and weighted Cauchy-Schwarz give
+a finite scalar upper bound for its whole norm and the smaller projected
+cost. No new-block inverse is used in that bound or the feasible update.
+The starting optimized old coefficients remain inherited inputs.
+
+At N256 the cheap bound certifies >0.0443% relative gain for step 1/512.
+Separate physical integration, with complete cross tails, certifies
+>1.57% for step 1/16. These do not improve the previously optimized error.
+The scalar budget is about 60.74 times the sharp projected cost. Seven
+scalar budgets through N65536 lie between 0.00098 and 0.00220, but their
+uniform bound is open. The elementary block-oscillation argument gives
+only O(N); square-root cancellation is not assumed.
+
+Both precisions and doubled physical/inherited coefficient cutoffs pass:
+56 scalar precision overlaps, eight scalar cutoff invariants, ten physical
+precision overlaps and nine physical cutoff overlaps, 16 Maxima checks,
+and 131072 exact integer Mobius convolution checks. The broad physical
+numerator enclosure overlaps the inherited exact numerator but does not
+independently establish NS91's much closer lower bound; direct physical
+step improvement is certified instead. No new Gram solves or independent
+review. Uniform cost and signed numerator inputs remain open. Manuscript
+v1.66 is unchanged; no new theorem version or tag.
