@@ -1,0 +1,30 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/ns100_reassessment/checks.mac")
+kill(all)
+display2d:false
+checks:0
+check(label,expr):=block([v:ratsimp(expand(expr))],
+      if v # 0 then error(label,v),checks:checks+1,print("PASS",label))
+check("Cayley deficit",((a+1)^2+b^2)-((a-1)^2+b^2)+(-4)*a)
+PASS Cayley deficit 
+check("product coordinates",(p+q)+(p-q)+(-2)*p)
+PASS product coordinates 
+check("difference coordinates",(p+q)-(p-q)+(-2)*q)
+PASS difference coordinates 
+check("Jacobian determinant",determinant(matrix([1,1],[1,-1]))+2)
+PASS Jacobian determinant 
+check("Gaussian shift completion",-(u-c)^2/4+z*u-(-(u-c+(-2)*z)^2/4+z*c+z^2))
+PASS Gaussian shift completion 
+check("cosh at log two",(2+1/2)/2-5/4)
+PASS cosh at log two 
+check("sinh at log two",(2-1/2)/2-3/4)
+PASS sinh at log two 
+check("negative radial control",
+      (3-(2*5)/4)*((-2*3)/4)+2*x*(3-(2*5)/4)^2-(x/2-3/4))
+PASS negative radial control 
+check("weighted center variance",
+      (wm+wp)-(wp-wm)^2-((wm+wp)*(wm+(1-wm-wp)+wp)-(wp-wm)^2))
+PASS weighted center variance 
+print("CHECK COUNT",checks)
+CHECK COUNT 9 
+quit()

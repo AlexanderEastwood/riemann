@@ -1,0 +1,12 @@
+{
+  "precision_bits": 256,
+  "theta_terms": 4,
+  "cutoff": 2,
+  "cosine_frequency": 40,
+  "prefix_integral": "[-5.431936635484278743709330046491779885430248325167954477893073087e-10 +/- 6.19e-74]",
+  "theta_series_error_bound": "[3.27623775599902053671651387553567475529474415101887182786159384727159952222e-30 +/- 8.75e-105]",
+  "physical_tail_bound": "[3.9226491701208497839854208592977385018821014931434121623120102044379309682e-142 +/- 7.15e-216]",
+  "complete_half_line_integral": "[-5.4319366354842787437e-10 +/- 4.21e-30]",
+  "conclusion": "strictly negative; slice positivity fails, not the weighted full kernel",
+  "scope": "one complete theta-product slice, not an RH counterexample"
+}

@@ -1,0 +1,22 @@
+{
+  "replay_pairs_overlap": true,
+  "complete_integrals_strictly_negative": true,
+  "precision_bits": [
+    256,
+    384
+  ],
+  "series_terms": [
+    4,
+    8
+  ],
+  "cutoffs": [
+    2,
+    4
+  ],
+  "maxima_checks": 9,
+  "python_diagnostics": "clean",
+  "local_report_links_resolve": 4,
+  "visual_review": "Not performed: inherited local-HTML browser policy block respected. Allowed Codex file preview request returned queued; no browser bypass.",
+  "primary_source_screen": "not exhaustive",
+  "new_cofinal_bound": false
+}

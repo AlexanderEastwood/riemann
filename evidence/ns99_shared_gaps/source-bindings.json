@@ -1,0 +1,107 @@
+[
+  {
+    "path": "AGENTS.md",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "c3ff3bdb3234f1283149a4f32112120991b28ee776417a581a9604cf8a1223c5"
+  },
+  {
+    "path": "README.md",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "c6254478798112b3f848e09f2d75609f99c843255570bf052dcac6bd7273fb08"
+  },
+  {
+    "path": "NEXT_STEPS.md",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "a447e9079d038d80306a2278c961076a5f3d3ff2018e04b6f592e866dc4a2229"
+  },
+  {
+    "path": "research-map.json",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "f166651409bab7def2d1f8032b9537bed0a3bb0f4c2f611ee8173790af965c7b"
+  },
+  {
+    "path": "evidence/MISSING.md",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073"
+  },
+  {
+    "path": "evidence/ns97_novelty_audit/README.md",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "dd2ae079627c88801a93e4ba79d08e95c9165a8b4145a322a56c4e4df58e76be"
+  },
+  {
+    "path": "evidence/ns98_projected_cost/turn-review.json",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "7853fdbf9b69984ad9ed53c81a002f134ec5ca20d9f4fa262623438e0fa61a20"
+  },
+  {
+    "path": "evidence/ns98_projected_cost/self-review.json",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "9bbdbdf7ff60b1b5dd5229b43102449d787052aa5481c5aefd34f0e9b5bd8a88"
+  },
+  {
+    "path": "evidence/ns98_projected_cost/argument.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "40f78654017c7c8e14ce5d2444b560cfe65d3a5d98c619573d96fed986ed3085"
+  },
+  {
+    "path": "evidence/ns92_arithmetic_cost/argument.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "7e0727e2a0ea4682285e1830aa5d63120d293b95c33d2c5378fc14aa47a3f4d7"
+  },
+  {
+    "path": "evidence/ns93_averaged_cost/argument.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "879c567b2aef66c78ed4b6d6178c0661116e41d961909e154ba1c6d23ef37a8a"
+  },
+  {
+    "path": "evidence/ns91_joint_abel/argument.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "32e288b4f632419d07ef4f7da3e988c7d5631ee576b31194c9205f7f3b69e135"
+  },
+  {
+    "path": "evidence/ns87_joint_tail/argument.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "b163dcd18c485ec937d7bf1657337de60ac9ec604e2137f4385f7e077f0e47e3"
+  },
+  {
+    "path": "evidence/v160/ns71/proof.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "cf02071d20c5db2f4b529d866e8d938a7957edfbe5debb83dc4aeef0851f4c40"
+  },
+  {
+    "path": "evidence/ns95_square_product/argument.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "bb2d4ff84ada634e951d538080f217c86c4a8216d815f3c72d7322bc0da6704a"
+  },
+  {
+    "path": "evidence/ns96_lcm_square/argument.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "75ebd5259d12fe66bdda4efad1cb1d7f4b3fb8dd8268e60ebee1a231cc138151"
+  },
+  {
+    "path": "evidence/ns88_dilation_defect/argument.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "c6d63b9e6f89cd0d26df3e9afdbaaf41b1769a14b94cd6e72440585a15c26b6a"
+  },
+  {
+    "path": "evidence/ns47_clifford_weil/representation.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "17cd8b66d82f3927d3257cf495b83e2daa68cd649630e379b34df6ac22e732f3"
+  },
+  {
+    "path": "evidence/ns50_cae_localization/localization-v2.tex",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "f01a0f20eb9376d5e8957643dd3adfdf1cac5202e240db06be661f549a2fd992"
+  },
+  {
+    "path": "audits/ns54-zero-picture-review-2026-09-22-v1.html",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "084dd3a6a437b643cda51af8e928aabfd53b9856fc4e83c891eb62ec39a2080e"
+  },
+  {
+    "path": "COMPARISON.md",
+    "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+    "sha256": "350a791661dfb6e376ea192335d472a582ff9e3759df5bcadc2f65d89e467b06"
+  }
+]

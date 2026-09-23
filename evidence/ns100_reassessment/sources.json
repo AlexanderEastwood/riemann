@@ -1,0 +1,43 @@
+{
+  "accessed": "2026-09-23",
+  "screen_is_exhaustive": false,
+  "sources": [
+    {
+      "author": "Jeffrey C. Lagarias",
+      "title": "On a positivity property of the Riemann xi-function",
+      "url": "https://websites.umich.edu/~lagarias/doc/positivity.pdf",
+      "year": 1999,
+      "use": "Classical xi logarithmic derivative half-plane criterion; introductory equations (1.4)-(1.6). No real-axis minimum estimate imported.",
+      "correction": "https://www.impan.pl/shop/en/publication/transaction/download/product/81942",
+      "correction_scope": "2005 erratum changes Lemma 3.1 and the sign in (3.8); those estimates are not used."
+    },
+    {
+      "author": "George Csordas",
+      "title": "Fourier transforms of positive definite kernels and the Riemann xi-Function",
+      "url": "https://arxiv.org/html/1309.0055v2",
+      "year": 2014,
+      "use": "Theta normalization (4.1)-(4.2), associated-kernel criterion Theorem 4.6, first Laguerre inequality Open Problem 4.7 as stated in this source; Example 3.12 already illustrates failure of generic log-concavity. No claim that all listed 2014 open questions have unchanged 2026 status."
+    },
+    {
+      "authors": "Griffin, Ono, Rolen, Thorner, Tripp, Wagner",
+      "title": "Jensen polynomials for the Riemann xi-function",
+      "url": "https://arxiv.org/html/1910.01227v3",
+      "year": 2022,
+      "use": "Definitions (1.1)-(1.2), Theorems 1.1-1.2 and Corollary 1.3. Already-known n>=c exp(d/2) and degree<=9.36e20 all-shift region. This is a published sufficient region, not a claimed sharp or latest frontier."
+    },
+    {
+      "authors": "Griffin, Ono, Rolen, Zagier",
+      "title": "Jensen polynomials for the Riemann zeta function and other sequences",
+      "url": "https://arxiv.org/abs/1902.07321",
+      "year": 2019,
+      "use": "Classical Jensen-Polya program and fixed-degree eventual hyperbolicity; not worldwide novelty."
+    },
+    {
+      "author": "Yufei Zhao",
+      "title": "Power of a Point",
+      "url": "https://yufeizhao.com/olympiad/power_of_a_point.pdf",
+      "year": 2011,
+      "use": "Previously checked in NS94, whose exact geometry/control was read here; not redownloaded in NS100. No instructions in source treated as user instructions."
+    }
+  ]
+}

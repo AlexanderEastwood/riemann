@@ -1,0 +1,37 @@
+{
+  "base_commit": "918dc6c370d37a224b0277babed2eeb7dc9bbd39",
+  "registered_nodes": 104,
+  "unchanged_prior_node_records": 104,
+  "annotated_nodes": 63,
+  "continuation_input_groups": 14,
+  "registry_source_paths_exist": true,
+  "generator_reproducible": true,
+  "generator_rejects_unknown_input": true,
+  "local_HTML_links_resolve": 7,
+  "pyright": {
+    "errors": 0,
+    "warnings": 0,
+    "files": [
+      "tools/make_map.py",
+      "evidence/ns100_reassessment/certify_slice.py"
+    ]
+  },
+  "manuscript": {
+    "pages": 358,
+    "undefined_duplicate_references": 0,
+    "source_unchanged": true
+  },
+  "v166_manifest": {
+    "ok": 16,
+    "missing": 0,
+    "mismatched": 0
+  },
+  "NS100_integration": {
+    "scientific_artifact_hashes_verified": 17,
+    "coordinator_256bit_replay_byte_identical": true,
+    "coordinator_Maxima_checks": 9,
+    "author_replays": "256/384 bits; 4/8 theta terms; L=2/4; complete enclosures overlap"
+  },
+  "HTML_review": "Source/links reviewed. Local-browser policy block inherited from earlier work respected; permitted app file preview requested. No browser visual review claimed.",
+  "no_new_cofinal_bound": true
+}

@@ -1,0 +1,17 @@
+/* NS100 exact algebra; these checks do not prove any zeta sign. */
+kill(all)$
+display2d:false$
+checks:0$
+check(label,expr):=block([v:ratsimp(expand(expr))], if v # 0 then error(label,v), checks:checks+1, print("PASS",label))$
+check("Cayley deficit",((a+1)^2+b^2)-((a-1)^2+b^2)-4*a)$
+check("product coordinates",(p+q)+(p-q)-2*p)$
+check("difference coordinates",(p+q)-(p-q)-2*q)$
+check("Jacobian determinant",determinant(matrix([1,1],[1,-1]))+2)$
+check("Gaussian shift completion",-(u-c)^2/4+z*u-(-(u-c-2*z)^2/4+z*c+z^2))$
+check("cosh at log two",(2+1/2)/2-5/4)$
+check("sinh at log two",(2-1/2)/2-3/4)$
+check("negative radial control",(3-2*5/4)*(-2*3/4)+2*x*(3-2*5/4)^2-(x/2-3/4))$
+check("weighted center variance",(wm+wp)-(wp-wm)^2-((wm+wp)*(wm+(1-wm-wp)+wp)-(wp-wm)^2))$
+/* The preceding variance identity requires total weight one; redo explicitly. */
+print("CHECK COUNT",checks)$
+quit();

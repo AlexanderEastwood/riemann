@@ -51,7 +51,9 @@
     "evidence/ns94_circle_inversion/*.py",
     "evidence/ns95_square_product/*.py",
     "evidence/ns96_lcm_square/*.py",
-    "evidence/ns98_projected_cost/*.py"
+    "evidence/ns98_projected_cost/*.py",
+    "tools/make_map.py",
+    "evidence/ns100_reassessment/*.py"
   ],
   "exclude": [
     "node_modules",

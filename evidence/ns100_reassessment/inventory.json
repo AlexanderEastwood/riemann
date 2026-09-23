@@ -1,0 +1,73 @@
+{
+  "classification": "NS100 scientific and report file hashes; no new version manifest",
+  "files": [
+    {
+      "path": "audits/independent-route-reassessment-2026-09-23-v1.html",
+      "sha256": "9ebf30a7f854d1be8cff5d7d6759225056fb69ee52e1ddcb3bde9ee7c775f9c8"
+    },
+    {
+      "path": "evidence/ns100_reassessment/README.md",
+      "sha256": "c8d1aac70f2b6cf655aab50b0f59ae2682d8744d5a8a1dc37a30191c5163ad7e"
+    },
+    {
+      "path": "evidence/ns100_reassessment/argument.tex",
+      "sha256": "1673593f001fc9be376e17fa36741c27b11e04731be887f7d6200d6ad05b6187"
+    },
+    {
+      "path": "evidence/ns100_reassessment/certify_slice.py",
+      "sha256": "fa59614518135308394529079f2b0ed8547d08f764ee400ab9cc4ba460cda4ae"
+    },
+    {
+      "path": "evidence/ns100_reassessment/checks-output.txt",
+      "sha256": "73e747c57723c88e5c3bf90a51a323768335ec87efd15e2922ac6922b26072be"
+    },
+    {
+      "path": "evidence/ns100_reassessment/checks.mac",
+      "sha256": "900d5965cfef66b71f881e6b991579b0c30bf3c156d4019e8f244afb9bb77d04"
+    },
+    {
+      "path": "evidence/ns100_reassessment/diagnostics.txt",
+      "sha256": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+    },
+    {
+      "path": "evidence/ns100_reassessment/proposals.json",
+      "sha256": "1b8562bc18ef6d947c8b07009bdab90d5733695d8c5f29efe68e0bde05b247c9"
+    },
+    {
+      "path": "evidence/ns100_reassessment/requirements-replay.txt",
+      "sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d"
+    },
+    {
+      "path": "evidence/ns100_reassessment/self-review.json",
+      "sha256": "b07fbdc07234176c64671faea9ca51ff8e11a4de4ad7ab646e74169780353ca8"
+    },
+    {
+      "path": "evidence/ns100_reassessment/slice-256bits.json",
+      "sha256": "cdb24989ad7ee02647065db827dfcfa028bc13a6391227a2add078f8762ab7dc"
+    },
+    {
+      "path": "evidence/ns100_reassessment/slice-384bits.json",
+      "sha256": "51354b8d0fdbad7786633e3830d5c89fdcc7e81d6e3b90287b9631073c0ee6b2"
+    },
+    {
+      "path": "evidence/ns100_reassessment/slice-cutoff-384bits.json",
+      "sha256": "f3aa6423a687c543ae525a8a2c23724b051906e3e6a39122bca571987e4f2d4d"
+    },
+    {
+      "path": "evidence/ns100_reassessment/source-bindings.json",
+      "sha256": "662afcfdb0faa4a4450691ae9f9c6e282e246d3f853c506ad33f7afd0f22830f"
+    },
+    {
+      "path": "evidence/ns100_reassessment/sources.json",
+      "sha256": "3278bc3b8f2f97b024c277824e7da11bbaa9c3fc1eab59418f743d31af12ccb0"
+    },
+    {
+      "path": "evidence/ns100_reassessment/turn-review.json",
+      "sha256": "aaa369b2fdbf04aaa59fb04d43967d75e297ee84651053f06501825d9b7c7687"
+    },
+    {
+      "path": "evidence/ns100_reassessment/validation.json",
+      "sha256": "de4bfd155e08fc538efd6d3ef345d8f63872d99c97028bc71c3f27c799a4cf33"
+    }
+  ]
+}

@@ -31,7 +31,7 @@ REPO_URL = _repo_url()
 STYLE = {
     "proved":  ("#1b5e20", "#a5d6a7", "proved"),
     "live":    ("#f57f17", "#ffd54f", "live"),      # gold: the routes currently being worked
-    "closed":  ("#b71c1c", "#ef9a9a", "closed"),    # red: proved dead ends, kept deliberately
+    "closed":  ("#b71c1c", "#ef9a9a", "closed"),    # red: scoped exclusions, kept deliberately
     "blocked": ("#4a148c", "#ce93d8", "blocked"),
     "open":    ("#37474f", "#cfd8dc", "open"),
 }
@@ -45,6 +45,14 @@ def main() -> int:
     doc = json.loads(SRC.read_text())
     nodes = doc["nodes"]
     by_id = {n["id"]: n for n in nodes}
+    inputs = doc.get("continuation_inputs", [])
+    input_by_id = {item["id"]: item for item in inputs}
+    if len(input_by_id) != len(inputs):
+        raise ValueError("Duplicate continuation input ID")
+    for n in nodes:
+        for link in n.get("continuation_inputs", []):
+            if link["id"] not in input_by_id:
+                raise ValueError(f"Unknown continuation input on {n['id']}: {link['id']}")
     kids = collections.defaultdict(list)
     for n in nodes:
         kids[n.get("parent")].append(n)
@@ -65,6 +73,9 @@ def main() -> int:
             label += f"<br/><small>&#128193; {esc(ev)}</small>"
         if n.get("wall"):
             label += f"<br/><small><b>wall: {esc(n['wall']['input'])}</b></small>"
+        if n.get("continuation_inputs"):
+            tags = ", ".join(link["id"] for link in n["continuation_inputs"])
+            label += f"<br/><small>continuation: {esc(tags)}</small>"
         L.append(f'  {n["id"]}["{label}"]')
     L.append("")
     for n in nodes:
@@ -94,7 +105,7 @@ def main() -> int:
     L.append('  subgraph Legend')
     L.append('    direction LR')
     L.append('    lg_live["current route (gold)"]:::live')
-    L.append('    lg_closed["closed route"]:::closed')
+    L.append('    lg_closed["scoped exclusion"]:::closed')
     L.append('    lg_proved["proved"]:::proved')
     L.append('    lg_open["open"]:::open')
     L.append('    lg_blocked["blocked"]:::blocked')
@@ -104,12 +115,28 @@ def main() -> int:
     c = collections.Counter(n["status"] for n in nodes)
     L.append("| status | count | meaning |")
     L.append("|---|---:|---|")
-    for s, desc in doc["legend"].items():
-        L.append(f"| `{s}` | {c.get(s,0)} | {desc} |")
+    for s in STYLE:
+        L.append(f"| `{s}` | {c.get(s,0)} | {doc['legend'][s]} |")
+
+    if inputs:
+        L += ["", "## Shared continuation inputs", "",
+              "These tags describe unfinished continuations, **not assumptions needed for",
+              "the existing proved results**. Identical tags group an explicitly stated",
+              "objective; the relation and direction restrictions below still matter.",
+              "A shared RH consequence does not make two estimates identical. Failure of",
+              "a stronger sufficient bound does not disprove the smaller quantity it bounds.", "",
+              "| input | question still open | tasks / scope |", "|---|---|---|"]
+        for item in inputs:
+            L.append(f"| [{item['id']}](#input-{item['id'].lower()}) | {item['title']} | {item['tasks']} |")
+        for item in inputs:
+            L += ["", f"<a id=\"input-{item['id'].lower()}\"></a>",
+                  f"### {item['id']}: {item['title']}", "", item["demand"], "",
+                  "**Scope / stop:** " + item["scope"], "",
+                  "Sources: " + " · ".join(f"[{p}]({p})" for p in item["sources"]) + "."]
 
     L += ["", "## Nodes", ""]
 
-    def walk(parent, depth):
+    def walk(parent: str | None, depth: int) -> None:
         for n in sorted(kids[parent], key=lambda x: x["title"]):
             bits = []
             if n.get("prop"):
@@ -125,6 +152,9 @@ def main() -> int:
                 bits.append(f"**wall: {n['wall']['input']}** → `{n['wall']['to']}` ({n['wall']['src']})")
             if n.get("note"):
                 bits.append(n["note"])
+            for link in n.get("continuation_inputs", []):
+                key = link["id"]
+                bits.append(f"**Continuation [{key}](#input-{key.lower()}) ({link['relation']}):** {link['detail']}")
             L.append("  " * depth + f"- {MARK[n['status']]} **{n['title']}**"
                      + (" — " + " · ".join(bits) if bits else ""))
             walk(n["id"], depth + 1)
@@ -132,11 +162,18 @@ def main() -> int:
     walk(None, 0)
     L += ["", "## Reading it", "",
           "Each node is an idea. A node with children is a branch point: the",
-          "children are the sub-ideas tried from it. `closed` children are proved",
-          "dead ends and are kept deliberately — they are the project's main",
-          "output. `live` is the only node currently worth spending on.", "",
+          "children are the sub-ideas tried from it. A `closed` node excludes only",
+          "its stated comparison, construction or inference under its hypotheses.",
+          "It does not close every neighboring route. `live` records current activity,",
+          "not an exclusive recommendation. A proved tool may have an open continuation.", "",
+          "Continuation tags group missing inputs without changing theorem statuses.",
+          "Read each relation: same selected cost, stronger sufficient budget, broader",
+          "gain target and distinct criterion are not interchangeable. NS99 audits these",
+          "dependencies; NS100 separately screens possible new tests. Neither audit is",
+          "a new theorem node or an RH advance.", "",
           "Nodes marked with a folder icon are clickable in the diagram and link",
-          "to the `evidence/vNNN/` directory holding their certificates; the same",
+          "to their evidence directory, which may contain proofs, certificates or",
+          "explicitly labeled diagnostics; the same",
           "links appear in the list above.", ""]
 
     OUT.write_text("\n".join(L) + "\n")

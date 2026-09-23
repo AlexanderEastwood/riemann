@@ -1,0 +1,21 @@
+{
+  "reviewer": "NS100 author-agent self-review, independent of root route assessment; not a separate certificate reviewer",
+  "checks": [
+    "complete theta terms positive for t>=0",
+    "uniform omitted-series majorant with decreasing ratios",
+    "complete physical tail retained",
+    "integrand entire for certified quadrature",
+    "256/384-bit and doubled-term/doubled-cutoff results overlap",
+    "p-continuity includes an integrable uniform majorant",
+    "negative slice distinguished from full signed integral",
+    "order-two Gaussian control scope disclosed",
+    "Cayley transform criterion identified as prior art",
+    "K1 alone not identified with RH",
+    "no theorem-node or manuscript change"
+  ],
+  "maxima_checks": 9,
+  "python_diagnostics": "0 errors, 0 warnings, 0 informations",
+  "python": "3.14.6",
+  "python_flint": "0.9.0",
+  "unresolved": "No full theta factorization, no cofinal NB estimate, no new RH route established."
+}
