@@ -1110,6 +1110,14 @@
       "parent": "nbjointlocalization",
       "evidence": "evidence/ns90_mobius_gain",
       "note": "NS90 exact identity cancels the prime main terms. Under a nonzero residual logarithmic or constant tail, the termwise absolute divisor allowance diverges as cutoff grows at fixed N; no uniform-in-N conclusion at T=N^6. At N16,256 the certified triangle lower bound is vacuous despite positive full numerators. The direction and full joint arithmetic lower-gain target remain open; inherited NS73 efficiencies are not new results."
+    },
+    {
+      "id": "nbjointabelbound",
+      "title": "Joint first-primitive finite lower bound with complete grouped tail",
+      "status": "proved",
+      "parent": "nbmobiusjointcancellation",
+      "evidence": "evidence/ns91_joint_abel",
+      "note": "NS91: exact old-space correction removes 0<t<N without changing gain or true projected cost. Complete absolute dyadic-tail bound is negligible at T=N^6; finite N256 gain >0.02821 certifies the known NS73 direction, not a new best error. No uniform interior margin/cost estimate. The NS78 divisor-inversion quadratic rewrite reduces to the same numerator under normal equations; no independent positivity or route closure."
     }
   ]
 }

@@ -1,0 +1,41 @@
+{
+  "classification": "Local author mathematical and implementation review; not independent review",
+  "open_major_findings": 0,
+  "scope": "NS91 identities, complete grouped tail, finite certificates, and quadratic-rewrite audit; no cofinal gain",
+  "checked": [
+    "Integration by parts keeps both endpoints and the complete Q potential.",
+    "Bounded J combines the terms before absolute values; no separately divergent terms are estimated.",
+    "Endpoint correction belongs to the old space and preserves numerator and true projected cost.",
+    "D=st through N follows from the exact NS90 divisor identities; subtracting Ns a_N removes the whole initial interval.",
+    "The code uses an exact zero-weighted-sum coefficient rule, not midpoint rounding.",
+    "The dyadic partition is fixed independently of signs.",
+    "The outer bound controls sum of absolute dyadic integrals, not merely absolute signed tail.",
+    "Bernoulli primitive is continuous at integer knots; its derivative identity holds almost everywhere.",
+    "Shared dyadic endpoints carry coefficient two; all residual and potential remainder terms are retained.",
+    "Exact Gamma/digamma endpoint formula is derived directly from complete cells.",
+    "Prior Gram numerator is used for validation only, after computing the new lower bound.",
+    "Coarse finite percentages are not extrapolated; a fixed positive contraction would contradict NS83.",
+    "The N^6 absolute grouped-tail estimate uses NS81/NS83 asymptotically and has no effective onset.",
+    "No uniform canonical norm or RH-strength raw-cost bound is assumed.",
+    "NS78 inversion is prior work; the quadratic rewrite is not filed as a new positivity mechanism.",
+    "The constrained residual space has dimension one, including beta=0 giving the zero residual.",
+    "The sufficient margin/cost ratio is left open; neither uniform margin nor uniform projected cost is assumed."
+  ],
+  "development_corrections": [
+    "An initial exploratory endpoint-Q enclosure amplified loose tail radii through the interval sum; replaced by the exact complete Gamma/digamma expression before certification.",
+    "The first exploratory tail comparison bounded absolute signed tail only; the final proof and code instead bound the sum of absolute values of every omitted dyadic integral.",
+    "All baseline runs were repeated after adding the endpoint-normalization option to preserve source-hash bindings."
+  ],
+  "publication": "Integrated in claimed NS91 branch; manuscript v1.66 unchanged",
+  "what_had_to_change": "Combine the signed forcing before absolute values; remove Ns a_N in the old space; count both shared dyadic boundaries in the full tail.",
+  "obstruction": "No independent uniform bound on the finite grouped arithmetic margin relative to its actual projected cost.",
+  "bound_or_object": "NS90 bound repaired at tested finite sizes; no eventual failure or success of the direction is proved.",
+  "verification": {
+    "manuscript_pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "pdf_visual_spot_check": "Unchanged final page rendered and inspected; no new manuscript pages and no full-book visual audit",
+    "pyright_errors": 0,
+    "pyright_warnings": 0,
+    "Maxima_checks": 32
+  }
+}

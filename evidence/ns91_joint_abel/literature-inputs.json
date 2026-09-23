@@ -1,0 +1,14 @@
+{
+  "classification": "Provenance; no new external theorem imported",
+  "local_dependencies": [
+    "NS67 complete atom asymptotics and residual tail",
+    "NS73 original direction and true projected cost",
+    "NS78 divisor inversion, explicitly reused",
+    "NS81 coefficient bound",
+    "NS83 asymptotic positive logarithmic error floor, no finite onset",
+    "NS89 original optimized coefficient balls",
+    "NS90 signed compensator and zero initial interval identity"
+  ],
+  "external_estimates_used": [],
+  "warning": "No assumed RH, subpolynomial canonical norm, zeta derivative moment, or uniform projected cost."
+}

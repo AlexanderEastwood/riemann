@@ -5,6 +5,30 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 grouped lower-gain bound (NS-91)
+
+Combining the signed compensator before taking absolute values repairs
+the tested NS90 estimate. An exact old-space correction removes its entire
+initial interval without changing the numerator or true projected cost.
+Fixed dyadic grouping, including the complete sum of absolute omitted
+interval contributions, certifies a relative error reduction above 2.821%
+at N=256. This bounds the already known NS73 direction; it is not a new
+best finite error or a percentage asserted at all sizes.
+
+At T=N^6 the regrouped tail is negligible on the required logarithmic
+scale. The finite arithmetic margin and its relation to the true projected
+cost still lack a uniform estimate. Rewriting the numerator as a quadratic
+expression using NS78 inversion does not supply positivity: the normal
+equations reduce it to a scalar multiple of the original numerator.
+The full PR42 observation-energy route remains open.
+
+Two precisions, doubled physical/inherited Gram cutoffs, 32 Maxima checks,
+and author self-review pass. The previously blocked standalone draft is
+preserved; these are fresh repository replays. Manuscript remains v1.66.
+
+[Complete argument and certificates](evidence/ns91_joint_abel/) ·
+[Readable report](audits/joint-abel-research-2026-09-23-v2.html).
+
 ## September 23 direct lower-gain attempt (NS-90)
 
 Returned to PR42's missing arithmetic lower gain. In the tested Mobius
@@ -533,6 +557,7 @@ graph LR
   nbdilationstrongnumerator["Eventual energy/j^p dilation-defect lower bound with p<1<br/><small>&#128193; evidence/ns88_dilation_defect</small><br/><small><b>wall: The proposed stronger numerator forces error decay contradicting the critical-zero lower bound</b></small>"]
   nbnormalizedupper["Constructive zero-exterior upper certificates preserve every decay rate<br/><small>&#128193; evidence/ns89_upper_normalization</small>"]
   nbmobiusjointcancellation["Exact Mobius cancellation; fixed-size absolute-bound loss<br/><small>&#128193; evidence/ns90_mobius_gain</small>"]
+  nbjointabelbound["Joint first-primitive finite lower bound with complete grouped tail<br/><small>&#128193; evidence/ns91_joint_abel</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -631,6 +656,7 @@ graph LR
   nbdilationenvelope --> nbdilationstrongnumerator
   nbsmoothedbudget --> nbnormalizedupper
   nbjointlocalization --> nbmobiusjointcancellation
+  nbmobiusjointcancellation --> nbjointabelbound
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -728,9 +754,10 @@ graph LR
   click nbdilationstrongnumerator "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns88_dilation_defect/" "evidence: evidence/ns88_dilation_defect" _blank
   click nbnormalizedupper "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns89_upper_normalization/" "evidence: evidence/ns89_upper_normalization" _blank
   click nbmobiusjointcancellation "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns90_mobius_gain/" "evidence: evidence/ns90_mobius_gain" _blank
+  click nbjointabelbound "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns91_joint_abel/" "evidence: evidence/ns91_joint_abel" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;

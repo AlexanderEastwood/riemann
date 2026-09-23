@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "Finite arithmetic certificates and scalar exact sanity checks; no cofinal gain proof",
+  "checks": {
+    "precision_values": 108,
+    "precision_grouped_integrals": 114,
+    "common_integrals_across_cutoffs": 38,
+    "complete_cutoff_overlaps": 14,
+    "finite_positive_numerator_cases": 14
+  },
+  "Maxima_exact_checks": 32,
+  "N256_guaranteed_relative_gain_above": "0.02821",
+  "new_Gram_solves": false,
+  "independent_author_review": false,
+  "source_sha256": "6adb18d6117fd376abe4661061992d714ade351340729006e6c8242a734ca9ed"
+}

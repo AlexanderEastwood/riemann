@@ -1,0 +1,244 @@
+\section*{NS91: combine before estimating}
+
+\paragraph{Status and classification.}
+Exact identities, proved complete-tail inequalities, and finite certified computations.
+This continues PR42 and PR45 and integrates the previously standalone draft.
+No cofinal arithmetic lower gain is proved.
+
+Retain the notation of NS90:
+\[
+ R=\tau-\Pi_N\tau,\quad E=\|R\|^2,\quad
+ \alpha=\log2,\quad D=\alpha\tau-\sum_{n\le2N}d_na_n,
+ \quad \ell=\alpha E-\langle R,D\rangle.
+\]
+Here $d_n=-\mu(n)\alpha$ through $N$, and
+$d_n=-\mu(n)\log(2N/n)$ on the next block. Its complete projected cost
+$K=\|(I-\Pi_N)\sum d_na_n\|^2$ is the NS73 cost; it is not replaced
+by a model cost. Set $s=-\sum d_n/n$.
+
+\paragraph{Exact first-primitive identity.}
+Define
+\[
+ Q(t)=\int_t^\infty R(u)\frac{du}{u^2},\qquad J(t)=tD'(t).
+\]
+For $t\ge1$, away from immaterial endpoint values,
+\[
+ J(t)=\alpha-\sum_{n\le2N}d_n\{t/n\}
+     =st+\sum_{k\le t}\delta_k,
+ \qquad \delta_k=\alpha\mathbf1_{k=1}+\sum_{n\mid k}d_n.
+\]
+For $0<t<1$, $J(t)=st$.
+Thus $J$ is bounded for $t\ge1$, even though the separate terms of the
+NS90 divisor-potential sum have divergent absolute allowance. Since
+$Q'=-R/t^2$, integration by parts gives the absolutely convergent identity
+\begin{equation}\label{ns91-first}
+ \langle R,D\rangle=\int_0^\infty J(t)Q(t)\frac{dt}{t}.
+\end{equation}
+The endpoints vanish: $D=O(t)$ and $Q=O(1+|\log t|)$ at zero, whereas
+$D=O(1+\log t)$ and $Q=O((1+\log t)/t)$ at infinity. These bounds also
+prove absolute integrability after this regrouping. No limit of separately
+divergent terms is used.
+
+\paragraph{Exact old-space correction: remove the whole initial interval.}
+NS90 gives $D(t)=st$ for $0<t\le N$. Set
+\[
+ \widetilde D=D-Ns\,a_N,\qquad
+ \widetilde d_N=d_N+Ns=-N\sum_{n\ne N}d_n/n,
+ \qquad \widetilde d_n=d_n\ (n\ne N).
+\]
+Then $\sum\widetilde d_n/n=0$, and $a_N(t)=t/N$ on $0<t\le N$, so
+\begin{equation}\label{ns91-zero-initial}
+ \widetilde D(t)=\widetilde J(t)=0\quad(0<t<N).
+\end{equation}
+Because $a_N\in V_N$, $\langle R,\widetilde D\rangle=\langle R,D\rangle$.
+The projected direction and its cost $K$ are also unchanged. This is a
+change of the representative used to estimate the numerator, not a change
+of the underlying gain direction or a refit. The subsequent formulas
+apply to either coefficient vector; the corrected one is used for the
+stronger certificates.
+
+\paragraph{Complete dyadic tail inequality.}
+Suppose $T\ge2N$ and, with the complete NS67 remainder,
+\[
+ R(t)=u\log t+v+\epsilon(t),\quad |\epsilon(t)|\le B/t,
+ \quad q=u\log T+v,\quad B=\tfrac16\sum n|c_n|.
+\]
+For the chosen coefficients $d$, let
+\[
+ u_D=\alpha-\tfrac12\sum d_n,\qquad B_P=\tfrac1{12}\sum n|d_n|.
+\]
+Put $B_2(x)=x^2-x+1/6$. For $t\ge1$ the continuous periodic function
+\[
+ P(t)=-\tfrac12\sum n d_n B_2(\{t/n\})
+\]
+satisfies $P'=J-u_D$ almost everywhere and $|P|\le B_P$.
+No period length is used in the bound. Write $f=Q/t$ and
+$C_k=\int_{2^kT}^{2^{k+1}T}J(t)f(t)\,dt$. Integration by parts and the
+triangle inequality, \emph{after} grouping, give
+\[
+ \sum_{k\ge0}|C_k|\le |u_D|\int_T^\infty|f|
+ +B_P\left(|f(T)|+2\sum_{k\ge1}|f(2^kT)|+\int_T^\infty|f'|\right).
+\]
+The coefficient two counts shared endpoints. It may not be dropped.
+Integrating the residual remainder first yields
+\[
+ Q(t)=\frac{u\log t+u+v}{t}+e(t),\qquad |e(t)|\le B/(2t^2).
+\]
+Moreover $f'=-R/t^3-Q/t^2$, so
+\[
+ |f'(t)|\le\frac{|2q+u|+2|u|\log(t/T)}{t^3}+\frac{3B}{2t^4}.
+\]
+Using the geometric sums $\sum_{k\ge1}4^{-k}=1/3$,
+$\sum_{k\ge1}k4^{-k}=4/9$, and $\sum_{k\ge1}8^{-k}=1/7$, we obtain
+\begin{align}
+ \sum_{k\ge0}|C_k|\le\mathcal T_N(T):={}&
+ |u_D|\left(\frac{|q+u|+|u|}{T}+\frac{B}{4T^2}\right)\\
+ &+B_P\left[
+ \frac{\tfrac53|q+u|+\tfrac89|u|\log2+
+                    \tfrac12(|2q+u|+|u|)}{T^2}
+ +\frac{8B}{7T^3}\right].
+ \label{ns91-tail}
+\end{align}
+This bounds the sum of the absolute values of \emph{all} omitted dyadic
+integrals, not just the absolute value of their signed sum. All constants
+are explicit in the finite coefficients.
+
+For $N=2^j$ and $T=2^L>N$, define, using the corrected representative,
+\[
+ \mathcal B_N(T)=
+ \sum_{k=j}^{L-1}\left|\int_{2^k}^{2^{k+1}}
+                  \widetilde J(t)Q(t)\frac{dt}{t}\right|
+ +\mathcal T_N(T),\qquad b_N(T)=\alpha E-\mathcal B_N(T).
+\]
+If $b_N(T)>0$, then
+\[
+ \ell\ge b_N(T),\qquad E_N-E_{2N}\ge b_N(T)^2/K.
+\]
+The second conclusion follows from exact line search in the unchanged
+projected direction. This is a finite sufficient inequality, not a new
+RH criterion. No eventual bound on $\mathcal B_N(T)/E$ or $K$ is proved.
+
+\paragraph{The regrouped absolute tail is also negligible cofinally.}
+This statement concerns the tail, not the missing arithmetic gain.
+The elementary identity
+$\sum_{n\le x}\mu(n)\lfloor x/n\rfloor=1$ gives
+$|\sum_{n\le x}\mu(n)/n|\le1+1/x$.
+Define $S(x)=\sum_{n\le x}\mu(n)n^{-1}\log(x/n)$. Then
+$s=S(2N)-S(N)$ and $S'(x)=x^{-1}\sum_{n\le x}\mu(n)/n$ almost everywhere, so
+$|s|\le\log2+1/(2N)$. Consequently the endpoint-corrected coefficients obey
+\[
+ \sum|\widetilde d_n|\le3N\log2+\tfrac12,\qquad
+ \sum n|\widetilde d_n|\le3N^2\log2+(\log2+\tfrac12)N.
+\]
+NS81 supplies $\|c\|_2^2\le32C_N$,
+$C_N=48H_NN^3(N+2)$. Thus
+\[
+ |u|=O(N^{5/2}\sqrt{\log N}),\quad
+ |v|=O(N^{5/2}\log^{3/2}N),\quad
+ B=O(N^{7/2}\sqrt{\log N}),\quad
+ |u_D|=O(N),\quad B_P=O(N^2).
+\]
+Insert these into \eqref{ns91-tail} at $T=N^6$:
+\[
+ \mathcal T_N(N^6)=O(N^{-5/2}\log^{3/2}N).
+\]
+The already proved NS83 bound $E_N\ge c/\log N$ for all sufficiently
+large $N$, with no effective onset, then yields
+\[
+ \mathcal T_N(N^6)/E_N=O(N^{-5/2}\log^{5/2}N)=o(1/\log N).
+\]
+Therefore even the sum of absolute values of the \emph{grouped} outer
+intervals can be controlled at the cofinal scale. This contrasts two
+different estimates: it does not invalidate NS90's divergence of the
+ungrouped divisor allowance at fixed $N$. The finite grouped arithmetic
+integrals and true projected cost still require an independent estimate.
+
+\paragraph{Exact endpoint evaluation.}
+To avoid amplifying a loose endpoint remainder through many intervals,
+the computation uses a closed expression for $Q(T)$. For $z>0$ and
+$m=\lfloor z\rfloor$, direct cell integration gives
+\[
+ A(z)=z-m\log z+\log\Gamma(m+1),\qquad
+ C(z):=\int_z^\infty\frac{\{x\}}{x^2}\,dx
+ =H_m-\gamma-\log z+\frac{z-m}{z}.
+\]
+Indeed at an integer $m$, the complete cell sum telescopes to
+$H_m-\gamma-\log m$; the partial cell gives the remaining term.
+Integration by parts then shows
+\[
+ \int_T^\infty a_n(t)\frac{dt}{t^2}=\frac{A(T/n)}T+\frac{C(T/n)}n,
+\quad Q(T)=\frac{\log T+1}T-
+ \sum c_n\left(\frac{A(T/n)}T+\frac{C(T/n)}n\right).
+\]
+The Arb implementation uses $H_m-\gamma=\psi(m+1)$. No midpoint inverse,
+uncertified quadrature, or omitted infinite tail enters the calculation.
+
+\paragraph{Finite result and its limit.}
+At $N=16,64,256$, the corrected dyadic bounds satisfy respectively
+$b_N(T)/E>0.1793,0.2634,0.1867$ at $T=262144$.
+At $N=256$ they guarantee relative gain $>0.02821$; the doubled-cutoff
+replay gives $>0.02822$. These validate the new \emph{bound} on an already
+known finite direction. They are not new best finite errors or a new
+discovery of that direction's gain. In particular no gain lower bound is
+asserted uniformly over $N$; the fractions above must not be extrapolated.
+
+The arithmetic problem is now to estimate the grouped integrals uniformly,
+and simultaneously control the true projected cost. Positivity of the
+displayed finite dyadic terms is not assumed at other sizes; at $N=16$
+several terms are negative. The cofinal estimate needed for RH remains
+open. The first-primitive identity and endpoint correction alone do not
+supply it.
+
+\paragraph{Uniform-estimate attempt: what the quadratic rewrite actually says.}
+The divisor inversion is already NS78's identity, not a new construction.
+For arbitrary real $\beta,c_1,\ldots,c_N$, extend $c$ by zero and put
+\[
+ R_{\beta,c}=\beta\tau-\sum_{n\le N}c_na_n,\quad
+ h_k=\langle R_{\beta,c},a_k\rangle,\quad
+ \delta_m=\beta\mathbf1_{m=1}+\sum_{n\mid m}c_n.
+\]
+Dirichlet convolution gives $\mu*\delta=\beta\mu+c$.
+With $w_k=\log(2N/k)$, define
+\[
+ \mathfrak q_N(R_{\beta,c})
+ =-\sum_{dm\le2N}\mu(d)w_{dm}\delta_m h_{dm},\qquad
+ \ell_N(R_{\beta,c})=-\sum_{N<k\le2N}\mu(k)w_k h_k.
+\]
+These are respectively a quadratic and a linear expression in
+$(\beta,c)$. Direct substitution gives the exact identity
+\[
+ \mathfrak q_N(R_{\beta,c})=\beta\ell_N(R_{\beta,c})
+ -\sum_{k\le N}w_k h_k(\beta\mu(k)+c_k).
+\]
+Thus the old normal equations $h_k=0$ for $k\le N$ do remove the final
+sum. But they also force $c=\beta G_N^{-1}g_N$, where
+$g_N=(\langle\tau,a_k\rangle)_{k\le N}$, and
+$R_{\beta,c}=\beta R_N$, because the old Gram is positive definite.
+Consequently, on this constrained space,
+\[
+ \mathfrak q_N(R_{\beta,c})=\beta^2\ell_N(R_N),\qquad
+ \|R_{\beta,c}\|^2=\beta^2 E_N.
+\]
+A uniform lower bound $\mathfrak q_N\ge\varepsilon_N\|R_{\beta,c}\|^2$
+on these residuals is therefore exactly the missing scalar bound
+$\ell_N(R_N)\ge\varepsilon_NE_N$. Writing it as a quadratic expression
+does not establish its sign. No new positivity or impossibility theorem
+is inferred; estimating its actual arithmetic terms remains possible.
+The finite Maxima checks verify inversion through index eight and the
+old-equation reduction only, not an eventual inequality.
+
+\paragraph{Precise next estimate.}
+For the corrected representative define
+$\rho_N=\mathcal B_N(N^6)/E_N$ and $\kappa_N=K_N/E_N$.
+This selected-direction approach would succeed if, for $N=2^j$ eventually,
+\[
+ \rho_N<\log2,\qquad
+ \frac{(\log2-\rho_N)^2}{\kappa_N}\ge\frac a j
+ \quad(a>0).
+\]
+Both the finite interior margin and its relation to the true projected
+cost need proof; neither has been bounded uniformly here. The stronger
+separate hypotheses $\rho_N\le\log2-\varepsilon$ and $K_N\le K_0$,
+with fixed positive $\varepsilon,K_0$, would suffice by NS83, but are not
+assumed. The full NS87 observation-energy route is still available if
+this single predetermined direction does not admit the needed estimate.
