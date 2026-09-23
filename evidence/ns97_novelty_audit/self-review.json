@@ -1,0 +1,25 @@
+{
+  "classification": "Author overlap audit; no new arithmetic theorem or independent review",
+  "open_major_findings": 0,
+  "checks": [
+    "NS62/64 coefficient cone not identified with the LCM PSD cone.",
+    "Positive c=+q complete-rule failure follows from NS78 fixed-index limit, with c1>=0 incompatible with -mu(1).",
+    "NS74 exact real Mellin evaluator and floor formula coincide with NS96 after t=1/x; annihilation and one-sided sign hypotheses are different.",
+    "NS95 ordinary-product and NS96 LCM-pairing matrices are not identified; their sign mechanisms are compared only at the stated scope.",
+    "Trace normalization claim explicitly assumes a free subsequent step scale. A budget on the actual total update remains outside it.",
+    "Single trace-one rank-one pairs give both signs of individual observations; no equality of the full rank-one class with the signed span is asserted.",
+    "Existing full actual-residual lower-bound input remains open; no broad positivity, sieve or arithmetic-convergence closure claimed.",
+    "No new theorem node or version; earlier NS96 proof/evidence/report unchanged.",
+    "Mandatory per-turn wall check records closest prior result and what changes, including on continue turns. A distinct-test label asserts neither novelty nor success."
+  ],
+  "validation": {
+    "Maxima_exact_checks": 9,
+    "source_bindings": 11,
+    "manuscript_pages": 358,
+    "undefined_duplicate_references": 0,
+    "v166_manifest_ok": 16,
+    "new_optimized_fits": 0,
+    "new_cofinal_estimates": 0
+  },
+  "HTML_review": "Source, relative links and scope reviewed. Prior local-browser URL policy block respected; no visual browser review claimed. Durable file preview will be requested."
+}

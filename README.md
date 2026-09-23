@@ -5,6 +5,28 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 overlap audit (NS-97)
+
+The signed-arithmetic bottleneck predates NS96. Its LCM class gives new
+scoped formulas in this record, not a new fundamental wall or progress on
+the actual cofinal lower bound. In particular, failure of its positive
+complete rule already follows qualitatively from NS78's necessary
+coefficient limit; NS96 adds a numerical constant. The negative-rule
+application and projected-cone equality concern a distinct class. The
+Mellin separator and floor function themselves already appear in NS74.
+
+A trace normalization alone is not a new restriction when a free step
+scale is retained: it leaves the same correction rays and optimized line
+gain. An actual total-update budget is different and remains unestimated.
+The next task must identify a specific stronger arithmetic estimate before
+trying another positivity reformulation. This is an audit correction, with
+nine exact Maxima checks; no theorem node or manuscript version is added.
+A required per-turn Wall check now identifies known walls, unchanged open
+gaps and distinct tests.
+
+[Claim comparison and scope](evidence/ns97_novelty_audit/) ·
+[Readable audit](audits/novelty-audit-2026-09-23-v1.html).
+
 ## September 23 divisor-square test (NS-96)
 
 A genuine pointwise divisor square groups by least common multiple. As a

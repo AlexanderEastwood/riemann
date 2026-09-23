@@ -1,0 +1,7 @@
+Actual command: ./manuscript/build.sh
+Result: PASS
+Version: v1.66 unchanged
+Pages: 358
+Undefined/duplicate references: 0
+Current v1.66 manifest: 16 ok, 0 missing, 0 mismatched
+No new numerical computation or manuscript version.

@@ -172,7 +172,7 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-96 | Test a genuine LCM divisor-square positivity replacement for square-scale signed gain, including complete real Mellin moments and the old-space refit | Codex | complete; scoped result, v1.66 unchanged | Both complete signs have fixed error floors. After unrestricted old refitting the projected PSD cone equals the signed LCM span; nonzero residual-pairing matrix indefinite. Extra rank/trace constraints not covered. Actual cofinal lower gain remains open. [Proof and checks](evidence/ns96_lcm_square/) |
 
-| NS-97 | Audit NS96 against existing walls and screen its suggested continuations for mere reformulation | Codex | claimed | Distinguish new scoped formulas from the unchanged arithmetic gap; record a comparison against NS62/64/74/78/95 and check trace normalization with free step size. Audit only, no new theorem node. |
+| NS-97 | Audit NS96 against existing walls and screen its suggested continuations for mere reformulation | Codex | done (audit; no new arithmetic estimate) | Recorded overlap with NS62/64/74/78/95; positive complete-rule failure follows qualitatively from NS78; the Mellin separator/floor function already appear in NS74. Trace normalization leaves correction rays unchanged if step scale is free. Core lower-gain target remains open; no new theorem node/version. [Audit](evidence/ns97_novelty_audit/) |
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
@@ -407,12 +407,31 @@ or carry the pure-rule floors over to refitted approximants.
 Retain the full signed PR42 observation problem or the explicitly
 restricted NS95 actual-target problem. A useful estimate must jointly
 control the actual numerator and complete projected cost relative to E_N.
-If imposing an additional trace, diagonal or rank constraint on an LCM
-square, first show that it survives the old refit and quantify the cost
-of the cancellation. NS96 does not exclude such constrained constructions,
-and provides no uniform lower gain for them. No further finite efficiency
-table is prescribed. The tail and original historical evidence gaps have
-exactly their prior status; no new manuscript version.
+Before proposing a constraint on an LCM square, first show that it changes
+the available corrections after both old refitting and step optimization.
+NS97 corrects the trace suggestion: a trace normalization alone changes no
+rays or best line gain when step scale is free. A budget on the actual
+total update, or a genuine ratio/rank restriction, is a different hypothesis;
+no arithmetic gain estimate is supplied for it. No further finite
+efficiency table is prescribed. The tail and original historical evidence
+gaps have exactly their prior status; no new manuscript version.
+
+## Continuation screen after NS-97 (audit, not a new theorem)
+
+The central arithmetic gap is the existing PR42/NS87 target. Returning to
+it is not a new research direction, and no proof of its impossibility has
+been obtained. NS96's named coefficient class differs from NS62/64's cone,
+but its additional formulas did not estimate that gap. Its Mellin separator
+and floor function already appear in NS74, under a different hypothesis.
+
+Stop the unconstrained PSD/normalization detour here. Before any next
+variant, write down the specific signed arithmetic term to be estimated,
+the genuinely new input beyond NS90--93/95, and the stated hypotheses of
+the closest existing obstruction. A useful continuation must either
+establish a stronger estimate for the actual residual or test a clearly
+different concrete hypothesis. Renaming the full observation energy,
+normalizing a freely scalable direction, or enlarging a finite table is
+insufficient. No new successful cofinal estimate is recorded in this audit.
 
 ## Lanes
 

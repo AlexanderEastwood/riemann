@@ -1167,7 +1167,7 @@
       "status": "proved",
       "parent": "nbsquareproductrestriction",
       "evidence": "evidence/ns96_lcm_square",
-      "note": "NS96: for the entire coefficient sequence c=-q grouped from any PSD matrix, E>=3087/4096 uniformly in size; c=+q gives E>1/32. Complete real Mellin exterior retained. After unrestricted old refitting, the projected PSD cone equals the signed LCM span; a nonzero old-orthogonal residual pairing matrix is indefinite. No floor for unrestricted/refitted error, actual cofinal gain bound, or general sieve no-go. Single rank-one squares and extra trace/diagonal constraints are outside the cone equality."
+      "note": "NS96: for the entire coefficient sequence c=-q grouped from any PSD matrix, E>=3087/4096 uniformly in size; c=+q gives E>1/32. Complete real Mellin exterior retained. After unrestricted old refitting, the projected PSD cone equals the signed LCM span; a nonzero old-orthogonal residual pairing matrix is indefinite. No floor for unrestricted/refitted error, actual cofinal gain bound, or general sieve no-go. Single rank-one squares and extra trace/diagonal constraints are outside the cone equality. NS97 audit: this does not advance the earlier arithmetic lower-gain input; positive-rule qualitative failure already follows from NS78. Trace normalization leaves the same rays when step scale is free. The Mellin separator and floor function already appear in NS74 under different hypotheses."
     }
   ]
 }

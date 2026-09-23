@@ -1,0 +1,65 @@
+{
+  "classification": "Overlap and continuation audit, not a new arithmetic result",
+  "reviewed_base": "6c50142e877e3c73ddb5600384fe24a15efd4462",
+  "findings": [
+    {
+      "claim": "A positive coefficient cone can miss the target",
+      "earlier": [
+        "evidence/v159/ns62/proof.tex",
+        "evidence/v159/ns64/proof.tex"
+      ],
+      "comparison": "Existing mechanism, different cones. NS62/64 concern nonnegative adjacent-difference coefficients; NS96 LCM-grouped coefficients can have either sign. Neither cone is identified with the other.",
+      "disposition": "Do not report a new general positivity wall."
+    },
+    {
+      "claim": "The complete c=+q LCM rule fails to converge",
+      "earlier": [
+        "evidence/v163/ns78/proof.tex"
+      ],
+      "comparison": "NS78 already forces c1 to -1 under norm convergence; this rule has c1=Gamma11>=0. The qualitative failure is an immediate consequence. NS96 adds an explicit local constant.",
+      "disposition": "Existing qualitative obstruction; quantitative application only."
+    },
+    {
+      "claim": "The complete c=-q LCM rule has E>=3087/4096",
+      "earlier": [
+        "evidence/v161/ns74/proof.tex",
+        "evidence/ns96_lcm_square/argument.tex",
+        "evidence/v159/ns61/proof.tex"
+      ],
+      "comparison": "The exact LCM coefficient class was not stated in the reviewed earlier record, but NS74 already displays the same exterior-aware Mellin evaluator and the same floor function F_beta=(2*beta-1)*(1-beta)^2/beta^6. NS96 uses a sign inequality instead of NS74 inserted-zero annihilation; 3087/4096 is F_(4/7). Different hypotheses, same separating tool and constant formula. This is not a floor for the unrestricted optimum.",
+      "disposition": "Distinct application of an already recorded separator; no new fundamental wall, cofinal estimate or worldwide novelty claim."
+    },
+    {
+      "claim": "Projected PSD LCM cone equals signed LCM span; nonzero pairing matrix indefinite",
+      "earlier": [
+        "evidence/ns95_square_product/argument.tex",
+        "evidence/ns96_lcm_square/argument.tex"
+      ],
+      "comparison": "NS95 already exhibits the ordinary-product pairing sign problem. NS96 proves a distinct exact LCM-space equality using elementary rank-one pairs and old-space projection. This is not a theorem that the actual signed gain is small.",
+      "disposition": "New scoped algebra in this record; underlying sign-loss issue already present."
+    },
+    {
+      "claim": "A trace-normalized square is a fresh route",
+      "earlier": [
+        "evidence/ns96_lcm_square/argument.tex"
+      ],
+      "comparison": "With a free line-step scale, trace normalization does not restrict correction rays or optimized gain. Trace-one rank-one pairs retain both individual pairing signs. A bound on the total update after scale absorption is different.",
+      "disposition": "Remove trace normalization alone from proposed escapes; no general restriction theorem claimed."
+    },
+    {
+      "claim": "Lower-bound the actual joint signed observations",
+      "earlier": [
+        "evidence/ns53_nb_blocks",
+        "evidence/v159/ns61/proof.tex",
+        "evidence/ns87_joint_tail/argument.tex",
+        "evidence/ns91_joint_abel/argument.tex",
+        "evidence/ns93_averaged_cost/argument.tex"
+      ],
+      "comparison": "This is the pre-existing open cofinal input. NS83 excludes a fixed error fraction at every doubling, not a compatible a/j lower gain or every compatible fixed gain per squaring. NS74 and NS95 arbitrary-residual countermodels do not refute an estimate for the actual target.",
+      "disposition": "Still open; not a new direction or a proved wall."
+    }
+  ],
+  "new_research_map_nodes": 0,
+  "new_cofinal_estimates": 0,
+  "independent_review": false
+}
