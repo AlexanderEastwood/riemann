@@ -138,6 +138,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-78 | Derive a complete norm comparison with reciprocal-integer residual samples and independently replay the actual optimized norm through divisor cells | Codex, Continue solving toward RH | claimed | Retain the exterior tail and all reciprocal cells, prove constants independent of coefficient count, and bound the infinite sampling and physical tails. No finite prefix substitutes for the cofinal signed arithmetic estimate. |
 
+| NS-79 | Test tail-balanced divisor feedback suggested by the complete sampling norm, with separate raw and projected gains | Codex, Continue solving toward RH | claimed | Preserve the exterior coefficient by compensating at the last new atom, retain the deliberately uncancelled last jump and the entire tail, and compare three balanced directions plus the original span augmented by that endpoint. No cofinal conclusion from the finite test. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
