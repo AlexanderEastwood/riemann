@@ -170,6 +170,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-95 | Test the N-to-N^2 product-index grouping against the complete joint arithmetic gain, retaining old-space projection, missing indices and complete costs | Codex | done (construction tested; cofinal lower bound open) | Free signed lift captures 99.83% of full gain at N16 to 256 versus NS86's 27.31%; its large-prime coefficient restriction and missing gain are exact. All-residual comparison fails under a prime-pair hypothesis; actual-target bound remains open. Complete 256/384-bit and cutoff replays, physical norms and 18 Maxima checks; evidence/ns95_square_product. |
 
+| NS-96 | Test a genuine LCM divisor-square positivity replacement for square-scale signed gain, including complete real Mellin moments and the old-space refit | Codex | claimed | Derive any size-independent estimate with exact hypotheses; distinguish a pure coefficient cone from projected corrections and identify the signed term left by refitting. No extrapolated efficiency table. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
