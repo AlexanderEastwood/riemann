@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scope": "Hash checks on inherited archives, not replay of all historical calculations",
+  "inventories": [
+    {
+      "inventory": "evidence/ns89_upper_normalization/inventory.json",
+      "verified_files": 21,
+      "sha256": "7b6b8420f29b149a3a409b856643982715e87e8be09b8760adb1de4047ab5237"
+    },
+    {
+      "inventory": "evidence/ns90_mobius_gain/inventory.json",
+      "verified_files": 18,
+      "sha256": "3fe81ba807854c9e6558de5b12bc5ba7cc69572396c91450f4fb603fc554bcce"
+    },
+    {
+      "inventory": "manifest/v1.61_manifest.json",
+      "verified_files": 32,
+      "sha256": "6c9c64e2e0272c82586220f5eb657285b57c8b368477f49456224723489388a9"
+    }
+  ]
+}

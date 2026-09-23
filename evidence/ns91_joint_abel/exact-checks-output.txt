@@ -1,0 +1,51 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("exact-checks.mac")
+kill(all)
+checks:[]
+check(name,expr):=block([r:radcan(ratsimp(expr))],
+      if r # 0 then error("FAILED",name,r),checks:endcons(name,checks))
+check("zero initial interval",s*t-(n*s*t)/n)
+check("zero weighted coefficients",s-(s*n)/n)
+check("old pairing unchanged",alpha*e-(c0-n*s*0)-(alpha*e-c0))
+b2(x):=x*x-x+1/6
+check("Bernoulli primitive derivative",
+      diff((-n*d*b2(t/n-k))/2,t)-d*(1/2-(t/n-k)))
+check("Bernoulli periodic continuity",b2(0)-b2(1))
+check("derivative f",(-r/t^2)/t-q/t^2-(-r/t^3-q/t^2))
+check("Q main antiderivative",diff((u*log(t)+u+v)/t,t)+(u*log(t)+v)/t^2)
+check("f main derivative",diff((u*log(t)+u+v)/t^2,t)+(2*u*log(t)+u+2*v)/t^3)
+check("Q remainder integration",diff(-bb/(2*t^2),t)-bb/t^3)
+check("f remainder integral",diff(-bb/(4*t^2),t)-bb/(2*t^3))
+check("f derivative remainder integral",diff(-bb/(2*t^3),t)-(3*bb)/(2*t^4))
+check("geometric endpoint sum",(1/4)/(1-1/4)-1/3)
+check("weighted geometric sum",(1/4)/(1-1/4)^2-4/9)
+check("remainder geometric sum",(1/8)/(1-1/8)-1/7)
+check("main endpoint multiplicity",1+2/3+(-5)/3)
+check("log endpoint multiplicity",(2*4)/9-8/9)
+check("total remainder coefficient",1/2+1/7+1/2+(-8)/7)
+check("fractional tail derivative",diff(hh-gamma-log(z)+(z-m)/z,z)+(z-m)/z^2)
+check("atom derivative",diff(z-m*log(z)+lg,z)-(1-m/z))
+check("partial Q derivative",
+      diff(cc+eta*log(t)+(a*(log(t)+1)-b)/t,t)-(-(-eta*t+a*log(t)-b))/t^2)
+check("cell primitive Q",
+      diff(cc*t+eta*(t*log(t)-t)+a*(log(t)^2/2+log(t))+(-b)*log(t),t)
+       -(cc+eta*log(t)+(a*(log(t)+1)-b)/t))
+check("cell primitive Q over t",
+      diff(cc*log(t)+(eta*log(t)^2)/2+(-a*(log(t)+2))/t+b/t,t)
+       -(cc+eta*log(t)+(a*(log(t)+1)-b)/t)/t)
+check("line search",e-2*(ell/kk)*ell+(ell/kk)^2*kk-(e-ell^2/kk))
+muvals:[1,-1,-1,0,-1,1,-1,0]
+cv:[c1,c2,c3,c4,0,0,0,0]
+dv:makelist(if k = 1 then beta else 0,k,1,8)
+for k thru 8 do (for m thru k do if mod(k,m) = 0 then dv[k]:dv[k]+cv[m])
+for k thru 8 do
+    block([z:0],for m thru k do if mod(k,m) = 0 then z:z+muvals[m]*dv[k/m],
+          check(concat("divisor inversion ",k),z-beta*muvals[k]-cv[k]))
+hv:[0,0,0,0,h5,h6,h7,h8]
+wv:[w1,w2,w3,w4,w5,w6,w7,w8]
+check("old-normal quadratic reduction",
+      -sum(wv[k]*hv[k]*(beta*muvals[k]+cv[k]),k,1,8)
+       +beta*sum(wv[k]*hv[k]*muvals[k],k,5,8))
+print("PASS:",length(checks),"exact checks; no cofinal gain proved.")
+PASS: 32 exact checks; no cofinal gain proved. 
+quit()

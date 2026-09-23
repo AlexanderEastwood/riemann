@@ -3473,3 +3473,34 @@ and true projected costs are inherited with verified hashes; no new Gram
 solve or asymptotic efficiency claim. Author self-review only. Main target
 remains a cofinal lower bound for the joint signed arithmetic energy. No
 lower-gain theorem obtained; manuscript v1.66 unchanged.
+
+## 2026-09-23 — NS91 joint first-primitive bound and uniform-estimate audit
+
+Reviewed all 98 recorded conclusions at main 8e03860, including after
+compaction. This was a scope/dependency review, not a replay of all history.
+The approval service recovered; NS91 was claimed in its own commit before
+integrating the separately preserved standalone draft. Both missing-original
+groups remain open.
+
+Combining before absolute values and subtracting Ns a_N in the old space
+removes the initial interval exactly while preserving numerator and cost.
+The complete Bernoulli-primitive bound includes the sum of absolute values
+of every omitted dyadic interval, with both shared endpoints. It is
+negligible at N^6 using NS81/83. Finite lower gain exceeds 0.02821 at N256
+and 0.02822 on doubling the cutoff; these bound NS73's existing direction.
+No improved best error, fixed-fraction cofinal contraction, or new Gram
+solve is claimed.
+
+The attempted next estimate rewrites the numerator using residual divisor
+defects. NS78 already contains the inversion. An exact audit shows the
+quadratic expression equals beta squared times the original numerator on
+the one-dimensional normal-equation space. This supplies no independent
+positivity estimate and proves no impossibility of an arithmetic bound.
+The finite interior margin relative to true projected cost remains open.
+
+Fresh branch replays pass at 256/384 bits and doubled physical/inherited
+Gram cutoffs: 108 scalar and 114 grouped-integral precision overlaps,
+38 common grouped integrals across cutoffs, 14 complete cutoff overlaps,
+14 positive finite cases, and 32 exact Maxima checks. Author self-review
+only. Evidence and versioned HTML report are in evidence/ns91_joint_abel
+and audits/joint-abel-research-2026-09-23-v2.html. Manuscript v1.66 unchanged.

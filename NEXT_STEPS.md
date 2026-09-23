@@ -162,6 +162,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-90 | Test a signed Mobius inversion estimate for the actual optimized finite arithmetic observations and its complete gain cost | Codex, Continue on PR42 arithmetic lower gain | done (attempt recorded; manuscript v1.66 unchanged) | Prime main terms cancel exactly after old-space orthogonality. Complete signed numerator is positive at N16,256, but the tested termwise absolute lower bound is negative; its divisor allowance diverges with cutoff at fixed N under the stated nonzero-tail hypothesis. No linked-cutoff or cofinal exclusion, lower gain, or new finite efficiency result. Full projected costs inherited from NS73. See evidence/ns90_mobius_gain. |
 
+| NS-91 | Preserve joint arithmetic cancellation by a first primitive and endpoint correction; test a uniform route beyond the finite bound | Codex, Continue on PR42 grouped lower gain | done (finite bound and attempt recorded; uniform estimate open) | Joint first-primitive dyadic bound includes every omitted interval; old-space correction removes 0<t<N. Certifies relative gain >0.02821 at N256, on the known NS73 direction. Grouped tail negligible at N^6. NS78 inversion plus normal equations reduces the proposed quadratic rewrite to the same missing numerator. No cofinal lower gain; see evidence/ns91_joint_abel. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
@@ -306,6 +308,25 @@ residual-tail hypothesis. This does not exclude the direction, another
 combined estimate, or the cofinal cutoff N^6. Do not repeat NS73 efficiency
 tables or NS89 normalization as a new decay theorem.
 
+
+## Open continuation after NS-91
+
+The first-primitive grouped bound repairs the NS90 absolute-value estimate
+at the tested sizes. Its corrected compensator vanishes before N, and its
+complete absolute dyadic tail is negligible at T=N^6. What remains is an
+independent bound on the finite arithmetic margin relative to the true
+projected cost. With rho_N = B_N(N^6)/E_N and kappa_N = K_N/E_N, a sufficient
+target is rho_N < log 2 and (log 2-rho_N)^2/kappa_N >= a/j on N=2^j,
+eventually, for fixed a>0. No such estimate is proved. Neither a constant
+finite percentage nor bounded raw/canonical norms may be assumed.
+
+The proposed divisor-defect quadratic rewrite is NS78 inversion followed
+by substitution. On the normal-equation space it is beta^2 times the same
+numerator, not a new sign theorem. Do not repackage that identity as a
+solution. This does not close arithmetic estimates of the expression.
+The full PR42 joint-observation route remains the primary alternative to
+this single selected direction. Both historical original-evidence gaps
+remain open; manuscript v1.66 is unchanged.
 
 ## Lanes
 

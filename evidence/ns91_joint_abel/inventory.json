@@ -1,0 +1,27 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental NS91 evidence and versioned report; excludes this inventory",
+  "files": {
+    "evidence/ns91_joint_abel/README.md": "0061b9d2056a7bec1bb2990dc8154715ae9d5a1abed3018dc96416fee749ede1",
+    "evidence/ns91_joint_abel/argument.tex": "32e288b4f632419d07ef4f7da3e988c7d5631ee576b31194c9205f7f3b69e135",
+    "evidence/ns91_joint_abel/build-summary.txt": "cbe7d53d293a8c98f860b29fe342900e000a36ab4be9c6625a832451d5977655",
+    "evidence/ns91_joint_abel/check-256bits.json": "04c171cfbf97a65fe3f0ef9f25deef8764cd8bb633c517618e1da4118536ac1b",
+    "evidence/ns91_joint_abel/check-384bits.json": "1a0d59651e9fa322908d490580dfe99ec961fa5f873035593a62be495bfaa584",
+    "evidence/ns91_joint_abel/check-cutoff-384bits.json": "24dab702eaeba2624accd90ef4177e75f2cb22635545bcad1610f3cf85f9d1a4",
+    "evidence/ns91_joint_abel/check_grouping.py": "e1bfbab72c9eb490c394af361857264a4aa43c98f1f7e4cd9426b3526e91d3da",
+    "evidence/ns91_joint_abel/dependency-validation.json": "ca4b13efcdf2989fe14b674464eeb19cd167c1378c6ceb88dcdb54ade7f57d69",
+    "evidence/ns91_joint_abel/endpoint-256bits.json": "5a2978550bb41c335772678f5add873513ce289f3dadbe72bb34a3bfe9a8db07",
+    "evidence/ns91_joint_abel/endpoint-384bits.json": "572380780733aa6f772b0bdc0722d97d0d5b271d178ff8257c049ee3331b6c70",
+    "evidence/ns91_joint_abel/endpoint-cutoff-384bits.json": "8c0eb54af41d30b99803d20a27b32acaa6c0b73a2c00a490754b3b3573d34ba4",
+    "evidence/ns91_joint_abel/exact-checks-output.txt": "5bb2656ec6e7e1e04e32c308fd15be9b5559f3f6f43a3f30e9942c9e73ecfd06",
+    "evidence/ns91_joint_abel/exact-checks.mac": "68814b59daa59c28e79e974b40f57470ed5942e87d264b2ec2072c63cf1d2278",
+    "evidence/ns91_joint_abel/literature-inputs.json": "96a28a8f55e8f76307d04239eff95cdffda99dd4f9930b21c10d1ed0e5c357d5",
+    "evidence/ns91_joint_abel/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "evidence/ns91_joint_abel/runtime-provenance.json": "dce604466cb426f6fee3660a94aea92e04f026d88161149ee2ab48a97f2a5ff5",
+    "evidence/ns91_joint_abel/self-review.json": "50475b1209abc42ed3a56a9c09178d882c15de07f95c7ff585efe1b5b111b9c6",
+    "evidence/ns91_joint_abel/turn-review.json": "d3de32dadd4c9d3ab75490e8ee510430a0c441a4d0bff64832cb1b3c2b131e36",
+    "evidence/ns91_joint_abel/validation.json": "2b909ec65a5015f8af910cfb5d7b78ea6c20de606950d2a4f095282d5ba77a37",
+    "evidence/ns91_joint_abel/verify.py": "6adb18d6117fd376abe4661061992d714ade351340729006e6c8242a734ca9ed",
+    "audits/joint-abel-research-2026-09-23-v2.html": "e28f3f688b3c2ab8ebad1e526056132dc7d5c28e19b55b2be471e627c4516102"
+  }
+}
