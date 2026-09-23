@@ -1,5 +1,26 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-23: NS-84 conclusions review and NS-85 full taper test
+
+No manuscript version bump. Read all 91 registered conclusions and current
+audit dispositions. Correct residual standard Toeplitz/Fourier-support
+overclaims, QG/ZLD-to-floor implication arrows, and stale positivity/cutoff
+summaries. Add Alex’s required review before every turn to AGENTS.md.
+The all-manifest checker’s four legacy current-tree failures are retained;
+18 affected publication files hash-match their original version tags.
+This does not recover the two missing original scientific evidence groups.
+
+The prescribed full logarithmic Mobius taper has complete q=2 squared error
+about 0.352175 at N=256; fitting c1 alone gives about 0.045293, compared with
+the earlier unrestricted optimum about 0.0000141424. Exterior cancellation
+is separately measured. The exact interior identity retains a smoothed
+prime-counting sum and provides no growing-interval mean-square bound.
+Two precision runs, doubled physical and Gram cutoffs, six independent
+N=16 Gram norm comparisons and 135 exact Maxima checks support only the
+finite conclusions. See the versioned NS-84/85 report and incremental
+folders. Cofinal arithmetic decay, the original Weil floor, G2 and RH open.
+
+
 ## v1.66: critical zeros constrain the decay rate (NS-83)
 
 Burnol's dual-vector lower-bound argument extends to every **fixed** Hardy

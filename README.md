@@ -40,6 +40,24 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | G2 | open |
 | RH | open, and not claimed |
 
+## September 23 continuation review (NS-84/85)
+
+Every entry in the 91-node conclusion register was reviewed for scope and
+evidence status. Stale Toeplitz/Fourier-support claims and misleading
+QG/ZLD-to-floor arrows are corrected; the new per-turn review requirement
+is recorded in `AGENTS.md`. This is not a fresh proof audit of all history.
+
+A complete q=2 test of the classical full logarithmic Mobius taper remains
+far above the unrestricted optimum at N=256: squared error about 0.352175,
+or 0.045293 after optimizing only its first coefficient, versus 0.0000141424.
+The finite decrease gives no asymptotic theorem. Its exact prime-sum
+identity leaves the needed growing-interval arithmetic estimate open.
+The manuscript remains v1.66; no new theorem version is claimed.
+
+[Review and continuation report](audits/conclusions-and-taper-review-2026-09-23-v1.html) ·
+[Full conclusion review](evidence/ns84_conclusions_review/) ·
+[Complete taper certificates](evidence/ns85_taper_test/).
+
 ## v1.66: critical zeros constrain the decay rate (NS-83)
 
 Burnol's dual-vector lower-bound argument extends to every **fixed** Hardy
@@ -336,7 +354,7 @@ graph LR
   recipband["reciprocal-band commutation<br/><small>EVIDENCE MISSING</small><br/><small><b>wall: generic mechanism: persistent source-compressed commutator > 9e-6; not every band choice</b></small>"]
   cotlar["Cotlar cross terms / atomization<br/><small>EVIDENCE MISSING</small><br/><small><b>wall: shortcut: cross norm >= 73/(375 pi) cofinally; not all Cotlar arguments</b></small>"]
   scalarprim["scalar signed primitive<br/><small>cor:v137-scalar-no-go</small><br/><small>&#128193; evidence/v137</small><br/><small><b>wall: genuine closure of the scalar route: a Delta(beta_a) -> infinity, unconditional</b></small>"]
-  concentration["signed weighted concentration<br/><small>prop:v131-concentration</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: QG + WLH packet</b></small>"]
+  concentration["signed weighted concentration<br/><small>prop:v131-concentration</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: uniform complete signed operator floor remains unproved</b></small>"]
   weaken["Target weakening"]
   floor["uniform finite floor suffices<br/><small>prop:v136-bounded-floor</small><br/><small>&#128193; evidence/v136</small>"]
   gapfree["no uniform positive gap exists<br/><small>prop:v135-growing-radical</small><br/><small>&#128193; evidence/v135</small>"]
@@ -358,9 +376,9 @@ graph LR
   groundzero4resolution["first complete zero within 9e-33; archived resolution quantified<br/><small>prop:v143-first-zero-bound; prop:v143-resolution; prop:v143-fixed-window-meaning</small><br/><small>&#128193; evidence/v143</small>"]
   pencilconcentration["pencil loss budget; cofinal obligation retained<br/><small>prop:v144-pencil-concentration</small><br/><small>&#128193; evidence/v144</small>"]
   betaexplicit["exact lattice symbol; varying envelopes<br/><small>prop:v146-beta-explicit</small><br/><small>&#128193; evidence/v146</small>"]
-  minorantlevels["bounded-complexity minorants: arithmetic gap remains<br/><small>prop:v146-packet-loss; prop:v146-level-complexity</small><br/><small>&#128193; evidence/v146</small><br/><small><b>wall: ZLD + packet</b></small>"]
-  zeroleveldistribution["zero level distribution and packet coverage: open inputs<br/><small>prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet</small><br/><small>&#128193; evidence/v147</small><br/><small><b>wall: ZLD + packet</b></small>"]
-  weightedexactcost["weighted exact cost: peak bound fails at critical levels<br/><small>prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg</small><br/><small>&#128193; evidence/v149</small><br/><small><b>wall: QG + WLH packet</b></small>"]
+  minorantlevels["bounded-complexity minorants: arithmetic gap remains<br/><small>prop:v146-packet-loss; prop:v146-level-complexity</small><br/><small>&#128193; evidence/v146</small><br/><small><b>wall: ZLD + packet: conditional minorant-complexity obstruction only</b></small>"]
+  zeroleveldistribution["zero level distribution and packet coverage: open inputs<br/><small>prop:v147-level-separation; ass:v147-zld; prop:v147-depth-measure; prop:v147-broad-packet</small><br/><small>&#128193; evidence/v147</small><br/><small><b>wall: ZLD + packet: conditional minorant-complexity obstruction only</b></small>"]
+  weightedexactcost["weighted exact cost: peak bound fails at critical levels<br/><small>prop:v149-critical-density; prop:v149-weighted-cost; prop:v149-qc1-insufficient; ass:v149-qg</small><br/><small>&#128193; evidence/v149</small><br/><small><b>wall: QG + WLH packet: conditional minorant-complexity obstruction only</b></small>"]
   capacityweight["positive arithmetic weight: critical capacity input<br/><small>lem:v150-weight; prop:v150-critical-energy; ass:v150-cae</small><br/><small>&#128193; evidence/v150</small><br/><small><b>wall: CAE</b></small>"]
   capacityslack["fixed energy loss for the Gaussian arithmetic weight<br/><small>prop:v150-capacity-slack</small><br/><small>&#128193; evidence/v150</small><br/><small><b>wall: fixed-slack shortcut: eta >= delta kappa exp(gamma lambda^2) - O(lambda log lambda)</b></small>"]
   inputcomparison["ZLD to QG; CAE is the signed-floor target<br/><small>prop:v151-input-comparison</small><br/><small>&#128193; evidence/v151</small>"]
@@ -368,7 +386,7 @@ graph LR
   bumpstrength["Restricted bump discrepancy can carry the full zero obstruction<br/><small>prop:ns43-bump-strength</small><br/><small>&#128193; evidence/v152</small>"]
   adaptiveidentity["Unrestricted exact adaptive hierarchy = complement floor<br/><small>ns43-conc-prop-adaptive</small><br/><small>&#128193; evidence/v152</small>"]
   scalarsetshortcut["Scalar set bounds alone determine signed floor: general inference<br/><small>ns43-conc-prop-scalar</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: general inference false: countermodels with equal scalar set extrema and opposite signed bottoms</b></small>"]
-  relativeselection["Complete relative selection and entire-transform control<br/><small>prop:ns43-ccm-rayleigh-selection; prop:ns43-ccm-residual-selection</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: cofinal separator</b></small>"]
+  relativeselection["Complete relative selection and entire-transform control<br/><small>prop:ns43-ccm-rayleigh-selection; prop:ns43-ccm-residual-selection</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: complete relative selection plus entire-transform control (both open)</b></small>"]
   absoluteselection["Absolute residual/resolvent data alone select ground: abstract inference<br/><small>prop:ns43-ccm-nonselection</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: abstract inference false: countermodel family with alternating profiles</b></small>"]
   coarseprofile["Single profile from the specified coarse rescaled liminf<br/><small>prop:ns43-ccm-coarse-profile</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: under the explicit coarse scale the limit form is zero; finer scales open</b></small>"]
   fineradicalrank["Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions<br/><small>lem:ns46-finite-arc; ns46-a2-cor-large-block; ns46-a2-cor-rank</small><br/><small>&#128193; evidence/v153</small><br/><small><b>wall: positive-gap strategy must remove rank >= lambda^2/(20000 log lambda)</b></small>"]
@@ -497,15 +515,12 @@ graph LR
   nbfiniteconditioning --> nbcompressedtail
   nbsmoothedbudget --> nbcriticalfloor
   nbcriticalfloor --> nbuniformrelativecontraction
-  concentration -. "QG + WLH packet" .-> floor
+  concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
   dbn -. "complete signed transport with uniform support control (open)" .-> rh
-  minorantlevels -. "ZLD + packet" .-> floor
-  zeroleveldistribution -. "ZLD + packet" .-> floor
-  weightedexactcost -. "QG + WLH packet" .-> floor
   capacityweight -. "CAE" .-> floor
-  relativeselection -. "cofinal separator" .-> g2
+  relativeselection -. "complete relative selection plus entire-transform control (both open)" .-> g2
   kernelapi -. "API: actual arithmetic affine-potential injectivity (open)" .-> rh
   nbsmoothedcorrelation -. "non-summable lower contraction for the actual optimized residual (open sufficient input)" .-> rh
   nbcanonicalgrowth -. "direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)" .-> rh

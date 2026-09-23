@@ -1,0 +1,83 @@
+\section*{NS-85: full logarithmic taper and the retained prime sum}
+
+This note tests a prescribed full coefficient family, rather than the
+projected next-block templates of NS-73. It does not claim a new
+approximation theorem. The logarithmic taper is classical; see
+Bettin--Conrey--Farmer, arXiv:1211.5191, Theorem 1. Their optimal
+unsmoothed asymptotic assumes RH and a separate inverse-zeta-derivative
+moment bound. Neither hypothesis is imported into this finite test.
+
+Let $L=\log N$, $N\geq2$, and
+\[
+ c_n=-\mu(n)\frac{\log(N/n)}{L},\qquad
+ R_N=\tau-\sum_{n\leq N}c_n\sigma_n,\qquad
+ \eta_N=\sum_{n\leq N}\frac{c_n}{n},\qquad
+ S_N=\sum_{n\leq N}\frac{\mu(n)}n\log(N/n)=-L\eta_N.
+\]
+Here $c_1=-1$ and $c_N=0$; these coefficients are not a fit.
+For $1\leq m\leq N$ the complete divisor defect of NS-75 is
+\[
+ \delta_m=\mathbf1_{m=1}+\sum_{n\mid m}c_n
+ =-\frac{\Lambda(m)}L.
+\]
+This includes $m=1$, with $\Lambda(1)=0$. Indeed
+$\sum_{d\mid m}\mu(d)=\mathbf1_{m=1}$ and
+$\sum_{d\mid m}\mu(d)\log d=-\Lambda(m)$.
+The second identity follows by differentiating
+$\sum_{d\mid m}\mu(d)d^z=\prod_{p\mid m}(1-p^z)$ at $z=0$:
+one distinct prime gives $-\log p$, and two or more give zero.
+Consequently, for every real $1\leq t\leq N$,
+\begin{equation}
+ L R_N(1/t)=S_Nt-\Psi_1(t),\qquad
+ \Psi_1(t)=\sum_{m\leq t}\Lambda(m)\log(t/m)
+          =\int_1^t\frac{\psi(u)}u\,du.
+\end{equation}
+All sums here are finite. A term entering at an integer endpoint has zero
+logarithmic factor, so there is no endpoint correction to hide.
+For $0<t<1$ the residual is $-\eta_Nt$. Thus its exact partial energy is
+\[
+ \eta_N^2+\int_1^N |R_N(1/t)|^2\frac{dt}{t^2}
+ =\frac1{L^2}\left[S_N^2+
+       \int_1^N\left|S_N-\frac{\Psi_1(t)}t\right|^2dt\right].
+\]
+The remaining interval $t>N$ is part of the complete norm and cannot be
+omitted. In particular, a necessary condition for this family's norm to
+tend to zero is that the displayed bracket be $o(L^2)$. The ordinary
+prime number theorem's pointwise $\Psi_1(t)/t\to1$, by itself, supplies
+no such growing-interval mean-square bound and no bound on the remaining
+tail. The identity is not the missing arithmetic estimate.
+
+The finite computation sums every exact reciprocal cell through $M$ and
+retains the entire tail via NS-78. In its notation,
+\[
+ u=1-\tfrac12\sum c_n,\quad
+ v=\tfrac12\sum c_n\log(n/(2\pi)),\quad
+ D=\tfrac16\sum n|c_n|,\quad Q=u\log M+v,
+\]
+\[
+ T=(Q^2+2uQ+2u^2)/M,\quad U=D^2/(3M^3),\qquad
+ \left|\int_M^\infty |R_N(1/t)|^2\frac{dt}{t^2}-T\right|
+ \leq2\sqrt{TU}+U.
+\]
+All signed cell cross terms and the main-tail/remainder cross term are
+included. Finite coefficient support is not finite physical support.
+
+Two distinct one-coefficient controls are also recorded. Write
+$g=\langle R_N,\sigma_1\rangle$, $G_{11}=\|\sigma_1\|^2$, and
+$F_N=\|R_N\|^2$. Replacing $c_1$ by $c_1+d$ gives
+\[
+ \|R_N-d\sigma_1\|^2=F_N-2dg+d^2G_{11}.
+\]
+The optimal one-atom adjustment is $d=g/G_{11}$, with error
+$F_N-g^2/G_{11}$. Exact exterior cancellation uses $d=-\eta_N$ and
+has error $F_N+2\eta_Ng+\eta_N^2G_{11}$. These are different rules;
+neither is the full $N$-coefficient optimum. Their pairings use the
+complete certified arithmetic Gram from NS-61, not a model kernel.
+
+At $N=16,64,256,1024$, both 256- and 384-bit enclosures agree. The
+$N=1024$ replay doubles both $M$ and the inherited Gram series cutoff.
+The errors decrease on this finite list but substantially exceed the
+previously certified optimum at $N=256$. No monotonicity for all $N$,
+uniform rate, convergence, or asymptotic failure is inferred. The
+exterior-balanced rule also remains inferior to the one-atom optimum
+at each tested size; removing one tail term is not a full norm estimate.

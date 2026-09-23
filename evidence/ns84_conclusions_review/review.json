@@ -1,0 +1,1258 @@
+{
+  "classification": "whole-register conclusions/dependency review; not independent reproof or numerical replay of all historical work",
+  "date": "2026-09-23",
+  "reviewed_main_commit": "7db0b91b7161ce84b755f950c1bc6d3fb7d10899",
+  "registered_conclusions_reviewed": 91,
+  "status_counts": {
+    "open": 10,
+    "proved": 38,
+    "closed": 30,
+    "blocked": 11,
+    "live": 2
+  },
+  "current_tree_manifests_checked": 34,
+  "current_tree_manifests_passing": 30,
+  "all_manifests_from_v138_onward_pass": true,
+  "legacy_publication_artifacts_matching_exact_tags": 18,
+  "missing_original_groups": "Both historical groups in evidence/MISSING.md remain open; tag matches recover publication bytes only",
+  "new_mathematical_invalidity_identified": false,
+  "independent_review": false,
+  "findings": [
+    {
+      "id": "M1",
+      "severity": "MAJOR",
+      "finding": "COMPARISON retained a standard single-symbol Toeplitz–Hankel identification and zero high-frequency Fourier mass despite prior audit corrections.",
+      "action": "Replace with the qualified structured split, finite diagnostic scope, nonzero tails and missing applicability theorem."
+    },
+    {
+      "id": "M2",
+      "severity": "MAJOR",
+      "finding": "Three QG/ZLD plus packet wall arrows pointed to the signed-floor target, while their known conclusions only obstruct low-complexity minorants; the parent label also conflated the inputs.",
+      "action": "Remove the three implication arrows and name the parent’s missing complete signed floor separately."
+    },
+    {
+      "id": "m1",
+      "severity": "MINOR",
+      "finding": "Old only-positivity and same-fact summaries obscured distinct certified windows and gap/floor statements.",
+      "action": "Identify lambda=4 as largest certified window and separate positive-gap obstruction from floor sufficiency."
+    },
+    {
+      "id": "m2",
+      "severity": "MINOR",
+      "finding": "Necessary scalar cutoff barrier was written with asymptotic equivalence notation.",
+      "action": "State only the proved necessary inequality and its growth shape."
+    },
+    {
+      "id": "N1",
+      "severity": "NOTE",
+      "finding": "Legacy current-tree manifests select mutable or relocated publication files.",
+      "action": "Verify all 18 affected publication artifacts against exact historical tags; retain old manifests and original missing-evidence ledger."
+    }
+  ],
+  "conclusions": [
+    {
+      "id": "rh",
+      "status": "open",
+      "title": "RH",
+      "scope_note": "via Weil positivity",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "g1",
+      "status": "proved",
+      "title": "G1 (weak)",
+      "scope_note": "closed for the repaired prolate source",
+      "labels": [
+        "thm:v14-radical"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v124/g2_source_certificate",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "fixedspace",
+      "status": "open",
+      "title": "Fixed-space / Burnol Sonine route",
+      "scope_note": "needs evaluator estimates + closed-operator realization",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "g2",
+      "status": "open",
+      "title": "G2: cofinal -o(1)",
+      "scope_note": "eps_lambda -> 0 cofinally IS RH",
+      "labels": [
+        "prop:v121-cofinal-rh"
+      ],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "windows",
+      "status": "proved",
+      "title": "Fixed-window certificates",
+      "scope_note": "no finite list is cofinal",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "w3",
+      "status": "proved",
+      "title": "lambda=3",
+      "scope_note": null,
+      "labels": [
+        "prop:v116-window-positive"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v124/g2_certificate",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "w4e",
+      "status": "proved",
+      "title": "lambda=4 even",
+      "scope_note": null,
+      "labels": [
+        "prop:v125-even-complete"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v126",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "w4o",
+      "status": "proved",
+      "title": "lambda=4 odd",
+      "scope_note": null,
+      "labels": [
+        "prop:v126-odd-complement"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v126",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "w4",
+      "status": "proved",
+      "title": "W_4 >= 0 both sectors",
+      "scope_note": "largest completely certified positive window in this record; lambda=3 is also certified; restored evidence does not supply a cofinal theorem",
+      "labels": [
+        "prop:v126-full-window"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v126",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": true
+    },
+    {
+      "id": "w5",
+      "status": "closed",
+      "title": "lambda=5: stipulated 10^-8 D tail comparison",
+      "scope_note": "NS-44 fresh exact dyadic witnesses, Arb 320/448: positive q/D <7e-18 even and <12e-18 odd, contradicting the stipulated 1e-8 comparison. Failure of this comparison, not negative Weil directions or complete lambda=5 positivity. Historical v1.27 originals remain unarchived.",
+      "labels": [
+        "prop:v152-tail-comparison"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/ns44_metric_replay",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "uniform",
+      "status": "open",
+      "title": "Uniform mechanism for G2",
+      "scope_note": null,
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "primenorm",
+      "status": "closed",
+      "title": "unsigned prime-norm domination",
+      "scope_note": "norm ~ lambda, survives any finite removal",
+      "labels": [
+        "prop:v119-prime-essential"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v124/g2_growing_sign",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "normcontr",
+      "status": "closed",
+      "title": "norm contraction",
+      "scope_note": null,
+      "labels": [
+        "prop:v120-norm-counterexample"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v124/g2_weighted_signed",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "schatten",
+      "status": "closed",
+      "title": "Schatten / Hilbert-Schmidt",
+      "scope_note": null,
+      "labels": [
+        "prop:v132-schatten"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "MISSING",
+      "evidence_state": "explicitly missing",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "sampling",
+      "status": "closed",
+      "title": "basis / sampling dominance",
+      "scope_note": null,
+      "labels": [
+        "prop:v121-complement-cancellation"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v124/g2_schur_cancellation",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "farmaj",
+      "status": "closed",
+      "title": "scalar far majorant",
+      "scope_note": "Necessary lower barrier N+1 > L exp(M_phi/(1-c)) for the specified scalar majorant; no optimal-cutoff asymptotic",
+      "labels": [
+        "prop:v125-cutoff-cost"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v126/g2_window_resolution",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": true
+    },
+    {
+      "id": "blockmetric",
+      "status": "closed",
+      "title": "lambda=5 N=25: tested dyadic norm comparison",
+      "scope_note": "NS-45 new 320/448-bit dyadic pair certificates on the first three existing blocks give exact rational Rayleigh bounds 341/250 even and 2093/1500 odd >1. Excludes all admissible smaller block metrics and positive row weights for this partition; no full-block inertia or general signed-block no-go. Historical v1.28 originals remain unarchived.",
+      "labels": [
+        "prop:v152-block-comparison"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/ns45_block_replay",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "flattop",
+      "status": "closed",
+      "title": "flat-top smoothing",
+      "scope_note": null,
+      "labels": [
+        "prop:v132-flat-top"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "MISSING",
+      "evidence_state": "explicitly missing",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "recipband",
+      "status": "closed",
+      "title": "reciprocal-band commutation",
+      "scope_note": "v1.33, commutator norm > 9e-6",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": "MISSING",
+      "evidence_state": "explicitly missing",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "cotlar",
+      "status": "closed",
+      "title": "Cotlar cross terms / atomization",
+      "scope_note": "v1.34, cross norm >= 73/(375 pi)",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": "MISSING",
+      "evidence_state": "explicitly missing",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "scalarprim",
+      "status": "closed",
+      "title": "scalar signed primitive",
+      "scope_note": "a Delta(beta_a) -> infinity, unconditional",
+      "labels": [
+        "cor:v137-scalar-no-go"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v137",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "concentration",
+      "status": "blocked",
+      "title": "signed weighted concentration",
+      "scope_note": "Valid sufficient criterion; the missing positivity input is a complete joint signed operator lower bound with a uniform cofinal error. QG plus a separate admissible bounded-energy packet would obstruct bounded level count, not supply this positivity input. NS-22 grid-family losses and its invalid sampled tail charge prove no closure (NS-31/36). NS-43 proves unrestricted exact adaptive levels are equivalent to the floor target; a nonarithmetic countermodel refutes general completeness of scalar set bounds. Specific arithmetic operator estimates remain open.",
+      "labels": [
+        "prop:v131-concentration"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v152",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": true
+    },
+    {
+      "id": "weaken",
+      "status": "proved",
+      "title": "Target weakening",
+      "scope_note": null,
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "floor",
+      "status": "proved",
+      "title": "uniform finite floor suffices",
+      "scope_note": "decay not required; dichotomy inf spec -> -inf or RH",
+      "labels": [
+        "prop:v136-bounded-floor"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v136",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "gapfree",
+      "status": "proved",
+      "title": "no uniform positive gap exists",
+      "scope_note": "growing radical family prevents a uniform positive complement gap; the later density/floor argument gives a distinct sufficient criterion without such a gap",
+      "labels": [
+        "prop:v135-growing-radical"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v135",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": true
+    },
+    {
+      "id": "floortest",
+      "status": "proved",
+      "title": "W_lambda >= -8 I at lambda=5,6,8",
+      "scope_note": "both parities, full infinite tail, Z=0; margin 0.84 -> 0.10 (odd) as lambda grows; not cofinal",
+      "labels": [
+        "prop:v138-three-floors"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v138",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "shiftbarrier",
+      "status": "proved",
+      "title": "bounded shift keeps the exp cutoff barrier",
+      "scope_note": "N+1 > L exp(M_phi - delta); polynomial cutoff needs delta ~ M_phi",
+      "labels": [
+        "prop:v138-shifted-floor"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v138",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "metablind",
+      "status": "proved",
+      "title": "Scoped information-loss obstructions",
+      "scope_note": "Full-histogram cap/probe relaxation fails; protected finite-head spectral orientation fails. Does not subsume all ten closures.",
+      "labels": [
+        "thm:v139-probe-relaxation",
+        "thm:v139-protected-orbit"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v139",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "altroutes",
+      "status": "open",
+      "title": "Alternative mechanisms: distinct missing inputs",
+      "scope_note": "Logical RH equivalence does not establish equal proof difficulty or a universal route closure. NS-51–53 test explicit first lemmas.",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "circle",
+      "status": "open",
+      "title": "circle / Toeplitz-Hankel lens",
+      "scope_note": "measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": "evidence/diag_true_symbol",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "debranges",
+      "status": "open",
+      "title": "de Branges / Hermite-Biehler",
+      "scope_note": "Shifted fixed-window structures do not determine the unshifted sign; arbitrary extension uniqueness is not established. NS-51 gives a complete-domain nullvector reduction; arithmetic injectivity remains open.",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "f1",
+      "status": "open",
+      "title": "function field / Hodge / F_1",
+      "scope_note": "No number-field intersection form and quantified positivity transfer are supplied here. A missing construction is not an impossibility theorem.",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nb",
+      "status": "open",
+      "title": "Nyman-Beurling-Baez-Duarte",
+      "scope_note": "Any fixed-order NB convergence suffices. NS-61 proves an elementary smoothed difference budget but leaves the actual optimized correlation input open. NS-60/62/63 exclude scoped correction, coefficient and changing-norm shortcuts. Finite gains are not cofinal bounds.",
+      "labels": [
+        "prop:ns53-nb-block-gain",
+        "eq:ns53-nb-rbc"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/ns53_nb_blocks",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "li",
+      "status": "closed",
+      "title": "Direct rational Li / entire window-test identification",
+      "scope_note": "The specified rational Li-transform class has trivial intersection with the finite-window entire Paley–Wiener class. This closes direct identification only; it does not exclude indirect inequalities or all Li approaches.",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": "evidence/diag_routes/li",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "dbn",
+      "status": "open",
+      "title": "de Bruijn–Newman: paired transport",
+      "scope_note": "Finite-cluster singularities cancel; external interaction and support growth remain. Same-test uniform comparison fails IF an unmatched real deformed zero exists; that hypothesis is not verified here. General heat route open.",
+      "labels": [
+        "prop:ns52-cluster",
+        "prop:ns52-unmatched"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/ns52_heat_pairs",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "ccmmu",
+      "status": "proved",
+      "title": "W_4 >= 0  <=>  CCM mu_lambda >= 0 for all lambda <= 4",
+      "scope_note": "CCM arXiv:2511.22755 Cor 3.7-3.8 write 'we cannot assert mu_lambda >= 0'; monotone in lambda; positioning statement",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": null,
+      "evidence_state": "no separate path in register",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "simpleeven4",
+      "status": "proved",
+      "title": "complete W_4: simple even ground; real-zero transform",
+      "scope_note": "NS-5 complete: mu0<2.454e-75, mu1>1e-73, 1024/1280-bit shifted inertia; CvS Thm6.1 applies; no Xi convergence or G2 claim",
+      "labels": [
+        "prop:v140-ground4",
+        "cor:v140-real-zeros"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v140",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "stepb",
+      "status": "live",
+      "title": "CCM step (b): finite-compression zeros track zeta zeros (numerical)",
+      "scope_note": "The 170-value CCM reproduction is a midpoint diagnostic, not a bound. Eight lambda=3, N=120 local roots are certified separately in v1.41. Original sinc-lattice inference withdrawn: missing centering phase in zeros.py. v1.42 separately encloses one complete lambda=4 zero within 0.1 of gamma_1. High-accuracy discrepancy transfer and cofinal Xi convergence remain open. v1.43 certifies a complete first-positive-zero radius 8.752082e-33 and quantifies the archived bound resolution; no complete discrepancy sign or 1e-71 magnitude. NS-43 supplies precise complete relative-selection and entire-transform criteria; none is proved cofinally. Absolute residuals and ordinary resolvent collapse alone do not select the Gaussian, as an explicitly nonarithmetic countermodel shows.",
+      "labels": [],
+      "all_labels_resolve": true,
+      "evidence": "evidence/diag_ns2_semantic_lock",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "semanticlock",
+      "status": "proved",
+      "title": "CCM finite-compression semantic lock, lambda=3 N=120",
+      "scope_note": "Eight local root discrepancies reproduce CCM Figure 1 with 768/1024-bit interval gates. The zero benchmark cannot detect a common positive scale or identity shift. No new window, complete-ground transfer or cofinal statement.",
+      "labels": [
+        "lem:v141-centering",
+        "prop:v141-ccm-lock"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v141",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "groundzero4",
+      "status": "proved",
+      "title": "complete ground zero within 0.1 of gamma_1",
+      "scope_note": "1024/1280-bit complete even separator 1e-67 plus energy projection; unique simple local zero, no earlier-zero ordering, discrepancy sign or cofinal claim.",
+      "labels": [
+        "lem:v142-energy-projection",
+        "prop:v142-ground-zero"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v142",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "groundzero4resolution",
+      "status": "proved",
+      "title": "first complete zero within 9e-33; archived resolution quantified",
+      "scope_note": "NS-19: 1024/1280-bit evaluator bound and earlier-zero exclusion. A lower-energy transfer at 1e-71 needs rho-l about 3.2032e-153 plus a suitable trial center. No complete sign, universal resolution no-go or cofinal claim.",
+      "labels": [
+        "prop:v143-first-zero-bound",
+        "prop:v143-resolution",
+        "prop:v143-fixed-window-meaning"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v143",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "pencilconcentration",
+      "status": "proved",
+      "title": "pencil loss budget; cofinal obligation retained",
+      "scope_note": "NS-24 exact translation: relative loss <= nu_k + eta_a ||v_k||^2/q+. Source constraint and mixture cross terms retained. Diagnostic thresholds not certified; fixed-head tests do not replace cofinal full-complement control. No new concentration bound.",
+      "labels": [
+        "prop:v144-pencil-concentration"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v144",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "betaexplicit",
+      "status": "proved",
+      "title": "exact lattice symbol; varying envelopes",
+      "scope_note": "Unconditional Perron identity with strict endpoint, trivial zeros and remainder. NS-26: 40 low plus 14 deep/centroid samples; numerical illustration only. Classical explicit formula restated, not new positivity content.",
+      "labels": [
+        "prop:v146-beta-explicit"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v146",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "minorantlevels",
+      "status": "blocked",
+      "title": "bounded-complexity minorants: arithmetic gap remains",
+      "scope_note": "NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure. NS-29 makes the missing value-distribution statement ZLD explicit; cumulative size and arbitrary positive-fraction spread are insufficient.",
+      "labels": [
+        "prop:v146-packet-loss",
+        "prop:v146-level-complexity"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v146",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": true
+    },
+    {
+      "id": "zeroleveldistribution",
+      "status": "blocked",
+      "title": "zero level distribution and packet coverage: open inputs",
+      "scope_note": "NS-29: conditional reduction requires lower measures for every level band and source-admissible bounded-energy packet coverage of those bands. Zero theorems assessed do not provide the input. D->infinity gives no uniform band measure; broad pulses cost log X. No closure or RH-equivalence claim.",
+      "labels": [
+        "prop:v147-level-separation",
+        "ass:v147-zld",
+        "prop:v147-depth-measure",
+        "prop:v147-broad-packet"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v147",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": true
+    },
+    {
+      "id": "weightedexactcost",
+      "status": "blocked",
+      "title": "weighted exact cost: peak bound fails at critical levels",
+      "scope_note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim.",
+      "labels": [
+        "prop:v149-critical-density",
+        "prop:v149-weighted-cost",
+        "prop:v149-qc1-insufficient",
+        "ass:v149-qg"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v149",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": true
+    },
+    {
+      "id": "capacityweight",
+      "status": "blocked",
+      "title": "positive arithmetic weight: critical capacity input",
+      "scope_note": "NS-34: explicit positive Gaussian arithmetic radical with pole mass 1/sqrt(3); exact full and windowed Picone identities retain exterior edges and both parity poles. Critical Arithmetic Energy comparison (CAE) is the uniform complement-floor target in these coordinates, not an independent positivity theorem. Coefficient-one capacity error remains open. NS-43 extends the loss obstruction to any fixed prime-power channel and moving omitted channels bounded away from the endpoint, with unchanged other signed terms. Full coefficient-one or compensated estimates remain open.",
+      "labels": [
+        "lem:v150-weight",
+        "prop:v150-critical-energy",
+        "ass:v150-cae"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v150",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "capacityslack",
+      "status": "closed",
+      "title": "fixed energy loss for the Gaussian arithmetic weight",
+      "scope_note": "Scoped closure: for this explicit weight, discarding fixed delta>0 of transformed energy, or the prime-2 channel alone, forces eta >= delta*kappa*exp(gamma*lambda^2)-O(lambda log lambda). Exact source-admissible even and odd tests, all cross terms controlled. Does not close coefficient-one capacity, another weight, or the physical Weil form.",
+      "labels": [
+        "prop:v150-capacity-slack"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v150",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "inputcomparison",
+      "status": "proved",
+      "title": "ZLD to QG; CAE is the signed-floor target",
+      "scope_note": "NS-39: exact inverse corrected-zero-field formula for the potential, including finite-window pole mass. ZLD implies QG growth with kappa theta² D/(2K) on the same prescribed family; no packet input supplied. CAE equals the uniform complement floor. General measure countermodels are not arithmetic independence. All three arithmetic inputs remain open; no new positivity conclusion.",
+      "labels": [
+        "prop:v151-input-comparison"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v151",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "capacitychannels",
+      "status": "closed",
+      "title": "Fixed/sub-endpoint channel deletion with unchanged signed terms",
+      "scope_note": "Exact source-admissible even and odd tests force an unbounded comparison error for the specified Gaussian weight. Covers bounded channel counts and sublinear-in-exp(2a) cutoffs. Endpoint-approaching omissions, compensation, and another weight are not closed.",
+      "labels": [
+        "prop:ns43-fixed-channel",
+        "prop:ns43-moving-channel"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v152",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "bumpstrength",
+      "status": "proved",
+      "title": "Restricted bump discrepancy can carry the full zero obstruction",
+      "scope_note": "For an explicit smooth compact probe with transform zeros only on the imaginary axis, a bounded translated prime discrepancy would exclude off-line zeros. The bound is unproved; no converse or weaker-than-RH claim. For arbitrary probes, boundedness permits off-line zeros only at common transform zeros; it does not exclude that masking.",
+      "labels": [
+        "prop:ns43-bump-strength"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v152",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "adaptiveidentity",
+      "status": "proved",
+      "title": "Unrestricted exact adaptive hierarchy = complement floor",
+      "scope_note": "Fixed-window compactness proves convergence of complete compressed lower edges. Cofinal uniform floor existence is equivalent; no effective complexity or new arithmetic bound. Growing adaptive level counts are unrestricted.",
+      "labels": [
+        "ns43-conc-prop-adaptive"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v152",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "scalarsetshortcut",
+      "status": "closed",
+      "title": "Scalar set bounds alone determine signed floor: general inference",
+      "scope_note": "Exact commuting three-outcome countermodels share all scalar set extrema but have signed bottoms -1/5 and +1/10, also after exact source removal. General inference is false; no arithmetic realization or physical concentration impossibility claimed.",
+      "labels": [
+        "ns43-conc-prop-scalar"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v152",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "relativeselection",
+      "status": "blocked",
+      "title": "Complete relative selection and entire-transform control",
+      "scope_note": "Missing cofinal complete separator relative to the explicit cutoff residual, or Rayleigh-excess/gap plus evaluator/weighted-tightness control. Global-ground use additionally needs odd ordering. No fixed-head replacement or polynomial positive separator.",
+      "labels": [
+        "prop:ns43-ccm-rayleigh-selection",
+        "prop:ns43-ccm-residual-selection"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v152",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": true
+    },
+    {
+      "id": "absoluteselection",
+      "status": "closed",
+      "title": "Absolute residual/resolvent data alone select ground: abstract inference",
+      "scope_note": "Exact abstract family has simple even nonnegative real-zero grounds, arbitrarily fast residual decay, resolvent collapse and tight support, yet alternating profiles. It is not an arithmetic support-consistent Weil family; CCM itself remains open.",
+      "labels": [
+        "prop:ns43-ccm-nonselection"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v152",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "coarseprofile",
+      "status": "closed",
+      "title": "Single profile from the specified coarse rescaled liminf",
+      "scope_note": "Under the explicit scale, full both-parity liminf, nonnegativity and lower-semicontinuity hypotheses, density of translated radicals forces the limit form to zero. Finer scales and other selection mechanisms remain open.",
+      "labels": [
+        "prop:ns43-ccm-coarse-profile"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v152",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "fineradicalrank",
+      "status": "closed",
+      "title": "Uniform or polynomial positive gap after o(lambda²/log lambda) removed directions",
+      "scope_note": "NS-46: fixed-range fine translates give complete near-zero rank asymptotic to lambda²/(20000 log lambda), exact even/odd counts and residual C exp(-lambda²/2000). Ill-conditioned finite Grams are bounded explicitly. The positive gap is at most this residual, so only uniform or polynomial positive coercivity is excluded; a smaller positive gap remains possible; no signed floor, negative Weil direction, finite starting-window certificate or closure of gap-free block methods.",
+      "labels": [
+        "lem:ns46-finite-arc",
+        "ns46-a2-cor-large-block",
+        "ns46-a2-cor-rank"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v153",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "kernelapi",
+      "status": "live",
+      "title": "Exact kernel exclusion: affine-potential injectivity",
+      "scope_note": "Complete form-domain reduction is exact in both parities. NS-55 rules out importing local UCP or ordinary-cone semigroup positivity; first-zero nullvectors must reach both endpoints. API remains open, with no signed arithmetic overlap estimate and no required uniform positive gap.",
+      "labels": [
+        "prop:ns51-affine-potential",
+        "eq:ns51-api"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/ns51_kernel",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "generic_h1",
+      "status": "closed",
+      "title": "Generic H¹ bootstrap from a zero eigenvalue",
+      "scope_note": "Rank-one bounded perturbation of the same logarithmic principal operator has a non-H¹ nullvector. This closes only inference from generic structural hypotheses; arithmetic regularity is not refuted.",
+      "labels": [
+        "prop:ns51-no-generic-bootstrap"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/ns51_kernel",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "localucp",
+      "status": "closed",
+      "title": "Local open-set UCP for the full prime-shift operator",
+      "scope_note": "Exact local-patch counterexamples, in each parity for a>log2 and after finitely many linear constraints. They do not solve A_a f=0 on the whole window and give no negative diagonal Weil energy. Prime-shift-free exterior-cell uniqueness remains valid under its explicit support hypothesis.",
+      "labels": [
+        "prop:ns55-local-ucp-counterexample",
+        "prop:ns55-parity-ucp-counterexample"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v155",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "fullpositivecone",
+      "status": "closed",
+      "title": "Ordinary-cone positivity for the full Weil semigroup",
+      "scope_note": "Positive off-diagonal pole-minus-archimedean cross terms for disjoint nonnegative tests show that the full real-space semigroup is not positivity preserving. A bounded positive multiplication conjugation cannot repair the cone property. No separate parity-cone claim, negative q direction, or API closure.",
+      "labels": [
+        "prop:ns55-nonpositive-semigroup"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v155",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "finiteweightcontrols",
+      "status": "proved",
+      "title": "Finite prime-weight changes: negative tests and first-zero controls",
+      "scope_note": "NS-57: every nonzero finite coefficient change gives negative compact tests in both parities and finite first-zero windows. Translation/reflection geometry, endpoint saturation and the modified affine-potential equation survive; the original arithmetic radical identity does not. Fixed-pattern lambda_* = O(sqrt(log(1/epsilon))) is an analytic upper bound, not a certified threshold. No negative original Weil direction or API closure.",
+      "labels": [
+        "cor:ns57-finite-weight-negative",
+        "thm:ns57-first-zero-controls",
+        "cor:ns57-fixed-direction-sensitivity"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v156",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "boundedfloorstability",
+      "status": "proved",
+      "title": "Bounded perturbations preserve the finite-floor objective",
+      "scope_note": "NS-57: q+B+cI is nonnegative on every compact test iff RH and B+cI>=0, for a fixed bounded self-adjoint B. Under RH the perturbed ground bottom tends to inf sigma(B); otherwise to -infinity. Consequences of v1.36; no new arithmetic lower estimate. Failure of exact positivity under finite coefficient changes does not obstruct a robust bounded-floor method.",
+      "labels": [
+        "lem:ns57-bounded-detection",
+        "thm:ns57-bounded-floor-stability"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v156",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "radicalboundarytest",
+      "status": "proved",
+      "title": "Translated-radical boundary test: exact kernel equivalence and forced controls",
+      "scope_note": "NS-58 stop condition: homogeneous vanishing is exactly the original null equation, with no independent sign estimate. Altered weights produce a necessarily nonzero forcing profile; compactness excludes only a uniform lower bound on the whole fixed-window space. API and the uniform floor remain open.",
+      "labels": [
+        "prop:ns58-boundary-identity",
+        "prop:ns58-equivalence",
+        "prop:ns58-forced-pairing"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v157",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbdifference",
+      "status": "proved",
+      "title": "NB adjacent-difference norm budget",
+      "scope_note": "Complete basis change transforms both Gram and correlations. Raw Gram norm O_epsilon(N^(-5/3+epsilon)); no lower correlation estimate. Near-N^(-2) power control of the raw all-coefficient norm is equivalent to Lindelof, not a proved estimate.",
+      "labels": [
+        "prop:v158-adjacent-budget",
+        "prop:v158-mellin-budget"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v158",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbrawlog",
+      "status": "closed",
+      "title": "NB uniform logarithmic raw norm",
+      "scope_note": "For every fixed B, the raw difference Gram is not O((log N)^B/N^2), even on dyadic blocks. Projected Grams and the actual residual direction are outside this obstruction.",
+      "labels": [
+        "prop:v158-lindelof-budget"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v158",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbeulergrid",
+      "status": "closed",
+      "title": "Uniform logarithmic norm after explicit Euler-grid correction",
+      "scope_note": "Only this explicit all-coefficient correction with Q_N <= N^alpha, fixed alpha < 1. Complete grid defect and cross terms retained; optimal projection and actual-residual estimates remain open.",
+      "labels": [
+        "prop:ns60-growing-euler-obstruction"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v159",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbsmoothedbudget",
+      "status": "proved",
+      "title": "Fixed smoothed NB: positive averages and N^(-2) trace",
+      "scope_note": "One fixed Mellin integration preserves the RH criterion. Trace <= 3*kappa/(8*N^2), and scaled trace tends to that constant. Every Gram cross term and transformed numerator remains.",
+      "labels": [
+        "prop:ns61-rh-equivalence",
+        "prop:ns61-average-budget"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v159",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbsmoothedcorrelation",
+      "status": "blocked",
+      "title": "Actual optimized smoothed residual correlations",
+      "scope_note": "The complete signed endpoint remainder exceeds the leading model at N=64,128. Repaired-kernel directions recover 97.06% of full finite gain at N=256, using the actual complete energy. No cofinal numerator/cost estimate is proved.",
+      "labels": [
+        "eq:ns61-open-correlation",
+        "eq:ns61-endpoint-correlation",
+        "prop:ns69-remainder",
+        "prop:ns71-selected-input"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v160",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbsharpintegrated",
+      "status": "closed",
+      "title": "Strong convergence of the smoothed canonical sharp Mobius sequence",
+      "scope_note": "Localized Laguerre witness preserves nonconvergence for the full integer sequence even if the number of integrations varies. Selected subsequences and optimal coefficients are outside the theorem. The nonnegative difference cone fails locally at its forced sixth coefficient -1/5. An explicit dual separator certifies full-space cone distance >0.00228323, with local equality only. Fixed ordinary Cesaro iterates also fail; weaker norm-growth targets remain open.",
+      "labels": [
+        "prop:ns62-smoothed-obstruction",
+        "prop:ns62-positive-cone",
+        "prop:ns64-cone-distance",
+        "prop:ns65-cesaro-obstruction"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v159",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbchangingnorm",
+      "status": "closed",
+      "title": "Relative convergence with increasing Mellin smoothing",
+      "scope_note": "One fixed atom has relative squared error ~D0^2/(8r) unconditionally, while its absolute squared error diverges. The fixed-order criterion remains valid; changing the norm is not RH evidence.",
+      "labels": [
+        "prop:ns63-one-atom"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v159",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbcanonicalgrowth",
+      "status": "blocked",
+      "title": "Canonical smoothed norm: subpolynomial growth",
+      "scope_note": "Fixed-order exponent equals beta_star-1/2 by local zero evaluation and conditional Bochner-Abel bounds. Exact reformulation, with no improved arithmetic estimate. A bounded cofinal subsequence is sufficient but not asserted necessary. Exact cells through N^2 retain the exponent; centered whole Abel vectors have a uniform conditioning bound, so internal arithmetic remains the target.",
+      "labels": [
+        "prop:ns66-growth-bounds",
+        "cor:ns66-growth-exponent",
+        "prop:ns67-polynomial-cutoff",
+        "prop:ns67-abel-conditioning"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v160",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbcanonicalcells",
+      "status": "proved",
+      "title": "Complete canonical divisor cells and full tail",
+      "scope_note": "Exact signed cells and a full Stirling remainder <=1/(6z). Tail norm beyond N^2 is O(log N), so the growing finite norm has the same RH-equivalent exponent; no subpolynomial estimate.",
+      "labels": [
+        "prop:ns67-cells",
+        "lem:ns67-remainder",
+        "prop:ns67-polynomial-cutoff"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v160/ns67",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbabelwholegain",
+      "status": "closed",
+      "title": "Power gain solely between the two complete Abel vectors",
+      "scope_note": "After explicit centering, their triangle norm is between D_N and (1+2||sigma_1||)D_N. Cancellation inside the integral and exact cells is still unestimated.",
+      "labels": [
+        "prop:ns67-abel-conditioning"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v160/ns67",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbrenewalforcing",
+      "status": "blocked",
+      "title": "Positive renewal with signed arithmetic forcing",
+      "scope_note": "Positive weighted inverse exists with q_theta<1; it transfers the same power. The integer first-annulus square-root-plus-epsilon bound remains RH-equivalent.",
+      "labels": [
+        "prop:ns68-weighted-inversion",
+        "prop:ns68-scalar-criterion"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v160/ns68",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbcriticalrenewalenergy",
+      "status": "closed",
+      "title": "Finite total critical renewal energy",
+      "scope_note": "Both critical weighted total integrals diverge by any known critical-line zero. Logarithmic or subpolynomial growth remains possible; this does not assert divergence of D_N.",
+      "labels": [
+        "cor:ns68-critical-energy"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v160/ns68",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbrepairedbounds",
+      "status": "closed",
+      "title": "Uniform comparison with the repaired elementary Gram",
+      "scope_note": "Subtracting d/max repairs the adjacent n^-2 cusp to n^-3. Uniform lower and upper all-coefficient comparisons still fail, respectively by critical zeros and unbounded zeta values. Selected directions remain outside the exclusion.",
+      "labels": [
+        "prop:ns70-cusp",
+        "prop:ns70-repaired-background"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v160/ns70",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbselectedpreconditioner",
+      "status": "blocked",
+      "title": "Repaired-kernel selection measured with true energy",
+      "scope_note": "Certified finite gain fractions above 97% at N=128,256 for the projected repaired direction. Exact selected numerator/cost criterion avoids the excluded uniform comparison.",
+      "labels": [
+        "prop:ns71-selected-input"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v160/ns71",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nblocalgeometry",
+      "status": "proved",
+      "title": "Complete local energy and discrete curvature",
+      "scope_note": "Uniform model-only curvature comparison and local direction rules. No cofinal actual arithmetic estimate.",
+      "labels": [
+        "prop:ns72-local-energy",
+        "prop:ns72-interpolation",
+        "prop:ns72-curvature"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v161/ns72",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbcurvaturearithmetic",
+      "status": "blocked",
+      "title": "Cofinal arithmetic curvature and selected cost",
+      "scope_note": "Diagonal curvature retains 97.63% of finite optimal gain at N=256. The prescribed three-template span is weaker on all five blocks.",
+      "labels": [
+        "eq:ns72-local-directions"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v161/ns72",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbsamegramcontrol",
+      "status": "closed",
+      "title": "Infer convergence from shared Gram geometry and finite efficiency",
+      "scope_note": "A unitary altered family preserves every Gram entry and has arbitrarily close finite statistics but a positive floor. No original-family error floor.",
+      "labels": [
+        "prop:ns74-same-gram",
+        "cor:ns74-finite-indistinguishability"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v161/ns74",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbdivisorfeedback",
+      "status": "proved",
+      "title": "Exact divisor feedback and finite unit-step failure",
+      "scope_note": "Exact local jump cancellation is not descent: every held-old unit step tested increases full error. No asymptotic exclusion of other feedback.",
+      "labels": [
+        "prop:ns75-divisor-cells"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v162/ns75",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbcontinuousdefect",
+      "status": "proved",
+      "title": "Exact continuous inner-factor defect and strict closure separation",
+      "scope_note": "Continuous defect depends on B(1), B′(1), B″(1). Integer closure strictly smaller; target distances not proved different.",
+      "labels": [
+        "prop:ns76-continuous-distance",
+        "prop:ns76-strict-closure"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v162/ns76",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbcontinuoustail",
+      "status": "proved",
+      "title": "Complete continuous zero-tail budget",
+      "scope_note": "Published finite-height information implies continuous squared distance <2.08e-32; not an integer upper bound or zero-distance proof.",
+      "labels": [
+        "prop:ns77-tail-budget"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v162/ns77",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbarithmeticsampling",
+      "status": "proved",
+      "title": "Complete reciprocal-knot norm and exact divisor inversion",
+      "scope_note": "S/16 <= squared norm <=21 S/16, all cells and tails retained. No cofinal vanishing sample sum.",
+      "labels": [
+        "prop:ns78-sampling",
+        "eq:ns78-sample-inverse"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v163/ns78",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbbalancedfeedback",
+      "status": "proved",
+      "title": "Tail-balanced divisor feedback control",
+      "scope_note": "Preserves exterior coefficient but leaves final jump. Endpoint-augmented span captures 71.18% at N=256; no uniform raw descent.",
+      "labels": [
+        "prop:ns79-balance"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v163/ns79",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbarithmeticpreconditioner",
+      "status": "proved",
+      "title": "Uniform efficiency using the full arithmetic sampling Gram",
+      "scope_note": "Projected condition ratio <=21, one-step capture >=21/121, twenty-step capture >97.79%. Complete comparator inverse assumed; no fast inverse or cofinal relative contraction.",
+      "labels": [
+        "prop:ns80-uniform-efficiency"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v163/ns80",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbfiniteconditioning",
+      "status": "proved",
+      "title": "Polynomial ordinary Gram conditioning and an effective finite comparator",
+      "scope_note": "Condition O(N^4 log² N); sufficient cutoff 2^16(N+1)^6 with full tail bound. Enormous comparator not assembled; no practical solver or cofinal decay.",
+      "labels": [
+        "prop:ns81-conditioning",
+        "prop:ns81-finite-comparator"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v164/ns81",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbcompressedtail",
+      "status": "proved",
+      "title": "Finite physical comparator with an exact rank-two tail",
+      "scope_note": "Sufficient cutoff O(N^(7/3) log^(1/3)(2N)); projected condition <=9. Scalar constants certified; comparator not assembled; no cofinal decay.",
+      "labels": [
+        "prop:ns82-tail-compression"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v165/ns82",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbcriticalfloor",
+      "status": "proved",
+      "title": "Critical-zero logarithmic lower bound at every fixed smoothing order",
+      "scope_note": "Burnol construction adapted with complete endpoint and tail control. Positive lower liminf; no upper bound or finite onset.",
+      "labels": [
+        "prop:ns83-log-floor"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v166/ns83",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    },
+    {
+      "id": "nbuniformrelativecontraction",
+      "status": "closed",
+      "title": "Fixed-fraction contraction of the full error at every doubling",
+      "scope_note": "Cumulative relative gains <=log K+O(1). Individual gains may fluctuate; capture of available block gain is not excluded.",
+      "labels": [
+        "eq:ns83-gain-budget"
+      ],
+      "all_labels_resolve": true,
+      "evidence": "evidence/v166/ns83",
+      "evidence_state": "path present; not a fresh replay",
+      "summary_corrected_this_turn": false
+    }
+  ]
+}

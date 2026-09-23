@@ -1,0 +1,164 @@
+[
+  {
+    "version": "v1.34",
+    "legacy_path": "fixed_space_prime_action_v1.tex",
+    "exact_tag_matches": [
+      "fixed_space_prime_action_v1.tex"
+    ],
+    "tag_commit": "5ab9cdc6b7dd13dda6c25ec0c62a2201f0c1db0e",
+    "expected_sha256": "84999020e3a940925b2f3285c79061d4f3a87f1d216ceffbe2d1be9c57da3c2a"
+  },
+  {
+    "version": "v1.34",
+    "legacy_path": "v1_revision_notes.md",
+    "exact_tag_matches": [
+      "v1_revision_notes.md"
+    ],
+    "tag_commit": "5ab9cdc6b7dd13dda6c25ec0c62a2201f0c1db0e",
+    "expected_sha256": "1db6fdf5842bf7fb64b979510aa167c1b2e3f9e2b391f79df728cc0d510c41cb"
+  },
+  {
+    "version": "v1.34",
+    "legacy_path": "RH_G1_G2_research_log.md",
+    "exact_tag_matches": [
+      "RH_G1_G2_research_log.md"
+    ],
+    "tag_commit": "5ab9cdc6b7dd13dda6c25ec0c62a2201f0c1db0e",
+    "expected_sha256": "1f2427612c0cc55318225331fa00076aa752e8a1ef348f1c5ea2f490f3672a5c"
+  },
+  {
+    "version": "v1.34",
+    "legacy_path": "fixed_space_prime_action_v1.pdf",
+    "exact_tag_matches": [
+      "fixed_space_prime_action_v1.pdf"
+    ],
+    "tag_commit": "5ab9cdc6b7dd13dda6c25ec0c62a2201f0c1db0e",
+    "expected_sha256": "fc3c296e249b1b1133643847c315c26804469cb1064a71085856f1292b1490a7"
+  },
+  {
+    "version": "v1.35",
+    "legacy_path": "fixed_space_prime_action_v1_35.tex",
+    "exact_tag_matches": [
+      "fixed_space_prime_action_v1.tex"
+    ],
+    "tag_commit": "f06ba5a3aebb3c96e0ab64b71bf83dc44afae750",
+    "expected_sha256": "822a1808e380893d4094ada54c05790cd323882617d8229d4d720e650baca97e"
+  },
+  {
+    "version": "v1.35",
+    "legacy_path": "fixed_space_prime_action_v1_35.pdf",
+    "exact_tag_matches": [
+      "fixed_space_prime_action_v1.pdf"
+    ],
+    "tag_commit": "f06ba5a3aebb3c96e0ab64b71bf83dc44afae750",
+    "expected_sha256": "6e5a44ac839ed5d78ff7a97c0f1b316c830c86e5ff2e7003530d3f26b36d4b3e"
+  },
+  {
+    "version": "v1.35",
+    "legacy_path": "RH_G1_G2_research_log.md",
+    "exact_tag_matches": [
+      "RH_G1_G2_research_log.md"
+    ],
+    "tag_commit": "f06ba5a3aebb3c96e0ab64b71bf83dc44afae750",
+    "expected_sha256": "f689d7b05ce323b1e52977695d1032e384a1944f7b8a73c81f5ef60261e5ab6c"
+  },
+  {
+    "version": "v1.35",
+    "legacy_path": "v1_35_revision_notes.md",
+    "exact_tag_matches": [
+      "v1_revision_notes.md"
+    ],
+    "tag_commit": "f06ba5a3aebb3c96e0ab64b71bf83dc44afae750",
+    "expected_sha256": "86e0cd436fc5bd031eb05ed8594343cfc2261e2542cae4b00f3b216a0392d0f8"
+  },
+  {
+    "version": "v1.36",
+    "legacy_path": "fixed_space_prime_action_v1.tex",
+    "exact_tag_matches": [
+      "fixed_space_prime_action_v1.tex"
+    ],
+    "tag_commit": "717e1ec90df425acadf73912447fc89d648e1dae",
+    "expected_sha256": "9ea457a8d77a00485b647a2dd207020ebff358b820a9b56c2808993b4442dcbc"
+  },
+  {
+    "version": "v1.36",
+    "legacy_path": "RH_G1_G2_research_log.md",
+    "exact_tag_matches": [
+      "RH_G1_G2_research_log.md"
+    ],
+    "tag_commit": "717e1ec90df425acadf73912447fc89d648e1dae",
+    "expected_sha256": "c420eff7e752fee1fe7c53dceeea8155fb9efc6c7cf6d68f10645f715b324dcb"
+  },
+  {
+    "version": "v1.36",
+    "legacy_path": "v1_revision_notes.md",
+    "exact_tag_matches": [
+      "v1_revision_notes.md"
+    ],
+    "tag_commit": "717e1ec90df425acadf73912447fc89d648e1dae",
+    "expected_sha256": "d98fcfef77ec857d108cb916208a42915ed044009553b95624d2ad1916500a2b"
+  },
+  {
+    "version": "v1.36",
+    "legacy_path": "README.md",
+    "exact_tag_matches": [
+      "README.md"
+    ],
+    "tag_commit": "717e1ec90df425acadf73912447fc89d648e1dae",
+    "expected_sha256": "eb8f38e7db744145b5c725dc67133bae3641418ead9cbbaa2aeb9377724d19eb"
+  },
+  {
+    "version": "v1.36",
+    "legacy_path": "archive/README.md",
+    "exact_tag_matches": [
+      "archive/README.md"
+    ],
+    "tag_commit": "717e1ec90df425acadf73912447fc89d648e1dae",
+    "expected_sha256": "a8dbdacdaaec4cdea0971c73783b866cfdb9fcf917abd3a97b2a8df798da69a3"
+  },
+  {
+    "version": "v1.37",
+    "legacy_path": "fixed_space_prime_action_v1.tex",
+    "exact_tag_matches": [
+      "fixed_space_prime_action_v1.tex"
+    ],
+    "tag_commit": "c623b21aca132a3b87a95dc19e24da9393f56a00",
+    "expected_sha256": "4bb282a93c0f8c52d743860dbc918513fcefb09021710e71ad2d8d7cb7b9aed8"
+  },
+  {
+    "version": "v1.37",
+    "legacy_path": "RH_G1_G2_research_log.md",
+    "exact_tag_matches": [
+      "RH_G1_G2_research_log.md"
+    ],
+    "tag_commit": "c623b21aca132a3b87a95dc19e24da9393f56a00",
+    "expected_sha256": "e0c8c7d782d66a64ba1d170ed42c8396928d490e4d70d15450b64afa8e6c7318"
+  },
+  {
+    "version": "v1.37",
+    "legacy_path": "v1_revision_notes.md",
+    "exact_tag_matches": [
+      "v1_revision_notes.md"
+    ],
+    "tag_commit": "c623b21aca132a3b87a95dc19e24da9393f56a00",
+    "expected_sha256": "a4c4670c1f8878235394c13370cd45accfc88539a69ca7023c1f6dfd0995dab0"
+  },
+  {
+    "version": "v1.37",
+    "legacy_path": "README.md",
+    "exact_tag_matches": [
+      "README.md"
+    ],
+    "tag_commit": "c623b21aca132a3b87a95dc19e24da9393f56a00",
+    "expected_sha256": "73237719f3041662002ec16315222eb27ae999942b4a8c5fd1355a3337bd435b"
+  },
+  {
+    "version": "v1.37",
+    "legacy_path": "archive/README.md",
+    "exact_tag_matches": [
+      "archive/README.md"
+    ],
+    "tag_commit": "c623b21aca132a3b87a95dc19e24da9393f56a00",
+    "expected_sha256": "d957e7cad3a187e062b3d578283dc8b150dc3f769a21dff32c8649b59b0f35b0"
+  }
+]

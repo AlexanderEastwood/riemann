@@ -1,0 +1,11 @@
+{
+  "classical_taper": {
+    "source": "Bettin, Conrey and Farmer, An optimal choice of Dirichlet polynomials for the Nyman–Beurling criterion",
+    "url": "https://arxiv.org/abs/1211.5191",
+    "used": "Theorem 1 and the definition of V_N; prior motivation only",
+    "hypotheses_not_assumed": ["RH", "inverse-zeta-derivative moment estimate"]
+  },
+  "inherited_complete_physical_norm": "evidence/v163/ns78/proof.tex",
+  "inherited_complete_gram": "evidence/v159/ns61/gram-tail-proof.tex",
+  "scope": "Exact finite prime-divisor identity and finite complete norm checks; no new asymptotic theorem"
+}

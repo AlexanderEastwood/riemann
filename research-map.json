@@ -84,7 +84,7 @@
       "parent": "windows",
       "prop": "prop:v126-full-window",
       "evidence": "evidence/v126",
-      "note": "only positive result; evidence restored and verified"
+      "note": "largest completely certified positive window in this record; lambda=3 is also certified; restored evidence does not supply a cofinal theorem"
     },
     {
       "id": "w5",
@@ -170,7 +170,7 @@
       "parent": "uniform",
       "prop": "prop:v125-cutoff-cost",
       "branch": "closed/scalar-far-majorant",
-      "note": "N ~ L exp(M_phi): exponential cutoff cost",
+      "note": "Necessary lower barrier N+1 > L exp(M_phi/(1-c)) for the specified scalar majorant; no optimal-cutoff asymptotic",
       "evidence": "evidence/v126/g2_window_resolution",
       "wall": {
         "input": "cost of one estimate: N > L exp(M_phi/(1-c)); not every method",
@@ -260,9 +260,9 @@
       "note": "Valid sufficient criterion; the missing positivity input is a complete joint signed operator lower bound with a uniform cofinal error. QG plus a separate admissible bounded-energy packet would obstruct bounded level count, not supply this positivity input. NS-22 grid-family losses and its invalid sampled tail charge prove no closure (NS-31/36). NS-43 proves unrestricted exact adaptive levels are equivalent to the floor target; a nonarithmetic countermodel refutes general completeness of scalar set bounds. Specific arithmetic operator estimates remain open.",
       "evidence": "evidence/v152",
       "wall": {
-        "input": "QG + WLH packet",
+        "input": "uniform complete signed operator floor remains unproved",
         "to": "floor",
-        "src": "ass:v149-qg; ZLD implies the QC_K bound at a fixed window (prop:v151-input-comparison ii); CAE = target"
+        "src": "prop:v131-concentration; QG/ZLD plus packets concern minorant complexity, not a proof of this floor"
       }
     },
     {
@@ -287,7 +287,7 @@
       "status": "proved",
       "parent": "weaken",
       "prop": "prop:v135-growing-radical",
-      "note": "dense radical family; same fact as the floor reduction",
+      "note": "growing radical family prevents a uniform positive complement gap; the later density/floor argument gives a distinct sufficient criterion without such a gap",
       "evidence": "evidence/v135"
     },
     {
@@ -484,9 +484,9 @@
       "evidence": "evidence/v146",
       "note": "NS-27: eta >= [(b+B)c-B]+ and, conditionally, eta >= [cD/(2K)-Q]+. D->infinity is unconditional; uniform level mass, bounded packet energy and trough multiplicity are not established. Source and odd-sector scopes explicit; no proved closure. NS-29 makes the missing value-distribution statement ZLD explicit; cumulative size and arbitrary positive-fraction spread are insufficient.",
       "wall": {
-        "input": "ZLD + packet",
-        "to": "floor",
-        "src": "prop:v146-level-complexity inputs, named as ZLD in v1.47"
+        "input": "ZLD + packet: conditional minorant-complexity obstruction only",
+        "to": null,
+        "src": "prop:v146-level-complexity inputs, named as ZLD in v1.47; no implication to the signed floor is established"
       }
     },
     {
@@ -499,9 +499,9 @@
       "evidence": "evidence/v147",
       "note": "NS-29: conditional reduction requires lower measures for every level band and source-admissible bounded-energy packet coverage of those bands. Zero theorems assessed do not provide the input. D->infinity gives no uniform band measure; broad pulses cost log X. No closure or RH-equivalence claim.",
       "wall": {
-        "input": "ZLD + packet",
-        "to": "floor",
-        "src": "ass:v147-zld; packet coverage eq:v147-packet-coverage"
+        "input": "ZLD + packet: conditional minorant-complexity obstruction only",
+        "to": null,
+        "src": "ass:v147-zld; packet coverage eq:v147-packet-coverage; no implication to the signed floor is established"
       }
     },
     {
@@ -514,9 +514,9 @@
       "evidence": "evidence/v149",
       "note": "NS-32/33: PR14 withdrawn after major findings. Exact density is unbounded at negative critical values; histogram peaks are not caps. The conditional QC_K loss implication survives. QG and source-admissible bounded-energy all-Borel WLH remain open inputs for a bounded-level obstruction, not for a positivity proof. NS-31/36 repair finite-bin interpretations; no closed physical route or G2/RH claim.",
       "wall": {
-        "input": "QG + WLH packet",
-        "to": "floor",
-        "src": "ass:v149-qg"
+        "input": "QG + WLH packet: conditional minorant-complexity obstruction only",
+        "to": null,
+        "src": "ass:v149-qg; no implication to the signed floor is established"
       }
     },
     {
@@ -614,7 +614,7 @@
       "evidence": "evidence/v152",
       "note": "Missing cofinal complete separator relative to the explicit cutoff residual, or Rayleigh-excess/gap plus evaluator/weighted-tightness control. Global-ground use additionally needs odd ordering. No fixed-head replacement or polynomial positive separator.",
       "wall": {
-        "input": "cofinal separator",
+        "input": "complete relative selection plus entire-transform control (both open)",
         "to": "g2",
         "src": "prop:ns43-ccm-rayleigh-selection: missing cofinal complete separator relative to the cutoff residual"
       }

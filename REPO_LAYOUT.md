@@ -34,7 +34,7 @@ tools/
 **Evidence is incremental, never cumulative.** `evidence/vNNN/` contains
 only what that version added. Git already stores history; re-bundling every
 prior artifact into each release is what produced a 207 MB ZIP that failed
-to upload with an HTTP 502 and left the project's only positive result
+to upload with an HTTP 502 and left the complete lambda=4 positivity result
 unreproducible (see `evidence/MISSING.md`).
 
 No single file may exceed 100 MB — GitHub rejects it outright. The largest

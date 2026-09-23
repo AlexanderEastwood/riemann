@@ -1,0 +1,80 @@
+v1.26_manifest.json: 468 ok, 0 relocated, 0 missing, 0 mismatched  [468 listed]
+v1.31_manifest.json: 3 ok, 0 relocated, 0 missing, 0 mismatched  [3 listed]
+  RELOCATED  fixed_space_prime_action_v1.tex -> manuscript/fixed_space_prime_action_v1.tex
+  MISMATCH   manuscript/fixed_space_prime_action_v1.tex
+  RELOCATED  v1_revision_notes.md -> log/v1_revision_notes.md
+  MISMATCH   log/v1_revision_notes.md
+  RELOCATED  RH_G1_G2_research_log.md -> log/RH_G1_G2_research_log.md
+  MISMATCH   log/RH_G1_G2_research_log.md
+  RELOCATED  fixed_space_prime_action_v1.pdf -> evidence/v126/fixed_space_prime_action_v1.pdf
+  MISMATCH   evidence/v126/fixed_space_prime_action_v1.pdf
+v1.34_manifest.json: 0 ok, 4 relocated, 0 missing, 4 mismatched  [4 listed]
+  MISSING    fixed_space_prime_action_v1_35.tex
+  RELOCATED  fixed_space_prime_action_v1_35.pdf -> manuscript/snapshots/fixed_space_prime_action_v1_35.pdf
+  RELOCATED  RH_G1_G2_research_log.md -> log/RH_G1_G2_research_log.md
+  MISMATCH   log/RH_G1_G2_research_log.md
+  MISSING    v1_35_revision_notes.md
+  RELOCATED  g2_growing_radical/adversarial_review.md -> evidence/v135/adversarial_review.md
+  RELOCATED  g2_growing_radical/new_section.tex -> evidence/v135/new_section.tex
+  RELOCATED  g2_growing_radical/check_growing_radical.py -> evidence/v135/check_growing_radical.py
+  RELOCATED  g2_growing_radical/research_report.md -> evidence/v135/research_report.md
+  RELOCATED  g2_growing_radical/diagnostic_results.json -> evidence/v135/diagnostic_results.json
+v1.35_manifest.json: 6 ok, 7 relocated, 2 missing, 1 mismatched  [9 listed]
+  RELOCATED  fixed_space_prime_action_v1.tex -> manuscript/fixed_space_prime_action_v1.tex
+  MISMATCH   manuscript/fixed_space_prime_action_v1.tex
+  RELOCATED  RH_G1_G2_research_log.md -> log/RH_G1_G2_research_log.md
+  MISMATCH   log/RH_G1_G2_research_log.md
+  RELOCATED  v1_revision_notes.md -> log/v1_revision_notes.md
+  MISMATCH   log/v1_revision_notes.md
+  MISMATCH   README.md
+  RELOCATED  archive/README.md -> evidence/v136/README.md
+  MISMATCH   evidence/v136/README.md
+  RELOCATED  g2_radical_topology/adversarial_review.md -> evidence/v136/adversarial_review.md
+  RELOCATED  g2_radical_topology/check_topology_countermodels.py -> evidence/v136/check_topology_countermodels.py
+  RELOCATED  g2_radical_topology/countermodel_results.json -> evidence/v136/countermodel_results.json
+  RELOCATED  g2_radical_topology/new_section.tex -> evidence/v136/new_section.tex
+  RELOCATED  g2_radical_topology/research_report.md -> evidence/v136/research_report.md
+v1.36_manifest.json: 5 ok, 9 relocated, 0 missing, 5 mismatched  [10 listed]
+  RELOCATED  fixed_space_prime_action_v1.tex -> manuscript/fixed_space_prime_action_v1.tex
+  MISMATCH   manuscript/fixed_space_prime_action_v1.tex
+  RELOCATED  RH_G1_G2_research_log.md -> log/RH_G1_G2_research_log.md
+  MISMATCH   log/RH_G1_G2_research_log.md
+  RELOCATED  v1_revision_notes.md -> log/v1_revision_notes.md
+  MISMATCH   log/v1_revision_notes.md
+  MISMATCH   README.md
+  RELOCATED  archive/README.md -> evidence/v137/README.md
+  MISMATCH   evidence/v137/README.md
+  RELOCATED  g2_scalar_budget_no_go/adversarial_review.md -> evidence/v137/adversarial_review.md
+  RELOCATED  g2_scalar_budget_no_go/check_probe.py -> evidence/v137/check_probe.py
+  RELOCATED  g2_scalar_budget_no_go/new_section.tex -> evidence/v137/new_section.tex
+  RELOCATED  g2_scalar_budget_no_go/probe_results.json -> evidence/v137/probe_results.json
+  RELOCATED  g2_scalar_budget_no_go/research_report.md -> evidence/v137/research_report.md
+v1.37_manifest.json: 5 ok, 9 relocated, 0 missing, 5 mismatched  [10 listed]
+v1.38_manifest.json: 12 ok, 0 relocated, 0 missing, 0 mismatched  [12 listed]
+v1.39_manifest.json: 7 ok, 0 relocated, 0 missing, 0 mismatched  [7 listed]
+v1.40_manifest.json: 11 ok, 0 relocated, 0 missing, 0 mismatched  [11 listed]
+v1.41_manifest.json: 17 ok, 0 relocated, 0 missing, 0 mismatched  [17 listed]
+v1.42_manifest.json: 21 ok, 0 relocated, 0 missing, 0 mismatched  [21 listed]
+v1.43_manifest.json: 19 ok, 0 relocated, 0 missing, 0 mismatched  [19 listed]
+v1.44_manifest.json: 7 ok, 0 relocated, 0 missing, 0 mismatched  [7 listed]
+v1.45_manifest.json: 4 ok, 0 relocated, 0 missing, 0 mismatched  [4 listed]
+v1.46_manifest.json: 8 ok, 0 relocated, 0 missing, 0 mismatched  [8 listed]
+v1.47_manifest.json: 7 ok, 0 relocated, 0 missing, 0 mismatched  [7 listed]
+v1.49_manifest.json: 7 ok, 0 relocated, 0 missing, 0 mismatched  [7 listed]
+v1.50_manifest.json: 6 ok, 0 relocated, 0 missing, 0 mismatched  [6 listed]
+v1.51_manifest.json: 6 ok, 0 relocated, 0 missing, 0 mismatched  [6 listed]
+v1.52_manifest.json: 9 ok, 0 relocated, 0 missing, 0 mismatched  [9 listed]
+v1.53_manifest.json: 7 ok, 0 relocated, 0 missing, 0 mismatched  [7 listed]
+v1.54_manifest.json: 6 ok, 0 relocated, 0 missing, 0 mismatched  [6 listed]
+v1.55_manifest.json: 10 ok, 0 relocated, 0 missing, 0 mismatched  [10 listed]
+v1.56_manifest.json: 9 ok, 0 relocated, 0 missing, 0 mismatched  [9 listed]
+v1.57_manifest.json: 9 ok, 0 relocated, 0 missing, 0 mismatched  [9 listed]
+v1.58_manifest.json: 19 ok, 0 relocated, 0 missing, 0 mismatched  [19 listed]
+v1.59_manifest.json: 69 ok, 0 relocated, 0 missing, 0 mismatched  [69 listed]
+v1.60_manifest.json: 54 ok, 0 relocated, 0 missing, 0 mismatched  [54 listed]
+v1.61_manifest.json: 32 ok, 0 relocated, 0 missing, 0 mismatched  [32 listed]
+v1.62_manifest.json: 28 ok, 0 relocated, 0 missing, 0 mismatched  [28 listed]
+v1.63_manifest.json: 26 ok, 0 relocated, 0 missing, 0 mismatched  [26 listed]
+v1.64_manifest.json: 15 ok, 0 relocated, 0 missing, 0 mismatched  [15 listed]
+v1.65_manifest.json: 15 ok, 0 relocated, 0 missing, 0 mismatched  [15 listed]
+v1.66_manifest.json: 16 ok, 0 relocated, 0 missing, 0 mismatched  [16 listed]

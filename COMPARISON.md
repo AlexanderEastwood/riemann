@@ -74,8 +74,9 @@ reproduction, not a complete-ground or cofinal convergence theorem.
 ## The one no-go with published prior art
 
 `prop:v125-cutoff-cost` proves the scalar diagonal far majorant needs a
-remote cutoff `N+1 > L exp(M_phi/(1-c))` with `M_phi / lambda -> 1`, i.e.
-`N ~ exp(e^a)` — doubly exponential in the half-width.
+remote cutoff `N+1 > L exp(M_phi/(1-c))` with `M_phi / lambda -> 1`.
+This is a necessary lower barrier with doubly exponential growth in the
+half-width `a`, not an asymptotic formula for an optimal cutoff.
 
 Zhu's abstract states that any one-stroke certificate must resolve
 frequencies up to `2 pi e^{A_L}` with `A_L ~ 4 e^L` — the same doubly
@@ -129,13 +130,12 @@ witnesses), so tone does not distinguish this project. Two things would:
 
 ---
 
-## Addendum, 2026-09-21: three more lenses on the same scalar
+## Structural comparisons and their separate missing inputs
 
-Three independent route assessments (Connes–Consani–Moscovici's operator
-framework, de Branges / Hermite–Biehler theory, and a Toeplitz–Hankel
-decomposition of the certified matrix) all land on the same conclusion:
-the certified window statements are values of **one scalar**, and every
-classical theory names the remaining gap as the same thing.
+The CCM operator framework, de Branges / Hermite–Biehler constructions and
+matrix decompositions describe related parts of the problem. Their
+established identities and missing transfer hypotheses differ. A shared
+RH objective does not identify those hypotheses or their proof difficulty.
 
 ### In CCM's own notation (arXiv:2511.22755, Cor. 3.7–3.8)
 
@@ -202,19 +202,22 @@ the finite identities. See `evidence/ns53_nb_blocks/`.
 
 ### In Toeplitz–Hankel terms (`evidence/diag_circle_split/`)
 
-The certified matrix splits exactly as symbol + Toeplitz-structured
-commutator + Hankel reflection term. The reflection term alone makes the
-form negative by O(1); the Toeplitz commutator cancels it to 10^-75. The
-parity sectors are the pencils `T(φ) ± H(φ)` (Basor–Ehrhardt). A prime-free
-control of the assembled form is negative by O(1) at every window, so the sign
-is arithmetic (exact). On the manuscript's
-own symbol `β_a` (validated against the assembled matrix to 2e-7,
-`evidence/diag_true_symbol/`), the λ=3 ground state puts 49.9% of its Fourier
-mass on `{β_a < 0}`, with negative- and positive-level energies `∓0.0898`
-cancelling to `10^-38`, all below `ξ ≈ 10`; it never touches the deep
-negativity of `β_a` at high frequency. That is the scale the weighted
-concentration criterion has to control. (An earlier KMS claim here used the
-wrong object and is withdrawn.)
+The archived split contains Toeplitz-structured commutator and reflection
+terms, including divided differences. It has not been identified with the
+standard single-symbol parity pencils `T(phi) +/- H(phi)` under hypotheses
+that would license the corresponding asymptotic theorems. The previous
+unqualified identification is withdrawn, as required by the NS-48
+conclusions audit, MAJOR A1.
+
+The finite lambda=3 diagnostic records substantial cancellation between
+positive- and negative-symbol contributions and concentration at low
+frequencies. Its displayed tiny final energies are not complete-space
+interval certificates. A nonzero compactly supported state has nonzero
+Fourier tails: the previous claim of all mass below about 10 and no contact
+with high-frequency negative regions is false. Quantified complete tail
+control and a uniform signed estimate remain necessary. See the NS-31
+circle/symbol audit and `evidence/diag_true_symbol/` for the diagnostic
+scope. The earlier KMS interpretation also remains withdrawn.
 
 ### de Bruijn–Newman (NS-52: exact paired transport, open arithmetic route)
 
@@ -590,3 +593,22 @@ known onset. The resulting restriction on total relative contraction does
 not conflict with the finite-block preconditioner guarantees. The missing
 unconditional upper estimate remains missing. No RH assumption is used in
 the critical-zero construction; no statement about off-line zeros is inferred.
+
+## NS-84/85 continuation review (2026-09-23; manuscript remains v1.66)
+
+The full conclusion register and archived audit dispositions were reviewed.
+This pass repairs the residual Toeplitz/Fourier-support overclaims above,
+clarifies the cutoff as a lower barrier, and removes map arrows that could
+misrepresent QG/ZLD plus packets as a positivity proof. These inputs obstruct
+specified low-complexity minorants; CAE is the distinct signed-floor target.
+
+NS-85 tests the classical full logarithmic Mobius taper in the fixed q=2
+norm, including every physical tail. At N=256 its squared error is about
+0.352175; optimizing only the first coefficient reduces it to about
+0.045293, still far above the unrestricted optimum about 0.0000141424.
+Its exact interior residual is a logarithmically smoothed prime-counting
+discrepancy. No growing-interval mean-square bound is obtained. Finite
+underperformance neither disproves its possible asymptotic convergence nor
+imports the RH and inverse-derivative hypotheses of Bettin–Conrey–Farmer.
+See `evidence/ns85_taper_test/` and the versioned NS-84/85 review. No new
+manuscript version, cofinal upper estimate, G2 or RH claim is made.

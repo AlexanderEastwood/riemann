@@ -1,0 +1,20 @@
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],checks:endcons([label,answer],checks),if answer # true then error("Exact check failed",label,expr))$
+mob(n):=block([f:ifactors(n),answer],answer:(-1)^length(f),for entry in f do if entry[2]>1 then answer:0,answer)$
+check("target defect at one",1-1)$
+for m:2 thru 64 do block([total:0,prod:1,f:ifactors(m),expected],
+ for d:1 thru m do if mod(m,d)=0 then (total:total+mob(d),prod:prod*d^mob(d)),
+ expected:if length(f)=1 then 1/f[1][1] else 1,
+ check(concat("Mobius divisor sum ",m),total),
+ check(concat("Exponentiated Mangoldt identity ",m),prod-expected)
+)$
+check("prime-sum residual sign", -eta*t-P/L-(S*t-P)/L),eta=-S/L$
+check("physical change of measure", ((S*t-P)/L)^2/t^2-(S-P/t)^2/L^2)$
+check("one coefficient energy", F-2*d*g+d^2*G-(F-g^2/G+G*(d-g/G)^2))$
+check("optimal step derivative", subst(d=g/G,diff(F-2*d*g+d^2*G,d)))$
+check("exterior balancing", subst(d=-eta,F-2*d*g+d^2*G)-(F+2*eta*g+eta^2*G))$
+check("balanced exterior", eta+(-eta))$
+check("tail primitive", diff(-(u^2*log(t)^2+2*u*(u+v)*log(t)+2*u^2+2*u*v+v^2)/t,t)-(u*log(t)+v)^2/t^2)$
+check("tail remainder primitive", diff(-D^2/(3*t^3),t)-D^2/t^4)$
+print("PASS:",length(checks),"exact algebra checks; no asymptotic estimate.")$

@@ -1,0 +1,30 @@
+{
+  "classification": "finite replay checks; no cofinal estimate or independent human audit",
+  "status": "PASS",
+  "precision_matches": 64,
+  "same_problem_cutoff_matches": 6,
+  "source_sha256": "50d4d67639ef767dce708910ca858731d8511fcacd0906696e9d04134a665168",
+  "dependency_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+  "N256_one_atom_error_over_full_optimum": "[3202.6 +/- 0.0632]",
+  "inherited_optimum_path": "evidence/v160/ns71/preconditioner-384bits.json",
+  "inherited_optimum_sha256": "85619ce1a6336d09faddc2a53d3ea580d2a7b9cf04da840b8a19c6ea87ce1de5",
+  "independent_Gram_comparisons": [
+    {
+      "bits": 256,
+      "N": 16,
+      "full_gram_error": "[1.3908463222091728460069638400043785633648657768 +/- 3.09e-47]",
+      "one_atom_fitted": "[0.1758481713973055092969057210682987002970529687 +/- 3.21e-47]",
+      "exterior_balanced": "[0.3792838544913567131824459601907096396062823574 +/- 3.26e-47]"
+    },
+    {
+      "bits": 384,
+      "N": 16,
+      "full_gram_error": "[1.3908463222091728460069638400043785633648657768 +/- 3.09e-47]",
+      "one_atom_fitted": "[0.1758481713973055092969057210682987002970529687 +/- 3.21e-47]",
+      "exterior_balanced": "[0.3792838544913567131824459601907096396062823574 +/- 3.26e-47]"
+    }
+  ],
+  "tail_radius_reduced_by_more_than_three": true,
+  "all_errors_positive_and_controls_ordered": true,
+  "RH_proved": false
+}
