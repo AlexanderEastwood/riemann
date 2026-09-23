@@ -114,6 +114,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-66 | Test a weaker norm-growth target for the once-smoothed canonical interpolant: combine its exact exterior matching with Abel summation and zero evaluation | Codex, Continue solving toward RH | done (local v1.59 draft; subpolynomial bound open) | evidence/v159/ns66/: for each fixed r>=1, log(1+canonical error norm)/log N tends to beta_star-1/2. Complete support lower bound and Bochner-Abel upper bound prove the reformulation. A bounded cofinal subsequence suffices for RH; none is proved. 29 exact checks, including complete physical Abel identities and exterior interpolation. |
 
+| NS-67 | Test direct cancellation in the fixed once-smoothed canonical error, retaining the complete boundary/integral identity and seeking an independent growth estimate | Codex, Continue solving toward RH | claimed | Derive a useful independently bounded signed quantity, or identify exactly where the complete cancellation estimate still requires RH-level input. Keep finite diagnostics separate and do not infer a cofinal bound from a table. |
+
 ## Open continuation targets after NS-66 (not yet claimed)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
