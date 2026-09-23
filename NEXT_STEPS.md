@@ -97,6 +97,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 ## Lanes
 
+| NS-57 | Integrate and audit the finite prime-weight perturbation controls: both-parity negative tests, first-zero windows, bounded-floor stability, and fixed-direction sensitivity | Codex, Continue solving toward RH | claimed | Integrate the exact identities and proved implications from the September 22 standalone checkpoint with all hypotheses and limits, archive incremental evidence and Maxima checks, update the research map, and run the complete manuscript build and manifest verification. API, the original uniform floor, G2 and RH remain open. Branch: codex/ns57-prime-weight-rigidity. NS-56 is reserved by the separate research-rules worktree. |
+
 ```
 lane/concentration     the live mechanism (prop:v131-concentration)
 lane/bounded-floor     v1.36 reduction; floors certified through λ=8
