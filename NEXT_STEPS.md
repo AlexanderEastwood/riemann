@@ -134,6 +134,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-76 | Identify the complete continuous-dilation relaxation in Hardy space and derive its exact q=2 inner-factor distance, retaining the distinction from integer dilation closure | Codex, Continue solving toward RH | claimed | Use the classical Burnol/Beurling factorization with attribution, keep the full one-dimensional exterior tail, and test the derived distance against explicit finite Blaschke controls. No unknown zero data or unconditional integer/continuous closure equality is assumed. |
 
+| NS-77 | Bound the continuous q=2 inner-factor defect in terms of hypothetical off-critical zero tails, and determine the scope of finite-height information | Codex, Continue solving toward RH | claimed | Derive a complete bound from convergent positive zero sums using the NS-76 distance formula. Keep the bound conditional on the specified zero-height exclusion, distinguish continuous from integer approximation, and assert no new verified height or zero-free region. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
