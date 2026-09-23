@@ -120,6 +120,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-69 | Test the actual signed endpoint remainder for optimized smoothed NB residuals, rather than its absolute coefficient-mass budget | Codex, Continue solving toward RH | claimed | Compare the complete correlation with its two endpoint moments and exact remainder, including cross terms, at finite blocks and farther dilations. Decide whether the earlier failure was only a loose error allowance or also cancellation in the leading model; no asymptotic inference from the finite sample. |
 
+| NS-70 | Test whether the elementary q=2 Gram background admits a uniformly small arithmetic correction; repair any diagonal-regularity mismatch before judging the comparison | Codex, Continue solving toward RH | claimed | Keep complete Gram cross terms, distinguish all-coefficient comparisons from the optimized residual, and give an analytic proof or a complete two-precision witness for any failed comparison. State what the repair changes and what arithmetic input remains. |
+
 ## Open continuation targets after NS-66 (not yet claimed)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
