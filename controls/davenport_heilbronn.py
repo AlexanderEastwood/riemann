@@ -185,3 +185,9 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+def F_xi(z: Any) -> Any:
+    """Riemann side for side-by-side screens: F(z) = xi(1/2+z)/2, xi(s) = s(s-1)/2 pi^{-s/2} Gamma(s/2) zeta(s)."""
+    s = mp.mpf(1) / 2 + z
+    return s * (s - 1) / 4 * mp.power(mp.pi, -s / 2) * mp.gamma(s / 2) * mp.zeta(s)

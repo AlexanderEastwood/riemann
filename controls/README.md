@@ -41,6 +41,9 @@ screen(lambda F, phi: <bool: does the candidate hold for this F, phi?>, "my-cand
 
 `holds_on_known_false_analogue: true` means stop or add a hypothesis.
 
+`example_screen.py` runs one candidate on Riemann's xi (`F_xi`) and on the
+Davenport-Heilbronn pair side by side and prints whether it discriminates.
+
 Normalisation: `Lambda(s) = (5/pi)^((s+1)/2) Gamma((s+1)/2) f(s)`,
 `F(z) = Lambda(1/2 + z) = int_R phi(t) e^{zt} dt`,
 `phi(t) = 2 e^{3t/2} theta_f(e^{2t})` with

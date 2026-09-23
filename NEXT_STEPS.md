@@ -517,6 +517,17 @@ formula or larger table is not sufficient. A compatible lower numerator
 would still be needed. PR42/NS87, RH/G2 and both original-evidence gaps
 remain open. No theorem node or manuscript version was added.
 
+## Frozen input groups (proposal gate, NS-102)
+
+A group listed here takes no new task row unless the proposal names a new
+arithmetic input for it; propose a freeze or a thaw in a PR that cites the
+attempt count in the NS-99 dependency index. None frozen yet; the four
+families in that index are the candidates.
+
+| Group | Frozen since | Attempts | Thaw condition |
+|---|---|---|---|
+| (none) | | | |
+
 ## Lanes
 
 ```
