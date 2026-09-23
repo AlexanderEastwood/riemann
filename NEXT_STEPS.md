@@ -146,6 +146,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-82 | Retain the analytic logarithmic tail as a rank-two form to reduce the sufficient finite-comparator cutoff | Codex, Continue solving toward RH | done (v1.65; analytic tail retained) | Rank-two physical tail and full remainder yield projected condition <=9 and sufficient cutoff 8435244 for 512 total atoms. Scalar certificates only; comparator and iterations not run. No cofinal decay. |
 
+| NS-83 | Derive the critical-zero lower bound for fixed Mellin smoothing and test which cofinal relative-gain estimates remain possible | Codex, Continue solving toward RH | claimed | Adapt the complete Burnol dual-vector argument with full domain and tail control; distinguish asymptotic lower bounds from finite thresholds and RH upper bounds. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
