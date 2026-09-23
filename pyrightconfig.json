@@ -39,7 +39,8 @@
     "evidence/v165/ns82/*.py",
     "evidence/v166/*.py",
     "evidence/v166/ns83/*.py",
-    "evidence/ns85_taper_test/*.py"
+    "evidence/ns85_taper_test/*.py",
+    "evidence/ns86_optimized_arithmetic/*.py"
   ],
   "exclude": [
     "node_modules",

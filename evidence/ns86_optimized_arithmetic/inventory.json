@@ -1,0 +1,111 @@
+{
+  "classification": "incremental NS86 exact identities and finite-control evidence; manuscript v1.66 unchanged",
+  "base_commit": "253df4fcf705ed05510d71ee9cce35374e8ab785",
+  "files": [
+    {
+      "path": "evidence/ns86_optimized_arithmetic/README.md",
+      "sha256": "759d1687fd4846c1847d7be10c4d15ef28e9c534adf95d75718d2311bef4b1a9",
+      "size_bytes": 3679
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/argument.tex",
+      "sha256": "2d42567894aea0fc07e185387f3889f6aebbe265e9ce55bbd745185193783972",
+      "size_bytes": 9723
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/certify_newton.py",
+      "sha256": "49ca23a07b9b8c92c25f7edb6921b1d4f555f9d30ef7bb8ac0bc7afebd45c790",
+      "size_bytes": 7387
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/certify_physical.py",
+      "sha256": "fbe63c49353a2025df80623ad3abddb27148d17345338c83b25afbdf2975eb9c",
+      "size_bytes": 8101
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/exact-checks-output.txt",
+      "sha256": "10ed61a8d363a96ae5c8fe87c57f1eca3a368f6d0d8552377936b0fbcebf1672",
+      "size_bytes": 3454
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/exact-checks.mac",
+      "sha256": "9677940bcec4ef45a16b038fa35bfd337db0ec30c6367e9808a7edb05ec215cd",
+      "size_bytes": 2858
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/literature-inputs.json",
+      "sha256": "d56b959eee81d8c8603e3b5bc9df87b383935887243f1133783b17747d3e7691",
+      "size_bytes": 525
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/newton-256bits.json",
+      "sha256": "1897fe1ef383f85cd1819ed7894160fd31f49407a170403f18e8237e6be25941",
+      "size_bytes": 68474
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/newton-384bits.json",
+      "sha256": "a0b844005cb1efb059e3e9817695434e7146c57ea0b619e9526ec77ff5964028",
+      "size_bytes": 68472
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/newton-cutoff-384bits.json",
+      "sha256": "7378018492469e45e7df7d6d8d9614dbdd970ff802e3acc1557384b91733723d",
+      "size_bytes": 49909
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/physical-256bits.json",
+      "sha256": "5d1ca663e75ff3713b57efd2af7719a10172413eec69f461c46fd1edecc8ce50",
+      "size_bytes": 17272
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/physical-384bits.json",
+      "sha256": "7b50b6efaddfc64e85e3522955597322b3bcac2755657e43626506a05dc89044",
+      "size_bytes": 17272
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/physical-cutoff-384bits.json",
+      "sha256": "b9bc52c8425690b5af21b10ad88e8700747f5ade4f4d9c123d9156bfbf0bb416",
+      "size_bytes": 6217
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/replay-validation.json",
+      "sha256": "f37a67a8159b099d4da1df199f77905e72dd869af27b7204f5c1bc8df74e9d75",
+      "size_bytes": 756
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/requirements-replay.txt",
+      "sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+      "size_bytes": 20
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/runtime-provenance.json",
+      "sha256": "cf250b08595ea57213566fd43aec5fc9cd6e1ec196e0a93070d6b1c5de8b9a4c",
+      "size_bytes": 342
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/self-review.json",
+      "sha256": "104f25916fab1d17aa8ef7a54070723332247b42aa6780f67ef3671b23dac147",
+      "size_bytes": 1527
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/turn-review.json",
+      "sha256": "05de3f6f76f351794a8677cfb594556f0ab9212c0f25361da98e6fd310de4a86",
+      "size_bytes": 35110
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/validation.json",
+      "sha256": "e3504a089960130bdb26c2b5a3241f51ae5e1ccd0a22f3569d2b1a02eafeee91",
+      "size_bytes": 700
+    },
+    {
+      "path": "evidence/ns86_optimized_arithmetic/verify_replays.py",
+      "sha256": "54c8fd69199555279ca4436adc157013c17d8ad9e1c89fbc56337e8280cc57ce",
+      "size_bytes": 5798
+    },
+    {
+      "path": "audits/optimized-arithmetic-2026-09-23-v1.html",
+      "sha256": "1a70870c987d14848c24de3a9b8adf782f28ca6fb273619fbdd0c19072bf8129",
+      "size_bytes": 6972
+    }
+  ]
+}

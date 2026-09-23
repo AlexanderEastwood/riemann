@@ -28,7 +28,7 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 
 | | |
 |---|---|
-| Only positivity result | `W_4 >= 0`, both parity sectors — evidence restored and verified |
+| Largest completely certified positive window | `W_4 >= 0`, both parity sectors — evidence restored and verified; lambda=3 is also certified |
 | Complete ground at lambda=4 | Simple and even; `0<mu0<2.454e-75`, `mu1>1e-73`; its entire Fourier transform has only real zeros ([certificate](evidence/v140/)) |
 | Complete-ground first zero | First positive zero simple and within 8.752082e-33 of gamma_1, at 1024/1280 bits ([v1.43](evidence/v143/)); no discrepancy sign |
 | CCM finite benchmark | Eight local lambda=3, N=120 root discrepancies certified at 768/1024 bits; broader reproduction remains diagnostic ([v1.41](evidence/v141/)) |
@@ -39,6 +39,24 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |
+
+## September 23 optimized arithmetic test (NS-86)
+
+The optimized residual has an exact integral-versus-lattice-sum identity,
+with a complete observation-tail bound. Its signed arithmetic lower estimate
+remains open; the identity alone gives no new convergence theorem.
+
+A concrete correction squares the divisor defect by Dirichlet convolution
+through N^2. Its full unit step raises squared error by factors 39.60 and
+29.55 at N=4 and N=16; N=8 improves. At N=16, optimally damping the direction
+and refitting all old coefficients captures 27.31% of available gain. Those
+modifications generally sacrifice the exact defect-square identity.
+The complete new tail beyond t=256 alone exceeds 21 times the old error.
+This rejects finite unit-step descent at the stated sizes, not eventual
+convergence or every arithmetic construction. Manuscript remains v1.66.
+
+[Readable report](audits/optimized-arithmetic-2026-09-23-v1.html) ·
+[Complete argument, Maxima worksheet and certificates](evidence/ns86_optimized_arithmetic/).
 
 ## September 23 continuation review (NS-84/85)
 
@@ -424,6 +442,8 @@ graph LR
   nbcompressedtail["Finite physical comparator with an exact rank-two tail<br/><small>prop:ns82-tail-compression</small><br/><small>&#128193; evidence/v165/ns82</small>"]
   nbcriticalfloor["Critical-zero logarithmic lower bound at every fixed smoothing order<br/><small>prop:ns83-log-floor</small><br/><small>&#128193; evidence/v166/ns83</small>"]
   nbuniformrelativecontraction["Fixed-fraction contraction of the full error at every doubling<br/><small>eq:ns83-gain-budget</small><br/><small>&#128193; evidence/v166/ns83</small>"]
+  nboptimizedpotential["Optimized arithmetic potential and complete observation tails<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
+  nbconvolutioncontrol["Divisor-convolution correction from N to N squared: finite control<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -515,6 +535,8 @@ graph LR
   nbfiniteconditioning --> nbcompressedtail
   nbsmoothedbudget --> nbcriticalfloor
   nbcriticalfloor --> nbuniformrelativecontraction
+  nbarithmeticsampling --> nboptimizedpotential
+  nboptimizedpotential --> nbconvolutioncontrol
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -605,9 +627,11 @@ graph LR
   click nbcompressedtail "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v165/ns82/" "evidence: evidence/v165/ns82" _blank
   click nbcriticalfloor "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v166/ns83/" "evidence: evidence/v166/ns83" _blank
   click nbuniformrelativecontraction "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v166/ns83/" "evidence: evidence/v166/ns83" _blank
+  click nboptimizedpotential "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns86_optimized_arithmetic/" "evidence: evidence/ns86_optimized_arithmetic" _blank
+  click nbconvolutioncontrol "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns86_optimized_arithmetic/" "evidence: evidence/ns86_optimized_arithmetic" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;

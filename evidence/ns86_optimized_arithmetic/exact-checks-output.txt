@@ -1,0 +1,71 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/ns86_optimized_arithmetic/exact-checks.mac")
+display2d:false
+logexpand:all
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+P:(u*log(t)+2*u+v)/t
+J:(u*log(t)+u+v)/t
+check("Potential derivative",t*diff(P,t)+J)
+check("Potential differential equation",diff(t*diff(P,t),t)-(u*log(t)+v)/t^2)
+check("Potential remainder integral",diff(-D/(2*t^2),t)-D/t^3)
+check("Quadrature derivative-tail integral",diff(-D/(4*t^2),t)-D/(2*t^3))
+check("Tail log norm primitive",
+      diff(-(log(t/T)^2+2*log(t/T)+2)/t,t)-log(t/T)^2/t^2)
+check("Tail log norm endpoint",subst(T,t,(log(t/T)^2+2*log(t/T)+2)/t)-2/T)
+check("Finite tail log-moment cancellation",
+      (k*aa-k*(log(n)+log(k))*jj+k*jj)-(k*aa-(k*log(n)+ff)*jj)
+                                      +(-(k*(1-log(k))+ff))*jj)
+L:log(1/t)
+patch:L^2/(2*(1-s))+L/s+1/s^2
+check("Evaluator patch differential equation",
+      diff(t*diff(patch,t),t)-1/((1-s)*t))
+check("Evaluator power differential equation",
+      diff(t*diff(t^-s/s^2,t),t)-t^(-s-1))
+check("Evaluator patch value",subst(1,t,patch)-1/s^2)
+check("Evaluator patch derivative",subst(1,t,diff(patch,t))+1/s)
+check("Evaluator patch integral equals power integral",
+      1/(1-s)+1/s+1/s^2+(-1)/(s^2*(1-s)))
+check("Optimal scalar gain",subst(h/b,z,E-2*z*h+z^2*b)-(E-h^2/b))
+check("Projected scalar gain",subst(h/bp,z,E-2*z*h+z^2*bp)-(E-h^2/bp))
+check("Energy-gain quadratic",E-2*h+b-(E-h^2/b)+(-b)*(1-h/b)^2)
+cc(k):=if k <= nb then concat(c,k) else 0
+qq(k):=block([ans:2*cc(k)],
+   for i thru nb do
+       (for j thru nb do if mod(k,i*j) = 0 then ans:ans+cc(i)*cc(j)),ans)
+dd(k):=block([ans:if k = 1 then 1 else 0],
+   for j thru k do if mod(k,j) = 0 then ans:ans+cc(j),ans)
+HH(k):=sum(1/j,j,1,k)
+for nb from 2 thru 4 do
+    block([mm:nb^2,eta:0,sm:0,lm:0,eta2:0,sm2:0,lm2:0],
+          for k thru mm do
+              block([left:if k = 1 then 1 else 0,right:0],
+                    for d thru k do
+                        if mod(k,d) = 0
+                            then (left:left+qq(d),right:right+dd(d)*dd(k/d)),
+                    check(sconcat("Convolution square N=",nb," m=",k),
+                          left-right),eta:eta+qq(k)/k,sm:sm+qq(k),
+                    lm:lm+qq(k)*log(k)),
+          for i thru nb do
+              (eta2:eta2+(2*cc(i))/i,sm2:sm2+2*cc(i),lm2:lm2+2*cc(i)*log(i)),
+          for i thru nb do
+              (for j thru nb do
+                   block([kk:floor(mm/(i*j))],
+                         eta2:eta2+(cc(i)*cc(j)*HH(kk))/(i*j),
+                         sm2:sm2+cc(i)*cc(j)*kk,
+                         lm2:lm2+cc(i)*cc(j)*(kk*log(i*j)+log(kk!)))),
+          check(sconcat("Signed exterior normalization N=",nb),eta-eta2),
+          check(sconcat("Signed tail slope N=",nb),sm-sm2),
+          check(sconcat("Signed tail constant N=",nb),radcan(lm-lm2)))
+mutab:[1,-1,-1,0,-1,1,-1,0,0,1,-1,0,-1,1,1,0]
+cc(k):=if k <= nb then -mutab[k] else 0
+for nb from 2 thru 4 do
+    (for k thru nb^2 do
+         check(sconcat("Sharp canonical control N=",nb," m=",k),
+               qq(k)+mutab[k]))
+print("PASS:",length(checks),
+      "exact checks; no asymptotic arithmetic estimate asserted.")
+PASS: 82 exact checks; no asymptotic arithmetic estimate asserted. 
+"/private/tmp/riemann-ns86/evidence/ns86_optimized_arithmetic/exact-checks.mac"

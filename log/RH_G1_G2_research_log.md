@@ -1,5 +1,23 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## 2026-09-23: NS-86 optimized arithmetic potential and convolution correction
+
+The optimized residual has an exact integral-versus-lattice-sum identity,
+with a complete observation-tail bound. Its signed arithmetic lower estimate
+remains open; the identity alone gives no new convergence theorem.
+
+A concrete correction squares the divisor defect by Dirichlet convolution
+through N^2. Its full unit step raises squared error by factors 39.60 and
+29.55 at N=4 and N=16; N=8 improves. At N=16, optimally damping the direction
+and refitting all old coefficients captures 27.31% of available gain. Those
+modifications generally sacrifice the exact defect-square identity.
+The complete new tail beyond t=256 alone exceeds 21 times the old error.
+This rejects finite unit-step descent at the stated sizes, not eventual
+convergence or every arithmetic construction. Manuscript remains v1.66.
+
+[Readable report](../audits/optimized-arithmetic-2026-09-23-v1.html) ·
+[Complete argument, Maxima worksheet and certificates](../evidence/ns86_optimized_arithmetic/).
+
 ## 2026-09-23: NS-84 conclusions review and NS-85 full taper test
 
 No manuscript version bump. Read all 91 registered conclusions and current

@@ -152,6 +152,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-85 | Test complete logarithmically tapered Mobius approximants and identify which arithmetic estimate a slower-rate candidate actually requires | Codex, Continue solving toward RH | done (finite control; arithmetic rate open) | Retain the full physical norm and tails; distinguish fixed coefficients from optimized fits, diagnostics from certificates, and finite behavior from an asymptotic bound. Stop rather than claim a new rate from a finite table. |
 
+| NS-86 | Derive complete optimized-residual optimality in arithmetic potential coordinates; test a signed identity for aggregate gain and retain the exact remainder | Codex, Continue solving toward RH | done (finite control; cofinal input open) | Exact optimized Muntz quadrature and full observation-tail bound; raw convolution-square correction fails the unit-step test at N=4,16. At N=16, damping plus old-space refitting captures 27.31% of full N-to-N^2 gain. All tails retained; no asymptotic estimate or manuscript version bump. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration

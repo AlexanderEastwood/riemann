@@ -1,0 +1,311 @@
+{
+  "classification": "independent complete physical-cell and arithmetic-potential certificates",
+  "precision_bits": 256,
+  "cell_stop": 65536,
+  "input_file": "newton-256bits.json",
+  "input_sha256": "1897fe1ef383f85cd1819ed7894160fd31f49407a170403f18e8237e6be25941",
+  "source_sha256": "fbe63c49353a2025df80623ad3abddb27148d17345338c83b25afbdf2975eb9c",
+  "dependencies": {
+    "certify_smoothed.py": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+    "certify_newton.py": "49ca23a07b9b8c92c25f7edb6921b1d4f555f9d30ef7bb8ac0bc7afebd45c790"
+  },
+  "rows": [
+    {
+      "N": 4,
+      "M": 16,
+      "old": {
+        "values": {
+          "eta": "[-0.0025250106883974166978568649102213751747982 +/- 5.54e-44]",
+          "exterior_energy": "[6.3756789765211961635144412166977201793714e-6 +/- 5.44e-47]",
+          "interior_energy_1_to_split": "[0.001673455434892954769097839779970211257325 +/- 3.68e-43]",
+          "complete_energy_after_split": "[0.000449863 +/- 3.48e-10]",
+          "complete_energy": "[0.002129694 +/- 2.34e-10]",
+          "physical_tail_radius": "[2.238365657276096710302504703692767155751977e-10 +/- 9.31e-53]",
+          "tail_slope": "[0.0500967966434582939020030169403930326676288 +/- 1.37e-44]",
+          "tail_constant": "[-0.1210870535172508538692968626907452867437447 +/- 5.02e-44]",
+          "Stirling_remainder_constant": "[1.7089218300253093500297859760059863880711737 +/- 1.57e-44]",
+          "P_at_one": "[0.00212969 +/- 6.30e-9]",
+          "P_at_one_minus_energy": "[+/- 2.53e-9]"
+        },
+        "potential_observations": {
+          "1": {
+            "finite_quadrature": "[-4.08e-6 +/- 1.88e-9]",
+            "analytic_main_tail": "[4.07941101792579527389002179271354269453695e-6 +/- 1.81e-48]",
+            "complete_quadrature": "[+/- 1.39e-9]",
+            "complete_Gram_pairing": "[+/- 4.69e-44]",
+            "universal_tail_bound": "[0.0003605360 +/- 2.15e-11]",
+            "physical_tail_observation_bound": "[5.257e-6 +/- 6.13e-10]"
+          },
+          "2": {
+            "finite_quadrature": "[-4.08e-6 +/- 1.82e-9]",
+            "analytic_main_tail": "[4.07940161542896521810345770604141944036755e-6 +/- 2.28e-48]",
+            "complete_quadrature": "[+/- 1.32e-9]",
+            "complete_Gram_pairing": "[+/- 3.44e-44]",
+            "universal_tail_bound": "[0.0003605360 +/- 2.15e-11]",
+            "physical_tail_observation_bound": "[5.257e-6 +/- 5.75e-10]"
+          },
+          "4": {
+            "finite_quadrature": "[-4.08e-6 +/- 1.77e-9]",
+            "analytic_main_tail": "[4.07938281043531350903118158484305191281253e-6 +/- 5.67e-48]",
+            "complete_quadrature": "[+/- 1.25e-9]",
+            "complete_Gram_pairing": "[+/- 2.41e-44]",
+            "universal_tail_bound": "[0.0003605360 +/- 2.15e-11]",
+            "physical_tail_observation_bound": "[5.257e-6 +/- 4.99e-10]"
+          },
+          "8": {
+            "finite_quadrature": "[0.00331378 +/- 1.89e-9]",
+            "analytic_main_tail": "[4.07934520044807731089297588293383960518824e-6 +/- 3.27e-48]",
+            "complete_quadrature": "[0.00331786 +/- 2.64e-9]",
+            "complete_Gram_pairing": "[0.0033178585405065174906908712876469699480071 +/- 4.77e-44]",
+            "universal_tail_bound": "[0.0003605360 +/- 2.15e-11]",
+            "physical_tail_observation_bound": "[5.257e-6 +/- 3.48e-10]"
+          },
+          "16": {
+            "finite_quadrature": "[0.00477235 +/- 4.91e-9]",
+            "analytic_main_tail": "[4.07926998047414267465230075018504182965192e-6 +/- 4.12e-48]",
+            "complete_quadrature": "[0.00477643 +/- 5.74e-9]",
+            "complete_Gram_pairing": "[0.0047764253765080305689710406140386991618225 +/- 3.55e-44]",
+            "universal_tail_bound": "[0.0003605360 +/- 2.15e-11]",
+            "physical_tail_observation_bound": "[5.257e-6 +/- 2.80e-10]"
+          },
+          "32": {
+            "finite_quadrature": "[0.00469082 +/- 3.03e-9]",
+            "analytic_main_tail": "[4.07911954053057548197568707962485787409020e-6 +/- 4.51e-48]",
+            "complete_quadrature": "[0.00469490 +/- 4.01e-9]",
+            "complete_Gram_pairing": "[0.00469489703995032635033985848834996842844933 +/- 9.11e-45]",
+            "universal_tail_bound": "[0.0003605360 +/- 2.15e-11]",
+            "physical_tail_observation_bound": "[5.258e-6 +/- 4.41e-10]"
+          },
+          "64": {
+            "finite_quadrature": "[0.00387240 +/- 5.21e-9]",
+            "analytic_main_tail": "[4.07881866067785771966345311279588770981037e-6 +/- 4.44e-48]",
+            "complete_quadrature": "[0.00387648 +/- 4.13e-9]",
+            "complete_Gram_pairing": "[0.00387648314874932868185539818374274788357314 +/- 6.48e-45]",
+            "universal_tail_bound": "[0.0003605360 +/- 2.15e-11]",
+            "physical_tail_observation_bound": "[5.259e-6 +/- 2.31e-10]"
+          },
+          "256": {
+            "finite_quadrature": "[0.00201160 +/- 5.24e-9]",
+            "analytic_main_tail": "[4.07701338459019278759158029161119299373587e-6 +/- 4.91e-48]",
+            "complete_quadrature": "[0.00201567 +/- 3.35e-9]",
+            "complete_Gram_pairing": "[0.00201567250847748006777516085927366941403671 +/- 1.38e-45]",
+            "universal_tail_bound": "[0.0003605360 +/- 2.15e-11]",
+            "physical_tail_observation_bound": "[5.266e-6 +/- 3.55e-10]"
+          }
+        }
+      },
+      "new": {
+        "values": {
+          "eta": "[0.034418751110078502284050794637383530269845 +/- 1.04e-43]",
+          "exterior_energy": "[0.0011846504279775301332526278090522540515880 +/- 1.02e-44]",
+          "interior_energy_1_to_split": "[0.01864680809486820038428370680872961541436 +/- 1.69e-42]",
+          "complete_energy_after_split": "[0.0645111 +/- 5.43e-8]",
+          "complete_energy": "[0.0843426 +/- 2.75e-8]",
+          "physical_tail_radius": "[2.01082972404158491867042895118835585051233e-8 +/- 4.80e-50]",
+          "tail_slope": "[-0.362344361577034226114519113374877895212974 +/- 5.55e-43]",
+          "tail_constant": "[0.421365421949555960246559288388528833061927 +/- 1.78e-43]",
+          "Stirling_remainder_constant": "[18.810690720183185992366329702568053610836176 +/- 7.74e-43]"
+        },
+        "potential_observations": {}
+      }
+    },
+    {
+      "N": 8,
+      "M": 64,
+      "old": {
+        "values": {
+          "eta": "[9.5475352001490932105888039176391218258e-6 +/- 5.18e-44]",
+          "exterior_energy": "[9.1155428398085985352377465044558510491e-11 +/- 8.34e-49]",
+          "interior_energy_1_to_split": "[9.602646727779561825240077428885596708e-5 +/- 5.33e-42]",
+          "complete_energy_after_split": "[1.3082e-5 +/- 4.55e-10]",
+          "complete_energy": "[0.000109109 +/- 1.60e-10]",
+          "physical_tail_radius": "[8.654965224194717596725805221427736319381e-11 +/- 2.31e-51]",
+          "tail_slope": "[0.0126791837902549550981909717357043210476278 +/- 9.15e-44]",
+          "tail_constant": "[-0.0394939976485947913784482111662932916152654 +/- 2.45e-44]",
+          "Stirling_remainder_constant": "[2.811128484379119028163706328196643488943581 +/- 4.36e-43]",
+          "P_at_one": "[0.00010911 +/- 4.87e-9]",
+          "P_at_one_minus_energy": "[+/- 3.88e-9]"
+        },
+        "potential_observations": {
+          "1": {
+            "finite_quadrature": "[-9.6e-7 +/- 7.09e-9]",
+            "analytic_main_tail": "[9.649713779842397134098430351640567753932e-7 +/- 5.08e-47]",
+            "complete_quadrature": "[+/- 2.28e-9]",
+            "complete_Gram_pairing": "[+/- 2.62e-43]",
+            "universal_tail_bound": "[8.16056e-5 +/- 7.19e-11]",
+            "physical_tail_observation_bound": "[1.235e-6 +/- 7.50e-10]"
+          },
+          "2": {
+            "finite_quadrature": "[-9.6e-7 +/- 6.98e-9]",
+            "analytic_main_tail": "[9.6496916993805026034574560797241289040482e-7 +/- 7.56e-48]",
+            "complete_quadrature": "[+/- 2.17e-9]",
+            "complete_Gram_pairing": "[+/- 1.97e-43]",
+            "universal_tail_bound": "[8.16056e-5 +/- 7.19e-11]",
+            "physical_tail_observation_bound": "[1.235e-6 +/- 7.58e-10]"
+          },
+          "4": {
+            "finite_quadrature": "[-9.6e-7 +/- 6.86e-9]",
+            "analytic_main_tail": "[9.649647538456733129668252561398120870377e-7 +/- 1.29e-47]",
+            "complete_quadrature": "[+/- 2.06e-9]",
+            "complete_Gram_pairing": "[+/- 1.43e-43]",
+            "universal_tail_bound": "[8.16056e-5 +/- 7.19e-11]",
+            "physical_tail_observation_bound": "[1.236e-6 +/- 7.59e-10]"
+          },
+          "8": {
+            "finite_quadrature": "[-9.6e-7 +/- 6.74e-9]",
+            "analytic_main_tail": "[9.6495592166093508820307154106600971736661e-7 +/- 7.72e-48]",
+            "complete_quadrature": "[+/- 1.94e-9]",
+            "complete_Gram_pairing": "[+/- 9.92e-44]",
+            "universal_tail_bound": "[8.16056e-5 +/- 7.19e-11]",
+            "physical_tail_observation_bound": "[1.236e-6 +/- 7.24e-10]"
+          },
+          "16": {
+            "finite_quadrature": "[0.00041001 +/- 5.92e-9]",
+            "analytic_main_tail": "[9.649382572915839986247710018098007048605e-7 +/- 4.54e-47]",
+            "complete_quadrature": "[0.00041097 +/- 2.52e-9]",
+            "complete_Gram_pairing": "[0.0004109706883311118310324714254383634535945 +/- 6.10e-44]",
+            "universal_tail_bound": "[8.16056e-5 +/- 7.19e-11]",
+            "physical_tail_observation_bound": "[1.236e-6 +/- 6.53e-10]"
+          },
+          "32": {
+            "finite_quadrature": "[0.00059925 +/- 4.92e-9]",
+            "analytic_main_tail": "[9.649029285538846989501765066000768271631e-7 +/- 2.50e-47]",
+            "complete_quadrature": "[0.00060021 +/- 3.25e-9]",
+            "complete_Gram_pairing": "[0.0006002115336467650137467964358680669130761 +/- 7.28e-44]",
+            "universal_tail_bound": "[8.16056e-5 +/- 7.19e-11]",
+            "physical_tail_observation_bound": "[1.236e-6 +/- 5.11e-10]"
+          },
+          "64": {
+            "finite_quadrature": "[0.00059032 +/- 2.31e-9]",
+            "analytic_main_tail": "[9.6483227108650913188429024185419639726592e-7 +/- 7.50e-48]",
+            "complete_quadrature": "[0.00059129 +/- 5.90e-9]",
+            "complete_Gram_pairing": "[0.0005912856988219580568286583244865480420137 +/- 2.98e-44]",
+            "universal_tail_bound": "[8.16056e-5 +/- 7.19e-11]",
+            "physical_tail_observation_bound": "[1.236e-6 +/- 3.10e-10]"
+          },
+          "256": {
+            "finite_quadrature": "[0.00036383 +/- 4.27e-9]",
+            "analytic_main_tail": "[9.6440832698827765439146307846199450311827e-7 +/- 7.87e-48]",
+            "complete_quadrature": "[0.00036479 +/- 2.73e-9]",
+            "complete_Gram_pairing": "[0.00036479135014398026285409525134796230351201 +/- 9.14e-45]",
+            "universal_tail_bound": "[8.16056e-5 +/- 7.19e-11]",
+            "physical_tail_observation_bound": "[1.238e-6 +/- 5.20e-10]"
+          }
+        }
+      },
+      "new": {
+        "values": {
+          "eta": "[1.651985387705486792161164690974490529e-5 +/- 4.07e-42]",
+          "exterior_energy": "[2.729055721192447512241212050694308674e-10 +/- 3.65e-47]",
+          "interior_energy_1_to_split": "[9.8754849596750155913691319153723734e-6 +/- 2.05e-41]",
+          "complete_energy_after_split": "[4.227e-5 +/- 5.64e-9]",
+          "complete_energy": "[5.215e-5 +/- 4.25e-9]",
+          "physical_tail_radius": "[2.81946481834555871350076158482816347488e-9 +/- 4.30e-48]",
+          "tail_slope": "[-0.00542006649817324691482254722553991123769 +/- 7.09e-42]",
+          "tail_constant": "[0.01835418332010749470836720700398430290138 +/- 8.15e-42]",
+          "Stirling_remainder_constant": "[216.4962020487429964138939845224842982378781 +/- 7.82e-41]"
+        },
+        "potential_observations": {}
+      }
+    },
+    {
+      "N": 16,
+      "M": 256,
+      "old": {
+        "values": {
+          "eta": "[6.7578479601541846533359797193260613407e-5 +/- 5.31e-43]",
+          "exterior_energy": "[4.5668509052560074490043488389022328655e-9 +/- 8.67e-47]",
+          "interior_energy_1_to_split": "[3.17277498703885452880452640559108497e-5 +/- 8.54e-41]",
+          "complete_energy_after_split": "[2.154e-7 +/- 9.13e-11]",
+          "complete_energy": "[3.19477e-5 +/- 7.45e-11]",
+          "physical_tail_radius": "[5.21689399667906342885714327039955448534e-11 +/- 6.29e-50]",
+          "tail_slope": "[0.00258586679862979311928764017714731663710 +/- 4.28e-42]",
+          "tail_constant": "[-0.01009225760527061078556485093403868670845 +/- 2.69e-42]",
+          "Stirling_remainder_constant": "[9.08062795783382617484973685379197929229492 +/- 7.94e-42]",
+          "P_at_one": "[3.19e-5 +/- 6.00e-8]",
+          "P_at_one_minus_energy": "[+/- 1.24e-8]"
+        },
+        "potential_observations": {
+          "1": {
+            "finite_quadrature": "[-1.8e-7 +/- 8.09e-9]",
+            "analytic_main_tail": "[1.81256123670383468987996520241480465703e-7 +/- 5.34e-46]",
+            "complete_quadrature": "[+/- 7.37e-9]",
+            "complete_Gram_pairing": "[+/- 2.57e-42]",
+            "universal_tail_bound": "[4.41580e-5 +/- 6.49e-11]",
+            "physical_tail_observation_bound": "[2.3e-7 +/- 9.98e-10]"
+          },
+          "2": {
+            "finite_quadrature": "[-1.8e-7 +/- 7.73e-9]",
+            "analytic_main_tail": "[1.81255712883598542853767645044868408412e-7 +/- 3.28e-46]",
+            "complete_quadrature": "[+/- 7.00e-9]",
+            "complete_Gram_pairing": "[+/- 2.03e-42]",
+            "universal_tail_bound": "[4.41580e-5 +/- 6.49e-11]",
+            "physical_tail_observation_bound": "[2.3e-7 +/- 9.99e-10]"
+          },
+          "4": {
+            "finite_quadrature": "[-1.8e-7 +/- 7.36e-9]",
+            "analytic_main_tail": "[1.81254891310029051403197239565468245708e-7 +/- 6.17e-46]",
+            "complete_quadrature": "[+/- 6.63e-9]",
+            "complete_Gram_pairing": "[+/- 1.55e-42]",
+            "universal_tail_bound": "[4.41580e-5 +/- 6.49e-11]",
+            "physical_tail_observation_bound": "[2.3e-7 +/- 1.01e-9]"
+          },
+          "8": {
+            "finite_quadrature": "[-1.8e-7 +/- 6.99e-9]",
+            "analytic_main_tail": "[1.81253248162892955045135229247053300590e-7 +/- 1.65e-46]",
+            "complete_quadrature": "[+/- 6.27e-9]",
+            "complete_Gram_pairing": "[+/- 1.15e-42]",
+            "universal_tail_bound": "[4.41580e-5 +/- 6.49e-11]",
+            "physical_tail_observation_bound": "[2.3e-7 +/- 1.01e-9]"
+          },
+          "16": {
+            "finite_quadrature": "[-1.8e-7 +/- 6.62e-9]",
+            "analytic_main_tail": "[1.81249961868643854673002936325199214797e-7 +/- 1.97e-46]",
+            "complete_quadrature": "[+/- 5.90e-9]",
+            "complete_Gram_pairing": "[+/- 8.14e-43]",
+            "universal_tail_bound": "[4.41580e-5 +/- 6.49e-11]",
+            "physical_tail_observation_bound": "[2.3e-7 +/- 1.03e-9]"
+          },
+          "32": {
+            "finite_quadrature": "[3.528e-5 +/- 7.55e-9]",
+            "analytic_main_tail": "[1.81243389280330392660234500068874809134e-7 +/- 2.11e-46]",
+            "complete_quadrature": "[3.546e-5 +/- 9.32e-9]",
+            "complete_Gram_pairing": "[3.5463786104804853031006118546303376468e-5 +/- 5.40e-43]",
+            "universal_tail_bound": "[4.41580e-5 +/- 6.49e-11]",
+            "physical_tail_observation_bound": "[2.3e-7 +/- 1.05e-9]"
+          },
+          "64": {
+            "finite_quadrature": "[5.432e-5 +/- 6.63e-9]",
+            "analytic_main_tail": "[1.81230244105181377832661946673858932508e-7 +/- 3.75e-46]",
+            "complete_quadrature": "[5.450e-5 +/- 5.93e-9]",
+            "complete_Gram_pairing": "[5.4499237082989111206848136090690946545e-5 +/- 7.41e-43]",
+            "universal_tail_bound": "[4.41580e-5 +/- 6.49e-11]",
+            "physical_tail_observation_bound": "[2.3e-7 +/- 1.11e-9]"
+          },
+          "256": {
+            "finite_quadrature": "[4.674e-5 +/- 5.68e-9]",
+            "analytic_main_tail": "[1.81151373184342398391178587633087342022e-7 +/- 4.43e-46]",
+            "complete_quadrature": "[4.692e-5 +/- 7.36e-9]",
+            "complete_Gram_pairing": "[4.6922921963616259696403259494669375239e-5 +/- 5.81e-43]",
+            "universal_tail_bound": "[4.41580e-5 +/- 6.49e-11]",
+            "physical_tail_observation_bound": "[2.3e-7 +/- 1.43e-9]"
+          }
+        }
+      },
+      "new": {
+        "values": {
+          "eta": "[0.0009440444141303863185572365138833346404 +/- 1.01e-41]",
+          "exterior_energy": "[8.912198558507843474089679324837001888e-7 +/- 5.50e-44]",
+          "interior_energy_1_to_split": "[0.00024288068937503058974083227075047915 +/- 4.05e-39]",
+          "complete_energy_after_split": "[0.00070 +/- 1.26e-6]",
+          "complete_energy": "[0.00094 +/- 5.03e-6]",
+          "physical_tail_radius": "[9.8336225082456315279830069839031865832e-7 +/- 2.86e-45]",
+          "tail_slope": "[-0.146313323763149433350091423556175196130 +/- 3.61e-40]",
+          "tail_constant": "[0.567523244655831126902458752358988847810 +/- 8.28e-40]",
+          "Stirling_remainder_constant": "[2989.5071829743843925089519889952059304778 +/- 1.95e-38]"
+        },
+        "potential_observations": {}
+      }
+    }
+  ]
+}
