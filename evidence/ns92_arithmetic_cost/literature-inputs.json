@@ -1,0 +1,24 @@
+{
+  "classification": "Source check and prior-art attribution; no new external estimate imported",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1211.5191",
+      "authors": "Bettin, Conrey, Farmer",
+      "reviewed": "Abstract",
+      "finding": "The stated optimal logarithmic-taper result assumes RH and a bound on inverse zeta-derivative moments. Neither assumption is imported."
+    },
+    {
+      "url": "https://arxiv.org/abs/1806.05070",
+      "authors": "Maier, Rassias",
+      "reviewed": "Abstract",
+      "finding": "Concerns Mobius sums related to the imaginary part of the Estermann zeta function. No theorem is transferred to the present suffix-square budget from the abstract."
+    }
+  ],
+  "local_prior_work": [
+    "NS61 strong average and complete generator norm",
+    "NS73 Mobius direction and triangular suffix conversion",
+    "NS89 original optimized coefficient balls",
+    "NS91 complete lower numerator"
+  ],
+  "external_theorems_used": []
+}

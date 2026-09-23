@@ -1,0 +1,31 @@
+{
+  "classification": "Certified finite scalar cost upper budgets; no cofinal cost or gain estimate",
+  "precision_bits": 384,
+  "cutoff_replay": true,
+  "source_sha256": "643154f283bfe173cc3ca60ae77316b651853f8e55cdc975332a39f16422fa9b",
+  "input_path": "evidence/ns91_joint_abel/endpoint-cutoff-384bits.json",
+  "input_sha256": "8c0eb54af41d30b99803d20a27b32acaa6c0b73a2c00a490754b3b3573d34ba4",
+  "cost_uses_Gram_inverse": false,
+  "rows": [
+    {
+      "N": 256,
+      "values": {
+        "weighted_Mobius_tail_square_sum": "[0.0025274970606624766639447644239500297662281857634624524019480435627 +/- 5.97e-69]",
+        "complete_cost_upper": "[0.0010622859293864111857401890690689248785831205499149310583153055077 +/- 2.73e-68]",
+        "L2_cost_upper": "[0.0022085873289189941443304187078554852454618967046035260204545703408 +/- 4.12e-68]",
+        "NS61_trace_cost_upper": "[0.0018356145658378934083683944544550967832985410401489519718920035452 +/- 3.62e-68]",
+        "endpoint_old_coefficient": "[-1.1350777264599680279017811111040091328733326073775637285479299538 +/- 4.47e-65]"
+      },
+      "finite_gain": {
+        "lower_relative_gain": "[0.000464732899156349163576059794390801 +/- 4.31e-37]",
+        "rational_step": "1/512",
+        "rational_step_lower_relative_gain": "[0.000443293073770579957130550690104113 +/- 2.18e-37]",
+        "upper_over_true_projected_cost": "[60.74343331578087666236450255560435101 +/- 2.23e-36]",
+        "inherited_true_cost_for_validation_only": "[1.7488078486838411487643752559461481900e-5 +/- 3.08e-43]",
+        "inherited_numerator_for_validation_only": "[2.642551527708189168441240254267486373045e-6 +/- 1.38e-46]",
+        "inherited_lower_numerator": "[2.642312861941258862759777257217136e-6 +/- 3.11e-40]",
+        "inherited_energy": "[1.414241673909017965604410325187231472063e-5 +/- 8.60e-45]"
+      }
+    }
+  ]
+}

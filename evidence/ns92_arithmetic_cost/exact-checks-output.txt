@@ -1,0 +1,36 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/ns92_arithmetic_cost/exact-checks.mac")
+kill(all)
+checks:[]
+check(name,expr):=block([r:radcan(ratsimp(expr))],
+      if r # 0 then error("FAILED",name,r),checks:endcons(name,checks))
+az:t/x-k*log(t/x)+lg
+check("continuous average derivative",diff(x*az,x)-(az-(t/x-k)))
+check("endpoint weighted sum",(-n*ss)/n+ss)
+check("square root interval",2/(sqrt(m+1)+sqrt(m))-2*(sqrt(m+1)-sqrt(m)))
+check("weighted tail derivative",diff(log((2*n)/x)/x,x)+(1+log((2*n)/x))/x^2)
+check("squared weight primitive",
+      diff(-(log((2*n)/x)^2-2*log((2*n)/x)+2)/x,x)-log((2*n)/x)^2/x^2)
+check("squared weight definite",(log(2)^2-2*log(2)+2)-1-(1-log(2))^2)
+check("step energy",ee-2*ll*ell+ll^2*kk-(ee-(2*ll*ell-ll^2*kk)))
+check("optimal budget step",2*(bb/uu)*bb-(bb/uu)^2*uu+(-bb^2)/uu)
+check("cell square",
+      (-eta*t+a*log(t)-b)^2/t^2-(eta^2-(2*eta*(a*log(t)-b))/t
+                                      +(a^2*log(t)^2-2*a*b*log(t)+b^2)/t^2))
+check("cell cross",
+      ((-eta*t+a*log(t)-b)*(af*log(t)-bf))/t^2
+       -((-eta*(af*log(t)-bf))/t+(a*af*log(t)^2-(a*bf+af*b)*log(t)+b*bf)/t^2))
+check("cross tail primitive",
+      diff(-((u1*log(t)+v1)*(u2*log(t)+v2)+u1*(u2*log(t)+v2)+u2*(u1*log(t)+v1)
+                                          +2*u1*u2)
+            /t,t)
+       -((u1*log(t)+v1)*(u2*log(t)+v2))/t^2)
+cv:[c5,c6,c7,c8]
+tv:makelist(sum(cv[k-4]/k,k,m+1,8),m,4,7)
+for k from 5 thru 8 do
+    check(concat("coefficient recovery ",k),
+          k*tv[k-4]-(if k < 8 then k*tv[k-3] else 0)-cv[k-4])
+check("old endpoint recovery",-4*tv[1]+4*sum(cv[k-4]/k,k,5,8))
+print("PASS:",length(checks),"exact checks; no cofinal estimate proved.")
+PASS: 16 exact checks; no cofinal estimate proved. 
+quit()

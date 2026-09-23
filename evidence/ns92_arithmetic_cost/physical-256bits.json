@@ -1,0 +1,26 @@
+{
+  "classification": "Certified full physical validation of a fixed rational endpoint-only step; no uniform estimate",
+  "precision_bits": 256,
+  "N": 256,
+  "physical_cutoff": 262144,
+  "step": "1/512",
+  "larger_physical_step": "1/16",
+  "values": {
+    "old_energy": "[1.4142e-5 +/- 5.37e-10]",
+    "complete_endpoint_direction_cost": "[2.75e-5 +/- 3.70e-8]",
+    "complete_gain_numerator": "[2.64e-6 +/- 5.66e-9]",
+    "scalar_cost_upper": "[0.0010622859293864111857401890690689248785831205499149310583153055077 +/- 2.74e-68]",
+    "rational_step_lower_gain": "[6.2661627996011170433330186e-9 +/- 2.60e-35]",
+    "rational_step_actual_gain": "[1.02e-8 +/- 2.99e-11]",
+    "rational_step_actual_relative_gain": "[0.00072 +/- 3.35e-6]",
+    "new_complete_error": "[1.4132e-5 +/- 3.32e-10]",
+    "larger_rational_step_actual_relative_gain": "[0.0158 +/- 6.29e-5]",
+    "larger_rational_step_new_error": "[1.392e-5 +/- 1.14e-9]"
+  },
+  "source_sha256": "4ca3a4858a88bbc7898ff6dbfc00afc3a42a585c1623259538132ab7aadfdeb3",
+  "dependencies": {
+    "evidence/ns89_upper_normalization/check-256bits.json": "f77d51839e4fb46dde098959d1f3a3c480250e4458dc16fb0475223b478c5b57",
+    "evidence/ns92_arithmetic_cost/cost-256bits.json": "d5ce4a400264113dd27eca8bb0f0a29b02a0a941f0e5613851395950a8217b03",
+    "evidence/ns92_arithmetic_cost/certify_cost.py": "643154f283bfe173cc3ca60ae77316b651853f8e55cdc975332a39f16422fa9b"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "classification": "Local author mathematical and implementation review; not independent review",
+  "open_major_findings": 0,
+  "what_had_to_change": "Upper-bound a feasible direction after one old endpoint correction instead of reading its denominator from the new-block Schur inverse. Keep all old optimal coefficients as inputs.",
+  "obstruction": "The computable Mobius tail budget and signed numerator margin have no proved compatible uniform estimate. The elementary oscillation bound yields only O(N) cost.",
+  "bound_or_object": "A conservative sufficient upper budget. Its eventual failure would not exclude the smaller projected cost or PR42 full observation route.",
+  "checked": [
+    "Average identity is the already proved NS61 full-space identity, applied after exact finite coefficient interchange.",
+    "Endpoint coefficient is set by an exact zero-weighted-sum rule, not midpoint rounding.",
+    "Norm budget uses the complete generator norm; no hidden physical tail or finite matrix is substituted.",
+    "Signed Mobius suffixes are formed before absolute values; Cauchy-Schwarz retains the log 2 factor.",
+    "The 1/512 step is certified by the cheap scalar upper budget; 1/16 uses the separately certified sharper physical norm.",
+    "Physical head includes original residual exterior on 0<t<1 and complete mixed cell terms.",
+    "Both cross tail terms and the remainder product are included.",
+    "The inherited true cost and numerator are validation inputs only, not used to calculate U_N or either direct physical norm/pairing.",
+    "No extrapolation from seven finite scalar budgets through N65536; no numerical starting threshold for NS83.",
+    "Pointwise Mertens growth is discussed only as an explicit unproved hypothesis; no RH equivalence of this scalar budget is claimed.",
+    "The starting optimized residual still depends on inherited old-space coefficient enclosures.",
+    "Finite improvements are weaker than prior full optimization and are not new best errors."
+  ],
+  "development_corrections": [
+    "An initial physical validation demanded that its broad numerator enclosure lie above NS91's very close lower bound. Its complete tail allowance was too wide for that comparison. The final independent check requires overlap with the inherited exact numerator and directly proves positive step gain; it does not claim to re-certify NS91's sharper lower bound.",
+    "The larger 1/16 step is certified by the physical norm, not by the looser analytic scalar upper budget."
+  ],
+  "verification": {
+    "Maxima_checks": 16,
+    "pyright_errors": 0,
+    "pyright_warnings": 0,
+    "independent_review": false,
+    "manuscript_pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "manuscript_source_unchanged": true
+  }
+}

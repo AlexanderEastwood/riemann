@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "classification": "Finite bound and step validation; no uniform arithmetic estimate",
+  "checks": {
+    "scalar_precision_overlaps": 56,
+    "scalar_cutoff_invariants": 8,
+    "physical_precision_overlaps": 10,
+    "physical_cutoff_overlaps": 9
+  },
+  "Maxima_exact_checks": 16,
+  "integer_Mobius_convolution_checks": 131072,
+  "N256_budget_step_relative_gain_above": "0.000443",
+  "N256_physical_step_relative_gain_above": "0.0157",
+  "new_Gram_solves": false,
+  "independent_author_review": false,
+  "source_sha256": "9f091bd5c35a757546dff55a5ec7ec0a1f3c4faae9fcf4d4a61ae69e3bb584c4"
+}

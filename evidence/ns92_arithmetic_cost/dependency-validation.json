@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "Inherited inventory hashes checked; prior proof identities reviewed; no historical Gram replay",
+  "dependencies": [
+    {
+      "path": "evidence/ns89_upper_normalization/inventory.json",
+      "files_verified": 21,
+      "sha256": "7b6b8420f29b149a3a409b856643982715e87e8be09b8760adb1de4047ab5237"
+    },
+    {
+      "path": "evidence/ns91_joint_abel/inventory.json",
+      "files_verified": 21,
+      "sha256": "0d65466c81ce744020cdb93273c3513beb695ffed6c82f9ae2ac59dc410fe40c"
+    },
+    {
+      "path": "evidence/v159/ns61/proof.tex",
+      "sha256": "e8d435301626c9097e4f18582bff9458762ddb6cfcb0c825858ce3f008692298"
+    },
+    {
+      "path": "evidence/v161/ns73/proof.tex",
+      "sha256": "8fdd6ab8bf3f68b4ec23d8236c3bccaba7365beb771f1e963fbcf193d72fb078"
+    },
+    {
+      "path": "evidence/v161/ns73/certify_mobius.py",
+      "sha256": "528b74437dd265187318bac2a1dd4658c1169d452fece880e8c95e0a7be8dfe5"
+    }
+  ]
+}

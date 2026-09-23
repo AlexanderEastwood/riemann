@@ -104,6 +104,7 @@ graph LR
   nbnormalizedupper["Constructive zero-exterior upper certificates preserve every decay rate<br/><small>&#128193; evidence/ns89_upper_normalization</small>"]
   nbmobiusjointcancellation["Exact Mobius cancellation; fixed-size absolute-bound loss<br/><small>&#128193; evidence/ns90_mobius_gain</small>"]
   nbjointabelbound["Joint first-primitive finite lower bound with complete grouped tail<br/><small>&#128193; evidence/ns91_joint_abel</small>"]
+  nbarithmeticcostbudget["Complete scalar cost budget and a feasible endpoint-only update<br/><small>&#128193; evidence/ns92_arithmetic_cost</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -203,6 +204,7 @@ graph LR
   nbsmoothedbudget --> nbnormalizedupper
   nbjointlocalization --> nbmobiusjointcancellation
   nbmobiusjointcancellation --> nbjointabelbound
+  nbjointabelbound --> nbarithmeticcostbudget
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -301,9 +303,10 @@ graph LR
   click nbnormalizedupper "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns89_upper_normalization/" "evidence: evidence/ns89_upper_normalization" _blank
   click nbmobiusjointcancellation "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns90_mobius_gain/" "evidence: evidence/ns90_mobius_gain" _blank
   click nbjointabelbound "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns91_joint_abel/" "evidence: evidence/ns91_joint_abel" _blank
+  click nbarithmeticcostbudget "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns92_arithmetic_cost/" "evidence: evidence/ns92_arithmetic_cost" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound,nbarithmeticcostbudget proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -326,7 +329,7 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 45 | established result |
+| `proved` | 46 | established result |
 | `live` | 2 | current route (gold): being worked now |
 | `closed` | 31 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 11 | attempted; obstruction found |
@@ -357,6 +360,7 @@ graph LR
                       - [x] **Joint finite arithmetic observations preserve logarithmic gain scale** — evidence: [`evidence/ns87_joint_tail/`](evidence/ns87_joint_tail/) · NS87: complete coupled-tail bound and explicit safe step. NS81/83 imply T=N^(5+epsilon) preserves relative gain up to o(1/log N), with no effective onset or arithmetic lower estimate. Finite N=32 to 64, T=4096 certificate retains >95.98% of available gain. Full Gram/inverse retained; no fast solver or cofinal decay.
                         - [x] **Exact Mobius cancellation; fixed-size absolute-bound loss** — evidence: [`evidence/ns90_mobius_gain/`](evidence/ns90_mobius_gain/) · NS90 exact identity cancels the prime main terms. Under a nonzero residual logarithmic or constant tail, the termwise absolute divisor allowance diverges as cutoff grows at fixed N; no uniform-in-N conclusion at T=N^6. At N16,256 the certified triangle lower bound is vacuous despite positive full numerators. The direction and full joint arithmetic lower-gain target remain open; inherited NS73 efficiencies are not new results.
                           - [x] **Joint first-primitive finite lower bound with complete grouped tail** — evidence: [`evidence/ns91_joint_abel/`](evidence/ns91_joint_abel/) · NS91: exact old-space correction removes 0<t<N without changing gain or true projected cost. Complete absolute dyadic-tail bound is negligible at T=N^6; finite N256 gain >0.02821 certifies the known NS73 direction, not a new best error. No uniform interior margin/cost estimate. The NS78 divisor-inversion quadratic rewrite reduces to the same numerator under normal equations; no independent positivity or route closure.
+                            - [x] **Complete scalar cost budget and a feasible endpoint-only update** — evidence: [`evidence/ns92_arithmetic_cost/`](evidence/ns92_arithmetic_cost/) · NS92 applies the prior NS61 complete average to signed Mobius tails. A finite scalar upper bounds the full projected cost and an endpoint-only direction without a new-block inverse. At N256 a 1/16 step has complete physical gain >1.57%; the cheaper scalar budget certifies >0.0443% for step 1/512. No new best error. Seven scalar budgets through N65536 are finite checks only; uniform arithmetic cost and numerator estimates remain open.
                       - [x] **Multiplicative normal equations and a scalar whole-error upper envelope** — evidence: [`evidence/ns88_dilation_defect/`](evidence/ns88_dilation_defect/) · NS88: dilation defect equals the overlap of successive orthogonal increments. Complete next-size upper certificate and E_(2^(J+1))<=K exp(-sqrt(2) S_J). Lower growth or even divergence of S_J remains unproved; finite envelope is weaker than optimized finite errors. No RH decay or necessity claim.
                         - [X] **Eventual energy/j^p dilation-defect lower bound with p<1** — evidence: [`evidence/ns88_dilation_defect/`](evidence/ns88_dilation_defect/) · **wall: The proposed stronger numerator forces error decay contradicting the critical-zero lower bound** → `None` (evidence/ns88_dilation_defect/argument.tex; scoped to the displayed dilated optimized approximant) · NS88: exact increment inequality plus NS83 excludes eventual abs(d_(2^j))/E_(2^j)>=a/j^p for a>0, 0<=p<1; at p=1 excludes a>1/sqrt(2). No pointwise upper bound on every defect; smaller p=1 constants and other constructions remain open.
                     - [x] **Tail-balanced divisor feedback control** — `prop:ns79-balance` · evidence: [`evidence/v163/ns79/`](evidence/v163/ns79/) · Preserves exterior coefficient but leaves final jump. Endpoint-augmented span captures 71.18% at N=256; no uniform raw descent.
