@@ -1,5 +1,32 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.63: complete arithmetic sampling and a uniform block guarantee (NS-78–80)
+
+The complete squared residual norm is bounded above and below by fixed
+multiples of an explicit weighted sum over **all reciprocal-integer samples**.
+Exact inversion exposes the remaining signed divisor constraints. Independent
+physical-cell integration, including the infinite tail, confirms the Gram
+norm at N=16,64,256.
+
+Preserving the exterior tail does not repair the tested divisor rule:
+at N=256 its best three-direction span captures **59.97%** of full gain;
+adding the endpoint atom reaches **71.18%**, versus curvature's **97.63%**.
+Thirteen of fifteen raw unit steps increase error; two decrease it at N=128.
+
+The full arithmetic sampling Gram supplies an unconditional, size-independent
+comparison: an ideal preconditioned step captures at least **21/121** of
+available block gain, and twenty capture **more than 97.79%**. This retains
+the entire infinite arithmetic comparator; no fast inverse is supplied.
+A uniform fraction of available gain is not a cofinal lower bound relative
+to the full residual error. That arithmetic input, G2 and RH remain open.
+
+[Readable update](../evidence/v163/research-update-2026-09-23-v1.html) ·
+[Proofs and complete finite replays](../evidence/v163/).
+No new Weil window, uniform Weil floor, or RH proof.
+
+Validation: `evidence/v163/validation.json`; local self-review only.
+
+
 ## v1.62: divisor feedback and the continuous relaxation (NS-75–77)
 
 Cancelling the actual residual's next derivative jumps is exact locally,

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "groups": {
+    "ns78": {
+      "precision_enclosure_matches": 45,
+      "complete_cutoff_overlap_matches": 9,
+      "published_gram_overlap_checks": 7,
+      "complete_reconstructed_norm_contains_gram_checks": 7,
+      "source_sha256": "2b425911e1421097f498eecd2eec5feaae7edd61bca644ed4353ffd508db92c5",
+      "largest_complete_tail_radius_over_energy": "[4.16647715002060010355442590137314643126e-5 +/- 4.86e-44]"
+    },
+    "ns79": {
+      "precision_enclosure_matches": 155,
+      "doubled_cutoff_matches": 31,
+      "published_overlap_matches": 20,
+      "source_sha256": "32991a98a54f834243e2c28c2b1bfde6f2908bf35eb4366c1b4f868016597122",
+      "table_intervals_verified": 15,
+      "raw_unit_increases": 13,
+      "raw_unit_decreases": [
+        [
+          128,
+          "balanced_linear_defect"
+        ],
+        [
+          128,
+          "balanced_quadratic_defect"
+        ]
+      ],
+      "minimum_nonzero_serialized_accuracy_bits": 66
+    }
+  },
+  "cofinal_arithmetic_bound": false,
+  "independent_review": false
+}

@@ -196,6 +196,19 @@ height. External literature inputs are explicit. Two-precision finite
 replays, doubled cutoff for NS75, exact Maxima checks and local self-review
 only. Cofinal arithmetic control, the original Weil floor, G2 and RH stay open.
 
+Version 1.63 (NS-78–80) proves S/16 <= ||R||^2 <= 21 S/16 for the
+complete arithmetic reciprocal-sample functional, including the exterior
+tail and all cells. Exact inversion keeps the infinite divisor compatibility
+constraints; fixed-index coefficient convergence is not convergence of sharp
+Mobius truncations. Full physical-cell/tail integration independently
+confirms finite Gram norms. Tail-balanced feedback and its endpoint-augmented
+span retain only 59.97% and 71.18% of gain at N=256. The full arithmetic
+sampling Gram yields a uniform projected condition ratio <=21, one-step
+capture >=21/121, and twenty-step capture >97.79%. This assumes the complete
+comparator inverse; no fast implementation, smooth-model comparison, or
+cofinal relative contraction follows. Complete Arb replays, exact Maxima
+checks and local self-review only. The original Weil floor, G2/RH stay open.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

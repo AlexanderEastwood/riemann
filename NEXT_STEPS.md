@@ -136,11 +136,11 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-77 | Bound the continuous q=2 inner-factor defect in terms of hypothetical off-critical zero tails, and determine the scope of finite-height information | Codex, Continue solving toward RH | done (v1.62; complete continuous tail bound) | D_cont^2 <= (8/3) S2^3 + 5 S4. Published zero verification and complete counting tail imply D_cont^2 < 2.08e-32. External input only; no integer upper bound, new verified height, or zero-distance proof. |
 
-| NS-78 | Derive a complete norm comparison with reciprocal-integer residual samples and independently replay the actual optimized norm through divisor cells | Codex, Continue solving toward RH | claimed | Retain the exterior tail and all reciprocal cells, prove constants independent of coefficient count, and bound the infinite sampling and physical tails. No finite prefix substitutes for the cofinal signed arithmetic estimate. |
+| NS-78 | Derive a complete norm comparison with reciprocal-integer residual samples and independently replay the actual optimized norm through divisor cells | Codex, Continue solving toward RH | done (v1.63; cofinal sum open) | Uniform complete reciprocal-knot comparison; exact divisor inversion; complete physical and sample tails. Independent full norm checks at N=16,64,256. No vanishing cofinal arithmetic sum. |
 
-| NS-79 | Test tail-balanced divisor feedback suggested by the complete sampling norm, with separate raw and projected gains | Codex, Continue solving toward RH | claimed | Preserve the exterior coefficient by compensating at the last new atom, retain the deliberately uncancelled last jump and the entire tail, and compare three balanced directions plus the original span augmented by that endpoint. No cofinal conclusion from the finite test. |
+| NS-79 | Test tail-balanced divisor feedback suggested by the complete sampling norm, with separate raw and projected gains | Codex, Continue solving toward RH | done (v1.63; finite balanced control) | Exact exterior preservation sacrifices the last jump. At N=256 balanced three-span captures 59.97% and endpoint-augmented span 71.18%, below curvature 97.63%. Two of fifteen raw unit steps decrease error; no uniform descent. |
 
-| NS-80 | Transfer the complete arithmetic sampling norm to a uniform projected-Gram preconditioner bound and quantify its finite-block descent guarantee | Codex, Continue solving toward RH | claimed | Use the full infinite arithmetic sampling Gram, preserve old-space Schur complements, and distinguish a uniform fraction of block gain from cofinal RH contraction. No fast inverse or comparison with the smooth model is assumed. |
+| NS-80 | Transfer the complete arithmetic sampling norm to a uniform projected-Gram preconditioner bound and quantify its finite-block descent guarantee | Codex, Continue solving toward RH | done (v1.63; uniform finite-block theorem) | Full arithmetic sampling Gram gives uniform projected condition ratio <=21. One ideal step captures >=21/121 of block gain; twenty capture >97.79%. No fast inverse or cofinal relative gain bound. |
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
@@ -202,6 +202,16 @@ space does not transfer automatically. The actual integer limiting error
 and cofinal curvature contraction remain open. A useful next estimate must
 control the integer residual with complete signed arithmetic information;
 local cancellation of its derivative jumps did not provide descent.
+
+## Open continuation after NS-80
+
+The complete arithmetic sample sum is an explicit equivalent norm, and its
+inverse formulas expose all finite-support divisor constraints. Prove a
+cofinal decay bound for that complete signed quantity, or bound available
+block gain relative to the entire current error. Uniform efficiency within
+a finite block is now available if the full arithmetic comparator can be
+applied, but it does not supply convergence or a fast algorithm. The tested
+endpoint tail repair does not explain the curvature rule's finite success.
 
 ## Lanes
 

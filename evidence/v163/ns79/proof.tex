@@ -1,0 +1,80 @@
+\section{Balancing the exterior tail of divisor feedback (NS-79)}
+\label{sec:ns79-balanced-feedback}
+
+The sampling norm isolates the exterior coefficient $\eta$. We therefore
+test whether removing its change repairs the failed NS-75 step. This is
+an explicitly modified correction, not a reinterpretation of that test.
+Let $a_n^{(p)}=-r_N(n)\log^p(2N/n)$ be the three original new-block
+physical directions, with the constant convention for $p=0$. Define
+\begin{equation}
+ \widetilde a_n^{(p)}=a_n^{(p)}\quad(N<n<2N),\qquad
+ \widetilde a_{2N}^{(p)}=-2N\sum_{n=N+1}^{2N-1}\frac{a_n^{(p)}}n.
+ \label{eq:ns79-balance}
+\end{equation}
+
+\begin{proposition}[Exact tail balance and its scope]
+\label{prop:ns79-balance}
+Each raw correction $f_p=\sum_{n=N+1}^{2N}\widetilde a_n^{(p)}\sigma_n$
+vanishes for $x>1/(N+1)$. Thus the held-old step preserves $\eta$.
+For $p=0$ it cancels the new derivative jumps for $N<m<2N$, leaving
+the jump at $m=2N$ unconstrained. It is not an exact cancellation of
+the entire next block.
+
+The original three-direction span augmented by the physical endpoint
+atom $\sigma_{2N}$ equals the balanced three-direction span augmented
+by that atom. This identity persists after the complete old-space
+projection. No assertion of norm descent follows from these identities.
+\end{proposition}
+\begin{proof}
+The weighted coefficient sum in~\eqref{eq:ns79-balance} is zero.
+For $x>1/(N+1)$ every new atom equals $1/(nx)$, proving vanishing
+and tail preservation. In the open block each proper divisor is old,
+so the NS-75 jump argument applies at every index except the modified
+last one. More explicitly, for $N<t<2N$ the held-old updated residual
+has one formula $-\eta t+D_N\log t-L_N$, with $D_N,L_N$ from NS-78;
+no new jumps occur inside this open interval.
+
+The difference between each original and balanced physical vector is
+a multiple of the same endpoint coordinate. Hence augmenting either
+span by that coordinate gives the same space; applying any linear
+old-space projection preserves this equality. In adjacent-difference
+coordinates the endpoint atom has vector $v_n=n/(2N)$, modulo its
+old boundary term. The transformation is retained exactly in the
+finite calculation.
+\end{proof}
+
+Old-space reoptimization can change $\eta$ again. The projected gains
+below therefore do not preserve the raw tail balance. Conversely,
+repeating only raw tail-preserving steps with a fixed nonzero initial
+$\eta$ can never reduce squared error below $\eta^2$, because the
+exterior tail remains unchanged. This observation does not exclude
+initialization with $\eta=0$ or algorithms that reoptimize old coefficients.
+
+\paragraph{Certified finite outcome.}
+At 256/384 bits, with a doubled complete-kernel cutoff at $N=256$,
+the fractions of full projected gain have the following strict enclosures.
+\begin{center}
+\begin{tabular}{rccc}
+\hline
+$N$&Balanced three-span&Endpoint-augmented four-span&Diagonal curvature\\
+\hline
+16&(.5960,.5961)&(.8542,.8543)&(.9308,.9310)\\
+32&(.6580,.6581)&(.8240,.8241)&(.9040,.9041)\\
+64&(.8978,.8979)&(.9192,.9193)&(.9783,.9784)\\
+128&(.8809,.8810)&(.8810,.8811)&(.9852,.9854)\\
+256&(.5996,.5997)&(.7118,.7119)&(.9763,.9764)\\
+\hline
+\end{tabular}
+\end{center}
+Thus removing the tail change improves the $N=256$ three-span fraction
+from $56.02\%$ to $59.97\%$, and the full four-span reaches $71.18\%$;
+both remain below curvature's $97.63\%$. The raw untapered unit step
+at $N=256$ still increases squared error by a factor in $(53.07,53.09)$,
+although this is smaller than NS-75's factor above $1495$.
+Thirteen of the fifteen raw balanced unit steps increase error. The two
+exceptions are the linear and quadratic tapers at $N=128$, whose error
+ratios lie in $(.9643,.9645)$ and $(.9890,.9893)$. This is neither a
+uniform-descent theorem nor an exclusion of all balanced feedback.
+Sixteen exact Maxima checks cover endpoint compensation, coordinate
+conversion and the complete exterior floor. The four-dimensional span
+keeps all cross terms; no mixed term is discarded to claim positivity.

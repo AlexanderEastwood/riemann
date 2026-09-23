@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.62**.
+Alexander Eastwood's complete working manuscript, **v1.63**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -39,6 +39,30 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |
+
+## v1.63: complete arithmetic sampling and a uniform block guarantee (NS-78–80)
+
+The complete squared residual norm is bounded above and below by fixed
+multiples of an explicit weighted sum over **all reciprocal-integer samples**.
+Exact inversion exposes the remaining signed divisor constraints. Independent
+physical-cell integration, including the infinite tail, confirms the Gram
+norm at N=16,64,256.
+
+Preserving the exterior tail does not repair the tested divisor rule:
+at N=256 its best three-direction span captures **59.97%** of full gain;
+adding the endpoint atom reaches **71.18%**, versus curvature's **97.63%**.
+Thirteen of fifteen raw unit steps increase error; two decrease it at N=128.
+
+The full arithmetic sampling Gram supplies an unconditional, size-independent
+comparison: an ideal preconditioned step captures at least **21/121** of
+available block gain, and twenty capture **more than 97.79%**. This retains
+the entire infinite arithmetic comparator; no fast inverse is supplied.
+A uniform fraction of available gain is not a cofinal lower bound relative
+to the full residual error. That arithmetic input, G2 and RH remain open.
+
+[Readable update](evidence/v163/research-update-2026-09-23-v1.html) ·
+[Proofs and complete finite replays](evidence/v163/).
+No new Weil window, uniform Weil floor, or RH proof.
 
 ## v1.62: divisor feedback and the continuous relaxation (NS-75–77)
 
@@ -314,6 +338,9 @@ graph LR
   nbdivisorfeedback["Exact divisor feedback and finite unit-step failure<br/><small>prop:ns75-divisor-cells</small><br/><small>&#128193; evidence/v162/ns75</small>"]
   nbcontinuousdefect["Exact continuous inner-factor defect and strict closure separation<br/><small>prop:ns76-continuous-distance; prop:ns76-strict-closure</small><br/><small>&#128193; evidence/v162/ns76</small>"]
   nbcontinuoustail["Complete continuous zero-tail budget<br/><small>prop:ns77-tail-budget</small><br/><small>&#128193; evidence/v162/ns77</small>"]
+  nbarithmeticsampling["Complete reciprocal-knot norm and exact divisor inversion<br/><small>prop:ns78-sampling; eq:ns78-sample-inverse</small><br/><small>&#128193; evidence/v163/ns78</small>"]
+  nbbalancedfeedback["Tail-balanced divisor feedback control<br/><small>prop:ns79-balance</small><br/><small>&#128193; evidence/v163/ns79</small>"]
+  nbarithmeticpreconditioner["Uniform efficiency using the full arithmetic sampling Gram<br/><small>prop:ns80-uniform-efficiency</small><br/><small>&#128193; evidence/v163/ns80</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -398,6 +425,9 @@ graph LR
   nbcurvaturearithmetic --> nbdivisorfeedback
   nbsamegramcontrol --> nbcontinuousdefect
   nbcontinuousdefect --> nbcontinuoustail
+  nbdivisorfeedback --> nbarithmeticsampling
+  nbarithmeticsampling --> nbbalancedfeedback
+  nbarithmeticsampling --> nbarithmeticpreconditioner
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -484,9 +514,12 @@ graph LR
   click nbdivisorfeedback "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v162/ns75/" "evidence: evidence/v162/ns75" _blank
   click nbcontinuousdefect "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v162/ns76/" "evidence: evidence/v162/ns76" _blank
   click nbcontinuoustail "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v162/ns77/" "evidence: evidence/v162/ns77" _blank
+  click nbarithmeticsampling "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns78/" "evidence: evidence/v163/ns78" _blank
+  click nbbalancedfeedback "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns79/" "evidence: evidence/v163/ns79" _blank
+  click nbarithmeticpreconditioner "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns80/" "evidence: evidence/v163/ns80" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;

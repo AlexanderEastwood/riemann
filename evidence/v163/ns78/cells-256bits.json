@@ -1,0 +1,102 @@
+{
+  "classification": "certified complete physical-cell and reciprocal-sampling checks; no cofinal arithmetic estimate",
+  "precision_bits": 256,
+  "kernel_series_cutoff": 128,
+  "kernel_bernoulli_order": 24,
+  "source_sha256": "2b425911e1421097f498eecd2eec5feaae7edd61bca644ed4353ffd508db92c5",
+  "dependency_sha256": {
+    "kernel": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5"
+  },
+  "rows": [
+    {
+      "N": 16,
+      "reciprocal_cell_stop": 65536,
+      "seconds": 0.419,
+      "values": {
+        "gram_energy": "[3.194767768109205273935131839275966013e-5 +/- 5.63e-42]",
+        "eta": "[6.7578479601541846533359797193260613407e-5 +/- 3.57e-43]",
+        "tail_slope": "[0.00258586679862979311928764017714731663710 +/- 3.18e-42]",
+        "tail_constant": "[-0.01009225760527061078556485093403868670845 +/- 4.19e-42]",
+        "stirling_remainder_constant": "[9.08062795783382617484973685379197929229492 +/- 3.50e-42]",
+        "finite_cell_energy_with_exterior": "[3.1940735978655140678746592753203886e-5 +/- 5.67e-40]",
+        "complete_main_tail": "[6.9417020507426539314459831693040722062e-9 +/- 1.28e-47]",
+        "complete_tail_radius": "[5.21689399667906342885714327039955448534e-11 +/- 3.48e-50]",
+        "complete_physical_energy_enclosure": "[3.19477e-5 +/- 7.45e-11]",
+        "tail_radius_over_gram_energy": "[1.6329493645062769226561308684681888396e-6 +/- 8.56e-44]",
+        "sample_prefix": "[0.000106187600314817656778800795355843484934 +/- 7.69e-43]",
+        "complete_sample_tail_upper": "[1.40630910149686965806875514880409905661e-8 +/- 5.10e-47]",
+        "complete_sample_sum_enclosure": "[0.0001062 +/- 1.24e-8]",
+        "comparison_quantity_enclosure": "[0.00010620 +/- 7.84e-9]",
+        "comparison_quantity_over_energy": "[3.324 +/- 3.81e-4]"
+      },
+      "gates": {
+        "complete_physical_tail": true,
+        "complete_sampling_tail": true,
+        "physical_gram_overlap": true,
+        "uniform_lower_comparison": true,
+        "uniform_upper_comparison": true,
+        "all_solves_keep_balls": true
+      }
+    },
+    {
+      "N": 64,
+      "reciprocal_cell_stop": 65536,
+      "seconds": 2.728,
+      "values": {
+        "gram_energy": "[1.9758498848339044931093888638682217e-5 +/- 3.85e-40]",
+        "eta": "[4.64174162255234788596538732234209486e-5 +/- 5.05e-41]",
+        "tail_slope": "[-0.000553694422675366190944038046914179423 +/- 6.61e-40]",
+        "tail_constant": "[0.00252830137481285311506363591855611439 +/- 4.34e-39]",
+        "stirling_remainder_constant": "[83.46534568751670353692785493556064807844 +/- 6.64e-39]",
+        "finite_cell_energy_with_exterior": "[1.97582293294238017440527378363321e-5 +/- 6.94e-38]",
+        "complete_main_tail": "[2.69510486316005673105275305820882735e-10 +/- 6.46e-46]",
+        "complete_tail_radius": "[1.02556857827226416501938564783974452e-10 +/- 4.81e-46]",
+        "complete_physical_energy_enclosure": "[1.9758e-5 +/- 6.02e-10]",
+        "tail_radius_over_gram_energy": "[5.1905187035930938069682096178534264e-6 +/- 5.94e-41]",
+        "sample_prefix": "[5.73033897057518987679190089041191725e-5 +/- 3.68e-41]",
+        "complete_sample_tail_upper": "[9.1236454633882126562594367483911527e-10 +/- 5.67e-45]",
+        "complete_sample_sum_enclosure": "[5.7304e-5 +/- 6.11e-10]",
+        "comparison_quantity_enclosure": "[5.7306e-5 +/- 4.57e-10]",
+        "comparison_quantity_over_energy": "[2.9003 +/- 4.47e-5]"
+      },
+      "gates": {
+        "complete_physical_tail": true,
+        "complete_sampling_tail": true,
+        "physical_gram_overlap": true,
+        "uniform_lower_comparison": true,
+        "uniform_upper_comparison": true,
+        "all_solves_keep_balls": true
+      }
+    },
+    {
+      "N": 256,
+      "reciprocal_cell_stop": 65536,
+      "seconds": 49.463,
+      "values": {
+        "gram_energy": "[1.41424167390901796560441032518723e-5 +/- 8.92e-38]",
+        "eta": "[3.303864079516702028177854557060191e-5 +/- 3.86e-39]",
+        "tail_slope": "[-0.000483598838046378395736652142499172 +/- 6.32e-37]",
+        "tail_constant": "[0.00289349669983676499621037528415224 +/- 7.05e-36]",
+        "stirling_remainder_constant": "[1378.4570751798377936137217271095448799 +/- 2.17e-35]",
+        "finite_cell_energy_with_exterior": "[1.41422784002645322227784006345e-5 +/- 3.19e-35]",
+        "complete_main_tail": "[1.36663056368036616995115774230890e-10 +/- 8.56e-43]",
+        "complete_tail_radius": "[3.35931623398101807240149216978800e-9 +/- 3.92e-42]",
+        "complete_physical_energy_enclosure": "[1.414e-5 +/- 5.78e-9]",
+        "tail_radius_over_gram_energy": "[0.00023753480723671080791691434974950 +/- 5.59e-36]",
+        "sample_prefix": "[3.73996891567024178587787735436954e-5 +/- 2.87e-38]",
+        "complete_sample_tail_upper": "[1.75661920552632969081958523401284e-8 +/- 3.59e-41]",
+        "complete_sample_sum_enclosure": "[3.74e-5 +/- 1.73e-8]",
+        "comparison_quantity_enclosure": "[3.741e-5 +/- 9.22e-9]",
+        "comparison_quantity_over_energy": "[2.645 +/- 8.25e-4]"
+      },
+      "gates": {
+        "complete_physical_tail": true,
+        "complete_sampling_tail": true,
+        "physical_gram_overlap": true,
+        "uniform_lower_comparison": true,
+        "uniform_upper_comparison": true,
+        "all_solves_keep_balls": true
+      }
+    }
+  ]
+}
