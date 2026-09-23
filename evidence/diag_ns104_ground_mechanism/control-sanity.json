@@ -1,0 +1,22 @@
+{
+  "classification": "diagnostic, not a certificate",
+  "candidate": "Re(F' conj F) >= 0 at four points around z0, Re z0 > 0",
+  "z0": "(0.30851718245663738555 + 85.699348485377592172j)",
+  "xi": {
+    "min_sample": "1.1337e-52",
+    "outcome": "sampled-pass"
+  },
+  "davenport_heilbronn": {
+    "name": "horizontal growth sample",
+    "classification": "diagnostic, not a certificate",
+    "sample_domain": "z0 plus/minus 0.02 and plus/minus 0.02i",
+    "dps": 20,
+    "applicability": "Same derivative expression; no transfer of original arithmetic hypotheses asserted",
+    "observations": {
+      "min_sample": "-2.94036e-58"
+    },
+    "proved_control_obstruction": false,
+    "outcome": "sampled-failure"
+  },
+  "verdict": "sampled distinction only; universal statement untested"
+}
