@@ -118,6 +118,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-68 | Test a single multiplicative-annulus response and its positive renewal equation as a possible independent canonical growth estimate | Codex, Continue solving toward RH | claimed | Retain the exact arithmetic forcing, prove any renewal bound with its weighted domain, and determine whether positivity gains an exponent or merely transfers an RH-equivalent input. Separate critical weighted-energy obstructions from the original canonical norm target. |
 
+| NS-69 | Test the actual signed endpoint remainder for optimized smoothed NB residuals, rather than its absolute coefficient-mass budget | Codex, Continue solving toward RH | claimed | Compare the complete correlation with its two endpoint moments and exact remainder, including cross terms, at finite blocks and farther dilations. Decide whether the earlier failure was only a loose error allowance or also cancellation in the leading model; no asymptotic inference from the finite sample. |
+
 ## Open continuation targets after NS-66 (not yet claimed)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
