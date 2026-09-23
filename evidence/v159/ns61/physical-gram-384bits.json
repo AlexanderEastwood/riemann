@@ -1,0 +1,84 @@
+{
+  "classification": "certified finite convention checks, not an asymptotic result",
+  "precision_bits": 384,
+  "tail_lemma": "gram-tail-proof.tex, physical check paragraph",
+  "rows": [
+    {
+      "m": 1,
+      "n": 1,
+      "cells": 16383,
+      "cutoff": 16384,
+      "physical_enclosure": "[3.2704653 +/- 8.89e-8]",
+      "gram_formula": "[3.27046527845398799351328419426 +/- 4.21e-30]",
+      "tail_error_bound": "[6.72902520628334e-8 +/- 1.74e-23]",
+      "strict_tail_gate": true,
+      "all_finite_cell_integrals_positive": true
+    },
+    {
+      "m": 1,
+      "n": 2,
+      "cells": 16383,
+      "cutoff": 16384,
+      "physical_enclosure": "[2.260069 +/- 5.61e-7]",
+      "gram_formula": "[2.26006853867296540899008932905 +/- 1.48e-30]",
+      "tail_error_bound": "[9.89990883044036e-8 +/- 5.88e-24]",
+      "strict_tail_gate": true,
+      "all_finite_cell_integrals_positive": true
+    },
+    {
+      "m": 2,
+      "n": 3,
+      "cells": 10922,
+      "cutoff": 16384,
+      "physical_enclosure": "[1.323925 +/- 5.91e-7]",
+      "gram_formula": "[1.32392456587305694169031941011 +/- 1.23e-31]",
+      "tail_error_bound": "[1.56279150478477e-7 +/- 1.54e-22]",
+      "strict_tail_gate": true,
+      "all_finite_cell_integrals_positive": true
+    },
+    {
+      "m": 3,
+      "n": 8,
+      "cells": 6826,
+      "cutoff": 16384,
+      "physical_enclosure": "[0.638669 +/- 3.72e-7]",
+      "gram_formula": "[0.638668956176889143984310052422 +/- 1.21e-31]",
+      "tail_error_bound": "[3.28123429726856e-7 +/- 1.92e-22]",
+      "strict_tail_gate": true,
+      "all_finite_cell_integrals_positive": true
+    },
+    {
+      "m": 7,
+      "n": 8,
+      "cells": 4095,
+      "cutoff": 16384,
+      "physical_enclosure": "[0.436576 +/- 5.23e-7]",
+      "gram_formula": "[0.436576101507369587914440041965 +/- 3.32e-31]",
+      "tail_error_bound": "[4.20546244283749e-7 +/- 1.93e-22]",
+      "strict_tail_gate": true,
+      "all_finite_cell_integrals_positive": true
+    },
+    {
+      "m": 5,
+      "n": 11,
+      "cells": 4468,
+      "cutoff": 16384,
+      "physical_enclosure": "[0.428250 +/- 8.31e-7]",
+      "gram_formula": "[0.428250375375749405313449298626 +/- 1.06e-31]",
+      "tail_error_bound": "[4.55391972814459e-7 +/- 3.18e-22]",
+      "strict_tail_gate": true,
+      "all_finite_cell_integrals_positive": true
+    },
+    {
+      "m": 8,
+      "n": 16,
+      "cells": 2047,
+      "cutoff": 16384,
+      "physical_enclosure": "[0.28251 +/- 2.09e-6]",
+      "gram_formula": "[0.282508567334120676123761166131 +/- 4.34e-31]",
+      "tail_error_bound": "[6.52631682764283e-7 +/- 2.63e-22]",
+      "strict_tail_gate": true,
+      "all_finite_cell_integrals_positive": true
+    }
+  ]
+}

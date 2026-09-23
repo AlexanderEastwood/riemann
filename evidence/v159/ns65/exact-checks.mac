@@ -1,0 +1,22 @@
+/* Exact finite checks only; nonconvergence uses the analytic pole argument. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+mu:[1,-1,-1,0,-1,1,-1,0,0,1,-1,0]$
+ss(n):=sum(mu[k]/k,k,1,n)$
+et(n):=ss(n)-sum(mu[k],k,1,n)/n$
+b(n,k):=if k>n then 0 else mu[k]-(if k=n then n*ss(n) else 0)$
+weight(q,n,m):=if m>n then 0 else if q=0 then (if m=n then 1 else 0)
+ else sum(weight(q-1,j,m),j,m,n)/n$
+for nn in [3,6,12] do for qq:0 thru 3 do block([aa,bb],
+ check(sconcat("Normalized average ",nn,",",qq),sum(weight(qq,nn,m),m,1,nn)-1),
+ aa:makelist(sum(weight(qq,nn,m)*b(m,k),m,1,nn),k,1,nn),
+ bb:sum(weight(qq,nn,m)*m*et(m),m,1,nn),
+ check(sconcat("Complete transformed small cell ",nn,",",qq),sum(aa[k],k,1,nn)+bb),
+ check(sconcat("Exact zero original tail ",nn,",",qq),sum(aa[k]/k,k,1,nn)))$
+check("Continuous averaging derivative",diff(ff(x)/x,x)-(diff(ff(x),x)/x-ff(x)/x^2))$
+check("Mellin Fubini tail primitive",diff(-x^(-s-1)/(s+1),x)-x^(-s-2))$
+check("Shifted eta transform",subst(s-1,z,1/(z*(z+1)*zz))-1/((s-1)*s*zz))$
+print("PASS:",length(checks),"exact checks; no asymptotic numerical certificate is claimed.")$

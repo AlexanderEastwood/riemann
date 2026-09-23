@@ -1,0 +1,29 @@
+/* Finite polynomial checks of the Laguerre witness, not an asymptotic proof. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+lag(r):=sum((-1)^j*binomial(r,j)*z^j/j!,j,0,r)$
+moment(pp):=block([out:0,poly:expand(pp)],
+ for jj:0 thru hipow(poly,z) do out:out+coeff(poly,z,jj)*jj!,out)$
+step_adjoint(pp):=block([out:0,poly:expand(pp)],
+ for jj:0 thru hipow(poly,z) do
+  out:out+coeff(poly,z,jj)*sum(binomial(jj,kk)*z^kk*(jj-kk)!,kk,0,jj),
+ expand(out))$
+for rr:0 thru 12 do block([pol:lag(rr)],
+ check(sconcat("Laguerre unit norm ",rr),moment(pol^2)-1),
+ for jj:0 thru rr-1 do check(sconcat("Laguerre lower moment ",rr,",",jj),moment(pol*z^jj)),
+ for jj:1 thru rr do (
+  check(sconcat("Exterior term vanishes ",rr,",",jj),moment(pol)),
+  pol:step_adjoint(pol)),
+ check(sconcat("Repeated adjoint ",rr),pol-(-1)^rr*z^rr/rr!))$
+check("Canonical sixth coefficient",6*(1-1/2-1/3-1/5)+1/5)$
+check("Triangular coefficient telescoping",n*ss-n*(ss+mm/n)+mm)$
+check("Unitary small-cell value",mm-n*ss+n*(ss-mm/n))$
+for j:0 thru 20 do check(sconcat("Taylor term ratio ",j),
+ (2*j+1)^2/((2*j+2)*(2*j+3)^3)
+ -(2*j+1)!*(2*j+1)^2/((2*j+3)!*(2*j+3)^2))$
+print(checks)$
+print("PASS:",length(checks),"exact checks; the all-order and nonconvergence arguments are analytic.")$
+quit();

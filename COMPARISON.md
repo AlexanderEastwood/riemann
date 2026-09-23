@@ -457,3 +457,28 @@ No such arithmetic exclusion is supplied. The supporting primitive equation,
 prime-entry norm obstruction and fixed-window Fredholm reduction are archived
 in `evidence/ns55_kernel/`; the physical exceptional coupling remains unresolved.
 Full build: 285 pages, zero undefined/duplicate references. API, G2 and RH remain open.
+
+## v1.59 local draft: smoothed NB and the limits of changing the norm
+
+The q=2 criterion and its Gram formula are prior art in Werner Ehm,
+[arXiv:2405.06349v1](https://arxiv.org/abs/2405.06349v1). This checkpoint
+independently states the tail-space obstruction to an off-line zero,
+adds a positive adjacent-average identity and an elementary N^(-2)
+trace budget, and keeps the optimized cross-correlations explicit.
+No priority claim is made for the criterion or the general smoothing idea.
+The certified finite quantities do not imply a cofinal lower bound.
+
+The sharp-interpolant obstruction uses the classical dilation-invariant
+unitary in [Baez-Duarte, math/0011254v1, Section 4](https://arxiv.org/abs/math/0011254v1).
+The localized Laguerre calculation extends that argument through Mellin
+integration; its scope is the full canonical sequence, not every subsequence
+or the optimal approximation. The changing-order one-atom control is
+unconditional and supplies no RH information. These NB results make no
+change to the certified Weil window or its comparison with published work.
+
+NS-65 checks fixed iterations of ordinary arithmetic Cesaro averaging,
+not all summability methods. NS-66 records the exact fixed-order canonical
+norm-growth exponent using the classical zero-free/Mobius-series implication
+in [Baez-Duarte, math/0202141v2, Lemma 2.1](https://arxiv.org/abs/math/0202141v2).
+This is a reformulation of zero location, not an independently improved
+Mertens estimate or zero-free region. No priority claim is made.

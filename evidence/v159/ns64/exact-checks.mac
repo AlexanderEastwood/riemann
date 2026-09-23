@@ -1,0 +1,44 @@
+/* Exact local geometry: the full nonnegative cone still needs signed coefficients.
+   Interval sign and distance gates are in certify_separator.py, not this file. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+primitive(t,a,b,c,d,e,f):=
+ a*d*t+(a*e+b*d)*log(t)^2/2+(a*f+c*d)*log(t)
+ -b*e*(log(t)^2+2*log(t)+2)/t-(b*f+c*e)*(log(t)+1)/t-c*f/t$
+check("Complete cell primitive",diff(primitive(t,a,b,c,d,e,f),t)
+ -(a*t+b*log(t)+c)*(d*t+e*log(t)+f)/t^2)$
+check("Complete cell symmetry",primitive(t,a,b,c,d,e,f)-primitive(t,d,e,f,a,b,c))$
+/* k=floor(t/n) is constant on each open unit cell. */
+Acell(n,j,t):=block([k:floor(j/n)],t/n-k*log(t)+k*log(n)+log(k!))$
+beta:[0,2,3/2,2/3,5/6,-1/5]$
+tr:zeromatrix(6,6)$
+for n:1 thru 6 do (tr[n,n]:1,if n>1 then tr[n-1,n]:-(n-1)/n)$
+beta_col:transpose(matrix(beta))$
+original_coeff:tr . beta_col$
+expected:[-1,1,1,0,1,-1/5]$
+for n:1 thru 6 do check(sconcat("Original coefficient ",n),original_coeff[n,1]-expected[n])$
+for j:0 thru 5 do block([target,expression],
+ target:if j=0 then 0 else log(t),
+ expression:sum(original_coeff[n,1]*Acell(n,j,t),n,1,6)-target,
+ check(sconcat("Target on cell ",j),radcan(expression)))$
+check("Sixth projected coefficient vanishes",-1/5+dd/(5*dd))$
+check("Dual target pairing",(-1/5)/(5*dd)+1/(25*dd))$
+check("Squared separator norm",dd/(25*dd^2)-1/(25*dd))$
+check("Squared gap from coordinate dual",(1/5)^2/dd-1/(25*dd))$
+/* G_sigma includes 0<t<1 exactly. All other cells have the primitive above.
+   The corresponding x-domain is 1/6<x<infinity, including its entire tail. */
+local_gram(m,n):=block([ans:1/(m*n),km,kn,cm,cn],
+ for j:1 thru 5 do (
+  km:floor(j/m),kn:floor(j/n),cm:km*log(m)+log(km!),cn:kn*log(n)+log(kn!),
+  ans:ans+primitive(j+1,1/m,-km,cm,1/n,-kn,cn)
+         -primitive(j,1/m,-km,cm,1/n,-kn,cn)),radcan(ans))$
+G_sigma:genmatrix(lambda([m,n],local_gram(m,n)),6,6)$
+G:transpose(tr) . G_sigma . tr$
+for m:1 thru 6 do for n:m thru 6 do check(sconcat("Gram symmetry ",m," ",n),G[m,n]-G[n,m])$
+print("beta =",beta)$
+print("Original sigma coefficients =",original_coeff)$
+print("Exact restricted difference Gram G is available in this session.")$
+print("PASS:",length(checks),"exact checks; distance signs require the interval replay.")$

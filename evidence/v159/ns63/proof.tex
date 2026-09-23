@@ -1,0 +1,131 @@
+\section{Fixed smoothing and a changing-norm control (NS-63)}
+\label{sec:ns63-changing-norm}
+
+\paragraph{Why this check is needed.}
+NS-61 uses one fixed extra Mellin integration. Increasing the smoothing
+order with the approximation size changes the problem. The following
+control shows that relative errors can then vanish with just one fixed
+dilation and a fixed coefficient, unconditionally. It is not convergence
+in a fixed NB norm.
+
+For an integer $r\geq0$ put
+\[
+ \tau_r=J^r\chi=\frac{(-\log x)^r}{r!}\mathbf1_{(0,1)},\quad
+ \sigma_{n,r}=J^r\rho_n,\quad
+ T_r=\norm{\tau_r}^2=\binom{2r}{r}.
+\]
+Let $E_{N,r}$ be the squared distance from $\tau_r$ to the span of
+$\sigma_{1,r},\ldots,\sigma_{N,r}$, so $E_{N,1}=E_N^{(2)}$.
+
+\begin{proposition}[Keep the smoothing order fixed in the RH criterion]
+\label{prop:ns63-fixed-order}
+For each fixed $r$, $E_{N,r}\to0$ if and only if RH. If
+$z=\beta+i\gamma_*$ is a zero with $1/2<\beta<1$, then
+\[
+ E_{N,r}\geq
+ \frac{|z|^{-2(r+1)}}{(2\beta-1)^{-1}+|1-z|^{-2}}.
+\]
+The lower obstruction itself depends on $r$. After division by $T_r$
+it tends to zero for every such $z$, since $|z|>1/2$; it gives no
+fixed positive obstruction for the relative error as $r\to\infty$.
+\end{proposition}
+\begin{proof}
+Boundedness of $J^r$ gives $E_{N,r}\leq4^rE_N$ under the original
+strong NB criterion. Every $\sigma_{n,r}$ has the same tail $1/(nx)$
+for $x>1$, whereas $\tau_r$ has zero tail. Thus the bounded functional
+$L_z$ in Proposition~\ref{prop:ns61-rh-equivalence} applies unchanged.
+Its value on the target is $z^{-(r+1)}$ and it annihilates the finite
+span. This proves the lower bound and the converse for fixed $r$.
+\end{proof}
+
+\begin{proposition}[One fixed atom has vanishing relative error as the norm changes]
+\label{prop:ns63-one-atom}
+Let $z_0=\zeta(1/2)$, $c_0=-1/z_0$, and
+\[
+ D_0=\frac{\zeta'(1/2)}{\zeta(1/2)}
+     =\frac12\left(\gamma+\frac\pi2+\log(8\pi)\right)>0.
+\]
+Unconditionally, as $r\to\infty$ through integers,
+\begin{equation}
+ \frac{\norm{\tau_r-c_0\sigma_{1,r}}^2}{T_r}
+    =\frac{D_0^2}{4(2r-1)}+O(r^{-2})
+    \sim\frac{D_0^2}{8r}\longrightarrow0.
+ \label{eq:ns63-relative-control}
+\end{equation}
+Nevertheless the absolute squared error for this fixed coefficient
+diverges:
+\begin{equation}
+ \norm{\tau_r-c_0\sigma_{1,r}}^2
+      \sim\frac{D_0^2}{8\sqrt\pi}\frac{4^r}{r^{3/2}}
+      \longrightarrow\infty.
+ \label{eq:ns63-absolute-control}
+\end{equation}
+Moreover $(J/2)^rf\to0$ in $H$ for every fixed $f\in H$.
+Neither this normalized convergence nor
+\eqref{eq:ns63-relative-control} tests RH.
+\end{proposition}
+\begin{proof}
+The alternating-series expression for zeta shows $z_0<0$: its
+numerator $\sum_{n\geq1}(-1)^{n-1}n^{-1/2}$ is positive and its
+denominator $1-\sqrt2$ is negative. Thus $c_0$ is well-defined.
+Mellin Plancherel writes the relative squared error as the average of
+\[
+ H(t)=\left|1-\frac{\zeta(1/2+it)}{z_0}\right|^2
+\]
+under the probability density proportional to
+$(1/4+t^2)^{-(r+1)}dt$. The exact second and fourth moments of this
+density are
+\[
+ \mathbb E_r(t^2)=\frac1{4(2r-1)},\qquad
+ \mathbb E_r(t^4)=\frac3{16(2r-1)(2r-3)}
+\]
+for $r\geq1$ and $r\geq2$, respectively. They follow directly
+from the beta integral. Near zero, conjugation symmetry and Taylor
+expansion give $H(t)=D_0^2t^2+O(t^4)$.
+Away from any fixed neighborhood of zero the normalized integral is
+exponentially small in $r$. To justify this without an unproved zeta
+estimate, use
+\[
+ \left|\frac{\zeta(1/2+it)}{1/2+it}\right|
+ \leq\int_0^\infty\rho_1(x)x^{-1/2}\,dx<4,
+\]
+or the integrability of the original Mellin square; either controls
+the entire exterior integral. The displayed moments then prove
+\eqref{eq:ns63-relative-control}. Differentiating the zeta functional
+equation at $1/2$, and using
+$\psi(1/2)=-\gamma-2\log2$ \cite[Eq. (5.4.13)]{DLMFGammaBounds},
+gives the stated value of $D_0$.
+Finally $T_r=\binom{2r}{r}\sim4^r/\sqrt{\pi r}$ proves
+\eqref{eq:ns63-absolute-control}.
+
+For the last assertion the Mellin multiplier of $(J/2)^r$ is
+$(2s)^{-r}$. Its modulus is at most one on $\Re s=1/2$ and tends
+to zero for every $t\ne0$. Dominated convergence in the Mellin
+$L^2$ norm applies to every fixed $f$. The exceptional point $t=0$
+has measure zero.
+\end{proof}
+
+\paragraph{Finite control and its full tail.}
+The companion Arb calculation integrates the analytic product
+\[
+ \frac{(1-\zeta(s)/z_0)(1-\zeta(1-s)/z_0)}
+             {\pi T_r\{s(1-s)\}^{r+1}},\qquad s=\tfrac12+it,
+\]
+over $0\leq t\leq A$. It uses reflection $1-s$, not complex
+conjugation of the integration variable, so the quadrature callback
+is meromorphic. The preceding elementary bound supplies the complete
+positive tail bound
+\begin{equation}
+ \frac1{\pi T_r}\left\{
+       \frac{2A^{-2r-1}}{2r+1}
+       +\frac{32A^{-2r+1}}{z_0^2(2r-1)}\right\},\qquad r\geq1.
+ \label{eq:ns63-quadrature-tail}
+\end{equation}
+The fixed-order interval results illustrate the control, not the
+asymptotic proof or any RH assertion.
+
+The useful research problem is therefore the fixed-order cofinal
+correlation estimate in~\eqref{eq:ns61-open-correlation}. Further
+smoothing cannot be credited as a convergence result without retaining
+one fixed norm and its target. The unsolved arithmetic estimate remains
+the one for the optimized coefficients as $N$ increases.

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "matching_ball_enclosures": 57,
+  "precision_bits": [
+    256,
+    384
+  ],
+  "minimum_accuracy_bits": [
+    224,
+    352
+  ],
+  "all_five_coefficient_signs_strict": true,
+  "local_equality_full_space_lower_bound_only": true,
+  "source_sha256": "4d4dbaf8951184e872815cab26ab2ffb61fcff62127fad143c02b75f71385feb"
+}

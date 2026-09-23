@@ -1,0 +1,245 @@
+\section{Explicit old-space Euler corrections and the grid cost (NS-60)}
+\label{sec:ns60-euler-corrections}
+
+\paragraph{Status and scope.}
+The preceding raw-norm obstruction does not apply automatically after
+optimal projection. Here we test one explicit family of old-space
+corrections. We derive its exact grid error and prove that its full
+coefficient norm still cannot obey a fixed-logarithmic $N^{-2}$ bound,
+even with suitably growing Euler products. This closes only that uniform
+comparison for this correction family. It does not close the optimal
+projected comparison, tapered non-Euler mollifiers, or a bound for the
+actual residual direction. All results below are analytic; the separate
+finite scan is a numerical illustration, not proof evidence.
+
+Extend the difference notation by $\delta_1=\rho_1$. For a finitely
+supported integer step function $F$, with value $F_n$ on $(n-1,n]$, set
+\begin{equation}
+ \Psi F=\sum_{n\geq1}nF_n\delta_n.
+ \label{eq:ns60-step-map}
+\end{equation}
+The triangular change of basis gives
+$\operatorname{span}\{\delta_1,\ldots,\delta_N\}=V_N$.
+The Mellin identity in Proposition~\ref{prop:v158-mellin-budget} extends
+to the first cell because $\int_0^1u^{-s}\,du=(1-s)^{-1}$.
+
+For an integer $d\geq2$, define the old-grid averaging operator
+\begin{equation}
+ (J_dF)(u)=\int_{m-1}^{m}F(dv)\,dv
+ =\frac1d\sum_{d(m-1)<n\leq dm}F_n
+ \quad(m-1<u\leq m).
+ \label{eq:ns60-cell-average}
+\end{equation}
+If $F$ is supported in $(N,2N]$, then $J_dF$ is supported in $(0,N]$.
+For a squarefree positive integer $Q$ put
+\begin{equation}
+ \Phi_QF=F+\sum_{\substack{d\mid Q\\d>1}}\mu(d)J_dF,
+ \qquad
+ \mathcal C_{N,Q}=\text{Gram matrix of }a\longmapsto\Psi\Phi_QF_a,
+ \label{eq:ns60-euler-correction}
+\end{equation}
+where $F_a$ is the new-block step function in
+Proposition~\ref{prop:v158-mellin-budget}. When $Q=1$, this is the raw
+difference Gram $\mathcal D_N$.
+
+\begin{proposition}[A valid correction, with the grid error retained]
+\label{prop:ns60-grid-correction}
+The correction lies in $V_N$ and has the explicit old difference
+coefficients
+\begin{equation}
+ (B_{N,Q}a)_m
+ =m\sum_{\substack{d\mid Q\\d>1}}\frac{\mu(d)}d
+       \sum_{\substack{N<n\leq2N\\d(m-1)<n\leq dm}}\frac{a_n}{n}.
+ \label{eq:ns60-correction-matrix}
+\end{equation}
+Therefore
+\begin{equation}
+ 0<K_N\leq\mathcal C_{N,Q},\qquad
+ \mathcal C_{N,Q}
+ =\mathcal D_N+X^*B_{N,Q}+B_{N,Q}^*X+B_{N,Q}^*G_\delta B_{N,Q},
+ \label{eq:ns60-full-correction-gram}
+\end{equation}
+where $G_\delta$ is the old difference Gram and
+$X=(\langle\delta_m,\delta_n\rangle)_{m\leq N<n\leq2N}$.
+Every old/new cross term is present.
+Equivalently,
+\[
+ \mathcal C_{N,Q}-K_N
+ =(B_{N,Q}+G_\delta^{-1}X)^*G_\delta
+                         (B_{N,Q}+G_\delta^{-1}X).
+\]
+
+If $F$ is constant on each interval $(jQ,(j+1)Q]$ on the positive
+axis, then $J_dF=F(d\,\cdot)$ for $d\mid Q$. On this compatible
+subspace,
+\begin{equation}
+ \norm{\Psi\Phi_QF}_H^2
+ =\frac1{2\pi}\int_{\mathbb R}|\zeta(\tfrac12+it)|^2
+       \prod_{p\mid Q}|1-p^{-1/2-it}|^2
+       |\widehat q_F(t)|^2\,dt,
+ \qquad q_F(v)=e^{v/2}F(e^v).
+ \label{eq:ns60-compatible-euler}
+\end{equation}
+For general $F$, the missing term in this simplification is exactly
+\begin{equation}
+ R_QF=\sum_{\substack{d\mid Q\\d>1}}\mu(d)
+                   \{J_dF-F(d\,\cdot)\}.
+ \label{eq:ns60-grid-defect}
+\end{equation}
+Its Mellin transform and its cross term cannot be omitted.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:ns60-cell-average} gives
+\eqref{eq:ns60-correction-matrix}, and the old support gives membership
+in $V_N$. Applying $I-P_N$ to $\Psi\Phi_QF_a$ therefore gives the
+same projected new vector as applying it to $\Psi F_a$.
+Contractivity proves $K_N\leq\mathcal C_{N,Q}$; expanding the squared
+norm gives the complete Gram formula.
+
+For compatible $F$, every breakpoint of $F(d\,\cdot)$ is an integer
+because $d\mid Q$. Averaging leaves this function unchanged. Also
+\[
+ \int_0^\infty F(du)u^{-s}\,du
+       =d^{s-1}\int_0^\infty F(u)u^{-s}\,du,
+ \qquad
+ \sum_{d\mid Q}\mu(d)d^{s-1}=\prod_{p\mid Q}(1-p^{s-1}).
+\]
+On $\Re s=1/2$, the last product has the modulus of
+$\prod_{p\mid Q}(1-p^{-s})$. Mellin Plancherel gives
+\eqref{eq:ns60-compatible-euler}. This is a finite product identity;
+no convergence of an Euler product in the critical strip is assumed.
+For general $F$ the transformed
+quantity is instead
+\[
+ \prod_{p\mid Q}(1-p^{s-1})\widehat q_F(t)
+                           +\widehat q_{R_QF}(t).
+\]
+Its absolute square contains both the defect energy and the mixed term.
+All these finite step functions have finite weighted Mellin energy,
+by the fractional Sobolev argument already proved, so the displayed
+identities are Hilbert-space identities rather than formal expansions.
+\end{proof}
+
+The grid defect is already nonzero when $N=2$, $Q=2$ and
+$F=\mathbf1_{(2,3]}$: then
+$F(2u)=\mathbf1_{(1,3/2]}(u)$ whereas
+$J_2F=\tfrac12\mathbf1_{(1,2]}$.
+Their ordinary $L^2(du)$ distance squared is $1/4$.
+This elementary example concerns the grid functions, not a negative
+Weil direction or a convergence obstruction.
+
+\begin{lemma}[The smallest Euler multiplier for a bounded grid product]
+\label{lem:ns60-euler-minimum}
+Let $m_Q=\prod_{p\mid Q}(1-p^{-1/2})$, with $m_1=1$.
+For $L=\max(3,\log Q)$,
+\begin{equation}
+ 0\leq-\log m_Q\leq C\frac{\sqrt L}{\log L}
+ \label{eq:ns60-euler-minimum}
+\end{equation}
+with an absolute constant. Consequently, for $Q\leq N$ and sufficiently
+large $N$,
+$m_Q^{-2}\leq\exp(C\sqrt{\log N}/\log\log N)$.
+\end{lemma}
+\begin{proof}
+For primes $p\geq2$,
+$-\log(1-p^{-1/2})\leq C_0p^{-1/2}$.
+The elementary prime-counting upper bound
+$\pi(x)\ll x/\log x$ (for example
+\cite[Corollary 1, Eq. (3.6)]{RosserSchoenfeld1962}) and partial
+summation give $\sum_{p\leq L}p^{-1/2}\ll\sqrt L/\log L$.
+For primes dividing $Q$ that exceed $L$, use
+\[
+ \sum_{\substack{p\mid Q\\p>L}}p^{-1/2}
+ \leq\frac1{\sqrt L\log L}\sum_{p\mid Q}\log p
+ \leq\frac{\sqrt L}{\log L}.
+\]
+The last inequality also holds when $\log Q<3$. Increasing the absolute
+constant covers bounded $L$ and proves the result.
+\end{proof}
+
+\begin{proposition}[Growing Euler-grid corrections do not give a logarithmic norm]
+\label{prop:ns60-growing-euler-obstruction}
+Fix $0\leq\alpha<1$. For each dyadic $N$, let $Q_N$ be any squarefree
+positive integer with $Q_N\leq N^\alpha$. For every fixed $B\geq0$,
+\begin{equation}
+ \norm{\mathcal C_{N,Q_N}}_{\rm op}
+ \ne O\left(N^{-2}(\log N)^B\right)
+ \quad\text{as }N\to\infty\text{ through powers of two}.
+ \label{eq:ns60-growing-no-log}
+\end{equation}
+The excluded bound is uniform over all new coefficient vectors for the
+explicit correction~\eqref{eq:ns60-euler-correction}. It is not a lower
+bound for $K_N$, and it does not exclude such a bound restricted to the
+actual residual vector $g$.
+\end{proposition}
+\begin{proof}
+Use the fixed nonnegative smooth $w$ from the proof of
+Proposition~\ref{prop:v158-lindelof-budget}. Approximate
+\[
+ F(u)=u^{-1/2}w(\log(u/N))e^{i\tau\log(u/N)}
+\]
+by its midpoint values on the complete $Q$-cells contained in $(N,2N]$,
+and set the other cells to zero. Call the result $F_{N,Q,\tau}$ and set
+$a_n=n(F_{N,Q,\tau})_n$. Because $w$ has compact support away from the
+two endpoints, for sufficiently large $N$ and $Q\leq N^\alpha$ no
+nonzero part is lost in a partially intersecting endpoint cell.
+The mean value theorem gives, uniformly in this range,
+\begin{equation}
+ \norm{q_{F_{N,Q,\tau}}
+       -w(\,\cdot-\log N)e^{i\tau(\,\cdot-\log N)}}_{L^1}
+ \leq C_w\frac{Q(1+|\tau|)}N,
+ \qquad \norm{a}_2^2\leq C_wN^2.
+ \label{eq:ns60-packet-grid-error}
+\end{equation}
+Thus whenever $Q(1+|\tau|)/N$ tends uniformly to zero, the Fourier
+transform is bounded below by a fixed positive constant on
+$[\tau-1,\tau+1]$. On this compatible packet,
+\eqref{eq:ns60-compatible-euler} and
+$\prod_{p\mid Q}|1-p^{-1/2-it}|\geq m_Q$ imply
+\begin{equation}
+ \int_{\tau-1}^{\tau+1}|\zeta(\tfrac12+it)|^2\,dt
+ \leq C m_Q^{-2} N^2\norm{\mathcal C_{N,Q}}_{\rm op}.
+ \label{eq:ns60-corrected-local-test}
+\end{equation}
+
+Suppose the excluded big-$O$ bound held. For large $T$, choose a power
+of two $N$ with
+$T^{2/(1-\alpha)}\leq N<2T^{2/(1-\alpha)}$.
+Then $Q_N(1+2T)/N\leq(1+2T)/T^2\to0$, uniformly for
+$|\tau|\leq2T$. Cover the interval in
+\eqref{eq:v158-short-interval} by $O(\log^2T)$ unit intervals and use
+\eqref{eq:ns60-corrected-local-test}. Lemma~\ref{lem:ns60-euler-minimum}
+gives
+\[
+ |\zeta(\tfrac12+iT)|^2
+ \ll \log T+
+ \exp\left(C_\alpha\frac{\sqrt{\log T}}{\log\log T}\right)
+ (\log T)^{B+3}.
+\]
+The logarithm of the right side is
+$O_\alpha(\sqrt{\log T}/\log\log T)+(B+3)\log\log T$.
+It is $o(\sqrt{\log T/\log\log T})$, contradicting the unconditional
+large values in~\cite[Theorem 1]{Soundararajan2008}.
+No relation between the choices $Q_N$ at different $N$ is required.
+\end{proof}
+
+\paragraph{What changed and what remains open.}
+Downsampling does give an admissible old-space correction, but on a
+general new vector it requires a cell average. Replacing that average
+by an exact Euler multiplier loses~\eqref{eq:ns60-grid-defect} and its
+mixed term. Even on a compatible family where the replacement is exact,
+known zeta large values defeat the stated uniform norm goal whenever
+$Q_N\leq N^\alpha$ for fixed $\alpha<1$.
+Since $K_N\leq\mathcal C_{N,Q_N}$, this failure of the explicit upper
+comparison does not give a lower obstruction for the optimal projection.
+The range $Q_N=N^{1-o(1)}$, tapered non-Euler coefficients and
+actual-residual-only estimates are outside the proved exclusion.
+
+The separately labelled scan in
+\texttt{evidence/diag\_ns60\_nb\_corrections/} compares fixed Euler
+products $Q=2,6,30$ and tapered M\"obius lengths $4,16,64$ with the full
+projection on fixed blocks $32\leq N\leq512$. It tests the correction
+proposal only; its finite reductions and selected-direction values are
+not asymptotic bounds. The remaining RH-relevant input is still a
+cofinal gain estimate for the actual optimal residuals. No such estimate,
+NB convergence, G2 or RH proof is supplied.

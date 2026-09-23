@@ -1,0 +1,19 @@
+/* Exact finite moments and tail primitives; not a proof by sampling. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+tt(r):=binomial(2*r,r)$
+for r:1 thru 20 do check(sconcat("Normalized second moment ",r),
+ tt(r-1)/tt(r)-1/4-1/(4*(2*r-1)))$
+for r:2 thru 20 do check(sconcat("Normalized fourth moment ",r),
+ tt(r-2)/tt(r)-tt(r-1)/(2*tt(r))+1/16-3/(16*(2*r-1)*(2*r-3)))$
+for r:0 thru 12 do check(sconcat("Target squared norm ",r),(2*r)!/(r!^2)-tt(r))$
+check("Logarithmic derivative constant",(log(2)+log(%pi)+%pi/2+ga+2*log(2))/2
+ -(ga+%pi/2+log(%pi)+3*log(2))/2)$
+check("First quadrature tail primitive",diff(-a^(-2*rr-1)/(2*rr+1),a)-a^(-2*rr-2))$
+check("Second quadrature tail primitive",diff(-a^(-2*rr+1)/(2*rr-1),a)-a^(-2*rr))$
+print(checks)$
+print("PASS:",length(checks),"exact checks; the concentration and fixed-order implications are analytic.")$
+quit();

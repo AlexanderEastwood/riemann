@@ -100,6 +100,44 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-59 | Test the NS-53 raw-correlation gain bound against the complete projected Nyman–Beurling blocks, then attempt an independently justified arithmetic bound for a sharper denominator or explicit block quotient | Codex, Continue solving toward RH | done (v1.58; lower correlation input open) | Adjacent norm bound and complete Mellin identity; unconditional raw difference Gram norm O_epsilon(N^(-5/3+epsilon)). Near-N^(-2) power norm is equivalent to Lindelof; fixed-logarithmic raw bounds are impossible. Scope excludes projected/selected-direction bounds. Arb 256/384 finite trace-loss and coordinate-cost gates, exact Maxima checks, local self-review and build in evidence/v158/. No convergence, G2 or RH claim. |
 
+| NS-60 | Test explicit old-space corrections for the NB adjacent-difference blocks, distinguishing raw norm obstructions from projected and actual-residual bounds | Codex, Continue solving toward RH | done (local v1.59 draft; optimal correlation open) | evidence/v159/ns60/: exact averaged-grid correction, all cross terms and a positive-square comparison with optimal projection. Fixed-log N^(-2) norms are excluded for Q_N <= N^alpha, fixed alpha < 1. Optimal/selected-direction bounds remain open; separate finite scan is diagnostic. |
+
+| NS-61 | Test one additional Mellin integration in NB: prove the smoothed criterion with its tail space, derive an unconditional difference-block budget, and examine the transformed correlation requirement | Codex, Continue solving toward RH | done (local v1.59 draft; lower correlation input open) | evidence/v159/ns61/: fixed q=2 criterion with a bounded off-line-zero functional; positive average identity and trace <= 3*kappa/(8*N^2). Exact endpoint moments and full remainder do not give a cofinal lower bound. Complete Arb Grams at 256/384 bits, cutoff replay and independent physical integrals; stop condition reached. |
+
+| NS-62 | Test whether Mellin smoothing repairs the canonical sharp Mobius interpolant; retain the exact target and use a localized dual witness | Codex, Continue solving toward RH | done (local v1.59 draft; scoped full-sequence and cone exclusions) | evidence/v159/ns62/: localized Laguerre witness preserves nonconvergence of the full canonical integer sequence through any number of integrations. Selected subsequences and optimal coefficients are not excluded. The nonnegative difference cone fails by its forced sixth coefficient -1/5. Exact checks and full proofs; scoped stop condition reached. |
+
+| NS-63 | Check fixed versus increasing Mellin smoothing: retain the RH zero obstruction at fixed order and test whether relative errors can vanish for a fixed finite span when the order grows | Codex, Continue solving toward RH | done (local v1.59 draft; fixed-order criterion retained) | evidence/v159/ns63/: every fixed smoothing order preserves the RH criterion. Increasing the order lets one fixed atom achieve relative squared error ~D0^2/(8r) unconditionally, while absolute squared error diverges. Arb finite controls at two precisions and full tails; moving-norm convergence is not RH evidence. |
+
+| NS-64 | Construct an explicit dual separator for the positive smoothed-difference cone and quantify its finite local gap, keeping the claim separate from signed NB approximation | Codex, Continue solving toward RH | done (local v1.59 draft; explicit cone witness) | evidence/v159/ns64/: complete six-function local Gram and exact dual separator. Arb 256/384 certifies five positive projection coefficients and a full-space cone-distance lower bound > 0.00228323; local equality only. 39 exact Maxima checks. Signed approximation and RH remain open. |
+
+| NS-65 | Test ordinary Cesaro averaging of the canonical sharp interpolant after Mellin integration; identify whether averaging removes the existing critical-zero obstruction | Codex, Continue solving toward RH | done (local v1.59 draft; fixed-average obstruction) | evidence/v159/ns65/: a fixed number of ordinary arithmetic Cesaro averages leaves the critical-zero pole and full-sequence nonconvergence after any Mellin integration order. Growing averages, logarithmic tapers and selected subsequences remain outside scope. 39 exact checks. |
+
+| NS-66 | Test a weaker norm-growth target for the once-smoothed canonical interpolant: combine its exact exterior matching with Abel summation and zero evaluation | Codex, Continue solving toward RH | done (local v1.59 draft; subpolynomial bound open) | evidence/v159/ns66/: for each fixed r>=1, log(1+canonical error norm)/log N tends to beta_star-1/2. Complete support lower bound and Bochner-Abel upper bound prove the reformulation. A bounded cofinal subsequence suffices for RH; none is proved. 29 exact checks, including complete physical Abel identities and exterior interpolation. |
+
+## Open continuation targets after NS-66 (not yet claimed)
+
+1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
+   fixed and use the complete identity in `eq:ns66-bochner-abel`. Attempt a
+   direct subpolynomial bound on the norm, or a bounded cofinal subsequence,
+   retaining the target, boundary term, integral and every cross term. The
+   existing triangle estimate assumes an RH-level Mertens bound and is not
+   the missing estimate. Stop if the proposed input merely restates a
+   zero-free half-plane or assumes the desired norm bound. A finite table
+   cannot establish boundedness of a cofinal subsequence.
+2. **Actual optimized correlations.** The denominator in
+   `eq:ns61-gain` is now elementary. Obtain a lower estimate for the actual
+   residual correlations with a non-summable relative contraction sequence.
+   The endpoint formula keeps its signed remainder; the current coefficient-
+   mass triangle bound is vacuous on the certified blocks. Do not insert
+   target loads, positive-cone arguments, or a changing norm in place of
+   those optimized signed correlations. Stop if no independent arithmetic
+   estimate survives the complete remainder.
+
+These are two open arithmetic targets, not achieved results or assigned
+work. Claim a new row before taking either one forward. The existing
+local v1.58/v1.59 checkpoints remain unpublished pending explicit
+branch-specific approval; recheck remote work and version order first.
+
 ## Lanes
 
 ```

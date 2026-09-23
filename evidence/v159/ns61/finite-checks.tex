@@ -1,0 +1,23 @@
+\paragraph{Certified finite checks, not a cofinal estimate.}
+The complete smoothed Grams through index 64 were enclosed at 256 and
+384 bits with the entire series tail retained. A separate replay doubles
+the finite series cutoff from 128 to 256 while keeping the same matrix.
+All 180 enclosure comparisons across the precision and cutoff replays pass; the minimum internal accuracies are
+99, 99 and 123 bits. Seven independent positive-cell Gram integrals
+also pass at both precisions.
+\begin{center}
+\begin{tabular}{rccc}
+\toprule
+$N$ & exact relative gain & trace-budget relative bound & bound/gain\\
+\midrule
+16 & $0.2372848\ldots$ & $0.003293361\ldots$ & $0.01387935\ldots$\\
+32 & $0.1891280\ldots$ & $0.003566353\ldots$ & $0.01885681\ldots$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The trace lower estimate is below $1/50$ of the exact gain on both
+blocks. The endpoint remainder budget is more than 2000 times the norm
+of its leading term there, so that particular triangle lower bound is
+vacuous, despite every individual remainder gate passing.
+These are finite statements, not a failure of
+\eqref{eq:ns61-open-correlation} or an asymptotic claim.

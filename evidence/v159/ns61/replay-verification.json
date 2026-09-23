@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "physical_precision_enclosure_comparisons": 21,
+  "matching_ball_enclosures": 180,
+  "precision_replay_bits": [
+    256,
+    384
+  ],
+  "same_matrix_dimension": 64,
+  "independent_tail_cutoffs": [
+    128,
+    256
+  ],
+  "tail_order": 24,
+  "minimum_accuracy_bits": [
+    99,
+    99,
+    123
+  ],
+  "physical_cell_checks_per_precision": 7,
+  "source_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5"
+}

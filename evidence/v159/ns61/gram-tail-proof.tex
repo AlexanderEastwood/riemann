@@ -1,0 +1,121 @@
+\subsection{A complete remainder for the smoothed Gram computation}
+\label{sec:ns61-gram-remainder}
+
+This subsection supplies the analytic tail used by the finite Arb replay;
+the diagnostic truncations do not enter that replay. Write
+$\widetilde B_j(x)=B_j(\{x\})$ and let $R_1,R_2,S_2$ be the
+functions in~\cite[Theorem 2.1]{Ehm2024}. For $r=p/q\geq1$ in lowest
+terms the Gram formula used is
+\[
+ G^{(2)}_{m,n}=\frac{K_2+K_1\log(n/m)+\tfrac14\log^2(n/m)}n
+                  +\frac{S_2(n/m)}m\quad(m\leq n),
+\]
+with
+\[
+ K_1=\frac{\log(2\pi)-\gamma+2}{2},\qquad
+ K_2=(1-\gamma/2)\log(2\pi)+\tfrac14\log^2(2\pi)
+       +\frac{\pi^2}{48}-\frac{\gamma^2}{4}-\gamma-\gamma_1+\frac32.
+\]
+The first $K$ terms of $S_2(r)=\sum_{k\geq1}R_2(kr)$ are evaluated
+by the finite formula in that theorem, retaining balls throughout.
+The rest is enclosed by the following lemma.
+
+\begin{lemma}[Bernoulli tail with an explicit remainder]
+\label{lem:ns61-r2-tail}
+For an integer $M\geq4$, let $c_2=c_3=0$ and, for $j\geq4$, let
+\[
+ c_j=\frac{2j-3-(j-1)H_{j-1}}{j(j-1)},\qquad
+ P_M(x)=\sum_{j=4}^{M+2}c_j\frac{\widetilde B_j(x)}{x^j}.
+\]
+Put
+\[
+ a_{M+1}=2(M+2)(M+1)c_{M+2}-(M+1)Mc_{M+1},\qquad
+ a_{M+2}=-(M+2)(M+1)c_{M+2}.
+\]
+For any constants $U_j\geq\sup_{0\leq x\leq1}|B_j(x)|$,
+\begin{equation}
+ |R_2(x)-P_M(x)|\leq
+ \frac{U_M}{M^2(M-1)x^M}
+ +\frac{|a_{M+1}|U_{M+1}}{M(M+1)x^{M+1}}
+ +\frac{|a_{M+2}|U_{M+2}}{(M+1)(M+2)x^{M+2}}.
+ \label{eq:ns61-r2-remainder}
+\end{equation}
+The rational constants
+$U_j=2j!\,(1+1/(j-1))/6^j$, $j\geq2$, are valid.
+For $r=p/q$ the Bernoulli part of the infinite sum is exactly
+\begin{equation}
+ \sum_{k>K}\frac{\widetilde B_j(kr)}{(kr)^j}
+ =p^{-j}\sum_{a=1}^{q}
+ B_j\left(\left\{\frac{(K+a)p}{q}\right\}\right)
+ \zeta\left(j,\frac{K+a}{q}\right).
+ \label{eq:ns61-hurwitz-tail}
+\end{equation}
+The sum of the three remainders in~\eqref{eq:ns61-r2-remainder}
+is bounded by replacing each $x^{-l}$ by
+$r^{-l}\zeta(l,K+1)$.
+\end{lemma}
+\begin{proof}
+From $R_1(x)=-\int_x^\infty\widetilde B_1(t)t^{-2}\,dt$,
+successive integrations by parts give the exact finite formula
+\[
+ R_1(x)=\sum_{j=2}^{M}\frac{\widetilde B_j(x)}{jx^j}
+            -\int_x^\infty\frac{\widetilde B_M(t)}{t^{M+1}}\,dt.
+\]
+The remainder is at most $U_M/(Mx^M)$. Also
+\cite[Proposition 5.2, Eq. (40)]{Ehm2024} gives
+$-(x^2R_2'(x))'=R_1(x)$ and the inverse formula
+\[
+ (\mathcal If)(x)=\int_x^\infty f(t)\left(\frac1t-\frac1x\right)dt.
+\]
+If $|f(t)|\leq At^{-l}$ with $l>1$, then
+$|\mathcal If(x)|\leq A x^{-l}/(l(l-1))$.
+For $\mathcal L=-(x^2\partial_x)'$ the coefficient of
+$\widetilde B_k(x)/x^k$ in $\mathcal LP_M$ is
+\[
+ -(k+2)(k+1)c_{k+2}+2(k+1)kc_{k+1}-k(k-1)c_k.
+\]
+It equals $1/k$ for $2\leq k\leq M$; the two remaining coefficients
+are $a_{M+1},a_{M+2}$. Periodic Bernoulli polynomials of orders at
+least four are twice continuously differentiable across integers, so
+no point masses are omitted in this differentiation. Apply
+$\mathcal I$ to $R_1-\mathcal LP_M$ and the preceding three bounds.
+The possible homogeneous terms $A+B/x$ vanish because both $R_2$
+and $P_M$ are $O(x^{-4})$. This proves~\eqref{eq:ns61-r2-remainder}.
+
+The absolutely convergent Bernoulli Fourier series
+\cite[Eq. (24.8.3)]{DLMFBernoulliFourier} gives
+$\sup|B_j|\leq2j!\zeta(j)/(2\pi)^j$.
+Using $2\pi>6$ and $\zeta(j)\leq1+1/(j-1)$ proves the rational
+upper bound. Finally write $k=K+a+q\ell$ and sum over $\ell\geq0$.
+The periodic numerator is constant in each such progression, giving
+\eqref{eq:ns61-hurwitz-tail}. Absolute convergence justifies every
+rearrangement and the sum of the absolute remainder bounds.
+\end{proof}
+
+\paragraph{An independent positive-cell convention check.}
+On a cell where $k=\lfloor t/m\rfloor$,
+$A(t/m)=t/m-k\log t+k\log m+\log(k!)$.
+Products of two such expressions divided by $t^2$ are integrated
+exactly between consecutive multiples of $m$ and $n$; the initial
+cell has constant integrand $1/(mn)$.
+For $z=k+r\geq1$, $0\leq r<1$, the elementary Stirling remainder
+\cite[\S5.11]{DLMFGammaBounds}
+$0<\log(k!)-(k+1/2)\log k+k-\tfrac12\log(2\pi)<1/(12k)$
+gives
+\[
+ \left|A(z)-\tfrac12\log(2\pi z)\right|
+ \leq\frac{13}{12k}\leq\frac{13}{6z}<\frac3z.
+\]
+Indeed $0\leq r-k\log(1+r/k)\leq r^2/(2k)$ and
+$0\leq\tfrac12\log(1+r/k)\leq r/(2k)$.
+For $T\geq\max(m,n)$ put $L_m=\tfrac12\log(2\pi T/m)$.
+The remaining physical integral is within
+\[
+ \frac3{T^2}\left[m\left(\frac{L_n}2+\frac18\right)
+                 +n\left(\frac{L_m}2+\frac18\right)\right]
+            +\frac{3mn}{T^3}
+\]
+of $(L_mL_n+(L_m+L_n)/2+1/2)/T$.
+This separate integral enclosure checks normalization and several
+off-diagonal entries of the series formula; it is not used to sharpen
+the block estimates.
