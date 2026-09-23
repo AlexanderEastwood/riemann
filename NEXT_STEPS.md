@@ -114,6 +114,30 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-66 | Test a weaker norm-growth target for the once-smoothed canonical interpolant: combine its exact exterior matching with Abel summation and zero evaluation | Codex, Continue solving toward RH | done (local v1.59 draft; subpolynomial bound open) | evidence/v159/ns66/: for each fixed r>=1, log(1+canonical error norm)/log N tends to beta_star-1/2. Complete support lower bound and Bochner-Abel upper bound prove the reformulation. A bounded cofinal subsequence suffices for RH; none is proved. 29 exact checks, including complete physical Abel identities and exterior interpolation. |
 
+## Open continuation targets after NS-66 (not yet claimed)
+
+1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
+   fixed and use the complete identity in `eq:ns66-bochner-abel`. Attempt a
+   direct subpolynomial bound on the norm, or a bounded cofinal subsequence,
+   retaining the target, boundary term, integral and every cross term. The
+   existing triangle estimate assumes an RH-level Mertens bound and is not
+   the missing estimate. Stop if the proposed input merely restates a
+   zero-free half-plane or assumes the desired norm bound. A finite table
+   cannot establish boundedness of a cofinal subsequence.
+2. **Actual optimized correlations.** The denominator in
+   `eq:ns61-gain` is now elementary. Obtain a lower estimate for the actual
+   residual correlations with a non-summable relative contraction sequence.
+   The endpoint formula keeps its signed remainder; the current coefficient-
+   mass triangle bound is vacuous on the certified blocks. Do not insert
+   target loads, positive-cone arguments, or a changing norm in place of
+   those optimized signed correlations. Stop if no independent arithmetic
+   estimate survives the complete remainder.
+
+These are two open arithmetic targets, not achieved results or assigned
+work. Claim a new row before taking either one forward. The existing
+local v1.58/v1.59 checkpoints remain unpublished pending explicit
+branch-specific approval; recheck remote work and version order first.
+
 ## Lanes
 
 ```
