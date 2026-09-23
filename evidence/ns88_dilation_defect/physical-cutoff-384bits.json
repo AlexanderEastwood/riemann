@@ -1,0 +1,23 @@
+{
+  "classification": "Certified complete physical identity checks; no cofinal lower bound",
+  "precision_bits": 384,
+  "physical_stop": 131072,
+  "source_sha256": "dd71e8cc4888f948cc67767f7e09cb1479e499f215b027cd3a552bdd1c58d551",
+  "input_sha256": "4de3f4a09c1b84494f704b4172b5e343d9baa87f5a22763aaf1d44c2ce995491",
+  "rows": [
+    {
+      "N": 64,
+      "values": {
+        "potential_at_two": "[-9.8e-6 +/- 3.90e-8]",
+        "autocorrelation_at_two": "[-8.0651e-6 +/- 8.80e-11]",
+        "dilation_defect": "[-1.7e-6 +/- 7.40e-8]",
+        "correlation_tail_radius": "[3.956341134434112507474704169742250924336369e-11 +/- 8.00e-54]",
+        "potential_tail_radius": "[2.8154841200680607027215578236085520549480809074e-8 +/- 7.80e-55]"
+      },
+      "gates": {
+        "complete_physical_vs_Gram": true,
+        "physical_defect_nonzero": true
+      }
+    }
+  ]
+}

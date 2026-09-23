@@ -1,0 +1,50 @@
+{
+  "classification": "Certified finite replay and derived upper bounds; no eventual arithmetic estimate",
+  "precision_scalar_overlaps": 80,
+  "precision_coefficient_overlaps": 120,
+  "kernel_cutoff_scalar_overlaps": 20,
+  "kernel_cutoff_coefficient_overlaps": 64,
+  "physical_precision_overlaps": 20,
+  "physical_cutoff_full_quantity_overlaps": 3,
+  "physical_vs_Gram_full_quantity_checks": 27,
+  "envelope_precision_overlaps": 20,
+  "Maxima_exact_checks": 13,
+  "dyadic_envelope": [
+    {
+      "N": 8,
+      "j": 3,
+      "S": "[0.108641153652797345770252723896090538125 +/- 6.48e-40]",
+      "j_times_normalized_defect": "[0.325923460958392037310758171688271614376 +/- 9.43e-40]",
+      "one_step_whole_error_upper": "[5.6121112359147244400642396386329565736e-5 +/- 5.53e-43]",
+      "cumulative_whole_error_upper": "[0.000413392850707734082025675113066137873914 +/- 5.04e-43]",
+      "actual_next_error": "[3.194767768109205273935131839275966013e-5 +/- 5.64e-42]"
+    },
+    {
+      "N": 16,
+      "j": 4,
+      "S": "[0.117179573755517756432254472103652859 +/- 4.12e-37]",
+      "j_times_normalized_defect": "[0.034153680410881642648006992830249282 +/- 3.54e-37]",
+      "one_step_whole_error_upper": "[3.192518162678863666281655065917914605e-5 +/- 9.11e-42]",
+      "cumulative_whole_error_upper": "[0.0004084310875340376741327861853743668849 +/- 4.23e-41]",
+      "actual_next_error": "[2.43669784669931395762958244676788980e-5 +/- 1.44e-41]"
+    },
+    {
+      "N": 32,
+      "j": 5,
+      "S": "[0.18204156306565933246036619306881726 +/- 3.15e-36]",
+      "j_times_normalized_defect": "[0.32430994655070788014055860482582200 +/- 8.65e-36]",
+      "one_step_whole_error_upper": "[2.3234109063418386675763907155196022e-5 +/- 3.57e-40]",
+      "cumulative_whole_error_upper": "[0.00037263317799335360593964604069685481 +/- 4.17e-39]",
+      "actual_next_error": "[1.9758498848339044931093888638682217e-5 +/- 3.86e-40]"
+    },
+    {
+      "N": 64,
+      "j": 6,
+      "S": "[0.253685310999424127356188268268075 +/- 2.96e-34]",
+      "j_times_normalized_defect": "[0.42986248760258876937493245119555 +/- 3.77e-33]",
+      "one_step_whole_error_upper": "[1.84358873986605744132902746873008e-5 +/- 2.96e-38]",
+      "cumulative_whole_error_upper": "[0.0003367278168056963712159708336390613 +/- 9.41e-38]",
+      "actual_next_error": "[1.649433182143668081417340126620132e-5 +/- 4.85e-39]"
+    }
+  ]
+}

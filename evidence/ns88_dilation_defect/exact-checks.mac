@@ -1,0 +1,24 @@
+/* NS88 scalar verification; Hilbert operator proof is in argument.tex. */
+kill(all)$
+checks:0$
+checkzero(x):=block([v:radcan(ratsimp(x))],if v#0 then error("FAIL",v),checks:checks+1)$
+assume(t>0)$
+/* All six cell-product primitives. */
+checkzero(diff(t,t)-1)$
+checkzero(diff(log(t)^2/2,t)-log(t)/t)$
+checkzero(diff(log(t),t)-1/t)$
+checkzero(diff(-1/t,t)-1/t^2)$
+checkzero(diff(-(log(t)+1)/t,t)-log(t)/t^2)$
+checkzero(diff(-(log(t)^2+2*log(t)+2)/t,t)-log(t)^2/t^2)$
+/* First-cell potential correction. */
+checkzero(integrate((log(2)-log(t))/t,t,1,2)-log(2)^2/2)$
+checkzero(integrate((log(2)-log(t))*log(t)/t^2,t,1,2)-(3*log(2)/2-1))$
+/* Tail polynomial identities using exponential moments 1,1,2. */
+checkzero(expand(q*q2+u*(q+q2)+2*u^2)-(q*q2+u*q+u*q2+u^2*2))$
+checkzero(expand(q*L+q+u*L+2*u)-(q*L+(q+u*L)*1+u*2))$
+checkzero((x-y)+(y-z)-(x-z))$
+checkzero((x-y)^2+4*x*y-(x+y)^2)$
+/* Exact product cancellation underlying the logarithmic envelope. */
+checkzero((e0/e2)*(e1/e3)*(e2/e4)*(e3/e5)-e0*e1/(e4*e5))$
+print("NS88 exact checks passed:",checks)$
+quit();

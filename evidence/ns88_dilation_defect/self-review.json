@@ -1,0 +1,21 @@
+{
+  "classification": "Local author mathematical and code review; no independent human or agent review",
+  "open_major_findings": 0,
+  "checked": [
+    "D_2 maps V_(N/2) into V_N and has squared norm factor 1/2.",
+    "Both normal-equation cancellations in d_N=<u_(j+1),D_2u_j> are exact.",
+    "The direction uses the full projected cost; the simpler next-error upper bound uses the exact unprojected increment cost.",
+    "The cumulative sum denominator is E_(2^(j-1)), whereas the scoped numerator obstruction is normalized by E_(2^j); these are not interchanged.",
+    "The logarithmic sum telescopes to a product of two consecutive errors; the final upper bound uses E_(J+1)^2 <= E_J E_(J+1).",
+    "No lower growth of the scalar cumulative sum is proved, and divergence is not asserted necessary.",
+    "The p<1 contradiction and p=1 coefficient ceiling use only NS83 asymptotically; no finite onset is assumed.",
+    "Signed defects change sign in the actual finite examples; the sufficient criterion uses absolute values.",
+    "The same generic projection/dilation identities survive the NS74 control. Any lower growth proof must use original arithmetic.",
+    "Physical autocorrelation tail includes two main/remainder cross terms and the remainder product.",
+    "Independent physical and Gram representations share certified coefficients; no midpoint solve enters a proof path.",
+    "The cumulative finite upper envelope is substantially looser than the existing optimized bound and is not advertised as a better finite certificate."
+  ],
+  "development_notes": [
+    "A quick presentation-only command initially used the system Python without flint; it was rerun with the repository virtual environment. Scientific verifiers used the configured environment."
+  ]
+}
