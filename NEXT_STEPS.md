@@ -174,6 +174,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-97 | Audit NS96 against existing walls and screen its suggested continuations for mere reformulation | Codex | done (audit; no new arithmetic estimate) | Recorded overlap with NS62/64/74/78/95; positive complete-rule failure follows qualitatively from NS78; the Mellin separator/floor function already appear in NS74. Trace normalization leaves correction rays unchanged if step scale is free. Core lower-gain target remains open; no new theorem node/version. [Audit](evidence/ns97_novelty_audit/) |
 
+| NS-98 | Bound the fixed Mobius/logarithmic direction after old-space refitting, retaining cancellation before estimating its complete cost | Codex | claimed | Attempt a scale-independent growing-index average of the actual projected cost. Closest NS92/93; same open gap. Stop if only the prior scalar absolute budget or Schur identity remains; keep the independent lower numerator open. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
