@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "precision_enclosure_matches": 140,
+  "doubled_cutoff_matches": 28,
+  "published_NS71_overlap_matches": 25,
+  "minimum_accuracy_bits": 73,
+  "finite_prediction": "both curvature directions outperform the repaired model at each tested size; diagonal best",
+  "cofinal_arithmetic_bound": false
+}

@@ -1,0 +1,86 @@
+\section{Testing explicit arithmetic coefficient templates (NS-73)}
+\label{sec:ns73-mobius-templates}
+
+\paragraph{Question and scope.}
+The successful curvature rule depends on the actual optimized residual.
+We test whether three prescribed M\"obius templates can replace that
+information on the same finite blocks. This is a finite control, not an
+asymptotic exclusion of M\"obius coefficients. Logarithmic tapers have
+established prior motivation: Bettin--Conrey--Farmer's Theorem~1
+in~\cite{BettinConreyFarmer2013} proves an optimal $q=1$ asymptotic under
+RH and an additional inverse-zeta-derivative moment hypothesis. Neither
+hypothesis is used here. Our $q=2$ projected block test is a different
+problem from their full canonical approximant.
+
+For $p=0,1,2$, prescribe physical new-atom coefficients
+\[
+ a^{(p)}_n=-\mu(n)\log^p(2N/n),\qquad N<n\leq2N,
+\]
+where $p=0$ means the constant taper, including at $n=2N$.
+No coefficient is fitted when selecting these three individual templates.
+Define their adjacent-difference coordinates by
+\begin{equation}
+ v^{(p)}_n=n\sum_{k=n}^{2N}\frac{a^{(p)}_k}{k}.
+ \label{eq:ns73-coordinate-change}
+\end{equation}
+Direct backward telescoping gives
+\[
+ \sum_{n=N+1}^{2N}v^{(p)}_n\varepsilon_n
+ =\sum_{n=N+1}^{2N}a^{(p)}_n\sigma_n
+                  -\frac{N}{N+1}v^{(p)}_{N+1}\sigma_N.
+\]
+Thus applying the complete old-space orthogonal complement gives exactly
+the intended physical new direction; the boundary term lies in the old
+space and is removed, not silently dropped before projection.
+
+\begin{proposition}[Complete finite template and span gains]
+\label{prop:ns73-span}
+For any real new-atom templates converted by
+\eqref{eq:ns73-coordinate-change}, let $V$ collect their difference
+coordinate vectors, $\Gamma=V^TH_NV$, and $\ell=V^Tg$.
+If the projected templates are independent, then $\Gamma>0$ and
+\[
+ \max_{v\in\operatorname{ran}V\setminus\{0\}}
+       \frac{(g^Tv)^2}{v^TH_Nv}=\ell^T\Gamma^{-1}\ell.
+\]
+For any nonzero direction $w$, the fraction of its actual projected
+energy lying in that span is
+\[
+ \frac{(V^TH_Nw)^T\Gamma^{-1}(V^TH_Nw)}{w^TH_Nw}\in[0,1].
+\]
+These formulae keep every cross term and the complete old-space correction.
+The maximizing span coefficients are fitted using the actual Gram; this
+span control is stronger than any fixed combination of the three templates.
+\end{proposition}
+\begin{proof}
+The coordinate relation follows from
+$v_n-nv_{n+1}/(n+1)=a_n$, with $v_{2N+1}=0$.
+The remaining claims are finite-dimensional orthogonal projection in the
+positive $H_N$ metric. Equivalently apply Cauchy--Schwarz to
+$\Gamma^{1/2}b$ and $\Gamma^{-1/2}\ell$. This also covers $\ell=0$,
+when every gain is zero. The second expression is the usual squared norm
+of the metric projection, divided by the original squared norm.
+\end{proof}
+
+\paragraph{Certified finite comparison.}
+The outward intervals below enclose fractions of the same full arithmetic
+block gain. The last column permits the best actual-Gram combination of
+all three M\"obius templates, not merely their individual scalings.
+\[
+\begin{array}{c|cccc}
+N& p=0&p=1&p=2&\text{three-template span}\\ \hline
+16&(.2134,.2135)&(.4692,.4694)&(.1828,.1829)&(.6023,.6024)\\
+32&(.0000683,.0000684)&(.6743,.6745)&(.5652,.5654)&(.7627,.7628)\\
+64&(.9222,.9223)&(.6407,.6409)&(.3966,.3967)&(.9512,.9514)\\
+128&(.2942,.2943)&(.4138,.4139)&(.2908,.2909)&(.8903,.8904)\\
+256&(.1023,.1025)&(.3390,.3392)&(.4338,.4339)&(.8366,.8367)
+\end{array}
+\]
+The curvature rule exceeds even this fitted span at all five sizes.
+Thus the three proposed templates do not explain its finite performance.
+The comparison does not rule out other arithmetic templates, larger
+families, or any asymptotic M\"obius approximation theorem.
+Two-precision and doubled-cutoff enclosures, the positive restricted Gram
+and all cross terms are retained in the archived evidence. Ten exact
+Maxima checks verify the coordinate and span algebra. No new cofinal
+estimate results from this test.

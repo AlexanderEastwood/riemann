@@ -1,0 +1,66 @@
+{
+  "classification": "certified finite comparison of prescribed Mobius directions and their span; no asymptotic exclusion",
+  "precision_bits": 384,
+  "finite_series_cutoff": 256,
+  "bernoulli_order": 24,
+  "source_sha256": "528b74437dd265187318bac2a1dd4658c1169d452fece880e8c95e0a7be8dfe5",
+  "dependency_sha256": {
+    "kernel": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+    "projection": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+    "sieve": "2c4c14202df2e733063c62658f882bd4f7a488008e077b786aabb809c11e6bde",
+    "curvature": "bdd12e937263e662ea26983ba9be9dd1e0a2f758d7bf42adddd53830f7d442d6"
+  },
+  "rows": [
+    {
+      "N": 256,
+      "seconds": 387.125,
+      "quantities": {
+        "energy": "[1.414241673909017965604410325187231472063e-5 +/- 8.58e-45]",
+        "full_relative_gain": "[0.0832680987052332706639099387285212045 +/- 2.86e-38]",
+        "three_direction_span_fraction": "[0.83662037631151161506469670260821258 +/- 6.91e-36]",
+        "three_direction_span_relative_gain": "[0.069663788073516351981583899084122847 +/- 7.42e-37]",
+        "curvature_energy_fraction_in_span": "[0.75259476677134425305286804102 +/- 7.36e-30]"
+      },
+      "directions": {
+        "sharp_mobius": {
+          "numerator": "[5.780969210406847568920105634147706331883e-6 +/- 8.20e-46]",
+          "true_projected_cost": "[0.00027723119591724046606975106746086315418 +/- 2.06e-42]",
+          "fraction_of_full_gain": "[0.1023662833005039156317567402635635693 +/- 4.65e-38]",
+          "relative_gain": "[0.0085238457819542322739316141031188769093 +/- 4.07e-41]"
+        },
+        "linear_log_taper": {
+          "numerator": "[2.642551527708189168441240254267486373045e-6 +/- 1.36e-46]",
+          "true_projected_cost": "[1.7488078486838411487643752559461481900e-5 +/- 3.06e-43]",
+          "fraction_of_full_gain": "[0.3390802980802844509972024076656406905 +/- 8.76e-38]",
+          "relative_gain": "[0.028234571729549045166363753636780691133 +/- 5.81e-40]"
+        },
+        "quadratic_log_taper": {
+          "numerator": "[1.3896877153776141734364977177896943771089e-6 +/- 7.81e-47]",
+          "true_projected_cost": "[3.7800587318415934152324514930605988483e-6 +/- 2.73e-44]",
+          "fraction_of_full_gain": "[0.4338440146770683373341470058963727675 +/- 6.41e-38]",
+          "relative_gain": "[0.036125366236804798094507062386997415086 +/- 4.02e-40]"
+        },
+        "diagonal_curvature": {
+          "numerator": "[7.140026411758257380387303183361e-7 +/- 2.38e-38]",
+          "true_projected_cost": "[4.43415640922345331698940229716e-7 +/- 3.89e-37]",
+          "fraction_of_full_gain": "[0.976306879136636993558119560657 +/- 6.81e-31]",
+          "relative_gain": "[0.0812952175785477381152279923503 +/- 6.07e-32]"
+        }
+      },
+      "span_fit_coefficients": [
+        "[0.189960044042636503309686678287724860 +/- 4.83e-37]",
+        "[-0.80893421460130000810822716553500111 +/- 5.53e-36]",
+        "[1.45695430631423623514997872707025186 +/- 1.80e-36]"
+      ],
+      "minimum_accuracy_bits": 96,
+      "gates": {
+        "complete_actual_gram": true,
+        "complete_old_projection": true,
+        "physical_difference_conversion": true,
+        "positive_three_direction_gram": true,
+        "complete_span_cross_terms": true,
+        "gains_below_optimum": true
+      }
+    }
+  ]
+}

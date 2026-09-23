@@ -1,0 +1,276 @@
+{
+  "classification": "certified finite model-curvature and selected-direction comparisons; no cofinal arithmetic estimate",
+  "precision_bits": 256,
+  "finite_series_cutoff": 128,
+  "bernoulli_order": 24,
+  "source_sha256": "bdd12e937263e662ea26983ba9be9dd1e0a2f758d7bf42adddd53830f7d442d6",
+  "kernel_source_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+  "projection_source_sha256": "de19a5ef5ae6a5eb7f28c72ff0bc1f591f9840e5faec6c721c122611725f604e",
+  "rows": [
+    {
+      "N": 16,
+      "seconds": 0.594,
+      "quantities": {
+        "energy": "[3.194767768109205273935131839275966013e-5 +/- 5.63e-42]",
+        "full_relative_gain": "[0.237284828329962843680199877406439284 +/- 5.57e-37]",
+        "model_numerator": "[9.078252747718833902902878433974272596e-5 +/- 8.43e-42]",
+        "bending_energy": "[1.209133540658009314389780204101047907e-5 +/- 9.01e-42]",
+        "local_curvature_sum": "[4.82121239601363341765582555797512736e-6 +/- 4.90e-42]",
+        "bending_to_model_ratio": "[0.1331901164529526997924433675963966108 +/- 7.05e-38]",
+        "certified_numerator_lower_fraction": "[0.0625208642047067273027206107039093448 +/- 6.63e-38]",
+        "curvature_lower_over_residual": "[0.1776593005982566936006088233863606514 +/- 7.81e-38]",
+        "local_lower_over_residual": "[0.1416771917261186769595131848377283496 +/- 4.25e-38]",
+        "RKHS_upper_over_residual": "[243.931299782545718793335385464476643 +/- 4.07e-34]",
+        "A": "[0.13033070075390631147707369136441642434031780566782161341426792304 +/- 3.32e-67]",
+        "B": "[0.53258267518847657786926842284110410608507945141695540335356698076 +/- 8.31e-68]",
+        "causal_rate": "[2.0214832737846360876662762309955560844549429093982476145402494511 +/- 4.99e-65]"
+      },
+      "directions": {
+        "spline_curvature": {
+          "fraction_of_full_gain": "[0.852909781325955069333283758236816 +/- 4.59e-34]",
+          "relative_gain": "[0.202382551042875397411445884312556 +/- 5.21e-34]",
+          "raw_lower_relative_gain": "[0.0413394064433372479572795251420033 +/- 8.42e-35]",
+          "numerator": "[1.2091335406580093143897802041010479e-5 +/- 4.22e-40]",
+          "true_projected_cost": "[2.261185421131510483333713950967559e-5 +/- 7.77e-39]"
+        },
+        "diagonal_curvature": {
+          "fraction_of_full_gain": "[0.930898072868598894402749936411478 +/- 3.45e-34]",
+          "relative_gain": "[0.2208879894133187305594874930553082 +/- 7.97e-35]",
+          "raw_lower_relative_gain": "[0.0662567423507329927737643847882341 +/- 3.90e-35]",
+          "numerator": "[4.821212396013633417655825557975127e-6 +/- 4.28e-40]",
+          "true_projected_cost": "[3.293829635545640189343145324088743e-6 +/- 5.80e-40]"
+        },
+        "repaired_model": {
+          "fraction_of_full_gain": "[0.83901638608493241172015527355452775 +/- 4.25e-36]",
+          "relative_gain": "[0.199085859138189013353511009209672778 +/- 3.85e-37]",
+          "raw_lower_relative_gain": "[0.041123827281712740820411022293503879 +/- 1.23e-37]",
+          "numerator": "[9.078252747718833902902878433974272596e-5 +/- 8.43e-42]",
+          "true_projected_cost": "[0.00129576078326015877448139818910832435 +/- 5.97e-39]"
+        }
+      },
+      "minimum_accuracy_bits": 109,
+      "gates": {
+        "complete_actual_gram": true,
+        "full_projection": true,
+        "normalized_interpolation_data": true,
+        "positive_tridiagonal_pivots": true,
+        "tridiagonal_residuals_contain_zero": true,
+        "adjoint_bending_identity": true,
+        "uniform_model_curvature_comparison": true,
+        "selected_gains_below_optimum": true
+      }
+    },
+    {
+      "N": 32,
+      "seconds": 1.942,
+      "quantities": {
+        "energy": "[2.43669784669931395762958244676788980e-5 +/- 1.43e-41]",
+        "full_relative_gain": "[0.18912807038823539269388365966485304 +/- 8.43e-36]",
+        "model_numerator": "[4.4560543676328056939081625772651396e-5 +/- 6.84e-40]",
+        "bending_energy": "[5.911923289595587885245972582562446e-6 +/- 1.27e-40]",
+        "local_curvature_sum": "[2.7196019523173049454533928073774711e-6 +/- 6.18e-41]",
+        "bending_to_model_ratio": "[0.13267170464834756770431047955538808 +/- 7.77e-36]",
+        "certified_numerator_lower_fraction": "[0.06227751616281742323201132862386779 +/- 2.93e-36]",
+        "curvature_lower_over_residual": "[0.11388855548034221563690151474094493 +/- 2.23e-36]",
+        "local_lower_over_residual": "[0.10478198808026954011861494199804834 +/- 3.66e-36]",
+        "RKHS_upper_over_residual": "[156.37224324944264622355752419320579 +/- 5.06e-33]",
+        "A": "[0.13033070075390631147707369136441642434031780566782161341426792304 +/- 3.32e-67]",
+        "B": "[0.53258267518847657786926842284110410608507945141695540335356698076 +/- 8.31e-68]",
+        "causal_rate": "[2.0214832737846360876662762309955560844549429093982476145402494511 +/- 4.99e-65]"
+      },
+      "directions": {
+        "spline_curvature": {
+          "fraction_of_full_gain": "[0.833444250319180772312541896807 +/- 3.34e-31]",
+          "relative_gain": "[0.1576277028390360992597071045330 +/- 3.56e-32]",
+          "raw_lower_relative_gain": "[0.0569030340373212798526335505808 +/- 7.03e-32]",
+          "numerator": "[5.911923289595587885245972582562e-6 +/- 5.13e-37]",
+          "true_projected_cost": "[9.09962205059973154630234232532e-6 +/- 4.50e-36]"
+        },
+        "diagonal_curvature": {
+          "fraction_of_full_gain": "[0.9040357142881961847874087425900 +/- 6.90e-32]",
+          "relative_gain": "[0.1709785302053766287561794324590 +/- 5.37e-32]",
+          "raw_lower_relative_gain": "[0.0935108810358711312591360743330 +/- 5.30e-32]",
+          "numerator": "[2.7196019523173049454533928073775e-6 +/- 4.05e-38]",
+          "true_projected_cost": "[1.7752823267556205137586341788200e-6 +/- 8.99e-38]"
+        },
+        "repaired_model": {
+          "fraction_of_full_gain": "[0.825296318633503524749810156552673 +/- 2.88e-34]",
+          "relative_gain": "[0.1560867002416687993276236029211753 +/- 6.49e-35]",
+          "raw_lower_relative_gain": "[0.0541937990796835255491819779859167 +/- 5.52e-35]",
+          "numerator": "[4.4560543676328056939081625772651396e-5 +/- 6.84e-40]",
+          "true_projected_cost": "[0.0005220755839428927471564700968665093 +/- 7.61e-38]"
+        }
+      },
+      "minimum_accuracy_bits": 99,
+      "gates": {
+        "complete_actual_gram": true,
+        "full_projection": true,
+        "normalized_interpolation_data": true,
+        "positive_tridiagonal_pivots": true,
+        "tridiagonal_residuals_contain_zero": true,
+        "adjoint_bending_identity": true,
+        "uniform_model_curvature_comparison": true,
+        "selected_gains_below_optimum": true
+      }
+    },
+    {
+      "N": 64,
+      "seconds": 8.622,
+      "quantities": {
+        "energy": "[1.9758498848339044931093888638682217e-5 +/- 3.85e-40]",
+        "full_relative_gain": "[0.165203189369659992753117494535513 +/- 1.80e-34]",
+        "model_numerator": "[3.15194084855513495212574988955147e-5 +/- 9.66e-39]",
+        "bending_energy": "[4.1688330433441269625373455436755e-6 +/- 1.33e-38]",
+        "local_curvature_sum": "[2.05340648747558439821476365834666e-6 +/- 4.18e-39]",
+        "bending_to_model_ratio": "[0.132262413657132567984075993634535 +/- 4.72e-34]",
+        "certified_numerator_lower_fraction": "[0.062085390597021392107085628466545 +/- 1.79e-34]",
+        "curvature_lower_over_residual": "[0.099040661045817664456892799463404 +/- 5.54e-34]",
+        "local_lower_over_residual": "[0.097567225072757433137385447616955 +/- 3.83e-34]",
+        "RKHS_upper_over_residual": "[135.985659624204956296167998419054 +/- 5.36e-31]",
+        "A": "[0.13033070075390631147707369136441642434031780566782161341426792304 +/- 3.32e-67]",
+        "B": "[0.53258267518847657786926842284110410608507945141695540335356698076 +/- 8.31e-68]",
+        "causal_rate": "[2.0214832737846360876662762309955560844549429093982476145402494511 +/- 4.99e-65]"
+      },
+      "directions": {
+        "spline_curvature": {
+          "fraction_of_full_gain": "[0.9602625214129528484609609003 +/- 6.85e-29]",
+          "relative_gain": "[0.1586384311695712331789869656 +/- 2.66e-29]",
+          "raw_lower_relative_gain": "[0.0853231482436745117351692804 +/- 2.56e-29]",
+          "numerator": "[4.1688330433441269625373455437e-6 +/- 3.52e-35]",
+          "true_projected_cost": "[5.544554448856197232980712102e-6 +/- 4.51e-34]"
+        },
+        "diagonal_curvature": {
+          "fraction_of_full_gain": "[0.9783698235019345826038774358 +/- 2.01e-29]",
+          "relative_gain": "[0.16162981522555092258113845615 +/- 7.43e-30]",
+          "raw_lower_relative_gain": "[0.08989473775731912429555147367 +/- 9.33e-30]",
+          "numerator": "[2.05340648747558439821476365835e-6 +/- 5.15e-36]",
+          "true_projected_cost": "[1.3203055143128728628105856161e-6 +/- 6.90e-35]"
+        },
+        "repaired_model": {
+          "fraction_of_full_gain": "[0.9577497907873506997694792124155 +/- 5.29e-32]",
+          "relative_gain": "[0.15822332005619493718505138696792 +/- 3.61e-33]",
+          "raw_lower_relative_gain": "[0.08391067405846616252508233861064 +/- 7.03e-33]",
+          "numerator": "[3.15194084855513495212574988955147e-5 +/- 9.66e-39]",
+          "true_projected_cost": "[0.00031778374446100226142379316218469 +/- 4.68e-36]"
+        }
+      },
+      "minimum_accuracy_bits": 90,
+      "gates": {
+        "complete_actual_gram": true,
+        "full_projection": true,
+        "normalized_interpolation_data": true,
+        "positive_tridiagonal_pivots": true,
+        "tridiagonal_residuals_contain_zero": true,
+        "adjoint_bending_identity": true,
+        "uniform_model_curvature_comparison": true,
+        "selected_gains_below_optimum": true
+      }
+    },
+    {
+      "N": 128,
+      "seconds": 40.947,
+      "quantities": {
+        "energy": "[1.649433182143668081417340126620132e-5 +/- 4.84e-39]",
+        "full_relative_gain": "[0.14258929114605661299429183200771 +/- 8.30e-33]",
+        "model_numerator": "[2.2148479233837348960102653322888e-5 +/- 6.35e-37]",
+        "bending_energy": "[2.92175934146765322068290772969e-6 +/- 5.24e-36]",
+        "local_curvature_sum": "[1.453395289665033172395765465051e-6 +/- 5.49e-37]",
+        "bending_to_model_ratio": "[0.1319169280482216626670456864406 +/- 5.47e-32]",
+        "certified_numerator_lower_fraction": "[0.0619232159596335720684680918280 +/- 6.46e-32]",
+        "curvature_lower_over_residual": "[0.0831500831692926102751242121289 +/- 6.51e-32]",
+        "local_lower_over_residual": "[0.0827240885300296466935205787094 +/- 1.16e-32]",
+        "RKHS_upper_over_residual": "[114.1674418181929607848252252421 +/- 4.29e-29]",
+        "A": "[0.13033070075390631147707369136441642434031780566782161341426792304 +/- 3.32e-67]",
+        "B": "[0.53258267518847657786926842284110410608507945141695540335356698076 +/- 8.31e-68]",
+        "causal_rate": "[2.0214832737846360876662762309955560844549429093982476145402494511 +/- 4.99e-65]"
+      },
+      "directions": {
+        "spline_curvature": {
+          "fraction_of_full_gain": "[0.9795243721537398515633595 +/- 4.57e-26]",
+          "relative_gain": "[0.13966968588568792057500014 +/- 7.53e-27]",
+          "raw_lower_relative_gain": "[0.06317536131100266598935719 +/- 8.53e-27]",
+          "numerator": "[2.92175934146765322068290773e-6 +/- 2.91e-33]",
+          "true_projected_cost": "[3.7055442083733538358568746e-6 +/- 9.66e-32]"
+        },
+        "diagonal_curvature": {
+          "fraction_of_full_gain": "[0.9852990502825881598192362 +/- 1.47e-26]",
+          "relative_gain": "[0.14049309314667703742438684 +/- 4.99e-27]",
+          "raw_lower_relative_gain": "[0.06863011075812079300617457 +/- 6.08e-27]",
+          "numerator": "[1.453395289665033172395765465e-6 +/- 4.87e-34]",
+          "true_projected_cost": "[9.1154433282793285842822736e-7 +/- 8.19e-33]"
+        },
+        "repaired_model": {
+          "fraction_of_full_gain": "[0.97810090107222488006443006170 +/- 1.29e-30]",
+          "relative_gain": "[0.139466714153207790218221186917 +/- 3.70e-31]",
+          "raw_lower_relative_gain": "[0.063286867425986119809597247543 +/- 3.25e-31]",
+          "numerator": "[2.2148479233837348960102653322888e-5 +/- 6.35e-37]",
+          "true_projected_cost": "[0.000213246802375573840903434465496 +/- 3.49e-34]"
+        }
+      },
+      "minimum_accuracy_bits": 82,
+      "gates": {
+        "complete_actual_gram": true,
+        "full_projection": true,
+        "normalized_interpolation_data": true,
+        "positive_tridiagonal_pivots": true,
+        "tridiagonal_residuals_contain_zero": true,
+        "adjoint_bending_identity": true,
+        "uniform_model_curvature_comparison": true,
+        "selected_gains_below_optimum": true
+      }
+    },
+    {
+      "N": 256,
+      "seconds": 241.172,
+      "quantities": {
+        "energy": "[1.41424167390901796560441032518723e-5 +/- 8.92e-38]",
+        "full_relative_gain": "[0.083268098705233270663909938729 +/- 6.24e-31]",
+        "model_numerator": "[1.08451219393489238648673242573e-5 +/- 8.95e-35]",
+        "bending_energy": "[1.4333233391776573032147226726e-6 +/- 6.06e-35]",
+        "local_curvature_sum": "[7.140026411758257380387303183e-7 +/- 4.65e-35]",
+        "bending_to_model_ratio": "[0.13216295281818707220025135902 +/- 4.48e-30]",
+        "certified_numerator_lower_fraction": "[0.06203870261617865373768731230 +/- 4.84e-30]",
+        "curvature_lower_over_residual": "[0.04757442148991196920461581391 +/- 3.53e-30]",
+        "local_lower_over_residual": "[0.047397906205445269097922470640 +/- 7.01e-31]",
+        "RKHS_upper_over_residual": "[65.32104106769615693082608340 +/- 5.14e-27]",
+        "A": "[0.13033070075390631147707369136441642434031780566782161341426792304 +/- 3.32e-67]",
+        "B": "[0.53258267518847657786926842284110410608507945141695540335356698076 +/- 8.31e-68]",
+        "causal_rate": "[2.0214832737846360876662762309955560844549429093982476145402494511 +/- 4.99e-65]"
+      },
+      "directions": {
+        "spline_curvature": {
+          "fraction_of_full_gain": "[0.9725739362023731358426 +/- 6.65e-23]",
+          "relative_gain": "[0.08098438251783645209839 +/- 6.05e-24]",
+          "raw_lower_relative_gain": "[0.01995983270955525744889 +/- 1.12e-24]",
+          "numerator": "[1.43332333917765730321472e-6 +/- 3.53e-30]",
+          "true_projected_cost": "[1.7937563006335776006112e-6 +/- 4.56e-29]"
+        },
+        "diagonal_curvature": {
+          "fraction_of_full_gain": "[0.97630687913663699355812 +/- 5.87e-24]",
+          "relative_gain": "[0.081295217578547738115228 +/- 4.60e-25]",
+          "raw_lower_relative_gain": "[0.026145526304190499452746 +/- 4.94e-25]",
+          "numerator": "[7.14002641175825738038730e-7 +/- 4.62e-31]",
+          "true_projected_cost": "[4.4341564092234533169894e-7 +/- 2.52e-30]"
+        },
+        "repaired_model": {
+          "fraction_of_full_gain": "[0.970588900077267770414542453 +/- 3.99e-28]",
+          "relative_gain": "[0.0808190923338377247506980412 +/- 5.56e-29]",
+          "raw_lower_relative_gain": "[0.0199094865209791057873546129 +/- 5.07e-29]",
+          "numerator": "[1.08451219393489238648673242573e-5 +/- 8.95e-35]",
+          "true_projected_cost": "[0.0001029037685166959342893118683 +/- 4.10e-32]"
+        }
+      },
+      "minimum_accuracy_bits": 73,
+      "gates": {
+        "complete_actual_gram": true,
+        "full_projection": true,
+        "normalized_interpolation_data": true,
+        "positive_tridiagonal_pivots": true,
+        "tridiagonal_residuals_contain_zero": true,
+        "adjoint_bending_identity": true,
+        "uniform_model_curvature_comparison": true,
+        "selected_gains_below_optimum": true
+      }
+    }
+  ]
+}

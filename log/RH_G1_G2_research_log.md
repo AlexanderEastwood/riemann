@@ -1,5 +1,28 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.61: local geometry and an arithmetic control (NS-72–74)
+
+The repaired model has an explicit positive differential energy. Its
+numerator is uniformly comparable to a discrete curvature energy, yielding
+an O(N) coefficient rule once the actual residual correlations are known.
+At N=256 the diagonal curvature rule captures **97.63% of the full block
+gain**, an **8.13% reduction of squared error**, versus the optimum's 8.33%.
+The best combination of three prescribed Mobius/log-taper templates captures
+83.66%; these finite comparisons do not exclude other arithmetic formulas.
+
+An explicit unitary altered family has identical complete Gram matrices
+and arbitrarily close finite efficiency statistics, but an unconditional
+positive approximation floor. This is a control on the inference from
+finite geometry, not an off-line zeta zero or a floor for the original
+family. The original cofinal arithmetic numerator/cost estimate remains open.
+
+[Readable update](../evidence/v161/research-update-2026-09-23-v1.html) ·
+[Proofs and complete finite replays](../evidence/v161/).
+No new Weil window, uniform floor, G2 or RH proof.
+
+Validation and the complete scope are recorded in `evidence/v161/validation.json`. Local self-review only; no independent review is claimed.
+
+
 ## v1.60 local draft — complete cancellation and selected directions (September 23, 2026)
 
 Version 1.60 local draft (NS-67–71) gives complete canonical cells and

@@ -1,0 +1,34 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v161/ns74/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+a:be-1/2
+bb:(1-be)/be
+cc:(2*be-1)/be^2
+check("Unit modulus",((%i*t-a)/(%i*t+a))*((-%i*t-a)/(-%i*t+a))-1)
+check("Causal multiplier",1-(2*a)/(s-1/2+a)+(-(s-be))/(s-(1-be)))
+check("Exterior tail multiplier",1-(2*a)/(a+1/2)-bb)
+check("Adjoint target slope",1-(2*a)/be-bb)
+check("Adjoint target constant",(-2*a)/be^2+cc)
+check("Adjoint exponential rate",a+1/2-be)
+check("Complete transformed target norm",2*bb^2-2*bb*cc+cc^2+cc^2/(2*be-1)-2)
+check("Tail orthogonality",1/be-(1/be)*1)
+check("Positive tail distance",
+      cc^2*(1/(2*be-1)-1/be^2)-((2*be-1)*(1-be)^2)/be^6)
+check("Evaluation representer norm",
+      1/(2*be-1)+1/(1-be)^2+(-be^2)/((2*be-1)*(1-be)^2))
+check("Dual floor matches tail floor",
+      (1/be^2)^2/(1/(2*be-1)+1/(1-be)^2)-((2*be-1)*(1-be)^2)/be^6)
+check("Limit original slope",limit(bb,be,1/2,plus)-1)
+check("Limit load correction",limit(cc,be,1/2,plus))
+check("Floor first-order scale",
+      limit((((2*be-1)*(1-be)^2)/be^6)/(be-1/2),be,1/2,plus)-32)
+check("Tail load integral primitive",diff(-x^-be/be,x)-x^(-be-1))
+check("Inserted zero",subst(be,s,(s-be)/(s-(1-be))))
+print("PASS:",length(checks),
+      "exact checks; altered family only, original RH remains open.")
+PASS: 16 exact checks; altered family only, original RH remains open. 
+"/private/tmp/riemann-ns72/evidence/v161/ns74/exact-checks.mac"

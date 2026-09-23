@@ -1,0 +1,77 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v161/ns72/exact-checks.mac")
+display2d:false
+scalarmatrixp:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+aa:kk-3/2
+bb:kk/4+1/8
+check("Positive spectral split",
+      (aa*t^2+bb)/(t^2+1/4)^3-aa/(t^2+1/4)^2+(-(1/2))/(t^2+1/4)^3)
+check("Rate relation",bb-aa/4+(-1)/2)
+check("Causal factor",1/(s+1/2)^2+(al-1/2)/(s+1/2)^3+(-(s+al))/(s+1/2)^3)
+check("Causal squared modulus",
+      subst(bb/aa,al^2,(aa*(al^2+t^2))/(t^2+1/4)^3)-(aa*t^2+bb)/(t^2+1/4)^3)
+check("Local positive energy polynomial",
+      (t^2+1/4)^3-t^6+(-(3/4))*t^4+(-(3/16))*t^2+(-1)/64)
+check("Second derivative energy",(t^2+1/4)^2-t^4+(-t^2)/2+(-1)/16)
+check("Lower comparison positive difference",
+      (t^2+1/4)/(aa*t^2+bb)-1/(4*bb)+(-t^2*(bb-aa/4))/(bb*(aa*t^2+bb)))
+check("Upper comparison positive difference",
+      1/aa-(t^2+1/4)/(aa*t^2+bb)+(-(bb-aa/4))/(aa*(aa*t^2+bb)))
+cc:al-1/2
+check("Covariance constant",subst(bb/aa,al^2,expand(aa*(2+6*cc+6*cc^2)))-2*kk)
+check("Covariance linear coefficient",
+      subst(bb/aa,al^2,expand(aa*(1+3*cc+3*cc^2)))-kk)
+check("Covariance quadratic coefficient",
+      subst(bb/aa,al^2,expand((aa*cc*(cc+1))/2))-1/4)
+L(expr):=-diff(expr,r,2)+expr/4
+for sign in [-1,1] do
+    (for deg from 0 thru 2 do
+         check(sconcat("Local homogeneous mode ",sign," ",deg),
+               L(L(L(exp((sign*r)/2)*r^deg)))))
+gp:exp(-r/2)*(r^2/2+3*r+6)
+gm:exp(r/2)*(r^2/2-3*r+6)
+zp:aa*(al*gp-diff(gp,r))
+zm:aa*(al*gm-diff(gm,r))
+for deg from 0 thru 3 do
+    check(sconcat("Green continuity order ",deg),
+          subst(0,r,diff(zp,r,deg)-diff(zm,r,deg)))
+check("Fourth derivative Green jump",subst(0,r,diff(zp,r,4)-diff(zm,r,4))-aa)
+check("Fifth derivative Green jump",
+      subst(0,r,diff(zp,r,5)-diff(zm,r,5))+aa*al)
+check("Positive-side Green factor",
+      subst(bb/aa,al^2,expand(diff(zp,r)+al*zp))-exp(-r/2)*(2*kk+kk*r+r^2/4))
+check("Negative-side Green factor",
+      subst(bb/aa,al^2,expand(diff(zm,r)+al*zm))-exp(r/2)*(2*kk-kk*r+r^2/4))
+check("Correlation telescoping",
+      nn*(ss/nn)-((nn-1)*(ss-nn*gg))/(nn-1)+(-nn)*gg)
+check("Normalized interpolation",sqrt(nn)*(ss/nn)-ss/sqrt(nn))
+check("Left tent Gram",integrate((x/h)^2,x,0,h)-h/3)
+check("Adjacent tent Gram",integrate((x/h)*(1-x/h),x,0,h)-h/6)
+check("Slope difference from quadratic",
+      ((c0+c1*(h1+h2)+c2*(h1+h2)^2)-(c0+c1*h1+c2*h1^2))/h2
+       -((c0+c1*h1+c2*h1^2)-c0)/h1+(-c2)*(h1+h2))
+Q(f,g):=integrate(
+  expand(diff(f,x,2)*diff(g,x,2)+(diff(f,x)*diff(g,x))/2+(f*g)/16),x,0,1)
+p:x^3-x^2
+h0:1-3*x^2+2*x^3
+h1:x-2*x^2+x^3
+check("Left extension boundary value",subst(1,x,p))
+check("Left extension boundary slope",subst(1,x,diff(p,x))-1)
+check("Left extension outer value",subst(0,x,p))
+check("Left extension outer slope",subst(0,x,diff(p,x)))
+check("Left extension complete energy",Q(p,p)-6833/1680)
+check("Right value basis energy",Q(h0,h0)-7069/560)
+check("Right slope basis energy",Q(h1,h1)-6833/1680)
+check("Right extension cross term",Q(h0,h1)-20339/3360)
+check("Right extension combined positive allowance",
+      29-(Q(h0,h0)+2*Q(h0,h1)+Q(h1,h1))+(-341)/1680)
+check("Finite-interval energy allowance",1+((1/2+1/16)*11)/3+(-49)/16)
+check("Uniform extension allowance",84-(4+2+232/3)+(-2)/3)
+print("PASS:",length(checks),
+      "exact checks; selected arithmetic growth remains open.")
+PASS: 41 exact checks; selected arithmetic growth remains open. 
+"/private/tmp/riemann-ns72/evidence/v161/ns72/exact-checks.mac"

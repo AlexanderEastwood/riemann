@@ -1,0 +1,138 @@
+{
+  "classification": "local integration validation; no independent review or RH proof",
+  "version": "v1.61",
+  "date": "2026-09-23",
+  "tasks": [
+    "NS-72",
+    "NS-73",
+    "NS-74"
+  ],
+  "publication_base_commit": "c06128bb687daccfad29f8ecddbd66ff1217c928",
+  "manuscript": {
+    "pages": 337,
+    "warning_counts": {
+      "undefined_or_duplicate_references": 0,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0,
+      "latex_warnings": 0,
+      "pdftex_warnings": 0,
+      "duplicate_pdf_destinations": 0
+    },
+    "proof_fragment_integrated_verbatim_once": true,
+    "proof_sha256": "b2a04f042d28a71f993078fd2eb90f460d1f2edc10c090144c31f9e9d1677c1f",
+    "main_tex_sha256": "22fa723ab1d002e7d4766e65f793d0e18d259dbff0fc1640f4ea26f79a727634",
+    "pdf_sha256": "33b8c47cf87a250feb9fedc565344daa7c4bf5d7f46babab58ab51835e6e1b6b",
+    "new_section_visual_review_pages": [
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313
+    ]
+  },
+  "maxima_exact_checks": {
+    "NS-72": 41,
+    "NS-73": 10,
+    "NS-74": 16
+  },
+  "maxima_total": 67,
+  "arb_precisions_bits": [
+    256,
+    384
+  ],
+  "replays": {
+    "ns72": {
+      "status": "PASS",
+      "precision_enclosure_matches": 140,
+      "doubled_cutoff_matches": 28,
+      "published_NS71_overlap_matches": 25,
+      "minimum_accuracy_bits": 73,
+      "finite_prediction": "both curvature directions outperform the repaired model at each tested size; diagonal best",
+      "cofinal_arithmetic_bound": false
+    },
+    "ns73_ns74": {
+      "status": "PASS",
+      "precision_bits": [
+        256,
+        384
+      ],
+      "groups": {
+        "ns73": {
+          "precision_enclosure_matches": 120,
+          "doubled_cutoff_matches": 24,
+          "NS72_overlap_matches": 20,
+          "source_sha256": "528b74437dd265187318bac2a1dd4658c1169d452fece880e8c95e0a7be8dfe5",
+          "minimum_nonzero_serialized_accuracy_bits": 71,
+          "conclusion": "curvature exceeds even the optimized three-template span at all five sizes; no asymptotic exclusion"
+        },
+        "ns74": {
+          "precision_enclosure_matches": 150,
+          "doubled_cutoff_matches": 30,
+          "NS72_overlap_matches": 20,
+          "source_sha256": "4608853ade376e8a822daaf9e3beabb4bf8a5cf2c00f147f261ddaf93ccddae7",
+          "minimum_nonzero_serialized_accuracy_bits": 75,
+          "largest_block_altered_family": {
+            "beta": "[0.50000100000000000000000000000000000000000000000000000000000000000 +/- 3e-70]",
+            "energy": "[4.61424001041192623145225818151614e-5 +/- 8.84e-38]",
+            "next_energy": "[4.496475036655833504501477724804e-5 +/- 5.66e-36]",
+            "positive_floor": "[3.1999488004351973376132607426562236407939099303848050959776980929e-5 +/- 1.87e-70]",
+            "floor_fraction_of_energy": "[0.69349422509765131938485384304386 +/- 1.76e-33]",
+            "full_relative_gain": "[0.0255220737305295732330396773882 +/- 8.11e-32]",
+            "curvature_relative_gain": "[0.024917378705109262707867 +/- 3.67e-25]",
+            "curvature_fraction_of_full_gain": "[0.97630697913481173320345 +/- 7.99e-24]",
+            "curvature_numerator": "[7.14025181214164434732323e-7 +/- 1.59e-31]",
+            "curvature_true_cost": "[4.4342943946720182588607e-7 +/- 5.00e-30]"
+          }
+        }
+      },
+      "cofinal_arithmetic_bound": false,
+      "manuscript_table_intervals_verified": {
+        "ns72": 15,
+        "ns73": 20
+      }
+    }
+  },
+  "python_diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "scope": "all new v161 scientific Python"
+  },
+  "source_sha256": {
+    "ns72/certify_curvature.py": "bdd12e937263e662ea26983ba9be9dd1e0a2f758d7bf42adddd53830f7d442d6",
+    "ns72/exact-checks.mac": "f3606b5cf99570f534f2bafed0e273f8e03722ec7c6c86c8f99b7746255318b1",
+    "ns72/proof.tex": "b5f08265ae7aadaa9f78764624525cd5c361ea13f37342c4ce7f52fb3d7d73e5",
+    "ns72/verify_replays.py": "6e0b943ac885e792e9c235e8dae7b3e990868409b47ab65e8d39a747805a918f",
+    "ns73/certify_mobius.py": "528b74437dd265187318bac2a1dd4658c1169d452fece880e8c95e0a7be8dfe5",
+    "ns73/exact-checks.mac": "84a11229573c7d47fb5c0326e2c1646c1c8429f6419c77ed9b4ab355dbff7cda",
+    "ns73/proof.tex": "8fdd6ab8bf3f68b4ec23d8236c3bccaba7365beb771f1e963fbcf193d72fb078",
+    "ns74/certify_deformation.py": "4608853ade376e8a822daaf9e3beabb4bf8a5cf2c00f147f261ddaf93ccddae7",
+    "ns74/exact-checks.mac": "028cb391ba5ff136d156943f215f9f5da714c4f2da8574382b87cc84285c9cbd",
+    "ns74/proof.tex": "6366fb5efadb25b097989de42aedb5ae5cff015b2b122ad69706b5b4bb68f62f",
+    "proof.tex": "b2a04f042d28a71f993078fd2eb90f460d1f2edc10c090144c31f9e9d1677c1f",
+    "verify_replays.py": "03eccd7c32353b9afee9a8d6521cca9b25e497d72eb7213c52b9eca01b1fed90"
+  },
+  "independent_review": false,
+  "open_inputs": [
+    "Cofinal lower curvature/model numerator and upper selected true-energy cost giving nonsummable contraction",
+    "Original arithmetic Weil floor, API, G2 and RH"
+  ],
+  "limits": [
+    "All uniform curvature comparisons are model-only",
+    "The O(N) scalar-operation count assumes the actual correlation vector supplied",
+    "Finite template underperformance is not an asymptotic exclusion",
+    "The inserted zero and positive error floor belong only to the altered family",
+    "No finite efficiency fraction establishes convergence"
+  ],
+  "publication_authorization": "User requested PRs and subsequently explicitly allowed validated merges and version tags.",
+  "html_checks": {
+    "balanced_nesting": true,
+    "local_links_resolve": true,
+    "inline_styles_only": true,
+    "browser_visual_review": false,
+    "preview": "Codex file preview; prior local browser restriction respected"
+  }
+}

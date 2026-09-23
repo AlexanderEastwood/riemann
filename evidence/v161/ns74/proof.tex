@@ -1,0 +1,155 @@
+\section{A same-Gram control with a positive error floor (NS-74)}
+\label{sec:ns74-same-gram-control}
+
+\paragraph{Scope.}
+The finite efficiency of a direction is a fraction of the available
+improvement, not an asymptotic convergence test. The following explicit
+altered family preserves every complete Gram entry, can approximate any
+fixed finite list of the original loads arbitrarily closely, and has an
+unconditional nonzero error floor. It is a control on that inference.
+It supplies neither an off-line zeta zero nor an error floor for the
+original arithmetic family.
+
+Fix $1/2<\beta<1$, set $a=\beta-1/2$, and put
+\[
+ B_\beta(s)=\frac{s-\beta}{s-(1-\beta)},\qquad
+ b_\beta=\frac{1-\beta}{\beta},\qquad
+ c_\beta=\frac{2\beta-1}{\beta^2}.
+\]
+Let $\mathcal U:L^2(0,\infty;dx)\to L^2(\mathbb R;dt)$ be
+$(\mathcal Uf)(t)=e^{-t/2}f(e^{-t})$. On this latter space define
+\[
+ (V_\beta u)(t)=u(t)-2a\int_{-\infty}^t
+                                      e^{-a(t-r)}u(r)\,dr,
+ \qquad U_\beta=\mathcal U^{-1}V_\beta\mathcal U.
+\]
+The convolution is a bounded $L^2$ operator, since its kernel is in
+$L^1$. Its Fourier multiplier is $(it-a)/(it+a)$, of modulus one,
+so $U_\beta$ is unitary. Define the altered atoms
+$\sigma_n^{(\beta)}=U_\beta\sigma_n$, keeping the original target
+$\tau$ and norm fixed.
+
+\begin{proposition}[Identical geometry, altered loads, and an explicit floor]
+\label{prop:ns74-same-gram}
+For every $m,n\geq1$ the complete altered Gram satisfies
+\[
+ \langle\sigma_m^{(\beta)},\sigma_n^{(\beta)}\rangle=G(m,n).
+\]
+The target loads are exactly
+\begin{equation}
+ b_n^{(\beta)}=\langle\tau,\sigma_n^{(\beta)}\rangle
+ =b_\beta b_n-\frac{c_\beta}{n}
+                    \left(\log n+2-\gamma+\frac1\beta\right).
+ \label{eq:ns74-loads}
+\end{equation}
+For every finite coefficient vector, including optimized coefficients,
+\begin{equation}
+ \left\|\tau-\sum_n q_n\sigma_n^{(\beta)}\right\|_2^2
+ \geq F_\beta:=\frac{(2\beta-1)(1-\beta)^2}{\beta^6}>0.
+ \label{eq:ns74-floor}
+\end{equation}
+All actual and elementary-model Gram matrices, old-space Schur
+complements, and geometric preconditioners are unchanged. The loads
+and residuals are changed.
+\end{proposition}
+\begin{proof}
+Unitarity proves the Gram equality on the complete space. In logarithmic
+coordinates $\mathcal U\tau=t e^{-t/2}\mathbf1_{t>0}$.
+Evaluating the adjoint anti-causal convolution gives
+\[
+ U_\beta^*\tau(x)=
+ \begin{cases}
+ b_\beta(-\log x)-c_\beta,&0<x<1,\\
+ -c_\beta x^{-\beta},&x>1.
+ \end{cases}
+\]
+Both pieces are retained. Since $\sigma_n(x)=1/(nx)$ for $x>1$ and
+\[
+ \int_0^1\sigma_n(x)\,dx=\frac{\log n+2-\gamma}{n},
+ \qquad \int_1^\infty x^{-\beta}\sigma_n(x)\,dx=\frac1{n\beta},
+\]
+the load formula follows. The first integral follows from Fubini in
+$\sigma_n=J\rho_n$: its interior contribution is
+$(\log n+1-\gamma)/n$ and its exterior contribution is $1/n$.
+
+All original atoms lie in the closed tail space
+\[
+ \mathcal T=L^2(0,1)\oplus
+              \operatorname{span}\{x^{-1}\mathbf1_{x>1}\}.
+\]
+Projecting the exterior piece of $U_\beta^*\tau$ onto that one-dimensional
+tail leaves squared distance
+\[
+ c_\beta^2\left(\frac1{2\beta-1}-\frac1{\beta^2}\right)
+ =F_\beta.
+\]
+The original approximation span is contained in $\mathcal T$, so its
+distance is at least this value. Applying the unitary $U_\beta$ proves
+\eqref{eq:ns74-floor}. No assumption about density of the original span
+in $\mathcal T$, or about RH, is made.
+\end{proof}
+
+\paragraph{The corresponding explicit dual obstruction.}
+The altered atoms still have exterior tail $b_\beta/(nx)$: integrate the
+causal convolution against $e^{t/2}/n$ for $t<0$.
+Their Mellin transforms, for $1-\beta<\Re s<1$, are
+\[
+ \widehat{\sigma_n^{(\beta)}}(s)
+     =-B_\beta(s)\frac{\zeta(s)}{s^2n^s}.
+\]
+This identity follows either by absolutely convergent convolution in a
+smaller strip and continuation, or directly from the physical formula.
+Thus the deliberately inserted zero at $s=\beta$ annihilates every atom.
+On $\mathcal T$, evaluation at $\beta$ is represented by
+\[
+ w_\beta(x)=x^{\beta-1}\mathbf1_{0<x<1}
+          +\frac{x^{-1}}{1-\beta}\mathbf1_{x>1},
+ \quad
+ \|w_\beta\|_2^2=\frac1{2\beta-1}+\frac1{(1-\beta)^2}.
+\]
+Since $\langle\tau,w_\beta\rangle=1/\beta^2$, Cauchy--Schwarz
+recovers precisely $F_\beta$. This is a zero of the inserted factor,
+not an asserted real or nonreal zero of $\zeta$.
+
+\begin{corollary}[Finite efficiency cannot distinguish convergence]
+\label{cor:ns74-finite-indistinguishability}
+For any fixed finite set of block sizes with nonzero original gain,
+the altered optimized energies, full gains, and either curvature
+rule's gain fractions converge to their original values as
+$\beta\downarrow1/2$. Nevertheless every fixed $\beta>1/2$ has the
+positive floor~\eqref{eq:ns74-floor} at all sizes. Consequently no
+strict finite collection of successful gain-fraction inequalities,
+together with the shared Gram geometry, implies convergence to zero.
+\end{corollary}
+\begin{proof}
+The loads~\eqref{eq:ns74-loads} converge entrywise to $b_n$.
+At each fixed size all Gram matrices are unchanged and positive
+definite. Hence their solved coefficients, projected loads and errors
+are continuous in $\beta$. Each curvature direction is a fixed linear
+map of those loads, and the positive gain denominators stay nonzero
+near the limit. Continuity proves the statement for each block and
+therefore for a finite list. The floor is strictly positive for every
+fixed parameter. There is no interchange of the limits $N\to\infty$
+and $\beta\downarrow1/2$.
+\end{proof}
+
+\paragraph{Certified control.}
+For $\beta=1/2+10^{-6}$ at $N=256$, the complete squared residual is
+in $(.00004614,.00004615)$, while the unconditional floor is in
+$(.00003199,.00003200)$. Thus more than $69.34\%$ of this finite error
+cannot be removed by any further approximation in the altered family.
+Nevertheless its diagonal curvature direction captures a fraction in
+$(.9763,.9764)$ of the available full block improvement, essentially
+the same finite efficiency as the original family. Its relative squared
+error reduction is only in $(.02491,.02493)$, compared with the original
+fraction in $(.08129,.08130)$: the distinction between gain fraction and
+error reduction matters.
+
+The parameter $\beta=1/2+10^{-10}$ gives the further exact positive floor
+$F_\beta\in(3.1999,3.2001)\cdot10^{-9}$ and still closer finite statistics.
+Both parameters and the original control are checked at all five sizes,
+at 256/384 bits and with the doubled cutoff at $N=256$. Sixteen exact
+Maxima checks cover the complete norm, tail, multiplier, dual functional
+and limiting identities. The original family's limiting error remains
+unknown; the positive floors in this paragraph belong only to the
+explicitly altered families.
