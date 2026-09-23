@@ -1,0 +1,54 @@
+{
+ "manuscript_revision": "v1.57",
+ "base_commit": "8cdb1053c0e43949d660c0221623b4c8a4316971",
+ "files": [
+  {
+   "path": "evidence/v157/README.md",
+   "size_bytes": 1921,
+   "sha256": "94e5b6a8bd5351b8a058309409a39742f6c6ca48fdc230aa0044eddde784d772"
+  },
+  {
+   "path": "evidence/v157/boundary-pairing-2026-09-22-v1.html",
+   "size_bytes": 4362,
+   "sha256": "fd193684302a96ae34ef6daffe8e0b5e989e570ccc1e0256121f6c7bacdc16fb"
+  },
+  {
+   "path": "evidence/v157/build-output.txt",
+   "size_bytes": 10757,
+   "sha256": "71a1a96bf1f95ebb10c4f9c2d7023338f2aba601d6ff883acd0d1b3e0a4975c0"
+  },
+  {
+   "path": "evidence/v157/exact-checks-output.txt",
+   "size_bytes": 2055,
+   "sha256": "afe5eb2921dd190b71a79a906bdbb976340ac77e018ee960992469f914538301"
+  },
+  {
+   "path": "evidence/v157/exact-checks.mac",
+   "size_bytes": 1724,
+   "sha256": "9fa68ff81bd95f0c39208679613c0ca6aaa8c46a2994460491196512ae13d276"
+  },
+  {
+   "path": "evidence/v157/integration-review-2026-09-22-v1.html",
+   "size_bytes": 4072,
+   "sha256": "5db60c1d8150fa5ac2440edb3165d9fba7c0c0354b575ffb2bd9fdfa7c80620f"
+  },
+  {
+   "path": "evidence/v157/latex-final-log.txt",
+   "size_bytes": 31643,
+   "sha256": "7614183677b674665f5ba9e8d047f3dd704dada64f5beb474520ac23bfacd72b"
+  },
+  {
+   "path": "evidence/v157/proof.tex",
+   "size_bytes": 11591,
+   "sha256": "02194d8ad744c3cefd5c347dee6bd1867e3ac3643cc0b274dc24dc8426fb4fb0"
+  },
+  {
+   "path": "evidence/v157/validation.json",
+   "size_bytes": 3315,
+   "sha256": "9d83ae0644fa22a99dc9e992098063bccbb9d7b164b3c4ec468a3d59669d2f12"
+  }
+ ],
+ "file_count": 9,
+ "total_bytes": 71440,
+ "note": "NS-58 incremental boundary-pairing equivalence and explicit forced controls. Stop condition reached; no new arithmetic sign. Complete build 294 pages with zero undefined/duplicate references or PDF destinations; nine exact algebra checks. Local self-review only."
+}

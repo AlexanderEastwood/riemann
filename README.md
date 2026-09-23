@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.56**.
+Alexander Eastwood's complete working manuscript, **v1.57**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -39,6 +39,21 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |
+
+## v1.57: the exact boundary test reaches its stop condition (NS-58)
+
+The full exterior pairing against every translated arithmetic radical is
+exactly equivalent to the original nullvector equation. Its derivation is
+valid on the complete form domain, with both poles and all exterior prime
+rows retained. It supplies no independent sign or uniqueness estimate.
+
+Finite prime-weight changes add an explicit forcing term. That forcing is
+nonzero for every nonzero test, but its map is compact and has no uniform
+positive lower bound on the entire fixed-window unit sphere. This does not
+exclude a bound restricted to a particular altered operator's finite kernel.
+
+[Proof, report, exact algebra checks and validation](evidence/v157/).
+NS-58 stops as specified; API, the uniform finite floor, G2 and RH remain open.
 
 ## v1.56: finite prime-weight controls (NS-57)
 
@@ -165,6 +180,7 @@ graph LR
   fullpositivecone["Ordinary-cone positivity for the full Weil semigroup<br/><small>prop:ns55-nonpositive-semigroup</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: order-preservation shortcut fails; quadratic-form positivity is a different property</b></small>"]
   finiteweightcontrols["Finite prime-weight changes: negative tests and first-zero controls<br/><small>cor:ns57-finite-weight-negative; thm:ns57-first-zero-controls; cor:ns57-fixed-direction-sensitivity</small><br/><small>&#128193; evidence/v156</small>"]
   boundedfloorstability["Bounded perturbations preserve the finite-floor objective<br/><small>lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability</small><br/><small>&#128193; evidence/v156</small>"]
+  radicalboundarytest["Translated-radical boundary test: exact kernel equivalence and forced controls<br/><small>prop:ns58-boundary-identity; prop:ns58-equivalence; prop:ns58-forced-pairing</small><br/><small>&#128193; evidence/v157</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -228,6 +244,7 @@ graph LR
   kernelapi --> fullpositivecone
   kernelapi --> finiteweightcontrols
   floor --> boundedfloorstability
+  kernelapi --> radicalboundarytest
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -288,9 +305,10 @@ graph LR
   click fullpositivecone "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v155/" "evidence: evidence/v155" _blank
   click finiteweightcontrols "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v156/" "evidence: evidence/v156" _blank
   click boundedfloorstability "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v156/" "evidence: evidence/v156" _blank
+  click radicalboundarytest "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v157/" "evidence: evidence/v157" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -315,7 +333,7 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.56_manifest.json)
+- [Checksums and provenance](manifest/v1.57_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).

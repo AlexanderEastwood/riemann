@@ -1,0 +1,83 @@
+{
+  "version": "v1.57",
+  "task": "NS-58",
+  "date_local": "2026-09-22",
+  "classification": [
+    "exact identity",
+    "proved implication",
+    "open input"
+  ],
+  "outcome": "Stop condition reached: the homogeneous translated-radical boundary test is exactly equivalent to the original nullvector equation; no independent arithmetic exclusion estimate.",
+  "provenance": {
+    "starting_main": "278be914c04d9b7492410d27aea8a23a6fa61bb5",
+    "claim_commit": "8cdb1053c0e43949d660c0221623b4c8a4316971",
+    "branch": "codex/ns58-radical-boundary",
+    "independent_review": false
+  },
+  "source": {
+    "manuscript_path": "manuscript/fixed_space_prime_action_v1.tex",
+    "manuscript_sha256": "ea83c728cac319e98bdf2d20233664477ba4d9851c017413b0b2eab5036f502f",
+    "proof_sha256": "02194d8ad744c3cefd5c347dee6bd1867e3ac3643cc0b274dc24dc8426fb4fb0",
+    "verbatim_fragment_occurrences": 1
+  },
+  "manuscript_build": {
+    "command": "./manuscript/build.sh",
+    "exit_code": 0,
+    "pages": 294,
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "duplicate_pdf_destinations": 0,
+    "count_scope": "Final converged LaTeX pass.",
+    "visually_inspected_pdf_pages": [
+      4,
+      267,
+      268,
+      269,
+      270,
+      271
+    ],
+    "output": "evidence/v157/build-output.txt",
+    "final_log": "evidence/v157/latex-final-log.txt"
+  },
+  "maxima": {
+    "command": "maxima --no-init --quit-on-error --very-quiet --batch=evidence/v157/exact-checks.mac",
+    "exit_code": 0,
+    "exact_checks_passed": 9,
+    "scope": "Finite exact pole and forcing-sign algebra only; not verification of the complete-domain analytic proofs or an interval certificate.",
+    "output": "evidence/v157/exact-checks-output.txt"
+  },
+  "local_review": {
+    "report": "evidence/v157/integration-review-2026-09-22-v1.html",
+    "outstanding_major_identified": 0,
+    "outstanding_minor_identified": 0,
+    "independent": false
+  },
+  "inherited_pdf_repair": {
+    "label": "eq:ns53-nb-rbc",
+    "change": "Use equation* for the explicitly tagged RBC display; formula and printed tag unchanged.",
+    "duplicate_destination_warnings_before": 4,
+    "duplicate_destination_warnings_after": 0
+  },
+  "limits": [
+    "No independent sign estimate, actual arithmetic nullvector, uniform floor, API, G2 or RH proof.",
+    "No new numerical window, tail metric or interval certificate.",
+    "Inherited radical and numerical inputs were not independently reviewed or replayed.",
+    "Compactness excludes a uniform lower bound on the entire fixed-window unit sphere, not on a particular finite-dimensional kernel.",
+    "No priority or literature novelty claim."
+  ],
+  "output_normalization": {
+    "build-output.txt": {
+      "captured_sha256": "71a1a96bf1f95ebb10c4f9c2d7023338f2aba601d6ff883acd0d1b3e0a4975c0",
+      "normalization": "Trailing whitespace removed only."
+    },
+    "latex-final-log.txt": {
+      "captured_sha256": "b98ca5f246c6b889511921287bd933d889149e75840406bfcaefc5f452aed3bc",
+      "normalization": "Trailing whitespace and final blank lines removed only."
+    },
+    "exact-checks-output.txt": {
+      "captured_sha256": "8136cbcd2e587cc05a019574f53fb07c53286d3628afac0d87f685a0e9973895",
+      "normalization": "Trailing whitespace removed only."
+    }
+  }
+}

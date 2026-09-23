@@ -1,0 +1,41 @@
+/* Finite exact algebra only. No numerical or RH certificate. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+
+/* Both signs in the continuous pole kernel. */
+check("Two-pole kernel decomposition",
+ exponentialize(2*cosh((x-y)/2)-2*cosh(x/2)*cosh(y/2)
+                +2*sinh(x/2)*sinh(y/2)))$
+check("Even pole reflection",
+ exponentialize(2*cosh((x-y)/2)+2*cosh((x+y)/2)
+                -4*cosh(x/2)*cosh(y/2)))$
+check("Odd pole reflection",
+ exponentialize(2*cosh((x-y)/2)-2*cosh((x+y)/2)
+                +4*sinh(x/2)*sinh(y/2)))$
+
+/* One changed prime row: h=u+r, A_delta u=-R_delta+d_delta. */
+check("Changed prime row preserves forcing sign",
+ -rr-dd*(um+up) - (-(rr-dd*(rm+rp))-dd*((um+rm)+(up+rp))))$
+
+/* A finite block identity check, not a model of the complete Weil operator. */
+ww:matrix([1,-1,0],[-1,2,-1],[0,-1,1])$
+hh:matrix([1],[1],[1])$
+check("Finite radical bookkeeping",sum((ww.hh)[j,1]^2,j,1,3))$
+bb:matrix([0,1-sqrt(2),0],[1-sqrt(2),0,0],[0,0,0])$
+aa:matrix([1,-sqrt(2)],[-sqrt(2),2])$
+ff:matrix([sqrt(2)],[1])$
+check("Altered interior block has a nullvector",sum((aa.ff)[j,1]^2,j,1,2))$
+rext:matrix([0],[-1])$
+forcing:matrix([(bb.hh)[1,1]],[(bb.hh)[2,1]])$
+check("Altered boundary equals forcing",
+ sum(ff[j,1]*(rext[j,1]-forcing[j,1]),j,1,2))$
+check("Forcing is explicitly nonzero",
+ sum(ff[j,1]*forcing[j,1],j,1,2)+1)$
+check("Homogeneous boundary would be false in this block",
+ sum(ff[j,1]*rext[j,1],j,1,2)+1)$
+print(checks)$
+print("PASS:",length(checks),"exact checks; analytic domain and injectivity arguments are not certified by these checks.")$
+quit();

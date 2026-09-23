@@ -1,5 +1,34 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## September 22, 2026 — NS-58 / v1.57 translated-radical boundary test
+
+Classification: exact identities and proved implications; API and the signed
+arithmetic estimate remain open. The bounded attempt reached its explicit
+stop condition: vanishing of the complete boundary pairing against all
+translated radicals is equivalent to the original nullvector equation.
+
+What had to change: the sharp radical restriction is handled in the complete
+operator domain, allowing boundary jumps; no H1 derivative of a hypothetical
+nullvector is assumed. The exterior formula retains the singular continuous
+kernel, both poles and all prime shifts beyond the window cutoff. A compact
+support distribution argument proves the exact equivalence without inferring
+form density from ordinary L2 density.
+
+The altered-weight controls obey an inhomogeneous equation with forcing
+P_a B_delta phi_t. That profile is nonzero for any nonzero test because the
+finite cosine multiplier is injective on ordinary L2. The forcing map is
+Hilbert--Schmidt, so injectivity yields no uniform lower bound on the whole
+fixed-window unit sphere; a particular finite kernel is outside that exclusion.
+
+A single inherited RBC display was changed to the starred equation environment
+to remove four duplicate PDF destinations, preserving its formula and tag.
+
+No independent sign or uniqueness estimate was obtained. This is a limitation
+of the proposed inference, not a negative original Weil direction or an API
+closure. Evidence/v157 records the analytic proofs, finite exact algebra,
+local self-review and actual manuscript build. No new numerical window,
+tail metric, uniform floor, G2 or RH claim.
+
 ## September 22, 2026 — NS-57 / v1.56 finite prime-weight controls
 
 Classification: exact identities, proved implications, and open input. The
