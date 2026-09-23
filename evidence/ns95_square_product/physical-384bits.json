@@ -1,0 +1,60 @@
+{
+  "classification": "independent full physical norms with analytic infinite tails",
+  "precision_bits": 384,
+  "cell_stop": 65536,
+  "source_sha256": "86ccc90a5ceab1b859eb908b70a9c1325854e540ce2fe4f4ee2d4b20a1503c90",
+  "input_file": "check-384bits.json",
+  "input_sha256": "7be769abf2cda7ba4188fde508715a1d565de4b8e3660ebe35b1ee4327112d30",
+  "dependencies": {
+    "evidence/ns86_optimized_arithmetic/certify_physical.py": "fbe63c49353a2025df80623ad3abddb27148d17345338c83b25afbdf2975eb9c",
+    "evidence/ns86_optimized_arithmetic/certify_newton.py": "49ca23a07b9b8c92c25f7edb6921b1d4f555f9d30ef7bb8ac0bc7afebd45c790",
+    "evidence/v159/ns61/certify_smoothed.py": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5"
+  },
+  "rows": [
+    {
+      "N": 4,
+      "values": {
+        "eta": "[7.08982250998798489606832625753e-5 +/- 3.23e-35]",
+        "exterior_energy": "[5.02655832231323301913706043600e-9 +/- 5.42e-39]",
+        "interior_energy_1_to_split": "[1.6680285370146670154402472250e-5 +/- 1.97e-34]",
+        "complete_energy_after_split": "[1.7688e-5 +/- 2.09e-10]",
+        "complete_energy": "[3.43732e-5 +/- 9.67e-11]",
+        "physical_tail_radius": "[6.816540493883156578517552628098e-11 +/- 4.50e-42]",
+        "tail_slope": "[0.0025881456971875128536165795991004 +/- 6.86e-35]",
+        "tail_constant": "[-0.0101098574995207747572008737253602 +/- 3.16e-35]",
+        "Stirling_remainder_constant": "[11.852598612115435941038738848456052 +/- 4.72e-34]",
+        "relative_improvement": "[0.9838600 +/- 7.42e-8]"
+      }
+    },
+    {
+      "N": 8,
+      "values": {
+        "eta": "[4.679399866707700457606751e-5 +/- 2.58e-30]",
+        "exterior_energy": "[2.189678311254404480948718e-9 +/- 1.68e-34]",
+        "interior_energy_1_to_split": "[1.43532506459670867684528e-5 +/- 7.31e-29]",
+        "complete_energy_after_split": "[5.631e-6 +/- 5.21e-10]",
+        "complete_energy": "[1.9987e-5 +/- 3.36e-10]",
+        "physical_tail_radius": "[1.4838593384167405250169508e-10 +/- 5.34e-36]",
+        "tail_slope": "[-0.00053019700450434889799019826 +/- 9.63e-30]",
+        "tail_constant": "[0.00241837284952958722727850442 +/- 7.36e-30]",
+        "Stirling_remainder_constant": "[121.0346611455484678642703415948 +/- 4.64e-29]",
+        "relative_improvement": "[0.81682 +/- 7.00e-6]"
+      }
+    },
+    {
+      "N": 16,
+      "values": {
+        "eta": "[3.3085566312875140822e-5 +/- 3.68e-25]",
+        "exterior_energy": "[1.09465469824365834076e-9 +/- 7.68e-30]",
+        "interior_energy_1_to_split": "[1.12254839196577922e-5 +/- 4.98e-23]",
+        "complete_energy_after_split": "[2.95e-6 +/- 8.94e-9]",
+        "complete_energy": "[1.417e-5 +/- 8.70e-9]",
+        "physical_tail_radius": "[5.52420558450074432100e-9 +/- 8.43e-30]",
+        "tail_slope": "[-0.000510168942125655732628 +/- 8.92e-25]",
+        "tail_constant": "[0.00305618493335421109702 +/- 4.44e-24]",
+        "Stirling_remainder_constant": "[1831.31477581845737168420871 +/- 7.29e-24]",
+        "relative_improvement": "[0.556 +/- 7.35e-4]"
+      }
+    }
+  ]
+}

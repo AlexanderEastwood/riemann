@@ -48,7 +48,8 @@
     "evidence/ns91_joint_abel/*.py",
     "evidence/ns92_arithmetic_cost/*.py",
     "evidence/ns93_averaged_cost/*.py",
-    "evidence/ns94_circle_inversion/*.py"
+    "evidence/ns94_circle_inversion/*.py",
+    "evidence/ns95_square_product/*.py"
   ],
   "exclude": [
     "node_modules",
@@ -65,6 +66,7 @@
     "evidence/v160/ns67",
     "evidence/v160/ns71",
     "evidence/v161/ns72",
-    "evidence/ns92_arithmetic_cost"
+    "evidence/ns92_arithmetic_cost",
+    "evidence/ns86_optimized_arithmetic"
   ]
 }

@@ -1,0 +1,55 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/ns95_square_product/checks.mac")
+kill(all)
+checks:0
+scalarmatrixp:false
+check(name,expr):=block([v:ratsimp(expr)],if v # 0 then error(name,v),
+      checks:checks+1,print("PASS",name))
+h:matrix([a,b],[b,c])
+f:matrix([u],[v])
+hl:a
+xl:matrix([u/a],[0])
+gg:f-h . xl
+full:(transpose(f) . invert(h) . f)[1,1]
+missing:(transpose(gg) . invert(h) . gg)[1,1]
+check("complete gain split",full-u^2/a-missing)
+PASS complete gain split 
+check("missing signed observation",gg[2,1]-(v-(b*u)/a))
+PASS missing signed observation 
+check("missing Schur denominator",missing-(v-(b*u)/a)^2/(c-b^2/a))
+PASS missing Schur denominator 
+check("pairing minor",determinant(matrix([0,u],[u,v]))+u^2)
+PASS pairing minor 
+ll:matrix([1],[-1])
+bb:matrix([1],[1])
+fstar:invert(h) . f
+xcon:bb . invert(transpose(bb) . h . bb) . transpose(bb) . f
+gaincon:(transpose(f) . xcon)[1,1]
+forced:(transpose(ll) . fstar)[1,1]^2/(transpose(ll) . invert(h) . ll)[1,1]
+check("constraint loss exact for codimension one",full-gaincon-forced)
+PASS constraint loss exact for codimension one 
+check("constraint orthogonality",(transpose(bb) . ll)[1,1])
+PASS constraint orthogonality 
+check("dual invisibility",(transpose(bb) . h . invert(h) . ll)[1,1])
+PASS dual invisibility 
+check("dual full norm",
+      (transpose(invert(h) . ll) . h . invert(h) . ll)[1,1]
+       -(transpose(ll) . invert(h) . ll)[1,1])
+PASS dual full norm 
+ps:[1,2,3,4,6,8,9,12,16]
+l:genmatrix(lambda([i,j],if mod(i+4,ps[j]) = 0 then 1 else 0),12,9)
+for j thru 9 do check(concat("prime equality column ",j),l[1,j]-l[3,j])
+PASS prime equality column 1 
+PASS prime equality column 2 
+PASS prime equality column 3 
+PASS prime equality column 4 
+PASS prime equality column 5 
+PASS prime equality column 6 
+PASS prime equality column 7 
+PASS prime equality column 8 
+PASS prime equality column 9 
+check("old-products gap",(n-1)*(n+1)-(n^2-1))
+PASS old-products gap 
+print("PASS:",checks,"exact checks")
+PASS: 18 exact checks 
+quit()

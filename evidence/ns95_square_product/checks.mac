@@ -1,0 +1,26 @@
+kill(all)$ checks:0$ scalarmatrixp:false$
+check(name,expr):=block([v:ratsimp(expr)],if v#0 then error(name,v),checks:checks+1,print("PASS",name))$
+/* Full two-coordinate Schur split, including the signed cross entry. */
+h:matrix([a,b],[b,c])$ f:matrix([u],[v])$
+hl:a$ xl:matrix([u/a],[0])$ gg:f-h.xl$
+full:(transpose(f).invert(h).f)[1,1]$
+missing:(transpose(gg).invert(h).gg)[1,1]$
+check("complete gain split",full-u^2/a-missing)$
+check("missing signed observation",gg[2,1]-(v-b*u/a))$
+check("missing Schur denominator",missing-(v-b*u/a)^2/(c-b^2/a))$
+check("pairing minor",determinant(matrix([0,u],[u,v]))+u^2)$
+/* Constraint x1=x2, distinct from simply dropping the second column. */
+ll:matrix([1],[-1])$ bb:matrix([1],[1])$
+fstar:invert(h).f$ xcon:bb.invert(transpose(bb).h.bb).transpose(bb).f$
+gaincon:(transpose(f).xcon)[1,1]$
+forced:(transpose(ll).fstar)[1,1]^2/(transpose(ll).invert(h).ll)[1,1]$
+check("constraint loss exact for codimension one",full-gaincon-forced)$
+check("constraint orthogonality",(transpose(bb).ll)[1,1])$
+check("dual invisibility",(transpose(bb).h.invert(h).ll)[1,1])$
+check("dual full norm",(transpose(invert(h).ll).h.invert(h).ll)[1,1]-(transpose(ll).invert(h).ll)[1,1])$
+/* Exact N=4 product and divisor-multiple matrices in new coordinates. */
+ps:[1,2,3,4,6,8,9,12,16]$
+l:genmatrix(lambda([i,j],if mod(i+4,ps[j])=0 then 1 else 0),12,9)$
+for j:1 thru 9 do check(concat("prime equality column ",j),l[1,j]-l[3,j])$
+check("old-products gap",(n-1)*(n+1)-(n^2-1))$
+print("PASS:",checks,"exact checks")$ quit()$

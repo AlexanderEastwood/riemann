@@ -1,0 +1,160 @@
+\section{The square-scale product grouping, with its missing directions (NS-95)}
+\paragraph{Classification and attempted estimate.}
+This is an exact arithmetic restriction, a scoped failure of an observation
+comparison for arbitrary residuals, and a finite test on the actual target.
+It does not prove the proposed eventual estimate
+$E_{N^2}\le(1-c)E_N$ for a fixed $c>0$. We attempted to promote the
+NS-86 divisor-product construction to a free signed block variational
+problem, hoping that the product identity would supply this lower gain.
+The calculation below retains the missing directions rather than identifying
+the restricted problem with the full NS-87 observation energy.
+
+Use the fixed $q=2$ Hilbert space and arithmetic atoms of NS-87. For
+$M=N^2$, write $\phi_n=(I-\Pi_N)a_n$, $N<n\le M$, with complete
+positive definite Gram $H$. Put $h_n=\langle r_N,\phi_n\rangle$ and
+$\Delta=h^TH^{-1}h=E_N-E_M$. The positive definiteness follows from
+the finite coefficient recovery of NS-78/81. The target is fixed throughout.
+
+\subsection{Two distinct product spaces}
+Let
+\[
+ {\cal P}_N=\{ij:1\le i,j\le N\}.
+\]
+Direct products give the span of $\phi_d$ for $d\in{\cal P}_N$, $d>N$.
+Repeated factorizations do not give new directions. This is a proper
+subspace of the full block: no prime $p>N$ is a product of two indices
+at most $N$. For example $N^2-1>N$ is also missing for every $N\ge2$:
+if both factors were at most $N$ and the product exceeded $N(N-1)$,
+both would have to equal $N$.
+
+NS-86 uses a different construction, completing each product by its
+multiples. Free all of its signed product weights, putting
+\[
+ b_n=\sum_{\substack{d\mid n\\d\in{\cal P}_N}}\beta_d,
+ \qquad N<n\le M.
+\]
+The weights $\beta_d$ can be arbitrary reals: each product has at least
+one factor pair, and allowing arbitrary signed pair weights realizes any
+such collection. Define the integer matrix
+\[
+ L_{n,d}=\boldsymbol1_{d\mid n},\quad
+ N<n\le M,\ d\in{\cal P}_N.
+\]
+The resulting projected space has coefficient range $\operatorname{ran}L$.
+Remove dependent columns by exact rational elimination, giving a basis $B$.
+All old coefficients may be refitted without changing these new coefficients.
+
+The NS-86 choice is $\beta_d=\sum_{ij=d}c_ic_j$, so its damped,
+old-space-refitted direction belongs to this free space. Freeing the
+weights generally loses NS-86's particular defect-convolution-square
+identity; that identity is not asserted for the optimized free lift.
+The direct-product and divisor-completed spaces are not presumed nested.
+
+\subsection{A restriction on coefficients at large primes}
+For every prime $p>N$ and integer $m\ge1$ with $mp\le N^2$,
+\begin{equation}
+ b_{mp}=\sum_{d\mid m}\beta_d.
+ \label{eq:ns95-prime-fiber}
+\end{equation}
+Indeed no $d\in{\cal P}_N$ is divisible by $p$. Thus a product seed
+dividing $mp$ must divide $m$. Conversely $m<N$, so every divisor of $m$
+is already in ${\cal P}_N$ through the pair $(1,d)$. In particular
+$b_p=\beta_1$ for all primes $N<p\le N^2$. This restriction survives
+arbitrary signed weights, damping and old-space refitting. It is a
+necessary restriction, not a complete characterization of the range of $L$.
+
+If the block has two such primes $p,q$, let $\ell=e_p-e_q$ in new-index
+coordinates. Then $B^T\ell=0$. The actual arithmetic vector
+\[
+ v=\sum_{n=N+1}^{M}(H^{-1}\ell)_n\phi_n
+\]
+is nonzero, orthogonal to every free-lift direction, and has squared
+norm $\ell^TH^{-1}\ell>0$. Its full block projection is itself.
+Consequently a comparison asserting a positive fraction of full block
+gain from these observations for \emph{every} residual orthogonal to
+$V_N$ is false, even in the original arithmetic family. This $v$ is a
+constructed test residual, not $r_N=(I-\Pi_N)\tau$. No failure of an
+actual-target lower estimate follows. The proposition is conditional
+only on the specified pair of primes, and such pairs are explicitly
+listed in each finite test; no asymptotic prime-count input is used.
+
+There is also no positivity supplied by the direct product pairing
+matrix $K_{ij}=\langle r_N,a_{ij}\rangle$. For $N\ge4$, its principal
+minor on indices $2,N$ is
+\[
+ \det\begin{pmatrix}0&h_{2N}\\h_{2N}&h_{N^2}\end{pmatrix}
+       =-h_{2N}^2.
+\]
+The zero is the old normal equation at index $4$. Whenever $h_{2N}\ne0$
+this matrix is indefinite; the verifier checks nonzero values on the
+three tested sizes. This pairing matrix is not the positive Gram $H$,
+nor the pairing matrix of the divisor-completed lift. No eventual sign
+or nonvanishing assertion is made.
+
+\subsection{Exact gain split and a lower bound on the discarded gain}
+The best free-lift step has coefficients and gain
+\[
+ x_L=B(B^THB)^{-1}B^Th,\qquad
+ \Delta_L=h^TB(B^THB)^{-1}B^Th.
+\]
+Set $g=h-Hx_L$. Then $B^Tg=0$, and, with all cross terms retained,
+\begin{equation}
+ \Delta=\Delta_L+g^TH^{-1}g.
+ \label{eq:ns95-exact-split}
+\end{equation}
+This follows either from orthogonal projection or by expanding the
+right side and using $x_L^THx_L=h^Tx_L=\Delta_L$.
+Both terms are nonnegative, but this alone does not compare either
+to $E_N$ from below. In particular one must not drop the second term
+while calling the first the complete joint observation energy.
+
+For any nonzero coefficient constraint $\ell$ with $B^T\ell=0$, let
+$x_*=H^{-1}h$. Cauchy--Schwarz in the $H$ metric gives
+\begin{equation}
+ \Delta-\Delta_L
+ =\|x_*-x_L\|_H^2
+ \ \ge\ \frac{(\ell^Tx_*)^2}{\ell^TH^{-1}\ell}.
+ \label{eq:ns95-loss}
+\end{equation}
+The prime-pair constraint gives a strictly positive finite lower bound
+in every tested block. This lower bound concerns the \emph{discarded}
+gain and does not help prove a lower bound on the retained gain. It
+quantifies the difference between the two optimization problems.
+
+Every gain above uses the complete physical Gram, including its tail.
+For a finite-observation implementation, NS-87's joint tail argument
+also applies to either restricted space. Its $B_T\le e_T$ estimate
+and $T=N^6$ localization remain valid with old-space rows retained.
+This does not make the physical cutoff $N^2$ sufficient and supplies
+no lower bound for the signed interior observations.
+
+\subsection{Outcome and remaining input}
+The finite tests compare the prescribed NS-86 direction, the direct
+product span, the free divisor-completed span and the complete block
+at $N=4,8,16$. They use exact rational rank reduction, complete Arb
+Grams at two precisions, a doubled analytic cutoff and an independent
+physical-cell integration of the free-lift approximant. These are tests
+of the proposed grouping, not new best finite approximation errors.
+The full $E_{N^2}$ values were already computed in NS-86.
+
+To obtain the suggested cofinal square-scale contraction from this
+free lift still requires an independent estimate
+\[
+ h^TB(B^THB)^{-1}B^Th\ge c E_N
+\]
+on the actual optimized residual, eventually on a specified squaring
+sequence. This is stronger than a bound for the full block and is not
+asserted necessary. The exact divisor-product algebra and old normal
+equations have not supplied it. No fixed $c$ is inferred from the
+finite table. An estimate can instead retain the complementary term
+in~\eqref{eq:ns95-exact-split}. Neither alternative is proved here.
+
+\paragraph{What had to change.}
+The fixed nonlinear product weights were replaced by freely optimized
+signed weights and all old coefficients were refitted. This repairs
+much of the finite loss, at the cost of a larger arithmetic inverse and
+loss of the defect-square prescription. Products lying below $N^2$
+do not imply that product observations span that whole block. The
+universal all-residual comparison is refuted under the explicit prime-pair
+hypothesis; the actual-target cofinal estimate stays open. The original
+Weil floor, G2 and RH remain open, and manuscript v1.66 is unchanged.

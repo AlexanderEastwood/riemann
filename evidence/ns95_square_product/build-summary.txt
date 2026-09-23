@@ -1,0 +1,6 @@
+Actual ./manuscript/build.sh completed successfully on the candidate tree.
+Manuscript source unchanged from main c679b08279617960c874662c3347cd4a68168f5a.
+Pages: 358
+Undefined or duplicate references: 0
+Existing v1.66 manifest: 16 ok, 0 missing, 0 mismatched.
+No new manuscript version or tag.

@@ -1,0 +1,26 @@
+{
+  "classification": "Inherited artifact byte checks, not reruns of all historical computations",
+  "inventories": {
+    "ns86_optimized_arithmetic": {
+      "files": 21,
+      "mismatches": []
+    },
+    "ns87_joint_tail": {
+      "files": 17,
+      "mismatches": []
+    },
+    "ns93_averaged_cost": {
+      "files": 17,
+      "mismatches": []
+    }
+  },
+  "proof_and_kernel_bindings": {
+    "evidence/v159/ns61/certify_smoothed.py": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+    "evidence/v159/ns61/gram-tail-proof.tex": "e33e4129fb81d0cdcb001e9177dc7f33ef044a746f1fa273b602286bf438ff15",
+    "evidence/v163/ns78/proof.tex": "3dac51b901eb8590d4640e39dcbdaf5cd8ccf2276bf748e4430cde7de2ec5dcc",
+    "evidence/ns86_optimized_arithmetic/argument.tex": "2d42567894aea0fc07e185387f3889f6aebbe265e9ce55bbd745185193783972",
+    "evidence/ns87_joint_tail/argument.tex": "b163dcd18c485ec937d7bf1657337de60ac9ec604e2137f4385f7e077f0e47e3",
+    "evidence/v166/ns83/proof.tex": "c4e7649245c159ba4b6e677581cdd5050ae677602d63f0508f299b6dca02a023"
+  },
+  "both_historical_original_groups": "OPEN"
+}

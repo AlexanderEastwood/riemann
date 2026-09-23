@@ -1,0 +1,61 @@
+{
+  "classification": "Author mathematical and implementation review; no independent reviewer",
+  "open_major_findings": 0,
+  "analytic_checks": [
+    "Product weights grouped by distinct integer product, not counted once per factorization. Arbitrary signed pair weights realize arbitrary grouped weights.",
+    "Direct products and divisor-completed products are distinct spaces and are not assumed nested.",
+    "NS86 prescribed new block belongs to the free divisor lift; its old 2c term is absorbed by the refit.",
+    "For p>N, no product seed contains p, while all divisors of m<N are available. This proves the exact mp constraint.",
+    "All-residual obstruction explicitly assumes a pair of primes in the block; no unproved prime asymptotic is used. Constructed residual is not the target residual.",
+    "Indefinite minor is for direct product pairings, not H or the divisor-completed pairing matrix; zero diagonal follows from the normal equation at 4 for N>=4.",
+    "Loss lower bound uses the dual H inverse norm of the coefficient constraint; it lower-bounds discarded gain, not retained gain.",
+    "The complete gain split includes every cross term and old-space projection. No finite support in physical space is assumed.",
+    "Restricted lower gain would suffice but is not asserted necessary or equivalent to the full PR42 target.",
+    "NS87 cutoff N^6 remains sufficient for joint tails; M=N^2 is not called a sufficient physical cutoff.",
+    "Free reweighting and old refit generally lose the prescribed defect-convolution square; no positivity or contraction is deduced from that identity.",
+    "Finite gain over 50 percent at N16 is compatible with the asymptotic critical-zero restriction; no onset or eventual fraction is asserted."
+  ],
+  "implementation_checks": [
+    "Exact fmpq row reduction selects linearly independent columns before the Arb solve.",
+    "Both old and new solves preserve full balls; complete Gram kernel analytic tails are retained.",
+    "Separate full-size solve overlaps the Schur-complement full gain.",
+    "Complete coefficient fit recomputed from old projection reproduces the trial norm.",
+    "Missing gain independently computed from the residual observation vector.",
+    "Physical code evaluates exact cells and the exterior plus complete Stirling tail, independent of the Gram assembly.",
+    "All source/input/dependency bindings checked, 256/384 and doubled-cutoff overlaps pass.",
+    "Saved coefficients are enclosures of an exact fit, not an asserted exact rounded rational witness."
+  ],
+  "development_corrections": [
+    "Maxima initially simplified a one-by-one matrix to a scalar before index extraction. Set scalarmatrixp:false explicitly and reran all 18 checks successfully.",
+    "The first diagnostic import check ran before the new local module path was added. Configured the actual evidence directory and reran; zero diagnostics.",
+    "Clarified inherited contraction summary as every sufficiently large doubling, and corrected stale current-manifest link forward."
+  ],
+  "what_had_to_change": "Free the signed divisor-product weights and refit the old coefficients; retain complementary directions and abandon the prescribed defect-square identity for that fit.",
+  "obstruction": "The arithmetic product algebra gives a restricted variational space, not an independent lower bound on its actual-target signed observation energy. Its uniform all-residual comparison fails under the explicit prime-pair hypothesis.",
+  "bound_or_object": "Failure of that comparison and of a direct product-pairing positivity shortcut; no failure of the actual-target convergence estimate or RH. Finite free-fit performance is favorable.",
+  "validation": {
+    "status": "PASS",
+    "classification": "finite certificates and scoped analytic restrictions; no cofinal gain bound",
+    "checks": {
+      "scalar_precision_overlaps": 51,
+      "coefficient_precision_overlaps": 468,
+      "scalar_cutoff_overlaps": 17,
+      "coefficient_cutoff_overlaps": 352,
+      "physical_precision_overlaps": 30,
+      "physical_cutoff_overlaps": 9,
+      "complete_physical_Gram_overlaps": 7,
+      "NS86_scalar_overlaps": 12,
+      "exact_large_prime_fiber_checks": 178
+    },
+    "Maxima_exact_checks": 18,
+    "source_sha256": "1061225149003f8f6cbb0af69d2decdf1fb29c51ef1383ccbca613ebab599c42",
+    "independent_review": false
+  },
+  "manuscript": {
+    "unchanged": true,
+    "pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "v166_manifest_ok": 16
+  },
+  "HTML_review": "Source, table arithmetic and links reviewed. Local browser preview is subject to a prior browser URL-policy block; no visual browser review is claimed. A file preview is requested for the durable report."
+}

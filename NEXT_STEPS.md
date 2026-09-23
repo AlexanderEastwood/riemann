@@ -146,7 +146,7 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-82 | Retain the analytic logarithmic tail as a rank-two form to reduce the sufficient finite-comparator cutoff | Codex, Continue solving toward RH | done (v1.65; analytic tail retained) | Rank-two physical tail and full remainder yield projected condition <=9 and sufficient cutoff 8435244 for 512 total atoms. Scalar certificates only; comparator and iterations not run. No cofinal decay. |
 
-| NS-83 | Derive the critical-zero lower bound for fixed Mellin smoothing and test which cofinal relative-gain estimates remain possible | Codex, Continue solving toward RH | done (v1.66; fixed-order rate restriction) | Complete Burnol dual-vector adaptation gives positive logarithmic lower liminf at every fixed smoothing order. Constant relative contraction is excluded; weaker nonsummable arithmetic gain remains open. Certified zero-subset constant has no finite-N onset. |
+| NS-83 | Derive the critical-zero lower bound for fixed Mellin smoothing and test which cofinal relative-gain estimates remain possible | Codex, Continue solving toward RH | done (v1.66; fixed-order rate restriction) | Complete Burnol dual-vector adaptation gives positive logarithmic lower liminf at every fixed smoothing order. Constant relative contraction at every sufficiently large doubling is excluded; weaker nonsummable arithmetic gain remains open. Certified zero-subset constant has no finite-N onset. |
 
 | NS-84 | Review every registered conclusion and current evidence/audit status; persist Alex’s per-turn review requirement | Codex, Continue solving toward RH | done (review; manuscript v1.66 unchanged) | Record scope and findings against the current main commit; correct stale summaries without silently upgrading missing evidence or implying a fresh proof audit. |
 
@@ -168,7 +168,7 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 | NS-93 | Test a concrete averaged arithmetic estimate for the selected cost and gain, retaining all signed correlations and projection losses | Codex | done (signed estimate remains open; manuscript unchanged) | Bounded diagonal; complete absolute-product cost grows at least linearly for dyadic N>=2048, so averaging does not repair that bound. Signed averaged cost and actual numerator remain unproved. Two-precision finite decomposition and eight Maxima checks; evidence/ns93_averaged_cost. |
 | NS-94 | Check the tangent-circle inversion and exterior similarity-point proposal in ordinary coordinates and Maxima | Codex | done (exact geometric check; no RH inference) | Read the linked Zhao handout, which does not define exterior similarity. Separate and successive inversions checked; equal counts and infinity persist in a symmetric off-line control. Nonnegative power-product statistic still requires an arithmetic vanishing proof. 23 Maxima checks; evidence/ns94_circle_inversion. |
 
-| NS-95 | Test the N-to-N^2 product-index grouping against the complete joint arithmetic gain, retaining old-space projection, missing indices and complete costs | Codex | claimed | Derive and test the full signed decomposition; distinguish products of old indices from NS86 divisor-multiple feedback. Prove an actual-residual lower estimate or record the exact missing term without extrapolating finite efficiency. |
+| NS-95 | Test the N-to-N^2 product-index grouping against the complete joint arithmetic gain, retaining old-space projection, missing indices and complete costs | Codex | done (construction tested; cofinal lower bound open) | Free signed lift captures 99.83% of full gain at N16 to 256 versus NS86's 27.31%; its large-prime coefficient restriction and missing gain are exact. All-residual comparison fails under a prime-pair hypothesis; actual-target bound remains open. Complete 256/384-bit and cutoff replays, physical norms and 18 Maxima checks; evidence/ns95_square_product. |
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
@@ -373,6 +373,24 @@ estimate: vanishing at every finite height is still RH-equivalent. A future
 geometric argument must supply a special property of zeta beyond the
 symmetries shared by the exact polynomial control. No broad geometric
 impossibility is claimed. Both historical evidence gaps remain open.
+
+## Open continuation after NS-95
+
+The full N-to-N^2 lower-gain target remains open. Freeing all signed
+product weights repairs the prescribed correction's finite loss, but
+retains exact coefficient restrictions at large primes and a nonzero
+complementary gain. A lower-gain requirement on this restricted family is
+stronger than the full PR42 target, not equivalent to it. Its finite efficiency gives
+no persistent lower fraction of the actual error.
+
+The next useful estimate must bound the actual-target signed observations
+relative to E_N, in the free lift or with the complementary block retained.
+Do not identify old products with the full squared-size index set, regard
+the product-pairing matrix as positive, invoke the all-residual comparison
+refuted here, or substitute another larger efficiency table. The exact
+square identity is not retained after arbitrary reweighting and old refit.
+A compatible small fixed gain per squaring remains a sufficient unproved
+target; fixed gain every doubling is excluded. No new manuscript version.
 
 ## Lanes
 
