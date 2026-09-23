@@ -65,6 +65,31 @@ cofinal estimate. Apply this check to route assessments and proposed next
 steps as well as calculations. Do not suppress it because the user only
 says "continue".
 
+### Proposal gate (Claude, 2026-09-23; NS-102)
+
+The per-turn wall check runs after work starts. By 2026-09-23 the board held
+100 rows, 36 of which ended in "no new estimate", and the NS-99 audit reduced
+all 104 conclusions to 14 shared inputs. The wall was being found after the
+work, one full cycle each time. So the check now also runs **before** a row
+is claimed, using `PROPOSAL_TEMPLATE.md`:
+
+1. **Name the shared-input group** from `RESEARCH_MAP.md` ("Shared
+   continuation inputs") that the proposal would discharge, or DISTINCT
+   with the closest node named. A group marked *frozen* on the board takes
+   no new attempt unless the proposal names a new input for it.
+2. **Name the arithmetic input beyond the functional equation.** If the
+   answer is NONE, do not start: see 3.5 below.
+3. **Run the control screen first.** Evaluate the candidate inequality or
+   identity on the known-false analogues in `controls/` (and the controls
+   recorded in NS-100/NS-101) before any proof, certificate or scan. A
+   candidate that holds on a known-false analogue cannot imply RH as
+   stated; record that and stop, or say what hypothesis must be added.
+4. Fill the wall-check fields, the success/failure consequences, and a
+   budget. Put the filled template in the PR body or the task README.
+
+A row claimed without a filled template is reverted to `open`. Audits
+and process changes are exempt; research tasks are not.
+
 ## 1. What this project is
 
 A research record for an attempt on the Riemann Hypothesis via Weil
@@ -360,6 +385,17 @@ different operators. Always state which you mean.
 
 ---
 
+**3.5 Arithmetic-blind arguments cannot close.** The Davenport-Heilbronn
+function (Titchmarsh 10.25) has a completed function even about 1/2, a
+theta-type kernel that is even with double-exponential decay, the full
+modular completion, and zeros off the critical line (one near
+0.8085 + 85.699i; `controls/davenport_heilbronn.py`). Any positivity
+argument that uses only evenness, decay, the functional equation or the
+modular structure of the kernel applies to it verbatim and is therefore
+false. The step where the Euler product, multiplicativity or nonnegativity
+of the coefficients enters must be visible in the proposal. This is the
+concrete form of the v1.39 meta-obstruction (`thm:v139-probe-relaxation`).
+
 ## 4. Numerical standards
 
 - **Interval/ball arithmetic only** for anything entering a proof. Arb via
@@ -390,6 +426,8 @@ manifest/     sha256 per version
 audits/       adversarial passes
 log/          research log, revision notes
 tools/        make_manifest.py, verify_manifest.py, make_map.py
+controls/     known-false analogues for screening proposals (diagnostic)
+PROPOSAL_TEMPLATE.md   fill in before claiming a research task row
 ```
 
 **Do not build cumulative bundles.** Re-bundling every prior artifact into
@@ -574,3 +612,13 @@ report the page count and the undefined-reference count.
 
 Do not produce a new version number to show motion. A version that only
 records a failure is fine and normal here. A version that overstates is not.
+
+**Version-bump policy (2026-09-23).** Nine manuscript versions landed on one
+day (v1.58 to v1.66), each recording a failure in an already-registered
+input group; the manuscript became unreviewable and the certified results
+were buried. Bump a manuscript version only when a shared-input group in
+`RESEARCH_MAP.md` changes status (a new bound, a closure, a corrected
+error) or a certified computation is added. Failed attempts, reformulations,
+controls and audits go in `evidence/nsNNN/` or `audits/` with a board row
+and a research-map annotation, and no version. One failure-only version a
+week is normal; one a day is churn.

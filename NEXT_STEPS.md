@@ -2,6 +2,8 @@
 
 One line per task. **Claim a task by writing your name in `owner` before you
 start, in its own small commit**, so the other agent does not duplicate it.
+Research rows also need a filled `PROPOSAL_TEMPLATE.md` (AGENTS.md, "Proposal
+gate") in the PR body or task README before the claim.
 Update `status` in the same commit as the work. Keep done items; record the
 version that did them. Nothing here is a claim about G2 or RH.
 
@@ -180,7 +182,7 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 | NS-100 | Independently reassess the repository and propose concrete research tests, including the tangent-circle/core geometry suggestion, screened against existing walls and primary literature | Assisting agent, requested by Alex | done (independent assessment; one scoped control) | Two conditional tasks screened against primary literature; no established novel RH mechanism. Actual theta-slice positivity fails with complete 256/384-bit and doubled-cutoff/series replay, nine Maxima checks. Full weighted kernel remains unestimated. Evidence/ns100_reassessment; manuscript unchanged. |
 
 | NS-101 | Short feasibility test of a theta-modular factorization for the full integrated kernel, retaining signed slice cancellation and screening every claimed new identity against NS100 and primary literature | Codex | done (feasibility stop; no new positivity bound) | Actual modular completion yields an autocorrelation whose derivative retains the missing signed comparison. Reciprocal positive-dilation control adds explicit off-axis zeros inside the critical strip; original one-lattice coefficients changed. Absolute unfolding has the classical convergence boundary, including an exact 0 versus 1/4 interchange failure. Twenty Maxima checks; evidence/ns101_theta_factorization. |
-| NS-102 | Process: pre-registration proposal gate (arithmetic input, shared-input group, control screen) written into AGENTS.md; `PROPOSAL_TEMPLATE.md`; `controls/` with a Davenport-Heilbronn known-false analogue; version-bump policy for failure-only work | Claude | claimed | AGENTS.md gate in force for new task rows; controls script replays evenness, an off-line zero and a Lagarias-criterion failure; no theorem node, manuscript version, G2 or RH claim |
+| NS-102 | Process: pre-registration proposal gate (arithmetic input, shared-input group, control screen) written into AGENTS.md; `PROPOSAL_TEMPLATE.md`; `controls/` with a Davenport-Heilbronn known-false analogue; version-bump policy for failure-only work | Claude | done (process; PR open) | AGENTS.md gate in force for new task rows; controls/davenport_heilbronn.py: kernel even to 1e-26, functional equation holds, off-line zero 0.8085+85.699i with winding number 1, Re(F' conj F)<0 at Re z>0 (mpmath 25 digits, diagnostic); AGENTS.md gains fact 3.5, the proposal gate and a version-bump policy; no theorem node, manuscript version, G2 or RH claim |
 
 ## Current dependency index (NS-99, September 23)
 
