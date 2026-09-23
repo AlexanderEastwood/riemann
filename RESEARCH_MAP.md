@@ -98,6 +98,7 @@ graph LR
   nbuniformrelativecontraction["Fixed-fraction contraction of the full error at every doubling<br/><small>eq:ns83-gain-budget</small><br/><small>&#128193; evidence/v166/ns83</small>"]
   nboptimizedpotential["Optimized arithmetic potential and complete observation tails<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
   nbconvolutioncontrol["Divisor-convolution correction from N to N squared: finite control<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
+  nbjointlocalization["Joint finite arithmetic observations preserve logarithmic gain scale<br/><small>&#128193; evidence/ns87_joint_tail</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -191,6 +192,7 @@ graph LR
   nbcriticalfloor --> nbuniformrelativecontraction
   nbarithmeticsampling --> nboptimizedpotential
   nboptimizedpotential --> nbconvolutioncontrol
+  nboptimizedpotential --> nbjointlocalization
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -283,9 +285,10 @@ graph LR
   click nbuniformrelativecontraction "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v166/ns83/" "evidence: evidence/v166/ns83" _blank
   click nboptimizedpotential "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns86_optimized_arithmetic/" "evidence: evidence/ns86_optimized_arithmetic" _blank
   click nbconvolutioncontrol "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns86_optimized_arithmetic/" "evidence: evidence/ns86_optimized_arithmetic" _blank
+  click nbjointlocalization "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns87_joint_tail/" "evidence: evidence/ns87_joint_tail" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -308,7 +311,7 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 40 | established result |
+| `proved` | 41 | established result |
 | `live` | 2 | current route (gold): being worked now |
 | `closed` | 30 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 11 | attempted; obstruction found |
@@ -336,6 +339,7 @@ graph LR
                   - [x] **Complete reciprocal-knot norm and exact divisor inversion** — `prop:ns78-sampling; eq:ns78-sample-inverse` · evidence: [`evidence/v163/ns78/`](evidence/v163/ns78/) · S/16 <= squared norm <=21 S/16, all cells and tails retained. No cofinal vanishing sample sum.
                     - [x] **Optimized arithmetic potential and complete observation tails** — evidence: [`evidence/ns86_optimized_arithmetic/`](evidence/ns86_optimized_arithmetic/) · NS86: exact joint-cutoff Muntz quadrature represents actual correlations; P_N(1)=E_N. Complete observation-tail bound and shared-tail cancellation are proved. Classical zero-evaluation obstruction remains; no cofinal lower bound or injectivity theorem.
                       - [x] **Divisor-convolution correction from N to N squared: finite control** — evidence: [`evidence/ns86_optimized_arithmetic/`](evidence/ns86_optimized_arithmetic/) · NS86: raw defect-convolution square holds through N^2, retaining signed normalization sums and omitted forcing. Unit step raises error at N=4,16 and lowers it at N=8; damped old-space-refitted direction captures 27.31% of available gain at N=16. Modified coefficients generally lose the exact defect-square identity. No eventual failure or general route closure.
+                      - [x] **Joint finite arithmetic observations preserve logarithmic gain scale** — evidence: [`evidence/ns87_joint_tail/`](evidence/ns87_joint_tail/) · NS87: complete coupled-tail bound and explicit safe step. NS81/83 imply T=N^(5+epsilon) preserves relative gain up to o(1/log N), with no effective onset or arithmetic lower estimate. Finite N=32 to 64, T=4096 certificate retains >95.98% of available gain. Full Gram/inverse retained; no fast solver or cofinal decay.
                     - [x] **Tail-balanced divisor feedback control** — `prop:ns79-balance` · evidence: [`evidence/v163/ns79/`](evidence/v163/ns79/) · Preserves exterior coefficient but leaves final jump. Endpoint-augmented span captures 71.18% at N=256; no uniform raw descent.
                     - [x] **Uniform efficiency using the full arithmetic sampling Gram** — `prop:ns80-uniform-efficiency` · evidence: [`evidence/v163/ns80/`](evidence/v163/ns80/) · Projected condition ratio <=21, one-step capture >=21/121, twenty-step capture >97.79%. Complete comparator inverse assumed; no fast inverse or cofinal relative contraction.
                       - [x] **Polynomial ordinary Gram conditioning and an effective finite comparator** — `prop:ns81-conditioning; prop:ns81-finite-comparator` · evidence: [`evidence/v164/ns81/`](evidence/v164/ns81/) · Condition O(N^4 log² N); sufficient cutoff 2^16(N+1)^6 with full tail bound. Enormous comparator not assembled; no practical solver or cofinal decay.

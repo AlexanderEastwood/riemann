@@ -1,0 +1,26 @@
+/* Exact scalar checks for NS87; not a proof of the operator inequality. */
+kill(all)$
+checks:0$
+checkzero(x):=block([v:radcan(ratsimp(x))],if v#0 then error("FAIL",v),checks:checks+1)$
+assume(t>0,T>0,x>0,y>0)$
+/* Complete physical cell primitives in the t,log(t),1 basis. */
+checkzero(diff(t,t)-1)$
+checkzero(diff(log(t)^2/2,t)-log(t)/t)$
+checkzero(diff(log(t),t)-1/t)$
+checkzero(diff(-1/t,t)-1/t^2)$
+checkzero(diff(-(log(t)+1)/t,t)-log(t)/t^2)$
+checkzero(diff(-(log(t)^2+2*log(t)+2)/t,t)-log(t)^2/t^2)$
+/* Safe damping gives the displayed squared difference. */
+th:1-y/x$
+checkzero(2*th*(x^2-x*y)-th^2*x^2-(x-y)^2)$
+checkzero(2*z*(x^2-x*y)-z^2*x^2-z^2*x^2-2*z*x*(x-y-z*x))$
+/* Exact exponential moments used for the complete tail. */
+checkzero(integrate(exp(-t),t,0,inf)-1)$
+checkzero(integrate(t*exp(-t),t,0,inf)-1)$
+checkzero(integrate(t^2*exp(-t),t,0,inf)-2)$
+checkzero(expand(a^2+a+1/2)-(a^2+2*a*(1/2)+(1/4)*2))$
+checkzero(expand(l^2+2*l+2)-(l^2+2*l*1+2))$
+/* Projection and actual Schur energy, retaining the old coordinate. */
+checkzero((matrix([-b/g,1]).matrix([g,b],[b,d]).transpose(matrix([-b/g,1])))-(d-b^2/g))$
+print("NS87 exact checks passed:",checks)$
+quit();

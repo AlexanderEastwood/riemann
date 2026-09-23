@@ -40,6 +40,29 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | G2 | open |
 | RH | open, and not claimed |
 
+## September 23 joint observation localization (NS-87)
+
+The optimized arithmetic observations now give a complete gain certificate:
+full block gain is at least `(sqrt(A_T)-sqrt(B_T))_+^2`, where `A_T` is the
+finite observation energy in the true projected Gram metric and `B_T`
+bounds the combined omitted tail. An explicit damped correction achieves
+the guarantee, retaining all old-space corrections.
+
+Combining NS81 and NS83 proves that a physical cutoff `T=N^6` makes this
+observation tail negligible on the `1/log N` relative-gain scale. This
+localizes the missing arithmetic estimate; it does not prove it. There is
+no effective asymptotic onset or new error-decay theorem. The full Gram
+and its inverse are retained; no fast algorithm is claimed.
+
+At N=32 to 64 and T=4096, the finite certificate guarantees over 95.98%
+of available gain, or over 18.15% of that finite old error. At T=64,
+ignoring the tail would overstate gain by over 15.99%. Two precisions,
+doubled analytic Gram cutoff, physical/potential checks and Maxima agree.
+Manuscript remains v1.66; RH and G2 remain open.
+
+[Readable report](audits/joint-tail-localization-2026-09-23-v1.html) ·
+[Proof, complete certificates and Maxima](evidence/ns87_joint_tail/).
+
 ## September 23 optimized arithmetic test (NS-86)
 
 The optimized residual has an exact integral-versus-lattice-sum identity,
@@ -444,6 +467,7 @@ graph LR
   nbuniformrelativecontraction["Fixed-fraction contraction of the full error at every doubling<br/><small>eq:ns83-gain-budget</small><br/><small>&#128193; evidence/v166/ns83</small>"]
   nboptimizedpotential["Optimized arithmetic potential and complete observation tails<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
   nbconvolutioncontrol["Divisor-convolution correction from N to N squared: finite control<br/><small>&#128193; evidence/ns86_optimized_arithmetic</small>"]
+  nbjointlocalization["Joint finite arithmetic observations preserve logarithmic gain scale<br/><small>&#128193; evidence/ns87_joint_tail</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -537,6 +561,7 @@ graph LR
   nbcriticalfloor --> nbuniformrelativecontraction
   nbarithmeticsampling --> nboptimizedpotential
   nboptimizedpotential --> nbconvolutioncontrol
+  nboptimizedpotential --> nbjointlocalization
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -629,9 +654,10 @@ graph LR
   click nbuniformrelativecontraction "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v166/ns83/" "evidence: evidence/v166/ns83" _blank
   click nboptimizedpotential "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns86_optimized_arithmetic/" "evidence: evidence/ns86_optimized_arithmetic" _blank
   click nbconvolutioncontrol "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns86_optimized_arithmetic/" "evidence: evidence/ns86_optimized_arithmetic" _blank
+  click nbjointlocalization "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns87_joint_tail/" "evidence: evidence/ns87_joint_tail" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;

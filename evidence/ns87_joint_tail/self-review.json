@@ -1,0 +1,28 @@
+{
+  "classification": "Local author proof and code review; no independent human or agent review",
+  "open_major_findings": 0,
+  "checked": [
+    "Finite potential P_T is distinct from full P_N; both upper boundary terms vanish.",
+    "The truncated residual is not old-space orthogonal; all old rows of the projection D are retained.",
+    "Coupled tail bound uses the actual full Gram metric, not unrelated entrywise radii.",
+    "The synthesis normalization is an isometry; both trace and one are valid tail operator bounds.",
+    "Safe dyadic step is chosen outward and guarantees theta squared times finite observation energy.",
+    "Coefficient bound uses orthogonal projection norm at most sqrt(2), then NS81 ordinary eigenvalue bound.",
+    "Complete physical tail includes target, coefficient combination and their cross term via a rigorous inequality.",
+    "Critical-zero lower bound is used only asymptotically, not at any finite test size.",
+    "T=N^(5+epsilon) gives normalized tail O(N^(-epsilon)log^4 N); normalized gain discrepancy is o(1/log N).",
+    "Polynomial localization supplies no positive arithmetic lower gain, effective onset or fast inverse.",
+    "Maxima checks are scalar sanity checks, not an automated proof of the operator theorem.",
+    "Precision/cutoff comparisons distinguish fixed observables from precision-dependent dyadic step scalars."
+  ],
+  "development_corrections": [
+    {
+      "finding": "Maxima auto-collapses a one-by-one matrix product to a scalar.",
+      "resolution": "Removed matrix indexing from the symbolic Schur check; all 14 checks pass."
+    },
+    {
+      "finding": "A verification invocation encountered an old output while its replacement run was still running; a later log guard matched FAIL in the echoed function definition.",
+      "resolution": "Waited for all runs, preserved source-hash checks, and made the log guard detect actual failure output. Final replay passes."
+    }
+  ]
+}
