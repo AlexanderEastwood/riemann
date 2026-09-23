@@ -142,6 +142,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-80 | Transfer the complete arithmetic sampling norm to a uniform projected-Gram preconditioner bound and quantify its finite-block descent guarantee | Codex, Continue solving toward RH | done (v1.63; uniform finite-block theorem) | Full arithmetic sampling Gram gives uniform projected condition ratio <=21. One ideal step captures >=21/121 of block gain; twenty capture >97.79%. No fast inverse or cofinal relative gain bound. |
 
+| NS-81 | Bound ordinary smoothed integer Gram conditioning from finite reciprocal samples and replace the infinite arithmetic comparator with an explicitly sufficient finite cutoff | Codex, Continue solving toward RH | claimed | Prove coefficient recovery bounds, retain the full discarded-sample tail, and distinguish an enormous effective cutoff from a practical solver or cofinal error estimate. No new Weil spectral floor is claimed. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
