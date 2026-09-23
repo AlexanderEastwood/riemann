@@ -1,0 +1,24 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental NS96 evidence and versioned report; excludes this inventory.",
+  "base_commit": "604cb9cbf5bb09c6bd42f504fc698738dd53577b",
+  "sha256": {
+    "evidence/ns96_lcm_square/README.md": "8e761bbe413f827d1ad4852617526fa66e8b421d35d9831c6e316f9576691196",
+    "evidence/ns96_lcm_square/argument.tex": "75ebd5259d12fe66bdda4efad1cb1d7f4b3fb8dd8268e60ebee1a231cc138151",
+    "evidence/ns96_lcm_square/build-summary.txt": "7cdc39803d3d877f302bc46f36f82ddeee3a8f97def298944596aaae8a43f192",
+    "evidence/ns96_lcm_square/certify.py": "1c42e2c8b32517fb54f29a8f285889a524a744d3c60f3955457f0e3169609a9d",
+    "evidence/ns96_lcm_square/check-256bits.json": "a4e9d76bf8ed3e27b6401bce733f6804cae1edaa86088de14fb9c02f554bb847",
+    "evidence/ns96_lcm_square/check-384bits.json": "068235343063f724be1a8d6d6e27669ee7d6388eba977ad5376504ea8119f660",
+    "evidence/ns96_lcm_square/checks-output.txt": "3e789bcee3b860ced4444acf651670ecaa4bb9891af95fabd9feca2a7fe18536",
+    "evidence/ns96_lcm_square/checks.mac": "dccb4d2f1147abfd4228c72f4a20988bde07acf523a75aca0a68bfe17b6fda90",
+    "evidence/ns96_lcm_square/dependencies.json": "949d337a1f76315ee9eef964d25a75aca67e7aaddf2d0c66d39e570ec2e89976",
+    "evidence/ns96_lcm_square/diagnostics.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+    "evidence/ns96_lcm_square/literature-screen.json": "3116fbca340ea35cc2a1c06a4eb3fbe464e10531cd3fb223de91cc7b5319cdb8",
+    "evidence/ns96_lcm_square/self-review.json": "6ce813b3950b28788f24ddf8fb305e38e66dfd7e8ff96db80bcedb211612deab",
+    "evidence/ns96_lcm_square/turn-review.json": "19d6230dd61646e1b0e56ac7a2802b04bef88b67267b628c80d93919c6d247f7",
+    "evidence/ns96_lcm_square/validation.json": "9f76ee17fde2732188dd55a970bbd8f6150ba915076983d8178feb3cda1271a2",
+    "evidence/ns96_lcm_square/verify.py": "7151719f13b2005e0fd8efbccf85a159fcac5dd311a9eef515871d8665f292ea",
+    "audits/lcm-square-obstruction-2026-09-23-v1.html": "50bd9b681df7263ec494a76f466f0253f39ffbf487c404d3695b1bb0ab7c1af8",
+    "evidence/ns96_lcm_square/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d"
+  }
+}

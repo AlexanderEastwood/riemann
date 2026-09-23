@@ -1,0 +1,217 @@
+\section*{NS-96: divisor squares before and after the old-space refit}
+
+\paragraph{Scope.}
+A genuine pointwise divisor square uses least common multiples, not the
+Dirichlet convolution square of NS86. We test finite positive semidefinite
+mixtures of such squares. As complete coefficient rules, either global sign
+has a uniform positive approximation-error floor. After an unrestricted
+old-space refit, their projected cone is exactly a signed linear space.
+Thus this positivity condition alone supplies no sign for the actual
+residual numerator. None of these statements excludes convergence of the
+unrestricted integer approximation, or supplies its missing lower gain.
+The manuscript remains v1.66.
+
+\paragraph{Prior art and normalization.}
+The divisor-square/LCM algebra and its diagonalization are classical
+Selberg-sieve tools; see Steve Lester, \emph{The Selberg sieve: lecture 2}
+(May 7, 2015), pp. 1 and 3, hosted at
+\url{https://www.math.tau.ac.il/~rudnick/courses/sieves2015/SelbergSieve_lecture_2.pdf}.
+We claim no novelty for those identities. All arguments needed here are
+given below. Keep the fixed NS61/78/86 normalization
+\[
+ \mathcal H=L^2((0,\infty),dt/t^2),\quad
+ A(z)=\int_0^z\{u\}\,du/u,\quad a_n(t)=A(t/n),\quad
+ \tau(t)=\log_+t.
+\]
+For any finite real coefficient sequence, set
+$r=\tau-\sum c_n a_n$, $E=\|r\|^2$ and $\eta=\sum c_n/n$.
+Then $r(t)=-\eta t$ below 1. No optimality hypothesis is imposed unless
+stated. In particular, a lower bound for a restricted coefficient rule is
+not a lower bound for the optimized error $E_N$.
+
+\subsection*{1. The actual divisor square}
+Fix $N\geq1$ and a real symmetric matrix $\Gamma\succeq0$ of size $N$.
+Write $[i,j]=\operatorname{lcm}(i,j)$ and group coefficients by
+\[
+ q_\ell=\sum_{\substack{i,j\leq N\\[i,j]=\ell}}\Gamma_{ij},
+ \qquad S_N=\{[i,j]:i,j\leq N\}\subseteq[1,N^2].
+ \tag{96.1}
+\]
+For every positive integer $m$, not merely $m\leq N^2$,
+\[
+ \sum_{\ell\mid m}q_\ell=v_m^T\Gamma v_m\geq0,
+ \qquad (v_m)_i=\boldsymbol1_{i\mid m}.
+ \tag{96.2}
+\]
+Indeed, $[i,j]\mid m$ if and only if both $i\mid m$ and $j\mid m$.
+For rank one $\Gamma=\lambda\lambda^T$ this is
+$(\sum_{i\mid m,\ i\leq N}\lambda_i)^2$.
+The individual $q_\ell$ can have either sign. This is neither a cone of
+nonnegative atom coefficients nor NS64's positive adjacent-difference cone.
+
+For every real $s>0$, define $Q(s)=\sum_\ell q_\ell\ell^{-s}$.
+The reciprocal LCM matrix $K_s=([i,j]^{-s})$ is positive definite. To see
+this without a numerical eigenvalue calculation, put
+\[
+ J_s(d)=d^s\prod_{p\mid d}(1-p^{-s})>0,
+ \quad \sum_{d\mid k}J_s(d)=k^s.
+\]
+The product identity follows prime-power by prime-power. Hence
+\[
+ \sum_{i,j\leq N}\lambda_i\lambda_j[i,j]^{-s}
+ =\sum_{d\leq N}J_s(d)
+     \left(\sum_{\substack{i\leq N\\d\mid i}}\lambda_i i^{-s}\right)^2.
+ \tag{96.3}
+\]
+The divisor-incidence matrix is triangular with nonzero diagonal, so the
+right side is strictly positive for nonzero $\lambda$. Decomposing
+$\Gamma$ into rank-one positive terms proves
+\[
+ Q(s)=\operatorname{tr}(\Gamma K_s)\geq0.
+ \tag{96.4}
+\]
+This matrix is not the physical arithmetic Gram matrix.
+
+\subsection*{2. A complete real Mellin separator}
+For $1/2<s<1$, let $C(s)=\sum c_n n^{-s}$. Complete integration gives
+\[
+ \mathcal L_s(r):=\int_0^\infty r(t)t^{-s-1}\,dt
+       =\frac{1+\zeta(s)C(s)}{s^2}.
+ \tag{96.5}
+\]
+Here $\int\tau(t)t^{-s-1}dt=1/s^2$. Also
+\[
+ \int_0^\infty\{t\}t^{-s-1}dt=-\zeta(s)/s,
+ \qquad
+ \int_0^\infty A(t/n)t^{-s-1}dt=-\zeta(s)n^{-s}/s^2.
+\]
+For completeness, the first formula follows for $\Re s>1$ by subtracting
+$\int_1^\infty\lfloor t\rfloor t^{-s-1}dt=\zeta(s)/s$ from
+$\int_1^\infty t^{-s}dt$, then continuing the convergent fractional-part
+integral on $[1,\infty)$ to $\Re s>0$ and adding $\int_0^1 t^{-s}dt$.
+The second follows by nonnegative Fubini for real $0<s<1$ and a dilation.
+This also proves $\zeta(s)<0$ on $(0,1)$. Endpoint integrability uses
+$r(t)=O(t)$ at zero and $r(t)=O(1+\log t)$ at infinity.
+
+The bare Mellin functional is not bounded on all of $\mathcal H$. We use
+only the subspace of functions linear in $t$ on $(0,1)$, which contains
+every residual here. On that subspace its bounded representative is
+\[
+ k_s(t)=\begin{cases}t/(1-s),&0<t<1,\\t^{1-s},&t\geq1,\end{cases}
+ \quad \mathcal L_s(r)=\langle r,k_s\rangle,
+ \quad \|k_s\|^2=\frac1{(1-s)^2}+\frac1{2s-1}
+       =\frac{s^2}{(1-s)^2(2s-1)}.
+ \tag{96.6}
+\]
+In particular no exterior term has been dropped.
+
+\paragraph{Negative complete coefficient rule.}
+If the \emph{entire} coefficient sequence is $c_\ell=-q_\ell$, (96.4)--(96.6)
+and Cauchy--Schwarz imply, for every $N$ and every $\Gamma\succeq0$,
+\[
+ E\geq\frac{(1-s)^2(2s-1)}{s^6};
+ \qquad s=4/7\quad\Longrightarrow\quad
+ \boxed{E\geq3087/4096}.
+ \tag{96.7}
+\]
+Indeed $\mathcal L_s(r)=(1-\zeta(s)Q(s))/s^2\geq1/s^2$.
+The bound is exact and independent of a numerical cutoff or of $N$.
+
+\paragraph{Positive complete coefficient rule.}
+If instead $c_\ell=q_\ell$, then $c_1=\Gamma_{11}\geq0$.
+On $(0,2)$ one has exactly
+$r(t)=-\eta t+(1+c_1)\log_+t$.
+Restricting the nonnegative norm integral to that interval and minimizing
+over arbitrary $\eta\in\mathbb R$ gives
+\[
+ E\geq(1+c_1)^2\kappa_0\geq\kappa_0>1/32,\qquad
+ \kappa_0=1-\log2-\tfrac12(\log2)^2-\tfrac18(\log2)^4.
+ \tag{96.8}
+\]
+In fact the local squared norm is
+$2\eta^2-\eta(1+c_1)(\log2)^2+
+(1+c_1)^2(1-\log2-(\log2)^2/2)$.
+To check positivity using rationals alone, the series
+$\log2=2\sum_{k\geq0}3^{-2k-1}/(2k+1)$ gives
+$\log2<2/3+1/36=25/36$. The function
+$f(x)=1-x-x^2/2-x^4/8$ is strictly decreasing for $x>0$, and
+$f(25/36)-1/32=55199/13436928>0$.
+Thus either global sign of this complete rule fails to approximate $\tau$.
+These statements do not cover signed differences of PSD matrices, nor
+adding a freely chosen old approximant.
+
+\subsection*{3. The projected PSD cone is a signed space}
+Let $V_N=\operatorname{span}\{a_1,\ldots,a_N\}$, let $\Pi_N$ be its
+orthogonal projection, and put $\phi_\ell=(I-\Pi_N)a_\ell$.
+Define $T_N(\Gamma)=\sum_\ell q_\ell a_\ell$. Then, exactly,
+\[
+ \boxed{\{(I-\Pi_N)T_N(\Gamma):\Gamma\succeq0\}
+ =\operatorname{span}\{\phi_\ell:\ell\in S_N,\ \ell>N\}.}
+ \tag{96.9}
+\]
+One inclusion follows from support. For the other, choose $i,j\leq N$
+with $[i,j]=\ell>N$; necessarily $i\ne j$. The two PSD rank-one matrices
+$\Gamma_\pm=(e_i\pm e_j)(e_i\pm e_j)^T$ satisfy
+\[
+ T_N(\Gamma_\pm)=a_i+a_j\pm2a_\ell,
+ \qquad (I-\Pi_N)T_N(\Gamma_\pm)=\pm2\phi_\ell.
+ \tag{96.10}
+\]
+An arbitrary signed linear combination is therefore realized by adding
+the corresponding matrices with nonnegative coefficients. This proof
+covers unrestricted finite PSD mixtures; it does not assert the same
+statement for a single rank-one square, fixed diagonal, normalization,
+trace budget, or other additional constraints.
+
+Equivalently, with an unrestricted old coefficient vector $d$,
+$\sum_{n\leq N}d_n a_n+T_N(\Gamma)$ ranges over precisely
+$\operatorname{span}\{a_\ell:\ell\in S_N\}$; the same holds for the
+minus sign. The positivity is absorbed by old terms which are free to
+cancel. This is an equality of approximation classes, not an error-decay
+theorem. All old indices belong to $S_N$, but no prime $p>N$ belongs to it.
+Also $S_N\subseteq\{ij:i,j\leq N\}$ since
+$[i,j]=i(j/\gcd(i,j))$. No equality with NS95's divisor-completed space
+is assumed.
+
+\paragraph{Actual residual pairings.}
+For any real $r\perp V_N$, the matrix
+$M(r)_{ij}=\langle r,a_{[i,j]}\rangle$ has zero diagonal.
+If it is nonzero, a nonzero off-diagonal entry $h$ gives the principal
+minor $\left(\begin{smallmatrix}0&h\\h&0\end{smallmatrix}\right)$.
+Thus $M(r)$ is indefinite and the two squares in (96.10) have pairings
+$\pm2h$. If $M(r)=0$, all LCM observations vanish.
+This statement applies in particular to the actual optimized residual,
+but does not assert that any particular observation is nonzero.
+It excludes an automatic one-sided numerator sign from PSD alone.
+
+\paragraph{What remains after refitting.}
+For complete coefficients $c=d-q$ with $d$ supported on $[1,N]$, let
+$D(s)=\sum d_n n^{-s}$ and $z_s=-\zeta(s)>0$. The moment bound reads
+\[
+ |1-z_s(D(s)-Q(s))|\leq\rho_s,
+ \quad \rho_s=s^2\|k_s\|\sqrt E,
+ \quad \frac{1-\rho_s}{z_s}\leq D(s)-Q(s)
+                           \leq\frac{1+\rho_s}{z_s}.
+ \tag{96.11}
+\]
+For $E<(1-s)^2(2s-1)/s^6$, necessarily $D(s)>Q(s)$.
+This is a necessary signed moment balance, not a sufficient estimate.
+In particular (96.7) cannot be applied to refitted coefficients.
+
+\subsection*{4. Stop condition and next input}
+The LCM replacement repairs pointwise positivity, but as a complete rule
+it cannot converge. The unrestricted old refit removes that obstruction
+by making the projected PSD class exactly a signed space. Neither branch
+supplies a cofinal arithmetic lower gain. No global Selberg-sieve no-go
+or impossibility of a constrained, residual-dependent square is claimed.
+
+The useful next input remains a joint estimate for the \emph{actual}
+signed observations and their complete projected energy. One can keep
+NS95's free signed class or use the full PR42 observation vector; a PSD
+relabeling alone does not improve the estimate. A new restricted square
+proposal must quantify its old-coefficient cancellation or trace budget,
+prove its actual-target numerator and cost bounds together, and respect
+NS83's logarithmic lower barrier. NS87 already controls the omitted tail
+at the relevant scale; another finite efficiency table does not supply
+the missing cofinal bound. G2, RH, and the original uniform Weil floor
+remain open.

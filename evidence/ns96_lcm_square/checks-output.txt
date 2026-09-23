@@ -1,0 +1,57 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/ns96_lcm_square/checks.mac")
+kill(all)
+checks:0
+scalarmatrixp:false
+check(name,expr):=block([v:ratsimp(expr)],if v # 0 then error(name,v),
+      checks:checks+1,print("PASS",name))
+kk:1/(1-s)^2+1/(2*s-1)
+check("evaluator norm",kk-s^2/((1-s)^2*(2*s-1)))
+PASS evaluator norm 
+check("Mellin error floor",1/(s^4*kk)-((1-s)^2*(2*s-1))/s^6)
+PASS Mellin error floor 
+check("rational negative floor",subst(4/7,s,((1-s)^2*(2*s-1))/s^6)-3087/4096)
+PASS rational negative floor 
+check("exterior primitive",diff((-eta*t^(1-s))/(1-s),t)+eta*t^-s)
+PASS exterior primitive 
+loc:2*eta^2-eta*(1+c1)*ell^2+(1+c1)^2*(1-ell+(-ell^2)/2)
+kap:1-ell+(-ell^2)/2+(-ell^4)/8
+check("complete local square",loc-2*(eta-((1+c1)*ell^2)/4)^2+(-(1+c1)^2)*kap)
+PASS complete local square 
+check("local stationary point",subst(((1+c1)*ell^2)/4,eta,diff(loc,eta)))
+PASS local stationary point 
+check("rational log bound series",2/3+1/36+(-25)/36)
+PASS rational log bound series 
+check("rational positive floor gap",
+      subst(25/36,ell,kap)-1/32+(-55199)/13436928)
+PASS rational positive floor gap 
+check("log-square primitive",diff(-(log(t)^2+2*log(t)+2)/t,t)-log(t)^2/t^2)
+PASS log-square primitive 
+qp:a1*u0^2+a2*x^2+a3*y^2+2*u0*x*a2+2*u0*y*a3+2*x*y*a6
+check("rank-one LCM pair",subst([x = 1,y = -1,u0 = 0],qp)-(a2+a3+(-2)*a6))
+PASS rank-one LCM pair 
+check("positive projected generator",(a2+a3+2*a6)-a2-a3+(-2)*a6)
+PASS positive projected generator 
+check("negative projected generator",(a2+a3+(-2)*a6)-a2-a3+2*a6)
+PASS negative projected generator 
+check("zero-diagonal pairing determinant",
+      determinant(matrix([0,h],[h,0]))+h^2)
+PASS zero-diagonal pairing determinant 
+check("positive square pairing",
+      (matrix([1,1]) . matrix([0,h],[h,0]) . matrix([1],[1]))[1,1]-2*h)
+PASS positive square pairing 
+check("negative square pairing",
+      (matrix([1,-1]) . matrix([0,h],[h,0]) . matrix([1],[-1]))[1,1]+2*h)
+PASS negative square pairing 
+check("signed refit moment",1-z*(dd-qq)-(1-z*dd+z*qq))
+PASS signed refit moment 
+vv:[u1,u2,u3,u4]
+km:matrix([1,x,y,x^2],[x,x,x*y,x^2],[y,x*y,y,x^2*y],[x^2,x^2,x^2*y,x^2])
+lhs:sum(sum(vv[i]*vv[j]*km[i,j],j,1,4),i,1,4)
+rhs:(u1+x*u2+y*u3+x^2*u4)^2+(1/x-1)*(x*u2+x^2*u4)^2+(1/y-1)*(y*u3)^2
+                           +(1/x^2-1/x)*(x^2*u4)^2
+check("Jordan LCM factorization",lhs-rhs)
+PASS Jordan LCM factorization 
+print("PASS:",checks,"exact checks")
+PASS: 17 exact checks 
+quit()

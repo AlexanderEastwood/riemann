@@ -1,0 +1,49 @@
+{
+  "classification": "Author mathematical and implementation review; no independent reviewer",
+  "open_major_findings": 0,
+  "analytic_checks": [
+    "LCM grouping uses all ordered pairs, retaining the factor 2 for off-diagonal rank-one terms. Divisor positivity holds for every m. Individual coefficients can be negative.",
+    "Jordan factorization valid for every real s>0: positive prime-power factors and invertible divisor incidence. It is not a physical Gram comparison.",
+    "Fractional-part Mellin continuation splits at 1, and the integration of A uses nonnegative Fubini. Endpoints of every finite residual are integrable on 0<s<1.",
+    "The bounded evaluator is asserted only for the exterior-linear subspace, with the entire (0,1) contribution retained; s is restricted to (1/2,1).",
+    "The negative floor requires the entire c=-q rule, not an arbitrary old approximant plus a negative PSD correction.",
+    "The positive floor follows from c1>=0 and unrestricted minimization over eta; restricting the total nonnegative integral to (0,2) is a valid lower bound.",
+    "The rational log bound and gap 55199/13436928 prove strict positivity without relying on rounded decimals.",
+    "Projected-cone equality explicitly uses arbitrary finite PSD mixtures and unrestricted old refit. It is not claimed for a single square or constrained trace, diagonal or rank.",
+    "The two rank-one generators realize both signs without an uncertified matrix decomposition. Their old components cancel in the projection exactly.",
+    "The old-orthogonal LCM pairing matrix has zero diagonal; if nonzero, a nonzero two-by-two minor is indefinite. No particular actual-target observation is assumed nonzero.",
+    "LCM support is contained in direct product support but is not identified with NS95 divisor completion. No prime above N appears.",
+    "The signed refit moment inequality is necessary, not sufficient; its rho threshold is exactly the pure negative floor.",
+    "No error floor for the unrestricted optimum, general Selberg-method obstruction, finite-to-cofinal extrapolation, or actual lower-gain theorem follows."
+  ],
+  "implementation_checks": [
+    "Exact integer incidence checks extend to 3*N^2, beyond coefficient support.",
+    "Exact rational Jordan checks at exponents 1,2,3 use divisor recursion independent of the product formula.",
+    "Signed rank-one generator checks compare actual coefficient maps above N, without replacing the physical Gram by a mock.",
+    "At s=4/7, grouped, Jordan, and direct reciprocal-LCM sums overlap with positive enclosures.",
+    "256/384-bit scalar enclosures overlap. No midpoint solves or finite physical integrals are used.",
+    "17 Maxima exact identities pass; the rational floor typo in the first working draft was corrected before publication and independently checked.",
+    "Touched Python passes pyright; all functions annotated. Runtime pins unchanged; no new dependency."
+  ],
+  "what_had_to_change": "Replace ordinary convolution by actual LCM squares for pointwise positivity. Permit old refitting to escape the complete-rule floors; that refit makes unrestricted PSD mixtures exactly a signed space.",
+  "obstruction": "PSD alone supplies no residual numerator sign after unrestricted old refitting. Complete coefficients with either global PSD sign have a genuine fixed error floor.",
+  "bound_or_object": "The two named complete coefficient objects fail to converge; the refitted class is not excluded. Failure of an automatic sign mechanism, not of the cofinal actual-target estimate.",
+  "validation": {
+    "status": "PASS",
+    "scalar_precision_overlaps": 19,
+    "exact_incidence_checks_per_precision": 699,
+    "signed_projected_generators_per_precision": 92,
+    "exact_Jordan_checks_per_precision": 12,
+    "Maxima_exact_checks": 17,
+    "dependency_hashes": 8,
+    "historical_numerical_replay": false,
+    "independent_review": false
+  },
+  "manuscript": {
+    "unchanged": true,
+    "pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "v166_manifest_ok": 16
+  },
+  "HTML_review": "Source, formulas, version naming and relative links checked. Prior local-browser URL policy block remains; no browser visual inspection claimed. File preview will be requested for the durable HTML report."
+}

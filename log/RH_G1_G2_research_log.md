@@ -3601,3 +3601,33 @@ seven independent complete physical norm comparisons, 12 prior NS86 scalar
 overlaps, 178 exact prime-fiber checks, 18 Maxima checks and clean Python
 diagnostics. Author review only. Unchanged manuscript builds to 358 pages,
 zero undefined/duplicate references; v1.66 manifest 16/16. No new tag/version.
+
+
+## 2026-09-23 — NS96: actual divisor squares and the old refit
+
+Reviewed all 103 prior conclusions at main 604cb9c, current checkpoints,
+missing-evidence ledger and NS95 author audit; repeated scope review after
+handoff. No historical numerical replay or recovery is claimed.
+
+The genuine pointwise divisor square uses LCM, not ordinary product
+convolution. For a PSD coefficient matrix, complete coefficients c=-q
+have E>=3087/4096 by a complete real Mellin separator; c=+q have
+E>=1-log(2)-log(2)^2/2-log(2)^4/8>1/32 by the first two cells.
+These are actual floors for the named rules only.
+
+What had to change: old coefficients must be free if this rule is to
+avoid those floors. With that refit, positive rank-one pairs give both
+signs of each projected LCM atom, so unrestricted PSD mixtures equal the
+signed LCM span. Every nonzero old-orthogonal pairing matrix is indefinite.
+The obstruction is to obtaining the missing numerator sign from PSD
+alone, not to convergence of the refitted class or all sieve arguments.
+The necessary signed real-moment balance is retained explicitly.
+
+Validation: 17 Maxima identities; scalar Arb replay at 256/384 bits;
+699 exact divisor-incidence checks and 92 signed projected generators per
+precision; exact Jordan identities at three integer exponents for four
+sizes. These finite checks supplement the general analytic proof and do
+not establish it by extrapolation. No new Gram solve, physical cutoff,
+best error or manuscript version. Author review only. RH/G2 and both
+missing-original groups remain open. Evidence: evidence/ns96_lcm_square;
+report: audits/lcm-square-obstruction-2026-09-23-v1.html.

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scalar_precision_overlaps": 19,
+  "exact_incidence_checks_per_precision": 699,
+  "signed_projected_generators_per_precision": 92,
+  "exact_Jordan_checks_per_precision": 12,
+  "Maxima_exact_checks": 17,
+  "dependency_hashes": 8,
+  "historical_numerical_replay": false,
+  "independent_review": false
+}

@@ -5,6 +5,29 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 divisor-square test (NS-96)
+
+A genuine pointwise divisor square groups by least common multiple. As a
+complete coefficient rule, either global sign of a positive semidefinite
+mixture leaves a size-independent squared-error floor: at least 3087/4096
+for the negative sign, and greater than 1/32 for the positive sign.
+These are restricted-construction bounds, not bounds on the optimized error.
+
+With unrestricted old-coefficient refitting, the projected positive cone
+is exactly the signed span of the LCM atoms. Every nonzero LCM pairing
+matrix of an old-orthogonal residual is indefinite. Thus this positivity
+condition alone supplies no numerator sign or arithmetic lower gain.
+Single squares, fixed trace budgets and other extra constraints are not
+identified with that full signed span. The refitted convergence route stays
+open; no general Selberg-sieve obstruction is asserted.
+
+Self-contained complete-moment and projection proofs, 17 Maxima checks,
+256/384-bit scalar replay and author review are archived. No new optimized
+error computation, cutoff experiment or manuscript version. RH/G2 remain open.
+
+[Derivation and checks](evidence/ns96_lcm_square/) ·
+[Readable report](audits/lcm-square-obstruction-2026-09-23-v1.html).
+
 ## September 23 square-scale product test (NS-95)
 
 Freeing the signed divisor-product weights repairs most of NS86's finite
@@ -637,6 +660,7 @@ graph LR
   nbaveragedabsolutecost["Averaging the fully separated absolute Mobius cost<br/><small>&#128193; evidence/ns93_averaged_cost</small><br/><small><b>wall: productwise absolute values force a linear majorant even before averaging</b></small>"]
   circlecountinference["Tangent-circle similarity point and count imbalance infer RH<br/><small>&#128193; evidence/ns94_circle_inversion</small><br/><small><b>wall: exact symmetric off-line control preserves the proposed geometric count and infinity features</b></small>"]
   nbsquareproductrestriction["Square-scale product restriction and complete gain split<br/><small>&#128193; evidence/ns95_square_product</small>"]
+  nblcmsquarecone["LCM divisor squares: complete-rule floors and signed refit equivalence<br/><small>&#128193; evidence/ns96_lcm_square</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -740,6 +764,7 @@ graph LR
   nbarithmeticcostbudget --> nbaveragedabsolutecost
   altroutes --> circlecountinference
   nbjointlocalization --> nbsquareproductrestriction
+  nbsquareproductrestriction --> nblcmsquarecone
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -842,9 +867,10 @@ graph LR
   click nbaveragedabsolutecost "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns93_averaged_cost/" "evidence: evidence/ns93_averaged_cost" _blank
   click circlecountinference "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns94_circle_inversion/" "evidence: evidence/ns94_circle_inversion" _blank
   click nbsquareproductrestriction "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns95_square_product/" "evidence: evidence/ns95_square_product" _blank
+  click nblcmsquarecone "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns96_lcm_square/" "evidence: evidence/ns96_lcm_square" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound,nbarithmeticcostbudget,nbsquareproductrestriction proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound,nbarithmeticcostbudget,nbsquareproductrestriction,nblcmsquarecone proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;

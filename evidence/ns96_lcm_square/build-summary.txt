@@ -1,0 +1,7 @@
+Command: ./manuscript/build.sh
+Result: PASS
+Manuscript version: v1.66 unchanged
+Pages: 358
+Undefined/duplicate references: 0
+Manifest: v1.66_manifest.json, 16 ok, 0 relocated, 0 missing, 0 mismatched
+New proof remains a separate argument.tex; no manuscript version or tag added.
