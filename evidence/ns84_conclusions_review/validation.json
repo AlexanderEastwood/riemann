@@ -1,0 +1,59 @@
+{
+  "classification": "local integration validation; manuscript unchanged and no independent historical reproof",
+  "base_commit": "7db0b91b7161ce84b755f950c1bc6d3fb7d10899",
+  "manuscript_pages": 358,
+  "manuscript_source_unchanged": true,
+  "warning_counts": {
+    "references": 0,
+    "latex": 0,
+    "pdftex": 0,
+    "overfull": 0,
+    "underfull": 0
+  },
+  "python_errors": 0,
+  "python_warnings": 0,
+  "maxima_exact_checks": 135,
+  "html_balanced": true,
+  "html_local_links_resolve": true,
+  "html_inline_css_only": true,
+  "browser_visual_review": false,
+  "preview": "Codex file preview; earlier local browser restriction respected",
+  "new_replay": {
+    "classification": "finite replay checks; no cofinal estimate or independent human audit",
+    "status": "PASS",
+    "precision_matches": 64,
+    "same_problem_cutoff_matches": 6,
+    "source_sha256": "50d4d67639ef767dce708910ca858731d8511fcacd0906696e9d04134a665168",
+    "dependency_sha256": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5",
+    "N256_one_atom_error_over_full_optimum": "[3202.6 +/- 0.0632]",
+    "inherited_optimum_path": "evidence/v160/ns71/preconditioner-384bits.json",
+    "inherited_optimum_sha256": "85619ce1a6336d09faddc2a53d3ea580d2a7b9cf04da840b8a19c6ea87ce1de5",
+    "independent_Gram_comparisons": [
+      {
+        "bits": 256,
+        "N": 16,
+        "full_gram_error": "[1.3908463222091728460069638400043785633648657768 +/- 3.09e-47]",
+        "one_atom_fitted": "[0.1758481713973055092969057210682987002970529687 +/- 3.21e-47]",
+        "exterior_balanced": "[0.3792838544913567131824459601907096396062823574 +/- 3.26e-47]"
+      },
+      {
+        "bits": 384,
+        "N": 16,
+        "full_gram_error": "[1.3908463222091728460069638400043785633648657768 +/- 3.09e-47]",
+        "one_atom_fitted": "[0.1758481713973055092969057210682987002970529687 +/- 3.21e-47]",
+        "exterior_balanced": "[0.3792838544913567131824459601907096396062823574 +/- 3.26e-47]"
+      }
+    ],
+    "tail_radius_reduced_by_more_than_three": true,
+    "all_errors_positive_and_controls_ordered": true,
+    "RH_proved": false
+  },
+  "historical_recovery": "two original evidence groups remain open",
+  "new_manuscript_version": false,
+  "RH_proved": false,
+  "inherited_proof_sha256": {
+    "evidence/v163/ns78/proof.tex": "3dac51b901eb8590d4640e39dcbdaf5cd8ccf2276bf748e4430cde7de2ec5dcc",
+    "evidence/v159/ns61/gram-tail-proof.tex": "e33e4129fb81d0cdcb001e9177dc7f33ef044a746f1fa273b602286bf438ff15",
+    "evidence/v166/ns83/proof.tex": "c4e7649245c159ba4b6e677581cdd5050ae677602d63f0508f299b6dca02a023"
+  }
+}

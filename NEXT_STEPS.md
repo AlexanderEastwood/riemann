@@ -148,6 +148,10 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-83 | Derive the critical-zero lower bound for fixed Mellin smoothing and test which cofinal relative-gain estimates remain possible | Codex, Continue solving toward RH | done (v1.66; fixed-order rate restriction) | Complete Burnol dual-vector adaptation gives positive logarithmic lower liminf at every fixed smoothing order. Constant relative contraction is excluded; weaker nonsummable arithmetic gain remains open. Certified zero-subset constant has no finite-N onset. |
 
+| NS-84 | Review every registered conclusion and current evidence/audit status; persist Alex’s per-turn review requirement | Codex, Continue solving toward RH | done (review; manuscript v1.66 unchanged) | Record scope and findings against the current main commit; correct stale summaries without silently upgrading missing evidence or implying a fresh proof audit. |
+
+| NS-85 | Test complete logarithmically tapered Mobius approximants and identify which arithmetic estimate a slower-rate candidate actually requires | Codex, Continue solving toward RH | done (finite control; arithmetic rate open) | Retain the full physical norm and tails; distinguish fixed coefficients from optimized fits, diagnostics from certificates, and finite behavior from an asymptotic bound. Stop rather than claim a new rate from a finite table. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration

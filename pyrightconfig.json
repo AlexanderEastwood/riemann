@@ -38,7 +38,8 @@
     "evidence/v165/*.py",
     "evidence/v165/ns82/*.py",
     "evidence/v166/*.py",
-    "evidence/v166/ns83/*.py"
+    "evidence/v166/ns83/*.py",
+    "evidence/ns85_taper_test/*.py"
   ],
   "exclude": [
     "node_modules",

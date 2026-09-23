@@ -8,6 +8,25 @@ already cost this project real work.
 
 ---
 
+## 0. Review before every turn (Alex, 2026-09-23)
+
+Before extending the work on each user turn, review the repository and **all
+recorded conclusions**, not just the active lane. Refresh the current remote
+state, read the full conclusion register (`research-map.json`), current
+README/checkpoints, `NEXT_STEPS.md`, `evidence/MISSING.md`, and the relevant
+current audit findings. Check every registered conclusion's scope,
+hypotheses, evidence status and relation to the proposed next step. Review
+changes since the last checked commit and trace any affected dependency
+before relying on it. Do the same after resuming from a compacted handoff.
+
+Record the reviewed commit and any findings in the turn's working record.
+Separate a conclusions/dependency review from a new proof audit or numerical
+replay; never claim all historical proofs or computations were revalidated
+unless they actually were. Known missing originals remain open even when a
+replacement certificate or the publication text is available. Correct stale
+summaries before building further conclusions on them. Preserve earlier
+reviews and documents; record corrections forward.
+
 ## 1. What this project is
 
 A research record for an attempt on the Riemann Hypothesis via Weil
@@ -336,7 +355,7 @@ tools/        make_manifest.py, verify_manifest.py, make_map.py
 
 **Do not build cumulative bundles.** Re-bundling every prior artifact into
 each release produced a 207 MB ZIP that failed to upload (HTTP 502) and left
-the project's only positive result unreproducible. Git stores history; use it.
+the complete lambda=4 positivity result unreproducible. Git stores history; use it.
 No file over 100 MB — GitHub rejects it.
 
 **If you cite an artifact, commit it.** If you cannot, add a row to
