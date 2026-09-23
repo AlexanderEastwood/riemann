@@ -1,0 +1,87 @@
+\section{Retaining the analytic tail instead of discarding it (NS-82)}
+\label{sec:ns82-tail-compression}
+
+The large sufficient cutoff in NS-81 is not a necessary cost. Its leading
+logarithmic tail can instead be retained exactly as a rank-two form. The
+following construction uses physical cell integrals, not the truncated
+sampling matrix of NS-81. It still gives no cofinal error estimate.
+
+For $f_c=\sum_{n\leq N}c_n\sigma_n$, set
+\[
+ u=\tfrac12\sum c_n,\qquad
+ v=\tfrac12\sum c_n\log(2\pi/n),\qquad
+ S_2(N)=\sum_{n\leq N}n^2=\frac{N(N+1)(2N+1)}6.
+\]
+Keep the harmonic number $H_N$ and constant $C_N=48H_NN^3(N+2)$
+from NS-81. For an integer $M\geq N+1$, define the finite quadratic form
+\begin{equation}
+ T_M(c)=\int_{1/M}^{\infty}|f_c(x)|^2\,dx
+       +\frac{q^2+2uq+2u^2}{M},\qquad q=u\log M+v.
+ \label{eq:ns82-comparator}
+\end{equation}
+The first term consists of the exact exterior contribution and cells
+$1\leq m<M$; the second is the integral of the logarithmic main tail.
+Thus the added tail has rank at most two in coefficient space. Exact
+cell formulas are those of NS-78, with $\alpha=0$ and the sign of the
+residual reversed; their squares are unchanged.
+
+\begin{proposition}[Complete remainder control for a finite physical comparator]
+\label{prop:ns82-tail-compression}
+Put $\delta^2=4C_NS_2(N)/(27M^3)$. If $\delta<1$, then
+\begin{equation}
+ (1-\delta)^2G_N\preceq T_M\preceq(1+\delta)^2G_N.
+ \label{eq:ns82-comparison}
+\end{equation}
+In particular the explicit integer choice
+\[
+ M_N=\max\left\{N+1,
+ \left\lceil\left(\frac{16C_NS_2(N)}{27}\right)^{1/3}\right\rceil\right\}
+ =O\bigl(N^{7/3}\log^{1/3}(2N)\bigr)
+\]
+satisfies $\delta\leq1/2$ and gives
+$G_N/4\preceq T_{M_N}\preceq9G_N/4$.
+The same constants survive old-space minimization, so the projected
+condition ratio is at most nine. An old $N$-to-$2N$ block uses $M_{2N}$.
+\end{proposition}
+\begin{proof}
+NS-78's complete Bernoulli remainder gives, for $t\geq M\geq N$,
+\[
+ f_c(1/t)=u\log t+v+e_c(t),\qquad
+ |e_c(t)|\leq\frac{\sum n|c_n|}{6t}
+            \leq\frac{\sqrt{S_2(N)}\,\|c\|_2}{6t}.
+\]
+Consequently the norm of the full discarded remainder is bounded by
+\[
+ \int_M^\infty\frac{|e_c(t)|^2}{t^2}\,dt
+ \leq\frac{S_2(N)}{108M^3}\|c\|_2^2
+ \leq\frac{4C_NS_2(N)}{27M^3}\|f_c\|_2^2,
+\]
+where the final step uses NS-81's ordinary Gram floor. Replace $f_c$
+only on $0<x<1/M$ by $u\log(1/x)+v$. The resulting function has squared
+norm exactly $T_M(c)$. The triangle and reverse-triangle inequalities
+therefore give~\eqref{eq:ns82-comparison}, retaining the cross term
+between the main tail and its remainder. The formula for $M_N$ forces
+$\delta^2\leq1/4$. Taking the infimum over old coordinates preserves
+both quadratic-form constants, as in NS-80. No equality of old
+minimizers is required.
+\end{proof}
+
+For the true projected correlations, the NS-80 exact line-search argument
+now gives one-step capture at least $9/25$ of full available gain; ten
+ideal steps capture at least
+\[
+ 1-(4/5)^{20}>.9884.
+\]
+The comparator uses finitely many elementary cell integrals and a closed
+rank-two tail; no infinite comparator or unevaluated tail is hidden.
+The cutoff is calculated using exact rational harmonic numbers and an
+integer cube-root inequality. Two-precision Arb checks additionally
+verify the complete remainder constants at $N=16,64,256,512$.
+These are scalar cutoff certificates only: the comparator matrices and
+preconditioned iterations are not assembled or executed here.
+
+This improves the sufficient construction cost, not the approximation
+rate or the original signed Weil floor. The new size comparison is
+uniform over all vectors and projected blocks; its useful descent is
+still measured against available block gain, which may be smaller than
+the entire residual error. Cofinal arithmetic decay, G2 and RH remain open.

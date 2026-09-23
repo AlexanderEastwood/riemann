@@ -1022,6 +1022,15 @@
       "prop": "prop:ns81-conditioning; prop:ns81-finite-comparator",
       "evidence": "evidence/v164/ns81",
       "note": "Condition O(N^4 log² N); sufficient cutoff 2^16(N+1)^6 with full tail bound. Enormous comparator not assembled; no practical solver or cofinal decay."
+    },
+    {
+      "id": "nbcompressedtail",
+      "title": "Finite physical comparator with an exact rank-two tail",
+      "status": "proved",
+      "parent": "nbfiniteconditioning",
+      "prop": "prop:ns82-tail-compression",
+      "evidence": "evidence/v165/ns82",
+      "note": "Sufficient cutoff O(N^(7/3) log^(1/3)(2N)); projected condition <=9. Scalar constants certified; comparator not assembled; no cofinal decay."
     }
   ]
 }

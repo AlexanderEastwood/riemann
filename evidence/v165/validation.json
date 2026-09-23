@@ -1,0 +1,93 @@
+{
+  "classification": "local integration validation; no independent review or RH proof",
+  "version": "v1.65",
+  "date": "2026-09-23",
+  "tasks": [
+    "NS-82"
+  ],
+  "publication_base_commit": "1aae979734d434c0d08f5a883374e5557f6ddd23",
+  "manuscript": {
+    "pages": 353,
+    "warning_counts": {
+      "undefined_or_duplicate_references": 0,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0,
+      "latex_warnings": 0,
+      "pdftex_warnings": 0,
+      "duplicate_pdf_destinations": 0
+    },
+    "proof_fragment_integrated_verbatim_once": true,
+    "proof_sha256": "ef4d009fb8607892fc2a515817de3bbbbe33f67312827eebecae7c78b604b84c",
+    "main_tex_sha256": "c2ef3eec4193a8f3c992b8490c7b9fb04f890f35535407cffad65df29091aa1f",
+    "pdf_sha256": "425e94b526c604ff3a72aac5cd29d768321d559b07e24d9d568ac132cabe716c",
+    "new_section_visual_review_pages": [
+      11,
+      327,
+      328,
+      329,
+      330
+    ]
+  },
+  "maxima_exact_checks": {
+    "NS-82": 12
+  },
+  "maxima_total": 12,
+  "arb_precisions_bits": [
+    256,
+    384
+  ],
+  "replays": {
+    "status": "PASS",
+    "precision_bits": [
+      256,
+      384
+    ],
+    "precision_enclosure_matches": 20,
+    "source_sha256": "da5ce84f7c3b7fa9f71eca6b2da1a14a445f1f3a0066ec04905403b080bd79cf",
+    "exact_cutoffs_rechecked": 4,
+    "comparator_assembled": false,
+    "cutoff_replay": "not applicable: all discarded remainder is bounded analytically; scalar certificates only",
+    "cofinal_error_decay": false,
+    "independent_review": false
+  },
+  "python_diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "scope": "all new v165 scientific Python"
+  },
+  "source_sha256": {
+    "ns82/certify_tail.py": "da5ce84f7c3b7fa9f71eca6b2da1a14a445f1f3a0066ec04905403b080bd79cf",
+    "ns82/exact-checks.mac": "38ece4dd05b5c6be75383eb6b2c6dbae957379ae568bd3e497d95c9b198675b2",
+    "ns82/proof.tex": "ef4d009fb8607892fc2a515817de3bbbbe33f67312827eebecae7c78b604b84c",
+    "proof.tex": "ef4d009fb8607892fc2a515817de3bbbbe33f67312827eebecae7c78b604b84c",
+    "verify_replays.py": "4f37c53579b5ad1e10152424bf3f560ece018537baa7c8a207b06321e12877be"
+  },
+  "independent_review": false,
+  "open_inputs": [
+    "Cofinal decay of the complete signed arithmetic sample sum",
+    "Available block gain relative to the entire residual energy",
+    "Practical application of the arithmetic sampling comparator",
+    "Original arithmetic Weil floor, API, G2 and RH"
+  ],
+  "limits": [
+    "Different physical-cell comparator from NS81; logarithmic main tail retained exactly",
+    "Complete Bernoulli remainder integrated to infinity; cross terms controlled by norm inequalities",
+    "Only scalar cutoffs and constants were computed, not comparator matrices or iterations",
+    "Use total atom count including old and new atoms",
+    "Sufficient cutoffs are not necessary costs or complexity lower bounds",
+    "Uniform block efficiency does not imply cofinal residual decay"
+  ],
+  "inherited_proof_sha256": {
+    "evidence/v163/ns78/proof.tex": "3dac51b901eb8590d4640e39dcbdaf5cd8ccf2276bf748e4430cde7de2ec5dcc",
+    "evidence/v163/ns80/proof.tex": "fa6a558bb246e2fc01df68d4f0b9a69f95f0e8ac363d7ff04be9dd6e495fdd39",
+    "evidence/v164/ns81/proof.tex": "bdedfeca6b9c897955d2c177e034b27d24f7dab1a651f55229b7d0aad7a0248c"
+  },
+  "publication_authorization": "User requested PRs and subsequently explicitly allowed validated merges and version tags.",
+  "html_checks": {
+    "balanced_nesting": true,
+    "local_links_resolve": true,
+    "inline_styles_only": true,
+    "browser_visual_review": false,
+    "preview": "Codex file preview; prior local browser restriction respected"
+  }
+}

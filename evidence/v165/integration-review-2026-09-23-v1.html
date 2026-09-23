@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local review of the retained-tail construction</title></head>
+<body style="margin:0;background:#f4f2ed;color:#192d35;font-family:Georgia,serif;font-size:17px;line-height:1.65;"><main style="max-width:680px;margin:32px auto;padding:36px 28px;background:#fff;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;color:#526971;">RIEMANN PROJECT · 23 SEPTEMBER 2026 · v1.65</p><h1 style="font-size:32px;line-height:1.2;">Local review of the retained-tail construction</h1>
+<p>This is author self-review of NS82, not an independent audit.</p>
+<p><strong>Comparator definition:</strong> the exact prefix includes the exterior and every reciprocal cell before M. Only the physical tail after M is replaced by its logarithmic main term. Its squared norm is an explicit quadratic expression of two coefficient sums.</p>
+<p><strong>Remainder and mixed term:</strong> weighted Cauchy–Schwarz bounds the complete Bernoulli remainder by the coefficient norm. Integrating to infinity yields the factor 1/(108 M cubed). The NS81 ordinary Gram floor converts that to a relative norm bound. Triangle and reverse-triangle inequalities control the main-tail/remainder interaction; comparing separate squared pieces would not suffice.</p>
+<p><strong>Projection and step count:</strong> the two quadratic-form constants survive minimization over old coordinates. Their ratio is nine. The inherited exact line-search inequality gives at least 9/25 of available gain in one step and more than 98.84% in ten. This does not lower-bound available gain relative to total residual energy.</p>
+<p><strong>Dimensions and computation:</strong> a 256-to-512 block uses 512 total atoms in the cutoff. Its 8,435,244 cutoff is selected with exact integer comparisons against a rational cube threshold. The scalar two-precision replay does not assemble the comparator or execute any descent steps.</p>
+<p><strong>Scope:</strong> this changes the comparator from NS81, so the two cutoffs describe different sufficient constructions. Neither is a necessary cost or complexity lower bound. No practical solver, cofinal decay, signed Weil floor, G2 or RH claim follows. No unresolved issue was identified in this local review.</p>
+<p><a href="validation.json" style="color:#155c68;">Build and certificate checks</a></p>
+
+<p style="border-top:1px solid #d5dedc;margin-top:32px;padding-top:18px;font-size:14px;color:#526971;">Exact implications and certified scalar computations are distinguished from open arithmetic inputs. Local self-review only.</p></main></body></html>

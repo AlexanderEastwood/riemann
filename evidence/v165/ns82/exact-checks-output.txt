@@ -1,0 +1,25 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/v165/ns82/exact-checks.mac")
+display2d:false
+checks:[]
+check(label,expr):=block([answer:is(ratsimp(expr) = 0)],
+      checks:endcons([label,answer],checks),
+      if answer # true then error("Exact check failed",label,expr))
+check("Squared tail primitive",
+      diff(-((u*log(t)+v)^2+2*u*(u*log(t)+v)+2*u^2)/t,t)-(u*log(t)+v)^2/t^2)
+check("Remainder tail primitive",diff(-1/(3*t^3),t)-1/t^4)
+check("Full remainder constant",16/108-4/27)
+check("Cutoff delta bound",((4*C*S)/27)/((16*C*S)/27)-1/4)
+check("Lower norm factor",(1-1/2)^2-1/4)
+check("Upper norm factor",(1+1/2)^2-9/4)
+check("Condition ratio",(9/4)/(1/4)-9)
+check("One step capture",(4*9)/(1+9)^2-9/25)
+check("Remaining fraction",1-9/25-(4/5)^2)
+check("Squares sum difference",(N*(N+1)*(2*N+1))/6-((N-1)*N*(2*N-1))/6-N^2)
+check("Tail quadratic matrix determinant",1*2-1*1-1)
+if not is(1-(4/5)^20 > 9884/10000) then error("Ten step bound failed")
+checks:endcons(["Ten step capture exceeds 98.84 percent",true],checks)
+print("PASS:",length(checks),
+      "exact checks; no comparator assembled or RH decay claimed.")
+PASS: 12 exact checks; no comparator assembled or RH decay claimed. 
+"/private/tmp/riemann-ns82/evidence/v165/ns82/exact-checks.mac"
