@@ -100,6 +100,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-59 | Test the NS-53 raw-correlation gain bound against the complete projected Nyman–Beurling blocks, then attempt an independently justified arithmetic bound for a sharper denominator or explicit block quotient | Codex, Continue solving toward RH | done (v1.58; lower correlation input open) | Adjacent norm bound and complete Mellin identity; unconditional raw difference Gram norm O_epsilon(N^(-5/3+epsilon)). Near-N^(-2) power norm is equivalent to Lindelof; fixed-logarithmic raw bounds are impossible. Scope excludes projected/selected-direction bounds. Arb 256/384 finite trace-loss and coordinate-cost gates, exact Maxima checks, local self-review and build in evidence/v158/. No convergence, G2 or RH claim. |
 
+| NS-60 | Test explicit old-space corrections for the NB adjacent-difference blocks, distinguishing raw norm obstructions from projected and actual-residual bounds | Codex, Continue solving toward RH | claimed | Derive the exact dilation/grid correction and retain every projection cross term. Test a specified denominator prediction; obtain an independent estimate or identify its missing arithmetic input. Stop if only the exact convergence condition is restated. Finite scaling is diagnostic only. |
+
 ## Lanes
 
 ```
