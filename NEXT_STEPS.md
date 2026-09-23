@@ -172,6 +172,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 
 | NS-96 | Test a genuine LCM divisor-square positivity replacement for square-scale signed gain, including complete real Mellin moments and the old-space refit | Codex | complete; scoped result, v1.66 unchanged | Both complete signs have fixed error floors. After unrestricted old refitting the projected PSD cone equals the signed LCM span; nonzero residual-pairing matrix indefinite. Extra rank/trace constraints not covered. Actual cofinal lower gain remains open. [Proof and checks](evidence/ns96_lcm_square/) |
 
+| NS-97 | Audit NS96 against existing walls and screen its suggested continuations for mere reformulation | Codex | claimed | Distinguish new scoped formulas from the unchanged arithmetic gap; record a comparison against NS62/64/74/78/95 and check trace normalization with free step size. Audit only, no new theorem node. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
