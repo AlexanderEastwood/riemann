@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RH continuation: exact weights and the first-zero problem</title></head>
+<body style="margin:0;padding:36px 20px;background:#f3f1eb;color:#252826;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.65;">
+<main style="max-width:680px;margin:0 auto;background:#fff;padding:34px;">
+<p style="margin:0;color:#68756f;font-family:Arial,sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;">Research checkpoint · September 22, 2026 · Version 2 · v1.56 integration</p>
+<h1 style="font-size:30px;line-height:1.2;margin:14px 0 18px;">Exact arithmetic weights matter to first-zero uniqueness</h1>
+<p style="font-size:19px;"><strong>Derived result:</strong> every nonzero change to finitely many prime-shift coefficients creates negative compact tests in both parity sectors, however small the change. The altered complete operator family reaches a finite first-zero window. These are tests of proposed geometric arguments, not negative directions for the original Weil form.</p>
+<p>The argument uses the current project’s established dense near-radicals and complete cutoff residuals. It is integrated as NS-57 in v1.56, without a claim of literature novelty or independent review. RH, arithmetic injectivity, and the original uniform lower floor remain open.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">The question investigated</h2>
+<p>The companion geometry investigation concerns the prime shifts and both endpoints of a hypothetical first-zero nullvector. I investigated what properties such an argument must distinguish. Bounded multiplier identities preserve the known weak domain, but their algebra leaves signed terms. Instead of treating that identity as a sign estimate, I constructed nearby complete operator families against which to test a proposed estimate.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">1. A negative perturbation is detected by the existing near-radicals</h2>
+<p>The project supplies a dense span of translated arithmetic radicals. For every fixed member h, its smooth cutoff g<sub>a</sub> converges to h in ordinary L² while the complete residual A<sub>a</sub>g<sub>a</sub> tends to zero. Therefore, for any fixed bounded self-adjoint operator B,</p>
+<div style="margin:18px 0;padding:16px;background:#f0f4f1;border-left:3px solid #577362;overflow-wrap:anywhere;">q<sub>a</sub>[g<sub>a</sub>] + ⟨Bg<sub>a</sub>, g<sub>a</sub>⟩ → ⟨Bh, h⟩.</div>
+<p>If B has a negative direction, density finds a fixed h with negative B-energy. Its sufficiently large cutoff is then a negative compact test for q + B. The reflected translate spans give the same argument separately in the even and odd sectors. No global form-norm density or uniform approximation coefficients are assumed.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">2. Every nonzero finite prime-weight change has both signs</h2>
+<p>Keep the complete archimedean contribution, both poles, and all prime locations. Change only finitely many coefficients w<sub>n</sub> = Λ(n)/√n by real amounts δ<sub>n</sub>. With R<sub>f</sub>(t) = ∫ f(x+t)f̅(x) dx, the new form is</p>
+<div style="margin:18px 0;padding:16px;background:#f0f4f1;border-left:3px solid #577362;">q<sub>δ</sub>[f] = q[f] − 2 ∑ δ<sub>n</sub> Re R<sub>f</sub>(log n).</div>
+<p>The difference is a bounded translation operator B<sub>δ</sub>. Its real even Fourier symbol is</p>
+<div style="margin:18px 0;padding:16px;background:#f7f6f2;">b<sub>δ</sub>(ξ) = −2 ∑ δ<sub>n</sub> cos(ξ log n),<br>‖B<sub>δ</sub>‖ ≤ 2 ∑ |δ<sub>n</sub>|.</div>
+<p>This finite cosine sum has long-interval mean zero and mean square 2 ∑ δ<sub>n</sub>² &gt; 0. Consequently it has both signs. Distinct positive frequencies suffice; no independence assumption on prime logarithms is needed. Fourier functions of either parity can be placed in a negative band. The near-radical argument then produces real compact smooth negative tests for the altered Weil form in both parities.</p>
+<p>The changes can be arbitrarily small and can keep every modified prime coefficient positive. For a single change δ, the perturbation’s spectral bottom is exactly −2|δ|.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">3. The controls have genuine first-zero windows</h2>
+<p>Before a modified shift fits inside a window, its extra correlation vanishes. Small-window positivity therefore survives. Negative compact tests supply later negative windows. The lowest energy remains continuous: after rescaling to a fixed interval, translations are strongly continuous and uniformly bounded, and the common logarithmic form domain has compact embedding. This argument does not assume operator-norm continuity at prime entry.</p>
+<p>There is thus a finite first window at which the altered full operator is nonnegative and has a nonzero nullvector. Translation invariance and support consistency force that vector to reach both endpoints. Each parity sector also has a first-zero window, possibly at a different location.</p>
+<p>The altered screw potential is exactly g<sub>δ</sub>(t) = g(t) + ∑ δ<sub>n</sub>(|t| − log n)<sub>+</sub>. Its nullvector equation still says that its convolution with the zero-extended vector is affine throughout the window. What fails is the original arithmetic near-radical identity: the altered residual generally approaches B<sub>δ</sub>h instead of zero.</p>
+<p><strong>Finite-window certificates remain meaningful.</strong> At any fixed window, the ground energy changes by at most 2 ∑ |δ<sub>n</sub>|. A positive finite-window margin can therefore survive a small change even though a later window becomes negative.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">4. A one-sided sensitivity bound</h2>
+<p>For a fixed nonzero coefficient pattern δ⁰, scale its size by ε &gt; 0. The v1.53 residual estimate for a fixed finite translate combination gives constants C, c &gt; 0 such that its unperturbed cutoff energy has magnitude at most C exp(−cλ²). Its perturbation energy is eventually at most −εκ/2 for a fixed κ &gt; 0. It becomes negative once</p>
+<div style="margin:18px 0;padding:16px;background:#f7f6f2;">λ² ≥ c<sup>−1</sup> log(4C/(εκ)).</div>
+<p>Thus, for each fixed perturbation pattern and sufficiently small ε, a negative test in each parity occurs by a window λ ≤ C<sub>0</sub>√log(1/ε). This is an analytic upper bound with pattern-dependent constants. It is not a matching lower bound, a computed threshold, or a prediction for the unchanged arithmetic operator.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">5. Exact positivity and a bounded floor have different requirements</h2>
+<p>A bounded perturbation changes a lower bound by at most its operator norm. Therefore q and q + B have a uniform finite cofinal floor simultaneously. Under the project’s v1.36 theorem, either floor would imply RH.</p>
+<p>The exact consequence is:</p>
+<div style="margin:18px 0;padding:16px;background:#f0f4f1;border-left:3px solid #577362;">q[f] + ⟨Bf,f⟩ + c‖f‖² ≥ 0 for every compact smooth f<br><strong>if and only if</strong> RH holds and B + cI ≥ 0.</div>
+<p>Conditionally on RH, the perturbed complete ground energy tends to inf σ(B); if RH fails, it tends to −∞. For one changed prime coefficient, the RH-conditional limit is −2|δ|. These are consequences of the archived floor and near-radical results, not a proof of their open sign input.</p>
+
+<table style="width:100%;border-collapse:collapse;margin:22px 0;font-size:15px;">
+<thead><tr><th style="text-align:left;border-bottom:2px solid #97a99e;padding:10px;">Proposed goal</th><th style="text-align:left;border-bottom:2px solid #97a99e;padding:10px;">What the control requires</th></tr></thead>
+<tbody>
+<tr><td style="vertical-align:top;padding:10px;border-bottom:1px solid #d9dfda;">Exclude every first nullvector</td><td style="padding:10px;border-bottom:1px solid #d9dfda;">Use a property that distinguishes the exact arithmetic coefficients, such as their actual radical identities.</td></tr>
+<tr><td style="vertical-align:top;padding:10px;border-bottom:1px solid #d9dfda;">Prove a uniform finite lower floor</td><td style="padding:10px;border-bottom:1px solid #d9dfda;">A bounded perturbation is allowed. Robustness to these changes does not invalidate the method.</td></tr>
+<tr><td style="vertical-align:top;padding:10px;">Use only translation, parity, endpoint support, or affine-potential form</td><td style="padding:10px;">Those properties are also present in the altered families and do not by themselves exclude their first nullvectors.</td></tr>
+</tbody></table>
+
+<h2 style="font-size:23px;margin-top:30px;">Validation and next step</h2>
+<p>Twelve exact Maxima checks passed: the supplied conformal embedding convention, a signed multiplier identity, a positive signed-matrix example, representative cosine means, and parity correlation formulas. These are finite algebra checks, not interval certificates or verification of the functional analysis. The complete manuscript build and local mathematical integration audit are recorded in the version validation and review artifacts.</p>
+<p>The next useful analytic step is to combine a hypothetical first-zero equation with the <em>actual</em> radical identities to obtain a new signed boundary relation. The current argument identifies what that relation must distinguish; it does not yet supply the exclusion estimate.</p>
+<p style="padding:16px;background:#f7f6f2;"><strong>Scope:</strong> no negative direction for the unchanged Weil form, new positive window, uniform lower floor, API proof, G2 proof, or RH proof. The manuscript and incremental evidence are updated in the isolated integration branch. No claim that all geometry routes fail.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">Proof and sources</h2>
+<ul style="padding-left:22px;">
+<li><a href="proof.tex" style="color:#245880;">proof source</a> · <a href="exact-checks.mac" style="color:#245880;">Maxima checks</a> · <a href="validation.json" style="color:#245880;">validation</a>.</li>
+<li><a href="https://github.com/AlexanderEastwood/riemann/blob/36c8b0f6c39ac218594872043051883368a21a69/manuscript/fixed_space_prime_action_v1.tex" style="color:#245880;">Pinned v1.55 manuscript</a>: v1.36 total near-radicals and bounded-floor theorem; v1.53 fixed-center residual estimate; NS-51/55 complete domains and first-zero geometry.</li>
+<li><a href="https://arxiv.org/html/2606.09096v2#S4" style="color:#245880;">Suzuki, Weil’s quadratic form via the screw function, §4</a>: the original continuity framework. The finite-perturbation continuity argument is given explicitly in this checkpoint.</li>
+<li><a href="https://github.com/AlexanderEastwood/riemann/tree/36c8b0f6c39ac218594872043051883368a21a69/evidence/ns47_clifford_weil" style="color:#245880;">NS-47 Clifford representation</a> and <a href="https://github.com/AlexanderEastwood/riemann/tree/36c8b0f6c39ac218594872043051883368a21a69/evidence/ns50_cae_localization" style="color:#245880;">NS-50 localization</a>: existing signed-geometry and localization limitations.</li>
+</ul>
+</main>
+</body>
+</html>

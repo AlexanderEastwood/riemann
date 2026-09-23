@@ -111,6 +111,15 @@ nullvector reaches both window endpoints. Finite dilation retains unestimated
 signed prime/pole changes. API, the uniform floor, G2 and RH remain open.
 No new window or tail metric.
 
+Version 1.56 (NS-57) adds finite prime-weight controls: every nonzero finite
+coefficient change creates negative compact tests in both parities and finite
+first-zero windows. The original arithmetic near-radical identity is lost.
+Fixed-pattern lambda_* = O(sqrt(log(1/epsilon))) is an analytic upper bound,
+not a numerical threshold. Bounded perturbations preserve the uniform-floor
+objective; exact scalar compensation and a conditional spectral limit follow
+from v1.36. These are controls and implications, not a new arithmetic sign
+estimate. API, the original floor, G2 and RH remain open.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

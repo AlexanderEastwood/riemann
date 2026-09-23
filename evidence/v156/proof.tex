@@ -1,0 +1,302 @@
+\section{Finite prime-weight controls and stable lower floors (v1.56)}
+\label{sec:v156-prime-weight-controls}
+
+\paragraph{Classification and scope.} Analytic consequences of the pinned project's complete-domain
+and total near-radical results. No claim of literature novelty, new numerical
+certificate, arithmetic injectivity, uniform floor, G2, or RH proof.
+The perturbed forms below are controls; the original arithmetic operator remains unchanged.
+
+\subsection*{Inputs and conventions}
+The standalone checkpoint uses v1.55 as its source baseline.
+Write $H=L^2(\mathbb R)$, $I_a=(-a,a)$, and $P_a$ for its ordinary support projection.
+The complete Weil form $q_a$ and operator $A_a$ have their original
+archimedean part, both pole terms, and all prime-power contributions.
+Their compact smooth cores are restrictions of one support-consistent form $q$.
+The common fixed-window form domain is
+\[
+ V_a=\{f\in L^2(I_a):\int_\mathbb R\log(2+|\xi|)
+           |\widehat{E_af}(\xi)|^2\,d\xi<\infty\}.
+\]
+Here $E_a$ is zero extension and the Fourier transform is unitary.
+The inner product is linear in the first slot.
+
+We use exactly the following archived inputs, without rerunning their proofs
+or numerical certificates:
+\begin{itemize}
+\item Lemma~\ref{lem:v136-total-radicals}: a dense reflected-translate
+span $\mathcal R\subset H$ and even cutoffs give, for every fixed
+$h\in\mathcal R$, $g_a\in C_c^\infty(I_a)$ with
+$E_ag_a\to h$ and $\norm{A_ag_a}\to0$.
+The parity-projected spans are dense in the even and odd subspaces.
+For the quantitative corollary we additionally use v1.53,
+Lemma~\ref{ns46-a2-lem-fixed-centers}: for a fixed range of translate
+centers, the complete cutoff residual is at most
+$C\sqrt a\,e^{2a}\exp(-c e^{2a})$, with $C,c>0$ independent of $a$.
+\item The complete $A_a$ have compact resolvent, are strictly positive
+for sufficiently small $a$, and have continuous lowest eigenvalue.
+The standard fixed-window realization is a logarithmic principal form
+plus a bounded perturbation.
+\item Proposition~\ref{prop:v136-bounded-floor}: a common finite
+ordinary lower floor on cofinal windows implies RH. If RH fails,
+$\inf\sigma(A_a)\to-\infty$.
+\end{itemize}
+All analytic statements below inherit these hypotheses. A bounded perturbation
+does not inherit the actual near-radical property of $A_a$.
+
+\subsection*{A general bounded-perturbation test}
+\begin{lemma}[Detection on the total near-radical span]\label{lem:ns57-bounded-detection}
+Let $B$ be any bounded self-adjoint operator on $H$, and define
+\[
+ q_a^B[f]=q_a[f]+\langle BE_af,E_af\rangle.
+\]
+If $B$ has a negative direction, then $q^B$ has a negative compact
+smooth test. If $B$ preserves parity and has a negative direction
+in each parity, so does $q^B$. Conversely, nonnegativity of $q^B$
+on all compact smooth tests forces $B\ge0$.
+\end{lemma}
+\begin{proof}
+For each fixed $h\in\mathcal R$ the archived approximants satisfy
+\[
+ |q_a[g_a]|\le\norm{A_ag_a}\norm{g_a}\longrightarrow0,
+ \qquad q_a^B[g_a]\longrightarrow\langle Bh,h\rangle.
+\]
+If $\langle Bv,v\rangle<0$, ordinary density and boundedness of $B$
+give a fixed $h\in\mathcal R$ with $\langle Bh,h\rangle<0$.
+For sufficiently large $a$, $g_a$ is the required compact test.
+Apply the parity-projected density for either sector. The converse
+follows by taking the same limit and using continuity on $H$.
+This uses neither global form-norm density nor any uniform bound
+on the coefficients in the translate approximation.
+When $B$ preserves real functions, taking real parts of approximants
+gives real compact tests for real negative directions.
+\end{proof}
+
+\begin{theorem}[Bounded-floor stability and exact compensation]\label{thm:ns57-bounded-floor-stability}
+For fixed bounded self-adjoint $B$, the existence of a uniform finite
+cofinal floor for $q_a^B$ is equivalent to that for $q_a$, hence to RH
+under the archived inputs. More sharply, for any real $c$,
+\[
+ q^B[f]+c\norm f^2\ge0\quad(f\in C_c^\infty(\mathbb R))
+ \quad\Longleftrightarrow\quad
+ \bigl[\mathrm{RH}\ \hbox{and}\ B+cI\ge0\bigr].
+\]
+Writing $\beta=\inf\sigma(B)$, the full lowest energies satisfy
+\[
+ \lim_{a\to\infty}\inf\sigma(A_a+E_a^*BE_a)
+ =\begin{cases}\beta,&\text{if RH holds},\\-\infty,&\text{if RH fails}.
+ \end{cases}
+\]
+\end{theorem}
+\begin{proof}
+The forms differ by at most $\norm B\norm f^2$, so each finite
+cofinal floor transfers to the other. The archived bounded-floor
+implication and Weil criterion give the equivalence with RH.
+Nonnegativity after adding $cI$ therefore implies RH, and the lemma
+applied to $B+cI$ forces its positivity. The converse is immediate.
+
+Under RH, $q_a\ge0$ implies the lower bound $\beta$. Given
+$\epsilon>0$, approximate a unit vector with $B$-Rayleigh quotient
+less than $\beta+\epsilon$ by a nonzero fixed $h\in\mathcal R$,
+and then by its cutoff $g_a$. The displayed limits in the lemma,
+also after normalization, give a limsup at most $\beta+2\epsilon$.
+Let $\epsilon\downarrow0$. If RH fails, the archived divergence
+of the original bottom and the bound $\norm B$ give divergence
+of the perturbed bottom. No arithmetic sign is established by this dichotomy.
+\end{proof}
+
+\subsection*{Changing finitely many actual prime-shift weights}
+Let $S$ be a nonempty finite set of distinct prime powers, and let
+real changes $\delta_n$ not all be zero. Write
+\[
+ \ell_n=\log n,\qquad w_n=\Lambda(n)/\sqrt n,\qquad
+ (T_tf)(x)=f(x+t),\qquad R_f(t)=\langle T_tf,f\rangle.
+\]
+Only the coefficient $w_n$ is changed to $w_n+\delta_n$ for $n\in S$.
+The new form is exactly
+\[
+ q_\delta[f]=q[f]-2\sum_{n\in S}\delta_n\operatorname{Re}R_f(\ell_n)
+            =q[f]+\langle B_\delta f,f\rangle,
+ \qquad B_\delta=-\sum_{n\in S}\delta_n(T_{\ell_n}+T_{-\ell_n}).
+\]
+This retains both poles, all original prime locations, and the original
+archimedean term. Its perturbation is bounded by
+$\norm{B_\delta}\le2\sum|\delta_n|$. Its Fourier symbol is
+\[
+ b_\delta(\xi)=-2\sum_{n\in S}\delta_n\cos(\ell_n\xi).
+\]
+
+\begin{lemma}[Both signs without independence of prime logarithms]\label{lem:ns57-symbol-signs}
+The continuous even function $b_\delta$ takes both positive and negative
+values. Consequently $B_\delta$ has negative directions in both parity sectors.
+\end{lemma}
+\begin{proof}
+Distinct positive frequencies suffice for the elementary Cesaro identities
+\[
+ \lim_{R\to\infty}\frac1{2R}\int_{-R}^R b_\delta(\xi)\,d\xi=0,
+ \qquad
+ \lim_{R\to\infty}\frac1{2R}\int_{-R}^R b_\delta(\xi)^2\,d\xi
+       =2\sum_{n\in S}\delta_n^2>0.
+\]
+They follow by integrating each cosine and each product of two cosines.
+If $b_\delta\ge0$, then $b_\delta^2\le\norm{b_\delta}_\infty b_\delta$
+contradicts these limits. Apply the same argument to $-b_\delta$.
+Choose Fourier bumps supported in a negative open interval and its
+reflection. A real even Fourier bump produces a real even physical
+test; a purely imaginary odd Fourier bump produces a real odd test.
+Both have negative $B_\delta$ energy. These are ordinary $L^2$
+directions; the preceding lemma supplies the compact smooth Weil tests.
+No rational independence, equidistribution rate, or prime number theorem
+is required.
+\end{proof}
+
+\begin{corollary}[Arbitrarily small finite changes create negative tests]\label{cor:ns57-finite-weight-negative}
+For every nonzero finite change $\delta$, $q_\delta$ has negative compact
+smooth tests in both parity sectors. This holds for arbitrarily small
+$\sum|\delta_n|$, including changes that keep all modified weights
+strictly positive. It does not assert a negative test for $q$ itself.
+For one changed coefficient, $\inf\sigma(B_\delta)=-2|\delta|$.
+Thus, conditionally on RH, the perturbed full lowest energy tends
+to $-2|\delta|$.
+\end{corollary}
+
+\subsection*{Actual first-zero controls, rather than only matrices}
+\begin{theorem}[A finite first-zero window for every nonzero finite change]\label{thm:ns57-first-zero-controls}
+Each perturbed family $q_{\delta,a}$ starts strictly positive at small
+windows and has a finite first-zero window. The full form is nonnegative
+at that first window and has a nonzero operator nullvector. Its support
+reaches both endpoints. Each parity sector also has a finite first-zero
+window, possibly different from the full first window.
+\end{theorem}
+\begin{proof}
+If $2a\le\min_{n\in S}\ell_n$, every added correlation is zero, so the
+original small-window positivity applies. The negative compact tests
+above give finite larger windows with negative lowest eigenvalue.
+
+For completeness, continuity survives the finite changes despite the
+operator-norm discontinuity of a compressed shift at prime entry.
+Scale $I_a$ unitarily to $(-1,1)$. Relative to a fixed reference
+archimedean form with compact resolvent, the rescaled form is
+$t[u]+\langle K(a)u,u\rangle$ on a common form domain.
+The reference can be shifted so $t\ge\norm{\cdot}^2$.
+The archimedean multiplier differences are norm-continuous by the
+bound $|\xi\alpha'(\xi)|\le5$ proved in Proposition~\ref{prop:ns55fc-dilation}; the pole terms are continuous
+finite-rank forms. On a compact range of $a$, there are only finitely
+many prime shifts. Each compressed translation by $\ell_n/a$ is
+strongly continuous, including where it becomes zero at the endpoint,
+and uniformly bounded. Thus $K(a)$ is locally uniformly bounded,
+self-adjoint, and strongly continuous.
+
+For $a_j\to a$, a fixed trial vector gives upper semicontinuity of
+the ground energy. Normalized ground vectors have uniformly bounded
+$t$-energy. Compactness gives an ordinary strongly convergent
+subsequence. Uniform boundedness and strong continuity of $K(a_j)$
+give convergence of its quadratic values on that subsequence; lower
+semicontinuity of $t$ gives the reverse inequality. This proves
+continuity, also on the closed parity subspaces.
+
+Continuity between the positive and negative windows gives a first
+zero, and compact resolvent makes it an eigenvalue. The perturbed
+global form is still translation invariant and support consistent.
+If a full first-zero nullvector had support diameter less than $2a_*$,
+translate it into a smaller window, contradicting strict positivity
+there. Thus both extreme support points equal the endpoints.
+For a parity-sector first zero, reflection symmetry of the support
+gives the same conclusion without translating out of the sector.
+The statement concerns essential support, not a nonzero boundary trace.
+\end{proof}
+
+At each fixed window, the elementary variational perturbation estimate is
+\[
+ |\mu_\delta(a)-\mu_0(a)|\le\norm{B_\delta}
+                    \le2\sum_{n\in S}|\delta_n|.
+\]
+It holds in each parity as well. Thus these controls do not invalidate
+finite-window positivity margins; their negative tests may occur later.
+
+\begin{corollary}[A one-sided sensitivity rate for a fixed perturbation direction]\label{cor:ns57-fixed-direction-sensitivity}
+Fix a nonzero finite coefficient pattern $\delta^0$ and put
+$\delta=\epsilon\delta^0$, $\epsilon>0$. There exist constants
+$C_0>0$ and $0<\epsilon_0<1$, depending on that fixed pattern, such
+that each parity has a negative test in a window with
+\[
+ \lambda=e^a\le C_0\sqrt{\log(1/\epsilon)}
+       \qquad(0<\epsilon<\epsilon_0).
+\]
+In particular the first-zero parameter $\lambda_*=e^{a_*}$ has this upper bound.
+This is not a matching lower bound or a numerically effective threshold.
+\end{corollary}
+\begin{proof}
+In either parity fix one finite translate combination $h$ with
+$\langle B_{\delta^0}h,h\rangle=-\kappa<0$, as above.
+All its translate centers lie in a fixed bounded interval. The
+v1.53 complete-residual estimate, the bounded norm of $g_a=\chi_a h$,
+and absorption of polynomial factors give constants $C,c>0$ with
+\[
+ |q_a[g_a]|\le C\exp(-c\lambda^2)
+\]
+for all sufficiently large $a$. Norm convergence and boundedness of
+$B_{\delta^0}$ give, after increasing this fixed threshold,
+$\langle B_{\delta^0}g_a,g_a\rangle\le-\kappa/2$.
+Therefore
+\[
+ q_{\epsilon\delta^0,a}[g_a]
+ \le C\exp(-c\lambda^2)-\epsilon\kappa/2<0
+ \quad\hbox{if}\quad
+ \lambda^2\ge c^{-1}\log\frac{4C}{\epsilon\kappa}.
+\]
+Take $\epsilon_0$ small enough to exceed the fixed window threshold
+and absorb the additive constant in this logarithm. Choose the larger
+constant for the two parity witnesses. No translate coefficients or
+centers depend on $\epsilon$; none is asserted uniform over different
+perturbation patterns.
+\end{proof}
+
+The screw potential is changed by precisely
+\[
+ \mathfrak g_\delta(t)=\mathfrak g(t)+
+                 \sum_{n\in S}\delta_n(|t|-\ell_n)_+.
+\]
+The proof of Proposition~\ref{prop:ns51-affine-potential} applies to this finite modification:
+nullvectors are exactly the complete-domain functions for which
+$\mathfrak g_\delta*E_af$ is affine throughout $I_a$.
+These controls therefore retain the global affine-potential equation
+in its modified form, not just a finite matrix resemblance.
+They lose the original arithmetic near-radical identity:
+for cutoff translates the perturbed residual generally approaches
+$B_\delta h$, rather than zero.
+
+\subsection*{What this changes in the proposed geometry task}
+A proof excluding the first arithmetic nullvector must use a property
+that fails in these perturbed families, such as the exact arithmetic
+radical identities. Translation and reflection geometry, finite-window
+compactness, both-endpoint support, and an affine-potential reformulation
+alone do not distinguish them. This is a test of those hypotheses,
+not a closure of conformal geometry or of API.
+
+A proof of a uniform finite lower floor has a different standard:
+bounded coefficient changes preserve that objective. A method robust
+under these changes can still prove RH through the original floor
+criterion. It would be incorrect to reject such a method merely
+because the altered forms are sometimes negative.
+
+The preliminary bounded-multiplier identity supplies no new sign.
+For a real symmetric matrix $K$, real vectors $f,m$, and ordinary
+quadratic form $q_K$, exact expansion gives
+\[
+ q_K[mf]-\langle Kf,m^2f\rangle
+ =-\frac12\sum_{i,j}K_{ij}f_if_j(m_i-m_j)^2.
+\]
+At a nullvector the middle term vanishes, but the right-hand side
+retains signed coefficients. The analogous form identity requires
+the proper domain argument and supplies no automatic positivity
+mechanism. We use its finite algebra only as a sign check, not as
+an unproved infinite-dimensional theorem.
+
+
+\paragraph{Evidence and unresolved input.}
+The twelve exact Maxima checks in \texttt{evidence/v156/} verify finite
+algebra only. The complete-domain implications above rely on the cited
+analytic lemmas, not on these checks. No new numerical window, tail metric,
+effective threshold, actual arithmetic lower bound, API, G2 or RH proof is
+obtained. Integration and local audit details are archived with this version;
+no independent review is claimed.

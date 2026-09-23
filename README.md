@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.55**.
+Alexander Eastwood's complete working manuscript, **v1.56**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -39,6 +39,25 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |
+
+## v1.56: finite prime-weight controls (NS-57)
+
+Every nonzero finite change to the prime-shift coefficients creates negative
+compact smooth tests in both parity sectors, however small the change. The
+altered complete family has a finite first-zero window, including endpoint
+support saturation and its modified affine-potential equation. It does **not**
+retain the original arithmetic radical identity. No negative direction for the
+unchanged Weil form is claimed.
+
+For a fixed perturbation pattern of size epsilon, the first-zero parameter
+has an analytic upper bound `lambda_* = O(sqrt(log(1/epsilon)))`; constants
+are pattern-dependent and no numerical threshold is certified. Fixed bounded
+perturbations preserve the cofinal finite-floor objective. The exact scalar
+compensation criterion and conditional spectral limit follow from v1.36.
+
+[Proof, report, exact Maxima checks and validation](evidence/v156/).
+These are analytic controls and target-stability results, not a new signed
+arithmetic estimate. API, the original uniform floor, G2 and RH remain open.
 
 ## v1.55: local uniqueness shortcuts tested
 
@@ -144,6 +163,8 @@ graph LR
   generic_h1["Generic H¹ bootstrap from a zero eigenvalue<br/><small>prop:ns51-no-generic-bootstrap</small><br/><small>&#128193; evidence/ns51_kernel</small>"]
   localucp["Local open-set UCP for the full prime-shift operator<br/><small>prop:ns55-local-ucp-counterexample; prop:ns55-parity-ucp-counterexample</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: local f=A_a f=0 does not force f=0; whole-window API is not refuted</b></small>"]
   fullpositivecone["Ordinary-cone positivity for the full Weil semigroup<br/><small>prop:ns55-nonpositive-semigroup</small><br/><small>&#128193; evidence/v155</small><br/><small><b>wall: order-preservation shortcut fails; quadratic-form positivity is a different property</b></small>"]
+  finiteweightcontrols["Finite prime-weight changes: negative tests and first-zero controls<br/><small>cor:ns57-finite-weight-negative; thm:ns57-first-zero-controls; cor:ns57-fixed-direction-sensitivity</small><br/><small>&#128193; evidence/v156</small>"]
+  boundedfloorstability["Bounded perturbations preserve the finite-floor objective<br/><small>lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability</small><br/><small>&#128193; evidence/v156</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -205,6 +226,8 @@ graph LR
   kernelapi --> generic_h1
   kernelapi --> localucp
   kernelapi --> fullpositivecone
+  kernelapi --> finiteweightcontrols
+  floor --> boundedfloorstability
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -263,9 +286,11 @@ graph LR
   click generic_h1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns51_kernel/" "evidence: evidence/ns51_kernel" _blank
   click localucp "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v155/" "evidence: evidence/v155" _blank
   click fullpositivecone "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v155/" "evidence: evidence/v155" _blank
+  click finiteweightcontrols "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v156/" "evidence: evidence/v156" _blank
+  click boundedfloorstability "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v156/" "evidence: evidence/v156" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -290,7 +315,7 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance](manifest/v1.53_manifest.json)
+- [Checksums and provenance](manifest/v1.56_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).
