@@ -15,8 +15,8 @@ from pathlib import Path
 
 import mpmath as mp
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from davenport_heilbronn import C, F, F_xi, GUESS, f  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from controls.davenport_heilbronn import C, F, F_xi, GUESS, f  # noqa: E402
 
 
 def sample_min(Fun, z0) -> mp.mpf:
