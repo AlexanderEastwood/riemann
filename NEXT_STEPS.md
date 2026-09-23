@@ -179,6 +179,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 | NS-99 | Audit which nodes share NS98’s exact cost input, which share the broader NB gain input, and which have different missing hypotheses; update the research map without over-closing routes | Codex root | done (audit; no new bound) | All 104 conclusions reviewed; 63 nodes annotated against 14 scoped input groups, all prior statuses retained. Exact Mobius cost/margin, broader NB gain, shared Weil floor and different inputs separated. Generator exclusivity claim corrected; evidence/ns99_shared_gaps. |
 | NS-100 | Independently reassess the repository and propose concrete research tests, including the tangent-circle/core geometry suggestion, screened against existing walls and primary literature | Assisting agent, requested by Alex | done (independent assessment; one scoped control) | Two conditional tasks screened against primary literature; no established novel RH mechanism. Actual theta-slice positivity fails with complete 256/384-bit and doubled-cutoff/series replay, nine Maxima checks. Full weighted kernel remains unestimated. Evidence/ns100_reassessment; manuscript unchanged. |
 
+| NS-101 | Short feasibility test of a theta-modular factorization for the full integrated kernel, retaining signed slice cancellation and screening every claimed new identity against NS100 and primary literature | Codex | claimed | Derive and independently check a concrete candidate identity or record the exact stop; no equivalent sign restatement counted as a new estimate. |
+
 ## Current dependency index (NS-99, September 23)
 
 Use the [shared-input register](RESEARCH_MAP.md#shared-continuation-inputs)
