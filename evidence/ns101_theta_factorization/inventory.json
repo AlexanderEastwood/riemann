@@ -1,0 +1,65 @@
+{
+  "classification": "NS101 audit/control hashes; no new manuscript-version manifest",
+  "files": [
+    {
+      "path": "NEXT_STEPS.md",
+      "sha256": "a333110f7dd1c7dabe7602a88a32799d8bb970ee9ff70dee29257ce3258a6342"
+    },
+    {
+      "path": "README.md",
+      "sha256": "c2426e96e04eb8e78a70ce02a360270a5ef1efb60b181a55af99dcdd5293987e"
+    },
+    {
+      "path": "RESEARCH_MAP.md",
+      "sha256": "5a6d945c65cf48af8808513caa81f60429e055483c44ab1fa4a83a23dd50e416"
+    },
+    {
+      "path": "audits/theta-factorization-test-2026-09-23-v1.html",
+      "sha256": "8148f62cf42211b89959f2f0e445249227b5cae2ac73f2d6303f43e5c79a0146"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/README.md",
+      "sha256": "28b8eafdc7dc0f4821032ea469292746614a66d9363611703aecfd400aeb2d5c"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/argument.tex",
+      "sha256": "4f967555a4174b6880a690beabd94d4cca975aff149229e7610eae6e3324a8e7"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/build-summary.txt",
+      "sha256": "bce1e9082221cfdde057c6fcea720a41d81cc9e1d1cc7281491daec77bd0c3bb"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/checks-output.txt",
+      "sha256": "8b107a2bfb0a5232aa7cb2088f2e76d36cae6f8ecb4c9745bde776618badb127"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/checks.mac",
+      "sha256": "fb7603994647d3c44fe34b6d3bb3540b0c5c0f54f18262a591ca4b6aef1df32d"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/self-review.json",
+      "sha256": "8f0fd09887db60bac32058d57649f5d106bce39d64e86f0f2732376a9deb2baa"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/source-bindings.json",
+      "sha256": "836ca172cfc8130fbcac2b6419f52cf8576ff2351c09c6f00c0e733e45a2dd40"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/sources.json",
+      "sha256": "a5fe9457152826aa7d1f791c7b79fc6ce04cdf9d4882f0f92ae1901338f03504"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/turn-review.json",
+      "sha256": "f81a90460160549f023ad9a56b23c80486a2bf06d58a7fa3e4913ce98a2182b1"
+    },
+    {
+      "path": "evidence/ns101_theta_factorization/validation.json",
+      "sha256": "207189e9738a83ce5de9fd41436e49e055baf7a6ff701677be4483da7613e17d"
+    },
+    {
+      "path": "research-map.json",
+      "sha256": "400d534f61b11ad0bb6ce62a5e0fcd76d837384ab6b087662ad886214f5c7c1c"
+    }
+  ]
+}

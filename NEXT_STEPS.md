@@ -179,6 +179,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 | NS-99 | Audit which nodes share NS98’s exact cost input, which share the broader NB gain input, and which have different missing hypotheses; update the research map without over-closing routes | Codex root | done (audit; no new bound) | All 104 conclusions reviewed; 63 nodes annotated against 14 scoped input groups, all prior statuses retained. Exact Mobius cost/margin, broader NB gain, shared Weil floor and different inputs separated. Generator exclusivity claim corrected; evidence/ns99_shared_gaps. |
 | NS-100 | Independently reassess the repository and propose concrete research tests, including the tangent-circle/core geometry suggestion, screened against existing walls and primary literature | Assisting agent, requested by Alex | done (independent assessment; one scoped control) | Two conditional tasks screened against primary literature; no established novel RH mechanism. Actual theta-slice positivity fails with complete 256/384-bit and doubled-cutoff/series replay, nine Maxima checks. Full weighted kernel remains unestimated. Evidence/ns100_reassessment; manuscript unchanged. |
 
+| NS-101 | Short feasibility test of a theta-modular factorization for the full integrated kernel, retaining signed slice cancellation and screening every claimed new identity against NS100 and primary literature | Codex | done (feasibility stop; no new positivity bound) | Actual modular completion yields an autocorrelation whose derivative retains the missing signed comparison. Reciprocal positive-dilation control adds explicit off-axis zeros inside the critical strip; original one-lattice coefficients changed. Absolute unfolding has the classical convergence boundary, including an exact 0 versus 1/4 interchange failure. Twenty Maxima checks; evidence/ns101_theta_factorization. |
+
 ## Current dependency index (NS-99, September 23)
 
 Use the [shared-input register](RESEARCH_MAP.md#shared-continuation-inputs)
@@ -205,7 +207,7 @@ here because their evidence is present without separate theorem nodes.
 NS100 independently screens proposed tests; it does not certify new routes
 merely by giving an equivalent criterion a geometric interpretation.
 
-## Bounded geometry continuation after NS-100
+## Historical bounded geometry proposal after NS-100 (tested and stopped in NS-101)
 
 The [independent reassessment](audits/independent-route-reassessment-2026-09-23-v1.html)
 returns no established novel RH route. If geometry is pursued next, first
@@ -224,7 +226,15 @@ positivity alone is only a necessary condition for RH. The lower-priority
 Jensen idea requires an actual backward-shift interlacing rule at unbounded
 degree. Modest-degree scans would duplicate published results. Stop either
 search if it supplies only an equivalent criterion or an assumed sign.
-Claim a task row before starting this additional research.
+NS101 has now made this short feasibility attempt and reached its stop.
+The natural autocorrelation leaves a derivative comparison; a reciprocal
+positive-Gaussian control defeats an inference from those general properties
+alone. The direct absolute unfolding is invalid in the required strip.
+Do not repeat a generic request for a positive factorization or enlarge a
+finite scan. Reopen only for a specific arithmetic identity not preserved by
+the control, with an explicit domain and a falsifiable consequence. No such
+candidate was obtained. This stop does not close the original full-sign
+question. See [NS101](evidence/ns101_theta_factorization/).
 
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 

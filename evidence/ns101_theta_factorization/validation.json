@@ -1,0 +1,23 @@
+{
+  "base_commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+  "exact_Maxima_checks": 20,
+  "numerical_proof_gates": 0,
+  "precision_and_cutoff_replays": "Not applicable: this task contains analytic proofs and exact symbolic identities, no approximate numerical certificate. NS100 results were read, not rerun.",
+  "new_or_edited_Python_files": 0,
+  "registered_nodes_unchanged": 104,
+  "only_changed_continuation_input": "ZERO-GEOMETRY",
+  "map_regeneration_stable": true,
+  "local_HTML_links_resolve": 4,
+  "manuscript_pages": 358,
+  "undefined_duplicate_references": 0,
+  "v166_manifest": {
+    "ok": 16,
+    "missing": 0,
+    "mismatched": 0
+  },
+  "manuscript_source_unchanged": true,
+  "missing_original_ledger_unchanged": true,
+  "HTML_review": "Source and links checked; inherited local-browser policy block respected. Allowed app file preview requested for the durable report. No browser visual review claimed.",
+  "author_review_only": true,
+  "new_full_sign_estimate": false
+}

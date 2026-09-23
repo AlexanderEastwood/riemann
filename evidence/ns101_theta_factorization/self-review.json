@@ -1,0 +1,21 @@
+{
+  "classification": "Author mathematical and algebra review; no separate-agent review of NS101",
+  "open_major_findings": 0,
+  "open_minor_findings": 0,
+  "checks": [
+    "Jacobi h evenness checked separately from individual Gaussian terms; differential factor 1/4 and homogeneous subtraction retained.",
+    "Subtracted g has rate-1/2 tails; its bilateral representation is stated only for |Re z|<1/2.",
+    "J Fourier normalization 1/2 and K=partial_x J/4 checked; positive definiteness is distinguished from pointwise positivity and from monotonicity of a parameterized family.",
+    "Polarization yields exactly a signed difference, not a sum of squares.",
+    "Paired-dilation theta reciprocity and constant term match; all Gaussian weights and translated complete phi kernels are positive.",
+    "Extra zeros arise from multiplication by an entire factor; cancellation is impossible even if F has an existing zero there.",
+    "For a=2 the added real displacement is strictly between 0 and 1/2 by cosh(1)>3/2. Normalization at z=1/2 preserved.",
+    "Order one and zero strip retained; full modular group, original lattice, monotonicity and log-concavity are expressly not claimed.",
+    "The positivity contradiction from an off-axis zero uses the identity theorem and does not assume a nonzero F at that zero.",
+    "Absolute Mellin integral scales n^(-x-1/2), with domain x>-5/2; endpoint signed integrals individually zero while full F(1/2)=1/4.",
+    "No failure of the original theta sign, general geometric route, conditional resummation or an arithmetic-specific factorization is inferred.",
+    "Recent Planat material is a scoped literature screen, not an imported checked theorem."
+  ],
+  "what_had_to_change": "Factor the already positive autocorrelation separately from its signed derivative; retain the original arithmetic data rather than only reciprocal symmetry.",
+  "bound_or_object": "No required original bound obtained. Two specific inference/interchange shortcuts fail; original positivity object remains open."
+}

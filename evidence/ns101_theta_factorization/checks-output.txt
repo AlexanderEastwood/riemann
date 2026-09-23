@@ -1,0 +1,57 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("evidence/ns101_theta_factorization/checks.mac")
+kill(all)
+display2d:false
+count:0
+check(label,expr):=block([v:radcan(ratsimp(expand(expr)))],
+      if v # 0 then error(label,v),count:count+1,print("PASS",label))
+ht:exp(t/2-q*exp(2*t))
+check("Gaussian completion derivative",
+      diff(ht,t,2)-ht/4+(-(4*q^2*exp(4*t)-6*q*exp(2*t)))*ht)
+PASS Gaussian completion derivative 
+check("paired n differential kernel",
+      ((4*q^2*exp(4*t)-6*q*exp(2*t))*exp(t/2))/2
+       -(2*q^2*exp((9*t)/2)-3*q*exp((5*t)/2)))
+PASS paired n differential kernel 
+check("homogeneous modes",diff(2*cosh(t/2),t,2)-(2*cosh(t/2))/4)
+PASS homogeneous modes 
+check("diagonal Jacobian",determinant(matrix([1,1],[1,-1]))+2)
+PASS diagonal Jacobian 
+check("tilted product exponent",x*(p+t)+x*(p-t)+(-2)*x*p)
+PASS tilted product exponent 
+check("cross derivative weight",(p+t)+(p-t)+(-2)*p)
+PASS cross derivative weight 
+check("polarized autocorrelations",(1+u)*(1+v)-(1-u)*(1-v)+(-2)*(u+v))
+PASS polarized autocorrelations 
+check("K normalization",
+      subst([u = p+t,v = p-t],((1+u)*(1+v)-(1-u)*(1-v))/8)-p/2)
+PASS K normalization 
+check("paired dilation reciprocity",
+      3*T0+(Tplus/E)*E^2+(Tminus*E)/E^2-(3*T0+Tminus/E+Tplus*E))
+PASS paired dilation reciprocity 
+check("constant term one",(3+1/E+E)/(3+E+1/E)-1)
+PASS constant term one 
+check("completion shift down",exp((t-a)/2)-exp(t/2)*exp(-a/2))
+PASS completion shift down 
+check("completion shift up",exp((t+a)/2)-exp(t/2)*exp(a/2))
+PASS completion shift up 
+check("Mellin shift down",z*(v+a)-z*v+(-a)*z)
+PASS Mellin shift down 
+check("Mellin shift up",z*(v-a)-z*v+a*z)
+PASS Mellin shift up 
+check("normalization at half",(3+E+1/E)/(3+E+1/E)-1)
+PASS normalization at half 
+b:(3+sqrt(5))/2
+check("root quadratic",b^2-3*b+1)
+PASS root quadratic 
+check("off axis zero multiplier",3-b+(-1)/b)
+PASS off axis zero multiplier 
+check("Mellin gamma recurrence",(s/2)*(s/2+1)-(3/2)*(s/2)+(-s*(s-1))/4)
+PASS Mellin gamma recurrence 
+check("absolute integral power",(x/2+1/4)-(x+1/2)/2)
+PASS absolute integral power 
+check("strict cosh lower margin",(1+1/2+1/24)-3/2+(-1)/24)
+PASS strict cosh lower margin 
+print("CHECK COUNT",count)
+CHECK COUNT 20 
+quit()

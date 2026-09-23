@@ -1,0 +1,37 @@
+{
+  "accessed": "2026-09-23",
+  "search_exhaustive": false,
+  "sources": [
+    {
+      "title": "NIST DLMF 20.7.32",
+      "url": "https://dlmf.nist.gov/20.7.E32",
+      "use": "Classical Jacobi reciprocal transformation, specialized to z=0 and imaginary lattice parameter. No additional positivity claim."
+    },
+    {
+      "title": "NIST DLMF 25.10",
+      "url": "https://dlmf.nist.gov/25.10",
+      "use": "Classical nontrivial-zeta-zero strip; no new verified height used."
+    },
+    {
+      "title": "Csordas, Fourier transforms of positive definite kernels and the Riemann xi-function (2014)",
+      "url": "https://arxiv.org/html/1309.0055v2",
+      "use": "Sections 3–4: autocorrelation positive definiteness and the associated-kernel hierarchy are prior art. Our completion/polarization is an elementary audit, not a new criterion."
+    },
+    {
+      "title": "Planat, A Theta-Kernel Reformulation of Riemann-Xi Growth and the Obstruction to Blockwise Positivity (2026)",
+      "url": "https://www.mdpi.com/2073-8994/18/8/1283",
+      "doi": "10.3390/sym18081283",
+      "published": "2026-07-29",
+      "access": "Indexed primary-source abstract and sections; direct full-page requests returned 429.",
+      "use": "Additional overlap screen: growth representation and a reported obstruction to a particular phase-aligned block decomposition. Not a proof dependency; not identified with the NS100 fixed-p slice test."
+    },
+    {
+      "title": "Planat, Nonlocal Cancellation in a Theta-Kernel Decomposition of the Riemann Xi-Growth Derivative (preprint, 2026)",
+      "url": "https://www.preprints.org/manuscript/202608.1692",
+      "posted": "2026-08-25",
+      "peer_reviewed": false,
+      "use": "Primary preprint text inspected for scope. It reports cancellation and failure of universal positivity in its phase-aligned blocks, while leaving correlated groupings/resummation open. No full proof audit or numerical replay performed, and none of its exclusion claims is imported as a new repository theorem."
+    }
+  ],
+  "novelty": "No worldwide novelty claimed for the elementary paired-dilation control or identities. NS100 literature screen was explicitly nonexhaustive; this adds omitted recent overlap without revising its archived files."
+}

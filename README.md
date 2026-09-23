@@ -5,6 +5,40 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 theta-factorization feasibility test (NS-101)
+
+**The short test stopped without a new positivity estimate.** The actual
+Jacobi completion gives a positive autocorrelation, but the kernel needed
+for the growth criterion is its derivative. Polarization leaves a difference
+of two positive kernels and the same unproved comparison.
+
+An exact control now preserves reciprocal theta symmetry, positive Gaussian
+mixtures, a positive even differential kernel, order one and the usual zero
+strip while inserting explicit off-axis zeros. It changes the original
+single-lattice coefficients; monotonicity, log-concavity and the other
+modular transformation laws are not asserted. This excludes an inference
+from the listed properties alone, not a factorization using the original
+theta arithmetic.
+
+Direct termwise absolute unfolding also fails in the required strip. At
+its boundary each individual Gaussian summand integrates to zero, while
+the complete kernel integrates to 1/4. The missing sum/integral interchange
+cannot be supplied by symmetry. Conditional or correlated resummation is
+not excluded.
+
+Twenty Maxima identity checks and author review are archived; no new
+numerical proof gate, theorem node or manuscript version. The expanded
+literature screen records the overlapping 2026 Planat theta-growth papers
+without importing their reported blockwise results as newly audited proofs.
+
+**Wall check: Same open gap.** Closest NS100; no full-sign estimate or
+candidate positive factor was found. The reciprocal-data-only shortcut is
+now excluded by the exact control. Do not restart this factorization search
+without a specific additional arithmetic identity to test.
+
+[Attempt and exact control](evidence/ns101_theta_factorization/) ·
+[Readable report](audits/theta-factorization-test-2026-09-23-v1.html).
+
 ## September 23 shared-gap audit and independent reassessment (NS-99/100)
 
 **The same gap recurs in several places, but not in every route.** The map

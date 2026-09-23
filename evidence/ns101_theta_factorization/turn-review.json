@@ -1,0 +1,650 @@
+{
+  "base_commit": "877fe07f483f84ddef78e1bb2dda7d76822d6c4b",
+  "claim_commit": "7fd97c7c0c5a695f1d15de6cefe81b54d69e222a",
+  "review": "All 104 conclusion-register claims, hypotheses, evidence and relationships reviewed; current checkpoints/task board, ledger, NS99 review and full NS100 argument read. This is not a replay of all historical proofs or computations.",
+  "remote": "All remotes refreshed; no open PR at start; isolated worktree.",
+  "nodes": [
+    {
+      "id": "rh",
+      "status": "open",
+      "record_sha256": "a6064b1210f9c9659f6674a3c86f8636957d37b31b92fe1a25fb7820a086b351",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "g1",
+      "status": "proved",
+      "record_sha256": "acd3798349e3f24c841620212371a6786326678e89d0687fbdd8d25a527c2612",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "fixedspace",
+      "status": "open",
+      "record_sha256": "1c213ba6f5b9c4af744d6f0cd3a3e4e1cfe33cbb0022cba165b881be0e6c2c96",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "g2",
+      "status": "open",
+      "record_sha256": "9e1d91e43c553c320cc35a297abb7a3db194f5c6ecc34a5ca0783d478fc37930",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "windows",
+      "status": "proved",
+      "record_sha256": "313aca50d66a946ed5a300deaeba59fe67e3651a7f15de6424eb15b371559487",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "w3",
+      "status": "proved",
+      "record_sha256": "77e96c1427481ffcdc807f20a5224963df465a72babc14a70dc62aad2d9f0480",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "w4e",
+      "status": "proved",
+      "record_sha256": "08d3c623e69a0d0b5d42519b1a4868a9f5ef590fb664db47320a926c54fafc4d",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "w4o",
+      "status": "proved",
+      "record_sha256": "f7f405cfde213fe5b008fcf497d4d7a9f02b8fc63bfa2e158415a61f7fd8a7b0",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "w4",
+      "status": "proved",
+      "record_sha256": "a9af870f45cc123e8643a37307dea08dbdd7577ad6859c56ec906c5bc230957c",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "w5",
+      "status": "closed",
+      "record_sha256": "b58fe88a61b22b2f7e4eb77e4c8de0d13b03b5857367a034b2efcbd66a186776",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "uniform",
+      "status": "open",
+      "record_sha256": "4a32ddf87af2d4c08d784723665bd4ce74501581c6937acfad444fcf8dba6a41",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "primenorm",
+      "status": "closed",
+      "record_sha256": "c436d6374511cc096b00c00ad647eb47e7714e9433f47e33526d2a9a0971b727",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "normcontr",
+      "status": "closed",
+      "record_sha256": "16ce503a76646be95214b964cfaea8dfa11c1d3568c893a8b966f533e94555f8",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "schatten",
+      "status": "closed",
+      "record_sha256": "23c5f2f6e4e068b04a6a882d4a731f9f692bfd63b123c0ddf73d93b6fe2abe3b",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "sampling",
+      "status": "closed",
+      "record_sha256": "d238a19552c63588f3fa628bffc79e84d9e24ad4d8f5527816f1a55355e7b916",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "farmaj",
+      "status": "closed",
+      "record_sha256": "922d397ae3886320001bad896200b0e64bb6b82457866e086de95a7970e3743b",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "blockmetric",
+      "status": "closed",
+      "record_sha256": "98fa7febdb22dee3387a1d24e2b6d98732620d900f8d093a48078fdc60dd2c81",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "flattop",
+      "status": "closed",
+      "record_sha256": "e41742192591a5897cf491b34da8ce6545fbf9e20a6e7ce897d288a18a1421c7",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "recipband",
+      "status": "closed",
+      "record_sha256": "914a3ab656ba5fda98156819211970473ce36c1c00946d3b04c63afb05ac9273",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "cotlar",
+      "status": "closed",
+      "record_sha256": "26760f64c87aa47b8d1bff350e23b0650cc60be33b721d2647032a3f520b9b60",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "scalarprim",
+      "status": "closed",
+      "record_sha256": "e1e71fed5e9d0fd0a79bd99d3a9a7415113f980b5607798eaf3f5bfda8547eb2",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "concentration",
+      "status": "blocked",
+      "record_sha256": "d6affa3a6f79c237f79021d8e0402e4d90db13cffbd5826bb616548a46d0dd48",
+      "relevance": "Signed Weil-floor input is distinct; no operator-square factorization or cofinal floor inferred from scalar theta identities."
+    },
+    {
+      "id": "weaken",
+      "status": "proved",
+      "record_sha256": "02c6c0591b77512a2924cb8942ef11c0763f7afc1f9899533e97c22e2c0b4db3",
+      "relevance": "Signed Weil-floor input is distinct; no operator-square factorization or cofinal floor inferred from scalar theta identities."
+    },
+    {
+      "id": "floor",
+      "status": "proved",
+      "record_sha256": "cd70d0a4ec1df2f7f085cf0d2b1e4803832a03f818a3df19ac343b20ae99f767",
+      "relevance": "Signed Weil-floor input is distinct; no operator-square factorization or cofinal floor inferred from scalar theta identities."
+    },
+    {
+      "id": "gapfree",
+      "status": "proved",
+      "record_sha256": "6299834ba31c3fa8b8d240cd20825589d33642e03390b1b50b23673c09977c67",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "floortest",
+      "status": "proved",
+      "record_sha256": "b34c42f92d658ac2ace922a395ab852c72c3ada0b155dee050df8fc6af0431e3",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "shiftbarrier",
+      "status": "proved",
+      "record_sha256": "deb8265a58e88e93865e777f403e06fe4e635f72ab9333a4f48b9dbec50afc1e",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "metablind",
+      "status": "proved",
+      "record_sha256": "0d55ce6cb403a94f3b6d18b119f49e975727471fa17aeb4fea5d977633c3bbd9",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "altroutes",
+      "status": "open",
+      "record_sha256": "fd489e30630bc43196bc08b403edfb3520e2e77e283230b802742fe181651656",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "circle",
+      "status": "open",
+      "record_sha256": "5b80e434fc9b475f795ab7dc60a05299d75f8dc06e1bd03fe696bf5ee457193a",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "debranges",
+      "status": "open",
+      "record_sha256": "51c86873430eefa3f445d92959d78e8cb3da1e02358506f13589ef9fe3056701",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "f1",
+      "status": "open",
+      "record_sha256": "ce3cf6f4686750291c242cbb7d87005698ae008b9e000707c1f3ef985799971f",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "nb",
+      "status": "open",
+      "record_sha256": "cf85f02af7913757f9aeac97b3ed9a9d980c9b4f5fdac6a1f15dbaf5f331ccf5",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "li",
+      "status": "closed",
+      "record_sha256": "08c24c85393301c646a38d6fb37abd108c3ee042cec0aa0f7afff837ae21b3cc",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "dbn",
+      "status": "open",
+      "record_sha256": "30d5cdc2da42c4b2609b433983e2e1cab35ca2a9c7f577f2b2f781b29f37e019",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "ccmmu",
+      "status": "proved",
+      "record_sha256": "9aafd7b83e2f9c2ff8664d1023761225d4ccc7fd09f730dee2ffbca9f5876e0d",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "simpleeven4",
+      "status": "proved",
+      "record_sha256": "0d2c8c58f3d12b803210c596b53f49ac4d4e30891d325e73c8a056448040d701",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "stepb",
+      "status": "live",
+      "record_sha256": "f13c8ab5a7a227b656356ec171924f2fc7496c20fdaaa7809db6c38f5005f92b",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "semanticlock",
+      "status": "proved",
+      "record_sha256": "13d6c4dc8d711f21927d3f500fc78ab1be5376ef7fb3d5ef918f634c160bf5ba",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "groundzero4",
+      "status": "proved",
+      "record_sha256": "3a4a3a88bc3fad460c510521458bbf08c77890c6c8b9bea535544ad93a5da26f",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "groundzero4resolution",
+      "status": "proved",
+      "record_sha256": "88bf69b311102ecd532ffde0aeb4a08dffc3030d8642a9e972edde5becb5413a",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "pencilconcentration",
+      "status": "proved",
+      "record_sha256": "b5341b9692a436b5680478d89a0139bd0b47ea7fa7ec14f8876ea9f5fc205227",
+      "relevance": "Signed Weil-floor input is distinct; no operator-square factorization or cofinal floor inferred from scalar theta identities."
+    },
+    {
+      "id": "betaexplicit",
+      "status": "proved",
+      "record_sha256": "ca76d4acef321e36ba9e280312da2c0ae09066e7085971526b7f1412ba3c88b9",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "minorantlevels",
+      "status": "blocked",
+      "record_sha256": "90007016528e40d1ab5ef45a50ea4215d11ae1af88da880ca43a45ad303a3d11",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "zeroleveldistribution",
+      "status": "blocked",
+      "record_sha256": "36cdf7878dcc07a92a35c52e2cb2d911699e2d4697337680b3a8973a3dd82b8d",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "weightedexactcost",
+      "status": "blocked",
+      "record_sha256": "e2e09995b09218f4eddd0b7100cfd04c7f2d2286ac992c4d72dc26938f11a776",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "capacityweight",
+      "status": "blocked",
+      "record_sha256": "7804b871543eb1d3de914bad1460654e0c3cb949b3e93fabf2ff546d055a7e2d",
+      "relevance": "Signed Weil-floor input is distinct; no operator-square factorization or cofinal floor inferred from scalar theta identities."
+    },
+    {
+      "id": "capacityslack",
+      "status": "closed",
+      "record_sha256": "d32fdcee5274ebd8b957eab8a75db3e9a4b05993f7ade3ee7a529d929afc8306",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "inputcomparison",
+      "status": "proved",
+      "record_sha256": "54609039c4cd34144e10795d89bf2ed4a232a55569ed1218dec234963ad13032",
+      "relevance": "Signed Weil-floor input is distinct; no operator-square factorization or cofinal floor inferred from scalar theta identities."
+    },
+    {
+      "id": "capacitychannels",
+      "status": "closed",
+      "record_sha256": "fd73d7508107d41db385fa41271d00f7162e0a1a3153c019373c82a7f4d7a581",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "bumpstrength",
+      "status": "proved",
+      "record_sha256": "33462bf70b2aa6a4a7b0befd68a8a2d380e6a61a419b9c7a60b4f797d6b44922",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "adaptiveidentity",
+      "status": "proved",
+      "record_sha256": "33654a920ffc0cd87df9f9f53206824af38599aeab90b43d5561f28730a772c3",
+      "relevance": "Signed Weil-floor input is distinct; no operator-square factorization or cofinal floor inferred from scalar theta identities."
+    },
+    {
+      "id": "scalarsetshortcut",
+      "status": "closed",
+      "record_sha256": "362ad96b64f39a6414f0784ab4b6c27709ebadcafd06b972b090f66ed6821836",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "relativeselection",
+      "status": "blocked",
+      "record_sha256": "1eff551738e7ab44d72ce51ac49bfb9e29fb12cc55d0f3877a9d4f2ef470d9c3",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "absoluteselection",
+      "status": "closed",
+      "record_sha256": "b96962a81d1a2473982a0d628e69226de898167994ac0fc73a7ade7ae419ee9b",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "coarseprofile",
+      "status": "closed",
+      "record_sha256": "5fac5febb11e2fc2f1efb2e8b153e5940901c22c8bec3a1d7c8bdd3655a56d2d",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "fineradicalrank",
+      "status": "closed",
+      "record_sha256": "6f266c22ccabaec3703604fc55b10f450d683345a66047ca07cf687f24d613fd",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "kernelapi",
+      "status": "live",
+      "record_sha256": "9aaa8950f6e892cdd604c4144432f2828a2b4c69256c6fd5c525b1caf982551a",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "generic_h1",
+      "status": "closed",
+      "record_sha256": "ae528ea33f4ad9d332bc25888a5d607b27116812684d740a02d9597055a9ff30",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "localucp",
+      "status": "closed",
+      "record_sha256": "2d9001806b811ad8b99048fd7acae362c3a1d29669e08b9660defd8363f76c4c",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "fullpositivecone",
+      "status": "closed",
+      "record_sha256": "463c0d33f274a677ba04f3f3564f8124f4ff86013fa8ee1d135576f9d4c76b52",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "finiteweightcontrols",
+      "status": "proved",
+      "record_sha256": "c5554135eb6d1ca8471f822ed539406130482fd296b7a9e8ad50e889c611c3e8",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "boundedfloorstability",
+      "status": "proved",
+      "record_sha256": "599b0aab151212b028ca5bd660ca4c6c4422ce29e4bd4b025b226ab6dea69c4e",
+      "relevance": "Signed Weil-floor input is distinct; no operator-square factorization or cofinal floor inferred from scalar theta identities."
+    },
+    {
+      "id": "radicalboundarytest",
+      "status": "proved",
+      "record_sha256": "f1734c2f7a77863ae1629a2d95f6c0d8f1bc769945cf1389316714b3a9d85c14",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "nbdifference",
+      "status": "proved",
+      "record_sha256": "7b2a9e85a0a8e227546f057e509d6878e1812fa2c658c1e7181df1c5db49d334",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbrawlog",
+      "status": "closed",
+      "record_sha256": "64d4887e7e08bdbff5a88af1ee08dbee6206f1f5880c3f8d5375fbb3f77da0b2",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "nbeulergrid",
+      "status": "closed",
+      "record_sha256": "40e33b4decb6bca43559f1c1f63e39910072162a62b955a6a39c374342e6fd02",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "nbsmoothedbudget",
+      "status": "proved",
+      "record_sha256": "29de6141146fe943200963294f9b8ce5ede3a2bff88b9d04367600be8ecf7f68",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbsmoothedcorrelation",
+      "status": "blocked",
+      "record_sha256": "356fdd6273c2a613fcb954d8fb464db08b01ed5f871d2c630fd12b5e2e7e8eac",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbsharpintegrated",
+      "status": "closed",
+      "record_sha256": "7fd7eaf684df237436d5c4ca665f8451676b073cf20e4b739f5a3e37ed0a876d",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbchangingnorm",
+      "status": "closed",
+      "record_sha256": "8f650392614d9d7790512df0395807ab6b5328d0dec1015a21a5d3ca379607de",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "nbcanonicalgrowth",
+      "status": "blocked",
+      "record_sha256": "32a91d0ff565e7b15fd872b2d7a523feedffdbc218576d1b882ef63a37718355",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbcanonicalcells",
+      "status": "proved",
+      "record_sha256": "519ba4b9f44ba88ffcdb9410934feb5ce77dac4d9713bb9d87d6c4b7595f9eae",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbabelwholegain",
+      "status": "closed",
+      "record_sha256": "296dbab57619a22caef098e4dadf2e89b2c80d81bce2b3f65666c21e6307db0b",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbrenewalforcing",
+      "status": "blocked",
+      "record_sha256": "7b403abd8d45582cd38f9c0784d14cd203ee36b11243e78a68ddd9eef9cad0e3",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbcriticalrenewalenergy",
+      "status": "closed",
+      "record_sha256": "8096f5f89664b9da3157847ab533a6a97abc07a8fc735e16c75c967fc23e8d3d",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbrepairedbounds",
+      "status": "closed",
+      "record_sha256": "a8119c617eec75783de3cdc6c952c1bd546da7a9dddd3985788e11521516c7fc",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "nbselectedpreconditioner",
+      "status": "blocked",
+      "record_sha256": "a70b5a50300ed274a2b52489f4eeb8ab5af36a3325974ac984acee3dadc2de5f",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nblocalgeometry",
+      "status": "proved",
+      "record_sha256": "82ba2335d65144a9631a0378272a18c5a55af393fc159e91215fc9fc3fb7b809",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbcurvaturearithmetic",
+      "status": "blocked",
+      "record_sha256": "685eaca0d72790e3131e33aacf7754b11c775f7ae16d6e0d913dc67c8dc62258",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbsamegramcontrol",
+      "status": "closed",
+      "record_sha256": "def71b0d3d7490c9a42298130ae8e143c0ad2aa9e53ac16f289b320fbef8d8f9",
+      "relevance": "Original hypotheses, scope and evidence status retained; no implication excluding or proving the original full theta sign is asserted."
+    },
+    {
+      "id": "nbdivisorfeedback",
+      "status": "proved",
+      "record_sha256": "c9d84cf2e8e5c4f7164eb5d14f6b1ae6267268cd6c531682dd1c55002ed004e1",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbcontinuousdefect",
+      "status": "proved",
+      "record_sha256": "e75e3267f7e0e7ae0a6cdd58d37392ab9bcc6fff4409eb71b8b00252986625bf",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbcontinuoustail",
+      "status": "proved",
+      "record_sha256": "f2ef62e2462b945de169c1e735d490bef1f047e9a64d66eee3788d5863522277",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbarithmeticsampling",
+      "status": "proved",
+      "record_sha256": "668c5707937c755cf0190fa2318862b161bb9f2c356e7e34171546376f75bac2",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbbalancedfeedback",
+      "status": "proved",
+      "record_sha256": "97afc502cb80fa008ce81c2e5b2c70bb3f55a5ce2fbbd209f3252f4b7d4bda20",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbarithmeticpreconditioner",
+      "status": "proved",
+      "record_sha256": "dc5f77cf927538a9adbcfb00dc5f75ebbbc5d80ed953f90251954a235c43c8f4",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbfiniteconditioning",
+      "status": "proved",
+      "record_sha256": "8a70e2d9cff2fe326b790a6b410e24e1aa02b58146cc86461f2c21c1e830152b",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbcompressedtail",
+      "status": "proved",
+      "record_sha256": "d275e3cad1d154ca6b94f676161c22fa1b7d3bd051b5c6990e2a247fd1893d67",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbcriticalfloor",
+      "status": "proved",
+      "record_sha256": "31fa0c7153b8b087a7be034f03335b18cc82ad3dd0fbbc437fe4a7625672efa5",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbuniformrelativecontraction",
+      "status": "closed",
+      "record_sha256": "336e948afd311592e4fc52c5058eba5fee0bad3180544a69632e6dec5e2e2b04",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nboptimizedpotential",
+      "status": "proved",
+      "record_sha256": "a626fba3d5f06921b7ab39247e36f875792ce23c33c8c903b6f79634176bdeef",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbconvolutioncontrol",
+      "status": "proved",
+      "record_sha256": "4d9f27690687d94a44318640f75d1f5bff494e6ff5f5625592683ada3b782276",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbjointlocalization",
+      "status": "proved",
+      "record_sha256": "580fcb094c4a356c1cd0520ef486a945dcf84d573f894fb37390e87251ac8aa3",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbdilationenvelope",
+      "status": "proved",
+      "record_sha256": "555e2bff9f7988f888f6da7e8e19e18a9157754d4b1e7d072cefe0b5745b065f",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbdilationstrongnumerator",
+      "status": "closed",
+      "record_sha256": "92b64f30623c59d940e5f9e75ae482144e37a77b5a5902156eeb6ed6b524c9a9",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbnormalizedupper",
+      "status": "proved",
+      "record_sha256": "1088799d43600af7fa73b8787747996921ed3955724f8ac580cbf94d8f0d66d7",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbmobiusjointcancellation",
+      "status": "proved",
+      "record_sha256": "b66eb899450efd095ee2090d2fcfce821f19fb30e396fbbe5f9838fbb713cd28",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbjointabelbound",
+      "status": "proved",
+      "record_sha256": "bab7d8c720cbe6e5dc1dde50f7346083d184758f82b087a40766ee83b79c35fe",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbarithmeticcostbudget",
+      "status": "proved",
+      "record_sha256": "cb29c36f51453fb5e9e7f5b271ebf900421999339e0ab77302ea2cb2e479b682",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nbaveragedabsolutecost",
+      "status": "closed",
+      "record_sha256": "c2f60662137ebc3845f81df65741a4944fee8c7cf33177572a621075106f3a26",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "circlecountinference",
+      "status": "closed",
+      "record_sha256": "d20ab8a68807e305e189224de71737141c48d65e8dcf9877d2b5ffebd0050325",
+      "relevance": "Closest geometric control: equal counts and infinity do not prove zero rigidity; new test changes the retained data to reciprocal theta sums."
+    },
+    {
+      "id": "nbsquareproductrestriction",
+      "status": "proved",
+      "record_sha256": "67644b819a4199cb4da8db2607e32880b789e41a65ae0818d91fd57c2751cfc8",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    },
+    {
+      "id": "nblcmsquarecone",
+      "status": "proved",
+      "record_sha256": "29dec8d820a6c97e490687ab2b74847837889b0886542dd93ee360da651da031",
+      "relevance": "NB arithmetic input remains distinct and unestimated; no transfer asserted."
+    }
+  ],
+  "initial_wall_check": {
+    "label": "Same open gap",
+    "closest": "NS100; classical associated-kernel criterion",
+    "change": "Attempt an explicit theta-modular factorization for the full kernel rather than demand per-slice positivity.",
+    "success": "A concrete independently derived positive factor or bound would create new information; a formula alone is insufficient.",
+    "stop": "Only an unestimated difference of positive kernels or the same Fourier-sign criterion remains."
+  },
+  "control_subtest": {
+    "classification": "Distinct test of a particular inference; not a new RH route",
+    "closest": "NS94 off-line symmetry control and NS100 order-two log-concave kernel control",
+    "changed_hypotheses": "Preserve actual Jacobi reciprocal identity through paired positive theta dilations, an order-one completed transform and the zero strip. Do not assert log-concavity or all modular transformations."
+  },
+  "final_wall_check": {
+    "label": "Same open gap",
+    "result": "The original full theta sign remains unestimated; the bounded factorization attempt stops. The reciprocal-data-only inference is excluded by an exact off-axis control; termwise absolute unfolding fails at and inside its classical boundary."
+  },
+  "missing_original_groups": "Both remain OPEN; companion disclosures unchanged.",
+  "no_new_theorem_node_or_version": true
+}

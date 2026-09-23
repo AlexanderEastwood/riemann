@@ -1,0 +1,5 @@
+Actual manuscript build completed.
+Pages: 358
+Undefined/duplicate references: 0
+v166 manifest: 16 ok, 0 missing, 0 mismatched
+Manuscript source and historical missing-evidence ledger unchanged.
