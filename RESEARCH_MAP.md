@@ -69,6 +69,8 @@ graph LR
   finiteweightcontrols["Finite prime-weight changes: negative tests and first-zero controls<br/><small>cor:ns57-finite-weight-negative; thm:ns57-first-zero-controls; cor:ns57-fixed-direction-sensitivity</small><br/><small>&#128193; evidence/v156</small>"]
   boundedfloorstability["Bounded perturbations preserve the finite-floor objective<br/><small>lem:ns57-bounded-detection; thm:ns57-bounded-floor-stability</small><br/><small>&#128193; evidence/v156</small>"]
   radicalboundarytest["Translated-radical boundary test: exact kernel equivalence and forced controls<br/><small>prop:ns58-boundary-identity; prop:ns58-equivalence; prop:ns58-forced-pairing</small><br/><small>&#128193; evidence/v157</small>"]
+  nbdifference["NB adjacent-difference norm budget<br/><small>prop:v158-adjacent-budget; prop:v158-mellin-budget</small><br/><small>&#128193; evidence/v158</small>"]
+  nbrawlog["NB uniform logarithmic raw norm<br/><small>prop:v158-lindelof-budget</small><br/><small>&#128193; evidence/v158</small><br/><small><b>wall: known zeta large values contradict every fixed logarithmic N^(-2) raw norm bound</b></small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -133,6 +135,8 @@ graph LR
   kernelapi --> finiteweightcontrols
   floor --> boundedfloorstability
   kernelapi --> radicalboundarytest
+  nb --> nbdifference
+  nb --> nbrawlog
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -194,13 +198,15 @@ graph LR
   click finiteweightcontrols "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v156/" "evidence: evidence/v156" _blank
   click boundedfloorstability "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v156/" "evidence: evidence/v156" _blank
   click radicalboundarytest "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v157/" "evidence: evidence/v157" _blank
+  click nbdifference "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v158/" "evidence: evidence/v158" _blank
+  click nbrawlog "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v158/" "evidence: evidence/v158" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
@@ -219,9 +225,9 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 25 | established result |
+| `proved` | 26 | established result |
 | `live` | 2 | current route (gold): being worked now |
-| `closed` | 21 | closed route (red): proved insufficient or impossible; kept deliberately |
+| `closed` | 22 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 6 | attempted; obstruction found |
 | `open` | 10 | target, not yet attacked |
 | `wall` | 0 | wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge |
@@ -237,7 +243,9 @@ graph LR
       - [X] **Local open-set UCP for the full prime-shift operator** — `prop:ns55-local-ucp-counterexample; prop:ns55-parity-ucp-counterexample` · evidence: [`evidence/v155/`](evidence/v155/) · **wall: local f=A_a f=0 does not force f=0; whole-window API is not refuted** → `None` (prop:ns55-local-ucp-counterexample) · Exact local-patch counterexamples, in each parity for a>log2 and after finitely many linear constraints. They do not solve A_a f=0 on the whole window and give no negative diagonal Weil energy. Prime-shift-free exterior-cell uniqueness remains valid under its explicit support hypothesis.
       - [X] **Ordinary-cone positivity for the full Weil semigroup** — `prop:ns55-nonpositive-semigroup` · evidence: [`evidence/v155/`](evidence/v155/) · **wall: order-preservation shortcut fails; quadratic-form positivity is a different property** → `None` (prop:ns55-nonpositive-semigroup) · Positive off-diagonal pole-minus-archimedean cross terms for disjoint nonnegative tests show that the full real-space semigroup is not positivity preserving. A bounded positive multiplication conjugation cannot repair the cone property. No separate parity-cone claim, negative q direction, or API closure.
       - [x] **Translated-radical boundary test: exact kernel equivalence and forced controls** — `prop:ns58-boundary-identity; prop:ns58-equivalence; prop:ns58-forced-pairing` · `codex/ns58-radical-boundary` · evidence: [`evidence/v157/`](evidence/v157/) · NS-58 stop condition: homogeneous vanishing is exactly the original null equation, with no independent sign estimate. Altered weights produce a necessarily nonzero forcing profile; compactness excludes only a uniform lower bound on the whole fixed-window space. API and the uniform floor remain open.
-    - [ ] **Nyman-Beurling-Baez-Duarte** — `prop:ns53-nb-block-gain; eq:ns53-nb-rbc` · evidence: [`evidence/ns53_nb_blocks/`](evidence/ns53_nb_blocks/) · **wall: RBC: corrected arithmetic residual block correlations (open sufficient input)** → `rh` (eq:ns53-nb-rbc; exact convergence criterion is prior art, and RBC is not proved or claimed equivalent to RH) · Reopened: any d_N→0 suffices. Exact residualized block gain and trace lower bound proved; the sufficient arithmetic residual block-correlation input is open. Finite distances do not prove it.
+    - [ ] **Nyman-Beurling-Baez-Duarte** — `prop:ns53-nb-block-gain; eq:ns53-nb-rbc` · evidence: [`evidence/ns53_nb_blocks/`](evidence/ns53_nb_blocks/) · **wall: RBC: corrected arithmetic residual block correlations (open sufficient input)** → `rh` (eq:ns53-nb-rbc; exact convergence criterion is prior art, and RBC is not proved or claimed equivalent to RH) · Any E_N→0 suffices. NS-53 exact projected gains and RBC remain; NS-59 supplies unconditional difference denominators and scoped raw-norm limits. An asymptotic lower bound for the actual corrected correlations or a selected block quotient is still missing; finite gains do not prove it.
+      - [x] **NB adjacent-difference norm budget** — `prop:v158-adjacent-budget; prop:v158-mellin-budget` · evidence: [`evidence/v158/`](evidence/v158/) · Complete basis change transforms both Gram and correlations. Raw Gram norm O_epsilon(N^(-5/3+epsilon)); no lower correlation estimate. Near-N^(-2) power control of the raw all-coefficient norm is equivalent to Lindelof, not a proved estimate.
+      - [X] **NB uniform logarithmic raw norm** — `prop:v158-lindelof-budget` · evidence: [`evidence/v158/`](evidence/v158/) · **wall: known zeta large values contradict every fixed logarithmic N^(-2) raw norm bound** → `None` (prop:v158-lindelof-budget; closure of this all-coefficient raw comparison only) · For every fixed B, the raw difference Gram is not O((log N)^B/N^2), even on dyadic blocks. Projected Grams and the actual residual direction are outside this obstruction.
     - [ ] **circle / Toeplitz-Hankel lens** — `lane/circle-toeplitz` · evidence: [`evidence/diag_true_symbol/`](evidence/diag_true_symbol/) · measurement lane; closure claims withdrawn after NS-31; geometry and exact identities retained
     - [ ] **de Branges / Hermite-Biehler** — **wall: screw-kernel positivity = RH; no fixed-window bridge** → `rh` (Suzuki Thm 1.5 (arXiv 2606.09096); the shifted finite-window construction sits strictly below the spectral bottom and does not determine its sign; fixed-window determinacy equivalence not proved) · Shifted fixed-window structures do not determine the unshifted sign; arbitrary extension uniqueness is not established. NS-51 gives a complete-domain nullvector reduction; arithmetic injectivity remains open.
     - [ ] **de Bruijn–Newman: paired transport** — `prop:ns52-cluster; prop:ns52-unmatched` · evidence: [`evidence/ns52_heat_pairs/`](evidence/ns52_heat_pairs/) · **wall: complete signed transport with uniform support control (open)** → `rh` (prop:ns52-cluster; prop:ns52-unmatched gives only a conditional obstruction to one same-test comparison) · Finite-cluster singularities cancel; external interaction and support growth remain. Same-test uniform comparison fails IF an unmatched real deformed zero exists; that hypothesis is not verified here. General heat route open.

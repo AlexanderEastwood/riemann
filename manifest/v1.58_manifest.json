@@ -1,0 +1,103 @@
+{
+ "manuscript_revision": "v1.58",
+ "base_commit": "3c3936edabc1035028cc08e601063e7b5eff9649",
+ "files": [
+  {
+   "path": "evidence/v158/README.md",
+   "size_bytes": 2938,
+   "sha256": "e590f057597aad64b4ed073c9763fc1eeb1d7769b4d1c914c88cbd2327f10f4e"
+  },
+  {
+   "path": "evidence/v158/arb-256-output.txt",
+   "size_bytes": 3244,
+   "sha256": "82fab1219e09bdf4cb2e334c04735f335f0aac74f9a1742e496b1469af5d3103"
+  },
+  {
+   "path": "evidence/v158/arb-384-output.txt",
+   "size_bytes": 3244,
+   "sha256": "042ee644c1b13e4845193b57df887ad6f0f8076a1cd35030e521e0bf33df5d29"
+  },
+  {
+   "path": "evidence/v158/build-output.txt",
+   "size_bytes": 10782,
+   "sha256": "639102a2696015976a056ce85fb7cc7dbf5204372d117fee457dcc4a384fc8d5"
+  },
+  {
+   "path": "evidence/v158/cell-integrals-256bits.json",
+   "size_bytes": 2862,
+   "sha256": "2464f7a818a9c1012545781b3c766b14e89e1fcc06e53f02565cb9fbec77ccdb"
+  },
+  {
+   "path": "evidence/v158/cell-integrals-384bits.json",
+   "size_bytes": 2862,
+   "sha256": "e7c2d79d5507404711fd9b95752b4cf02998e5c71537a0cf2d5813a07f68331a"
+  },
+  {
+   "path": "evidence/v158/check_cell_integrals.py",
+   "size_bytes": 2125,
+   "sha256": "aff7f043f0b2a56ae7ed52405df0daea0c9e06c88f5b97716e2a3b874163edfa"
+  },
+  {
+   "path": "evidence/v158/exact-checks-output.txt",
+   "size_bytes": 2150,
+   "sha256": "f2812836e36c4a712ab7e20c15ec6c6cf742b150f16d6943706d4a0d96095cb8"
+  },
+  {
+   "path": "evidence/v158/exact-checks.mac",
+   "size_bytes": 1557,
+   "sha256": "5e58b4aafc4665174d9ce3e12e58910a7c2324662b666a3eac1563f6760e344c"
+  },
+  {
+   "path": "evidence/v158/integration-review-2026-09-22-v1.html",
+   "size_bytes": 4271,
+   "sha256": "022874d8c42c111caaf9c45c8a49239b6fc9c4fea3e744f541405d19aed0753a"
+  },
+  {
+   "path": "evidence/v158/latex-final-log.txt",
+   "size_bytes": 31668,
+   "sha256": "a8ee5ea20bd4cb39fd95c75064e2a1840d3503f2764bab0a0141b0fb9591f24b"
+  },
+  {
+   "path": "evidence/v158/nb-blocks-256bits.json",
+   "size_bytes": 20550,
+   "sha256": "6f114cacc0510d444e1038efc1821118dbd48b2234103cc062a196a9cac8ab64"
+  },
+  {
+   "path": "evidence/v158/nb-blocks-384bits.json",
+   "size_bytes": 20561,
+   "sha256": "b6201f135e36edca94d8215bf01440aeebb0a21c3abe1b8255c4948e252acca5"
+  },
+  {
+   "path": "evidence/v158/nb-difference-budget-2026-09-22-v1.html",
+   "size_bytes": 5758,
+   "sha256": "8f26b8f8e1c2b65835ddc242216c10070f3a6f2f5c1cf83457f3393d07995409"
+  },
+  {
+   "path": "evidence/v158/nb_certify.py",
+   "size_bytes": 9519,
+   "sha256": "5fd26b63a9b5071b3d841f5c7590e32305a69a453522d5371fde12f608a3379f"
+  },
+  {
+   "path": "evidence/v158/proof.tex",
+   "size_bytes": 12884,
+   "sha256": "3ce82b76f6c460192602099ae1c96a6e713145667b80e5fa1a3ddc0feb3d6b8e"
+  },
+  {
+   "path": "evidence/v158/replay-verification.json",
+   "size_bytes": 256,
+   "sha256": "770928ec5153fdc1ef1f6cfa86c134e969ac29f8934ea8673fd2d0de934dac31"
+  },
+  {
+   "path": "evidence/v158/validation.json",
+   "size_bytes": 2151,
+   "sha256": "52f22157054a1c5cc268215243db882bbea712b4d8b5a203f2605def91327a9e"
+  },
+  {
+   "path": "evidence/v158/verify_replays.py",
+   "size_bytes": 3067,
+   "sha256": "877450eb67982ec78f57a75f74cc45d34c797f7d85a529e8aeb8e60753e64aee"
+  }
+ ],
+ "file_count": 19,
+ "total_bytes": 142449
+}

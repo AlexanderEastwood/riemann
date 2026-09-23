@@ -1,0 +1,62 @@
+{
+  "version": "v1.58",
+  "date": "2026-09-22",
+  "task": "NS-59",
+  "classification": [
+    "exact identities",
+    "proved implications",
+    "certified finite computation",
+    "open lower-correlation input"
+  ],
+  "pages": 298,
+  "build_warning_counts": {
+    "undefined_or_duplicate_references": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "duplicate_pdf_destinations": 0,
+    "latex_warnings": 0,
+    "pdftex_warnings": 0
+  },
+  "rendered_pages_reviewed": [
+    271,
+    272,
+    273,
+    274
+  ],
+  "maxima_exact_checks_passed": 13,
+  "arb_precisions_bits": [
+    256,
+    384
+  ],
+  "finite_max_index": 512,
+  "cross_precision_enclosures_checked": 161,
+  "independent_cell_checks_per_precision": 7,
+  "pyright": {
+    "errors": 0,
+    "warnings": 0,
+    "files": [
+      "nb_certify.py",
+      "verify_replays.py",
+      "check_cell_integrals.py",
+      "../diag_ns59_nb_budget/scan_blocks.py"
+    ]
+  },
+  "proof_fragment_included_verbatim_once": true,
+  "source_sha256": "acbb1b311af592128ce3383eab7166f4a8f3500abb576ce2b1294840a27c0184",
+  "pdf_sha256": "e37efa714adb01ed5f91992d976f2dbb4967c507b784f952d59dd0d81d16621e",
+  "review": "local self-review only; no independent review",
+  "raw_log_sha256_before_whitespace_normalization": {
+    "build-output.txt": "639102a2696015976a056ce85fb7cc7dbf5204372d117fee457dcc4a384fc8d5",
+    "latex-final-log.txt": "04ee9f5f7dd0f2588d57514d23d442ff4495a9027ee8c7188f69f39dd6511efe",
+    "exact-checks-output.txt": "ecc64f98ce21ab8bb905fde7cb2040067c226653f16ecbca924e52691371ae3f",
+    "arb-256-output.txt": "82fab1219e09bdf4cb2e334c04735f335f0aac74f9a1742e496b1469af5d3103",
+    "arb-384-output.txt": "042ee644c1b13e4845193b57df887ad6f0f8076a1cd35030e521e0bf33df5d29"
+  },
+  "log_normalization": "Trailing whitespace on each line and terminal blank lines removed; mathematical and build output text preserved.",
+  "limits": [
+    "No asymptotic lower-correlation estimate",
+    "Raw Gram obstruction not transferred to projected Gram or selected direction",
+    "Analytic constants not finite numerical certificates",
+    "No convergence, G2, RH or publication-readiness claim"
+  ]
+}

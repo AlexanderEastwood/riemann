@@ -1,5 +1,31 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## September 22, 2026 — NS-59 / v1.58 NB difference budget
+
+Classification: exact identities, proved implications, certified finite
+computations, and a named open lower-correlation input. The adjacent
+functions delta_n=rho_n-(n-1)rho_(n-1)/n have norm squared between
+H_(n-1)/n^2-(n-1)/n^3 and H_(n-1)/n^2. The complete coordinate change
+uses g=T* h and K=T* S T; a smaller denominator cannot keep the old h.
+
+The raw difference Gram has an exact zeta-weighted Mellin identity.
+A piecewise-exponential fractional Sobolev inverse estimate, including
+jumps, converts any critical-line zeta exponent theta<1/2 into norm
+O(N^(-2+2 theta)). Classical Weyl gives O_epsilon(N^(-5/3+epsilon)).
+Conversely, localized Mellin packets and the classical short-interval
+point bound show near-N^(-2) power control equivalent to Lindelof, even
+on dyadic blocks. Known zeta large values exclude every fixed logarithmic
+N^(-2) raw norm bound. Scope: raw all-coefficient norm, not the projected
+Gram, not the actual residual direction, and not the NB route as a whole.
+
+Finite Arb checks replayed at 256/384 bits show raw-trace gain below 1/400
+of the true gain at N=128 and N=256. The adjacent trace bound becomes
+worse at N=256 after its numerator is transformed. The full directional
+quotient does better there but supplies no asymptotic input. The floating
+scan is separate, not proof evidence. Full evidence and local self-review
+are in evidence/v158/. No independent review is claimed. No new Weil
+window, tail metric, convergence, uniform floor, G2 or RH claim.
+
 ## September 22, 2026 — NS-58 / v1.57 translated-radical boundary test
 
 Classification: exact identities and proved implications; API and the signed
