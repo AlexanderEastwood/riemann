@@ -3567,3 +3567,37 @@ arithmetic and 23 geometric Maxima checks. No physical cutoff in these
 finite sums. Python diagnostics clean. Author self-review only. Actual
 unchanged manuscript build: 358 pages, zero undefined/duplicate references.
 Manuscript stays v1.66; no new version or tag.
+
+
+## 2026-09-23 — NS95 square-scale product grouping
+
+Reviewed all 102 conclusions at main c679b08, including the NS86 failure,
+NS87 joint localization, NS78 support constraints and NS83 rate restriction.
+Claim 149249b precedes implementation. The review is scope/dependency work,
+not a replay of every historical proof. Both missing-original groups stay OPEN.
+Corrected the ambiguous AGENTS/board contraction wording to specify every
+sufficiently large doubling, and the README current-manifest link to v1.66.
+
+The attempted promotion of old-index products to the complete square block
+requires retaining missing directions. Even the free signed divisor-completed
+lift forces b_(mp)=sum_(d|m) beta_d when p>N and mp<=N^2. Its coefficients
+at all new primes agree. A constructed nonzero arithmetic vector is invisible
+to this lift, refuting an all-residual comparison under an explicit prime-pair
+hypothesis; it is not the actual optimized target residual. The exact gain
+split retains the positive complement, and a coefficient constraint gives a
+strict positive finite lower bound on discarded gain. The direct product
+pairing matrix has minor -h_(2N)^2<0 on all tested sizes, unlike the Gram.
+
+What had to change: optimize all signed product weights and refit old
+coefficients, generally losing NS86's prescribed defect-square identity.
+At N16 to 256 the free span has rank 96 versus full rank 240 and captures
+99.82728755% of full gain, versus the prior direction's 27.30715250%.
+Its actual finite error reduction exceeds 55.636%; this is no persistent
+rate or new best finite error. An independent actual-target lower estimate
+is still missing. Enlarging a finite table alone is not the next proof step.
+
+Validation: Arb 256/384, doubled analytic Gram and physical cutoffs,
+seven independent complete physical norm comparisons, 12 prior NS86 scalar
+overlaps, 178 exact prime-fiber checks, 18 Maxima checks and clean Python
+diagnostics. Author review only. Unchanged manuscript builds to 358 pages,
+zero undefined/duplicate references; v1.66 manifest 16/16. No new tag/version.

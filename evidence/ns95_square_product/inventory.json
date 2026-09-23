@@ -1,0 +1,30 @@
+{
+  "algorithm": "sha256",
+  "scope": "Incremental NS95 evidence and versioned HTML report; excludes this inventory",
+  "base_commit": "c679b08279617960c874662c3347cd4a68168f5a",
+  "files": {
+    "audits/square-scale-products-2026-09-23-v1.html": "58e35f60e9d6ec823e25e8751484b0567b0a5536afce9531e55001b16bcd58cc",
+    "evidence/ns95_square_product/README.md": "4cf0faccfb891ed991674c0432b01fd9f6c93eb6e17ad31b4da1280f45cc0014",
+    "evidence/ns95_square_product/argument.tex": "bb2d4ff84ada634e951d538080f217c86c4a8216d815f3c72d7322bc0da6704a",
+    "evidence/ns95_square_product/build-summary.txt": "3c4ca1949cda3684bf6ac6a32a542d2f95d2f889b6d2bac9d8500ad5755db356",
+    "evidence/ns95_square_product/certify.py": "c45962fa64707f0d6c7587e6f74ead5f0f3f075bb06d1dda3aaacd4ca25becf0",
+    "evidence/ns95_square_product/check-256bits.json": "6e1ec420d92819a8b020df16d2b4fa740c0487966ac2a67d5c2339b9c3ec0bbd",
+    "evidence/ns95_square_product/check-384bits.json": "7be769abf2cda7ba4188fde508715a1d565de4b8e3660ebe35b1ee4327112d30",
+    "evidence/ns95_square_product/check-cutoff-384bits.json": "b25be4f0e9cb6051835721267587223aa218d4e5bc0858f92e4032f95702141c",
+    "evidence/ns95_square_product/checks-output.txt": "296dd0f712b8b552adaeeee05977f338c46908f8984693cb79fd47ba70c3947d",
+    "evidence/ns95_square_product/checks.mac": "fa6cdffa55edf3065ec3fe891bafd06be6dbe7a0c11775b3aa84530dcbec3391",
+    "evidence/ns95_square_product/dependency-validation.json": "a7a3c2e35e1e793d44350a945c33af0b995a56cd8a116a67ac0b2694c17e72cf",
+    "evidence/ns95_square_product/literature-screen.json": "7f41651def6365138c447ceba05107bb80b6aeedfc02b2e7e1955ed72c15a190",
+    "evidence/ns95_square_product/physical-256bits.json": "6b7ef03d40754284c8473e24709dfd92b5a7bdebeb0b2efb8226b7fbf9184845",
+    "evidence/ns95_square_product/physical-384bits.json": "1223a667b7723e8314f87b4757613276dbc32252f983634929656f78e5d1596b",
+    "evidence/ns95_square_product/physical-cutoff-384bits.json": "ca007b61694caa03025a1b127555419a16c484381487761dae31447648be77b3",
+    "evidence/ns95_square_product/physical.py": "86ccc90a5ceab1b859eb908b70a9c1325854e540ce2fe4f4ee2d4b20a1503c90",
+    "evidence/ns95_square_product/pyright.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+    "evidence/ns95_square_product/requirements-replay.txt": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+    "evidence/ns95_square_product/runtime-provenance.json": "63f6ef6a51c864bc314cf734e62d86c6e713ea32882f49946fd6a5a7acaba05d",
+    "evidence/ns95_square_product/self-review.json": "737c62225618a381c137ba4c59a519663e3fee6162e8071db59b25776e0e1493",
+    "evidence/ns95_square_product/turn-review.json": "23bcff30aa806f9e3a48a4c5f13285812dca883ba844c2ed47d7ca4a41e7a11e",
+    "evidence/ns95_square_product/validation.json": "cfa6c9dcdf8bb7bc58e089d3b1f44153e09671b3c03813f0582233db226090aa",
+    "evidence/ns95_square_product/verify.py": "1061225149003f8f6cbb0af69d2decdf1fb29c51ef1383ccbca613ebab599c42"
+  }
+}

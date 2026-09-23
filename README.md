@@ -5,6 +5,31 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 square-scale product test (NS-95)
+
+Freeing the signed divisor-product weights repairs most of NS86's finite
+loss: at N=16 to 256 it captures about **99.83% of full available gain**,
+versus 27.31% for the prescribed direction with optimal damping/refit.
+The enlarged fit has 96 independent new directions versus the full 240.
+It reduces that finite old error by over 55.636%; no cofinal lower bound
+or new best finite approximation error follows.
+
+The construction still forces equal coefficients at all new primes above
+N, and more generally ties coefficients at mp across primes p>N. Exact
+constraint and gain identities retain the complementary directions. The
+direct product-pairing matrix is indefinite on the tested blocks; it is
+not the positive Gram. An explicit invisible arithmetic vector refutes
+an all-residual comparison under the stated prime-pair hypothesis, not
+an estimate for the actual optimized target. The latter remains open.
+
+Two precisions, doubled Gram and physical cutoffs, complete independent
+physical norms, 18 Maxima checks and author review pass. The freely
+optimized weights generally lose the original defect-square prescription.
+Manuscript remains v1.66; both historical original-evidence gaps stay open.
+
+[Readable report](audits/square-scale-products-2026-09-23-v1.html) ·
+[Exact argument and certificates](evidence/ns95_square_product/).
+
 ## September 23 averaged-cost attempt and tangent-circle check (NS-93/94)
 
 The arithmetic cost splits into a uniformly bounded diagonal and signed
@@ -611,6 +636,7 @@ graph LR
   nbarithmeticcostbudget["Complete scalar cost budget and a feasible endpoint-only update<br/><small>&#128193; evidence/ns92_arithmetic_cost</small>"]
   nbaveragedabsolutecost["Averaging the fully separated absolute Mobius cost<br/><small>&#128193; evidence/ns93_averaged_cost</small><br/><small><b>wall: productwise absolute values force a linear majorant even before averaging</b></small>"]
   circlecountinference["Tangent-circle similarity point and count imbalance infer RH<br/><small>&#128193; evidence/ns94_circle_inversion</small><br/><small><b>wall: exact symmetric off-line control preserves the proposed geometric count and infinity features</b></small>"]
+  nbsquareproductrestriction["Square-scale product restriction and complete gain split<br/><small>&#128193; evidence/ns95_square_product</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -713,6 +739,7 @@ graph LR
   nbjointabelbound --> nbarithmeticcostbudget
   nbarithmeticcostbudget --> nbaveragedabsolutecost
   altroutes --> circlecountinference
+  nbjointlocalization --> nbsquareproductrestriction
   concentration -. "uniform complete signed operator floor remains unproved" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -814,9 +841,10 @@ graph LR
   click nbarithmeticcostbudget "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns92_arithmetic_cost/" "evidence: evidence/ns92_arithmetic_cost" _blank
   click nbaveragedabsolutecost "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns93_averaged_cost/" "evidence: evidence/ns93_averaged_cost" _blank
   click circlecountinference "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns94_circle_inversion/" "evidence: evidence/ns94_circle_inversion" _blank
+  click nbsquareproductrestriction "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns95_square_product/" "evidence: evidence/ns95_square_product" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound,nbarithmeticcostbudget proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor,nboptimizedpotential,nbconvolutioncontrol,nbjointlocalization,nbdilationenvelope,nbnormalizedupper,nbmobiusjointcancellation,nbjointabelbound,nbarithmeticcostbudget,nbsquareproductrestriction proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
@@ -841,7 +869,7 @@ graph LR
 - [Complete LaTeX](manuscript/fixed_space_prime_action_v1.tex)
 - [Research log and candidate register](log/RH_G1_G2_research_log.md)
 - [Revision notes](log/v1_revision_notes.md)
-- [Checksums and provenance for the local draft](manifest/v1.59_manifest.json)
+- [Checksums and provenance for v1.66](manifest/v1.66_manifest.json)
 
 One live manuscript; delivery is **LaTeX only** at the author's request.
 Prior versions are reachable by tag (`v1.24`, `v1.34` … `v1.38`).

@@ -252,8 +252,9 @@ Version 1.66 (NS-83) adapts Burnol's critical-zero dual vectors to every
 fixed Hardy smoothing order q. The lower liminf constant is the sum of
 m(rho)^2/|rho|^(2q) over critical zeros. At q=2 a certified ten-pair subset
 exceeds 0.000072332433; no finite-size onset is supplied. Fixed-fraction
-contraction of the entire error is impossible; cumulative relative gains
-are <=log K+O(1) through doubling K. This is not a pointwise 1/j bound,
+contraction of the entire error at every sufficiently large doubling is
+impossible; cumulative relative gains are <=log K+O(1) through doubling K.
+This is not a pointwise 1/j bound,
 not a restriction on capture of available gain, and not a decay upper
 bound. Two-precision constants, exact Maxima checks and local self-review;
 cofinal signed arithmetic decay, the original Weil floor, G2 and RH stay open.

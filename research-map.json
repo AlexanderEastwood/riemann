@@ -1152,6 +1152,14 @@
         "to": null,
         "src": "evidence/ns94_circle_inversion/argument.tex; geometry and symmetry alone, not zeta arithmetic"
       }
+    },
+    {
+      "id": "nbsquareproductrestriction",
+      "title": "Square-scale product restriction and complete gain split",
+      "status": "proved",
+      "parent": "nbjointlocalization",
+      "evidence": "evidence/ns95_square_product",
+      "note": "NS95: free signed divisor-product weights force b_(mp) independent of prime p>N for mp<=N^2. Exact complementary gain retained; an invisible arithmetic vector refutes the all-residual comparison under the stated prime-pair hypothesis, not the actual-target bound. Free lift captures 99.83% of finite N16-to-256 gain versus 27.31% for NS86, with complete costs and tails. Product-pairing matrix indefinite on tested blocks. Reweighting generally loses the defect-square prescription; no cofinal lower estimate or new best error."
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "classification": "Primary-source abstract/metadata screen, not a complete literature review or a proof input",
+  "date": "2026-09-23",
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1211.5191",
+      "authors": "Sandro Bettin, J. Brian Conrey, David W. Farmer",
+      "scope": "The stated optimality result assumes RH and an additional derivative-sum bound; not used for an unconditional lower-gain estimate."
+    },
+    {
+      "url": "https://www.numdam.org/articles/10.5802/jtnb.1227/",
+      "authors": "François Alouges, Sébastien Darses, Erwan Hillion",
+      "scope": "A different generalized criterion separates approximation and coefficient control; the abstract highlights remaining Gram-matrix difficulty. No theorem from this paper is imported into NS95."
+    }
+  ],
+  "novelty_claim": "No worldwide novelty claim for Hilbert projection, Schur complements, or the elementary divisor restriction."
+}

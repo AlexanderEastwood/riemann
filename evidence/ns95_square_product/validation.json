@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "classification": "finite certificates and scoped analytic restrictions; no cofinal gain bound",
+  "checks": {
+    "scalar_precision_overlaps": 51,
+    "coefficient_precision_overlaps": 468,
+    "scalar_cutoff_overlaps": 17,
+    "coefficient_cutoff_overlaps": 352,
+    "physical_precision_overlaps": 30,
+    "physical_cutoff_overlaps": 9,
+    "complete_physical_Gram_overlaps": 7,
+    "NS86_scalar_overlaps": 12,
+    "exact_large_prime_fiber_checks": 178
+  },
+  "Maxima_exact_checks": 18,
+  "source_sha256": "1061225149003f8f6cbb0af69d2decdf1fb29c51ef1383ccbca613ebab599c42",
+  "independent_review": false
+}

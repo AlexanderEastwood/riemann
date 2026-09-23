@@ -1,0 +1,30 @@
+{
+  "classification": "independent full physical norms with analytic infinite tails",
+  "precision_bits": 384,
+  "cell_stop": 131072,
+  "source_sha256": "86ccc90a5ceab1b859eb908b70a9c1325854e540ce2fe4f4ee2d4b20a1503c90",
+  "input_file": "check-cutoff-384bits.json",
+  "input_sha256": "b25be4f0e9cb6051835721267587223aa218d4e5bc0858f92e4032f95702141c",
+  "dependencies": {
+    "evidence/ns86_optimized_arithmetic/certify_physical.py": "fbe63c49353a2025df80623ad3abddb27148d17345338c83b25afbdf2975eb9c",
+    "evidence/ns86_optimized_arithmetic/certify_newton.py": "49ca23a07b9b8c92c25f7edb6921b1d4f555f9d30ef7bb8ac0bc7afebd45c790",
+    "evidence/v159/ns61/certify_smoothed.py": "0f70a98cf11b61054ff1f0ba855c3e5be383eddc95468ac87d5eea51288974c5"
+  },
+  "rows": [
+    {
+      "N": 16,
+      "values": {
+        "eta": "[3.30855663128751408222221682e-5 +/- 3.18e-32]",
+        "exterior_energy": "[1.094654698243658340756705371e-9 +/- 9.14e-37]",
+        "interior_energy_1_to_split": "[1.122548391965779223637316e-5 +/- 3.60e-30]",
+        "complete_energy_after_split": "[2.95e-6 +/- 4.34e-9]",
+        "complete_energy": "[1.417e-5 +/- 4.10e-9]",
+        "physical_tail_radius": "[9.276124775875962905158383005e-10 +/- 8.42e-38]",
+        "tail_slope": "[-0.0005101689421256557326278061538 +/- 5.07e-32]",
+        "tail_constant": "[0.0030561849333542110970159211719 +/- 4.49e-32]",
+        "Stirling_remainder_constant": "[1831.314775818457371684208709257441 +/- 6.88e-31]",
+        "relative_improvement": "[0.556 +/- 5.91e-4]"
+      }
+    }
+  ]
+}

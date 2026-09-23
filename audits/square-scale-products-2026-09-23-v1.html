@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Square-scale product test — NS95</title></head>
+<body style="margin:0;background:#f4f2ed;color:#202824;font-family:Georgia,serif;font-size:17px;line-height:1.6;">
+<main style="max-width:680px;margin:36px auto;padding:34px 30px;background:#fff;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.5px;color:#52675d;">RH RESEARCH · 23 SEPTEMBER 2026 · NS95 · VERSION 1</p>
+<h1 style="font-size:34px;line-height:1.15;font-weight:normal;margin:12px 0 24px;">The larger signed construction works well in the finite test</h1>
+<p><strong>Allowing the product weights to vary repairs most of the earlier finite loss.</strong> In the 16-to-256 block, the enlarged construction captures about <strong>99.83% of the available improvement</strong>, compared with 27.31% for the previous prescribed correction after its best damping and old-coefficient refit.</p>
+<p>The missing lower bound is still unproved. This test establishes neither a persistent improvement at growing sizes nor convergence to zero. RH, G2 and the original uniform Weil floor remain open.</p>
+
+<h2 style="font-size:23px;font-weight:normal;margin-top:30px;">What changed</h2>
+<p>The earlier correction fixed each product weight using the old optimized coefficients. Here every distinct product receives its own freely chosen signed weight, and all old coefficients are refitted. The resulting calculation is larger: at old size 16 it has 96 independent new directions, versus 240 for the entire new block.</p>
+<p>This freedom generally loses the earlier defect-square prescription. The norm, old-space projection and complete infinite tail are retained. The full optimized errors used for comparison were already available in NS86; these are not new best finite errors.</p>
+
+<table style="width:100%;border-collapse:collapse;font-size:15px;margin:22px 0;">
+<caption style="text-align:left;font-style:italic;margin-bottom:10px;">Fraction of the full available improvement; rounded finite certificates</caption>
+<thead><tr style="background:#e9eee9;"><th style="padding:10px;text-align:left;">Block</th><th style="padding:10px;text-align:right;">Earlier rule</th><th style="padding:10px;text-align:right;">Direct products</th><th style="padding:10px;text-align:right;">Free divisor products</th></tr></thead>
+<tbody>
+<tr><td style="padding:10px;border-bottom:1px solid #ddd;">4 → 16</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">84.94%</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">95.00%</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">99.88%</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #ddd;">8 → 64</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">84.94%</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">94.19%</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">99.74%</td></tr>
+<tr><td style="padding:10px;border-bottom:1px solid #ddd;">16 → 256</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">27.31%</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">94.08%</td><td style="padding:10px;text-align:right;border-bottom:1px solid #ddd;">99.83%</td></tr>
+</tbody></table>
+<p>At 16 → 256, the free construction reduces the entire old squared error by more than 55.636%. Its remaining error is about 0.00001417317, compared with the full optimum of about 0.00001414242. The 99.83% figure refers to the available improvement, not to eliminating 99.83% of the old error.</p>
+
+<h2 style="font-size:23px;font-weight:normal;margin-top:30px;">The exact restriction we found</h2>
+<p>Products of old indices fit below N², but they do not supply all indices in that block. Completing those products by their multiples still ties certain coefficients together.</p>
+<p style="padding:16px 18px;background:#f0f4ef;border-left:3px solid #52675d;">For every prime p &gt; N and mp ≤ N², the new coefficient at mp depends on m alone. In particular, all new prime coefficients must be equal.</p>
+<p>The full optimized fit does not obey that prime constraint in the tested blocks. An exact norm inequality certifies a positive cost for imposing it. The lost directions therefore cannot be silently discarded or identified with the full joint observation space.</p>
+<p>There is a second warning against an unjustified positivity step: the direct product-pairing matrix has a two-by-two determinant equal to −h<sub>2N</sub>². It is indefinite on all three tested blocks. This is a pairing matrix, not the positive Gram matrix used to measure the norm.</p>
+
+<h2 style="font-size:23px;font-weight:normal;margin-top:30px;">Where the proof attempt stops</h2>
+<p>The full gain splits exactly into the gain from the free product construction and a nonnegative complementary gain. An explicit arithmetic test vector is invisible to all the free-product observations, so those observations cannot control <em>every</em> residual. That test vector is not the actual optimized target residual, and does not refute the desired target-specific estimate.</p>
+<p>The next substantive requirement remains a lower bound on the signed observation energy of the actual residual, relative to its entire error. One may attempt it in this restricted space, or retain the complementary term in the full block. The finite efficiencies above do not supply such a bound. Enlarging the next numerical table alone would not resolve it.</p>
+<p>A compatible small fixed reduction per <em>squaring</em> of N would suffice. The earlier critical-zero result excludes a fixed fraction at every sufficiently large <em>doubling</em>; it does not exclude that squaring-scale target. No fixed reduction has been proved here.</p>
+
+<h2 style="font-size:23px;font-weight:normal;margin-top:30px;">Checks and scope</h2>
+<p>Arb runs at 256 and 384 bits agree, as does a doubled analytic Gram cutoff. Separate physical-cell integration includes the exterior interval and the entire infinite tail, with a doubled physical cutoff. Exact rational rank reduction, 178 finite large-prime coefficient checks and 18 Maxima algebra checks pass. The saved coefficients are ball enclosures of the exact restricted fit, not a rounded rational witness.</p>
+<p>Author mathematical and code review only; no independent reviewer. The unchanged manuscript builds to 358 pages with zero undefined or duplicate references. Its v1.66 manifest verifies. All 102 prior registered conclusions were reviewed for scope and dependencies; historical computations were not all rerun. Both missing-original evidence groups remain open.</p>
+<p>Related literature abstracts were screened, without importing an unproved estimate: <a href="https://arxiv.org/abs/1211.5191" style="color:#295c50;">Bettin–Conrey–Farmer</a> gives a conditional optimality result, while <a href="https://www.numdam.org/articles/10.5802/jtnb.1227/" style="color:#295c50;">Alouges–Darses–Hillion</a> separates approximation from coefficient control in a different generalized criterion. Neither result is used as a bound for this construction. No worldwide novelty claim is made.</p>
+<p style="font-size:14px;border-top:1px solid #d8ded8;padding-top:18px;"><a href="../evidence/ns95_square_product/argument.tex" style="color:#295c50;">Exact argument</a> · <a href="../evidence/ns95_square_product/README.md" style="color:#295c50;">Replay instructions</a> · <a href="../evidence/ns95_square_product/validation.json" style="color:#295c50;">Validation record</a></p>
+</main></body></html>
