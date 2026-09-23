@@ -1013,6 +1013,15 @@
       "prop": "prop:ns80-uniform-efficiency",
       "evidence": "evidence/v163/ns80",
       "note": "Projected condition ratio <=21, one-step capture >=21/121, twenty-step capture >97.79%. Complete comparator inverse assumed; no fast inverse or cofinal relative contraction."
+    },
+    {
+      "id": "nbfiniteconditioning",
+      "title": "Polynomial ordinary Gram conditioning and an effective finite comparator",
+      "status": "proved",
+      "parent": "nbarithmeticpreconditioner",
+      "prop": "prop:ns81-conditioning; prop:ns81-finite-comparator",
+      "evidence": "evidence/v164/ns81",
+      "note": "Condition O(N^4 log² N); sufficient cutoff 2^16(N+1)^6 with full tail bound. Enormous comparator not assembled; no practical solver or cofinal decay."
     }
   ]
 }

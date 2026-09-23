@@ -1,5 +1,29 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.64: ordinary conditioning and an effective finite comparator (NS-81)
+
+Exact coefficient recovery from a finite reciprocal-sample prefix gives an
+unconditional ordinary Gram condition bound **O(N^4 log²(2N))**. This rules
+out exponential growth of the spectral condition number in these physical
+atom coordinates; it says nothing about the size of the approximation error
+or a signed Weil spectral floor.
+
+The full arithmetic comparator now has an explicitly sufficient finite
+cutoff, **M = 2^16 (N+1)^6**, with a complete tail bound and projected
+condition ratio at most 42. For an old-size-256 block, use total atom count
+512: the sufficient cutoff exceeds **10^21 cells**. That enormous comparator
+was not assembled. The result establishes effectiveness, not a fast solver
+or a necessary lower bound on computational cost.
+
+Small-prefix inverse certificates and scalar tail bounds pass at 256/384
+bits. The missing cofinal signed arithmetic decay, G2 and RH remain open.
+
+[Readable update](../evidence/v164/research-update-2026-09-23-v1.html) ·
+[Proof and finite checks](../evidence/v164/).
+
+Validation: `evidence/v164/validation.json`; local self-review only.
+
+
 ## v1.63: complete arithmetic sampling and a uniform block guarantee (NS-78–80)
 
 The complete squared residual norm is bounded above and below by fixed

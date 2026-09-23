@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Local review of the conditioning and cutoff bounds</title></head>
+<body style="margin:0;background:#f4f2ed;color:#192d35;font-family:Georgia,serif;font-size:17px;line-height:1.65;">
+<main style="max-width:680px;margin:32px auto;padding:36px 28px;background:#fff;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;color:#526971;margin:0 0 12px;">RIEMANN PROJECT · 23 SEPTEMBER 2026 · v1.64</p>
+<h1 style="font-size:32px;line-height:1.2;margin:0 0 24px;">Local review of the conditioning and cutoff bounds</h1>
+
+<p><strong>Scope:</strong> NS81’s coefficient estimate, ordinary Gram conditioning, complete discarded-tail bound, finite-comparator constants and actual computations. This is author self-review, not an independent audit.</p>
+<h2 style="font-size:23px;">Coefficient recovery and spectral meaning</h2>
+<p>The finite prefix includes N full reciprocal cells and the endpoint at N+1. Its positive definiteness follows from exact coefficient recovery. The divisor estimate retains the weights: the sum of integers up to y is bounded by y squared, rather than an invalid bound that would lose the divisor-dependent endpoint.</p>
+<p>The ordinary eigenvalue floor follows from a complete quadratic-form inequality. No coordinate pivot is called an eigenvalue. The trace upper bound uses the positive Gram’s exact diagonal scaling. The conclusion is limited to this ordinary positive Gram; no signed Weil floor or RH approximation rate is inferred.</p>
+<h2 style="font-size:23px;">Full tail and dimension</h2>
+<p>The discarded-sample bound covers both endpoints of every cell from M to infinity, including the logarithmic main term and Bernoulli remainder. It is a matrix inequality obtained uniformly over every unit coefficient vector, not an estimate on selected entries alone.</p>
+<p>The explicit cutoff uses the full atom count. A block extending from N to 2N therefore uses 2N in that formula. The finite comparator has a condition ratio at most 42 after the old coordinates are minimized out; this preserves all mixed terms and does not assume the old minimizers agree.</p>
+<h2 style="font-size:23px;">What the replay proves</h2>
+<p>An initial direct interval elimination became too wide to verify later pivots. The official replay instead uses a certified ball inverse and checks its trace against the analytically proved coefficient constant. It retains all enclosures and makes no midpoint sign decision. This validates the displayed finite prefix floor at the tested sizes; the stronger trace test is not assumed to pass at every larger size.</p>
+<p>The very large comparator is never assembled. The code calculates its sufficient cutoff and the scalar complete-tail bound, while assembling only N prefix cells. Source hashes, all 27 two-precision enclosure matches, exact Maxima checks and Python diagnostics are recorded in <a href="validation.json" style="color:#155c68;">validation.json</a>.</p>
+<p>No unresolved issue was identified in this review. The large cutoff is sufficient, not necessary; its impractical size is not a complexity lower bound. Cofinal signed arithmetic decay, the original Weil floor, G2 and RH remain open.</p>
+
+<p style="border-top:1px solid #d5dedc;margin-top:32px;padding-top:18px;font-size:14px;color:#526971;">Exact identities, proved implications and certified finite computations are distinguished from open arithmetic inputs. Local self-review only; no independent review or publication-readiness claim.</p>
+</main></body></html>

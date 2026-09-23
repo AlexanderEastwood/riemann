@@ -1,0 +1,27 @@
+/* Complete coefficient, tail and finite-comparator constants. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+check("Three-term square slack",3*(a^2+b^2+c^2)-(a-b+c)^2-((a+b)^2+(a-c)^2+(b+c)^2))$
+check("Difference square slack",2*a^2+2*b^2-(a-b)^2-(a+b)^2)$
+check("Finite prefix coefficient constant",4*12*N*(N+2)*HH*N^2-48*HH*N^3*(N+2))$
+check("Integer triangular bound slack",k^2-k*(k+1)/2-k*(k-1)/2)$
+check("Ordinary Gram eigenvalue denominator",16*48-768)$
+check("Condition number constant",16*(48*HH*N^3*(N+2))*K2*HH-768*K2*HH^2*N^3*(N+2))$
+check("Full tail quadratic primitive",diff(-((a+log(t/M)/2)^2+(a+log(t/M)/2)+1/2)/t,t)-(a+log(t/M)/2)^2/t^2)$
+check("Tail quadratic endpoint",subst(M,t,((a+log(t/M)/2)^2+(a+log(t/M)/2)+1/2)/t)-(a^2+a+1/2)/M)$
+check("Polynomial cutoff slack",(N+1)^5-N^4*(N+2)-(3*N^4+10*N^3+10*N^2+5*N+1))$
+check("Log bound derivative",diff(log(v)/v^(1/4),v)-(1-log(v)/4)/v^(5/4))$
+check("Log bound maximum",subst(exp(4),v,log(v)/v^(1/4))-4/%e)$
+check("Quadratic scalar majorant",13^2+13+1/2-365/2)$
+check("Complete tail universal constant",96*3*(365/2)-52560)$
+if not is(52560/65536 < 1) then error("Tail comparison constant failed")$
+checks:endcons(["Universal tail constant below one",true],checks)$
+check("Finite comparator condition ratio",(21/8)/(1/16)-42)$
+check("Finite comparator one-step gain",4*42/(1+42)^2-168/1849)$
+check("Finite comparator residual ratio",1-168/1849-(41/43)^2)$
+if not is(1-(41/43)^80 > 9778/10000) then error("Forty-step bound failed")$
+checks:endcons(["Forty steps exceed 97.78 percent",true],checks)$
+print("PASS:",length(checks),"exact checks; no enormous comparator assembled and no RH decay estimate.")$

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The numerical conditioning is controlled. The arithmetic decay is still open.</title></head>
+<body style="margin:0;background:#f4f2ed;color:#192d35;font-family:Georgia,serif;font-size:17px;line-height:1.65;">
+<main style="max-width:680px;margin:32px auto;padding:36px 28px;background:#fff;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;color:#526971;margin:0 0 12px;">RIEMANN PROJECT · 23 SEPTEMBER 2026 · v1.64</p>
+<h1 style="font-size:32px;line-height:1.2;margin:0 0 24px;">The numerical conditioning is controlled. The arithmetic decay is still open.</h1>
+
+<p style="font-size:20px;">We proved a polynomial bound on the ordinary integer Gram matrices’ condition numbers, and made the full arithmetic comparator explicitly finite. The resulting cutoff is enormous. This advances the mathematical description of the computation; <strong>it does not establish RH or G2</strong>.</p>
+<h2 style="font-size:23px;margin-top:30px;">What is now proved</h2>
+<p>The first N reciprocal cells, including their last endpoint, control the size of every coefficient vector. Combined with the complete norm comparison, this gives an ordinary spectral condition bound of order <strong>N<sup>4</sup> log<sup>2</sup>(2N)</strong>. Exponential growth of that condition number is therefore ruled out for these particular positive Gram matrices.</p>
+<p>This statement concerns numerical sensitivity in the physical atom coordinates. It does not bound the approximation error, and it is not a lower floor for a signed Weil operator.</p>
+<h2 style="font-size:23px;margin-top:30px;">The infinite comparator can be replaced by a finite one</h2>
+<p>Keeping all sample cells below <strong>M = 2<sup>16</sup>(N+1)<sup>6</sup></strong> is sufficient to bound the entire discarded tail by the retained matrix. The resulting projected condition ratio is at most 42. The earlier step argument then guarantees more than <strong>97.78% of available block improvement after forty ideal steps</strong>.</p>
+<p>The formula uses the total number of atoms. For the block starting at size 256 and extending to 512, its sufficient cutoff exceeds <strong>10<sup>21</sup> cells</strong>. We did not assemble that matrix. This is a conservative upper bound on sufficient work, not a practical algorithm or a proof that every algorithm requires that much work.</p>
+<h2 style="font-size:23px;margin-top:30px;">What was actually checked</h2>
+<p>Only the small prefix matrices at N = 16, 64 and 256 were assembled. Their certified inverses confirm the analytic coefficient bound. The separate large-cutoff quantities are scalar evaluations of the complete tail inequality, not sums over the enormous comparator.</p>
+<p>At N = 256, the analytic lower bound on the ordinary Gram’s smallest eigenvalue exceeds <strong>4.91 × 10<sup>−14</sup></strong>. All checks agree at 256 and 384 bits. Maxima passed 18 exact checks; the full manuscript builds to 352 pages with clean references and layout.</p>
+<h2 style="font-size:23px;margin-top:30px;">Where this leaves the RH project</h2>
+<p>The simple curvature rule’s certified finite result remains <strong>97.63% of full improvement at size 256</strong>. We now also have a complete arithmetic norm and uniform block-efficiency guarantees for a more demanding comparator.</p>
+<p>The unresolved step is still a bound that forces the <em>entire</em> residual error to zero as sizes grow. Controlling numerical conditioning, or taking nearly all available improvement in a finite block, does not provide that decay. Further proof work must estimate the complete signed arithmetic sample sum or establish a sufficiently strong lower bound on available improvement relative to current error.</p>
+<p><a href="proof.tex" style="color:#155c68;">Complete proof</a> · <a href="validation.json" style="color:#155c68;">Validation record</a> · <a href="integration-review-2026-09-23-v1.html" style="color:#155c68;">Local self-review</a></p>
+
+<p style="border-top:1px solid #d5dedc;margin-top:32px;padding-top:18px;font-size:14px;color:#526971;">Exact identities, proved implications and certified finite computations are distinguished from open arithmetic inputs. Local self-review only; no independent review or publication-readiness claim.</p>
+</main></body></html>

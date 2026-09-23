@@ -1,0 +1,84 @@
+{
+ "manuscript_revision": "v1.64",
+ "base_commit": "822f06b314c60e6a8941f460fbed9876f1bf1946",
+ "files": [
+  {
+   "path": "evidence/v164/README.md",
+   "size_bytes": 1726,
+   "sha256": "a10d7babfa34b179686592edc0a8dbee4f037e5122671453056c5914e9d1dc82"
+  },
+  {
+   "path": "evidence/v164/integration-review-2026-09-23-v1.html",
+   "size_bytes": 3643,
+   "sha256": "60f8b65cb41d63569a58698ef742b71d101507cecfd56cf5c648ad783a7ec2b4"
+  },
+  {
+   "path": "evidence/v164/ns81/certify_conditioning.py",
+   "size_bytes": 3346,
+   "sha256": "6872259cfe2269e7c5b32d210b32ccd2f65ff5ede34837b22ba1b3bb5dc358af"
+  },
+  {
+   "path": "evidence/v164/ns81/conditioning-256bits.json",
+   "size_bytes": 5390,
+   "sha256": "a0b9f12b81a2ae969d6a6753ee404d455991a396dba9a59dccd66484e4611969"
+  },
+  {
+   "path": "evidence/v164/ns81/conditioning-384bits.json",
+   "size_bytes": 5395,
+   "sha256": "18a78d4983b09a46a969202e91d650922d8e9b159e056c83495ed65848f9c82d"
+  },
+  {
+   "path": "evidence/v164/ns81/exact-checks-output.txt",
+   "size_bytes": 2028,
+   "sha256": "3a0e73337fccad3ffd97b86fbe60fc6062824e51e4f8a76442f87d1ee187f21f"
+  },
+  {
+   "path": "evidence/v164/ns81/exact-checks.mac",
+   "size_bytes": 1812,
+   "sha256": "f055b1cecf06ac2ae5069249f1d3a322b7164894d1a1ada94e80834176913e61"
+  },
+  {
+   "path": "evidence/v164/ns81/proof.tex",
+   "size_bytes": 6827,
+   "sha256": "bdedfeca6b9c897955d2c177e034b27d24f7dab1a651f55229b7d0aad7a0248c"
+  },
+  {
+   "path": "evidence/v164/proof.tex",
+   "size_bytes": 6827,
+   "sha256": "bdedfeca6b9c897955d2c177e034b27d24f7dab1a651f55229b7d0aad7a0248c"
+  },
+  {
+   "path": "evidence/v164/replay-validation.json",
+   "size_bytes": 598,
+   "sha256": "3769f9c88d7681743993988fecc3bf49d75e13e9596b35e7f85d8da1213528cb"
+  },
+  {
+   "path": "evidence/v164/requirements-replay.txt",
+   "size_bytes": 63,
+   "sha256": "c45dd1f2c3394d5d0270975a6fdc29e39ccd99d8d4c9d3694780dc3dd5bb5e9f"
+  },
+  {
+   "path": "evidence/v164/research-update-2026-09-23-v1.html",
+   "size_bytes": 4426,
+   "sha256": "c40e004ce9ef5a0dcc2d9a0173ec9ae78e437a6ac9eb01da83cb2e901f131eff"
+  },
+  {
+   "path": "evidence/v164/runtime-provenance.json",
+   "size_bytes": 137,
+   "sha256": "d81afe77c3db5a0cd755f4604d12e557d35b86c869acbbbea45b12e4c8bb9a63"
+  },
+  {
+   "path": "evidence/v164/validation.json",
+   "size_bytes": 3653,
+   "sha256": "c7cf457e53ad5dd32afd90eef37efae1a2c863d6a2e713959cbb1c6a292bd3a9"
+  },
+  {
+   "path": "evidence/v164/verify_replays.py",
+   "size_bytes": 2940,
+   "sha256": "bd970a35b42a72ad63c311ca344bae06be7876103be168e9cd214980f8639a67"
+  }
+ ],
+ "file_count": 15,
+ "total_bytes": 48811,
+ "note": "NS81: polynomial ordinary Gram conditioning and an effective finite arithmetic comparator; complete analytic tail; 256/384-bit replay; no cofinal decay claim."
+}

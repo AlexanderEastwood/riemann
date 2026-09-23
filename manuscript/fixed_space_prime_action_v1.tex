@@ -22,7 +22,7 @@
 
 
 \usepackage{mathrsfs}
-\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.63},pdfauthor={Alexander Eastwood}}
+\hypersetup{pdftitle={Fixed-Space Prime Compatibility in Burnol's Sonine Quotients -- v1.64},pdfauthor={Alexander Eastwood}}
 \newtheorem{assumption}[theorem]{Assumption}
 \newtheorem{conditionalresult}[theorem]{Conditional result}
 \newcommand{\Q}{\mathcal Q}
@@ -35,7 +35,7 @@
 \setlength{\emergencystretch}{2em}
 \setcounter{tocdepth}{1}
 \title{\textbf{Fixed-Space Prime Compatibility in Burnol's Sonine Quotients}\\[5pt]
-\large Complete working manuscript, version 1.63\\
+\large Complete working manuscript, version 1.64\\
 \normalsize Finite sampling, endpoint recovery, and the remaining graph defect}
 \author{Alexander Eastwood}
 \date{September 23, 2026}
@@ -206,7 +206,7 @@ new witnesses; they do not recover the original evidence.
 
 \clearpage
 \paragraph{Status of this version.}
-The latest checkpoint is v1.63 (NS-78--80), stated below; earlier version
+The latest checkpoint is v1.64 (NS-81), stated below; earlier version
 paragraphs record the historical scope and remain part of the audit trail.
 
 Version 1.58 supplies an unconditional adjacent-difference block bound
@@ -670,6 +670,16 @@ of available block gain in one ideal step and more than $97.79\%$ in
 twenty. No fast inverse is supplied, and this is not a lower bound on
 available gain relative to current error. The cofinal signed arithmetic
 estimate, original Weil floor, G2 and RH remain open.
+
+\paragraph{Version 1.64 checkpoint (NS-81).}
+Finite reciprocal samples bound coefficient size and give ordinary Gram
+condition number $O(N^4\log^2(2N))$. A complete discarded-sample bound
+makes the arithmetic comparator explicitly finite: cutoff
+$M=2^{16}(N+1)^6$ suffices for relative tail below one and projected
+condition ratio at most $42$. This cutoff is enormous, and the large
+comparator is not assembled. Certified small-prefix and scalar replays
+support the constants; no practical solver, cofinal error decay, signed
+Weil floor, G2 or RH result follows.
 
 \tableofcontents
 \clearpage
@@ -23677,6 +23687,181 @@ The present theorem preserves arithmetic in its comparator and supplies a
 uniform finite-block efficiency guarantee; it does not provide that lower
 estimate, a fast computable replacement for $H_Q$, a bound for the earlier
 smooth curvature rule, G2 or RH.
+
+\section{Polynomial conditioning and an effective finite comparator (NS-81)}
+\label{sec:ns81-effective-sampling}
+
+\paragraph{Scope.}
+The coefficient inverse in NS-78 makes the finite arithmetic comparator
+in NS-80 effective. We prove an ordinary positive-Gram conditioning bound
+and an explicitly sufficient finite sample cutoff. The cutoff is extremely
+large; this is not a practical solver or a cofinal error estimate. None of
+these bounds concerns a signed Weil operator or its spectral floor.
+
+Let $H_N=\sum_{n=1}^N1/n$ in this section only, and let $G_N$ be the
+ordinary Gram of $\sigma_1,\ldots,\sigma_N$. For a pure combination
+$f=\sum c_n\sigma_n$, define the finite prefix form
+\[
+ P_N(c)=\eta^2+\sum_{m=1}^N\frac{f(1/m)^2+f(1/(m+1))^2}{m(m+1)},
+ \qquad \eta=\sum_{n\leq N}c_n/n.
+\]
+It includes the sample at $1/(N+1)$. The same notation $P_N$ denotes
+its matrix, and put
+\[
+ C_N=48H_NN^3(N+2).
+\]
+
+\begin{proposition}[A finite-prefix coefficient bound]
+\label{prop:ns81-conditioning}
+For every real coefficient vector,
+\begin{equation}
+ \|c\|_{\ell^2}^2\leq C_N P_N(c),\qquad
+ \lambda_{\min}(G_N)\geq\frac1{16C_N}.
+ \label{eq:ns81-conditioning}
+\end{equation}
+Writing $K_2=\|\sigma_1\|_2^2$, one also has
+\[
+ \lambda_{\max}(G_N)\leq K_2H_N,\qquad
+ \operatorname{cond}_2(G_N)\leq768K_2H_N^2N^3(N+2)
+                         =O(N^4\log^2(2N)).
+\]
+This is an ordinary spectral condition bound in the physical atom
+coordinates, not a lower bound on approximation error.
+\end{proposition}
+\begin{proof}
+Use $R=-f$ and $\alpha=0$ in NS-78; signs of the samples do not affect
+$P_N$. Since $m\log(1+1/m)\geq1/2$, the exact inverse gives
+\[
+ \sum_{m=1}^N\frac{D_m^2}{m^2}
+ \leq12\sum_{m=1}^N(z_m^2+z_{m+1}^2+\eta^2)
+ \leq12N(N+2)P_N(c).
+\]
+Here each cell weight is at least $1/[N(N+1)]$ and $\eta^2\leq P_N$.
+With $D_0=0$ and $\delta_m=D_m-D_{m-1}$,
+\[
+ \sum_{m=1}^N\frac{\delta_m^2}{m^2}
+ \leq4\sum_{m=1}^N\frac{D_m^2}{m^2}
+ \leq48N(N+2)P_N(c).
+\]
+M\"obius inversion and weighted Cauchy--Schwarz imply
+\[
+ |c_n|^2\leq\left(\sum_{d\mid n}d\right)
+                  \sum_{d\mid n}\frac{\delta_d^2}{d}
+ \leq nH_N\sum_{d\mid n}\frac{\delta_d^2}{d}.
+\]
+After summing and using $\sum_{k\leq y}k\leq y^2$ for $y\geq1$,
+\[
+ \sum_{n\leq N}|c_n|^2
+ \leq H_N\sum_{d\leq N}\delta_d^2\sum_{k\leq N/d}k
+ \leq H_NN^2\sum_{d\leq N}\frac{\delta_d^2}{d^2}
+ \leq C_NP_N(c).
+\]
+The complete sampling form dominates its finite prefix, and NS-78
+therefore gives $c^TG_Nc\geq P_N(c)/16$. This proves the ordinary
+minimum-eigenvalue bound. The maximum is at most the trace,
+$\operatorname{tr}G_N=K_2H_N$, by dilation and positivity. Division
+of these two bounds proves the condition estimate.
+\end{proof}
+
+\begin{proposition}[Explicit complete tail and a finite comparator]
+\label{prop:ns81-finite-comparator}
+Let $Q^{<M}$ be the complete arithmetic sampling Gram of NS-80 truncated
+to cells $1\leq m<M$, retaining the exterior term, where $M\geq N+1$.
+Set
+\[
+ a_{N,M}=\tfrac12\log(2\pi M)+\frac{N+3}{6M},\qquad
+ B_N(M)=\frac{2N}{M}\left(a_{N,M}^2+a_{N,M}+\tfrac12\right).
+\]
+Then the entire discarded sample tail satisfies
+\begin{equation}
+ 0\preceq Q-Q^{<M}\preceq B_N(M)I
+                  \preceq C_NB_N(M)Q^{<M}.
+ \label{eq:ns81-tail-matrix}
+\end{equation}
+In particular the explicit integer choice
+\begin{equation}
+ M=2^{16}(N+1)^6
+ \label{eq:ns81-explicit-cutoff}
+\end{equation}
+satisfies $C_NB_N(M)<1$, and hence
+\[
+ Q^{<M}\preceq Q\preceq2Q^{<M},\qquad
+ \frac1{16}Q^{<M}\preceq G_N\preceq\frac{21}{8}Q^{<M}.
+\]
+The same constants survive any old-space Schur complement. For an
+$N$-to-$2N$ block use~\eqref{eq:ns81-explicit-cutoff} with the total
+atom count $2N$, not the old count $N$.
+\end{proposition}
+\begin{proof}
+For $t\geq M\geq N$, the complete Bernoulli remainder in NS-78 gives
+\[
+ 0\leq A(t/n)\leq\tfrac12\log(2\pi t)+\frac{N}{6M}
+ \quad(1\leq n\leq N).
+\]
+On a cell $m\leq t\leq m+1$ with $m\geq M$, either endpoint's
+atom value is bounded above by
+$a_{N,M}+\tfrac12\log(t/M)$, since
+$\log((m+1)/t)\leq1/M$. For a unit coefficient vector,
+$\sum|c_n|\leq\sqrt N$, so both squared endpoint values are bounded
+by $N(a_{N,M}+\tfrac12\log(t/M))^2$.
+Integrating with $dt/t^2$ on every remaining cell gives $B_N(M)$,
+including the complete tail to infinity. Finally
+$Q^{<M}\succeq P_N\succeq I/C_N$, proving the last comparison.
+
+For the displayed cutoff put $v=N+1\geq2$. Elementary bounds give
+\[
+ H_N\leq1+\log v\leq3v^{1/4},\qquad
+ a_{N,M}\leq7+3\log v\leq13v^{1/4}.
+\]
+Here $\log v\leq2v^{1/4}$ follows by maximizing
+$\log v/v^{1/4}$, whose maximum is $4/e<2$.
+Also $\tfrac12\log(2\pi2^{16})<6.5$ and
+$(N+3)/(6M)<1/2$, giving the bound for $a_{N,M}$.
+Since $N^4(N+2)\leq v^5$, we obtain
+\[
+ C_NB_N(M)
+ \leq\frac{96}{2^{16}}v^{-1}
+       (3v^{1/4})\left(\frac{365}{2}v^{1/2}\right)
+ =\frac{52560}{65536}v^{-1/4}<1.
+\]
+The full Gram comparison follows from NS-80. Taking old-coordinate
+minima preserves the constants exactly as there.
+\end{proof}
+
+\paragraph{What is now finite, and what remains open.}
+The finite comparator has projected condition ratio at most $42$.
+The elementary NS-80 argument gives one-step capture at least
+$168/1849$ of full available block gain and forty ideal steps capture
+\[
+ 1-(41/43)^{80}>.9778.
+\]
+This is an effective finite-dimensional prescription; it does not make
+that prescription fast. For a block with old size $256$, the total atom
+count is $512$, and the sufficient cutoff exceeds $10^{21}$ cells.
+No such enormous matrix is assembled in this update. The cutoff is a
+conservative existence bound, not a necessary cutoff or a complexity
+lower bound on every algorithm.
+
+The scalar inequalities and positivity of the small finite-prefix matrices
+are replayed with certified arithmetic. Those checks do not evaluate the
+large finite comparator. Polynomial conditioning removes a numerical
+resolution concern for these ordinary Grams, but leaves the missing
+cofinal arithmetic decay completely unresolved. The original Weil floor,
+G2 and RH remain open.
+
+\paragraph{Finite validation.}
+At $N=16,64,256$, the first $N$ cells and their final endpoint are
+assembled exactly with Arb logarithms and integer factorial identities.
+Their positive definiteness is supplied by the coefficient inverse.
+A certified solve for $P_N^{-1}$ gives
+$\operatorname{tr}(P_N^{-1})<C_N$ at each tested size, independently
+confirming the displayed prefix floor; no midpoint solve is used.
+The two 256/384-bit replays agree. At $N=256$ the analytic ordinary
+Gram eigenvalue lower bound exceeds $4.91\cdot10^{-14}$, and the scalar
+complete-tail ratio at~\eqref{eq:ns81-explicit-cutoff} is below $.01925$.
+The latter is an evaluation of the proved tail bound, not an assembly
+of the comparator's $18883333817345572864$ cells. Eighteen exact Maxima
+checks validate the constants, primitives and rational step guarantees.
 
 \appendix
 \section{Reproducible finite checks}\label{app:numerics}
