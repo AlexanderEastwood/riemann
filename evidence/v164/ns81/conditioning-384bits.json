@@ -1,0 +1,85 @@
+{
+  "classification": "certified small finite-prefix positivity and complete scalar tail bound; enormous finite comparators not assembled; no cofinal decay estimate",
+  "precision_bits": 384,
+  "source_sha256": "6872259cfe2269e7c5b32d210b32ccd2f65ff5ede34837b22ba1b3bb5dc358af",
+  "rows": [
+    {
+      "N": 16,
+      "prefix_cells_evaluated": 16,
+      "largest_sample_integer": 17,
+      "sufficient_comparator_cell_stop": 1581879721984,
+      "large_comparator_assembled": false,
+      "values": {
+        "harmonic_number": "[3.3807289932289932289932289932289932289932289932289932289932289932 +/- 2.90e-65]",
+        "coefficient_bound_C_N": "[11964210.586213786213786213786213786213786213786213786213786213786 +/- 2.14e-58]",
+        "ordinary_gram_eigenvalue_lower_bound": "[5.2239133998542274850174638359533533424253903421450769986143026566e-9 +/- 1.66e-75]",
+        "prefix_eigenvalue_lower_bound": "[8.3582614397667639760279421375253653478806245474321231977828842506e-8 +/- 3.74e-73]",
+        "complete_discarded_tail_operator_upper_bound": "[4.8423959744720825256387196160186755194701248455046289479399954684e-9 +/- 4.03e-74]",
+        "tail_relative_to_prefix_upper_bound": "[0.057935445180417913015748375312272362951443813052229801182871801207 +/- 3.67e-67]",
+        "universal_relative_tail_upper_bound": "[0.39496916839853781556812388138817555694251165244982113652312104873 +/- 2.38e-66]",
+        "certified_inverse_trace": "[599287.36599477231768808334103218217519028697479744308835458027741 +/- 1.27e-60]",
+        "certified_prefix_eigenvalue_lower_bound_from_trace": "[1.6686485595104689134383622077297532799192988878379127425139822712e-6 +/- 3.48e-71]"
+      },
+      "gates": {
+        "positive_prefix_by_exact_injectivity": true,
+        "inverse_trace_below_C_N": true,
+        "certified_solve_keeps_balls": true,
+        "full_discarded_tail_bounded": true,
+        "tail_below_prefix": true,
+        "large_comparator_not_assembled": true
+      }
+    },
+    {
+      "N": 64,
+      "prefix_cells_evaluated": 64,
+      "largest_sample_integer": 65,
+      "sufficient_comparator_cell_stop": 4942652416000000,
+      "large_comparator_assembled": false,
+      "values": {
+        "harmonic_number": "[4.7438909037057690260058832334030470502761697230595741430695015721 +/- 1.69e-65]",
+        "coefficient_bound_C_N": "[3939669477.4093909260728108537402761033219848752733174851814505789 +/- 4.34e-56]",
+        "ordinary_gram_eigenvalue_lower_bound": "[1.5864275000322650103914838784949242282878723081947813009181370095e-11 +/- 3.67e-78]",
+        "prefix_eigenvalue_lower_bound": "[2.5382840000516240166263742055918787652605956931116500814690192152e-10 +/- 5.85e-77]",
+        "complete_discarded_tail_operator_upper_bound": "[9.8409734972465498745001949773618301709702703177726725300021730891e-12 +/- 4.13e-77]",
+        "tail_relative_to_prefix_upper_bound": "[0.038770182915096981337622351968257878879497978076453473163527209549 +/- 9.23e-68]",
+        "universal_relative_tail_upper_bound": "[0.28245358203562819407194563698900278708323740012234817656937657059 +/- 4.24e-66]",
+        "certified_inverse_trace": "[653411642.95268530995481312579605746344889885618799523476457710951 +/- 3.71e-58]",
+        "certified_prefix_eigenvalue_lower_bound_from_trace": "[1.5304288051573818750460300850901096457795568686761846175751135050e-9 +/- 5.71e-75]"
+      },
+      "gates": {
+        "positive_prefix_by_exact_injectivity": true,
+        "inverse_trace_below_C_N": true,
+        "certified_solve_keeps_balls": true,
+        "full_discarded_tail_bounded": true,
+        "tail_below_prefix": true,
+        "large_comparator_not_assembled": true
+      }
+    },
+    {
+      "N": 256,
+      "prefix_cells_evaluated": 256,
+      "largest_sample_integer": 257,
+      "sufficient_comparator_cell_stop": 18883333817345572864,
+      "large_comparator_assembled": false,
+      "values": {
+        "harmonic_number": "[6.1243449628172803688769736905381395096450230580943463165309507282 +/- 4.71e-65]",
+        "coefficient_bound_C_N": "[1272449291583.4536081864881077621768742492998979530744466429273190 +/- 3.77e-53]",
+        "ordinary_gram_eigenvalue_lower_bound": "[4.9117870875800583090643673524845533114125517721941269473419987937e-14 +/- 4.18e-79]",
+        "prefix_eigenvalue_lower_bound": "[7.8588593401280932945029877639752852982600828355106031157471980699e-13 +/- 4.69e-78]",
+        "complete_discarded_tail_operator_upper_bound": "[1.5122633424238701382461844394577718943739293487023211803058182182e-14 +/- 2.26e-79]",
+        "tail_relative_to_prefix_upper_bound": "[0.019242784187548792825527950000932018559367111220360311251500091243 +/- 2.10e-67]",
+        "universal_relative_tail_upper_bound": "[0.20030516365752853529858067168888303996227328138356934585270647592 +/- 8.19e-67]",
+        "certified_inverse_trace": "[679802365878.71399640710752750931467716814097955758547814320998746 +/- 1.64e-54]",
+        "certified_prefix_eigenvalue_lower_bound_from_trace": "[1.4710157689836778588707586758936816561017671722187442384424994904e-12 +/- 2.21e-77]"
+      },
+      "gates": {
+        "positive_prefix_by_exact_injectivity": true,
+        "inverse_trace_below_C_N": true,
+        "certified_solve_keeps_balls": true,
+        "full_discarded_tail_bounded": true,
+        "tail_below_prefix": true,
+        "large_comparator_not_assembled": true
+      }
+    }
+  ]
+}

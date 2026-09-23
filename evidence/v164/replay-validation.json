@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "precision_bits": [
+    256,
+    384
+  ],
+  "precision_enclosure_matches": 27,
+  "source_sha256": "6872259cfe2269e7c5b32d210b32ccd2f65ff5ede34837b22ba1b3bb5dc358af",
+  "prefix_matrices_tested": [
+    16,
+    64,
+    256
+  ],
+  "complete_scalar_tail_bounds_tested": [
+    16,
+    64,
+    256
+  ],
+  "enormous_comparators_assembled": false,
+  "cutoff_replay": "not applicable: all small prefix cells evaluated; infinite tail bounded by a complete analytic inequality",
+  "minimum_serialized_accuracy_bits": 205,
+  "cofinal_error_decay": false,
+  "independent_review": false
+}

@@ -556,3 +556,13 @@ these two kinds of closure. The related
 kernel hypotheses. Our logarithmic target is unbounded at zero, so we do
 not apply that theorem directly to it: the relevant fixed-order criterion
 is the separately justified bounded-integration argument in NS61.
+
+## v1.64: ordinary finite-frame conditioning
+
+The coefficient estimate uses elementary weighted Cauchy–Schwarz and divisor
+inversion on a finite sample prefix. No priority claim is made for these
+standard mechanisms or for polynomial conditioning of related NB systems.
+The statement is specific to the displayed q=2 physical-coordinate Gram.
+The explicit large-cutoff construction is an upper bound on sufficient work,
+not a necessary cutoff, complexity lower bound, or practical implementation.
+It does not resolve the original cofinal approximation input.

@@ -209,6 +209,17 @@ comparator inverse; no fast implementation, smooth-model comparison, or
 cofinal relative contraction follows. Complete Arb replays, exact Maxima
 checks and local self-review only. The original Weil floor, G2/RH stay open.
 
+Version 1.64 (NS-81) uses finite reciprocal samples to bound coefficient
+norm and proves ordinary integer Gram condition O(N^4 log^2(2N)). This is
+not a signed Weil floor or an approximation-error estimate. A complete
+sample-tail operator bound makes the arithmetic comparator finite at
+M=2^16(N+1)^6, with projected condition ratio <=42. Use total atom count
+2N for an N-to-2N block. The sufficient cutoff exceeds 10^21 for old size
+256; no such matrix was assembled and no practical solver is claimed.
+Small-prefix inverse-trace and scalar tail certificates replay at 256/384
+bits, with exact Maxima checks and local self-review. The original cofinal
+arithmetic decay, Weil floor, G2 and RH remain open.
+
 ## 2. Claim discipline — the non-negotiable part
 
 Every statement must be filed as exactly one of:

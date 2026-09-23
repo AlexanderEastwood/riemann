@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.63**.
+Alexander Eastwood's complete working manuscript, **v1.64**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -39,6 +39,27 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |
+
+## v1.64: ordinary conditioning and an effective finite comparator (NS-81)
+
+Exact coefficient recovery from a finite reciprocal-sample prefix gives an
+unconditional ordinary Gram condition bound **O(N^4 log²(2N))**. This rules
+out exponential growth of the spectral condition number in these physical
+atom coordinates; it says nothing about the size of the approximation error
+or a signed Weil spectral floor.
+
+The full arithmetic comparator now has an explicitly sufficient finite
+cutoff, **M = 2^16 (N+1)^6**, with a complete tail bound and projected
+condition ratio at most 42. For an old-size-256 block, use total atom count
+512: the sufficient cutoff exceeds **10^21 cells**. That enormous comparator
+was not assembled. The result establishes effectiveness, not a fast solver
+or a necessary lower bound on computational cost.
+
+Small-prefix inverse certificates and scalar tail bounds pass at 256/384
+bits. The missing cofinal signed arithmetic decay, G2 and RH remain open.
+
+[Readable update](evidence/v164/research-update-2026-09-23-v1.html) ·
+[Proof and finite checks](evidence/v164/).
 
 ## v1.63: complete arithmetic sampling and a uniform block guarantee (NS-78–80)
 
@@ -341,6 +362,7 @@ graph LR
   nbarithmeticsampling["Complete reciprocal-knot norm and exact divisor inversion<br/><small>prop:ns78-sampling; eq:ns78-sample-inverse</small><br/><small>&#128193; evidence/v163/ns78</small>"]
   nbbalancedfeedback["Tail-balanced divisor feedback control<br/><small>prop:ns79-balance</small><br/><small>&#128193; evidence/v163/ns79</small>"]
   nbarithmeticpreconditioner["Uniform efficiency using the full arithmetic sampling Gram<br/><small>prop:ns80-uniform-efficiency</small><br/><small>&#128193; evidence/v163/ns80</small>"]
+  nbfiniteconditioning["Polynomial ordinary Gram conditioning and an effective finite comparator<br/><small>prop:ns81-conditioning; prop:ns81-finite-comparator</small><br/><small>&#128193; evidence/v164/ns81</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -428,6 +450,7 @@ graph LR
   nbdivisorfeedback --> nbarithmeticsampling
   nbarithmeticsampling --> nbbalancedfeedback
   nbarithmeticsampling --> nbarithmeticpreconditioner
+  nbarithmeticpreconditioner --> nbfiniteconditioning
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -517,9 +540,10 @@ graph LR
   click nbarithmeticsampling "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns78/" "evidence: evidence/v163/ns78" _blank
   click nbbalancedfeedback "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns79/" "evidence: evidence/v163/ns79" _blank
   click nbarithmeticpreconditioner "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns80/" "evidence: evidence/v163/ns80" _blank
+  click nbfiniteconditioning "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v164/ns81/" "evidence: evidence/v164/ns81" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;

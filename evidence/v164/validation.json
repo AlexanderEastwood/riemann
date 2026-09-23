@@ -1,0 +1,101 @@
+{
+  "classification": "local integration validation; no independent review or RH proof",
+  "version": "v1.64",
+  "date": "2026-09-23",
+  "tasks": [
+    "NS-81"
+  ],
+  "publication_base_commit": "c1409f4433fc4e0f56fc4de79e094be0274b74e4",
+  "manuscript": {
+    "pages": 352,
+    "warning_counts": {
+      "undefined_or_duplicate_references": 0,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0,
+      "latex_warnings": 0,
+      "pdftex_warnings": 0,
+      "duplicate_pdf_destinations": 0
+    },
+    "proof_fragment_integrated_verbatim_once": true,
+    "proof_sha256": "bdedfeca6b9c897955d2c177e034b27d24f7dab1a651f55229b7d0aad7a0248c",
+    "main_tex_sha256": "8a966fdf57d03447db5924dc7c513151c419c7af8ea6d7d7fbe4bd9951de772f",
+    "pdf_sha256": "2e47774b88df21873e25f8e7bbe465c00077f48b475036b04699f33ec1abd279",
+    "new_section_visual_review_pages": [
+      11,
+      325,
+      326,
+      327,
+      328,
+      329
+    ]
+  },
+  "maxima_exact_checks": {
+    "NS-81": 18
+  },
+  "maxima_total": 18,
+  "arb_precisions_bits": [
+    256,
+    384
+  ],
+  "replays": {
+    "status": "PASS",
+    "precision_bits": [
+      256,
+      384
+    ],
+    "precision_enclosure_matches": 27,
+    "source_sha256": "6872259cfe2269e7c5b32d210b32ccd2f65ff5ede34837b22ba1b3bb5dc358af",
+    "prefix_matrices_tested": [
+      16,
+      64,
+      256
+    ],
+    "complete_scalar_tail_bounds_tested": [
+      16,
+      64,
+      256
+    ],
+    "enormous_comparators_assembled": false,
+    "cutoff_replay": "not applicable: all small prefix cells evaluated; infinite tail bounded by a complete analytic inequality",
+    "minimum_serialized_accuracy_bits": 205,
+    "cofinal_error_decay": false,
+    "independent_review": false
+  },
+  "python_diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "scope": "all new v164 scientific Python"
+  },
+  "source_sha256": {
+    "ns81/certify_conditioning.py": "6872259cfe2269e7c5b32d210b32ccd2f65ff5ede34837b22ba1b3bb5dc358af",
+    "ns81/exact-checks.mac": "f055b1cecf06ac2ae5069249f1d3a322b7164894d1a1ada94e80834176913e61",
+    "ns81/proof.tex": "bdedfeca6b9c897955d2c177e034b27d24f7dab1a651f55229b7d0aad7a0248c",
+    "proof.tex": "bdedfeca6b9c897955d2c177e034b27d24f7dab1a651f55229b7d0aad7a0248c",
+    "verify_replays.py": "bd970a35b42a72ad63c311ca344bae06be7876103be168e9cd214980f8639a67"
+  },
+  "independent_review": false,
+  "open_inputs": [
+    "Cofinal decay of the complete signed arithmetic sample sum",
+    "Available block gain relative to the entire residual energy",
+    "Practical application of the arithmetic sampling comparator",
+    "Original arithmetic Weil floor, API, G2 and RH"
+  ],
+  "limits": [
+    "The conditioning bound concerns ordinary positive integer Grams, not signed Weil forms",
+    "Only the small finite-prefix matrices at N16,64,256 were assembled",
+    "The discarded infinite sample tail is bounded analytically, not truncated silently",
+    "The enormous finite comparator was not assembled",
+    "The sufficient cutoff uses the total atom count, including both old and new atoms",
+    "The displayed cutoff is sufficient, not necessary or a complexity lower bound",
+    "The stronger inverse-trace check is only asserted at the tested finite sizes",
+    "Polynomial conditioning does not give cofinal approximation-error decay"
+  ],
+  "publication_authorization": "User requested PRs and subsequently explicitly allowed validated merges and version tags.",
+  "html_checks": {
+    "balanced_nesting": true,
+    "local_links_resolve": true,
+    "inline_styles_only": true,
+    "browser_visual_review": false,
+    "preview": "Codex file preview; prior local browser restriction respected"
+  }
+}
