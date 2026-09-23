@@ -1049,6 +1049,22 @@
       "prop": "eq:ns83-gain-budget",
       "evidence": "evidence/v166/ns83",
       "note": "Cumulative relative gains <=log K+O(1). Individual gains may fluctuate; capture of available block gain is not excluded."
+    },
+    {
+      "id": "nboptimizedpotential",
+      "title": "Optimized arithmetic potential and complete observation tails",
+      "status": "proved",
+      "parent": "nbarithmeticsampling",
+      "evidence": "evidence/ns86_optimized_arithmetic",
+      "note": "NS86: exact joint-cutoff Muntz quadrature represents actual correlations; P_N(1)=E_N. Complete observation-tail bound and shared-tail cancellation are proved. Classical zero-evaluation obstruction remains; no cofinal lower bound or injectivity theorem."
+    },
+    {
+      "id": "nbconvolutioncontrol",
+      "title": "Divisor-convolution correction from N to N squared: finite control",
+      "status": "proved",
+      "parent": "nboptimizedpotential",
+      "evidence": "evidence/ns86_optimized_arithmetic",
+      "note": "NS86: raw defect-convolution square holds through N^2, retaining signed normalization sums and omitted forcing. Unit step raises error at N=4,16 and lowers it at N=8; damped old-space-refitted direction captures 27.31% of available gain at N=16. Modified coefficients generally lose the exact defect-square identity. No eventual failure or general route closure."
     }
   ]
 }

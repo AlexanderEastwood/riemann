@@ -1,0 +1,16 @@
+{
+  "classification": "finite certificates and exact identities; no cofinal arithmetic lower estimate",
+  "status": "PASS",
+  "scalar_precision_matches": 156,
+  "coefficient_precision_matches": 728,
+  "potential_precision_matches": 144,
+  "same_problem_cutoff_matches": 58,
+  "independent_physical_norm_comparisons": 14,
+  "independent_quadrature_pairing_comparisons": 56,
+  "exact_Maxima_checks": 82,
+  "N16_unit_error_ratio": "[29.54955797442034051394724799702150940636419 +/- 4.90e-42]",
+  "N16_projected_fraction_of_available_gain": "[0.273071524965248444749296677727657659720 +/- 3.05e-40]",
+  "N16_new_tail_over_old_error": "[21.9 +/- 0.0276]",
+  "review": "local author review; numerical methods independently cross-checked",
+  "RH_proved": false
+}

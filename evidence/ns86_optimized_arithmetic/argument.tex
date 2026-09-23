@@ -1,0 +1,219 @@
+\section*{NS-86: optimized arithmetic potentials and a convolution correction}
+
+\paragraph{Scope and prior art.}
+This is an exact optimality reformulation, a complete tail estimate, and a
+finite test of one nonlinear coefficient rule. No cofinal error contraction
+is obtained. The integral-minus-lattice-sum operator is the classical
+M\"untz operator, with the opposite sign and a joint cutoff required by
+our logarithmic tail; see B\'aez-Duarte, arXiv:math/0505453, Sections 1--2.
+The underlying approximation criterion and the zero-evaluation obstruction
+are prior art. We do not claim that renaming either supplies new arithmetic
+cancellation. The manuscript version remains v1.66.
+
+\subsection*{1. Complete optimality in potential coordinates}
+Keep the fixed $q=2$ space and the notation of NS-78:
+\[
+ R=\tau-\sum_{j\leq N}c_j\sigma_j,\quad r(t)=R(1/t),\quad
+ \eta=\sum_{j\leq N}c_j/j,\quad A(z)=\int_0^z\{v\}\,dv/v.
+\]
+Thus $\sigma_j(1/t)=A(t/j)$, $\tau(1/t)=\log_+t$, and
+$\|R\|^2=\int_0^\infty|r(t)|^2dt/t^2$.
+Set
+\[
+ P(t)=\int_t^\infty \log(u/t)r(u)\,du/u^2,
+ \qquad J(t)=\int_t^\infty r(u)\,du/u^2.
+\]
+Both integrals converge, $tP'(t)=-J(t)$, and $(tP'(t))'=r(t)/t^2$.
+In particular,
+\[
+ |P(t)|\leq\sqrt{2\|R\|^2/t},\qquad
+ |P'(t)|\leq\|R\|/t^{3/2}.
+\]
+For the actual finite residual, $r(t)=-\eta t$ below 1 and
+$r(t)=u_0\log t+v_0+O(D/t)$ above $N$, where
+\[
+ u_0=1-\tfrac12\sum c_j,\quad
+ v_0=\tfrac12\sum c_j\log(j/(2\pi)),\quad D=\tfrac16\sum j|c_j|.
+\]
+Consequently $P(t)=O(1+|\log t|^2)$ near zero and
+$P(t)=(u_0\log t+2u_0+v_0)/t+O(D/(4t^2))$ at infinity.
+No separate integral of $P$ over the full half-line is assumed finite.
+
+\paragraph{Exact identity.}
+For an integer $n\geq1$, define the joint-cutoff discrepancy
+\[
+ Q_{n,K}=\frac1n\int_0^{Kn}P(t)\,dt-\sum_{k=1}^K P(kn).
+\]
+Then
+\begin{equation}
+ \langle R,\sigma_n\rangle=\lim_{K\to\infty}Q_{n,K}.
+ \tag{86.1}
+\end{equation}
+Indeed, distributionally,
+$(t(A(t/n))')'=1/n-\sum_{k\geq1}\delta_{kn}$.
+Twice integrating by parts gives (86.1). At zero both boundary products
+are $O(t(1+|\log t|^2))$; at infinity they are
+$O((1+\log^2t)/t)$. All interior joins are accounted for by the displayed
+Dirac masses. Thus no endpoint or lattice term is discarded.
+
+For the minimizing residual $R_N$, the exact normal equations become
+$\lim_K Q_{n,K}=0$ for $n\leq N$. Moreover
+\begin{equation}
+ P_N(1)=\langle R_N,\tau\rangle=E_N.
+ \tag{86.2}
+\end{equation}
+The second equality uses orthogonality to the fitted finite span. For a
+nonoptimal residual it must not be substituted for $\|R\|^2$.
+
+\paragraph{A complete observation-tail estimate.}
+Write $T=Kn$ and $E_{>T}=\int_T^\infty|r(u)|^2du/u^2$. Cellwise
+integration followed by absolutely convergent Fubini gives
+\begin{equation}
+ \langle R,\sigma_n\rangle-Q_{n,K}
+ =-\int_T^\infty\{t/n\}P'(t)\,dt
+ =\int_T^\infty\frac{r(u)}{u^2}
+                 \bigl(A(u/n)-A(K)\bigr)\,du.
+ \tag{86.3}
+\end{equation}
+Since $0\leq A(u/n)-A(K)\leq\log(u/T)$, Cauchy--Schwarz implies
+\[
+ |\langle R,\sigma_n\rangle-Q_{n,K}|
+ \leq\sqrt{2E_{>T}/T}.
+\]
+For $K\geq1$, the complete NS-78 bound
+$|A(v)-\tfrac12\log(2\pi v)|\leq1/(6v)$ improves this to
+\begin{equation}
+ |\langle R,\sigma_n\rangle-Q_{n,K}|
+ \leq\sqrt{E_{>T}/T}\left(\frac1{\sqrt2}+\frac{n}{3T}\right).
+ \tag{86.4}
+\end{equation}
+To check the constant, the logarithmic main term has squared norm
+$1/(2T)$ in $L^2((T,\infty),du/u^2)$; the difference of its two
+Stirling remainders has magnitude at most $1/(3K)$, hence norm at most
+$1/(3K\sqrt T)$. Apply Minkowski, then Cauchy--Schwarz. This estimate
+holds for each finite residual, with no bound on its coefficient mass.
+It bounds an observation's tail, not that observation from below.
+
+\paragraph{Tail cancellation before interval arithmetic.}
+Let $P_T(t)=\int_t^T\log(u/t)r(u)du/u^2$. A useful exact finite formula is
+\begin{equation}
+ Q_{n,K}=\frac1n\int_0^T r(u)\,du/u
+ -\sum_{k=1}^K P_T(kn)
+ +\bigl[K(1-\log K)+\log K!\bigr]J(T).
+ \tag{86.5}
+\end{equation}
+In its derivation the shared tail log-moment cancels identically; bounding
+its two occurrences separately introduces unnecessary uncertainty.
+
+For $T\geq N$, the remaining tail in (86.3) can also be evaluated with
+the logarithmic model. Put $B=u_0\log n+2u_0+v_0$ and
+$L_K=\sum_{k\leq K}(\log k)/k$. Its main value is
+\[
+ \frac1n\left[u_0\left(-\gamma_1-\tfrac12\log^2K+L_K\right)
+       +B\left(H_K-\gamma-\log K\right)\right].
+\]
+Here $\gamma_1=\lim_K(L_K-\tfrac12\log^2K)$ is the first Stieltjes
+constant. The error is at most $D/(4T^2)$: the derivative of the
+potential remainder has magnitude at most $D/(2t^3)$, which is integrated
+against $\{t/n\}\leq1$. This proof controls the entire tail.
+
+\paragraph{Why the identity itself is not injectivity.}
+For $1/2<\Re s<1$, the classical bounded Mellin evaluator in the physical
+tail space is represented bilinearly by
+\[
+ r_s(t)=\begin{cases}t/(1-s),&t<1,\\t^{1-s},&t\geq1.\end{cases}
+\]
+Its potential is $t^{-s}/s^2$ above 1 and, with $L=\log(1/t)$,
+$L^2/(2(1-s))+L/s+1/s^2$ below 1. The integral of this lower patch
+equals the integral of $t^{-s}/s^2$ over $(0,1)$. Therefore
+\[
+ \lim_K Q_{n,K}=-\frac{\zeta(s)}{s^2n^s},\qquad P_s(1)=1/s^2.
+\]
+A hypothetical off-critical zero supplies a nonzero profile invisible to
+all these observations. No such zero is asserted. This is the familiar
+zero-evaluation obstruction in the new coordinates, not a new exclusion.
+Also, NS-74's unitary multiplier commutes with dilations; covariance alone
+does not distinguish its altered family from the original arithmetic one.
+
+\subsection*{2. A specific arithmetic correction from $N$ to $N^2$}
+Write $\mathbf1(n)=1$ and $e(n)=\mathbf1_{n=1}$ for arithmetic sequences,
+and let $*$ denote Dirichlet convolution. Extend $c$ by zero after $N$.
+The original divisor defect is $\delta=e+\mathbf1*c$. For $M=N^2$ define
+\begin{equation}
+ q_n=2c_n+\sum_{ij\mid n}c_i c_j\quad(1\leq n\leq M),\qquad
+ q_n=0\quad(n>M),
+ \tag{86.6}
+\end{equation}
+where $i,j\leq N$. At every $m\leq M$ one has exactly
+\begin{equation}
+ (e+\mathbf1*q)(m)=(\delta*\delta)(m)
+                 =\sum_{d\mid m}\delta(d)\delta(m/d).
+ \tag{86.7}
+\end{equation}
+Expand $(e+\mathbf1*c)^2$ in the associative convolution algebra.
+Truncating $q$ cannot affect divisors of $m\leq M$, which proves the claim.
+This is a convolution square, not a pointwise square, an energy square,
+or a positivity statement. Beyond $M$ its omitted forcing is
+\[
+ (\delta*\delta)(m)-(e+\mathbf1*q)(m)
+ =\sum_{\substack{d\mid m\\d>M}}(\mathbf1*c*c)(d).
+\]
+For the sharp canonical input $c_n=-\mu(n)$, $n\leq N$, (86.7) simply
+reproduces the sharp canonical coefficients through $N^2$: each factorization
+of $m\leq N^2$ has a factor at most $N$. It is not a new cure for the known
+sharp-sequence obstruction, which does not itself rule out selected subsequences.
+
+\paragraph{The three signed normalization sums are retained.}
+Set $K_{ij}=\lfloor M/(ij)\rfloor$. Rearranging finite sums gives
+\begin{align*}
+ \eta_q&=2\eta_c+\sum_{i,j\leq N}\frac{c_ic_j}{ij}H_{K_{ij}},\\
+ \sum_{n\leq M}q_n&=2\sum c_n+\sum_{i,j\leq N}c_ic_jK_{ij},\\
+ \sum_{n\leq M}q_n\log n
+ &=2\sum c_n\log n+
+   \sum_{i,j\leq N}c_ic_j\bigl[K_{ij}\log(ij)+\log K_{ij}!\bigr].
+\end{align*}
+These give the exterior energy $\eta_q^2$ and the complete logarithmic
+tail coefficients of the new residual. Orthogonality of the old residual
+does not assert that these nonlinear sums are small.
+
+\paragraph{Complete finite test, including old-space refitting.}
+Let $V=\sum_{n\leq M}(q_n-c_n)\sigma_n$, $h=\langle R_N,V\rangle$,
+$B=\|V\|^2$, and $B_\perp=\|(I-\Pi_N)V\|^2$. The unit-step error is
+$E_N-2h+B$. The best real scalar along $V$ gains $h^2/B$.
+Refitting all old coefficients and optimizing the scalar gains
+$h^2/B_\perp$. These use the true complete Gram, not the elementary model.
+After damping or old-space refitting, the modified coefficient vector
+generally no longer satisfies the exact convolution-square identity (86.7).
+
+\begin{center}
+\begin{tabular}{rrrrr}
+$N$&$M$&unit error$/E_N$&best raw gain/full gain&best projected gain/full gain\\
+4&16&39.60315&0.16650&0.84935\\
+8&64&0.47795&0.84502&0.84937\\
+16&256&29.54956&0.10134&0.27307
+\end{tabular}
+\end{center}
+The decimals are rounded outward-enclosed finite results, not predictions
+for larger sizes. The N=16 unit step raises the error from about
+$3.19477\cdot10^{-5}$ to $9.44040\cdot10^{-4}$. Its new energy beyond
+$t=256$ alone exceeds 21 times the entire old error; its interior energy
+also increases. Thus the failure is not solely an exterior-normalization
+defect. A damped, old-space-refitted direction gives descent but captures
+only 27.31 percent of available gain in this case.
+
+The same coefficient rule is tested on the NS-74 altered loads with
+$\beta=1/2+10^{-6}$. Its coefficient convolution identity remains algebraically
+true, but (86.7) is not the physical divisor identity of the altered atoms.
+That family still has its proved positive error floor. It must not be used
+as evidence of a floor for the original family.
+
+\subsection*{3. Outcome and stop condition}
+The exact potential formulas and their complete tail bound are retained.
+The proposed nonlinear correction fails the finite unit-step test at two
+of three sizes; neither its eventual behavior nor all arithmetic correction
+rules are ruled out. Optimizing a scalar does not supply a cofinal gain.
+We have no new bound proving $E_{N^2}\leq\theta E_N$ for all sufficiently
+large $N$ and fixed $\theta<1$. Such a bound would imply convergence;
+NS-83 requires $\theta\geq1/2$, and still slower convergence could suffice.
+The missing step remains a lower estimate on actual signed arithmetic
+observations with their true cost. RH, G2, and the uniform Weil floor stay open.

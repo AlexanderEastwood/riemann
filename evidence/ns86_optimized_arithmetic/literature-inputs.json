@@ -1,0 +1,11 @@
+{
+  "classification": "primary literature for operator provenance; no RH-conditional input imported",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/math/0505453v1",
+      "author": "Luis Baez-Duarte",
+      "title": "A general strong Nyman-Beurling criterion for the Riemann Hypothesis",
+      "scope": "Sections 1-2 define the classical Muntz integral/sum operator. Our logarithmic potential requires the joint-cutoff argument proved in argument.tex, rather than importing integrability hypotheses."
+    }
+  ]
+}

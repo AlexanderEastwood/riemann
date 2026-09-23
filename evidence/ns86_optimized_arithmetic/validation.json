@@ -1,0 +1,26 @@
+{
+  "classification": "unchanged manuscript build and new finite evidence validation",
+  "manuscript_version": "v1.66",
+  "new_version_tag": false,
+  "manuscript_pages": 358,
+  "build_exit_code": 0,
+  "warnings": {
+    "undefined_references": 0,
+    "duplicate_references": 0,
+    "latex_warnings": 0,
+    "pdf_warnings": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0
+  },
+  "inherited_manifests": {
+    "v159": "69 files match",
+    "v161": "32 files match",
+    "v163": "26 files match",
+    "v166": "16 files match"
+  },
+  "python_diagnostics": "0 errors, 0 warnings",
+  "exact_Maxima_checks": 82,
+  "replay": "replay-validation.json",
+  "independent_review": false,
+  "RH_proved": false
+}

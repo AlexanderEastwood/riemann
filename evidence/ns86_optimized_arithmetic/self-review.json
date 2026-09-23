@@ -1,0 +1,26 @@
+{
+  "classification": "local author proof and code review; no independent human review",
+  "open_major_findings": 0,
+  "checked": [
+    "Distributional jump sign and both endpoint products in the potential identity.",
+    "The limiting quadrature is a joint cutoff; divergent pieces never separated.",
+    "Both Cauchy-Schwarz and Stirling-based bounds keep complete observation tails.",
+    "P(1)=energy is used only for actual optimized residuals.",
+    "Complex zero profiles are bilinear evaluator controls, not asserted off-line zeros.",
+    "Convolution square is not pointwise square; truncation forcing after N^2 retained.",
+    "Damping/refitting changes the raw defect identity; projected energy uses the true old-space Schur correction.",
+    "Unit-step failure is finite only, not eventual failure.",
+    "NS74 altered coefficient algebra is not called its physical divisor identity.",
+    "All original/new norms and correlations retain ball enclosures and complete tails."
+  ],
+  "development_corrections": [
+    {
+      "finding": "The first draft of the quadrature main tail had the Stieltjes constant sign reversed.",
+      "resolution": "Corrected to -gamma1; independent physical/Gram pairing checks and cutoff replays pass."
+    },
+    {
+      "finding": "Separately bounding two occurrences of the same tail moment inflated the finite quadrature enclosure.",
+      "resolution": "Cancel the shared log-moment algebraically before interval evaluation; retain the remaining bounded tail moment."
+    }
+  ]
+}
