@@ -168,6 +168,8 @@ Coordination, 2026-09-22 (Astra-3): Alex explicitly assigned NS-43/44 to this au
 | NS-93 | Test a concrete averaged arithmetic estimate for the selected cost and gain, retaining all signed correlations and projection losses | Codex | done (signed estimate remains open; manuscript unchanged) | Bounded diagonal; complete absolute-product cost grows at least linearly for dyadic N>=2048, so averaging does not repair that bound. Signed averaged cost and actual numerator remain unproved. Two-precision finite decomposition and eight Maxima checks; evidence/ns93_averaged_cost. |
 | NS-94 | Check the tangent-circle inversion and exterior similarity-point proposal in ordinary coordinates and Maxima | Codex | done (exact geometric check; no RH inference) | Read the linked Zhao handout, which does not define exterior similarity. Separate and successive inversions checked; equal counts and infinity persist in a symmetric off-line control. Nonnegative power-product statistic still requires an arithmetic vanishing proof. 23 Maxima checks; evidence/ns94_circle_inversion. |
 
+| NS-95 | Test the N-to-N^2 product-index grouping against the complete joint arithmetic gain, retaining old-space projection, missing indices and complete costs | Codex | claimed | Derive and test the full signed decomposition; distinguish products of old indices from NS86 divisor-multiple feedback. Prove an actual-residual lower estimate or record the exact missing term without extrapolating finite efficiency. |
+
 ## Historical continuation targets after NS-66 (tested in NS-67–71)
 
 1. **Canonical boundary/integral cancellation.** Keep one Mellin integration
