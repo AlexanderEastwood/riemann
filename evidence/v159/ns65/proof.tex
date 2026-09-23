@@ -1,0 +1,117 @@
+\section{Ordinary averaging does not remove the canonical obstruction (NS-65)}
+\label{sec:ns65-cesaro}
+
+The preceding results leave different coefficient rules open. One simple
+repair of the sharp canonical rule can be tested exactly: ordinary
+Ces\`aro averaging over its index. The conclusion below concerns a fixed
+number of these averages. Logarithmic tapers, a growing number of averages,
+and optimized coefficients are outside its scope.
+
+For a sequence $(f_N)$ of vectors or scalars define
+\[
+ (Cf)_N=\frac1N\sum_{n=1}^Nf_n,\qquad
+ B_N^{[q]}=(C^qB)_N,\qquad
+ H_N^{[q]}=(C^q a)_N,\quad a_n=n\eta_n,
+\]
+where $B_n$ and $\eta_n$ are the canonical objects of NS-62 and
+$q\geq0$ is a fixed integer. The averaging weights are nonnegative,
+sum to one, and only involve indices $n\leq N$.
+
+\begin{proposition}[A fixed number of Ces\`aro averages leaves a critical-zero pole]
+\label{prop:ns65-cesaro-obstruction}
+For every fixed integer $q\geq0$ and every sequence of nonnegative
+integers $r_N$,
+\[
+ \norm{J^{r_N}(\chi+B_N^{[q]})}_H\not\longrightarrow0
+ \quad(N\to\infty\text{ through all integers}).
+\]
+More precisely, for every $N$ and every $r\geq0$,
+\begin{equation}
+ \norm{J^r(\chi+B_N^{[q]})}_H
+ \geq\frac{|H_N^{[q]}-k_{N,r}|}{\sqrt N}
+ \geq\frac{|H_N^{[q]}-2|}{\sqrt N}
+             -\frac{4\pi^2}{3^{r+2}N^{5/2}},
+ \label{eq:ns65-averaged-witness}
+\end{equation}
+and $H_N^{[q]}\ne o(\sqrt N)$. This is full-sequence nonconvergence;
+no selected-subsequence exclusion or assertion about signed optimal
+approximation follows.
+\end{proposition}
+\begin{proof}
+For $0<x<1/N$, every index $n\leq N$ obeys the same small-cell
+identity from NS-62. Linearity and normalization of the weights give
+\[
+ \mathcal V(\chi+B_N^{[q]})(x)=k(x)-H_N^{[q]}.
+\]
+Apply the same unit Laguerre test $\psi_{N,r}$ and its complete
+adjoint identity. This proves~\eqref{eq:ns65-averaged-witness},
+including its remainder uniform in $r$.
+
+It remains to prove the scalar obstruction. Put
+\[
+ \eta(x)=\int_1^x\frac{M(t)}{t^2}\,dt,\qquad
+ A_0(x)=x\eta(x),\qquad
+ A_{q+1}(x)=\frac1x\int_1^x A_q(u)\,du.
+\]
+For $\Re s>1$, absolute convergence and Fubini give
+\begin{equation}
+ \int_1^\infty A_q(x)x^{-s-1}\,dx
+   =\frac1{(s+1)^q(s-1)s\zeta(s)}.
+ \label{eq:ns65-cesaro-mellin}
+\end{equation}
+For $q=0$ this is the Mellin identity for $\eta$ with its variable
+shifted by one. Each continuous averaging contributes exactly the
+factor $(s+1)^{-1}$; there is no discarded endpoint term.
+
+We now connect this continuous identity to the discrete averages.
+Directly $A_0(x)=O(x\log(2x))$ and, almost everywhere,
+\[
+ A_0'(x)=\eta(x)+M(x)/x
+         =\sum_{n\leq x}\mu(n)/n=O(\log(2x)).
+\]
+Inductively $A_q(x)=O_q(x\log(2x))$ and
+$A_{q+1}'(x)=(A_q(x)-A_{q+1}(x))/x=O_q(\log(2x))$.
+The functions are locally absolutely continuous. Comparing each
+unit-cell integral with its endpoint value therefore gives
+\[
+ \frac1N\sum_{n\leq N}A_q(n)-\frac1N\int_1^N A_q(x)\,dx
+       =O_q(\log(2N)).
+\]
+Since $A_0(N)=a_N$, induction yields
+\begin{equation}
+ H_N^{[q]}=A_q(N)+O_q(\log(2N)).
+ \label{eq:ns65-discrete-continuous}
+\end{equation}
+Thus $H_N^{[q]}=o(\sqrt N)$ would imply $A_q(x)=o(\sqrt x)$
+also between integers, by the displayed derivative bounds.
+
+Under that hypothetical little-$o$ estimate the Mellin integral in
+\eqref{eq:ns65-cesaro-mellin} is analytic for $\Re s>1/2$.
+At a known critical-line zero $\rho=1/2+i\gamma_*$, its usual
+Abelian boundary estimate gives
+\[
+ \lim_{\sigma\downarrow1/2}(\sigma-1/2)
+       \int_1^\infty A_q(x)x^{-\sigma-i\gamma_*-1}\,dx=0.
+\]
+For example, split the integral at a fixed large $X$, use
+$|A_q(x)|\leq\varepsilon\sqrt x$ on the tail, then let
+$\sigma\downarrow1/2$ and $\varepsilon\downarrow0$.
+But the meromorphic continuation on the right side of
+\eqref{eq:ns65-cesaro-mellin} has a genuine pole at $\rho$:
+none of $\rho+1$, $\rho-1$ or $\rho$ is zero, and its numerator
+is one. A pole of any positive order contradicts the boundary limit.
+Therefore $\limsup_N|H_N^{[q]}|/\sqrt N>0$.
+Together with~\eqref{eq:ns65-averaged-witness}, whose remainder tends
+to zero uniformly in $r\geq0$, this proves the stated nonconvergence.
+\end{proof}
+
+\paragraph{Interpretation and stop condition.}
+Ordinary averaging attenuates a critical-zero contribution by
+$(\rho+1)^{-q}$, but a fixed $q$ cannot annihilate it. This is an
+analytic obstruction for the specified averaged sharp rule, not a
+numerical observation or a priority claim about summability methods.
+The general summability viewpoint is already part of
+\cite[Section 3]{BaezDuarteStrong}. The useful open task remains an
+independent estimate for the optimized signed residual, or a genuinely
+different coefficient rule with a complete norm bound. No such lower
+correlation or convergence estimate is supplied here.

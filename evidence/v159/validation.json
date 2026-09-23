@@ -1,19 +1,41 @@
 {
   "classification": "local integration validation, not a proof of RH or an independent review",
-  "version": "v1.59 local provisional draft",
+  "version": "v1.59 local provisional draft, revision 2",
   "session_date": "2026-09-22",
+  "tasks": [
+    "NS-60",
+    "NS-61",
+    "NS-62",
+    "NS-63",
+    "NS-64",
+    "NS-65",
+    "NS-66"
+  ],
   "prior_local_checkpoint_commit": "ec51bf8aa1236bcbe8f2f9680b8c2f37902992a8",
-  "latest_claim_commit": "ea7b72aee85ed3bc371b5003ca2161db0e4da6c2",
+  "latest_claim_commit": "1a821bf4cc05ea3f0f77503be1d28601b5464861",
   "manuscript": {
-    "pages": 312,
+    "pages": 317,
     "undefined_or_duplicate_references": 0,
     "overfull_boxes": 0,
     "underfull_boxes": 0,
     "duplicate_pdf_destinations": 0,
     "proof_fragment_integrated_verbatim": true,
-    "proof_sha256": "7ce6c58443710569ee346e70ff01dfe28fc91913e4aca8c7d06f3ac9df1f6e66",
-    "main_tex_sha256": "c439be6cd44c4eb89ed4e8da44a603f5c5794e3635c56c945f70070e94dddbcd",
-    "visual_review_pages": [
+    "proof_sha256": "1d815b76502078a91cd7b4c0ffac33e852e237f9782ee1cb79469977ef1aa831",
+    "main_tex_sha256": "1bb48ff117373baa36b93e8f02d1bcbaaf0d346d00f33a35c62dbf0894270b59",
+    "final_build_visual_review_pages": [
+      275,
+      276,
+      277,
+      284,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294
+    ],
+    "earlier_312_page_build_reviewed": [
       274,
       277,
       278,
@@ -32,9 +54,12 @@
     "ns60": 11,
     "ns61": 40,
     "ns62": 206,
-    "ns63": 55
+    "ns63": 55,
+    "ns64": 39,
+    "ns65": 39,
+    "ns66": 29
   },
-  "exact_maxima_total": 312,
+  "exact_maxima_total": 419,
   "smoothed_replay": {
     "status": "PASS",
     "physical_precision_enclosure_comparisons": 21,
@@ -75,11 +100,34 @@
     "full_analytic_tail_included": true,
     "source_sha256": "a599caf85318bbb199eeb9811edbc18acd09cb4f776c782aa058964705eb31ce"
   },
+  "cone_separator_replay": {
+    "status": "PASS",
+    "matching_ball_enclosures": 57,
+    "precision_bits": [
+      256,
+      384
+    ],
+    "minimum_accuracy_bits": [
+      224,
+      352
+    ],
+    "all_five_coefficient_signs_strict": true,
+    "local_equality_full_space_lower_bound_only": true,
+    "source_sha256": "4d4dbaf8951184e872815cab26ab2ffb61fcff62127fad143c02b75f71385feb"
+  },
   "python_diagnostics": {
     "errors": 0,
     "warnings": 0,
-    "tool": "pyright",
+    "tool": "pyright 1.1.411",
     "scope": "all new or modified scientific Python programs"
+  },
+  "runtime_provenance": "runtime-provenance.json",
+  "html_checks": {
+    "revision": 2,
+    "balanced_nesting": true,
+    "local_links_resolve": true,
+    "visual_browser_review": false,
+    "reason": "Local browser file navigation was previously blocked; use the allowed Codex file-preview fallback."
   },
   "source_sha256": {
     "ns60/exact-checks.mac": "815ba4f99794dfea2021f1e71459be0855dd63ddc9eb9f498f1c64dec6f07fc7",
@@ -91,11 +139,17 @@
     "ns63/certify_one_atom.py": "a599caf85318bbb199eeb9811edbc18acd09cb4f776c782aa058964705eb31ce",
     "ns63/check_q2_anchor.py": "2d432a564bbe55047129ec2e6f2e1b4385b99027da31f763d1ee4d5ae299d979",
     "ns63/exact-checks.mac": "a47457fd3ed8f93483db9b671bb96a70614f518d2f967c37265deb203a6c00b4",
-    "ns63/verify_replays.py": "48c02d0b64b320329afffc59fe611ab5ac2387415cf333950aa4340c897a7a03"
+    "ns63/verify_replays.py": "48c02d0b64b320329afffc59fe611ab5ac2387415cf333950aa4340c897a7a03",
+    "ns64/certify_separator.py": "4d4dbaf8951184e872815cab26ab2ffb61fcff62127fad143c02b75f71385feb",
+    "ns64/exact-checks.mac": "e193583b44c7bad61bd312a39fff8b82ae7fa145634ab41863c877684ab0c20f",
+    "ns64/verify_replays.py": "547302566f66e5137a20f0f9198207e0c60d1026ed674ad938ab3ad779994f58",
+    "ns65/exact-checks.mac": "95c3f6ea7964ac03a159598dd8056090cbfdafe1f25cf363843c94c13cb16835",
+    "ns66/exact-checks.mac": "fe47e4cb96c3f9a0ab309ade5d60f23f1d41df6af278839d2ad777e93127d8c0"
   },
   "independent_review": false,
   "open_inputs": [
     "A cofinal lower estimate for the optimized residual correlations in one fixed smoothing norm",
+    "A direct subpolynomial bound or bounded cofinal subsequence for the fixed-order canonical error norm",
     "Original arithmetic uniform Weil floor, API, G2 and RH"
   ],
   "publication": {
@@ -103,5 +157,6 @@
     "reason": "branch-specific user approval required; prior v1.58 push rejected by automatic approval review",
     "remote_mutations": false
   },
-  "manifest_scope": "only new evidence in evidence/v159, with no diagnostic truncations"
+  "manifest_scope": "only new evidence in evidence/v159, with no diagnostic truncations",
+  "raw_output_whitespace": "Raw Maxima and TeX logs retain original whitespace; source diffs pass whitespace checks."
 }

@@ -1,4 +1,4 @@
-# v1.59 local checkpoint — NS-60–63
+# v1.59 local checkpoint — NS-60–66
 
 RH, G2, the original Weil floor and the optimized NB correlation input remain open.
 This version is a local draft on top of the unpublished v1.58 checkpoint.
@@ -25,13 +25,18 @@ Version numbering and integration must be rechecked before publication.
   positive shapes of the atoms supplies this estimate.
 
 `proof.tex` is integrated verbatim in the live manuscript. Its components are
-in `ns60/`, `ns61/`, `ns62/` and `ns63/`. The diagnostic scans remain separately
+in `ns60/` through `ns66/`. The diagnostic scans remain separately
 labelled in `../diag_ns60_nb_corrections/` and `../diag_ns61_smoothed_nb/`.
 No diagnostic truncation enters a proof or an interval gate.
 
 ## Replay
 
-From the repository root, with the configured Python environment:
+From the repository root, with the configured Python environment. The
+certified Python dependency is pinned in `requirements-replay.txt`; optional
+diagnostic packages are separately pinned in `requirements-diagnostics.txt`.
+The exact tested runtime versions are in `runtime-provenance.json`.
+
+Replay commands:
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 python evidence/v159/ns61/certify_smoothed.py --bits 256 --output /tmp/smoothed-256.json
@@ -45,6 +50,12 @@ PYTHONDONTWRITEBYTECODE=1 python evidence/v159/ns63/certify_one_atom.py --bits 3
 PYTHONDONTWRITEBYTECODE=1 python evidence/v159/ns63/check_q2_anchor.py --bits 256 --output /tmp/anchor-256.json
 PYTHONDONTWRITEBYTECODE=1 python evidence/v159/ns63/check_q2_anchor.py --bits 384 --output /tmp/anchor-384.json
 PYTHONDONTWRITEBYTECODE=1 python evidence/v159/ns63/verify_replays.py
+PYTHONDONTWRITEBYTECODE=1 python evidence/v159/ns64/certify_separator.py --bits 256 --output /tmp/separator-256.json
+PYTHONDONTWRITEBYTECODE=1 python evidence/v159/ns64/certify_separator.py --bits 384 --output /tmp/separator-384.json
+PYTHONDONTWRITEBYTECODE=1 python evidence/v159/ns64/verify_replays.py
+maxima --very-quiet -b evidence/v159/ns66/exact-checks.mac
+maxima --very-quiet -b evidence/v159/ns65/exact-checks.mac
+maxima --very-quiet -b evidence/v159/ns64/exact-checks.mac
 maxima --very-quiet -b evidence/v159/ns60/exact-checks.mac
 maxima --very-quiet -b evidence/v159/ns61/exact-checks.mac
 maxima --very-quiet -b evidence/v159/ns62/exact-checks.mac
@@ -66,3 +77,16 @@ bundle of previous releases.
 The q=2 anchor compares the one-atom Mellin quadrature with the separate
 Gram/load formula at both precisions. Its r=1 tail is deliberately coarse;
 it checks normalization and is not used for the high-accuracy finite claims.
+
+NS-64 supplies the explicit dual separator for the nonnegative coefficient
+cone. Its complete six-function local Gram includes the entire x>1 tail
+exactly. The local cone distance is attained and is a lower bound for the
+full-space cone distance, with no equality claim for the latter. The current
+readable report and self-review are the v2 HTML files; v1 files preserve
+the earlier checkpoint before this quantitative witness.
+
+NS-65 excludes fixed ordinary Cesaro iterates of the canonical sharp rule.
+NS-66 supplies its weaker fixed-order norm-growth criterion: the exponent
+is exactly beta_star-1/2. A direct subpolynomial bound or bounded cofinal
+subsequence is a new stated open target, not a bound established here.
+The analytic implications are separate from their finite exact checks.

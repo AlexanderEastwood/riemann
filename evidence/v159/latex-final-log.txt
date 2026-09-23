@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  22 SEP 2026 21:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  22 SEP 2026 21:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -667,72 +667,72 @@ Package microtype Info: Loading generic protrusion settings for font family
 [7] [8] [9]
 (./fixed_space_prime_action_v1.toc [10
 
-])
+] [11])
 \tf@toc=\write4
 \openout4 = `fixed_space_prime_action_v1.toc'.
 
- [11] [12
+ [12] [13
 
-] [13] [14] [15] [16] [17]
-[18]
+] [14] [15] [16] [17]
+[18] [19]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 105
-3.
+7.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
-) [19]
+) [20]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-139.
+143.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [20{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [21] [
-22] [23] [24]
-[25] [26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39]
-[40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54]
-[55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
-[70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84]
-[85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99]
-[100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
-[112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123]
-[124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135]
-[136] [137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147]
-[148] [149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159]
-[160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171]
-[172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183]
-[184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195]
-[196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206] [207]
-[208] [209] [210] [211] [212] [213] [214] [215] [216] [217] [218] [219]
-[220] [221] [222] [223] [224] [225] [226] [227] [228] [229] [230] [231]
-[232] [233] [234] [235] [236] [237] [238] [239] [240] [241] [242] [243]
-[244] [245] [246] [247] [248] [249] [250] [251] [252] [253] [254] [255]
-[256] [257] [258] [259] [260] [261] [262] [263] [264] [265] [266] [267]
-[268] [269] [270] [271] [272] [273] [274] [275] [276] [277] [278] [279]
-[280] [281] [282] [283] [284] [285] [286] [287] [288] [289] [290] [291]
-[292] [293] [294] [295] [296] [297] [298] [299] [300] [301] [302] [303]
-[304]
-ignored: Infinite glue shrinkage found in box being split [305]
-ignored: Infinite glue shrink
-age found in box being split [306]
-ignored: Infinite glue shrinkage found in box being sp
-lit [307] [308] [309] [310] [311] [312]
-(./fixed_space_prime_action_v1.aux)
+) [21{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [22] [
+23] [24] [25]
+[26] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40]
+[41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55]
+[56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69] [70]
+[71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85]
+[86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100]
+[101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112]
+[113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124]
+[125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136]
+[137] [138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148]
+[149] [150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160]
+[161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172]
+[173] [174] [175] [176] [177] [178] [179] [180] [181] [182] [183] [184]
+[185] [186] [187] [188] [189] [190] [191] [192] [193] [194] [195] [196]
+[197] [198] [199] [200] [201] [202] [203] [204] [205] [206] [207] [208]
+[209] [210] [211] [212] [213] [214] [215] [216] [217] [218] [219] [220]
+[221] [222] [223] [224] [225] [226] [227] [228] [229] [230] [231] [232]
+[233] [234] [235] [236] [237] [238] [239] [240] [241] [242] [243] [244]
+[245] [246] [247] [248] [249] [250] [251] [252] [253] [254] [255] [256]
+[257] [258] [259] [260] [261] [262] [263] [264] [265] [266] [267] [268]
+[269] [270] [271] [272] [273] [274] [275] [276] [277] [278] [279] [280]
+[281] [282] [283] [284] [285] [286] [287] [288] [289] [290] [291] [292]
+[293] [294] [295] [296] [297] [298] [299] [300] [301] [302] [303] [304]
+[305] [306] [307] [308] [309]
+ignored: Infinite glue shrinkage found in box being split [
+310]
+ignored: Infinite glue shrinkage found in box being split [311]
+ignored: Infinite glue shrinka
+ge found in box being split [312] [313] [314] [315] [316]
+[317] (./fixed_space_prime_action_v1.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `fixed_space_prime_action_v1.out' has not cha
 nged.
-(rerunfilecheck)             Checksum: 937D64C3FAABB68A0C692A722D676920;14894.
+(rerunfilecheck)             Checksum: 4562819BE5DBCEA9B8035D9BEFAFF082;16152.
  ) 
 Here is how much of TeX's memory you used:
- 17419 strings out of 467525
- 271483 string characters out of 5418982
- 810736 words of memory out of 5000000
- 43984 multiletter control sequences out of 15000+600000
+ 17463 strings out of 467525
+ 272175 string characters out of 5418982
+ 814330 words of memory out of 5000000
+ 44004 multiletter control sequences out of 15000+600000
  757068 words of font info for 406 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,19n,79p,1024b,806s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -759,10 +759,10 @@ c/lm/lmtt10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts
 /symbols/msam10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
 rsfs/rsfs10.pfb>
-Output written on fixed_space_prime_action_v1.pdf (312 pages, 1982759 bytes).
+Output written on fixed_space_prime_action_v1.pdf (317 pages, 2006614 bytes).
 PDF statistics:
- 4590 PDF objects out of 5155 (max. 8388607)
- 4183 compressed objects within 42 object streams
- 1538 named destinations out of 1728 (max. 500000)
- 65897 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 4664 PDF objects out of 5155 (max. 8388607)
+ 4251 compressed objects within 43 object streams
+ 1562 named destinations out of 1728 (max. 500000)
+ 65921 words of extra memory for PDF output out of 74296 (max. 10000000)
 

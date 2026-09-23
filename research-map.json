@@ -804,12 +804,12 @@
     },
     {
       "id": "nbsharpintegrated",
-      "title": "Canonical sharp Mobius sequence after Mellin integration",
+      "title": "Strong convergence of the smoothed canonical sharp Mobius sequence",
       "status": "closed",
       "parent": "nbsmoothedbudget",
-      "prop": "prop:ns62-smoothed-obstruction; prop:ns62-positive-cone",
+      "prop": "prop:ns62-smoothed-obstruction; prop:ns62-positive-cone; prop:ns64-cone-distance; prop:ns65-cesaro-obstruction",
       "evidence": "evidence/v159",
-      "note": "Localized Laguerre witness preserves nonconvergence for the full integer sequence even if the number of integrations varies. Selected subsequences and optimal coefficients are outside the theorem. The nonnegative difference cone fails locally at its forced sixth coefficient -1/5.",
+      "note": "Localized Laguerre witness preserves nonconvergence for the full integer sequence even if the number of integrations varies. Selected subsequences and optimal coefficients are outside the theorem. The nonnegative difference cone fails locally at its forced sixth coefficient -1/5. An explicit dual separator certifies full-space cone distance >0.00228323, with local equality only. Fixed ordinary Cesaro iterates also fail; weaker norm-growth targets remain open.",
       "wall": {
         "input": "a surviving weighted-Mertens witness for this coefficient rule",
         "to": null,
@@ -828,6 +828,20 @@
         "input": "one-atom unconditional control refutes this convergence inference",
         "to": null,
         "src": "prop:ns63-one-atom"
+      }
+    },
+    {
+      "id": "nbcanonicalgrowth",
+      "title": "Canonical smoothed norm: subpolynomial growth",
+      "status": "blocked",
+      "parent": "nbsmoothedbudget",
+      "prop": "prop:ns66-growth-bounds; cor:ns66-growth-exponent",
+      "evidence": "evidence/v159",
+      "note": "Fixed-order exponent equals beta_star-1/2 by local zero evaluation and conditional Bochner-Abel bounds. Exact reformulation, with no improved arithmetic estimate. A bounded cofinal subsequence is sufficient but not asserted necessary.",
+      "wall": {
+        "input": "direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)",
+        "to": "rh",
+        "src": "cor:ns66-growth-exponent"
       }
     }
   ]

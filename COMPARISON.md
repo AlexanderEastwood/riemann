@@ -475,3 +475,10 @@ integration; its scope is the full canonical sequence, not every subsequence
 or the optimal approximation. The changing-order one-atom control is
 unconditional and supplies no RH information. These NB results make no
 change to the certified Weil window or its comparison with published work.
+
+NS-65 checks fixed iterations of ordinary arithmetic Cesaro averaging,
+not all summability methods. NS-66 records the exact fixed-order canonical
+norm-growth exponent using the classical zero-free/Mobius-series implication
+in [Baez-Duarte, math/0202141v2, Lemma 2.1](https://arxiv.org/abs/math/0202141v2).
+This is a reformulation of zero location, not an independently improved
+Mertens estimate or zero-free region. No priority claim is made.

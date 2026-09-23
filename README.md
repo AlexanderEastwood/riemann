@@ -40,7 +40,7 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | G2 | open |
 | RH | open, and not claimed |
 
-## v1.59 local draft: a fixed smoothing gives an elementary block bound (NS-60–63)
+## v1.59 local draft: a fixed smoothing gives an elementary block bound (NS-60–66)
 
 One extra Mellin integration keeps convergence equivalent to RH and gives
 an unconditional complete difference-block trace bound `3*kappa/(8*N^2)`.
@@ -53,11 +53,19 @@ Explicit Euler-grid corrections have a scoped uniform-norm obstruction.
 The canonical sharp Mobius interpolant still fails along the full integer
 sequence after smoothing; optimized coefficients and selected subsequences
 are not excluded. A positive coefficient cone already fails on a finite
-interval. Increasing the smoothing order is also not an RH test: one fixed
+interval; an explicit dual separator certifies a full-space distance
+lower bound greater than 0.00228323. Signed approximation is not excluded. Increasing the smoothing order is also not an RH test: one fixed
 atom then has relative squared error tending to zero while absolute squared
 error grows. Keep the norm fixed while increasing N.
 
-[Readable report](evidence/v159/research-update-2026-09-22-v1.html) ·
+A fixed number of ordinary Cesaro averages also fails to give canonical
+convergence. A weaker target remains: the fixed-order canonical norm
+has growth exponent exactly `beta_star - 1/2`. Subpolynomial growth is
+equivalent to RH, and even a bounded cofinal subsequence would suffice.
+These growth bounds remain unproved; the exact reformulation supplies
+no new zero-free region.
+
+[Readable report](evidence/v159/research-update-2026-09-22-v2.html) ·
 [Proofs, exact Maxima checks and finite certificates](evidence/v159/).
 This version is local and unpublished. RH, G2 and the original Weil floor remain open.
 
@@ -225,8 +233,9 @@ graph LR
   nbeulergrid["Uniform logarithmic norm after explicit Euler-grid correction<br/><small>prop:ns60-growing-euler-obstruction</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: zeta large values exceed the allowed finite Euler-product loss</b></small>"]
   nbsmoothedbudget["Fixed smoothed NB: positive averages and N^(-2) trace<br/><small>prop:ns61-rh-equivalence; prop:ns61-average-budget</small><br/><small>&#128193; evidence/v159</small>"]
   nbsmoothedcorrelation["Actual optimized smoothed residual correlations<br/><small>eq:ns61-open-correlation; eq:ns61-endpoint-correlation</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: non-summable lower contraction for the actual optimized residual (open sufficient input)</b></small>"]
-  nbsharpintegrated["Canonical sharp Mobius sequence after Mellin integration<br/><small>prop:ns62-smoothed-obstruction; prop:ns62-positive-cone</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: a surviving weighted-Mertens witness for this coefficient rule</b></small>"]
+  nbsharpintegrated["Strong convergence of the smoothed canonical sharp Mobius sequence<br/><small>prop:ns62-smoothed-obstruction; prop:ns62-positive-cone; prop:ns64-cone-distance; prop:ns65-cesaro-obstruction</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: a surviving weighted-Mertens witness for this coefficient rule</b></small>"]
   nbchangingnorm["Relative convergence with increasing Mellin smoothing<br/><small>prop:ns63-one-atom</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: one-atom unconditional control refutes this convergence inference</b></small>"]
+  nbcanonicalgrowth["Canonical smoothed norm: subpolynomial growth<br/><small>prop:ns66-growth-bounds; cor:ns66-growth-exponent</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)</b></small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -298,6 +307,7 @@ graph LR
   nbsmoothedbudget --> nbsmoothedcorrelation
   nbsmoothedbudget --> nbsharpintegrated
   nbsmoothedbudget --> nbchangingnorm
+  nbsmoothedbudget --> nbcanonicalgrowth
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -309,6 +319,7 @@ graph LR
   relativeselection -. "cofinal separator" .-> g2
   kernelapi -. "API: actual arithmetic affine-potential injectivity (open)" .-> rh
   nbsmoothedcorrelation -. "non-summable lower contraction for the actual optimized residual (open sufficient input)" .-> rh
+  nbcanonicalgrowth -. "direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)" .-> rh
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -367,6 +378,7 @@ graph LR
   click nbsmoothedcorrelation "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
   click nbsharpintegrated "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
   click nbchangingnorm "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
+  click nbcanonicalgrowth "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget proved;
@@ -375,7 +387,7 @@ graph LR
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
   class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation blocked;
+  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes,circle,debranges,f1,nb,dbn open;
   subgraph Legend

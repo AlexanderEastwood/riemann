@@ -74,8 +74,9 @@ graph LR
   nbeulergrid["Uniform logarithmic norm after explicit Euler-grid correction<br/><small>prop:ns60-growing-euler-obstruction</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: zeta large values exceed the allowed finite Euler-product loss</b></small>"]
   nbsmoothedbudget["Fixed smoothed NB: positive averages and N^(-2) trace<br/><small>prop:ns61-rh-equivalence; prop:ns61-average-budget</small><br/><small>&#128193; evidence/v159</small>"]
   nbsmoothedcorrelation["Actual optimized smoothed residual correlations<br/><small>eq:ns61-open-correlation; eq:ns61-endpoint-correlation</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: non-summable lower contraction for the actual optimized residual (open sufficient input)</b></small>"]
-  nbsharpintegrated["Canonical sharp Mobius sequence after Mellin integration<br/><small>prop:ns62-smoothed-obstruction; prop:ns62-positive-cone</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: a surviving weighted-Mertens witness for this coefficient rule</b></small>"]
+  nbsharpintegrated["Strong convergence of the smoothed canonical sharp Mobius sequence<br/><small>prop:ns62-smoothed-obstruction; prop:ns62-positive-cone; prop:ns64-cone-distance; prop:ns65-cesaro-obstruction</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: a surviving weighted-Mertens witness for this coefficient rule</b></small>"]
   nbchangingnorm["Relative convergence with increasing Mellin smoothing<br/><small>prop:ns63-one-atom</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: one-atom unconditional control refutes this convergence inference</b></small>"]
+  nbcanonicalgrowth["Canonical smoothed norm: subpolynomial growth<br/><small>prop:ns66-growth-bounds; cor:ns66-growth-exponent</small><br/><small>&#128193; evidence/v159</small><br/><small><b>wall: direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)</b></small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -147,6 +148,7 @@ graph LR
   nbsmoothedbudget --> nbsmoothedcorrelation
   nbsmoothedbudget --> nbsharpintegrated
   nbsmoothedbudget --> nbchangingnorm
+  nbsmoothedbudget --> nbcanonicalgrowth
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -158,6 +160,7 @@ graph LR
   relativeselection -. "cofinal separator" .-> g2
   kernelapi -. "API: actual arithmetic affine-potential injectivity (open)" .-> rh
   nbsmoothedcorrelation -. "non-summable lower contraction for the actual optimized residual (open sufficient input)" .-> rh
+  nbcanonicalgrowth -. "direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)" .-> rh
 
   click g1 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_source_certificate/" "evidence: evidence/v124/g2_source_certificate" _blank
   click w3 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_certificate/" "evidence: evidence/v124/g2_certificate" _blank
@@ -216,6 +219,7 @@ graph LR
   click nbsmoothedcorrelation "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
   click nbsharpintegrated "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
   click nbchangingnorm "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
+  click nbcanonicalgrowth "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v159/" "evidence: evidence/v159" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
   class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget proved;
@@ -224,7 +228,7 @@ graph LR
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
   class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
-  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation blocked;
+  class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
   class rh,fixedspace,g2,uniform,altroutes,circle,debranges,f1,nb,dbn open;
   subgraph Legend
@@ -244,7 +248,7 @@ graph LR
 | `proved` | 27 | established result |
 | `live` | 2 | current route (gold): being worked now |
 | `closed` | 25 | closed route (red): proved insufficient or impossible; kept deliberately |
-| `blocked` | 7 | attempted; obstruction found |
+| `blocked` | 8 | attempted; obstruction found |
 | `open` | 10 | target, not yet attacked |
 | `wall` | 0 | wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge |
 
@@ -262,8 +266,9 @@ graph LR
     - [ ] **Nyman-Beurling-Baez-Duarte** — `prop:ns53-nb-block-gain; eq:ns53-nb-rbc` · evidence: [`evidence/ns53_nb_blocks/`](evidence/ns53_nb_blocks/) · **wall: RBC: corrected arithmetic residual block correlations (open sufficient input)** → `rh` (eq:ns53-nb-rbc; exact convergence criterion is prior art, and RBC is not proved or claimed equivalent to RH) · Any fixed-order NB convergence suffices. NS-61 proves an elementary smoothed difference budget but leaves the actual optimized correlation input open. NS-60/62/63 exclude scoped correction, coefficient and changing-norm shortcuts. Finite gains are not cofinal bounds.
       - [x] **Fixed smoothed NB: positive averages and N^(-2) trace** — `prop:ns61-rh-equivalence; prop:ns61-average-budget` · evidence: [`evidence/v159/`](evidence/v159/) · One fixed Mellin integration preserves the RH criterion. Trace <= 3*kappa/(8*N^2), and scaled trace tends to that constant. Every Gram cross term and transformed numerator remains.
         - [!] **Actual optimized smoothed residual correlations** — `eq:ns61-open-correlation; eq:ns61-endpoint-correlation` · evidence: [`evidence/v159/`](evidence/v159/) · **wall: non-summable lower contraction for the actual optimized residual (open sufficient input)** → `rh` (prop:ns61-gain; no necessity or equivalence claim for this sufficient estimate) · Exact endpoint moments and a complete coefficient-mass remainder. No independent cofinal lower bound; finite bounds are below 1/50 of exact gain on two checked blocks.
-        - [X] **Canonical sharp Mobius sequence after Mellin integration** — `prop:ns62-smoothed-obstruction; prop:ns62-positive-cone` · evidence: [`evidence/v159/`](evidence/v159/) · **wall: a surviving weighted-Mertens witness for this coefficient rule** → `None` (prop:ns62-smoothed-obstruction; not a general NB obstruction) · Localized Laguerre witness preserves nonconvergence for the full integer sequence even if the number of integrations varies. Selected subsequences and optimal coefficients are outside the theorem. The nonnegative difference cone fails locally at its forced sixth coefficient -1/5.
+        - [!] **Canonical smoothed norm: subpolynomial growth** — `prop:ns66-growth-bounds; cor:ns66-growth-exponent` · evidence: [`evidence/v159/`](evidence/v159/) · **wall: direct subpolynomial canonical norm bound, or a bounded cofinal subsequence (open)** → `rh` (cor:ns66-growth-exponent) · Fixed-order exponent equals beta_star-1/2 by local zero evaluation and conditional Bochner-Abel bounds. Exact reformulation, with no improved arithmetic estimate. A bounded cofinal subsequence is sufficient but not asserted necessary.
         - [X] **Relative convergence with increasing Mellin smoothing** — `prop:ns63-one-atom` · evidence: [`evidence/v159/`](evidence/v159/) · **wall: one-atom unconditional control refutes this convergence inference** → `None` (prop:ns63-one-atom) · One fixed atom has relative squared error ~D0^2/(8r) unconditionally, while its absolute squared error diverges. The fixed-order criterion remains valid; changing the norm is not RH evidence.
+        - [X] **Strong convergence of the smoothed canonical sharp Mobius sequence** — `prop:ns62-smoothed-obstruction; prop:ns62-positive-cone; prop:ns64-cone-distance; prop:ns65-cesaro-obstruction` · evidence: [`evidence/v159/`](evidence/v159/) · **wall: a surviving weighted-Mertens witness for this coefficient rule** → `None` (prop:ns62-smoothed-obstruction; not a general NB obstruction) · Localized Laguerre witness preserves nonconvergence for the full integer sequence even if the number of integrations varies. Selected subsequences and optimal coefficients are outside the theorem. The nonnegative difference cone fails locally at its forced sixth coefficient -1/5. An explicit dual separator certifies full-space cone distance >0.00228323, with local equality only. Fixed ordinary Cesaro iterates also fail; weaker norm-growth targets remain open.
       - [x] **NB adjacent-difference norm budget** — `prop:v158-adjacent-budget; prop:v158-mellin-budget` · evidence: [`evidence/v158/`](evidence/v158/) · Complete basis change transforms both Gram and correlations. Raw Gram norm O_epsilon(N^(-5/3+epsilon)); no lower correlation estimate. Near-N^(-2) power control of the raw all-coefficient norm is equivalent to Lindelof, not a proved estimate.
       - [X] **NB uniform logarithmic raw norm** — `prop:v158-lindelof-budget` · evidence: [`evidence/v158/`](evidence/v158/) · **wall: known zeta large values contradict every fixed logarithmic N^(-2) raw norm bound** → `None` (prop:v158-lindelof-budget; closure of this all-coefficient raw comparison only) · For every fixed B, the raw difference Gram is not O((log N)^B/N^2), even on dyadic blocks. Projected Grams and the actual residual direction are outside this obstruction.
       - [X] **Uniform logarithmic norm after explicit Euler-grid correction** — `prop:ns60-growing-euler-obstruction` · evidence: [`evidence/v159/`](evidence/v159/) · **wall: zeta large values exceed the allowed finite Euler-product loss** → `None` (prop:ns60-growing-euler-obstruction) · Only this explicit all-coefficient correction with Q_N <= N^alpha, fixed alpha < 1. Complete grid defect and cross terms retained; optimal projection and actual-residual estimates remain open.

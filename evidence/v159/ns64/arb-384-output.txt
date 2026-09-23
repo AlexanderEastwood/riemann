@@ -1,0 +1,1 @@
+{"status": "PASS", "precision_bits": 384, "support": [1, 2, 3, 4, 5], "distance_lower_bound": "[0.002283237661186016281211728016069905463122 +/- 3.86e-43]", "accuracy_bits": 352}

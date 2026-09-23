@@ -1,0 +1,35 @@
+/* Exact algebra for the growth bounds; zero-location implications are analytic. */
+display2d:false$
+checks:[]$
+check(label,expr):=block([answer:is(ratsimp(expr)=0)],
+ checks:endcons([label,answer],checks),
+ if answer # true then error("Exact check failed",label,expr))$
+check("Power integral",diff((u^(th-1/2)-1)/(th-1/2),u)-u^(th-3/2))$
+check("Endpoint logarithm",diff(log(u),u)-1/u)$
+check("Eta tail primitive",diff(u^(th-1)/(th-1),u)-u^(th-2))$
+check("Restricted zero evaluation primitive",diff(x^(2*be-1)/(2*be-1),x)-x^(2*be-2))$
+check("Full Abel boundary coefficient",mm-n*ss+n*(ss-mm/n))$
+check("Dilation norm power",(-1/2)+(-1)+(th)-(th-3/2))$
+check("Tail correction growth power",1+(th-1)-1/2-(th-1/2))$
+check("Squared zero-growth power",2*(be-1/2)-(2*be-1))$
+/* Check the complete Abel identity at rational physical points, including
+   the exact exterior where the canonical error vanishes. */
+mu:[1,-1,-1,0,-1,1,-1,0,0,1,-1,0]$
+MM(n):=if n<1 then 0 else sum(mu[k],k,1,n)$
+ss(n):=sum(mu[k]/k,k,1,n)$
+AA(z):=block([kk:floor(z)],z-kk*log(z)+log(kk!))$
+abel_integral(nn,xx):=block([cuts:makelist(j,j,1,nn),aa,bb,mid,kk,out:0],
+ for k:1 thru floor(1/xx) do if 1/(k*xx)>1 and 1/(k*xx)<nn
+  then cuts:endcons(1/(k*xx),cuts),
+ cuts:sort(listify(setify(cuts))),
+ for j:1 thru length(cuts)-1 do (
+  aa:cuts[j],bb:cuts[j+1],mid:(aa+bb)/2,kk:floor(1/(mid*xx)),
+  out:out+MM(floor(mid))*(-1/(xx*bb)-kk*log(bb)+1/(xx*aa)+kk*log(aa))),out)$
+for nn in [2,6,12] do for xx in [1/(2*nn),1/nn,2/nn,2] do block([lhs,rhs,tau],
+ lhs:sum(mu[k]*AA(1/(k*xx)),k,1,nn)-nn*ss(nn)*AA(1/(nn*xx)),
+ rhs:-nn*(ss(nn)-MM(nn)/nn)*AA(1/(nn*xx))+abel_integral(nn,xx),
+ check(sconcat("Complete physical Abel identity ",nn,",",xx),radcan(lhs-rhs)),
+ if xx>=1/nn then (
+  tau:if xx>=1 then 0 else -log(xx),
+  check(sconcat("Exact exterior interpolation ",nn,",",xx),radcan(tau+lhs))))$
+print("PASS:",length(checks),"exact checks; no independent Mertens bound is claimed.")$

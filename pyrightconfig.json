@@ -13,7 +13,8 @@
     "evidence/diag_ns60_nb_corrections/*.py",
     "evidence/diag_ns61_smoothed_nb/*.py",
     "evidence/v159/ns61/*.py",
-    "evidence/v159/ns63/*.py"
+    "evidence/v159/ns63/*.py",
+    "evidence/v159/ns64/*.py"
   ],
   "exclude": [
     "node_modules",

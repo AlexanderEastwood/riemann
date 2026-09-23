@@ -1,0 +1,128 @@
+\section{A weaker canonical target: growth rather than convergence (NS-66)}
+\label{sec:ns66-canonical-growth}
+
+Strong convergence of the full canonical sequence is excluded, but
+that does not exclude slow growth or bounded subsequences of its norms.
+One Mellin integration makes a complete Abel-summation estimate
+available. The resulting growth exponent is an exact reformulation
+of the zero-location question, not an independently established RH bound.
+
+For a fixed integer $r\geq1$ define
+\[
+ D_{N,r}=\norm{J^r(\chi+B_N)}_H,\qquad
+ \beta_* =\sup\{\Re z:\zeta(z)=0,\ 0<\Re z<1\}.
+\]
+Known critical-line zeros give $1/2\leq\beta_*\leq1$.
+
+\begin{proposition}[Complete growth bounds for the smoothed canonical error]
+\label{prop:ns66-growth-bounds}
+If $z=\beta+i\gamma_*$ is a zero with $1/2<\beta<1$, then
+\begin{equation}
+ D_{N,r}\geq\frac{\sqrt{2\beta-1}}{|z|^{r+1}}N^{\beta-1/2}
+ \quad\text{for every }N\geq1.
+ \label{eq:ns66-zero-growth}
+\end{equation}
+Conversely, suppose for some $1/2\leq\theta<1$ and constant $C$
+that $|M(u)|\leq Cu^\theta$ for all $u\geq1$. Then
+\begin{equation}
+ D_{N,1}\leq\sqrt2+
+  \frac{C\norm{\sigma_1}}{1-\theta}N^{\theta-1/2}
+  +C\sqrt\kappa\int_1^N u^{\theta-3/2}\,du,
+ \qquad D_{N,r}\leq2^{r-1}D_{N,1}.
+ \label{eq:ns66-mertens-upper}
+\end{equation}
+The integral is $(N^{\theta-1/2}-1)/(\theta-1/2)$ for
+$\theta>1/2$, and $\log N$ for $\theta=1/2$.
+The Mertens bound in this implication is a hypothesis, not a result
+proved here.
+\end{proposition}
+\begin{proof}
+Exact exterior interpolation gives $\chi+B_N=0$ on $x>1/N$.
+Since $Jf(x)$ only uses arguments at least $x$, $J^r(\chi+B_N)$
+is supported in $(0,1/N]$. Its Mellin value at $z$ is
+$z^{-(r+1)}$: the zeta factor annihilates every basis contribution.
+Cauchy--Schwarz on that support gives
+\[
+ |z|^{-(r+1)}\leq D_{N,r}
+ \left(\int_0^{1/N}x^{2\beta-2}\,dx\right)^{1/2}
+ =D_{N,r}\frac{N^{1/2-\beta}}{\sqrt{2\beta-1}},
+\]
+proving~\eqref{eq:ns66-zero-growth}.
+
+Under the stated Mertens hypothesis, partial summation makes
+$\sum\mu(n)/n$ convergent and identifies its value as
+$\lim_{s\downarrow1}1/\zeta(s)=0$. Hence
+\[
+ \eta_N=-\int_N^\infty M(u)u^{-2}\,du,\qquad
+ |\eta_N|\leq\frac{C}{1-\theta}N^{\theta-1}.
+\]
+The strong derivative $\partial_u\sigma_u=-\rho_u/u$ gives the
+complete Bochner summation-by-parts identity
+\begin{equation}
+ JB_N=-N\eta_N\sigma_N+
+           \int_1^N\frac{M(u)}u\rho_u\,du.
+ \label{eq:ns66-bochner-abel}
+\end{equation}
+There is no lower-endpoint contribution, since $M(1^-)=0$.
+Use $\norm{\sigma_N}=N^{-1/2}\norm{\sigma_1}$,
+$\norm{\rho_u}=\sqrt{\kappa/u}$ and $\norm{J\chi}=\sqrt2$.
+The triangle inequality yields~\eqref{eq:ns66-mertens-upper},
+including all coefficient and tail-correction terms. Boundedness
+of $J^{r-1}$ gives the final assertion.
+\end{proof}
+
+\begin{corollary}[The canonical norm-growth exponent records the rightmost zeros]
+\label{cor:ns66-growth-exponent}
+For every fixed integer $r\geq1$ the following limit exists and equals
+\begin{equation}
+ \lim_{N\to\infty}\frac{\log(1+D_{N,r})}{\log N}
+                  =\beta_*-\frac12.
+ \label{eq:ns66-exponent}
+\end{equation}
+In particular, RH is equivalent to the subpolynomial bound
+\[
+ \text{for every }\varepsilon>0,\qquad
+ D_{N,r}=O_{r,\varepsilon}(N^\varepsilon).
+\]
+Even a bounded cofinal subsequence of $D_{N,r}$ would suffice to
+prove RH. No such bounded subsequence or unconditional subpolynomial
+bound is supplied, and boundedness is not claimed necessary under RH.
+\end{corollary}
+\begin{proof}
+For each zero to the right of the line,
+\eqref{eq:ns66-zero-growth} bounds the lower limit by
+$\beta-1/2$. Taking the supremum gives $\beta_*-1/2$; when
+$\beta_*=1/2$, the same lower limit is at least zero trivially.
+
+If $\beta_*<1$, choose $\beta_*<\alpha<\theta<1$.
+The classical zero-free-half-plane implication, stated precisely
+in~\cite[Lemma 2.1]{BaezDuarteStrong}, gives convergence of
+$\sum\mu(n)n^{-\theta}$. Partial summation of its bounded partial
+sums gives $M(x)=O_\theta(x^\theta)$.
+Proposition~\ref{prop:ns66-growth-bounds} then bounds the upper
+limit by $\theta-1/2$. Let $\theta\downarrow\beta_*$.
+This includes RH by choosing $\theta>1/2$ arbitrarily close to the
+line, without claiming a bound at the endpoint $\theta=1/2$.
+
+If $\beta_*=1$, the direct bounds $|s_N|\leq1+\log N$ and
+$\norm{\sigma_n}=\norm{\sigma_1}/\sqrt n$ give
+$D_{N,1}=O(\sqrt N\log(2N))$, so the upper limit is at most
+$1/2$. This matches the preceding lower bound.
+Thus~\eqref{eq:ns66-exponent} holds in every case.
+The functional equation identifies $\beta_*=1/2$ with RH.
+Finally~\eqref{eq:ns66-zero-growth} diverges along every cofinal
+subsequence if any zero lies to the right of the line, proving the
+bounded-subsequence implication.
+\end{proof}
+
+\paragraph{What the weaker target changes.}
+For this explicit coefficient rule, norm convergence is false, while
+subpolynomial norm growth is equivalent to RH. These are compatible
+statements. The exact growth reformulation does not itself improve
+our knowledge of $\beta_*$ or supply the missing Mertens estimate.
+It gives a second precise research target: a direct subpolynomial
+bound for the complete smoothed canonical norm, or a bounded cofinal
+subsequence. Increasing the number of Mellin integrations changes
+constants in~\eqref{eq:ns66-zero-growth}; the corollary is stated
+only for one fixed order. No inference from a changing normalization
+or finite table is used.
