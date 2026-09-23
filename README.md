@@ -1,6 +1,6 @@
 # Fixed-Space Prime Compatibility
 
-Alexander Eastwood's complete working manuscript, **v1.65**.
+Alexander Eastwood's complete working manuscript, **v1.66**.
 
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
@@ -39,6 +39,28 @@ python3 tools/make_map.py                 # regenerate RESEARCH_MAP.md
 | Evidence gaps | Both remaining groups explicitly not archived; disclosure complete, recovery open — see the ledger |
 | G2 | open |
 | RH | open, and not claimed |
+
+## v1.66: critical zeros constrain the decay rate (NS-83)
+
+Burnol's dual-vector lower-bound argument extends to every **fixed** Hardy
+smoothing order q. The squared optimal error satisfies
+**liminf (log N) E_N^(q) >= sum m(rho)^2 / |rho|^(2q) > 0**, summing over
+distinct critical-line zeros with both signs of their ordinate.
+
+For q=2, ten conjugate pairs give a certified subset constant above
+**0.000072332433**. This is an asymptotic lower bound, with no numerical
+onset threshold; it is not asserted at N=256 or any other specified size.
+The uncomputed zero terms are nonnegative and are not silently set to zero.
+
+A fixed positive fraction of the whole error cannot be removed at every
+large doubling. Cumulative relative gains through doubling K are at most
+log K + O(1), although individual blocks can fluctuate. A lower gain bound
+of order a/j with 0<a<=1 is not excluded; no such arithmetic estimate is
+proved. Uniform capture of available block gain remains consistent with
+this restriction. The original Weil floor, cofinal decay, G2 and RH stay open.
+
+[Readable update](evidence/v166/research-update-2026-09-23-v1.html) ·
+[Proof and certified constants](evidence/v166/).
 
 ## v1.65: retain the tail as a rank-two form (NS-82)
 
@@ -382,6 +404,8 @@ graph LR
   nbarithmeticpreconditioner["Uniform efficiency using the full arithmetic sampling Gram<br/><small>prop:ns80-uniform-efficiency</small><br/><small>&#128193; evidence/v163/ns80</small>"]
   nbfiniteconditioning["Polynomial ordinary Gram conditioning and an effective finite comparator<br/><small>prop:ns81-conditioning; prop:ns81-finite-comparator</small><br/><small>&#128193; evidence/v164/ns81</small>"]
   nbcompressedtail["Finite physical comparator with an exact rank-two tail<br/><small>prop:ns82-tail-compression</small><br/><small>&#128193; evidence/v165/ns82</small>"]
+  nbcriticalfloor["Critical-zero logarithmic lower bound at every fixed smoothing order<br/><small>prop:ns83-log-floor</small><br/><small>&#128193; evidence/v166/ns83</small>"]
+  nbuniformrelativecontraction["Fixed-fraction contraction of the full error at every doubling<br/><small>eq:ns83-gain-budget</small><br/><small>&#128193; evidence/v166/ns83</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -471,6 +495,8 @@ graph LR
   nbarithmeticsampling --> nbarithmeticpreconditioner
   nbarithmeticpreconditioner --> nbfiniteconditioning
   nbfiniteconditioning --> nbcompressedtail
+  nbsmoothedbudget --> nbcriticalfloor
+  nbcriticalfloor --> nbuniformrelativecontraction
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -562,13 +588,15 @@ graph LR
   click nbarithmeticpreconditioner "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns80/" "evidence: evidence/v163/ns80" _blank
   click nbfiniteconditioning "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v164/ns81/" "evidence: evidence/v164/ns81" _blank
   click nbcompressedtail "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v165/ns82/" "evidence: evidence/v165/ns82" _blank
+  click nbcriticalfloor "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v166/ns83/" "evidence: evidence/v166/ns83" _blank
+  click nbuniformrelativecontraction "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v166/ns83/" "evidence: evidence/v166/ns83" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds,nbsamegramcontrol closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds,nbsamegramcontrol,nbuniformrelativecontraction closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth,nbrenewalforcing,nbselectedpreconditioner,nbcurvaturearithmetic blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;

@@ -1,0 +1,109 @@
+{
+  "classification": "local integration validation; no independent review or RH proof",
+  "version": "v1.66",
+  "date": "2026-09-23",
+  "tasks": [
+    "NS-83"
+  ],
+  "publication_base_commit": "b065f1a2a63ef7b02f827019518aa784e7723d72",
+  "manuscript": {
+    "pages": 358,
+    "warning_counts": {
+      "undefined_or_duplicate_references": 0,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0,
+      "latex_warnings": 0,
+      "pdftex_warnings": 0,
+      "duplicate_pdf_destinations": 0
+    },
+    "proof_fragment_integrated_verbatim_once": true,
+    "proof_sha256": "c4e7649245c159ba4b6e677581cdd5050ae677602d63f0508f299b6dca02a023",
+    "main_tex_sha256": "8e494729b436099efc41bedf391e7ecf1c4ff7548176ec0692bb2843a6c2aeab",
+    "pdf_sha256": "a23765e75f02c80470e7f50e9e8eb0ac493bcbc132d8e4d0ef2dcbdd37c1953b",
+    "new_section_visual_review_pages": [
+      11,
+      12,
+      13,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334
+    ]
+  },
+  "maxima_exact_checks": {
+    "NS-83": 33
+  },
+  "maxima_total": 33,
+  "arb_precisions_bits": [
+    256,
+    384
+  ],
+  "replays": {
+    "status": "PASS",
+    "precision_bits": [
+      256,
+      384
+    ],
+    "precision_enclosure_matches": 43,
+    "exact_hilbert_blocks_checked": 8,
+    "source_sha256": "0d3770620cc8d737e640df74452ae1591b8d2859c33f9ac8425d3c117ad4dae9",
+    "critical_zeros_used": 20,
+    "finite_zero_subset_only": true,
+    "cutoff_replay": "not applicable: omitted zero weights are nonnegative and the subset constant is only a lower bound",
+    "finite_N_error_bound": false,
+    "asymptotic_onset_N0": null,
+    "independent_review": false
+  },
+  "python_diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "scope": "all new v166 scientific Python"
+  },
+  "source_sha256": {
+    "ns83/certify_constants.py": "0d3770620cc8d737e640df74452ae1591b8d2859c33f9ac8425d3c117ad4dae9",
+    "ns83/exact-checks.mac": "1d94c30f04376bfe1cbe8358c3895ace5887d93e9a7dd9afb415b1be4a75a77d",
+    "ns83/proof.tex": "c4e7649245c159ba4b6e677581cdd5050ae677602d63f0508f299b6dca02a023",
+    "proof.tex": "c4e7649245c159ba4b6e677581cdd5050ae677602d63f0508f299b6dca02a023",
+    "verify_replays.py": "3fc1f08d281bc0ea0d7f5f8cb9de18a7da8d5ce0bbe9f3a9a14f6442b168401a"
+  },
+  "independent_review": false,
+  "open_inputs": [
+    "Cofinal decay of the actual arithmetic optimal residual",
+    "A nonsummable lower estimate on relative arithmetic block gain compatible with the logarithmic budget",
+    "Original arithmetic Weil floor, API, G2 and RH"
+  ],
+  "limits": [
+    "Fixed smoothing order only",
+    "Asymptotic lower bound, not convergence or an upper estimate",
+    "No finite-N onset threshold or pointwise bound on each gain",
+    "Certified zero subset gives only a lower bound on the full constant",
+    "Classical Burnol mechanism with extra Hardy operators; no new-zero or priority claim",
+    "Uniform capture of available block gain remains possible"
+  ],
+  "literature_inputs": {
+    "Burnol": {
+      "url": "https://arxiv.org/abs/math/0103058",
+      "version": "v2, 20 March 2001; published Advances in Mathematics 170 (2002), 56\u201370",
+      "used": "Sections 3\u20135: phase construction, oscillatory-integral expansion before Theorem 4.11, and target identity in Theorem 5.4",
+      "adaptation": "Extra Hardy operators, complete uniform endpoint/tail bounds, target pairing and fixed-order critical weight derived in NS83; no new-mechanism priority claim"
+    },
+    "FLINT": {
+      "url": "https://flintlib.org/doc/acb_dirichlet.html",
+      "used": "Certified nontrivial zero enclosures via python-flint acb.zeta_zero; only first ten positive ordinates and their conjugates contribute to a subset lower bound"
+    },
+    "zero_count": {
+      "manuscript_key": "HasanalizadeShenWong2021",
+      "used": "Unit-height zero count O(log T) and hence convergence of the positive weighted multiplicity series"
+    }
+  },
+  "publication_authorization": "User requested PRs and subsequently explicitly allowed validated merges and version tags.",
+  "html_checks": {
+    "balanced_nesting": true,
+    "local_links_resolve": true,
+    "inline_styles_only": true,
+    "browser_visual_review": false,
+    "preview": "Codex file preview; prior local browser restriction respected"
+  }
+}

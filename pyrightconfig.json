@@ -36,7 +36,9 @@
     "evidence/v164/*.py",
     "evidence/v164/ns81/*.py",
     "evidence/v165/*.py",
-    "evidence/v165/ns82/*.py"
+    "evidence/v165/ns82/*.py",
+    "evidence/v166/*.py",
+    "evidence/v166/ns83/*.py"
   ],
   "exclude": [
     "node_modules",

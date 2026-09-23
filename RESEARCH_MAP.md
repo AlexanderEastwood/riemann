@@ -94,6 +94,8 @@ graph LR
   nbarithmeticpreconditioner["Uniform efficiency using the full arithmetic sampling Gram<br/><small>prop:ns80-uniform-efficiency</small><br/><small>&#128193; evidence/v163/ns80</small>"]
   nbfiniteconditioning["Polynomial ordinary Gram conditioning and an effective finite comparator<br/><small>prop:ns81-conditioning; prop:ns81-finite-comparator</small><br/><small>&#128193; evidence/v164/ns81</small>"]
   nbcompressedtail["Finite physical comparator with an exact rank-two tail<br/><small>prop:ns82-tail-compression</small><br/><small>&#128193; evidence/v165/ns82</small>"]
+  nbcriticalfloor["Critical-zero logarithmic lower bound at every fixed smoothing order<br/><small>prop:ns83-log-floor</small><br/><small>&#128193; evidence/v166/ns83</small>"]
+  nbuniformrelativecontraction["Fixed-fraction contraction of the full error at every doubling<br/><small>eq:ns83-gain-budget</small><br/><small>&#128193; evidence/v166/ns83</small>"]
 
   rh --> g1
   rh --> fixedspace
@@ -183,6 +185,8 @@ graph LR
   nbarithmeticsampling --> nbarithmeticpreconditioner
   nbarithmeticpreconditioner --> nbfiniteconditioning
   nbfiniteconditioning --> nbcompressedtail
+  nbsmoothedbudget --> nbcriticalfloor
+  nbcriticalfloor --> nbuniformrelativecontraction
   concentration -. "QG + WLH packet" .-> floor
   debranges -. "screw-kernel positivity = RH; no fixed-window bridge" .-> rh
   nb -. "RBC: corrected arithmetic residual block correlations (open sufficient input)" .-> rh
@@ -274,13 +278,15 @@ graph LR
   click nbarithmeticpreconditioner "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v163/ns80/" "evidence: evidence/v163/ns80" _blank
   click nbfiniteconditioning "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v164/ns81/" "evidence: evidence/v164/ns81" _blank
   click nbcompressedtail "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v165/ns82/" "evidence: evidence/v165/ns82" _blank
+  click nbcriticalfloor "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v166/ns83/" "evidence: evidence/v166/ns83" _blank
+  click nbuniformrelativecontraction "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v166/ns83/" "evidence: evidence/v166/ns83" _blank
 
   classDef proved fill:#a5d6a7,stroke:#1b5e20,stroke-width:1px,color:#000;
-  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail proved;
+  class g1,windows,w3,w4e,w4o,w4,weaken,floor,gapfree,floortest,shiftbarrier,metablind,ccmmu,simpleeven4,semanticlock,groundzero4,groundzero4resolution,pencilconcentration,betaexplicit,inputcomparison,bumpstrength,adaptiveidentity,finiteweightcontrols,boundedfloorstability,radicalboundarytest,nbdifference,nbsmoothedbudget,nbcanonicalcells,nblocalgeometry,nbdivisorfeedback,nbcontinuousdefect,nbcontinuoustail,nbarithmeticsampling,nbbalancedfeedback,nbarithmeticpreconditioner,nbfiniteconditioning,nbcompressedtail,nbcriticalfloor proved;
   classDef live fill:#ffd54f,stroke:#f57f17,stroke-width:3px,color:#000;
   class stepb,kernelapi live;
   classDef closed fill:#ef9a9a,stroke:#b71c1c,stroke-width:1px,color:#000;
-  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds,nbsamegramcontrol closed;
+  class w5,primenorm,normcontr,schatten,sampling,farmaj,blockmetric,flattop,recipband,cotlar,scalarprim,li,capacityslack,capacitychannels,scalarsetshortcut,absoluteselection,coarseprofile,fineradicalrank,generic_h1,localucp,fullpositivecone,nbrawlog,nbeulergrid,nbsharpintegrated,nbchangingnorm,nbabelwholegain,nbcriticalrenewalenergy,nbrepairedbounds,nbsamegramcontrol,nbuniformrelativecontraction closed;
   classDef blocked fill:#ce93d8,stroke:#4a148c,stroke-width:1px,color:#000;
   class concentration,minorantlevels,zeroleveldistribution,weightedexactcost,capacityweight,relativeselection,nbsmoothedcorrelation,nbcanonicalgrowth,nbrenewalforcing,nbselectedpreconditioner,nbcurvaturearithmetic blocked;
   classDef open fill:#cfd8dc,stroke:#37474f,stroke-width:1px,color:#000;
@@ -299,9 +305,9 @@ graph LR
 
 | status | count | meaning |
 |---|---:|---|
-| `proved` | 37 | established result |
+| `proved` | 38 | established result |
 | `live` | 2 | current route (gold): being worked now |
-| `closed` | 29 | closed route (red): proved insufficient or impossible; kept deliberately |
+| `closed` | 30 | closed route (red): proved insufficient or impossible; kept deliberately |
 | `blocked` | 11 | attempted; obstruction found |
 | `open` | 10 | target, not yet attacked |
 | `wall` | 0 | wall tag: on a blocked node, the named open input it terminates on (dashed edge to the node that input reduces to); on a closed node, the closing mechanism and its scope (estimate/construction/route), no edge |
@@ -338,6 +344,8 @@ graph LR
           - [!] **Positive renewal with signed arithmetic forcing** — `prop:ns68-weighted-inversion; prop:ns68-scalar-criterion` · evidence: [`evidence/v160/ns68/`](evidence/v160/ns68/) · **wall: independent square-root-plus-epsilon bound for the signed forcing** → `rh` (prop:ns68-scalar-criterion; equivalence is not a new estimate) · Positive weighted inverse exists with q_theta<1; it transfers the same power. The integer first-annulus square-root-plus-epsilon bound remains RH-equivalent.
             - [X] **Finite total critical renewal energy** — `cor:ns68-critical-energy` · evidence: [`evidence/v160/ns68/`](evidence/v160/ns68/) · **wall: critical-line Mellin pole contradicts finite weighted L2 energy** → `None` (cor:ns68-critical-energy; scope is these total integrals) · Both critical weighted total integrals diverge by any known critical-line zero. Logarithmic or subpolynomial growth remains possible; this does not assert divergence of D_N.
           - [X] **Power gain solely between the two complete Abel vectors** — `prop:ns67-abel-conditioning` · evidence: [`evidence/v160/ns67/`](evidence/v160/ns67/) · **wall: uniform conditioning excludes an exponent improvement in this whole-vector split** → `None` (prop:ns67-abel-conditioning; no obstruction to internal arithmetic cancellation) · After explicit centering, their triangle norm is between D_N and (1+2||sigma_1||)D_N. Cancellation inside the integral and exact cells is still unestimated.
+        - [x] **Critical-zero logarithmic lower bound at every fixed smoothing order** — `prop:ns83-log-floor` · evidence: [`evidence/v166/ns83/`](evidence/v166/ns83/) · Burnol construction adapted with complete endpoint and tail control. Positive lower liminf; no upper bound or finite onset.
+          - [X] **Fixed-fraction contraction of the full error at every doubling** — `eq:ns83-gain-budget` · evidence: [`evidence/v166/ns83/`](evidence/v166/ns83/) · Cumulative relative gains <=log K+O(1). Individual gains may fluctuate; capture of available block gain is not excluded.
         - [X] **Relative convergence with increasing Mellin smoothing** — `prop:ns63-one-atom` · evidence: [`evidence/v159/`](evidence/v159/) · **wall: one-atom unconditional control refutes this convergence inference** → `None` (prop:ns63-one-atom) · One fixed atom has relative squared error ~D0^2/(8r) unconditionally, while its absolute squared error diverges. The fixed-order criterion remains valid; changing the norm is not RH evidence.
         - [X] **Strong convergence of the smoothed canonical sharp Mobius sequence** — `prop:ns62-smoothed-obstruction; prop:ns62-positive-cone; prop:ns64-cone-distance; prop:ns65-cesaro-obstruction` · evidence: [`evidence/v159/`](evidence/v159/) · **wall: a surviving weighted-Mertens witness for this coefficient rule** → `None` (prop:ns62-smoothed-obstruction; not a general NB obstruction) · Localized Laguerre witness preserves nonconvergence for the full integer sequence even if the number of integrations varies. Selected subsequences and optimal coefficients are outside the theorem. The nonnegative difference cone fails locally at its forced sixth coefficient -1/5. An explicit dual separator certifies full-space cone distance >0.00228323, with local equality only. Fixed ordinary Cesaro iterates also fail; weaker norm-growth targets remain open.
       - [x] **NB adjacent-difference norm budget** — `prop:v158-adjacent-budget; prop:v158-mellin-budget` · evidence: [`evidence/v158/`](evidence/v158/) · Complete basis change transforms both Gram and correlations. Raw Gram norm O_epsilon(N^(-5/3+epsilon)); no lower correlation estimate. Near-N^(-2) power control of the raw all-coefficient norm is equivalent to Lindelof, not a proved estimate.

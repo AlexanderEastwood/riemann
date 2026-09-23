@@ -1,5 +1,30 @@
 # v1.42 — NS-17 integration and PR preparation, September 21, 2026
 
+## v1.66: critical zeros constrain the decay rate (NS-83)
+
+Burnol's dual-vector lower-bound argument extends to every **fixed** Hardy
+smoothing order q. The squared optimal error satisfies
+**liminf (log N) E_N^(q) >= sum m(rho)^2 / |rho|^(2q) > 0**, summing over
+distinct critical-line zeros with both signs of their ordinate.
+
+For q=2, ten conjugate pairs give a certified subset constant above
+**0.000072332433**. This is an asymptotic lower bound, with no numerical
+onset threshold; it is not asserted at N=256 or any other specified size.
+The uncomputed zero terms are nonnegative and are not silently set to zero.
+
+A fixed positive fraction of the whole error cannot be removed at every
+large doubling. Cumulative relative gains through doubling K are at most
+log K + O(1), although individual blocks can fluctuate. A lower gain bound
+of order a/j with 0<a<=1 is not excluded; no such arithmetic estimate is
+proved. Uniform capture of available block gain remains consistent with
+this restriction. The original Weil floor, cofinal decay, G2 and RH stay open.
+
+[Readable update](../evidence/v166/research-update-2026-09-23-v1.html) ·
+[Proof and certified constants](../evidence/v166/).
+
+Validation: `evidence/v166/validation.json`; local self-review only.
+
+
 ## v1.65: retain the tail as a rank-two form (NS-82)
 
 Keeping the exact logarithmic main tail gives a different, physical-cell

@@ -574,3 +574,19 @@ Stirling remainder already retained in NS78. It changes the comparator:
 finite physical integrals plus a rank-two logarithmic tail, instead of
 truncated reciprocal samples. The cutoff improvement is a sufficient
 construction bound; no priority, necessary complexity or convergence claim.
+
+## v1.66: fixed-order use of the classical critical-zero lower bound
+
+Burnol, *Advances in Mathematics* 170 (2002), 56–70, Sections 3–5,
+[arXiv:math/0103058](https://arxiv.org/abs/math/0103058), supplies the
+phase-operator dual-vector construction and squared-multiplicity Hilbert
+blocks. NS83 extends that calculation by explicit additional Hardy
+operators; it does not claim a new lower-bound mechanism or priority.
+The small-endpoint and complete-tail estimates are carried through for
+each fixed order, and the target weight changes to |rho|^(-2q).
+
+This is a lower liminf, not an asymptotic equality or a finite-N bound with
+known onset. The resulting restriction on total relative contraction does
+not conflict with the finite-block preconditioner guarantees. The missing
+unconditional upper estimate remains missing. No RH assumption is used in
+the critical-zero construction; no statement about off-line zeros is inferred.
