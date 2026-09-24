@@ -5,6 +5,22 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## September 23 prime–archimedean admission test
+
+**The exponential-damping proposal was rejected before a research claim.**
+Grouping the damped prime sum with the exact gamma and pole terms is valid
+in its convergence region. A uniformly bounded cost of removing fixed
+damping would violate the existing NS47 closed-comparison obstruction.
+Shrinking damping escapes that fixed hypothesis but leaves the justified
+Euler-series/Fourier representation; the needed arithmetic bound remains open.
+
+**Wall check: Known wall** for the fixed comparison; **Same open gap** for
+the shrinking variant, WEIL-FLOOR. No new theorem node, manuscript version,
+research row or thaw. Two-precision control samples are diagnostics only.
+
+[Attempt and reproducible screen](audits/prime-archimedean-screen-2026-09-23-v1/) ·
+[Readable report](audits/prime-archimedean-attempt-2026-09-23-v1.html).
+
 ## September 23 archived ground interpretation check (NS-104)
 
 **The finite trial supports the predicted near-zero pattern; its explanation

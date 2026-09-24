@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Prime–archimedean attempt · September 23, 2026 · v1</title></head>
+<body style="margin:0;background:#f4f2ed;color:#222b25;font-family:Georgia,serif;line-height:1.65;">
+<main style="max-width:680px;margin:36px auto;padding:34px 30px;background:#fff;border-top:5px solid #526651;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.4px;color:#637260;">RIEMANN PROJECT · PROPOSAL SCREEN · SEPTEMBER 23, 2026 · VERSION 1</p>
+<h1 style="font-size:31px;line-height:1.2;margin:12px 0 24px;">The damping attempt reaches a recorded obstruction</h1>
+<p style="font-size:18px;"><strong>A concrete prime–archimedean comparison was tried and rejected before a research task was claimed.</strong> Fixed exponential damping makes the prime sum converge and groups it with the exact gamma and pole terms. But removing that damping at a uniformly bounded cost would violate the existing NS47 theorem.</p>
+<p>Letting the damping shrink avoids that fixed-comparison argument. It also leaves the region where the convergent Euler sum supplies the claimed Fourier representation. No new estimate was found for that transition. The uniform-floor target remains open.</p>
+<h2 style="font-size:22px;margin-top:30px;">The proposed bridge</h2>
+<p>Start with the complete Weil form q. In each correlation at displacement t, insert the factor e<sup>−ε|t|</sup>, keeping the original archimedean diagonal and both pole terms. Call the result q<sub>ε</sub>. The sought inequality was</p>
+<p style="padding:15px;background:#eef2ec;text-align:center;font-size:18px;">q<sub>ε</sub>[f] − q[f] ≤ C‖f‖²</p>
+<p>for every compact smooth test, with one constant C independent of the window. If q<sub>ε</sub> is nonnegative, this inequality gives the required negative floor for q.</p>
+<p>For fixed ε &gt; 1/2, the exact combined Fourier multiplier is</p>
+<p style="padding:15px;background:#eef2ec;text-align:center;">m<sub>ε</sub>(t) = 2 Re[ξ′/ξ(1/2 + ε + it)].</p>
+<p>The prime contribution, gamma contribution and the two poles all enter this expression. Its derivation uses the <a href="https://dlmf.nist.gov/27.4.E12" style="color:#315c44;">von Mangoldt Dirichlet series in Re(s) &gt; 1</a> and the <a href="https://dlmf.nist.gov/25.4.E4" style="color:#315c44;">original completed xi function</a>. It does not establish a formula for a divergent infinite prime sum.</p>
+<h2 style="font-size:22px;margin-top:30px;">Why the fixed comparison fails</h2>
+<p>In this right half-plane the multiplier is nonnegative by classical zero-free-half-plane information; see <a href="https://arxiv.org/abs/1005.1104v1" style="color:#315c44;">Sondow and Dumitrescu</a>. At high frequency it grows like log(2 + |t|). Its square-root multiplier therefore defines a closed, unbounded operator in ordinary L².</p>
+<p><strong>That is exactly the hypothesis NS47 excludes.</strong> The proposed inequality would bound the original form below by the square of this operator, up to a constant ordinary-norm error. NS47 says such a comparison operator must be bounded. The contradiction applies to the original zeta form, including the odd sector, which is already source admissible.</p>
+<p>This is an application of a recorded theorem. It is not a new closure, does not produce a negative zeta Weil direction, and does not disprove the uniform floor. The fixed comparison fails even under RH.</p>
+<h2 style="font-size:22px;margin-top:30px;">What the controls showed</h2>
+<p>At ε = 2, the tested multiplier was positive for zeta and all four false analogues at five selected frequencies, at both 30 and 50 decimal digits. The full all-test remainder inequality was not established on any control.</p>
+<table style="border-collapse:collapse;width:100%;font-size:14px;">
+<thead><tr style="background:#eef2ec;"><th style="padding:9px;text-align:left;">Control</th><th style="padding:9px;text-align:left;">Damped samples</th><th style="padding:9px;text-align:left;">Continued expression near an off-axis zero</th></tr></thead>
+<tbody>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Davenport–Heilbronn</td><td style="padding:9px;border-bottom:1px solid #ddd;">Positive</td><td style="padding:9px;border-bottom:1px solid #ddd;">−96.1631</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">NS100 order-two model</td><td style="padding:9px;border-bottom:1px solid #ddd;">Positive</td><td style="padding:9px;border-bottom:1px solid #ddd;">−94.8839</td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">NS101 reciprocal dilation</td><td style="padding:9px;border-bottom:1px solid #ddd;">Positive</td><td style="padding:9px;border-bottom:1px solid #ddd;">−97.2540</td></tr>
+<tr><td style="padding:9px;">Shifted zeta product</td><td style="padding:9px;">Positive</td><td style="padding:9px;">−95.5862</td></tr>
+</tbody></table>
+<p>These are diagnostic samples, not certificates or universal conclusions. The controls do not share all of Riemann’s exact prime, gamma and pole data. The continued function values are not silently identified with physical-form multipliers outside a justified convergence domain.</p>
+<p>The original prime-power sums were also checked at two cutoffs against the completed logarithmic derivative. All comparisons fell inside the recorded elementary tail allowances at both precisions. This checks the normalization and convergence region; it supplies no new arithmetic bound.</p>
+<h2 style="font-size:22px;margin-top:30px;">What remains if damping tends to zero</h2>
+<p>A window-dependent ε tending to zero changes the fixed-operator hypothesis, so the audit does not declare every such construction impossible. Eventually, however, ε ≤ 1/2, outside the absolute-convergence regime used above. Compact-support forms still exist, but their useful lower bound and the cost of removing damping remain unproved.</p>
+<p>Analytic continuation alone cannot transport the Fourier identity across zeros without accounting for any additional contributions. Assuming positivity of the continued logarithmic derivative throughout Re(s) &gt; 1/2 invokes an existing RH-equivalent criterion. It does not estimate the missing prime cancellation.</p>
+<p style="padding:16px;border-left:4px solid #526651;background:#f5f7f3;"><strong>Wall check: Known wall</strong> for fixed damping, closest NS47/50. <strong>Same open gap</strong> for the shrinking variant, WEIL-FLOOR. The proposal is rejected before claim. No new research row, theorem node, manuscript version or thaw.</p>
+<p style="font-size:13px;color:#5c665d;border-top:1px solid #d8ddd6;padding-top:15px;margin-top:28px;">Reviewed main 5ddff5e, all 104 registered conclusions and 14 continuation groups, current checkpoints and affected dependencies. Local author review only; historical proofs were not all replayed. Both missing-original evidence groups remain OPEN. Reproducible screen, full hypothesis match and source record: audits/prime-archimedean-screen-2026-09-23-v1/. G2 and RH remain open.</p>
+</main></body></html>

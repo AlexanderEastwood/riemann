@@ -1,0 +1,72 @@
+{
+  "classification": "Admission/overlap audit; no numerical certificate or new arithmetic theorem",
+  "reviewed_main": "5ddff5e215fce7c0236e7a27860ec8fdd697176a",
+  "review_scope": "All recorded conclusions and affected dependencies, not all historical proof replays; author review only.",
+  "review_findings": [
+    "Fixed positive unbounded Fourier comparison matches NS47 exactly.",
+    "Shrinking damping exits the absolute Euler convergence domain; no general shrinking-regularizer no-go inferred.",
+    "False controls do not match original gamma/pole/prime hypotheses; full undamping bound remains untested on them."
+  ],
+  "numerics": {
+    "decimal_precisions": [
+      30,
+      50
+    ],
+    "numeric_strings_compared": 108,
+    "maximum_scaled_difference": "6.9299999233508e-30",
+    "tolerance": "1e-22",
+    "all_20_prime_prefix_checks_within_tail": true,
+    "source_hashes_match": true
+  },
+  "repository": {
+    "all104_node_objects_unchanged": true,
+    "continuation_interpretation_updated": [
+      "WEIL-FLOOR"
+    ],
+    "new_research_rows": 0,
+    "manuscript_unchanged": true,
+    "missing_originals_ledger_unchanged": true,
+    "missing_originals_status": "Both OPEN",
+    "new_version": false
+  },
+  "checks": {
+    "pyright": "0 errors, 0 warnings, 0 informations",
+    "actual_build": {
+      "pages": 358,
+      "undefined_duplicate_references": 0
+    },
+    "v166_manifest": {
+      "ok": 16,
+      "missing": 0,
+      "mismatched": 0
+    },
+    "diff_check": "passed"
+  },
+  "disposition": "REJECT before claim; no thaw",
+  "wall_check": {
+    "fixed_damping": "Known wall: NS47/50",
+    "shrinking_damping": "Same open gap: WEIL-FLOOR"
+  },
+  "files": [
+    {
+      "path": "audits/prime-archimedean-screen-2026-09-23-v1/PROPOSAL.md",
+      "sha256": "4133e9bebc87dcf5dd9efcf95f428e81fcc3e6a5227970ffe5dccb3059124d5b"
+    },
+    {
+      "path": "audits/prime-archimedean-screen-2026-09-23-v1/results.md",
+      "sha256": "05390658c274f01c855c54c40da4d059e4bef9126f2ccd8872d8693d0dead8d0"
+    },
+    {
+      "path": "audits/prime-archimedean-screen-2026-09-23-v1/screen-results.json",
+      "sha256": "9a4bb90fb10e7ec86d909f7de47f6d61b41d4f7d79c6633541848947d07ba83a"
+    },
+    {
+      "path": "audits/prime-archimedean-screen-2026-09-23-v1/screen.py",
+      "sha256": "13fc9d837ed461d46ab796272a93c0197988582451875756f322bda8727f97ee"
+    },
+    {
+      "path": "audits/prime-archimedean-screen-2026-09-23-v1/sources.json",
+      "sha256": "547b095f403b43004dba7e4f69d78d7ace676195c5e8d22ecc0514a9c3406323"
+    }
+  ]
+}

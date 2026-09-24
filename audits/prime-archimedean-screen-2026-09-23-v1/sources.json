@@ -1,0 +1,22 @@
+[
+  {
+    "title": "DLMF 27.4.12: von Mangoldt logarithmic derivative",
+    "url": "https://dlmf.nist.gov/27.4.E12",
+    "use": "Exact prime identity and its Re(s)>1 domain; no critical-strip estimate imported."
+  },
+  {
+    "title": "DLMF 25.4.4: xi definition",
+    "url": "https://dlmf.nist.gov/25.4.E4",
+    "use": "Original gamma/pole normalization."
+  },
+  {
+    "title": "Sondow and Dumitrescu, 2010, Theorem1 and proof",
+    "url": "https://arxiv.org/abs/1005.1104v1",
+    "use": "Classical horizontal monotonicity in a zero-free right half-plane; not positivity throughout the critical strip."
+  },
+  {
+    "title": "AIM: logarithmic derivative criterion",
+    "url": "https://www.aimath.org/WWN/rh/articles/html/108a/",
+    "use": "Prior-art criterion, already in NS100; not a new mechanism."
+  }
+]
