@@ -61,3 +61,33 @@ The raw kernel is `2 exp(3t/2) theta_f(exp(2t))`, where
 `kappa=(sqrt(10-2sqrt(5))-2)/(sqrt(5)-1)`.
 The historical zero near 0.8085+85.699i is discussed by Spira (1994).
 No new zero-location certificate is claimed here.
+
+## Floor screen (`floor_screen.py`)
+
+The v1.36 target is a uniform floor q[f] >= -C ||f||^2 with one C for every
+window. On the plain window-restricted Weil form (NS-103 machinery) zeta
+sits at 0 on every scanned window while Davenport-Heilbronn falls without
+bound (about -0.76, -3.7, -10.6, -24.7 per unit norm at lambda 2, 3, 4, 5).
+So any chain of inequalities that would prove a floor for zeta must contain a
+step that fails on Davenport-Heilbronn. Evaluate the chain here first:
+
+```
+.venv/bin/python controls/floor_screen.py --candidate plain --C 1
+.venv/bin/python controls/floor_screen.py --candidate abel --eps 2 --C 1     # PR #58 shape
+.venv/bin/python controls/floor_screen.py --candidate custom --custom mymod:build
+```
+
+`custom` takes a function `build(data, lam, K, ww) -> {"name": matrix}` in
+the sine basis of `weil_window.window_matrix`; every matrix gets its min and
+max eigenvalue per unit norm on both objects across the window list.
+
+Recorded runs (`floor_screen_*.json`): the plain floor with C = 1 is violated
+by Davenport-Heilbronn from lambda = 2.5; the Abel-damped chain with eps = 2
+or 0.5 fails step (i) (the damped form is not nonnegative, on zeta or on the
+control) and step (ii) (the undamping cost is not uniform, growing by a
+factor above 20 across the scan on both). A chain whose every step holds on
+Davenport-Heilbronn would prove a false statement; name the hypothesis the
+control violates, or stop.
+
+This is the plain explicit-formula form, not the manuscript's semilocal form.
+A pass here is a screen, never a proof.

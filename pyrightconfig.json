@@ -74,6 +74,7 @@
     "evidence/v160/ns71",
     "evidence/v161/ns72",
     "evidence/ns92_arithmetic_cost",
-    "evidence/ns86_optimized_arithmetic"
+    "evidence/ns86_optimized_arithmetic",
+    "evidence/diag_ns103_window_calibration"
   ]
 }

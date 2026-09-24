@@ -1,0 +1,118 @@
+{
+ "classification": "diagnostic floor screen on the plain window-restricted Weil form; not a certificate",
+ "candidate": "plain",
+ "C": 1.0,
+ "eps": null,
+ "FMAX": 130.0,
+ "rows": [
+  {
+   "lambda": 1.0,
+   "K": 87,
+   "zeta": {
+    "min_eig_over_lambda": -1.4289805473958016e-15,
+    "floor_holds_with_C": true
+   },
+   "davenport-heilbronn": {
+    "min_eig_over_lambda": 3.882990790012657e-05,
+    "floor_holds_with_C": true
+   }
+  },
+  {
+   "lambda": 1.5,
+   "K": 129,
+   "zeta": {
+    "min_eig_over_lambda": -7.23931933389084e-15,
+    "floor_holds_with_C": true
+   },
+   "davenport-heilbronn": {
+    "min_eig_over_lambda": 6.655500048696872e-16,
+    "floor_holds_with_C": true
+   }
+  },
+  {
+   "lambda": 2.0,
+   "K": 170,
+   "zeta": {
+    "min_eig_over_lambda": -3.619948590608829e-14,
+    "floor_holds_with_C": true
+   },
+   "davenport-heilbronn": {
+    "min_eig_over_lambda": -0.7555435836395024,
+    "floor_holds_with_C": true
+   }
+  },
+  {
+   "lambda": 2.5,
+   "K": 211,
+   "zeta": {
+    "min_eig_over_lambda": -6.606549109567123e-14,
+    "floor_holds_with_C": true
+   },
+   "davenport-heilbronn": {
+    "min_eig_over_lambda": -1.8613230377300454,
+    "floor_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 3.0,
+   "K": 253,
+   "zeta": {
+    "min_eig_over_lambda": -1.4918588576363214e-13,
+    "floor_holds_with_C": true
+   },
+   "davenport-heilbronn": {
+    "min_eig_over_lambda": -3.6761482526331,
+    "floor_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 3.5,
+   "K": 294,
+   "zeta": {
+    "min_eig_over_lambda": -2.633740480092913e-13,
+    "floor_holds_with_C": true
+   },
+   "davenport-heilbronn": {
+    "min_eig_over_lambda": -6.310482900969853,
+    "floor_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 4.0,
+   "K": 336,
+   "zeta": {
+    "min_eig_over_lambda": -3.782934068517481e-13,
+    "floor_holds_with_C": true
+   },
+   "davenport-heilbronn": {
+    "min_eig_over_lambda": -10.643473297592774,
+    "floor_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 4.5,
+   "K": 377,
+   "zeta": {
+    "min_eig_over_lambda": -5.358568921828715e-13,
+    "floor_holds_with_C": true
+   },
+   "davenport-heilbronn": {
+    "min_eig_over_lambda": -16.44328758018789,
+    "floor_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 5.0,
+   "K": 418,
+   "zeta": {
+    "min_eig_over_lambda": -1.051022357529277e-12,
+    "floor_holds_with_C": true
+   },
+   "davenport-heilbronn": {
+    "min_eig_over_lambda": -24.71839192808223,
+    "floor_holds_with_C": false
+   }
+  }
+ ],
+ "verdict": "Davenport-Heilbronn violates the floor -C from lambda = 2.5 on; zeta holds on every scanned window (as it must if RH)"
+}
