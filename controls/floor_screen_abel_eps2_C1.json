@@ -1,0 +1,154 @@
+{
+ "classification": "diagnostic floor screen on the plain window-restricted Weil form; not a certificate",
+ "candidate": "abel",
+ "C": 1.0,
+ "eps": 2.0,
+ "FMAX": 130.0,
+ "rows": [
+  {
+   "lambda": 1.0,
+   "K": 87,
+   "zeta": {
+    "step_i_min_eig_q_eps_over_lambda": -1.2096758944229902,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 1.701935053134734,
+    "step_ii_holds_with_C": false
+   },
+   "davenport-heilbronn": {
+    "step_i_min_eig_q_eps_over_lambda": -0.11239240319955573,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 1.2570466850604276,
+    "step_ii_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 1.5,
+   "K": 129,
+   "zeta": {
+    "step_i_min_eig_q_eps_over_lambda": -2.6562915189852556,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 3.9555137594033454,
+    "step_ii_holds_with_C": false
+   },
+   "davenport-heilbronn": {
+    "step_i_min_eig_q_eps_over_lambda": -0.29627073411834826,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 2.771405999021759,
+    "step_ii_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 2.0,
+   "K": 170,
+   "zeta": {
+    "step_i_min_eig_q_eps_over_lambda": -5.06844967291166,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 7.584600218071368,
+    "step_ii_holds_with_C": false
+   },
+   "davenport-heilbronn": {
+    "step_i_min_eig_q_eps_over_lambda": -0.3927535151311126,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 4.9336827917795745,
+    "step_ii_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 2.5,
+   "K": 211,
+   "zeta": {
+    "step_i_min_eig_q_eps_over_lambda": -9.237316480915243,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 13.214306290588194,
+    "step_ii_holds_with_C": false
+   },
+   "davenport-heilbronn": {
+    "step_i_min_eig_q_eps_over_lambda": -0.4497751427066213,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 6.145112719487374,
+    "step_ii_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 3.0,
+   "K": 253,
+   "zeta": {
+    "step_i_min_eig_q_eps_over_lambda": -16.414752542620917,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 22.029865328581263,
+    "step_ii_holds_with_C": false
+   },
+   "davenport-heilbronn": {
+    "step_i_min_eig_q_eps_over_lambda": -0.48616789003982963,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 7.989702442688571,
+    "step_ii_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 3.5,
+   "K": 294,
+   "zeta": {
+    "step_i_min_eig_q_eps_over_lambda": -28.628066549773347,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 36.00923131920323,
+    "step_ii_holds_with_C": false
+   },
+   "davenport-heilbronn": {
+    "step_i_min_eig_q_eps_over_lambda": -0.5107487243074382,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 10.633532118651981,
+    "step_ii_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 4.0,
+   "K": 336,
+   "zeta": {
+    "step_i_min_eig_q_eps_over_lambda": -49.200491647385064,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 58.45250769936953,
+    "step_ii_holds_with_C": false
+   },
+   "davenport-heilbronn": {
+    "step_i_min_eig_q_eps_over_lambda": -0.5280997219327775,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 14.982508926078724,
+    "step_ii_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 4.5,
+   "K": 377,
+   "zeta": {
+    "step_i_min_eig_q_eps_over_lambda": -83.59689880109549,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 94.75868759432109,
+    "step_ii_holds_with_C": false
+   },
+   "davenport-heilbronn": {
+    "step_i_min_eig_q_eps_over_lambda": -0.5407849570342207,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 20.808154975415356,
+    "step_ii_holds_with_C": false
+   }
+  },
+  {
+   "lambda": 5.0,
+   "K": 418,
+   "zeta": {
+    "step_i_min_eig_q_eps_over_lambda": -140.8260215810478,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 153.91842918273161,
+    "step_ii_holds_with_C": false
+   },
+   "davenport-heilbronn": {
+    "step_i_min_eig_q_eps_over_lambda": -0.5503299368596386,
+    "step_i_holds": false,
+    "step_ii_max_eig_diff_over_lambda": 29.087415714782804,
+    "step_ii_holds_with_C": false
+   }
+  }
+ ],
+ "verdict": "step (i) q_eps >= 0 fails on zeta at lambda [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0] and on Davenport-Heilbronn at [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0] ; step (ii) <= C fails on zeta at [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0] and on Davenport-Heilbronn at [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0], growing by a factor 23.1 across the scan ; no uniform C on either object: the damping cannot be removed at constant cost (NS47/PR58)"
+}

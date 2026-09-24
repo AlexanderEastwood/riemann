@@ -58,5 +58,14 @@ class ControlRegressionTests(unittest.TestCase):
         self.assertEqual(out["outcome"], "not-applicable")
 
 
+class FloorScreenTests(unittest.TestCase):
+    def test_plain_floor_discriminates_at_lambda_3(self) -> None:
+        from controls.floor_screen import screen
+        out = screen("plain", [3.0], 1.0, 2.0, None)
+        row = out["rows"][0]
+        self.assertGreater(row["zeta"]["min_eig_over_lambda"], -1e-6)
+        self.assertLess(row["davenport-heilbronn"]["min_eig_over_lambda"], -1.0)
+
+
 if __name__ == "__main__":
     unittest.main()
