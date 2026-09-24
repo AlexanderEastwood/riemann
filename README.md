@@ -5,6 +5,48 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
+## Status in one page (2026-09-23)
+
+Read this before any dated section below. Dated sections are preserved as
+written; this page states what the record supports now.
+
+**Certified (interval arithmetic, two precisions).** The complete semilocal
+Weil form at multiplicative window lambda=4 (support [-log 4, log 4]) is
+nonnegative in both parity sectors; its ground is simple and even with
+0 < mu_0 < 2.454e-75; the ground's entire transform has only real zeros
+(v1.40); its first positive zero lies within 9e-33 of gamma_1 (v1.43, an
+energy/evaluator upper bound). Fresh lambda=5 comparison certificates
+(v1.52) and finite Nyman-Beurling block certificates (v1.58 to v1.66) are
+listed in `RESEARCH_MAP.md`.
+
+**What the certificates do not say.** They verify no zero of zeta beyond
+the numerically verified range and establish no convergence to Xi. The
+window sees heights of order e^{2 lambda} at most (NS103, plain form,
+diagnostic). The archived lambda=4 trial's transform carries its mass
+below height about 150, vanishes near every zeta ordinate there, and sits
+at the sqrt(mu_0) scale above (NS104, NS105): the small ground energy and
+the zero near gamma_1 describe that finite object. Finite windows do not
+accumulate (`prop:v121-cofinal-rh`); windows cost exponentially
+(`prop:v125-cutoff-cost`).
+
+**Closed.** About ten scoped routes are proved closed under their stated
+hypotheses (research map, status "closed"). A closure is a result; it is not
+a negative Weil direction.
+
+**Open.** RH and G2. Every route reduces to one of 14 continuation inputs
+(`RESEARCH_MAP.md`, "Shared continuation inputs"); all of them are frozen
+on the board with per-group thaw conditions (`NEXT_STEPS.md`, "Frozen
+input groups"). The single missing
+ingredient is an analytic estimate on the prime side that uses the Euler
+product, on tests that annihilate the zeros a window can resolve. No node
+supplies it. Two historical evidence groups remain unarchived
+(`evidence/MISSING.md`).
+
+**How work proceeds.** `AGENTS.md`: review before every turn, per-turn wall
+check, proposal gate with a control screen (`controls/`), no manuscript
+version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
+PR before a research row is claimed.
+
 ## September 23 prime–archimedean admission test
 
 **The exponential-damping proposal was rejected before a research claim.**
