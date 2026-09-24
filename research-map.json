@@ -1742,14 +1742,15 @@
     {
       "id": "CCM-LIMIT",
       "title": "Obtain complete relative ground selection and transform control",
-      "tasks": "NS5,14,18,19,43",
+      "tasks": "NS5,14,18,19,43; NS105 trial-spectrum diagnostic",
       "demand": "Control the complete cutoff residual relative to a complete separator (or the stated Rayleigh-excess/gap variant) cofinally, plus entire-transform evaluator/tightness bounds. Global-ground claims also require the specified odd ordering.",
-      "scope": "Fixed-window real-zero transforms and proximity to the first zeta zero do not supply convergence to Xi. Absolute residual/resolvent data and a polynomial positive separator do not replace the named relative inputs. Distinct from the NB cost and API. NS104 evaluates the frozen finite trial only; the v1.43 complete-root radius is an energy/evaluator upper bound, not a measured displacement. Later trial zeros are not transferred to the complete ground.",
+      "scope": "Fixed-window real-zero transforms and proximity to the first zeta zero do not supply convergence to Xi. Absolute residual/resolvent data and a polynomial positive separator do not replace the named relative inputs. Distinct from the NB cost and API. NS104 evaluates the frozen finite trial only; the v1.43 complete-root radius is an energy/evaluator upper bound, not a measured displacement. Later trial zeros are not transferred to the complete ground. NS105 (diagnostic) samples the same archived trial transform on a height grid: its mass sits below about 150, decays exponentially, vanishes near every ordinate up to 150 and plateaus at the sqrt(rho) scale above 200, where matching to ordinates stops. A description of the finite trial; no complete-ground transfer or convergence statement.",
       "sources": [
         "evidence/v152",
         "evidence/v140",
         "evidence/v143",
-        "evidence/diag_ns104_ground_mechanism/results.md"
+        "evidence/diag_ns104_ground_mechanism/results.md",
+        "evidence/diag_ns105_trial_spectrum/results.md"
       ]
     },
     {

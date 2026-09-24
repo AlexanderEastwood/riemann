@@ -1,0 +1,11 @@
+{
+ "grid_points": 8000,
+ "max_abs_difference_of_midpoints": 0.0,
+ "max_relative_difference_of_midpoints": 0.0,
+ "all_intervals_overlap": true,
+ "sign_change_heights_identical": true,
+ "counts_identical": true,
+ "envelope_log10_identical_to_3dp": true,
+ "trial_rayleigh_rho_1024": "[2.45361754930714136034863662577e-75 +/- 1.69e-105]",
+ "trial_rayleigh_rho_1280": "[2.45361754930714136034863662577e-75 +/- 1.69e-105]"
+}
