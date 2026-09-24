@@ -520,6 +520,21 @@ formula or larger table is not sufficient. A compatible lower numerator
 would still be needed. PR42/NS87, RH/G2 and both original-evidence gaps
 remain open. No theorem node or manuscript version was added.
 
+## Pre-claim Abel-damping screen (2026-09-23; no research row)
+
+The attempted estimate was a uniform ordinary-norm upper bound on the cost
+of removing fixed exponential damping from the complete prime/gamma/pole
+form. The damped expression passes the recorded samples for zeta and four
+false analogues; those samples do not establish the full comparison.
+NS47 excludes that comparison for the original form because its positive
+Fourier multiplier is closed and unbounded. Letting the damping tend to
+zero leaves the absolute-convergence regime; its arithmetic transfer is
+unproved. This is an overlap/domain audit, not a new scoped closure or a
+thaw. **Wall check: Known wall** for fixed damping (NS47/50); **Same open
+gap** for the shrinking variant (WEIL-FLOOR). No new row or version.
+
+[Screen, exact hypothesis match and scope](audits/prime-archimedean-screen-2026-09-23-v1/).
+
 ## Frozen input groups (proposal gate, NS-102)
 
 These freezes pause repeat attempts; they do not change mathematical

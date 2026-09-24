@@ -1,0 +1,460 @@
+{
+  "classification": "pre-claim diagnostic screen, not a numerical certificate",
+  "candidate": "fixed Abel damping epsilon=2 plus an all-test, support-independent upper bound on q_epsilon-q",
+  "screen_order": "Recorded proposal; function/control and prime-prefix screen before obstruction/domain audit",
+  "replays": [
+    {
+      "dps": 30,
+      "heights": [
+        "0.0",
+        "14.13472514173469379045725",
+        "20.0",
+        "85.69934848537759217192927",
+        "176.702461"
+      ],
+      "epsilon2": {
+        "zeta": {
+          "values": [
+            "0.1836685429912815531647001",
+            "1.262487056143146532365621",
+            "1.234643074673958859666335",
+            "2.635221845903701725225609",
+            "3.449634329435153611606983"
+          ],
+          "minimum": "0.1836685429912815531647001",
+          "outcome": "sampled-pass"
+        },
+        "davenport_heilbronn": {
+          "values": [
+            "0.7352532096786361350202411",
+            "2.521704372825215446671383",
+            "2.668638703508443318936947",
+            "4.501968620704460328542013",
+            "5.202647382809242220940535"
+          ],
+          "minimum": "0.7352532096786361350202411",
+          "outcome": "sampled-pass"
+        },
+        "NS100_order_two": {
+          "values": [
+            "9.378458963049376074659173",
+            "9.770156064849699921378695",
+            "9.572625850349389808858932",
+            "10.36614134147123198291193",
+            "9.46192690753066428522094"
+          ],
+          "minimum": "9.378458963049376074659173",
+          "outcome": "sampled-pass"
+        },
+        "NS101_reciprocal_dilation": {
+          "values": [
+            "3.972851635542447954706893",
+            "5.492129160670132866261365",
+            "5.379809675770729611451344",
+            "6.665989301646124503291875",
+            "7.434975801794827543073381"
+          ],
+          "minimum": "3.972851635542447954706893",
+          "outcome": "sampled-pass"
+        },
+        "shifted_zeta_product": {
+          "values": [
+            "1.441391912835546901834742",
+            "5.863726891247253847266044",
+            "7.60389444901935781812399",
+            "12.9194173040458508265627",
+            "15.84341016518529783174665"
+          ],
+          "minimum": "1.441391912835546901834742",
+          "outcome": "sampled-pass"
+        }
+      },
+      "DH_expression_screen": {
+        "name": "Abel-damped logarithmic derivative at epsilon=2",
+        "classification": "diagnostic, not a certificate",
+        "sample_domain": "z=2+i*t at t=0,gamma1,20,Im(DH zero),176.702461",
+        "dps": 30,
+        "applicability": "Same function expression only; original zeta gamma/pole/prime coefficients do not transfer. The full all-test undamping bound is untested.",
+        "observations": {
+          "min_symbol": "0.7352532096786361350202411"
+        },
+        "proved_control_obstruction": false,
+        "outcome": "sampled-pass"
+      },
+      "continued_interior_checks": {
+        "davenport_heilbronn": {
+          "z": "(0.288517182456637385553351960607 + 85.6993484853775921719292677089j)",
+          "continued_expression": "-96.16306416841621871080867",
+          "original_zeta_same_point": "0.9839682753435319499917891",
+          "outcome": "sampled-failure",
+          "physical_multiplier_transfer": "NOT ASSERTED outside the separately justified convergence domain"
+        },
+        "NS100_order_two": {
+          "z": "(0.942423650119206894995517826849 + 3.14159265358979323846264338328j)",
+          "continued_expression": "-94.88388940724697078071065",
+          "original_zeta_same_point": "0.09135080220296346766911693",
+          "outcome": "sampled-failure",
+          "physical_multiplier_transfer": "NOT ASSERTED outside the separately justified convergence domain"
+        },
+        "NS101_reciprocal_dilation": {
+          "z": "(0.461211825059603447497758913424 + 1.57079632679489661923132169164j)",
+          "continued_expression": "-97.25404857158713874668386",
+          "original_zeta_same_point": "0.0431250122867078060259966",
+          "outcome": "sampled-failure",
+          "physical_multiplier_transfer": "NOT ASSERTED outside the separately justified convergence domain"
+        },
+        "shifted_zeta_product": {
+          "z": "(0.23 + 7.06736257086734689522862599178j)",
+          "continued_expression": "-95.58618383638530662747317",
+          "original_zeta_same_point": "0.02879263940062112465224927",
+          "outcome": "sampled-failure",
+          "physical_multiplier_transfer": "NOT ASSERTED outside the separately justified convergence domain"
+        }
+      },
+      "prime_prefix_checks": [
+        {
+          "N": 1000,
+          "sigma": "2.5",
+          "elementary_tail_allowance": "0.0003193656707655242975056175",
+          "rows": [
+            {
+              "t": "0.0",
+              "arch_pole": "0.7611499141076677511003758",
+              "twice_real_prime_prefix": "0.5774390662554355789886263",
+              "partial_symbol": "0.1837108478522321721117495",
+              "completed_expression": "0.1836685429912815531647001",
+              "absolute_difference": "0.00004230486095061894704936828",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "14.13472514173469379045725",
+              "arch_pole": "0.8546633235995546106892905",
+              "twice_real_prime_prefix": "-0.4078231492554501178826835",
+              "partial_symbol": "1.262486472855004728571974",
+              "completed_expression": "1.262487056143146532365621",
+              "absolute_difference": "0.0000005832881418037936474414813",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "20.0",
+              "arch_pole": "1.180015174105793539779965",
+              "twice_real_prime_prefix": "-0.05462859817186342198850058",
+              "partial_symbol": "1.234643772277656961768466",
+              "completed_expression": "1.234643074673958859666335",
+              "absolute_difference": "0.0000006976036981021021305262977",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "85.69934848537759217192927",
+              "arch_pole": "2.61418720196172528512311",
+              "twice_real_prime_prefix": "-0.02103263994176059988610793",
+              "partial_symbol": "2.635219841903485885009218",
+              "completed_expression": "2.635221845903701725225609",
+              "absolute_difference": "0.000002004000215840216390276838",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "176.702461",
+              "arch_pole": "3.336877108725493077451822",
+              "twice_real_prime_prefix": "-0.1127572096491699150312929",
+              "partial_symbol": "3.449634318374662992483115",
+              "completed_expression": "3.449634329435153611606983",
+              "absolute_difference": "1.106049061912386725254101e-8",
+              "within_tail_diagnostic": true
+            }
+          ]
+        },
+        {
+          "N": 4000,
+          "sigma": "2.5",
+          "elementary_tail_allowance": "0.00004722712166000191386164052",
+          "rows": [
+            {
+              "t": "0.0",
+              "arch_pole": "0.7611499141076677511003758",
+              "twice_real_prime_prefix": "0.5774760825570517198697827",
+              "partial_symbol": "0.1836738315506160312305931",
+              "completed_expression": "0.1836685429912815531647001",
+              "absolute_difference": "0.000005288559334478065892963351",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "14.13472514173469379045725",
+              "arch_pole": "0.8546633235995546106892905",
+              "twice_real_prime_prefix": "-0.4078240949766184802796178",
+              "partial_symbol": "1.262487418576173090968908",
+              "completed_expression": "1.262487056143146532365621",
+              "absolute_difference": "0.0000003624330265586032868749875",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "20.0",
+              "arch_pole": "1.180015174105793539779965",
+              "twice_real_prime_prefix": "-0.05462763644149324605833647",
+              "partial_symbol": "1.234642810547286785838302",
+              "completed_expression": "1.234643074673958859666335",
+              "absolute_difference": "0.0000002641266720738280335826374",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "85.69934848537759217192927",
+              "arch_pole": "2.61418720196172528512311",
+              "twice_real_prime_prefix": "-0.02103468950166475605541912",
+              "partial_symbol": "2.635221891463390041178529",
+              "completed_expression": "2.635221845903701725225609",
+              "absolute_difference": "4.55596883159529209042596e-8",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "176.702461",
+              "arch_pole": "3.336877108725493077451822",
+              "twice_real_prime_prefix": "-0.1127573171444279584696927",
+              "partial_symbol": "3.449634425869921035921515",
+              "completed_expression": "3.449634329435153611606983",
+              "absolute_difference": "9.643476742431453252767831e-8",
+              "within_tail_diagnostic": true
+            }
+          ]
+        }
+      ],
+      "all_test_bound_control_outcome": {
+        "name": "Existence of C with q_epsilon-q <= C||f||^2 on every compact test",
+        "classification": "diagnostic, not a certificate",
+        "sample_domain": "No finite sample establishes the existential, all-support bound",
+        "dps": 30,
+        "applicability": "Full condition not established on any control; exact original coefficients/gamma/poles also differ",
+        "observations": {},
+        "proved_control_obstruction": false,
+        "outcome": "inconclusive"
+      }
+    },
+    {
+      "dps": 50,
+      "heights": [
+        "0.0",
+        "14.13472514173469379045725",
+        "20.0",
+        "85.69934848537759217192927",
+        "176.702461"
+      ],
+      "epsilon2": {
+        "zeta": {
+          "values": [
+            "0.1836685429912815531647001",
+            "1.262487056143146532365621",
+            "1.234643074673958859666335",
+            "2.635221845903701725225609",
+            "3.449634329435153611606983"
+          ],
+          "minimum": "0.1836685429912815531647001",
+          "outcome": "sampled-pass"
+        },
+        "davenport_heilbronn": {
+          "values": [
+            "0.7352532096786361350202411",
+            "2.521704372825215446671383",
+            "2.668638703508443318936947",
+            "4.501968620704460328542013",
+            "5.202647382809242220940535"
+          ],
+          "minimum": "0.7352532096786361350202411",
+          "outcome": "sampled-pass"
+        },
+        "NS100_order_two": {
+          "values": [
+            "9.378458963049376074659173",
+            "9.770156064849699921378695",
+            "9.572625850349389808858932",
+            "10.36614134147123198291193",
+            "9.46192690753066428522094"
+          ],
+          "minimum": "9.378458963049376074659173",
+          "outcome": "sampled-pass"
+        },
+        "NS101_reciprocal_dilation": {
+          "values": [
+            "3.972851635542447954706893",
+            "5.492129160670132866261365",
+            "5.379809675770729611451344",
+            "6.665989301646124503291875",
+            "7.434975801794827543073381"
+          ],
+          "minimum": "3.972851635542447954706893",
+          "outcome": "sampled-pass"
+        },
+        "shifted_zeta_product": {
+          "values": [
+            "1.441391912835546901834742",
+            "5.863726891247253847266044",
+            "7.60389444901935781812399",
+            "12.9194173040458508265627",
+            "15.84341016518529783174665"
+          ],
+          "minimum": "1.441391912835546901834742",
+          "outcome": "sampled-pass"
+        }
+      },
+      "DH_expression_screen": {
+        "name": "Abel-damped logarithmic derivative at epsilon=2",
+        "classification": "diagnostic, not a certificate",
+        "sample_domain": "z=2+i*t at t=0,gamma1,20,Im(DH zero),176.702461",
+        "dps": 50,
+        "applicability": "Same function expression only; original zeta gamma/pole/prime coefficients do not transfer. The full all-test undamping bound is untested.",
+        "observations": {
+          "min_symbol": "0.7352532096786361350202411"
+        },
+        "proved_control_obstruction": false,
+        "outcome": "sampled-pass"
+      },
+      "continued_interior_checks": {
+        "davenport_heilbronn": {
+          "z": "(0.28851718245663738555335196060684412785067026830502 + 85.699348485377592171929267708941729037987829423408j)",
+          "continued_expression": "-96.16306416841621871080867",
+          "original_zeta_same_point": "0.9839682753435319499917891",
+          "outcome": "sampled-failure",
+          "physical_multiplier_transfer": "NOT ASSERTED outside the separately justified convergence domain"
+        },
+        "NS100_order_two": {
+          "z": "(0.94242365011920689499551782684873684627036866877132 + 3.1415926535897932384626433832795028841971693993751j)",
+          "continued_expression": "-94.88388940724697078071065",
+          "original_zeta_same_point": "0.09135080220296346766911693",
+          "outcome": "sampled-failure",
+          "physical_multiplier_transfer": "NOT ASSERTED outside the separately justified convergence domain"
+        },
+        "NS101_reciprocal_dilation": {
+          "z": "(0.46121182505960344749775891342436842313518433438566 + 1.5707963267948966192313216916397514420985846996876j)",
+          "continued_expression": "-97.25404857158713874668386",
+          "original_zeta_same_point": "0.0431250122867078060259966",
+          "outcome": "sampled-failure",
+          "physical_multiplier_transfer": "NOT ASSERTED outside the separately justified convergence domain"
+        },
+        "shifted_zeta_product": {
+          "z": "(0.23 + 7.0673625708673468952286259917812351353921285578496j)",
+          "continued_expression": "-95.58618383638530662747317",
+          "original_zeta_same_point": "0.02879263940062112465224927",
+          "outcome": "sampled-failure",
+          "physical_multiplier_transfer": "NOT ASSERTED outside the separately justified convergence domain"
+        }
+      },
+      "prime_prefix_checks": [
+        {
+          "N": 1000,
+          "sigma": "2.5",
+          "elementary_tail_allowance": "0.0003193656707655242975056175",
+          "rows": [
+            {
+              "t": "0.0",
+              "arch_pole": "0.7611499141076677511003758",
+              "twice_real_prime_prefix": "0.5774390662554355789886263",
+              "partial_symbol": "0.1837108478522321721117495",
+              "completed_expression": "0.1836685429912815531647001",
+              "absolute_difference": "0.00004230486095061894704936828",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "14.13472514173469379045725",
+              "arch_pole": "0.8546633235995546106892905",
+              "twice_real_prime_prefix": "-0.4078231492554501178826835",
+              "partial_symbol": "1.262486472855004728571974",
+              "completed_expression": "1.262487056143146532365621",
+              "absolute_difference": "0.0000005832881418037936474414811",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "20.0",
+              "arch_pole": "1.180015174105793539779965",
+              "twice_real_prime_prefix": "-0.05462859817186342198850058",
+              "partial_symbol": "1.234643772277656961768466",
+              "completed_expression": "1.234643074673958859666335",
+              "absolute_difference": "0.0000006976036981021021305262984",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "85.69934848537759217192927",
+              "arch_pole": "2.61418720196172528512311",
+              "twice_real_prime_prefix": "-0.02103263994176059988610793",
+              "partial_symbol": "2.635219841903485885009218",
+              "completed_expression": "2.635221845903701725225609",
+              "absolute_difference": "0.000002004000215840216390276835",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "176.702461",
+              "arch_pole": "3.336877108725493077451822",
+              "twice_real_prime_prefix": "-0.1127572096491699150312929",
+              "partial_symbol": "3.449634318374662992483115",
+              "completed_expression": "3.449634329435153611606983",
+              "absolute_difference": "1.106049061912386725253408e-8",
+              "within_tail_diagnostic": true
+            }
+          ]
+        },
+        {
+          "N": 4000,
+          "sigma": "2.5",
+          "elementary_tail_allowance": "0.00004722712166000191386164052",
+          "rows": [
+            {
+              "t": "0.0",
+              "arch_pole": "0.7611499141076677511003758",
+              "twice_real_prime_prefix": "0.5774760825570517198697827",
+              "partial_symbol": "0.1836738315506160312305931",
+              "completed_expression": "0.1836685429912815531647001",
+              "absolute_difference": "0.000005288559334478065892963352",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "14.13472514173469379045725",
+              "arch_pole": "0.8546633235995546106892905",
+              "twice_real_prime_prefix": "-0.4078240949766184802796178",
+              "partial_symbol": "1.262487418576173090968908",
+              "completed_expression": "1.262487056143146532365621",
+              "absolute_difference": "0.0000003624330265586032868749876",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "20.0",
+              "arch_pole": "1.180015174105793539779965",
+              "twice_real_prime_prefix": "-0.05462763644149324605833647",
+              "partial_symbol": "1.234642810547286785838302",
+              "completed_expression": "1.234643074673958859666335",
+              "absolute_difference": "0.0000002641266720738280335826368",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "85.69934848537759217192927",
+              "arch_pole": "2.61418720196172528512311",
+              "twice_real_prime_prefix": "-0.02103468950166475605541912",
+              "partial_symbol": "2.635221891463390041178529",
+              "completed_expression": "2.635221845903701725225609",
+              "absolute_difference": "4.555968831595292090426318e-8",
+              "within_tail_diagnostic": true
+            },
+            {
+              "t": "176.702461",
+              "arch_pole": "3.336877108725493077451822",
+              "twice_real_prime_prefix": "-0.1127573171444279584696927",
+              "partial_symbol": "3.449634425869921035921515",
+              "completed_expression": "3.449634329435153611606983",
+              "absolute_difference": "9.64347674243145325276852e-8",
+              "within_tail_diagnostic": true
+            }
+          ]
+        }
+      ],
+      "all_test_bound_control_outcome": {
+        "name": "Existence of C with q_epsilon-q <= C||f||^2 on every compact test",
+        "classification": "diagnostic, not a certificate",
+        "sample_domain": "No finite sample establishes the existential, all-support bound",
+        "dps": 50,
+        "applicability": "Full condition not established on any control; exact original coefficients/gamma/poles also differ",
+        "observations": {},
+        "proved_control_obstruction": false,
+        "outcome": "inconclusive"
+      }
+    }
+  ],
+  "limits": "Samples check the damped expression and demonstrate that its positivity is not distinguishing. They do not refute or prove the quantified undamping bound; that is assessed using the existing NS47 theorem. Interior continuation samples are not physical-form multiplier identities.",
+  "script_sha256": "13fc9d837ed461d46ab796272a93c0197988582451875756f322bda8727f97ee",
+  "control_sha256": "20d737be7f298dc77196545a4be32cfabb7961d1379b35b4c5ef1662f8577439"
+}
