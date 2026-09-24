@@ -366,7 +366,7 @@ a stronger sufficient bound does not disprove the smaller quantity it bounds.
 | [NB-CONTINUOUS](#input-nb-continuous) | Bridge continuous zero-defect information to the integer problem | NS76,77 |
 | [WEIL-FLOOR](#input-weil-floor) | One complete signed lower floor with a common cofinal constant | NS24,34,39,43,47,50; v1.36 |
 | [KERNEL-API](#input-kernel-api) | Exclude full-window arithmetic nullvectors on the complete domain | NS51,55,58 |
-| [CCM-LIMIT](#input-ccm-limit) | Obtain complete relative ground selection and transform control | NS5,14,18,19,43 |
+| [CCM-LIMIT](#input-ccm-limit) | Obtain complete relative ground selection and transform control | NS5,14,18,19,43; NS105 trial-spectrum diagnostic |
 | [LEVEL-PACKETS](#input-level-packets) | Supply arithmetic level mass and independent admissible packet coverage | NS27,29,32–33,39,54 |
 | [ZERO-GEOMETRY](#input-zero-geometry) | Find zeta-specific zero rigidity beyond reflection symmetry | NS94; NS100 reassessment; NS101 bounded attempt; NS103 window-sensitivity diagnostic; NS104 interpretation audit |
 | [HEAT-TRANSPORT](#input-heat-transport) | Control exterior-cluster transport and test-support costs | NS52 |
@@ -458,9 +458,9 @@ Sources: [evidence/v154](evidence/v154) · [evidence/v155](evidence/v155) · [ev
 
 Control the complete cutoff residual relative to a complete separator (or the stated Rayleigh-excess/gap variant) cofinally, plus entire-transform evaluator/tightness bounds. Global-ground claims also require the specified odd ordering.
 
-**Scope / stop:** Fixed-window real-zero transforms and proximity to the first zeta zero do not supply convergence to Xi. Absolute residual/resolvent data and a polynomial positive separator do not replace the named relative inputs. Distinct from the NB cost and API. NS104 evaluates the frozen finite trial only; the v1.43 complete-root radius is an energy/evaluator upper bound, not a measured displacement. Later trial zeros are not transferred to the complete ground.
+**Scope / stop:** Fixed-window real-zero transforms and proximity to the first zeta zero do not supply convergence to Xi. Absolute residual/resolvent data and a polynomial positive separator do not replace the named relative inputs. Distinct from the NB cost and API. NS104 evaluates the frozen finite trial only; the v1.43 complete-root radius is an energy/evaluator upper bound, not a measured displacement. Later trial zeros are not transferred to the complete ground. NS105 (diagnostic) samples the same archived trial transform on a height grid: its mass sits below about 150, decays exponentially, vanishes near every ordinate up to 150 and plateaus at the sqrt(rho) scale above 200, where matching to ordinates stops. A description of the finite trial; no complete-ground transfer or convergence statement.
 
-Sources: [evidence/v152](evidence/v152) · [evidence/v140](evidence/v140) · [evidence/v143](evidence/v143) · [evidence/diag_ns104_ground_mechanism/results.md](evidence/diag_ns104_ground_mechanism/results.md).
+Sources: [evidence/v152](evidence/v152) · [evidence/v140](evidence/v140) · [evidence/v143](evidence/v143) · [evidence/diag_ns104_ground_mechanism/results.md](evidence/diag_ns104_ground_mechanism/results.md) · [evidence/diag_ns105_trial_spectrum/results.md](evidence/diag_ns105_trial_spectrum/results.md).
 
 <a id="input-level-packets"></a>
 ### LEVEL-PACKETS: Supply arithmetic level mass and independent admissible packet coverage
