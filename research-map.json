@@ -1717,12 +1717,13 @@
       "title": "One complete signed lower floor with a common cofinal constant",
       "tasks": "NS24,34,39,43,47,50; v1.36",
       "demand": "Prove q_a[f]>=-C||f||² with a common finite C on complete admissible domains: the actual even source complement and the odd sector, with the established source transfer to the full form. All prime, pole, exterior and cross terms must remain.",
-      "scope": "CAE, unrestricted exact adaptive concentration, critical Clifford domination and coefficient-one localization absorption are versions of this same floor under their stated domains. Their stronger fixed-slack or channel-deletion failures do not refute the floor. This is a second genuine shared-gap family, distinct from the NB selected numerator/cost. RH implications alone do not identify their estimates.",
+      "scope": "CAE, unrestricted exact adaptive concentration, critical Clifford domination and coefficient-one localization absorption are versions of this same floor under their stated domains. Their stronger fixed-slack or channel-deletion failures do not refute the floor. This is a second genuine shared-gap family, distinct from the NB selected numerator/cost. RH implications alone do not identify their estimates. NS104 clarification: a common absolute error bound can suffice without resolving each tiny positive eigenvalue. The target does not require a positive spectral gap.",
       "sources": [
         "evidence/v151",
         "evidence/v152",
         "evidence/ns47_clifford_weil/representation.tex",
-        "evidence/ns50_cae_localization/localization-v2.tex"
+        "evidence/ns50_cae_localization/localization-v2.tex",
+        "evidence/diag_ns104_ground_mechanism/results.md"
       ]
     },
     {
@@ -1742,11 +1743,12 @@
       "title": "Obtain complete relative ground selection and transform control",
       "tasks": "NS5,14,18,19,43",
       "demand": "Control the complete cutoff residual relative to a complete separator (or the stated Rayleigh-excess/gap variant) cofinally, plus entire-transform evaluator/tightness bounds. Global-ground claims also require the specified odd ordering.",
-      "scope": "Fixed-window real-zero transforms and proximity to the first zeta zero do not supply convergence to Xi. Absolute residual/resolvent data and a polynomial positive separator do not replace the named relative inputs. Distinct from the NB cost and API.",
+      "scope": "Fixed-window real-zero transforms and proximity to the first zeta zero do not supply convergence to Xi. Absolute residual/resolvent data and a polynomial positive separator do not replace the named relative inputs. Distinct from the NB cost and API. NS104 evaluates the frozen finite trial only; the v1.43 complete-root radius is an energy/evaluator upper bound, not a measured displacement. Later trial zeros are not transferred to the complete ground.",
       "sources": [
         "evidence/v152",
         "evidence/v140",
-        "evidence/v143"
+        "evidence/v143",
+        "evidence/diag_ns104_ground_mechanism/results.md"
       ]
     },
     {
@@ -1766,16 +1768,17 @@
     {
       "id": "ZERO-GEOMETRY",
       "title": "Find zeta-specific zero rigidity beyond reflection symmetry",
-      "tasks": "NS94; NS100 reassessment; NS101 bounded attempt; NS103 window-sensitivity diagnostic",
+      "tasks": "NS94; NS100 reassessment; NS101 bounded attempt; NS103 window-sensitivity diagnostic; NS104 interpretation audit",
       "demand": "A geometric revival must add a property of the actual xi/theta/Euler-product object that symmetric off-line controls do not share. The NS94 power-product detector still requires an all-height vanishing proof.",
-      "scope": "Equal inversion counts and an infinite exterior similarity point do not imply RH: the point depends on circle parameters. That inference is closed, not every geometric approach. A classical RH-equivalent radial-growth or disk-contraction criterion is not a new arithmetic estimate; any new proposed sufficient mechanism needs its own test and scope. NS100 tests a concrete stronger condition using the actual theta kernel: its p=0 slice cosine transform at frequency 40 is strictly negative, and continuity extends failure to small p>0. This closes only per-slice positivity; the full integrated kernel remains unestimated. Its classical associated-kernel criterion is not a novel mechanism. NS101 stops the proposed completion/factorization attempt without a new estimate. Its reciprocal positive-Gaussian dilation control retains a positive even differential kernel, order one and the usual zero strip but introduces off-axis zeros. It changes the single-lattice coefficients and does not claim monotonicity, log-concavity or all modular laws. The original full-sign question is not closed; reopening needs a specific additional arithmetic identity. NS103 (diagnostic, not a certificate) calibrates the plain window-restricted Weil form on the Davenport-Heilbronn function: an off-line zero at height T is first detected at window lambda about (1/2)log(T/2pi)+0.7, nearly independent of its offset, with negative energy scaling like offset squared; the zeta form has a Paley-Wiener near-null space up to a fraction of height 2pi e^{2lambda}. This quantifies finite-window reach for that form only; no transfer to the semilocal form is claimed.",
+      "scope": "Equal inversion counts and an infinite exterior similarity point do not imply RH: the point depends on circle parameters. That inference is closed, not every geometric approach. A classical RH-equivalent radial-growth or disk-contraction criterion is not a new arithmetic estimate; any new proposed sufficient mechanism needs its own test and scope. NS100 tests a concrete stronger condition using the actual theta kernel: its p=0 slice cosine transform at frequency 40 is strictly negative, and continuity extends failure to small p>0. This closes only per-slice positivity; the full integrated kernel remains unestimated. Its classical associated-kernel criterion is not a novel mechanism. NS101 stops the proposed completion/factorization attempt without a new estimate. Its reciprocal positive-Gaussian dilation control retains a positive even differential kernel, order one and the usual zero strip but introduces off-axis zeros. It changes the single-lattice coefficients and does not claim monotonicity, log-concavity or all modular laws. The original full-sign question is not closed; reopening needs a specific additional arithmetic identity. NS103 records four finite-grid Davenport-Heilbronn detections and a heuristic bandwidth count, not minimum support sizes, a sharp height cutoff or a universal detection law. NS104 corrects the parameter conversion: manuscript lambda=4 has logarithmic half-width log4. The unchanged archived trial has near-zeros at the first64 zeta ordinates at two precisions, including beyond the heuristic crossover; no new complete-ground root transfer, null-space mechanism or cofinal estimate follows.",
       "sources": [
         "evidence/ns94_circle_inversion",
         "evidence/ns100_reassessment/argument.tex",
         "evidence/ns100_reassessment/proposals.json",
         "evidence/ns100_reassessment/sources.json",
         "evidence/ns101_theta_factorization/argument.tex",
-        "evidence/diag_ns103_window_calibration/results.md"
+        "evidence/diag_ns103_window_calibration/results.md",
+        "evidence/diag_ns104_ground_mechanism/results.md"
       ]
     },
     {

@@ -54,7 +54,8 @@
     "evidence/ns98_projected_cost/*.py",
     "tools/make_map.py",
     "evidence/ns100_reassessment/*.py",
-    "controls/*.py"
+    "controls/*.py",
+    "evidence/diag_ns104_ground_mechanism/*.py"
   ],
   "exclude": [
     "node_modules",
