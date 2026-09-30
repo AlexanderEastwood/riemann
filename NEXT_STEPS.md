@@ -566,6 +566,17 @@ Subgroup thaw conditions for the fourth family:
 
 ## September 29 published admission records (no research rows)
 
+The [API prime-chain screen](audits/api-prime-chain-screen-2026-09-29-v1.html)
+is **Known wall** for inferring first-zero exclusion from the original
+two-sided chain bounds alone. The NS57 control with only
+`delta_2=-log(2)/100` retains those bounds at every frequency and window,
+yet inherits a complete nonnegative first-zero window with a nullvector.
+The exact Euler coefficient recurrence and original radical identity do
+not survive. Original KERNEL-API remains **Same open gap**, and bounded-floor
+methods are not excluded. Stop this inference; a subsequent proposal needs
+an independent arithmetic inequality beyond chain positivity. No new row,
+node, thaw or version. [Replay and scope](audits/api-prime-chain-screen-2026-09-29-v1/).
+
 The [cancellation-transfer audit](audits/mobius-cancellation-transfer-2026-09-29-v1.html)
 does not supply the changing-weight, growing-shift transfer or required
 energy rate. The [prime-scaling audit](audits/prime-scaling-admission-2026-09-29-v1.html)

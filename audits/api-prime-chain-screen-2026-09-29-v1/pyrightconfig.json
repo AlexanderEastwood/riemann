@@ -1,0 +1,7 @@
+{
+  "extends": "../../pyrightconfig.json",
+  "venvPath": "../..",
+  "venv": ".venv",
+  "include": ["screen.py"],
+  "exclude": ["node_modules", "__pycache__", ".claude/worktrees", "data"]
+}

@@ -1,0 +1,87 @@
+{
+  "date": "2026-09-29",
+  "reviewed_commit": "9db64fdfdc1237005c071f777088291df254ac72",
+  "review_scope": "All 104 recorded node conclusions and 14 continuation groups reassessed for scope and dependency; remote refreshed after context handoff, unchanged. Not an independent historical proof audit or numerical certificate replay.",
+  "base_source_sha256": {
+    "AGENTS.md": "6c4b30a5b702f3ae455f2e023735db491f86550077dc6e83418857d52a377fa0",
+    "research-map.json": "58d3c2ae3962a86d9a5489e852659d3aa6624c9552f0c35a90270c1eb413c0df",
+    "README.md": "ce8bb8df4027a3887e91106f4fca453dc37ebe7b64d1ba976023b86c46f9e59f",
+    "NEXT_STEPS.md": "0ce00ae82a122860ea1d5b44ac44184b9a7c9f33b5f9c3ed9672d3080bc1053a",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "evidence/v154/proof.tex": "039eed8b6867440ba77bbe8ecc2aafe01ad9d40de5b47a1e4572d8612823cbe2",
+    "evidence/v155/proof.tex": "aa94567cd00321e710b902975183ed1e8676786646771d7c2bc5dbf8da173ead",
+    "evidence/v156/proof.tex": "c6ebe402b4555ec18384457f6a24222170a20599ec889dd9848b9d2019b8a384",
+    "evidence/v157/proof.tex": "02194d8ad744c3cefd5c347dee6bd1867e3ac3643cc0b274dc24dc8426fb4fb0"
+  },
+  "node_count": 104,
+  "node_status_counts": {
+    "open": 10,
+    "proved": 48,
+    "closed": 33,
+    "blocked": 11,
+    "live": 2
+  },
+  "all_existing_nodes_unchanged": true,
+  "continuation_groups": 14,
+  "initial_wall": "Same open gap: KERNEL-API; admission screen asks whether chain bounds distinguish NS57 controls.",
+  "final_wall": "Known wall for bounds-only first-zero inference by NS57; Same open gap for original API and exact Euler arithmetic.",
+  "numerical_screen": {
+    "digits": [
+      50,
+      80
+    ],
+    "theta_samples": 65,
+    "stored_symbol_and_coefficient_values_agree": true,
+    "sampled_slacks_minimum": "0.02",
+    "classification": "diagnostic, not interval arithmetic"
+  },
+  "exact_checks": {
+    "engine": "Maxima",
+    "passed": 15,
+    "all_frequency_argument": "two cosine-sign cases in HTML report; not extrapolation of samples"
+  },
+  "pyright": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "manuscript_build": {
+    "pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "source_changed": false,
+    "build_note": "latexmk reports existing target up-to-date; build wrapper completes successfully"
+  },
+  "html": {
+    "parsed": true,
+    "relative_links_resolve": true,
+    "visual_render_verified": false
+  },
+  "review": "Author self-review only. No outstanding finding identified; no independent review claimed.",
+  "not_computed": [
+    "first-zero window location",
+    "nullvector",
+    "negative original Weil test",
+    "new Weil certificate",
+    "cofinal arithmetic estimate"
+  ],
+  "inherited_analytic_input": "NS57 first-zero theorem and its complete-domain/total-near-radical hypotheses; no independent revalidation here.",
+  "scope_limits": [
+    "Exact Euler recurrence and original radical identity lost by control",
+    "No original API closure",
+    "No bounded-floor-method exclusion",
+    "Both historical original-evidence gaps remain open",
+    "No research row, new theorem node, thaw, manuscript version or interval certificate"
+  ],
+  "primary_source": "https://dlmf.nist.gov/1.15.E12",
+  "artifact_sha256": {
+    "audits/api-prime-chain-screen-2026-09-29-v1/README.md": "8393a817d7d04f13f66e82ea8ec66bc4f24f9228717dde8b531ad1a2646d3002",
+    "audits/api-prime-chain-screen-2026-09-29-v1/admission.json": "bd4e759030edbdce06a51e2b55872bcf0deba6ffa85296d09b2eee1f7f59a07e",
+    "audits/api-prime-chain-screen-2026-09-29-v1/check_identities.mac": "7f6dc22704b86c22136e704d5a90dd14e927cc984729ae6b75858f45f4f54b3e",
+    "audits/api-prime-chain-screen-2026-09-29-v1/maxima-output.txt": "16312865a77da8dd7a29f728800ae4491882c80f2b12cfa37ee92427cb49dd38",
+    "audits/api-prime-chain-screen-2026-09-29-v1/pyrightconfig.json": "225f4b533fae96cdb7c207d436a5efdf880b240e7082f38a7cf9df52c2d27761",
+    "audits/api-prime-chain-screen-2026-09-29-v1/requirements-replay.txt": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645",
+    "audits/api-prime-chain-screen-2026-09-29-v1/screen-50dps.json": "28876f893bd5ab34027a934bf53104a612bf4f873b4c7b47eaacd7ca0b798c9c",
+    "audits/api-prime-chain-screen-2026-09-29-v1/screen-80dps.json": "006bc63bff1df6855c8bbd910fd5d6d9ed2223f2a3ba183bcd609cdf8a8b384e",
+    "audits/api-prime-chain-screen-2026-09-29-v1/screen.py": "1dd08ecded4ad739e64909547cf5bb1e6974f423f2f4ef1dfeeb86f5de9be6b1",
+    "audits/api-prime-chain-screen-2026-09-29-v1.html": "60dda2caa7614937db9b1469cdb2ff68214e13803ed8307c3ce6e210bdc55b86"
+  }
+}
