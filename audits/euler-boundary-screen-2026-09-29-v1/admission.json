@@ -1,0 +1,20 @@
+{
+  "reviewed_commit": "ccebc6524cf8adf5e83143ad00daa55b190737bd",
+  "kind": "Bounded pre-claim screen; no research row",
+  "review": "Refreshed all remote refs. All 104 node conclusions equal the prior reviewed register; reviewed the PR63 changes to KERNEL-API scope and current README/board. All 14 continuation inputs reassessed. AGENTS, missing-evidence ledger and NS51/55/57/58 sources unchanged. Scope/dependency review, not independent historical proof replay.",
+  "wall": "Distinct test of an exact Euler boundary sign; original KERNEL-API remains Same open gap.",
+  "closest_result": "PR63 stops bounds-only inference; NS55 excludes ordinary-cone semigroup positivity. Neither settles the specific mixed boundary operator of the exact Euler denominators.",
+  "arithmetic_input": "D_p=(1+p^(-1))I-p^(-1/2)(T_log(p)+T_-log(p)), the exact inverse denominator of the original full prime-power Poisson chain. Original p=2 and p=3 coefficients and shifts are retained.",
+  "candidate": "For every window projection P and compactly supported f=Pf, K_pq=(P D_p (I-P) D_q P + P D_q (I-P) D_p P)/2 is nonpositive. Then the symmetrized product of compressed denominators dominates P D_p D_q P >= 0. Also check whether the opposite one-sided ordering is available.",
+  "quantifiers": "Candidate all p!=q, all windows and both parities. One rejection witness suffices; a finite pass cannot establish it.",
+  "screen": "p=2,q=3; I=(-2,2); normalized indicator packets of half-width 1/100 centered at 3/2, 3/2+log(3/2) and their negatives. Evaluate outside-window translated-packet intersections directly at 50/80 digits.",
+  "controls": {
+    "Davenport_Heilbronn": "Record not-applicable using the control interface: the candidate is an operator inequality for original Euler denominators, not a completed-function or theta assertion.",
+    "NS100_NS101": "Not applicable to the literal Euler-denominator operator hypothesis; theta modifications supply neither the same coefficients nor the proposed complete Weil transfer.",
+    "NS57": "Not used to reject exact Euler identities; altered coefficients do not retain them. The original two-prime operator itself is the diagnostic object."
+  },
+  "budget": "One two-prime/four-packet screen at two precisions; no larger scan. If signs differ, stop the ordering before any RH proof/certification attempt, publish, then conduct user-requested independent reassessment.",
+  "success": "Only this boundary ordering survives its first test; a separate explicit bridge to the complete signed Weil form would still be required before a research claim.",
+  "failure": "Reject this one-sided boundary ordering. Do not claim the symmetrized compressed product is indefinite, a negative Weil test, or closure of exact Euler/API methods.",
+  "version": "No manuscript version, new node or thaw expected."
+}

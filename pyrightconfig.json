@@ -60,7 +60,8 @@
     "audits/prime-scaling-admission-2026-09-29-v1/*.py",
     "audits/jacobi-product-admission-2026-09-29-v1/*.py",
     "audits/nightly-2026-09-29/replay.py",
-    "audits/api-prime-chain-screen-2026-09-29-v1/*.py"
+    "audits/api-prime-chain-screen-2026-09-29-v1/*.py",
+    "audits/euler-boundary-screen-2026-09-29-v1/*.py"
   ],
   "exclude": [
     "node_modules",

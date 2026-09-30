@@ -17,6 +17,18 @@ Arithmetic input beyond the functional equation:
    where it enters; why applicable controls do not supply it>
   If NONE: stop. A property name alone is not an estimate.
 
+Dependency edge and arithmetic use (before any new candidate computation):
+  <display the implication to the named registered input; include domains,
+   parity/source conditions, quantifiers, error rates and every additional
+   unproved estimate; identify the step that fails for generic data in the
+   full proposed argument. A generic supporting lemma may instead name its
+   separate arithmetic application, as in AGENTS.md.>
+  If success would still leave an unspecified bridge: stop the computation
+  and make defining/assessing that bridge the task. State which decision
+  success and failure change. This also applies to pre-claim screens;
+  existing-proof audits and interpretation diagnostics name their separate
+  validation question instead of claiming an RH implication.
+
 Control screen (actual candidate, before proof/certification):
   Davenport-Heilbronn: <sampled-pass / sampled-failure / inconclusive /
     not-applicable; complete hypothesis match or explicit mismatch>

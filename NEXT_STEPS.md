@@ -566,6 +566,21 @@ Subgroup thaw conditions for the fourth family:
 
 ## September 29 published admission records (no research rows)
 
+The [final Euler boundary screen and reassessment](audits/euler-boundary-reassessment-2026-09-29-v1.html)
+rejects a one-sided mixed-boundary ordering in a 50/80-digit four-packet
+diagnostic, retaining exact prime-2/3 factors. No complete Weil energy is
+computed. Three subagent reviews find no supplied arithmetic bridge and
+recommend relevance screening before further computation. **Same open gap**,
+KERNEL-API; no new proved-wall claim, node, thaw or version.
+
+Recommended next bounded validation, **not yet claimed or completed**:
+independently reconstruct NS57's finite first-zero control for the explicit
+n=2 perturbation, checking fixed-vector detection, complete cutoff/domain
+transfer, continuity at prime entry, and attainment/parity/support. Preserve
+the existing independent v1.36 review and reopen upstream steps only for a
+specific discrepancy. A clean audit validates a reused dependency; it does
+not admit a new RH route. See the report and its three reviewer notes.
+
 The [API prime-chain screen](audits/api-prime-chain-screen-2026-09-29-v1.html)
 is **Known wall** for inferring first-zero exclusion from the original
 two-sided chain bounds alone. The NS57 control with only

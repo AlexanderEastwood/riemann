@@ -100,6 +100,37 @@ assumptions. Use `PROPOSAL_TEMPLATE.md` to prevent repeated unestimated inputs:
 A row claimed without a filled PR template is reverted to `open`. Audits
 and process changes are exempt; research tasks are not.
 
+### Relevance before another candidate screen (2026-09-29 reassessment)
+
+The row-claim exemption is not an exemption from choosing a useful test.
+Before computing a new candidate, including a pre-claim admission audit:
+
+1. **Show the dependency edge.** Write the implication from the candidate
+   to one named registered input, retaining its quantifiers, domains,
+   source/parity constraints and required error rate. List every additional
+   unproved estimate. If a successful screen would still leave an
+   unspecified bridge, stop the computation; defining or assessing that
+   bridge is the next task. An exact representation alone is not a bridge.
+2. **Show what uses the arithmetic.** Name the step that would fail if the
+   coefficients or shifts were generic. Inserting primes into a generic
+   projection or positivity argument is not an independent arithmetic
+   estimate. An applicable generic obstruction should be checked on paper
+   before numerical replay. A generic supporting lemma can still be useful:
+   specify its separate arithmetic hypotheses and complete conditional
+   transfer. It need not distinguish every false analogue by itself; the
+   full proposed implication must survive the matched controls.
+3. **State the decision.** Say which existing proof obligation, claim or
+   route-selection decision changes on success and on failure. A rejected
+   screen does not justify automatically testing an adjacent variation;
+   first repair the missing dependency edge or stop that attempt family.
+
+Audits of an existing proof, recovery of evidence and explanation diagnostics
+remain valid tasks with their own explicit question and scope. They need not
+promise an RH implication, but must be labelled validation or interpretation,
+not a new route. Do not pad a simple rejected sign screen with certification,
+larger tables or a manuscript version. Apply the filled proposal gate before
+claiming any actual research row, as before.
+
 ## 1. What this project is
 
 A research record for an attempt on the Riemann Hypothesis via Weil
