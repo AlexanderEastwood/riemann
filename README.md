@@ -5,7 +5,7 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
-## Status in one page (2026-09-23)
+## Status in one page (2026-09-29)
 
 Read this before any dated section below. Dated sections are preserved as
 written; this page states what the record supports now.
@@ -21,11 +21,15 @@ listed in `RESEARCH_MAP.md`.
 
 **What the certificates do not say.** They verify no zero of zeta beyond
 the numerically verified range and establish no convergence to Xi. The
-window sees heights of order e^{2 lambda} at most (NS103, plain form,
-diagnostic). The archived lambda=4 trial's transform carries its mass
-below height about 150, vanishes near every zeta ordinate there, and sits
-at the sqrt(mu_0) scale above (NS104, NS105): the small ground energy and
-the zero near gamma_1 describe that finite object. Finite windows do not
+NS103 bandwidth count is a heuristic, not a sharp height cutoff; its
+logarithmic half-width is not the manuscript's multiplicative lambda.
+The archived lambda=4 finite trial's transform carries its sampled mass
+below height about 150, has near-zeros at the tested ordinates there, and
+plateaus at approximately the sqrt(rho) scale above 200 (NS104, NS105),
+where rho is its Rayleigh bound, not an identified ground eigenvalue.
+Those trial observations do not transfer to the complete ground. The
+certified complete-ground energy and first-zero enclosure concern the
+fixed window. Finite windows do not
 accumulate (`prop:v121-cofinal-rh`); windows cost exponentially
 (`prop:v125-cutoff-cost`).
 
@@ -36,16 +40,38 @@ a negative Weil direction.
 **Open.** RH and G2. Every route reduces to one of 14 continuation inputs
 (`RESEARCH_MAP.md`, "Shared continuation inputs"); all of them are frozen
 on the board with per-group thaw conditions (`NEXT_STEPS.md`, "Frozen
-input groups"). The single missing
-ingredient is an analytic estimate on the prime side that uses the Euler
-product, on tests that annihilate the zeros a window can resolve. No node
-supplies it. Two historical evidence groups remain unarchived
+input groups"). The groups have distinct missing estimates and constructions;
+RH equivalence does not identify their proof obligations. None supplies its
+required cofinal arithmetic input. Two historical evidence groups remain unarchived
 (`evidence/MISSING.md`).
 
 **How work proceeds.** `AGENTS.md`: review before every turn, per-turn wall
 check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
+
+## September 29 admission audits
+
+Three completed tests stopped without a new cofinal estimate:
+
+- [Cancellation-theorem transfer](audits/mobius-cancellation-transfer-2026-09-29-v1.html):
+  the published fixed-shift and short-interval results do not directly bound
+  NS98's changing projected weights and growing shift sum at the required
+  rate. This does not prove an adaptation impossible.
+- [Prime scaling](audits/prime-scaling-admission-2026-09-29-v1.html):
+  the exact projection loss and Mobius split leave a new-size cost, a
+  filtered cost and a cross term unestimated. Surrogate control replays
+  verify structure only; they are not physical NB certificates.
+- [Jacobi product](audits/jacobi-product-admission-2026-09-29-v1.html):
+  the completed first finite product, including its boundary atom, has a
+  negative radial-sign diagnostic at z=1/4+14i, reproduced at 50/80 digits
+  and by direct integration. This stops the stated all-M approximation
+  mechanism, not the original theta sign or every product construction.
+
+**Wall check: Same open gap** for NS92–98 and NS100–101 under their respective
+scopes. No new theorem node, thaw, manuscript version or interval certificate.
+[Publication record and portable replay](audits/nightly-2026-09-29/README.md).
+Alex has authorized publication after each completed test; see `AGENTS.md`.
 
 ## September 23 prime–archimedean admission test
 

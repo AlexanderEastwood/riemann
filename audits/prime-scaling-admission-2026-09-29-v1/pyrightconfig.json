@@ -1,0 +1,8 @@
+{
+  "extends": "../../pyrightconfig.json",
+  "venvPath": "../..",
+  "venv": ".venv",
+  "include": ["screen_projection.py"],
+  "exclude": ["node_modules", "**/__pycache__", ".claude/worktrees", "data"],
+  "typeCheckingMode": "basic"
+}

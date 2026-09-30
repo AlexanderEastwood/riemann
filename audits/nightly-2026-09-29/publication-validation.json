@@ -1,0 +1,106 @@
+{
+  "date": "2026-09-29",
+  "reviewed_base": "f32cadfb7be523a8920b19be57d40d652e39a2ef",
+  "review_scope": "104 conclusion statuses/scopes and 14 continuation inputs reviewed; required sources unchanged from prior complete review; no historical proof/certificate replay.",
+  "authorization": "Alex authorized publishing findings after every completed test and publication of tonight's findings.",
+  "original_audit_files_preserved_byte_for_byte": [
+    "audits/jacobi-product-admission-2026-09-29-v1/pyrightconfig.json",
+    "audits/jacobi-product-admission-2026-09-29-v1/screen-50dps.json",
+    "audits/jacobi-product-admission-2026-09-29-v1/check_identities.mac",
+    "audits/jacobi-product-admission-2026-09-29-v1/screen-80dps.json",
+    "audits/jacobi-product-admission-2026-09-29-v1/requirements-replay.txt",
+    "audits/jacobi-product-admission-2026-09-29-v1/maxima-output.txt",
+    "audits/jacobi-product-admission-2026-09-29-v1/outcome-and-validation.json",
+    "audits/jacobi-product-admission-2026-09-29-v1/screen-35dps.json",
+    "audits/jacobi-product-admission-2026-09-29-v1/screen_product.py",
+    "audits/jacobi-product-admission-2026-09-29-v1/admission.json",
+    "audits/jacobi-product-admission-2026-09-29-v1.html",
+    "audits/mobius-cancellation-transfer-2026-09-29-v1.json",
+    "audits/mobius-cancellation-transfer-2026-09-29-validation-v1.json",
+    "audits/prime-scaling-admission-2026-09-29-v1.html",
+    "audits/prime-scaling-admission-2026-09-29-v1/control-screen-80dps.json",
+    "audits/prime-scaling-admission-2026-09-29-v1/maxima-output-v2.txt",
+    "audits/prime-scaling-admission-2026-09-29-v1/screen_projection.py",
+    "audits/prime-scaling-admission-2026-09-29-v1/pyrightconfig.json",
+    "audits/prime-scaling-admission-2026-09-29-v1/check_identities.mac",
+    "audits/prime-scaling-admission-2026-09-29-v1/requirements-replay.txt",
+    "audits/prime-scaling-admission-2026-09-29-v1/control-screen-50dps.json",
+    "audits/prime-scaling-admission-2026-09-29-v1/maxima-output.txt",
+    "audits/prime-scaling-admission-2026-09-29-v1/validation.json",
+    "audits/prime-scaling-admission-2026-09-29-v1/admission-and-review.json",
+    "audits/mobius-cancellation-transfer-2026-09-29-v1.html"
+  ],
+  "portable_replays": {
+    "prime_50": {
+      "all_json_fields_match": true,
+      "sha256": "36f3d9716a6f1c89afe78b5b8cea21f87122186f0254bfb9264e0baa79291732"
+    },
+    "prime_80": {
+      "all_json_fields_match": true,
+      "sha256": "f6af6e781bd26600eae6597cb49becebba68264a5e0ac7d1841226b365d60fd9"
+    },
+    "jacobi_50": {
+      "all_json_fields_match": true,
+      "sha256": "27329537762628664c83edb41a52e092ecd12fe30137efb5a7d60cbc6f383b5a"
+    },
+    "jacobi_80": {
+      "all_json_fields_match": true,
+      "sha256": "944d6452e0cc6ea9272fa766a3ee8412b9672df214a083ede5de7fcdde41c6cb"
+    }
+  },
+  "maxima": {
+    "prime_scaling_exact_checks": 1368,
+    "jacobi_exact_checks": 8
+  },
+  "pyright": {
+    "errors": 0,
+    "warnings": 0,
+    "scope": "Portable wrapper and both preserved audit scripts"
+  },
+  "manuscript_build": {
+    "command": "./manuscript/build.sh",
+    "pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "source_changed": false,
+    "new_version": false
+  },
+  "map": {
+    "nodes": 104,
+    "status_changes": false,
+    "continuation_groups": 14,
+    "thaws": 0
+  },
+  "author_review": {
+    "independent_mathematical_review": false,
+    "open_major_findings": 0,
+    "interval_certificates_added": false
+  },
+  "historical_publication_fields": "Original records describing local-only status are preserved as statements about the test turns, before this publication.",
+  "original_file_sha256": {
+    "audits/jacobi-product-admission-2026-09-29-v1/pyrightconfig.json": "eab60ea14db616996218f0618c244c7e13c3595ca70f35faa7e9d1b540d705a2",
+    "audits/jacobi-product-admission-2026-09-29-v1/screen-50dps.json": "27329537762628664c83edb41a52e092ecd12fe30137efb5a7d60cbc6f383b5a",
+    "audits/jacobi-product-admission-2026-09-29-v1/check_identities.mac": "7d5420a2570146f8dfb9f48f04aebc6d540925f702426eecf7db9e8110935b96",
+    "audits/jacobi-product-admission-2026-09-29-v1/screen-80dps.json": "944d6452e0cc6ea9272fa766a3ee8412b9672df214a083ede5de7fcdde41c6cb",
+    "audits/jacobi-product-admission-2026-09-29-v1/requirements-replay.txt": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645",
+    "audits/jacobi-product-admission-2026-09-29-v1/maxima-output.txt": "80c9e4bd71d4950601ef1dd32148a9262d82581a6c8230025306a9990b4f1c79",
+    "audits/jacobi-product-admission-2026-09-29-v1/outcome-and-validation.json": "3f713717122c19d8f6a4c7d59477f7663908668755268d25bf7ad8f48dc9685a",
+    "audits/jacobi-product-admission-2026-09-29-v1/screen-35dps.json": "c235e29815eb7bd53faef0352e7f926c2c5693dbad0a77763061922ebfe608e5",
+    "audits/jacobi-product-admission-2026-09-29-v1/screen_product.py": "3bddf684429edc4f004e12b4257c17461e9fbb23698339dd3bd4122271bbd208",
+    "audits/jacobi-product-admission-2026-09-29-v1/admission.json": "8f4fb25639bf1a2fc7305252efac79e7f23806c49a3d72a586c575b7d689a7d9",
+    "audits/jacobi-product-admission-2026-09-29-v1.html": "86210d31107c0429f1f9a49c389b1b1a9a078cbf8870e87e557a7fa46450e8d7",
+    "audits/mobius-cancellation-transfer-2026-09-29-v1.json": "ee6f1469c1ced9470b937bacd7acef8f1b17f4ed5739a40c8bb4f8defc19c67a",
+    "audits/mobius-cancellation-transfer-2026-09-29-validation-v1.json": "75ed6f6d7ecd3e242a7a6970933c95fc770b3e947ed779ac2788a9e58760569c",
+    "audits/prime-scaling-admission-2026-09-29-v1.html": "73d5aa50a0db356f7fab79491fa13eb8e813694069a0ef6ca6acf3065b97e0a3",
+    "audits/prime-scaling-admission-2026-09-29-v1/control-screen-80dps.json": "f6af6e781bd26600eae6597cb49becebba68264a5e0ac7d1841226b365d60fd9",
+    "audits/prime-scaling-admission-2026-09-29-v1/maxima-output-v2.txt": "69ecdae4c280f841120abfb3c2898ba47ec9b9ed2b0465e6c770d4cb06116241",
+    "audits/prime-scaling-admission-2026-09-29-v1/screen_projection.py": "f097b4ce54d9a953e44091b58dcd04a3b1ef5f3576fe6060874689902b13b2b2",
+    "audits/prime-scaling-admission-2026-09-29-v1/pyrightconfig.json": "2ad869f63d9e1417275fd4fb0ec41ecd4deed46414d9d62cb835502a8d33e986",
+    "audits/prime-scaling-admission-2026-09-29-v1/check_identities.mac": "45b89f07059d7ebe91494a78ed09f47bc0610ceace7a0f4cc220dd78de1cb55e",
+    "audits/prime-scaling-admission-2026-09-29-v1/requirements-replay.txt": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645",
+    "audits/prime-scaling-admission-2026-09-29-v1/control-screen-50dps.json": "36f3d9716a6f1c89afe78b5b8cea21f87122186f0254bfb9264e0baa79291732",
+    "audits/prime-scaling-admission-2026-09-29-v1/maxima-output.txt": "9dcf91bd4b51506c591b2f48b9a0074b0ab9a2de4b212a88cf5add7201997799",
+    "audits/prime-scaling-admission-2026-09-29-v1/validation.json": "130f780d99d3c8af78099745b54320e569284334b917c0d27343786a7a55d475",
+    "audits/prime-scaling-admission-2026-09-29-v1/admission-and-review.json": "54c1ef286fa45688ce34e5257e208c48e9f44f71f95e106a06edc28da0b44ceb",
+    "audits/mobius-cancellation-transfer-2026-09-29-v1.html": "aaedbc539b5e43bff6cbfe6f7b3731e0342e21daa430f1ceff14bf59253fa90a"
+  }
+}

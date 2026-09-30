@@ -1,0 +1,20 @@
+{
+  "classification": "local artifact and author scope verification; not a numerical certificate",
+  "report_sha256_matches_record": true,
+  "html_parser_completed": true,
+  "external_scripts": false,
+  "independent_mathematical_review": false,
+  "browser_open": {
+    "system_open": "failed: no compatible default application",
+    "in_app_browser": "blocked: local file protocol is disallowed; no workaround attempted"
+  },
+  "codex_file_preview": "queued by open_in_codex; rendered display not verified",
+  "visual_review": false,
+  "python_source_files_created_or_edited": false,
+  "remote_changes": false,
+  "new_local_files": [
+    "mobius-cancellation-transfer-2026-09-29-v1.html",
+    "mobius-cancellation-transfer-2026-09-29-v1.json",
+    "mobius-cancellation-transfer-2026-09-29-validation-v1.json"
+  ]
+}

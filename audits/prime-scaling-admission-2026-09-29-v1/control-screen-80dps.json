@@ -1,0 +1,99 @@
+{
+  "classification": "diagnostic admission screen, not a certificate",
+  "dps": 80,
+  "source": {
+    "commit": "f32cadfb7be523a8920b19be57d40d652e39a2ef",
+    "path": "controls/davenport_heilbronn.py",
+    "sha256": "20d737be7f298dc77196545a4be32cfabb7961d1379b35b4c5ef1662f8577439"
+  },
+  "candidate": "Structural projection comparison only; full arithmetic estimate unproved",
+  "davenport_heilbronn_structural_screen": {
+    "name": "0 <= p H_(pN)[pm,pn] <= H_N on finite dilation-Gram controls",
+    "classification": "diagnostic, not a certificate",
+    "sample_domain": "t=k/2, k=0..32; (N,p)=(2,2),(2,3),(4,2); full finite Schur complements",
+    "dps": 80,
+    "applicability": "Matched structural hypotheses: positive spectral Gram, exact n^(-1/2) dilation orbit and nested old spaces. Weights are |F(it)|^2 normalized to sum one. This surrogate is not NS98's physical arithmetic Gram.",
+    "observations": {
+      "claim_scope": "finite diagnostic of the structural comparison only"
+    },
+    "proved_control_obstruction": false,
+    "outcome": "sampled-pass"
+  },
+  "davenport_heilbronn_rows": [
+    {
+      "N": 2,
+      "p": 2,
+      "min_eigenvalue_H_minus_scaled_H": "0.000110588948272127530710518977092",
+      "min_eigenvalue_scaled_H": "0.00195148418378723237721512799621",
+      "raw_homogeneity_residual": "0.0",
+      "filtered_direction_zero": false,
+      "filtered_loss_fraction": "0.676721805174315943388738829053",
+      "passes_with_diagnostic_tolerance": true
+    },
+    {
+      "N": 2,
+      "p": 3,
+      "min_eigenvalue_H_minus_scaled_H": "0.0001940326058516237697800129448",
+      "min_eigenvalue_scaled_H": "0.00078818199714060441536322597224",
+      "raw_homogeneity_residual": "5.271099e-82",
+      "filtered_direction_zero": true,
+      "filtered_loss_fraction": null,
+      "passes_with_diagnostic_tolerance": true
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "min_eigenvalue_H_minus_scaled_H": "0.0000000192280910435836204825559751858",
+      "min_eigenvalue_scaled_H": "0.000000045161625889222522321863704839",
+      "raw_homogeneity_residual": "0.0",
+      "filtered_direction_zero": false,
+      "filtered_loss_fraction": "0.877404308169460944057982652324",
+      "passes_with_diagnostic_tolerance": true
+    }
+  ],
+  "xi_rows": [
+    {
+      "N": 2,
+      "p": 2,
+      "min_eigenvalue_H_minus_scaled_H": "0.000356713752513361425991624040024",
+      "min_eigenvalue_scaled_H": "0.0683663401296238938560128591838",
+      "raw_homogeneity_residual": "0.0",
+      "filtered_direction_zero": false,
+      "filtered_loss_fraction": "0.101232657325798046140495003888",
+      "passes_with_diagnostic_tolerance": true
+    },
+    {
+      "N": 2,
+      "p": 3,
+      "min_eigenvalue_H_minus_scaled_H": "0.000635582940360581836142344522436",
+      "min_eigenvalue_scaled_H": "0.0511283154651252709460704868125",
+      "raw_homogeneity_residual": "5.271099e-82",
+      "filtered_direction_zero": true,
+      "filtered_loss_fraction": null,
+      "passes_with_diagnostic_tolerance": true
+    },
+    {
+      "N": 4,
+      "p": 2,
+      "min_eigenvalue_H_minus_scaled_H": "0.000000231641341721099373337725776704",
+      "min_eigenvalue_scaled_H": "0.0000125171099315188637268779125616",
+      "raw_homogeneity_residual": "0.0",
+      "filtered_direction_zero": false,
+      "filtered_loss_fraction": "0.697415597978071695678985266012",
+      "passes_with_diagnostic_tolerance": true
+    }
+  ],
+  "full_arithmetic_target_screen": {
+    "name": "Independent bounded dyadic-index mean of the actual prime-scaling loss",
+    "classification": "diagnostic, not a certificate",
+    "sample_domain": "fixed p, all sufficiently large dyadic J; no numerical evaluation",
+    "dps": 80,
+    "applicability": "Not applicable: the original fractional-part atoms with reciprocal-zeta Mobius coefficients are part of the target. DH has different coefficients and completion; its positive spectral surrogate does not preserve this pair.",
+    "observations": {},
+    "proved_control_obstruction": false,
+    "outcome": "not-applicable"
+  },
+  "NS100_NS101": "Not applicable to the full target: original coefficient/atom pair not preserved.",
+  "NS74": "Same complete Gram preserves every H and prime-scaling loss; the unproved cost bound is not marked as passed.",
+  "verdict": "Structural samples do not distinguish xi from DH. No independent loss estimate or thaw."
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prime scaling and the projected Möbius cost — admission audit, 29 September 2026</title>
+</head>
+<body style="margin:0;background:#f6f4ef;color:#253039;font:17px/1.6 Georgia,'Times New Roman',serif;">
+<main style="max-width:680px;margin:36px auto;padding:34px 28px;background:white;border-top:6px solid #34535f;">
+<p style="font:12px/1.5 Arial,sans-serif;letter-spacing:1.2px;color:#65747b;">RH PROJECT · PRE-ADMISSION AUDIT · 2026-09-29 · V1</p>
+<h1 style="font-size:31px;line-height:1.2;">Prime scaling leaves the cost estimate open</h1>
+<p><strong>The bounded test stopped without an independent arithmetic bound.</strong> The exact projection comparison is one-sided. Applying Möbius multiplicativity also leaves a residue-restricted cost at the new size and a signed cross term. Neither is estimated here.</p>
+<p style="padding:15px 18px;background:#edf2f3;border-left:4px solid #34535f;"><strong>Wall check: Same open gap.</strong> Closest results: NS88 and NS98. The work below audits the proposed transfer; it does not reopen MOBIUS-COST or supply its companion MOBIUS-MARGIN. No research row, manuscript version or RH advance is claimed.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">1. What the projection comparison actually says</h2>
+<p>Use the complete space L²((0,∞), dt/t²), the original atoms a<sub>n</sub>(t) = A(t/n), and V<sub>N</sub> = span{a<sub>1</sub>, …, a<sub>N</sub>}. Write Π<sub>N</sub> for its orthogonal projection. All physical tails remain included.</p>
+<p>The dilation D<sub>p</sub>f(t) = f(t/p) has squared norm factor 1/p. Thus U<sub>p</sub> = √p D<sub>p</sub> is unitary and U<sub>p</sub>V<sub>N</sub> ⊂ V<sub>pN</sub>. Define</p>
+<p style="padding:14px;background:#f5f7f7;text-align:center;">P̃<sub>p,N</sub> = U<sub>p</sub>Π<sub>N</sub>U<sub>p</sub><sup>*</sup>,<br>E<sub>p,N</sub> = Π<sub>pN</sub> − P̃<sub>p,N</sub>.</p>
+<p>Because the subspaces are nested, E<sub>p,N</sub> is the orthogonal projection onto the additional old directions. For q<sub>N</sub>(c) = ∑<sub>N&lt;n≤2N</sub> c<sub>n</sub>a<sub>n</sub>, put</p>
+<p style="padding:14px;background:#f5f7f7;text-align:center;">Δ<sub>p,N</sub>(c) = ‖E<sub>p,N</sub>U<sub>p</sub>q<sub>N</sub>(c)‖².</p>
+<p>Let H<sub>N</sub> be NS98’s full Schur complement and H<sub>pN</sub><sup>[p]</sup> its counterpart at size pN restricted to the indices pm, pn with N &lt; m,n ≤ 2N. The inherited projection algebra gives</p>
+<p style="padding:15px;background:#edf2f3;text-align:center;">p c<sup>T</sup>H<sub>pN</sub><sup>[p]</sup>c = c<sup>T</sup>H<sub>N</sub>c − Δ<sub>p,N</sub>(c),<br>0 ≤ Δ<sub>p,N</sub>(c) ≤ c<sup>T</sup>H<sub>N</sub>c.</p>
+<p>To check the equality, split (I − P̃<sub>p,N</sub>)U<sub>p</sub>q into its two orthogonal components (I − Π<sub>pN</sub>)U<sub>p</sub>q and E<sub>p,N</sub>U<sub>p</sub>q. This is standard nested-projection bookkeeping, not a new arithmetic estimate.</p>
+<p>The upper bound on Δ still uses the source cost. It supplies no independent constant, vanishing relative error or uniform weighted transfer. The positive matrix ordering does not assign signs to individual off-diagonal differences. <a href="https://github.com/AlexanderEastwood/riemann/blob/f32cadfb7be523a8920b19be57d40d652e39a2ef/evidence/ns98_projected_cost/argument.tex" style="color:#24576d;">NS98’s complete cost and stop record</a>.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">2. The prime identity leaves two channels</h2>
+<p>Keep d<sub>N</sub>(n) = −μ(n) log(2N/n), without rescaling. Let q<sub>N</sub><sup>(0)</sup> contain only terms with p ∤ n. Möbius multiplicativity gives the exact coefficient identity</p>
+<p style="padding:14px;background:#f5f7f7;text-align:center;">q<sub>pN</sub> = q<sub>pN</sub><sup>(0)</sup> − D<sub>p</sub>q<sub>N</sub><sup>(0)</sup>.</p>
+<p>This uses μ(pm) = −μ(m) when p ∤ m and μ(pm) = 0 when p ∣ m. The latter statement is essential; omitting it would incorrectly treat the full coefficient vector as prime-scaled.</p>
+<p>Project both channels off V<sub>pN</sub>. Call the resulting vectors u and v, respectively, so the actual new direction is u − v. Put A = ‖u‖², C = ⟨u,v⟩, and K<sub>N</sub><sup>(0)</sup> = ‖(I − Π<sub>N</sub>)q<sub>N</sub><sup>(0)</sup>‖². Then</p>
+<p style="padding:15px;background:#edf2f3;text-align:center;">K<sub>pN</sub> = A + [K<sub>N</sub><sup>(0)</sup> − Δ<sub>p,N</sub>(d<sub>N</sub><sup>(0)</sup>)]/p − 2C.</p>
+<p>All three obstacles are visible. A is an unknown cost at the <em>new</em> size pN. K<sub>N</sub><sup>(0)</sup> uses a coefficient mask and is not automatically bounded by K<sub>N</sub>. The sign and useful magnitude of C remain unestimated. Cauchy–Schwarz gives only</p>
+<p style="padding:14px;background:#f5f7f7;text-align:center;">K<sub>pN</sub> ≤ (√A + √(K<sub>N</sub><sup>(0)</sup>/p))².</p>
+<p>This is not a closed recurrence. Even an independent bound on Δ alone would leave the other terms. No weighted cancellation theorem has been transferred to this identity.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">3. Why deleting coefficients is not a valid shortcut</h2>
+<p>An exact abstract control checks the tempting assertion that keeping only the p-free coefficients can only decrease cost. For 0 &lt; ε &lt; 1, take</p>
+<p style="padding:14px;background:#f5f7f7;text-align:center;">H = [[1, 1−ε], [1−ε, 1]],<br>d = (1, −1), &nbsp; d<sup>(0)</sup> = (1, 0).</p>
+<p>H is positive definite: its determinant is ε(2−ε). Yet d<sup>T</sup>Hd = 2ε while (d<sup>(0)</sup>)<sup>T</sup>Hd<sup>(0)</sup> = 1. Their ratio is unbounded as ε tends to zero. Thus positivity of the Gram does not justify this masking step. This is a control of that generic inference, not a counterexample for the original arithmetic H<sub>N</sub> or its Möbius vector.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">4. Control screen and verification scope</h2>
+<p>The structural comparison was screened first through the repository’s <code>controls/davenport_heilbronn.py</code> interface. The explicit finite control Gram was</p>
+<p style="padding:14px;background:#f5f7f7;text-align:center;">G<sub>F</sub>(m,n) = (mn)<sup>−1/2</sup> ∑<sub>k=0</sub><sup>32</sup> w<sub>k</sub> cos(t<sub>k</sub> log(m/n)),<br>t<sub>k</sub> = k/2, &nbsp; w<sub>k</sub> = |F(it<sub>k</sub>)|² / ∑<sub>ℓ</sub>|F(it<sub>ℓ</sub>)|².</p>
+<p>This is a positive Gram with the required dilation geometry for both completed xi and the Davenport–Heilbronn control. All tested comparisons passed at 50 and 80 decimal digits for (N,p) = (2,2), (2,3), (4,2); the saved eigenvalues and nonzero-direction ratios agree to 30 displayed digits. These are floating-point diagnostics. They are <strong>surrogate Grams, not NS98’s arithmetic Gram</strong>, and no quadrature approximation to that Gram is asserted. A zero filtered direction is recorded with a blank ratio.</p>
+<p>The full arithmetic target is separately marked <strong>not applicable</strong> to this Davenport–Heilbronn substitution and to NS100/101: those alterations do not preserve the original fractional-part atoms together with reciprocal-zeta Möbius coefficients. Their structural passes do not establish or refute the original cost estimate.</p>
+<p>The existing <a href="https://github.com/AlexanderEastwood/riemann/blob/f32cadfb7be523a8920b19be57d40d652e39a2ef/evidence/v161/ns74/proof.tex" style="color:#24576d;">NS74 same-Gram control</a> preserves every Schur complement and hence this prime-scaling loss matrix, while changing the target loads and allowing a positive approximation floor. This reinforces the separate lower-numerator obligation. The unproved cost bound is not marked as passed on that control.</p>
+<p>Maxima checked eight projection, Schur-complement and channel/mask identities, plus 1,360 exact coefficient instances for primes 2, 3, 5 and 1 ≤ N ≤ 16. These checks validate bookkeeping; the general coefficient rule follows from Möbius multiplicativity. Python diagnostics report zero errors or warnings. Review was by the author; no independent proof review or historical certificate replay was performed.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">Disposition</h2>
+<p><strong>Stop this transfer attempt at admission.</strong> The intended independent estimate was not found. The exact identity and the finite structural controls do not meet the freeze’s thaw condition. There is no justified reason to expand the numerical table or claim a new research row.</p>
+<p>A future attempt would need an actual arithmetic estimate for the projection change and remaining channels, with sufficient uniformity and error rate. That is still the named open problem. NS88’s scalar overlap estimate, NS70’s scoped unprojected comparison failures and NS98’s cost gap retain their original scopes. No impossibility of the original prime-scaling approach is proved.</p>
+<p><strong>Final wall check: Same open gap — NS88/NS98.</strong> RH, G2, MOBIUS-COST and MOBIUS-MARGIN remain open.</p>
+
+<div style="margin-top:30px;padding-top:15px;border-top:1px solid #ccd5d9;font-size:13px;color:#596c76;">
+<p>Public main reviewed: <a href="https://github.com/AlexanderEastwood/riemann/tree/f32cadfb7be523a8920b19be57d40d652e39a2ef" style="color:#24576d;">f32cadf</a>, unchanged after refresh from the isolated conclusions-review worktree. All 104 registered conclusions and 14 continuation groups were reassessed; instruction/status/checkpoint/ledger and prior audit sources were hash-identical to the preceding review. The relevant NS74 source was reread. The two historical original-evidence groups remain recovery OPEN.</p>
+<p>Local artifacts: <a href="prime-scaling-admission-2026-09-29-v1/control-screen-50dps.json" style="color:#24576d;">50-digit screen</a>, <a href="prime-scaling-admission-2026-09-29-v1/control-screen-80dps.json" style="color:#24576d;">80-digit screen</a>, <a href="prime-scaling-admission-2026-09-29-v1/screen_projection.py" style="color:#24576d;">screen replay</a>, <a href="prime-scaling-admission-2026-09-29-v1/check_identities.mac" style="color:#24576d;">Maxima checks</a>, <a href="prime-scaling-admission-2026-09-29-v1/maxima-output-v2.txt" style="color:#24576d;">successful exact-check output</a>.</p>
+<p>Local audit only. No push, manuscript change, research-row claim or thaw. Source and equations reviewed; browser visual review unavailable under the local-file URL policy.</p>
+</div>
+</main>
+</body>
+</html>

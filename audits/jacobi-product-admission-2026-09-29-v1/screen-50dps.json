@@ -1,0 +1,67 @@
+{
+  "classification": "floating diagnostic, not a certificate or proof",
+  "dps": 50,
+  "commit": "f32cadfb7be523a8920b19be57d40d652e39a2ef",
+  "control_sha256": "20d737be7f298dc77196545a4be32cfabb7961d1379b35b4c5ef1662f8577439",
+  "controls": [
+    {
+      "name": "Actual radial-sign functional, structural control only",
+      "classification": "diagnostic, not a certificate",
+      "sample_domain": "z=(0.28851718245663738555335196060684413 + 85.699348485377592171929267708941729j)",
+      "dps": 50,
+      "applicability": "Even completed transform; original Jacobi product is not assumed in this calibration.",
+      "observations": {
+        "radial": "-2.9403627764451601513623505962978974e-58"
+      },
+      "proved_control_obstruction": false,
+      "outcome": "sampled-failure"
+    },
+    {
+      "name": "Exact finite Jacobi product premise",
+      "classification": "diagnostic, not a certificate",
+      "sample_domain": "M>=1; 0<x<=1/2; y real",
+      "dps": 50,
+      "applicability": "Davenport-Heilbronn has different theta coefficients, conductor and gamma factor; not this Jacobi product completion.",
+      "observations": {},
+      "proved_control_obstruction": false,
+      "outcome": "not-applicable"
+    },
+    {
+      "name": "NS101 reciprocal mixture",
+      "z": "(0.46121182505960344749775891342436842 + 1.5707963267948966192313216916397514j)",
+      "radial": "-0.0005539334371779953534003179391190297",
+      "candidate_applicability": "not-applicable: different lattice frequencies; no original finite product premise"
+    }
+  ],
+  "M": 1,
+  "coefficients": {
+    "0": 1,
+    "1": 2,
+    "3": -2,
+    "4": -1
+  },
+  "boundary_mass": "0.001609654542708465845590992244368136",
+  "candidate_samples": [
+    {
+      "x": "0.25",
+      "y": "14.0",
+      "radial": "-0.000000010016243053408531495471460675446692",
+      "F": "(0.00066104706681596319592650619806917743 + 0.00018495704357251067187479801957731741j)",
+      "Fprime": "(-0.00021871791185464747824397129702902582 + 0.00072755591481685313928280484041760134j)",
+      "original_xi_radial": "0.0000001408557148502553328952353194127263"
+    }
+  ],
+  "negative_found": true,
+  "independent_integral_check": {
+    "method": "Direct density quadrature on [0,3] plus exact-formula boundary mass",
+    "F": "(0.00066104706681596319592650619806917743 + 0.00018495704357251067187479801957731741j)",
+    "Fprime": "(-0.00021871791185464747824397129702902582 + 0.00072755591481685313928280484041760134j)",
+    "radial": "-0.000000010016243053408531495471460675446692",
+    "difference_F": "3.0765426589681018786221613207131095e-52",
+    "difference_Fprime": "0.0",
+    "absolute_tail_majorant_F": "8.9822962675699172535190191177998504e-547",
+    "absolute_tail_majorant_Fprime": "1.804854667834870233451671620631865e-545",
+    "tail_status": "Analytic formula evaluated at floating precision; quadrature and rounding not certified"
+  },
+  "scope": "Finite-product candidate only. No negative original xi value or limiting-sign conclusion."
+}

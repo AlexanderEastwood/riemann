@@ -56,14 +56,18 @@
     "evidence/ns100_reassessment/*.py",
     "controls/*.py",
     "evidence/diag_ns104_ground_mechanism/*.py",
-    "audits/prime-archimedean-screen-2026-09-23-v1/*.py"
+    "audits/prime-archimedean-screen-2026-09-23-v1/*.py",
+    "audits/prime-scaling-admission-2026-09-29-v1/*.py",
+    "audits/jacobi-product-admission-2026-09-29-v1/*.py",
+    "audits/nightly-2026-09-29/replay.py"
   ],
   "exclude": [
     "node_modules",
     "__pycache__",
     ".Codex/worktrees",
     "data",
-    "evidence/diag_semantic_lock/cache"
+    "evidence/diag_semantic_lock/cache",
+    ".claude/worktrees"
   ],
   "extraPaths": [
     "evidence/diag_true_symbol",

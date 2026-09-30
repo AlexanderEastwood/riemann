@@ -506,6 +506,20 @@ git worktree add ../riemann-worktrees/<name> lane/<topic>
 The repository is **public**: `github.com/AlexanderEastwood/riemann`.
 Anything you push is visible immediately and permanently.
 
+### Publish completed tests (Alex, 2026-09-29)
+
+Alex explicitly authorized publishing findings after every completed test,
+including failed admission screens and audits, and requested publication of
+the September 29 findings. This is standing authorization to prepare, push
+and merge the corresponding RH findings PR after the checks below; do not
+request fresh push approval for each such test. Publish the actual evidence,
+scope limits and stop/continuation decision, with board/map links. Preserve
+original records and correct descriptions forward. The proposal gate still
+applies to new research; this authorization does not thaw a frozen group or
+permit a manuscript version for failure-only work. Do not start another test
+while leaving a completed test unpublished, unless a concrete publication
+blocker is recorded and reported.
+
 ### Authentication
 
 Push access belongs to the **AlexanderEastwood** account. Other accounts on

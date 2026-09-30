@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-29",
+  "reviewed_commit": "f32cadfb7be523a8920b19be57d40d652e39a2ef",
+  "kind": "Pre-claim admission audit, not an admitted research row",
+  "review": "Fetched current remote; all 104 registered conclusions and 14 continuation demands reviewed. Required instruction/status/checkpoint/ledger and relevant audit sources are hash-identical to the preceding review. Historical proofs and certificates were not replayed.",
+  "wall_check": "Same open gap: ZERO-GEOMETRY, NS100-101. No original full-kernel signed inequality is known.",
+  "arithmetic_input": "The exact Jacobi product at q=exp(-pi*r): Theta(r)=product (1-q^(2n))(1+q^(2n-1))^2.",
+  "source": "https://dlmf.nist.gov/20.5.E3",
+  "candidate": "For every finite product P_M(q), M>=1, complete h_M(t)=exp(|t|/2)*P_M(exp(-pi*exp(2|t|))) evenly. Retain the distributional boundary mass in phi_M=(h_M''-h_M/4)/4. Ask whether R_M(z)=Re(F_M'(z)*conj(F_M(z)))>=0 for all 0<Re z<=1/2 and all Im z, where F_M is the entire bilateral transform of phi_M. This finite-approximant sign is a proposed sufficient mechanism, not a necessary condition for the infinite-product target.",
+  "control_plan": "Evaluate exactly this radial-sign functional on the Davenport-Heilbronn and NS101 completions as diagnostic calibration. Both fail the original finite Jacobi product premise, so neither is a matched counterexample to the finite-product candidate. Screen the candidate on its own M=1 approximant as well; record every boundary term. NS100 already excludes a per-slice positivity substitute.",
+  "budget": "Small fixed M, bounded frequency grid; stop at a reproducible negative candidate value or at identity-only output. No larger accuracy table, theorem node, manuscript version or thaw.",
+  "success": "A surviving candidate is not proof. It would need justified locally uniform transform convergence and a full-domain sign theorem, with a filled proposal before research admission.",
+  "failure": "A negative value stops the stated finite-approximant positivity mechanism only. It does not refute the limiting sign, exact product, RH, or every product-based argument.",
+  "publication": "Local audit only; no push authorized or performed."
+}
