@@ -1,0 +1,2682 @@
+{
+  "classification": "Exact local construction/admission checks; no RH candidate certified",
+  "arithmetic": "Python Fraction and integers; no floating-point comparisons",
+  "workers": 2,
+  "case_count": 165,
+  "all_checks_consistent": true,
+  "controls": {
+    "composite_labels": "Same local geometry with 4 or 6; local weight pass is insufficient to identify prime support",
+    "dimension_lift": "Unit-rate 6D lift fails; chosen normalized rates/parity can restore weight algebra only",
+    "davenport_heilbronn": "Not applicable to local determinant/deck/individual Euler-factor algebra: the analogue lacks the specified prime-product geometry. No generic completed-function positivity inference is tested or passed.",
+    "ns94_ns100_ns101": "No circle-count or theta-positivity inference attempted; their broader symmetry-only warnings retained"
+  },
+  "rows": [
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/2",
+      "target_without_log_label": "-1/2",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/4",
+      "target_without_log_label": "-1/4",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/8",
+      "target_without_log_label": "-1/8",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/16",
+      "target_without_log_label": "-1/16",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/3",
+      "target_without_log_label": "-1/3",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/9",
+      "target_without_log_label": "-1/9",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/27",
+      "target_without_log_label": "-1/27",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/81",
+      "target_without_log_label": "-1/81",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/5",
+      "target_without_log_label": "-1/5",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/25",
+      "target_without_log_label": "-1/25",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/125",
+      "target_without_log_label": "-1/125",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/625",
+      "target_without_log_label": "-1/625",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/7",
+      "target_without_log_label": "-1/7",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/49",
+      "target_without_log_label": "-1/49",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/343",
+      "target_without_log_label": "-1/343",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/2401",
+      "target_without_log_label": "-1/2401",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/11",
+      "target_without_log_label": "-1/11",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/121",
+      "target_without_log_label": "-1/121",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/1331",
+      "target_without_log_label": "-1/1331",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/14641",
+      "target_without_log_label": "-1/14641",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/4",
+      "target_without_log_label": "-1/4",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/16",
+      "target_without_log_label": "-1/16",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/64",
+      "target_without_log_label": "-1/64",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/256",
+      "target_without_log_label": "-1/256",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/6",
+      "target_without_log_label": "-1/6",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/36",
+      "target_without_log_label": "-1/36",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/216",
+      "target_without_log_label": "-1/216",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 4,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/1296",
+      "target_without_log_label": "-1/1296",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/4",
+      "target_without_log_label": "-1/2",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/16",
+      "target_without_log_label": "-1/4",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/64",
+      "target_without_log_label": "-1/8",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/256",
+      "target_without_log_label": "-1/16",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/9",
+      "target_without_log_label": "-1/3",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/81",
+      "target_without_log_label": "-1/9",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/729",
+      "target_without_log_label": "-1/27",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/6561",
+      "target_without_log_label": "-1/81",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/25",
+      "target_without_log_label": "-1/5",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/625",
+      "target_without_log_label": "-1/25",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/15625",
+      "target_without_log_label": "-1/125",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/390625",
+      "target_without_log_label": "-1/625",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/49",
+      "target_without_log_label": "-1/7",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/2401",
+      "target_without_log_label": "-1/49",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/117649",
+      "target_without_log_label": "-1/343",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/5764801",
+      "target_without_log_label": "-1/2401",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/121",
+      "target_without_log_label": "-1/11",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/14641",
+      "target_without_log_label": "-1/121",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/1771561",
+      "target_without_log_label": "-1/1331",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/214358881",
+      "target_without_log_label": "-1/14641",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/16",
+      "target_without_log_label": "-1/4",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/256",
+      "target_without_log_label": "-1/16",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/4096",
+      "target_without_log_label": "-1/64",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/65536",
+      "target_without_log_label": "-1/256",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 2,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/36",
+      "target_without_log_label": "-1/6",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/1296",
+      "target_without_log_label": "-1/36",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 6,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/46656",
+      "target_without_log_label": "-1/216",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1",
+        "1"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "1/1679616",
+      "target_without_log_label": "-1/1296",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": false,
+      "symbolic_rate_and_parity_condition": false,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/4",
+      "target_without_log_label": "-1/4",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/16",
+      "target_without_log_label": "-1/16",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 12,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/64",
+      "target_without_log_label": "-1/64",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/256",
+      "target_without_log_label": "-1/256",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/9",
+      "target_without_log_label": "-1/9",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/81",
+      "target_without_log_label": "-1/81",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 12,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/729",
+      "target_without_log_label": "-1/729",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/6561",
+      "target_without_log_label": "-1/6561",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/25",
+      "target_without_log_label": "-1/25",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/625",
+      "target_without_log_label": "-1/625",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 12,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/15625",
+      "target_without_log_label": "-1/15625",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/390625",
+      "target_without_log_label": "-1/390625",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/49",
+      "target_without_log_label": "-1/49",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/2401",
+      "target_without_log_label": "-1/2401",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 12,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/117649",
+      "target_without_log_label": "-1/117649",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/5764801",
+      "target_without_log_label": "-1/5764801",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/121",
+      "target_without_log_label": "-1/121",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/14641",
+      "target_without_log_label": "-1/14641",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 12,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/1771561",
+      "target_without_log_label": "-1/1771561",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/214358881",
+      "target_without_log_label": "-1/214358881",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/16",
+      "target_without_log_label": "-1/16",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/256",
+      "target_without_log_label": "-1/256",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 12,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/4096",
+      "target_without_log_label": "-1/4096",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/65536",
+      "target_without_log_label": "-1/65536",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 4,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/36",
+      "target_without_log_label": "-1/36",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/1296",
+      "target_without_log_label": "-1/1296",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 12,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/46656",
+      "target_without_log_label": "-1/46656",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 6,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/2",
+        "1/2"
+      ],
+      "grading_shift": 1,
+      "normalized_weight_without_log_label": "-1/1679616",
+      "target_without_log_label": "-1/1679616",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/16",
+      "target_without_log_label": "-1/16",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/256",
+      "target_without_log_label": "-1/256",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 24,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/4096",
+      "target_without_log_label": "-1/4096",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 2,
+      "label_is_prime": true,
+      "actual_repetition_m": 32,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/65536",
+      "target_without_log_label": "-1/65536",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/81",
+      "target_without_log_label": "-1/81",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/6561",
+      "target_without_log_label": "-1/6561",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 24,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/531441",
+      "target_without_log_label": "-1/531441",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 3,
+      "label_is_prime": true,
+      "actual_repetition_m": 32,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/43046721",
+      "target_without_log_label": "-1/43046721",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/625",
+      "target_without_log_label": "-1/625",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/390625",
+      "target_without_log_label": "-1/390625",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 24,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/244140625",
+      "target_without_log_label": "-1/244140625",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 5,
+      "label_is_prime": true,
+      "actual_repetition_m": 32,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/152587890625",
+      "target_without_log_label": "-1/152587890625",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/2401",
+      "target_without_log_label": "-1/2401",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/5764801",
+      "target_without_log_label": "-1/5764801",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 24,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/13841287201",
+      "target_without_log_label": "-1/13841287201",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 7,
+      "label_is_prime": true,
+      "actual_repetition_m": 32,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/33232930569601",
+      "target_without_log_label": "-1/33232930569601",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/14641",
+      "target_without_log_label": "-1/14641",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/214358881",
+      "target_without_log_label": "-1/214358881",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 24,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/3138428376721",
+      "target_without_log_label": "-1/3138428376721",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 11,
+      "label_is_prime": true,
+      "actual_repetition_m": 32,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/45949729863572161",
+      "target_without_log_label": "-1/45949729863572161",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/256",
+      "target_without_log_label": "-1/256",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/65536",
+      "target_without_log_label": "-1/65536",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 24,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/16777216",
+      "target_without_log_label": "-1/16777216",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 4,
+      "label_is_prime": false,
+      "actual_repetition_m": 32,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/4294967296",
+      "target_without_log_label": "-1/4294967296",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 8,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/1296",
+      "target_without_log_label": "-1/1296",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 16,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/1679616",
+      "target_without_log_label": "-1/1679616",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 24,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/2176782336",
+      "target_without_log_label": "-1/2176782336",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "hyperbolic_local_weight",
+      "dimension_real": 8,
+      "label": 6,
+      "label_is_prime": false,
+      "actual_repetition_m": 32,
+      "rates": [
+        "1/4",
+        "1/4",
+        "1/2"
+      ],
+      "grading_shift": 0,
+      "normalized_weight_without_log_label": "-1/2821109907456",
+      "target_without_log_label": "-1/2821109907456",
+      "exterior_trace_equals_determinant": true,
+      "candidate_condition_holds": true,
+      "symbolic_rate_and_parity_condition": true,
+      "test_passed": true,
+      "scope": "Exact finite algebra only; composite labels can also match. No global trace, gamma/poles, positivity or RH transfer."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 2,
+      "a": "1/2",
+      "y": "2",
+      "ratio": "7/6",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 2,
+      "a": "1",
+      "y": "5/2",
+      "ratio": "5/4",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 2,
+      "a": "3/2",
+      "y": "3",
+      "ratio": "31/24",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 3,
+      "a": "1/2",
+      "y": "2",
+      "ratio": "13/12",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 3,
+      "a": "1",
+      "y": "5/2",
+      "ratio": "10/9",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 3,
+      "a": "3/2",
+      "y": "3",
+      "ratio": "121/108",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 5,
+      "a": "1/2",
+      "y": "2",
+      "ratio": "31/30",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 5,
+      "a": "1",
+      "y": "5/2",
+      "ratio": "26/25",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 5,
+      "a": "3/2",
+      "y": "3",
+      "ratio": "781/750",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 7,
+      "a": "1/2",
+      "y": "2",
+      "ratio": "57/56",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 7,
+      "a": "1",
+      "y": "5/2",
+      "ratio": "50/49",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 7,
+      "a": "3/2",
+      "y": "3",
+      "ratio": "2801/2744",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 11,
+      "a": "1/2",
+      "y": "2",
+      "ratio": "133/132",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 11,
+      "a": "1",
+      "y": "5/2",
+      "ratio": "122/121",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 11,
+      "a": "3/2",
+      "y": "3",
+      "ratio": "16105/15972",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 4,
+      "a": "1/2",
+      "y": "2",
+      "ratio": "21/20",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 4,
+      "a": "1",
+      "y": "5/2",
+      "ratio": "17/16",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 4,
+      "a": "3/2",
+      "y": "3",
+      "ratio": "341/320",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 6,
+      "a": "1/2",
+      "y": "2",
+      "ratio": "43/42",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 6,
+      "a": "1",
+      "y": "5/2",
+      "ratio": "37/36",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "independent_passive_prime_port",
+      "label": 6,
+      "a": "3/2",
+      "y": "3",
+      "ratio": "1555/1512",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Rejects this independently passive Euler-factor architecture; says nothing against a coupled completed system."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 2,
+      "power": 1,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 2,
+      "power": 2,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 2,
+      "power": 3,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 2,
+      "power": 4,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 3,
+      "power": 1,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 3,
+      "power": 2,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 3,
+      "power": 3,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 3,
+      "power": 4,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 5,
+      "power": 1,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 5,
+      "power": 2,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 5,
+      "power": 3,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 5,
+      "power": 4,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 7,
+      "power": 1,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 7,
+      "power": 2,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 7,
+      "power": 3,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 7,
+      "power": 4,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 11,
+      "power": 1,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 11,
+      "power": 2,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 11,
+      "power": 3,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 11,
+      "power": 4,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 4,
+      "power": 1,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 4,
+      "power": 2,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 4,
+      "power": 3,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 4,
+      "power": 4,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 6,
+      "power": 1,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 6,
+      "power": 2,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 6,
+      "power": 3,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "elliptic_deck_map",
+      "label": 6,
+      "power": 4,
+      "reduced_shift_in_period_units": "0",
+      "candidate_condition_holds": false,
+      "test_passed": true,
+      "scope": "Ordinary quotient map is the identity; labeled return/groupoid data would be extra structure."
+    },
+    {
+      "kind": "primitive_support",
+      "labels": [
+        2,
+        3,
+        5
+      ],
+      "faults": [],
+      "repeated_primitive_labels": false,
+      "candidate_condition_holds": true,
+      "scope": "Exact support check on the supplied finite primitive list, not a global construction or analytic continuation.",
+      "expected_candidate_condition": true,
+      "expected_repeated_labels": false,
+      "test_passed": true
+    },
+    {
+      "kind": "primitive_support",
+      "labels": [
+        2,
+        3,
+        4
+      ],
+      "faults": [
+        {
+          "primitive_label": 4,
+          "extra_log_coefficient": {
+            "2": 2
+          },
+          "type": "duplicates_prime_power"
+        }
+      ],
+      "repeated_primitive_labels": false,
+      "candidate_condition_holds": false,
+      "scope": "Exact support check on the supplied finite primitive list, not a global construction or analytic continuation.",
+      "expected_candidate_condition": false,
+      "expected_repeated_labels": false,
+      "test_passed": true
+    },
+    {
+      "kind": "primitive_support",
+      "labels": [
+        2,
+        3,
+        6
+      ],
+      "faults": [
+        {
+          "primitive_label": 6,
+          "extra_log_coefficient": {
+            "2": 1,
+            "3": 1
+          },
+          "type": "extra_primitive_support"
+        }
+      ],
+      "repeated_primitive_labels": false,
+      "candidate_condition_holds": false,
+      "scope": "Exact support check on the supplied finite primitive list, not a global construction or analytic continuation.",
+      "expected_candidate_condition": false,
+      "expected_repeated_labels": false,
+      "test_passed": true
+    },
+    {
+      "kind": "primitive_support",
+      "labels": [
+        2,
+        2,
+        3
+      ],
+      "faults": [],
+      "repeated_primitive_labels": true,
+      "candidate_condition_holds": false,
+      "scope": "Exact support check on the supplied finite primitive list, not a global construction or analytic continuation.",
+      "expected_candidate_condition": false,
+      "expected_repeated_labels": true,
+      "test_passed": true
+    }
+  ]
+}

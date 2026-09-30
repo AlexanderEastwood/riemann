@@ -1,0 +1,53 @@
+{
+  "classification": "Operational pilot and candidate-admission audit, not a model benchmark",
+  "phases": [
+    {
+      "phase": "qwen_proposals",
+      "requests": 3,
+      "http_successes": 3,
+      "model": "qwen3.8-27b",
+      "reported_tokens": {
+        "prompt_tokens": 3648,
+        "completion_tokens": 1700,
+        "total_tokens": 5348
+      },
+      "sum_request_duration_seconds": 90.248914
+    },
+    {
+      "phase": "qwen_critiques",
+      "requests": 3,
+      "http_successes": 3,
+      "model": "qwen3.8-27b",
+      "reported_tokens": {
+        "prompt_tokens": 5023,
+        "completion_tokens": 1979,
+        "total_tokens": 7002
+      },
+      "sum_request_duration_seconds": 40.369385
+    },
+    {
+      "phase": "llama_critic_audits",
+      "requests": 3,
+      "http_successes": 3,
+      "model": "llama3.1:8b",
+      "reported_tokens": {
+        "prompt_tokens": 3917,
+        "completion_tokens": 1524,
+        "total_tokens": 5441
+      },
+      "sum_request_duration_seconds": 60.226327
+    }
+  ],
+  "initial_hostname_attempt": {
+    "requests": 3,
+    "inference_requests": 0,
+    "error": "nonlocal_endpoint",
+    "reported_tokens": null,
+    "disposition": "All failed local-address validation before inference. Reconfigured to an independently verified private address; guard not weakened."
+  },
+  "structured_proposals": 3,
+  "admitted_proposals": 0,
+  "automatically_executed_model_code": false,
+  "raw_endpoint_records": "Retained locally in ignored .local-runs; public sanitized transcripts above",
+  "post_pilot_prompt_changes": "Separated construction briefs and explicit critique error checks. No new inference after these edits, so effectiveness unvalidated."
+}

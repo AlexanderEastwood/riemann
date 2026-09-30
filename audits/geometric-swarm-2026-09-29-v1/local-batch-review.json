@@ -1,0 +1,20 @@
+{
+  "reviewer": "geometry_symplectic",
+  "scope": "Read-only review of local algebra and construction fixture implementation",
+  "major_findings": 0,
+  "minor_findings": [
+    {
+      "finding": "Bounded primality helper used floating square root while output claimed integer-only arithmetic",
+      "resolution": "Replaced with math.isqrt; touched-file diagnostics and six regression tests pass"
+    },
+    {
+      "finding": "Primitive-support fixtures hardcoded test_passed",
+      "resolution": "Explicit expected support/duplicate outcomes now checked in run_checks"
+    }
+  ],
+  "runs": {
+    "exact-run-1": "Preserved pre-correction record; aggregate consistency scope was weaker for primitive fixtures",
+    "exact-run-2": "Authoritative corrected replay: 165 fixtures, all checks consistent"
+  },
+  "limits": "No general analytic flat-trace theorem, new arithmetic estimate, independent 165-hypothesis search, RH proof or thaw."
+}

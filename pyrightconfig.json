@@ -61,7 +61,9 @@
     "audits/jacobi-product-admission-2026-09-29-v1/*.py",
     "audits/nightly-2026-09-29/replay.py",
     "audits/api-prime-chain-screen-2026-09-29-v1/*.py",
-    "audits/euler-boundary-screen-2026-09-29-v1/*.py"
+    "audits/euler-boundary-screen-2026-09-29-v1/*.py",
+    "tools/geometry_swarm/*.py",
+    "tests/test_geometry_swarm*.py"
   ],
   "exclude": [
     "node_modules",
