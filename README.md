@@ -50,6 +50,27 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## September 29 geometric constructions and local-model pilot
+
+Three construction agents specified contact, arithmetic-intersection and spectral
+objects in four or more real dimensions, then cross-reviewed their missing
+transfers. The [construction and pilot brief](audits/geometric-swarm-2026-09-29-v1.html)
+records the outcome; [definitions and evidence](audits/geometric-swarm-2026-09-29-v1/README.md)
+retain the precise scopes. These are explicit local objects and construction
+questions, not a new global positivity theorem.
+
+The [local batch runner](tools/geometry_swarm/README.md) completed 165 deterministic
+exact calibration fixtures and nine local-model inference requests (three
+proposals, three critiques, three second-model audits). No generated proposal
+was admitted for computation; the critics also required correction. Repeated
+fixtures and model agreement are not mathematical advances. Post-pilot prompt
+repairs are not yet inference-tested. No further batch is running.
+
+**Wall check: Same open gap.** OPERATOR-BRIDGES retains separate route-specific
+construction obligations. No new arithmetic estimate, research row, thaw,
+manuscript version or RH/G2 result. All frozen groups and missing-original
+records are preserved.
+
 ## September 29 full-residual feasibility assessment
 
 Three agents examined the exact original-target NB bottleneck, three primary

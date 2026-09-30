@@ -1,0 +1,31 @@
+{
+  "classification": "Construction-admission calibration and local model-pipeline pilot, not a new RH research row",
+  "pre_run_protocol": true,
+  "math_cases": {
+    "count": 165,
+    "hyperbolic": 112,
+    "passive_ports": 21,
+    "quotient_maps": 28,
+    "primitive_support": 4,
+    "arithmetic": "Exact integers/Fraction, deterministic bounded cases",
+    "purpose": "Replay known local admissibility distinctions before model review; repetitions are implementation fixtures, not independent mathematical discoveries"
+  },
+  "controls": "Composite labels, unadjusted dimension lift, duplicate primitive weights, elliptic quotient collapse and independent-passive factor counterexample. Davenport\u2013Heilbronn is not an instance of these local prime-product objects; no generic completed-function positivity inference tested.",
+  "model_pilot": {
+    "existing_service_only": true,
+    "models": [
+      "qwen3.8-27b"
+    ],
+    "proposal_jobs": 3,
+    "maximum_review_jobs": 3,
+    "maximum_tokens_per_request": 1200,
+    "concurrency": 1,
+    "timeout_seconds": 60,
+    "no_retries": true,
+    "maximum_completion_token_budget": 7200,
+    "other_gpu_work": "Present; existing model queue empty at inspection; no service/model changes"
+  },
+  "data_handling": "Raw model jobs/endpoints stay in ignored local-runs; publish sanitized findings only. Model text is untrusted and never executed. Unknown measurements stay null.",
+  "acceptance": "Network/schema successes show pipeline function only. Every proposed mathematical claim remains unverified and must undergo source, wall and matched-control review. No automatic research admission, score or thaw.",
+  "stop": "Bounded pilot ends after its proposal/review phase; invalid output is retained as failure, not automatically retried."
+}

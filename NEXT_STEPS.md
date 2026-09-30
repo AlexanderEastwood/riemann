@@ -564,6 +564,25 @@ Subgroup thaw conditions for the fourth family:
 - ZERO-GEOMETRY: a specific original arithmetic identity absent from the applicable NS94/100/101 controls; no generic theta factorization rerun.
 - OPERATOR-BRIDGES: name and construct the missing route-specific operator/evaluator/transfer; assess each construction separately.
 
+## September 29 geometric-swarm audit and local runner (no research row)
+
+Codex plus three assisting agents completed the bounded [construction audit](audits/geometric-swarm-2026-09-29-v1/README.md)
+and [brief](audits/geometric-swarm-2026-09-29-v1.html). Explicit contact blocks,
+adelic metric candidates and arithmetic oscillators retain separate missing
+global constructions. The local runner replayed 165 exact calibration fixtures;
+three Qwen proposals, three Qwen critiques and three Llama critic audits supplied
+no admitted research candidate. Model critics were themselves corrected.
+Twenty-four regression tests and pyright pass; manuscript remains 358 pages,
+zero undefined/duplicate references. No manuscript edits or version.
+
+**Wall check: Same open gap.** Closest inputs are OPERATOR-BRIDGES and its
+route-specific transfers, with NS47/94/100/101 scopes retained. The next work is
+specification and review of a complete conditional construction bridge; it is
+not a larger model batch or parameter scan. A connected prime-period assembly
+must account for mixed primitives; an adelic pairing must identify the actual
+Weil form; the passive-port failure requires a different coupled construction.
+No row or thaw is claimed. All frozen-input conditions above remain unchanged.
+
 ## September 29 published admission records (no research rows)
 
 **Completed three-agent feasibility assessment (Codex):** the

@@ -1,0 +1,29 @@
+test_actual_passive_port_counterexample (test_geometry_swarm_checks.GeometryCheckTests.test_actual_passive_port_counterexample) ... ok
+test_deck_map_retains_no_power_label (test_geometry_swarm_checks.GeometryCheckTests.test_deck_map_retains_no_power_label) ... ok
+test_exterior_degrees_cancel_trace_denominator (test_geometry_swarm_checks.GeometryCheckTests.test_exterior_degrees_cancel_trace_denominator) ... ok
+test_extra_dimension_is_not_automatic (test_geometry_swarm_checks.GeometryCheckTests.test_extra_dimension_is_not_automatic) ... ok
+test_fake_prime_passes_local_algebra_but_fails_support (test_geometry_swarm_checks.GeometryCheckTests.test_fake_prime_passes_local_algebra_but_fails_support) ... ok
+test_unbounded_or_invalid_work_is_rejected (test_geometry_swarm_checks.GeometryCheckTests.test_unbounded_or_invalid_work_is_rejected) ... ok
+test_absent_or_invalid_usage_remains_null (test_geometry_swarm_models.LocalModelTests.test_absent_or_invalid_usage_remains_null) ... ok
+test_all_request_bounds_are_checked_before_output (test_geometry_swarm_models.LocalModelTests.test_all_request_bounds_are_checked_before_output) ... ok
+test_authorization_is_sent_but_never_returned_or_saved (test_geometry_swarm_models.LocalModelTests.test_authorization_is_sent_but_never_returned_or_saved) ... ok
+test_deadline_interrupts_body_after_connection_detaches (test_geometry_swarm_models.LocalModelTests.test_deadline_interrupts_body_after_connection_detaches) ... ok
+test_discovery_uses_existing_server (test_geometry_swarm_models.LocalModelTests.test_discovery_uses_existing_server) ... ok
+test_dns_requires_every_address_to_be_local (test_geometry_swarm_models.LocalModelTests.test_dns_requires_every_address_to_be_local) ... ok
+test_missing_auth_fails_before_network (test_geometry_swarm_models.LocalModelTests.test_missing_auth_fails_before_network) ... ok
+test_parallel_requests_respect_worker_limit_and_preserve_order (test_geometry_swarm_models.LocalModelTests.test_parallel_requests_respect_worker_limit_and_preserve_order) ... ok
+test_partial_failures_do_not_cancel_success (test_geometry_swarm_models.LocalModelTests.test_partial_failures_do_not_cancel_success) ... ok
+test_preexisting_output_is_never_overwritten (test_geometry_swarm_models.LocalModelTests.test_preexisting_output_is_never_overwritten) ... ok
+test_public_and_unsafe_urls_are_rejected (test_geometry_swarm_models.LocalModelTests.test_public_and_unsafe_urls_are_rejected) ... ok
+test_redirect_is_not_followed (test_geometry_swarm_models.LocalModelTests.test_redirect_is_not_followed) ... ok
+test_success_usage_prompts_and_persistence (test_geometry_swarm_models.LocalModelTests.test_success_usage_prompts_and_persistence) ... ok
+test_thinking_option_is_only_sent_when_explicit (test_geometry_swarm_models.LocalModelTests.test_thinking_option_is_only_sent_when_explicit) ... ok
+test_timeout_is_failed_without_exception_text (test_geometry_swarm_models.LocalModelTests.test_timeout_is_failed_without_exception_text) ... ok
+test_failed_proposals_do_not_spawn_review_requests (test_geometry_swarm_pipeline.PipelineTests.test_failed_proposals_do_not_spawn_review_requests) ... ok
+test_http_success_is_not_a_complete_proposal (test_geometry_swarm_pipeline.PipelineTests.test_http_success_is_not_a_complete_proposal) ... ok
+test_schema_is_only_a_format_check (test_geometry_swarm_pipeline.PipelineTests.test_schema_is_only_a_format_check) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.734s
+
+OK

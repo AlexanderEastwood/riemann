@@ -1,0 +1,12 @@
+{
+  "reason": "Titan pilot produced repeated constructions and unreliable critiques; check a second installed model on the same drafts, not generate more candidates",
+  "classification": "Local multi-model pipeline calibration; no mathematical admission",
+  "model": "llama3.1:8b",
+  "requests": 3,
+  "max_tokens_per_request": 900,
+  "concurrency": 1,
+  "timeout_seconds": 60,
+  "max_completion_token_budget": 2700,
+  "source": "Existing installed local Ollama model; no downloads",
+  "decision": "Compare which explicit errors the second reviewer identifies. Model agreement is not validation; coordinator must assess both outputs. Stop after three responses."
+}

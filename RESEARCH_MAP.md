@@ -494,9 +494,9 @@ Sources: [evidence/v154](evidence/v154).
 
 These are separate unfinished constructions, grouped only to mark their independence from NS98: evaluator estimates and closed realization (fixed-space); actual structural/asymptotic transfer (circle/Toeplitz); a valid unshifted-sign/extension bridge (de Branges); number-field intersection construction and positivity transfer (Hodge/F_1).
 
-**Scope / stop:** No equivalence between these missing inputs is asserted. The old circle/Toeplitz measurement lane is not Dad’s tangent-circle zero-count proposal. Shifted finite-window data do not determine an unshifted sign; analogy with function fields does not construct a number-field intersection theory.
+**Scope / stop:** No equivalence between these missing inputs is asserted. The old circle/Toeplitz measurement lane is not Dad’s tangent-circle zero-count proposal. Shifted finite-window data do not determine an unshifted sign; analogy with function fields does not construct a number-field intersection theory. September 29 geometric construction audit: explicit 4D contact blocks, higher-dimensional local weights, elliptic products, adelic metric families and arithmetic oscillators supply no global completed trace or positivity transfer. Composite controls preserve local orbit algebra; ordinary elliptic deck maps collapse; independently passive Euler factors fail contractivity. These scoped observations leave connected assembly, arithmetic intersection transfer and coupled small-shift canonical systems unconstructed. A bounded local-model pilot admitted no proposal; critic agreement was unreliable. Calibration and construction specifications only, with no new estimate, node or thaw.
 
-Sources: [COMPARISON.md](COMPARISON.md) · [evidence/diag_true_symbol](evidence/diag_true_symbol).
+Sources: [COMPARISON.md](COMPARISON.md) · [evidence/diag_true_symbol](evidence/diag_true_symbol) · [audits/geometric-swarm-2026-09-29-v1.html](audits/geometric-swarm-2026-09-29-v1.html).
 
 ## Nodes
 

@@ -21,6 +21,7 @@ __pycache__/
 .venv/
 /.venv
 venv/
+/.local-runs/
 
 # Versioned cumulative bundles belong in release assets.
 fixed_space_prime_action_v*_bundle.zip
