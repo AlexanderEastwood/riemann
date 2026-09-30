@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-29",
+  "reviewed_commit": "a992456a6305b0b01b0d6efe2b022c73d1c0cd3b",
+  "classification": "Audit / feasibility assessment; no research row",
+  "wall_check": "Same open gap — NB-GAIN / NS53/61/87; no arithmetic input changed",
+  "review_scope": {
+    "conclusion_records": 104,
+    "continuation_demands": 14,
+    "historical_proof_or_certificate_replay": false,
+    "missing_original_groups": "Both OPEN"
+  },
+  "team": [
+    "nb_exact_bottleneck",
+    "nb_arithmetic_literature",
+    "nb_strategy_challenge"
+  ],
+  "review_findings": {
+    "major": 0,
+    "minor": 4,
+    "unresolved": 0,
+    "resolved": [
+      "Explicitly state aggregate divergence is equivalent to convergence, not a weaker lemma",
+      "State no effective tail-onset threshold",
+      "BCF moment assumption entails simple zeros",
+      "Short Mollifiers theorem uses sufficiently small fixed theta"
+    ],
+    "optional_notation": "Explicit a/j with a>1 restriction incorporated",
+    "scope": "Exact-target and source-table reviews by two agents; skeptical strategy review by third. Not external expert review or independent repository proof verification."
+  },
+  "checks": {
+    "nodes_unchanged": true,
+    "all_demand_fields_unchanged": true,
+    "freeze_conditions_unchanged": true,
+    "only_nb_gain_scope_and_source_changed_in_map": true,
+    "manuscript_and_historical_evidence_unchanged": true,
+    "referenced_repository_paths_exist": true,
+    "html_tag_balance": true,
+    "html_relative_links": [
+      "nb-bottleneck-team-2026-09-29-v1/exact-target.md",
+      "nb-bottleneck-team-2026-09-29-v1/literature-feasibility.md",
+      "nb-bottleneck-team-2026-09-29-v1/strategy-challenge.md",
+      "nb-bottleneck-team-2026-09-29-v1/validation.json"
+    ],
+    "html_inline_styles_and_no_scripts": true,
+    "html_visual_review": "Not performed; file-panel opening requested at delivery, browser rendering unavailable in this session",
+    "manuscript_build": {
+      "command": "./manuscript/build.sh",
+      "exit_code": 0,
+      "pages": 358,
+      "undefined_or_duplicate_references": 0,
+      "mode": "Existing unchanged PDF up-to-date according to latexmk; not a fresh TeX compilation"
+    },
+    "python_files_edited": false,
+    "numerical_candidate_screen": false,
+    "new_manuscript_version": false,
+    "new_node_or_thaw": false,
+    "external_outreach": false
+  },
+  "outcome": "No new unconditional partial arithmetic lemma with an identified proof input emerged. Prepare the exact brief for specialist feasibility assessment; do not automatically start an adjacent scan. RH and G2 remain open.",
+  "artifact_sha256": {
+    "audits/nb-arithmetic-bottleneck-2026-09-29-v1.html": "764901c0bce1b34ccb748be3908219ef57da802733e3793f82b33255485c4b90",
+    "audits/nb-bottleneck-team-2026-09-29-v1/README.md": "5f5304990740cd1786d4fcd9de475b532ee1af68b4bc7c68488b39109b6615a2",
+    "audits/nb-bottleneck-team-2026-09-29-v1/exact-target.md": "5d56d40dccbb3ef789f0cbb2f92bad79644d856b110136640c8eaae69aebf0e5",
+    "audits/nb-bottleneck-team-2026-09-29-v1/literature-feasibility.md": "131798ecb31b2a540d8abfe15278f90c127c987fa6515308ab8509b15bc6632b",
+    "audits/nb-bottleneck-team-2026-09-29-v1/manuscript-build.txt": "1ae2a25e648e59dff05b640060e6289ddf6631f86a029067a48aff5cdf8c01c6",
+    "audits/nb-bottleneck-team-2026-09-29-v1/plan.json": "11da8045e4d29d51a21765121777c30f6cca0b4cb3dca99c943d649cb103ff98",
+    "audits/nb-bottleneck-team-2026-09-29-v1/sources.json": "80a1b3c56a947ddc55171554633065d362338050fea6b1aaf074ba1f5c08ca99",
+    "audits/nb-bottleneck-team-2026-09-29-v1/strategy-challenge.md": "f4847ebe892ea137b6fe697cb0474c24e44a6816e29adfa68eff5f546f3be13a"
+  }
+}

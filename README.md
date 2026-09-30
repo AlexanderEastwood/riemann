@@ -50,6 +50,25 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## September 29 full-residual feasibility assessment
+
+Three agents examined the exact original-target NB bottleneck, three primary
+literature sources and the strategy/control requirements. Their
+[arithmetic bottleneck brief](audits/nb-arithmetic-bottleneck-2026-09-29-v1.html)
+identifies the corrected finite observation vector and the complete tail
+allowance. It produces **no new unconditional partial arithmetic lemma**.
+Divergence of the localized normalized observations is equivalent to the
+existing convergence target; it is not a weaker intermediate theorem.
+
+**Wall check: Same open gap**, NB-GAIN / NS53/61/87. The full residual is a
+useful target for a specialist feasibility assessment because its dependency
+is explicit, not because this review establishes its superiority. The checked
+full-line approximation theorem assumes RH; the unconditional short-mollifier
+result has a different target and height regime. No matching import was found
+in this bounded review. Keep NS74's target-sensitive control and NS83's rate
+restriction. No candidate computation, research row, node, thaw or manuscript
+version. The brief is prepared; no external outreach has been sent.
+
 ## September 29 Jensen-preprint proof audit
 
 The [focused Holland audit](audits/jensen-preprint-audit-2026-09-29-v1.html)

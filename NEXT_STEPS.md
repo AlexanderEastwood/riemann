@@ -566,6 +566,23 @@ Subgroup thaw conditions for the fourth family:
 
 ## September 29 published admission records (no research rows)
 
+**Completed three-agent feasibility assessment (Codex):** the
+[full-residual arithmetic brief](audits/nb-arithmetic-bottleneck-2026-09-29-v1.html)
+fixes the original target, full projected block, old-coordinate correction and
+complete tail. The normalized localization error is summable on doublings;
+aggregate divergence is equivalent to the existing convergence obligation.
+No effective asymptotic onset or new arithmetic lower estimate is supplied.
+The bounded three-source review admits no unconditional partial lemma with a
+specified estimating mechanism. This is not an exhaustive literature verdict.
+
+**Same open gap**, NB-GAIN / NS53/61/87. Use the brief for specialist feasibility
+assessment before another proof-oriented scan; no external message has been
+sent. A next candidate must specify an arithmetic expression, coefficient
+hypotheses, uniform range, proposed estimating method and remaining transfer.
+The present assessment supplies none to compute. Retain NS74/83 and every
+freeze condition. No new row, node, theorem, thaw, version or numerical screen.
+[Team notes and validation](audits/nb-bottleneck-team-2026-09-29-v1/README.md).
+
 **Completed external-proof audit (Codex):** the
 [Holland Jensen audit](audits/jensen-preprint-audit-2026-09-29-v1.html)
 checks normalization, matching, root stability and the analytic/derivative

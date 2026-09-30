@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nyman–Beurling: the arithmetic bottleneck — 29 September 2026</title></head>
+<body style="margin:0;background:#f5f2eb;color:#27343b;font:17px/1.65 Georgia,serif;">
+<main style="max-width:680px;margin:36px auto;padding:34px;background:white;border-top:5px solid #365e64;">
+<p style="margin:0;color:#63787b;font-size:12px;letter-spacing:1px;">RH PROJECT · SPECIALIST FEASIBILITY BRIEF · 2026-09-29 · V1</p>
+<h1 style="font-size:30px;line-height:1.2;">The actual residual needs an arithmetic estimate</h1>
+<p style="font-size:20px;">Three agents examined the exact target, relevant literature and research priorities. This assessment produced no new unconditional partial lemma with a credible proof input. It does produce a precise question for specialist review.</p>
+<p style="padding:15px;background:#edf3f3;border-left:4px solid #365e64;"><strong>Wall check: Same open gap — NB-GAIN, NS53/61/87.</strong> The full optimized residual is already the subject of NS87. Returning to it changes our priority, not the mathematical input. NS74 and NS83 remain binding; no frozen group is reopened.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">1. Fix the original approximation problem</h2>
+<p>Use the fixed q=2 space H=L²((0,∞), dt/t²), with target τ(t)=1<sub>t≥1</sub> log t and integer atoms</p>
+<div style="padding:14px;background:#f5f7f7;text-align:center;">a<sub>n</sub>(t)=A(t/n), &nbsp; A(z)=∫<sub>0</sub><sup>z</sup> {u} du/u.</div>
+<p>Let Π<sub>N</sub> project onto the span of a<sub>1</sub>,…,a<sub>N</sub>. Define the actual residual r<sub>N</sub>=(I−Π<sub>N</sub>)τ and squared error E<sub>N</sub>=‖r<sub>N</sub>‖². Keep the target, integer span, norm and smoothing order fixed. The existing criterion gives E<sub>N</sub>→0 if and only if RH; no optimal convergence rate is required.</p>
+<p>For N&lt;n≤2N, set φ<sub>n</sub>=(I−Π<sub>N</sub>)a<sub>n</sub>, H<sub>N</sub>=(⟨φ<sub>i</sub>,φ<sub>j</sub>⟩), and h<sub>N</sub>=(⟨r<sub>N</sub>,φ<sub>n</sub>⟩). The complete block identity is</p>
+<div style="padding:14px;background:#f5f7f7;text-align:center;">Δ<sub>N</sub>=E<sub>N</sub>−E<sub>2N</sub>=h<sub>N</sub><sup>T</sup>H<sub>N</sub><sup>−1</sup>h<sub>N</sub>.</div>
+<p>The full inverse and old-space projection matter. This target permits every new-block direction; it is not restricted to the prescribed logarithmic Möbius direction. Estimates for that particular direction remain sufficient possibilities with their separate numerator and cost obligations.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">2. What is controlled, and what is missing</h2>
+<p>NS87 represents the correlations by finite signed arithmetic observations. For a physical cutoff T, put P<sub>T</sub>(t)=∫<sub>t</sub><sup>T</sup> log(u/t)r<sub>N</sub>(u) du/u² and</p>
+<div style="padding:14px;background:#f5f7f7;text-align:center;">q<sub>n</sub>(T)=(1/n)∫<sub>0</sub><sup>T</sup>P<sub>T</sub>(t)dt − ∑<sub>1≤k≤T/n</sub>P<sub>T</sub>(kn).</div>
+<p>Write G<sub>N</sub> for the complete old Gram and C<sub>N</sub> for its old/new cross block. The corrected observation vector is</p>
+<div style="padding:14px;background:#f5f7f7;text-align:center;">ĥ<sub>N,T</sub>=q<sub>new</sub>(T)−C<sub>N</sub><sup>T</sup>G<sub>N</sub><sup>−1</sup>q<sub>old</sub>(T).</div>
+<p>Truncation destroys old-space orthogonality, so q<sub>old</sub> cannot be discarded. The residual itself also contains the optimized arithmetic coefficients. This is the first unestimated signed vector.</p>
+<p>At T=N⁶, define 𝒜<sub>N</sub>=ĥ<sub>N,T</sub><sup>T</sup>H<sub>N</sub><sup>−1</sup>ĥ<sub>N,T</sub>. The existing complete-tail bound gives</p>
+<div style="padding:14px;background:#f5f7f7;text-align:center;">|𝒜<sub>N</sub>/E<sub>N</sub>−Δ<sub>N</sub>/E<sub>N</sub>| = O(N<sup>−1/2</sup> log²N).</div>
+<p>This error is summable on N=2<sup>j</sup>. Divergence of the sum of normalized observations is therefore equivalent to convergence of the actual errors to zero, through the exact error product. It remains an RH-equivalent target, not a weaker intermediate lemma. The familiar positive lower limit of j𝒜<sub>2<sup>j</sup></sub>/E<sub>2<sup>j</sup></sub> is one stronger sufficient condition. Neither arithmetic assertion is proved here. The asymptotic tail rate has no effective onset in the inherited argument. This is bookkeeping from existing bounds, not a new convergence theorem.</p>
+<p>NS83 excludes eventual fixed-fraction whole-error contraction and eventual Δ<sub>2<sup>j</sup></sub>/E<sub>2<sup>j</sup></sub>≥a/j with a&gt;1. NS74 shows that identical Gram geometry and impressive finite gain capture can coexist with a positive error floor in an altered family. A successful argument must use the original target correlations, beyond generic projection geometry.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">3. What the checked literature supplies</h2>
+<table style="width:100%;border-collapse:collapse;font-size:15px;">
+<thead><tr><th style="text-align:left;border-bottom:2px solid #365e64;padding:9px;">Source</th><th style="text-align:left;border-bottom:2px solid #365e64;padding:9px;">Transfer assessment</th></tr></thead>
+<tbody>
+<tr><td style="vertical-align:top;padding:10px;border-bottom:1px solid #d9e1e1;"><a href="https://arxiv.org/html/1211.5191v1" style="color:#245b6b;">Bettin–Conrey–Farmer, Theorem 1</a></td><td style="padding:10px;border-bottom:1px solid #d9e1e1;">Full-line approximation, but assumes RH and a reciprocal-derivative moment hypothesis that also requires simple zeros. Existing smoothing does not remove these assumptions.</td></tr>
+<tr><td style="vertical-align:top;padding:10px;border-bottom:1px solid #d9e1e1;"><a href="https://arxiv.org/html/2508.11108v1" style="color:#245b6b;">Short Mollifiers, Theorem 1</a></td><td style="padding:10px;border-bottom:1px solid #d9e1e1;">The stated theorem gives an unconditional positive zero proportion for sufficiently small fixed θ. Its differentiated target and moving-height moment do not supply the original full-line residual bound.</td></tr>
+<tr><td style="vertical-align:top;padding:10px;border-bottom:1px solid #d9e1e1;"><a href="https://arxiv.org/html/1604.02740v1" style="color:#245b6b;">Bettin–Gonek, Theorems 1–2</a></td><td style="padding:10px;border-bottom:1px solid #d9e1e1;">Even coarse uniform long-mollifier bounds imply zero-free regions. A warning about the strength of the proposed input, not an impossibility theorem.</td></tr>
+</tbody></table>
+<p>This was a bounded three-source applicability assessment. It supplies no proof that an adaptation is impossible and no global ranking of RH approaches. Physical cutoff T=N⁶ above must not be confused with the height parameter in these moment theorems.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">4. The question for a specialist</h2>
+<p style="padding:17px;background:#f5f2eb;">Can an established arithmetic method estimate a precisely identified signed part of ĥ<sub>N,T</sub> for the actual optimized coefficients, with uniform errors still useful after applying H<sub>N</sub><sup>−1</sup>? If additional coefficient regularity is required, what exact unconditional statement would supply it?</p>
+<p>A useful answer would name the expression, coefficient hypotheses, parameter ranges, estimating method and remaining shortfall. A smaller theorem may have standalone value without proving RH. An unspecified request for “more cancellation,” a generic solver improvement or another equivalent identity does not yet constitute such a lemma.</p>
+<p>The complete dependency is present. A new estimating mechanism is absent from this assessment. That is the point at which the next research decision should be made.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">5. Decision and review limits</h2>
+<p>Use this brief for a specialist feasibility assessment before another proof-oriented scan. No external message has been sent. If no concrete arithmetic statement emerges, leave the research groups frozen and stop automatic generation of adjacent variants.</p>
+<p>The preference for full NB is organizational: its objects and missing estimate are explicit. It does not establish superiority over the signed Weil-floor problem. Arithmetic geometry remains a separate construction program requiring an actual pairing or operator and a proved transfer; the present team supplies neither.</p>
+<p>Three agents provided separate reconstruction, literature and skeptical-strategy assessments, with communication between them. This is not external expert review, full independent verification of the repository, or numerical replication. No candidate screen was represented as passed; a later concrete candidate must meet the existing proposal and control gate.</p>
+<p style="border-top:1px solid #d4dddd;padding-top:15px;font-size:13px;color:#617178;">Reviewed main: a992456a6305b0b01b0d6efe2b022c73d1c0cd3b. All 104 conclusion records and 14 continuation demands reviewed for scope. No new row, theorem node, thaw or manuscript version. RH, G2 and both missing-original recovery groups remain open.</p>
+<p style="font-size:13px;"><a href="nb-bottleneck-team-2026-09-29-v1/exact-target.md" style="color:#245b6b;">Exact target</a> · <a href="nb-bottleneck-team-2026-09-29-v1/literature-feasibility.md" style="color:#245b6b;">Source assessment</a> · <a href="nb-bottleneck-team-2026-09-29-v1/strategy-challenge.md" style="color:#245b6b;">Skeptical review</a> · <a href="nb-bottleneck-team-2026-09-29-v1/validation.json" style="color:#245b6b;">Checks and limits</a></p>
+</main></body></html>
