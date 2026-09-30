@@ -50,6 +50,22 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## September 29 projected-cost literature audit
+
+The [cotangent/Estermann applicability audit](audits/mobius-estermann-transfer-2026-09-29-v1.html)
+finds no direct estimate for NS98's actual projected Möbius cost in the
+checked Maier–Rassias statements. Their original parameter ranges leave
+comparable indices untreated. The survey's delta-zero endpoint differs
+from the original theorem and is not imported; the printed PDF pages were
+checked. No existing repo theorem relied on that endpoint.
+
+The existing bounded smoothing operator does give a valid one-sided
+transfer from a complete q=1 selected-cost bound to q=2. No such arithmetic
+bound, uniform endpoint extension or full projected-kernel transfer was
+obtained. **Wall check: Same open gap**, MOBIUS-COST/MOBIUS-MARGIN (NS92–98).
+The bounded source search stops without a new candidate, node, thaw or
+version; it does not exclude adapting the methods or other literature.
+
 ## September 29 NS57 dependency audit completed
 
 The [focused independent-agent audit](audits/ns57-dependency-audit-2026-09-29-v1.html)

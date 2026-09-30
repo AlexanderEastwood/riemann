@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-29",
+  "scope": "Bounded check of these statements and their transfer; not an exhaustive search or independent verification of the papers.",
+  "primary_sources": [
+    {
+      "authors": "Maier and Rassias",
+      "url": "https://arxiv.org/pdf/1705.09921v1",
+      "html_url": "https://arxiv.org/html/1705.09921v1",
+      "reviewed": "Theorem 1.1, printed page 3",
+      "method": "HTML and extracted PDF text compared; locally rendered PDF page visually inspected",
+      "printed_page": 3,
+      "downloaded_pdf_sha256": "e8cedf9cc31278b314e6021266695d1e0078168b5d29a6677d60a02b8fd47882",
+      "finding": "Original strict positive delta; no endpoint extension assumed.",
+      "source_proof_audit": "Not performed"
+    },
+    {
+      "authors": "Maier and Rassias",
+      "url": "https://arxiv.org/pdf/1806.05070v1",
+      "html_url": "https://arxiv.org/html/1806.05070v1",
+      "reviewed": "Theorem 2.1, printed page 3",
+      "method": "HTML and extracted PDF text compared; locally rendered PDF page visually inspected",
+      "printed_page": 3,
+      "downloaded_pdf_sha256": "bc8651e74ca7b3cefe7798312a272080fdb5bcae9b0d0aa1700b35cf905c3a39",
+      "finding": "Explicit theorem requires D>=2.",
+      "source_proof_audit": "Not performed"
+    },
+    {
+      "authors": "Kovalenko and Derevyanko",
+      "url": "https://arxiv.org/pdf/1811.04399v1",
+      "html_url": "https://arxiv.org/html/1811.04399v1",
+      "reviewed": "Theorems 6.1 and 6.2, printed page 20",
+      "method": "HTML and extracted PDF text compared; locally rendered PDF page visually inspected",
+      "printed_page": 20,
+      "downloaded_pdf_sha256": "cd50b4cb2634e7df8f7ad15776ead28ccb66ecc3d307ff555d862b0943ee4e5a",
+      "finding": "Survey includes delta=0 in Theorem 6.1, unlike the original; source discrepancy recorded without importing an extension.",
+      "source_proof_audit": "Not performed"
+    },
+    {
+      "authors": "Werner Ehm",
+      "url": "https://arxiv.org/html/2405.06349v1",
+      "reviewed": "Theorem 2.1; Proposition 3.1; reciprocal Gram formulas",
+      "method": "Primary HTML text",
+      "finding": "Existing Gram representations and continuous q=1-to-q=2 scale average. No projected cost estimate imported."
+    }
+  ],
+  "publisher_attempt": {
+    "url": "https://doi.org/10.1016/j.jnt.2017.12.012",
+    "result": "Web reader internal error; no claim to have checked publisher text."
+  },
+  "local_sources_sha256": {
+    "evidence/ns98_projected_cost/argument.tex": "40f78654017c7c8e14ce5d2444b560cfe65d3a5d98c619573d96fed986ed3085",
+    "evidence/ns93_averaged_cost/argument.tex": "879c567b2aef66c78ed4b6d6178c0661116e41d961909e154ba1c6d23ef37a8a",
+    "evidence/ns92_arithmetic_cost/argument.tex": "7e0727e2a0ea4682285e1830aa5d63120d293b95c33d2c5378fc14aa47a3f4d7",
+    "evidence/ns92_arithmetic_cost/literature-inputs.json": "9cb326e30026dc7822bf5832477c7bf89ed1f64b32edd4aaa3edfe8c2061a502",
+    "manuscript/fixed_space_prime_action_v1.tex": "180d446f1df20147a1d6358fc20ef4952756c1ce6d53e463bddb430683ff9492",
+    "audits/mobius-cancellation-transfer-2026-09-29-v1.html": "aaedbc539b5e43bff6cbfe6f7b3731e0342e21daa430f1ceff14bf59253fa90a"
+  },
+  "prior_work": "NS92 recorded the explicit paper abstract only. The preceding September 29 transfer audit covered Tao and Matomaki-Radziwill statements, not the cotangent theorem parameters.",
+  "not_imported": [
+    "Survey delta-zero endpoint",
+    "Any uniform limit as delta depends on matrix size",
+    "Numerical value of the explicit saving",
+    "Any rational-point g series convention for computation",
+    "Any RH-dependent taper optimality assertion"
+  ]
+}
