@@ -1,0 +1,35 @@
+{
+  "reviewed_commit": "a992456a6305b0b01b0d6efe2b022c73d1c0cd3b",
+  "repository_sources_sha256": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "PROPOSAL_TEMPLATE.md": "77376151e7685c52859bdff1eac6378e5b46e87a68174c3efbb2da0db969a057",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "evidence/ns53_nb_blocks/proof.tex": "36de7fe507f8957a361f14ae430c6a96a812cb90c3dd8de20c22057f1a10b7d5",
+    "evidence/ns86_optimized_arithmetic/argument.tex": "2d42567894aea0fc07e185387f3889f6aebbe265e9ce55bbd745185193783972",
+    "evidence/ns87_joint_tail/argument.tex": "b163dcd18c485ec937d7bf1657337de60ac9ec604e2137f4385f7e077f0e47e3",
+    "evidence/ns90_mobius_gain/argument.tex": "e52e49d6fc78ba07bbc4603d04113733ea3faa31db4702452e2dbee289be23f4",
+    "evidence/ns95_square_product/argument.tex": "bb2d4ff84ada634e951d538080f217c86c4a8216d815f3c72d7322bc0da6704a",
+    "evidence/ns96_lcm_square/argument.tex": "75ebd5259d12fe66bdda4efad1cb1d7f4b3fb8dd8268e60ebee1a231cc138151",
+    "evidence/ns98_projected_cost/argument.tex": "40f78654017c7c8e14ce5d2444b560cfe65d3a5d98c619573d96fed986ed3085",
+    "evidence/v159/ns61/proof.tex": "e8d435301626c9097e4f18582bff9458762ddb6cfcb0c825858ce3f008692298",
+    "evidence/v161/ns74/proof.tex": "6366fb5efadb25b097989de42aedb5ae5cff015b2b122ad69706b5b4bb68f62f",
+    "evidence/v164/ns81/proof.tex": "bdedfeca6b9c897955d2c177e034b27d24f7dab1a651f55229b7d0aad7a0248c",
+    "evidence/v166/ns83/proof.tex": "c4e7649245c159ba4b6e677581cdd5050ae677602d63f0508f299b6dca02a023",
+    "evidence/v166/proof.tex": "c4e7649245c159ba4b6e677581cdd5050ae677602d63f0508f299b6dca02a023"
+  },
+  "external_sources": [
+    {
+      "url": "https://arxiv.org/html/1211.5191v1",
+      "scope": "Introduction, Theorem 1, Lemmas 2-3 and opening proof estimates; applicability assessment only"
+    },
+    {
+      "url": "https://arxiv.org/html/2508.11108v1",
+      "scope": "Theorem 1, equations 12-18, sections 1-3 and 5; authors stated theorem, numeric constants not replayed"
+    },
+    {
+      "url": "https://arxiv.org/html/1604.02740v1",
+      "scope": "Theorems 1-2 and common Mellin proof; no transfer to actual optimized gain established"
+    }
+  ],
+  "limits": "Repository hashes identify referenced evidence, not independent verification. External versions identify the examined texts; no external byte archive or hash is claimed."
+}

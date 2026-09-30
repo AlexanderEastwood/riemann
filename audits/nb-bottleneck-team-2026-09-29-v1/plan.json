@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-29",
+  "reviewed_commit": "a992456a6305b0b01b0d6efe2b022c73d1c0cd3b",
+  "authorization": "Alex explicitly requested several subagents to aid the arithmetic-first research phase. Existing standing authorization covers publication of completed assessments and findings.",
+  "classification": "Team feasibility assessment and specialist-facing bottleneck brief; no new research row or RH candidate admitted",
+  "review_scope": "Remote refreshed; all 104 conclusion records and 14 continuation demands reviewed against unchanged current main, with instructions, status/checkpoints, freeze table and missing-original ledger. Relevant September 29 controls, process, first-zero, literature-transfer and Jensen findings retained. No historical proof or certificate replay.",
+  "wall_check": {
+    "label": "Same open gap",
+    "closest": "NB-GAIN: NS53/61/87, with NS74 target-sensitive control and NS83 rate restriction",
+    "changed_input": "None supplied at the start. Choosing the full residual instead of a prescribed direction changes the research priority, not the existing missing arithmetic estimate."
+  },
+  "question": "Can the full original-target NB bottleneck be stated with a genuinely useful partial arithmetic lemma, a credible proof input and a complete quantified dependency edge?",
+  "assignments": {
+    "nb_exact_bottleneck": "Exact target, implication, normalization and first unestimated signed term; owns exact-target.md",
+    "nb_arithmetic_literature": "Bounded primary-source feasibility search, including exact hypothesis and quantifier matching; owns literature-feasibility.md",
+    "nb_strategy_challenge": "Skeptical prioritization, matched controls and stop criteria; owns strategy-challenge.md",
+    "coordinator": "Resolve conflicts, check the resulting recommendation, produce versioned HTML brief and publish findings"
+  },
+  "success": "An explicit partial lemma with a specified arithmetic mechanism and an independently meaningful conclusion, or a precise specialist question that identifies the remaining absent input. Neither alone thaws a group or proves RH.",
+  "failure": "No defensible candidate. Record the exact mismatch and stop candidate computation; do not replace it automatically with another attractive representation.",
+  "controls": "This phase is assessment/reconstruction, not proof or numerical screening of a new RH inequality. Any proposed candidate must state its matched controls and pass the existing gate before later proof-oriented computation.",
+  "budget": "One team assessment, one integrated brief and one findings PR. Three concurrent agents plus coordinator; no adjacent scan, manuscript version, external outreach or separate user-owned thread.",
+  "evidence_gaps": "Both original-evidence recovery groups remain OPEN.",
+  "outcome": "Three assessments completed. Exact bottleneck specified; no new unconditional partial arithmetic lemma or estimating mechanism admitted. Prepare brief for specialist feasibility assessment; no external outreach, further candidate computation or thaw."
+}
