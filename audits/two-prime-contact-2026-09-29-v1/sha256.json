@@ -1,0 +1,22 @@
+{
+  "algorithm": "sha256",
+  "base_commit": "eb4e1809178cb583575ea1f1bf2e0bf51c27b8e8",
+  "files": {
+    "NEXT_STEPS.md": "9750174f3470702230ae0b7c9be54a571e311d06858934f0dab32a78185f86a0",
+    "README.md": "493121d8cb61b5a90ed441df4ace6ba4d85525c5c571b1cda28e3134d14e26d4",
+    "RESEARCH_MAP.md": "8f2fb62b626611ad69be50dce78cee3ece9b2271a364cf2ce39651716304829a",
+    "audits/two-prime-contact-2026-09-29-v1/README.md": "987928035631139ca5e6d85b7f71ca6ddeacfa3d8d76ba6033c13246eb8e6944",
+    "audits/two-prime-contact-2026-09-29-v1/check-clean-output.txt": "8a8f19aa4dcb908f93250552da9803723e4a15c48c3645085e08f28f680ecd12",
+    "audits/two-prime-contact-2026-09-29-v1/check-output.txt": "b28e540e5f4c36d03b1d2510013ec1dacf4b64b1ae02652f5828accd6b78e10d",
+    "audits/two-prime-contact-2026-09-29-v1/check.mac": "d6dff903aa033716d6237691f12de5aa95f570d82199ff38e6d974621bb3be33",
+    "audits/two-prime-contact-2026-09-29-v1/construction-review.md": "81ac3fcc9ab62baaa7854ff96a77e06fc08cb94f73e05ed4191ee0727d240b4c",
+    "audits/two-prime-contact-2026-09-29-v1/manuscript-build.txt": "1ae2a25e648e59dff05b640060e6289ddf6631f86a029067a48aff5cdf8c01c6",
+    "audits/two-prime-contact-2026-09-29-v1/mixed-cycle-audit.md": "8bf785bc58b303cacc2b6086f576546a37e425bf7a48ea7e7f2dae1463d7bbe3",
+    "audits/two-prime-contact-2026-09-29-v1/plan.json": "fb495de54763d49797a562eca0b2efb26821e37b93866f4c08bef87639ba2870",
+    "audits/two-prime-contact-2026-09-29-v1/symbolic-review.md": "1eb02c45ea8a3c9ecb8243adb6a77b9f646c52d0acee33600ad0a68d81c6f4cb",
+    "audits/two-prime-contact-2026-09-29-v1/transfer-audit.md": "a8443349ed686e766cfb035e80d9ea89f1c54b2f15b02bb485c435f2f5c2d2e3",
+    "audits/two-prime-contact-2026-09-29-v1/validation.json": "d1eab5bbf95fe1a68415411236514bd5f54225aa4f4dbca9c8a1d5435ac42953",
+    "audits/two-prime-contact-2026-09-29-v1.html": "7cd483dc9bcb751a56fa9bfb043f7b946ba8555872bcd9d3fa3496192034b0a0",
+    "research-map.json": "169d337d728b019bd4231e05b749e482f8a5d5a45854e9867e14fb9ef7634476"
+  }
+}

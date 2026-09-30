@@ -50,6 +50,28 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## September 29 two-prime connected construction audit
+
+The [two-prime construction brief](audits/two-prime-contact-2026-09-29-v1.html)
+answers PR69's finite assembly question: an explicit connected 4D cotangent
+space has a complete contact energy flow with exactly the two prescribed
+primitive periods log2 and log3, and no mixed return. But conserved momentum
+prevents the trapped circles from interacting. On its natural scalar
+contact-volume Hilbert space, an exact coordinate change yields three
+translation channels: purely continuous spectrum and no eigenvalues.
+
+A chosen scalar damping on horizontal forms still gives the local signed
+prime weights; this is not a positive ordinary trace or an analytic completion.
+[Definitions, analytic reviews and 25 clean-start Maxima checks](audits/two-prime-contact-2026-09-29-v1/README.md)
+retain the distinction. The earlier generic-gluing warning is corrected:
+connectedness alone forces no mixed orbit, and log6 requires specified roofs.
+
+**Wall check: Same open gap**, OPERATOR-BRIDGES. The finite connectedness
+prerequisite succeeds; the naive scalar spectral interpretation fails for
+this model. Arbitrary distinct positive periods work too, so no prime rigidity or new
+arithmetic estimate follows. Stop larger-prime-list variations absent a
+specified analytic/complete-form transfer. No row, thaw or manuscript version.
+
 ## September 29 geometric constructions and local-model pilot
 
 Three construction agents specified contact, arithmetic-intersection and spectral
