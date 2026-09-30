@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>API prime-chain admission screen — 29 September 2026</title></head>
+<body style="margin:0;background:#f4f1eb;color:#263237;font-family:Georgia,serif;line-height:1.65;">
+<main style="max-width:680px;margin:36px auto;padding:36px;background:white;border-top:5px solid #315a61;">
+<p style="margin:0;color:#62777b;font-size:13px;letter-spacing:1px;">RH PROJECT · ADMISSION AUDIT · 29 SEPTEMBER 2026 · V1</p>
+<h1 style="font-size:29px;line-height:1.2;">Positive prime-power chains do not exclude a first zero</h1>
+<p style="font-size:19px;">The proposed API shortcut loses the arithmetic information it needs. A finite change to the coefficient at n=2 preserves every original prime-chain lower and upper operator bound, while NS57 supplies a nonzero nullvector at a finite first-zero window for that altered family. This is a scope-matched application of an existing control, not a new impossibility theorem for API.</p>
+<p style="padding:15px;background:#edf3f3;border-left:4px solid #315a61;"><strong>Wall check: Known wall for the bounds-only inference.</strong> Closest result: NS57’s finite-weight first-zero controls. The retained hypotheses all survive the change. <strong>Same open gap</strong> remains for original KERNEL-API (NS51/55/58): the exact Euler coefficient recurrence and original radical identities are not preserved by this control.</p>
+
+<h2 style="font-size:22px;margin-top:28px;">The proposed arithmetic input</h2>
+<p>For each prime p, put r=p<sup>−1/2</sup>. The exact original weights w<sub>pᵏ</sub>=log(p)r<sup>k</sup> give</p>
+<p style="font-family:monospace;padding:12px;background:#f5f6f6;overflow-wrap:anywhere;">P<sub>p</sub>(θ)=1+2Σ<sub>k≥1</sub>r<sup>k</sup>cos(kθ)<br>=(1−r²)/(1−2r cosθ+r²).</p>
+<p>This classical <a href="https://dlmf.nist.gov/1.15.E12" style="color:#245c70;">Poisson-kernel identity</a> yields the bounds m<sub>p</sub>≤P<sub>p</sub>(θ)≤M<sub>p</sub>, where m<sub>p</sub>=(1−r)/(1+r) and M<sub>p</sub>=1/m<sub>p</sub>.</p>
+<p>Let T<sub>ℓ</sub> be the unitary translation by ℓ=log p on the whole line. The complete chain is the norm-convergent bounded operator</p>
+<p style="font-family:monospace;padding:12px;background:#f5f6f6;overflow-wrap:anywhere;">C<sub>p</sub>=I+Σ<sub>k≥1</sub>r<sup>k</sup>(T<sub>kℓ</sub>+T<sub>−kℓ</sub>),<br>m<sub>p</sub>I ≤ C<sub>p</sub> ≤ M<sub>p</sub>I.</p>
+<p>The same bounds hold after compression to any finite window and in either parity. For a compactly supported f, only finitely many correlations in this complete series are nonzero. Its exact contribution to the prime part of the Weil form is log(p)(‖f‖²−⟨C<sub>p</sub>f,f⟩). No infinite sum over primes is interchanged here.</p>
+<p><strong>Candidate screened:</strong> retaining these bounds for every prime, positive weights, the original prime locations, gamma and pole terms, and nonnegativity of the full form at a first-zero window would exclude a nonzero nullvector. The candidate uses the bounds derived from the Euler recurrence; it does not retain that exact recurrence as an additional hypothesis.</p>
+
+<h2 style="font-size:22px;margin-top:28px;">A matched control preserves even the original bounds</h2>
+<p>Choose ε=1/100 and change only</p>
+<p style="font-family:monospace;padding:12px;background:#f5f6f6;overflow-wrap:anywhere;">w<sub>2</sub> → w<sub>2</sub>−ε log 2 = log 2(1/√2−ε).</p>
+<p>This coefficient remains positive. All other coefficients, all locations, the archimedean term and both pole terms remain unchanged. The modified 2-chain symbol is</p>
+<p style="font-family:monospace;padding:12px;background:#f5f6f6;overflow-wrap:anywhere;">P̃<sub>2</sub>(θ)=P<sub>2</sub>(θ)−2ε cosθ.</p>
+<p>The following elementary bound covers <em>all</em> frequencies; it does not extrapolate the numerical grid. Write c=cosθ. P<sub>2</sub> is increasing in c, with P<sub>2</sub>(0)=1/3 and endpoint values m<sub>2</sub>=3−2√2, M<sub>2</sub>=3+2√2.</p>
+<ul style="padding-left:23px;">
+<li>If c≥0, then 47/150=1/3−1/50≤P̃<sub>2</sub>≤M<sub>2</sub>. Also 47/150&gt;1/5&gt;m<sub>2</sub>, since √2&gt;7/5.</li>
+<li>If c≤0, then m<sub>2</sub>≤P̃<sub>2</sub>≤1/3+1/50=53/150&lt;3&lt;M<sub>2</sub>.</li>
+</ul>
+<p>Thus the original constants m<sub>2</sub>, M<sub>2</sub> still bound the modified chain. Its constant Fourier coefficient is still one. The other prime chains are exactly unchanged. Fourier multiplication and compression transfer the bounds to every full-line or finite-window test, including both parities.</p>
+
+<h2 style="font-size:22px;margin-top:28px;">Where the existing control applies</h2>
+<p>The perturbation is precisely NS57 with δ<sub>2</sub>=−ε log 2 and every other δ<sub>n</sub>=0. The archived theorem <em>A finite first-zero window for every nonzero finite change</em> establishes that this family starts positive, becomes negative on a compact test, and has a finite first window where the complete form is nonnegative and the operator has a nonzero nullvector. It also treats both parity sectors and endpoint support.</p>
+<p>Consequently the retained chain bounds do not imply the candidate’s kernel exclusion. This deduction uses the archived NS57 theorem and its stated complete-domain and near-radical dependencies. Those historical proofs were reviewed for scope, not rerun or independently revalidated here. No first-zero location, eigenvector or new negative Weil certificate was computed.</p>
+<p>The Davenport–Heilbronn screen interface records <em>not applicable</em> to the literal coefficient/gamma/pole family; NS100/101 have the same kind of object mismatch. They are not counted as passed controls. NS57 is the additional control matching the actual retained hypotheses.</p>
+
+<h2 style="font-size:22px;margin-top:28px;">Exactly what was lost</h2>
+<p>For the normalized 2-chain coefficients a<sub>k</sub>=w<sub>2ᵏ</sub>/log 2, the original identity is a<sub>k+1</sub>=r a<sub>k</sub>. The modified coefficients instead satisfy</p>
+<p style="font-family:monospace;padding:12px;background:#f5f6f6;overflow-wrap:anywhere;">ã<sub>2</sub>−r ã<sub>1</sub>=εr≠0.</p>
+<p>The original arithmetic near-radical identity is also lost, as NS57 already records. Therefore this audit does not exclude an argument using those exact identities in a way that survives through to the needed signed comparison. No such comparison was obtained here. Positivity of the individual factors, even with the original two-sided constants, has discarded too much information.</p>
+<p><strong>Separate scope:</strong> NS57’s bounded-floor stability shows that bounded coefficient changes preserve the uniform-floor objective. The existence of altered negative tests cannot reject a bounded-floor method. This audit concerns first-zero exclusion only.</p>
+
+<h2 style="font-size:22px;margin-top:28px;">Validation and disposition</h2>
+<p>The 65-point symbol screen at 50 and 80 decimal digits agrees in all stored symbol and coefficient values. Both sampled slacks have minimum 0.02. These samples are diagnostics; the elementary two-case argument above supplies the all-frequency comparison. Maxima checks 15 exact identities and rational comparisons. Pyright reports zero errors and warnings.</p>
+<p>Stop this inference at admission. Original API, RH, G2, all existing scoped estimates and both historical evidence gaps keep their prior status. No research row, new theorem node, thaw, manuscript version or interval certificate is added. A subsequent proposal must identify an arithmetic inequality beyond these chain bounds; repeating the same bounds or enlarging the frequency grid is not a new test.</p>
+<p style="border-top:1px solid #d6dfdf;padding-top:15px;font-size:13px;color:#607177;">Reviewed source: 9db64fdfdc1237005c071f777088291df254ac72. NS57 source: evidence/v156/proof.tex. <a href="api-prime-chain-screen-2026-09-29-v1/README.md" style="color:#245c70;">Admission record, scripts, controls and validation</a>. Original complete operator unchanged. This audit is published under Alex’s standing authorization after each test.</p>
+</main></body></html>

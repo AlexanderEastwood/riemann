@@ -50,6 +50,21 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## September 29 API prime-chain screen
+
+The [prime-chain admission audit](audits/api-prime-chain-screen-2026-09-29-v1.html)
+stops a bounds-only first-zero argument. Changing only the coefficient at
+n=2 preserves every original prime-chain lower and upper operator bound;
+NS57 supplies a nonzero nullvector at a finite nonnegative first-zero
+window for that altered family. The all-frequency comparison is elementary;
+the 50/80-digit samples are diagnostics, not Weil certificates.
+
+**Wall check: Known wall** for this inference, with NS57's hypotheses
+matched. **Same open gap** for original KERNEL-API: the control loses the
+exact Euler recurrence and original radical identity. No general API or
+bounded-floor closure, new research row, theorem node, thaw or version.
+[Replay and scope record](audits/api-prime-chain-screen-2026-09-29-v1/).
+
 ## September 29 admission audits
 
 Three completed tests stopped without a new cofinal estimate:

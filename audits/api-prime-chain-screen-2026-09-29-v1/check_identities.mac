@@ -1,0 +1,32 @@
+/* Exact algebra supporting an NS57 hypothesis-match audit. */
+display2d:false$
+checks:0$
+assertzero(label, expression):=block([value:radcan(ratsimp(expression))],
+  if value # 0 then error(label,value),
+  checks:checks+1,
+  true)$
+asserttrue(label, statement):=block([value:is(statement)],
+  if value # true then error(label,value),
+  checks:checks+1,
+  true)$
+poisson:(1-r^2)/(1-2*r*c+r^2)$
+assertzero("geometric sum",1+r*u/(1-r*u)+(r/u)/(1-r/u)
+  -(1-r^2)/((1-r*u)*(1-r/u)))$
+assertzero("minimum",subst(-1,c,poisson)-(1-r)/(1+r))$
+assertzero("maximum",subst(1,c,poisson)-(1+r)/(1-r))$
+assertzero("monotone cosine",diff(poisson,c)
+  -2*r*(1-r^2)/(1-2*r*c+r^2)^2)$
+assertzero("2-chain midpoint",subst(0,c,subst(1/sqrt(2),r,poisson))-1/3)$
+assertzero("2-chain lower",subst(1/sqrt(2),r,(1-r)/(1+r))-(3-2*sqrt(2)))$
+assertzero("2-chain upper",subst(1/sqrt(2),r,(1+r)/(1-r))-(3+2*sqrt(2)))$
+assertzero("lower allowance",1/3-2/100-47/150)$
+assertzero("upper allowance",1/3+2/100-53/150)$
+asserttrue("sqrt2 lower bracket",(7/5)^2<2)$
+asserttrue("lower allowance beats 1/5",47/150>1/5)$
+asserttrue("upper allowance below 3",53/150<3)$
+asserttrue("modified first coefficient stays positive",1/2-1/100>0)$
+assertzero("Euler recurrence defect",r^2-r*(r-eps)-r*eps)$
+assertzero("Weil perturbation sign",-2*(-eps*log(2))*corr-2*eps*log(2)*corr)$
+print("PASS: exact identity/rational checks",checks)$
+print("NS57 supplies first-zero existence; no new window or RH certificate.")$
+quit();

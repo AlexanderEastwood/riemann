@@ -1732,11 +1732,12 @@
       "title": "Exclude full-window arithmetic nullvectors on the complete domain",
       "tasks": "NS51,55,58",
       "demand": "Establish arithmetic affine-potential injectivity (API), respecting parity, endpoints, all prime shifts and poles. The homogeneous translated-radical boundary test is exactly the null equation, not an independent rigidity estimate.",
-      "scope": "This is a different unresolved input. Local open-set UCP and ordinary-cone positivity are false for the actual operator; those controls are not full-window nullvectors. No generic Sobolev bootstrap or whole-space compact inverse supplies API.",
+      "scope": "This is a different unresolved input. Local open-set UCP and ordinary-cone positivity are false for the actual operator; those controls are not full-window nullvectors. No generic Sobolev bootstrap or whole-space compact inverse supplies API. September 29 prime-chain admission: an explicit NS57 finite change at n=2 preserves every original two-sided prime-chain bound at all frequencies and windows, but inherits a nonnegative first-zero window with a nullvector. This stops only the bounds-only inference. The exact Euler recurrence and original radical identity are lost; original API and bounded-floor methods remain open. No new node or thaw.",
       "sources": [
         "evidence/v154",
         "evidence/v155",
-        "evidence/v157"
+        "evidence/v157",
+        "audits/api-prime-chain-screen-2026-09-29-v1.html"
       ]
     },
     {

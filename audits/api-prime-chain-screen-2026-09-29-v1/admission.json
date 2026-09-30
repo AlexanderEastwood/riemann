@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-29",
+  "reviewed_commit": "9db64fdfdc1237005c071f777088291df254ac72",
+  "kind": "Pre-claim control/hypothesis audit; no research row",
+  "review_scope": "Refreshed remote; reassessed all 104 conclusion statuses/scopes and 14 continuation groups. Required current instructions, README, map, board, evidence gaps and API checkpoints match the prior review hashes. Read NS57's complete-domain finite-weight and first-zero control statements. No historical proof or certificate replay.",
+  "initial_wall_check": "Same open gap: KERNEL-API, NS51/55/58; test whether prime-chain positivity supplies a distinguishing input.",
+  "arithmetic_input": "Original weights w_(p^k)=log(p)*p^(-k/2) give the complete Poisson symbol P_p(theta)=1+2*sum_(k>=1) p^(-k/2)*cos(k*theta).",
+  "candidate_inference": "With the original archimedean and pole terms, prime locations, positive prime-power weights and first-window nonnegativity retained, the prime-chain operator bounds m_p I <= C_p <= M_p I for every prime exclude a nonzero nullvector at that window. Here m_p=(1-p^(-1/2))/(1+p^(-1/2)), M_p=1/m_p, and C_p uses the complete chain with constant Fourier coefficient one.",
+  "scope_of_candidate": "This tests sufficiency of the bounds derived from Euler coefficients. It does not test a theorem that retains the exact geometric coefficient identities as an additional premise. Losing that distinction would overstate the control.",
+  "controls_before_proof": {
+    "Davenport_Heilbronn": "Use controls/davenport_heilbronn.py screen interface, record not-applicable: it does not preserve the stipulated original conductor, gamma/poles or this original real prime-chain coefficient family.",
+    "NS100_NS101": "Not-applicable to literal coefficient/complete-Weil-family premises; their theta or Gaussian alterations are different objects.",
+    "NS57": "Matched additional control: change only w_2 by -epsilon*log(2), epsilon=1/100; test the resulting complete 2-chain symbol P_2(theta)-2*epsilon*cos(theta). All other chains are unchanged. First-zero existence is inherited from NS57, not estimated numerically."
+  },
+  "quantifiers_and_budget": "Candidate bounds for all primes, all Fourier frequencies and all finite windows. One explicit perturbation, 50/80-digit diagnostic screen, then elementary exact bounds only if the hypothesis match survives. No scan for a first-zero window or new certificate.",
+  "success_consequence": "A distinguishing independent inequality would still need its own full proposal and proof; positive samples alone cannot admit API.",
+  "failure_consequence": "If the exact original bounds survive the NS57 first-zero control, stop the positivity-only inference. Do not close original API, exact Euler recursions or bounded-floor methods.",
+  "publication": "Standing user authorization: publish this audit after completion; no manuscript version."
+}
