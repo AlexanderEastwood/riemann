@@ -1,0 +1,2 @@
+# Preserve the exact Maxima transcript, including print() trailing spaces.
+audits/api-prime-chain-screen-2026-09-29-v1/maxima-output.txt whitespace=-blank-at-eol
