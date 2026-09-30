@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-29",
+  "scope": "Focused main hyperbolicity-chain audit; external analytic and convolution results remain inherited, not independently reproved.",
+  "primary_sources": [
+    {
+      "author": "Jonathan Holland",
+      "url": "https://arxiv.org/abs/2608.08682v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.08682v1",
+      "tex_url": "https://arxiv.org/src/2608.08682v1",
+      "submitted": "2026-08-09",
+      "reviewed": "Sections 2-10 main hyperbolicity chain; selected exact algebra, domain/scale checks and Lemma 7.3 scope. Joint semicircle result not independently audited.",
+      "printed_pages_visually_inspected": [
+        7,
+        18,
+        19,
+        20,
+        21
+      ],
+      "local_download_sha256": {
+        "source.tar": "f2fe1a202eae2d9a54291f223897b4fc5355011d6f4d0470d64c9d420bbb18af",
+        "jensen.tex": "f561d6dd53606ae054e5ab5fcb8dad4e9690cb9557c27b0a1a3845260f5205e0",
+        "paper.pdf": "3fc31ba84fb113bc0b3109fb0e569bd1d7183018485aca1eb1dab565c839b49d"
+      },
+      "finding": "No fatal defect found in checked main chain under inherited inputs and matched parameters. Lemma 7.3 localization needs the construction or an additional D-to-B comparison; four displayed inequalities alone are insufficient."
+    },
+    {
+      "authors": "Griffin, Ono, Rolen, Thorner, Tripp and Wagner",
+      "url": "https://arxiv.org/html/1910.01227v3",
+      "reviewed": "Section 3, equations (3.1)-(3.2) and following complex-extension statement.",
+      "finding": "Sectorial asymptotic is an inherited analytic input. Overall factor eight differs with xi normalization; factorial normalization retained.",
+      "proof_reconstructed": false
+    },
+    {
+      "authors": "Martinez-Finkelshtein, Morales and Perales",
+      "url": "https://arxiv.org/html/2309.10970v3",
+      "reviewed": "Propositions 2.7, 2.11 and 2.17; positivity, directed interlacing and logarithmic mesh.",
+      "finding": "Positive-root inputs and normalized convolution checked; preservation theorems inherited.",
+      "proof_reconstructed": false
+    },
+    {
+      "authors": "Marcus, Spielman and Srivastava",
+      "url": "https://link.springer.com/article/10.1007/s00440-021-01105-w",
+      "arxiv_pdf": "https://arxiv.org/pdf/1504.00350v2",
+      "reviewed": "ArXiv v2 Definition 1.4 and Theorem 1.6; published Theorems 1.6 and 1.13.",
+      "finding": "Direct maximum-root product bound is Theorem 1.6; published Theorem 1.13 is stronger and yields it by a limit. The arXiv numbering differs. No mathematical gap inferred from citation numbering.",
+      "proof_reconstructed": false
+    },
+    {
+      "author": "David W. Farmer",
+      "url": "https://arxiv.org/html/2008.07206v2",
+      "reviewed": "Differentiation universality and strategic critique, especially Sections 2-4 and discussion of Hermite universality.",
+      "finding": "Context for route selection, not a no-go theorem for Holland or proof that a false analogue satisfies the full quantitative wedge.",
+      "numerical_examples_replayed": false
+    }
+  ],
+  "local_dependencies_sha256": {
+    "evidence/ns100_reassessment/proposals.json": "1b8562bc18ef6d947c8b07009bdab90d5733695d8c5f29efe68e0bde05b247c9",
+    "evidence/ns100_reassessment/argument.tex": "1673593f001fc9be376e17fa36741c27b11e04731be887f7d6200d6ad05b6187",
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073"
+  },
+  "source_storage": "Public links and hashes retained; external paper PDF/TeX not vendored into the repository."
+}

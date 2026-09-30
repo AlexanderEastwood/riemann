@@ -50,6 +50,23 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## September 29 Jensen-preprint proof audit
+
+The [focused Holland audit](audits/jensen-preprint-audit-2026-09-29-v1.html)
+found no fatal defect in the checked main hyperbolicity chain, retaining
+its inherited analytic/convolution inputs and matched parameters. Twenty-six
+exact Maxima identities pass. One scope qualification matters: Lemma 7.3
+uses a D-to-B comparison supplied by the construction; its four displayed
+inequalities alone do not imply the claimed uniform root localization.
+An exact degree-two family demonstrates the distinction without
+contradicting the main application. This is not a full proof verification.
+
+The method controls large shifts and leaves NS100's backward-in-shift,
+unbounded-degree arithmetic input untouched. Retain the method as a source,
+but lower its priority as an RH proof lane until that transfer is supplied.
+**Wall check: Same open gap**, ZERO-GEOMETRY / NS100. No new research row,
+node, thaw, scan or manuscript version; all existing statuses stay fixed.
+
 ## September 29 projected-cost literature audit
 
 The [cotangent/Estermann applicability audit](audits/mobius-estermann-transfer-2026-09-29-v1.html)

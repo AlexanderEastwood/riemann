@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-29",
+  "reviewed_commit": "aa2d52b4bb37acce571cfd9db787ad8627b469af",
+  "outcome": "Focused checked chain retained, with Lemma 7.3 matched-parameter scope explicit; no RH transfer obtained.",
+  "wall_check": "Same open gap: ZERO-GEOMETRY / NS100",
+  "review": "Coordinator audit only, not independent expert verification or full external-proof reproof.",
+  "checks": {
+    "maxima_version": "5.50.0",
+    "exact_identity_checks": 26,
+    "additional_rational_inequality_guards": 2,
+    "personal_initialization": "disabled in final replay",
+    "exit_code": 0,
+    "final_output": "maxima-output-clean.txt",
+    "initial_harness_failure_preserved": true,
+    "lemma_7_3_standalone_scope_example": "Exact degree-two coefficient/root identities; asymptotic contradiction explained in README. Does not satisfy matched construction."
+  },
+  "repository_checks": {
+    "all_104_node_records_unchanged": true,
+    "all_14_input_demands_unchanged": true,
+    "all_freeze_conditions_unchanged": true,
+    "only_zero_geometry_scope_and_source_updated": true,
+    "scientific_evidence_and_manuscript_unchanged": true,
+    "html_tags_balanced": true,
+    "local_report_link_count": 4,
+    "html_visual_render": "Not verified; prior local-file browser restriction and unavailable system opener recorded in earlier audits. File-panel opening requested separately.",
+    "build": {
+      "command": "./manuscript/build.sh",
+      "exit_code": 0,
+      "pages": 358,
+      "undefined_duplicate_references": 0,
+      "mode": "Already up to date; no manuscript source changes."
+    }
+  },
+  "not_done": [
+    "Independent proof of inherited sectorial saddle or finite-free results",
+    "Term-by-term independent reconstruction of every uniform matching remainder",
+    "Joint semicircle proof audit",
+    "Effective numerical threshold or interval certificate",
+    "A matched false-analogue test of the entire quantitative wedge",
+    "New RH candidate, research row, node, thaw or version",
+    "Historical original-evidence recovery"
+  ],
+  "artifact_sha256": {
+    "audits/jensen-preprint-audit-2026-09-29-v1.html": "a9a28d298a18854e3d26bd4cfd841eeca6f5e157e46155c125efd6a7c9405907",
+    "audits/jensen-preprint-audit-2026-09-29-v1/README.md": "518508b274c810a585b753260f45f044bf86bd4ffc78eda0aee8bc317b9093d8",
+    "audits/jensen-preprint-audit-2026-09-29-v1/check_identities.mac": "2650b4f920eae20be12f6759878fb0ab0d647a06ce66ae9602b341b9bdf3acb4",
+    "audits/jensen-preprint-audit-2026-09-29-v1/manuscript-build.txt": "1ae2a25e648e59dff05b640060e6289ddf6631f86a029067a48aff5cdf8c01c6",
+    "audits/jensen-preprint-audit-2026-09-29-v1/maxima-output-clean.txt": "98402eae2dc3a524b273908120429b8e32c5ab95986513ccc31dfce61462514f",
+    "audits/jensen-preprint-audit-2026-09-29-v1/maxima-output-initial.txt": "b127bfee8f63af3f608dff32b1947084b4a5155235eb24d9427b9edbcdc3a617",
+    "audits/jensen-preprint-audit-2026-09-29-v1/maxima-output-with-scope.txt": "92a858d583ef33004adbae5940257b2058176f9dfb588c344bf44ed0c0aac4be",
+    "audits/jensen-preprint-audit-2026-09-29-v1/maxima-output.txt": "3cf755fc9f2b79dd77539979ea9b1a6f8c1c3168146efc8a1e231698bfeb2808",
+    "audits/jensen-preprint-audit-2026-09-29-v1/plan.json": "92511f841d923ef0265aae0cc809e3039983088618cb1ba52c2e93ac6a16bd96",
+    "audits/jensen-preprint-audit-2026-09-29-v1/sources.json": "89b70a14b93fce3321f02ac29f1cef6e0732438be67244722bb0c3dd372b72a1"
+  }
+}

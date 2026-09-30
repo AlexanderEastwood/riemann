@@ -1,0 +1,22 @@
+{
+  "reviewed_commit": "aa2d52b4bb37acce571cfd9db787ad8627b469af",
+  "classification": "Existing external-proof audit, no new research row or RH candidate",
+  "review_scope": "All 104 conclusion records, 14 continuation demands, current instructions/status/board, missing-original ledger and NS100 Jensen proposal. Remote unchanged since global review; historical proofs/certificates not replayed.",
+  "wall_check": "Same open gap: ZERO-GEOMETRY, closest NS100 second proposal. No new arithmetic hypothesis.",
+  "source": "Jonathan Holland, arXiv:2608.08682v1, 9 August 2026",
+  "question": "Does the quantitative comparison-polynomial argument justify its stated root-stability hypotheses from the actual xi coefficients?",
+  "scope": [
+    "xi-to-moment normalization",
+    "comparison coefficient matching and real-rootedness",
+    "Lemma 8.1 analytic residual",
+    "Lemma 9.1 critical-point derivative bound",
+    "logical transfer to Theorem 1.1 and untouched small-shift region"
+  ],
+  "success": "A checked dependency chain or a narrowly scoped unresolved dependency, with any plausible improvement identified separately; no automatic thaw.",
+  "failure": "An explicit defect with exact algebra/domain/scale identified; do not infer Theorem 1.1 false or Jensen program impossible.",
+  "controls": "Proof-applicability audit, not a candidate RH inequality. No unrelated DH sample. Any new candidate requires its matched screen before proof/certification.",
+  "budget": "One focused audit and findings PR. Stop at a decisive defect; no automatic adjacent scan or manuscript version.",
+  "independence": "Coordinator only; no external expert or separate-agent review in this turn.",
+  "outcome": "No fatal defect in the checked matched-parameter chain; standalone Lemma 7.3 needs D comparable to B or equivalent lower comparison, which the matched construction supplies. RH transfer remains absent.",
+  "decision": "Lower priority as an RH lane; retain source method. Stop without larger scans or adjacent candidate. No group thaw."
+}
