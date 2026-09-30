@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-29",
+  "reviewed_commit": "f32cadfb7be523a8920b19be57d40d652e39a2ef",
+  "wall_check": {
+    "label": "Same open gap",
+    "group": "ZERO-GEOMETRY",
+    "closest": [
+      "NS100",
+      "NS101"
+    ],
+    "disposition": "Reject the stated all-M completed-product sign candidate at its negative diagnostic. The infinite-product signed kernel remains open."
+  },
+  "candidate_status": "Stopped at diagnostic failure; no interval certification or new closure theorem",
+  "original_input": "Exact Jacobi product, DLMF 20.5.3",
+  "witness": {
+    "x": "0.25",
+    "y": "14.0",
+    "radial": "-0.000000010016243053408531495471460675446692",
+    "F": "(0.00066104706681596319592650619806917743 + 0.00018495704357251067187479801957731741j)",
+    "Fprime": "(-0.00021871791185464747824397129702902582 + 0.00072755591481685313928280484041760134j)",
+    "original_xi_radial": "0.0000001408557148502553328952353194127263"
+  },
+  "controls": {
+    "Davenport-Heilbronn": "Actual radial-sign diagnostic sampled-failure; exact Jacobi product premise not-applicable (different conductor, gamma factor and theta coefficients).",
+    "NS100 log-concave order-2": "Not-applicable to exact finite Jacobi product premise: its polynomial-times-Gaussian kernel is not the completed finite product. Its existing per-slice failure remains binding and was not rerun.",
+    "NS101 reciprocal mixture": "Radial-sign diagnostic negative; exact product premise not-applicable (changed Gaussian frequencies and coefficients).",
+    "matched candidate": "The actual completed M=1 product gives the displayed negative sample."
+  },
+  "validation": {
+    "stored_35_digit_agreement_50_vs_80": {
+      "radial": true,
+      "F": true,
+      "Fprime": true,
+      "original_xi_radial": true,
+      "boundary_mass": true
+    },
+    "independent_integral": {
+      "method": "Direct density quadrature on [0,3] plus exact-formula boundary mass",
+      "F": "(0.00066104706681596319592650619806917743 + 0.00018495704357251067187479801957731741j)",
+      "Fprime": "(-0.00021871791185464747824397129702902582 + 0.00072755591481685313928280484041760134j)",
+      "radial": "-0.000000010016243053408531495471460675446692",
+      "difference_F": "4.7174915028897272487196399982708009e-82",
+      "difference_Fprime": "0.0",
+      "absolute_tail_majorant_F": "8.9822962675699172535190191177998504e-547",
+      "absolute_tail_majorant_Fprime": "1.804854667834870233451671620631865e-545",
+      "tail_status": "Analytic formula evaluated at floating precision; quadrature and rounding not certified"
+    },
+    "maxima_exact_algebra_checks": 8,
+    "pyright": "0 errors, 0 warnings, 0 informations; project config in this folder",
+    "html": "Parsed with HTMLParser; no scripts; browser rendering not verified",
+    "certificate": false,
+    "historical_proof_replay": false
+  },
+  "scoped_findings": [
+    "Reflection of finite h introduces boundary atom h_prime(0+)/2; it is retained.",
+    "An unreflected finite product has raw transform zero at z=1/2, whereas the original transform is 1/4. Pointwise product convergence does not license that integral interchange.",
+    "The logarithmic product derivative retains signed terms; no independent original Fourier-side comparison obtained."
+  ],
+  "not_established": [
+    "Failure for every M",
+    "Failure for different completions or atom removal",
+    "Negative original xi radial sign",
+    "Impossibility of all Jacobi-product approaches",
+    "RH or G2"
+  ],
+  "publication": {
+    "local_only": true,
+    "pushed": false,
+    "research_row_claimed": false,
+    "freeze_thawed": false,
+    "manuscript_changed": false
+  },
+  "sha256": {
+    "admission.json": "8f4fb25639bf1a2fc7305252efac79e7f23806c49a3d72a586c575b7d689a7d9",
+    "check_identities.mac": "7d5420a2570146f8dfb9f48f04aebc6d540925f702426eecf7db9e8110935b96",
+    "maxima-output.txt": "80c9e4bd71d4950601ef1dd32148a9262d82581a6c8230025306a9990b4f1c79",
+    "pyrightconfig.json": "eab60ea14db616996218f0618c244c7e13c3595ca70f35faa7e9d1b540d705a2",
+    "requirements-replay.txt": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645",
+    "screen-35dps.json": "c235e29815eb7bd53faef0352e7f926c2c5693dbad0a77763061922ebfe608e5",
+    "screen-50dps.json": "27329537762628664c83edb41a52e092ecd12fe30137efb5a7d60cbc6f383b5a",
+    "screen-80dps.json": "944d6452e0cc6ea9272fa766a3ee8412b9672df214a083ede5de7fcdde41c6cb",
+    "screen_product.py": "3bddf684429edc4f004e12b4257c17461e9fbb23698339dd3bd4122271bbd208"
+  },
+  "report_sha256": "86210d31107c0429f1f9a49c389b1b1a9a078cbf8870e87e557a7fa46450e8d7"
+}

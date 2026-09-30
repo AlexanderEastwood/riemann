@@ -564,6 +564,25 @@ Subgroup thaw conditions for the fourth family:
 - ZERO-GEOMETRY: a specific original arithmetic identity absent from the applicable NS94/100/101 controls; no generic theta factorization rerun.
 - OPERATOR-BRIDGES: name and construct the missing route-specific operator/evaluator/transfer; assess each construction separately.
 
+## September 29 published admission records (no research rows)
+
+The [cancellation-transfer audit](audits/mobius-cancellation-transfer-2026-09-29-v1.html)
+does not supply the changing-weight, growing-shift transfer or required
+energy rate. The [prime-scaling audit](audits/prime-scaling-admission-2026-09-29-v1.html)
+leaves the new-size, residue-restricted and cross costs unestimated. Both
+retain MOBIUS-COST/MOBIUS-MARGIN as **Same open gap**; neither establishes
+failure of the physical projected cost.
+
+The [Jacobi-product screen](audits/jacobi-product-admission-2026-09-29-v1.html)
+rejects the stated all-M completed-product sign mechanism at a negative
+M=1 diagnostic, including its reflection boundary mass. The original full
+theta sign remains **Same open gap** (ZERO-GEOMETRY, NS100–101). The result
+is not interval-certified and does not close every product-based approach.
+
+All groups remain frozen; manuscript v1.66 is unchanged. Original reports,
+failed harness output, control precision/domain records and scope limits
+are preserved. [Publication and replay record](audits/nightly-2026-09-29/README.md).
+
 ## Lanes
 
 ```

@@ -1,0 +1,16 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("audits/prime-scaling-admission-2026-09-29-v1/check_identities.mac")
+display2d:false
+checks:0
+assertzero(label,expression):=block([value:ratsimp(expression)],
+           if value # 0 then error(label,value),checks:checks+1,true)
+normsq(v):=(transpose(v) . v)[1,1]
+ident:ident(3)
+small:matrix([1,0,0],[0,0,0],[0,0,0])
+large:matrix([1,0,0],[0,1,0],[0,0,0])
+v:matrix([x1],[x2],[x3])
+assertzero("energy split",
+           normsq((ident-small) . v)-normsq((ident-large) . v)
+                                    -normsq((large-small) . v))
+#0: assertzero(label=energy split,expression=(x3^2+x2^2)[1,1]-(x3^2)[1,1]-(x2^2)[1,1]) (check_identities.mac line 2)
+"/Users/alex/Documents/ChatGPT/riemann/audits/prime-scaling-admission-2026-09-29-v1/check_identities.mac"

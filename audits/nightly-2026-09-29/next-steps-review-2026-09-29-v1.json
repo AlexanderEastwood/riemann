@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-29",
+  "type": "next-step assessment; no research calculation or row claimed",
+  "reviewed_commit": "f32cadfb7be523a8920b19be57d40d652e39a2ef",
+  "review_workspace": "/Users/alex/riemann-worktrees/conclusions-review",
+  "changes_since_previous_review": [],
+  "review": "All 104 conclusion statuses, named obstructions and 14 continuation demands reassessed against the proposed direction; previously read instruction/status/checkpoint/ledger and relevant audit sources hash-identical. NS70 and NS88 proof scopes reread. No historical proof or certificate replay.",
+  "source_sha256": {
+    "AGENTS.md": "2dc92707c7af8091774eb37a145af2a9a2b56ebf863aff5e5115e261784b8cfb",
+    "research-map.json": "1478e95761f31532f9e6079c7045691e7945cd5b2a88260b934259d3aeee1c91",
+    "README.md": "f69b68cb0f0c38be1c5120f48c1440729af0e158086d245aed9ddab8b9e26c6f",
+    "NEXT_STEPS.md": "d4692cb166282e88bf1f88237d8df8f273bad4b38e6be27574e18bfa72232483",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "evidence/ns92_arithmetic_cost/argument.tex": "7e0727e2a0ea4682285e1830aa5d63120d293b95c33d2c5378fc14aa47a3f4d7",
+    "evidence/ns93_averaged_cost/argument.tex": "879c567b2aef66c78ed4b6d6178c0661116e41d961909e154ba1c6d23ef37a8a",
+    "evidence/ns98_projected_cost/argument.tex": "40f78654017c7c8e14ce5d2444b560cfe65d3a5d98c619573d96fed986ed3085",
+    "evidence/ns98_projected_cost/self-review.json": "9bbdbdf7ff60b1b5dd5229b43102449d787052aa5481c5aefd34f0e9b5bd8a88",
+    "evidence/ns88_dilation_defect/argument.tex": "c6d63b9e6f89cd0d26df3e9afdbaaf41b1769a14b94cd6e72440585a15c26b6a",
+    "evidence/v160/ns70/proof.tex": "fb98b07eb310e5f3987baae55fbfde41476ce957d3e6a0914e9fc49460614599"
+  },
+  "wall_check": {
+    "label": "Same open gap",
+    "closest": [
+      "NS88",
+      "NS98",
+      "NS70"
+    ],
+    "groups": [
+      "MOBIUS-COST",
+      "MOBIUS-MARGIN"
+    ],
+    "change": "Proposed admission audit of small-prime dilation compatibility of the full Schur kernel, linked to mu(pn)=-mu(n) for p not dividing n; no new estimate yet"
+  },
+  "proposed_next_test": {
+    "object": "Compare H_N(m,n) with p H_(pN)(pm,pn), retaining the enlarged old projection and every nonmultiple/residue contribution.",
+    "question": "Can the change of projection under small-prime dilation be bounded independently at a scale useful for a weighted multiplicative-cancellation argument?",
+    "closest_scope": "NS88 concerns a scalar pairing of successive optimized residual increments. NS70 rules out its specified unprojected all-coefficient model comparisons. Neither supplies this weighted projected-kernel transfer.",
+    "success": "A quantified independent transfer estimate, with its error rate and all residue terms, would supply an ingredient to assess; sufficient cancellation rates and a companion lower numerator would remain to prove.",
+    "stop": "If only dilation identities, projection contractivity, or a bound by the same unknown K_N results, stop and leave the family frozen. Do not enlarge a finite table.",
+    "admission": "No mathematical research claim or thaw now. Any surviving candidate must receive a filled proposal and actual matched controls before proof/certification.",
+    "confidence": "Feasibility unestablished; not a novelty or success claim"
+  },
+  "not_recommended_now": [
+    "More fixed-window certificates",
+    "Larger unchanged Mobius-cost tables",
+    "Another generic geometry or symmetry reformulation",
+    "Treating a new algebraic decomposition as an arithmetic estimate"
+  ],
+  "publication": {
+    "local_only": true,
+    "pushed": false,
+    "manuscript_changed": false,
+    "research_row_claimed": false,
+    "freeze_thawed": false
+  }
+}

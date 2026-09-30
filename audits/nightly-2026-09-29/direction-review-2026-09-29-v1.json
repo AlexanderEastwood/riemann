@@ -1,0 +1,51 @@
+{
+  "classification": "Direction and theorem-applicability assessment; no new research result",
+  "reviewed_commit": "f32cadfb7be523a8920b19be57d40d652e39a2ef",
+  "review_checkout": "/Users/alex/riemann-worktrees/conclusions-review",
+  "remote_refreshed": true,
+  "changes_since_last_review": [],
+  "review_scope": "Current AGENTS gate, all 104 conclusion objects and 14 continuation inputs, README/checkpoints, NEXT_STEPS freezes, MISSING ledger, NS93 and NS98 arguments, NS98 self-review and literature screen, and prior Boy controls. Unchanged earlier instruction sections retained. Conclusions/dependencies reviewed; historical proofs and computations not replayed.",
+  "missing_original_groups": "Both recovery groups remain OPEN",
+  "wall_check": {
+    "label": "Same open gap",
+    "closest": ["NS92", "NS93", "NS98"],
+    "groups": ["MOBIUS-COST", "MOBIUS-MARGIN"],
+    "what_changes": "Proposed bounded theorem-applicability audit using external multiplicative-function cancellation results. No changed mathematical hypothesis or new estimate has yet been obtained.",
+    "success": "An independent bound for the exact signed projected cross term would advance only the cost input; a compatible actual-residual lower numerator remains required.",
+    "failure": "Document the precise theorem/kernel mismatch and leave the freeze in place; no enlarged finite cost table or renamed decomposition."
+  },
+  "recommendation": {
+    "first_deliverable": "A hypothesis-and-rate match between a stated published cancellation theorem and the exact NS98 weighted projected quadratic sum, retaining the old Gram inverse, signs, growing shifts and scale average.",
+    "cost_target": "For fixed d_n=-mu(n)log(2N/n), bound (1/J) sum_{j=J}^{2J-1} K_{2^j} by a constant independent of sufficiently large dyadic J, where K_N=d^T(D-C^TG^{-1}C)d.",
+    "companion": "Keep NS91/93's compatible positive lower average of normalized actual residual numerator on the same index blocks. Cost alone does not imply RH.",
+    "arithmetic_data": "Actual Mobius multiplicativity and signed products, beyond the functional equation; no cancellation estimate for the required kernel is claimed available.",
+    "scope_cautions": [
+      "NS98 already separated a bounded diagonal from the unestimated signed cross term; repeating that is not progress.",
+      "NS93 excludes the fully absolute product majorant, not the signed projected cost.",
+      "A logarithmic average over integers is not automatically an average of quadratic costs over dyadic sizes.",
+      "Fixed affine shifts do not give uniform estimates for all shifts up to the block length.",
+      "A little-o cancellation statement is not automatically the bounded absolute cost required here.",
+      "The weights contain an N-dependent old Gram inverse and cannot be treated as arbitrary harmless smooth weights.",
+      "A control sharing one partial cost estimate does not refute a route that also needs a distinguishing numerator hypothesis. Screen the stated combined implication, with actual hypothesis matching."
+    ]
+  },
+  "external_sources_screened": [
+    {
+      "url": "https://arxiv.org/abs/1509.05422",
+      "title": "The logarithmically averaged Chowla and Elliott conjectures for two-point correlations",
+      "scope_read": "Abstract and author's exposition; not a full proof audit",
+      "status": "Potential source for an applicability audit; no theorem applied to NS98"
+    },
+    {
+      "url": "https://arxiv.org/abs/1501.04585",
+      "title": "Multiplicative functions in short intervals",
+      "scope_read": "Abstract; not a full proof audit",
+      "status": "Potential source for an applicability audit; no theorem applied to NS98"
+    }
+  ],
+  "research_row_claimed": false,
+  "group_thawed": false,
+  "manuscript_changed": false,
+  "published": false,
+  "status": "RH, G2 and the cofinal arithmetic estimates remain open"
+}

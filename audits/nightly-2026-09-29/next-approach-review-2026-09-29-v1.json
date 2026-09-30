@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-29",
+  "kind": "Route assessment and proposed admission audit; no research row claimed",
+  "reviewed_commit": "f32cadfb7be523a8920b19be57d40d652e39a2ef",
+  "review_workspace": "/Users/alex/riemann-worktrees/conclusions-review",
+  "changes_since_previous_review": [],
+  "review_scope": "Remote refreshed this turn. All 104 registered conclusion statuses/scopes and 14 continuation demands reassessed; instruction/status/checkpoint/ledger and relevant audit sources reviewed. NS100 proposals and NS101 full argument read. No historical proofs or certificates replayed.",
+  "source_sha256": {
+    "AGENTS.md": "2dc92707c7af8091774eb37a145af2a9a2b56ebf863aff5e5115e261784b8cfb",
+    "research-map.json": "1478e95761f31532f9e6079c7045691e7945cd5b2a88260b934259d3aeee1c91",
+    "README.md": "f69b68cb0f0c38be1c5120f48c1440729af0e158086d245aed9ddab8b9e26c6f",
+    "NEXT_STEPS.md": "d4692cb166282e88bf1f88237d8df8f273bad4b38e6be27574e18bfa72232483",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "evidence/ns92_arithmetic_cost/argument.tex": "7e0727e2a0ea4682285e1830aa5d63120d293b95c33d2c5378fc14aa47a3f4d7",
+    "evidence/ns93_averaged_cost/argument.tex": "879c567b2aef66c78ed4b6d6178c0661116e41d961909e154ba1c6d23ef37a8a",
+    "evidence/ns98_projected_cost/argument.tex": "40f78654017c7c8e14ce5d2444b560cfe65d3a5d98c619573d96fed986ed3085",
+    "evidence/ns98_projected_cost/self-review.json": "9bbdbdf7ff60b1b5dd5229b43102449d787052aa5481c5aefd34f0e9b5bd8a88",
+    "evidence/ns88_dilation_defect/argument.tex": "c6d63b9e6f89cd0d26df3e9afdbaaf41b1769a14b94cd6e72440585a15c26b6a",
+    "evidence/v160/ns70/proof.tex": "fb98b07eb310e5f3987baae55fbfde41476ce957d3e6a0914e9fc49460614599",
+    "evidence/ns100_reassessment/proposals.json": "1b8562bc18ef6d947c8b07009bdab90d5733695d8c5f29efe68e0bde05b247c9",
+    "evidence/ns101_theta_factorization/argument.tex": "4f967555a4174b6880a690beabd94d4cca975aff149229e7610eae6e3324a8e7",
+    "PROPOSAL_TEMPLATE.md": "e0cc20cd191a2074859a920c751fa4d5e8e0b91b70a50ee0e982c2e54e35ea16"
+  },
+  "wall_check": {
+    "label": "Same open gap",
+    "group": "ZERO-GEOMETRY",
+    "closest": [
+      "NS100",
+      "NS101"
+    ],
+    "change": "Consider the exact Jacobi product for the original integer-square theta series as an additional arithmetic input. No signed comparison has been formulated or proved; the full integrated-kernel positivity input remains unchanged."
+  },
+  "proposed_admission_audit": {
+    "input": "For q=exp(-pi*r), r>0, Theta(r)=product_(n>=1) (1-q^(2*n))*(1+q^(2*n-1))^2.",
+    "primary_source": "https://dlmf.nist.gov/20.5.E3",
+    "question": "Does using this particular product in the theta differential kernel supply an independently usable inequality for the full NS101 signed autocorrelation comparison, with a justified domain and complete remainder?",
+    "control_scope": "The NS101 reciprocal positive Gaussian mixture changes the one-lattice frequencies and coefficients. Its generic-structure obstruction does not by itself exclude an argument requiring the original product at the same q. This hypothesis distinction is not a positivity argument.",
+    "first_deliverable": "A specific candidate inequality with quantifiers, justification for all interchanges and a stated implication, or a stop record saying no such candidate was found. An exact rewritten kernel alone is not success.",
+    "controls_before_proof": "If a candidate emerges, screen that actual candidate through controls/davenport_heilbronn.py and the applicable NS100/101 controls. Record a concrete hypothesis mismatch wherever not applicable. No claim that any such screen has run this turn.",
+    "stop_conditions": [
+      "Only pointwise product positivity is obtained; this does not imply Fourier positivity.",
+      "Only a restatement of the unknown full sign is obtained.",
+      "Argument requires per-slice positivity already refuted by NS100.",
+      "Full Gaussian-sum interchange is used outside its justified absolute-convergence domain.",
+      "A matched false analogue satisfies all claimed sufficient premises."
+    ],
+    "success_consequence": "A genuinely independent comparison could justify a pre-registered research proposal. Merely escaping a control does not thaw the group or establish progress toward RH.",
+    "budget": "One bounded admission assessment before committing to proof work, certification or scans; no multi-hour programme proposed.",
+    "confidence": "Feasibility unestablished. No novelty claim; no candidate inequality currently clears the gate."
+  },
+  "prior_route_status": "Prime-scaling admission audit stopped without closing a cost recurrence. NS88/98 open estimates and all existing scopes retained.",
+  "publication": {
+    "local_only": true,
+    "pushed": false,
+    "manuscript_changed": false,
+    "research_row_claimed": false,
+    "freeze_thawed": false
+  }
+}

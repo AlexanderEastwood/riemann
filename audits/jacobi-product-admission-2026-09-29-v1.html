@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Jacobi product admission audit — 29 September 2026</title></head>
+<body style="margin:0;background:#f4f1eb;color:#222b30;font-family:Georgia,serif;line-height:1.65;">
+<main style="max-width:680px;margin:36px auto;padding:36px;background:#fff;border-top:5px solid #315a61;">
+<p style="margin:0;color:#66787c;font-size:13px;letter-spacing:1px;">RH PROJECT · LOCAL ADMISSION AUDIT · 29 SEPTEMBER 2026 · V1</p>
+<h1 style="font-size:30px;line-height:1.2;margin:14px 0 20px;">The finite Jacobi product does not supply the proposed sign</h1>
+<p style="font-size:19px;">The first finite product, completed evenly with its required boundary mass, gives a negative radial-sign diagnostic inside the critical strip. The value agrees at 50 and 80 decimal digits and with an independent direct integral. This stops the stated finite-approximant positivity attempt. It does not refute the infinite-product target or RH.</p>
+<p style="padding:14px 18px;background:#edf3f3;border-left:4px solid #315a61;"><strong>Wall check: Same open gap — ZERO-GEOMETRY, NS100–101.</strong> Jacobi’s exact product provides original arithmetic data beyond reciprocal symmetry, but this audit obtains no independent signed estimate for the full original kernel. The group remains frozen. The numerical finding is a diagnostic, not an interval certificate or a new impossibility theorem.</p>
+
+<h2 style="font-size:22px;margin-top:30px;">What was tested</h2>
+<p>The original identity is</p>
+<p style="padding:12px;background:#f5f6f6;font-family:monospace;overflow-wrap:anywhere;">Θ(r) = ∏<sub>n≥1</sub>(1−q<sup>2n</sup>)(1+q<sup>2n−1</sup>)², &nbsp; q=e<sup>−πr</sup>, r&gt;0.</p>
+<p>This is the z=0 specialization of <a href="https://dlmf.nist.gov/20.5.E3" style="color:#245c70;">DLMF 20.5.3</a>. It specifies the original integer-square theta series, not a generic positive reciprocal Gaussian mixture.</p>
+<p>The candidate mechanism was: truncate that product after M factors, complete it evenly, and obtain the desired sign at every finite M before passing to a justified limit. Explicitly, define P<sub>M</sub>(q) as the finite product and</p>
+<p style="padding:12px;background:#f5f6f6;font-family:monospace;overflow-wrap:anywhere;">h<sub>M</sub>(t)=e<sup>|t|/2</sup>P<sub>M</sub>(e<sup>−πe<sup>2|t|</sup></sup>),<br>Φ<sub>M</sub>=(h<sub>M</sub>″−h<sub>M</sub>/4)/4,<br>F<sub>M</sub>(z)=∫ e<sup>zt</sup> dΦ<sub>M</sub>(t).<br>Candidate: Re(F<sub>M</sub>′(z) conjugate(F<sub>M</sub>(z))) ≥ 0<br>for every M≥1, 0&lt;Re z≤½ and Im z∈ℝ.</p>
+<p>The derivative is distributional: reflection creates an atom at zero of mass b<sub>M</sub>=h<sub>M</sub>′(0+)/2. Omitting that atom would change the candidate. The original smooth theta completion has no such atom. We did not screen an alternative construction that discards or otherwise corrects it.</p>
+
+<h2 style="font-size:22px;margin-top:30px;">The diagnostic that stops the candidate</h2>
+<p>Already M=1 gives the exact polynomial P<sub>1</sub>(q)=1+2q−2q³−q⁴. Its factors are positive for 0&lt;q&lt;1, but its Gaussian expansion has signed coefficients. At z=¼+14i:</p>
+<table style="width:100%;border-collapse:collapse;font-size:15px;">
+<thead><tr><th style="text-align:left;border-bottom:2px solid #c9d5d7;padding:9px;">Object</th><th style="text-align:right;border-bottom:2px solid #c9d5d7;padding:9px;">Re(F′ conjugate(F))</th></tr></thead>
+<tbody><tr><td style="padding:9px;border-bottom:1px solid #ddd;">Completed first product, including atom</td><td style="padding:9px;text-align:right;border-bottom:1px solid #ddd;">−1.00162430534 × 10<sup>−8</sup></td></tr>
+<tr><td style="padding:9px;border-bottom:1px solid #ddd;">Original F(z)=ξ(½+z)/2</td><td style="padding:9px;text-align:right;border-bottom:1px solid #ddd;">+1.40855714850 × 10<sup>−7</sup></td></tr></tbody></table>
+<p>The first-product boundary mass is approximately 0.00160965454270846585. The negative value belongs to the explicitly defined approximant, not to xi. A bounded initial grid used x=¼ and y=0,2,…, stopping at its first negative value, y=14. We did not expand the scan after that finding.</p>
+<p>The 50- and 80-digit runs agree in all 35 stored significant digits of the candidate value. Direct integration of the differential density on [0,3], plus the boundary atom, gives the same result. At 80 digits, its transform differs from the incomplete-gamma evaluator by about 4.72×10<sup>−82</sup>. An explicit absolute tail majorant beyond t=3 evaluates to about 8.99×10<sup>−547</sup> for F and 1.81×10<sup>−545</sup> for F′. Those tail numbers and the quadrature are floating evaluations; neither rounding nor quadrature errors are interval-certified.</p>
+
+<h2 style="font-size:22px;margin-top:30px;">Boundary and domain accounting</h2>
+<p>Write P<sub>M</sub>(q)=1+Σ<sub>k&gt;0</sub>c<sub>k</sub>q<sup>k</sup>. For t&gt;0 the ordinary differential density is</p>
+<p style="padding:12px;background:#f5f6f6;font-family:monospace;overflow-wrap:anywhere;">φ<sub>M</sub>(t)=e<sup>t/2</sup> Σ c<sub>k</sub>[(πk)²e<sup>4t</sup>−(3/2)πk e<sup>2t</sup>]e<sup>−πk e<sup>2t</sup></sup>.</p>
+<p>The complete transform is b<sub>M</sub>+2∫<sub>0</sub><sup>∞</sup>φ<sub>M</sub>(t)cosh(zt)dt. A separate evaluator uses</p>
+<p style="padding:12px;background:#f5f6f6;font-family:monospace;overflow-wrap:anywhere;">I<sub>k</sub>(z)=½(πk)<sup>−(z+½)/2</sup> Γ((z+½)/2,πk),<br>F<sub>M</sub>(z)=¼+(z²−¼)/4 · Σ c<sub>k</sub>[I<sub>k</sub>(z)+I<sub>k</sub>(−z)].</p>
+<p>Here Γ(a,v) is the upper incomplete gamma integral. All sums in these finite-product formulas are finite; their half-line integrals have double-exponential tails. The formula includes the boundary atom and is entire. It gives F<sub>M</sub>(½)=¼, matching the original normalization.</p>
+<p>There is a separate warning for the <em>unreflected</em> product. Set h̃<sub>M</sub>(t)=e<sup>t/2</sup>P<sub>M</sub>(e<sup>−πe<sup>2t</sup></sup>) on the whole line. For every finite M≥1,</p>
+<p style="padding:12px;background:#f5f6f6;font-family:monospace;overflow-wrap:anywhere;">∫ e<sup>t/2</sup>(h̃<sub>M</sub>″−h̃<sub>M</sub>/4)/4 dt<br>= ¼[e<sup>t/2</sup>(h̃<sub>M</sub>′−h̃<sub>M</sub>/2)]<sub>−∞</sub><sup>∞</sup> = 0.</p>
+<p>Both boundary values vanish: near r=e<sup>2t</sup>=0, the finite product has order r<sup>M</sup>, while at +∞ the nonconstant Gaussian terms decay rapidly. The original completed transform at z=½ is ¼. Thus pointwise convergence of the raw product and its derivatives does not justify passing this whole-line integral to the limit. This is the same kind of domain issue already recorded in NS101, now visible for product truncations; it is not a new closure of conditional or completed approaches.</p>
+
+<h2 style="font-size:22px;margin-top:30px;">What the infinite product still leaves open</h2>
+<p>For L(r)=log Θ(r), differentiating the product on compact positive-r intervals gives</p>
+<p style="padding:12px;background:#f5f6f6;font-family:monospace;overflow-wrap:anywhere;">L′(r)=Σ 2πn/(e<sup>2πnr</sup>−1)<br>−2Σ π(2n−1)/(e<sup>π(2n−1)r</sup>+1),<br>φ(t)/h(t)=r²[L″(r)+L′(r)²]+(3/2)rL′(r), &nbsp; r=e<sup>2t</sup>.</p>
+<p>This retains signed terms and their cross products. No estimate for their full Fourier-side comparison was found. Positive real product factors do not assign that Fourier sign. The full NS101 integrated kernel remains unestimated; the original product identity itself remains valid.</p>
+
+<h2 style="font-size:22px;margin-top:30px;">Controls, scope and record</h2>
+<p>The pinned Davenport–Heilbronn interface was used with the actual radial-sign functional. It detects a negative value near its off-line zero, and the NS101 reciprocal-mixture completion also has a negative sampled value. These calibrate the sign evaluator. Neither control satisfies the original finite Jacobi-product premise, so neither is presented as a matched counterexample to that stronger premise. The direct M=1 evaluation is the relevant candidate screen.</p>
+<p>Maxima checked eight exact algebra identities, including the first polynomial, differential density, boundary mass and logarithmic derivatives. Python diagnostics report zero errors and zero warnings. These checks validate bookkeeping; they do not certify the numerical sign or prove an asymptotic statement.</p>
+<p><strong>Disposition:</strong> stop the stated finite-approximant mechanism at its failed screen. Starting at a later M, removing the atom, smoothing the reflection, or using a different completion would be changed hypotheses needing their own specific justification and gate; none is established or prescribed here. No claim that every product-based route is impossible. No new research row, thaw, manuscript version, PR or push. RH, G2, the signed arithmetic estimates and both historical original-evidence gaps remain open.</p>
+<p style="font-size:13px;color:#607177;border-top:1px solid #d6dfdf;padding-top:16px;">Reviewed public commit f32cadfb7be523a8920b19be57d40d652e39a2ef. All 104 registered conclusion statuses/scopes and 14 continuation demands were reassessed; historical proofs and certificates were not replayed. Reproduction scripts, admission record and outputs are in <a href="jacobi-product-admission-2026-09-29-v1/" style="color:#245c70;">the adjacent evidence folder</a>. This local report has not been published.</p>
+</main></body></html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Möbius cancellation: theorem-transfer audit — 29 September 2026</title>
+</head>
+<body style="margin:0;background:#f6f4ef;color:#242c32;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.6;">
+<main style="max-width:680px;margin:36px auto;padding:36px 28px;background:#ffffff;border-top:6px solid #344f5a;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.3px;color:#596973;">RH PROJECT · THEOREM-APPLICABILITY AUDIT · 2026-09-29 · V1</p>
+<h1 style="font-size:31px;line-height:1.2;margin:18px 0;">Cancellation is available.<br>The required transfer is not.</h1>
+<p><strong>Neither of the two examined theorem families directly supplies NS98’s bounded projected cost.</strong> The mismatch is in the quantifiers, weights and required energy scale. This audit does not prove that an adaptation is impossible.</p>
+<p style="padding:15px 18px;background:#edf2f3;border-left:4px solid #344f5a;"><strong>Wall check: Same open gap.</strong> Closest results: NS92–93 and NS98. MOBIUS-COST and the separate MOBIUS-MARGIN input remain open. No thaw, research row, manuscript version or new RH bound.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">The quantity that must survive the transfer</h2>
+<p>Keep the prescribed coefficients <var>d<sub>n</sub> = −μ(n) log(2N/n)</var> for <var>N &lt; n ≤ 2N</var>, without rescaling. With the complete old/new Gram blocks,</p>
+<p style="padding:14px;background:#f6f7f7;text-align:center;">H<sub>N</sub> = D − C<sup>T</sup>G<sup>−1</sup>C,<br>K<sub>N</sub> = d<sup>T</sup>H<sub>N</sub>d.</p>
+<p>The sufficient cost target is a constant upper bound for</p>
+<p style="padding:14px;background:#f6f7f7;text-align:center;">(1/J) ∑<sub>J≤j&lt;2J</sub> K<sub>2<sup>j</sup></sub></p>
+<p>on all sufficiently large dyadic <var>J</var>. The diagonal contribution is already bounded. The unresolved part is the signed cross sum containing the full matrix <var>H<sub>N</sub></var>. Removing its old-space subtraction replaces the problem with a larger sufficient budget. <a href="https://github.com/AlexanderEastwood/riemann/blob/f32cadfb7be523a8920b19be57d40d652e39a2ef/evidence/ns98_projected_cost/argument.tex" style="color:#24576d;">NS98: exact target and stop record</a>.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">What the source theorems provide</h2>
+<table style="border-collapse:collapse;width:100%;font-size:15px;">
+<thead><tr><th style="padding:10px;border-bottom:2px solid #82959c;text-align:left;width:30%;">Source examined</th><th style="padding:10px;border-bottom:2px solid #82959c;text-align:left;">Usable scope</th></tr></thead>
+<tbody>
+<tr><td style="padding:12px 10px;border-bottom:1px solid #ddd;vertical-align:top;">Tao<br>Theorem 1.3,<br>Corollary 1.5</td><td style="padding:12px 10px;border-bottom:1px solid #ddd;">Bounded multiplicative functions, with the stated non-pretentiousness condition; fixed distinct affine forms; harmonic weight 1/n. The nonasymptotic threshold depends on the forms and the error tolerance. The asymptotic interval ratio ω(x) must tend to infinity. Möbius correlations are included. Fixed ratio 2 is not covered by that asymptotic conclusion. <a href="https://arxiv.org/html/1509.05422v4" style="color:#24576d;">Primary paper</a>.</td></tr>
+<tr><td style="padding:12px 10px;border-bottom:1px solid #ddd;vertical-align:top;">Matomäki–Radziwiłł<br>Theorems 1 and 3</td><td style="padding:12px 10px;border-bottom:1px solid #ddd;">Real multiplicative functions bounded by 1; fixed interval length 2 ≤ h ≤ X. Theorem 1 compares normalized short and long averages outside a quantified exceptional set of starting points. Its displayed parameter choice gives logarithmic savings. Theorem 3 gives a normalized mean-square estimate with an additional prime-factor restriction and a logarithmic error term. <a href="https://arxiv.org/html/1501.04585v4" style="color:#24576d;">Primary paper</a>.</td></tr>
+</tbody></table>
+<p style="font-size:14px;color:#53636c;">Source scope: these named statements and their accompanying remarks were checked, including the short-interval paper’s Proposition 1. This is not an exhaustive survey of subsequent cancellation results.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">Tao: fixed shifts do not settle the growing sum</h2>
+<p>Write the projected cross term as a sum over shifts:</p>
+<p style="padding:14px;background:#f6f7f7;overflow-wrap:anywhere;">C<sub>N</sub><sup>proj</sup> = 2 ∑<sub>h=1</sub><sup>N−1</sup> ∑<sub>m=N+1</sub><sup>2N−h</sup> μ(m)μ(m+h)L<sub>N</sub>(m)L<sub>N</sub>(m+h)H<sub>N</sub>(m,m+h),<br><span style="font-size:15px;">where L<sub>N</sub>(m) = log(2N/m).</span></p>
+<p><strong>Elementary scope check:</strong> positivity of <var>H<sub>N</sub></var> and NS98’s existing diagonal bound imply</p>
+<p style="padding:14px;background:#f6f7f7;text-align:center;">|H<sub>N</sub>(m,n)| ≤ 4κ/√(mn),<br>∑<sub>1≤h≤L</sub> |C<sub>N,h</sub><sup>proj</sup>| ≤ 8κ(log 2)<sup>2</sup>L.</p>
+<p>Here <var>κ = log(2π) − γ</var>, and each fixed-shift sum has at most <var>N</var> terms, each bounded using <var>m,n &gt; N</var>. Thus every <em>fixed finite</em> collection of shifts already has bounded cost, without a Möbius-cancellation theorem. This is bookkeeping from the inherited bound, not a new arithmetic estimate. Letting <var>L</var> grow destroys that constant bound.</p>
+<p>The missing transfer must therefore handle growing shifts and the changing projected weights together. Summation by parts would require control of the variation of <var>2mL<sub>N</sub>(m)L<sub>N</sub>(m+h)H<sub>N</sub>(m,m+h)</var>, with errors summable over the shifts. No such control is supplied here.</p>
+<p>Averaging in <var>j</var> does create a long logarithmic range of integers, so the fixed-ratio mismatch alone does <em>not</em> dispose of that possibility. But each doubling changes the projection and taper, and the number of shifts grows. A uniform weighted transfer and a total error budget would still have to be established. Applying a fixed-shift limit and then summing a growing set of shifts is not justified.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">Short intervals: the scale is too weak for the proposed substitution</h2>
+<p>NS92’s larger scalar budget is</p>
+<p style="padding:14px;background:#f6f7f7;text-align:center;">K<sub>N</sub> ≤ κ log(2) S<sub>N</sub>,<br>S<sub>N</sub> = ∫<sub>N</sub><sup>2N</sup> |∑<sub>x&lt;n≤2N</sub> μ(n) log(2N/n)/n|<sup>2</sup> dx.</p>
+<p>To expose the normalization, put <var>v(u) = log(2/u)/u</var> and <var>R<sub>N</sub>(u) = ∑<sub>Nu&lt;n≤2N</sub> μ(n)v(n/N)</var>. A change of variable gives the exact bookkeeping identity</p>
+<p style="padding:14px;background:#f6f7f7;text-align:center;">S<sub>N</sub> = (1/N) ∫<sub>1</sub><sup>2</sup> |R<sub>N</sub>(u)|<sup>2</sup> du = N e<sub>N</sub>,<br><span style="font-size:15px;">e<sub>N</sub> := ∫<sub>1</sub><sup>2</sup> |R<sub>N</sub>(u)/N|<sup>2</sup> du.</span></p>
+<p>Pointwise bounded scalar cost would follow from <var>e<sub>N</sub> = O(1/N)</var>. The actual averaged target only needs bounded means of <var>2<sup>j</sup>e<sub>2<sup>j</sup></sub></var>, which is weaker than that pointwise demand. Qualitative cancellation <var>e<sub>N</sub> → 0</var> does not supply either bound.</p>
+<p>Even an optimistic transfer giving <var>e<sub>N</sub> ≤ C/(log N)<sup>c</sup></var> would leave an upper allowance <var>CN/(log N)<sup>c</sup></var>. Averaging that allowance over <var>J ≤ j &lt; 2J</var> still grows. This is a limitation of that upper bound; it is not evidence that the actual cost grows.</p>
+<p>There is also a domain mismatch before any rate comparison: <var>R<sub>N</sub></var> uses varying-length suffixes with a common endpoint. An almost-everywhere statement for each fixed interval length cannot automatically be evaluated along the variable length <var>2N−x</var>. Nor does a small exceptional set guarantee that selected dyadic endpoints avoid it. The paper’s long-average term and, for Theorem 3, the excluded integers would also need accounting. None is discarded in this audit. <a href="https://github.com/AlexanderEastwood/riemann/blob/f32cadfb7be523a8920b19be57d40d652e39a2ef/evidence/ns92_arithmetic_cost/argument.tex" style="color:#24576d;">NS92 already records the stronger square-root oscillation requirement for its supremum bound</a>.</p>
+
+<h2 style="font-size:23px;margin-top:32px;">Controls, companion input and disposition</h2>
+<p>This is a theorem-applicability audit, exempt from claiming a new research row. It proposes no new sufficient RH inequality to certify or scan. Davenport–Heilbronn and the NS100/101 theta controls do not carry the stipulated Möbius reciprocal-Euler coefficients together with this exact fractional-part Gram family; importing their coefficients would change the problem. They are marked <strong>not applicable to the proposed literal transfer</strong>, not counted as passed tests. No unchanged example screen was run.</p>
+<p>The existing NS74 unitary control preserves the whole Gram, hence every projected cost, while changing the target-approximation behavior. It reinforces the existing requirement to prove a compatible lower numerator separately. NS93’s sufficient pair remains: bounded averaged cost and a positive averaged normalized lower numerator. A cost theorem alone would not complete that argument.</p>
+<p><strong>Decision:</strong> stop direct substitution of these two theorem families. A follow-up would need a concrete uniform estimate for the growing-shift sum with the actual projection retained, or a justified interval-energy transfer with a sufficient total error budget. Neither has been obtained. That requirement restates the same open input; it is not a newly opened route.</p>
+
+<div style="margin-top:32px;padding-top:16px;border-top:1px solid #ccd4d8;font-size:13px;color:#596973;">
+<p>Reviewed source: public main <a href="https://github.com/AlexanderEastwood/riemann/tree/f32cadfb7be523a8920b19be57d40d652e39a2ef" style="color:#24576d;">f32cadf</a>, refreshed from an isolated worktree. Review covered the current instruction file, all 104 registered conclusions and 14 continuation groups, current README status/checkpoints, task board, missing-evidence ledger and relevant NS92–99 findings. This is a conclusions/dependency review and bounded source audit, not a replay of historical proofs or certificates.</p>
+<p>The two historical original-evidence groups remain recovery OPEN. The README’s heuristic window-height language is not used as a hard cutoff; the trial’s scale uses its Rayleigh bound ρ rather than identifying it with the unknown ground energy. The 14 input groups are not asserted to be one identical estimate.</p>
+<p>Local audit artifact only; not pushed or represented as archived on GitHub. Historical documents and the manuscript are unchanged. RH, G2, MOBIUS-COST and MOBIUS-MARGIN remain open.</p>
+</div>
+</main>
+</body>
+</html>

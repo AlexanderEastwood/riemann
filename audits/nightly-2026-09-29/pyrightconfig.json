@@ -1,0 +1,7 @@
+{
+  "extends": "../../pyrightconfig.json",
+  "venvPath": "../..",
+  "venv": ".venv",
+  "include": ["replay.py", "../prime-scaling-admission-2026-09-29-v1/screen_projection.py", "../jacobi-product-admission-2026-09-29-v1/screen_product.py"],
+  "exclude": ["__pycache__", "node_modules", ".claude/worktrees", "data"]
+}
