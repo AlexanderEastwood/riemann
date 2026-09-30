@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Projected Möbius cost: a source-range check — 29 September 2026</title></head>
+<body style="margin:0;background:#f5f2eb;color:#27343b;font:17px/1.65 Georgia,serif;">
+<main style="max-width:680px;margin:36px auto;padding:34px;background:white;border-top:5px solid #365e64;">
+<p style="margin:0;color:#63787b;font-size:12px;letter-spacing:1px;">RH PROJECT · THEOREM-APPLICABILITY AUDIT · 2026-09-29 · V1</p>
+<h1 style="font-size:30px;line-height:1.2;">The cotangent estimates leave the needed range untreated</h1>
+<p style="font-size:20px;">The bounded search found no usable estimate for NS98’s projected Möbius cost in the checked sources. The published arithmetic estimates are relevant, but their original parameter ranges do not cover the comparable-sized indices that remain in our problem.</p>
+<p style="padding:15px;background:#edf3f3;border-left:4px solid #365e64;"><strong>Wall check: Same open gap — MOBIUS-COST and MOBIUS-MARGIN, NS92–98.</strong> This is a source and transfer audit. It does not prove that the cost grows, that the desired estimate is impossible, or that the whole literature lacks a suitable theorem.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">The target stays fixed</h2>
+<p>For the prescribed coefficients d<sub>n</sub>=−μ(n) log(2N/n), N&lt;n≤2N, the complete projected cost is</p>
+<p style="padding:13px;background:#f5f7f7;text-align:center;">K<sub>N</sub>=d<sup>T</sup>H<sub>N</sub>d, &nbsp; H<sub>N</sub>=D−C<sup>T</sup>G<sup>−1</sup>C.</p>
+<p>The target is a constant bound for the average of K<sub>2<sup>j</sup></sub> over J≤j&lt;2J, for all sufficiently large dyadic J. The diagonal is already bounded; the signed cross-term with the old-space correction remains open. A compatible positive average of the normalized lower numerator is also required. A cost bound alone would not prove convergence.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">What the primary statements actually cover</h2>
+<p>NS92 had recorded only the abstract of Maier–Rassias’s explicit-estimate paper. This audit checked its theorem and the predecessor it strengthens.</p>
+<table style="width:100%;border-collapse:collapse;font-size:15px;">
+<thead><tr><th style="padding:10px;border-bottom:2px solid #85999b;text-align:left;">Statement</th><th style="padding:10px;border-bottom:2px solid #85999b;text-align:left;">Range relevant to this transfer</th></tr></thead>
+<tbody>
+<tr><td style="padding:12px 10px;border-bottom:1px solid #ddd;vertical-align:top;">Maier–Rassias<br>Theorem 1.1</td><td style="padding:12px 10px;border-bottom:1px solid #ddd;">The parameter satisfies <strong>0&lt;δ&lt;D/2</strong>; B≥k<sup>2δ</sup>. The sum starts at Bk, hence at least k<sup>1+2δ</sup>. The positive power saving depends on fixed parameters. <a href="https://arxiv.org/pdf/1705.09921v1#page=3" style="color:#245b6b;">Original PDF, page 3</a>.</td></tr>
+<tr><td style="padding:12px 10px;border-bottom:1px solid #ddd;vertical-align:top;">Maier–Rassias<br>Theorem 2.1</td><td style="padding:12px 10px;border-bottom:1px solid #ddd;">The explicit estimate applies on k<sup>D</sup>≤n&lt;2k<sup>D</sup>, with <strong>D≥2</strong>. Its power saving concerns that stated sum, not a complete projected Gram cost. <a href="https://arxiv.org/html/1806.05070v1#S2" style="color:#245b6b;">Primary theorem</a>.</td></tr>
+</tbody></table>
+<p>In NS98’s new/new block, N&lt;m,n≤2N, so their ratio lies between 1/2 and 2. For unbounded reduced denominators, this comparable-index region falls outside those literal ranges. Reducing a fraction preserves its ratio; bounded reduced denominators do not cover every pair. This identifies an untreated part, without asserting that it dominates the energy.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">A survey endpoint cannot supply the missing case</h2>
+<p>The later survey prints 0≤δ≤D/2 in its Theorem 6.1. The zero endpoint would appear to allow comparable scales, but it is absent from the original theorem. I visually checked both printed pages: this difference is present in the PDFs, not introduced by text extraction. <a href="https://arxiv.org/pdf/1811.04399v1#page=20" style="color:#245b6b;">Survey PDF, page 20</a>.</p>
+<p>No independently justified endpoint extension was found in the checked passages. We do not assume one, and we do not claim it is false. Taking δ toward zero with the matrix size would require uniform control of the saving and constants; a theorem stated for fixed positive δ does not provide that limit.</p>
+<p>This corrects no existing repo theorem: the project had not imported the survey’s endpoint. It prevents an unsupported new application.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">Smoothing has a valid transfer</h2>
+<p>The use of the unsmoothed q=1 problem in these papers is not by itself a barrier. The existing NS61 operator J sends each unsmoothed atom to its q=2 counterpart and has norm 2.</p>
+<p>For the same new coefficients d, choose the q=1 minimizing old coefficients as a permissible q=2 correction. Boundedness of J gives</p>
+<p style="padding:13px;background:#f5f7f7;text-align:center;">K<sub>N</sub><sup>(2)</sup>(d) ≤ 4K<sub>N</sub><sup>(1)</sup>(d).</p>
+<p>This applies the repository’s existing bounded-map argument to the selected cost. It does not assert that projection commutes with smoothing, or that the two optimizers coincide. A complete bounded-average q=1 cost estimate would therefore suffice for the q=2 cost half. The checked cotangent theorems do not supply it.</p>
+<p>Ehm also gives an exact continuous scale-average relation between the two Gram kernels. That representation alone does not supply a uniform arithmetic estimate or allow minimization to commute with averaging. <a href="https://arxiv.org/html/2405.06349v1#S3" style="color:#245b6b;">Ehm, Proposition 3.1</a>.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">What a successful import would still need</h2>
+<p>A bound on one arithmetic row must retain the taper, rational normalization and gcd factors, both orientations, elementary Gram terms, and losses from every remaining sum. It must then control the full old-space correction or establish a sufficiently strong complete raw-cost bound. Dropping the nonnegative quadratic subtraction is a legitimate upper-bound route; no bounded raw cost was obtained here.</p>
+<p>These are the missing transfer requirements. The audit supplies neither a comparable-range estimate nor a uniform limiting argument that establishes them. The separate lower numerator remains open even if the cost requirement is eventually met.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">Disposition</h2>
+<p><strong>Stop this direct substitution.</strong> The next reopening needs a concrete arithmetic estimate covering the untreated region and its full cost transfer. This audit does not nominate a replacement mechanism. The family remains frozen; no numerical scan, interval certificate, new research row, theorem node or manuscript version is added.</p>
+<p>Theorem applicability was reviewed by the coordinator; the external proofs were not independently re-proved. The known false analogues do not carry the stipulated Möbius coefficients and exact integer Gram family, so they are not literal transfer tests here. That mismatch is not a passed control. NS74 still shows why a cost statement must retain a separate target-dependent numerator.</p>
+<p style="border-top:1px solid #d4dddd;padding-top:15px;font-size:13px;color:#617178;">Reviewed base: 716ae6af503f8f2f539550ce32f9b2a398f2870a. All 104 conclusion records and 14 continuation demands reviewed for scope; no historical certificate replay. Both original-evidence recovery groups, G2 and RH remain open. The published DOI page was unavailable to the web reader; the versioned arXiv sources above were inspected.</p>
+<p style="font-size:13px;"><a href="mobius-estermann-transfer-2026-09-29-v1/README.md" style="color:#245b6b;">Detailed applicability record</a> · <a href="mobius-estermann-transfer-2026-09-29-v1/sources.json" style="color:#245b6b;">Source provenance</a> · <a href="mobius-estermann-transfer-2026-09-29-v1/validation.json" style="color:#245b6b;">Validation and limits</a></p>
+</main></body></html>

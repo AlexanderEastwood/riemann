@@ -566,6 +566,17 @@ Subgroup thaw conditions for the fourth family:
 
 ## September 29 published admission records (no research rows)
 
+**Completed source applicability audit (Codex):** the
+[projected-cost cotangent/Estermann check](audits/mobius-estermann-transfer-2026-09-29-v1.html)
+reads the Maier–Rassias theorems beyond the abstract recorded by NS92. The
+original fixed-positive-parameter and D>=2 ranges do not cover all
+comparable new/new indices. A survey prints a delta-zero endpoint absent
+from the original; no endpoint extension is assumed. The existing
+bounded-J argument transfers a complete q=1 cost bound to q=2, but the
+needed arithmetic bound and compatible numerator remain open. Stop this
+literal substitution. **Same open gap**, MOBIUS-COST/MOBIUS-MARGIN; no new
+research row, theorem node, thaw, version or blanket literature exclusion.
+
 **Completed validation (Codex and two separate agent reviewers):** the
 [NS57 dependency audit](audits/ns57-dependency-audit-2026-09-29-v1.html)
 reconstructs the first-zero chain for the explicit n=2 perturbation used in
