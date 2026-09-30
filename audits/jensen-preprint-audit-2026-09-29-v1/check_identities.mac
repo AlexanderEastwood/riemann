@@ -1,0 +1,93 @@
+/* Exact supporting algebra for an external-proof audit.
+   No numerical xi coefficients, root scan, asymptotic certificate or RH test.
+   Source: arXiv:2608.08682v1; see README.md for analytical dependencies. */
+display2d:false$
+checks:0$
+check_zero(label,expr):=block([value:ratsimp(expr)],
+  if value # 0 then error("FAIL",label,value),
+  checks:checks+1,
+  print("PASS",label))$
+
+/* Factorial normalization in (10)--(11), at successive j. */
+check_zero("factorial ratio step",
+ (n+j+1)/((2*n+2*j+2)*(2*n+2*j+1))-1/(4*(n+j+1/2)))$
+
+/* Two integrations by parts in the actual theta integral (15).
+   The boundary terms vanish for real k>1; the check concerns the integrand. */
+theta_weight:x^(5/4)*log(x)^k$
+theta_ibp:4*diff(theta_weight,x,2)-6*diff(x^(1/4)*log(x)^k,x)$
+check_zero("theta moment integrand",
+ radcan(theta_ibp-x^(-3/4)*(4*k*(k-1)*log(x)^(k-2)-log(x)^k/4)))$
+
+q0:A*(B+1)/(B*(A+1))$
+q1:(A+1)*(B+2)/((B+1)*(A+2))$
+check_zero("Jacobi quotient relation (36)", (q0-1)/(q1-1)-q0*(1+2/A))$
+check_zero("Jacobi A recovery (38)",2*q0/((q0-1)/(q1-1)-q0)-A)$
+check_zero("Jacobi B recovery (38)",q0*(1+1/A)-1-1/B)$
+
+/* Exact limiting matching equations and quantitative contraction constants. */
+limit_map:[1-1/a-b+4*c,2*b-16*c,-6*b+96*c-2]$
+for i:1 thru 3 do
+ check_zero(concat("matching limit equation ",i),
+  subst([a=6/5,b=1/3,c=1/24],limit_map[i]))$
+Jac:matrix([25/36,-1,4],[0,2,-16],[0,-6,96])$
+Inv:matrix([36/25,27/25,3/25],[0,1,1/6],[0,1/16,1/48])$
+for i:1 thru 3 do for j:1 thru 3 do
+ check_zero(concat("Jacobian inverse ",i," ",j),
+  (Jac.Inv)[i,j]-(if i=j then 1 else 0))$
+check_zero("contraction cube lower endpoint",36/(25*(21/20)^2)-1-15/49)$
+if not is(15/49+11/125<2/5) then error("contraction constant")$
+if not is(11/125+(2/5)*(3/20)<3/20) then error("cube preservation")$
+
+/* Jacobi matrix diagonal difference, (75) and (78). */
+diag:U*(H*(V+2*k)+2*k*(k+1))/((H+2*k)*(H+2*k+2))$
+diagd:(2*k*(k+H+1)*(U-2*V)+V*H*(d-1))/((H+2*k)*(H+2*k+2))$
+check_zero("Jacobi diagonal difference (78)",subst(U-d-1,H,diag-V-diagd))$
+
+/* (86) is an operator identity modulo the hypergeometric equation.
+   Check independently on a general monomial y^j; linearity then applies. */
+Euler(f):=y*diff(f,y)$
+JacobiOp(f):=y*(1-y/A)*diff(f,y,2)+(B-y+(d-1)*y/A)*diff(f,y)+d*f$
+f:y^j$
+cubic:Euler(Euler(Euler(f)+A*f)-d*(Euler(f)+A*f))$
+hyper:Euler(Euler(Euler(f)+(D-1)*f)+(B-1)*(Euler(f)+(D-1)*f))
+ -(D*y/(A*C))*(Euler(Euler(Euler(f)+C*f)+A*(Euler(f)+C*f))
+ -d*(Euler(Euler(f)+C*f)+A*(Euler(f)+C*f)))$
+check_zero("perturbed Jacobi factor (86)",
+ radcan(Euler(JacobiOp(f))+D*JacobiOp(f)+(C-D)/(A*C)*cubic-hyper/y))$
+
+/* (88) coefficient expansion after m derivatives, common falling j,m
+   and y^j factors canceled. This verifies all m symbolically. */
+beta:A*(2*m+1-d)-d*(2*m+1)+3*m^2+3*m+1$
+gam:m*(m-d)*(m+A)$
+check_zero("cubic derivative expansion",
+ (j-m)*(j-m-1)*(j-m-2)+(A-d+3+3*m)*(j-m)*(j-m-1)
+ +beta*(j-m)+gam-j*(j-d)*(j+A))$
+
+/* (90), same monomial reduction. */
+lhs:j*(j+B-1)*(j-m)+(d-j)*(1+j/A)*y*j$
+rhs:(1-y/A)*j*(j-m)*(j-m-1)
+ +(B+m-y+(d-1-2*m)*y/A)*j*(j-m)
+ +(d-m)*(1+m/A)*y*j$
+check_zero("differentiated Jacobi recurrence (90)",lhs-rhs)$
+
+/* Geometric tail in Proposition 2.2. */
+/* Write the convergent geometric series in closed form; default Maxima
+   leaves the infinite sum unevaluated. Initial harness output is retained. */
+check_zero("stability tail",2^(-5)/(1-1/2)-1/16)$
+
+/* Audit of Lemma 7.3 if read outside the matched-parameter construction.
+   d=2, A=8B, C=5D/4, w=1/B. D is fixed and >=max(2Kr,32).
+   p_F(B*x)=1-2*x+kappa(w)*x^2. The four displayed inequalities
+   allow B->infinity; they do not imply D comparable to B. */
+kappa:(1+w/8)*(5*D+4)/(5*(D+1)*(1+w))$
+check_zero("standalone degree-two model coefficient",
+ subst(1/B,w,kappa)-(8*B+1)/(8*B)*(5*D+4)/(5*D)*D/(D+1)*B/(B+1))$
+check_zero("standalone limiting coefficient deficit",
+ 1-subst(0,w,kappa)-1/(5*(D+1)))$
+/* For 0<t<1, x=1/(1+t) is a root of the limiting normalized
+   polynomial with kappa=1-t^2. The other root uses -t. */
+check_zero("standalone limiting root",
+ 1-2/(1+t)+(1-t^2)/(1+t)^2)$
+print("ALL_EXACT_CHECKS_PASSED",checks)$
+quit();

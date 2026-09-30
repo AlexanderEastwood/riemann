@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jensen preprint audit — 29 September 2026</title></head>
+<body style="margin:0;background:#f5f2eb;color:#27343b;font:17px/1.65 Georgia,serif;">
+<main style="max-width:680px;margin:36px auto;padding:34px;background:white;border-top:5px solid #365e64;">
+<p style="margin:0;color:#63787b;font-size:12px;letter-spacing:1px;">RH PROJECT · FOCUSED PROOF AUDIT · 2026-09-29 · V1</p>
+<h1 style="font-size:30px;line-height:1.2;">A useful method, with the RH bridge still missing</h1>
+<p style="font-size:20px;">I found no fatal defect in the checked main argument. I did identify an assumption that must stay attached to one supporting lemma. The audit does not justify promoting this method to our next RH proof attempt.</p>
+<p style="padding:15px;background:#edf3f3;border-left:4px solid #365e64;"><strong>Wall check: Same open gap — ZERO-GEOMETRY / NS100.</strong> The missing input is still an arithmetic mechanism reaching small shifts at unbounded degree. No new hypothesis or estimate closes that gap.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">What was examined</h2>
+<p>Jonathan Holland’s August 2026 preprint claims real-rooted Jensen polynomials whenever n³ log²(n+2) ≥ Kd⁵, where n is the coefficient shift and d the degree. I checked the normalization, matching construction, root-stability argument and the two estimates that connect them. <a href="https://arxiv.org/abs/2608.08682v1" style="color:#245b6b;">Versioned preprint</a>.</p>
+<p>The factorial conversion from theta moments is retained. The final sign argument is valid under its stated hypotheses, and the derivative estimate uses a legitimate maximum argument. Twenty-six exact Maxima checks confirm selected identities, including the differential factorization and recurrences; two further rational inequalities also pass. These checks are algebra, not a numerical zero certificate.</p>
+<p>This remains a bounded audit. The complex asymptotic and finite-free polynomial theorems are inherited inputs whose source statements were checked. I have not independently re-proved those theorems, every uniform matching remainder, or the separate semicircle result. Key printed PDF pages were inspected.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">One assumption must remain explicit</h2>
+<p>The root-location proof uses D comparable to B. Its earlier parameter construction supplies this relation. The four inequalities displayed in Lemma 7.3 alone do not.</p>
+<p>An exact degree-two check makes the distinction concrete. Fix D sufficiently large, set C=5D/4 and A=8B, and increase B. Those inequalities hold, but the roots remain a fixed fraction of B away from B. Their distance therefore grows like B, while the proposed uniform bound grows only like √B.</p>
+<p><strong>Retain the matched-parameter construction when reusing that lemma.</strong> The family above lies outside that construction, so it does not refute the paper’s main application. The derivation is recorded in the <a href="jensen-preprint-audit-2026-09-29-v1/README.md" style="color:#245b6b;">technical audit</a>.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">Why the next RH step remains absent</h2>
+<p>The controlling error has size d<sup>5/2</sup>/(n<sup>3/2</sup> log n). Making it small requires the degree to grow much more slowly than the shift. For a fixed shift, the claimed region permits only bounded degree. The unshifted, all-degree requirement remains outside it.</p>
+<p>Our earlier NS100 assessment already named the missing step: a coefficient-specific rule that moves from the large-shift region to lower shifts at unbounded degree. This audit supplies no such rule. Improving a constant, running a larger table, or matching more coefficients would need a separate argument explaining how it reaches that obligation.</p>
+<p>Farmer’s discussion of differentiation universality reinforces the need for that distinction. It does not prove this entire program impossible, and I have not shown that a false RH analogue satisfies Holland’s full quantitative claim. <a href="https://arxiv.org/html/2008.07206v2" style="color:#245b6b;">Farmer’s primary discussion</a>.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">Decision</h2>
+<p>Keep the preprint as a useful source for quantitative root stability. Lower its priority as an RH proof direction until a concrete small-shift transfer is supplied and screened. This corrects the emphasis of the preceding recommendation; it is not a new mathematical wall.</p>
+<p>No new research row, node, thaw, manuscript version or numerical scan is added. RH, G2 and both missing-original recovery groups remain open.</p>
+<p style="border-top:1px solid #d4dddd;padding-top:15px;font-size:13px;color:#617178;">Reviewed base: aa2d52b4bb37acce571cfd9db787ad8627b469af. All 104 conclusion records and 14 continuation demands reviewed for scope; historical proofs and certificates were not replayed. Coordinator audit only. The initial Maxima run left an infinite sum unevaluated; its output is preserved, and the corrected clean replay passes.</p>
+<p style="font-size:13px;"><a href="jensen-preprint-audit-2026-09-29-v1/sources.json" style="color:#245b6b;">Source provenance</a> · <a href="jensen-preprint-audit-2026-09-29-v1/validation.json" style="color:#245b6b;">Checks and limits</a> · <a href="jensen-preprint-audit-2026-09-29-v1/maxima-output-clean.txt" style="color:#245b6b;">Exact algebra results</a></p>
+</main></body></html>

@@ -566,6 +566,24 @@ Subgroup thaw conditions for the fourth family:
 
 ## September 29 published admission records (no research rows)
 
+**Completed external-proof audit (Codex):** the
+[Holland Jensen audit](audits/jensen-preprint-audit-2026-09-29-v1.html)
+checks normalization, matching, root stability and the analytic/derivative
+bounds under inherited sectorial and convolution results. No fatal defect
+was found in the checked main chain. Lemma 7.3 needs the matched
+construction's D-to-B comparison for localization; a degree-two scope
+check disproves the broader reading using its displayed inequalities alone.
+The main application retains that relation. Twenty-six exact identities
+pass in a clean Maxima run; this is not a full external-proof validation.
+
+**Same open gap**, ZERO-GEOMETRY / NS100: the method's large-shift region
+does not yield a small-shift, all-degree arithmetic transfer. Lower its
+priority as an RH proof lane; retain it as a quantitative source. Do not
+automatically increase the scan size or matching order. Reopening requires
+a concrete transfer to NS100's named obligation and a matched control.
+Farmer's critique is context, not a no-go theorem or a matched quantitative
+counterexample. No research row, theorem node, thaw or version.
+
 **Completed source applicability audit (Codex):** the
 [projected-cost cotangent/Estermann check](audits/mobius-estermann-transfer-2026-09-29-v1.html)
 reads the Maier–Rassias theorems beyond the abstract recorded by NS92. The
