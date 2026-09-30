@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-29",
+  "reviewed_commit": "b55d13ef6975e14a1f5b3cffe82381a68d64d943",
+  "verdict": "No defect found in the specialized existing first-zero dependency, retaining explicitly inherited inputs.",
+  "wall_check": "Same open gap: KERNEL-API, NS51/55/58",
+  "perturbation": "delta_2=-log(2)/100; all other delta_n=0",
+  "reviews": {
+    "detection": "Separate agent reconstruction; no defect found",
+    "first_zero": "Separate agent reconstruction; no defect found",
+    "coordinator": "Assumption matching and downstream scope checked",
+    "final_report_review": "No blocking error; clarified convergence of bounded K(a) quadratic values separately from lower semicontinuity of unbounded t."
+  },
+  "checks": {
+    "all_104_nodes_exactly_unchanged": true,
+    "all_14_continuation_demands_unchanged": true,
+    "frozen_group_table_and_conditions_unchanged": true,
+    "only_Kernel_API_scope_and_source_updated": true,
+    "manuscript_evidence_and_historical_manifests_unchanged": true,
+    "html_parsed_and_local_links_exist": true,
+    "visual_render": "Not verified; prior local-file browser restriction and unavailable system opener persist. Codex file panel requested separately.",
+    "manuscript_build": {
+      "command": "./manuscript/build.sh",
+      "exit_code": 0,
+      "pages": 358,
+      "undefined_or_duplicate_references": 0,
+      "mode": "Build verified targets up to date; no source changes."
+    }
+  },
+  "not_done": [
+    "No numerical experiment or interval certification",
+    "No reproof of the Gaussian construction, Poisson summation or canonical complete-form identity",
+    "No general finite-pattern, sensitivity-rate, bounded-floor or spectral-limit re-audit",
+    "No historical evidence recovery",
+    "No new arithmetic estimate, RH route admission, theorem node, thaw or manuscript version"
+  ],
+  "source_sha256": {
+    "evidence/v156/proof.tex": "c6ebe402b4555ec18384457f6a24222170a20599ec889dd9848b9d2019b8a384",
+    "evidence/v136/new_section.tex": "78e5f6cb2fe60bff4b6edd41594e8499d815cf4cd20b9d96eb0dec7b628828a3",
+    "evidence/v136/adversarial_review.md": "2075651e73d84fc3b3c698853e96914ac29a2a301324f750c1aeba40230d2cbd",
+    "evidence/v135/new_section.tex": "95b12e631f5f55c987ca8ddfdb1c8712b2a40bbaa01967ec29157742769b77fa",
+    "evidence/v155/proof.tex": "aa94567cd00321e710b902975183ed1e8676786646771d7c2bc5dbf8da173ead",
+    "manuscript/fixed_space_prime_action_v1.tex": "180d446f1df20147a1d6358fc20ef4952756c1ce6d53e463bddb430683ff9492"
+  },
+  "artifact_sha256": {
+    "audits/ns57-dependency-audit-2026-09-29-v1.html": "0b5159a05dce59af33e6f1d4dcde3b28109ac9efc3b05fc692cdbbd0afef9a49",
+    "audits/ns57-dependency-audit-2026-09-29-v1/README.md": "a1f93db59c3819c6166ceff70dff6a2207c1cd38ad486a3c77c80da62014dc18",
+    "audits/ns57-dependency-audit-2026-09-29-v1/detection-review.md": "b287d50fde282f0d258556ae9af2f7e0c40bc06dfb86d540b929bfd2e4e9beb2",
+    "audits/ns57-dependency-audit-2026-09-29-v1/first-zero-review.md": "d1225f24c72b47f47988bb645944180d3cfac19b8f51f24700f744d7f0cf639b",
+    "audits/ns57-dependency-audit-2026-09-29-v1/manuscript-build.txt": "1ae2a25e648e59dff05b640060e6289ddf6631f86a029067a48aff5cdf8c01c6",
+    "audits/ns57-dependency-audit-2026-09-29-v1/plan.json": "e7686986695107bcbe7ae7f1d6e4455b29fbcacd2d753be3299fa7f803ad4cf4"
+  }
+}

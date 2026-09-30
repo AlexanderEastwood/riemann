@@ -50,6 +50,23 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## September 29 NS57 dependency audit completed
+
+The [focused independent-agent audit](audits/ns57-dependency-audit-2026-09-29-v1.html)
+found no defect in NS57's first-zero chain for the specific
+`delta_2=-log(2)/100` perturbation used by PR #63. The two reviews reconstruct
+fixed-vector detection, complete cutoff transfer, small-window positivity,
+continuity, attainment and endpoint support, retaining the stated upstream
+complete-form and arithmetic-radical inputs. Compactness supplies the step
+needed beyond strong continuity when a prime shift enters the window.
+
+At the full first zero the entire altered form is nonnegative; at a parity
+sector's own first zero only that sector is guaranteed nonnegative. This
+validates PR #63's existing dependency, not an arithmetic estimate for the
+original form. No mathematical correction, new node, thaw or version is
+needed. **Wall check: Same open gap**, KERNEL-API (NS51/55/58). The validation
+recommended in the earlier dated section below is now complete.
+
 ## September 29 final Euler screen and research reassessment
 
 The [extra boundary-ordering test and three subagent reviews](audits/euler-boundary-reassessment-2026-09-29-v1.html)
