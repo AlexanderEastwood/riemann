@@ -566,6 +566,17 @@ Subgroup thaw conditions for the fourth family:
 
 ## September 29 published admission records (no research rows)
 
+**Completed validation (Codex and two separate agent reviewers):** the
+[NS57 dependency audit](audits/ns57-dependency-audit-2026-09-29-v1.html)
+reconstructs the first-zero chain for the explicit n=2 perturbation used in
+PR #63. No defect was found under the inherited canonical-form and original
+arithmetic-radical hypotheses. Compactness bridges strong shift continuity
+to continuity of the minimum; full and parity-sector first-zero scopes are
+kept distinct. The validation recommendation below is now fulfilled. No
+new arithmetic estimate, research row, node, thaw or manuscript version;
+**Same open gap**, KERNEL-API. The next candidate still needs the complete
+dependency edge and arithmetic-use explanation before any computation.
+
 The [final Euler boundary screen and reassessment](audits/euler-boundary-reassessment-2026-09-29-v1.html)
 rejects a one-sided mixed-boundary ordering in a 50/80-digit four-packet
 diagnostic, retaining exact prime-2/3 factors. No complete Weil energy is
@@ -573,7 +584,7 @@ computed. Three subagent reviews find no supplied arithmetic bridge and
 recommend relevance screening before further computation. **Same open gap**,
 KERNEL-API; no new proved-wall claim, node, thaw or version.
 
-Recommended next bounded validation, **not yet claimed or completed**:
+Historical recommendation from the reassessment (now completed above):
 independently reconstruct NS57's finite first-zero control for the explicit
 n=2 perturbation, checking fixed-vector detection, complete cutoff/domain
 transfer, continuity at prime entry, and attainment/parity/support. Preserve

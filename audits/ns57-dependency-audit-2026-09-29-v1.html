@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NS57 first-zero dependency audit — 29 September 2026</title></head>
+<body style="margin:0;background:#f5f2eb;color:#27343b;font:17px/1.65 Georgia,serif;">
+<main style="max-width:680px;margin:36px auto;padding:34px;background:white;border-top:5px solid #365e64;">
+<p style="margin:0;color:#63787b;font-size:12px;letter-spacing:1px;">RH PROJECT · DEPENDENCY AUDIT · 2026-09-29 · V1</p>
+<h1 style="font-size:30px;line-height:1.2;">The NS57 control survives the focused audit</h1>
+<p style="font-size:20px;">No defect was found in the chain used by PR #63. For the stated change to the coefficient at n=2, the altered family has negative compact tests in both parities and an attained finite first-zero window. The conclusion retains the archived complete-form and arithmetic-radical hypotheses; it is not a fresh proof of every upstream result.</p>
+<p style="padding:15px;background:#edf3f3;border-left:4px solid #365e64;"><strong>Wall check: Same open gap — KERNEL-API, NS51/55/58.</strong> This validates an existing control dependency. It does not establish an arithmetic sign estimate for the original form, reopen a frozen group or admit a new RH route.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">What “first zero” means here</h2>
+<p>It is the first window where the altered operator’s lowest energy reaches zero. It is not a newly located zero of the zeta function. At that full first-zero window the complete altered form is nonnegative and has a nonzero nullvector.</p>
+<p>The explicit alteration is δ<sub>2</sub>=−log(2)/100, with every other coefficient unchanged. Its n=2 weight stays positive. Two separate reviewers reconstructed the two halves of the argument; the coordinator checked that their hypotheses and conclusions match. Their full derivations and inherited assumptions are linked below.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">1. A negative perturbation direction becomes a negative compact test</h2>
+<p>Write d=log(2)/100 and ℓ=log 2. The bounded perturbation is B=d(T<sub>ℓ</sub>+T<sub>−ℓ</sub>), whose Fourier multiplier is 2d cos(ℓξ). Paired Fourier bumps where cos(ℓξ)≤−1/2 give normalized real even and real odd vectors with B-energy at most −d.</p>
+<p>Ordinary L² density of the finite radical span then supplies one fixed approximation h to each vector. Accuracy better than 1/16 preserves a strict negative margin because B is bounded. This approximation, including all its coefficients and centers, is fixed <em>before</em> the window grows.</p>
+<p>For the smooth cutoffs g<sub>a</sub>=χ<sub>a</sub>h, the complete original operator residual tends to zero and g<sub>a</sub> tends to h in ordinary norm. Thus</p>
+<p style="padding:13px;background:#f5f7f7;font-family:monospace;overflow-wrap:anywhere;">q<sub>δ,a</sub>[g<sub>a</sub>]=q<sub>a</sub>[g<sub>a</sub>]+⟨Bg<sub>a</sub>,g<sub>a</sub>⟩ → ⟨Bh,h⟩&lt;0.</p>
+<p>The audit traced the complete residual: it retains prime rows beyond the finite window cutoff and both pole terms. The smooth compact tests belong to the actual operator domain. No uniform approximation coefficients, global form-norm density, positive gap or RH assumption is used.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">2. Small windows start positive</h2>
+<p>Below 2a&lt;log 2, all prime correlations vanish, including the altered one. The restricted logarithmic principal form gains log(1/a) under dilation, while its physical remainder stays bounded as a shrinks. The reviewer reconstructed the complete lower estimate</p>
+<p style="padding:13px;background:#f5f7f7;font-family:monospace;overflow-wrap:anywhere;">q<sub>δ,a</sub>[f] ≥ [log(1/a)−2/π−log(2π)−2∫<sub>0</sub><sup>2a</sup>|k(y)|dy−4sinh(a)]‖f‖²,<br>k(y)=e<sup>−y/2</sup>/(1−e<sup>−2y</sup>)−1/(2y), &nbsp; k(0)=1/4.</p>
+<p>The bracket tends to positive infinity. This establishes the required initial positivity directly from the existing physical decomposition, without a numerical small-window certificate or an effective first-zero location.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">3. Compactness resolves the continuity question</h2>
+<p>After scaling to (−1,1), all windows have one logarithmic form domain. The form is t[u]+⟨K(a)u,u⟩, where t measures the log-weighted Fourier energy and K(a) is locally bounded and strongly continuous.</p>
+<p>At a prime-entry point, the compressed translation is strongly continuous but need not be continuous in operator norm. The argument does not assume otherwise. Bounded t-energy controls the Fourier tails; fixed physical support then makes these sets compact in L². Minimizing vectors therefore have strongly convergent subsequences. This compactness, together with the bounded strong continuity of K(a), makes the K(a) quadratic values converge. Lower semicontinuity of t gives the lower limit inequality, and a fixed minimizing test gives the upper limit inequality, proving continuity of the lowest energy.</p>
+<p>The principal multiplier is continuous in norm under dilation; the audited bound is sup<sub>ξ</sub>|α(ξ/a)−α(ξ/b)|≤5|log(a/b)|. Both signed pole terms are retained as a continuous finite-rank operator. The standard digamma asymptotic used to identify the logarithmic domain is recorded in <a href="https://dlmf.nist.gov/5.11.E2" style="color:#245b6b;">DLMF 5.11.2</a>.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">4. The zero is attained, with the stated support</h2>
+<p>Continuity between an initially positive window and a window containing a negative compact test gives a finite first zero. Compactness gives a minimizing vector, and the closed-form representation puts it in the operator domain as a genuine nullvector.</p>
+<p>If a full first-zero nullvector had smaller support diameter, translating it into a smaller window would preserve its norm and complete form value, contradicting positivity there. The pole pair is kept together to justify translation invariance. For a parity-sector first zero, symmetry gives the same contradiction in a smaller centered interval, without translating out of the sector.</p>
+<p><strong>Scope:</strong> the full first-zero parameter is the smaller of the two parity parameters. At a sector’s own first zero, only that sector is guaranteed nonnegative; the other may already be negative. Reaching both endpoints refers to essential support, not to a nonzero boundary trace. No simplicity or numerical threshold is asserted.</p>
+
+<h2 style="font-size:23px;margin-top:30px;">What remains inherited, and what this changes</h2>
+<p>The canonical complete form, original Gaussian source and its derivative decay, and the polarized global radical identity remain explicit inherited inputs. The required density and cutoff-transfer deductions were reconstructed from them. The Gaussian construction and Poisson summation were not reproved, and v1.36’s earlier independent review remains part of the record.</p>
+<p>This audit is specialized to the perturbation used by PR #63. It does not separately revalidate every finite perturbation pattern, NS57’s sensitivity rate or bounded-floor equivalences, or any historical numerical certificate.</p>
+<p><strong>PR #63’s scoped conclusion remains supported:</strong> its retained chain bounds hold for an altered family that has a first-zero nullvector. Those bounds alone cannot exclude that vector. The control loses the exact Euler recurrence and original radical identity, so it does not close original API or methods using those exact inputs. Negative altered tests also do not rule out a uniform bounded-floor method.</p>
+<p>The validation task is complete. No correction to the theorem’s stated scope was required, no manuscript version is added, and no new research proposal is admitted. RH, G2 and the cofinal signed-arithmetic estimate remain open.</p>
+
+<p style="border-top:1px solid #d4dddd;padding-top:15px;font-size:13px;color:#617178;">Reviewed base: b55d13ef6975e14a1f5b3cffe82381a68d64d943. All 104 recorded conclusions and 14 continuation inputs reviewed for scope. Separate agent validation is not external expert review or independent numerical replication. Both historical original-evidence recovery groups remain open.</p>
+<p style="font-size:13px;"><a href="ns57-dependency-audit-2026-09-29-v1/README.md" style="color:#245b6b;">Audit record</a> · <a href="ns57-dependency-audit-2026-09-29-v1/detection-review.md" style="color:#245b6b;">Detection and cutoff reconstruction</a> · <a href="ns57-dependency-audit-2026-09-29-v1/first-zero-review.md" style="color:#245b6b;">Continuity, attainment and support reconstruction</a></p>
+</main></body></html>
