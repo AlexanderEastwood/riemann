@@ -1,0 +1,105 @@
+{
+  "classification": "Diagnostic, not an interval certificate or complete Weil computation",
+  "reviewed_commit": "ccebc6524cf8adf5e83143ad00daa55b190737bd",
+  "dps": 80,
+  "control_sha256": "20d737be7f298dc77196545a4be32cfabb7961d1379b35b4c5ef1662f8577439",
+  "Davenport_Heilbronn": {
+    "name": "One-sided boundary ordering for exact Euler denominators",
+    "classification": "diagnostic, not a certificate",
+    "sample_domain": "Every window and pair of distinct primes; screen p=2,q=3",
+    "dps": 80,
+    "applicability": "Literal original Euler-denominator operators are not hypotheses supplied by this completed-function control.",
+    "observations": {},
+    "proved_control_obstruction": false,
+    "outcome": "not-applicable"
+  },
+  "NS100_NS101": "not-applicable: exact Euler-denominator hypotheses absent",
+  "NS57": "not used: finite coefficient alteration loses the exact identities being retained",
+  "p": 2,
+  "q": 3,
+  "window_half_width": "2",
+  "packet_half_width": "1/100",
+  "packet_centers": [
+    "1.5",
+    "1.9054651081081643819780131154643491",
+    "-1.5",
+    "-1.9054651081081643819780131154643491"
+  ],
+  "nonzero_exterior_paths": [
+    {
+      "i": 1,
+      "j": 0,
+      "p_sign": 1,
+      "q_sign": 1,
+      "overlap": "1.0"
+    },
+    {
+      "i": 3,
+      "j": 2,
+      "p_sign": -1,
+      "q_sign": -1,
+      "overlap": "1.0"
+    }
+  ],
+  "mixed_matrix": [
+    [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    [
+      "0.4082482904638630163662140124509819",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    [
+      "0.0",
+      "0.0",
+      "0.4082482904638630163662140124509819",
+      "0.0"
+    ]
+  ],
+  "symmetric_defect": [
+    [
+      "0.0",
+      "0.20412414523193150818310700622549095",
+      "0.0",
+      "0.0"
+    ],
+    [
+      "0.20412414523193150818310700622549095",
+      "0.0",
+      "0.0",
+      "0.0"
+    ],
+    [
+      "0.0",
+      "0.0",
+      "0.0",
+      "0.20412414523193150818310700622549095"
+    ],
+    [
+      "0.0",
+      "0.0",
+      "0.20412414523193150818310700622549095",
+      "0.0"
+    ]
+  ],
+  "rayleigh_values": {
+    "even_same_sign": "0.20412414523193150818310700622549095",
+    "even_opposite_sign": "-0.20412414523193150818310700622549095",
+    "odd_same_sign": "0.20412414523193150818310700622549095",
+    "odd_opposite_sign": "-0.20412414523193150818310700622549095"
+  },
+  "predicted_absolute_value": "0.20412414523193150818310700622549095",
+  "both_orderings_fail_diagnostically": true,
+  "scope": "The boundary defect alone is tested. No claim about indefiniteness of the compressed product, the complete Weil form, or API."
+}

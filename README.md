@@ -50,6 +50,25 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## September 29 final Euler screen and research reassessment
+
+The [extra boundary-ordering test and three subagent reviews](audits/euler-boundary-reassessment-2026-09-29-v1.html)
+identify a candidate-selection problem. The exact prime-2/3 factors give
+mixed exterior errors of both signs in a four-packet diagnostic; no negative
+Weil energy or compressed-product indefiniteness follows. The overlap
+mechanism is generic despite retaining the Euler parameters, and even a
+successful ordering lacked a complete bridge to the missing estimate.
+
+The rules now require that bridge, the actual use of arithmetic, and the
+decision changed by a test **before** candidate computation, including
+pre-claim audits. Supporting generic lemmas remain allowed when their
+conditional transfer and arithmetic hypotheses are explicit.
+
+**Wall check: Same open gap**, KERNEL-API. No new RH route is admitted.
+The recommended next action is independent validation of NS57's first-zero
+control, preserving v1.36's existing independent-review history. That audit
+is not performed here. All 104 node statuses and all freezes are retained.
+
 ## September 29 API prime-chain screen
 
 The [prime-chain admission audit](audits/api-prime-chain-screen-2026-09-29-v1.html)

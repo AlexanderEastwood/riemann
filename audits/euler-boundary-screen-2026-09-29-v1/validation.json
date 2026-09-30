@@ -1,0 +1,88 @@
+{
+  "reviewed_commit": "ccebc6524cf8adf5e83143ad00daa55b190737bd",
+  "review_scope": "Conclusions and dependency review: 104 unchanged node conclusions, 14 continuation groups, current instructions/README/board/ledger and prior audits; not a replay of historical proofs or certificates.",
+  "base_source_sha256": {
+    "AGENTS.md": "6c4b30a5b702f3ae455f2e023735db491f86550077dc6e83418857d52a377fa0",
+    "PROPOSAL_TEMPLATE.md": "e0cc20cd191a2074859a920c751fa4d5e8e0b91b70a50ee0e982c2e54e35ea16",
+    "research-map.json": "81c1d340711bc834f92d4bc04246ff4f3b0f1d95faf82a6a46dc050d4b7637f1",
+    "README.md": "69c06aa5319b9b1bd4b0c417aaf24ae6979ed1cc8b6b49f4f5401e9cefb81ee5",
+    "NEXT_STEPS.md": "ad01b33b4c420d92233197ac903fe64c36defb469e7637a88cfea48a4994a0d0",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "evidence/v156/proof.tex": "c6ebe402b4555ec18384457f6a24222170a20599ec889dd9848b9d2019b8a384",
+    "evidence/v157/proof.tex": "02194d8ad744c3cefd5c347dee6bd1867e3ac3643cc0b274dc24dc8426fb4fb0"
+  },
+  "initial_wall": "Distinct auxiliary test retaining exact Euler denominators; original KERNEL-API remains open.",
+  "final_wall": "Same open gap for KERNEL-API. Distinct boundary ordering rejected at admission; no new proved wall claimed.",
+  "reason_for_refinement": "Independent mathematical/process reviews identify generic overlap algebra and absence of a complete-Weil bridge even if ordering succeeded.",
+  "screen": {
+    "precision_decimal_digits": [
+      50,
+      80
+    ],
+    "prime_pair": [
+      2,
+      3
+    ],
+    "packet_count": 4,
+    "window_half_width": 2,
+    "packet_half_width": "1/100",
+    "displayed_values_agree": true,
+    "energy_magnitudes": "0.20412414523193150818310700622549095",
+    "both_signs_each_parity": true,
+    "classification": "floating diagnostic, not interval/ball certification"
+  },
+  "retrospective_relevance": {
+    "target_edge": "absent: no conditional transfer from this ordering to complete signed Weil/API target",
+    "arithmetic_use": "partial: exact parameters retained, generic translation-overlap mechanism",
+    "decision_value": "limited: rejection of this ordering only"
+  },
+  "pyright": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "manuscript_build": {
+    "pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "source_changed": false,
+    "note": "build wrapper passed; latexmk existing target up-to-date"
+  },
+  "report": {
+    "html_parsed": true,
+    "local_links_resolve": true,
+    "visual_render_verified": false
+  },
+  "reviews": [
+    "independent-math-review.md",
+    "process-review.md",
+    "route-triage.md"
+  ],
+  "review_limits": "Three separate subagent assessments, not external expert review or independent historical numerical replication. No material local algebra error identified; conceptual relevance deficiency recorded.",
+  "next_recommended_action": "Targeted independent NS57 first-zero dependency reconstruction; not performed or claimed in this turn. Preserve existing v1.36 independent-review record.",
+  "node_status_counts": {
+    "open": 10,
+    "proved": 48,
+    "closed": 33,
+    "blocked": 11,
+    "live": 2
+  },
+  "no_change": [
+    "104 node conclusions/statuses",
+    "14 frozen input groups",
+    "both historical original-evidence gaps",
+    "RH/G2/API open status",
+    "manuscript version"
+  ],
+  "artifact_sha256": {
+    "audits/euler-boundary-screen-2026-09-29-v1/README.md": "f6a8bb8c2743ca47604e83c31b1b041cafd27a2493dbd47613389b7282d8bb36",
+    "audits/euler-boundary-screen-2026-09-29-v1/admission.json": "5a05dfc8a251c9392e3432cb99660eb2d3d6f654d819a514a492c8630d00277f",
+    "audits/euler-boundary-screen-2026-09-29-v1/independent-math-review.md": "4e667310edcb01207913c107ab86bca124a69098ce2add440d032fb738b6e902",
+    "audits/euler-boundary-screen-2026-09-29-v1/process-review.md": "90286775f7f03b4f17be3609e795bb8360ea30cccb91186f331a2c8c5669f0e9",
+    "audits/euler-boundary-screen-2026-09-29-v1/pyrightconfig.json": "225f4b533fae96cdb7c207d436a5efdf880b240e7082f38a7cf9df52c2d27761",
+    "audits/euler-boundary-screen-2026-09-29-v1/requirements-replay.txt": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645",
+    "audits/euler-boundary-screen-2026-09-29-v1/route-triage.md": "1c61016af91c1c95870c99f8b1507ed74c024a954dbf6d06f951d4be164af2a3",
+    "audits/euler-boundary-screen-2026-09-29-v1/screen-50dps.json": "de60300907b9ebcdf05283d37b0b01861758df34deb506d3c0a09fadb11a7811",
+    "audits/euler-boundary-screen-2026-09-29-v1/screen-80dps.json": "14d251d22f14e14dc7da80705f2f3e5c070770e6e559e8f680b9cad9ec22c8e2",
+    "audits/euler-boundary-screen-2026-09-29-v1/screen.py": "635cbf6ab12216917926dbb625d0e4d03863c6fdb4c1e1263019f14d0ab30766",
+    "audits/euler-boundary-reassessment-2026-09-29-v1.html": "e79868ce15a4a1e3668bc52b6c3453f6be27aef40e6c226f32b48fb72874834f"
+  }
+}
