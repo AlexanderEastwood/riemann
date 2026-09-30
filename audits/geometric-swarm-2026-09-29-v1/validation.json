@@ -22,5 +22,6 @@
   "html_links_checked": 7,
   "html_review": "Structural and local-link checks only; no rendered/screenshot layout audit.",
   "publication_scope": "Audit and runner only; no new research row, thaw, manuscript version or tag.",
-  "code_review": "Read-only assisting-agent integration review found no blocking runtime, credential-inheritance or budget issue. DNS time excluded from request timeout; HTTP success is not reviewer schema or mathematical acceptance."
+  "code_review": "Read-only assisting-agent integration review found no blocking runtime, credential-inheritance or budget issue. DNS time excluded from request timeout; HTTP success is not reviewer schema or mathematical acceptance.",
+  "html_open": "Default-browser command failed (no compatible executable); Codex file-panel open returned queued."
 }
