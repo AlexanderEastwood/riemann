@@ -1,0 +1,77 @@
+Loading /Users/alex/.maxima/maxima-init.mac
+batch("audits/two-prime-contact-2026-09-29-v1/check.mac")
+kill(all)
+display2d:false
+passed:0
+check_zero(expr,label):=block([r:ratsimp(trigsimp(expr))],
+           if not is(r = 0) then error("FAIL",label,r),passed:passed+1,
+           print("PASS",label))
+b:(x*(1-x))/(x^2-x+1)
+v:(a+c)/2+((a-c)*cos(%pi*x))/2
+A:(1-b*y)/v
+k:-diff(v,x)*A-diff(b,x)*y
+check_zero(b-(1/(x^2-x+1)-1),"bounded drift rewrite")
+PASS bounded drift rewrite 
+check_zero(subst(0,x,b),"root zero")
+PASS root zero 
+check_zero(subst(1,x,b),"root one")
+PASS root one 
+check_zero(subst(0,x,diff(b,x))-1,"drift derivative zero")
+PASS drift derivative zero 
+check_zero(subst(1,x,diff(b,x))+1,"drift derivative one")
+PASS drift derivative one 
+check_zero(subst(0,x,v)-a,"speed zero")
+PASS speed zero 
+check_zero(subst(1,x,v)-c,"speed one")
+PASS speed one 
+check_zero(subst(0,x,diff(v,x)),"speed derivative zero")
+PASS speed derivative zero 
+check_zero(subst(1,x,diff(v,x)),"speed derivative one")
+PASS speed derivative one 
+check_zero(A*v+y*b-1,"alpha on Reeb is one")
+PASS alpha on Reeb is one 
+check_zero(b*diff(A,x)+k*diff(A,y),"iR dalpha dt component and conserved tau")
+PASS iR dalpha dt component and conserved tau 
+check_zero(-v*diff(A,x)+k,"iR dalpha dx component")
+PASS iR dalpha dx component 
+check_zero(-v*diff(A,y)-b,"iR dalpha dy component")
+PASS iR dalpha dy component 
+check_zero(A-y*diff(A,y)+(-1)/v,"contact volume coefficient")
+PASS contact volume coefficient 
+check_zero(diff(log(x)-log(1-x)-x,x)-1/b,
+           "straightened time derivative inside corridor")
+PASS straightened time derivative inside corridor 
+check_zero((tau*v)/b+(1-tau*v)/b+(-1)/b,"alpha becomes du plus tau dtheta")
+PASS alpha becomes du plus tau dtheta 
+check_zero(((-v/b)*b)/v+1,"absolute volume Jacobian is one")
+PASS absolute volume Jacobian is one 
+L:matrix([diff(b,x),0],[diff(k,x),diff(k,y)])
+L0:subst([x = 0,y = 0],L)
+L1:subst([x = 1,y = 0],L)
+check_zero(determinant(z*ident(2)-L0)-(z^2-1),
+           "first transverse characteristic polynomial")
+PASS first transverse characteristic polynomial 
+check_zero(determinant(z*ident(2)-L1)-(z^2-1),
+           "second transverse characteristic polynomial")
+PASS second transverse characteristic polynomial 
+check_zero(determinant(ident(2)-matrix([r,0],[h,1/r]))-(2-r+(-1)/r),
+           "return shear leaves graded denominator")
+PASS return shear leaves graded denominator 
+check_zero((1-r)*(1-1/r)-(2-r+(-1)/r),"exterior supertrace determinant")
+PASS exterior supertrace determinant 
+M:matrix([X,U*X],[V*Y,Y])
+D:determinant(ident(2)-M)
+D0:(1-X)*(1-Y)
+check_zero(D-D0+U*V*X*Y,"two-way scalar coupling determinant")
+PASS two-way scalar coupling determinant 
+check_zero(subst(U = 0,D)-D0,"one-way upper missing coupling")
+PASS one-way upper missing coupling 
+check_zero(subst(V = 0,D)-D0,"one-way lower missing coupling")
+PASS one-way lower missing coupling 
+check_zero(subst([X = 0,Y = 0],diff(-log(D)+log(D0),X,1,Y,1))-U*V,
+           "first mixed log coefficient")
+PASS first mixed log coefficient 
+print("TOTAL_PASSED",passed)
+TOTAL_PASSED 25 
+if not is(passed = 25) then error("unexpected check count",passed)
+quit()

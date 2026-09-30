@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Two-prime contact construction — 29 September 2026</title></head>
+<body style="margin:0;background:#f2f0e9;color:#25302c;font-family:Georgia,serif;line-height:1.65;">
+<main style="max-width:680px;margin:36px auto;padding:38px 30px;background:#fffdf8;border-top:5px solid #276655;">
+<p style="font-family:Arial,sans-serif;font-size:12px;letter-spacing:1.3px;text-transform:uppercase;color:#276655;">Riemann project · construction audit · started 29 September 2026 · v1</p>
+<h1 style="font-size:35px;line-height:1.15;margin:10px 0 24px;">The connected geometry exists.<br>It does not yet connect the arithmetic.</h1>
+<p style="font-size:19px;">We constructed a connected four-dimensional symplectic space whose three-dimensional contact energy surface has exactly two primitive periodic orbits, with periods log 2 and log 3. It has no unwanted mixed periodic orbit. That answers the narrow construction question from PR #69.</p>
+<p style="padding:16px;background:#e8f0e9;border-left:4px solid #276655;"><strong>Wall check: Same open gap.</strong> The global arithmetic and positivity transfers remain absent. We also identified an exact limitation: the natural scalar operator for this geometry has continuous spectrum and no eigenvalues. It is not the sought operator with discrete zeta-zero levels.</p>
+<h2 style="font-size:24px;margin-top:30px;">The actual construction</h2>
+<p>Start with a cylinder: one coordinate t repeats after one unit, while x runs along the real line. Add their two momentum coordinates, τ and y. This gives four dimensions. Use</p>
+<p style="padding:16px;background:#f1f3ed;font-family:Georgia,serif;">b(x) = x(1 − x)/(x² − x + 1)<br>v(x) = (a + c)/2 + (a − c) cos(πx)/2<br>a = 1/log 2, &nbsp; c = 1/log 3<br>H = v(x)τ + b(x)y.</p>
+<p>On the energy surface H = 1, the flow is complete and the contact volume never vanishes. Away from x = 0 and x = 1, the x coordinate moves strictly in one direction, so it cannot return. At those two levels, the remaining equations leave exactly one periodic circle each. Their local expansion and contraction give the required two prime-period weights.</p>
+<p>This is an explicit model with equations and a classification of its recurrent trajectories. It does not rely on a diagram or on treating a named space as a constructed object. <a href="two-prime-contact-2026-09-29-v1/construction-review.md" style="color:#276655;">Construction and review</a>.</p>
+<h2 style="font-size:24px;margin-top:30px;">Why connectedness was too weak a target</h2>
+<p>The momentum τ is conserved. It equals log 2 on one periodic circle and log 3 on the other. A trajectory therefore cannot approach one circle in the past and the other in the future. Paths connecting them on the base cylinder escape to infinity in the extra momentum direction after lifting to the full energy surface.</p>
+<p>The space is connected, but the two trapped orbit components do not interact. The same construction works with arbitrary distinct positive assigned periods. Primality is supplied as an input; this geometry does not explain it.</p>
+<p>That corrects the earlier warning about mixed orbits. Mere connectedness does not force them. In a specified two-state model, positive transitions in both directions do add a mixed term; a one-way transition need not. An orbit exactly at log 6 also requires a particular rule for adding travel times. <a href="two-prime-contact-2026-09-29-v1/mixed-cycle-audit.md" style="color:#276655;">Exact mixing calculation</a>.</p>
+<h2 style="font-size:24px;margin-top:30px;">A stronger result about the ordinary spectrum</h2>
+<p>On each of the three open regions separated by x = 0 and x = 1, an explicit coordinate change reduces the contact form and flow to</p>
+<p style="padding:16px;background:#f1f3ed;">α = du + τ dθ, &nbsp;&nbsp; R = ∂/∂u.</p>
+<p>The flow is simply translation along u. Those regions cover the entire scalar Hilbert space up to sets of volume zero. Fourier transformation then gives a continuous spectrum covering the real line, with no square-integrable eigenvectors.</p>
+<p>This rules out the proposed discrete-spectrum interpretation for the <strong>natural scalar realization of this model</strong>. It does not rule out every weighted, resonant or geometric approach. In particular, an assigned damped transport on differential forms does reproduce the two local signed orbit contributions. Its distributional trace is a different operation from a positive ordinary Hilbert-space trace. The required analytic realization and full arithmetic completion are still missing. <a href="two-prime-contact-2026-09-29-v1/transfer-audit.md" style="color:#276655;">Spectral argument and domains</a>.</p>
+<h2 style="font-size:24px;margin-top:30px;">What was checked</h2>
+<ul style="padding-left:22px;">
+<li>Three assisting agents checked the construction, its spectral interpretation and the mixed-cycle model.</li>
+<li>Maxima verified 25 exact identities, including the contact equations, conserved momentum, return-map polynomials and mixing determinant.</li>
+<li>The initial output is preserved. After a reviewer noted that it loaded a user initialization file, all 25 identities passed again with initialization disabled.</li>
+<li>The completeness, recurrence and spectrum conclusions have explicit analytic arguments; they do not follow merely from the symbolic pass count.</li>
+</ul>
+<p>The local flat-trace convention follows <a href="https://math.berkeley.edu/~zworski/zeta.pdf" style="color:#276655;">Dyatlov–Zworski, §2.2 and Appendix B</a>. Their compact-Anosov global theorem is not applicable to this noncompact example. No new GPU batch, fitted zero experiment or historical certificate replay was performed.</p>
+<h2 style="font-size:24px;margin-top:30px;">Where this leaves the project</h2>
+<p>I would stop expanding this model merely to include more primes. The small construction has answered its question, and its scalar spectral limitation is exact. Further work needs a specified weighted analytic realization that retains the complete prime, gamma, pole and boundary contributions and supplies the original signed estimate. None is supplied here.</p>
+<p>All 104 registered conclusions, 14 continuation-input demands and freeze conditions remain intact. Both historical evidence-recovery groups remain open. No new research row, manuscript version, arithmetic estimate, G2 result or RH result is claimed.</p>
+<p style="border-top:1px solid #c6d2c8;padding-top:16px;margin-top:28px;font-size:14px;"><a href="two-prime-contact-2026-09-29-v1/README.md" style="color:#276655;">Full mathematical record</a> · <a href="two-prime-contact-2026-09-29-v1/check.mac" style="color:#276655;">Maxima source</a> · <a href="two-prime-contact-2026-09-29-v1/check-clean-output.txt" style="color:#276655;">Clean-start output</a></p>
+</main></body></html>

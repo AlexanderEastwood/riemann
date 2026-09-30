@@ -564,6 +564,28 @@ Subgroup thaw conditions for the fourth family:
 - ZERO-GEOMETRY: a specific original arithmetic identity absent from the applicable NS94/100/101 controls; no generic theta factorization rerun.
 - OPERATOR-BRIDGES: name and construct the missing route-specific operator/evaluator/transfer; assess each construction separately.
 
+## September 29 two-prime construction audit completed (no research row)
+
+Codex and three assisting agents completed the [connected contact audit](audits/two-prime-contact-2026-09-29-v1/README.md)
+and [brief](audits/two-prime-contact-2026-09-29-v1.html). A concrete connected
+four-dimensional cotangent construction has exactly two primitive closed
+Reeb orbits with periods log2/log3. Conserved momentum forbids a full lifted
+heteroclinic connection; arbitrary distinct positive periods give the same geometry.
+The natural scalar contact-volume realization is exactly three translation
+channels, with purely absolutely continuous spectrum and no eigenvalues.
+Assigned damped horizontal-form transport retains a cutoff signed orbit
+trace, but its closed analytic realization and arithmetic completion are
+not supplied. All 25 identities pass in a clean-start Maxima replay; initial
+user-init output is retained with its provenance limitation.
+
+**Same open gap**, OPERATOR-BRIDGES/WEIL-FLOOR. Connectedness alone was too
+weak a prerequisite; PR69's generic-mixing language is qualified forward.
+Positive two-way scalar communication gives mixed terms only under the stated
+transition/roof model. Stop mere larger-prime-list constructions and the naive
+scalar discrete-spectrum interpretation. A future candidate needs the actual
+weighted analytic and complete signed-form transfer before a research scan.
+No general geometry closure, new row, thaw, arithmetic estimate or version.
+
 ## September 29 geometric-swarm audit and local runner (no research row)
 
 Codex plus three assisting agents completed the bounded [construction audit](audits/geometric-swarm-2026-09-29-v1/README.md)
