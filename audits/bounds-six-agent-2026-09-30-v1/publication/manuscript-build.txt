@@ -106,11 +106,11 @@ ps/lm/lm-mathsy.enc}] [2]
 (/usr/local/texlive/2026/texmf-dist/tex/latex/lm/ot1lmtt.fd) [3{/usr/local/texl
 ive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
 
-LaTeX Warning: Reference `sec:v158-nb-difference' on page 4 undefined on input 
+LaTeX Warning: Reference `sec:v158-nb-difference' on page 4 undefined on input
 line 229.
 
 
-LaTeX Warning: Reference `sec:ns58-boundary' on page 4 undefined on input line 
+LaTeX Warning: Reference `sec:ns58-boundary' on page 4 undefined on input line
 239.
 
 
@@ -168,7 +168,7 @@ LaTeX Warning: Reference `lem:v141-centering' on page 6 undefined on input line
  402.
 
 
-LaTeX Warning: Reference `prop:v140-ground4' on page 6 undefined on input line 
+LaTeX Warning: Reference `prop:v140-ground4' on page 6 undefined on input line
 408.
 
 
@@ -201,7 +201,7 @@ LaTeX Warning: Reference `prop:v135-growing-radical' on page 7 undefined on inp
 ut line 467.
 
 
-LaTeX Warning: Reference `cor:v135-coercivity-obstruction' on page 7 undefined 
+LaTeX Warning: Reference `cor:v135-coercivity-obstruction' on page 7 undefined
 on input line 471.
 
 
@@ -383,15 +383,15 @@ LaTeX Warning: Reference `thm:threepiece' on page 18 undefined on input line 11
 42.
 
 
-LaTeX Warning: Reference `eq:shell-balance' on page 18 undefined on input line 
+LaTeX Warning: Reference `eq:shell-balance' on page 18 undefined on input line
 1146.
 
 
-LaTeX Warning: Reference `eq:shell-balance' on page 18 undefined on input line 
+LaTeX Warning: Reference `eq:shell-balance' on page 18 undefined on input line
 1149.
 
 
-LaTeX Warning: Reference `eq:shell-balance' on page 18 undefined on input line 
+LaTeX Warning: Reference `eq:shell-balance' on page 18 undefined on input line
 1158.
 
 [18] (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd)
@@ -469,7 +469,7 @@ LaTeX Warning: Reference `lem:v111-cutoff' on page 23 undefined on input line 1
 438.
 
 
-LaTeX Warning: Reference `eq:v111-adjoint-error' on page 23 undefined on input 
+LaTeX Warning: Reference `eq:v111-adjoint-error' on page 23 undefined on input
 line 1439.
 
 
@@ -477,7 +477,7 @@ LaTeX Warning: Reference `eq:v111-adjoint-finite' on page 23 undefined on input
  line 1451.
 
 
-LaTeX Warning: Reference `eq:v111-adjoint-error' on page 23 undefined on input 
+LaTeX Warning: Reference `eq:v111-adjoint-error' on page 23 undefined on input
 line 1465.
 
 
@@ -552,11 +552,11 @@ LaTeX Warning: Reference `ass:evaluators' on page 28 undefined on input line 17
 LaTeX Warning: Reference `thm:mleak' on page 29 undefined on input line 1789.
 
 
-LaTeX Warning: Reference `eq:jetgram-upper' on page 29 undefined on input line 
+LaTeX Warning: Reference `eq:jetgram-upper' on page 29 undefined on input line
 1797.
 
 
-LaTeX Warning: Reference `eq:det-one-sided' on page 29 undefined on input line 
+LaTeX Warning: Reference `eq:det-one-sided' on page 29 undefined on input line
 1797.
 
 
@@ -622,7 +622,7 @@ e 2015.
 
 [33]
 
-LaTeX Warning: Reference `eq:first-range-kernel' on page 34 undefined on input 
+LaTeX Warning: Reference `eq:first-range-kernel' on page 34 undefined on input
 line 2043.
 
 [34]
@@ -695,7 +695,7 @@ LaTeX Warning: Reference `eq:window-prime-calculus' on page 40 undefined on inp
 ut line 2347.
 
 
-LaTeX Warning: Reference `eq:window-det-modulus' on page 40 undefined on input 
+LaTeX Warning: Reference `eq:window-det-modulus' on page 40 undefined on input
 line 2365.
 
 [40]
@@ -721,7 +721,7 @@ LaTeX Warning: Reference `eq:metric-coercive' on page 42 undefined on input lin
 e 2425.
 
 
-LaTeX Warning: Reference `thm:off-line-spectrum' on page 42 undefined on input 
+LaTeX Warning: Reference `thm:off-line-spectrum' on page 42 undefined on input
 line 2429.
 
 
@@ -767,7 +767,7 @@ LaTeX Warning: Reference `eq:v15-annihilation' on page 44 undefined on input li
 ne 2551.
 
 
-LaTeX Warning: Reference `eq:v15-projector-coercivity' on page 44 undefined on 
+LaTeX Warning: Reference `eq:v15-projector-coercivity' on page 44 undefined on
 input line 2571.
 
 
@@ -783,7 +783,7 @@ LaTeX Warning: Reference `eq:v15-variance' on page 44 undefined on input line 2
 606.
 
 
-LaTeX Warning: Reference `eq:v15-variance-limit' on page 44 undefined on input 
+LaTeX Warning: Reference `eq:v15-variance-limit' on page 44 undefined on input
 line 2609.
 
 
@@ -809,7 +809,7 @@ LaTeX Warning: Reference `prop:v15-projector' on page 46 undefined on input lin
 e 2687.
 
 
-LaTeX Warning: Reference `eq:v16-exact-cut' on page 46 undefined on input line 
+LaTeX Warning: Reference `eq:v16-exact-cut' on page 46 undefined on input line
 2727.
 
 
@@ -843,7 +843,7 @@ LaTeX Warning: Reference `lem:v16-band-transform' on page 47 undefined on input
 
 [47]
 
-LaTeX Warning: Reference `eq:v17-pair-edge' on page 48 undefined on input line 
+LaTeX Warning: Reference `eq:v17-pair-edge' on page 48 undefined on input line
 2849.
 
 
@@ -868,7 +868,7 @@ LaTeX Warning: Reference `v1:lem:strip' on page 49 undefined on input line 2983
 .
 
 
-LaTeX Warning: Reference `eq:v18-full-gram' on page 49 undefined on input line 
+LaTeX Warning: Reference `eq:v18-full-gram' on page 49 undefined on input line
 2989.
 
 [49]
@@ -881,7 +881,7 @@ LaTeX Warning: Reference `v1:eq:zeros' on page 50 undefined on input line 3006.
 
 
 
-LaTeX Warning: Reference `eq:v18-full-weil' on page 50 undefined on input line 
+LaTeX Warning: Reference `eq:v18-full-weil' on page 50 undefined on input line
 3008.
 
 
@@ -893,11 +893,11 @@ LaTeX Warning: Reference `prop:v17-pair-edge' on page 50 undefined on input lin
 e 3013.
 
 
-LaTeX Warning: Reference `thm:v15-finite-metric' on page 50 undefined on input 
+LaTeX Warning: Reference `thm:v15-finite-metric' on page 50 undefined on input
 line 3037.
 
 
-LaTeX Warning: Reference `eq:v18-full-weil' on page 50 undefined on input line 
+LaTeX Warning: Reference `eq:v18-full-weil' on page 50 undefined on input line
 3041.
 
 
@@ -914,7 +914,7 @@ LaTeX Warning: Reference `eq:v19-local-count' on page 51 undefined on input lin
 e 3107.
 
 
-LaTeX Warning: Reference `eq:v19-synthesis' on page 51 undefined on input line 
+LaTeX Warning: Reference `eq:v19-synthesis' on page 51 undefined on input line
 3110.
 
 
@@ -957,7 +957,7 @@ LaTeX Warning: Reference `eq:ccm-commutator' on page 53 undefined on input line
 
 [53]
 
-LaTeX Warning: Citation `ConnesConsani2023' on page 54 undefined on input line 
+LaTeX Warning: Citation `ConnesConsani2023' on page 54 undefined on input line
 3275.
 
 
@@ -966,15 +966,15 @@ LaTeX Warning: Reference `eq:v14-euler-tail' on page 54 undefined on input line
 
 [54]
 
-LaTeX Warning: Reference `eq:v14-primitive' on page 55 undefined on input line 
+LaTeX Warning: Reference `eq:v14-primitive' on page 55 undefined on input line
 3346.
 
 
-LaTeX Warning: Reference `eq:v14-smoothing' on page 55 undefined on input line 
+LaTeX Warning: Reference `eq:v14-smoothing' on page 55 undefined on input line
 3381.
 
 
-LaTeX Warning: Citation `ConnesConsani2023' on page 55 undefined on input line 
+LaTeX Warning: Citation `ConnesConsani2023' on page 55 undefined on input line
 3382.
 
 
@@ -982,7 +982,7 @@ LaTeX Warning: Reference `eq:v14-translation' on page 55 undefined on input lin
 e 3397.
 
 
-LaTeX Warning: Citation `ConnesConsani2023' on page 55 undefined on input line 
+LaTeX Warning: Citation `ConnesConsani2023' on page 55 undefined on input line
 3415.
 
 [55]
@@ -1085,7 +1085,7 @@ LaTeX Warning: Reference `lem:pswf-away-energy' on page 60 undefined on input l
 ine 3754.
 
 
-LaTeX Warning: Reference `lem:pswf-far-volterra' on page 60 undefined on input 
+LaTeX Warning: Reference `lem:pswf-far-volterra' on page 60 undefined on input
 line 3760.
 
 [60]
@@ -1094,7 +1094,7 @@ LaTeX Warning: Reference `eq:pswf-far-controlled' on page 61 undefined on input
  line 3771.
 
 
-LaTeX Warning: Reference `eq:lattice-log-target' on page 61 undefined on input 
+LaTeX Warning: Reference `eq:lattice-log-target' on page 61 undefined on input
 line 3775.
 
 
@@ -1115,7 +1115,7 @@ LaTeX Warning: Reference `eq:pswf-away' on page 62 undefined on input line 3825
 .
 
 
-LaTeX Warning: Reference `thm:lattice-tail' on page 62 undefined on input line 
+LaTeX Warning: Reference `thm:lattice-tail' on page 62 undefined on input line
 3829.
 
 
@@ -1123,7 +1123,7 @@ LaTeX Warning: Reference `eq:scaled-poisson-radial' on page 62 undefined on inp
 ut line 3829.
 
 
-LaTeX Warning: Reference `eq:lower-tail-l2' on page 62 undefined on input line 
+LaTeX Warning: Reference `eq:lower-tail-l2' on page 62 undefined on input line
 3834.
 
 
@@ -1143,7 +1143,7 @@ LaTeX Warning: Reference `thm:v14-radical' on page 62 undefined on input line 3
 843.
 
 
-LaTeX Warning: Reference `eq:lower-tail-l2' on page 62 undefined on input line 
+LaTeX Warning: Reference `eq:lower-tail-l2' on page 62 undefined on input line
 3851.
 
 
@@ -1164,7 +1164,7 @@ nput line 3876.
 
 [62]
 
-LaTeX Warning: Reference `eq:lower-tail-l2' on page 63 undefined on input line 
+LaTeX Warning: Reference `eq:lower-tail-l2' on page 63 undefined on input line
 3922.
 
 
@@ -1180,7 +1180,7 @@ LaTeX Warning: Reference `eq:v13-correlation-jumps' on page 63 undefined on inp
 ut line 3930.
 
 
-LaTeX Warning: Reference `eq:lower-tail-l2' on page 63 undefined on input line 
+LaTeX Warning: Reference `eq:lower-tail-l2' on page 63 undefined on input line
 3951.
 
 
@@ -1193,11 +1193,11 @@ LaTeX Warning: Reference `thm:v14-radical' on page 63 undefined on input line 3
 
 [63]
 
-LaTeX Warning: Reference `eq:lower-tail-l2' on page 64 undefined on input line 
+LaTeX Warning: Reference `eq:lower-tail-l2' on page 64 undefined on input line
 3986.
 
 
-LaTeX Warning: Reference `thm:lattice-tail' on page 64 undefined on input line 
+LaTeX Warning: Reference `thm:lattice-tail' on page 64 undefined on input line
 3991.
 
 
@@ -1205,11 +1205,11 @@ LaTeX Warning: Reference `eq:centered-prime-cumulative' on page 64 undefined on
  input line 3996.
 
 
-LaTeX Warning: Reference `eq:lower-tail-l2' on page 64 undefined on input line 
+LaTeX Warning: Reference `eq:lower-tail-l2' on page 64 undefined on input line
 4002.
 
 
-LaTeX Warning: Reference `eq:endpoint-jump-rate' on page 64 undefined on input 
+LaTeX Warning: Reference `eq:endpoint-jump-rate' on page 64 undefined on input
 line 4013.
 
 
@@ -1263,7 +1263,7 @@ LaTeX Warning: Reference `eq:pole-prime-small' on page 66 undefined on input li
 ne 4170.
 
 
-LaTeX Warning: Reference `lem:g1-inversion' on page 66 undefined on input line 
+LaTeX Warning: Reference `lem:g1-inversion' on page 66 undefined on input line
 4177.
 
 
@@ -1272,11 +1272,11 @@ LaTeX Warning: Reference `eq:G1-sobolev' on page 66 undefined on input line 417
 
 [66]
 
-LaTeX Warning: Citation `ConnesConsani2023' on page 67 undefined on input line 
+LaTeX Warning: Citation `ConnesConsani2023' on page 67 undefined on input line
 4204.
 
 
-LaTeX Warning: Reference `eq:g1-endpoint-limits' on page 67 undefined on input 
+LaTeX Warning: Reference `eq:g1-endpoint-limits' on page 67 undefined on input
 line 4209.
 
 [67]
@@ -1290,7 +1290,7 @@ LaTeX Warning: Reference `eq:G1-continuum' on page 68 undefined on input line 4
 
 [68]
 
-LaTeX Warning: Reference `lem:g1-inversion' on page 69 undefined on input line 
+LaTeX Warning: Reference `lem:g1-inversion' on page 69 undefined on input line
 4313.
 
 
@@ -1318,7 +1318,7 @@ LaTeX Warning: Reference `eq:g1-threshold-beta' on page 69 undefined on input l
 ine 4338.
 
 
-LaTeX Warning: Reference `eq:g1-threshold-gamma' on page 69 undefined on input 
+LaTeX Warning: Reference `eq:g1-threshold-gamma' on page 69 undefined on input
 line 4338.
 
 
@@ -1326,7 +1326,7 @@ LaTeX Warning: Reference `eq:g1-master-bound' on page 69 undefined on input lin
 e 4342.
 
 
-LaTeX Warning: Reference `eq:finite-g1-transfer' on page 69 undefined on input 
+LaTeX Warning: Reference `eq:finite-g1-transfer' on page 69 undefined on input
 line 4342.
 
 
@@ -1352,12 +1352,12 @@ LaTeX Warning: Reference `lem:g1-high-low' on page 70 undefined on input line 4
 
 [70]
 
-LaTeX Warning: Reference `eq:g1-complete-matrix' on page 71 undefined on input 
+LaTeX Warning: Reference `eq:g1-complete-matrix' on page 71 undefined on input
 line 4457.
 
 [71]
 
-LaTeX Warning: Reference `eq:beta-bcoeff-direct' on page 72 undefined on input 
+LaTeX Warning: Reference `eq:beta-bcoeff-direct' on page 72 undefined on input
 line 4520.
 
 
@@ -1374,7 +1374,7 @@ put line 4560.
 
 [72]
 
-LaTeX Warning: Reference `eq:v114-tail-positive' on page 73 undefined on input 
+LaTeX Warning: Reference `eq:v114-tail-positive' on page 73 undefined on input
 line 4616.
 
 [73]
@@ -1416,7 +1416,7 @@ LaTeX Warning: Reference `prop:v115-sharp-tail' on page 76 undefined on input l
 ine 4833.
 
 
-LaTeX Warning: Reference `eq:v116-weighted-prime-general' on page 76 undefined 
+LaTeX Warning: Reference `eq:v116-weighted-prime-general' on page 76 undefined
 on input line 4869.
 
 
@@ -1504,7 +1504,7 @@ LaTeX Warning: Reference `prop:v116-remote-moment' on page 80 undefined on inpu
 t line 5172.
 
 
-LaTeX Warning: Reference `prop:v116-directional-schur' on page 80 undefined on 
+LaTeX Warning: Reference `prop:v116-directional-schur' on page 80 undefined on
 input line 5189.
 
 [80]
@@ -1550,7 +1550,7 @@ LaTeX Warning: Reference `prop:v113-source-certificate' on page 83 undefined on
 LaTeX Warning: Citation `ChenWethLog' on page 84 undefined on input line 5438.
 
 
-LaTeX Warning: Reference `eq:v114-arch-diagonal' on page 84 undefined on input 
+LaTeX Warning: Reference `eq:v114-arch-diagonal' on page 84 undefined on input
 line 5452.
 
 
@@ -1679,7 +1679,7 @@ LaTeX Warning: Reference `sec:matching' on page 89 undefined on input line 5916
 
 [89] [90]
 
-LaTeX Warning: Reference `lem:g1-inversion' on page 91 undefined on input line 
+LaTeX Warning: Reference `lem:g1-inversion' on page 91 undefined on input line
 6005.
 
 
@@ -1691,7 +1691,7 @@ LaTeX Warning: Reference `lem:g1-high-low' on page 91 undefined on input line 6
 006.
 
 
-LaTeX Warning: Reference `eq:g1-shell-corrector' on page 91 undefined on input 
+LaTeX Warning: Reference `eq:g1-shell-corrector' on page 91 undefined on input
 line 6009.
 
 
@@ -1699,11 +1699,11 @@ LaTeX Warning: Reference `eq:g1-bc-master' on page 91 undefined on input line 6
 021.
 
 
-LaTeX Warning: Reference `eq:g1-N-explicit' on page 91 undefined on input line 
+LaTeX Warning: Reference `eq:g1-N-explicit' on page 91 undefined on input line
 6022.
 
 
-LaTeX Warning: Reference `eq:g1-K-explicit' on page 91 undefined on input line 
+LaTeX Warning: Reference `eq:g1-K-explicit' on page 91 undefined on input line
 6022.
 
 
@@ -1813,16 +1813,16 @@ LaTeX Warning: Citation `Suzuki2026' on page 93 undefined on input line 6238.
 
 [93]
 
-LaTeX Warning: Reference `prop:v115-absolute-residual' on page 94 undefined on 
+LaTeX Warning: Reference `prop:v115-absolute-residual' on page 94 undefined on
 input line 6253.
 
 
-LaTeX Warning: Reference `prop:v115-absolute-residual' on page 94 undefined on 
+LaTeX Warning: Reference `prop:v115-absolute-residual' on page 94 undefined on
 input line 6281.
 
 [94] [95]
 
-LaTeX Warning: Reference `eq:v118-gap-free-difference' on page 96 undefined on 
+LaTeX Warning: Reference `eq:v118-gap-free-difference' on page 96 undefined on
 input line 6393.
 
 
@@ -1830,7 +1830,7 @@ LaTeX Warning: Reference `eq:v118-gap-free-lower' on page 96 undefined on input
  line 6395.
 
 
-LaTeX Warning: Reference `prop:v115-absolute-residual' on page 96 undefined on 
+LaTeX Warning: Reference `prop:v115-absolute-residual' on page 96 undefined on
 input line 6406.
 
 
@@ -1842,7 +1842,7 @@ LaTeX Warning: Reference `ns46-a2-cor-large-block' on page 96 undefined on inpu
 t line 6416.
 
 
-LaTeX Warning: Reference `eq:v118-gap-free-difference' on page 96 undefined on 
+LaTeX Warning: Reference `eq:v118-gap-free-difference' on page 96 undefined on
 input line 6422.
 
 [96]
@@ -1856,7 +1856,7 @@ LaTeX Warning: Reference `prop:v113-source-certificate' on page 97 undefined on
 
 [97]
 
-LaTeX Warning: Reference `eq:v116-weighted-prime-general' on page 98 undefined 
+LaTeX Warning: Reference `eq:v116-weighted-prime-general' on page 98 undefined
 on input line 6530.
 
 
@@ -1864,7 +1864,7 @@ LaTeX Warning: Reference `eq:v119-prime-recurrence' on page 98 undefined on inp
 ut line 6569.
 
 
-LaTeX Warning: Reference `eq:v119-prime-compact' on page 98 undefined on input 
+LaTeX Warning: Reference `eq:v119-prime-compact' on page 98 undefined on input
 line 6575.
 
 
@@ -1881,7 +1881,7 @@ LaTeX Warning: Citation `NISTPrimeAsymptotics' on page 99 undefined on input li
 ne 6615.
 
 
-LaTeX Warning: Reference `eq:v116-weighted-prime-general' on page 99 undefined 
+LaTeX Warning: Reference `eq:v116-weighted-prime-general' on page 99 undefined
 on input line 6630.
 
 
@@ -1897,7 +1897,7 @@ LaTeX Warning: Reference `eq:v115-sharp-tail' on page 99 undefined on input lin
 e 6641.
 
 
-LaTeX Warning: Reference `eq:v119-prime-compact' on page 99 undefined on input 
+LaTeX Warning: Reference `eq:v119-prime-compact' on page 99 undefined on input
 line 6654.
 
 
@@ -1906,7 +1906,7 @@ nput line 6669.
 
 [99]
 
-LaTeX Warning: Reference `eq:v120-weighted-remainder' on page 100 undefined on 
+LaTeX Warning: Reference `eq:v120-weighted-remainder' on page 100 undefined on
 input line 6720.
 
 [100]
@@ -1928,7 +1928,7 @@ LaTeX Warning: Reference `prop:v116-remote-moment' on page 102 undefined on inp
 ut line 6852.
 
 
-LaTeX Warning: Reference `eq:v120-lambda4-tail' on page 102 undefined on input 
+LaTeX Warning: Reference `eq:v120-lambda4-tail' on page 102 undefined on input
 line 6871.
 
 
@@ -1956,7 +1956,7 @@ LaTeX Warning: Reference `prop:v120-lambda4-tail' on page 103 undefined on inpu
 t line 6929.
 
 
-LaTeX Warning: Reference `eq:v120-structured-inverse' on page 103 undefined on 
+LaTeX Warning: Reference `eq:v120-structured-inverse' on page 103 undefined on
 input line 6981.
 
 
@@ -1986,7 +1986,7 @@ LaTeX Warning: Reference `eq:v114-b-d' on page 105 undefined on input line 7092
 .
 
 
-LaTeX Warning: Reference `eq:v114-b-bound' on page 105 undefined on input line 
+LaTeX Warning: Reference `eq:v114-b-bound' on page 105 undefined on input line
 7092.
 
 
@@ -2015,7 +2015,7 @@ LaTeX Warning: Reference `eq:v120-lambda4-prime-bound' on page 106 undefined on
  input line 7156.
 
 
-LaTeX Warning: Reference `prop:v115-sharp-tail' on page 106 undefined on input 
+LaTeX Warning: Reference `prop:v115-sharp-tail' on page 106 undefined on input
 line 7161.
 
 
@@ -2028,7 +2028,7 @@ LaTeX Warning: Reference `eq:v122-prefix-scalar' on page 107 undefined on input
  line 7248.
 
 
-LaTeX Warning: Reference `eq:v122-parity-upper' on page 107 undefined on input 
+LaTeX Warning: Reference `eq:v122-parity-upper' on page 107 undefined on input
 line 7253.
 
 
@@ -2040,7 +2040,7 @@ LaTeX Warning: Reference `app:v122-inverse' on page 107 undefined on input line
  7273.
 
 
-LaTeX Warning: Reference `eq:v122-refined-structured' on page 107 undefined on 
+LaTeX Warning: Reference `eq:v122-refined-structured' on page 107 undefined on
 input line 7285.
 
 
@@ -2078,7 +2078,7 @@ LaTeX Warning: Reference `prop:v122-refined-structured' on page 109 undefined o
 n input line 7398.
 
 
-LaTeX Warning: Reference `eq:v122-refined-structured' on page 109 undefined on 
+LaTeX Warning: Reference `eq:v122-refined-structured' on page 109 undefined on
 input line 7430.
 
 
@@ -2095,7 +2095,7 @@ LaTeX Warning: Reference `prop:v122-directional-far' on page 110 undefined on i
 nput line 7461.
 
 
-LaTeX Warning: Reference `eq:v122-refined-structured' on page 110 undefined on 
+LaTeX Warning: Reference `eq:v122-refined-structured' on page 110 undefined on
 input line 7463.
 
 
@@ -2138,7 +2138,7 @@ LaTeX Warning: Reference `eq:v124-posterior-upper' on page 113 undefined on inp
 ut line 7739.
 
 
-LaTeX Warning: Reference `eq:v124-posterior-identity' on page 113 undefined on 
+LaTeX Warning: Reference `eq:v124-posterior-identity' on page 113 undefined on
 input line 7740.
 
 [113]
@@ -2181,7 +2181,7 @@ LaTeX Warning: Reference `eq:v126-local-physical-error' on page 116 undefined o
 n input line 8003.
 
 
-LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 116 undefined on input 
+LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 116 undefined on input
 line 8008.
 
 [116]
@@ -2237,7 +2237,7 @@ LaTeX Warning: Reference `prop:v126-full-window' on page 119 undefined on input
  line 8174.
 
 
-LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 119 undefined on input 
+LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 119 undefined on input
 line 8182.
 
 
@@ -2261,7 +2261,7 @@ LaTeX Warning: Reference `prop:v138-three-floors' on page 119 undefined on inpu
 t line 8220.
 
 
-LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 119 undefined on input 
+LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 119 undefined on input
 line 8224.
 
 
@@ -2300,7 +2300,7 @@ LaTeX Warning: Reference `prop:v127-block-metric' on page 122 undefined on inpu
 t line 8416.
 
 
-LaTeX Warning: Reference `eq:v128-weighted-row' on page 122 undefined on input 
+LaTeX Warning: Reference `eq:v128-weighted-row' on page 122 undefined on input
 line 8442.
 
 
@@ -2406,7 +2406,7 @@ LaTeX Warning: Reference `prop:v140-ground4' on page 128 undefined on input lin
 e 8913.
 
 
-LaTeX Warning: Reference `lem:v142-energy-projection' on page 128 undefined on 
+LaTeX Warning: Reference `lem:v142-energy-projection' on page 128 undefined on
 input line 8925.
 
 [128]
@@ -2429,7 +2429,7 @@ LaTeX Warning: Reference `prop:v142-ground-zero' on page 130 undefined on input
 
 [130]
 
-LaTeX Warning: Reference `prop:v143-first-zero-bound' on page 131 undefined on 
+LaTeX Warning: Reference `prop:v143-first-zero-bound' on page 131 undefined on
 input line 9096.
 
 
@@ -2446,7 +2446,7 @@ LaTeX Warning: Reference `eq:v143-required-lower' on page 132 undefined on inpu
 t line 9186.
 
 
-LaTeX Warning: Reference `prop:v143-first-zero-bound' on page 132 undefined on 
+LaTeX Warning: Reference `prop:v143-first-zero-bound' on page 132 undefined on
 input line 9197.
 
 [132]
@@ -2475,11 +2475,11 @@ LaTeX Warning: Reference `prop:v120-structured-inverse' on page 134 undefined o
 n input line 9351.
 
 
-LaTeX Warning: Reference `eq:v120-structured-inverse' on page 134 undefined on 
+LaTeX Warning: Reference `eq:v120-structured-inverse' on page 134 undefined on
 input line 9378.
 
 
-LaTeX Warning: Reference `eq:v120-structured-uniform' on page 134 undefined on 
+LaTeX Warning: Reference `eq:v120-structured-uniform' on page 134 undefined on
 input line 9382.
 
 [134]
@@ -2565,7 +2565,7 @@ LaTeX Warning: Reference `eq:v130-constrained' on page 140 undefined on input l
 ine 9822.
 
 
-LaTeX Warning: Reference `eq:v129-jump-decomposition' on page 140 undefined on 
+LaTeX Warning: Reference `eq:v129-jump-decomposition' on page 140 undefined on
 input line 9832.
 
 
@@ -2614,7 +2614,7 @@ LaTeX Warning: Reference `eq:v130-pointwise' on page 141 undefined on input lin
 e 9932.
 
 
-LaTeX Warning: Citation `LandauPollak1961' on page 141 undefined on input line 
+LaTeX Warning: Citation `LandauPollak1961' on page 141 undefined on input line
 9938.
 
 
@@ -2802,7 +2802,7 @@ LaTeX Warning: Reference `eq:v146-source-concentration' on page 150 undefined o
 n input line 10582.
 
 
-LaTeX Warning: Reference `prop:v136-positive-comparison' on page 150 undefined 
+LaTeX Warning: Reference `prop:v136-positive-comparison' on page 150 undefined
 on input line 10613.
 
 [150]
@@ -2841,7 +2841,7 @@ ut line 10740.
 
 [152]
 
-LaTeX Warning: Reference `prop:v146-level-complexity' on page 153 undefined on 
+LaTeX Warning: Reference `prop:v146-level-complexity' on page 153 undefined on
 input line 10784.
 
 
@@ -2862,7 +2862,7 @@ ne 10820.
 
 [153]
 
-LaTeX Warning: Reference `prop:v146-level-complexity' on page 154 undefined on 
+LaTeX Warning: Reference `prop:v146-level-complexity' on page 154 undefined on
 input line 10852.
 
 
@@ -2890,7 +2890,7 @@ LaTeX Warning: Reference `eq:v147-level-increments' on page 154 undefined on in
 put line 10915.
 
 
-LaTeX Warning: Reference `eq:v147-partial-level-loss' on page 154 undefined on 
+LaTeX Warning: Reference `eq:v147-partial-level-loss' on page 154 undefined on
 input line 10919.
 
 
@@ -2907,7 +2907,7 @@ LaTeX Warning: Citation `Ingham1940' on page 155 undefined on input line 10938.
 
 
 
-LaTeX Warning: Citation `ChourasiyaSimonic2025' on page 155 undefined on input 
+LaTeX Warning: Citation `ChourasiyaSimonic2025' on page 155 undefined on input
 line 10938.
 
 
@@ -2926,7 +2926,7 @@ LaTeX Warning: Reference `eq:v147-level-increments' on page 155 undefined on in
 put line 10993.
 
 
-LaTeX Warning: Reference `prop:v137-conditional-mass' on page 155 undefined on 
+LaTeX Warning: Reference `prop:v137-conditional-mass' on page 155 undefined on
 input line 10998.
 
 [155]
@@ -2947,7 +2947,7 @@ LaTeX Warning: Reference `eq:v147-probe-measure' on page 156 undefined on input
  line 11028.
 
 
-LaTeX Warning: Reference `lem:v146-packet-concentration' on page 156 undefined 
+LaTeX Warning: Reference `lem:v146-packet-concentration' on page 156 undefined
 on input line 11089.
 
 
@@ -2983,7 +2983,7 @@ ne 11298.
 
 [159]
 
-LaTeX Warning: Reference `eq:v149-concentration-cost' on page 160 undefined on 
+LaTeX Warning: Reference `eq:v149-concentration-cost' on page 160 undefined on
 input line 11326.
 
 
@@ -3013,7 +3013,7 @@ LaTeX Warning: Reference `prop:v136-bounded-floor' on page 162 undefined on inp
 ut line 11488.
 
 
-LaTeX Warning: Reference `lem:v115-source-mass' on page 162 undefined on input 
+LaTeX Warning: Reference `lem:v115-source-mass' on page 162 undefined on input
 line 11501.
 
 
@@ -3022,11 +3022,11 @@ LaTeX Warning: Reference `eq:v150-weight' on page 162 undefined on input line 1
 
 [162]
 
-LaTeX Warning: Reference `lem:v115-source-mass' on page 163 undefined on input 
+LaTeX Warning: Reference `lem:v115-source-mass' on page 163 undefined on input
 line 11532.
 
 
-LaTeX Warning: Reference `eq:v150-weight-ratio' on page 163 undefined on input 
+LaTeX Warning: Reference `eq:v150-weight-ratio' on page 163 undefined on input
 line 11544.
 
 
@@ -3038,7 +3038,7 @@ LaTeX Warning: Reference `eq:v150-global-energy' on page 163 undefined on input
  line 11585.
 
 
-LaTeX Warning: Reference `eq:v129-transformed-energy' on page 163 undefined on 
+LaTeX Warning: Reference `eq:v129-transformed-energy' on page 163 undefined on
 input line 11586.
 
 [163]
@@ -3076,7 +3076,7 @@ LaTeX Warning: Reference `eq:v150-capacity-demand' on page 165 undefined on inp
 ut line 11677.
 
 
-LaTeX Warning: Reference `eq:v150-weight-ratio' on page 165 undefined on input 
+LaTeX Warning: Reference `eq:v150-weight-ratio' on page 165 undefined on input
 line 11717.
 
 [165]
@@ -3085,7 +3085,7 @@ LaTeX Warning: Reference `eq:v150-budget-form' on page 166 undefined on input l
 ine 11738.
 
 
-LaTeX Warning: Reference `eq:v150-slack-budget' on page 166 undefined on input 
+LaTeX Warning: Reference `eq:v150-slack-budget' on page 166 undefined on input
 line 11745.
 
 
@@ -3152,7 +3152,7 @@ LaTeX Warning: Reference `eq:v131-layercake' on page 169 undefined on input lin
 e 12013.
 
 
-LaTeX Warning: Reference `eq:v132-hs-layercake' on page 169 undefined on input 
+LaTeX Warning: Reference `eq:v132-hs-layercake' on page 169 undefined on input
 line 12025.
 
 
@@ -3172,7 +3172,7 @@ LaTeX Warning: Reference `prop:v131-concentration' on page 169 undefined on inp
 ut line 12041.
 
 
-LaTeX Warning: Reference `eq:v132-hs-layercake' on page 169 undefined on input 
+LaTeX Warning: Reference `eq:v132-hs-layercake' on page 169 undefined on input
 line 12042.
 
 [169]
@@ -3186,7 +3186,7 @@ LaTeX Warning: Reference `eq:v131-weighted-concentration' on page 170 undefined
 
 [170]
 
-LaTeX Warning: Reference `eq:v133-product' on page 171 undefined on input line 
+LaTeX Warning: Reference `eq:v133-product' on page 171 undefined on input line
 12178.
 
 
@@ -3211,11 +3211,11 @@ LaTeX Warning: Reference `eq:v133-joint-leakage' on page 171 undefined on input
 
 [171]
 
-LaTeX Warning: Reference `lem:v115-source-mass' on page 172 undefined on input 
+LaTeX Warning: Reference `lem:v115-source-mass' on page 172 undefined on input
 line 12204.
 
 
-LaTeX Warning: Reference `eq:v115-source-limit' on page 172 undefined on input 
+LaTeX Warning: Reference `eq:v115-source-limit' on page 172 undefined on input
 line 12252.
 
 
@@ -3240,7 +3240,7 @@ LaTeX Warning: Citation `Virtanen2022' on page 173 undefined on input line 1229
 5.
 
 
-LaTeX Warning: Reference `prop:v133-noncommute' on page 173 undefined on input 
+LaTeX Warning: Reference `prop:v133-noncommute' on page 173 undefined on input
 line 12303.
 
 
@@ -3249,7 +3249,7 @@ LaTeX Warning: Reference `eq:v133-joint-channel' on page 173 undefined on input
 
 [173]
 
-LaTeX Warning: Reference `eq:v115-source-limit' on page 174 undefined on input 
+LaTeX Warning: Reference `eq:v115-source-limit' on page 174 undefined on input
 line 12370.
 
 
@@ -3273,7 +3273,7 @@ ne 12422.
 
 [174]
 
-LaTeX Warning: Reference `eq:v134-optimal' on page 175 undefined on input line 
+LaTeX Warning: Reference `eq:v134-optimal' on page 175 undefined on input line
 12448.
 
 
@@ -3326,7 +3326,7 @@ LaTeX Warning: Citation `ConnesConsani2023' on page 176 undefined on input line
  12557.
 
 
-LaTeX Warning: Reference `lem:v115-source-mass' on page 176 undefined on input 
+LaTeX Warning: Reference `lem:v115-source-mass' on page 176 undefined on input
 line 12565.
 
 [176]
@@ -3410,7 +3410,7 @@ LaTeX Warning: Reference `prop:v118-log-dirichlet' on page 180 undefined on inp
 ut line 12911.
 
 
-LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 180 undefined on input 
+LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 180 undefined on input
 line 12913.
 
 [180]
@@ -3513,7 +3513,7 @@ LaTeX Warning: Reference `prop:v136-bounded-floor' on page 183 undefined on inp
 ut line 13174.
 
 
-LaTeX Warning: Reference `prop:v137-conditional-mass' on page 183 undefined on 
+LaTeX Warning: Reference `prop:v137-conditional-mass' on page 183 undefined on
 input line 13175.
 
 
@@ -3546,7 +3546,7 @@ LaTeX Warning: Reference `eq:v139-probe-density' on page 185 undefined on input
  line 13282.
 
 
-LaTeX Warning: Reference `prop:v137-conditional-mass' on page 185 undefined on 
+LaTeX Warning: Reference `prop:v137-conditional-mass' on page 185 undefined on
 input line 13284.
 
 
@@ -3562,7 +3562,7 @@ LaTeX Warning: Citation `LiebLoss2001' on page 185 undefined on input line 1332
 5.
 
 
-LaTeX Warning: Reference `eq:v139-bathtub' on page 185 undefined on input line 
+LaTeX Warning: Reference `eq:v139-bathtub' on page 185 undefined on input line
 13331.
 
 
@@ -3571,7 +3571,7 @@ nput line 13333.
 
 [185]
 
-LaTeX Warning: Reference `eq:v139-bathtub' on page 186 undefined on input line 
+LaTeX Warning: Reference `eq:v139-bathtub' on page 186 undefined on input line
 13338.
 
 
@@ -3650,7 +3650,7 @@ n input line 13646.
 
 [189]
 
-LaTeX Warning: Reference `eq:v121-finite-trial' on page 190 undefined on input 
+LaTeX Warning: Reference `eq:v121-finite-trial' on page 190 undefined on input
 line 13678.
 
 
@@ -3674,7 +3674,7 @@ LaTeX Warning: Reference `app:v121-audit' on page 190 undefined on input line 1
 3741.
 
 
-LaTeX Warning: Reference `eq:v121-finite-trial' on page 190 undefined on input 
+LaTeX Warning: Reference `eq:v121-finite-trial' on page 190 undefined on input
 line 13743.
 
 [190]
@@ -3688,19 +3688,19 @@ LaTeX Warning: Reference `eq:v112-solve' on page 191 undefined on input line 13
 
 [191]
 
-LaTeX Warning: Reference `app:v112-certificate' on page 192 undefined on input 
+LaTeX Warning: Reference `app:v112-certificate' on page 192 undefined on input
 line 13830.
 
 
 LaTeX Warning: Citation `DLMFPSWF' on page 192 undefined on input line 13885.
 
 
-LaTeX Warning: Reference `eq:v113-inertia' on page 192 undefined on input line 
+LaTeX Warning: Reference `eq:v113-inertia' on page 192 undefined on input line
 13892.
 
 [192]
 
-LaTeX Warning: Reference `prop:v12-source' on page 193 undefined on input line 
+LaTeX Warning: Reference `prop:v12-source' on page 193 undefined on input line
 13970.
 
 
@@ -3708,7 +3708,7 @@ LaTeX Warning: Reference `prop:v112-finite-certificate' on page 193 undefined o
 n input line 13973.
 
 
-LaTeX Warning: Reference `app:v113-source' on page 193 undefined on input line 
+LaTeX Warning: Reference `app:v113-source' on page 193 undefined on input line
 13976.
 
 [193]
@@ -3728,11 +3728,11 @@ LaTeX Warning: Reference `prop:g1-vp-transfer' on page 194 undefined on input l
 ine 14019.
 
 
-LaTeX Warning: Reference `prop:g1-sobolev' on page 194 undefined on input line 
+LaTeX Warning: Reference `prop:g1-sobolev' on page 194 undefined on input line
 14056.
 
 
-LaTeX Warning: Reference `lem:g1-high-low' on page 194 undefined on input line 
+LaTeX Warning: Reference `lem:g1-high-low' on page 194 undefined on input line
 14064.
 
 [194]
@@ -3775,7 +3775,7 @@ LaTeX Warning: Reference `cor:pswf-cross-tail' on page 197 undefined on input l
 ine 14234.
 
 
-LaTeX Warning: Reference `eq:g1-jump-fourier-trivial' on page 197 undefined on 
+LaTeX Warning: Reference `eq:g1-jump-fourier-trivial' on page 197 undefined on
 input line 14235.
 
 
@@ -3791,7 +3791,7 @@ LaTeX Warning: Reference `prop:g1-weighted-sampler' on page 197 undefined on in
 put line 14257.
 
 
-LaTeX Warning: Reference `eq:g1-jump-fourier-trivial' on page 197 undefined on 
+LaTeX Warning: Reference `eq:g1-jump-fourier-trivial' on page 197 undefined on
 input line 14287.
 
 
@@ -3860,7 +3860,7 @@ ut line 14450.
 LaTeX Warning: Citation `DLMFPSWF' on page 199 undefined on input line 14452.
 
 
-LaTeX Warning: Reference `prop:endpoint-radial' on page 199 undefined on input 
+LaTeX Warning: Reference `prop:endpoint-radial' on page 199 undefined on input
 line 14453.
 
 
@@ -3868,7 +3868,7 @@ LaTeX Warning: Reference `cor:pswf-cross-tail' on page 199 undefined on input l
 ine 14465.
 
 
-LaTeX Warning: Reference `lem:v114-entire-polynomial' on page 199 undefined on 
+LaTeX Warning: Reference `lem:v114-entire-polynomial' on page 199 undefined on
 input line 14471.
 
 [199]
@@ -3881,7 +3881,7 @@ LaTeX Warning: Reference `eq:v114-smooth-remainder' on page 200 undefined on in
 put line 14508.
 
 
-LaTeX Warning: Reference `prop:v12-source' on page 200 undefined on input line 
+LaTeX Warning: Reference `prop:v12-source' on page 200 undefined on input line
 14514.
 
 
@@ -3927,7 +3927,7 @@ LaTeX Warning: Reference `prop:v114-weil-core' on page 202 undefined on input l
 ine 14652.
 
 
-LaTeX Warning: Reference `prop:g1-sobolev' on page 202 undefined on input line 
+LaTeX Warning: Reference `prop:g1-sobolev' on page 202 undefined on input line
 14654.
 
 
@@ -3944,7 +3944,7 @@ LaTeX Warning: Reference `v1:eq:tails' on page 203 undefined on input line 1477
 
 [203]
 
-LaTeX Warning: Reference `v1:eq:transform' on page 204 undefined on input line 
+LaTeX Warning: Reference `v1:eq:transform' on page 204 undefined on input line
 14781.
 
 
@@ -3986,7 +3986,7 @@ LaTeX Warning: Reference `v1:eq:zeros' on page 207 undefined on input line 1499
 7.
 
 
-LaTeX Warning: Reference `v1:eq:cutdefect' on page 207 undefined on input line 
+LaTeX Warning: Reference `v1:eq:cutdefect' on page 207 undefined on input line
 15002.
 
 
@@ -3997,11 +3997,11 @@ LaTeX Warning: Reference `v1:lem:uncut' on page 207 undefined on input line 150
 LaTeX Warning: Citation `Hardy' on page 207 undefined on input line 15017.
 
 
-LaTeX Warning: Reference `v1:eq:cutdefect' on page 207 undefined on input line 
+LaTeX Warning: Reference `v1:eq:cutdefect' on page 207 undefined on input line
 15018.
 
 
-LaTeX Warning: Reference `v1:eq:cutdefect' on page 207 undefined on input line 
+LaTeX Warning: Reference `v1:eq:cutdefect' on page 207 undefined on input line
 15026.
 
 
@@ -4087,7 +4087,7 @@ LaTeX Warning: Reference `cor:v18-shift' on page 210 undefined on input line 15
 254.
 
 
-LaTeX Warning: Reference `prop:v19-action' on page 210 undefined on input line 
+LaTeX Warning: Reference `prop:v19-action' on page 210 undefined on input line
 15259.
 
 
@@ -4104,7 +4104,7 @@ LaTeX Warning: Reference `eq:v1-residual' on page 211 undefined on input line 1
 5312.
 
 
-LaTeX Warning: Reference `v1:eq:graphnorm' on page 211 undefined on input line 
+LaTeX Warning: Reference `v1:eq:graphnorm' on page 211 undefined on input line
 15316.
 
 
@@ -4112,7 +4112,7 @@ LaTeX Warning: Reference `prop:v1-lyapunov' on page 211 undefined on input line
  15334.
 
 
-LaTeX Warning: Reference `eq:v1-general-metric' on page 211 undefined on input 
+LaTeX Warning: Reference `eq:v1-general-metric' on page 211 undefined on input
 line 15335.
 
 [211]
@@ -4158,7 +4158,7 @@ LaTeX Warning: Reference `v1:eq:tails' on page 213 undefined on input line 1547
 
 [213]
 
-LaTeX Warning: Reference `eq:v11-endpoint-asymptotic' on page 214 undefined on 
+LaTeX Warning: Reference `eq:v11-endpoint-asymptotic' on page 214 undefined on
 input line 15509.
 
 
@@ -4205,7 +4205,7 @@ nput line 15719.
 
 [216]
 
-LaTeX Warning: Reference `lem:g1-high-low' on page 217 undefined on input line 
+LaTeX Warning: Reference `lem:g1-high-low' on page 217 undefined on input line
 15727.
 
 
@@ -4292,7 +4292,7 @@ LaTeX Warning: Reference `ass:evaluators' on page 221 undefined on input line 1
 6059.
 
 
-LaTeX Warning: Reference `prop:v110-normalized-shell' on page 221 undefined on 
+LaTeX Warning: Reference `prop:v110-normalized-shell' on page 221 undefined on
 input line 16064.
 
 
@@ -4321,11 +4321,11 @@ t line 16081.
 
 [221]
 
-LaTeX Warning: Reference `thm:v14-radical' on page 222 undefined on input line 
+LaTeX Warning: Reference `thm:v14-radical' on page 222 undefined on input line
 16083.
 
 
-LaTeX Warning: Reference `prop:v12-source' on page 222 undefined on input line 
+LaTeX Warning: Reference `prop:v12-source' on page 222 undefined on input line
 16085.
 
 
@@ -4333,7 +4333,7 @@ LaTeX Warning: Reference `cor:v12-repair' on page 222 undefined on input line 1
 6085.
 
 
-LaTeX Warning: Reference `eq:G1-continuum' on page 222 undefined on input line 
+LaTeX Warning: Reference `eq:G1-continuum' on page 222 undefined on input line
 16087.
 
 
@@ -4369,7 +4369,7 @@ LaTeX Warning: Reference `prop:v15-variance' on page 222 undefined on input lin
 e 16116.
 
 
-LaTeX Warning: Reference `prop:v15-krylov' on page 222 undefined on input line 
+LaTeX Warning: Reference `prop:v15-krylov' on page 222 undefined on input line
 16119.
 
 
@@ -4389,7 +4389,7 @@ LaTeX Warning: Reference `cor:v18-shift' on page 222 undefined on input line 16
 134.
 
 
-LaTeX Warning: Reference `prop:v19-action' on page 222 undefined on input line 
+LaTeX Warning: Reference `prop:v19-action' on page 222 undefined on input line
 16138.
 
 
@@ -4410,11 +4410,11 @@ LaTeX Warning: Reference `prop:v120-structured-uniform' on page 223 undefined o
 n input line 16180.
 
 
-LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 223 undefined on input 
+LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 223 undefined on input
 line 16184.
 
 
-LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 223 undefined on input 
+LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 223 undefined on input
 line 16190.
 
 
@@ -4434,7 +4434,7 @@ LaTeX Warning: Citation `BasorEhrhardt2002' on page 223 undefined on input line
  16208.
 
 
-LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 223 undefined on input 
+LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 223 undefined on input
 line 16214.
 
 
@@ -4450,7 +4450,7 @@ LaTeX Warning: Reference `prop:v113-source-certificate' on page 223 undefined o
 n input line 16224.
 
 
-LaTeX Warning: Reference `prop:v114-polynomial-endpoint' on page 223 undefined 
+LaTeX Warning: Reference `prop:v114-polynomial-endpoint' on page 223 undefined
 on input line 16227.
 
 
@@ -4462,7 +4462,7 @@ LaTeX Warning: Reference `prop:v114-weil-core' on page 223 undefined on input l
 ine 16234.
 
 
-LaTeX Warning: Reference `prop:v115-sharp-tail' on page 223 undefined on input 
+LaTeX Warning: Reference `prop:v115-sharp-tail' on page 223 undefined on input
 line 16237.
 
 
@@ -4483,7 +4483,7 @@ ut line 16250.
 
 [223]
 
-LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 224 undefined on input 
+LaTeX Warning: Reference `prop:v121-cofinal-rh' on page 224 undefined on input
 line 16258.
 
 
@@ -4515,11 +4515,11 @@ LaTeX Warning: Reference `prop:v126-full-window' on page 224 undefined on input
  line 16291.
 
 
-LaTeX Warning: Reference `cor:v126-local-error' on page 224 undefined on input 
+LaTeX Warning: Reference `cor:v126-local-error' on page 224 undefined on input
 line 16296.
 
 
-LaTeX Warning: Reference `prop:v121-alpha-zero' on page 224 undefined on input 
+LaTeX Warning: Reference `prop:v121-alpha-zero' on page 224 undefined on input
 line 16300.
 
 
@@ -4616,7 +4616,7 @@ LaTeX Warning: Reference `eq:v127-weighted-complement' on page 225 undefined on
  input line 16371.
 
 
-LaTeX Warning: Reference `prop:v120-norm-counterexample' on page 225 undefined 
+LaTeX Warning: Reference `prop:v120-norm-counterexample' on page 225 undefined
 on input line 16381.
 
 
@@ -4649,7 +4649,7 @@ LaTeX Warning: Reference `prop:v136-resolvent-collapse' on page 226 undefined o
 n input line 16403.
 
 
-LaTeX Warning: Reference `prop:v136-positive-comparison' on page 226 undefined 
+LaTeX Warning: Reference `prop:v136-positive-comparison' on page 226 undefined
 on input line 16404.
 
 
@@ -4677,7 +4677,7 @@ LaTeX Warning: Reference `prop:v132-flat-top' on page 226 undefined on input li
 ne 16426.
 
 
-LaTeX Warning: Reference `prop:v120-norm-counterexample' on page 226 undefined 
+LaTeX Warning: Reference `prop:v120-norm-counterexample' on page 226 undefined
 on input line 16436.
 
 
@@ -4689,7 +4689,7 @@ LaTeX Warning: Reference `prop:v132-schatten' on page 226 undefined on input li
 ne 16438.
 
 
-LaTeX Warning: Reference `prop:v133-noncommute' on page 226 undefined on input 
+LaTeX Warning: Reference `prop:v133-noncommute' on page 226 undefined on input
 line 16440.
 
 
@@ -4723,7 +4723,7 @@ LaTeX Warning: Reference `eq:v150-weight' on page 229 undefined on input line 1
 
 [229] [230] [231]
 
-LaTeX Warning: Reference `eq:ns43-bump-laplace' on page 232 undefined on input 
+LaTeX Warning: Reference `eq:ns43-bump-laplace' on page 232 undefined on input
 line 16916.
 
 [232] [233]
@@ -4795,7 +4795,7 @@ LaTeX Warning: Reference `eq:v135-gaussian-tail' on page 244 undefined on input
  line 17806.
 
 
-LaTeX Warning: Reference `ns46-a2-eq-column-residual' on page 244 undefined on 
+LaTeX Warning: Reference `ns46-a2-eq-column-residual' on page 244 undefined on
 input line 17825.
 
 [244]
@@ -4804,11 +4804,11 @@ LaTeX Warning: Reference `ns46-a2-eq-tails' on page 245 undefined on input line
  17852.
 
 
-LaTeX Warning: Reference `ns46-a2-eq-arc-input' on page 245 undefined on input 
+LaTeX Warning: Reference `ns46-a2-eq-arc-input' on page 245 undefined on input
 line 17873.
 
 
-LaTeX Warning: Reference `ns46-a2-eq-column-residual' on page 245 undefined on 
+LaTeX Warning: Reference `ns46-a2-eq-column-residual' on page 245 undefined on
 input line 17886.
 
 
@@ -4852,7 +4852,7 @@ LaTeX Warning: Citation `Suzuki2026' on page 249 undefined on input line 18157.
 
 
 
-LaTeX Warning: Reference `prop:ns51-affine-potential' on page 249 undefined on 
+LaTeX Warning: Reference `prop:ns51-affine-potential' on page 249 undefined on
 input line 18160.
 
 [249]
@@ -4862,15 +4862,15 @@ e 18222.
 
 [250]
 
-LaTeX Warning: Reference `eq:ns52-contour' on page 251 undefined on input line 
+LaTeX Warning: Reference `eq:ns52-contour' on page 251 undefined on input line
 18283.
 
 
-LaTeX Warning: Reference `eq:ns52-contour-derivative' on page 251 undefined on 
+LaTeX Warning: Reference `eq:ns52-contour-derivative' on page 251 undefined on
 input line 18289.
 
 
-LaTeX Warning: Reference `eq:ns52-divided-difference' on page 251 undefined on 
+LaTeX Warning: Reference `eq:ns52-divided-difference' on page 251 undefined on
 input line 18296.
 
 
@@ -4886,7 +4886,7 @@ LaTeX Warning: Reference `eq:ns52-multiple' on page 251 undefined on input line
  18358.
 
 
-LaTeX Warning: Reference `eq:ns52-support-cost' on page 251 undefined on input 
+LaTeX Warning: Reference `eq:ns52-support-cost' on page 251 undefined on input
 line 18358.
 
 [251]
@@ -4912,7 +4912,7 @@ LaTeX Warning: Reference `eq:v150-mellin' on page 252 undefined on input line 1
 
 [252] [253]
 
-LaTeX Warning: Reference `eq:ns53-nb-gain' on page 254 undefined on input line 
+LaTeX Warning: Reference `eq:ns53-nb-gain' on page 254 undefined on input line
 18567.
 
 [254]
@@ -4925,7 +4925,7 @@ LaTeX Warning: Reference `eq:ns53-nb-trace-gain' on page 255 undefined on input
  line 18650.
 
 
-LaTeX Warning: Reference `prop:ns51-affine-potential' on page 255 undefined on 
+LaTeX Warning: Reference `prop:ns51-affine-potential' on page 255 undefined on
 input line 18675.
 
 [255]
@@ -4948,7 +4948,7 @@ e 18817.
 
 [257] [258]
 
-LaTeX Warning: Reference `eq:ns55fc-first' on page 259 undefined on input line 
+LaTeX Warning: Reference `eq:ns55fc-first' on page 259 undefined on input line
 18907.
 
 
@@ -4957,7 +4957,7 @@ put line 18936.
 
 [259]
 
-LaTeX Warning: Reference `eq:v129-jump-decomposition' on page 260 undefined on 
+LaTeX Warning: Reference `eq:v129-jump-decomposition' on page 260 undefined on
 input line 18981.
 
 
@@ -4969,7 +4969,7 @@ LaTeX Warning: Reference `eq:ns55fc-defect' on page 260 undefined on input line
  18998.
 
 
-LaTeX Warning: Reference `eq:ns55fc-arch-bound' on page 260 undefined on input 
+LaTeX Warning: Reference `eq:ns55fc-arch-bound' on page 260 undefined on input
 line 19018.
 
 
@@ -4977,12 +4977,12 @@ LaTeX Warning: Reference `eq:ns55fc-defect' on page 260 undefined on input line
  19038.
 
 
-LaTeX Warning: Reference `prop:ns51-affine-potential' on page 260 undefined on 
+LaTeX Warning: Reference `prop:ns51-affine-potential' on page 260 undefined on
 input line 19053.
 
 [260]
 
-LaTeX Warning: Reference `prop:ns51-affine-potential' on page 261 undefined on 
+LaTeX Warning: Reference `prop:ns51-affine-potential' on page 261 undefined on
 input line 19081.
 
 [261]
@@ -5005,12 +5005,12 @@ ut line 19236.
 
 [263] [264]
 
-LaTeX Warning: Reference `prop:ns55fc-dilation' on page 265 undefined on input 
+LaTeX Warning: Reference `prop:ns55fc-dilation' on page 265 undefined on input
 line 19379.
 
 [265]
 
-LaTeX Warning: Reference `prop:ns51-affine-potential' on page 266 undefined on 
+LaTeX Warning: Reference `prop:ns51-affine-potential' on page 266 undefined on
 input line 19456.
 
 [266]
@@ -5020,7 +5020,7 @@ ut line 19513.
 
 [267]
 
-LaTeX Warning: Reference `eq:ns58-exterior-row' on page 268 undefined on input 
+LaTeX Warning: Reference `eq:ns58-exterior-row' on page 268 undefined on input
 line 19560.
 
 
@@ -5028,7 +5028,7 @@ LaTeX Warning: Reference `prop:v118-log-dirichlet' on page 268 undefined on inp
 ut line 19571.
 
 
-LaTeX Warning: Reference `eq:ns58-exterior-row' on page 268 undefined on input 
+LaTeX Warning: Reference `eq:ns58-exterior-row' on page 268 undefined on input
 line 19577.
 
 
@@ -5146,7 +5146,7 @@ LaTeX Warning: Reference `prop:v158-mellin-budget' on page 275 undefined on inp
 ut line 20113.
 
 
-LaTeX Warning: Reference `eq:ns60-cell-average' on page 275 undefined on input 
+LaTeX Warning: Reference `eq:ns60-cell-average' on page 275 undefined on input
 line 20163.
 
 
@@ -5209,11 +5209,11 @@ put line 20381.
 
 [278]
 
-LaTeX Warning: Reference `eq:ns61-positive-first-moment' on page 279 undefined 
+LaTeX Warning: Reference `eq:ns61-positive-first-moment' on page 279 undefined
 on input line 20452.
 
 
-LaTeX Warning: Reference `eq:ns61-average' on page 279 undefined on input line 
+LaTeX Warning: Reference `eq:ns61-average' on page 279 undefined on input line
 20466.
 
 
@@ -5238,7 +5238,7 @@ ut line 20577.
 
 [280]
 
-LaTeX Warning: Reference `eq:ns61-positive-first-moment' on page 281 undefined 
+LaTeX Warning: Reference `eq:ns61-positive-first-moment' on page 281 undefined
 on input line 20607.
 
 
@@ -5250,14 +5250,14 @@ LaTeX Warning: Citation `Ehm2024' on page 281 undefined on input line 20626.
 
 [281]
 
-LaTeX Warning: Reference `eq:ns61-r2-remainder' on page 282 undefined on input 
+LaTeX Warning: Reference `eq:ns61-r2-remainder' on page 282 undefined on input
 line 20672.
 
 
 LaTeX Warning: Citation `Ehm2024' on page 282 undefined on input line 20684.
 
 
-LaTeX Warning: Reference `eq:ns61-r2-remainder' on page 282 undefined on input 
+LaTeX Warning: Reference `eq:ns61-r2-remainder' on page 282 undefined on input
 line 20702.
 
 
@@ -5265,7 +5265,7 @@ LaTeX Warning: Citation `DLMFBernoulliFourier' on page 282 undefined on input l
 ine 20705.
 
 
-LaTeX Warning: Reference `eq:ns61-hurwitz-tail' on page 282 undefined on input 
+LaTeX Warning: Reference `eq:ns61-hurwitz-tail' on page 282 undefined on input
 line 20710.
 
 
@@ -5295,7 +5295,7 @@ LaTeX Warning: Citation `DLMFLaguerre' on page 284 undefined on input line 2084
 8.
 
 
-LaTeX Warning: Reference `eq:ns62-unitary-small-cell' on page 284 undefined on 
+LaTeX Warning: Reference `eq:ns62-unitary-small-cell' on page 284 undefined on
 input line 20867.
 
 [284]
@@ -5356,7 +5356,7 @@ LaTeX Warning: Reference `eq:ns65-averaged-witness' on page 290 undefined on in
 put line 21271.
 
 
-LaTeX Warning: Citation `BaezDuarteStrong' on page 290 undefined on input line 
+LaTeX Warning: Citation `BaezDuarteStrong' on page 290 undefined on input line
 21281.
 
 [290]
@@ -5373,7 +5373,7 @@ LaTeX Warning: Reference `eq:ns66-zero-growth' on page 291 undefined on input l
 ine 21378.
 
 
-LaTeX Warning: Citation `BaezDuarteStrong' on page 291 undefined on input line 
+LaTeX Warning: Citation `BaezDuarteStrong' on page 291 undefined on input line
 21384.
 
 
@@ -5412,7 +5412,7 @@ LaTeX Warning: Reference `eq:ns67-tail-energy' on page 294 undefined on input l
 ine 21567.
 
 
-LaTeX Warning: Reference `eq:ns67-cutoff-error' on page 294 undefined on input 
+LaTeX Warning: Reference `eq:ns67-cutoff-error' on page 294 undefined on input
 line 21570.
 
 
@@ -5428,7 +5428,7 @@ LaTeX Warning: Reference `eq:ns67-tail-energy' on page 294 undefined on input l
 ine 21637.
 
 
-LaTeX Warning: Reference `eq:ns67-centered-conditioning' on page 294 undefined 
+LaTeX Warning: Reference `eq:ns67-centered-conditioning' on page 294 undefined
 on input line 21644.
 
 [294]
@@ -5459,7 +5459,7 @@ e 21761.
 
 [296]
 
-LaTeX Warning: Reference `eq:ns68-sup-transfer' on page 297 undefined on input 
+LaTeX Warning: Reference `eq:ns68-sup-transfer' on page 297 undefined on input
 line 21805.
 
 
@@ -5551,7 +5551,7 @@ LaTeX Warning: Reference `eq:ns72-local-functional' on page 305 undefined on in
 put line 22419.
 
 
-LaTeX Warning: Reference `eq:ns72-sobolev-comparison' on page 305 undefined on 
+LaTeX Warning: Reference `eq:ns72-sobolev-comparison' on page 305 undefined on
 input line 22427.
 
 
@@ -5565,11 +5565,11 @@ LaTeX Warning: Reference `eq:ns72-data' on page 306 undefined on input line 224
 
 [306]
 
-LaTeX Warning: Reference `eq:ns72-sobolev-comparison' on page 307 undefined on 
+LaTeX Warning: Reference `eq:ns72-sobolev-comparison' on page 307 undefined on
 input line 22540.
 
 
-LaTeX Warning: Reference `eq:ns72-sobolev-comparison' on page 307 undefined on 
+LaTeX Warning: Reference `eq:ns72-sobolev-comparison' on page 307 undefined on
 input line 22586.
 
 [307]
@@ -5602,7 +5602,7 @@ LaTeX Warning: Reference `eq:ns74-loads' on page 311 undefined on input line 22
 
 [311]
 
-LaTeX Warning: Reference `eq:ns75-jump-measure' on page 312 undefined on input 
+LaTeX Warning: Reference `eq:ns75-jump-measure' on page 312 undefined on input
 line 22957.
 
 [312]
@@ -5629,7 +5629,7 @@ LaTeX Warning: Reference `eq:ns77-tail-budget' on page 317 undefined on input l
 ine 23270.
 
 
-LaTeX Warning: Reference `eq:ns77-height-bound' on page 317 undefined on input 
+LaTeX Warning: Reference `eq:ns77-height-bound' on page 317 undefined on input
 line 23281.
 
 
@@ -5669,7 +5669,7 @@ LaTeX Warning: Reference `eq:ns78-sampling-tail' on page 320 undefined on input
 
 [320]
 
-LaTeX Warning: Reference `eq:ns79-balance' on page 321 undefined on input line 
+LaTeX Warning: Reference `eq:ns79-balance' on page 321 undefined on input line
 23576.
 
 [321]
@@ -5750,7 +5750,7 @@ LaTeX Warning: Reference `lem:v137-probe' on page 331 undefined on input line 2
 4314.
 
 
-LaTeX Warning: Reference `prop:v137-conditional-mass' on page 331 undefined on 
+LaTeX Warning: Reference `prop:v137-conditional-mass' on page 331 undefined on
 input line 24318.
 
 
@@ -5770,7 +5770,7 @@ LaTeX Warning: Reference `prop:v136-bounded-floor' on page 331 undefined on inp
 ut line 24329.
 
 
-LaTeX Warning: Reference `prop:v136-positive-comparison' on page 331 undefined 
+LaTeX Warning: Reference `prop:v136-positive-comparison' on page 331 undefined
 on input line 24329.
 
 
@@ -5795,7 +5795,7 @@ LaTeX Warning: Reference `v1:thm:repair' on page 332 undefined on input line 24
 391.
 
 
-LaTeX Warning: Reference `lem:v11-resolvent-endpoint' on page 332 undefined on 
+LaTeX Warning: Reference `lem:v11-resolvent-endpoint' on page 332 undefined on
 input line 24400.
 
 [332]
@@ -5808,7 +5808,7 @@ LaTeX Warning: Reference `eq:v12-noncancellation' on page 333 undefined on inpu
 t line 24452.
 
 
-LaTeX Warning: Reference `thm:v14-radical' on page 333 undefined on input line 
+LaTeX Warning: Reference `thm:v14-radical' on page 333 undefined on input line
 24477.
 
 [333]
@@ -5817,7 +5817,7 @@ LaTeX Warning: Reference `eq:v15-budget' on page 334 undefined on input line 24
 498.
 
 
-LaTeX Warning: Reference `eq:v15-variance' on page 334 undefined on input line 
+LaTeX Warning: Reference `eq:v15-variance' on page 334 undefined on input line
 24499.
 
 
@@ -5839,7 +5839,7 @@ put line 24550.
 
 [335]
 
-LaTeX Warning: Reference `app:v113-source' on page 336 undefined on input line 
+LaTeX Warning: Reference `app:v113-source' on page 336 undefined on input line
 24651.
 
 
@@ -5856,12 +5856,12 @@ LaTeX Warning: Reference `prop:v112-schur-angle' on page 337 undefined on input
  line 24687.
 
 
-LaTeX Warning: Reference `app:v113-source' on page 337 undefined on input line 
+LaTeX Warning: Reference `app:v113-source' on page 337 undefined on input line
 24749.
 
 [337]
 
-LaTeX Warning: Reference `eq:v113-inertia' on page 338 undefined on input line 
+LaTeX Warning: Reference `eq:v113-inertia' on page 338 undefined on input line
 24785.
 
 
@@ -5890,7 +5890,7 @@ LaTeX Warning: Reference `eq:v114-tail-constant' on page 339 undefined on input
  line 24865.
 
 
-LaTeX Warning: Reference `prop:v115-sharp-tail' on page 339 undefined on input 
+LaTeX Warning: Reference `prop:v115-sharp-tail' on page 339 undefined on input
 line 24882.
 
 
@@ -5978,7 +5978,7 @@ LaTeX Warning: Reference `eq:v122-remote-H' on page 346 undefined on input line
  25329.
 
 
-LaTeX Warning: Reference `prop:v121-alpha-zero' on page 346 undefined on input 
+LaTeX Warning: Reference `prop:v121-alpha-zero' on page 346 undefined on input
 line 25337.
 
 
@@ -5987,7 +5987,7 @@ ned on input line 25338.
 
 [346]
 
-LaTeX Warning: Reference `lem:v115-source-mass' on page 347 undefined on input 
+LaTeX Warning: Reference `lem:v115-source-mass' on page 347 undefined on input
 line 25405.
 
 
@@ -6003,11 +6003,11 @@ LaTeX Warning: Reference `thm:v15-finite-metric' on page 347 undefined on input
  line 25453.
 
 
-LaTeX Warning: Reference `thm:v14-radical' on page 347 undefined on input line 
+LaTeX Warning: Reference `thm:v14-radical' on page 347 undefined on input line
 25458.
 
 
-LaTeX Warning: Reference `thm:v14-radical' on page 347 undefined on input line 
+LaTeX Warning: Reference `thm:v14-radical' on page 347 undefined on input line
 25461.
 
 

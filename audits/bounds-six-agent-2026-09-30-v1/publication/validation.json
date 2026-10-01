@@ -14,7 +14,8 @@
     "pages": 358,
     "undefined_references": 0,
     "duplicate_references": 0,
-    "combined_reference_warning_lines": 0
+    "combined_reference_warning_lines": 0,
+    "saved_log_format": "Trailing whitespace normalized; source and final compilation log unchanged."
   },
   "version_manifest": "v1.66_manifest.json: 16 ok, 0 relocated, 0 missing, 0 mismatched  [16 listed]",
   "node_count": 104,
