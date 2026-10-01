@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-30",
+  "reviewer": "gain03-adversarial",
+  "reviewed_commit": "769359298fada57711b6895c4bde3fabe2cc5168",
+  "review_type": "paper derivation and primary-source applicability audit",
+  "wall_classification": "Same open gap",
+  "open_input": "NB-GAIN",
+  "closest_results": ["NS53", "NS61", "NS74", "NS75", "NS78", "NS83", "NS87", "NS90", "NS91", "NS92", "NS93", "NS98"],
+  "reviewed_notes": [
+    {
+      "path": "gain/01-derivation/derivation-2026-09-30-v1.md",
+      "sha256": "1d881b327d54ef09842ca33a0914bffbb02246dba6ac29a8c2b23bc889744c41",
+      "decision": "accepted as scoped audit; no substantive defect found"
+    },
+    {
+      "path": "gain/02-independent/assessment.md",
+      "sha256": "ea5b98a286834e66c2b0dde945e2779ec53e59ad0f1a7d871efb3a14ea1d9b36",
+      "decision": "accepted as scoped audit after necessity-language correction"
+    }
+  ],
+  "checks": {
+    "coefficient_constant_1536_zeta2_squared": "passed",
+    "full_old_refit_matrix_L": "passed",
+    "positive_matrix_inverse_order": "passed; gives an upper inverse-Gram bound",
+    "squarefree_density_and_7_over_24_constant": "passed",
+    "N_minus_7_over_2_remainder": "passed",
+    "normalized_certificate_summability": "passed; not an upper bound on actual gain",
+    "old_refit_and_complete_tails": "retained",
+    "primary_source_Davenport_Green_Tao_statement": "verified from original Annals PDF",
+    "structured_phase_kernel_transfer": "passed; N normalization retained",
+    "cost_and_numerator_separation": "retained",
+    "inverse_metric_model_error": "corrected; fixed strict separation also suffices",
+    "NS74_scope": "retained; original arithmetic target-sensitive estimates not excluded",
+    "NS83_rate_scope": "retained; compatible slower nonsummable gains remain open"
+  },
+  "findings": [
+    {
+      "id": "G03-01",
+      "severity": "minor",
+      "status": "resolved in reviewed gain02 note",
+      "issue": "Little-o inverse-metric model error was stated as necessary rather than sufficient.",
+      "resolution": "Author changed language and included fixed 0<=a<b signal/error separation, giving Delta>=(b-a)^2 E/log N."
+    }
+  ],
+  "additional_unproved_inputs": {
+    "gain01": [
+      "An arithmetic lower bound on actual optimizer new coefficients or old refit in the weighted certificate, strong enough for nonsummable relative gain"
+    ],
+    "gain02_selected_direction": [
+      "Complete projected-kernel representation with mass and remainder bounds strong enough after the explicit factor N",
+      "Compatible actual signed residual numerator lower means on the same dyadic index ranges"
+    ],
+    "gain02_model_alternative": [
+      "Independent model-observation lower bound in the complete H^-1 metric",
+      "Actual approximation error strictly smaller than that signal in the same metric"
+    ]
+  },
+  "admissibility": {
+    "internal_audits": true,
+    "new_candidate": false,
+    "numerical_screen": false,
+    "independent_nonsummable_signed_gain": false,
+    "new_theorem_row": false,
+    "thaw": false,
+    "public_page": false,
+    "RH_or_G2_proved": false
+  },
+  "primary_external_source": "https://annals.math.princeton.edu/wp-content/uploads/annals-v175-n2-p03-p.pdf",
+  "historical_certificates_replayed": false,
+  "historical_original_evidence_groups_remain_open": true,
+  "decision": "Stop both bounded attempts; retain findings without promoting reformulations or loose estimates to cofinal arithmetic progress."
+}

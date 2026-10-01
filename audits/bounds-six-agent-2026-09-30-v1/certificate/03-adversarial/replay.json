@@ -1,0 +1,119 @@
+{
+  "classification": "Same open gap; fixed existing-claim validation",
+  "source_commit": "769359298fada57711b6895c4bde3fabe2cc5168",
+  "checks": {
+    "seal:01-direct/verify_beta.py": true,
+    "seal:01-direct/outputs.json": true,
+    "seal:01-direct/explanation.md": true,
+    "seal:01-direct/pyrightconfig.json": true,
+    "seal:01-direct/pyright.txt": true,
+    "seal:02-independent/certify_series.py": true,
+    "seal:02-independent/certificate.json": true,
+    "seal:02-independent/output.txt": true,
+    "seal:02-independent/proof.md": true,
+    "seal:02-independent/pyrightconfig.json": true,
+    "seal:02-independent/pyright.txt": true,
+    "direct:byte_identical_replay": true,
+    "series:byte_identical_replay": true,
+    "128:independent_wide_rational": true,
+    "128:continuum_tail": true,
+    "128:independent_saved_ball_contains": true,
+    "128:contains_direct_192": true,
+    "direct_192:45_decimal_enclosure": true,
+    "128:contains_direct_320": true,
+    "direct_320:45_decimal_enclosure": true,
+    "256:independent_wide_rational": true,
+    "256:continuum_tail": true,
+    "256:independent_saved_ball_contains": true,
+    "256:contains_direct_192": true,
+    "256:contains_direct_320": true,
+    "same_strict_prime_power_list": true,
+    "unchanged:01-direct/verify_beta.py": true,
+    "unchanged:01-direct/outputs.json": true,
+    "unchanged:01-direct/explanation.md": true,
+    "unchanged:01-direct/pyrightconfig.json": true,
+    "unchanged:01-direct/pyright.txt": true,
+    "unchanged:02-independent/certify_series.py": true,
+    "unchanged:02-independent/certificate.json": true,
+    "unchanged:02-independent/output.txt": true,
+    "unchanged:02-independent/proof.md": true,
+    "unchanged:02-independent/pyrightconfig.json": true,
+    "unchanged:02-independent/pyright.txt": true
+  },
+  "all_pass": true,
+  "cross_enclosures": [
+    {
+      "series_bits": 128,
+      "direct_bits": 192,
+      "series_contains_direct": true,
+      "direct_strict_45_decimal_gate": true
+    },
+    {
+      "series_bits": 128,
+      "direct_bits": 320,
+      "series_contains_direct": true,
+      "direct_strict_45_decimal_gate": true
+    },
+    {
+      "series_bits": 256,
+      "direct_bits": 192,
+      "series_contains_direct": true,
+      "direct_strict_45_decimal_gate": true
+    },
+    {
+      "series_bits": 256,
+      "direct_bits": 320,
+      "series_contains_direct": true,
+      "direct_strict_45_decimal_gate": true
+    }
+  ],
+  "direct_outward_enclosure": {
+    "lower": {
+      "numerator": "-640027118160897146421661394744768547319369747",
+      "denominator": "1000000000000000000000000000000000000000000000"
+    },
+    "upper": {
+      "numerator": "-320013559080448573210830697372384273659684873",
+      "denominator": "500000000000000000000000000000000000000000000"
+    },
+    "lower_decimal_exact": "-0.640027118160897146421661394744768547319369747",
+    "upper_decimal_exact": "-0.640027118160897146421661394744768547319369746",
+    "strict": true
+  },
+  "independent_broader_enclosure_exact": [
+    "-0.640150",
+    "-0.639904"
+  ],
+  "input_hashes_verified_before_and_after": {
+    "01-direct/verify_beta.py": "a0b4d9b7b1f0cce449ee81028045763c6c0914e0a98d14d2772f44168e9ba370",
+    "01-direct/outputs.json": "ff1d30ec2b3198e6212b6c2d71749307accad1e4a0da36b82acf26b0eb7c442f",
+    "01-direct/explanation.md": "52b820660128fecf9aaad693880f0f77a7d10d0c80aea3c9c833de24592054ba",
+    "01-direct/pyrightconfig.json": "a1f6353f0a6ad7c3caa98643d5919a99e41d2463b04507995db6226f65a96e6c",
+    "01-direct/pyright.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+    "02-independent/certify_series.py": "b8c12d61f1a3fd9be873ccfef82c74c42f2775f255c355bc2ae2577bbe381f87",
+    "02-independent/certificate.json": "f9e4ac81bbc45d4fc50a69bdeef07e95ac44b7bd68bf7ca31198a52dcf8661f5",
+    "02-independent/output.txt": "f9e4ac81bbc45d4fc50a69bdeef07e95ac44b7bd68bf7ca31198a52dcf8661f5",
+    "02-independent/proof.md": "bf1cf69cde624231f8351d8c49c112d970530e8bebfb21986bca182acc84a759",
+    "02-independent/pyrightconfig.json": "73d491ec0d650ffccb508c78d89f795e7b603c7fbe0c27a0c07a6dc39a2ad12f",
+    "02-independent/pyright.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+  },
+  "source_hashes": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "169d337d728b019bd4231e05b749e482f8a5d5a45854e9867e14fb9ef7634476",
+    "README.md": "493121d8cb61b5a90ed441df4ace6ba4d85525c5c571b1cda28e3134d14e26d4",
+    "NEXT_STEPS.md": "9750174f3470702230ae0b7c9be54a571e311d06858934f0dab32a78185f86a0",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "manuscript/fixed_space_prime_action_v1.tex": "180d446f1df20147a1d6358fc20ef4952756c1ce6d53e463bddb430683ff9492"
+  },
+  "scope": {
+    "new_negative_index_numeric_premise_validated": true,
+    "full_line_even_negative_index": "infinite by existing analytic implication",
+    "finite_constraints": "arbitrary fixed finite homogeneous linear constraints; codimension at most their number",
+    "physical_window_negative_test": false,
+    "original_evidence_recovered": false,
+    "historical_original_groups": "both OPEN",
+    "RH_G2_cofinal_floor_NB_gain": "all remain open"
+  },
+  "replayed_in_subprocess": true,
+  "replay_script_sha256": "4fc1dcbc7c9004ea287f9c32fb74fc9360931499fbc384f699b252dc50c3e651"
+}

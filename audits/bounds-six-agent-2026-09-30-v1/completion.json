@@ -1,0 +1,108 @@
+{
+  "request": "Three agents each on signed NB gain and missing fixed beta certificate",
+  "status": "completed",
+  "agents": [
+    {
+      "group": "gain",
+      "role": "derivation",
+      "agent": "bounds_gain_derivation",
+      "status": "completed",
+      "ownership": "gain/01-derivation"
+    },
+    {
+      "group": "gain",
+      "role": "independent arithmetic mechanism",
+      "status": "completed",
+      "ownership": "gain/02-independent",
+      "agent": "reset11_literature"
+    },
+    {
+      "group": "gain",
+      "role": "adversarial review",
+      "status": "completed",
+      "ownership": "gain/03-adversarial",
+      "agent": "reset12_redteam"
+    },
+    {
+      "group": "certificate",
+      "role": "direct ball calculation",
+      "agent": "prime_four_d_viewer",
+      "status": "completed",
+      "ownership": "certificate/01-direct"
+    },
+    {
+      "group": "certificate",
+      "role": "independent analytic enclosure",
+      "agent": "research_four_d_viewer",
+      "status": "completed",
+      "ownership": "certificate/02-independent"
+    },
+    {
+      "group": "certificate",
+      "role": "replay and downstream scope",
+      "status": "completed",
+      "ownership": "certificate/03-adversarial",
+      "agent": "prime_geometry_audit"
+    }
+  ],
+  "agentCount": 6,
+  "reviewedCommit": "769359298fada57711b6895c4bde3fabe2cc5168",
+  "completedAtUtc": "2026-10-01T04:13:04.197558+00:00",
+  "certificate": {
+    "outcome": "Fixed existing numerical premise independently validated with fresh replacement evidence",
+    "directExactInterval": {
+      "lower": {
+        "numerator": "-640027118160897146421661394744768547319369747",
+        "denominator": "1000000000000000000000000000000000000000000000"
+      },
+      "upper": {
+        "numerator": "-320013559080448573210830697372384273659684873",
+        "denominator": "500000000000000000000000000000000000000000000"
+      },
+      "lower_decimal_exact": "-0.640027118160897146421661394744768547319369747",
+      "upper_decimal_exact": "-0.640027118160897146421661394744768547319369746",
+      "strict": true
+    },
+    "independentSeriesExactInterval": [
+      "-0.640150",
+      "-0.639904"
+    ],
+    "independence": "Distinct analytic evaluation paths; both use Arb interval backend. Only direct method certifies the narrow45-place interval; both certify historical enclosure and beta<−3/5.",
+    "machineChecksPassed": 37,
+    "source": "certificate/03-adversarial/review.md",
+    "consequence": "Existing full-line even-sector infinite-negative-index implication now has locally replayable numerical evidence; finite homogeneous constraints retain infinite negative index.",
+    "physicalWindowNegativity": false,
+    "originalArtifactsRecovered": false
+  },
+  "gain": {
+    "outcome": "No new arithmetic lower-gain estimate or numerical candidate admitted",
+    "findings": [
+      "Weighted full-refit coercivity reverses to an upper inverse-Gram bound; lower estimate in optimizer coordinates still needs an independent arithmetic input.",
+      "Hypothetical Mobius-size new-block contribution to this specific certificate scales as N^-3 and is too small to force nonsummable normalized gains. This is not an upper bound on actual gain.",
+      "Direct structured-phase cancellation transfer leaves an uncontrolled Fourier-complexity factor and a growing N/log^A allowance; compatible actual signed numerator also remains unestimated."
+    ],
+    "minorCorrection": "Little-o model error is sufficient, not necessary; fixed strict signal/error separation also suffices. No such arithmetic signal/error estimates proved.",
+    "source": "gain/03-adversarial/review-2026-09-30-v1.md"
+  },
+  "wall": {
+    "classification": "Same open gap",
+    "closest": [
+      "NS53",
+      "NS61",
+      "NS87",
+      "NS98"
+    ],
+    "openInput": "Actual signed NB gain; certificate validation supplies no cofinal RH estimate"
+  },
+  "stateChanges": {
+    "newPublicPages": 0,
+    "publicDeployment": false,
+    "manuscriptChanged": false,
+    "registerChanged": false,
+    "frozenGroupsThawed": false,
+    "RH": "open",
+    "G2": "open",
+    "historicalOriginalGroups": "both recovery OPEN"
+  },
+  "checks": "Reviewed final notes and machine results; note hashes bound to reviewed bytes. Dirty primary tracked changes remain HANDOFF.md and RESEARCH_STATE.json; isolated source tracked worktree remains clean."
+}

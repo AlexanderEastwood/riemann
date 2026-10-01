@@ -1,0 +1,16 @@
+{
+  "commit": "769359298fada57711b6895c4bde3fabe2cc5168",
+  "files": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "169d337d728b019bd4231e05b749e482f8a5d5a45854e9867e14fb9ef7634476",
+    "README.md": "493121d8cb61b5a90ed441df4ace6ba4d85525c5c571b1cda28e3134d14e26d4",
+    "NEXT_STEPS.md": "9750174f3470702230ae0b7c9be54a571e311d06858934f0dab32a78185f86a0",
+    "evidence/MISSING.md": "7ea9ce7ea2c2dbcbc891010ca5143f68bb6a6fbae44b777b862d064adbc1b073",
+    "manuscript/fixed_space_prime_action_v1.tex": "180d446f1df20147a1d6358fc20ef4952756c1ce6d53e463bddb430683ff9492",
+    "evidence/ns53_nb_blocks/proof.tex": "36de7fe507f8957a361f14ae430c6a96a812cb90c3dd8de20c22057f1a10b7d5",
+    "evidence/v159/ns61/proof.tex": "e8d435301626c9097e4f18582bff9458762ddb6cfcb0c825858ce3f008692298",
+    "evidence/ns87_joint_tail/argument.tex": "b163dcd18c485ec937d7bf1657337de60ac9ec604e2137f4385f7e077f0e47e3",
+    "evidence/ns98_projected_cost/argument.tex": "40f78654017c7c8e14ce5d2444b560cfe65d3a5d98c619573d96fed986ed3085"
+  },
+  "purpose": "Bind current source for six reviewers; source hashes are not a claim of proof replay."
+}

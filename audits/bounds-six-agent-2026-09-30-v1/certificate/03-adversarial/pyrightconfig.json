@@ -1,0 +1,1 @@
+{"include":["replay.py"],"venvPath":"/Users/alex/Documents/ChatGPT/riemann","venv":".venv","typeCheckingMode":"basic","exclude":["node_modules","__pycache__",".claude/worktrees","direct-replay","series-replay"]}

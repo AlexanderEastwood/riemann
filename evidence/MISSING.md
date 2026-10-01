@@ -141,3 +141,31 @@ ratios, four-block tables, and original protocols remain unarchived. The first
 evidence group therefore remains **recovery OPEN**, while these two precisely
 scoped mathematical comparison closures now have current replayable evidence.
 The concentration-era group is unchanged and remains **recovery OPEN**.
+
+## September 30 forward note: beta replacement evidence (NS38)
+
+The [six-agent audit](../audits/bounds-six-agent-2026-09-30-v1/README.md)
+now supplies **REPLACEMENT evidence** for the numerical premise of
+`prop:v132-global-index`: `beta_(log4)(1)<-3/5`. Direct Arb at 192/320 bits
+and an independent digamma-series enclosure at 128/256 bits confirm the
+historically reported interval; the third review records 37 passing
+replay/integrity checks. Only the direct method certifies the narrower
+45-place interval. This is a new implementation of the same fixed claim.
+
+The beta certificate does NOT transfer to the physical lambda=4 form:
+its tests are not compactly supported in that physical window.
+It supplies evidence for the existing full-line even-sector negative-index
+implication, including fixed finite homogeneous constraints.
+
+The original `certify_beta4_negative.py` and its output remain **NOT ARCHIVED**.
+This note does not close either original-recovery row, recover the other
+concentration-era scripts, or change RH/G2 or the cofinal signed floor.
+The manuscript is preserved; this forward note qualifies its historical
+statement that the numerical premise could not then be replayed.
+
+The preserved audit notes refer to earlier local coefficient working files
+that are not included in this publication. Those provenance references are
+not an assertion that the files are archived in this public repository.
+The [forward dependency note](../audits/bounds-six-agent-2026-09-30-v1/publication/weighted-dependency.md)
+states the full inherited coefficient corollary from public NS78 needed by
+the present audit; the certificate replay does not depend on those local files.

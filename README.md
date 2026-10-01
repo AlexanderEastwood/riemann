@@ -50,6 +50,25 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## September 30 six-agent replacement certificate and gain audits
+
+The [six-agent audit](audits/bounds-six-agent-2026-09-30-v1/README.md)
+publishes fresh **REPLACEMENT evidence** for NS38's reported
+`beta_(log4)(1)<-3/5`: direct Arb at 192/320 bits and a separate series
+enclosure at 128/256 bits, with 37 recorded adversarial replay checks.
+The beta certificate does NOT transfer to the physical lambda=4 form:
+its tests are not compactly supported in that physical window.
+The original `certify_beta4_negative.py` and output remain missing;
+both original-evidence recovery groups stay OPEN.
+
+The coefficient-recovery and structured-phase gain attempts remain scoped
+audits. The first retains an upper inverse-Gram bound and a summable
+new-block certificate; the second leaves complete-kernel complexity and
+the companion signed numerator unestimated. Correction G03-01 distinguishes
+sufficient little-o error from the weaker sufficient fixed separation.
+No new signed-gain estimate, theorem node, thaw or manuscript version.
+**Wall check: Same open gap — NB-GAIN / NS53/61/87.**
+
 ## September 29 two-prime connected construction audit
 
 The [two-prime construction brief](audits/two-prime-contact-2026-09-29-v1.html)

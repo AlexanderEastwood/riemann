@@ -1,0 +1,46 @@
+{
+  "classification": "Audit publication; replacement fixed certificate; no candidate attempt",
+  "base_commit": "769359298fada57711b6895c4bde3fabe2cc5168",
+  "origin_refreshed": true,
+  "newer_remote_commits": false,
+  "source_review": "104 conclusion nodes,14 input demands,current AGENTS/README/board/MISSING and affected reviews; not replay of every historical proof",
+  "copied_from_primary": "Only audits/bounds-six-agent-2026-09-30-v1;31 original files plus original manifest, byte-identical",
+  "original_files_hash_matched": 31,
+  "portable_replay_checks": 85,
+  "portable_replay_all_pass": true,
+  "build": {
+    "command": "./manuscript/build.sh",
+    "fresh_pdflatex_passes": 3,
+    "pages": 358,
+    "undefined_references": 0,
+    "duplicate_references": 0,
+    "combined_reference_warning_lines": 0
+  },
+  "version_manifest": "v1.66_manifest.json: 16 ok, 0 relocated, 0 missing, 0 mismatched  [16 listed]",
+  "node_count": 104,
+  "nodes_unchanged": true,
+  "all_14_demand_fields_unchanged": true,
+  "freeze_text_unchanged": true,
+  "manuscript_unchanged": true,
+  "publication_wrapper_correction": {
+    "initial_record": "replay-initial-output.json",
+    "initial_failed_checks": [
+      "series_128_broad_rational_interval",
+      "series_256_broad_rational_interval"
+    ],
+    "cause": "Parsing the deliberately coarsened display ball widened it past the sharper rational enclosure. Original exact balls already pass.",
+    "resolution": "Recompute the exact series ball for the endpoint gate; check separately that the display encloses it. Original31files unchanged.",
+    "status": "resolved in85checkreplay"
+  },
+  "review_findings": {
+    "round_major_open": 0,
+    "G03-01": "resolved in sealed gain02",
+    "publication_major_open": 0
+  },
+  "arxiv_prior_art": "https://arxiv.org/html/0807.1736v4; eq(1.1) and Theorem1.1 scope read; no proof revalidation",
+  "version_policy": "No manuscript version requested or added. Replacement evidence for same historical scalar; scoped gain audits. No new theorem node or thaw.",
+  "beta_scope": "The beta certificate does NOT transfer to the physical lambda=4 form: its tests are not compactly supported in that physical window.",
+  "original_recovery": "Both groups remain OPEN; original certify_beta4_negative.py and output remain missing",
+  "B": "Not begun; publication A first, proposal assessment only afterwards",
+  "python_diagnostics": "0 errors, 0 warnings, 0 informations"
+}

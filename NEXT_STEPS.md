@@ -709,11 +709,20 @@ are preserved. [Publication and replay record](audits/nightly-2026-09-29/README.
 
 ## September 30 six-agent audit publication
 
-Owner: Codex. Status: in progress (audit publication only).
-Publish the completed 2026-09-30 beta replacement certificate and the two
-scoped NB gain audits with their adversarial corrections. This is not a
-research-row claim, a new theorem node, or a thaw. The separate proposed
-COEFF attempt remains unstarted and requires Alex's approval.
+Owner: Codex. Status: completed audit; publication checks recorded with PR.
+The [six-agent record](audits/bounds-six-agent-2026-09-30-v1/README.md)
+contains **REPLACEMENT evidence** for NS38 / `prop:v132-global-index` at
+`beta_(log4)(1)<-3/5`, from two analytic evaluation paths and the third
+reviewer's 37 checks. The beta certificate does NOT transfer to the physical
+lambda=4 form: its tests are not compactly supported in that physical window.
+The original verifier/output remain missing and both recovery groups remain OPEN.
+
+Gain01 coefficient recovery and gain02 structured-phase import supply no
+nonsummable actual gain; gain03's G03-01 correction keeps fixed strict
+model/error separation as sufficient. These are scoped audits, not route
+closures. **Same open gap — NB-GAIN / NS53/61/87.** This is not a research-row
+claim, a new theorem node, a thaw or a manuscript version. The separate
+proposed COEFF attempt remains unstarted and requires Alex's approval.
 
 ## Lanes
 

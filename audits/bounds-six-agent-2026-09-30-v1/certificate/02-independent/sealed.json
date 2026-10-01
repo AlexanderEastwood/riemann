@@ -1,0 +1,12 @@
+{
+  "status": "sealed-independent-certificate-passed",
+  "other_direct_implementation_read_before_sealing": false,
+  "files": {
+    "certify_series.py": "b8c12d61f1a3fd9be873ccfef82c74c42f2775f255c355bc2ae2577bbe381f87",
+    "certificate.json": "f9e4ac81bbc45d4fc50a69bdeef07e95ac44b7bd68bf7ca31198a52dcf8661f5",
+    "output.txt": "f9e4ac81bbc45d4fc50a69bdeef07e95ac44b7bd68bf7ca31198a52dcf8661f5",
+    "proof.md": "bf1cf69cde624231f8351d8c49c112d970530e8bebfb21986bca182acc84a759",
+    "pyrightconfig.json": "73d491ec0d650ffccb508c78d89f795e7b603c7fbe0c27a0c07a6dc39a2ad12f",
+    "pyright.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+  }
+}
