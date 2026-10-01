@@ -707,6 +707,14 @@ All groups remain frozen; manuscript v1.66 is unchanged. Original reports,
 failed harness output, control precision/domain records and scope limits
 are preserved. [Publication and replay record](audits/nightly-2026-09-29/README.md).
 
+## September 30 six-agent audit publication
+
+Owner: Codex. Status: in progress (audit publication only).
+Publish the completed 2026-09-30 beta replacement certificate and the two
+scoped NB gain audits with their adversarial corrections. This is not a
+research-row claim, a new theorem node, or a thaw. The separate proposed
+COEFF attempt remains unstarted and requires Alex's approval.
+
 ## Lanes
 
 ```
