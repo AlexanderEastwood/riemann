@@ -1,0 +1,7 @@
+{
+  "venvPath": "/Users/alex/Documents/ChatGPT/riemann",
+  "venv": ".venv",
+  "include": ["certify_series.py"],
+  "exclude": ["node_modules", "__pycache__", ".claude/worktrees", "data"],
+  "typeCheckingMode": "basic"
+}

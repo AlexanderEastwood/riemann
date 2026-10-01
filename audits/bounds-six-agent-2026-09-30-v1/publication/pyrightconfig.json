@@ -1,0 +1,7 @@
+{
+  "venvPath": "../../..",
+  "venv": ".venv",
+  "typeCheckingMode": "basic",
+  "include": ["replay_publication.py"],
+  "exclude": ["node_modules", "__pycache__", ".claude/worktrees", "data"]
+}

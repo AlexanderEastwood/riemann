@@ -1,6 +1,6 @@
 {
   "title": "Riemann project research map",
-  "updated": "2026-09-29",
+  "updated": "2026-09-30",
   "legend": {
     "proved": "established result",
     "live": "current route (gold): being worked now",
@@ -1661,13 +1661,14 @@
       "title": "Lower-bound actual residual gain along a cofinal sequence",
       "tasks": "NS53,59,61,69,71–73,75,79–83,86,87,95–97",
       "demand": "For a fixed smoothing order and actual optimized residual, prove a nonsummable sequence of relative gains. In q=2, the full block target is Delta_N/E_N, Delta_N=h_N^T H_N^(-1)h_N. NS87 localizes the actual arithmetic observations with complete tails at T=N^6; a positive lower liminf of j A_(2^j)/E_(2^j) is sufficient. This remains unproved.",
-      "scope": "Related selected-direction bounds are sufficient routes to this objective, not the same scalar cost. NS71 needs its model-inverted numerator and true-energy ratio; NS72 needs actual curvature and selected cost; NS95/96 use a restricted N-to-N² span and complementary gain. NS53/59 use the unsmoothed analogue, so their formulas are not identified with q=2. NS80–82 guarantee a fraction of available gain, not a fraction of total error. NS83 excludes eventual fixed-fraction whole-error contraction, not all nonsummable slower gains. The September 29 three-agent feasibility assessment retains the full original-target block, old-coordinate correction and complete tails; aggregate divergence of the localized normalized observations is equivalent to the existing convergence target, not a weaker partial lemma. The bounded literature review supplies no new unconditional arithmetic estimate; the brief is for specialist feasibility assessment, not a thaw or a mathematical ranking of routes.",
+      "scope": "Related selected-direction bounds are sufficient routes to this objective, not the same scalar cost. NS71 needs its model-inverted numerator and true-energy ratio; NS72 needs actual curvature and selected cost; NS95/96 use a restricted N-to-N² span and complementary gain. NS53/59 use the unsmoothed analogue, so their formulas are not identified with q=2. NS80–82 guarantee a fraction of available gain, not a fraction of total error. NS83 excludes eventual fixed-fraction whole-error contraction, not all nonsummable slower gains. The September 29 three-agent feasibility assessment retains the full original-target block, old-coordinate correction and complete tails; aggregate divergence of the localized normalized observations is equivalent to the existing convergence target, not a weaker partial lemma. The bounded literature review supplies no new unconditional arithmetic estimate; the brief is for specialist feasibility assessment, not a thaw or a mathematical ranking of routes. September 30 six-agent audit: gain01 retains the full-refit weighted coefficient inequality but its inverse comparison is an upper bound in corrected-load coordinates; the hypothetical Mobius-sized new-block certificate is dyadically summable, not an upper bound on actual gain. Gain02 structured-phase import leaves complete projected-kernel complexity, a factor-N allowance and the companion numerator unestimated. G03-01 corrects necessity language: fixed strict model/error separation also suffices. No new arithmetic estimate, candidate, row, node or thaw.",
       "sources": [
         "evidence/ns87_joint_tail/argument.tex",
         "evidence/v160/ns71/proof.tex",
         "evidence/ns95_square_product/argument.tex",
         "evidence/ns96_lcm_square/argument.tex",
-        "audits/nb-arithmetic-bottleneck-2026-09-29-v1.html"
+        "audits/nb-arithmetic-bottleneck-2026-09-29-v1.html",
+        "audits/bounds-six-agent-2026-09-30-v1/README.md"
       ]
     },
     {
@@ -1719,14 +1720,15 @@
       "title": "One complete signed lower floor with a common cofinal constant",
       "tasks": "NS24,34,39,43,47,50; v1.36",
       "demand": "Prove q_a[f]>=-C||f||² with a common finite C on complete admissible domains: the actual even source complement and the odd sector, with the established source transfer to the full form. All prime, pole, exterior and cross terms must remain.",
-      "scope": "CAE, unrestricted exact adaptive concentration, critical Clifford domination and coefficient-one localization absorption are versions of this same floor under their stated domains. Their stronger fixed-slack or channel-deletion failures do not refute the floor. This is a second genuine shared-gap family, distinct from the NB selected numerator/cost. RH implications alone do not identify their estimates. NS104 clarification: a common absolute error bound can suffice without resolving each tiny positive eigenvalue. The target does not require a positive spectral gap. A pre-claim Abel-damping screen applies NS47 to the fixed positive multiplier 2 Re(xi'/xi)(1/2+epsilon+it), epsilon>1/2: uniformly bounded undamping cost is excluded for this ordinary-closable unbounded comparison. Shrinking epsilon to zero leaves the justified absolute-convergence domain; no positivity transfer or new arithmetic estimate is supplied. This overlap audit adds no theorem or closure node.",
+      "scope": "CAE, unrestricted exact adaptive concentration, critical Clifford domination and coefficient-one localization absorption are versions of this same floor under their stated domains. Their stronger fixed-slack or channel-deletion failures do not refute the floor. This is a second genuine shared-gap family, distinct from the NB selected numerator/cost. RH implications alone do not identify their estimates. NS104 clarification: a common absolute error bound can suffice without resolving each tiny positive eigenvalue. The target does not require a positive spectral gap. A pre-claim Abel-damping screen applies NS47 to the fixed positive multiplier 2 Re(xi'/xi)(1/2+epsilon+it), epsilon>1/2: uniformly bounded undamping cost is excluded for this ordinary-closable unbounded comparison. Shrinking epsilon to zero leaves the justified absolute-convergence domain; no positivity transfer or new arithmetic estimate is supplied. This overlap audit adds no theorem or closure node. September 30 replacement validation for NS38 / prop:v132-global-index: direct 192/320-bit Arb and independent 128/256-bit series enclosures certify the same fixed beta_(log4)(1)<-3/5 premise; 37 adversarial replay checks pass. The beta certificate does NOT transfer to the physical lambda=4 form: its tests are not compactly supported in that physical window. Both original-recovery groups remain OPEN. No cofinal floor, theorem node, thaw or manuscript version follows.",
       "sources": [
         "evidence/v151",
         "evidence/v152",
         "evidence/ns47_clifford_weil/representation.tex",
         "evidence/ns50_cae_localization/localization-v2.tex",
         "evidence/diag_ns104_ground_mechanism/results.md",
-        "audits/prime-archimedean-screen-2026-09-23-v1/results.md"
+        "audits/prime-archimedean-screen-2026-09-23-v1/results.md",
+        "audits/bounds-six-agent-2026-09-30-v1/README.md"
       ]
     },
     {

@@ -1,0 +1,153 @@
+{
+  "classification": "Fixed existing-claim validation only; no RH or physical-window negativity claim",
+  "reviewed_commit": "769359298fada57711b6895c4bde3fabe2cc5168",
+  "source_file": "/private/tmp/riemann-prime-folding-review-20260930/manuscript/fixed_space_prime_action_v1.tex",
+  "source_sha256": "180d446f1df20147a1d6358fc20ef4952756c1ce6d53e463bddb430683ff9492",
+  "script_sha256": "b8c12d61f1a3fd9be873ccfef82c74c42f2775f255c355bc2ae2577bbe381f87",
+  "python_flint_version": "0.9.0",
+  "independence": "No direct certificate read. No digamma, gamma or Euler-constant library calls. Positive digamma series, harmonic-limit bound, and continuum Taylor series with explicit remainders.",
+  "fixed_counts": {
+    "gamma_harmonic_terms": 4096,
+    "digamma_terms": 1024,
+    "exponential_terms": 40
+  },
+  "external_formula_source": "https://dlmf.nist.gov/5.7.E6",
+  "historical_original_recovery": "OPEN; this is newly generated replacement evidence only",
+  "runs": [
+    {
+      "bits": 128,
+      "gamma_interval": "[0.5772156599344791589299064897761658180979 +/- 1.23e-4]",
+      "digamma_real_interval": "[-0.08041630232574737502810037905867049929086 +/- 1.23e-4]",
+      "digamma_tail_interval": "[0.0002441106822071013260339545738767891723210 +/- 1.20e-7]",
+      "log_pi": "[1.144729885849400174143427351353058711646 +/- 8.15e-39]",
+      "prime_powers": [
+        {
+          "m": 2,
+          "prime_base": 2,
+          "term": "[0.3770263486674161054473054448545924642171 +/- 8.52e-39]"
+        },
+        {
+          "m": 3,
+          "prime_base": 3,
+          "term": "[0.2884929742351870960564693411095576422351 +/- 9.70e-39]"
+        },
+        {
+          "m": 4,
+          "prime_base": 2,
+          "term": "[0.06358134239868832683913198777341971314468 +/- 3.22e-39]"
+        },
+        {
+          "m": 5,
+          "prime_base": 5,
+          "term": "[-0.02780584386044042379302619835848984032261 +/- 4.84e-39]"
+        },
+        {
+          "m": 7,
+          "prime_base": 7,
+          "term": "[-0.2694658111823401942750263553794217963653 +/- 9.76e-39]"
+        },
+        {
+          "m": 8,
+          "prime_base": 2,
+          "term": "[-0.1193450610086706444420944136827945685690 +/- 5.00e-39]"
+        },
+        {
+          "m": 9,
+          "prime_base": 3,
+          "term": "[-0.2146889583682648871830456103762806376912 +/- 7.41e-39]"
+        },
+        {
+          "m": 11,
+          "prime_base": 11,
+          "term": "[-0.5321011862320573503677487863249912726997 +/- 1.77e-38]"
+        },
+        {
+          "m": 13,
+          "prime_base": 13,
+          "term": "[-0.5963555748531379604256434248859988057926 +/- 1.69e-38]"
+        }
+      ],
+      "prime_sum": "[-1.030661770203619932143678015270407101844 +/- 1.01e-37]",
+      "continuum_integral": "[-0.7381022327323349052062372761418707186218 +/- 4.04e-30]",
+      "continuum_tail_bound": "[4.030629502815936373229334850819328677699e-30 +/- 2.34e-66]",
+      "beta_interval": "[-0.6400271132325774952966462521546564444896 +/- 1.23e-4]",
+      "beta_lower_endpoint_ball": "[-0.6401493026108942568732168226235590323802 +/- 4.54e-41]",
+      "beta_upper_endpoint_ball": "[-0.6399049238542607337200756816857538565990 +/- 4.66e-42]",
+      "threshold_margin": "[0.04002711323257749529664625215465644449138 +/- 1.23e-4]",
+      "checks": {
+        "strict_endpoint_16_excluded": true,
+        "beta_above_reported_lower": true,
+        "beta_below_reported_upper": true,
+        "beta_below_minus_three_fifths": true
+      }
+    },
+    {
+      "bits": 256,
+      "gamma_interval": "[0.5772156599344791589299064897761658871274 +/- 1.23e-4]",
+      "digamma_real_interval": "[-0.08041630232574737502810037905867056756091 +/- 1.23e-4]",
+      "digamma_tail_interval": "[0.0002441106822071013260339545738767891518027 +/- 1.20e-7]",
+      "log_pi": "[1.144729885849400174143427351353058711647 +/- 2.95e-40]",
+      "prime_powers": [
+        {
+          "m": 2,
+          "prime_base": 2,
+          "term": "[0.3770263486674161054473054448545924642192 +/- 2.32e-42]"
+        },
+        {
+          "m": 3,
+          "prime_base": 3,
+          "term": "[0.2884929742351870960564693411095576422346 +/- 4.55e-41]"
+        },
+        {
+          "m": 4,
+          "prime_base": 2,
+          "term": "[0.06358134239868832683913198777341971314453 +/- 4.78e-42]"
+        },
+        {
+          "m": 5,
+          "prime_base": 5,
+          "term": "[-0.02780584386044042379302619835848984032334 +/- 1.25e-42]"
+        },
+        {
+          "m": 7,
+          "prime_base": 7,
+          "term": "[-0.2694658111823401942750263553794217963680 +/- 3.27e-41]"
+        },
+        {
+          "m": 8,
+          "prime_base": 2,
+          "term": "[-0.1193450610086706444420944136827945685706 +/- 3.68e-41]"
+        },
+        {
+          "m": 9,
+          "prime_base": 3,
+          "term": "[-0.2146889583682648871830456103762806376967 +/- 1.31e-41]"
+        },
+        {
+          "m": 11,
+          "prime_base": 11,
+          "term": "[-0.5321011862320573503677487863249912727042 +/- 6.18e-42]"
+        },
+        {
+          "m": 13,
+          "prime_base": 13,
+          "term": "[-0.5963555748531379604256434248859988058025 +/- 4.70e-41]"
+        }
+      ],
+      "prime_sum": "[-1.030661770203619932143678015270407101867 +/- 7.65e-41]",
+      "continuum_integral": "[-0.7381022327323349052062372761418707187085 +/- 4.04e-30]",
+      "continuum_tail_bound": "[4.030629502815936373229334850819328678115e-30 +/- 4.91e-70]",
+      "beta_interval": "[-0.6400271132325774952966462521546565128911 +/- 1.23e-4]",
+      "beta_lower_endpoint_ball": "[-0.6401493026106668831977735905640803410161 +/- 1.59e-41]",
+      "beta_upper_endpoint_ball": "[-0.6399049238544881073955189137452326847661 +/- 1.59e-41]",
+      "threshold_margin": "[0.04002711323257749529664625215465651289108 +/- 1.23e-4]",
+      "checks": {
+        "strict_endpoint_16_excluded": true,
+        "beta_above_reported_lower": true,
+        "beta_below_reported_upper": true,
+        "beta_below_minus_three_fifths": true
+      }
+    }
+  ],
+  "all_checks_pass": true
+}

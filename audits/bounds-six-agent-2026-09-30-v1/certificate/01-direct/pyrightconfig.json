@@ -1,0 +1,1 @@
+{"include":["verify_beta.py"],"venvPath":"/Users/alex/Documents/ChatGPT/riemann","venv":".venv","exclude":["node_modules","__pycache__",".claude/worktrees","data"],"typeCheckingMode":"basic","reportMissingTypeStubs":false}

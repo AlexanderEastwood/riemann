@@ -1,0 +1,14 @@
+{
+  "status": "adversarial fixed-input replay and scope audit passed",
+  "checks": 37,
+  "classification": "Same open gap",
+  "files": {
+    "replay.py": "4fc1dcbc7c9004ea287f9c32fb74fc9360931499fbc384f699b252dc50c3e651",
+    "replay.json": "35602c62d34a077669bfd6f12404596bcf84d3ad41681eb590ab727b0a0d67ac",
+    "review.md": "cfd29414ab34e23ba3103575fdb93c925ba277db4b8dac604214324d103d790c",
+    "pyrightconfig.json": "e5c2ab89b00aa855ae6c4aa8b6595e714318654b722c1038a0244804cbf62e60",
+    "pyright.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332",
+    "direct-replay/outputs.json": "ff1d30ec2b3198e6212b6c2d71749307accad1e4a0da36b82acf26b0eb7c442f",
+    "series-replay/certificate.json": "f9e4ac81bbc45d4fc50a69bdeef07e95ac44b7bd68bf7ca31198a52dcf8661f5"
+  }
+}

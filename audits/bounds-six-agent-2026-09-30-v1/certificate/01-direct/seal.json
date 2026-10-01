@@ -1,0 +1,12 @@
+{
+  "sealed_independent_result": true,
+  "independent_method": "direct acb digamma at192/320bits",
+  "other_agent_results_read": false,
+  "sha256": {
+    "verify_beta.py": "a0b4d9b7b1f0cce449ee81028045763c6c0914e0a98d14d2772f44168e9ba370",
+    "outputs.json": "ff1d30ec2b3198e6212b6c2d71749307accad1e4a0da36b82acf26b0eb7c442f",
+    "explanation.md": "52b820660128fecf9aaad693880f0f77a7d10d0c80aea3c9c833de24592054ba",
+    "pyrightconfig.json": "a1f6353f0a6ad7c3caa98643d5919a99e41d2463b04507995db6226f65a96e6c",
+    "pyright.txt": "6d88a1b220adb7a3d62092b6e38431f0b3fe8babe9864fab90e5849766260332"
+  }
+}

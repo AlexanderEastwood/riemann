@@ -1,0 +1,61 @@
+{
+  "userDate": "2026-09-30",
+  "request": "Deploy 3 agents on each: signed NB gain and fixed beta certificate",
+  "reviewedCommit": "769359298fada57711b6895c4bde3fabe2cc5168",
+  "originRefreshed": true,
+  "originChanged": false,
+  "reviewScope": "Current conclusion register and dependency/status review; relevant NB and beta source checks. Not a replay of all historical proofs.",
+  "wall": "Same open gap: NB-GAIN, closest NS53/61/87; NS98 cost is incomplete without signed cross and companion margin estimates.",
+  "certificateScope": "Fixed existing-claim validation at beta_log4(1), current strict endpoint m<16; no new candidate search.",
+  "concurrency": "Three workers plus coordinator; six distinct workers in batches, reusing completed agents where the session thread cap prevents new names.",
+  "jobs": [
+    {
+      "group": "gain",
+      "role": "derivation",
+      "agent": "bounds_gain_derivation",
+      "status": "completed",
+      "ownership": "gain/01-derivation"
+    },
+    {
+      "group": "gain",
+      "role": "independent arithmetic mechanism",
+      "status": "completed",
+      "ownership": "gain/02-independent",
+      "agent": "reset11_literature"
+    },
+    {
+      "group": "gain",
+      "role": "adversarial review",
+      "status": "completed",
+      "ownership": "gain/03-adversarial",
+      "agent": "reset12_redteam"
+    },
+    {
+      "group": "certificate",
+      "role": "direct ball calculation",
+      "agent": "prime_four_d_viewer",
+      "status": "completed",
+      "ownership": "certificate/01-direct"
+    },
+    {
+      "group": "certificate",
+      "role": "independent analytic enclosure",
+      "agent": "research_four_d_viewer",
+      "status": "completed",
+      "ownership": "certificate/02-independent"
+    },
+    {
+      "group": "certificate",
+      "role": "replay and downstream scope",
+      "status": "completed",
+      "ownership": "certificate/03-adversarial",
+      "agent": "prime_geometry_audit"
+    }
+  ],
+  "frozenGroupsChanged": false,
+  "historicalOriginalRecovery": "Both groups remain OPEN; replacement is not recovery",
+  "newPublicPages": 0,
+  "status": "completed",
+  "agentsCount": 6,
+  "completedAtUtc": "2026-10-01T04:13:04.197558+00:00"
+}

@@ -1,0 +1,24 @@
+Six-agent bounded review — 2026-09-30
+
+User request: deploy three agents on each of (A) the actual signed NB gain bound and (B) replacing the missing fixed beta certificate. Four total runtime slots require two waves of three workers. Distinct agents, not repeat roles assigned to one worker.
+
+Reviewed public origin: 769359298fada57711b6895c4bde3fabe2cc5168; refreshed this turn, unchanged.
+Read-only source worktree: /private/tmp/riemann-prime-folding-review-20260930
+Dirty primary workspace: /Users/alex/Documents/ChatGPT/riemann — preserve it.
+
+Wall check: Same open gap. Closest NB results NS53/61/87 and NS98, controls NS74/83. No new signed arithmetic estimate yet. Certificate lane is validation of a fixed existing conditional claim (NS38), not a new RH candidate or new route. No frozen group thaw, new theorem row, public page, or publication.
+
+Each reviewer reads source AGENTS, current conclusions/dependencies and relevant proofs before extending work. This is a conclusions/dependency review, not a replay of all proofs. Two historical original-evidence groups stay open even if a replacement certificate succeeds. Scope and uncertainty must be explicit.
+
+GAIN team: 01 seeks a concrete arithmetic estimating mechanism for full optimized signed residual gain, retaining old refit, inverse Gram and tails. 02 independently assesses an alternative analytic mechanism/known estimates with precise hypotheses. 03 adversarially checks both. No numerical candidate screens absent the complete proposal gate and independently supplied arithmetic input. A conditional reformulation alone is not progress.
+
+CERTIFICATE team: 01 derives and implements the exact current beta_(log4)(1) formula with direct ball arithmetic at two precisions. 02 independently certifies using a proved digamma series/remainder (avoid reading implementation 01 before recording independent result). 03 replays both and checks all downstream scope/constraints. Fixed parameters only; no search for favorable points.
+
+Certificate source: manuscript/fixed_space_prime_action_v1.tex, eq:v130-beta and prop:v132-global-index, appendix about absent certify_beta4_negative.py. Independently check source rather than trusting the following transcription:
+b = Re psi(5/4+i/2) - log(pi) - 2 sum_(2<=m<16) Lambda(m)/sqrt(m) cos(log(m)) + 2 integral_0^log(16) exp(t/2)cos(t) dt.
+Claim to check, not an input: -0.64784909 < b < -0.6321938 < -3/5.
+Finite prime powers: 2,3,4,5,7,8,9,11,13; endpoint16 excluded. Lambda(p^k)=log(p).
+
+All output under this audit directory in exclusively owned reviewer subdirectories. Workers are not alone; never revert others' edits. No manuscript, registry, primary HANDOFF/RESEARCH_STATE, site, dependencies or global config edits. Python functions annotated; existing .venv has python-flint0.9.0. CLI pyright fallback if no LSP tool; use an owned config if needed to cover owned files.
+
+Decision: a successful beta certificate changes evidence for one full-line multiplier claim; it does not establish physical-window negativity or RH. Failure corrects that numerical premise. NB needs an actual lower estimate; if none emerges, state it and stop.
