@@ -50,6 +50,19 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 5 alternative-mechanism review
+
+The [six-agent follow-up](audits/theta-alternative-mechanisms-2026-10-05-v1/README.md)
+checks auxiliary heat transport, completed duplication and direct quotient
+contours. Heat retains an unestimated subtractive source; unrestricted
+sector-matrix positivity fails. A complete contour argument shows that an
+uncancelled original zero of M in abs(Im z)<pi/4 would exclude positive
+definiteness of k=C/M, a sufficient certificate only. No such zero is located;
+the original Laguerre target is not refuted. A bounded locator proposal has
+fixed limits and requires its own evaluator/control protocol before running.
+No scan, row, thaw, new node or manuscript version.
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–78.**
+
 ## October 5 six-agent arithmetic admission
 
 The [six-review audit](audits/theta-arithmetic-admission-2026-10-05-v1/README.md)
