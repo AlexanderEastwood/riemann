@@ -50,6 +50,21 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 5 six-agent theta review
+
+The [six-agent review](audits/theta-six-agent-2026-10-05-v1/README.md)
+independently checks PR73, rejects a specific local nonlinear certificate,
+and gives a smooth reciprocal completion with complete all-height transform
+and derivative error bounds. Its lower Laguerre margin remains unproved.
+A reviewed Bessel reference has a positive margin, but no original-theta
+comparison to that different reference is supplied. A direct complete-moment
+argument also gives first-Laguerre failure for an explicit parameter range
+of the NS101 reciprocal-mixture family, without inferring sign from zeros.
+
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR72/73.**
+No original-theta sign method is admitted; the exact nonlinear orbit remains
+unexcluded. No scan, node, thaw or manuscript version.
+
 ## October 5 two-factor theta continuation
 
 The [pair audit](audits/theta-pair-laguerre-2026-10-05-v1/README.md)

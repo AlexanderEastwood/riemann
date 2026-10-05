@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Six-agent theta review — October 5, 2026</title><meta name="description" content="Six independent roles assess the complete theta pair, approximation errors, reference margins and matched controls."></head>
+<body style="margin:0;background:#101c29;color:#e8eced;font:18px/1.65 Georgia,serif;">
+<main style="max-width:680px;margin:0 auto;padding:44px 24px 70px;">
+<p style="font:12px/1.5 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#a9c6cc;">Research audit · October 5, 2026 · Version 1</p>
+<h1 style="font-size:39px;line-height:1.12;font-weight:normal;margin:18px 0;">Six agents, one remaining sign estimate</h1>
+<p style="font-size:22px;color:#c8d9dc;">The original nonlinear theta evolution remains unexcluded. We obtained a complete approximation-error bound, rejected a specific local certificate, and made the controls sharper. No method yet proves the original pair’s sign at every height.</p>
+<div style="border-left:4px solid #d5b574;padding:12px 18px;background:#182939;margin:26px 0;"><strong>Wall check: Same open gap.</strong> Closest results: NS100/101 and PRs #72–73, in ZERO-GEOMETRY. The new work distinguishes an error estimate from the missing lower bound. It does not thaw the group.</div>
+<p style="font-size:15px;color:#afc0c8;">Reviewed scientific baseline: <code style="overflow-wrap:anywhere;">5434d96f0034f842b0229f1d69dbbf3fb7fea270</code>. Six assisting agents worked in two rolling waves, followed by adversarial cross-review. The coordinator reviewed all 104 registered conclusions and 14 continuation inputs; this was a scope and dependency review, not a replay of all historical evidence.</p>
+
+<h2 style="font-size:27px;font-weight:normal;margin-top:38px;">The target we kept</h2>
+<p>The target retains the complete, smooth, even original theta kernel <code>phi</code>, both shifted factors and all tails. Approximations and controls are identified explicitly below. With the project’s normalization:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;border-radius:8px;font:14px/1.65 monospace;">X(r) = integral_R phi(u) exp(i*r*u) du
+     = xi(1/2+i*r)/2
+C(t) = integral_R s^2 phi(s+t) phi(s-t) ds
+L1[X](r) = X'(r)^2 - X(r)*X''(r)
+         = 4 integral_R C(t) cos(2*r*t) dt
+
+Target: L1[X](r) &gt;= 0 for EVERY real r.</pre>
+<p>This is equivalent to positive definiteness of the complete associated kernel <code>C</code>. It is only the first Laguerre condition; proving it alone would not prove RH. The original Jacobi evolution retains the clock <code>L=2u</code> and its distinguished initial state.</p>
+
+<h2 style="font-size:27px;font-weight:normal;margin-top:38px;">What the six reviews established</h2>
+<ol style="padding-left:24px;">
+<li style="margin-bottom:18px;"><strong>The previous pair algebra survives independent review.</strong> The factors and signs in PR73 check. Its tail cancellation includes prefix–tail cross terms: the tail’s own Laguerre expression is eventually negative. Smooth boundary cancellation by itself gives rapid decay, not a positive sign. <a style="color:#9cdbde;" href="reviews/01-independent-audit.md">Review 1</a></li>
+<li style="margin-bottom:18px;"><strong>A particular local nonlinear certificate fails.</strong> An integration-by-parts construction would suffice if its residual kernel were positive semidefinite for every finite set of real arguments. The drift-cancelling choice fails already on its diagonal for the original theta tail. This rejects that choice, not every local or nonlocal use of the nonlinear evolution. <a style="color:#9cdbde;" href="reviews/02-nonlinear-estimate.md">Review 2</a></li>
+<li style="margin-bottom:18px;"><strong>A smooth reciprocal completion has a complete error estimate.</strong> It avoids PR73’s cusp and admits explicit bounds on the transform and its first two derivatives at every real height. Its differential kernel has a negative artificial real-space tail; that fact alone does not determine its Laguerre sign. No lower sign margin for this approximation was obtained. <a style="color:#9cdbde;" href="reviews/03-modular-completion.md">Review 3</a></li>
+<li style="margin-bottom:18px;"><strong>A positive reference margin is available.</strong> Gasper’s Bessel square identity supplies an all-height positive Laguerre margin for a different smooth reference. The original-theta comparison needed to use it remains missing. The other three arXiv sources checked do not supply that comparison. <a style="color:#9cdbde;" href="reviews/04-arxiv-methods.md">Review 4</a></li>
+<li style="margin-bottom:18px;"><strong>The reciprocal-mixture family fails the actual first-Laguerre test.</strong> A sufficient parameter range follows analytically from complete theta moments. This avoids the invalid inference that off-axis zeros alone force first-Laguerre failure. The control does not satisfy the original Jacobi equation. <a style="color:#9cdbde;" href="reviews/05-matched-controls.md">Review 5</a></li>
+<li style="margin-bottom:18px;"><strong>The adversarial review admits no sign method.</strong> It checked the new error rates, local rejection, reference normalization and control threshold. The missing comparison remains an admission blocker. <a style="color:#9cdbde;" href="reviews/06-adversarial-admission.md">Review 6</a></li>
+</ol>
+
+<h2 style="font-size:27px;font-weight:normal;margin-top:38px;">Why the local certificate stops</h2>
+<p>Write <code>p=phi'/phi</code>, <code>w(u,v)=(u+v)^2/4</code>, and <code>S=p(u)+p(v)</code>. For an admissible symmetric function <code>h</code>, integration by parts gives the residual:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;border-radius:8px;font:14px/1.65 monospace;">R_h = w - (partial_u+partial_v)h - S*h
+
+Choose h = w/S. On the diagonal:
+R_h(u,u) = -u/p(u) + u^2*p'(u)/(2*p(u)^2)
+         = (u-u^2)/(2*pi*exp(2u))
+           + O(u^2*exp(-4u)) &lt; 0 eventually.</pre>
+<p>The complete original theta asymptotic supplies this rejection. A global smooth-quotient discussion is conditional on pointwise <code>p'(t)&lt;0</code>; the diagonal rejection needs no such global premise. No numerical onset is asserted.</p>
+
+<h2 style="font-size:27px;font-weight:normal;margin-top:38px;">What the error bound does—and leaves open</h2>
+<p>The smooth completion blends a finite original theta sum with its reciprocal using <code>w(u)=1/(1+exp(-(pi/2)*sinh(2u)))</code>. All derivatives of the weight and both omitted tails are retained. The detailed note defines every constant in:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;border-radius:8px;font:14px/1.65 monospace;">|X^(j)(r)-X_M^(j)(r)|
+ &lt;= S_j(r) exp(-pi*|r|/8-beta*(M+1)), j=0,1,2
+beta = pi/(2*sqrt(2)), M &gt;= 1, r real.
+
+If M(r) &gt;= ceil(|r|)+M0, M0 &gt;= 1:
+|L1[X]-L1[X_M]|
+ &lt;= O((1+r^2) exp(-(pi/4+beta)*|r|))
+   + O((1+r^2)^2 exp(-(pi/4+2*beta)*|r|)).</pre>
+<p>Derivatives are always taken with <code>M</code> fixed, then the bound is evaluated at the chosen <code>M(r)</code>. We never differentiate a discontinuous cutoff. The constants are given as convergent integrals in Review 3, rather than fitted from samples.</p>
+<p>This bounds the absolute error. It does not prove that the approximation has a positive margin larger than that error. In particular, a zero lower margin cannot absorb a positive error allowance. The supporting estimate therefore does not establish the target.</p>
+
+<h2 style="font-size:27px;font-weight:normal;margin-top:38px;">A reference with a known positive margin</h2>
+<p>For <code>B_a(r)=K_(i*r/2)(a)</code>, <code>a&gt;0</code>, taking the quadratic coefficient in <a style="color:#9cdbde;" href="https://arxiv.org/html/0801.2996v1">Gasper’s identity (2.6)</a> gives:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;border-radius:8px;font:14px/1.65 monospace;">L1[B_a](r)
+ = (1/4) integral_0^1 [-log(t)]/[t*(1-t)]
+            * K_(i*r/2)(a/sqrt(t))^2 dt &gt; 0.</pre>
+<p>The reviewed note also derives a crude explicit lower bound. But <code>B_a</code> is not the smooth completion <code>X_M</code>. The error estimate above does not estimate <code>X-B_a</code>. Combining those two findings without a new comparison would be a false transfer.</p>
+<p>For any real reference <code>H</code>, errors <code>|(X-H)^(j)|&lt;=epsilon_j</code> would suffice if, at every real height:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;border-radius:8px;font:14px/1.65 monospace;">2|H'|*epsilon_1 + |H|*epsilon_2
+ + |H''|*epsilon_0 + epsilon_0*epsilon_2
+ &lt;= m_H &lt;= L1[H].</pre>
+<p>That is a conditional comparison with the mixed terms retained, not an estimate we have proved. The original integer-square theta coefficients and nonlinear evolution would have to control these errors, or the signed cross terms directly.</p>
+
+<h2 style="font-size:27px;font-weight:normal;margin-top:38px;">The matched control, without a scan</h2>
+<p>For the NS101 reciprocal family, write <code>X_beta=(3+2cos(beta*r))*X/B_beta</code>, where <code>B_beta</code> is its positive normalization constant, unrelated to the Bessel reference. Set <code>m_j=integral_R u^j*phi(u)du</code> for <code>j=0,2</code>, and <code>k=m_2/m_0&gt;0</code>.</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;border-radius:8px;font:14px/1.65 monospace;">beta &gt;= max(2, pi*sqrt(k))
+  =&gt; L1[X_beta](pi/beta) &lt; 0.</pre>
+<p>The proof uses complete moments and the exact product identity. It asserts no evaluated threshold and does not separately decide the archived <code>beta=2</code> member. The family shares reciprocity, positive even kernels and order-one transform structure, while failing the original normalized Jacobi equation. A separate smooth, strictly log-concave control also shows that boundary cancellation and kernel shape alone cannot provide the desired sign. Neither control defeats a method that genuinely uses the original equation.</p>
+<p>NS100 already excludes positivity of each separate original slice. Davenport–Heilbronn has different coefficients and completion, so it is not a counterexample satisfying the original theta initial-value premises. No unchanged example script was presented as a screen of this different target.</p>
+
+<h2 style="font-size:27px;font-weight:normal;margin-top:38px;">Decision and next admissible step</h2>
+<p><strong>No original-theta sign candidate is admitted.</strong> The work separates three obligations: construct a smooth approximation, estimate its complete error, and prove a lower sign margin. The first two can now be made explicit for the displayed completion. The third remains unestimated.</p>
+<p>The next useful proposal must supply a concrete method for a signed lower bound using the original two-shift Jacobi trajectory, or a complete original-theta-to-reference comparison. It must retain every real height and arbitrary finite translate coefficients. Another fitted reference or finite height table would not meet this requirement.</p>
+<p><strong>Budget decision:</strong> no scan is authorized by this audit. If an independent estimating mechanism is specified, allow one bounded applicability review before numerical work. Success would establish the first-Laguerre target only; failure would stop that mechanism under its stated hypotheses.</p>
+<p style="border-top:1px solid #344655;padding-top:22px;color:#afc0c8;font-size:15px;">No new NS row, node, thaw, interval certificate or manuscript version. The manuscript remains v1.66; the required build has 358 pages and zero undefined or duplicate references. Both historical original-evidence recovery groups remain OPEN. RH, G2 and the cofinal signed-arithmetic lower bound remain open.</p>
+<p style="font-size:15px;"><a style="color:#9cdbde;" href="README.md">Archive index</a> · <a style="color:#9cdbde;" href="review-record.json">Review and validation record</a> · <a style="color:#9cdbde;" href="https://arxiv.org/html/1309.0055v2">Classical Laguerre context</a></p>
+</main></body></html>
