@@ -750,3 +750,18 @@ inequality using the distinguished nonlinear trajectory. Its first partial
 target is the all-height first Laguerre inequality. Keep the complete
 integrals and their signs; NS100 still excludes per-slice positivity.
 No new node, thaw or manuscript version; original evidence recovery stays OPEN.
+
+## October 5 two-factor continuation disposition
+
+Owner: Codex. Status: completed transfer/approximation audit; no research row.
+The [pair report](audits/theta-pair-laguerre-2026-10-05-v1/README.md)
+derives the complete first-Laguerre mixed form, but obtains no estimating
+method from the original nonlinear evolution. Every fixed reflected finite
+theta sum eventually violates the first Laguerre inequality; the omitted
+tail cancels its leading algebraic error. Stop that all-height prefix
+strategy. This is not an exclusion of the exact orbit or smooth completions.
+
+**Same open gap — ZERO-GEOMETRY / NS100–101.** No new scan is recommended
+without an independent bound for the complete mixed form or a specified
+uniform-height error comparison. A larger prefix or finite matrix table
+leaves the same gap. No row, thaw, node or manuscript version.
