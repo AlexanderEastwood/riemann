@@ -765,3 +765,11 @@ strategy. This is not an exclusion of the exact orbit or smooth completions.
 without an independent bound for the complete mixed form or a specified
 uniform-height error comparison. A larger prefix or finite matrix table
 leaves the same gap. No row, thaw, node or manuscript version.
+
+## October 5 six-agent theta continuation audit
+
+Owner: Codex plus six assisting agents. Status: in progress (audit; no NS row).
+[Shared brief](audits/theta-six-agent-2026-10-05-v1/BRIEF.md).
+Review original-pair estimating mechanisms, independently audit PR73, and
+assess exact modular completions and matched controls. No scan or thaw.
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR72/73.**
