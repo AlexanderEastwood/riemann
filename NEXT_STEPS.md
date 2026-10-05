@@ -839,3 +839,13 @@ lanes. Each recommendation must identify its arithmetic input, dependency
 edge, matched controls, falsifiable decision and bounded budget. No scans
 or generic adjacent variation are authorized by this audit.
 **Final wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76.**
+
+## October 5 user-requested six-agent arithmetic admission
+
+Owner: Codex with six assigned assistants. Status: in progress (candidate
+formulation audit; no research row). Alex explicitly requested continuation
+after PR77. Three concrete mechanism proposals receive three independent
+algebra/control/admission checks. Unproved estimates may qualify, but exact
+inputs, a specific method and conditional transfer must be supplied. No
+scan, row, thaw or version follows merely from this renewed request.
+**Wall check at dispatch: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–77.**
