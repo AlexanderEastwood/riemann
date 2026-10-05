@@ -1,0 +1,102 @@
+{
+  "reviewed_commit": "18d324703969b5bcc9aa94043cfd90a6e8211f34",
+  "date": "2026-10-05",
+  "owner": "Codex with twelve assigned agents",
+  "scope": "User-requested next-step method feasibility review; no computation, scan or proof claim",
+  "refresh": "Remote unchanged from the current-turn full conclusion/dependency review. Rechecked current conclusions, all input demands and PR76 audit. Not a historical proof replay.",
+  "wall_check": "Same open gap",
+  "closest": [
+    "NS100",
+    "NS101",
+    "PR76"
+  ],
+  "changed_input": "None admitted at dispatch; each reviewer must distinguish an estimating step from a restatement",
+  "original_recovery_groups": "Both OPEN",
+  "no_research_row": true,
+  "no_manuscript_version": true,
+  "status": "complete; no estimating method admitted",
+  "input_sha256": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "c9e2fe491864d015a70cc2eb9c3004ad853504c63e847265625a14e5f02605b7",
+    "README.md": "e1fa52920ed24be812e21d68d14af401be03a3d4f18f796822b94f84110afa68",
+    "NEXT_STEPS.md": "7ca82dd8872180108ba04af376126c184e052d46c2de9190ded60fdb41b23717",
+    "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74"
+  },
+  "reviewers_completed": 12,
+  "reviews": [
+    {
+      "file": "reviews/01-jacobi.md",
+      "sha256": "eb58a73f25c296927bee7f082e60d7b7d7e0a575c6598bdcdde0383d5fbfbc4e"
+    },
+    {
+      "file": "reviews/02-transport.md",
+      "sha256": "ba032c17ddb3a1674d43f573667c41277e28ac35949fe3b8b3e70a36b42bca33"
+    },
+    {
+      "file": "reviews/03-lattice.md",
+      "sha256": "41673867c3ad671ee32cbc4954088b054787c5b847f75fdc0c6ae3bef1f40d96"
+    },
+    {
+      "file": "reviews/04-prime-sum.md",
+      "sha256": "3c24b40e5fc5775f620ca6ab7ba2b393209007813bbf724df942dcdf3e18b54e"
+    },
+    {
+      "file": "reviews/05-canonical.md",
+      "sha256": "22b04573ef97c4ddc1fcb69f3c2e8176053df1770aeded6e4565240b9efe1a5f"
+    },
+    {
+      "file": "reviews/06-factorization.md",
+      "sha256": "1bbda6b17696b45127bcb3fbe62203358c80e54726e08443e556498db45e7dd1"
+    },
+    {
+      "file": "reviews/07-moments.md",
+      "sha256": "15a277006ced4eeb16c6b8697d6346ab11e4b07590eab6f5a4b067a3e2f778df"
+    },
+    {
+      "file": "reviews/08-reference.md",
+      "sha256": "15960a2e2ad6d2961ed6ba5f7b3d96a37003e51fee00a9f373c0c3795fbf7933"
+    },
+    {
+      "file": "reviews/09-high-height.md",
+      "sha256": "c77fced259502c7920a39fb61ab96f37d66e7d63942c7e6cdc2bac15fc931eb3"
+    },
+    {
+      "file": "reviews/10-controls.md",
+      "sha256": "aad06cb079ffcd57fee75d59fafba13b1436fbd93b875479ae82489106103407"
+    },
+    {
+      "file": "reviews/11-global.md",
+      "sha256": "40b572b91c1701536fc04e70340a13fd7f5db12e95ae10ddc8d7840ace586d62"
+    },
+    {
+      "file": "reviews/12-admission.md",
+      "sha256": "a65d64208ba0530719069d87e28b6aa58e2940c29967433df60dceed4f3aa355"
+    }
+  ],
+  "disposition": "Complete this commissioned synthesis, then stop automatic variations and route switches. No current computation allocation. Original target remains open.",
+  "corrections_integrated": [
+    "Review02 spells out the low-height threshold and negative correction in J.",
+    "Review08 distinguishes its analytic allowance from interval certification."
+  ],
+  "validation": {
+    "manuscript_pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "manuscript_changed": false,
+    "new_version_manifest": "not applicable",
+    "registered_nodes_unchanged": true,
+    "continuation_demands_unchanged": true,
+    "historical_proof_or_certificate_replay": false,
+    "numerical_sign_scan": false,
+    "inline_css_only": true,
+    "local_links_valid": true,
+    "diff_check_passed": true,
+    "browser_preview": {
+      "title": "Where to go next after the theta audit",
+      "viewport_width": 1280,
+      "document_width": 1280,
+      "focused_reviews": 12,
+      "visual_review": "readable; no horizontal overflow; tab preserved"
+    }
+  },
+  "html_sha256": "c910f4d0702affe9b4b3ce38812a34c631376c36f370e2bfdb4c102969356212"
+}
