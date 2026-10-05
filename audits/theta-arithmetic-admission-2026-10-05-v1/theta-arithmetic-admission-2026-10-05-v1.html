@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Original theta: six-agent arithmetic review · October 5, 2026</title><meta name="description" content="One concrete nonlocal certificate rejected; two arithmetic decompositions still need a signed estimate. Six focused reviews of the original theta route."></head>
+<body style="margin:0;background:#f4f1e9;color:#21353c;font-family:Georgia,'Times New Roman',serif;font-size:18px;line-height:1.62;">
+<main style="max-width:680px;margin:0 auto;padding:40px 22px 56px;overflow-wrap:anywhere;">
+<p style="font:12px system-ui,sans-serif;letter-spacing:0.13em;text-transform:uppercase;color:#5b7177;margin:0 0 17px;">Riemann research · October 5, 2026 · Audit v1</p>
+<h1 style="font-size:clamp(34px,7vw,49px);line-height:1.08;font-weight:normal;margin:0 0 22px;">One concrete test.<br>Six focused reviews.</h1>
+<p style="font-size:22px;line-height:1.45;">We found a specific nonlocal construction to test. Its proposed positive-mixture condition fails on the original theta function. The other two attempts expose the arithmetic, but still do not estimate the sign.</p>
+<div style="padding:18px 20px;background:#e3ebe8;border-left:4px solid #3f7770;margin:25px 0;">
+<strong>Wall check: Same open gap.</strong> Closest: NS100/101, PR76–77. One sufficient certificate class is now rejected. No signed lower bound for the complete original target has been added.</div>
+<p>Three agents formulated mechanisms. Three others checked their algebra, controls and admission decisions. No candidate survives for a numerical scan. The original nonlinear theta route remains open.</p>
+<h2 style="font-size:28px;line-height:1.2;font-weight:normal;margin:32px 0 14px;">The test that became concrete</h2>
+<p>Take the two shifted original theta factors together. Their total mass is <strong>M</strong>; their second moment is <strong>C</strong>. Their quotient <strong>k = C/M</strong> measures the spread of their product.</p>
+<pre style="background:#fffdf8;border:1px solid #d2d6cd;padding:17px;font:14px/1.65 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;">M(t) = integral phi(s+t)*phi(s-t) ds
+C(t) = integral s^2*phi(s+t)*phi(s-t) ds
+k(t) = C(t)/M(t)</pre>
+<p>We supplied an explicit correction, integrating from minus infinity and centering by k, that keeps both boundary terms zero. If k were a positive-definite kernel, this construction would establish the complete first-Laguerre inequality. Positive definiteness means that every finite matrix built from the kernel has a nonnegative quadratic form; ordinary positivity of k is insufficient.</p>
+<p>The proposed estimating condition was specific: represent k as a <strong>nonnegative mixture of powers of sech(2t)</strong>. Each such power has the required positive-definite property. This gave a definite sufficient conjecture with a complete transfer to the target.</p>
+<h2 style="font-size:28px;line-height:1.2;font-weight:normal;margin:32px 0 14px;">The original tail rejects that mixture</h2>
+<p>After a change of variable, the proposed mixture would make Q a nonnegative mixture of decaying exponentials. The complete original theta expansion instead gives:</p>
+<pre style="background:#fffdf8;border:1px solid #d2d6cd;padding:17px;font:14px/1.65 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;">Q(z) = k(arcosh(exp(z))/2)
+
+Q(z) = exp(-z)/(16*pi)
+     - exp(-2*z)/(128*pi^2)
+     + O(exp(-3*z))</pre>
+<p>The leading coefficient fixes an atom in any proposed positive mixture. All its remaining contributions would be nonnegative, so it must approach that leading term from above. The original theta quotient approaches from below. The negative second correction rules out this precise mixture class.</p>
+<p>The derivation retains the original polynomial factors, every other lattice term and the outer integration tails. Independent reviewers reproduced both coefficients. No onset height or numerical certificate is asserted.</p>
+<p><strong>Scope:</strong> this does not show that k fails positive definiteness. It does not show that the original first-Laguerre expression is negative. Other nonlocal corrections remain unexcluded. PR77’s positive Gaussian-mixture rejection concerned C itself; it did not already settle this different quotient and mixture.</p>
+<h2 style="font-size:28px;line-height:1.2;font-weight:normal;margin:32px 0 14px;">The two arithmetic attempts</h2>
+<p><strong>Divisor variance.</strong> Grouping the two zeta factors by their product gives explicit coefficients involving prime-factor exponents and squared logarithms. These coefficients are nonnegative in their convergent Dirichlet series. On the critical line, however, the full completion and oscillatory contributions remain. No positive main term and compatible lower remainder estimate were obtained.</p>
+<p><strong>Riemann–Siegel sums.</strong> We wrote the complete quadratic with both ratio and product phases, gamma curvature and every differentiated remainder term. At the balanced cutoff, the stationary dual sum has comparable length. The tested absolute-value budget grows like N, while its positive diagonal grows only like (log N)^3. This explains the failure of that proposed bound; it does not determine the actual oscillatory sign or exclude all Poisson methods.</p>
+<h2 style="font-size:28px;line-height:1.2;font-weight:normal;margin:32px 0 14px;">What is still missing</h2>
+<pre style="background:#e7eeed;border-left:4px solid #3f7770;padding:17px;font:14px/1.65 ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere;">J(r) = (r^2+1/4)^2*(Y'^2-Y*Y'')
+     + 2*(r^2-1/4)*Y^2
+
+Required: J(r) &gt;= 0 for every real r.</pre>
+<p>The full correction, zeros and mixed terms are included. A proof of this first inequality alone would still not prove RH; the distinction is explicit in <a href="https://arxiv.org/html/1309.0055v2" style="color:#245e6b;">Csordas’s formulation of the Laguerre inequalities</a>.</p>
+<p>The NS101 control shares the generic centering identities. In its established negative-Laguerre range, its own quotient cannot be positive definite. Thus “it is a conditional variance” supplies no sign theorem. The control changes the original lattice and nonlinear initial data; that mismatch remains a distinction, not a successful screen.</p>
+<p><strong>Decision:</strong> stop these three attempts. A future conjecture need not already be proved to deserve review. It must supply a concrete estimator and its complete conditional link to the target. Changing the mixture or running a larger finite table is not an automatic next step.</p>
+<p><strong>Budget completed:</strong> six paper reviews and one findings PR. Zero sign scans or interval-certificate runs. No research row, thaw, new theorem node or manuscript version.</p>
+<h2 style="font-size:28px;line-height:1.2;font-weight:normal;margin:32px 0 14px;">The six review records</h2>
+<ol style="padding-left:24px;">
+<li style="margin:10px 0;"><a href="reviews/01-nonlocal.md" style="color:#245e6b;">Nonlocal construction and original-tail rejection</a></li>
+<li style="margin:10px 0;"><a href="reviews/02-poisson.md" style="color:#245e6b;">Divisor variance and complete continuation</a></li>
+<li style="margin:10px 0;"><a href="reviews/03-riemann-siegel.md" style="color:#245e6b;">Pointwise Riemann–Siegel quadratic</a></li>
+<li style="margin:10px 0;"><a href="reviews/04-algebra.md" style="color:#245e6b;">Independent algebra and complete-tail check</a></li>
+<li style="margin:10px 0;"><a href="reviews/05-controls.md" style="color:#245e6b;">Matched controls and coefficient check</a></li>
+<li style="margin:10px 0;"><a href="reviews/06-admission.md" style="color:#245e6b;">Adversarial admission decision</a></li>
+</ol>
+<footer style="border-top:1px solid #becbc8;margin-top:30px;padding-top:20px;font-size:14px;color:#4c646b;"><p>Reviewed remote commit <span style="font-family:ui-monospace,monospace;">6708643</span>. All 104 registered conclusions and 14 continuation inputs were reviewed for scope and dependencies; historical proofs and certificates were not all replayed. Both original-evidence recovery groups remain open.</p><p><strong>Final wall check: Same open gap.</strong> Original theta sign, RH, G2 and the cofinal arithmetic bounds remain open. <a href="review-record.json" style="color:#245e6b;">Review record</a> · <a href="PROPOSAL.md" style="color:#245e6b;">Filled proposal and control record</a>.</p></footer>
+</main></body></html>

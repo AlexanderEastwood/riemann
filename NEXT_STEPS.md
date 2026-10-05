@@ -842,10 +842,17 @@ or generic adjacent variation are authorized by this audit.
 
 ## October 5 user-requested six-agent arithmetic admission
 
-Owner: Codex with six assigned assistants. Status: in progress (candidate
-formulation audit; no research row). Alex explicitly requested continuation
-after PR77. Three concrete mechanism proposals receive three independent
-algebra/control/admission checks. Unproved estimates may qualify, but exact
-inputs, a specific method and conditional transfer must be supplied. No
-scan, row, thaw or version follows merely from this renewed request.
-**Wall check at dispatch: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–77.**
+Owner: Codex with six completed assisting reviews. Status: complete (candidate
+formulation and admission audit; no research row).
+[Report and six reviews](audits/theta-arithmetic-admission-2026-10-05-v1/README.md).
+An explicit nonlocal Volterra correction has complete vanishing boundaries.
+Its proposed positive sech-power mixture for k=C/M is rejected by the
+original quotient's negative second tail coefficient. This is distinct from
+PR77's Gaussian mixture for C and does not decide general positive-definite k.
+Divisor variance and the complete Hardy/Riemann–Siegel quadratic expose
+arithmetic but supply no signed lower estimating mechanism. No candidate
+survives. Stop these attempts; no automatic scan, neighboring mixture or
+route pivot. A future conjectural estimate need not already be proved, but
+must specify its technique and complete conditional transfer.
+No scan, row, thaw, node or version. Both recovery groups remain OPEN.
+**Final wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–77.**
