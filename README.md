@@ -50,6 +50,20 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 5 decaying-primitive boundary audit
+
+The [primitive audit](audits/theta-decaying-primitive-2026-10-05-v1/README.md)
+repairs PR75's ordinary-transform difficulty: a positive decaying primitive
+has integrable pair moments. Recovering the original function retains an
+explicit polynomial Laguerre correction. The exact NS101 control shares
+the primitive's positivity, envelope and unit leading tail yet fails the
+corrected target in PR74's analytic range. These structural properties
+supply no original sign estimate; the original Jacobi IVP is absent from
+the control and remains an unexcluded source of a genuinely new estimate.
+The primitive transform is meromorphic, outside the cited admissible
+entire-transform kernel class. No scan, node, thaw or manuscript version.
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR74/75.**
+
 ## October 5 theta-addition applicability audit
 
 The [addition audit](audits/theta-addition-admission-2026-10-05-v1/README.md)

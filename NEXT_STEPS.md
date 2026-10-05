@@ -797,3 +797,20 @@ No original sign method admitted. Next requires an independent estimate for
 that complete signed combination or the original pair, not another expansion.
 No numerical/symbolic scan, node, thaw, certificate or manuscript version.
 **Wall check: Same open gap — ZERO-GEOMETRY.**
+
+## October 5 decaying-primitive boundary audit
+
+Owner: Codex plus twelve assigned reviewers. Status: complete (audit; no NS row).
+[Report and twelve reviews](audits/theta-decaying-primitive-2026-10-05-v1/README.md).
+A complete positive decaying primitive yields integrable pair moments and
+legitimate ordinary transforms. Recovering X retains its polynomial Laguerre
+correction. NS101 shares the positive primitive, envelope and unit tail yet
+fails the corrected sign; original coefficients/Jacobi IVP remain different.
+The primitive transform is the meromorphic completed zeta factor. Local
+moments, direct separation-clock transport and an Euler-series import supply
+no all-height estimate. The pointwise second-logarithmic target is not the
+older NS47 all-test comparison. No new method admitted: require an independent
+complete arithmetic estimating step before any sign computation. All twelve
+reviews are archived; no historical proof replay is claimed. No scan, node,
+thaw, certificate or manuscript version. Both recovery groups remain OPEN.
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR75.**
