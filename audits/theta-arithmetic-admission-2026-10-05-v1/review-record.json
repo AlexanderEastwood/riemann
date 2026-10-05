@@ -1,0 +1,85 @@
+{
+  "reviewed_commit": "670864385024041d24612cf620054c1975473928",
+  "date": "2026-10-05",
+  "request": "Continue original theta route with six assisting agents",
+  "scope": "Explicitly requested bounded candidate formulation and independent admission assessment; not an automatic follow-on scan",
+  "review_scope": "Remote refreshed and all conclusions/dependency records compared with the full PR77 review; unchanged. Current instructions/checkpoints/board/missing-evidence and relevant PR76/77 findings retained. No historical proof or certificate replay.",
+  "wall_check": "Same open gap",
+  "closest": [
+    "NS100",
+    "NS101",
+    "PR76",
+    "PR77"
+  ],
+  "changed_input": "A new sufficient nonlocal mixture class was assessed and rejected; no original signed lower bound is established.",
+  "arithmetic_scan": false,
+  "new_research_row": false,
+  "new_manuscript_version": false,
+  "original_recovery_groups": "Both OPEN",
+  "status": "complete: no candidate survives",
+  "input_sha256": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "c53d7f12755fa28f1256d63cd116b8f31a9cdaa50595f1dfcbd4c41de2be5134",
+    "README.md": "370c83601310cf44999c74c9a0644129ae3c2d4a9f78a65e9bf6047bfb7df0b0",
+    "NEXT_STEPS.md": "70acc08aee4375e88001cec85834de4acb17bbd04ae3b34998b5e5454770a1b3",
+    "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74",
+    "audits/theta-next-steps-team-2026-10-05-v1/README.md": "fbab675428eabcb10bb2183cbb28d78f62189304f9abd27228b338dc9c7a7d0e"
+  },
+  "assistants_completed": 6,
+  "reviewers": [
+    "arith01_nonlocal",
+    "arith02_poisson",
+    "arith03_rs",
+    "arith04_algebra",
+    "arith05_controls",
+    "arith06_admission"
+  ],
+  "outcome": "Well-specified positive sech-power mixture for k=C/M rejected by the original second tail coefficient. Divisor and Hardy arithmetic decompositions have no signed estimating step. General PD k and original J remain open.",
+  "checks": {
+    "independent_algebra": "reviews/04-algebra.md",
+    "controls": "reviews/05-controls.md",
+    "admission": "reviews/06-admission.md",
+    "major_findings_unresolved": 0,
+    "parent_checks": [
+      "Volterra residual and vanishing flux",
+      "two complete-tail coefficients and positive-measure contradiction",
+      "divisor variance and completion signs",
+      "Hardy double-sum and full remainder expansion"
+    ],
+    "manuscript_build": {
+      "command": "./manuscript/build.sh",
+      "pages": 358,
+      "undefined_or_duplicate_references": 0,
+      "manuscript_changed": false
+    },
+    "register": {
+      "nodes": 104,
+      "continuation_inputs": 14,
+      "node_records_changed": false,
+      "input_demands_changed": false,
+      "change": "ZERO-GEOMETRY scope/source annotation only"
+    },
+    "html": {
+      "rendered_in_browser": true,
+      "observed_width": 461,
+      "observed_scroll_width": 461,
+      "review_links": 6,
+      "local_links_resolve": true,
+      "scripts": 0
+    }
+  },
+  "control_commands_run": [],
+  "no_control_run_reason": "Actual sufficient mixture rejected analytically on original input; remaining proposals lack an estimating statement. Existing controls applied with explicit scope/mismatch. No sampled pass claimed.",
+  "sources_consulted": [
+    "https://arxiv.org/html/1309.0055v2"
+  ],
+  "budget": "Six bounded paper reviews and one audit PR; zero sign scans/certification runs.",
+  "review_sha256": {
+    "reviews/01-nonlocal.md": "34fc4d369de06b188a53c58d99f95f0822a411d25d4715bb151daf7c7dad8dae",
+    "reviews/02-poisson.md": "9b56e282e7a47ae39123860531982736809e6a4acb66e47b537e00a5e6387fcb",
+    "reviews/03-riemann-siegel.md": "2a0373817c27d423f7927ff94657dd9d84f31183fa5802fe8f69adcd45ac15ed",
+    "reviews/04-algebra.md": "280bdb5bb5d2642265904a6b1c5126e276d77ac2b9e8e560e82f7c8d972bf632",
+    "reviews/05-controls.md": "a5d8c0408791a4f20d709e5fc4da84549bcfc0d30ac07dce442f5621538b7015",
+    "reviews/06-admission.md": "cff2451f5ed47083f6ebe9df636a272e2df460e422bcea9e9d094c2a1a756ca5"
+  }
+}

@@ -50,6 +50,18 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 5 six-agent arithmetic admission
+
+The [six-review audit](audits/theta-arithmetic-admission-2026-10-05-v1/README.md)
+assesses an explicit nonlocal centering certificate. A proposed positive
+sech-power mixture for the original pair quotient C/M is incompatible with
+its second tail coefficient. This excludes that sufficient class, not general
+positive definiteness of C/M or the original theta target. Exact divisor
+variance and Hardy/Riemann–Siegel decompositions still lack a signed lower
+estimating step. No candidate survives for computation. First Laguerre alone
+is not RH; no row, thaw, new node or manuscript version.
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–77.**
+
 ## October 5 next-step review and 4D explanation
 
 The [twelve-review report](audits/theta-next-steps-team-2026-10-05-v1/README.md)
