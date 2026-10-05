@@ -16,7 +16,7 @@
   "new_manuscript_version": false,
   "arithmetic_scan": false,
   "actual_theta_values_plotted": false,
-  "status": "in progress",
+  "status": "complete; explanatory artifact, unchanged arithmetic gap",
   "input_sha256": {
     "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
     "research-map.json": "c9e2fe491864d015a70cc2eb9c3004ad853504c63e847265625a14e5f02605b7",
@@ -24,5 +24,30 @@
     "NEXT_STEPS.md": "84743012834164f26a316ade307f172452a6766022a56702f7ed4da293ba6304",
     "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74",
     "audits/theta-decaying-primitive-2026-10-05-v1/derivation.md": "c6bee5824b93387120263dcf75446a8191ecdd997945e31dcbcb1b026e0c9f00"
-  }
+  },
+  "validation": {
+    "javascript_syntax": "passed",
+    "display_logic": "8 independent product-rule examples; both sign directions and y=0 degeneracy; passed",
+    "browser_controls": "boundary/allowed/violating/zero presets; negative Y; height endpoints; stack toggle; manual angle and pause/resume passed",
+    "browser_errors": [],
+    "width_checks": [
+      {
+        "viewport": 1280,
+        "document_width": 1280
+      },
+      {
+        "viewport": 390,
+        "document_width": 390
+      }
+    ],
+    "screenshot": "model-preview.jpg",
+    "manuscript_pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "manuscript_changed": false,
+    "certificate_or_arithmetic_scan": false,
+    "inline_css_only": true,
+    "local_links_valid": true,
+    "diff_check_passed": true
+  },
+  "html_sha256": "68e9a42ae9ce751d6756c83aa2d64690fb92e6348072ceda6873dee10218f4c4"
 }

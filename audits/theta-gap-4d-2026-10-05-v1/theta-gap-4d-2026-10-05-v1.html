@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="An interactive four-coordinate explanation of the missing all-height theta inequality. Illustrative states only; no computed zeta trajectory.">
+<title>The missing bound — a moving 4D model</title>
+</head>
+<body style="margin:0;background:#f5f6f4;color:#182c36;font-family:Georgia,serif;font-size:18px;line-height:1.65;">
+<main style="max-width:680px;margin:0 auto;padding:32px 18px 60px;">
+<header>
+<p style="margin:0 0 12px;font-family:system-ui,sans-serif;font-size:13px;">Riemann project / October 5, 2026 / Explanation v1</p>
+<h1 style="font-size:clamp(34px,7vw,52px);font-weight:normal;line-height:1.08;letter-spacing:-1.4px;margin:0 0 22px;">The surface we still<br>have to stay above.</h1>
+<p style="font-size:21px;line-height:1.55;margin:0 0 14px;">For this theta subproblem, yes: we still need a <strong>lower bound at every height</strong> for the complete signed expression. We have an exact identity and justified boundary terms. We do not yet have the arithmetic estimate that forces its sign.</p>
+<p style="margin:0 0 26px;">That would prove the first Laguerre inequality for the original function. <strong>That inequality alone would not prove RH.</strong></p>
+</header>
+<section aria-labelledby="model-title" style="background:#122633;color:#f5f6f4;border-radius:12px;padding:20px 16px 18px;">
+<h2 id="model-title" style="font-size:26px;line-height:1.2;font-weight:normal;margin:0 0 10px;">Four coordinates. One sign boundary.</h2>
+<p style="font-size:15px;line-height:1.5;margin:0 0 12px;color:#d5e2e7;">The four coordinates are height <b>r</b>, value <b>Y</b>, slope <b>Y′</b>, and curvature <b>Y″</b>. The gold surface marks equality in the required bound.</p>
+<p style="font-family:system-ui,sans-serif;font-size:13px;line-height:1.5;margin:0;border-left:3px solid #e7c978;padding-left:10px;">Illustrative coordinate space. No zeta values or original theta trajectory are plotted. Motion rotates the view; it does not evolve the function.</p>
+<canvas id="model" width="640" height="470" role="img" aria-label="Rotatable projection of the four-dimensional sign boundary. The controls and numerical comparison below provide an equivalent text view." style="display:block;width:100%;height:clamp(310px,75vw,470px);touch-action:pan-y;cursor:grab;"></canvas>
+<div style="display:flex;gap:10px 20px;flex-wrap:wrap;font:13px/1.5 system-ui,sans-serif;margin-bottom:12px;">
+<span style="color:#e7c978;">◇ Equality surface</span><span style="color:#70ddd0;">+ Allowed side</span><span style="color:#ff9a89;">− Violating side</span>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+<button id="motion" type="button" aria-pressed="true" style="font:14px system-ui,sans-serif;padding:9px 12px;border:1px solid #e7c978;border-radius:6px;background:#e7c978;color:#122633;cursor:pointer;">Pause rotation</button>
+<button id="reset" type="button" style="font:14px system-ui,sans-serif;padding:9px 12px;border:1px solid #80949f;border-radius:6px;background:transparent;color:#f5f6f4;cursor:pointer;">Reset view</button>
+<label style="font:13px system-ui,sans-serif;display:flex;align-items:center;gap:6px;"><input id="stack" type="checkbox" checked> Show other heights</label>
+</div>
+<label for="angle" style="display:block;font:13px system-ui,sans-serif;margin-top:17px;">Rotation through the fourth dimension</label>
+<input id="angle" type="range" min="0" max="360" step="1" value="25" style="width:100%;accent-color:#e7c978;">
+<p style="font:12px/1.5 system-ui,sans-serif;color:#c1d0d7;margin:4px 0 0;">Drag horizontally or use the rotation slider. Dim sheets show selected heights from 0 to 2; the bright sheet follows the height slider. The display is cropped, not a global bound.</p>
+</section>
+
+<section aria-labelledby="controls-title" style="padding:22px 0 0;">
+<h2 id="controls-title" style="font-size:26px;font-weight:normal;margin:0 0 8px;">Move an illustrative state</h2>
+<p style="font-size:16px;margin:0 0 16px;">These four numbers are free examples. They need not belong to any single function, let alone the original theta function. Try crossing the boundary by changing curvature.</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;">
+<button type="button" data-preset="boundary" style="font:13px system-ui,sans-serif;padding:8px 10px;background:#fff;border:1px solid #9babb2;border-radius:5px;cursor:pointer;">On the boundary</button>
+<button type="button" data-preset="allowed" style="font:13px system-ui,sans-serif;padding:8px 10px;background:#fff;border:1px solid #9babb2;border-radius:5px;cursor:pointer;">Allowed example</button>
+<button type="button" data-preset="violation" style="font:13px system-ui,sans-serif;padding:8px 10px;background:#fff;border:1px solid #9babb2;border-radius:5px;cursor:pointer;">Violating example</button>
+<button type="button" data-preset="zero" style="font:13px system-ui,sans-serif;padding:8px 10px;background:#fff;border:1px solid #9babb2;border-radius:5px;cursor:pointer;">Set Y = 0</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px 26px;">
+<div><label for="r" style="display:flex;justify-content:space-between;font:15px system-ui,sans-serif;">Height r <output id="r-out" for="r">0.50</output></label><input id="r" type="range" min="0" max="2" step="0.01" value="0.5" style="width:100%;accent-color:#24576b;"></div>
+<div><label for="y" style="display:flex;justify-content:space-between;font:15px system-ui,sans-serif;">Value Y <output id="y-out" for="y">0.50</output></label><input id="y" type="range" min="-1.2" max="1.2" step="0.01" value="0.5" style="width:100%;accent-color:#24576b;"></div>
+<div><label for="v" style="display:flex;justify-content:space-between;font:15px system-ui,sans-serif;">Slope Y′ <output id="v-out" for="v">0.50</output></label><input id="v" type="range" min="-1.4" max="1.4" step="0.01" value="0.5" style="width:100%;accent-color:#24576b;"></div>
+<div><label for="w" style="display:flex;justify-content:space-between;font:15px system-ui,sans-serif;">Curvature Y″ <output id="w-out" for="w">0.50</output></label><input id="w" type="range" min="-2.2" max="2.2" step="0.01" value="0.5" style="width:100%;accent-color:#24576b;"></div>
+</div>
+<div id="readout" aria-live="polite" aria-atomic="true" style="margin:20px 0 0;padding:16px 18px;background:#fff;border-left:4px solid #b58f32;">
+<p id="state-label" style="font-weight:bold;margin:0 0 8px;">Illustrative state: on the boundary</p>
+<dl style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px 18px;font-size:16px;margin:0;">
+<dt>Left side: Y′² − Y·Y″</dt><dd id="lhs" style="margin:0;font-variant-numeric:tabular-nums;">0.0000</dd>
+<dt>Required lower bound</dt><dd id="rhs" style="margin:0;font-variant-numeric:tabular-nums;">0.0000</dd>
+<dt>Difference: left − required</dt><dd id="gap" style="margin:0;font-variant-numeric:tabular-nums;">0.0000</dd>
+</dl>
+<p id="height-note" style="font-size:15px;margin:12px 0 0;"></p>
+<p id="zero-note" style="font-size:15px;margin:8px 0 0;"></p>
+</div>
+<p style="font-size:14px;color:#47616d;margin:9px 0 25px;">Display arithmetic only. The sign of a chosen example says nothing about the sign of the actual function.</p>
+</section>
+
+<section aria-labelledby="missing-title" style="border-top:1px solid #bdcbd0;padding-top:25px;">
+<h2 id="missing-title" style="font-size:30px;line-height:1.2;font-weight:normal;margin:0 0 15px;">What the missing proof must do</h2>
+<p>The actual original function selects a very particular path through this four-coordinate space:</p>
+<p style="font-family:ui-monospace,monospace;font-size:16px;overflow-wrap:anywhere;">r ↦ (r, Y(r), Y′(r), Y″(r)).</p>
+<p>We need to show that <strong>this path stays on the allowed side at every real height</strong>. That path is deliberately not drawn here: a finite plot would not supply the missing all-height proof.</p>
+<div style="border-left:4px solid #24576b;padding:8px 0 8px 18px;margin:24px 0;">
+<p style="font-size:15px;margin:0 0 8px;">The required lower bound, including its correction:</p>
+<p style="font-family:ui-monospace,monospace;font-size:clamp(13px,3.4vw,17px);line-height:1.8;margin:0;overflow-wrap:anywhere;">Y′² − Y·Y″ ≥ c(r)·Y²<br>c(r) = 2(1/4 − r²)/(r² + 1/4)²</p>
+<p style="font-size:16px;margin:12px 0 0;">For every real r, for the <strong>original theta coefficients</strong>.</p>
+</div>
+<p>“Above” means above this lower bound, not above a fixed screen direction. If Y is positive, lowering curvature helps the inequality; if Y is negative, the allowed direction reverses.</p>
+<p>Below |r| = 1/2 the correction is positive. Above it, the correction is negative. Omitting it changes the question. At Y = 0 the complete expression is regular and becomes a nonnegative square; no division by Y is needed.</p>
+</section>
+
+<section style="border-top:1px solid #bdcbd0;padding-top:25px;margin-top:28px;">
+<h2 style="font-size:28px;line-height:1.2;font-weight:normal;margin:0 0 16px;">What we have — and what it does not give</h2>
+<p><strong>The boundary repair is complete.</strong> The positive decaying primitive makes the pair moments integrable, and the integrations by parts retain their full boundaries. This is why the displayed expression is legitimate.</p>
+<p><strong>The sign estimate is absent.</strong> Positivity, decay and a good tail do not force this inequality. The existing NS101 control retains those features yet violates the corrected sign in its established parameter range.</p>
+<p><strong>The original arithmetic remains different.</strong> That control changes the original theta coefficients and does not obey the same nonlinear Jacobi initial-value problem. It therefore does not disprove the original target. A useful next method must exploit that difference to estimate the complete signed quantity.</p>
+<p><strong>This is a partial target.</strong> First-Laguerre positivity is only one condition in the broader real-zero problem. The NB cofinal gain and the Weil uniform-floor targets are separate open obligations. This page does not reduce the entire project to one final inequality.</p>
+</section>
+
+<details style="border-top:1px solid #bdcbd0;padding-top:22px;margin-top:28px;">
+<summary style="cursor:pointer;font-size:21px;">Exact identity and how the 4D picture is drawn</summary>
+<p>In PR76’s fixed normalization, X(r) = xi(1/2 + ir)/2. Let Theta(x) be the sum of exp(−pi·n²x) over all integers n, let h(u) = exp(u/2)·Theta(exp(2u)), and let f(u) = 2 cosh(u/2) − h(u). Its Fourier transform is Y(r).</p>
+<p style="font:14px/1.9 ui-monospace,monospace;overflow-wrap:anywhere;">p = r² + 1/4<br>X = pY/4<br>16(X′² − X·X″)<br>= p²(Y′² − Y·Y″) + 2(r² − 1/4)Y².</p>
+<p>The canvas draws the zero set of the right side in independent coordinates (r, y, v, w). For y ≠ 0, each height sheet has w = v²/y + 2(r² − 1/4)y/p². At y = v = 0 every w lies on the boundary; these lines are included separately. The curvature segment through the selected example marks its allowed and violating portions.</p>
+<p>Display ranges are 0 ≤ r ≤ 2, |y| ≤ 1.2, |v| ≤ 1.4 and |w| ≤ 2.2. The renderer samples and clips the boundary, scales these four axes, rotates in four dimensions, then projects to three dimensions and onto the screen. Thus a sheet may end at the display box; it is not a mathematical endpoint.</p>
+<p>The coordinate scales are only for viewing. No physical metric, symplectic structure or new geometric theorem is asserted. The sliders do not impose the derivative consistency of a genuine function. For example, the actual even function has Y′(0) = 0, and complete moments already give strict first-Laguerre positivity at r = 0. Free slider settings need not respect that.</p>
+<p>Y is the meromorphic completed zeta factor with poles at r = ±i/2; it is not the entire function X. This model uses real r throughout.</p>
+</details>
+
+<footer style="border-top:1px solid #bdcbd0;padding-top:22px;margin-top:30px;font-size:14px;line-height:1.65;">
+<p><strong>Wall check: Same open gap.</strong> Closest: NS100/101 and <a href="https://github.com/AlexanderEastwood/riemann/pull/76" style="color:#24576b;">PR76</a>. Changed input: none. This is an explanatory model, not a new estimate, scan, research row or manuscript version.</p>
+<p>Source: <a href="https://github.com/AlexanderEastwood/riemann/blob/18d324703969b5bcc9aa94043cfd90a6e8211f34/audits/theta-decaying-primitive-2026-10-05-v1/derivation.md" style="color:#24576b;">the reviewed complete derivation</a>. Reviewed repository commit: <span style="font-family:ui-monospace,monospace;">18d3247</span>. RH, G2 and the cofinal arithmetic bounds remain open. Both original-evidence recovery groups remain open.</p>
+<p>New standalone rendering; earlier reports are preserved. No external assets or tracking. <noscript>The model needs JavaScript for interaction; the exact target and its limitations remain readable above.</noscript></p>
+</footer>
+</main>
+<script>
+'use strict';
+(() => {
+  const canvas = document.getElementById('model');
+  const ctx = canvas.getContext('2d');
+  const el = id => document.getElementById(id);
+  const inputs = ['r','y','v','w'].map(el);
+  const colors = {gold:'#e7c978',good:'#70ddd0',bad:'#ff9a89',white:'#f5f6f4'};
+  const state = {r:0.5,y:0.5,v:0.5,w:0.5};
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let spinning = !reduced.matches, angle = 25*Math.PI/180, yaw = -0.48;
+  let width = 640, height = 470, last = 0, dirty = true;
+  const bound = (r,y,v) => v*v/y + 2*(r*r-0.25)*y/(r*r+0.25)**2;
+  const expression = (r,y,v,w) => (r*r+0.25)**2*(v*v-y*w)+2*(r*r-0.25)*y*y;
+  function values() {
+    const {r,y,v,w} = state, p = r*r+0.25;
+    const lhs = v*v-y*w, rhs = 2*(0.25-r*r)*y*y/(p*p);
+    return {lhs,rhs,gap:lhs-rhs,J:expression(r,y,v,w)};
+  }
+  function format(n) { return (Math.abs(n)<0.00005 ? 0 : n).toFixed(4); }
+  function syncReadout() {
+    inputs.forEach(input => { el(input.id+'-out').textContent=state[input.id].toFixed(2); });
+    const x=values(), near=Math.abs(x.gap)<1e-10;
+    el('lhs').textContent=format(x.lhs); el('rhs').textContent=format(x.rhs); el('gap').textContent=format(x.gap);
+    el('state-label').textContent='Illustrative state: '+(near?'on the boundary (display precision)':x.gap>0?'allowed side (+)':'violating side (−)');
+    el('readout').style.borderColor=near?'#b58f32':x.gap>0?'#287c73':'#b34532';
+    el('height-note').textContent=state.r<0.5?'At this height the correction coefficient is positive. The lower bound is positive unless Y = 0.':state.r===0.5?'At this height the correction vanishes. The required lower bound is zero.':'At this height the correction coefficient is negative. A negative left side can still meet the full corrected bound.';
+    el('zero-note').textContent=state.y===0?'With Y = 0, J = (r² + 1/4)²·Y′² ≥ 0. This is a hypothetical zero state, not a located zeta zero.':'The proof must control this difference for the original function at every height.';
+    dirty=true;
+  }
+  function setMotion(value) {
+    spinning=value; el('motion').textContent=value?'Pause rotation':'Resume rotation';
+    el('motion').setAttribute('aria-pressed',String(value)); dirty=true;
+  }
+  // Axis order for display is (y, v, w, r). Fixed scales carry no metric claim.
+  function project(point) {
+    let [r,y,v,w]=point;
+    let x=y/1.2, z=w/2.2, yy=v/1.4, q=r-1;
+    const c=Math.cos(angle), s=Math.sin(angle);
+    [x,q]=[c*x-s*q,s*x+c*q];
+    const b=0.37, cb=Math.cos(b), sb=Math.sin(b);
+    [yy,q]=[cb*yy-sb*q,sb*yy+cb*q];
+    const p4=3.8/(3.8-q); x*=p4; yy*=p4; z*=p4;
+    const cy=Math.cos(yaw), sy=Math.sin(yaw);
+    [x,z]=[cy*x+sy*z,-sy*x+cy*z];
+    const tilt=-0.36, ct=Math.cos(tilt), st=Math.sin(tilt);
+    [yy,z]=[ct*yy-st*z,st*yy+ct*z];
+    const p3=5/(5-z), scale=Math.min(width*0.285,height*0.285);
+    return {x:width/2+scale*p3*x,y:height/2-scale*p3*yy,z};
+  }
+  let edges=[];
+  function segment(a,b,color,alpha=1,lineWidth=1) {
+    const p=project(a), q=project(b); edges.push({p,q,color,alpha,lineWidth,depth:(p.z+q.z)/2});
+  }
+  function clippedSegment(a,b,color,alpha,lineWidth) {
+    let lo=0,hi=1;
+    const d=b[3]-a[3];
+    if(Math.abs(d)<1e-12) { if(Math.abs(a[3])>2.2)return; }
+    else {
+      const t1=(-2.2-a[3])/d, t2=(2.2-a[3])/d;
+      lo=Math.max(lo,Math.min(t1,t2)); hi=Math.min(hi,Math.max(t1,t2));
+      if(lo>hi)return;
+    }
+    const at=t=>a.map((n,i)=>n+(b[i]-n)*t);
+    segment(at(lo),at(hi),color,alpha,lineWidth);
+  }
+  function surface(r,selected) {
+    const col=colors.gold, opacity=selected?0.65:0.095;
+    for(const sign of [-1,1]) {
+      for(let k=1;k<=10;k++) {
+        const y=sign*k*0.12;
+        for(let j=0;j<36;j++) {
+          const v=-1.4+j*2.8/36, v2=v+2.8/36;
+          clippedSegment([r,y,v,bound(r,y,v)],[r,y,v2,bound(r,y,v2)],col,opacity,selected?1.1:0.75);
+        }
+      }
+      for(let j=0;j<=14;j++) {
+        const v=-1.4+j*0.2;
+        for(let k=1;k<24;k++) {
+          const y=sign*k*0.05, y2=sign*(k+1)*0.05;
+          clippedSegment([r,y,v,bound(r,y,v)],[r,y2,v,bound(r,y2,v)],col,opacity,selected?1.1:0.75);
+        }
+      }
+    }
+    // The division chart misses this entire boundary line; draw it explicitly.
+    segment([r,0,0,-2.2],[r,0,0,2.2],col,selected?0.8:0.16,1);
+  }
+  function dot(point,color,size,diamond=false) {
+    const p=project(point);ctx.globalAlpha=1;ctx.fillStyle=color;ctx.beginPath();
+    if(diamond){ctx.moveTo(p.x,p.y-size);ctx.lineTo(p.x+size,p.y);ctx.lineTo(p.x,p.y+size);ctx.lineTo(p.x-size,p.y);ctx.closePath();}
+    else ctx.arc(p.x,p.y,size,0,Math.PI*2);
+    ctx.fill();return p;
+  }
+  function draw() {
+    ctx.clearRect(0,0,width,height); edges=[];
+    const layers=[0,0.25,0.5,0.75,1,1.5,2];
+    if(el('stack').checked) {
+      layers.filter(r=>Math.abs(r-state.r)>0.02).forEach(r=>surface(r,false));
+      // Connect identical (y,v) points across height; these are viewing meshes only.
+      for(const y of [-0.9,-0.45,0.45,0.9]) for(const v of [-0.7,0,0.7]) {
+        for(let i=0;i<40;i++) {
+          const r=i/20, r2=(i+1)/20;
+          clippedSegment([r,y,v,bound(r,y,v)],[r2,y,v,bound(r2,y,v)],colors.gold,0.08,0.7);
+        }
+      }
+    }
+    surface(state.r,true);
+    const origin=[1,0,0,0];
+    const axes=[{a:[0,0,0,0],b:[2,0,0,0],label:'r · height'}, {a:[1,-1.2,0,0],b:[1,1.2,0,0],label:'Y · value'}, {a:[1,0,-1.4,0],b:[1,0,1.4,0],label:'Y′ · slope'}, {a:[1,0,0,-2.2],b:[1,0,0,2.2],label:'Y″ · curvature'}];
+    axes.forEach(a=>segment(a.a,a.b,'#a0b2bd',0.36,0.8));
+    const {r,y,v,w}=state;
+    for(let k=0;k<80;k++) {
+      const wa=-2.2+k*4.4/80, wb=wa+4.4/80;
+      const J=expression(r,y,v,(wa+wb)/2);
+      segment([r,y,v,wa],[r,y,v,wb],Math.abs(J)<1e-12?colors.gold:J>0?colors.good:colors.bad,0.95,2.6);
+    }
+    edges.sort((a,b)=>a.depth-b.depth);
+    edges.forEach(e=>{ctx.strokeStyle=e.color;ctx.globalAlpha=e.alpha;ctx.lineWidth=e.lineWidth;ctx.beginPath();ctx.moveTo(e.p.x,e.p.y);ctx.lineTo(e.q.x,e.q.y);ctx.stroke();});
+    ctx.globalAlpha=1;ctx.font='12px system-ui, sans-serif';
+    axes.forEach(a=>{
+      const p=project(a.b), ox=project(origin);
+      ctx.fillStyle='#d8e2e7';ctx.textAlign=p.x>ox.x?'left':'right';
+      const labelWidth=ctx.measureText(a.label).width;
+      const x=ctx.textAlign==='left'?Math.min(width-labelWidth-4,p.x+7):Math.max(labelWidth+4,p.x-7);
+      ctx.fillText(a.label,x,Math.max(14,Math.min(height-8,p.y-7)));
+    });
+    if(Math.abs(y)>1e-12) { const w0=bound(r,y,v); if(Math.abs(w0)<=2.2)dot([r,y,v,w0],colors.gold,5,true); }
+    const gap=values().gap, color=Math.abs(gap)<1e-10?colors.gold:gap>0?colors.good:colors.bad;
+    const p=dot([r,y,v,w],color,6);
+    ctx.strokeStyle=colors.white;ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(p.x,p.y,9,0,Math.PI*2);ctx.stroke();
+    ctx.textAlign='left';ctx.fillStyle='#d8e2e7';ctx.fillText('Selected height r = '+r.toFixed(2),10,24);
+    ctx.fillStyle=colors.white;ctx.font='12px system-ui, sans-serif';
+    const caption='○ Your illustrative state';ctx.fillText(caption,10,height-12);
+    dirty=false;
+  }
+  function resize() {
+    const rect=canvas.getBoundingClientRect(), dpr=Math.min(window.devicePixelRatio||1,2);
+    width=rect.width;height=rect.height;canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);dirty=true;
+  }
+  inputs.forEach(input=>input.addEventListener('input',()=>{state[input.id]=Number(input.value);syncReadout();}));
+  document.querySelectorAll('[data-preset]').forEach(button=>button.addEventListener('click',()=>{
+    const presets={boundary:[0.5,0.5,0.5,0.5],allowed:[0.5,0.5,0.5,-0.5],violation:[0.5,0.5,0.1,0.5],zero:[0.5,0,0.5,0.5]};
+    const p=presets[button.dataset.preset];inputs.forEach((input,i)=>{input.value=p[i];state[input.id]=p[i];});syncReadout();
+  }));
+  el('motion').addEventListener('click',()=>setMotion(!spinning));
+  el('reset').addEventListener('click',()=>{angle=25*Math.PI/180;yaw=-0.48;el('angle').value=25;dirty=true;});
+  el('angle').addEventListener('input',()=>{angle=Number(el('angle').value)*Math.PI/180;setMotion(false);dirty=true;});
+  el('stack').addEventListener('change',()=>{dirty=true;});
+  let drag=null;
+  canvas.addEventListener('pointerdown',e=>{drag={x:e.clientX,angle};canvas.setPointerCapture(e.pointerId);setMotion(false);});
+  canvas.addEventListener('pointermove',e=>{if(!drag)return;angle=(drag.angle+(e.clientX-drag.x)*0.009+Math.PI*8)%(Math.PI*2);el('angle').value=Math.round(angle*180/Math.PI);dirty=true;});
+  const endDrag=()=>{drag=null;};canvas.addEventListener('pointerup',endDrag);canvas.addEventListener('pointercancel',endDrag);
+  reduced.addEventListener('change',e=>{if(e.matches)setMotion(false);});
+  new ResizeObserver(resize).observe(canvas);
+  document.addEventListener('visibilitychange',()=>{last=0;dirty=true;});
+  function frame(now) {
+    const dt=last?Math.min((now-last)/1000,0.05):0;last=now;
+    if(spinning&&!document.hidden){angle=(angle+dt*0.14)%(Math.PI*2);el('angle').value=Math.round(angle*180/Math.PI);dirty=true;}
+    if(dirty&&!document.hidden)draw();requestAnimationFrame(frame);
+  }
+  syncReadout();setMotion(spinning);resize();requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

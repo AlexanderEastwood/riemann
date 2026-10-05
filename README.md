@@ -50,6 +50,21 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 5 next-step review and 4D explanation
+
+The [twelve-review report](audits/theta-next-steps-team-2026-10-05-v1/README.md)
+admits no new arithmetic estimating method. It separates scoped failures
+from the original open target: smoothing controls distant residues but
+not the local signed sum; Jensen backward transfer needs critical-value
+estimates; Bessel margins and smooth-completion errors concern different
+comparisons. Original coefficients/Jacobi IVP distinguish NS101 without
+supplying a signed lower bound. No automatic scan or route pivot follows.
+The [moving 4D model](audits/theta-gap-4d-2026-10-05-v1/README.md) shows the
+complete corrected sign boundary using illustrative coordinates only.
+No original theta values are plotted. First-Laguerre positivity alone is
+not RH. No new row, node, thaw, certificate or manuscript version.
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76.**
+
 ## October 5 decaying-primitive boundary audit
 
 The [primitive audit](audits/theta-decaying-primitive-2026-10-05-v1/README.md)

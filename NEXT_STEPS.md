@@ -817,7 +817,8 @@ thaw, certificate or manuscript version. Both recovery groups remain OPEN.
 
 ## October 5 four-coordinate gap explanation
 
-Owner: Codex. Status: in progress (interpretation artifact; no research row).
+Owner: Codex. Status: complete (interpretation artifact; no research row).
+[Interactive model and validation](audits/theta-gap-4d-2026-10-05-v1/README.md).
 Render PR76's complete corrected first-Laguerre target in coordinates
 (r, Y, Y-prime, Y-double-prime). No theta-value scan or original trajectory
 is plotted. Explain the y=0 case, height-dependent correction, and why this
@@ -826,10 +827,15 @@ partial target is not RH. No arithmetic hypothesis, thaw, node or version.
 
 ## October 5 twelve-agent next-step assessment
 
-Owner: Codex with twelve assigned agents. Status: in progress (method
-feasibility audit; no research row). Review concrete next estimating steps
+Owner: Codex with twelve completed reviews. Status: complete (method
+feasibility audit; no research row).
+[Report and twelve reviews](audits/theta-next-steps-team-2026-10-05-v1/README.md).
+No arithmetic estimating method admitted. Stop automatic variants and route
+pivots pending a concrete estimating formula with complete transfer. The
+original theta target and separate alternative gaps remain open. Reviewed
+concrete next estimating steps
 for the complete original theta sign and compare the strongest alternative
 lanes. Each recommendation must identify its arithmetic input, dependency
 edge, matched controls, falsifiable decision and bounded budget. No scans
 or generic adjacent variation are authorized by this audit.
-**Wall check at dispatch: Same open gap — ZERO-GEOMETRY, NS100/101, PR76.**
+**Final wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76.**
