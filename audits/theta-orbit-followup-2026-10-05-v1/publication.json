@@ -1,0 +1,27 @@
+{
+  "reviewed_commit": "33bda7f04a34e49f578c666b7f8953a8ca09c3c4",
+  "date": "2026-10-05",
+  "remote_refreshed": true,
+  "open_prs_at_start": [],
+  "review_scope": "104 registered conclusions/dependencies and current boards reviewed; unchanged core hashes compared with prior review. Not a historical proof or certificate replay.",
+  "classification": "Same open gap",
+  "authorization": "Explicit request to update GitHub/push the latest theta findings, then continue.",
+  "preserved_files": {
+    "review-record.json": "44ffe78aeab3f2beca4fb4464a35d5562f7a1d0bf74d5077259859e3807d4b23",
+    "support/01-jacobi-transfer.md": "b325f6fde8942183c07a486e29000ec251564cbaf34a761d4f71e0196af90f1f",
+    "support/04-jacobi-source.md": "6d782b804455b00c41b7c0eee178d919c951e4f44c4ef6907700723e125702dd",
+    "theta-orbit-followup-2026-10-05-v1.html": "96c481ea9ac3db62e86aa612c92a4a4fbee9396ebf02c3536d0913fef10bfb5f"
+  },
+  "new_row": false,
+  "version": false,
+  "outreach": false,
+  "validation": {
+    "manuscript_build": "passed",
+    "pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "generated_map_nodes": 104,
+    "node_statuses_unchanged": true,
+    "numerical_scan": false,
+    "certificate": false
+  }
+}

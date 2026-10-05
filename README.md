@@ -50,6 +50,22 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 5 original theta evolution audit
+
+The [original-orbit audit](audits/theta-orbit-followup-2026-10-05-v1/README.md)
+shows analytically that the precise NS101 reciprocal mixture fails the
+original normalized Jacobi equation. Its positive regularized disk operator
+is still shared by that control and supplies no signed-transform bound.
+The complete zero-frequency slice also excludes finite constant-matrix
+moment closures containing that slice; nonlinear and variable-coefficient
+methods remain unexcluded.
+
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101.** The first radial
+derivative is the classical first Laguerre expression. A bound using the
+original two-shift orbit remains missing. No new estimate, node, thaw,
+certificate or manuscript version. The report retains its original local
+disposition; the publication record explains this subsequent authorized push.
+
 ## September 30 six-agent replacement certificate and gain audits
 
 The [six-agent audit](audits/bounds-six-agent-2026-09-30-v1/README.md)

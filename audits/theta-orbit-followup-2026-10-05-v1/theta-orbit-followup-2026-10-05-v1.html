@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="description" content="A focused audit of the original Jacobi theta evolution, its matched controls and its missing signed-transform estimate."><title>What the original theta evolution adds | Prime Shapes</title></head>
+<body style="margin:0;background:#101c29;color:#e5edf0;font:18px/1.7 Georgia,serif;">
+<main style="max-width:680px;margin:0 auto;padding:32px 22px 64px;overflow-wrap:break-word;">
+<p style="font:14px/1.6 system-ui,sans-serif;color:#b9cdd8;">Prime Shapes / Focused arithmetic audit<br>October 5, 2026 · Audit version 1</p>
+<h1 style="font-size:clamp(36px,7vw,48px);font-weight:400;line-height:1.15;">What the original theta evolution adds.</h1>
+<p style="font-size:23px;line-height:1.5;">The original differential equation excludes the old false analogue. The missing step is still a signed estimate that actually uses that equation.</p>
+<p>The previous review called this an unexcluded lead. This follow-up makes that statement concrete, examines the disk coordinate suggested by the source, and checks a specific way of closing the moment equations. No arithmetic sign bound or computational proposal emerged.</p>
+<p style="padding:20px;background:#1b2b3a;border-left:3px solid #efc67b;"><strong>Wall check: Same open gap.</strong> Closest results: NS100/101 and the October 5 Jacobi-transfer audit. The original theta equation is an additional hypothesis absent from the reciprocal-mixture control. The calculations below establish that mismatch and delimit two possible transfers; they do not estimate the complete signed integral.</p>
+<nav style="font:14px/1.6 system-ui,sans-serif;"><a href="#distinction" style="color:#c8ddf2;">Actual distinction</a> · <a href="#disk" style="color:#c8ddf2;">Disk algebra</a> · <a href="#moments" style="color:#c8ddf2;">Moment closure</a> · <a href="#target" style="color:#c8ddf2;">Missing estimate</a></nav>
+
+<h2 id="distinction" style="font-size:29px;font-weight:400;line-height:1.3;margin-top:42px;">1. The old control fails the exact theta equation.</h2>
+<p>Use v for the positive theta variable. The original function is Y(v)=sum over all integers n of exp(-pi*n^2*v). Jacobi's equation, recorded in <a href="https://arxiv.org/html/1807.06130v2#S6" style="color:#c8ddf2;">Romik, equation (28)</a>, is the identity Q[Y]=0, with v derivatives:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">S = Y*Y'' - 3*(Y')^2
+T = Y^2*Y''' - 15*Y*Y'*Y'' + 30*(Y')^3
+Q[Y] = T^2 + 32*S^3 - pi^2*Y^10*S^2.</pre>
+<p>Here is a direct paper check against NS101. Suppose a normalized theta-type function has the differentiable asymptotic expansion</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">Y(v)=1+c*exp(-k*v)+o(exp(-k*v)), c&gt;0, k&gt;0,
+with the corresponding expansions through derivative 3.
+
+Q[Y] = c^2*k^4*(k^2-pi^2)*exp(-2*k*v)
+       + o(exp(-2*k*v)).</pre>
+<p>The squared third-derivative term and the right-side term supply this leading coefficient; 32*S^3 is of smaller order. Therefore Q[Y]=0 forces k=pi under these normalization and tail hypotheses.</p>
+<p>For the precise NS101 reciprocal dilation mixture, with beta&gt;0,</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">B_beta=3+2*cosh(beta/2)
+Y_beta(v)=[3*Y(v)+exp(-beta/2)*Y(exp(-2*beta)*v)
+                 +exp(beta/2)*Y(exp(2*beta)*v)]/B_beta
+
+k=pi*exp(-2*beta),
+c=2*exp(-beta/2)/B_beta.</pre>
+<p>Its leading k is strictly smaller than pi, so Q[Y_beta] is strictly negative for all sufficiently large v. The Gaussian series justifies differentiating the asymptotic remainder. This is an analytic hypothesis mismatch, not a sampled control pass. It strengthens the earlier wording “not known to preserve the equation” to “does not preserve the equation” for this exact mixture.</p>
+<p>This does not characterize every solution of Jacobi's squared equation. The original trajectory also carries its distinguished initial data and branch. Nor does exclusion of one analogue establish the desired sign for the original function.</p>
+
+<h2 id="disk" style="font-size:29px;font-weight:400;line-height:1.3;margin-top:42px;">2. The disk coordinate gives exact algebra, with essential boundary terms.</h2>
+<p>Romik's centered theta function uses a Cayley coordinate. With v=exp(2*u), put w=tanh(u) and define the even function sigma by</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">sigma(w)=(1+w)^(-1/2)*Y((1-w)/(1+w)), |w|&lt;1.
+
+h(u)=exp(u/2)*Y(exp(2*u))
+    =(1-w^2)^(1/4)*sigma(w).
+
+phi(u)=(1/4)*(d^2/du^2 - 1/4)*h(u).</pre>
+<p>The identity for h uses theta reciprocity; the differential identity is the complete NS101 kernel identity. This disk belongs to the auxiliary theta variable. It is not a new map placing zeta zeros on the critical line. The centering definition is from <a href="https://arxiv.org/html/1807.06130v2#S1.SS2" style="color:#c8ddf2;">Romik, Section 1.2</a>; the following operator calculation is this audit's direct substitution.</p>
+<p>Since d/du=(1-w^2)*d/dw, the kernel equation becomes</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">L = (1-w^2)*d^2/dw^2 - 3*w*d/dw - 3/4
+phi(u)=(1-w^2)^(5/4)*L[sigma](w)/4.</pre>
+<p>Two exact solutions of L[b]=0 are b_plus=(1-w)^(-1/2) and b_minus=(1+w)^(-1/2). They correspond to h's exp(u/2) and exp(-u/2) modes. They cannot be discarded by imposing a regular endpoint condition on sigma.</p>
+<p>Instead, subtract both explicitly:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">R(w)=sigma(w)-(1-w)^(-1/2)-(1+w)^(-1/2)
+L[R](w)=4*phi(atanh(w))/(1-w^2)^(5/4).</pre>
+<p>This R extends smoothly to [-1,1]. For example, as w approaches 1, reciprocity gives the exact expression</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">R(w)=-(1+w)^(-1/2)
+ +2*(1-w)^(-1/2)*sum_(n&gt;=1)
+   exp(-pi*n^2*(1+w)/(1-w)).</pre>
+<p>The series remainder and all its derivatives vanish at the endpoint. The other endpoint follows by evenness. In particular, both endpoint values of R are -1/sqrt(2), rather than zero.</p>
+<p>The regularized differential operator has a positive energy. Writing mu(w)=sqrt(1-w^2), integration by parts gives</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">int_(-1)^1 R*(-L[R])*mu dw
+ =int_(-1)^1 (1-w^2)^(3/2)*(R')^2 dw
+  +(3/4)*int_(-1)^1 R^2*mu dw.</pre>
+<p>The boundary term vanishes for R, whose derivative is finite. It does not vanish for the singular sigma modes; those modes are not in this regular energy domain. The regular polynomial eigenfunctions U_n have eigenvalues n*(n+2)+3/4 for -L. These eigenvalues do not depend on the arithmetic theta data.</p>
+<p style="padding:18px;background:#1b2b3a;border-left:3px solid #efc67b;"><strong>Matched control.</strong> NS101's reciprocal mixture has the same constant term, reciprocity, positive differential kernel and smooth regularization after the same boundary subtraction. It therefore has this same positive differential operator and energy identity, while its completed transform has the recorded off-axis zeros. This rules out using the positive operator alone as the missing transfer. The nonlinear Jacobi equation fails for that mixture, as section 1 shows.</p>
+
+<h2 id="moments" style="font-size:29px;font-weight:400;line-height:1.3;margin-top:42px;">3. Two possible shortcuts do not close the integral.</h2>
+<p><strong>The usual theta addition variable is different.</strong> Our factors involve theta constants at v_plus=exp(2*(p+t)) and v_minus=exp(2*(p-t)), hence two varying lattice parameters. An addition formula for elliptic arguments at a common lattice parameter is not a formula for these two factors.</p>
+<p>For a direct check that retains the actual lattice, changing integer variables to j=m+n and k=m-n gives the absolutely convergent identity</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">Y(v_plus)*Y(v_minus)
+ =sum_(j,k integers; j=k mod 2)
+  exp(-(pi/4)*[(v_plus+v_minus)*(j^2+k^2)
+                        +2*(v_plus-v_minus)*j*k]).</pre>
+<p>The cross term disappears only at t=0. Differentiating to obtain the two phi factors and integrating with the cosine retains this coupling. The identity gives no signed lower bound. This does not exclude more elaborate modular or addition identities.</p>
+<p><strong>A finite constant-matrix moment evolution is impossible.</strong> Let A(p)=int_0^infinity phi(p+t)*phi(p-t)dt, the frequency-zero member of the existing slice family. It is strictly positive and decays faster than exp(-c*p) for every fixed c&gt;0. A nonzero component of a finite system M'=C*M, with constant C and A included as a fixed linear component, is an exponential polynomial and cannot have that decay.</p>
+<details style="margin:20px 0;padding:18px;background:#1b2b3a;"><summary style="cursor:pointer;color:#c8ddf2;">Tail check and exact scope of this restriction</summary>
+<p>The complete theta envelope is phi(u)&lt;=C*exp(9*|u|/2-pi*exp(2*|u|)); also let M0=sup phi, which is finite. Split the integral at t=p. On 0&lt;=t&lt;=p, use cosh(2*t)&gt;=1+2*t^2. On t&gt;=p, bound one factor by M0 and integrate the other with the tangent bound for its exponential. This gives, for p&gt;=0,</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">0&lt;A(p)&lt;=(C^2/4)*exp(8*p-2*pi*exp(2*p))
+ +M0*C*exp(9*p-pi*exp(4*p))
+             /(2*pi*exp(4*p)-9/2).</pre>
+<p>Thus a finite homogeneous linear closure with coefficients independent of p is ruled out even at frequency zero. Affine constant systems are also covered by adjoining a constant component. This does not exclude p-dependent coefficients, nonlinear integrated equations, infinite hierarchies or a closure after nonconstant rescaling. None of those alternatives is supplied here. The actual Jacobi state system is nonlinear and is not contradicted.</p>
+</details>
+
+<h2 id="target" style="font-size:29px;font-weight:400;line-height:1.3;margin-top:42px;">4. The first useful sign test is already a classical problem.</h2>
+<p>Set F(z)=xi(1/2+z)/2 and X(r)=F(i*r), which is real for real r. The geometric target remains J(x,r)=Re(F'(x+i*r)*conjugate(F(x+i*r))). Expanding the exact function at x=0 gives</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">J(x,r)=x*[(X'(r))^2-X(r)*X''(r)]+O(x^3),
+for each fixed r.
+
+lim_(x to 0+) J(x,r)/x
+ =16*int_0^infinity p^2*A_p(r)dp.</pre>
+<p>Consequently an all-height J bound must at least control the first Laguerre expression (X')^2-X*X''. It is the scaled form of <a href="https://arxiv.org/html/1309.0055v2" style="color:#c8ddf2;">Csordas's Open Problem 4.7</a>. That paper distinguishes it from the all-order conditions and gives examples showing that a first-order Laguerre inequality alone does not force all zeros onto a line. Such examples are not controls sharing the original theta equation.</p>
+<p>The <a href="https://arxiv.org/html/2608.19160v1#S7" style="color:#c8ddf2;">Planat–Solé result</a> concerns second-level real-kernel concavity and a double-Turan consequence for coefficients. It does not supply this all-frequency transform inequality. This audit uses its differential formulation, checked against Romik, without assuming its external finite certificates have been independently replayed.</p>
+<p>The earlier exact B-moment identity still reads</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">(x^2+r^2)*J(x,r)
+ =32*int_0^infinity p*sinh(2*x*p)*B_p(r)dp
+  -x*|F(x+i*r)|^2.
+
+B_p(r)=int_0^infinity P_plus*P_minus
+          *phi(p+t)*phi(p-t)*cos(2*r*t)dt,
+P_plus/minus=(1/2)*(log phi)'(p plus/minus t).</pre>
+<p>That identity is generic calculus. Restricting P to the original orbit is where the extra information lies; no lower bound for its complete signed moment follows from merely writing the restriction down. The full target requires all 0&lt;x&lt;1/2 and all r&gt;=0, with the complete tails. The local expansion's error is not asserted uniform in r.</p>
+
+<h2 style="font-size:29px;font-weight:400;line-height:1.3;margin-top:42px;">Decision after this investigation</h2>
+<p><strong>Retain the original Jacobi orbit as a specific arithmetic lead, but do not promote it to an admitted estimating method.</strong> Its exact equation demonstrably excludes the existing reciprocal control. The disk's positive operator and the first two moment identities do not provide the needed sign. The simplest finite constant-matrix closure is unavailable.</p>
+<p>Further algebra would need an orbit-specific inequality for the two-factor signed integral, or a useful partial inequality with its remaining transfer stated. The first Laguerre expression is a meaningful partial target, but naming it again is not progress and this investigation supplies no independent estimating method for it. No new scan or certificate replay is recommended from these calculations alone.</p>
+<p>NS100 continues to rule out positivity of each slice for the original kernel itself. Davenport–Heilbronn has different theta coefficients and completion and is not a matched instance of the specified original-lattice initial-value problem. NS74 and NS83 concern the separate NB target and rate. No unchanged example screen was passed off as a test of the original orbit.</p>
+<footer style="margin-top:40px;padding-top:22px;border-top:1px solid #425968;font:14px/1.7 system-ui,sans-serif;color:#b9cdd8;">
+<p>Baseline: <a href="https://github.com/AlexanderEastwood/riemann/tree/33bda7f04a34e49f578c666b7f8953a8ca09c3c4" style="color:#c8ddf2;">33bda7f</a>, refreshed for this turn. All 104 recorded conclusion scopes were reviewed again, along with current continuation demands and relevant audits. Core files remain unchanged. Both historical evidence-recovery groups remain open.</p>
+<p>Classification: exact algebra, an analytic control-hypothesis check, source-scope review and open input. The new calculations were self-checked; this follow-up was not independently reviewed by the preceding ten agents. No numerical or symbolic scan, interval certificate, new research row, thaw, manuscript version, push or outreach. This is a local forward audit; previous delivered documents are preserved. <a href="review-record.json" style="color:#c8ddf2;">Review record</a>.</p>
+<p><strong style="color:#e5edf0;">Final wall check: Same open gap.</strong> RH, G2 and the complete signed arithmetic targets remain open.</p>
+</footer></main></body></html>
