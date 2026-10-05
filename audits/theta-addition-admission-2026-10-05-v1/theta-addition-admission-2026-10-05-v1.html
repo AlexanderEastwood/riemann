@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Theta addition: the variables and boundaries matter</title><meta name="description" content="Applicability audit of theta addition identities for the complete original pair, with exact lattice coupling and boundary treatment."></head>
+<body style="margin:0;background:#101c29;color:#e8eced;font:18px/1.65 Georgia,serif;"><main style="max-width:680px;margin:auto;padding:44px 24px 70px;">
+<p style="font:12px/1.5 Arial,sans-serif;letter-spacing:2px;color:#a9c6cc;text-transform:uppercase;">Riemann project · October 5, 2026 · Audit v1</p>
+<h1 style="font-size:38px;line-height:1.15;font-weight:normal;">Theta addition: the variables and boundaries matter</h1>
+<p style="font-size:22px;color:#c8d9dc;">A valid two-dimensional lattice identity keeps the original arithmetic intact. It still leaves the signed lower bound open. The calculation also shows exactly which boundary cancellations a proposed transform argument must retain.</p>
+<div style="border-left:4px solid #d5b574;padding:14px 18px;background:#182939;margin:28px 0;"><strong>Wall check: Same open gap.</strong> Closest: NS100/101 and PR #74. No sign method is admitted. The original nonlinear theta evolution remains unexcluded.</div>
+<h2 style="font-size:27px;font-weight:normal;">1. The shifts change the modulus</h2>
+<p>The familiar theta addition formulas change an elliptic argument while holding the modulus fixed. Our factors have elliptic argument zero and these two moduli:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;font:14px/1.65 monospace;">tau_plus  = i*exp(2s+2t)
+tau_minus = i*exp(2s-2t)
+tau_plus/tau_minus = exp(4t)</pre>
+<p>Substituting <code>s+t</code> and <code>s-t</code> into the other argument would change the function. <a href="https://arxiv.org/html/1502.04603v2" style="color:#9cdbde;">Kharchev–Zabrodin I</a> makes this distinction explicit. Its <a href="https://arxiv.org/html/1510.02699v1" style="color:#9cdbde;">multidimensional companion, Proposition 3.1</a>, also gives formulas for integer multiples of a common modulus. Those can apply when <code>exp(4t)</code> is rational, with all residue classes retained. They do not supply the required sign estimate or its limiting control.</p>
+<p>This is a limitation of the proposed substitution, not an exclusion of every addition identity or unequal-modulus method.</p>
+<h2 style="font-size:27px;font-weight:normal;margin-top:34px;">2. The lattice formula that does apply</h2>
+<p>Let <code>Theta(x)=sum exp(-pi*n^2*x)</code> over all integers, and <code>x=exp(2s)</code>. Reindex the complete product by <code>k=n+m</code>, <code>l=n-m</code>:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;font:14px/1.65 monospace;">Theta(x*exp(2t))*Theta(x*exp(-2t))
+ = sum_(k=l mod 2) exp[-pi*x/2 *
+   {cosh(2t)*(k^2+l^2)+2*sinh(2t)*k*l}].</pre>
+<p>The parity constraint and coupling term are essential. At <code>t=0</code> the coupling vanishes and the familiar duplication identity returns. For general <code>t</code>, discarding it changes even the contribution corresponding to the original lattice point <code>(1,0)</code>.</p>
+<p>The quadratic matrix has positive eigenvalues <code>exp(2t)</code> and <code>exp(-2t)</code>, and determinant one. That guarantees convergence of this lattice series. It does not establish positive definiteness of our associated kernel as a function of real translation differences. These are different positivity questions.</p>
+<h2 style="font-size:27px;font-weight:normal;margin-top:34px;">3. Keep the complete differential kernel</h2>
+<p>Define <code>h(u)=exp(u/2)*Theta(exp(2u))</code> and <code>phi=(h''-h/4)/4</code>. The original pair is a differential expression in <code>H(s,t)=h(s+t)*h(s-t)</code>:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;font:14px/1.65 monospace;">phi(s+t)*phi(s-t) = P H(s,t)/256
+
+P = partial_s^4 -2*partial_s^2*partial_t^2
+    +partial_t^4 -2*partial_s^2 -2*partial_t^2 +1.</pre>
+<p>Integrating <code>s^2*H</code> directly would diverge. A smooth exact subtraction retains the boundaries:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;font:14px/1.65 monospace;">R(s,t) = H(s,t)-2*cosh(s)
+M_j(t) = integral_R s^j*R(s,t) ds, j=0,2
+
+C(t) = [(partial_t^2-1)^2*M_2(t)
+        -4*(partial_t^2+1)*M_0(t)]/256.</pre>
+<p>The operator annihilates the subtracted term. The remaining integrals converge, and integration by parts in <code>s</code> has vanishing boundary terms. The full derivation checks the factor 256, the parity reindexing, and both ends of the complete theta tail.</p>
+<h2 style="font-size:27px;font-weight:normal;margin-top:34px;">4. The moments cannot be transformed separately without further work</h2>
+<p>The subtraction makes the <code>s</code> integrals finite, but their values still grow with <code>t</code>. In fact, reciprocity and positivity of the complete theta sum give the exact lower bound</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#09131e;padding:18px;font:14px/1.65 monospace;">M_0(t) &gt;= 2*(t-1)*exp(t), t &gt;= 0.</pre>
+<p>The full differential bracket above equals <code>256*C</code> and decays rapidly. Transforming its separate growing moments as ordinary integrable functions would therefore be invalid. Their cancellation must stay inside the calculation; a distributional treatment would need its own justification.</p>
+<p>This is an exact boundary-accounting result. It is not a lower sign bound for <code>C</code> or its transform.</p>
+<h2 style="font-size:27px;font-weight:normal;margin-top:34px;">Decision</h2>
+<p>The original target remains <code>X'^2-X*X'' &gt;= 0</code> at every real height, with <code>X=xi(1/2+ir)/2</code>. The new representation preserves that obligation and does not estimate it. The positive lattice matrix and individual Gaussian terms cannot replace a signed comparison after differentiation and transformation.</p>
+<p>NS100 still rules out positivity of each separate original slice. PR74’s reciprocal control retains general symmetry and transform calculus while failing the actual first-Laguerre condition in its stated parameter range; it does not retain the original Jacobi equation. Davenport–Heilbronn likewise has different arithmetic data. These scope distinctions leave the original evolution open, but do not establish a control pass for a missing method.</p>
+<p><strong>No candidate passes admission.</strong> The next useful input would be a concrete arithmetic estimate for the complete differential combination above, or for the original pair directly. Another dimension, residue-class expansion or height table would not supply that estimate. No scan follows from this audit.</p>
+<p style="border-top:1px solid #344655;margin-top:30px;padding-top:20px;font-size:15px;color:#afc0c8;">Reviewed commit: <code style="overflow-wrap:anywhere;">1f09dd8a8587506ea83c0c48573d225b7a323bc1</code>. Full register review; paper algebra self-review only. No historical proof replay, new research row, node, thaw, certificate or manuscript version. Both original-evidence recovery groups remain OPEN. RH, G2 and the cofinal signed-arithmetic lower bound remain open.</p>
+<p style="font-size:15px;"><a href="derivation.md" style="color:#9cdbde;">Complete internal derivation and controls</a> · <a href="review-record.json" style="color:#9cdbde;">Review record</a></p>
+</main></body></html>

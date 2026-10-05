@@ -782,3 +782,18 @@ Next: require an independently estimating arithmetic mechanism for the
 complete signed comparison before computation; no adjacent model/height scan.
 No node, thaw, interval certificate or manuscript version.
 **Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR72/73.**
+
+## October 5 theta-addition applicability audit
+
+Owner: Codex. Status: complete (audit; no NS row).
+[Report and derivation](audits/theta-addition-admission-2026-10-05-v1/README.md).
+Common-modulus addition does not accept the two actual moduli by substituting
+elliptic arguments; commensurable-modulus identities remain separately scoped.
+The valid all-shift lattice formula retains parity and coupling. A complete
+regularized moment identity keeps both boundaries; M_0(t)>=2(t-1)exp(t), so
+separate ordinary Fourier integrals of the moments are not available. Only
+their full differential combination decays, and its sign is still unestimated.
+No original sign method admitted. Next requires an independent estimate for
+that complete signed combination or the original pair, not another expansion.
+No numerical/symbolic scan, node, thaw, certificate or manuscript version.
+**Wall check: Same open gap — ZERO-GEOMETRY.**
