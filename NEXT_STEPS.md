@@ -856,3 +856,13 @@ route pivot. A future conjectural estimate need not already be proved, but
 must specify its technique and complete conditional transfer.
 No scan, row, thaw, node or version. Both recovery groups remain OPEN.
 **Final wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–77.**
+
+## October 5 renewed six-agent mechanism assessment
+
+Owner: Codex with six requested assistants. Status: in progress (paper
+admission audit; no research row). Assess auxiliary heat-flow transport,
+full modular-duplication sectors and direct contour analysis of the complete
+pair quotient. Each requires an independently estimating arithmetic step
+and full conditional transfer. PR78's failed mixture is not restarted.
+No scan, thaw or version at dispatch. Both evidence recovery groups stay OPEN.
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–78.**
