@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-05",
+  "reviewed_commit": "33bda7f04a34e49f578c666b7f8953a8ca09c3c4",
+  "remote_refreshed": true,
+  "isolated_worktree": "/private/tmp/riemann-dad-conformal-audit-20261004",
+  "input_sha256": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "4cd9964f0cb0070a74a89446ee13f1ebc287f55ea021b5d556d9b754a57ab42e",
+    "README.md": "7c713783ef27d47a0996b8da494eb5fd08b5ab6951c4f1ea3d3f897089154e4a",
+    "NEXT_STEPS.md": "b2eecfc4b03e7251dac04e5d1bd4c533f91bb445610119f54f07d5ac55995953",
+    "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74",
+    "evidence/ns94_circle_inversion/argument.tex": "45f9bce1083fed8fe6184f0d59784a974c26980e58bdc7a7faa4f67f1018ed1a",
+    "evidence/ns100_reassessment/argument.tex": "1673593f001fc9be376e17fa36741c27b11e04731be887f7d6200d6ad05b6187",
+    "evidence/ns101_theta_factorization/argument.tex": "4f967555a4174b6880a690beabd94d4cca975aff149229e7610eae6e3324a8e7"
+  },
+  "review_scope": "All 104 registered conclusion/status/scope notes reviewed again; current continuation demands, README checkpoints, freeze conditions, MISSING and relevant NS100/101 plus two Jacobi audit notes checked. Unchanged core hashes matched preceding full review. Not a replay of historical proofs or computations.",
+  "missing_originals": "Both historical recovery groups remain OPEN.",
+  "authorization": "User requested investigation of the original theta evolution lead.",
+  "work_type": "Bounded source-applicability, control-hypothesis and transfer audit; no admitted research estimate.",
+  "wall_check": {
+    "classification": "Same open gap",
+    "closest": [
+      "NS100",
+      "NS101",
+      "ten-agent-next-input-2026-10-05-v1/reviews/01-jacobi-transfer.md"
+    ],
+    "specific_question": "Does the original Jacobi ODE exclude the reciprocal-mixture control, and do Cayley reduction, theta addition or finite linear moment closure yield the missing signed estimate?",
+    "changed_input": "Original normalized theta differential equation and its distinguished initial data; these have not changed, but their control mismatch is checked explicitly."
+  },
+  "controls": {
+    "NS101": "Paper screen: fails original Jacobi ODE by its leading exponential. Shares the regularized Cayley/Sturm-Liouville construction, so that construction alone still fails to force the desired sign.",
+    "NS100": "Original kernel already violates per-slice positivity; retaining Jacobi ODE does not rescue that stronger demand.",
+    "Davenport_Heilbronn": "Not matched to original one-lattice theta IVP: different coefficients, conductor and completion. No computational pass claimed.",
+    "NS74_NS83": "NB family and dyadic gain rate; not applicable to this theta transform question."
+  },
+  "computations": {
+    "numerical_scan": false,
+    "symbolic_scan": false,
+    "certificate": false,
+    "midpoint_solve": false
+  },
+  "new_row": false,
+  "manuscript_version": false,
+  "push": false,
+  "outreach": false,
+  "sources": [
+    "https://arxiv.org/html/1807.06130v2",
+    "https://arxiv.org/html/2608.19160v1",
+    "https://arxiv.org/html/1309.0055v2"
+  ],
+  "final_decision": {
+    "classification": "Same open gap",
+    "new_estimate_candidate": false,
+    "forward_qualification": "The precise NS101 reciprocal mixture does not satisfy the original normalized Jacobi equation; replaces prior not-known-to-preserve wording.",
+    "checked_outputs": [
+      "Leading asymptotic residual Q[Y_beta] and concrete control mismatch",
+      "Cayley kernel operator with both singular boundary modes and smooth regularization retained",
+      "Positive regular differential energy shared by the NS101 control",
+      "Exact two-lattice parity reindexing, with cross term retained",
+      "Super-exponential slice tail excludes finite homogeneous or affine constant-matrix closure containing A(p,0)",
+      "First radial derivative is the classical first Laguerre expression; no uniform-height lower bound supplied"
+    ],
+    "still_open": [
+      "an original-orbit two-factor signed inequality",
+      "p-dependent, nonlinear or infinite moment methods",
+      "full J sign and its all-height range"
+    ],
+    "recommended_new_scan_budget": 0,
+    "disposition": "Retain explicit control distinction and transfer audit. No admitted estimating method emerged; no computation or certificate task proposed."
+  },
+  "self_review": {
+    "method": "Independent chain-rule recalculation, leading-exponential order check, lattice bijection, endpoint expansions, split complete-tail estimate and direct Taylor expansion of J. No numerical/symbolic computation or independent external review.",
+    "items": [
+      "Cayley differential coefficients -3*w and -3/4",
+      "Regularized endpoint values -1/sqrt(2)",
+      "Boundary energy term vanishes only after regularization",
+      "Parity index bijection introduces no multiplicity",
+      "Tail denominator and Gaussian integral factor 1/4",
+      "J/x normalization matches 16*integral p^2*A_p",
+      "ODE control leading coefficient and derivative remainder hypotheses"
+    ],
+    "unresolved_algebra_findings": []
+  },
+  "report": {
+    "path": "theta-orbit-followup-2026-10-05-v1.html",
+    "sha256": "96c481ea9ac3db62e86aa612c92a4a4fbee9396ebf02c3536d0913fef10bfb5f",
+    "validation": {
+      "html_balanced": true,
+      "links_present": true,
+      "inline_css_only": true,
+      "external_assets": false,
+      "noindex": true
+    },
+    "browser_validation": {
+      "opened": true,
+      "screenshot_reviewed": true,
+      "viewport_width": 1280,
+      "document_width": 1280,
+      "formula_blocks": 12,
+      "kept_open": true
+    }
+  },
+  "durable_output": "/Users/alex/Documents/ChatGPT/riemann/research-updates/theta-orbit-followup-2026-10-05-v1/theta-orbit-followup-2026-10-05-v1.html"
+}

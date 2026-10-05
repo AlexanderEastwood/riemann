@@ -736,3 +736,17 @@ lane/window-scaling    window behaviour; closed to new windows by NS-13
 ```
 
 Add a row before starting anything not listed. Remove nothing.
+
+## October 5 original theta orbit audit publication
+
+Owner: Codex. Status: completed applicability/transfer audit; no research row.
+[Report and supporting notes](audits/theta-orbit-followup-2026-10-05-v1/README.md)
+record the explicit NS101/Jacobi-equation mismatch, boundary-preserving Cayley
+reduction, and the narrow constant-matrix moment restriction. The original
+nonlinear evolution remains unexcluded, with no estimating mechanism yet.
+
+**Same open gap — ZERO-GEOMETRY / NS100–101.** Next assess a two-shift
+inequality using the distinguished nonlinear trajectory. Its first partial
+target is the all-height first Laguerre inequality. Keep the complete
+integrals and their signs; NS100 still excludes per-slice positivity.
+No new node, thaw or manuscript version; original evidence recovery stays OPEN.
