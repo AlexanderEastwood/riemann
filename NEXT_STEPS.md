@@ -859,10 +859,17 @@ No scan, row, thaw, node or version. Both recovery groups remain OPEN.
 
 ## October 5 renewed six-agent mechanism assessment
 
-Owner: Codex with six requested assistants. Status: in progress (paper
-admission audit; no research row). Assess auxiliary heat-flow transport,
-full modular-duplication sectors and direct contour analysis of the complete
-pair quotient. Each requires an independently estimating arithmetic step
-and full conditional transfer. PR78's failed mixture is not restarted.
-No scan, thaw or version at dispatch. Both evidence recovery groups stay OPEN.
-**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–78.**
+Owner: Codex with six completed reviews. Status: complete (paper admission
+audit; no research row).
+[Report and notes](audits/theta-alternative-mechanisms-2026-10-05-v1/README.md).
+Auxiliary heat has an unestimated subtractive source. The unrestricted
+completed duplication matrix is indefinite away from X zeros. Direct
+contours give a complete falsification edge: an uncancelled original M zero
+in abs(Im z)<pi/4 would exclude general positive definiteness of k=C/M,
+not the original J. No pole is located and no sign estimator is supplied.
+Next possible test: fixed-domain bounded pole locator, with its evaluator,
+complete-error handling, selection rule and cancellation controls preregistered.
+An external root is not required before discovery; a specific box is required
+before certification. No witness is inconclusive; no automatic wider scan.
+No scan, row, thaw, node or version. Both evidence recovery groups stay OPEN.
+**Final wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–78.**
