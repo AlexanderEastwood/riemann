@@ -797,3 +797,12 @@ No original sign method admitted. Next requires an independent estimate for
 that complete signed combination or the original pair, not another expansion.
 No numerical/symbolic scan, node, thaw, certificate or manuscript version.
 **Wall check: Same open gap — ZERO-GEOMETRY.**
+
+## October 5 decaying-primitive boundary audit
+
+Owner: Codex. Status: in progress (audit; no NS row).
+Assess an integrable primitive of the complete original theta kernel, its
+exact transform multiplier and the matched NS101 boundary/positivity
+hypotheses. This validates the PR75 boundary treatment; it is not an
+admitted arithmetic estimate. No scan, node, thaw or manuscript version.
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR75.**
