@@ -814,3 +814,12 @@ complete arithmetic estimating step before any sign computation. All twelve
 reviews are archived; no historical proof replay is claimed. No scan, node,
 thaw, certificate or manuscript version. Both recovery groups remain OPEN.
 **Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR75.**
+
+## October 5 four-coordinate gap explanation
+
+Owner: Codex. Status: in progress (interpretation artifact; no research row).
+Render PR76's complete corrected first-Laguerre target in coordinates
+(r, Y, Y-prime, Y-double-prime). No theta-value scan or original trajectory
+is plotted. Explain the y=0 case, height-dependent correction, and why this
+partial target is not RH. No arithmetic hypothesis, thaw, node or version.
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76.**

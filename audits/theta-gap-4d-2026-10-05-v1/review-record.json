@@ -1,0 +1,28 @@
+{
+  "reviewed_commit": "18d324703969b5bcc9aa94043cfd90a6e8211f34",
+  "date": "2026-10-05",
+  "owner": "Codex",
+  "task": "Interactive four-coordinate explanation of the missing complete first-Laguerre bound",
+  "review_scope": "Current conclusions and dependencies, refreshed against the preceding full review; all 104 node records and all 14 continuation demands unchanged. Not a historical proof audit or certificate replay.",
+  "wall_check": "Same open gap",
+  "closest_results": [
+    "NS100",
+    "NS101",
+    "PR76"
+  ],
+  "arithmetic_change": "None; explanatory visualization only",
+  "original_recovery_groups": "Both OPEN",
+  "new_research_row": false,
+  "new_manuscript_version": false,
+  "arithmetic_scan": false,
+  "actual_theta_values_plotted": false,
+  "status": "in progress",
+  "input_sha256": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "c9e2fe491864d015a70cc2eb9c3004ad853504c63e847265625a14e5f02605b7",
+    "README.md": "e1fa52920ed24be812e21d68d14af401be03a3d4f18f796822b94f84110afa68",
+    "NEXT_STEPS.md": "84743012834164f26a316ade307f172452a6766022a56702f7ed4da293ba6304",
+    "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74",
+    "audits/theta-decaying-primitive-2026-10-05-v1/derivation.md": "c6bee5824b93387120263dcf75446a8191ecdd997945e31dcbcb1b026e0c9f00"
+  }
+}
