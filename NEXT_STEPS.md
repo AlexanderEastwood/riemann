@@ -782,3 +782,11 @@ Next: require an independently estimating arithmetic mechanism for the
 complete signed comparison before computation; no adjacent model/height scan.
 No node, thaw, interval certificate or manuscript version.
 **Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR72/73.**
+
+## October 5 theta-addition applicability audit
+
+Owner: Codex. Status: in progress (audit; no NS row).
+Assess the actual modular parameters in theta addition and lattice reindexing
+before importing a two-factor sign estimate. Closest NS100/101 and PR74.
+No numerical/symbolic scan, thaw or manuscript version.
+**Wall check: Same open gap — ZERO-GEOMETRY.**
