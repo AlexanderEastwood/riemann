@@ -50,6 +50,21 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 5 theta-addition applicability audit
+
+The [addition audit](audits/theta-addition-admission-2026-10-05-v1/README.md)
+checks the actual modular parameters, retains the parity and coupling in an
+exact two-dimensional lattice identity, and derives a complete regularized
+moment formula for the associated kernel. The separate moments grow with
+the shift; only their complete differential combination decays. Treating
+them as separate ordinary Fourier integrals would lose the required boundary
+cancellation. No signed lower estimate follows from the positive lattice form.
+
+**Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR74.**
+No addition-based sign method is admitted; unequal-modulus identities and the
+original nonlinear evolution are not generally excluded. No scan, node, thaw
+or manuscript version.
+
 ## October 5 six-agent theta review
 
 The [six-agent review](audits/theta-six-agent-2026-10-05-v1/README.md)

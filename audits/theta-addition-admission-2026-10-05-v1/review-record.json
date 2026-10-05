@@ -139,5 +139,48 @@
   "no_scan": true,
   "new_row": false,
   "new_version": false,
-  "original_recovery_groups": "Both OPEN"
+  "original_recovery_groups": "Both OPEN",
+  "status": "completed; no sign candidate admitted",
+  "review_type": "local paper self-review; no fresh independent agent review",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1502.04603v2",
+      "scope": "Definitions, Sections 3.1-3.3 and 4.2; elliptic-argument identities at common modulus or tau/2tau."
+    },
+    {
+      "url": "https://arxiv.org/html/1510.02699v1",
+      "scope": "Multidimensional definition and Proposition3.1; positive integer multiples n1*tau,n2*tau with residue sum retained."
+    }
+  ],
+  "validation": {
+    "manuscript_pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "manuscript_changed": false,
+    "new_version_manifest": "not applicable",
+    "node_records_unchanged": true,
+    "continuation_demands_unchanged": true,
+    "inline_css_only": true,
+    "local_links_valid": true,
+    "diff_check_passed": true,
+    "browser_preview": {
+      "title": "Theta addition: the variables and boundaries matter",
+      "viewport_width": 1280,
+      "document_width": 1280,
+      "visual_review": "readable; no horizontal overflow; report tab preserved"
+    }
+  },
+  "algebra_self_checks": [
+    "bijection (n,m)<->(k,l) with same parity",
+    "t=0 duplication and (n,m)=(1,0) exponent",
+    "P factor by independent coordinate operators and exponential mode",
+    "smooth subtraction annihilated exactly by P",
+    "complete s endpoint decay on compact t ranges",
+    "two integrations by parts give 2*M0; four give zero",
+    "exact M0 lower bound with interior and exterior retained",
+    "complete Fourier bracket factor 64*L1; no splitting growing terms"
+  ],
+  "open_input": "All-height signed comparison for complete original associated kernel, or independent reference/error comparison.",
+  "original_target_refuted": false,
+  "no_full_route_closure": true,
+  "derivation_sha256": "4f8046dbe8264ccd64a36a5360a4117b9c6fb4d88bc1d9481899b47e53945eb9"
 }
