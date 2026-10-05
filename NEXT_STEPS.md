@@ -768,8 +768,17 @@ leaves the same gap. No row, thaw, node or manuscript version.
 
 ## October 5 six-agent theta continuation audit
 
-Owner: Codex plus six assisting agents. Status: in progress (audit; no NS row).
-[Shared brief](audits/theta-six-agent-2026-10-05-v1/BRIEF.md).
-Review original-pair estimating mechanisms, independently audit PR73, and
-assess exact modular completions and matched controls. No scan or thaw.
+Owner: Codex plus six assisting agents. Status: complete (audit; no NS row).
+[Report and six reviews](audits/theta-six-agent-2026-10-05-v1/README.md).
+PR73's algebra survives independent review; its tail cancellation includes
+cross terms. The specified local drift-cancelling certificate fails on the
+original tail. A smooth reciprocal completion has complete all-height error
+bounds but no lower sign margin. A distinct Bessel reference has a reviewed
+positive margin, but no original-theta comparison. The NS101 mixture fails
+the actual first-Laguerre condition for beta>=max(2,pi*sqrt(m2/m0)); the
+historical beta=2 member is not separately decided. The original Jacobi
+equation is absent from this control. No original sign method is admitted.
+Next: require an independently estimating arithmetic mechanism for the
+complete signed comparison before computation; no adjacent model/height scan.
+No node, thaw, interval certificate or manuscript version.
 **Wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR72/73.**
