@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-05",
+  "reviewed_commit": "99fa727a0eb31b2e017d0fa6ae219287c67fe66a",
+  "preceding_reviewed_commit": "33bda7f04a34e49f578c666b7f8953a8ca09c3c4",
+  "remote_refreshed": true,
+  "input_sha256": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "6314bd614e8b69ea1c7b85bf5dfe6fe6012729e632ec54e8d0522d26f9b0b81f",
+    "README.md": "34209288a3fc5c897a4673d52d648b22fb7fb2aead2a3bb05a9c776bdccfce35",
+    "NEXT_STEPS.md": "fb0a4be279a1e86edd05d25d5a9af381250d92f222486eb60a2bb0d47e88a854",
+    "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74",
+    "evidence/ns100_reassessment/argument.tex": "1673593f001fc9be376e17fa36741c27b11e04731be887f7d6200d6ad05b6187",
+    "evidence/ns101_theta_factorization/argument.tex": "4f967555a4174b6880a690beabd94d4cca975aff149229e7610eae6e3324a8e7"
+  },
+  "review_scope": "104 conclusion scopes/dependencies reviewed before publication; merged PR72 delta reviewed before continuation. No historical proof/certificate replay.",
+  "wall_check": {
+    "classification": "Same open gap",
+    "closest": [
+      "NS100",
+      "NS101",
+      "PR72"
+    ],
+    "what_changes": "Original nonlinear orbit transported into the complete associated kernel and a mixed quadratic form; fixed reflected theta-sum approximation checked on paper. No new signed estimate."
+  },
+  "admission": {
+    "type": "transfer and approximation audit, no research row",
+    "dependency": "L1>=0 for all real heights iff the complete C kernel is positive definite; exact mixed-form comparison retains all shifts and coefficient vectors. This equivalence is not an estimating method.",
+    "arithmetic": "Original theta coefficients and modular cancellation phi_prime(0)=0; distinguished Jacobi state initial data.",
+    "success": "Expose a usable original-orbit estimating mechanism, or delimit a proposed transfer with a full-scope matched screen.",
+    "failure": "Record the precise missing comparison and stop the failed fixed-prefix sub-strategy. No adjacent numerical scan.",
+    "budget": "One bounded paper audit and findings PR; zero numerical/symbolic scan budget."
+  },
+  "controls": {
+    "NS100": "Original-kernel per-slice positivity excluded; complete s^2 integral retained. Generic real log-concavity does not prove the arbitrary-size matrix comparisons.",
+    "NS101": "Generic pair identities shared; original Jacobi ODE not shared. Off-axis zeros alone are not claimed to decide its first-order Laguerre sign.",
+    "fixed_prefix": "Every fixed M>=1 reflected original theta sum loses smoothness at zero and the original initial data; its L1 is eventually negative by exact asymptotic. Rejects all-height nonnegative-prefix certificates only.",
+    "Davenport_Heilbronn": "Not matched: different coefficients/conductor/completion from the specified original theta IVP.",
+    "NS74_NS83": "Not applicable: NB target and dyadic rates differ."
+  },
+  "self_review": [
+    "Independent variable change checks factor 4 in the full-line C transform",
+    "Chain-rule checks clock factors 2 and 4 and P1 signs in K_tt",
+    "Shift substitution and expansion checks the mixed quadratic form for complex coefficients",
+    "Differentiation of each theta term checks -4*a^2+15*a-15/2",
+    "Full modular evenness and Gaussian summability give delta_M=-tail of b_n>0",
+    "Separate integration by parts of f_M, u*f_M and u^2*f_M justifies differentiated asymptotics",
+    "Complete transform is Schwartz; omitted tail supplies the leading Laguerre correction"
+  ],
+  "results": {
+    "estimating_method_found": false,
+    "prefix_asymptotic": "L1[X_M]=-8*delta_M^2*r^-6+O_M(r^-8), delta_M>0, for every fixed M>=1",
+    "uniformity": "Fixed M; no threshold computed; no claim uniform in M(r).",
+    "still_open": "Full original orbit mixed-form lower bound for arbitrary translates and complex coefficient vectors; equivalently first Laguerre sign at all real heights.",
+    "narrow_exclusion": "Fixed reflected finite theta-sum sign certificate; not arbitrary smooth completions, growing truncations, or original nonlinear orbit."
+  },
+  "new_row": false,
+  "thaw": false,
+  "manuscript_version": false,
+  "numerical_scan": false,
+  "symbolic_scan": false,
+  "interval_certificate": false,
+  "outreach": false,
+  "missing_originals": "Both historical recovery groups remain OPEN.",
+  "sources": [
+    "https://arxiv.org/html/1309.0055v2",
+    "https://arxiv.org/html/2608.19160v1"
+  ],
+  "report_version": 2,
+  "preserved_v1_sha256": "8e44b9346c5c5b8e8df3b39056c80fdbbf15406848b535a1102ddaa6934d8fc0",
+  "report_sha256": "8df5ad7bd527775b2b14d19635b297d82cec457724b2da5fd1515ddef2d12a81",
+  "editorial_corrections": [
+    "Finite-product control belongs to September 29 Jacobi-product admission audit, not NS101 itself.",
+    "No monotonic onset-height statement as M increases."
+  ],
+  "validation": {
+    "manuscript_build": "passed",
+    "pages": 358,
+    "undefined_or_duplicate_references": 0,
+    "map_nodes_unchanged": 104,
+    "html_balanced": true,
+    "browser_opened": true,
+    "browser_screenshot_reviewed": true,
+    "viewport_width": 1280,
+    "document_width": 1280,
+    "formula_blocks": 10
+  }
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="description" content="An exact two-factor theta transfer audit, with a full-height obstruction for reflected finite theta sums."><title>The two theta factors: what still needs a sign | Prime Shapes</title></head>
+<body style="margin:0;background:#101c29;color:#e5edf0;font:18px/1.7 Georgia,serif;">
+<main style="max-width:680px;margin:0 auto;padding:32px 22px 64px;overflow-wrap:break-word;">
+<p style="font:14px/1.6 system-ui,sans-serif;color:#b9cdd8;">Prime Shapes / Two-factor transfer audit<br>October 5, 2026 · Version 1</p>
+<h1 style="font-size:clamp(36px,7vw,48px);font-weight:400;line-height:1.15;">The two factors must stay together.</h1>
+<p style="font-size:23px;line-height:1.5;">The nonlinear theta evolution supplies exact derivatives of the pair. It does not yet supply the required nonnegative quadratic form.</p>
+<p>This continuation identifies that form explicitly and checks a tempting approximation strategy. Every fixed finite theta-sum prefix, made even by reflection, eventually has a <em>negative</em> first Laguerre expression. The omitted tail is essential to the cancellation at large height, however small it looks in the real variable.</p>
+<p style="padding:20px;background:#1b2b3a;border-left:3px solid #efc67b;"><strong>Wall check: Same open gap.</strong> Closest results: NS100/101 and <a href="https://github.com/AlexanderEastwood/riemann/pull/72" style="color:#c8ddf2;">PR72</a>. The original nonlinear orbit remains unexcluded. This is a transfer and approximation audit, with no new all-height arithmetic bound. The narrower reflected-prefix shortcut fails as specified below.</p>
+
+<h2 style="font-size:29px;font-weight:400;margin-top:38px;">1. The exact pair and the needed implication</h2>
+<p>Use the complete NS100 theta kernel phi, with its smooth even extension and full double-exponential tails. Write</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">X(r) = integral_R phi(u)*exp(i*r*u) du
+     = xi(1/2+i*r)/2.
+
+K(s,t) = phi(s+t)*phi(s-t)
+C(t)   = integral_R s^2*K(s,t) ds
+
+L1(r)  = (X'(r))^2-X(r)*X''(r)
+       = 4*integral_R C(t)*cos(2*r*t) dt.</pre>
+<p>All quantities retain the entire real line. The factor 4 can be checked by setting u=s+t, v=s-t, using the Jacobian 1/2 and the evenness of phi. This is the classical associated-kernel reduction, not a new criterion. With this normalization, <strong>L1(r)&gt;=0 for every real r is equivalent to C being positive definite</strong>: every finite matrix C(t_i-t_j) must be positive semidefinite. See <a href="https://arxiv.org/html/1309.0055v2" style="color:#c8ddf2;">Csordas, Section 3 and Open Problem 4.7</a>. A first-order Laguerre inequality alone is not the full all-order criterion.</p>
+<p>The established real-kernel log-concavity makes C positive, even and decreasing for t&gt;0. It therefore supplies the two-point matrix checks, since 0&lt;C(t)&lt;=C(0). It does not supply the matrices of every size. No finite collection of those checks would establish the missing quantifier.</p>
+
+<h2 style="font-size:29px;font-weight:400;margin-top:38px;">2. Where the original nonlinear evolution enters</h2>
+<p>The <a href="https://arxiv.org/html/2608.19160v1#S5" style="color:#c8ddf2;">Jacobi state formulation</a> uses clock L. Its original trajectory satisfies</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">a'=(U+a^2-1)/2
+U'=2*U*(a+chi)
+chi'=a*chi-U
+
+a(0)=chi(0)=0,
+U(0)=Gamma(1/4)^8/(64*pi^4).
+
+d=U+3*(a^2-1)/2
+P=a/4+[2*U*(a+chi)+(3*a/2)*(U+a^2-1)]/d
+P1=V(P), where V is the vector field above.</pre>
+<p>The checked clock conversion is L=2u for our phi(u). Thus P is one half of the logarithmic slope of phi, and P1 is its derivative with respect to L. The factor d is positive at each finite real clock on the original orbit. Smooth parity retains negative clocks when s-t&lt;0.</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">P_plus=P(2*(s+t)), P_minus=P(2*(s-t))
+
+K_t=2*(P_plus-P_minus)*K
+K_tt=4*[(P_plus-P_minus)^2+P1_plus+P1_minus]*K
+
+C''(t)=4*integral_R s^2*
+ [(P_plus-P_minus)^2+P1_plus+P1_minus]*K(s,t) ds.</pre>
+<p>The last identity follows by the chain rule and dominated differentiation; the complete theta tails control the polynomially weighted derivatives. It has no artificial boundary at s=t. The square term is nonnegative, the real-orbit P1 terms are negative, and the subsequent cosine is signed. The source's scalar curvature result does not estimate this combined transform. Substituting V(P) makes the arithmetic dependence explicit but does not resolve the comparison.</p>
+<p>The initial data give P(0)=0. This exact modular-point cancellation will matter in the approximation check below. The precise NS101 mixture fails the original Jacobi equation (PR72), so it is not a counterexample to an eventual estimate using this distinguished trajectory.</p>
+
+<h2 style="font-size:29px;font-weight:400;margin-top:38px;">3. An explicit quadratic-form obligation</h2>
+<p>For arbitrary finitely many real x_i and complex coefficients c_i, define functions of y:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">f_i(y)=phi(y-x_i)
+e_i(y)=(y-x_i)*f_i(y)
+D_k(y)=sum_i c_i*x_i^k*f_i(y), k=0,1,2
+E(y)=sum_i c_i*e_i(y).
+
+sum_(i,j) c_i*conj(c_j)*C((x_i-x_j)/2)
+ = ||E||_2^2
+   +(1/2)*Re&lt;D_2,D_0&gt;
+   -(1/2)*||D_1||_2^2.</pre>
+<p>To verify it, shift the integration variable in C by (x_i+x_j)/2 and use</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">[y-(x_i+x_j)/2]^2
+ =(y-x_i)*(y-x_j)+(x_i-x_j)^2/4.</pre>
+<p>Consequently the exact first-Laguerre target is the comparison</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">||D_1||_2^2 &lt;= 2*||E||_2^2+Re&lt;D_2,D_0&gt;
+for every finite set of shifts and every complex coefficient vector.</pre>
+<p>This is <strong>bookkeeping, not a newly proved estimate</strong>. A positive norm appears, but it has a negative companion and an uncontrolled mixed term. There is no legitimate step that drops those terms. The original evolution supplies f_i'=2*P(2*(y-x_i))*f_i; differentiating the quadratic forms therefore introduces correlated slope-weighted translates. No sign-preserving comparison for all coefficient vectors was obtained.</p>
+<p>This pinpoints a possible future proof obligation without admitting a new research task: an independently derived bound for this mixed form using the exact trajectory. It is the x=0 counterpart of NS101's missing comparison between positive autocorrelations. Naming it does not thaw the input group.</p>
+
+<h2 style="font-size:29px;font-weight:400;margin-top:38px;">4. A finite theta prefix cannot certify all heights</h2>
+<p>Here is a complete paper check of the simplest approximation proposal. For each fixed integer M&gt;=1, let f_M be the sum of the first M original terms on u&gt;=0, reflect it evenly to phi_M(u)=f_M(|u|), and transform that reflected function:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">f_M(u)=sum_(1&lt;=n&lt;=M)
+ [2*pi^2*n^4*exp(9*u/2)-3*pi*n^2*exp(5*u/2)]
+ *exp(-pi*n^2*exp(2*u)), u&gt;=0
+
+X_M(r)=2*integral_0^infinity f_M(u)*cos(r*u) du.</pre>
+<p>For a_n=pi*n^2, direct differentiation of an individual term gives its right derivative at zero:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">b_n=a_n*exp(-a_n)*[-4*a_n^2+15*a_n-15/2].
+
+b_n&lt;0 for every n&gt;=2.
+The full smooth even kernel has sum_(n&gt;=1) b_n=0.
+Therefore delta_M=f_M'(0)=-sum_(n&gt;M) b_n&gt;0.</pre>
+<p>There is no numerical assumption here. For n&gt;=2, a_n&gt;4 makes the bracket negative. Termwise differentiation at zero is justified by Gaussian summability, and the full derivative vanishes by theta reciprocity. Thus every fixed reflected prefix has an upward cusp at zero; it misses P(0)=0. It is not the original smooth solution of the nonlinear initial-value problem.</p>
+<p>Repeated integration by parts on the positive half-line now gives, as r tends to positive infinity with M fixed,</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">X_M(r)   = -2*delta_M/r^2 + O_M(r^-4)
+X_M'(r)  =  4*delta_M/r^3 + O_M(r^-5)
+X_M''(r) =-12*delta_M/r^4 + O_M(r^-6)
+
+(X_M')^2-X_M*X_M''
+ = -8*delta_M^2/r^6 + O_M(r^-8) &lt;0
+for all sufficiently large r (depending on M).</pre>
+<p>The derivative remainders come from integrating the transforms of u*f_M and u^2*f_M, not from formally differentiating an uncontrolled error term. Every derivative and polynomial moment of these finite sums is integrable. The negative leading coefficient establishes the stated eventual sign; it gives no numerical threshold and is not a finite sample.</p>
+<p>The full X and its derivatives decrease faster than every inverse power, since phi is smooth with all derivatives rapidly decreasing. Consequently the omitted terms contribute a <em>leading-order</em> correction to this Laguerre expression:</p>
+<pre style="white-space:pre-wrap;overflow-wrap:anywhere;background:#1b2b3a;padding:18px;color:#b8e4d7;font:14px/1.8 ui-monospace,monospace;">L1[X](r)-L1[X_M](r)
+ = +8*delta_M^2/r^6 + O_M(r^-8).</pre>
+<p>A remainder allowance o(r^-6) is therefore false for this comparison at fixed M. A tiny bound for the omitted real-space tail cannot justify an all-height sign certificate for the prefix. The exact tail cancels its leading negative term. None of this determines the sign of the remaining complete expression.</p>
+<p><strong>Scope.</strong> This applies to every fixed reflected finite sum defined above. NS101's earlier finite-product screen used a different approximation; it did not state this all-M sum asymptotic. Increasing M delays the issue and does not remove it. A growing M(r), a globally smooth completion, a different model or the exact original evolution is outside this exclusion and still needs its own uniform error estimate.</p>
+<details style="padding:18px;background:#1b2b3a;margin:22px 0;"><summary style="cursor:pointer;color:#c8ddf2;">Why cancelling only finitely many boundary derivatives can still fail</summary><p>More generally, for a rapidly decreasing half-line function whose first nonzero odd right derivative has order 2k+1, its even-reflected transform has leading term c*r^(-nu), where nu=2k+2 and c is nonzero. The first Laguerre expression then has leading term -nu*c^2*r^(-2*nu-2). This statement assumes the corresponding differentiated asymptotic remainders. It covers a finite boundary repair only if a later nonzero odd derivative remains. It does not exclude smooth even repairs with all odd derivatives zero.</p></details>
+
+<h2 style="font-size:29px;font-weight:400;margin-top:38px;">Decision and matched controls</h2>
+<p><strong>No new all-height estimating method was found in this bounded continuation.</strong> The pair's exact nonlinear derivatives and its mixed quadratic form expose where a proof must act. The reflected-prefix strategy cannot supply the target at all heights. Stop that fixed-prefix strategy; retain the original nonlinear orbit as open.</p>
+<ul style="padding-left:23px;">
+<li><strong>NS100:</strong> the original orbit already fails per-slice positivity. This audit retains the s^2-integrated pair, so that obstruction does not decide its sign. Ordinary real log-concavity only gives the previously known scalar shape and two-point checks.</li>
+<li><strong>NS101:</strong> shares the generic pair and quadratic-form identities. It fails the original normalized Jacobi equation, as PR72 shows. Its off-axis zeros are not, by themselves, a proof that its first Laguerre expression fails everywhere or somewhere; no such claim or sampled pass is made.</li>
+<li><strong>Reflected-prefix screen:</strong> all original first M coefficients and complete finite-sum tails are retained, but the exact modular-point cancellation and original IVP are lost. This analytically rejects an all-height nonnegative-prefix certificate, not the original equation.</li>
+<li><strong>Davenport–Heilbronn:</strong> different theta coefficients, conductor and completion; not a matched original-IVP control. No unchanged example screen was run.</li>
+<li><strong>NS74/83:</strong> different NB target and dyadic-rate hypotheses; not applicable to this transform inequality.</li>
+</ul>
+<p>A successful future estimate must control the mixed quadratic form for arbitrary shifts and coefficients, or directly its complete Fourier transform at every height, using arithmetic absent from the controls. A finite matrix table, positive real-space kernel or a further exact identity would leave the same gap. No scan is recommended from the present identities.</p>
+<footer style="margin-top:40px;padding-top:22px;border-top:1px solid #425968;font:14px/1.7 system-ui,sans-serif;color:#b9cdd8;">
+<p>Reviewed baseline: <a href="https://github.com/AlexanderEastwood/riemann/tree/99fa727a0eb31b2e017d0fa6ae219287c67fe66a" style="color:#c8ddf2;">99fa727</a>, including merged PR72. The full 104-node conclusion/dependency review preceded this continuation; the merge changed audit scope and links only. Historical proofs and certificates were not replayed. Both original-evidence recovery groups remain open.</p>
+<p>Exact paper derivations and source-scope review, self-checked. No numerical or symbolic scan, new interval certificate, research row, thaw, manuscript version or external outreach. Prior reports are preserved. <a href="review-record.json" style="color:#c8ddf2;">Review and decision record</a>.</p>
+<p><strong style="color:#e5edf0;">Final wall check: Same open gap.</strong> The fixed reflected-prefix sub-strategy fails by the boundary asymptotic above. The complete original two-factor inequality, RH and G2 remain open.</p>
+</footer></main></body></html>

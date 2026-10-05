@@ -50,6 +50,21 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 5 two-factor theta continuation
+
+The [pair audit](audits/theta-pair-laguerre-2026-10-05-v1/README.md)
+retains the original nonlinear evolution and exposes the exact mixed
+quadratic-form comparison for the first Laguerre target. No lower bound
+for that form was obtained. It also shows analytically that every fixed
+finite theta-sum prefix, reflected evenly at zero, eventually has a negative
+first Laguerre expression. The complete tail cancels its leading algebraic
+error, so a tiny real-space remainder is insufficient for that all-height
+approximation strategy.
+
+**Same open gap — ZERO-GEOMETRY, NS100/101.** Only the stated fixed reflected
+prefix strategy is excluded; the original nonlinear orbit remains open.
+No scan, new node, thaw or manuscript version.
+
 ## October 5 original theta evolution audit
 
 The [original-orbit audit](audits/theta-orbit-followup-2026-10-05-v1/README.md)
