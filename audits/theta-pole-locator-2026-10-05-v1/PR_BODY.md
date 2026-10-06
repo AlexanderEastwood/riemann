@@ -1,3 +1,11 @@
+The fixed-domain original theta quotient search produced no candidate satisfying its preregistered root threshold. This is an inconclusive diagnostic: general quotient PD and the original signed Laguerre estimate remain open. Stop this bounded test; no wider scan, certificate, research row, thaw or manuscript version.
+
+Six agents completed implementation and independent mathematical/numerical review. Matched uncancelled/removable controls passed. A separate direct-term/tanh-sinh implementation checked the same four endpoints. Details and styled report: `audits/theta-pole-locator-2026-10-05-v1/`; reproducible diagnostics: `evidence/diag_theta_pole_locator/`.
+
+Validation: unchanged manuscript builds to358pages with0undefined/duplicate references; three touched Python scripts have0pyright errors/warnings.104nodes and14input demands unchanged. No new-version manifest applies. No unresolved major finding.
+
+The filled proposal below was first published before the original run; its completed-result addendum records the outcome.
+
 Proposal: Bounded diagnostic of an uncancelled complex zero of the ORIGINAL
 M(z)=int_R phi(s+z)phi(s-z)ds, C(z)=int_R s^2 phi(s+z)phi(s-z)ds,
 in 1/8<=Re z<=2, 1/8<=Im z<=5/8. A candidate is not a certificate.

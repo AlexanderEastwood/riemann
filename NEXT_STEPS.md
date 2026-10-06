@@ -876,12 +876,17 @@ No scan, row, thaw, node or version. Both evidence recovery groups stay OPEN.
 
 ## October 5 bounded theta quotient-pole diagnostic
 
-Owner: Codex with six assigned agents. Status: in progress (diagnostic/audit;
+Owner: Codex with six completed agent reviews. Status: complete (diagnostic;
 no NS row). Reviewed main bc3ff0c962c485ac8104ce8cd832c119c260c871.
-[Protocol](audits/theta-pole-locator-2026-10-05-v1/PROPOSAL.md).
-One fixed off-axis rectangle, matched uncancelled/removable controls first,
-81 grid points and four capped same-cell refinements; original coefficients,
-explicit lattice/tail bounds and honest quadrature uncertainty. A verified
-uncancelled pole would reject only general quotient PD; null is inconclusive.
-No domain expansion, thaw or manuscript version.
-**Wall check: Distinct test — closest PR78/79, NS100/101.**
+[Report](audits/theta-pole-locator-2026-10-05-v1/README.md),
+[protocol](audits/theta-pole-locator-2026-10-05-v1/PROPOSAL.md),
+[PR80](https://github.com/AlexanderEastwood/riemann/pull/80).
+Matched uncancelled/removable controls passed. The one fixed rectangle,
+81-point grid and four capped same-cell refinements locate no approximate
+root meeting the protocol. Independent integration reproduces the four
+saved endpoints. This null is inconclusive, not a zero-free or PD statement;
+finite quadrature and roundoff are not certified. No pole certificate
+candidate. Stop this bounded test without enlargement. General quotient PD
+and the original first-Laguerre estimate remain open. No lower estimate,
+row, node, thaw or version; both evidence recovery groups remain OPEN.
+**Final wall check: Distinct test — closest PR78/79, NS100/101.**

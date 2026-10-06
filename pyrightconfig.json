@@ -63,7 +63,8 @@
     "audits/api-prime-chain-screen-2026-09-29-v1/*.py",
     "audits/euler-boundary-screen-2026-09-29-v1/*.py",
     "tools/geometry_swarm/*.py",
-    "tests/test_geometry_swarm*.py"
+    "tests/test_geometry_swarm*.py",
+    "evidence/diag_theta_pole_locator/*.py"
   ],
   "exclude": [
     "node_modules",
