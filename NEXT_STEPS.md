@@ -873,3 +873,15 @@ An external root is not required before discovery; a specific box is required
 before certification. No witness is inconclusive; no automatic wider scan.
 No scan, row, thaw, node or version. Both evidence recovery groups stay OPEN.
 **Final wall check: Same open gap — ZERO-GEOMETRY, NS100/101, PR76–78.**
+
+## October 5 bounded theta quotient-pole diagnostic
+
+Owner: Codex with six assigned agents. Status: in progress (diagnostic/audit;
+no NS row). Reviewed main bc3ff0c962c485ac8104ce8cd832c119c260c871.
+[Protocol](audits/theta-pole-locator-2026-10-05-v1/PROPOSAL.md).
+One fixed off-axis rectangle, matched uncancelled/removable controls first,
+81 grid points and four capped same-cell refinements; original coefficients,
+explicit lattice/tail bounds and honest quadrature uncertainty. A verified
+uncancelled pole would reject only general quotient PD; null is inconclusive.
+No domain expansion, thaw or manuscript version.
+**Wall check: Distinct test — closest PR78/79, NS100/101.**

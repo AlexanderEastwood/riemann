@@ -1,0 +1,25 @@
+{
+  "reviewed_commit": "bc3ff0c962c485ac8104ce8cd832c119c260c871",
+  "date": "2026-10-05",
+  "review_scope": "Full 104-node conclusion register and 14 continuation demands reviewed against prior turn; unchanged node records and input demands, PR79 ZERO-GEOMETRY audit annotation reviewed. Current instructions/checkpoints/board/missing evidence reviewed. Not a historical proof or certificate replay.",
+  "wall_check": "Distinct test",
+  "closest": [
+    "PR78",
+    "PR79",
+    "NS100",
+    "NS101"
+  ],
+  "new_input": "Bounded original M-zero/C-nonzero diagnostic for general quotient PD, not a lower-bound estimate.",
+  "original_recovery_groups": "Both OPEN",
+  "input_sha256": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "00b3f1941ea97635c6424038e9491d08c346ea6fc845caec781f1406324c60d6",
+    "README.md": "90f5124b3767921887e0b354331d632a6d057c996d026d14d2daa9e0a4f3580c",
+    "NEXT_STEPS.md": "5119c372ec775239cd62d71606306321db82ef4189467a939da37393b9355bb9",
+    "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74",
+    "audits/theta-alternative-mechanisms-2026-10-05-v1/reviews/06-admission.md": "c5175a12b54e683710d3e53fddb1e46c8f2babf4b270cde6c575dc1ab3bab43f"
+  },
+  "status": "protocol and controls in progress",
+  "new_research_row": false,
+  "new_manuscript_version": false
+}
