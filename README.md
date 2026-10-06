@@ -50,6 +50,18 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 5 bounded quotient-pole diagnostic
+
+The [six-agent continuation](audits/theta-pole-locator-2026-10-05-v1/README.md)
+runs PR79's fixed-domain locator after matched cancellation controls.
+None of the four selected refinements reaches its root-candidate threshold
+at 128/256 bits. This is inconclusive: no certified pole, zero-free region,
+or evidence of quotient positive definiteness. Complete lattice/real-tail
+formulas do not enclose the numerical quadrature error. Stop this bounded
+test; no automatic larger scan, research row, thaw or manuscript version.
+The original signed theta estimate remains open.
+**Wall check: Distinct test — closest PR78/79, NS100/101.**
+
 ## October 5 alternative-mechanism review
 
 The [six-agent follow-up](audits/theta-alternative-mechanisms-2026-10-05-v1/README.md)

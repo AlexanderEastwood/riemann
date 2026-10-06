@@ -1,0 +1,80 @@
+{
+  "reviewed_commit": "bc3ff0c962c485ac8104ce8cd832c119c260c871",
+  "date": "2026-10-05",
+  "review_scope": "Full 104-node conclusion register and 14 continuation demands reviewed against prior turn; unchanged node records and input demands, PR79 ZERO-GEOMETRY audit annotation reviewed. Current instructions/checkpoints/board/missing evidence reviewed. Not a historical proof or certificate replay.",
+  "wall_check": "Distinct test",
+  "closest": [
+    "PR78",
+    "PR79",
+    "NS100",
+    "NS101"
+  ],
+  "new_input": "Bounded original M-zero/C-nonzero diagnostic for general quotient PD, not a lower-bound estimate.",
+  "original_recovery_groups": "Both OPEN",
+  "input_sha256": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "00b3f1941ea97635c6424038e9491d08c346ea6fc845caec781f1406324c60d6",
+    "README.md": "90f5124b3767921887e0b354331d632a6d057c996d026d14d2daa9e0a4f3580c",
+    "NEXT_STEPS.md": "5119c372ec775239cd62d71606306321db82ef4189467a939da37393b9355bb9",
+    "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74",
+    "audits/theta-alternative-mechanisms-2026-10-05-v1/reviews/06-admission.md": "c5175a12b54e683710d3e53fddb1e46c8f2babf4b270cde6c575dc1ab3bab43f"
+  },
+  "status": "complete: inconclusive, stop bounded test",
+  "new_research_row": false,
+  "new_manuscript_version": false,
+  "protocol_commit": "728cc6c",
+  "pre_run_code_commit": "0604699",
+  "draft_pr": "https://github.com/AlexanderEastwood/riemann/pull/80",
+  "original_evaluations": 171,
+  "independent_endpoint_replays": 4,
+  "controls": "uncancelled and removable synthetic cases passed through actual pipeline",
+  "outcome": "No stable approximate root met protocol threshold; no certificate candidate. Inconclusive, stop fixed-domain test. General quotient PD and original target remain open.",
+  "original_certificate_attempted": false,
+  "domain_expansion": false,
+  "checks": {
+    "pyright": "0 errors,0 warnings on three new scripts",
+    "manuscript_build": {
+      "pages": 358,
+      "undefined_or_duplicate_references": 0,
+      "manuscript_changed": false
+    },
+    "no_new_node": true,
+    "no_thaw": true,
+    "major_findings_unresolved": 0,
+    "html": {
+      "rendered_in_browser": true,
+      "width": 461,
+      "scroll_width": 461,
+      "review_links": 6,
+      "scripts": 0,
+      "relative_links_resolve": true
+    }
+  },
+  "evidence_sha256": {
+    "evidence/diag_theta_pole_locator/controls.json": "ff826ab13e6c2bbe0c55aeb733bc6b5f214792bf3a61fa712364a78b98ff96f7",
+    "evidence/diag_theta_pole_locator/independent.json": "572aad5cd80e49db2967c3dd8a9d8dc51eaa514353879dbee54c39772d237c42",
+    "evidence/diag_theta_pole_locator/independent_replay.py": "25222ac33384c20bedf20552e28331dac79fb70b2aecef8a59e837df52f0afe9",
+    "evidence/diag_theta_pole_locator/locator.py": "bf51d0e9a19e6bffc0b72f8228efadc86a9ecf5aed918a1cd95e1e5133aa7e0e",
+    "evidence/diag_theta_pole_locator/original.json": "ac8827f603bb6d23c692cca8991d90d62be426cf87cd32e7aa2c23c989fd701b",
+    "evidence/diag_theta_pole_locator/requirements-replay.txt": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645",
+    "evidence/diag_theta_pole_locator/results.md": "9c0fafc37f72da7ad2699574ed320dbb7a6d9107d9c617b543043ba767acfecb",
+    "evidence/diag_theta_pole_locator/theta_eval.py": "d4dd2964ff76b3e9fd2bd1f94b02ce40f5f02af39ba5adbdf34a4d6da729fb3d"
+  },
+  "assistants_completed": 6,
+  "reviewers": [
+    "pole01_evaluator",
+    "pole02_locator",
+    "pole03_protocol",
+    "pole04_independent",
+    "pole05_code_review",
+    "pole06_admission"
+  ],
+  "review_sha256": {
+    "reviews/01-evaluator.md": "92b7945d48788aa1cb7fb65953f8b5b1117dcf7be70fa03928b7eba2c1f115f7",
+    "reviews/02-locator.md": "c9b38c374dfc331cd58b61b1a3b8e4422e9ecade14748b5c17d453a475c33e46",
+    "reviews/03-protocol.md": "d28db341fdbd4e30eee96130b68cafe03d6ac20013613c4e5002f30e321d153e",
+    "reviews/04-independent.md": "e5fd9fd4d71aaeddc99f622e315991a2378f7e14008cb68fd47d76ccb7269284",
+    "reviews/05-code-results.md": "c44e12f4821c9eb409ee2a8b5406cd38baf0c9dc81b9a385abe44a5d08e6cc5a",
+    "reviews/06-admission.md": "62de23f28c81a3493ccbb0f3eddd52dd501c9d644851a7e277659d82eaf76883"
+  }
+}
