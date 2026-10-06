@@ -890,3 +890,14 @@ candidate. Stop this bounded test without enlargement. General quotient PD
 and the original first-Laguerre estimate remain open. No lower estimate,
 row, node, thaw or version; both evidence recovery groups remain OPEN.
 **Final wall check: Distinct test — closest PR78/79, NS100/101.**
+
+## October 6 fixed six-point theta quotient screen
+
+Owner: Codex with six assigned agents. Status: in progress (validation;
+no NS row). Reviewed main0da30a5c92203e45c452df87b68a93d86b7e5fd7.
+[Protocol](audits/theta-six-point-2026-10-06-v1/PROPOSAL.md).
+Direct original B_ij=k((i-j)/4),i,j=0,...,5, with k=C/M. Controls first,
+one fixed dyadic witness, no stencil enlargement. A verified negative form
+would reject general quotient PD without requiring a pole; a positive
+finite matrix is inconclusive. No arithmetic lower estimate or thaw.
+**Wall check: Distinct test — closest PR78–80, NS100/101.**

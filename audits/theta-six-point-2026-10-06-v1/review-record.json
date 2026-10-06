@@ -1,0 +1,26 @@
+{
+  "reviewed_commit": "0da30a5c92203e45c452df87b68a93d86b7e5fd7",
+  "date": "2026-10-06",
+  "review_scope": "Remote refreshed; complete register identical to preceding reviewed PR80,104node records14continuation demands. Current instructions/checkpoints/board/missing-evidence and relevant quotient/controls/admission findings reviewed. No historical proof/certificate replay.",
+  "wall_check": "Distinct test",
+  "closest": [
+    "PR78",
+    "PR79",
+    "PR80",
+    "NS100",
+    "NS101"
+  ],
+  "changed_input": "Direct original finite real-shift quadratic form, without a pole hypothesis; route-validation only, no new signed lower estimate.",
+  "original_recovery_groups": "Both OPEN",
+  "new_research_row": false,
+  "new_manuscript_version": false,
+  "status": "protocol/control preparation",
+  "input_sha256": {
+    "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
+    "research-map.json": "102c50571f94a47ad5334e3c0f407c23193c96a93eb0caae429beae971a042d0",
+    "README.md": "07f89f88b661da8be1e784d4e3e7ad682f97127e4e6e80bf14a8785ba03ebf27",
+    "NEXT_STEPS.md": "cd977d05df07438b3c68f65adf1b2f105a66fee02a677afb1e7909b1940384e2",
+    "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74",
+    "audits/theta-pole-locator-2026-10-05-v1/reviews/06-admission.md": "62de23f28c81a3493ccbb0f3eddd52dd501c9d644851a7e277659d82eaf76883"
+  }
+}
