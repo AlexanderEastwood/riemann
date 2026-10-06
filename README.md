@@ -50,6 +50,19 @@ check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
 
+## October 6 fixed six-point quotient screen
+
+The [six-agent direct test](audits/theta-six-point-2026-10-06-v1/README.md)
+uses t_j=j/4,j=0,...,5 and the complete original k=C/M. The finite matrix
+has positive numerical eigenvalues at128/256bits; its frozen rational test
+form is positive. Matched Gaussian/pole-free controls passed, and independent
+integration reproduces the six quotient values. No negative candidate or
+interval certificate. This is inconclusive for global quotient PD and
+supplies no original signed lower bound. Stop this screen and shelve further
+quotient falsification screens until independent analytic input appears.
+No larger stencil, row, thaw, theorem node or manuscript version.
+**Wall check: Distinct test — closest PR78–80, NS100/101.**
+
 ## October 5 bounded quotient-pole diagnostic
 
 The [six-agent continuation](audits/theta-pole-locator-2026-10-05-v1/README.md)
