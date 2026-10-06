@@ -893,11 +893,18 @@ row, node, thaw or version; both evidence recovery groups remain OPEN.
 
 ## October 6 fixed six-point theta quotient screen
 
-Owner: Codex with six assigned agents. Status: in progress (validation;
-no NS row). Reviewed main0da30a5c92203e45c452df87b68a93d86b7e5fd7.
-[Protocol](audits/theta-six-point-2026-10-06-v1/PROPOSAL.md).
-Direct original B_ij=k((i-j)/4),i,j=0,...,5, with k=C/M. Controls first,
-one fixed dyadic witness, no stencil enlargement. A verified negative form
-would reject general quotient PD without requiring a pole; a positive
-finite matrix is inconclusive. No arithmetic lower estimate or thaw.
-**Wall check: Distinct test — closest PR78–80, NS100/101.**
+Owner: Codex with six completed agent assignments. Status: complete
+(diagnostic; no NS row).
+Reviewed main0da30a5c92203e45c452df87b68a93d86b7e5fd7.
+[Report](audits/theta-six-point-2026-10-06-v1/README.md),
+[protocol](audits/theta-six-point-2026-10-06-v1/PROPOSAL.md),
+[PR81](https://github.com/AlexanderEastwood/riemann/pull/81).
+Direct B_ij=k((i-j)/4),i,j=0,...,5, k=C/M. Matched controls passed.
+The original matrix has positive diagnostic eigenvalues and a positive
+frozen rational form at128/256bits; independent direct-term integration
+reproduces the same six arguments/form. No negative candidate or interval
+certificate. Finite positivity is inconclusive for global PD; no original
+signed lower bound. Stop this screen; shelve further quotient falsification
+screens until independent analytic input appears. No stencil enlargement,
+row, node, thaw or manuscript version. Both recovery groups remain OPEN.
+**Final wall check: Distinct test — closest PR78–80, NS100/101.**

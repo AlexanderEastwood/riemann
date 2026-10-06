@@ -14,7 +14,7 @@
   "original_recovery_groups": "Both OPEN",
   "new_research_row": false,
   "new_manuscript_version": false,
-  "status": "protocol/control preparation",
+  "status": "complete: inconclusive, stop screen; shelve further quotient screens pending independent analytic input",
   "input_sha256": {
     "AGENTS.md": "819f0aa80d93e56b86fd41e577942ec59dee077c5356024cb6c2db46ec557254",
     "research-map.json": "102c50571f94a47ad5334e3c0f407c23193c96a93eb0caae429beae971a042d0",
@@ -22,5 +22,69 @@
     "NEXT_STEPS.md": "cd977d05df07438b3c68f65adf1b2f105a66fee02a677afb1e7909b1940384e2",
     "evidence/MISSING.md": "16bbaf548b68ac5d42cc02099e35d0a450d52c74386e036acd12024c639cee74",
     "audits/theta-pole-locator-2026-10-05-v1/reviews/06-admission.md": "62de23f28c81a3493ccbb0f3eddd52dd501c9d644851a7e277659d82eaf76883"
-  }
+  },
+  "protocol_commit": "1b9efc9",
+  "draft_pr": "https://github.com/AlexanderEastwood/riemann/pull/81",
+  "original_quotient_evaluations": 12,
+  "independent_quotient_evaluations": 6,
+  "stencil": "t_j=j/4, j=0,...,5",
+  "outcome": "No negative diagnostic candidate. Computed six-point matrix eigenvalues and fixed rational form positive; global quotient PD and original Laguerre remain open.",
+  "original_certificate_attempted": false,
+  "stencil_enlargement": false,
+  "controls": "Gaussian positive and entire pole-free non-PD controls passed same matrix/witness pipeline at128/256bits",
+  "minor_review_correction": "Review03 initially transcribed strict agreement comparisons; parent verified preregistered code uses <= and corrected the text with explicit coordinator note. Protocol/data unchanged.",
+  "checks": {
+    "pyright": "0 errors,0 warnings on three new scripts",
+    "manuscript_build": {
+      "pages": 358,
+      "undefined_or_duplicate_references": 0,
+      "manuscript_changed": false
+    },
+    "registered_nodes": 104,
+    "input_demands": 14,
+    "nodes_or_demands_changed": false,
+    "major_findings_unresolved": 0,
+    "minor_findings_resolved": [
+      "Review03 agreement-comparison transcription corrected against preregistered source; no code or data change.",
+      "Report lead changed from passed to no negative witness found; scope unchanged."
+    ],
+    "html_render": {
+      "browser": "Codex in-app browser",
+      "viewport_width": 1280,
+      "document_scroll_width": 1280,
+      "review_links": 6,
+      "scripts": 0,
+      "visual_check": "Readable full-page render; no horizontal overflow or clipped content",
+      "preview_sha256": "0e48b390e92ea447e7432f6bfb00158ed14ca85e9e8c2ef61f1a7f2dc1a7900f"
+    }
+  },
+  "evidence_sha256": {
+    "evidence/diag_theta_six_point/controls.json": "033c2758cd79ece1aa3fe7d3783aab2443c860b14526e08edc847e2b03f3b253",
+    "evidence/diag_theta_six_point/independent.json": "5a9a85be65d5da686aa47f56a8c151ea31308344e28b8767ed9176d433b22f63",
+    "evidence/diag_theta_six_point/independent_replay.py": "1bd360191836e184a154f65abfe912760851ad396171898d7f03f7eabc2eb163",
+    "evidence/diag_theta_six_point/matrix_screen.py": "dcec3471c6062ecacacbbc81ad74f465baffe59ac367a1cf606b70123b8ae4b2",
+    "evidence/diag_theta_six_point/original-screen.json": "cb8fd2d9a527bddb94044ed238c4886a0cf877b1b1ac56140e0ef5e7469c9c70",
+    "evidence/diag_theta_six_point/original.json": "46400781b60ede84085d0a169869f72685b18cf3db88620d2295adfa8f6e7c5b",
+    "evidence/diag_theta_six_point/original_screen.py": "2b9dea9f86acb4c54e787453ce285c010e1896e92354ab666281d4da1e888046",
+    "evidence/diag_theta_six_point/requirements-replay.txt": "a699f46ed76bd216f1081b6b2330e4fb45d7c8c5a5354b208694d6590a5a8645",
+    "evidence/diag_theta_six_point/results.md": "68b582a70eeb1e102e8de6b362d87b62de53e5a74c0d21ecaf0c51d4476a0624"
+  },
+  "assistants_completed": 6,
+  "reviewers": [
+    "six01_controls",
+    "six02_evaluator",
+    "pole01_evaluator (reused as protocol reviewer03)",
+    "six04_independent",
+    "six05_code_review",
+    "six06_admission"
+  ],
+  "review_sha256": {
+    "reviews/01-controls.md": "40f6b291de2169ac24d5a73c37fe4b8bea9a973ab25379caccf903a104bcc55d",
+    "reviews/02-evaluator.md": "d7a22c9c0e107dd08ce40bd3dfe9572eb29036bbce50a6444fe780512019c393",
+    "reviews/03-protocol.md": "ffbade022e0cb0dc83b00020d0370f040bb23fd985d9a86d06469d40179b52a9",
+    "reviews/04-independent.md": "8ce35f35d9561b22a55baec3738a2a3e0d36a4df22032cf8545a419969f72a9e",
+    "reviews/05-code-results.md": "c7c7e4c0710bbf6d9b08f9f401c122a36ecabde2848ff8a1a554e2e665821e8e",
+    "reviews/06-admission.md": "41a33cb027d570b20afa8b584b545d94bbf246e79ab465dd07be8bc0f54d288f"
+  },
+  "post_compaction_review": "Refreshed remote again before publication: main remains 0da30a5c92203e45c452df87b68a93d86b7e5fd7. No changed historical conclusion/dependency since the full turn review. Re-read current instructions, final admission review and result/scope changes; no new proof or numerical replay."
 }

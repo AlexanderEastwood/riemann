@@ -1,3 +1,13 @@
+The fixed six-point original theta quotient test produced no negative witness. Its computed matrix eigenvalues and frozen rational quadratic form are positive at both precisions; independent integration reproduces the same six values. This is inconclusive for general positive definiteness, not an original signed lower bound.
+
+The Gaussian and pole-free non-PD controls passed before original computation. Six agents cover the matrix pipeline, evaluator, mathematical protocol, independent integration, code/results and final admission. Stop this screen and shelve further quotient falsification screens pending independent analytic input. No larger stencil, certificate, research row, thaw or manuscript version.
+
+Report and reviews: `audits/theta-six-point-2026-10-06-v1/`. Reproducible diagnostic archives: `evidence/diag_theta_six_point/`.
+
+Validation: unchanged manuscript builds to 358 pages, with zero undefined/duplicate references. Pyright reports zero errors/warnings on the three new scripts. The 104 registered nodes and 14 continuation demands are unchanged. No new-version manifest applies.
+
+The filled proposal below was published before the original calculation; its completed-result addendum records the disposition.
+
 Proposal: Test the single original six-point translation matrix
 B_ij=k((i-j)/4), i,j=0,...,5, k=C/M,
 M(t)=int_R phi(s+t)phi(s-t)ds,
