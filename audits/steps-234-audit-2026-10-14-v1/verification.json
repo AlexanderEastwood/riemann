@@ -1,0 +1,237 @@
+{
+  "audit": "steps-234-audit-2026-10-14-v1",
+  "date": "2026-10-14",
+  "script_sha256": "0e22ba3874be2867e389eca484ad93d056feb1ce0a0c34082e4471e399aab42d",
+  "task2_zero_geometry_general_bilinear_obstruction": {
+    "bell_isomorphism_D_in_P": {
+      "D_1": "(2)*P0",
+      "D_2": "(4)*P0^2 + (4)*P1",
+      "D_3": "(8)*P0^3 + (24)*P0*P1 + (8)*P2",
+      "D_4": "(16)*P0^4 + (96)*P0^2*P1 + (48)*P1^2 + (64)*P0*P2 + (16)*P3"
+    },
+    "bell_inverse_P_in_D": {
+      "P_0": "(1/2)*D1",
+      "P_1": "(-1/4)*D1^2 + (1/4)*D2",
+      "P_2": "(1/4)*D1^3 + (-3/8)*D1*D2 + (1/8)*D3",
+      "P_3": "(-3/8)*D1^4 + (3/4)*D1^2*D2 + (-3/16)*D2^2 + (-1/4)*D1*D3 + (1/16)*D4"
+    },
+    "two_sided_inverse_verified": true,
+    "planat_sole_jacobi_principal_in_D": "(-3/4)*D1^3 + (9/8)*D1*D2 + (1/8)*D3",
+    "planat_sole_jacobi_c1_in_D": "(-2)*D1^2 + -D2",
+    "non_bell_remainder_degree_in_D": 3,
+    "pointwise_bell_collapse_max_errors": {
+      "m=1,n=1": "3.88938454866e-62",
+      "m=1,n=2": "1.55575381947e-61",
+      "m=1,n=3": "1.55575381947e-61",
+      "m=2,n=1": "0.0",
+      "m=2,n=2": "0.0",
+      "m=2,n=3": "1.55575381947e-61",
+      "m=3,n=1": "0.0",
+      "m=3,n=2": "0.0",
+      "m=3,n=3": "0.0"
+    },
+    "strip_identity_max_errors": {
+      "m=1,n=1": "3.11150763893e-61",
+      "m=2,n=1": "0.0",
+      "m=2,n=2": "1.55575381947e-61",
+      "m=3,n=1": "1.55575381947e-61"
+    }
+  },
+  "task3_nb_coeff_specialist_brief_v3": {
+    "C_b": "6904/45045",
+    "A_b": "181/3360",
+    "I_diag": "1219/38798760",
+    "Var_R_b_triple_prime": "543/14",
+    "kappa": "1.260661401507812622954147",
+    "ns61_second_difference_weighted_n3": {
+      "n=16_n3_times_weighted_l2_n-3": "5.32182644684171",
+      "n=64_n3_times_weighted_l2_n-3": "5.81727822210662",
+      "n=256_n3_times_weighted_l2_n-3": "5.95342851565532",
+      "n=1024_n3_times_weighted_l2_n-3": "5.98830029744381"
+    }
+  },
+  "task4_kernel_api_p2_interior_screen": {
+    "pole_annihilation_residual": "0.0",
+    "p2_finite_vs_collapsed_max_error": "6.22301527786e-61",
+    "three_island_gap_constant_5_log2_over_2": "1.7328679513998632735",
+    "unrestricted_symbol_at_zero": {
+      "subwindow_I_a_0.75": {
+        "a": "0.75",
+        "b_interior_half_width": "0.056852819440054690583",
+        "active_odd_prime_powers": [
+          3
+        ],
+        "M_a_0_original": "-0.073501595649350178387",
+        "M_a_0_NS57": "-0.073399573909867658589"
+      },
+      "subwindow_I_edge_half_log5": {
+        "a": "0.8047189562170501873",
+        "b_interior_half_width": "0.11157177565710487788",
+        "active_odd_prime_powers": [
+          3
+        ],
+        "M_a_0_original": "-0.073501595649350178387",
+        "M_a_0_NS57": "-0.073399573909867658589"
+      },
+      "subwindow_II_a_0.90": {
+        "a": "0.9",
+        "b_interior_half_width": "0.20685281944005469058",
+        "active_odd_prime_powers": [
+          3,
+          5
+        ],
+        "M_a_0_original": "-0.084095510752888852881",
+        "M_a_0_NS57": "-0.083993489013406333084"
+      },
+      "subwindow_II_edge_half_log7": {
+        "a": "0.97295507452765665255",
+        "b_interior_half_width": "0.27980789396771134314",
+        "active_odd_prime_powers": [
+          3,
+          5
+        ],
+        "M_a_0_original": "-0.084095510752888852881",
+        "M_a_0_NS57": "-0.083993489013406333084"
+      },
+      "subwindow_III_edge_log3": {
+        "a": "1.0986122886681096914",
+        "b_interior_half_width": "0.40546510810816438198",
+        "active_odd_prime_powers": [
+          3,
+          5,
+          7
+        ],
+        "M_a_0_original": "-0.094920837808207787784",
+        "M_a_0_NS57": "-0.094818816068725267986"
+      }
+    },
+    "support_restricted_window_screens": [
+      {
+        "window": "subwindow_I_a_0.75",
+        "a": "0.75",
+        "b": "0.0568528194400546906",
+        "dirichlet_fundamental_freq_pi_over_2b": "27.6291719965",
+        "active_odd_prime_powers": [
+          3
+        ],
+        "even_fundamental_archimedean": "2.90347757874758",
+        "even_fundamental_prime_original": "1.73286795139986",
+        "even_11_total_original": "4.63634553014744",
+        "even_12_total_original": "0.921400074214683",
+        "even_22_total_original": "9.53214070693363",
+        "even_2x2_det_original": "43.3453198625654",
+        "even_2x2_min_eig_original": "4.46867803618767",
+        "even_2x2_det_NS57": "42.9295214575548",
+        "even_2x2_min_eig_NS57": "4.43927029188361",
+        "odd_fundamental_rayleigh_original": "8.1375425072698",
+        "odd_fundamental_rayleigh_NS57": "8.10813476296574",
+        "separates_NS57_in_2D_even_subspace": false
+      },
+      {
+        "window": "subwindow_I_edge_half_log5",
+        "a": "0.804718956217050187",
+        "b": "0.111571775657104878",
+        "dirichlet_fundamental_freq_pi_over_2b": "14.0787965195",
+        "active_odd_prime_powers": [
+          3
+        ],
+        "even_fundamental_archimedean": "0.952993480992123",
+        "even_fundamental_prime_original": "1.73286795139986",
+        "even_11_total_original": "2.68586143239199",
+        "even_12_total_original": "0.837943663895991",
+        "even_22_total_original": "7.36990065561221",
+        "even_2x2_det_original": "19.0923823476058",
+        "even_2x2_min_eig_original": "2.54047165971695",
+        "even_2x2_det_NS57": "18.7975298827644",
+        "even_2x2_min_eig_NS57": "2.51106391541289",
+        "odd_fundamental_rayleigh_original": "5.93965990393497",
+        "odd_fundamental_rayleigh_NS57": "5.91025215963091",
+        "separates_NS57_in_2D_even_subspace": false
+      },
+      {
+        "window": "subwindow_II_a_0.90",
+        "a": "0.9",
+        "b": "0.206852819440054691",
+        "dirichlet_fundamental_freq_pi_over_2b": "7.59378736556",
+        "active_odd_prime_powers": [
+          3,
+          5
+        ],
+        "even_fundamental_archimedean": "-0.6099964810958",
+        "even_fundamental_prime_original": "1.49273396619305",
+        "even_11_total_original": "0.882737485097249",
+        "even_12_total_original": "1.0016808732488",
+        "even_22_total_original": "5.17841727492747",
+        "even_2x2_det_original": "3.56781847022114",
+        "even_2x2_min_eig_original": "0.660644725690419",
+        "even_2x2_det_NS57": "3.39043839627607",
+        "even_2x2_min_eig_NS57": "0.631236981386363",
+        "odd_fundamental_rayleigh_original": "4.39662430820915",
+        "odd_fundamental_rayleigh_NS57": "4.3672165639051",
+        "separates_NS57_in_2D_even_subspace": false
+      },
+      {
+        "window": "subwindow_II_edge_half_log7",
+        "a": "0.972955074527656653",
+        "b": "0.279807893967711343",
+        "dirichlet_fundamental_freq_pi_over_2b": "5.61383849655",
+        "active_odd_prime_powers": [
+          3,
+          5
+        ],
+        "even_fundamental_archimedean": "-1.21148986832739",
+        "even_fundamental_prime_original": "1.36336790824534",
+        "even_11_total_original": "0.151878039917946",
+        "even_12_total_original": "0.510005214756329",
+        "even_22_total_original": "5.74935790797041",
+        "even_2x2_det_original": "0.613095890770638",
+        "even_2x2_min_eig_original": "0.105789237905432",
+        "even_2x2_det_NS57": "0.440418668362284",
+        "even_2x2_min_eig_NS57": "0.0763814936013757",
+        "odd_fundamental_rayleigh_original": "2.85982229375969",
+        "odd_fundamental_rayleigh_NS57": "2.83041454945563",
+        "separates_NS57_in_2D_even_subspace": false
+      },
+      {
+        "window": "subwindow_III_edge_log3",
+        "a": "1.09861228866810969",
+        "b": "0.405465108108164382",
+        "dirichlet_fundamental_freq_pi_over_2b": "3.87406041946",
+        "active_odd_prime_powers": [
+          3,
+          5,
+          7
+        ],
+        "even_fundamental_archimedean": "-1.56805358593824",
+        "even_fundamental_prime_original": "1.6253584013353",
+        "even_11_total_original": "0.0573048153970589",
+        "even_12_total_original": "-0.454863831789017",
+        "even_22_total_original": "3.76408329149019",
+        "even_2x2_det_original": "0.008798992688212",
+        "even_2x2_min_eig_original": "0.00230395360119024",
+        "even_2x2_det_NS57": "-0.101977278362583",
+        "even_2x2_min_eig_NS57": "-0.0268795921958214",
+        "odd_fundamental_rayleigh_original": "0.168095374844151",
+        "odd_fundamental_rayleigh_NS57": "0.136760938947653",
+        "separates_NS57_in_2D_even_subspace": true
+      }
+    ],
+    "explicit_formula_zero_sum_cross_check_at_log3": {
+      "num_zero_pairs": 59,
+      "zero_sum_m00": "0.0572801419485",
+      "zero_sum_m01": "-0.454789616023",
+      "zero_sum_m11": "3.76386005607",
+      "zero_sum_min_eig": "0.00229410749648"
+    },
+    "Davenport_Heilbronn_screen": {
+      "name": "Single-prime p=2 interior archimedean dominance on V_{a - log 2} for log 2 < a <= log 3",
+      "classification": "diagnostic, not a certificate",
+      "sample_domain": "a in (log 2, log 3]; even/odd Dirichlet basis on (-a+log 2, a-log 2) and unrestricted symbol at xi=0",
+      "dps": 60,
+      "applicability": "Literal original p=2 Euler denominator L_2 and prime-chain coefficients are not shared by Davenport-Heilbronn; matched NS-57 control (delta_2 = -log(2)/100) is applicable, passes on log 2 < a <= (1/2)log 7, and is separated at a = log 3 (lambda_min = -0.0268796 < 0 vs +0.0023040 > 0).",
+      "observations": {},
+      "proved_control_obstruction": false,
+      "outcome": "not-applicable"
+    }
+  }
+}

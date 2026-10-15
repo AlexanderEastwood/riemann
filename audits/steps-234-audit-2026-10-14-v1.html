@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mathematical Audit of Next Steps 2, 3, and 4 — October 14, 2026 · v1</title></head>
+<body style="margin:0;background:#f2f0e9;color:#26343a;font:17px/1.65 Georgia,serif;">
+<main style="box-sizing:border-box;max-width:680px;margin:24px auto;padding:28px 24px 36px;background:#fff;border-top:5px solid #305d64;overflow-wrap:anywhere;">
+<p style="margin:0 0 14px;font:12px/1.5 Arial,sans-serif;letter-spacing:1px;color:#586f74;">RH PROJECT · MATHEMATICAL AUDIT OF STEPS 2, 3, AND 4 · OCTOBER 14, 2026 · V1</p>
+<h1 style="font-size:30px;line-height:1.22;margin:0 0 18px;">Bell-Polynomial Bilinear Obstruction, Specialist Brief v3, and the <em>p</em> = 2 Interior Archimedean Screen</h1>
+<p style="padding:15px;background:#edf3f3;border-left:4px solid #305d64;margin:0 0 22px;"><strong>Wall check: Known wall</strong> for the general single-power bilinear logarithmic-derivative hierarchy in <code>ZERO-GEOMETRY</code> (PR #72, NS101) and for universal <em>n</em><sup>−3</sup>-weighted recovery on <em>V</em><sub>2<em>N</em></sub> ∩ <em>V</em><sub><em>N</em></sub><sup>⊥</sup> in <code>NB-GAIN</code>/<code>COEFF</code> (NS61); <strong>Same open gap</strong> for <code>KERNEL-API</code> / <code>WEIL-FLOOR</code> (NS50/51/55/57/58, PR #63) and for the actual <code>NB-GAIN</code> optimizer (NS53/61/78/80/87). What changes: (1) we prove the <strong>General Bilinear Single-Power Obstruction Theorem</strong> via the Bell-polynomial triangular isomorphism Φ<sub><em>M</em></sub> and compute the exact degree-3 non-Bell remainder of the Planat–Solé Jacobi ODE; (2) we deliver the separately versioned specialist brief <a style="color:#245b6b;" href="coeff-specialist-brief-2026-10-14-v3.html"><code>coeff-specialist-brief-2026-10-14-v3.html</code></a>; and (3) we prove the <strong>Three-Island Gap and Exact Prime Diagonalization Theorem</strong> on log 2 &lt; <em>a</em> ≤ ½ log 5 (<em>q</em><sub>prime</sub>[<em>L</em><sub>2</sub><em>g</em>] ≡ (5 log 2 / 2)‖<em>g</em>‖<sub>2</sub><sup>2</sup>), low-frequency indefiniteness of the unrestricted symbol <em>M</em><sub><em>a</em></sub>(0) &lt; 0, and <strong>constructive separation of the NS57 control (δ<sub>2</sub> = −log(2)/100) at <em>a</em> = log 3</strong> on the 2D even interior subspace span{<em>L</em><sub>2</sub><em>g</em><sub>1</sub><sup>+</sup>, <em>L</em><sub>2</sub><em>g</em><sub>2</sub><sup>+</sup>} ⊂ <em>V</em><sub>log 3</sub> (λ<sub>min</sub><sup>NS57</sup>(log 3) = −0.02687959 &lt; 0 vs. λ<sub>min</sub><sup>orig</sup>(log 3) = +0.00230395 &gt; 0). <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.</p>
+
+<h2 style="font-size:22px;line-height:1.3;margin-top:28px;">1. Step 2 (<code>ZERO-GEOMETRY</code>): General Bilinear Single-Power Obstruction Theorem</h2>
+<p>In <code>01-jacobi-transfer.md</code> (PR #72), let ϕ : ℝ → (0, ∞) be a smooth positive even kernel with Laplace–Fourier transform <em>f</em>(<em>z</em>) = ∫<sub>ℝ</sub> ϕ(<em>u</em>)<em>e</em><sup><em>zu</em></sup> <em>du</em>, logarithmic derivatives <em>P</em><sub><em>k</em></sub>(<em>u</em>) := 2<sup>−(<em>k</em>+1)</sup>(<em>d</em>/<em>du</em>)<sup><em>k</em>+1</sup> log ϕ(<em>u</em>) (<em>k</em> ≥ 0), and normalized linear derivatives <em>D</em><sub><em>m</em></sub>(<em>u</em>) := ϕ<sup>(<em>m</em>)</sup>(<em>u</em>)/ϕ(<em>u</em>) (<em>m</em> ≥ 1, <em>D</em><sub>0</sub> := 1).</p>
+
+<div style="padding:14px;background:#f6f7f7;margin:14px 0;">
+<strong>Lemma 1.1 (Bell-Polynomial Triangular Isomorphism).</strong> For every <em>M</em> ≥ 1, Faà di Bruno’s identity gives <em>D</em><sub><em>m</em></sub> = 2<sup><em>m</em></sup><em>Y</em><sub><em>m</em></sub>(<em>P</em><sub>0</sub>, …, <em>P</em><sub><em>m</em>−1</sub>) = 2<sup><em>m</em></sup><em>P</em><sub><em>m</em>−1</sub> + 2<sup><em>m</em></sup>Ỹ<sub><em>m</em></sub>(<em>P</em><sub>0</sub>, …, <em>P</em><sub><em>m</em>−2</sub>), where <em>Y</em><sub><em>m</em></sub> is the complete exponential Bell polynomial and every monomial in Ỹ<sub><em>m</em></sub> has total degree ≥ 2. Consequently, Φ<sub><em>M</em></sub> : ℚ[<em>P</em><sub>0</sub>, …, <em>P</em><sub><em>M</em>−1</sub>] → ℚ[<em>D</em><sub>1</sub>, …, <em>D</em><sub><em>M</em></sub>] is an invertible triangular polynomial isomorphism over ℚ. For 1 ≤ <em>m</em> ≤ 4:<br><br>
+<em>D</em><sub>1</sub> = 2<em>P</em><sub>0</sub>, &nbsp; <em>D</em><sub>2</sub> = 4<em>P</em><sub>0</sub><sup>2</sup> + 4<em>P</em><sub>1</sub>, &nbsp; <em>D</em><sub>3</sub> = 8<em>P</em><sub>0</sub><sup>3</sup> + 24<em>P</em><sub>0</sub><em>P</em><sub>1</sub> + 8<em>P</em><sub>2</sub>, &nbsp; <em>D</em><sub>4</sub> = 16<em>P</em><sub>0</sub><sup>4</sup> + 96<em>P</em><sub>0</sub><sup>2</sup><em>P</em><sub>1</sub> + 48<em>P</em><sub>1</sub><sup>2</sup> + 64<em>P</em><sub>0</sub><em>P</em><sub>2</sub> + 16<em>P</em><sub>3</sub>;<br>
+<em>P</em><sub>0</sub> = ½<em>D</em><sub>1</sub>, &nbsp; <em>P</em><sub>1</sub> = ¼<em>D</em><sub>2</sub> − ¼<em>D</em><sub>1</sub><sup>2</sup>, &nbsp; <em>P</em><sub>2</sub> = ⅛<em>D</em><sub>3</sub> − ⅜<em>D</em><sub>1</sub><em>D</em><sub>2</sub> + ¼<em>D</em><sub>1</sub><sup>3</sup>, &nbsp; <em>P</em><sub>3</sub> = (1/16)<em>D</em><sub>4</sub> − ¼<em>D</em><sub>1</sub><em>D</em><sub>3</sub> − (3/16)<em>D</em><sub>2</sub><sup>2</sup> + ¾<em>D</em><sub>1</sub><sup>2</sup><em>D</em><sub>2</sub> − ⅜<em>D</em><sub>1</sub><sup>4</sup>.
+</div>
+
+<p><strong>Theorem 1.2 (Bilinear Single-Power Collapse).</strong> <em>In the universal jet ring ℚ[ϕ, ϕ<sup>−1</sup>, ϕ′, …, ϕ<sup>(M)</sup>], a two-point polynomial 𝒬(<strong>P</strong>(p + t); <strong>P</strong>(p − t)) has its denominators cleared by a single power of the product kernel K(p, t) = ϕ(p + t)ϕ(p − t) <strong>if and only if</strong> 𝒬 lies in the (M + 1)(N + 1)-dimensional Bell subspace</em></p>
+<div style="padding:14px;background:#f6f7f7;margin:14px 0;">
+𝒬(<strong>P</strong>(<em>u</em>); <strong>P</strong>(<em>v</em>)) = ∑<sub><em>m</em>=0</sub><sup><em>M</em></sup> ∑<sub><em>n</em>=0</sub><sup><em>N</em></sup> <em>c</em><sub><em>mn</em></sub> 2<sup><em>m</em>+<em>n</em></sup> <em>Y</em><sub><em>m</em></sub>(<strong>P</strong>(<em>u</em>)) <em>Y</em><sub><em>n</em></sub>(<strong>P</strong>(<em>v</em>)),
+</div>
+<p><em>in which case the integrand collapses identically to the linear-derivative bilinear form</em></p>
+<div style="padding:14px;background:#f6f7f7;margin:14px 0;">
+𝒬(<strong>P</strong>(<em>p</em> + <em>t</em>); <strong>P</strong>(<em>p</em> − <em>t</em>)) <em>K</em>(<em>p</em>, <em>t</em>) ≡ ∑<sub><em>m</em>=0</sub><sup><em>M</em></sup> ∑<sub><em>n</em>=0</sub><sup><em>N</em></sup> <em>c</em><sub><em>mn</em></sub> ϕ<sup>(<em>m</em>)</sup>(<em>p</em> + <em>t</em>) ϕ<sup>(<em>n</em>)</sup>(<em>p</em> − <em>t</em>),
+</div>
+<p><em>and its strip Laplace–Fourier integral equals ¼ Re(∑<sub>m,n</sub> c<sub>mn</sub>(−z)<sup>m</sup>(−z̄)<sup>n</sup> |f(z)|<sup>2</sup>) (z = x + ir) for every smooth rapidly decaying even kernel ϕ, completely erasing the Planat–Solé Jacobi ODE.</em></p>
+
+<p><strong>Why the Planat–Solé Jacobi ODE lies strictly outside the single-power subspace:</strong> Substituting Φ<sub>3</sub><sup>−1</sup> into the Planat–Solé differential polynomial 𝒥<sub>PS</sub>(<em>P</em><sub>0</sub>, <em>P</em><sub>1</sub>, <em>P</em><sub>2</sub>) = <em>P</em><sub>2</sub> + 12<em>P</em><sub>0</sub><em>P</em><sub>1</sub> + 4<em>P</em><sub>0</sub><sup>3</sup> − 4<em>c</em><sub>1</sub><em>P</em><sub>1</sub> − 12<em>c</em><sub>1</sub><em>P</em><sub>0</sub><sup>2</sup> + <em>c</em><sub>2</sub><em>P</em><sub>0</sub> + <em>c</em><sub>3</sub> yields the exact Bell-basis decomposition</p>
+<div style="padding:14px;background:#f6f7f7;margin:14px 0;">
+𝒥<sub>PS</sub> = <span style="color:#1e5b4f;">(⅛<em>D</em><sub>3</sub> − <em>c</em><sub>1</sub><em>D</em><sub>2</sub> + ½<em>c</em><sub>2</sub><em>D</em><sub>1</sub> + <em>c</em><sub>3</sub>)</span> + <span style="color:#8a2c24;">(⁹⁄₈ <em>D</em><sub>1</sub><em>D</em><sub>2</sub> − ¾<em>D</em><sub>1</sub><sup>3</sup> − 2<em>c</em><sub>1</sub><em>D</em><sub>1</sub><sup>2</sup>)</span>.
+</div>
+<p>The degree-3 non-Bell remainder (⁹⁄₈)(ϕ′ϕ″/ϕ<sup>2</sup>) − ¾(ϕ′/ϕ)<sup>3</sup> − 2<em>c</em><sub>1</sub>(ϕ′/ϕ)<sup>2</sup> has pole order ϕ<sup>−3</sup>: it cannot be cleared by a single power of <em>K</em>(<em>p</em>, <em>t</em>) = ϕ(<em>p</em> + <em>t</em>)ϕ(<em>p</em> − <em>t</em>), while clearing denominators with <em>K</em>(<em>p</em>, <em>t</em>)<sup>3</sup> produces a 6-fold frequency convolution of <em>f</em>(<em>z</em>) rather than a quadratic energy in |<em>f</em>(<em>z</em>)|<sup>2</sup>.</p>
+
+<h2 style="font-size:22px;line-height:1.3;margin-top:28px;">2. Step 3 (<code>NB-GAIN</code> / <code>COEFF</code>): Specialist Feasibility Brief v3</h2>
+<p>The separately versioned specialist brief is delivered at <a style="color:#245b6b;" href="coeff-specialist-brief-2026-10-14-v3.html"><code>audits/coeff-specialist-brief-2026-10-14-v3.html</code></a> (preserving the September 30 v1 and October 1 v2 files untouched). It sharpens the external specialist question with two proved inputs:</p>
+<ol style="padding-left:22px;">
+<li style="margin-bottom:8px;"><strong>Refutation of universal <em>n</em><sup>−3</sup> recovery on <em>V</em><sub>2<em>N</em></sub> ∩ <em>V</em><sub><em>N</em></sub><sup>⊥</sup> (NS61):</strong> The adjacent second-difference vectors <em>W</em><sub><em>n</em></sub> = ε<sub><em>n</em>+1</sub> − (<em>n</em>/(<em>n</em> + 1))ε<sub><em>n</em></sub> (<em>N</em> + 2 ≤ <em>n</em> ≤ 2<em>N</em> − 1) are supported purely in the new block {<em>N</em> + 1, …, 2<em>N</em>}, satisfy ∑<sub><em>k</em>=<em>N</em>+1</sub><sup>2<em>N</em></sup> |<em>y</em><sub><em>k</em></sub>|<sup>2</sup>/<em>k</em><sup>3</sup> ∼ 6/<em>n</em><sup>3</sup> (5.9883/<em>n</em><sup>3</sup> at <em>n</em> = 1024), and have <em>n</em><sup>3</sup>‖(<em>I</em> − Π<sub><em>N</em></sub>)<em>W</em><sub><em>n</em></sub>‖<sub><em>H</em></sub><sup>2</sup> ≤ <em>n</em><sup>3</sup>‖<em>W</em><sub><em>n</em></sub>‖<sub><em>H</em></sub><sup>2</sup> → 0. Any improvement over <em>n</em><sup>−4</sup> must therefore be <em>directional or target-aware</em>.</li>
+<li style="margin-bottom:8px;"><strong>Exact compact dual extractor and untruncated Schur–Rayleigh reduction:</strong> For ψ<sub><em>N</em></sub>(<em>t</em>) = −<em>t</em><sup>2</sup>(<em>t</em>β′<sub><em>N</em></sub>(<em>t</em>))′ on [<em>N</em>, 2<em>N</em>] with <em>b</em>(<em>s</em>) = (<em>s</em> − 1)<sup>3</sup>(2 − <em>s</em>)<sup>3</sup>(2<em>s</em> − 3)1<sub>[1,2]</sub>(<em>s</em>), exact rational arithmetic gives
+<div style="margin:8px 0;padding:10px;background:#f6f7f7;"><em>C</em><sub><em>b</em></sub> = <strong>6904 / 45045</strong>, &nbsp; Var<sub>ℝ</sub>(<em>b</em>‴) = <strong>543 / 14</strong>, &nbsp; <em>A</em><sub><em>b</em></sub> = <strong>181 / 3360</strong>, &nbsp; <em>I</em><sub>diag</sub> = <strong>1219 / 38798760</strong>,</div>
+and on the optimizer increment <em>y</em> = <em>S</em><sup>−1</sup><em>h</em>, <em>M</em><sub><em>N</em></sub>(<em>u</em>, <em>y</em>) = λ̃<sub><em>N</em></sub><sup>T</sup><em>y</em> = λ̃<sub><em>N</em></sub><sup>T</sup><em>S</em><sup>−1</sup><em>h</em> = ⟨(Π<sub>2<em>N</em></sub> − Π<sub><em>N</em></sub>)ψ<sub><em>N</em></sub>, τ⟩<sub><em>H</em></sub> satisfies Δ<sub><em>N</em></sub> ≥ |<em>M</em><sub><em>N</em></sub>(<em>u</em>, <em>y</em>)|<sup>2</sup> / (λ̃<sub><em>N</em></sub><sup>T</sup><em>S</em><sup>−1</sup>λ̃<sub><em>N</em></sub>) ≥ |<em>M</em><sub><em>N</em></sub>(<em>u</em>, <em>y</em>)|<sup>2</sup> / (<em>C</em><sub><em>b</em></sub><em>N</em>) without low-old alias truncation at <em>K</em> = ⌊√<em>N</em>⌋ and with direct NS87 transfer at <em>T</em> = <em>N</em><sup>6</sup> without the NS78 factor <em>B</em> = 1536 ζ(2)<sup>2</sup>.</li>
+</ol>
+
+<h2 style="font-size:22px;line-height:1.3;margin-top:28px;">3. Step 4 (<code>KERNEL-API</code>): Single-Prime <em>p</em> = 2 Interior Archimedean Dominance Screen</h2>
+<p>For ℓ<sub>2</sub> = log 2, <em>r</em><sub>2</sub> = 2<sup>−1/2</sup>, and <em>a</em> &gt; log 2, set <em>b</em> := <em>a</em> − log 2 &gt; 0 and consider the interior Euler difference embedding <em>L</em><sub>2</sub> = (3/2)<em>I</em> − 2<sup>−1/2</sup>(<em>T</em><sub>ℓ<sub>2</sub></sub> + <em>T</em><sub>−ℓ<sub>2</sub></sub>) : <em>V</em><sub><em>b</em></sub> → <em>V</em><sub><em>a</em></sub>. For every <em>g</em> ∈ <em>V</em><sub><em>b</em></sub>, supp(<em>L</em><sub>2</sub><em>g</em>) ⊂ [−<em>a</em>, <em>a</em>], the pole kernel vanishes identically (<em>K</em><sub>pole</sub><em>L</em><sub>2</sub> = 0), and the <em>p</em> = 2 chain collapses via (<em>C</em><sub>2</sub> − <em>I</em>)<em>L</em><sub>2</sub> = ½<em>I</em> − <em>L</em><sub>2</sub>.</p>
+
+<h3 style="font-size:19px;line-height:1.3;margin-top:20px;">3.1 Unrestricted symbol indefiniteness vs. the Three-Island Gap Theorem</h3>
+<ul style="padding-left:22px;">
+<li style="margin-bottom:8px;"><strong>Unrestricted low-frequency symbol is negative (<em>M</em><sub><em>a</em></sub>(0) &lt; 0):</strong> Because <em>K</em><sub>pole</sub><em>L</em><sub>2</sub> = 0 removes the rank-2 pole stabilization at ξ = 0, the Plancherel multiplier <em>M</em><sub><em>a</em></sub>(ξ) satisfies <em>M</em><sub><em>a</em></sub>(0) = −0.07350160 &lt; 0 on Sub-window I (log 2 &lt; <em>a</em> ≤ ½ log 5), −0.08409551 &lt; 0 on Sub-window II (½ log 5 &lt; <em>a</em> ≤ ½ log 7), and −0.09492084 &lt; 0 on Sub-window III (½ log 7 &lt; <em>a</em> ≤ log 3). Positivity of <em>q</em>[<em>L</em><sub>2</sub><em>g</em>] therefore relies essentially on the Paley–Wiener support confinement supp(<em>g</em>) ⊂ [−<em>b</em>, <em>b</em>].</li>
+<li style="margin-bottom:8px;"><strong>Theorem 3.2 (Three-Island Gap and Exact Prime Diagonalization on log 2 &lt; <em>a</em> ≤ ½ log 5):</strong> For 0 &lt; 2<em>b</em> = 2(<em>a</em> − log 2) ≤ log(5/4) ≈ 0.223144, supp(<em>L</em><sub>2</sub><em>g</em>) lies in three disjoint islands [−ℓ<sub>2</sub> − <em>b</em>, −ℓ<sub>2</sub> + <em>b</em>] ∪ [−<em>b</em>, <em>b</em>] ∪ [ℓ<sub>2</sub> − <em>b</em>, ℓ<sub>2</sub> + <em>b</em>]. Every odd prime power <em>n</em> = <em>q</em><sup><em>m</em></sup> (<em>q</em> ≥ 3) misses all autocorrelation islands {0, log 2, log 4} + (−2<em>b</em>, 2<em>b</em>) because |log 3 − log 4| = log(4/3) &gt; log(5/4) and |log 5 − log 4| = log(5/4) ≥ 2<em>b</em>. Moreover, all nonzero shifts of <em>g</em> in <em>L</em><sub>2</sub> and <em>L</em><sub>2</sub><sup>2</sup> vanish since log 2 &gt; log(5/4) ≥ 2<em>b</em>. Hence on the entire sub-window log 2 &lt; <em>a</em> ≤ ½ log 5, the prime-power quadratic form is <strong>strictly diagonal and positive</strong>:
+<div style="margin:8px 0;padding:10px;background:#f6f7f7;"><em>q</em><sub>prime</sub>[<em>L</em><sub>2</sub><em>g</em>] ≡ −(log 2)(½ · (3/2) − 13/4)‖<em>g</em>‖<sub><em>L</em><sup>2</sup>(−<em>b</em>,<em>b</em>)</sub><sup>2</sup> = +<strong>(5 log 2 / 2)</strong> ‖<em>g</em>‖<sub><em>L</em><sup>2</sup>(−<em>b</em>,<em>b</em>)</sub><sup>2</sup> ≈ +1.73286795 ‖<em>g</em>‖<sub><em>L</em><sup>2</sup>(−<em>b</em>,<em>b</em>)</sub><sup>2</sup>.</div></li>
+</ul>
+
+<h3 style="font-size:19px;line-height:1.3;margin-top:20px;">3.2 Support-restricted Rayleigh screen and constructive separation of NS57 at <em>a</em> = log 3</h3>
+<p>Using the exact identity 2∫<sub>2<em>a</em></sub><sup>∞</sup> (<em>e</em><sup><em>t</em>/2</sup> / (2 sinh <em>t</em>)) <em>dt</em> = log((1 + <em>e</em><sup>−<em>a</em></sup>)/(1 − <em>e</em><sup>−<em>a</em></sup>)) + 2 arctan(<em>e</em><sup>−<em>a</em></sup>), we evaluate <em>P</em><sub><em>b</em></sub><em>L</em><sub>2</sub><em>W</em><sub>0</sub><em>L</em><sub>2</sub><em>P</em><sub><em>b</em></sub> on the orthonormal Dirichlet basis <em>g</em><sub><em>k</em></sub><sup>+</sup>(<em>x</em>) = <em>b</em><sup>−1/2</sup> cos((2<em>k</em> − 1)π<em>x</em>/(2<em>b</em>))1<sub>[−<em>b</em>,<em>b</em>]</sub> (<em>k</em> = 1, 2) and <em>g</em><sub>1</sub><sup>−</sup>(<em>x</em>) = <em>b</em><sup>−1/2</sup> sin(π<em>x</em>/<em>b</em>)1<sub>[−<em>b</em>,<em>b</em>]</sub> across log 2 &lt; <em>a</em> ≤ log 3 at 60-digit working precision:</p>
+
+<table style="width:100%;border-collapse:collapse;font:14px/1.45 Georgia,serif;margin:14px 0;">
+<thead>
+<tr style="background:#edf3f3;border-bottom:2px solid #305d64;text-align:left;">
+<th style="padding:7px 6px;">Window <em>a</em></th>
+<th style="padding:7px 6px;"><em>b</em> = <em>a</em> − log 2</th>
+<th style="padding:7px 6px;">π / (2<em>b</em>)</th>
+<th style="padding:7px 6px;">Even 2×2 λ<sub>min</sub><sup>orig</sup></th>
+<th style="padding:7px 6px;">Even 2×2 λ<sub>min</sub><sup>NS57</sup></th>
+<th style="padding:7px 6px;">Odd <em>k</em>=1 <em>q</em><sup>orig</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid #d8e0e0;">
+<td style="padding:6px;">0.75</td>
+<td style="padding:6px;">0.056853</td>
+<td style="padding:6px;">27.629</td>
+<td style="padding:6px;">+4.468678</td>
+<td style="padding:6px;">+4.439270</td>
+<td style="padding:6px;">+8.137543</td>
+</tr>
+<tr style="border-bottom:1px solid #d8e0e0;">
+<td style="padding:6px;">½ log 5 ≈ 0.804719</td>
+<td style="padding:6px;">0.111572</td>
+<td style="padding:6px;">14.079</td>
+<td style="padding:6px;">+2.540472</td>
+<td style="padding:6px;">+2.511064</td>
+<td style="padding:6px;">+5.939660</td>
+</tr>
+<tr style="border-bottom:1px solid #d8e0e0;">
+<td style="padding:6px;">0.90</td>
+<td style="padding:6px;">0.206853</td>
+<td style="padding:6px;">7.594</td>
+<td style="padding:6px;">+0.660645</td>
+<td style="padding:6px;">+0.631237</td>
+<td style="padding:6px;">+4.396624</td>
+</tr>
+<tr style="border-bottom:1px solid #d8e0e0;">
+<td style="padding:6px;">½ log 7 ≈ 0.972955</td>
+<td style="padding:6px;">0.279808</td>
+<td style="padding:6px;">5.614</td>
+<td style="padding:6px;">+0.105789</td>
+<td style="padding:6px;">+0.076381</td>
+<td style="padding:6px;">+2.859822</td>
+</tr>
+<tr style="border-bottom:2px solid #305d64;background:#fdf8e8;">
+<td style="padding:6px;"><strong>log 3 ≈ 1.098612</strong></td>
+<td style="padding:6px;"><strong>0.405465</strong></td>
+<td style="padding:6px;"><strong>3.874</strong></td>
+<td style="padding:6px;color:#1e5b4f;"><strong>+0.002304</strong></td>
+<td style="padding:6px;color:#8a2c24;"><strong>−0.026880</strong></td>
+<td style="padding:6px;"><strong>+0.168095</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Constructive separation of NS57 at <em>a</em> = log 3 and localization of <em>a</em><sub>*</sub><sup>+</sup>(NS57):</strong> At <em>a</em> = log 3 (<em>b</em> = log(3/2) ≈ 0.405465), the first two even Dirichlet frequencies <em>w</em><sub>1</sub> = π/(2<em>b</em>) ≈ 3.8741 and <em>w</em><sub>2</sub> = 3π/(2<em>b</em>) ≈ 11.6222 both lie strictly below the first Riemann zero γ<sub>1</sub> ≈ 14.134725, while <em>w</em><sub>1</sub> sits directly inside NS57’s negative perturbation band (2π/(3 log 2), 4π/(3 log 2)) ≈ (3.0216, 6.0431) where cos(<em>w</em><sub>1</sub> log 2) ≈ −0.8967 &lt; 0. Canceling the <em>O</em>(ξ<sup>−2</sup>) Fourier tail between <em>g</em><sub>1</sub><sup>+</sup> and <em>g</em><sub>2</sub><sup>+</sup> suppresses the original Riemann zero sum to λ<sub>min</sub><sup>orig</sup>(log 3) = +0.00230395 &gt; 0 (matching the 59-pair explicit-formula zero sum +0.00229411 &gt; 0), whereas the NS57 perturbation (δ<sub>2</sub> = −log(2)/100) drives the 2×2 interior matrix determinant negative (det <em>M</em><sub>NS57</sub>(log 3) = −0.101977 &lt; 0, λ<sub>min</sub><sup>NS57</sup>(log 3) = −0.02687959 &lt; 0). This yields the first explicit, closed-form two-mode trigonometric negative test vector <em>f</em><sub>*</sub> = <em>L</em><sub>2</sub>(<em>c</em><sub>1</sub><em>g</em><sub>1</sub><sup>+</sup> + <em>c</em><sub>2</sub><em>g</em><sub>2</sub><sup>+</sup>) ∈ <em>H</em><sub>0</sub><sup>1</sup>(−log 3, log 3) ⊂ <em>V</em><sub>log 3</sub> for NS57 and locates its even first-zero window inside Sub-window III: ½ log 7 ≈ 0.972955 &lt; <em>a</em><sub>*</sub><sup>+</sup>(NS57) &lt; log 3 ≈ 1.098612.</p>
+
+<p><strong>Why <code>KERNEL-API</code> remains at <code>Same open gap</code>:</strong> As <em>a</em> grows past log 3 (<em>a</em> = 1.20, 1.30, 1.40), higher Dirichlet modes cancel low frequencies below γ<sub>1</sub> ≈ 14.1347 and drive λ<sub>min</sub><sup>orig</sup>(<em>a</em>) rapidly toward zero (+0.000305 at <em>a</em> = 1.20, +0.000024 at <em>a</em> = 1.40), while by the Multi-Prime Interior Support Barrier (<code>four-lane-audit-2026-10-14-v1</code>, §2.2), every larger window activates additional odd prime chains <em>q</em> ∉ 𝒫 that cannot be cleared by finite interior Euler products alone.</p>
+
+<h2 style="font-size:22px;line-height:1.3;margin-top:28px;">4. Verification &amp; Artifact Trail</h2>
+<ul style="padding-left:22px;font-size:15px;">
+<li style="margin-bottom:6px;"><a style="color:#245b6b;" href="coeff-specialist-brief-2026-10-14-v3.html"><code>audits/coeff-specialist-brief-2026-10-14-v3.html</code></a> — Separately versioned specialist feasibility brief v3 (Task 3).</li>
+<li style="margin-bottom:6px;"><a style="color:#245b6b;" href="steps-234-audit-2026-10-14-v1/derivation.md"><code>audits/steps-234-audit-2026-10-14-v1/derivation.md</code></a> — Complete proofs for Tasks 2, 3, and 4.</li>
+<li style="margin-bottom:6px;"><a style="color:#245b6b;" href="steps-234-audit-2026-10-14-v1/verify_steps_234.py"><code>audits/steps-234-audit-2026-10-14-v1/verify_steps_234.py</code></a> &amp; <a style="color:#245b6b;" href="steps-234-audit-2026-10-14-v1/verification.json"><code>verification.json</code></a> — Deterministic exact-rational and 60-digit <code>mpmath</code> verification script (<code>pyright</code>: 0 errors, 0 warnings).</li>
+</ul>
+
+<p style="border-top:1px solid #d4dddd;padding-top:16px;font:13px/1.6 Arial,sans-serif;color:#586b72;"><strong>Wall check: Known wall</strong> for the general single-power bilinear logarithmic-derivative hierarchy in <code>ZERO-GEOMETRY</code> (PR #72, NS101) and for universal <em>n</em><sup>−3</sup>-weighted recovery on <em>V</em><sub>2<em>N</em></sub> ∩ <em>V</em><sub><em>N</em></sub><sup>⊥</sup> in <code>NB-GAIN</code>/<code>COEFF</code> (NS61); <strong>Same open gap</strong> for <code>KERNEL-API</code> / <code>WEIL-FLOOR</code> (NS50/51/55/57/58, PR #63) and for the actual <code>NB-GAIN</code> optimizer (NS53/61/78/80/87). What changes: proves the General Bilinear Single-Power Obstruction Theorem and exact non-Bell remainder of the Planat–Solé Jacobi ODE, delivers <code>coeff-specialist-brief-2026-10-14-v3.html</code>, and establishes the Three-Island Gap exact prime diagonalization on log 2 &lt; <em>a</em> ≤ ½ log 5 together with explicit two-mode interior separation of NS57 at <em>a</em> = log 3. <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.</p>
+</main>
+</body></html>
