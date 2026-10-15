@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-14",
+  "baseline_commit": "2d5638ed3b56ab2375162bb072f4866ad5bdfe6d",
+  "wall_check": {
+    "classification": "Same open gap",
+    "narrow_closures": [
+      "Known wall for linearized two-shift moment B_p(r) in 01-jacobi-transfer.md (collapses identically to (1/4) int phi'(p+t)phi'(p-t)cos(2rt)dt without using the Jacobi ODE)",
+      "Known wall for pure interior finite-prime-product annihilation L_P : V_{a-ell_P} -> V_a removing all active window primes (blocked by the Chebyshev/Bertrand support barrier ell_P < a < 2a - ell_P)"
+    ],
+    "closest_results": [
+      "NS51",
+      "NS55",
+      "NS57",
+      "NS58",
+      "NS61",
+      "NS74",
+      "NS78",
+      "NS80",
+      "NS83",
+      "NS87",
+      "NS100",
+      "NS101",
+      "PR76",
+      "PR78",
+      "PR80",
+      "PR81"
+    ]
+  },
+  "lane1_nb_coeff": {
+    "C_b_rational": "6904/45045",
+    "C_b_float": 0.15326895326895326,
+    "b3_jump_at_endpoints": 6,
+    "b4_interior_roots": [
+      "3/2 - sqrt(3/28)",
+      "3/2",
+      "3/2 + sqrt(3/28)"
+    ],
+    "b3_local_extrema_rational": [
+      "-6",
+      "18/7",
+      "-9/4",
+      "18/7",
+      "-6"
+    ],
+    "Var_b3_rational": "543/14",
+    "Var_b3_float": 38.785714285714285,
+    "A_b_rational": "181/3360",
+    "A_b_float": 0.05386904761904762,
+    "I_diag_rational": "1219/38798760",
+    "I_diag_float": 3.1418529870542255e-05,
+    "N16_max_alias_over_bound": 0.2855208040251347,
+    "N16_untruncated_cost_CbN": 2.452303252303252,
+    "N16_truncated_cost_DN": 10.90583031757769,
+    "untruncated_strictly_smaller_than_DN": true
+  },
+  "lane2_kernel_api": {
+    "max_pole_annihilation_residual": 2.6727647100921956e-51,
+    "max_ns57_symbol_defect_error": 7.188275401947175e-51,
+    "multi_prime_support_barrier": [
+      {
+        "primes_annihilated": [
+          2
+        ],
+        "min_half_width_a_gt": 0.693147,
+        "min_window_width_2a_gt": 1.386294,
+        "next_uncancelled_prime": 3,
+        "log_next_prime": 1.098612,
+        "strictly_active_in_window": true
+      },
+      {
+        "primes_annihilated": [
+          2,
+          3
+        ],
+        "min_half_width_a_gt": 1.791759,
+        "min_window_width_2a_gt": 3.583519,
+        "next_uncancelled_prime": 5,
+        "log_next_prime": 1.609438,
+        "strictly_active_in_window": true
+      },
+      {
+        "primes_annihilated": [
+          2,
+          3,
+          5
+        ],
+        "min_half_width_a_gt": 3.401197,
+        "min_window_width_2a_gt": 6.802395,
+        "next_uncancelled_prime": 7,
+        "log_next_prime": 1.94591,
+        "strictly_active_in_window": true
+      },
+      {
+        "primes_annihilated": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "min_half_width_a_gt": 5.347108,
+        "min_window_width_2a_gt": 10.694215,
+        "next_uncancelled_prime": 11,
+        "log_next_prime": 2.397895,
+        "strictly_active_in_window": true
+      },
+      {
+        "primes_annihilated": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ],
+        "min_half_width_a_gt": 7.745003,
+        "min_window_width_2a_gt": 15.490006,
+        "next_uncancelled_prime": 13,
+        "log_next_prime": 2.564949,
+        "strictly_active_in_window": true
+      },
+      {
+        "primes_annihilated": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13
+        ],
+        "min_half_width_a_gt": 10.309952,
+        "min_window_width_2a_gt": 20.619904,
+        "next_uncancelled_prime": 17,
+        "log_next_prime": 2.833213,
+        "strictly_active_in_window": true
+      }
+    ]
+  },
+  "lane3_zero_geometry": {
+    "pointwise_Bp_integrand_collapse_error": 0.0,
+    "pointwise_dBp_dp_collapse_error": 0.0,
+    "dh_sample_point": "0.3085+85.699i",
+    "dh_strip_identity_residual": 1.7556286330095744e-97,
+    "ns101_beta": 4.0,
+    "ns101_r_beta": 0.7853981633974483,
+    "ns101_L1_X_beta": -0.01732226975239773,
+    "ns101_64_int_p2_Bp_minus_X2": -0.010685246861570106,
+    "ns101_critical_limit_identity_residual": 1.793662034335766e-43,
+    "ns101_violates_Bp_positivity": true
+  }
+}
