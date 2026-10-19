@@ -1103,13 +1103,13 @@ graph LR
   uniform["Uniform mechanism for G2"]
   primenorm["unsigned prime-norm domination<br/><small>prop:v119-prime-essential</small><br/><small>&#128193; evidence/v124/g2_growing_sign</small><br/><small><b>wall: cost: prime norm ~ lambda survives finite removal; exponential cutoff (estimate, not route)</b></small>"]
   normcontr["norm contraction<br/><small>prop:v120-norm-counterexample</small><br/><small>&#128193; evidence/v124/g2_weighted_signed</small><br/><small><b>wall: specific estimate: violated by a POSITIVE direction, q/D > 2.05 at lambda=4</b></small>"]
-  schatten["Schatten / Hilbert-Schmidt<br/><small>prop:v132-schatten</small><br/><small>EVIDENCE MISSING</small><br/><small><b>wall: scoped: remainder outside finite Schatten classes; negative-only penalty stays a constant (does not obstruct v136)</b></small>"]
+  schatten["Schatten / Hilbert-Schmidt<br/><small>prop:v132-schatten</small><br/><small>&#128193; manuscript</small><br/><small><b>wall: scoped: remainder outside finite Schatten classes; negative-only penalty stays a constant (does not obstruct v136)</b></small>"]
   sampling["basis / sampling dominance<br/><small>prop:v121-complement-cancellation</small><br/><small>&#128193; evidence/v124/g2_schur_cancellation</small><br/><small><b>wall: estimate counterexample: source-complement vector with tiny q despite O(1) cancellation</b></small>"]
   farmaj["scalar far majorant<br/><small>prop:v125-cutoff-cost</small><br/><small>&#128193; evidence/v126/g2_window_resolution</small><br/><small><b>wall: cost of one estimate: N > L exp(M_phi/(1-c)); not every method</b></small>"]
   blockmetric["lambda=5 N=25: tested dyadic norm comparison<br/><small>prop:v152-block-comparison</small><br/><small>&#128193; evidence/ns45_block_replay</small><br/><small><b>wall: fixed-partition comparison fails: Rayleigh 341/250, 2093/1500 > 1 (lambda=5, N=25)</b></small>"]
-  flattop["flat-top smoothing<br/><small>prop:v132-flat-top</small><br/><small>EVIDENCE MISSING</small><br/><small><b>wall: construction class: form-exact positive smoothing = point mass; signed smoothing not covered</b></small>"]
-  recipband["reciprocal-band commutation<br/><small>EVIDENCE MISSING</small><br/><small><b>wall: generic mechanism: persistent source-compressed commutator > 9e-6; not every band choice</b></small>"]
-  cotlar["Cotlar cross terms / atomization<br/><small>EVIDENCE MISSING</small><br/><small><b>wall: shortcut: cross norm >= 73/(375 pi) cofinally; not all Cotlar arguments</b></small>"]
+  flattop["flat-top smoothing<br/><small>prop:v132-flat-top</small><br/><small>&#128193; manuscript</small><br/><small><b>wall: construction class: form-exact positive smoothing = point mass; signed smoothing not covered</b></small>"]
+  recipband["reciprocal-band commutation<br/><small>prop:v133-noncommute</small><br/><small>&#128193; manuscript</small><br/><small><b>wall: generic mechanism: persistent source-compressed commutator > 9e-6; not every band choice</b></small>"]
+  cotlar["Cotlar cross terms / atomization<br/><small>prop:v134-disjoint</small><br/><small>&#128193; manuscript</small><br/><small><b>wall: shortcut: cross norm >= 73/(375 pi) cofinally; not all Cotlar arguments</b></small>"]
   scalarprim["scalar signed primitive<br/><small>cor:v137-scalar-no-go</small><br/><small>&#128193; evidence/v137</small><br/><small><b>wall: genuine closure of the scalar route: a Delta(beta_a) -> infinity, unconditional</b></small>"]
   concentration["signed weighted concentration<br/><small>prop:v131-concentration</small><br/><small>&#128193; evidence/v152</small><br/><small><b>wall: uniform complete signed operator floor remains unproved</b></small><br/><small>continuation: WEIL-FLOOR</small>"]
   weaken["Target weakening<br/><small>continuation: WEIL-FLOOR</small>"]
@@ -1319,9 +1319,13 @@ graph LR
   click w5 "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns44_metric_replay/" "evidence: evidence/ns44_metric_replay" _blank
   click primenorm "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_growing_sign/" "evidence: evidence/v124/g2_growing_sign" _blank
   click normcontr "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_weighted_signed/" "evidence: evidence/v124/g2_weighted_signed" _blank
+  click schatten "https://github.com/AlexanderEastwood/riemann/tree/main/manuscript/" "evidence: manuscript" _blank
   click sampling "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v124/g2_schur_cancellation/" "evidence: evidence/v124/g2_schur_cancellation" _blank
   click farmaj "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v126/g2_window_resolution/" "evidence: evidence/v126/g2_window_resolution" _blank
   click blockmetric "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/ns45_block_replay/" "evidence: evidence/ns45_block_replay" _blank
+  click flattop "https://github.com/AlexanderEastwood/riemann/tree/main/manuscript/" "evidence: manuscript" _blank
+  click recipband "https://github.com/AlexanderEastwood/riemann/tree/main/manuscript/" "evidence: manuscript" _blank
+  click cotlar "https://github.com/AlexanderEastwood/riemann/tree/main/manuscript/" "evidence: manuscript" _blank
   click scalarprim "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v137/" "evidence: evidence/v137" _blank
   click concentration "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v152/" "evidence: evidence/v152" _blank
   click floor "https://github.com/AlexanderEastwood/riemann/tree/main/evidence/v136/" "evidence: evidence/v136" _blank

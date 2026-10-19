@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missing-Evidence Audit (NS-1 / NS-38) &amp; Standalone Paper Blueprint — 2026-10-18 (v1)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #fbfaf8; color: #1f2328; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.65;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #d8d4cc; padding: 36px 40px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+
+    <div style="background-color: #f4f1ea; border-left: 4px solid #5c4b37; padding: 14px 18px; margin-bottom: 28px; font-size: 0.94rem;">
+      <strong>Wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR</code> (<code>NS24/39/43</code>) and <code>NB-GAIN</code> (<code>NS61/83/87/98</code>). No new uniform arithmetic estimate is supplied. Both historical original-recovery rows in <code>evidence/MISSING.md</code> (<code>NS-1</code> / <code>NS-38</code>) remain <strong>OPEN</strong> (<code>NOT ARCHIVED</code>). All five RH continuation lanes remain <strong>PAUSED</strong>; <code>RH</code> and <code>G2</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <h1 style="font-size: 1.55rem; line-height: 1.3; margin-top: 0; margin-bottom: 8px; color: #111111;">
+      Audit of <code>evidence/MISSING.md</code> (<code>NS-1</code> / <code>NS-38</code>) and Standalone Paper Blueprint
+    </h1>
+    <p style="margin-top: 0; margin-bottom: 24px; color: #57606a; font-size: 0.92rem;">
+      <strong>Date:</strong> October 18, 2026 &middot; <strong>Version:</strong> v1 &middot; <strong>Repository:</strong> <code>AlexanderEastwood/riemann</code> (<code>main</code> @ <code>b548fa4</code>)
+    </p>
+
+    <h2 style="font-size: 1.2rem; border-bottom: 1px solid #e5e1d8; padding-bottom: 6px; margin-top: 28px;">
+      1. Executive Summary
+    </h2>
+    <p>
+      This dossier performs two tasks:
+    </p>
+    <ol style="padding-left: 22px;">
+      <li style="margin-bottom: 10px;">
+        <strong>Complete Audit of <code>evidence/MISSING.md</code> (<code>NS-1</code> / <code>NS-38</code>):</strong> We trace every unarchived item in the two remaining <code>OPEN</code> rows of <code>evidence/MISSING.md</code> to its historical source (the 207,224,098-byte cumulative archive <code>fixed_space_prime_action_v1_34_bundle.zip</code>, library ID <code>libfile_386d5bdf90848191b485e716d0205c09</code>) and separate <em>historical original file recovery</em> (which remains strictly <strong>OPEN</strong>) from <em>replayable replacement certificates and self-contained analytical proofs</em> already present in the repository.
+      </li>
+      <li style="margin-bottom: 10px;">
+        <strong>Standalone Paper Scope (~38 Pages, Zero Unarchived Dependencies):</strong> We design a self-contained publication extracted from <code>manuscript/fixed_space_prime_action_v1.tex</code> and the verified evidence tree (<code>evidence/v124</code>, <code>evidence/v126</code>, <code>evidence/v135</code>–<code>v166</code>, <code>evidence/ns44_metric_replay</code>, <code>evidence/ns45_block_replay</code>, and <code>audits/</code>) that has <strong>zero dependency on any unarchived file</strong> in <code>evidence/MISSING.md</code>.
+      </li>
+    </ol>
+
+    <h2 style="font-size: 1.2rem; border-bottom: 1px solid #e5e1d8; padding-bottom: 6px; margin-top: 32px;">
+      2. Exact Audit of <code>evidence/MISSING.md</code> (<code>NS-1</code> / <code>NS-38</code>)
+    </h2>
+    <p>
+      Per repository governance (<code>AGENTS.md</code> &sect;0), known missing historical originals must remain marked <code>OPEN</code> even when a replacement certificate or self-contained manuscript proof is available. Auditing each item in <code>evidence/MISSING.md</code> against the current repository establishes the following exact matrix:
+    </p>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.86rem; margin: 18px 0 24px 0;">
+      <thead>
+        <tr style="background-color: #f4f1ea; border-bottom: 2px solid #c9c4b8; text-align: left;">
+          <th style="padding: 8px 10px;">Historical Group / Claim</th>
+          <th style="padding: 8px 10px;">Original Recovery Status</th>
+          <th style="padding: 8px 10px;">Mathematical Proof &amp; Replacement Status in Repo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e1d8; vertical-align: top;">
+          <td style="padding: 8px 10px;">
+            <strong>Row 1 (v1.27):</strong> $\lambda=5$ $10^{-8}\mathcal{D}$ tail metric failure (<code>g2_lambda5_transfer</code>, <code>prop:v127-metric-fails</code>)
+          </td>
+          <td style="padding: 8px 10px; color: #8a2be2;">
+            <strong>OPEN</strong> (<code>NOT ARCHIVED</code>; <code>falsify_fixed_tail_metric.py</code> absent)
+          </td>
+          <td style="padding: 8px 10px; color: #1b5e20;">
+            <strong>Replaced by <code>NS-44</code></strong> (<code>evidence/ns44_metric_replay/</code>, <code>prop:v152-tail-comparison</code>): fresh exact dyadic witnesses + 320/448-bit <code>flint.arb</code> verifiers in both parities ($q/\mathcal{D} &lt; 7\times 10^{-18}$ even, $&lt; 12\times 10^{-18}$ odd).
+          </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8; vertical-align: top;">
+          <td style="padding: 8px 10px;">
+            <strong>Row 1 (v1.28):</strong> $\lambda=5, N=25$ dyadic block-norm comparison failure (<code>g2_block_metric</code>, <code>prop:v128-dyadic-fails</code>)
+          </td>
+          <td style="padding: 8px 10px; color: #8a2be2;">
+            <strong>OPEN</strong> (<code>NOT ARCHIVED</code>; <code>certify_block_failure.py</code> absent)
+          </td>
+          <td style="padding: 8px 10px; color: #1b5e20;">
+            <strong>Replaced by <code>NS-45</code></strong> (<code>evidence/ns45_block_replay/</code>, <code>prop:v152-block-comparison</code>): fresh 320/448-bit <code>flint.arb</code> dyadic pair certificates establishing exact rational Rayleigh bounds $341/250 &gt; 1$ (even) and $2093/1500 &gt; 1$ (odd).
+          </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8; vertical-align: top;">
+          <td style="padding: 8px 10px;">
+            <strong>Companions (v1.29–v1.30):</strong> Picone capacity &amp; continuum cancellation (<code>prop:v129-picone</code>, <code>prop:v130-continuum-cancellation</code>, <code>prop:v130-local-no-go</code>)
+          </td>
+          <td style="padding: 8px 10px; color: #8a2be2;">
+            <strong>OPEN</strong> (<code>NOT ARCHIVED</code>; companion report &amp; <code>test_continuum_symbol.py</code> absent)
+          </td>
+          <td style="padding: 8px 10px; color: #1b5e20;">
+            <strong>100% Analytic Proofs in Manuscript</strong> (lines 9645–9918) + positive-weight capacity theorems archived in <code>evidence/v150/</code> (<code>lem:v150-weight</code>, <code>prop:v150-critical-energy</code>, <code>prop:v150-capacity-slack</code>).
+          </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8; vertical-align: top;">
+          <td style="padding: 8px 10px;">
+            <strong>Row 2 (v1.31):</strong> Weighted concentration hierarchy (<code>prop:v131-concentration</code>)
+          </td>
+          <td style="padding: 8px 10px; color: #8a2be2;">
+            <strong>OPEN</strong> (report in <code>evidence/v131/</code>; diagnostic grid scripts absent)
+          </td>
+          <td style="padding: 8px 10px; color: #1b5e20;">
+            <strong>100% Analytic Proof in Manuscript</strong> (lines 10000–10073). The missing scripts were finite-grid diagnostics not used as proof inputs.
+          </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8; vertical-align: top;">
+          <td style="padding: 8px 10px;">
+            <strong>Row 2 (v1.32):</strong> Full-line infinite negative index at $a=\log 4$ (<code>prop:v132-global-index</code>, $\beta_{\log 4}(1) &lt; -3/5$)
+          </td>
+          <td style="padding: 8px 10px; color: #8a2be2;">
+            <strong>OPEN</strong> (<code>NOT ARCHIVED</code>; <code>certify_beta4_negative.py</code> absent)
+          </td>
+          <td style="padding: 8px 10px; color: #1b5e20;">
+            <strong>Replaced by <code>NS-38</code> forward audit</strong> (<code>audits/bounds-six-agent-2026-09-30-v1/</code>): direct 192/320-bit Arb and independent 128/256-bit digamma-series enclosures certifying $\beta_{\log 4}(1) \in [-0.6400215, -0.6400214] &lt; -3/5$ (37/37 checks pass).
+          </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8; vertical-align: top;">
+          <td style="padding: 8px 10px;">
+            <strong>Row 2 (v1.32):</strong> Schatten refinement &amp; flat-top smoothing no-go (<code>prop:v132-schatten</code>, <code>prop:v132-flat-top</code>)
+          </td>
+          <td style="padding: 8px 10px; color: #8a2be2;">
+            <strong>OPEN</strong> (<code>g2_schatten_no_go</code> companion directory absent)
+          </td>
+          <td style="padding: 8px 10px; color: #1b5e20;">
+            <strong>100% Analytic Proofs in Manuscript</strong> (lines 11984–12099): pure Hilbert–Schmidt trace cyclicity, Dirichlet Poincar&eacute; scaling, and characteristic-function intersection. Zero numerical dependencies.
+          </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8; vertical-align: top;">
+          <td style="padding: 8px 10px;">
+            <strong>Row 2 (v1.33):</strong> Toeplitz leakage &amp; reciprocal-band noncommutation (<code>prop:v133-leakage</code>, <code>prop:v133-noncommute</code>)
+          </td>
+          <td style="padding: 8px 10px; color: #8a2be2;">
+            <strong>OPEN</strong> (<code>g2_nested_commutator</code> &amp; <code>certify_scaled_commutator.py</code> absent)
+          </td>
+          <td style="padding: 8px 10px; color: #1b5e20;">
+            <strong>100% Analytic Proofs in Manuscript</strong> (lines 12144–12265): the lower bound $\liminf_{a\to\infty}\|[A_{E_a}, A_{F_a}]\| &gt; 9\cdot 10^{-6}$ is proved by hand via the degree-2 Taylor operator $T_c$ and rational bounds $9 &lt; \pi^2 &lt; 10$, $\sqrt{5} &lt; 9/4$. (The unarchived script only checked a stronger appendix remark $&gt; 1.198\times 10^{-5}$.)
+          </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8; vertical-align: top;">
+          <td style="padding: 8px 10px;">
+            <strong>Row 2 (v1.34):</strong> Disjoint-channel cross term &amp; signed-primitive criterion (<code>prop:v134-disjoint</code>, <code>prop:v134-primitive</code>)
+          </td>
+          <td style="padding: 8px 10px; color: #8a2be2;">
+            <strong>OPEN</strong> (<code>g2_primitive_transport</code> &amp; <code>test_primitive_transport.py</code> absent)
+          </td>
+          <td style="padding: 8px 10px; color: #1b5e20;">
+            <strong>100% Analytic Proofs in Manuscript</strong> (lines 12314–12490) using $\frac{\sin t}{t} \ge 1 - \frac{t^2}{6} \ge \frac{73}{75}$ to prove $\liminf_{a\to\infty}\|1_{E_a}\Pi_{a,u}1_{F_a}\| \ge \frac{73}{375\pi} &gt; 0.0619$; unconditional cofinal drawdown divergence $a\Delta(\beta_a)\to\infty$ (<code>cor:v137-scalar-no-go</code>) is fully archived in <code>evidence/v137/</code>.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>Audit Conclusion:</strong> Every theorem and computational certificate needed for an external mathematical publication is already either (a) a self-contained analytical proof in <code>manuscript/fixed_space_prime_action_v1.tex</code> or (b) backed by a byte-verified, dual-precision interval certificate in <code>evidence/</code> and <code>audits/</code>. Neither of the two <code>OPEN</code> historical recovery rows in <code>evidence/MISSING.md</code> blocks or enters the standalone paper.
+    </p>
+
+    <h2 style="font-size: 1.2rem; border-bottom: 1px solid #e5e1d8; padding-bottom: 6px; margin-top: 32px;">
+      3. Standalone Paper Blueprint (~38 Pages, Zero Unarchived Dependencies)
+    </h2>
+    <p>
+      <strong>Proposed Title:</strong> <em>Certified Semilocal Weil Positivity at $\lambda = 4$, Ground-State Zero Localization, and Cofinal Obstructions for Fixed-Window and Nyman&ndash;Beurling Approximations</em>
+    </p>
+    <p>
+      <strong>Target Venues:</strong> <em>Mathematics of Computation</em> or <em>Experimental Mathematics</em> (primary, given the combination of 1024/1280-bit rigorous Arb spectral enclosures and analytical operator no-go theorems), or <em>Journal of Functional Analysis</em>.
+    </p>
+
+    <h3 style="font-size: 1.05rem; margin-top: 22px; margin-bottom: 6px;">
+      Section 1 &mdash; Introduction, the Semilocal Weil Form, and the Cofinal Bounded-Floor Reduction (~5 pp.)
+    </h3>
+    <ul style="padding-left: 20px; margin-top: 6px;">
+      <li>
+        <strong>Formulation:</strong> The finite-window Weil quadratic form $q_a[f] = \langle W_\lambda f, f\rangle$ on $L^2(-a,a) = L^2_{\mathrm{ev}}(-a,a) \oplus L^2_{\mathrm{odd}}(-a,a)$ ($a = \log\lambda$), retaining the archimedean digamma kernel, all prime-power shifts $m &lt; \lambda^2$, and both parity pole rank-one forms $\Pi[f] = 2|\langle f, c\rangle|^2 - 2|\langle f, s\rangle|^2$.
+      </li>
+      <li>
+        <strong>Compact-Source Radical Passage &amp; Bounded-Floor Equivalence:</strong> Exact source residual decay $\|W_\lambda u_\lambda\| \to 0$ for the normalized Gaussian-theta restriction $u_\lambda$ (<code>thm:v14-radical</code>, <code>lem:v115-source-mass</code>, <code>prop:v115-absolute-residual</code>; archived in <code>evidence/v124/g2_source_certificate/</code>) and the theorem that a uniform finite lower floor $q_a[f] \ge -C_*\|f\|^2$ along any cofinal sequence $a_k \to \infty$ (and equivalently on the even source complement $u_a^\perp$ plus the odd sector) is both necessary and sufficient for the Riemann Hypothesis (<code>prop:v118-gap-free</code>, <code>prop:v136-bounded-floor</code>, <code>cor:v136-complement-floor</code>; archived in <code>evidence/v136/</code>).
+      </li>
+    </ul>
+
+    <h3 style="font-size: 1.05rem; margin-top: 22px; margin-bottom: 6px;">
+      Section 2 &mdash; Complete Fixed-Window Positivity and First-Zero Localization at $\lambda = 3, 4$ (~10 pp.)
+    </h3>
+    <ul style="padding-left: 20px; margin-top: 6px;">
+      <li>
+        <strong>Complete Positivity at $\lambda = 3$ and $\lambda = 4$:</strong>
+        <ul>
+          <li>$\lambda = 3$ complete window certificate (<code>prop:v116-window-positive</code>, <code>evidence/v124/g2_certificate/</code>).</li>
+          <li>$\lambda = 4$ complete even-sector simultaneous Schur certificate (<code>prop:v125-simultaneous</code>, <code>prop:v125-even-complete</code>, <code>evidence/v126/g2_simultaneous/</code>, 58 restored files) and complete odd-sector complement certificate (<code>prop:v126-odd-complement</code>, <code>prop:v126-full-window</code>, <code>evidence/v126/g2_odd_complement/</code>, 51 restored files).</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Simple Even Ground State &amp; Real-Zero Entire Transform at $\lambda = 4$:</strong> Proof that the lowest even eigenvalue $\mu_0(4)$ of $W_4$ is simple and that the entire Fourier transform $\widehat{\widetilde{\psi_0}}(\xi)$ of the complete even ground state has only real zeros (<code>lem:v140-shifted-schur</code>, <code>prop:v140-ground4</code>, <code>cor:v140-real-zeros</code>; archived in <code>evidence/v140/</code>).
+      </li>
+      <li>
+        <strong>1024/1280-Bit First-Zero Enclosure Near $\gamma_1$:</strong> Local uniqueness (<code>prop:v142-ground-zero</code>, <code>evidence/v142/</code>) and validated 1024/1280-bit Arb enclosure proving that the first positive zero $z_1(4)$ of the complete $\lambda=4$ even ground-state transform satisfies
+        $$|z_1(4) - \gamma_1| &lt; 8.752082 \times 10^{-33}$$
+        where $\gamma_1 \approx 14.13472514\dots$ is the first nontrivial ordinate of $\zeta(s)$ (<code>lem:v143-evaluator-dual</code>, <code>prop:v143-first-zero-bound</code>, <code>prop:v143-resolution</code>; archived in <code>evidence/v143/</code>), together with the 768/1024-bit Connes&ndash;Consani&ndash;Moscovici $\lambda=3, N=120$ semantic lock (<code>prop:v141-ccm-lock</code>, <code>evidence/v141/</code>).
+      </li>
+    </ul>
+
+    <h3 style="font-size: 1.05rem; margin-top: 22px; margin-bottom: 6px;">
+      Section 3 &mdash; Cofinal Obstructions for Fixed-Window and Operator-Compression Mechanisms (~13 pp.)
+    </h3>
+    <ul style="padding-left: 20px; margin-top: 6px;">
+      <li>
+        <strong>3.1 Fixed-Metric and Dyadic Block Comparison Failures at $\lambda = 5$:</strong>
+        Exact dyadic witnesses and 320/448-bit Arb certificates proving that the $\lambda=4$ tail comparison $10^{-8}\mathcal{D}$ fails at $\lambda=5$ in both parities (<code>prop:v152-tail-comparison</code>, <code>evidence/ns44_metric_replay/</code>) and that the $N=25$ dyadic block-norm comparison fails with exact rational Rayleigh quotients $341/250 &gt; 1$ (even) and $2093/1500 &gt; 1$ (odd) (<code>prop:v152-block-comparison</code>, <code>evidence/ns45_block_replay/</code>), plus the exponential Fourier cutoff barrier $N + 1 &gt; L\exp(M_\phi/(1-c))$ for scalar far majorants (<code>prop:v125-cutoff-cost</code>, <code>prop:v138-shifted-floor</code>, <code>evidence/v126/g2_window_resolution/</code>, <code>evidence/v138/</code>).
+      </li>
+      <li>
+        <strong>3.2 Growing Radical Subspaces and the Rank Barrier to Positive Spectral Gaps:</strong>
+        No uniform positive spectral gap exists on the source complement (<code>prop:v135-growing-radical</code>, <code>cor:v135-coercivity-obstruction</code>, <code>evidence/v135/</code>), and translated-radical interpolation proves that achieving a uniform or polynomial positive spectral gap by removing a subspace requires removing rank at least $\frac{\lambda^2}{20000\log\lambda}$ (<code>lem:ns46-finite-arc</code>, <code>ns46-a2-cor-rank</code>, <code>evidence/v153/</code>).
+      </li>
+      <li>
+        <strong>3.3 Concentration, Scalar-Primitive, and Positive-Weight Capacity Obstructions:</strong>
+        <ul>
+          <li>Exact continuum pole cancellation and the local no-go theorem against treating the prime-minus-continuum operator $R_a = C_a - K_a^+$ as an $o(1)$ or small relative archimedean perturbation (<code>prop:v130-continuum-cancellation</code>, <code>prop:v130-local-no-go</code>).</li>
+          <li>Full-line infinite negative index of the even discrepancy multiplier $\beta_a$ at $a=\log 4$ via $\beta_{\log 4}(1) &lt; -3/5$ (<code>prop:v132-global-index</code>, certified in <code>audits/bounds-six-agent-2026-09-30-v1/</code>).</li>
+          <li>Structural limits of negative-only Hilbert&ndash;Schmidt concentration, positive flat-top frequency smoothing, reciprocal-band asymptotic commutation ($\liminf_{a\to\infty}\|[A_{E_a}, A_{F_a}]\| &gt; 9\cdot 10^{-6}$), and disjoint-channel Cotlar cross terms ($\liminf_{a\to\infty}\|1_{E_a}\Pi_{a,u}1_{F_a}\| \ge \frac{73}{375\pi}$) (<code>prop:v132-schatten</code>, <code>prop:v132-flat-top</code>, <code>prop:v133-noncommute</code>, <code>prop:v134-disjoint</code>).</li>
+          <li>Optimal Bernstein / signed-primitive drawdown criterion (<code>prop:v134-primitive</code>) and its unconditional cofinal closure $a\Delta(\beta_a) \ge \frac{\log 2}{3\sqrt{2}}a - C \to \infty$ (<code>cor:v137-scalar-no-go</code>, <code>evidence/v137/</code>).</li>
+          <li>Exact Gaussian positive-weight Picone identity and the $\exp(\gamma\lambda^2)$ blowup of any fixed relative energy slack $\delta_0 &gt; 0$ or prime-2 channel deletion (<code>lem:v150-weight</code>, <code>prop:v150-critical-energy</code>, <code>prop:v150-capacity-slack</code>, <code>evidence/v150/</code>; <code>prop:ns43-fixed-channel</code>, <code>evidence/v152/</code>).</li>
+        </ul>
+      </li>
+      <li>
+        <strong>3.4 Meta-Obstructions, Kernel-Depletion Counterexamples, and Dual-Pole Elimination:</strong>
+        <ul>
+          <li>Probe-relaxation and protected-orbit meta-obstruction for arithmetic-location-insensitive certificates (<code>thm:v139-probe-relaxation</code>, <code>thm:v139-protected-orbit</code>, <code>evidence/v139/</code>).</li>
+          <li>Counterexamples to local open-set unique continuation (UCP) and ordinary-cone semigroup positivity for the prime-shift operator (<code>prop:ns55-local-ucp-counterexample</code>, <code>prop:ns55-nonpositive-semigroup</code>, <code>evidence/v155/</code>).</li>
+          <li>Finite prime-weight perturbation controls and stability of the bounded-floor objective (<code>thm:ns57-first-zero-controls</code>, <code>thm:ns57-bounded-floor-stability</code>, <code>evidence/v156/</code>).</li>
+          <li>Equivalence of the homogeneous translated-radical boundary test with the full-window null-vector equation (<code>prop:ns58-equivalence</code>, <code>evidence/v157/</code>) and the boundary-free dual-pole Chebyshev&ndash;Legendre identity and closed-form odd pole moment (<code>Theorem 1</code> &amp; <code>Theorem 2</code>, <code>audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/</code>).</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3 style="font-size: 1.05rem; margin-top: 22px; margin-bottom: 6px;">
+      Section 4 &mdash; Nyman&ndash;Beurling / B&aacute;ez-Duarte Block-Schur Reductions and Critical-Zero Floors (~8 pp.)
+    </h3>
+    <ul style="padding-left: 20px; margin-top: 6px;">
+      <li>
+        <strong>Exact Block-Schur &amp; Smoothed $q=2$ Budgets:</strong> Residualized block-Schur gain formula $\Delta_N = h_N^T H_N^{-1} h_N$ and smoothed Mellin $q=2$ normal equations (<code>prop:ns53-nb-block-gain</code>, <code>prop:ns61-rh-equivalence</code>, <code>prop:ns61-average-budget</code>, <code>evidence/ns53_nb_blocks/</code>, <code>evidence/v159/</code>).
+      </li>
+      <li>
+        <strong>Raw-Norm, Euler-Grid, and Canonical Sharp-M&ouml;bius Obstructions:</strong> Large-value obstructions to uniform logarithmic raw norms and finite Euler-grid corrections, and non-convergence of the smoothed canonical sharp M&ouml;bius sequence (<code>prop:v158-lindelof-budget</code>, <code>prop:ns60-growing-euler-obstruction</code>, <code>prop:ns62-smoothed-obstruction</code>, <code>evidence/v158/</code>, <code>evidence/v159/</code>).
+      </li>
+      <li>
+        <strong>Same-Gram Positive-Floor Countermodel (<code>NS-74</code>):</strong> Construction of an explicit inner-factor modification sharing the exact Nyman&ndash;Beurling Gram matrix and all finite-block efficiency ratios while maintaining a strictly positive asymptotic error floor $E_\infty(\beta) &gt; 0$ (<code>prop:ns74-same-gram</code>, <code>cor:ns74-finite-indistinguishability</code>, <code>evidence/v161/ns74/</code>).
+      </li>
+      <li>
+        <strong>Critical-Zero Logarithmic Decay Floor (<code>NS-83</code>):</strong> Proof that any single critical-line zero forces $E_N^{(q)} \ge \frac{C_q + o(1)}{\log N}$ at every fixed smoothing order $q \ge 0$, ruling out eventual fixed-fraction whole-error contraction at every dyadic doubling (<code>prop:ns83-log-floor</code>, <code>evidence/v166/ns83/</code>).
+      </li>
+    </ul>
+
+    <h3 style="font-size: 1.05rem; margin-top: 22px; margin-bottom: 6px;">
+      Section 5 &mdash; Open Problems: The Surviving Cofinal Targets (<code>WEIL-FLOOR</code> and <code>NB-GAIN</code>) (~2 pp.)
+    </h3>
+    <ul style="padding-left: 20px; margin-top: 6px;">
+      <li>
+        Formulates the two surviving cofinal arithmetic obligations&mdash;the uniform signed lower floor $q_a[f] \ge -C_*\|f\|^2$ on the complete physical domain (<code>WEIL-FLOOR</code>) and a nonsummable lower bound on the residualized dyadic block gain $\Delta_N / E_N$ for the actual optimized smoothed residual (<code>NB-GAIN</code>)&mdash;with exact admissibility checklists for future researchers.
+      </li>
+    </ul>
+
+    <h2 style="font-size: 1.2rem; border-bottom: 1px solid #e5e1d8; padding-bottom: 6px; margin-top: 32px;">
+      4. Execution &amp; Verification Plan for Standalone Extraction
+    </h2>
+    <ol style="padding-left: 22px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Dedicated Extraction Directory:</strong> Create <code>manuscript/standalone_weil_certificates_and_obstructions_v1.tex</code> (leaving the master 358-page record <code>manuscript/fixed_space_prime_action_v1.tex</code> untouched).
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Self-Contained Artifact Manifest:</strong> Generate a standalone verification script <code>tools/verify_standalone_paper_artifacts.py</code> that replays the SHA-256 manifest checks and dual-precision interval verifiers for every theorem in Sections 1&ndash;4 (<code>v124</code>, <code>v126</code>, <code>v135</code>&ndash;<code>v143</code>, <code>v150</code>, <code>v152</code>/<code>ns44</code>/<code>ns45</code>, <code>v153</code>, <code>v155</code>&ndash;<code>v166</code>, <code>bounds-six-agent-2026-09-30-v1</code>, and <code>cofinal-candidate-mechanisms-screen-2026-10-16-v1</code>), confirming zero references to any unarchived file in <code>evidence/MISSING.md</code>.
+      </li>
+    </ol>
+
+    <div style="background-color: #f4f1ea; border-left: 4px solid #5c4b37; padding: 14px 18px; margin-top: 32px; font-size: 0.94rem;">
+      <strong>Wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR</code> (<code>NS24/39/43</code>) and <code>NB-GAIN</code> (<code>NS61/83/87/98</code>). No new uniform arithmetic estimate is supplied. Both historical original-recovery rows in <code>evidence/MISSING.md</code> (<code>NS-1</code> / <code>NS-38</code>) remain <strong>OPEN</strong> (<code>NOT ARCHIVED</code>). All five RH continuation lanes remain <strong>PAUSED</strong>; <code>RH</code> and <code>G2</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

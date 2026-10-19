@@ -1,16 +1,14 @@
 # Evidence availability ledger
 
-Updated 2026-09-22 (NS-38; fresh NS-44/45 distinction). **Both remaining groups are explicitly NOT ARCHIVED.**
-The manuscript archival overclaims are corrected by disclosure; original recovery remains OPEN.
-Recovery of the original v1.26 bundle resolved the two λ=4 evidence gaps;
-it did not resolve the later λ=5 or concentration-evidence gaps.
+Updated 2026-10-18 (`NS-1` / `NS-38` historical recovery remains **OPEN**; for the scoped standalone paper `manuscript/standalone_weil_certificates_and_obstructions_v4.tex` and the 274-page standalone monograph `manuscript/standalone_weil_certificates_and_obstructions_monograph_v4.tex` [with `v1`–`v3` preserved], all unrecovered historical `v1.27–v1.34` diagnostic files are omitted and replaced by the archived certificates and analytical proofs mapped below).
 
 | Evidence group | Status | Available evidence or remaining gap |
 | --- | --- | --- |
 | v1.25 complete even λ=4 certificate: `g2_simultaneous` | RESTORED | [58 original files](v126/g2_simultaneous/), including frozen witnesses, verifiers and saved complete residual ingredients, restored from the original v1.26 bundle. These files also match the original v1.25 bundle. |
 | v1.26 complete odd λ=4 certificate: `g2_odd_complement` | RESTORED | [51 original files](v126/g2_odd_complement/), including complement and directional witnesses, verifiers, saved reports and the exact shared-head check. |
-| λ=5 disproof evidence through v1.28 | NOT ARCHIVED; disclosure complete, recovery OPEN | `g2_lambda5_transfer` and `g2_block_metric` remain absent. Recover the original frozen protocols, exact dyadic counterwitnesses, 320/448-bit reports and independent signed-index verifiers. The unchanged `10^-8 D` metric failure is the v1.27 checkpoint; the separate signed-block comparison failure is v1.28. Neither is restored by the v1.26 bundle. |
-| v1.31–v1.34 concentration evidence and diagnostics | NOT ARCHIVED; disclosure complete, recovery OPEN | The original [v1.31 weighted-concentration report](v131/g2_weighted_concentration_report.md) is partially restored with [provenance](v131/recovery_provenance.json). Its scripts, saved outputs and complete adversarial evidence remain absent; so do the original `g2_schatten_no_go`, `g2_nested_commutator` and `g2_primitive_transport` evidence sets. Recover their original scripts, saved outputs, candidate/proof reports and adversarial reviews, including `certify_beta4_negative.py`, `certify_scaled_commutator.py` and `test_primitive_transport.py`. The finite diagnostics and the claimed rigorous interval/rational checks must retain their distinct scopes. |
+| λ=5 disproof evidence through v1.28 | OPEN (historical originals unrecovered; omitted from scoped standalone paper) | Historical `g2_lambda5_transfer` ($N=16$) and `g2_block_metric` files remain unarchived. For the scoped standalone paper, the $\lambda=5$ comparison closures use only the archived replacement certificates [NS-44](ns44_metric_replay/) (`prop:v152-tail-comparison`, $\lambda=5$ `10^-8 D` tail comparison failure in both parities) and [NS-45](ns45_block_replay/) (`prop:v152-block-comparison`, $\lambda=5, N=25$ dyadic block-norm comparison failure in both parities), indexed in [v1.52](v152/) at `320/448` bits. |
+| v1.31–v1.34 concentration evidence and diagnostics | OPEN (historical originals unrecovered; omitted from scoped standalone paper) | Historical scripts and finite-grid diagnostics (`g2_schatten_no_go`, `g2_nested_commutator` degree-four check, `g2_primitive_transport` finite tables) remain unarchived; the [v1.31 report](v131/g2_weighted_concentration_report.md) is a partial recovery only. The scoped standalone paper omits those unarchived diagnostics and relies only on the analytical proofs in `manuscript/fixed_space_prime_action_v1.tex` (`prop:v131-concentration`, `prop:v132-schatten`, `prop:v132-flat-top`, `prop:v133-leakage`, `prop:v133-noncommute` degree-two proof, `prop:v134-disjoint`, `prop:v134-primitive`), the `192/320`-bit Arb and `128/256`-bit digamma-series replacement certificates for `prop:v132-global-index` ($\beta_{\log 4}(1) < -3/5$) in [bounds-six-agent-2026-09-30-v1](../audits/bounds-six-agent-2026-09-30-v1/README.md), and the archived cofinal scalar drawdown divergence (`cor:v137-scalar-no-go`) in [v1.37](v137/). |
+
 
 ## What the recovery establishes
 
@@ -169,3 +167,13 @@ not an assertion that the files are archived in this public repository.
 The [forward dependency note](../audits/bounds-six-agent-2026-09-30-v1/publication/weighted-dependency.md)
 states the full inherited coefficient corollary from public NS78 needed by
 the present audit; the certificate replay does not depend on those local files.
+
+## October 18 scoping note: replacement mapping for the standalone paper (`v4` / `monograph_v4`) vs. historical recovery (`OPEN`)
+
+Per user direction on 2026-10-18, the scoped standalone extraction (`manuscript/standalone_weil_certificates_and_obstructions_v4.tex` and `manuscript/standalone_weil_certificates_and_obstructions_monograph_v4.tex`, with `v1`–`v3` preserved) omits all unrecovered historical `v1.27–v1.34` diagnostic tables and relies exclusively on archived replacement certificates and self-contained analytical proofs (verified by `audits/standalone-paper-v4-verification-2026-10-18-v1/verify_standalone_v4.py`, `61/61` checks passing):
+
+1. **$\lambda = 5$ comparison closures:** Uses only the archived `320/448`-bit `flint.arb` certificates in [NS-44](ns44_metric_replay/) (`prop:v152-tail-comparison`) and [NS-45](ns45_block_replay/) (`prop:v152-block-comparison`), indexed in [v1.52](v152/). The historical `v1.27` ($N=16$) and `v1.28` four-block diagnostic tables are omitted.
+2. **Concentration and operator no-go propositions:** Uses only the self-contained analytical proofs in `manuscript/fixed_space_prime_action_v1.tex` (`prop:v131-concentration`, `prop:v132-schatten`, `prop:v132-flat-top`, `prop:v133-leakage`, `prop:v133-noncommute` degree-two proof, `prop:v134-disjoint`, `prop:v134-primitive`), the `192/320`-bit Arb and `128/256`-bit digamma-series replacement certificates for `prop:v132-global-index` ($\beta_{\log 4}(1) < -3/5$) in [bounds-six-agent-2026-09-30-v1](../audits/bounds-six-agent-2026-09-30-v1/README.md), and the archived cofinal drawdown divergence (`cor:v137-scalar-no-go`) in [v1.37](v137/).
+3. **Historical provenance (`OPEN`):** Choosing replacement evidence for a scoped standalone paper does not constitute historical recovery. The `207,224,098`-byte bundle `fixed_space_prime_action_v1_34_bundle.zip` remains unrecovered, so both historical original-recovery rows in this ledger remain **OPEN**. `G2` and `RH` remain open.
+
+

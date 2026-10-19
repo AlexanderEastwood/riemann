@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certified Semilocal Weil Positivity at λ = 4, Ground-State Zero Localization, and Cofinal Obstructions — 2026-10-18 (v1)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #fbfaf8; color: #1f2328; font-family: Georgia, 'Times New Roman', Times, serif; line-height: 1.68;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #d8d4cc; padding: 40px 44px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+
+    <div style="background-color: #f4f1ea; border-left: 4px solid #5c4b37; padding: 14px 18px; margin-bottom: 28px; font-size: 0.92rem;">
+      <strong>Wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR</code> (<code>NS24/39/43</code>) and <code>NB-GAIN</code> (<code>NS61/83/87/98</code>). No new uniform arithmetic estimate is supplied. Historical <code>v1.27–v1.34</code> missing files in <code>evidence/MISSING.md</code> are de-scoped as <strong>SUPERSEDED — NO LONGER NEEDED</strong>. All five RH continuation lanes remain <strong>PAUSED</strong>; <code>RH</code> and <code>G2</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <div style="text-align: center; margin-bottom: 28px;">
+      <h1 style="font-size: 1.48rem; line-height: 1.32; margin-top: 0; margin-bottom: 10px; color: #111111;">
+        Certified Semilocal Weil Positivity at &lambda; = 4, Ground-State Zero Localization, and Cofinal Obstructions for Fixed-Window and Nyman&ndash;Beurling Approximations
+      </h1>
+      <p style="margin: 0; font-size: 1.02rem; color: #222222;">
+        <strong>Alexander Eastwood</strong>
+      </p>
+      <p style="margin: 4px 0 0 0; font-size: 0.9rem; color: #57606a;">
+        October 18, 2026 &middot; Standalone Short Paper (v1) &middot; Companion PDF: <code>manuscript/standalone_weil_certificates_and_obstructions_v1.pdf</code>
+      </p>
+    </div>
+
+    <div style="background-color: #f9f8f5; border: 1px solid #e5e1d8; padding: 18px 22px; margin-bottom: 30px; font-size: 0.93rem;">
+      <p style="margin-top: 0; margin-bottom: 8px; text-align: center; font-weight: bold; letter-spacing: 0.03em; text-transform: uppercase; font-size: 0.84rem; color: #444;">
+        Abstract
+      </p>
+      <p style="margin: 0; text-align: justify;">
+        We establish unconditional computer-assisted spectral certificates and analytical cofinal obstruction theorems for two Hilbert-space approaches to the Riemann Hypothesis (RH): the semilocal Weil quadratic form <em>q<sub>a</sub></em>[<em>f</em>] = &langle;<em>W<sub>&lambda;</sub>f</em>, <em>f</em>&rangle; on <em>L</em><sup>2</sup>(&minus;<em>a</em>, <em>a</em>) (<em>a</em> = log &lambda;) and the smoothed Nyman&ndash;Beurling&ndash;B&aacute;ez-Duarte approximation problem. First, using validated ball arithmetic (<code>flint.arb</code>) at up to 1024/1280-bit precision, we prove complete positivity <em>W</em><sub>3</sub> &#8829; 0 and <em>W</em><sub>4</sub> &#8829; 0 across both parity sectors on the full physical form domain, certify that the complete &lambda; = 4 even ground state &psi;<sub>0</sub> is simple with 0 &lt; &mu;<sub>0</sub>(4) &lt; 2.454 &times; 10<sup>&minus;75</sup> and &mu;<sub>1</sub><sup>ev</sup>(4) &gt; 10<sup>&minus;73</sup>, and deduce via the Connes&ndash;van Suijlekom theorem that its entire Fourier transform has only real zeros, with its first positive zero enclosed within 8.752082 &times; 10<sup>&minus;33</sup> of the first Riemann zeta ordinate &gamma;<sub>1</sub> &approx; 14.13472514. Second, we prove that the uniform bounded-floor condition <em>q<sub>a</sub></em>[<em>f</em>] &ge; &minus;<em>C</em><sub>*</sub>&Vert;<em>f</em>&Vert;<sup>2</sup> along a cofinal sequence <em>a</em> &rarr; &infin; is both necessary and sufficient for RH without a positive spectral gap, and we rule out a broad hierarchy of proposed cofinal mechanisms: at &lambda; = 5 the unchanged tail comparison and <em>N</em> = 25 dyadic block-norm comparison fail in both parities; achieving a uniform positive spectral gap by finite subspace removal requires removing rank &Omega;(&lambda;<sup>2</sup> / log &lambda;); the optimal Bernstein signed-primitive drawdown diverges as <em>a</em>&Delta;(&beta;<sub><em>a</em></sub>) &ge; ((log 2)/(3&radic;2))<em>a</em> &minus; <em>C</em> &rarr; &infin;; any fixed relative slack &delta;<sub>0</sub> &gt; 0 or prime-2 channel deletion in the Gaussian positive-weight Picone identity forces an exp(&gamma;&lambda;<sup>2</sup>) error blowup; and the prime-shift operator violates local open-set unique continuation and ordinary-cone semigroup positivity. Third, in the Nyman&ndash;Beurling lane, we construct an explicit inner-factor countermodel sharing the exact Nyman&ndash;Beurling Gram matrix while maintaining a strictly positive asymptotic error floor <em>E</em><sub>&infin;</sub>(&beta;) &gt; 0, and we prove that any critical-line zero forces <em>E<sub>N</sub></em><sup>(<em>q</em>)</sup> &ge; (<em>C<sub>q</sub></em> + <em>o</em>(1)) / log <em>N</em> at every fixed smoothing order <em>q</em> &ge; 0, excluding eventual fixed-fraction contraction at every dyadic doubling. Every computational claim in this paper is backed by byte-verified, dual-precision interval certificates in the accompanying repository.
+      </p>
+    </div>
+
+    <h2 style="font-size: 1.18rem; border-bottom: 1px solid #e5e1d8; padding-bottom: 6px; margin-top: 28px;">
+      1. Introduction and the Semilocal Weil Form
+    </h2>
+    <p>
+      Let &lambda; &gt; 1 and <em>a</em> = log &lambda;. On the finite logarithmic interval <em>I<sub>a</sub></em> = (&minus;<em>a</em>, <em>a</em>), decompose <em>L</em><sup>2</sup>(<em>I<sub>a</sub></em>) = <em>L</em><sup>2</sup><sub>ev</sub>(<em>I<sub>a</sub></em>) &oplus; <em>L</em><sup>2</sup><sub>odd</sub>(<em>I<sub>a</sub></em>) into even and odd parity sectors. For a test function <em>f</em> &isin; <em>L</em><sup>2</sup>(<em>I<sub>a</sub></em>) with zero extension <em>f&#771;</em> &isin; <em>L</em><sup>2</sup>(&#8477;) and unitary Fourier transform <em>f&#770;</em>(&xi;) = (2&pi;)<sup>&minus;1/2</sup> &int;<sub>&minus;<em>a</em></sub><sup><em>a</em></sup> <em>f</em>(<em>x</em>)<em>e</em><sup>&minus;<em>i</em>&xi;<em>x</em></sup> d<em>x</em>, the canonical semilocal Weil quadratic form <em>q<sub>a</sub></em>[<em>f</em>] = &langle;<em>W<sub>&lambda;</sub>f</em>, <em>f</em>&rangle; is defined on its maximal closed form domain <em>D</em>(<em>q<sub>a</sub></em>) &sub; <em>L</em><sup>2</sup>(<em>I<sub>a</sub></em>) by
+    </p>
+    <p style="text-align: center; background-color: #f9f8f5; padding: 10px 14px; border-radius: 4px; font-size: 0.95rem;">
+      <em>q<sub>a</sub></em>[<em>f</em>] = &int;<sub>&#8477;</sub> &alpha;(&xi;) |<em>f&#770;</em>(&xi;)|<sup>2</sup> d&xi; &minus; &sum;<sub>2 &le; <em>m</em> &lt; &lambda;<sup>2</sup></sub> (&Lambda;(<em>m</em>)/&radic;<em>m</em>) &int;<sub>&minus;<em>a</em></sub><sup><em>a</em></sup> (<em>f&#771;</em>(<em>x</em> + log <em>m</em>) + <em>f&#771;</em>(<em>x</em> &minus; log <em>m</em>)) <span style="text-decoration: overline;"><em>f</em>(<em>x</em>)</span> d<em>x</em> + &Pi;[<em>f</em>],
+    </p>
+    <p>
+      where &alpha;(&xi;) = Re &psi;(1/4 + <em>i</em>&xi;/2) &minus; log &pi; is the archimedean digamma multiplier, &Lambda;(<em>m</em>) is the von Mangoldt function, and the polar contribution at <em>s</em> = 0, 1 splits by parity as the rank-two form
+    </p>
+    <p style="text-align: center; background-color: #f9f8f5; padding: 8px 14px; border-radius: 4px; font-size: 0.95rem;">
+      &Pi;[<em>f</em>] = 2|&langle;<em>f</em>, <em>c</em>&rangle;|<sup>2</sup> &minus; 2|&langle;<em>f</em>, <em>s</em>&rangle;|<sup>2</sup>, &emsp; <em>c</em>(<em>x</em>) = cosh(<em>x</em>/2), &emsp; <em>s</em>(<em>x</em>) = sinh(<em>x</em>/2).
+    </p>
+    <p>
+      As &lambda; &rarr; &infin;, the classical Gaussian completed-zeta radical <em>h</em>(<em>x</em>) = <em>e</em><sup><em>x</em>/2</sup> &sum;<sub><em>n</em>&ge;1</sub> <em>H</em>(<em>ne<sup>x</sup></em>), with <em>H</em>(<em>u</em>) = (4&pi;/&radic;3)<em>u</em><sup>2</sup>(2&pi;<em>u</em><sup>2</sup> &minus; 3)<em>e</em><sup>&minus;&pi;<em>u</em><sup>2</sup></sup>, induces a normalized boundary-repaired even source vector <em>u<sub>a</sub></em> &isin; <em>D</em>(<em>q<sub>a</sub></em>) whose operator residual &Vert;<em>W<sub>&lambda;</sub>u<sub>a</sub></em>&Vert; decays super-exponentially. Nevertheless, a positive spectral gap is not required for RH:
+    </p>
+
+    <div style="border-left: 3px solid #1b5e20; background-color: #f6fbf6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 1.1 (Cofinal Bounded-Floor Equivalence, <code>evidence/v136/</code>).</strong>
+      <em>The Riemann Hypothesis holds if and only if there exist a finite constant C<sub>*</sub> &lt; &infin; and an unbounded sequence a<sub>k</sub> &rarr; &infin; such that</em>
+      <div style="text-align: center; margin: 8px 0;">
+        <em>q<sub>a<sub>k</sub></sub></em>[<em>f</em>] &ge; &minus;<em>C</em><sub>*</sub>&Vert;<em>f</em>&Vert;<sup>2</sup><sub><em>L</em><sup>2</sup>(<em>I<sub>a<sub>k</sub></sub></em>)</sub>
+      </div>
+      <em>for all even f &isin; P<sub>a<sub>k</sub></sub>D(q<sub>a<sub>k</sub></sub>) (where P<sub>a</sub> = I &minus; |u<sub>a</sub>&rangle;&langle;u<sub>a</sub>|) and all odd f &isin; D(q<sub>a<sub>k</sub></sub>) &cap; L<sup>2</sup><sub>odd</sub>(I<sub>a<sub>k</sub></sub>).</em>
+    </div>
+
+    <h2 style="font-size: 1.18rem; border-bottom: 1px solid #e5e1d8; padding-bottom: 6px; margin-top: 32px;">
+      2. Certified Positivity and First-Zero Localization at &lambda; = 3, 4
+    </h2>
+
+    <div style="border-left: 3px solid #1b5e20; background-color: #f6fbf6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 2.1 (Complete Interval-Certified Positivity at &lambda; = 3, 4; <code>evidence/v124/</code>, <code>evidence/v126/</code>).</strong>
+      <em>For &lambda; &isin; {3, 4} (a &isin; {log 3, log 4}), the complete semilocal Weil form satisfies q<sub>a</sub>[f] &ge; 0 for all f &isin; D(q<sub>a</sub>) = D(q<sub>a</sub><sup>ev</sup>) &oplus; D(q<sub>a</sub><sup>odd</sup>), with exact fixed-window error &varepsilon;<sub>3</sub> = &varepsilon;<sub>4</sub> = 0. At &lambda; = 4, outward ball arithmetic in <code>flint.arb</code> at 320 and 448 bits certifies both the simultaneous multi-trial Schur complement on the even sector (58 restored files in <code>evidence/v126/g2_simultaneous/</code>) and the directional Schur complement on the odd sector (51 restored files in <code>evidence/v126/g2_odd_complement/</code>).</em>
+    </div>
+
+    <div style="border-left: 3px solid #1b5e20; background-color: #f6fbf6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 2.2 (Simple &lambda; = 4 Even Ground State and Real-Zero Transform; <code>evidence/v140/</code>).</strong>
+      <em>The lowest eigenvalue &mu;<sub>0</sub>(4) of the self-adjoint Friedrichs realization W<sub>4</sub> on L<sup>2</sup>(&minus;log 4, log 4) is simple and belongs to the even sector, with 1024/1280-bit enclosures</em>
+      <div style="text-align: center; margin: 8px 0;">
+        0 &lt; &mu;<sub>0</sub>(4) &lt; 2.454 &times; 10<sup>&minus;75</sup>, &emsp; &mu;<sub>1</sub><sup>ev</sup>(4) &gt; 10<sup>&minus;73</sup>, &emsp; &mu;<sub>0</sub><sup>odd</sup>(4) &gt; 10<sup>&minus;68</sup>.
+      </div>
+      <em>By the Connes&ndash;van Suijlekom theorem, the entire Fourier transform &psi;&#770;<sub>0</sub>(z) = (2&pi;)<sup>&minus;1/2</sup> &int;<sub>&minus;log 4</sub><sup>log 4</sup> &psi;<sub>0</sub>(x) cos(zx) dx of the complete ground state has <strong>only real zeros</strong>.</em>
+    </div>
+
+    <div style="border-left: 3px solid #1b5e20; background-color: #f6fbf6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 2.3 (1024/1280-Bit First-Zero Enclosure Near &gamma;<sub>1</sub>; <code>evidence/v142/</code>, <code>evidence/v143/</code>).</strong>
+      <em>The entire Fourier transform &psi;&#770;<sub>0</sub> of the complete &lambda; = 4 ground state has a unique zero z<sub>1</sub>(4) in [&gamma;<sub>1</sub> &minus; 1/10, &gamma;<sub>1</sub> + 1/10], and at 1024/1280-bit ball precision it satisfies</em>
+      <div style="text-align: center; margin: 8px 0;">
+        |<em>z</em><sub>1</sub>(4) &minus; &gamma;<sub>1</sub>| &lt; 8.752082 &times; 10<sup>&minus;33</sup>,
+      </div>
+      <em>where &gamma;<sub>1</sub> &approx; 14.13472514173469379045725198356247 is the first nontrivial ordinate of &zeta;(s).</em>
+    </div>
+
+    <h2 style="font-size: 1.18rem; border-bottom: 1px solid #e5e1d8; padding-bottom: 6px; margin-top: 32px;">
+      3. Cofinal Obstructions for Fixed-Window and Compression Mechanisms
+    </h2>
+
+    <div style="border-left: 3px solid #b71c1c; background-color: #fdf6f6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 3.1 (Failure of the &lambda; = 4 Tail and Dyadic Block Comparisons at &lambda; = 5; <code>NS-44</code>, <code>NS-45</code>).</strong>
+      <ol style="margin: 6px 0 0 0; padding-left: 20px;">
+        <li>
+          <strong>Stipulated tail comparison (<code>evidence/ns44_metric_replay/</code>):</strong> Explicit dyadic witnesses on Fourier modes 17 &le; <em>n</em> &le; 128 certified at 320/448 bits satisfy 0 &lt; <em>q</em><sub>log 5</sub>[<em>f</em>] / <em>D</em>[<em>f</em>] &lt; 7 &times; 10<sup>&minus;18</sup> &lt; 10<sup>&minus;8</sup> (even) and &lt; 1.2 &times; 10<sup>&minus;17</sup> &lt; 10<sup>&minus;8</sup> (odd).
+        </li>
+        <li>
+          <strong>Dyadic block-norm comparison (<code>evidence/ns45_block_replay/</code>):</strong> On the first three dyadic blocks above <em>N</em> = 25 at &lambda; = 5, 320/448-bit certificates give off-diagonal Rayleigh quotients <em>R</em><sub>ev</sub> &gt; 341/250 = 1.364 &gt; 1 and <em>R</em><sub>odd</sub> &gt; 2093/1500 &gt; 1, excluding every diagonal block metric and positive row-weight comparison for that partition.
+        </li>
+        <li>
+          <strong>Exponential cutoff barrier (<code>evidence/v138/</code>):</strong> Any scalar far majorant with relative slack <em>c</em> &isin; (0, 1) requires Fourier cutoff <em>N</em> + 1 &gt; 2<em>a</em> exp(<em>M<sub>&phi;</sub></em> / (1 &minus; <em>c</em>)), which remains exponential even for the shifted floor <em>W<sub>&lambda;</sub></em> + <em>C</em><sub>*</sub><em>I</em>.
+        </li>
+      </ol>
+    </div>
+
+    <div style="border-left: 3px solid #b71c1c; background-color: #fdf6f6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 3.2 (Super-Polynomial Rank Barrier to Positive Coercivity; <code>evidence/v135/</code>, <code>evidence/v153/</code>).</strong>
+      <em>Fine translates of the Gaussian completed-zeta radical h supported inside I<sub>a</sub> span a subspace R<sub>a</sub> &sub; D(q<sub>a</sub>) of dimension dim R<sub>a</sub> &ge; &lambda;<sup>2</sup> / (20000 log &lambda;) on which |q<sub>a</sub>[f]| &le; C exp(&minus;&lambda;<sup>2</sup>/2000)&Vert;f&Vert;<sup>2</sup> in both parities. Consequently, no subspace removal of rank o(&lambda;<sup>2</sup> / log &lambda;) can produce a uniform or polynomial positive spectral gap &lambda;<sup>&minus;B</sup>.</em>
+    </div>
+
+    <div style="border-left: 3px solid #b71c1c; background-color: #fdf6f6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 3.3 (Concentration, Commutator, Scalar-Primitive, and Capacity-Slack Obstructions).</strong>
+      <ol style="margin: 6px 0 0 0; padding-left: 20px;">
+        <li>
+          <strong>Perturbative PNT no-go (<code>prop:v130-local-no-go</code>):</strong> The prime-minus-continuum operator <em>R<sub>a</sub></em> = <em>C<sub>a</sub></em> &minus; <em>K<sub>a</sub></em><sup>+</sup> satisfies &langle;<em>R<sub>a</sub>g<sub>a</sub></em>, <em>g<sub>a</sub></em>&rangle; &gt; (log 2)/&radic;2 &gt; 0.4901 on smooth source-orthogonal bumps with uniformly bounded archimedean Sobolev norms.
+        </li>
+        <li>
+          <strong>Full-line infinite negative index at &lambda; = 4 (<code>audits/bounds-six-agent-2026-09-30-v1/</code>):</strong> Direct 192/320-bit Arb and independent 128/256-bit digamma-series enclosures certify &beta;<sub>log 4</sub>(1) &isin; [&minus;0.64002145940588, &minus;0.64002145940586] &lt; &minus;3/5, forcing infinite negative index on <em>L</em><sup>2</sup>(&#8477;).
+        </li>
+        <li>
+          <strong>Reciprocal-band noncommutation &amp; Cotlar cross persistence (<code>prop:v133-noncommute</code>, <code>prop:v134-disjoint</code>):</strong> On the source complement, lim inf<sub><em>a</em>&rarr;&infin;</sub> &Vert;[<em>A<sub>E<sub>a</sub></sub></em>, <em>A<sub>F<sub>a</sub></sub></em>]&Vert; &gt; 9 &times; 10<sup>&minus;6</sup> for nested reciprocal bands, and lim inf<sub><em>a</em>&rarr;&infin;</sub> &Vert;1<sub><em>E<sub>a</sub></em></sub>&Pi;<sub><em>a,u</em></sub>1<sub><em>F<sub>a</sub></em></sub>&Vert; &ge; 73/(375&pi;) &gt; 0.0619 for disjoint reciprocal bands.
+        </li>
+        <li>
+          <strong>Unconditional scalar-primitive drawdown divergence (<code>evidence/v137/</code>):</strong> The optimal Bernstein drawdown lower bound &minus;<em>a</em>&Delta;(&beta;<sub><em>a</em></sub>)&Vert;<em>f</em>&Vert;<sup>2</sup> diverges unconditionally: <em>a</em>&Delta;(&beta;<sub><em>a</em></sub>) &ge; ((log 2)/(3&radic;2))<em>a</em> &minus; <em>C</em> &rarr; +&infin;.
+        </li>
+        <li>
+          <strong>Gaussian positive-weight capacity slack blowup (<code>evidence/v150/</code>):</strong> Sacrificing any fixed fraction &delta;<sub>0</sub> &gt; 0 of the Picone difference energy <em>J<sub>a,h</sub></em>[<em>f/h</em>] or deleting the prime-2 shift channel forces &eta;<sub><em>a</em></sub> &ge; &delta;<sub>0</sub>&kappa; exp(&gamma;&lambda;<sup>2</sup>) &minus; <em>O</em>(&lambda; log &lambda;) &rarr; +&infin;.
+        </li>
+      </ol>
+    </div>
+
+    <div style="border-left: 3px solid #1b5e20; background-color: #f6fbf6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 3.4 (Local-UCP Failure and Boundary-Free Dual-Pole Elimination; <code>evidence/v155/</code>, <code>audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/</code>).</strong>
+      <ol style="margin: 6px 0 0 0; padding-left: 20px;">
+        <li>
+          <strong>Local UCP failure:</strong> Nonzero functions <em>f</em> &isin; <em>D</em>(<em>q<sub>a</sub></em>) in both parity sectors vanish together with <em>W<sub>&lambda;</sub>f</em> on nonempty open subintervals of <em>I<sub>a</sub></em>, and <em>e</em><sup>&minus;<em>tW<sub>&lambda;</sub></em></sup> is not positivity-preserving on <em>L</em><sup>2</sup><sub>+</sub>(<em>I<sub>a</sub></em>).
+        </li>
+        <li>
+          <strong>Boundary-free dual-pole subspace <em>V<sub>a</sub></em>:</strong> On <em>V<sub>a</sub></em> = {<em>f</em> &isin; <em>H</em><sup>1</sup><sub>0</sub>(&minus;<em>a</em>, <em>a</em>) : &langle;<em>f</em>, <em>c</em>&rangle; = &langle;<em>f</em>, <em>s</em>&rangle; = 0}, the polar form &Pi;[<em>f</em>] vanishes identically in both parity sectors without boundary delta penalties, and the odd pole moment has the exact Bessel closed form &int;<sub>0</sub><sup><em>a</em></sup> <em>u</em>(<em>x</em>) sinh(<em>x</em>/2) d<em>x</em> = <em>a</em> &sum;<sub><em>j</em>=0</sub><sup><em>M</em></sup> <em>c<sub>j</sub></em> &radic;(&pi;/<em>a</em>) <em>I</em><sub>2<em>j</em>+3/2</sub>(<em>a</em>/2). At &lambda; = 4, 256/384-bit ball quadrature certifies a 53-fold reduction in the 8-mode odd residual magnitude upon projection to <em>V<sub>a</sub></em>.
+        </li>
+      </ol>
+    </div>
+
+    <h2 style="font-size: 1.18rem; border-bottom: 1px solid #e5e1d8; padding-bottom: 6px; margin-top: 32px;">
+      4. Nyman&ndash;Beurling / B&aacute;ez-Duarte Reductions and Critical-Zero Floors
+    </h2>
+
+    <div style="border-left: 3px solid #b71c1c; background-color: #fdf6f6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 4.1 (Same-Gram Positive-Floor Countermodel, <code>NS-74</code>; <code>evidence/v161/ns74/</code>).</strong>
+      <em>For any &beta; &gt; 1/2, multiplying the target Mellin transform by the unitary inner factor I<sub>&beta;</sub>(s) = (s &minus; &beta;)/(s &minus; (1 &minus; &beta;)) preserves the exact Nyman&ndash;Beurling Gram matrix G<sub>m,n</sub> and all finite-prefix preconditioner efficiency ratios at every truncation N, yet maintains a strictly positive asymptotic squared error floor E<sub>&infin;</sub>(&beta;) &ge; 1 &minus; ((1 &minus; &beta;)/&beta;)<sup>2</sup> &gt; 0.</em>
+    </div>
+
+    <div style="border-left: 3px solid #b71c1c; background-color: #fdf6f6; padding: 12px 16px; margin: 18px 0;">
+      <strong>Theorem 4.2 (Critical-Zero Logarithmic Decay Floor, <code>NS-83</code>; <code>evidence/v166/ns83/</code>).</strong>
+      <em>At every fixed Mellin smoothing order q &ge; 0, any simple zero &rho;<sub>0</sub> = 1/2 + i&gamma;<sub>0</sub> of &zeta;(s) on the critical line forces the unconditional lower bound</em>
+      <div style="text-align: center; margin: 8px 0;">
+        <em>E<sub>N</sub></em><sup>(<em>q</em>)</sup> &ge; (<em>C<sub>q</sub></em>(&rho;<sub>0</sub>) + <em>o</em>(1)) / log <em>N</em> &emsp; (<em>N</em> &rarr; &infin;),
+      </div>
+      <em>where C<sub>q</sub>(&rho;<sub>0</sub>) = 2 / (|&rho;<sub>0</sub>|<sup>2</sup> |1 + &rho;<sub>0</sub>|<sup>2q</sup> |&zeta;'(&rho;<sub>0</sub>)|<sup>2</sup>) &gt; 0 (at q = 2, C<sub>2</sub>(&rho;<sub>1</sub>) &isin; [7.785058046 &times; 10<sup>&minus;8</sup>, 7.785058047 &times; 10<sup>&minus;8</sup>] at 256/384 bits). Consequently, lim inf<sub>j&rarr;&infin;</sub> &Delta;<sub>2<sup>j</sup></sub> / E<sub>2<sup>j</sup></sub><sup>(q)</sup> = 0; no uniform fixed-fraction contraction at every dyadic doubling is possible.</em>
+    </div>
+
+    <h2 style="font-size: 1.18rem; border-bottom: 1px solid #e5e1d8; padding-bottom: 6px; margin-top: 32px;">
+      5. Open Problems and Reproducibility Ledger
+    </h2>
+    <p>
+      The results above isolate two surviving cofinal open problems:
+    </p>
+    <ul style="padding-left: 20px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Open Problem 5.1 (<code>WEIL-FLOOR</code>):</strong> Prove a uniform lower floor <em>q<sub>a<sub>k</sub></sub></em>[<em>f</em>] &ge; &minus;<em>C</em><sub>*</sub>&Vert;<em>f</em>&Vert;<sup>2</sup> along a cofinal sequence <em>a<sub>k</sub></em> &rarr; &infin; on the complete even source complement and odd sector (or on the dual-pole subspace <em>V<sub>a<sub>k</sub></sub></em>), retaining all prime shifts <em>m</em> &lt; &lambda;<sub><em>k</em></sub><sup>2</sup> and cross terms.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Open Problem 5.2 (<code>NB-GAIN</code>):</strong> At fixed smoothing order <em>q</em> = 2, prove &sum;<sub><em>j</em>&ge;1</sub> &Delta;<sub>2<sup><em>j</em></sup></sub> / <em>E</em><sub>2<sup><em>j</em></sup></sub><sup>(2)</sup> = +&infin; for the actual optimized residual <em>r<sub>N</sub></em> (e.g., via compatible bounds on the projected logarithmic M&ouml;bius cost <code>MOBIUS-COST</code> and signed residual correlation <code>MOBIUS-MARGIN</code>).
+      </li>
+    </ul>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.84rem; margin: 18px 0 24px 0;">
+      <thead>
+        <tr style="background-color: #f4f1ea; border-bottom: 2px solid #c9c4b8; text-align: left;">
+          <th style="padding: 7px 9px;">Theorem</th>
+          <th style="padding: 7px 9px;">Precision / Method</th>
+          <th style="padding: 7px 9px;">Archived Repository Path</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 1.1 (Bounded floor &harr; RH)</td>
+          <td style="padding: 7px 9px;">Analytic + 256/384-bit Arb</td>
+          <td style="padding: 7px 9px;"><code>evidence/v136/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 2.1 (&lambda; = 3, 4 complete <em>W<sub>&lambda;</sub></em> &#8829; 0)</td>
+          <td style="padding: 7px 9px;">320/448-bit Arb + rational</td>
+          <td style="padding: 7px 9px;"><code>evidence/v124/</code>, <code>evidence/v126/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 2.2 (Simple &lambda; = 4 ground &amp; real zeros)</td>
+          <td style="padding: 7px 9px;">1024/1280-bit Arb</td>
+          <td style="padding: 7px 9px;"><code>evidence/v140/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 2.3 (|<em>z</em><sub>1</sub>(4) &minus; &gamma;<sub>1</sub>| &lt; 8.76 &times; 10<sup>&minus;33</sup>)</td>
+          <td style="padding: 7px 9px;">1024/1280-bit Arb</td>
+          <td style="padding: 7px 9px;"><code>evidence/v141/</code>&ndash;<code>evidence/v143/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 3.1 (&lambda; = 5 tail &amp; block failures)</td>
+          <td style="padding: 7px 9px;">320/448-bit Arb + rational</td>
+          <td style="padding: 7px 9px;"><code>evidence/ns44_metric_replay/</code>, <code>evidence/ns45_block_replay/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 3.2 (&Omega;(&lambda;<sup>2</sup>/log &lambda;) rank barrier)</td>
+          <td style="padding: 7px 9px;">Analytic + 256/384-bit Arb</td>
+          <td style="padding: 7px 9px;"><code>evidence/v135/</code>, <code>evidence/v153/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 3.3(b) (&beta;<sub>log 4</sub>(1) &lt; &minus;3/5)</td>
+          <td style="padding: 7px 9px;">192/320-bit Arb + series</td>
+          <td style="padding: 7px 9px;"><code>audits/bounds-six-agent-2026-09-30-v1/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 3.3(c)&ndash;(e) (Commutator, Drawdown, Slack)</td>
+          <td style="padding: 7px 9px;">Analytic + 256/384-bit Arb</td>
+          <td style="padding: 7px 9px;"><code>evidence/v137/</code>, <code>evidence/v150/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 3.4 (Local UCP &amp; Dual-Pole <em>V<sub>a</sub></em>)</td>
+          <td style="padding: 7px 9px;">Analytic + 256/384-bit Arb</td>
+          <td style="padding: 7px 9px;"><code>evidence/v155/</code>, <code>audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 4.1 (Same-Gram floor <em>E</em><sub>&infin;</sub>(&beta;) &gt; 0)</td>
+          <td style="padding: 7px 9px;">Analytic + 256/384-bit Arb</td>
+          <td style="padding: 7px 9px;"><code>evidence/v161/ns74/</code></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e1d8;">
+          <td style="padding: 7px 9px;">Theorem 4.2 (Critical-zero floor &ge; <em>C<sub>q</sub></em> / log <em>N</em>)</td>
+          <td style="padding: 7px 9px;">Analytic + 256/384-bit Arb</td>
+          <td style="padding: 7px 9px;"><code>evidence/v166/ns83/</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background-color: #f4f1ea; border-left: 4px solid #5c4b37; padding: 14px 18px; margin-top: 32px; font-size: 0.92rem;">
+      <strong>Wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR</code> (<code>NS24/39/43</code>) and <code>NB-GAIN</code> (<code>NS61/83/87/98</code>). No new uniform arithmetic estimate is supplied. Historical <code>v1.27–v1.34</code> missing files in <code>evidence/MISSING.md</code> are de-scoped as <strong>SUPERSEDED — NO LONGER NEEDED</strong>. All five RH continuation lanes remain <strong>PAUSED</strong>; <code>RH</code> and <code>G2</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

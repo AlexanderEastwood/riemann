@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Certified Fixed-Window Weil Positivity, Ground-State Real Zeros, and Cofinal Obstructions for Semilocal Prime-Shift Operators (Unabridged Monograph v2)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', Times, serif; max-width: 680px; margin: 36px auto; padding: 0 20px; line-height: 1.62; color: #1b1b1b; background-color: #ffffff;">
+
+<div style="border-left: 4px solid #1f3f68; background-color: #f5f7fa; padding: 12px 16px; margin-bottom: 28px; font-size: 0.94em;">
+  <strong>Wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR NS24/39/43</code> and <code>NB-GAIN NS61/83/87/98</code>. This unabridged standalone monograph (<code>v2</code>, 273 pages in PDF, 117 numbered subsections, 806 labels, 500 resolved cross-references, 65 bibliography items) presents the complete, self-contained mathematical proofs and dual-precision interval certificates for the fixed-window Weil positivity theorems ($\lambda=3,4$), the simple even ground state and real-zero transform at $\lambda=4$, the $1024/1280$-bit first-zero enclosure on $[14.13,14.14]$, and the cofinal no-go theorems in both the semilocal Weil and Nyman&ndash;Beurling / B&aacute;ez-Duarte lanes, with zero reliance on the superseded historical files in <code>evidence/MISSING.md</code>. It supplies no new cofinal arithmetic estimate; <code>RH</code> and <code>G2</code> remain <strong>OPEN</strong>, and all five continuation lanes remain <strong>PAUSED</strong>.
+</div>
+
+<h1 style="font-size: 1.55em; line-height: 1.28; color: #1f3f68; margin-bottom: 6px; text-align: center;">
+  Certified Fixed-Window Weil Positivity, Ground-State Real Zeros, and Cofinal Obstructions for Semilocal Prime-Shift Operators
+</h1>
+<p style="text-align: center; font-size: 1.02em; color: #333333; margin-top: 0; margin-bottom: 4px;">
+  <strong>Alexander Eastwood</strong>
+</p>
+<p style="text-align: center; font-size: 0.88em; color: #666666; margin-top: 0; margin-bottom: 26px;">
+  October 18, 2026 &mdash; Unabridged Standalone Monograph (Version 2)<br>
+  Full LaTeX Monograph: <code>manuscript/standalone_weil_certificates_and_obstructions_v2.tex</code> &rarr; <code>standalone_weil_certificates_and_obstructions_v2.pdf</code> (273 pages)<br>
+  Condensed Overview (preserved): <code>manuscript/standalone_weil_certificates_and_obstructions_v1.pdf</code> (10 pages)
+</p>
+
+<div style="background-color: #fafafa; border: 1px solid #dddddd; padding: 14px 18px; margin-bottom: 28px; font-size: 0.93em;">
+  <strong>Abstract.</strong> We present the complete, self-contained mathematical proofs and dual-precision interval certificates for the fixed-window Weil positivity theorems, simple ground-state and real-zero characterizations, and cofinal structural obstructions for the canonical semilocal Weil quadratic form $QW_\lambda$ on $L^2(-\log\lambda,\log\lambda)$ and its Nyman&ndash;Beurling / B&aacute;ez-Duarte counterparts. First, we establish the closed self-adjoint realization $\mathsf{W}_\lambda$ of the semilocal Weil form on its logarithmic Sobolev core, prove the compact-source radical passage that eliminates point-value boundary terms on the exact translated radical $\mathcal{R}_\lambda^{\mathrm{tr}}$, and show that cofinal lower-boundedness $\mathsf{W}_{\lambda_j}\succeq -M I$ on the source-orthogonal complement $P_{\lambda_j}\mathcal{H}_{\lambda_j}$ along a sequence $\lambda_j\to\infty$ is equivalent to the Riemann Hypothesis (via dense-radical ordinary resolvent collapse). Second, using signed Schur complements, parity-split structured low-mode inverses, and outward Arb interval arithmetic at $256/384$, $320/448$, and $1024/1280$ bits, we prove unconditional complete positivity $\mathsf{W}_\lambda\succeq 0$ at $\lambda=3$ and $\lambda=4$ in both parities with exact fixed-window error $\varepsilon_4=0$, establish that the complete ground state $\psi_{0,4}$ at $\lambda=4$ is simple and even with $0 &lt; \mu_0(\mathsf{W}_4) &lt; 2.454\cdot 10^{-75}$ and $\mu_1(\mathsf{W}_4) &gt; 10^{-73}$, deduce via the Connes&ndash;van Suijlekom theorem that its entire Fourier transform $\widehat{\psi}_{0,4}$ has only real zeros, and certify a simple sign-changing zero of $\widehat{\psi}_{0,4}$ in $[14.13,14.14]$ within $5.52\cdot 10^{-3}$ of the first Riemann zero $\gamma_1\approx 14.13472514$. Third, we prove a comprehensive suite of cofinal no-go theorems ruling out candidate continuation mechanisms as $\lambda\to\infty$: exponential rank growth $\exp(\kappa_\lambda/(1-c))$ for unsigned diagonal majorants; certified failure of the $\lambda=4$ tail metric and three-block dyadic norm-comparison criterion at $\lambda=5$ (<code>NS-44/45</code>); non-vanishing source-compressed concentration commutators and disjoint-channel cross terms; divergence of the arithmetic scalar primitive-drawdown budget $\sqrt{a}\,\Delta(\beta_a)\ge c_0\log a-C_0\to\infty$; fine translated-radical rank barriers $\ge \lambda^2/(20000\log\lambda)$; boundary-free dual-pole subspace equivalence and closed-form Bessel odd-sector pole divergence $2\pi a\,I_1(a)/(I_1(a)-I_0(a)) &lt; -2\pi a$; and Nyman&ndash;Beurling / B&aacute;ez-Duarte canonical sharp-cutoff, same-Gram countermodel, and critical-zero $\Omega(1/\log N)$ decay-floor obstructions. All fixed-window results are unconditional theorems; the cofinal uniform positivity margin (Goal G2) and the Riemann Hypothesis remain open.
+</div>
+
+<h2 style="font-size: 1.25em; color: #1f3f68; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; margin-top: 28px;">
+  Complete Monograph Architecture &amp; Page Index (273 Pages, 117 Subsections)
+</h2>
+
+<p>
+  Whereas <code>v1</code> (<code>standalone_weil_certificates_and_obstructions_v1.pdf</code>, 10 pages) provided a condensed executive article, <code>v2</code> (<code>standalone_weil_certificates_and_obstructions_v2.pdf</code>, <strong>273 pages</strong>, <code>20,440</code> lines of LaTeX) contains the <strong>complete, unabridged proofs, lemmas, propositions, corollaries, and certified interval tables</strong> across all four pillars and Appendix A, compiled with <strong>0 undefined references, 0 duplicate labels, 0 overfull boxes, and 0 underfull boxes</strong>.
+</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0 24px 0; font-size: 0.85em;">
+  <thead>
+    <tr style="background-color: #1f3f68; color: #ffffff; text-align: left;">
+      <th style="padding: 7px 8px; border: 1px solid #1f3f68;">Section / Pillar</th>
+      <th style="padding: 7px 8px; border: 1px solid #1f3f68;">Numbered Subsections &amp; Core Content</th>
+      <th style="padding: 7px 8px; border: 1px solid #1f3f68; width: 78px;">PDF Pages</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;"><strong>Front Matter &amp; &sect;1</strong><br>Introduction</td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">
+        Title, Abstract, Full 4-Page Table of Contents (pp. 1&ndash;4)<br>
+        <strong>&sect;1.1</strong> The Semilocal Weil Operator and the Cofinal Gap (p. 5)<br>
+        <strong>&sect;1.2</strong> Master Inventory of Main Theorems and Evidence Provenance, Table 1 (p. 6)
+      </td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">pp. 1&ndash;6</td>
+    </tr>
+    <tr style="background-color: #f9fbfd;">
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;"><strong>&sect;2 (Pillar I)</strong><br>Semilocal Weil Core, $\lambda=3$ Positivity &amp; Bounded-Floor Equivalence</td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">
+        <strong>&sect;2.1&ndash;2.6</strong> Rank-two symmetry defect, compact-source radical passage (<code>thm:v14-radical</code>), PSWF cross-tails, normalized source coefficients, pole&ndash;prime weak G1 closure, high&ndash;low decay (pp. 6&ndash;25)<br>
+        <strong>&sect;2.7&ndash;2.13</strong> Closed Weil operator core (<code>prop:v114-weil-core</code>), sharper Fourier tail (<code>prop:v115-sharp-tail</code>), weighted prime shifts &amp; diagonal inverse (<code>prop:v116-weighted-prime</code>, <code>prop:v116-diagonal-inverse</code>), directional Schur certificate (<code>prop:v116-directional-schur</code>), complete $\lambda=3$ positivity $\mathsf{W}_3\succeq 0$ (<code>prop:v116-window-positive</code>), spectral ordering (<code>prop:v117-ground-order</code>), physical endpoint vanishing $\widetilde{\psi}(a^-)=0$ (<code>thm:v118-eigen-endpoint-zero</code>) (pp. 25&ndash;41)<br>
+        <strong>&sect;2.14&ndash;2.20</strong> Filtered finite section, ordinary source mass &amp; full residual (<code>lem:v115-source-mass</code>, <code>prop:v115-absolute-residual</code>), screw-function calibration, gap-free Schur complement (<code>prop:g2-schur</code>, <code>prop:v118-gap-free</code>), complement cancellation (<code>prop:v121-complement-cancellation</code>), prime essential norm $\sim 2\lambda$ (<code>prop:v119-prime-essential</code>, <code>prop:v119-prime-scale</code>) (pp. 41&ndash;54)<br>
+        <strong>&sect;2.21&ndash;2.28</strong> Both parities &amp; quantitative growing radical blocks (<code>prop:v135-both-parities</code>, <code>prop:v135-growing-radical</code>), dense radicals, ordinary resolvent collapse &amp; cofinal bounded-floor equivalence (<code>lem:v136-total-radicals</code>, <code>prop:v136-resolvent-collapse</code>, <code>prop:v136-bounded-floor</code>, <code>cor:v136-complement-floor</code>), exact omitted-tail correction, weighted G1 jump train, polynomial source cutoff, and direct cofinal RH equivalence (<code>prop:v121-cofinal-rh</code>) (pp. 54&ndash;72)
+      </td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">pp. 6&ndash;72<br>(67 pp.)</td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;"><strong>&sect;3 (Pillar II)</strong><br>Complete $\lambda=4$ Positivity, Simple Ground State &amp; First-Zero Enclosure</td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">
+        <strong>&sect;3.1&ndash;3.4</strong> One-sided archimedean tail certificate $Q_{16}\mathsf{W}_4 Q_{16}\succeq 10^{-8}Q_{16}DQ_{16}$ (<code>prop:v120-tail4</code>), structured low-mode inverse (<code>prop:v121-structured-inverse</code>), parity-split inverse refinement (<code>prop:v122-parity-inverse</code>), complete mixed correlations &amp; monotone head refinement (<code>prop:v123-complete-head</code>) (pp. 73&ndash;85)<br>
+        <strong>&sect;3.5&ndash;3.8</strong> Complete Schur-direction certificate (<code>prop:v124-complete-direction</code>), simultaneous even certificate $\mathsf{W}_4^+\succeq 0$ (<code>prop:v125-even-complete</code>), odd complement certificate $\mathsf{W}_4^-\succeq 2.182\cdot 10^{-1}I$ &amp; full-window positivity $\mathsf{W}_4\succeq 0$ with $\varepsilon_4=0$ (<code>prop:v126-odd-complement</code>, <code>prop:v126-full-window</code>), window translation table (pp. 86&ndash;93)<br>
+        <strong>&sect;3.9&ndash;3.12</strong> Simple even ground state $0&lt;\mu_0(\mathsf{W}_4)&lt;2.454\cdot 10^{-75}$ &amp; real zeros of $\widehat{\psi}_{0,4}$ (<code>lem:v140-shifted-schur</code>, <code>prop:v140-ground4</code>, <code>cor:v140-real-zeros</code>), external CCM semantic lock (<code>prop:v141-ccm-lock</code>), local zero enclosure (<code>prop:v142-ground-zero</code>), and $1024/1280$-bit first-zero enclosure in $[14.13,14.14]$ (<code>prop:v143-first-zero-bound</code>, <code>prop:v143-resolution</code>) (pp. 93&ndash;101)
+      </td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">pp. 73&ndash;101<br>(29 pp.)</td>
+    </tr>
+    <tr style="background-color: #f9fbfd;">
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;"><strong>&sect;4 (Pillar III-A)</strong><br>Cofinal Obstructions: Concentration, Commutators &amp; Drawdown</td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">
+        <strong>&sect;4.1&ndash;4.5</strong> Rank barrier $\exp(\kappa_\lambda/(1-c))$ (<code>prop:v127-rank-barrier</code>), signed block-metric criterion &amp; optimal block energy lemma (<code>prop:v127-block-metric</code>, <code>lem:v128-comparison-obstruction</code>), diagonal majorant cutoff cost (<code>prop:v125-cutoff-cost</code>), nonclosable point-value repair (<code>prop:v127-nonclosable</code>), nonlocal Picone identity &amp; capacity target (<code>prop:v129-picone</code>, <code>prop:v129-capacity</code>), continuum cancellation $2|c\rangle\langle c|-K_a^+=K_a^-\succeq 0$ (<code>prop:v130-continuum-cancellation</code>), discrepancy symbol $\beta_a(\xi)$ (<code>prop:v130-remainder</code>), local PNT no-go $&gt;\frac{\log 2}{\sqrt{2}}$ (<code>prop:v130-local-no-go</code>), and certified negative index $\beta_{\log 4}(1)\in(-0.640150,-0.639904)&lt;-3/5$ (<code>prop:v132-global-index</code>) (pp. 102&ndash;114)<br>
+        <strong>&sect;4.6&ndash;4.13</strong> Source-compressed concentration hierarchy (<code>prop:v131-concentration</code>), level-pencil loss budget (<code>prop:v144-pencil-concentration</code>), exact zero expansion of $\beta_a(\xi)$ (<code>prop:v146-beta-explicit</code>), step-minorant packets, value-distribution &amp; histogram-vs-weighted-cost obstructions (<code>NS-29/32/33</code>), critical capacity &amp; critical energy target (<code>lem:v150-weight</code>, <code>prop:v150-critical-energy</code>, <code>NS-34/39</code>) (pp. 114&ndash;139)<br>
+        <strong>&sect;4.14&ndash;4.19</strong> Schatten refinement &amp; Dirichlet model no-go (<code>prop:v132-schatten</code>), positive flat-top smoothing no-go (<code>prop:v132-flat-top</code>), Toeplitz&ndash;leakage commutator algebra &amp; reciprocal-band noncommutation $&gt;9\cdot 10^{-6}$ (<code>prop:v133-leakage</code>, <code>prop:v133-noncommute</code>), disjoint-channel cross term $\ge\frac{73}{375\pi}$ &amp; optimal primitive drawdown (<code>prop:v134-disjoint</code>, <code>prop:v134-primitive</code>), divergence of arithmetic primitive budget $\sqrt{a}\,\Delta(\beta_a)\to\infty$ (<code>prop:v137-conditional-mass</code>, <code>cor:v137-scalar-no-go</code>), protected-orbit meta-obstruction (<code>thm:v139-protected-orbit</code>), and shifted additive-floor certificates (<code>prop:v138-three-floors</code>) (pp. 139&ndash;153)
+      </td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">pp. 102&ndash;153<br>(52 pp.)</td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;"><strong>&sect;5 (Pillar III-B)</strong><br>$\lambda=5$ Failures, Fine Radical Barriers, Kernel Exclusion &amp; Dual-Pole / Bessel Theorems</td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">
+        <strong>&sect;5.1</strong> Certified $\lambda=5$ tail-metric failure (<code>prop:v152-tail-comparison</code>, <code>NS-44</code>), 3-block dyadic norm-comparison failure (<code>prop:v152-block-comparison</code>, <code>NS-45</code>), Gaussian prime-channel retention, and adaptive/CCM nonselection (<code>NS-43</code>) (pp. 154&ndash;168)<br>
+        <strong>&sect;5.2</strong> Fine translated-radical blocks &amp; rank barrier $\ge \lambda^2/(20000\log\lambda)$ (<code>ns46-a2-cor-rank</code>, <code>NS-46</code>) (pp. 169&ndash;173)<br>
+        <strong>&sect;5.3</strong> Affine screw-potential nullvector equation (<code>prop:ns51-affine-potential</code>, <code>NS-51</code>), paired heat-zero transport (<code>NS-52</code>), and residualized integer-dilation blocks (<code>NS-53</code>) (pp. 174&ndash;182)<br>
+        <strong>&sect;5.4</strong> Local-UCP counterexamples in both parities, first-crossing geometry, and nonpositive semigroup counterexample (<code>prop:ns55-local-ucp-counterexample</code>, <code>prop:ns55-nonpositive-semigroup</code>, <code>NS-55</code>) (pp. 183&ndash;189)<br>
+        <strong>&sect;5.5&ndash;5.6</strong> Finite prime-weight controls &amp; bounded-floor stability (<code>NS-57</code>), translated-radical boundary test equivalence (<code>NS-58</code>) (pp. 190&ndash;197)<br>
+        <strong>&sect;5.7</strong> Boundary-free dual-pole subspace $\mathcal{V}_a$ Sturm&ndash;Liouville reduction (<code>thm:v2-dual-pole</code>) and closed-form Bessel odd pole moment $\mathcal{M}_{\mathrm{pole}}^{\mathrm{odd}}(a)=2\pi a\,I_1(a)/(I_1(a)-I_0(a))&lt;-2\pi a$ (<code>thm:v2-odd-bessel</code>) (pp. 198&ndash;199)
+      </td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">pp. 154&ndash;199<br>(46 pp.)</td>
+    </tr>
+    <tr style="background-color: #f9fbfd;">
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;"><strong>&sect;6 (Pillar IV)</strong><br>Nyman&ndash;Beurling / B&aacute;ez-Duarte Reductions &amp; Critical-Zero Floors</td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">
+        <strong>&sect;6.1&ndash;6.4</strong> NB difference budgets (<code>NS-59</code>), explicit old-space Euler grid cost (<code>NS-60</code>), smoothed $q=2$ Mellin normal equations (<code>NS-61</code>), canonical sharp-interpolant Möbius obstruction (<code>NS-62</code>) (pp. 200&ndash;213)<br>
+        <strong>&sect;6.5&ndash;6.15</strong> Changing-norm controls, positive-cone geometric separator, Ces&agrave;ro averaging no-go, growth targets, exact cell norms, positive renewal forcing, endpoint remainder bounds, cusp Gram correction, repaired kernel geometry, and arithmetic coefficient templates (<code>NS-63</code>&ndash;<code>NS-73</code>) (pp. 214&ndash;237)<br>
+        <strong>&sect;6.16&ndash;6.25</strong> Same-Gram positive-floor countermodel $E_\infty(\beta)&gt;0$ (<code>NS-74</code>), divisor-defect feedback (<code>NS-75</code>), continuous inner-factor defect &amp; high-zero tail masking (<code>NS-76/77</code>), reciprocal-integer cell norms (<code>NS-78</code>), exterior tail balancing, uniform &amp; polynomial preconditioning, analytic tail retention (<code>NS-79</code>&ndash;<code>NS-82</code>), and critical-zero logarithmic decay floor $E_N^{(q)}\ge\frac{C_q+o(1)}{\log N}$ (<code>NS-83</code>) (pp. 238&ndash;257)
+      </td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">pp. 200&ndash;257<br>(58 pp.)</td>
+    </tr>
+    <tr>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;"><strong>Appendix A &amp; References</strong></td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">
+        <strong>&sect;A.1&ndash;A.24</strong> Reproducible finite checks and dual-precision verification protocols for <code>v1.12</code>&ndash;<code>v1.43</code> (pp. 258&ndash;269)<br>
+        <strong>References</strong> 65 bibliography items (pp. 270&ndash;273)
+      </td>
+      <td style="padding: 7px 8px; border: 1px solid #cccccc; vertical-align: top;">pp. 258&ndash;273<br>(16 pp.)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 style="font-size: 1.25em; color: #1f3f68; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; margin-top: 28px;">
+  Key Unabridged Additions in Version 2 (Compared to Condensed 10-Page v1)
+</h2>
+
+<ol>
+  <li style="margin-bottom: 10px;">
+    <strong>Complete Analytical &amp; Interval Proofs Across All 28 Subsections of Pillar I (&sect;2, pp. 6&ndash;72):</strong>
+    Includes the full compact-source radical passage (<code>Theorem 2.2</code>), PSWF cross-tail and endpoint noncancellation bounds (&sect;2.3&ndash;2.6), the closed Weil operator core and exact Fourier matrix coefficients $a_n, d_n, b_n$ (&sect;2.7&ndash;2.10), the complete $\lambda=3$ positivity and spectral-ordering proofs (&sect;2.11&ndash;2.12), vanishing of the physical endpoint trace $\widetilde{\psi}(a^-)=0$ of complete Weil eigenfunctions (<code>Theorem 2.24</code>, &sect;2.13), the prime essential norm theorem $\|\mathsf{T}_{\mathrm{pr},\lambda}\|_{\mathrm{ess}}=2\lambda+O(\lambda e^{-\sqrt{\log\lambda}})$ (&sect;2.20), the growing radical block theorem in both parities (&sect;2.21), dense-radical ordinary resolvent collapse and the bounded-floor equivalence $\mathsf{W}_{\lambda_j}\succeq -M I \implies \mathrm{RH}$ (&sect;2.22), and the arithmetic jump-train extraction and polynomial source cutoff (&sect;2.26&ndash;2.28).
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Complete 29-Page Proof Chain for $\lambda=4$ Positivity, Simple Ground State, Real Zeros, and $1024/1280$-Bit First-Zero Enclosure (&sect;3, pp. 73&ndash;101):</strong>
+    Includes every intermediate lemma and certified interval table for the $\lambda=4$ tail certificate $Q_{16}\mathsf{W}_4 Q_{16}\succeq 10^{-8}Q_{16}DQ_{16}$ (&sect;3.1), the structured low-mode inverse (&sect;3.2), the parity-split inverse refinement (&sect;3.3), the mixed-correlation monotone head refinement (&sect;3.4), the simultaneous even Schur certificate $\mathsf{W}_4^+\succeq 0$ (&sect;3.6), the odd complement certificate $\mathsf{W}_4^-\succeq 2.182\cdot 10^{-1}I$ and single-direction repair proving $\mathsf{W}_4\succeq 0$ with $\varepsilon_4=0$ (&sect;3.7), the shifted Schur certificate proving $0&lt;\mu_0(\mathsf{W}_4)&lt;2.454\cdot 10^{-75}$ and $\mu_1(\mathsf{W}_4)&gt;10^{-73}$ and real-zero property of $\widehat{\psi}_{0,4}$ (&sect;3.9), the external CCM semantic lock (&sect;3.10), and the $1024/1280$-bit evaluator-dual enclosure of the first zero of $\widehat{\psi}_{0,4}$ in $[14.13,14.14]$ (&sect;3.11&ndash;3.12).
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Complete 98-Page Suite of Cofinal Structural Obstructions in the Semilocal Weil Lane (&sect;4&ndash;&sect;5, pp. 102&ndash;199):</strong>
+    Includes the full proofs of the rank barrier (&sect;4.1), diagonal majorant cutoff cost (&sect;4.2), nonclosable point-value repair (&sect;4.3), nonlocal Picone identity and capacity target (&sect;4.4), continuum prime cancellation and local PNT no-go (&sect;4.5), replacement-certified negative index $-0.640150 &lt; \beta_{\log 4}(1) &lt; -0.639904 &lt; -3/5$ via <code>audits/bounds-six-agent-2026-09-30-v1/</code> (&sect;4.5), source-compressed concentration hierarchy (&sect;4.6), level-pencil loss budget (&sect;4.7), exact Perron zero expansion of $\beta_a(\xi)$ (&sect;4.8), step-minorant packets, value-distribution, and critical-energy budgets (&sect;4.9&ndash;4.13), Schatten refinement and flat-top smoothing no-go (&sect;4.14), Toeplitz&ndash;leakage commutators and reciprocal-band noncommutation (&sect;4.15), disjoint-channel persistence and optimal primitive drawdown (&sect;4.16), divergence of the arithmetic primitive budget $\sqrt{a}\,\Delta(\beta_a)\to\infty$ (&sect;4.17), protected-orbit meta-obstruction (&sect;4.18), shifted additive floors (&sect;4.19), certified $\lambda=5$ tail-metric and 3-block dyadic failures (&sect;5.1, <code>NS-44/45</code>), adaptive/CCM nonselection (&sect;5.1, <code>NS-43</code>), fine translated-radical rank barrier $\ge\lambda^2/(20000\log\lambda)$ (&sect;5.2, <code>NS-46</code>), affine screw-potential kernel and heat transport (&sect;5.3, <code>NS-51/52/53</code>), local-UCP and nonpositive semigroup counterexamples (&sect;5.4, <code>NS-55</code>), finite prime-weight stability (&sect;5.5, <code>NS-57</code>), translated-radical boundary test equivalence (&sect;5.6, <code>NS-58</code>), and the boundary-free dual-pole subspace $\mathcal{V}_a$ and closed-form Bessel odd pole moment (&sect;5.7, <code>Theorems 5.44&ndash;5.45</code>).
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Complete 58-Page Nyman&ndash;Beurling / B&aacute;ez-Duarte Analysis (&sect;6, pp. 200&ndash;257) and Reproducible Verification Appendix (Appendix A, pp. 258&ndash;273):</strong>
+    Includes all 25 subsections (<code>NS-59</code> through <code>NS-83</code>) of the Nyman&ndash;Beurling / B&aacute;ez-Duarte lane, culminating in the same-Gram positive-floor countermodel $E_\infty(\beta)&gt;0$ (&sect;6.16) and the critical-zero logarithmic decay floor $E_N^{(q)}\ge\frac{C_q+o(1)}{\log N}$ (&sect;6.25), followed by the 24 reproducible finite-check subsections in Appendix A and the complete 65-item bibliography.
+  </li>
+</ol>
+
+<div style="border-left: 4px solid #1f3f68; background-color: #f5f7fa; padding: 12px 16px; margin-top: 28px; font-size: 0.94em;">
+  <strong>Wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR NS24/39/43</code> and <code>NB-GAIN NS61/83/87/98</code>. This unabridged 273-page standalone monograph (<code>v2</code>) compiles the complete proved mathematical results and archived interval certificates of the repository into a single self-contained publication artifact without any dependency on unarchived historical files. It supplies no new cofinal arithmetic estimate; <code>RH</code> and <code>G2</code> remain <strong>OPEN</strong>, and all five continuation lanes remain <strong>PAUSED</strong>.
+</div>
+
+</body>
+</html>

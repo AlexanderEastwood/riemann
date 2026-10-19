@@ -1,6 +1,6 @@
 {
   "title": "Riemann project research map",
-  "updated": "2026-10-05",
+  "updated": "2026-10-18",
   "legend": {
     "proved": "established result",
     "live": "current route (gold): being worked now",
@@ -149,7 +149,8 @@
       "parent": "uniform",
       "prop": "prop:v132-schatten",
       "branch": "closed/schatten",
-      "evidence": "MISSING",
+      "note": "Self-contained analytical proof in manuscript/fixed_space_prime_action_v1.tex; historical v1.32 companion directory unarchived and de-scoped in evidence/MISSING.md.",
+      "evidence": "manuscript",
       "wall": {
         "input": "scoped: remainder outside finite Schatten classes; negative-only penalty stays a constant (does not obstruct v136)",
         "to": null,
@@ -207,7 +208,8 @@
       "parent": "uniform",
       "prop": "prop:v132-flat-top",
       "branch": "closed/flat-top",
-      "evidence": "MISSING",
+      "note": "Self-contained analytical proof in manuscript/fixed_space_prime_action_v1.tex; historical v1.32 companion directory unarchived and de-scoped in evidence/MISSING.md.",
+      "evidence": "manuscript",
       "wall": {
         "input": "construction class: form-exact positive smoothing = point mass; signed smoothing not covered",
         "to": null,
@@ -219,13 +221,14 @@
       "title": "reciprocal-band commutation",
       "status": "closed",
       "parent": "uniform",
+      "prop": "prop:v133-noncommute",
       "branch": "closed/reciprocal-band",
-      "note": "v1.33, commutator norm > 9e-6",
-      "evidence": "MISSING",
+      "note": "v1.33, commutator norm > 9e-6 proved analytically in manuscript/fixed_space_prime_action_v1.tex; historical degree-4 companion check unarchived and de-scoped in evidence/MISSING.md.",
+      "evidence": "manuscript",
       "wall": {
         "input": "generic mechanism: persistent source-compressed commutator > 9e-6; not every band choice",
         "to": null,
-        "src": "v1.33; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v133-noncommute; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {
@@ -233,13 +236,14 @@
       "title": "Cotlar cross terms / atomization",
       "status": "closed",
       "parent": "uniform",
+      "prop": "prop:v134-disjoint",
       "branch": "closed/cotlar-atomization",
-      "note": "v1.34, cross norm >= 73/(375 pi)",
-      "evidence": "MISSING",
+      "note": "v1.34, cross norm >= 73/(375 pi) proved analytically in manuscript/fixed_space_prime_action_v1.tex; historical companion diagnostics unarchived and de-scoped in evidence/MISSING.md.",
+      "evidence": "manuscript",
       "wall": {
         "input": "shortcut: cross norm >= 73/(375 pi) cofinally; not all Cotlar arguments",
         "to": null,
-        "src": "v1.34; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
+        "src": "prop:v134-disjoint; scope per audit PR #22 §2 (closure of the named estimate/construction, not of the surrounding route)"
       }
     },
     {

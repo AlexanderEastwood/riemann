@@ -1,0 +1,722 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage[hidelinks,psdextra]{hyperref}
+\usepackage{lmodern}
+\usepackage{mathrsfs}
+
+\pdfstringdefDisableCommands{%
+  \def\lambda{lambda}%
+  \def\norm#1{||#1||}%
+  \def\ip#1#2{<#1,#2>}%
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{openproblem}[theorem]{Open Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\dd}{\mathrm d}
+
+\setlength{\emergencystretch}{3em}
+
+\hypersetup{
+  pdftitle={Certified Fixed-Window Weil Positivity at lambda=4, Ground-State Zero Localization, and Cofinal Obstructions (v4)},
+  pdfauthor={Alexander Eastwood}
+}
+
+\title{\textbf{Certified Semilocal Weil Positivity at $\lambda = 4$, Ground-State Zero Localization, and Cofinal Obstructions for Fixed-Window and Nyman--Beurling Approximations}\\[4pt]
+\large Self-Contained Extraction with Complete Inlined Proofs and Claim-by-Claim Provenance (Version 4)}
+\author{Alexander Eastwood}
+\date{October 18, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a self-contained extraction of the unconditional fixed-window spectral certificates and analytical cofinal obstruction theorems established in the repository \path{AlexanderEastwood/riemann} for two Hilbert-space approaches to the Riemann Hypothesis (RH): the complete physical semilocal Weil quadratic form $q_a[f] = \ip{\mathsf W_{e^a} f}{f}$ on $L^2(-a,a)$ ($a = \log\lambda$) and the smoothed Nyman--Beurling--B\'aez-Duarte approximation problem. First, using density of real translates of the Gaussian completed-zeta radical and exterior-tail residual decay, we prove that strong-resolvent collapse $(\mathsf W_{e^a}\oplus 0 - z)^{-1} \to -z^{-1}I$ holds unconditionally and that a uniform finite lower floor $q_{a_j}[f] \ge -C_*\norm{f}_2^2$ on the source-orthogonal complement along a cofinal sequence $a_j \to \infty$ is both necessary and sufficient for RH (\path{evidence/v136/}). Second, using simultaneous multi-trial and direction-complement Schur certificates in outward ball arithmetic (\texttt{flint.arb}) at $768/896$ and $1024/1280$ bits together with exact rational shared-head verification (\path{evidence/v126/}), we prove complete infinite-dimensional positivity $\mathsf W_3 \succeq 0$ and $\mathsf W_4 \succeq 0$ across both parity sectors, certify at $1024/1280$ bits that the complete $\lambda = 4$ ground state $\xi_4$ is simple and even with $0 < \mu_0(\mathsf W_4) < 2.454 \times 10^{-75}$ and $\mu_1(\mathsf W_4) > 10^{-73}$ (\path{evidence/v140/}), deduce via the Connes--van Suijlekom real-zero theorem~\cite{ConnesVanSuijlekom2025} that its entire Fourier transform $\widehat{\xi}_4$ has only real zeros, and certify at $1024/1280$ bits that its first positive zero $z_1(4)$ is simple and satisfies $|z_1(4) - \gamma_1| < 8.752082 \times 10^{-33}$ (\path{evidence/v142/}, \path{evidence/v143/}). Third, we establish a suite of cofinal no-go theorems ruling out candidate continuation mechanisms as $a \to \infty$: at $\lambda = 5$ the stipulated $10^{-8}\mathcal D$ tail comparison (\texttt{NS-44}) and $N = 25$ three-block dyadic norm comparison (\texttt{NS-45}) fail in both parities; cutoff-repaired fine translates of the Gaussian radical span a subspace of rank $m = 2J+1 \sim \lambda^2/(20000\log\lambda)$ ($J = \lfloor\lambda^2/(40000a)\rfloor$) with operator residual $\le C\exp(-\lambda^2/2000)$ (\texttt{NS-46}); local $6$-bump witnesses defeat perturbative PNT replacement (\texttt{prop:v130-local-no-go}); source-compressed reciprocal concentration bands fail to commute and retain Cotlar cross terms; the optimal Bernstein scalar primitive-drawdown budget $a\Delta(\beta_a) \to +\infty$ and $\inf_{\xi\in\mathbb R}\beta_a(\xi) \to -\infty$ diverge unconditionally (\path{evidence/v137/}); fixed relative slack in the Gaussian Picone identity blows up as $\exp(\gamma\lambda^2)$ (\texttt{NS-34}); and the prime-shift operator violates local open-set unique continuation (\texttt{NS-55}). We also record the exact boundary-free dual-pole Chebyshev--Legendre Stieltjes identity and the closed-form odd pole moment of the position-weighted radical $x\,h(x)$. Fourth, in the Nyman--Beurling lane, we present the unitary atom-transformation countermodel $\sigma_n^{(\beta)} = U_\beta\sigma_n$ ($1/2 < \beta < 1$) preserving the complete Gram matrix $G(m,n)$ while enforcing the positive asymptotic error floor $F_\beta = (2\beta-1)(1-\beta)^2/\beta^6 > 0$ (\texttt{NS-74}), and prove that at every fixed integer smoothing order $q \ge 1$ the smoothed distance $E_N^{(q)} = \inf_{c\in\mathbb R^N}\norm{\tau_q - \sum_{n\le N} c_n\sigma_{q,n}}_2^2$ satisfies $\liminf_{N\to\infty}(\log N)E_N^{(q)} \ge C_q = \sum_{\rho\in\mathcal Z_c} m_\rho^2/|\rho|^{2q} > 0$ (\texttt{NS-83}). All fixed-window and obstruction theorems are unconditional; the cofinal uniform positivity floor (\texttt{WEIL-FLOOR} / Goal G2), nonsummable relative dyadic gain (\texttt{NB-GAIN}), and RH remain open.
+\end{abstract}
+
+\tableofcontents
+
+\section{The Semilocal Weil Form and the Cofinal Bounded-Floor Reduction}
+\label{sec:intro}
+
+\subsection{The Complete Physical Semilocal Weil Operator and Classical Gaussian Radical}
+Put $H = L^2(\mathbb{R},\dd x)$, let $\lambda > 1$, set $a = \log\lambda$ and $I_a = (-a,a)$ of total length $L = 2a = 2\log\lambda$, and let $J_a : L^2(I_a) \to H$ denote zero extension, $f \mapsto \widetilde{f} = J_a f$. Inner products $\ip{\cdot}{\cdot}$ are linear in the first slot, and we write $\norm{\cdot}_2$ for the $L^2$ norm on $L^2(I_a)$ or $H = L^2(\mathbb{R})$ as determined by the support of the argument (since $J_a$ is an isometry, $\norm{J_a f}_{L^2(\mathbb{R})} = \norm{f}_{L^2(I_a)}$). Decompose $L^2(I_a) = L^2_{\mathrm{ev}}(I_a) \oplus L^2_{\mathrm{odd}}(I_a)$ into even and odd parity sectors under $x \mapsto -x$. With the unitary Fourier transform $\widehat{\widetilde{f}}(\xi) = (\mathcal{F}_a f)(\xi) := (2\pi)^{-1/2}\int_{-a}^a f(x)e^{-i\xi x}\,\dd x$, the canonical closed semilocal Weil quadratic form $q_a[f] = \ip{\mathsf{W}_{e^a}f}{f}$ on its maximal logarithmic Sobolev form domain
+\[
+  \mathcal{D}(q_a) = \left\{f \in L^2(I_a) : \int_{\mathbb{R}} \log(2 + |\xi|)\,\bigl|\widehat{\widetilde{f}}(\xi)\bigr|^2\,\dd\xi < \infty\right\}
+\]
+(\texttt{prop:v114-weil-core}, \texttt{prop:v118-log-dirichlet}) is given by
+\begin{equation}\label{eq:weil-form}
+  q_a[f] = \int_{\mathbb{R}} \alpha(\xi)\bigl|\widehat{\widetilde{f}}(\xi)\bigr|^2\,\dd\xi - \sum_{2 \le m < e^{2a}} \frac{\Lambda(m)}{\sqrt{m}} \int_{-a}^a \bigl(\widetilde{f}(x + \log m) + \widetilde{f}(x - \log m)\bigr)\overline{f(x)}\,\dd x + \Pi[f],
+\end{equation}
+where $\alpha(\xi) = \Re\psi\!\left(\tfrac{1}{4} + \tfrac{i\xi}{2}\right) - \log\pi$ is the archimedean digamma multiplier, $\Lambda(m)$ is the von Mangoldt function, and the polar contribution at $s = 0, 1$ has kernel $2\cosh(\frac{x-y}{2}) = 2\cosh(x/2)\cosh(y/2) - 2\sinh(x/2)\sinh(y/2)$ and splits by parity as the rank-two form
+\begin{equation}\label{eq:pole-form}
+  \Pi[f] = 2\bigl|\ip{f}{c}\bigr|^2 - 2\bigl|\ip{f}{s}\bigr|^2, \qquad c(x) = \cosh(x/2), \quad s(x) = \sinh(x/2).
+\end{equation}
+Thus $\Pi[f] = +2|\ip{f}{c}|^2 \ge 0$ on $L^2_{\mathrm{ev}}(I_a)$ and $\Pi[f] = -2|\ip{f}{s}|^2 \le 0$ on $L^2_{\mathrm{odd}}(I_a)$. For any fixed window $a > 0$, we denote by
+\begin{equation}\label{eq:eps-lambda-def}
+  \varepsilon_\lambda := \max\bigl\{0,\, -\inf\{\,q_a[f] : f \in \mathcal{D}(q_a),\ \norm{f}_2 = 1\,\}\bigr\} \ge 0 \qquad (\lambda = e^a)
+\end{equation}
+the minimal nonnegative lower-floor error constant satisfying $\mathsf{W}_\lambda \succeq -\varepsilon_\lambda I$ on $\mathcal{D}(q_a)$, so that $\varepsilon_\lambda = 0$ if and only if $\mathsf{W}_\lambda \succeq 0$. On compactly supported smooth tests $f \in C_c^\infty(\mathbb{R})$, $q_a[f]$ is the restriction of a single support-consistent geometric form $q[f]$ once $\operatorname{supp}(f) \subset I_a$. By Weil's explicit-formula criterion~\cite{BurnolExplicit2000,ConnesVanSuijlekom2021,ConnesConsani2023,ConnesConsaniMoscovici2025,Suzuki2026Screw}, the Riemann Hypothesis holds if and only if $q[f] \ge 0$ for every compactly supported smooth test $f$, or equivalently $q_a[f] \ge 0$ for all $a > 0$ and all $f \in \mathcal{D}(q_a)$ (\texttt{prop:v121-cofinal-rh}).
+
+Let $\xi(s) := \tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ denote Riemann's completed zeta function and $\Xi(\gamma) := \xi(\tfrac{1}{2} + i\gamma)$ its critical-line specialization. A fundamental structural feature of $\mathsf{W}_{e^a}$ as $a \to \infty$ is the presence of the classical even Gaussian completed-zeta radical (\texttt{lem:v115-source-mass}, \texttt{eq:v150-source})
+\begin{equation}\label{eq:gaussian-radical}
+  h(x) = e^{x/2}\sum_{n=1}^\infty H(ne^x), \qquad H(u) = \frac{4\pi}{\sqrt{3}}\,u^2(2\pi u^2 - 3)e^{-\pi u^2},
+\end{equation}
+which is smooth, even ($h(-x) = h(x)$ by Poisson summation), strictly positive on $\mathbb{R}$, and has Mellin--Fourier transform (\texttt{eq:v150-mellin})
+\begin{equation}\label{eq:v150-mellin}
+  M(z) := \int_{\mathbb{R}} h(x)e^{(z-1/2)x}\,\dd x = \frac{2}{\sqrt{3}}\,\xi(z) \qquad (z \in \mathbb{C}),
+\end{equation}
+so that $\int_{\mathbb{R}} c(x)h(x)\,\dd x = M(1) = 1/\sqrt{3}$ (\texttt{eq:v150-pole-mass}) and every real translate $h(\cdot - t)$ lies in the global explicit-formula radical $\mathcal{W}(h(\cdot - t)) = 0$ because $M(\tfrac{1}{2} + i\gamma) = \frac{2}{\sqrt{3}}\Xi(\gamma)$ vanishes at every critical-line zero of $\zeta(s)$ while $\int_0^\infty H(u)\,\dd u = \int_0^\infty u^{-1}H(u)\,\dd u = 0$ annihilates both polar terms. Moreover, $h$ satisfies the two-sided double-exponential bounds (\texttt{eq:v150-tail-bounds}) and derivative bounds (\texttt{eq:v135-gaussian-tail})
+\begin{equation}\label{eq:v135-gaussian-tail}
+  A_- e^{9x/2 - \pi e^{2x}} \le h(x) \le A_+ e^{9x/2 - \pi e^{2x}} \quad (x \ge 0), \qquad |h^{(r)}(x)| \le C_r \exp\!\left(-\tfrac{\pi}{2}e^{2|x|}\right) \quad (x \in \mathbb{R},\ r \ge 0),
+\end{equation}
+where $A_- = \frac{4\pi(2\pi-3)}{\sqrt{3}}$ and $A_+ = \frac{16\pi^2}{\sqrt{3}}$. Let $\phi = h/\norm{h}_{L^2(\mathbb{R})}$ denote the normalized Gaussian radical. Fix a smooth cutoff profile $\vartheta \in C^\infty(\mathbb{R})$ with $0 \le \vartheta \le 1$, $\vartheta(t) = 1$ for $t \le -1$, and $\vartheta(t) = 0$ for $t \ge -1/2$, and for $a \ge 2$ define the smooth physical cutoff $\chi_a(x) := \vartheta(|x| - a) \in C_c^\infty(I_a)$ (\texttt{prop:v135-growing-radical}), which satisfies $\chi_a \equiv 1$ on $[-a+1, a-1]$ and $\operatorname{supp}(\chi_a) \subset [-a+\tfrac{1}{2}, a-\tfrac{1}{2}]$. We also write $u_a \in \mathcal{D}(\mathsf{W}_{e^a}) \cap L^2_{\mathrm{ev}}(I_a)$ for the normalized repaired even source vector (\texttt{lem:v115-source-mass}, \texttt{prop:v135-growing-radical}, e.g.\ $u_a = \chi_a\phi/\norm{\chi_a\phi}_2$), which satisfies $J_a u_a \to \phi$ in $H$ and $\norm{\mathsf{W}_{e^a}u_a}_2 \le C\sqrt{a}\,e^{-e^a/100} \to 0$ as $a \to \infty$.
+
+\subsection{Dense Radicals, Strong-Resolvent Collapse, Gap-Free Transfer, and the Bounded-Floor Equivalence}
+We reproduce the exact statements and complete proofs of \texttt{lem:v136-total-radicals}, \texttt{prop:v136-resolvent-collapse}, \texttt{prop:v118-gap-free}, \texttt{prop:v136-bounded-floor}, and \texttt{cor:v136-complement-floor} from \path{evidence/v136/new_section.tex} and \path{manuscript/fixed_space_prime_action_v1.tex} (lines 6354--6403 and 12759--12942).
+
+\begin{lemma}[A total family of localized ordinary near-radicals, \texttt{lem:v136-total-radicals}]
+\label{lem:v136-total-radicals}
+Use the normalized source $\phi = h/\norm{h}_2$ and smooth physical cutoff $\chi_a(x) = \vartheta(|x|-a)$ defined above. Then
+\[
+  \mathcal{R} = \operatorname{span}\{\phi(\cdot - t) : t \in \mathbb{R}\} \quad \text{is dense in } H = L^2(\mathbb{R}).
+\]
+For every fixed $h_0 \in \mathcal{R}$, $g_a = \chi_a h_0$ belongs to $C_c^\infty(I_a)$ and satisfies
+\begin{equation}\label{eq:v136-dense-residual}
+  J_a g_a \longrightarrow h_0, \qquad \norm{\mathsf{W}_{e^a} g_a}_2 \longrightarrow 0 \qquad (a \to \infty).
+\end{equation}
+The even and odd reflected translate spans are dense in their respective parity subspaces. These are ordinary-norm assertions; they assert neither uniform approximation coefficients nor density in a global form norm.
+\end{lemma}
+\begin{proof}
+The double-exponential estimate~\eqref{eq:v135-gaussian-tail} makes $\widehat{\phi}$ entire. It is not identically zero, so its real zeros have measure zero. If $v \in H$ is orthogonal to every translate, the inverse Fourier transform of the $L^1$ function $\widehat{v}\,\overline{\widehat{\phi}}$ vanishes. Fourier uniqueness gives $\widehat{v}\,\overline{\widehat{\phi}} = 0$ almost everywhere, and hence $v = 0$. This is the elementary Hilbert-space version of Wiener's translation-density principle~\cite{Wiener1932}. Apply the bounded parity projections to obtain the two parity statements.
+
+Write $h_0 = \sum_{j=1}^r c_j \phi(\cdot - t_j)$ with fixed real $t_j$. For sufficiently large $a$, every $|t_j| \le a/2$. To bound $\norm{\mathsf{W}_{e^a}(\chi_a\phi(\cdot - t_j))}_2$ explicitly (\texttt{prop:v135-growing-radical}), put $r_{a,j} = (1 - \chi_a)\phi(\cdot - t_j)$ on $\mathbb{R}$. Since $\operatorname{supp}(1-\chi_a) \subset \{|x| \ge a-1\}$ and $|t_j| \le a/2$, on $\operatorname{supp}(r_{a,j})$ we have $|x - t_j| \ge |x| - a/2 \ge a/2 - 1$. Setting $X = e^{2|x-t_j|} \ge e^{a-2} = \lambda/e^2$, we have $e^{2|x|} \le \lambda X \le e^2 X^2$; absorbing $e^2 X^2$ into half the Gaussian exponent in~\eqref{eq:v135-gaussian-tail} gives
+\begin{equation}\label{eq:v135-weighted-tail}
+  \norm{r_{a,j}}_{H^1(\mathbb{R})} + \sup_{x \in \mathbb{R}} e^{2|x|}\bigl(|r_{a,j}(x)| + |r_{a,j}'(x)|\bigr) \le \delta_a := C\exp\!\left(-\frac{\pi\lambda}{4e^2}\right).
+\end{equation}
+Denoting the global explicit-formula distribution by $\mathcal{W}$, global radicality $\mathcal{W}(\phi(\cdot - t_j)) = 0$ gives $\mathsf{W}_{e^a}(\chi_a\phi(\cdot - t_j)) = -\mathcal{W}r_{a,j}$ on $I_a$. Because the full-line archimedean multiplier $\alpha(\xi)$ satisfies $|\alpha(\xi)| \le C(1 + |\xi|)$, its $L^2$ action on $r_{a,j}$ is bounded by $C\norm{r_{a,j}}_{H^1(\mathbb{R})} \le C\delta_a$. For the prime shifts (including all $n \ge 2$), $|x \pm \log n| \ge \log n - |x|$ and~\eqref{eq:v135-weighted-tail} yield, for all $x \in I_a$,
+\[
+  \sum_{n \ge 2} \frac{\Lambda(n)}{\sqrt{n}}\bigl|r_{a,j}(x \pm \log n)\bigr| \le \delta_a e^{2|x|} \sum_{n \ge 2} \frac{\Lambda(n)}{n^{5/2}} \le C\delta_a e^{2a},
+\]
+while both pole integrals are bounded by $C\delta_a e^{|x|/2}$ using their kernels $e^{\pm(x-y)/2}$. Integrating over $x \in I_a = (-a,a)$ (which contributes a factor $\sqrt{2a}$) and using $\pi/(4e^2) \approx 0.1063 > 1/100$ to absorb $\lambda^2 = e^{2a}$ into the exponential gives
+\begin{equation}\label{eq:single-translate-residual}
+  \norm{\mathsf{W}_{e^a}(\chi_a\phi(\cdot - t_j))}_2 \le C\sqrt{a}\,\lambda^2\delta_a \le C\sqrt{a}\,e^{-e^a/100}.
+\end{equation}
+The triangle inequality over $1 \le j \le r$ proves $\norm{\mathsf{W}_{e^a}g_a}_2 \to 0$, and dominated convergence proves $J_a g_a \to h_0$. In particular, all global prime rows in the exterior remainder, both poles, and the logarithmic diagonal are retained.
+\end{proof}
+
+\begin{proposition}[Ordinary strong-resolvent collapse, \texttt{prop:v136-resolvent-collapse}]
+\label{prop:v136-resolvent-collapse}
+Define the self-adjoint operator $A_a = \mathsf{W}_{e^a} \oplus 0$ on $H = L^2(I_a) \oplus L^2(I_a^c)$ with domain $\mathcal{D}(A_a) = \mathcal{D}(\mathsf{W}_{e^a}) \oplus L^2(I_a^c)$. Then, without a uniform lower bound or a sign hypothesis,
+\begin{equation}\label{eq:v136-resolvent-collapse}
+  (A_a - z)^{-1} \longrightarrow -z^{-1}I \quad \text{strongly for every } z \in \mathbb{C} \setminus \mathbb{R}.
+\end{equation}
+If $P_a$ is an orthogonal projection with range in $\mathcal{D}(A_a)$ and $\norm{A_a P_a} \to 0$, the same conclusion holds for $A_a^\perp = A_a - A_a P_a - P_a A_a + P_a A_a P_a$ on $\mathcal{D}(A_a)$, where the terms involving $P_a A_a$ denote the bounded extensions $(A_a P_a)^*$ (which have norm $\norm{(A_a P_a)^*} = \norm{A_a P_a} \to 0$ by the symmetry of $A_a$ on $\mathcal{D}(A_a)$).
+\end{proposition}
+\begin{proof}
+For $h_0 \in \mathcal{R}$ use $g_a$ from Lemma~\ref{lem:v136-total-radicals}, regarded as a vector in $H$. The resolvent bound for self-adjoint operators and the resolvent identity $(A_a - z)^{-1}h_0 + z^{-1}h_0 = (A_a - z)^{-1}(h_0 - g_a) + z^{-1}(h_0 - g_a) + z^{-1}(A_a - z)^{-1}A_a g_a$ give
+\[
+  \norm{(A_a - z)^{-1}h_0 + z^{-1}h_0}_2 \le \left(\frac{1}{|\Im z|} + \frac{1}{|z|}\right)\norm{h_0 - g_a}_2 + \frac{\norm{A_a g_a}_2}{|z|\,|\Im z|} \longrightarrow 0.
+\]
+Uniform resolvent boundedness and density extend the conclusion to every $h_0 \in H$. For the deleted block, the difference $A_a^\perp - A_a = -A_a P_a - (A_a P_a)^* + P_a(A_a P_a)$ is a bounded self-adjoint perturbation of norm at most $3\norm{A_a P_a}$, bounding the resolvent difference by $3\norm{A_a P_a}/|\Im z|^2 \to 0$.
+\end{proof}
+
+\begin{lemma}[Gap-free near-radical block bound, \texttt{prop:v118-gap-free}]
+\label{lem:v118-gap-free}
+Let $A$ be a lower-bounded self-adjoint operator with closed form $q$, and let $P$ be a finite-rank orthogonal projection with $\operatorname{Ran} P \subset \mathcal{D}(A)$. Put $Q = I - P$ and assume $\norm{AP} \le \epsilon$. Then $Q$ preserves $\mathcal{D}(q)$ and
+\begin{equation}\label{eq:v118-gap-free-difference}
+  \bigl|q(f,f) - q(Qf, Qf)\bigr| \le \frac{2}{\sqrt{3}}\,\epsilon\,\norm{f}_2^2 \qquad (f \in \mathcal{D}(q)).
+\end{equation}
+Consequently, if $q(g,g) \ge -\eta\norm{g}_2^2$ for all $g \in \operatorname{Ran} Q \cap \mathcal{D}(q)$ with $\eta \ge 0$, then $\inf\sigma(A) \ge -\eta - \frac{2}{\sqrt{3}}\epsilon$. The constant $2/\sqrt{3}$ is sharp.
+\end{lemma}
+\begin{proof}
+Write $h_1 = Pf \in \mathcal{D}(A)$ and $g = Qf \in \mathcal{D}(q)$. With the first-slot-linear convention, $q(f,f) - q(g,g) = \ip{Ah_1}{h_1} + 2\Re\ip{Ah_1}{g} = \Re\ip{Ah_1}{h_1 + 2g}$. Since $h_1 \perp g$ and $\norm{Ah_1}_2 \le \epsilon\norm{h_1}_2$, Cauchy--Schwarz gives
+\[
+  \bigl|q(f,f) - q(g,g)\bigr| \le \epsilon\norm{h_1}_2\sqrt{\norm{h_1}_2^2 + 4\norm{g}_2^2} \le \frac{2}{\sqrt{3}}\,\epsilon\bigl(\norm{h_1}_2^2 + \norm{g}_2^2\bigr) = \frac{2}{\sqrt{3}}\,\epsilon\norm{f}_2^2,
+\]
+because $\max_{0 \le t \le 1} t\sqrt{4 - 3t^2} = 2/\sqrt{3}$ (attained at $t = \sqrt{2/3}$). Using $q(g,g) \ge -\eta\norm{g}_2^2 \ge -\eta\norm{f}_2^2$ yields $\inf\sigma(A) \ge -\eta - \frac{2}{\sqrt{3}}\epsilon$. Sharpness is witnessed on $\mathbb{C}^2$ by $P = \operatorname{diag}(1,0)$ and $A = -\frac{\epsilon}{\sqrt{3}}\left(\begin{smallmatrix} 1 & \sqrt{2} \\ \sqrt{2} & 0 \end{smallmatrix}\right)$, which has $\norm{AP} = \epsilon$, zero complementary form, and lowest eigenvalue $-2\epsilon/\sqrt{3}$.
+\end{proof}
+
+\begin{theorem}[Uniform finite lower floor equivalence, \texttt{prop:v136-bounded-floor} \& \texttt{cor:v136-complement-floor}]
+\label{thm:bounded-floor}
+Suppose that for a cofinal sequence $a_j \to \infty$ there is one finite constant $C_*$, independent of $j$, such that
+\begin{equation}\label{eq:v136-bounded-floor}
+  q_{a_j}[f] \ge -C_*\norm{f}_2^2 \qquad \text{for all } f \in \mathcal{D}(q_{a_j}).
+\end{equation}
+Then $q[f] \ge 0$ on every compact smooth test. Consequently every complete finite-window form is nonnegative, and the Weil criterion implies RH. Equivalently, if any compact smooth test has negative Weil form, then
+\begin{equation}\label{eq:v136-negative-divergence}
+  \inf\sigma(\mathsf{W}_{e^a}) \longrightarrow -\infty \qquad (a \longrightarrow \infty).
+\end{equation}
+Moreover, let $P_a$ be either the actual repaired rank-one source projection or the growing radical projection, with its established $\norm{\mathsf{W}_{e^a}P_a} \to 0$. Then it is sufficient to prove, along a cofinal family $a_j \to \infty$, the single uniform estimate
+\begin{equation}\label{eq:v136-complement-target}
+  q_{a_j}[f] \ge -C_*\norm{f}_2^2, \qquad f \in \mathcal{D}(q_{a_j}) \cap \operatorname{Ran}(I - P_{a_j}), \qquad C_* < \infty \text{ independent of } j,
+\end{equation}
+including both parity sectors. This is a conditional reduction: no bound~\eqref{eq:v136-bounded-floor} or~\eqref{eq:v136-complement-target} is established here.
+\end{theorem}
+\begin{proof}
+Suppose a compact smooth $f$ has $q[f] = -d < 0$. Given $\varepsilon > 0$, choose a fixed $h_0 \in \mathcal{R}$ with $\norm{f - h_0}_2 < \varepsilon/2$. Put $g_a = \chi_a h_0$ and $w_a = f - g_a$ for sufficiently large windows (so $\operatorname{supp}(f) \subset I_a$). By support consistency $q_a[f] = q[f]$ and self-adjointness, $q_a[w_a] - q[f] = -2\Re\ip{\mathsf{W}_{e^a}g_a}{f} + \ip{\mathsf{W}_{e^a}g_a}{g_a}$, so
+\[
+  \bigl|q_a[w_a] - q[f]\bigr| \le \bigl(2\norm{f}_2 + \norm{g_a}_2\bigr)\norm{\mathsf{W}_{e^a} g_a}_2 \longrightarrow 0, \qquad \norm{w_a}_2 \longrightarrow \norm{f - h_0}_2 < \frac{\varepsilon}{2}
+\]
+by Lemma~\ref{lem:v136-total-radicals}. Thus eventually $q_a[w_a] < -d/2$ and $0 < \norm{w_a}_2 < \varepsilon$, so the variational principle gives
+\begin{equation}\label{eq:v136-negative-amplification}
+  \inf\sigma(\mathsf{W}_{e^a}) \le \frac{q_a[w_a]}{\norm{w_a}_2^2} < -\frac{d}{2\varepsilon^2}.
+\end{equation}
+Since $\varepsilon > 0$ is arbitrary, this proves~\eqref{eq:v136-negative-divergence} and contradicts every cofinal finite lower floor. Therefore~\eqref{eq:v136-bounded-floor} forces $q[f] \ge 0$ for every compact smooth $f$. Compact smooth tests form a form core at each fixed window by \texttt{prop:v118-log-dirichlet}, so complete local positivity follows, and \texttt{prop:v121-cofinal-rh} yields RH. Note that this argument gives no effective window threshold for a prescribed $\varepsilon$, since the finite translate coefficients and shifts in $h_0 \in \mathcal{R}$ can grow as $\varepsilon \downarrow 0$. Finally, under~\eqref{eq:v136-complement-target}, Lemma~\ref{lem:v118-gap-free} gives the full lower floor $q_{a_j}[f] \ge -\bigl(C_* + \frac{2}{\sqrt{3}}\norm{\mathsf{W}_{e^{a_j}}P_{a_j}}\bigr)\norm{f}_2^2$, which is uniformly bounded along the cofinal family.
+\end{proof}
+
+\section{Certified Positivity and First-Zero Localization at \texorpdfstring{$\lambda = 3, 4$}{lambda = 3, 4}}
+\label{sec:lambda4}
+
+\subsection{Complete Infinite-Dimensional Positivity at \texorpdfstring{$\lambda = 3$ and $\lambda = 4$}{lambda = 3 and lambda = 4}}
+On any fixed window $I_a = (-a,a)$ of length $L = 2a$, we expand each parity sector in its orthonormal Fourier basis on $(-a,a)$: the even cosine basis $c_0(x) = L^{-1/2}$, $c_n(x) = (2/L)^{1/2}\cos(2\pi n x/L)$ ($n \ge 1$) for $L^2_{\mathrm{ev}}(I_a)$, and the odd sine basis $s_n(x) = (2/L)^{1/2}\sin(2\pi n x/L)$ ($n \ge 1$) for $L^2_{\mathrm{odd}}(I_a)$. Splitting a parity sector at Fourier mode cutoff $N$ via the finite-head projection $P_N$ ($\operatorname{span}\{c_0,\dots,c_N\}$ or $\operatorname{span}\{s_1,\dots,s_N\}$) and tail projection $Q_N = I - P_N$, the operator $\mathsf{W}_\lambda$ takes the block form
+\begin{equation}\label{eq:head-tail-block}
+  \mathsf{W}_\lambda = \begin{pmatrix} F & B^* \\ B & T \end{pmatrix}, \qquad F = P_N\mathsf{W}_\lambda P_N, \quad B = Q_N\mathsf{W}_\lambda P_N, \quad T = Q_N\mathsf{W}_\lambda Q_N.
+\end{equation}
+When the infinite-dimensional tail $T$ is coercive ($T \succeq \delta I$ with $\delta > 0$), the exact Schur complement on the head is $S = F - B^* T^{-1} B$. For any finite-support trial matrix $G = (V, Z)^t$ supported on modes $n \le M$ with invertible head $V = P_N G$ and tail $Z = Q_N G$, setting $K = G^*\mathsf{W}_\lambda G$ and residual $r = Q_N\mathsf{W}_\lambda G = BV + TZ$ yields the exact square-completion identity (\texttt{prop:v125-simultaneous})
+\begin{equation}\label{eq:simultaneous-schur-id}
+  V^* S V = K - r^* T^{-1} r.
+\end{equation}
+
+At $\lambda = 3$ ($a = \log 3$), the scalar weighted-prime bound $\mathfrak{m}_3 \in [0.8920550919, 0.8920550920]$ is certified at $256$ bits (\texttt{prop:v116-weighted-prime}, \path{evidence/v126/g2_weighted_signed/}), the $N = 64$ finite-trial certificate is certified at $512/768$ bits (\path{evidence/v124/g2_certificate/}), and outward ball arithmetic at $768$ and $896$ bits certifies complete positivity $\mathsf{W}_3 \succeq 0$ and resolves its simple even ground state $0 < \mu_0(\mathsf{W}_3) < 3.644 \times 10^{-38}$, $\mu_1(\mathsf{W}_3) > 10^{-36}$ (\texttt{prop:v116-window-positive}, \texttt{prop:v117-ground-order}, \path{evidence/v126/g2_schur_directional/}, \path{evidence/v126/g2_ground_order/}). At $\lambda = 4$ ($a = \log 4$), the lowest even eigenvalue sits near $2.45 \times 10^{-75}$; complete infinite-dimensional positivity is established by combining the $320$-bit tail floor $\delta = 1.7940 \times 10^{-8}$ above mode $N = 16$ (\texttt{prop:v120-lambda4-tail}) with a simultaneous $M = 4096$, $16$-step Schur certificate on the even sector and a direction-complement plus $M = 8192$ directional Schur certificate on the odd sector.
+
+\begin{theorem}[Complete Interval-Certified Positivity at $\lambda = 3$ and $\lambda = 4$]
+\label{thm:lambda4-positivity}
+For $\lambda \in \{3, 4\}$ ($a \in \{\log 3, \log 4\}$), the complete physical semilocal Weil form satisfies
+\begin{equation}
+  q_a[f] \ge 0 \qquad \text{for all } f \in \mathcal{D}(q_a) = \mathcal{D}(q_a^{\mathrm{ev}}) \oplus \mathcal{D}(q_a^{\mathrm{odd}}),
+\end{equation}
+with exact fixed-window lower-floor error $\varepsilon_3 = \varepsilon_4 = 0$ in~\eqref{eq:eps-lambda-def} (\texttt{prop:v116-window-positive}, \texttt{prop:v125-even-complete}, \texttt{prop:v126-odd-complement}, \texttt{prop:v126-full-window}). Specifically, at $\lambda = 4$, splitting at Fourier cutoff $N = 16$ in each parity with certified complete tail floor $T \succeq \delta I$, $\delta = 1.7940 \times 10^{-8}$ (\texttt{prop:v120-lambda4-tail}):
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Even sector (\path{evidence/v126/g2_simultaneous/}):} Using the frozen $M = 4096$-support rational trial matrix $G_{\mathrm{ev}}$ ($17$ head columns, $16$ preconditioner steps) and retaining all remote Fourier rows (explicitly through $J = 65536$ plus the order-$64$ Hurwitz-zeta moment majorant beyond $J$), outward ball arithmetic in \texttt{flint.arb} at $768$ and $896$ bits certifies the complete Schur inequality
+  \[
+    V_{\mathrm{ev}}^* S_{\mathrm{ev}} V_{\mathrm{ev}} \succeq \kappa_{\mathrm{ev}} K_{\mathrm{ev}}, \qquad \kappa_{\mathrm{ev}} = \frac{62629}{100000} > 0, \qquad K_{\mathrm{ev}} = G_{\mathrm{ev}}^*\mathsf{W}_4^{\mathrm{ev}} G_{\mathrm{ev}} \succ 0,
+  \]
+  and hence $\mathsf{W}_4^{\mathrm{ev}} \succeq 0$.
+  \item \textbf{Odd sector (\path{evidence/v126/g2_odd_complement/}):} Combining the $768$-bit complete $K$-orthogonal direction-complement certificate ($\mathcal{C}|_{v^{\perp_K}} \preceq \sigma_{\mathrm{old}} K_{\mathrm{od}}|_{v^{\perp_K}}$ with $\sigma_{\mathrm{old}} = 1/1000$ on the $M = 4096$, $16$-column odd trial $G_{\mathrm{od}}$, whose $10\times 10$ Schur gate is replayed at $768/896$ bits in \texttt{v126} and $1024/1280$ bits in \texttt{v140}) with the $1024/1280$-bit directional certificate on the matching-head $M = 8192$, $24$-step trial ($S_{\mathrm{od}}(v,v) \ge s K_{\mathrm{od}}(v,v)$ with $s = 429/1000$) and exact rational shared-head verification (\path{complete_lambda4_v126_certificate.json}) certifies via Cauchy--Schwarz on $\mathcal{C} \succeq 0$ (\texttt{prop:v126-direction-complement}, $s - \sigma_{\mathrm{old}} = 428/1000$) that
+  \[
+    V_{\mathrm{od}}^* S_{\mathrm{od}} V_{\mathrm{od}} \succeq \kappa_{\mathrm{od}} K_{\mathrm{od}}, \qquad \kappa_{\mathrm{od}} = \frac{428}{1000} > 0, \qquad K_{\mathrm{od}} = G_{\mathrm{od}}^*\mathsf{W}_4^{\mathrm{odd}} G_{\mathrm{od}} \succ 0,
+  \]
+  and hence $\mathsf{W}_4^{\mathrm{odd}} \succeq 0$.
+\end{enumerate}
+\end{theorem}
+
+\subsection{Simple Even Ground State and Real-Zero Transform at \texorpdfstring{$\lambda = 4$}{lambda = 4}}
+We reproduce \texttt{lem:v140-shifted-schur}, \texttt{prop:v140-ground4}, and \texttt{cor:v140-real-zeros} from \path{evidence/v140/new_section.tex} (\path{manuscript/fixed_space_prime_action_v1.tex}, lines 8535--8722).
+
+\begin{lemma}[Shifted Schur lower bound, \texttt{lem:v140-\allowbreak shifted-\allowbreak schur}]
+\label{lem:v140-shifted-schur}
+Let $W = \left(\begin{smallmatrix} F & B^* \\ B & T \end{smallmatrix}\right)$ be a lower-bounded self-adjoint operator with finite head, $T \succeq \delta I$ ($\delta > 0$), and bounded head-to-tail coupling $B$. Let $G = (V, Z)^t$ be a finite trial map with $V$ invertible and $\operatorname{Ran} Z \subset \mathcal{D}(T)$. Put $K = G^* W G$, $H_h = V^* V$, $H_t = Z^* Z$, and $S = F - B^* T^{-1} B$. Suppose $K \succ 0$ and $V^* S V \succeq \kappa K$ ($\kappa > 0$). For $0 < \sigma < \delta$, define
+\begin{equation}\label{eq:v140-shifted-lower}
+  L_\sigma = \kappa K - \sigma\left[H_h + \frac{2}{1 - \sigma/\delta}\bigl(H_t + \delta^{-1}K\bigr)\right].
+\end{equation}
+Then $V^*\{F - \sigma I - B^*(T - \sigma I)^{-1}B\}V \succeq L_\sigma$.
+\end{lemma}
+\begin{proof}
+Set $r = BV + TZ$ and $\mathcal{C} = r^* T^{-1} r$. Square completion gives $V^* S V = K - \mathcal{C}$, hence $0 \preceq \mathcal{C} \preceq K$. With $Y = T^{-1} B V = -Z + T^{-1} r$, the Hilbert-space square inequality and $T^{-2} \preceq \delta^{-1} T^{-1}$ give $Y^* Y \preceq 2H_t + 2r^* T^{-2} r \preceq 2H_t + 2\delta^{-1}K$. The resolvent identity yields $V^* S_\sigma V = V^* S V - \sigma H_h - \sigma Y^*(I - \sigma T^{-1})^{-1}Y$, and spectral calculus gives $(I - \sigma T^{-1})^{-1} \preceq (1 - \sigma/\delta)^{-1}I$.
+\end{proof}
+
+\begin{theorem}[Complete ground ordering and real-zero transform at $\lambda = 4$, \texttt{prop:v140-ground4} \& \texttt{cor:v140-real-zeros}]
+\label{thm:lambda4-ground}
+Let $\mu_0 \le \mu_1 \le \cdots$ be the eigenvalues, counted with multiplicity, of the canonical complete $\mathsf{W}_4$ in its ordinary Hilbert norm on $L^2(-\log 4, \log 4)$. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item The ground state is simple and even, and
+  \begin{equation}\label{eq:v140-ground4-bounds}
+    0 < \mu_0 < 2.454 \times 10^{-75}, \qquad \mu_1 > 10^{-73}.
+  \end{equation}
+  In particular, the spectral gap satisfies $\mu_1 - \mu_0 > 9.7546 \times 10^{-74}$.
+  \item Let $\xi_4 \in \mathcal{D}(q_{\log 4}) \cap L^2_{\mathrm{ev}}(-\log 4, \log 4)$ be a normalized ground eigenfunction of the complete $\mathsf{W}_4$, extended by zero outside $[-\log 4, \log 4]$. Then the nonzero entire function
+  \begin{equation}
+    \widehat{\xi}_4(z) = \frac{1}{\sqrt{2\pi}}\int_{-\log 4}^{\log 4} \xi_4(x)e^{-izx}\,\dd x \qquad (z \in \mathbb{C})
+  \end{equation}
+  has \textbf{only real zeros}.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(i) Apply Lemma~\ref{lem:v140-shifted-schur} with $\delta = 1.7940 \times 10^{-8}$, $\kappa_{\mathrm{ev}} = 62629/100000$, $\kappa_{\mathrm{od}} = 428/1000$, and shift $\sigma = 10^{-73}$, reusing the saved $768/896$-bit complete even residual enclosures, the saved $768$-bit odd complement enclosure, and the $1024/1280$-bit odd directional enclosures from Theorem~\ref{thm:lambda4-positivity} (\path{evidence/v140/certify_ground4.py}). At both $1024$ and $1280$ bits, outward interval LDL factorization of $L_\sigma$ gives $1$ negative and $16$ positive pivots on the $17$-dimensional even head, and $0$ negative and $16$ positive pivots on the $16$-dimensional odd head (with every pivot excluding zero). Meanwhile, the exact finite-support even trial column $f = G_{\mathrm{ev}} e_{16}$ has complete Rayleigh quotient
+\begin{equation}\label{eq:v140-rayleigh-e16}
+  2.45361754930 \times 10^{-75} < \rho := \frac{K_{\mathrm{ev},16,16}}{(H_h + H_t)_{\mathrm{ev},16,16}} < 2.45361754931 \times 10^{-75} < \sigma.
+\end{equation}
+Since $T - \sigma I \succ 0$, triangular square completion and compact resolvent (\texttt{prop:v114-weil-core}) identify the negative inertia of $\mathsf{W}_4 - \sigma I$ with that of the shifted Schur form, proving that $\mathsf{W}_4$ has a unique eigenvalue below $\sigma = 10^{-73}$, which is simple, even, and satisfies $0 < \mu_0 \le \rho < 2.454 \times 10^{-75}$.
+
+(ii) We verify the distribution hypothesis of Connes and van Suijlekom~\cite[Theorem~6.1 and Remark~4.3]{ConnesVanSuijlekom2025}. Put $L = 2\log 4$, $w_m = \Lambda(m)/\sqrt{m}$, $\rho(t) = e^{t/2}/(2\sinh t)$, and $c_L = \log(4\pi) + \gamma_{\mathrm{E}} + \log\tanh(L/2)$. For smooth $h$ on $[0,L]$, define the order-$\le 1$ real distribution
+\[
+  \mathcal{D}_L(h) = \int_0^L 2\cosh(t/2)h(t)\,\dd t - \sum_{1 < m \le 16} w_m h(\log m) - \int_0^L \rho(t)\bigl\{h(t) - e^{-t/2}h(0)\bigr\}\,\dd t - \frac{1}{2}c_L h(0).
+\]
+For a trigonometric polynomial $f$ on $[0,L]$ extended by zero, $R_f(t) = \int f(x+t)\overline{f(x)}\,\dd x$ and $h_f(t) = R_f(t) + R_f(-t)$ satisfy $q_{\log 4}[f] = \mathcal{D}_L(h_f)$ with $h_f(0) = 2\norm{f}_2^2$ and $h_f(L) = 0$. Essential self-adjointness on trigonometric polynomials (\texttt{prop:v114-weil-core}) and the simple isolated reflection-even global minimum from~(i) satisfy all hypotheses of~\cite[Theorem~6.1]{ConnesVanSuijlekom2025}. Translating from the centered interval $[-L/2, L/2]$ to $[0,L]$ and removing our $(2\pi)^{-1/2}$ unitary Fourier normalization multiply $\widehat{\xi}_4(z)$ by the zero-free factor $\sqrt{2\pi}\,e^{-izL/2}$, preserving its real zero set.
+\end{proof}
+
+\subsection{First-Zero Localization of the Complete \texorpdfstring{$\lambda = 4$}{lambda = 4} Ground State}
+We reproduce \texttt{lem:v142-\allowbreak energy-\allowbreak projection}, \texttt{prop:v142-\allowbreak ground-\allowbreak zero}, \texttt{lem:v143-\allowbreak evaluator-\allowbreak dual}, and \texttt{prop:v143-\allowbreak first-\allowbreak zero-\allowbreak bound} from \path{manuscript/fixed_space_prime_action_v1.tex} (lines 8848--9095; \path{evidence/v142/new_section.tex}, \path{evidence/v143/sharpening_section.tex}). Throughout this subsection, for an even function $v \in L^2_{\mathrm{ev}}(-a,a)$ ($a = \log 4$, $L = 2\log 4$), we write
+\begin{equation}\label{eq:unnormalized-cosine-transform}
+  \widehat{v}_{\mathrm{c}}(t) := \int_{-a}^a v(x)\cos(tx)\,\dd x = \sqrt{2\pi}\,\widehat{\widetilde{v}}(t)
+\end{equation}
+for its unnormalized cosine transform, which has the exact same zeros and root-displacement ratios as the unitary transform $\widehat{\widetilde{v}}(t)$. In the orthonormal even cosine basis $e_0(x) = L^{-1/2}$, $e_n(x) = (2/L)^{1/2}\cos(2\pi n x/L)$ ($n \ge 1$) of $L^2_{\mathrm{ev}}(-a,a)$, the head coordinates of the functional $\ell(v) = \widehat{v}_{\mathrm{c}}(t)$ are
+\begin{equation}\label{eq:cosine-head-coords}
+\begin{aligned}
+  c_0(t) &= \int_{-a}^a e_0(x)\cos(tx)\,\dd x = \frac{2\sin(at)}{\sqrt{L}\,t}, \\
+  c_n(t) &= \int_{-a}^a e_n(x)\cos(tx)\,\dd x = \sqrt{\frac{2}{L}}\,\frac{(-1)^n\,2t\sin(at)}{t^2 - (2\pi n/L)^2} \qquad (1 \le n \le 16).
+\end{aligned}
+\end{equation}
+
+\begin{theorem}[1024/1280-Bit First-Zero Enclosure of the Complete $\lambda = 4$ Ground Transform]
+\label{thm:first-zero-enclosure}
+Let $\gamma_1 = 14.13472514173469379045725198356247\dots$ denote the first positive Riemann zeta zero ordinate, and let $\xi_4$ be the complete ground state of Theorem~\ref{thm:lambda4-ground} (\texttt{prop:v142-ground-zero}, \texttt{prop:v143-first-zero-bound}).
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Even-sector spectral separator and local simplicity (\path{evidence/v142/}):} At shift $b = 10^{-67}$, outward $1024/1280$-bit LDL factorization of the $17$-dimensional even lower matrix $L_b$ in~\eqref{eq:v140-shifted-lower} certifies $16$ positive and $1$ negative pivots, so the even spectrum of $\mathsf{W}_4$ above $\mu_0$ lies in $[b, \infty) = [10^{-67}, \infty)$. For the normalized trial column $f = G_{\mathrm{ev}}e_{16}/\norm{G_{\mathrm{ev}}e_{16}}_2$ and its ground projection $h_{\mathrm{g}} = P_{\xi_4}f$, $\norm{f - h_{\mathrm{g}}}_2 \le \sqrt{\rho/b} < 1.566403 \times 10^{-4}$, and $1024/1280$-bit interval evaluation on $I = (\gamma_1 - \tfrac{1}{10}, \gamma_1 + \tfrac{1}{10})$ certifies opposite endpoint signs and $\widehat{h_{\mathrm{g}}}_{\mathrm{c}}'(t) > 0.0016 > 0$ throughout $\overline{I}$. Hence $\widehat{\xi}_4$ has a unique, simple zero $z_1(4)$ in $(\gamma_1 - \tfrac{1}{10}, \gamma_1 + \tfrac{1}{10})$.
+  \item \textbf{Evaluator dual bound and $32$-digit enclosure (\texttt{NS-19}, \path{evidence/v143/}):} For any bounded real functional $\ell$ on the even form domain with trial vector $p = \ell G_{\mathrm{ev}}$, tail restriction $\ell_t = \ell Q_{16}$, $A^2 = p K_{\mathrm{ev}}^{-1} p^*$, and $B_{\mathrm{tail}}^2 = \delta^{-1}\norm{\ell_t}_2^2$, square completion gives
+  \begin{equation}\label{eq:v143-dual-bound}
+    |\ell(v)|^2 \le C_\ell\, q_{\log 4}[v], \qquad C_\ell = \frac{A^2 + B_{\mathrm{tail}}^2 + 2\sqrt{1 - \kappa_{\mathrm{ev}}}\,AB_{\mathrm{tail}}}{\kappa_{\mathrm{ev}}}.
+  \end{equation}
+  Taking $\ell(v) = \widehat{v}_{\mathrm{c}}(\gamma_1) = \int_{-\log 4}^{\log 4} v(x)\cos(\gamma_1 x)\,\dd x$ (with exact Parseval tail $\norm{\ell_t}_2^2 = \frac{L}{2} + \frac{\sin(\gamma_1 L)}{2\gamma_1} - \sum_{n=0}^{16} c_n(\gamma_1)^2$, $C_\ell < 79921$) and excluding earlier positive zeros on $(0, \gamma_1 - \tfrac{1}{10}]$ at $1024$ and $1280$ bits (inheriting the $320$-bit tail floor $\delta$ and $768/896$-bit Schur ingredients $K_{\mathrm{ev}}, \kappa_{\mathrm{ev}}$), the first positive zero $z_1(4)$ of $\widehat{\xi}_4$ satisfies
+  \begin{equation}\label{eq:v143-first-zero-absolute}
+    -8.752082 \times 10^{-33} < z_1(4) - \gamma_1 < 8.752082 \times 10^{-33}.
+  \end{equation}
+  The interval includes zero; neither the sign of $z_1(4) - \gamma_1$ nor a nonzero lower bound on $|z_1(4) - \gamma_1|$ is certified.
+  \item \textbf{External CCM benchmark (\texttt{NS-2}, \texttt{prop:v141-ccm-lock}, \path{evidence/v141/}):} For the Connes--Consani--Moscovici~\cite{ConnesConsaniMoscovici2025} finite $N = 120$ compression at $\lambda = 3$, the first eight local root discrepancies are interval-certified at $768$ and $1024$ bits, with first root discrepancy $1.582329697193127 \times 10^{-34}$ (a finite-compression benchmark that does not transfer to the complete ground state).
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(a) Write $f = h_{\mathrm{g}} + w$ with $h_{\mathrm{g}} = P_{\xi_4}f$ and $w = (I - P_{\xi_4})f$. Since $\mathsf{W}_4^{\mathrm{ev}} \ge bI$ on $\xi_4^\perp$ and $\mu_0 > 0$, $b\norm{w}_2^2 \le q_{\log 4}[w] \le q_{\log 4}[f] = \rho$, giving $\norm{f - h_{\mathrm{g}}}_2 = \norm{w}_2 \le \sqrt{\rho/b} < 1.566403 \times 10^{-4}$ (\texttt{lem:v142-energy-projection}). By Cauchy--Schwarz on $(-a,a)$, for all $t \in \mathbb{R}$,
+\[
+  \bigl|\widehat{f}_{\mathrm{c}}(t) - \widehat{h_{\mathrm{g}}}_{\mathrm{c}}(t)\bigr| \le \sqrt{2a}\,\norm{w}_2, \qquad
+  \bigl|\widehat{f}_{\mathrm{c}}'(t) - \widehat{h_{\mathrm{g}}}_{\mathrm{c}}'(t)\bigr| \le \sqrt{\frac{2a^3}{3}}\,\norm{w}_2, \qquad
+  \bigl|\widehat{h_{\mathrm{g}}}_{\mathrm{c}}''(t)\bigr| \le \sqrt{\frac{2a^5}{5}}.
+\]
+Outward $1024/1280$-bit interval evaluation on $I = (\gamma_1 - \tfrac{1}{10}, \gamma_1 + \tfrac{1}{10})$ certifies $\widehat{h_{\mathrm{g}}}_{\mathrm{c}}(\gamma_1 - \tfrac{1}{10}) < -0.00028 < 0 < 0.00029 < \widehat{h_{\mathrm{g}}}_{\mathrm{c}}(\gamma_1 + \tfrac{1}{10})$ and $\widehat{h_{\mathrm{g}}}_{\mathrm{c}}'(t) > 0.0016 > 0$ on $\overline{I}$ (\path{evidence/v142/certify_ground_zero.py}), so $\widehat{h_{\mathrm{g}}}_{\mathrm{c}}$ (and hence $\widehat{\xi}_4$) has a unique, simple root $z_1(4)$ in $I$.
+
+(b) For any $v \in \mathcal{D}(q_{\log 4}^{\mathrm{ev}})$, write its head $x = V_{\mathrm{ev}} u$ and tail $y = Z_{\mathrm{ev}} u + z$, so $v = G_{\mathrm{ev}} u + (0,z)^t$. Then $\ell(v) = pu + \ell_t z$, while square completion gives $q_{\log 4}[v] = S_{\mathrm{ev}}(x,x) + \norm{T^{1/2}(z + T^{-1}r_{\mathrm{ev}}u)}_2^2$ where $r_{\mathrm{ev}} = Q_{16}\mathsf{W}_4^{\mathrm{ev}}G_{\mathrm{ev}}$. Put $w_{\mathrm{t}} = T^{1/2}(z + T^{-1}r_{\mathrm{ev}}u)$, so $\ell(v) = (p - \ell_t T^{-1}r_{\mathrm{ev}})u + (\ell_t T^{-1/2})w_{\mathrm{t}}$. By Cauchy--Schwarz, $|\ell_t T^{-1/2}w_{\mathrm{t}}| \le B_{\mathrm{tail}}\norm{w_{\mathrm{t}}}_2$ and $|(p - \ell_t T^{-1}r_{\mathrm{ev}})u| \le \bigl(A + B_{\mathrm{tail}}\sqrt{1 - \kappa_{\mathrm{ev}}}\bigr)\norm{u}_{K_{\mathrm{ev}}}$ because $r_{\mathrm{ev}}^* T^{-1}r_{\mathrm{ev}} = K_{\mathrm{ev}} - V_{\mathrm{ev}}^* S_{\mathrm{ev}} V_{\mathrm{ev}} \preceq (1 - \kappa_{\mathrm{ev}})K_{\mathrm{ev}}$. Combining with $S_{\mathrm{ev}}(x,x) \ge \kappa_{\mathrm{ev}}\norm{u}_{K_{\mathrm{ev}}}^2$ and optimizing over $\norm{u}_{K_{\mathrm{ev}}}$ and $\norm{w_{\mathrm{t}}}_2$ proves~\eqref{eq:v143-dual-bound} (\texttt{lem:v143-evaluator-dual}). Applying~\eqref{eq:v143-dual-bound} to $v = h_{\mathrm{g}}$ with $q_{\log 4}[h_{\mathrm{g}}] \le q_{\log 4}[f] = \rho$ yields $|\widehat{h_{\mathrm{g}}}_{\mathrm{c}}(\gamma_1)| \le \sqrt{C_\ell\,\rho} < 1.400334 \times 10^{-35}$. Combined with the verified derivative lower bound $\widehat{h_{\mathrm{g}}}_{\mathrm{c}}'(t) > d = 0.0016$ on $[\gamma_1 - \tfrac{1}{10}, \gamma_1 + \tfrac{1}{10}]$ and a $304$-interval dyadic subdivision check excluding zeros on $[0, \gamma_1 - \tfrac{1}{10}]$ (\path{evidence/v143/certify_discrepancy_budget.py}), the mean-value theorem gives $|z_1(4) - \gamma_1| \le \sqrt{C_\ell\,\rho}/d < 8.752082 \times 10^{-33}$. Part~(c) is certified in \path{evidence/v141/certify_ccm_semantic_lock.py}.
+\end{proof}
+
+\section{Cofinal Obstructions for Fixed-Window and Compression Mechanisms}
+\label{sec:obstructions}
+
+\subsection{Breakdown of Fixed Tail and Dyadic Block Comparisons at \texorpdfstring{$\lambda = 5$}{lambda = 5}}
+On a window $I_a = (-a,a)$ of length $L = 2a$, let $\mathcal{D}[f] := \sum_{n > 16} d_n^{\mathrm{ref}} |\widehat{f}_n|^2$ denote the positive diagonal tail reference quadratic form from the $\lambda = 4$ certificate (\texttt{prop:v120-lambda4-tail}, where $d_n^{\mathrm{ref}} > 0$ are the certified archimedean-minus-prime diagonal lower weights above mode $N = 16$). For the dyadic block-metric test above $N = 25$ (\texttt{prop:v127-block-metric}, \texttt{NS-45}), let $I_0 = \{26,\dots,50\}$, $I_1 = \{51,\dots,100\}$, and $I_2 = \{101,\dots,200\}$ be the first three dyadic Fourier index blocks in each parity, with diagonal block restrictions $T_{jj} = P_{I_j}\mathsf{W}_{\log 5} P_{I_j}$ and off-diagonal blocks $T_{jk} = P_{I_j}\mathsf{W}_{\log 5} P_{I_k}$ ($j \ne k$). Finally, let $M_{\phi,\lambda} := \operatorname{ess\,sup}_{x \in (-a,a)} \frac{(\mathsf{T}_{\mathrm{pr},\lambda}\phi_{\mathrm{wt}})(x)}{\phi_{\mathrm{wt}}(x)}$ denote the weighted-Schur prime majorant constant for the positive weight $\phi_{\mathrm{wt}}(x) = e^{-x/2} + e^{x/2}$ (\texttt{prop:v116-weighted-prime}, \texttt{prop:v119-prime-scale}, satisfying $M_{\phi,\lambda} \ge \norm{\mathsf{T}_{\mathrm{pr},\lambda}} = (1 + o(1))\lambda$).
+
+\begin{theorem}[Failure of the $\lambda = 4$ Tail Comparison and $N = 25$ Dyadic Block Criterion at $\lambda = 5$]
+\label{thm:lambda5-failures}
+At $\lambda = 5$ ($a = \log 5$, $L = 2\log 5$):
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Stipulated tail metric comparison (\texttt{NS-44}, \texttt{prop:v152-tail-comparison}, \path{evidence/ns44_metric_replay/}):} There exist explicit dyadic vectors supported on Fourier modes $17 \le n \le 128$ in both the even and odd sectors on which $q_{\log 5}[f] > 0$, yet the ratio to the positive tail reference form $\mathcal{D}$ satisfies
+  \begin{equation}
+    0 < \frac{q_{\log 5}[f_{\mathrm{ev}}]}{\mathcal{D}[f_{\mathrm{ev}}]} < 7 \times 10^{-18} < 10^{-8}, \qquad
+    0 < \frac{q_{\log 5}[f_{\mathrm{odd}}]}{\mathcal{D}[f_{\mathrm{odd}}]} < 1.2 \times 10^{-17} < 10^{-8},
+  \end{equation}
+  certified in \texttt{flint.arb} at $320$ and $448$ bits. Thus the unchanged $10^{-8}\mathcal{D}$ tail comparison fails in both parities at $\lambda = 5$ (without exhibiting a negative Weil direction).
+  \item \textbf{Dyadic block-norm comparison (\texttt{NS-45}, \texttt{prop:v152-block-comparison}, \path{evidence/ns45_block_replay/}):} On the first three dyadic blocks $I_0, I_1, I_2$ above $N = 25$, explicit dyadic pair witnesses $(u_0, u_1) \in I_0 \times I_1$ and $(u_1, u_2) \in I_1 \times I_2$ certified at $320$ and $448$ bits yield off-diagonal coupling Rayleigh quotients $\mathcal{R}_{jk}(u_j,u_k) = |\ip{T_{jk}u_k}{u_j}| / \sqrt{\ip{T_{jj}u_j}{u_j}\ip{T_{kk}u_k}{u_k}}$ whose sum exceeds the exact rational thresholds
+  \begin{equation}
+    \mathcal{R}_{\mathrm{ev}} > \frac{341}{250} = 1.364 > 1, \qquad
+    \mathcal{R}_{\mathrm{odd}} > \frac{2093}{1500} = 1.395\overline{3} > 1,
+  \end{equation}
+  excluding all admissible smaller diagonal block metrics $0 \prec M_j \preceq T_{jj}$ and positive row-weight Schur comparisons for that partition.
+  \item \textbf{Exponential cutoff barrier (\texttt{prop:v125-\allowbreak cutoff-\allowbreak cost}, \path{evidence/v126/g2_window_resolution/}, \path{evidence/v138/}):} Any scalar far majorant of the form $g_{N+1} = (1-c)\{\log((N+1)/L) - E_L(2\pi(N+1)/L)\} - \kappa_{\lambda,N} > 0$ with relative slack $c \in [0,1)$ and $\kappa_{\lambda,N} \ge M_{\phi,\lambda} \ge \norm{\mathsf{T}_{\mathrm{pr},\lambda}}$ requires a Fourier cutoff
+  \begin{equation}\label{eq:v125-cutoff-cost}
+    N + 1 > 2a\exp\!\left(\frac{M_{\phi,\lambda}}{1-c}\right), \qquad \liminf_{\lambda\to\infty} \frac{\log((N(\lambda)+1)/(2\log\lambda))}{\lambda} \ge \frac{1}{1-c},
+  \end{equation}
+  and this exponential barrier persists under any bounded shift $\mathsf{W}_\lambda + C_* I$ (\texttt{prop:v138-\allowbreak shifted-\allowbreak floor}, certified with $160$-bit frozen witnesses replayed at $256$ bits in \path{evidence/v138/replay_b256.json} and at $320/384$ bits in \path{evidence/v126/g2_window_resolution/}).
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Parts~(a) and~(b) are verified by direct outward interval evaluation of the finite-support quadratic forms on the archived exact dyadic witnesses in \path{evidence/ns44_metric_replay/replay.py} and \path{evidence/ns45_block_replay/replay.py} (since $0 \prec M_j \preceq T_{jj}$ implies $\norm{M_j^{-1/2}T_{jk}M_k^{-1/2}} \ge \mathcal{R}_{jk}(u_j,u_k)$, and for a $3\times 3$ tridiagonal coupling pattern no positive diagonal row scaling $w_j > 0$ can make all row sums $< 1$ once $\beta_{10} + \beta_{12} > 1$ and $\beta_{01},\beta_{21}$ exceed the reciprocal margin). For~(c), since the archimedean remainder $E_L(t)$ is strictly positive (\texttt{prop:v115-sharp-tail}), $g_{N+1} > 0$ implies $(1-c)\log((N+1)/L) > \kappa_{\lambda,N} \ge M_{\phi,\lambda}$, which exponentiates to~\eqref{eq:v125-cutoff-cost}. By \texttt{prop:v119-prime-scale}, evaluating $(\mathsf{T}_{\mathrm{pr},\lambda}\phi_{\mathrm{wt}})/\phi_{\mathrm{wt}}$ via the Prime Number Theorem $\sum_{m<X}\Lambda(m) \sim X$ gives $M_{\phi,\lambda} \ge \norm{\mathsf{T}_{\mathrm{pr},\lambda}} = (1 + o(1))\lambda$. Adding a fixed shift $C_* I$ replaces $\kappa_{\lambda,N}$ by $\kappa_{\lambda,N} - C_*$, which changes $\log((N+1)/L)$ by only $-C_*/(1-c) = O(1)$ while $M_{\phi,\lambda}/(1-c) \sim \lambda/(1-c) \to \infty$.
+\end{proof}
+
+\subsection{Growing Radical Subspaces and the Fine Translated-Radical Rank Barrier}
+
+\begin{theorem}[Fine Translated-Radical Rank Barrier to Positive Coercivity, \texttt{NS-46}]
+\label{thm:rank-barrier}
+\leavevmode
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Spaced radical lattice (\texttt{prop:v135-\allowbreak growing-\allowbreak radical}, \path{evidence/v135/}):} Fix $D = \lceil 4\pi\sqrt{M_2}\rceil$ where $M_2 = \norm{(1+|x|)^2\phi}_2$, and for $a = \log\lambda$ sufficiently large set $J_a = \lfloor a/(2D)\rfloor$ and $g_{a,j}(x) = \chi_a(x)\phi(x - jD)$ ($|j| \le J_a$). Each individual column satisfies $\norm{\mathsf{W}_{e^a}g_{a,j}}_2 \le C\sqrt{a}\,e^{-e^a/100}$, and their synthesis map $G_a$ has Gram matrix $\Gamma_a = G_a^* G_a \succeq \tfrac{1}{2}I$, rank $m_a = 2J_a + 1 \asymp a$, and complete block projection residual
+  \begin{equation}\label{eq:v135-block-residual}
+    \norm{\mathsf{W}_{e^a} P_{G_a}} \le \varepsilon_a := C\,a\,e^{-e^a/100} \qquad (\lambda = e^a),
+  \end{equation}
+  so no fixed finite-rank subspace removal can leave a uniform positive spectral gap as $a \to \infty$.
+  \item \textbf{Fine translated-radical block (\texttt{NS-46}, \texttt{cor:ns46-\allowbreak a2-\allowbreak cor-\allowbreak rank}, \path{evidence/v153/new_section.tex}):} For $a = \log\lambda$ sufficiently large, set
+  \begin{equation}
+    J = \left\lfloor \frac{\lambda^2}{40000\,a} \right\rfloor, \qquad m = 2J + 1 \sim \frac{\lambda^2}{20000\log\lambda}.
+  \end{equation}
+  Using centers $t_j = j/J \in [-1,1]$ ($|j| \le J$) multiplied by the smooth physical cutoff $\chi_a$ and paying the finite-interpolation Gram conditioning cost explicitly, the complete cutoff block $\mathcal{R}_a^{\mathrm{fine}} = \operatorname{span}\{\chi_a\phi(\cdot - t_j) : |j| \le J\} \subset \mathcal{D}(\mathsf{W}_{e^a})$ has total rank $m = 2J + 1$, exact even rank $J + 1$, exact odd rank $J$, and complete operator residual (retaining all prime shifts, both poles, and all block mixtures) bounded by
+  \begin{equation}\label{eq:ns46-fine-residual}
+    \norm{\mathsf{W}_{e^a}\big|_{\mathcal{R}_a^{\mathrm{fine}}}} \le C\exp\!\left(-\frac{\lambda^2}{2000}\right).
+  \end{equation}
+  Consequently, removing $o(\lambda^2/\log\lambda)$ directions cannot leave a uniform positive spectral gap or a positive gap bounded below by any fixed power $\lambda^{-B}$. (This is a purely analytic theorem with an eventual threshold in $a$; it does not certify a finite numerical onset threshold or exhibit a negative Weil direction.)
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(a) For $|s| \ge D$, splitting $\int_{\mathbb{R}} |\phi(x-s)\phi(x)|\,\dd x$ at $|x| = |s|/2$ gives $|\ip{\phi(\cdot-s)}{\phi}| \le 2M_2/(1+|s|/2)^2$, so the off-diagonal row sum of the uncut lattice Gram is at most $4M_2\sum_{n\ge 1}(1+nD/2)^{-2} \le 8\pi^2 M_2/(3D^2) \le 1/6$. The exterior tail bound~\eqref{eq:v135-weighted-tail} implies that the cutoff Gram loss has trace at most $C m_a \delta_a^2 < 1/3$ for $a \ge a_0$, proving $\Gamma_a \succeq \tfrac{1}{2}I$. By~\eqref{eq:single-translate-residual}, each column satisfies $\norm{\mathsf{W}_{e^a}g_{a,j}}_2 \le C\sqrt{a}\,e^{-e^a/100}$, and since $G_a\Gamma_a^{-1/2}$ is an isometry onto $\operatorname{Ran} P_{G_a}$ with $\norm{\Gamma_a^{-1/2}} \le \sqrt{2}$ and $m_a = 2J_a + 1 = O(a)$, we obtain $\norm{\mathsf{W}_{e^a}P_{G_a}} \le \sqrt{2}\bigl(\sum_{|j|\le J_a}\norm{\mathsf{W}_{e^a}g_{a,j}}_2^2\bigr)^{1/2} \le C a e^{-e^a/100}$.
+
+(b) On $[-1,1]$, the uncut fine translates $\phi(\cdot - t_j)$ ($t_j = j/J$, $|j| \le J$, $m = 2J+1$) have Fourier transforms $e^{-i\xi t_j}\widehat{\phi}(\xi)$. Restricting to the frequency band $[-\pi J, \pi J]$, where $|\widehat{\phi}(\xi)| = \frac{2}{\sqrt{3\pi}\norm{h}_2}\Xi(\xi) \ge \exp(-C_1 J\log J)$ along a well-spaced grid or by divided-difference Lagrange interpolation on $\{t_j\}$ (\path{evidence/v153/new_section.tex}, \texttt{lem:ns46-a2-lem-gram}), the uncut Gram matrix $\Gamma^{\mathrm{uncut}}$ satisfies $\lambda_{\min}(\Gamma^{\mathrm{uncut}}) \ge \exp(-C_2 m\log m)$. Since $m = 2J+1 \le \lambda^2/(20000a) + 1$, we have $m\log m \le \frac{\lambda^2}{10000}$, so $\lambda_{\min}(\Gamma^{\mathrm{uncut}}) \ge \exp(-\lambda^2/5000)$. Meanwhile, because every $|t_j| \le 1$, on $\operatorname{supp}(1-\chi_a) = \{|x| \ge a-1\}$ we have $|x - t_j| \ge a - 2$, so the Gaussian tail~\eqref{eq:v135-gaussian-tail} has exponent $-\frac{\pi}{2}e^{2(a-2)} = -\frac{\pi}{2e^4}\lambda^2 < -\frac{1}{35}\lambda^2$. Thus each column's exterior residual satisfies $\norm{\mathsf{W}_{e^a}(\chi_a\phi(\cdot - t_j))}_2 \le C\exp(-\lambda^2/40)$ and the cutoff Gram perturbation is $O(m\exp(-\lambda^2/20)) \ll \frac{1}{2}\lambda_{\min}(\Gamma^{\mathrm{uncut}})$. Multiplying the individual column residual $\le C\exp(-\lambda^2/40)$ by $\sqrt{m}\,\lambda_{\min}(\Gamma_a)^{-1/2} \le C\exp(\lambda^2/10000)$ yields~\eqref{eq:ns46-fine-residual}. Symmetrizing and antisymmetrizing under $t_j \leftrightarrow -t_j$ splits $\mathcal{R}_a^{\mathrm{fine}}$ into $J+1$ even and $J$ odd linearly independent directions. By min--max, if $\dim F_a < m$, $\mathcal{R}_a^{\mathrm{fine}} \cap F_a^\perp$ contains a unit vector satisfying~\eqref{eq:ns46-fine-residual}.
+\end{proof}
+
+\subsection{Continuum Cancellation, Local PNT Obstruction, Concentration Commutators, and Scalar-Primitive Divergence}
+
+On $(-a,a)$, define $(K_a^\pm f)(x) = \int_{-a}^a e^{\pm|x-y|/2}f(y)\,\dd y$. By \texttt{prop:v130-continuum-cancellation}, the kernel identity $2\cosh(x/2)\cosh(y/2) - e^{|x-y|/2} = e^{-|x-y|/2} + 2\sinh(x/2)\sinh(y/2)$ gives
+\begin{equation}\label{eq:continuum-cancel}
+  2|c\rangle\langle c| - K_a^+ = K_a^- + 2|s\rangle\langle s| \succeq 0,
+\end{equation}
+and by \texttt{prop:v130-remainder} and \texttt{prop:v135-both-parities}, for every $f \in \mathcal{D}(q_a)$,
+\begin{align}\label{eq:beta-symbol}
+  q_a[f] &= \int_{\mathbb{R}} \beta_a(\xi)\bigl|\widehat{\widetilde{f}}(\xi)\bigr|^2\,\dd\xi, \\
+  \beta_a(\xi) &= \Re\psi\!\left(\frac{5}{4} + \frac{i\xi}{2}\right) - \log\pi - 2\sum_{1 < m < e^{2a}} \frac{\Lambda(m)}{\sqrt{m}}\cos(\xi\log m) + 2\int_0^{2a} e^{t/2}\cos(\xi t)\,\dd t.\nonumber
+\end{align}
+For the Gaussian positive-weight capacity identity (\texttt{NS-34}, \path{evidence/v150/capacity_weight.tex}), let $h$ be the positive Gaussian radical~\eqref{eq:gaussian-radical} and for $f \in \mathcal{D}(q_a)$ with $g = f/h$ define the positive difference energy
+\begin{equation}\label{eq:v150-picone-energy}
+\begin{aligned}
+  \mathcal{J}_{a,h}[g] :={}& \frac{1}{2}\iint_{I_a^2} \frac{e^{|x-y|/2}}{2\sinh|x-y|}\,h(x)h(y)\bigl|g(x) - g(y)\bigr|^2\,\dd x\,\dd y \\
+  &+ \sum_{2 \le m < e^{2a}} \frac{\Lambda(m)}{\sqrt{m}} \int_{\substack{x \in I_a \\ x + \log m \in I_a}} h(x)h(x+\log m)\bigl|g(x+\log m) - g(x)\bigr|^2\,\dd x.
+\end{aligned}
+\end{equation}
+
+\begin{theorem}[Obstructions to Perturbative PNT Replacement, Reciprocal Commutation, Scalar Primitives, and Capacity Slack]
+\label{thm:concentration-obstructions}
+Let $C_a$ be the prime-shift operator $(C_a f)(x) = \sum_{1<m<e^{2a}}\frac{\Lambda(m)}{\sqrt{m}}\{\widetilde{f}(x+\log m)+\widetilde{f}(x-\log m)\}$, let $R_a = C_a - K_a^+$, and let $\beta_a(\xi)$ be the discrepancy symbol~\eqref{eq:beta-symbol}.
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Local obstruction to perturbative PNT replacement (\texttt{prop:v130-local-no-go}):} Let $u_a$ be any normalized family in $L^2(-a,a)$. For all sufficiently large $a$ ($a > \tfrac{1}{2}\log 3$), there is a normalized real even $g_a \in C_c^\infty(-a,a) \cap u_a^\perp$ chosen from a \emph{fixed two-dimensional family} of $6$-bump combinations (total support diameter $< \log 3$, with both $c$- and $s$-moments vanishing) such that
+  \begin{equation}\label{eq:v130-local-no-go}
+    \ip{R_a g_a}{g_a} = \frac{\log 2}{\sqrt{2}}\norm{g_a}_2^2 + \ip{K_a^- g_a}{g_a} > \frac{\log 2}{\sqrt{2}} > 0.4901,
+  \end{equation}
+  and every fixed archimedean reference-form norm $\mathcal{E}_{\mathrm{ref}}(g_a) = \ip{A_{\mathrm{ref}}g_a}{g_a}$ (for any fixed positive reference operator $A_{\mathrm{ref}}$ defined on $C_c^\infty(-\log 3, \log 3)$) is bounded uniformly in $a$. Therefore no estimate $R_a \preceq \eta_a I$ ($\eta_a \to 0$) or $R_a \preceq \alpha_a A_{\mathrm{ref}} + \eta_a I$ ($\alpha_a, \eta_a \to 0$) can hold on $u_a^\perp$. Separately, letting the bump profile vary over the infinite-dimensional space of even smooth bumps in $(-\varepsilon, \varepsilon)$ shows that the ordinary-$L^2$ inequality $\ip{R_a g_a}{g_a} > \frac{\log 2}{\sqrt{2}}\norm{g_a}_2^2$ persists in $V_a^\perp$ after removing any finite-dimensional subspace $V_a$ at each window (without a $V_a$-independent Sobolev bound).
+  \item \textbf{Full-line infinite negative index at $\lambda = 4$ (\texttt{prop:v132-global-index}, \path{audits/bounds-six-agent-2026-09-30-v1/}):} At $a = \log 4$, direct $192/320$-bit Arb evaluation (\path{certificate/01-direct/verify_beta.py}) and an independent $128/256$-bit digamma-series plus rational gate enclosure (\path{certificate/02-independent/certify_series.py}) certify respectively
+  \begin{equation}\label{eq:beta-log4-enclosures}
+  \begin{aligned}
+    \beta_{\log 4}(1) &\in \bigl(-0.640027118160897146421661394744768547319369747,\\
+    &\phantom{\in\bigl(}\,-0.640027118160897146421661394744768547319369746\bigr) < -\frac{3}{5}, \\
+    \beta_{\log 4}(1) &\in (-0.640150, -0.639904) < -\frac{3}{5}.
+  \end{aligned}
+  \end{equation}
+  Hence the unconstrained $L^2(\mathbb{R})$ multiplier $\beta_{\log 4}(\xi)$ has infinite negative index even after any fixed finite number of homogeneous linear constraints, whereas its Paley--Wiener physical compression $\mathsf{W}_4^{\mathrm{ev}}$ is nonnegative by Theorem~\ref{thm:lambda4-positivity}.
+  \item \textbf{Noncommutation of source-compressed reciprocal bands (\texttt{prop:v133-noncommute}):} Let $P_a = I - |u_a\rangle\langle u_a|$ project onto the actual even source complement on $L^2_{\mathrm{ev}}(-a,a)$, where $\mathcal{F}_a : L^2(-a,a) \to L^2(\mathbb{R})$ is the unitary Fourier transform of the zero extension (compare classical bandlimited concentration~\cite{LandauPollak1961,Nazarov1994,Kovrijkine2000}). For $E_a = [-1/(10a), 1/(10a)]$ and $F_a = [-1/(5a), 1/(5a)]$, the source-compressed concentration operators $A_{E_a} = P_a \mathcal{F}_a^* \mathbf{1}_{E_a}\mathcal{F}_a P_a$ satisfy
+  \begin{equation}\label{eq:commutator-lower}
+    \liminf_{a \to \infty} \norm{[A_{E_a}, A_{F_a}]} > 9 \times 10^{-6}.
+  \end{equation}
+  \item \textbf{Disjoint-channel Cotlar cross-term persistence (\texttt{prop:v134-disjoint}):} For $E_a = [-1/(10a), 1/(10a)]$ and $F_a = [-3/(10a), -1/(5a)] \cup [1/(5a), 3/(10a)]$, the source-compressed Paley--Wiener projection $\Pi_{a,u} = \mathcal{F}_a P_a \mathcal{F}_a^*$ satisfies
+  \begin{equation}\label{eq:cotlar-lower}
+    \liminf_{a \to \infty} \norm{\mathbf{1}_{E_a}\Pi_{a,u}\mathbf{1}_{F_a}} \ge \frac{73}{375\pi} > 0.0619.
+  \end{equation}
+  \item \textbf{Conditional linear growth and unconditional divergence of the Bernstein scalar primitive-drawdown budget (\texttt{prop:v134-\allowbreak primitive}, \texttt{lem:v137-\allowbreak probe}, \texttt{prop:v137-\allowbreak conditional-\allowbreak mass}, \texttt{cor:v137-\allowbreak scalar-\allowbreak no-\allowbreak go}, \path{evidence/v137/}):} Among all scalar decompositions $\beta_a = b_a + W_a'$ with $b_a \ge 0$ and $W_a \in L^\infty(\mathbb{R})$, the $L^2$ Bernstein inequality $\norm{(\widehat{\widetilde{f}})'}_2 \le a\norm{f}_2$ gives $q_a[f] \ge -a\Delta(\beta_a)\norm{f}_2^2$, where the optimal primitive drawdown is $\Delta(\beta_a) = 2\inf\{\norm{W}_\infty : \beta_a - W' \ge 0\} = \sup_{x<y}\bigl(-\int_x^y \beta_a(\xi)\,\dd\xi\bigr)_+$. Under RH (using the Riemann--von Mangoldt zero-counting bound~\cite{HasanalizadeShenWong2022}), for all sufficiently large $a$,
+  \begin{equation}\label{eq:v137-rh-linear}
+    \Delta(\beta_a) \ge \frac{1}{6\pi}, \qquad a\Delta(\beta_a) \ge \frac{a}{6\pi}, \qquad \inf_{\xi \in \mathbb{R}} \beta_a(\xi) \le -\frac{a}{6\pi^2},
+  \end{equation}
+  and \textbf{unconditionally} (without assuming RH),
+  \begin{equation}\label{eq:v137-unconditional-div}
+    \lim_{a \to \infty} a\Delta(\beta_a) = +\infty, \qquad \lim_{a \to \infty} \inf_{\xi \in \mathbb{R}} \beta_a(\xi) = -\infty,
+  \end{equation}
+  closing the scalar signed-primitive route to Theorem~\ref{thm:bounded-floor}.
+  \item \textbf{Gaussian positive-weight capacity slack blowup (\texttt{NS-34}, \texttt{prop:v150-critical-energy}, \texttt{prop:v150-capacity-slack}, \path{evidence/v150/capacity_weight.tex}):} In the exact Picone identity for the positive Gaussian radical $h$ of~\eqref{eq:gaussian-radical}, sacrificing any fixed fraction $\delta_0 \in (0,1]$ of the positive difference energy $\mathcal{J}_{a,h}[f/h]$ in~\eqref{eq:v150-picone-energy} or deleting the prime-$2$ shift channel forces the lower-floor error $\eta_a$ in both the even source-orthogonal sector and the odd sector to satisfy
+  \begin{equation}\label{eq:v150-slack-blowup}
+    \eta_a \ge \delta_0 \kappa \exp(\gamma\lambda^2) - O(\lambda\log\lambda) \longrightarrow +\infty, \qquad \kappa = \frac{(2\pi - 3)\log 2}{128\pi} > 0, \quad \gamma = \frac{3\pi}{4}e^{-4\ell - 2b} > 0,
+  \end{equation}
+  where $\ell = \log 2$ and $b = \ell/16$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(a) Put $\ell = \log 2$, $d = 1/10$, and $0 < \varepsilon < 1/100$. For any nonzero even $\phi_0 \in C_c^\infty(-\varepsilon, \varepsilon)$, set $c_{-1} = c_1 = 1$, $c_0 = -2\cosh(d/2)$, and
+\[
+  g_{\phi_0}(x) = \sum_{j=-1}^1 c_j\bigl\{\phi_0(x - \ell/2 - jd) + \phi_0(x + \ell/2 - jd)\bigr\}.
+\]
+The six bump supports are pairwise disjoint and lie inside $(-a,a)$ with total diameter $\ell + 2d + 2\varepsilon < \log 3$. Hence among all prime powers $m \ge 2$, only $m = 2$ ($\log 2 = \ell$) couples the supports, and direct shift evaluation gives $\ip{C_a g_{\phi_0}}{g_{\phi_0}} = \frac{\log 2}{\sqrt{2}}\norm{g_{\phi_0}}_2^2$. Since $\sum_{j=-1}^1 c_j e^{\pm jd/2} = 2\cosh(d/2) - 2\cosh(d/2) = 0$, both $\ip{g_{\phi_0}}{c} = 0$ and $\ip{g_{\phi_0}}{s} = 0$. By~\eqref{eq:continuum-cancel}, $-\ip{K_a^+ g_{\phi_0}}{g_{\phi_0}} = \ip{K_a^- g_{\phi_0}}{g_{\phi_0}} > 0$ (as $K_a^-$ has strictly positive Fourier multiplier $(\xi^2 + 1/4)^{-1}$), proving~\eqref{eq:v130-local-no-go}. Choosing two linearly independent profiles $\phi_{0,1}, \phi_{0,2} \in C_c^\infty(-\varepsilon,\varepsilon)$ yields a fixed $2$-dimensional space intersecting $u_a^\perp$ nontrivially at every $a$.
+
+(b) Continuity of $\beta_{\log 4}(\xi)$ and~\eqref{eq:beta-log4-enclosures} imply $\beta_{\log 4}(\xi) < -3/5$ on a nonempty open interval $I_- \subset \mathbb{R}$, on which $L^2(I_-)$ is infinite-dimensional.
+
+(c) Scale $L^2_{\mathrm{ev}}(-1,1)$ unitarily to $L^2_{\mathrm{ev}}(-a,a)$ via $(U_a f)(x) = a^{-1/2}f(x/a)$. Under $U_a$, the uncompressed operators become $C_{1/10}$ and $C_{1/5}$ on $L^2_{\mathrm{ev}}(-1,1)$, where $(C_c f)(x) = \frac{1}{\pi}\int_{-1}^1 \frac{\sin(c(x-y))}{x-y}f(y)\,\dd y$. With $e_0 = 1/\sqrt{2}$, $e_2(x) = \sqrt{5/8}(3x^2 - 1)$, and the rank-two Taylor approximation $T_c = \frac{c}{\pi}|1\rangle\langle 1| - \frac{c^3}{6\pi}(|x^2\rangle\langle 1| + |1\rangle\langle x^2|)$, Taylor's theorem gives $\norm{C_c - T_c} \le \frac{2c^5}{15\pi}$ and $\norm{C_c} \le \frac{2c}{\pi}$. Direct rank-two algebra gives $\ip{[T_c, T_d]e_0}{e_2} = \frac{4cd(d^2 - c^2)}{9\sqrt{5}\,\pi^2}$, so at $c = 1/10, d = 1/5$ (using $9 < \pi^2 < 10$ and $\sqrt{5} < 9/4$) we obtain $\norm{[C_{1/10}, C_{1/5}]} > \frac{1}{84375} - \frac{272}{135000000} - \frac{256}{20250000000000} > 9 \times 10^{-6}$. Since $J_a u_a \to \phi$ strongly in $L^2(\mathbb{R})$, the dilated source $z_a = U_a^* u_a$ converges weakly to $0$ in $L^2(-1,1)$, and compactness of $C_c$ gives $\norm{C_c z_a}_2 \to 0$, so $\norm{U_a^*[A_{E_a}, A_{F_a}]U_a - [C_{1/10}, C_{1/5}]} \to 0$.
+
+(d) Under the reciprocal frequency dilation $\xi \mapsto \xi/a$, $E_a$ and $F_a$ become $E = [-1/10, 1/10]$ and $F = [-3/10, -1/5] \cup [1/5, 3/10]$ of measure $|E| = |F| = 1/5$, and $\Pi_a$ becomes $(\Pi f)(\xi) = \int_{\mathbb{R}} \frac{\sin(\xi - \eta)}{\pi(\xi - \eta)}f(\eta)\,\dd\eta$. Testing on the unit even indicators $e_E = \sqrt{5}\,\mathbf{1}_E$ and $e_F = \sqrt{5}\,\mathbf{1}_F$, for $\xi \in E$ and $\eta \in F$ we have $|\xi - \eta| \le 2/5$ and $\frac{\sin t}{t} \ge 1 - \frac{t^2}{6} \ge \frac{73}{75}$, so $\ip{\mathbf{1}_E \Pi \mathbf{1}_F e_F}{e_E} \ge 5|E||F|\frac{73}{75\pi} = \frac{73}{375\pi}$. Absolute continuity of $|\widehat{\phi}|^2$ implies $\norm{\mathbf{1}_{E_a}\widehat{\widetilde{u}}_a}_2 \norm{\mathbf{1}_{F_a}\widehat{\widetilde{u}}_a}_2 \to 0$, proving~\eqref{eq:cotlar-lower}.
+
+(e) Let $w = \mathbf{1}_{[\pi, 3\pi]} * \kappa_\delta$ where $\kappa_\delta(t) = \delta^{-1}(1 - |t|/\delta)_+$ ($\delta = 1/100$), supported in $[\pi - \delta, 3\pi + \delta] \subset (1, 10)$. Its Laplace--Fourier transform $H(z) = \int_0^\infty w(t)\cosh(zt)\,\dd t$ has $H(\pm i) = \int_0^\infty w(t)\cos t\,\dd t = \bigl(\frac{\sin(\delta/2)}{\delta/2}\bigr)^2\int_\pi^{3\pi}\cos t\,\dd t = 0$. For $K(\xi) = \frac{1}{\pi}\int_0^\infty w(t)\cos(\xi t)\,\dd t$, integration by parts gives $K(\xi) - K(0) = \frac{1}{\pi\xi}\int_0^\infty w'(t)\sin(\xi t)\,\dd t$. Using $w(t) \ge 1$ on $[\pi+\delta, 3\pi-\delta]$, $\int_0^\infty |w'(t)|\,\dd t = 2$, $\pi > 3$, and the rational gate $6(22/7)^2 = 2904/49 < 100 = 1/\delta$ (\texttt{lem:v137-probe}, \path{evidence/v137/check_probe.py}), we obtain $K(0) > 2 - \frac{2}{3\pi} > \frac{5}{3}$ and $\max_{|\xi|\le 3\pi}\bigl(-K(\xi)\bigr) < \frac{1}{3\pi}$. Under RH, the explicit formula for $w_a(t) = w(t - (2a - 10))$ (supported in $(2a-9, 2a)$ for $a \ge 5$) gives $\int_{\mathbb{R}} \beta_a(\xi)K_a(\xi)\,\dd\xi = -2\sum_{\gamma > 0} m_\gamma \Re\bigl(e^{i\gamma(2a-10)}\widehat{w}(\gamma)\bigr) + O(e^{-a}) = O(1)$ since $\widehat{w}(\gamma) = O(\gamma^{-2})$ and $\sum_\gamma \gamma^{-2} < \infty$. Splitting $\int_{\mathbb{R}} \beta_a K_a = \int_{|\xi|\le 3\pi} \beta_a K_a + \int_{|\xi|>3\pi} \beta_a K_a$ and bounding the tail by integration by parts shows that for large $a$, either $\inf_{|\xi|\le 3\pi}\beta_a(\xi) \le -a/(6\pi^2)$ or $\Delta(\beta_a) \ge 1/(6\pi)$; since $\Delta(\beta_a) \le 6\pi\sup_{|\xi|\le 3\pi}(\beta_a)_-$, both hold under RH (\texttt{prop:v137-conditional-mass}). Finally, if $a_j\Delta(\beta_{a_j})$ were bounded along a cofinal sequence $a_j \to \infty$, the Bernstein bound $q_{a_j}[f] \ge -a_j\Delta(\beta_{a_j})\norm{f}_2^2$ and Theorem~\ref{thm:bounded-floor} would imply RH, which by~\eqref{eq:v137-rh-linear} forces $a_j\Delta(\beta_{a_j}) \ge a_j/(6\pi) \to +\infty$, a contradiction (\texttt{cor:v137-scalar-no-go}).
+
+(f) By \texttt{prop:v150-critical-energy} (\path{evidence/v150/capacity_weight.tex}), global radicality of $h$ implies that on $I_a = (-a,a)$, with $g = f/h$, $I_h = \int_{\mathbb{R}} c(x)h(x)\,\dd x = 1/\sqrt{3}$, exterior tail $T_a(x) \ge 0$, and interior potential $r_a(x) = \bigl(T_a(x) - 2I_h c(x)\bigr)/h(x)$, the local Picone identity is
+\begin{equation}\label{eq:v150-critical-picone}
+  q_a[f] = \mathcal{J}_{a,h}[g] + \int_{I_a} r_a(x)|f(x)|^2\,\dd x + \Pi[f].
+\end{equation}
+Choose two fixed real even orthonormal smooth bumps $\phi_1, \phi_2 \in C_c^\infty(-b,b)$ ($b = \ell/16$), set $t = a - 2\ell$, and define the orthonormal pairs $F_{j,t}^{\pm}(x) = 2^{-1/2}\bigl(\phi_j(x-t) \pm \phi_j(x+t)\bigr)$ ($j=1,2$) in the even and odd sectors. The even $2$-dimensional span contains a unit vector $f_a^{\mathrm{ev}} \perp u_a$, and every odd vector is source-orthogonal. For any unit vector $f$ in either span, the shifted supports by $\pm\ell$ lie in $I_a$ outside $\operatorname{supp}(f)$, and by~\eqref{eq:gaussian-radical} we have $h(x-\ell)/h(x) \ge \frac{2\pi-3}{4\pi}2^{-9/2}\exp\bigl(\frac{3\pi}{4}e^{2x}\bigr)$ on $[t-b, t+b]$. Hence $\mathcal{J}_{a,h}[f/h] \ge \mathcal{J}_{a,h}^{(2)}[f/h] \ge \frac{\log 2}{\sqrt{2}}\inf_{t-b \le x \le t+b}\frac{h(x-\ell)}{h(x)} \ge \kappa\exp(\gamma e^{2a})$, while $q_a[f] \le B_a = A + (8a+1)e^a + 2a = O(\lambda\log\lambda)$, proving~\eqref{eq:v150-slack-blowup}.
+\end{proof}
+
+\subsection{Local-UCP Failure, Boundary-Free Dual-Pole Stieltjes Identity, and Position-Weighted Radical Moments}
+We record the exact local-UCP counterexample (\texttt{NS-55}, \path{evidence/v155/proof.tex}) together with the repaired Theorem~1 and Theorem~2 from \texttt{audits/cofinal-\allowbreak candidate-\allowbreak mechanisms-\allowbreak screen-\allowbreak 2026-10-16-v1/\allowbreak derivation.md}.
+
+\begin{theorem}[Local-UCP Failure, Dual-Pole Chebyshev--Legendre Identity, and Position-Weighted Radical Moment]
+\label{thm:ucp-and-dual-pole}
+\leavevmode
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Local open-set UCP failure (\texttt{NS-55}, \texttt{prop:ns55-\allowbreak local-\allowbreak ucp-\allowbreak counterexample}, \texttt{prop:ns55-\allowbreak parity-\allowbreak ucp-\allowbreak counterexample}, \path{evidence/v155/proof.tex}):} For every $a = \log\lambda > \log 2$ and parity sign $\sigma \in \{+1,-1\}$, there exist a nonempty open subinterval $U \Subset (0,a)$ and an infinite-dimensional real linear subspace $\mathcal{L}_\sigma \subset \mathcal{D}(\mathsf{W}_{e^a})$ of $\sigma$-parity functions ($f(-x) = \sigma f(x)$) such that $f$ and $\mathsf{W}_{e^a} f$ vanish identically on $U \cup (-U)$ (hence also after imposing any finite number of linear constraints such as orthogonality to $u_a$). Moreover, for $2a > \log r$ where $r > 1$ is the unique real root of $r^3 - r - 1 = 0$, the semigroup $e^{-s\mathsf{W}_{e^a}}$ is not positivity-preserving on the ordinary pointwise cone $L^2_+(I_a)$ (\texttt{prop:ns55-\allowbreak nonpositive-\allowbreak semigroup}).
+  \item \textbf{Boundary-free dual-pole Chebyshev--Legendre Stieltjes identity in both parities (\path{derivation.md}, Theorem~1):} Let $a > 0$, let $e_m^{(a)}(x) = \sqrt{\frac{2m+1}{2a}}\,P_m(x/a)\mathbf{1}_{(-a,a)}(x)$ ($m \ge 0$) be the orthonormal Legendre basis of $L^2(-a,a)$, and let
+  \begin{align*}
+    C_{m,n}(u) &:= \int_{-1}^{1-u} \sqrt{\frac{2m+1}{2}}\,P_m(y)\,\sqrt{\frac{2n+1}{2}}\,P_n(y+u)\,\dd y \qquad (u \in [0,2]), \\
+    \widetilde{C}_{m,n}(u) &:= \frac{C_{m,n}(u) + C_{n,m}(u)}{2}.
+  \end{align*}
+  Define the Legendre pole moments $c_m(a) = \int_{-a}^a e_m^{(a)}(x)\cosh(x/2)\,\dd x$ and $s_m(a) = \int_{-a}^a e_m^{(a)}(x)\sinh(x/2)\,\dd x$. For all $m, n \ge 0$ with $m \equiv n \pmod 2$, the prime-shift matrix entry $\bigl(T_{\mathrm{arith}}(a)\bigr)_{m,n} = \sum_{2 \le k < e^{2a}} \frac{\Lambda(k)}{\sqrt{k}}\,2\,\widetilde{C}_{m,n}(\frac{\log k}{a})$ and the polar matrix entry $\bigl(T_{\mathrm{pole}}(a)\bigr)_{m,n}$ ($+2c_m(a)c_n(a)$ for $m,n$ even; $-2s_m(a)s_n(a)$ for $m,n$ odd) satisfy
+  \begin{equation}\label{eq:dual-pole-stieltjes}
+    \bigl(T_{\mathrm{pole}}(a)\bigr)_{m,n} = \int_1^{e^{2a}} x^{-1/2}\,2\,\widetilde{C}_{m,n}\!\left(\frac{\log x}{a}\right)\dd(x + \log x - 1).
+  \end{equation}
+  Consequently, with the dual-pole Chebyshev remainder $\widetilde{R}_\psi(x) := \psi(x) - x - \log x + 1$, Stieltjes integration by parts on $[1, e^{2a}]$ produces \textbf{identically zero boundary terms at both endpoints} ($\widetilde{R}_\psi(1) = 0$ and $\widetilde{C}_{m,n}(2) = 0$) and yields the exact identity
+  \begin{equation}\label{eq:dual-pole-ibp}
+    \bigl(T_{\mathrm{arith}}(a) - T_{\mathrm{pole}}(a)\bigr)_{m,n} = \int_0^2 \frac{\psi(e^{au}) - e^{au} - au + 1}{e^{au/2}}\,\bigl(a\,\widetilde{C}_{m,n}(u) - 2\,\widetilde{C}_{m,n}'(u)\bigr)\,\dd u.
+  \end{equation}
+  \item \textbf{Position-weighted radical $f_{\mathrm{pos}}(x) = x\,h(x)$ and closed-form odd pole moment (\path{derivation.md}, Theorem~2):} Writing $\widehat{f}_{\mathrm{nu}}(\gamma) := \int_{\mathbb{R}} f(x)e^{-i\gamma x}\,\dd x = \sqrt{2\pi}\,\widehat{f}(\gamma)$ for the unnormalized Fourier transform, every translation $h_\tau(x) = h(x-\tau)$ of the even Gaussian radical~\eqref{eq:gaussian-radical} has $\widehat{h_\tau}_{\mathrm{nu}}(\gamma) = e^{-i\gamma\tau}\frac{2}{\sqrt{3}}\Xi(\gamma)$ vanishing at every critical-line zero $\rho_k = \tfrac{1}{2} + i\gamma_k$. By contrast, the odd position-weighted radical $f_{\mathrm{pos}}(x) := x\,h(x)$ has Mellin transform $M'(z) = \int_{\mathbb{R}} x\,h(x)e^{(z-1/2)x}\,\dd x = \frac{2}{\sqrt{3}}\xi'(z)$, nonzero Fourier value $\widehat{f_{\mathrm{pos}}}_{\mathrm{nu}}(\gamma_k) = +\frac{2i}{\sqrt{3}}\Xi'(\gamma_k) \ne 0$ (equivalently $\widehat{f_{\mathrm{pos}}}(\gamma_k) = \frac{i\sqrt{2}}{\sqrt{3\pi}}\Xi'(\gamma_k) \ne 0$) at simple critical zeros, and exact closed-form odd pole moment at $z = 1$:
+  \begin{align}\label{eq:odd-pole-moment-closed}
+    \int_{\mathbb{R}} x\sinh\!\left(\frac{x}{2}\right)h(x)\,\dd x &= \frac{2}{\sqrt{3}}\,\xi'(1) = \frac{1}{\sqrt{3}}\!\left(1 + \frac{\gamma_{\mathrm{E}} - \log(4\pi)}{2}\right) \nonumber\\
+    &= +0.01333431378871523222883\dots > 0.
+  \end{align}
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(a) Put $\ell = \log 2$, $w_2 = \frac{\log 2}{\sqrt{2}}$, $\rho(t) = \frac{e^{t/2}}{2\sinh t}$, and $R(t) = 2\cosh(t/2) - \rho(t)$ ($t > 0$). On any open $J \subset I_a$ disjoint from $\operatorname{supp}(f)$, \texttt{prop:v118-log-dirichlet} gives $(\mathsf{W}_{e^a}f)(x) = \int_{I_a} R(|x-y|)f(y)\,\dd y - \sum_{1<n<e^{2a}}\frac{\Lambda(n)}{\sqrt{n}}\{\widetilde{f}(x-\log n)+\widetilde{f}(x+\log n)\}$. For $a > \log 2$ and $\sigma \in \{+1,-1\}$, choose $v_0 \in (0, a-\ell)$ with $2v_0 + \ell \notin \mathcal{P}_a := \{\log n : 1 < n < e^{2a},\ \Lambda(n) > 0\}$, set $u_0 = v_0 + \ell$, and choose $w_0 \in (0, v_0/2)$ with $u_0 \pm w_0 \notin \mathcal{P}_a$. Pick $\epsilon > 0$ small enough that $U = (u_0-\epsilon, u_0+\epsilon)$, $V = (v_0-\epsilon, v_0+\epsilon)$, $W = (w_0-\epsilon, w_0+\epsilon)$ and their reflections have pairwise disjoint closures in $I_a$, differences from $U$ to $\pm V, \pm W$ meet $\mathcal{P}_a$ only in $U - V \ni \ell$, and $2\epsilon\sup_{x,t\in\overline{U}}|R(x-t+\ell)+\sigma R(x+t-\ell)| < w_2/2$. For any $h_0 \in C_c^\infty(W)$, define $(T_\sigma v)(x) = \int_U \{R(x-t+\ell)+\sigma R(x+t-\ell)\}v(t)\,\dd t$ and $H_\sigma(x) = \int_W \{R(x-y)+\sigma R(x+y)\}h_0(y)\,\dd y$ on $L^2(U)$. Since $\norm{T_\sigma} < w_2/2$, $v = (w_2 I - T_\sigma)^{-1}H_\sigma$ is smooth on $\overline{U}$. Setting $f(y) = v(y+\ell)$ on $V$, $f = h_0$ on $W$, $f(-x) = \sigma f(x)$, and $0$ elsewhere yields $f \in \mathcal{D}(\mathsf{W}_{e^a})$ (since piecewise smooth compactly supported functions lie in $H^s(\mathbb{R})$ for $0 < s < 1/2 \subset \mathcal{D}(\mathsf{W}_{e^a})$) with $f = \mathsf{W}_{e^a}f = 0$ on $U \cup (-U)$ because $-w_2 v + T_\sigma v + H_\sigma = 0$ on $U$. Since $h_0 \mapsto f$ is injective ($f|_W = h_0$), $\mathcal{L}_\sigma$ is infinite-dimensional. Finally, for $t > 0$ with $u = e^t > 1$, the off-diagonal kernel away from $\mathcal{P}_a$ is $J(t) = 2\cosh(t/2) - \rho(t) = \frac{u^3 - u - 1}{\sqrt{u}(u^2 - 1)} > 0$ for $t > \log r$ ($r^3 - r - 1 = 0$). Choosing disjoint nonnegative smooth bumps $f_1, f_2 \in C_c^\infty(I_a)$ at separation $t_0 \in (\log r, 2a) \setminus \mathcal{P}_a$ gives $q_a(f_1, f_2) = \iint J(|x-y|)f_1(x)f_2(y)\,\dd x\,\dd y > 0$, so $\ip{e^{-s\mathsf{W}_{e^a}}f_1}{f_2} = -s\,q_a(f_1,f_2) + o(s) < 0$ for small $s > 0$.
+
+(b) Using $\cosh(\frac{x-y}{2}) = \cosh(x/2)\cosh(y/2) - \sinh(x/2)\sinh(y/2)$ and parity, we have
+\[
+  \iint_{(-a,a)^2} e_m^{(a)}(x)e_n^{(a)}(y)\,2\cosh\!\left(\frac{x-y}{2}\right)\dd x\,\dd y = \bigl(T_{\mathrm{pole}}(a)\bigr)_{m,n}
+\]
+in both parities simultaneously. Changing variables to $\tau = |x-y| \in (0,2a)$ and $x = e^\tau \in [1,e^{2a}]$ yields $(e^{\tau/2} + e^{-\tau/2})\,\dd\tau = x^{-1/2}(1 + x^{-1})\,\dd x = x^{-1/2}\,\dd(x + \log x - 1)$, proving~\eqref{eq:dual-pole-stieltjes} and, by Stieltjes integration by parts with $\widetilde{R}_\psi(1) = \widetilde{C}_{m,n}(2) = 0$,~\eqref{eq:dual-pole-ibp}.
+
+(c) Differentiating $M(z) = \int_{\mathbb{R}} h(x)e^{(z-1/2)x}\,\dd x = \frac{2}{\sqrt{3}}\xi(z)$ (\texttt{eq:v150-mellin}) gives $M'(z) = \frac{2}{\sqrt{3}}\xi'(z)$ and $\widehat{f_{\mathrm{pos}}}_{\mathrm{nu}}(\gamma) = iM'(\tfrac{1}{2} + i\gamma) = +\frac{2i}{\sqrt{3}}\Xi'(\gamma)$. Since $x\,h(x)$ is odd, $\int_{\mathbb{R}} x\cosh(x/2)h(x)\,\dd x = 0$, so $\int_{\mathbb{R}} x\sinh(x/2)h(x)\,\dd x = M'(1) = \frac{2}{\sqrt{3}}\xi'(1)$. Using $M(1) = 1/\sqrt{3}$ and $\frac{\dd}{\dd z}\log\bigl(z\pi^{-z/2}\Gamma(z/2)(z-1)\zeta(z)\bigr)\big|_{z=1} = 1 - \tfrac{1}{2}\log\pi + \tfrac{1}{2}\psi(1/2) + \gamma_{\mathrm{E}} = 1 + \frac{\gamma_{\mathrm{E}} - \log(4\pi)}{2}$ yields~\eqref{eq:odd-pole-moment-closed}.
+\end{proof}
+
+\begin{remark}[Certified Finite-Shell Diagnostics and Scope Limitations]
+In \path{verify_cofinal_candidate_mechanisms.py} ($256$ and $384$ bits, \path{derivation.md} \S\S1.3, 2.1),~\eqref{eq:dual-pole-ibp} is verified across $8$ even/odd pairs at $\lambda = 5$ to ball radius $\le 1.48 \times 10^{-98}$, and~\eqref{eq:odd-pole-moment-closed} is verified with two-sided $[3.5,\infty)$ tail enclosure $2\int_{3.5}^\infty x\sinh(x/2)h(x)\,\dd x \in [2.8135\times 10^{-1491}, 1.1110\times 10^{-1490}]$ to radius $3.22 \times 10^{-41}$. On the $8\times 8$ Legendre subspaces $V_8^{\mathrm{even}}(-a,a)$ and $V_8^{\mathrm{odd}}(-a,a)$, the compressed matrix $\mathsf{W}_\lambda^{(8)}$ is certified positive definite across $\lambda \in \{2,3,5,8\}$, and on the $4$-mode even Legendre shell $V_{[4,8]}^{\mathrm{even}}$ at $\lambda = 8$ the Frobenius cancellation ratio is $\frac{\sum 2\Lambda(k)/\sqrt{k}}{\norm{T_{\mathrm{arith}}(a)|_{V_{[4,8]}^{\mathrm{even}}}}_F} = 53.16\times$ ($26.497679$ vs.\ $0.498479$). These finite-shell and two-function ($h, x\,h$) diagnostics do \textbf{not} bound the infinite-dimensional tail $V_8(a)^\perp$ or the full unbounded archimedean form, and do not establish \texttt{WEIL-FLOOR}.
+\end{remark}
+
+\section{Nyman--Beurling / B\'aez-Duarte Reductions, Same-Gram Control, and Critical-Zero Floors}
+\label{sec:nb}
+
+\subsection{Smoothed Nyman--Beurling Setup and Block-Schur Gain}
+In $L^2(0,\infty;\dd x)$, let $\chi = \mathbf{1}_{(0,1]}$, $\rho_n(x) = \{1/(nx)\} - \frac{1}{n}\{1/x\}$~\cite{BaezDuarteStrong}, and let $J$ be the Hardy integration operator $(Jf)(x) = \int_x^\infty f(t)\,\frac{\dd t}{t}$ with adjoint $(Mf)(x) = x^{-1}\int_0^x f(t)\,\dd t$. For an integer smoothing order $q \ge 1$ fixed independently of $N$, put (\path{evidence/v166/ns83/proof.tex})
+\begin{equation}\label{eq:nb-smoothed-def}
+  \tau_q = J^{q-1}\chi, \qquad \sigma_{q,n} = J^{q-1}\rho_n, \qquad E_N^{(q)} = \inf_{c \in \mathbb{R}^N} \norm{\tau_q - \sum_{n \le N} c_n \sigma_{q,n}}_2^2.
+\end{equation}
+In particular, at $q = 2$, $\tau = \tau_2 = J\chi = (-\log x)\mathbf{1}_{(0,1]}(x)$, $\sigma_n = \sigma_{2,n} = J\rho_n$, and $E_N = E_N^{(2)}$ is the smoothed $q = 2$ squared distance with Gram matrix $G(m,n) = \ip{\sigma_m}{\sigma_n}$ and target loads $b_n = \ip{\tau}{\sigma_n}$ (\texttt{NS-61}). Adding a dyadic block $N < n \le 2N$ reduces $E_N$ by the exact block-Schur gain $\Delta_N = E_N - E_{2N} = h_N^\top H_N^{-1} h_N$, where $h_N$ is the residualized load vector and $H_N$ is the old-space Schur-complement Gram matrix (\texttt{NS-53}, \texttt{NS-61}).
+
+\subsection{Same-Gram Control with a Strictly Positive Error Floor (\texttt{NS-74})}
+We reproduce \texttt{prop:ns74-same-gram} and \texttt{cor:ns74-finite-indistinguishability} verbatim from \path{manuscript/fixed_space_prime_action_v1.tex} (lines 22747--22880; \path{evidence/v161/ns74/}).
+
+Fix $1/2 < \beta < 1$, set $a = \beta - 1/2$, and put
+\begin{equation}\label{eq:ns74-params}
+  B_\beta(s) = \frac{s - \beta}{s - (1 - \beta)}, \qquad b_\beta = \frac{1 - \beta}{\beta}, \qquad c_\beta = \frac{2\beta - 1}{\beta^2}.
+\end{equation}
+Let $\mathcal{U} : L^2(0,\infty;\dd x) \to L^2(\mathbb{R};\dd t)$ be $(\mathcal{U}f)(t) = e^{-t/2}f(e^{-t})$. On $L^2(\mathbb{R};\dd t)$ define the causal $L^1$-convolution $(V_\beta u)(t) = u(t) - 2a\int_{-\infty}^t e^{-a(t-r)}u(r)\,\dd r$, whose Fourier multiplier $(it-a)/(it+a)$ has modulus one, so $U_\beta = \mathcal{U}^{-1}V_\beta\mathcal{U}$ is unitary on $L^2(0,\infty;\dd x)$. Define the \textbf{altered atoms}
+\begin{equation}\label{eq:ns74-altered-atoms}
+  \sigma_n^{(\beta)} = U_\beta \sigma_n \qquad (n \ge 1),
+\end{equation}
+keeping the original $q = 2$ target $\tau = J\chi$ and Hilbert norm fixed.
+
+\begin{theorem}[Identical Gram geometry, altered loads, and explicit positive floor, \texttt{NS-74}]
+\label{thm:nb-same-gram}
+For every $1/2 < \beta < 1$ (\texttt{prop:ns74-same-gram}, \texttt{cor:ns74-finite-indistinguishability}):
+\begin{enumerate}[label=(\roman*)]
+  \item For every $m, n \ge 1$, the complete altered Gram matrix satisfies
+  \[
+    \ip{\sigma_m^{(\beta)}}{\sigma_n^{(\beta)}} = G(m,n).
+  \]
+  All actual and elementary-model Gram matrices, old-space Schur complements, and geometric preconditioners are unchanged.
+  \item The target loads are changed and equal
+  \begin{equation}\label{eq:ns74-loads}
+    b_n^{(\beta)} = \ip{\tau}{\sigma_n^{(\beta)}} = b_\beta b_n - \frac{c_\beta}{n}\left(\log n + 2 - \gamma_{\mathrm{E}} + \frac{1}{\beta}\right).
+  \end{equation}
+  \item For every finite coefficient vector $(q_n)$, including optimized coefficients at every $N$,
+  \begin{equation}\label{eq:ns74-floor}
+    \norm{\tau - \sum_n q_n \sigma_n^{(\beta)}}_2^2 \ge F_\beta := \frac{(2\beta - 1)(1 - \beta)^2}{\beta^6} > 0.
+  \end{equation}
+  \item (\textbf{Finite efficiency cannot distinguish convergence}) For any fixed finite set of block sizes with nonzero original gain, the altered optimized energies, full gains, and curvature-rule gain fractions converge to their original values as $\beta \downarrow 1/2$, yet every fixed $\beta > 1/2$ has the positive floor~\eqref{eq:ns74-floor} at all sizes $N$. Consequently, no finite collection of strict gain-fraction inequalities together with the shared Gram geometry $G(m,n)$ implies convergence to zero.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Unitarity of $U_\beta$ proves $\ip{\sigma_m^{(\beta)}}{\sigma_n^{(\beta)}} = G(m,n)$ on the complete space. In logarithmic coordinates $\mathcal{U}\tau = t e^{-t/2}\mathbf{1}_{t>0}$; evaluating the adjoint anti-causal convolution gives
+\[
+  U_\beta^*\tau(x) = \begin{cases} b_\beta(-\log x) - c_\beta, & 0 < x < 1, \\ -c_\beta x^{-\beta}, & x > 1, \end{cases}
+\]
+retaining both pieces. Since $\sigma_n(x) = 1/(nx)$ for $x > 1$, $\int_0^1 \sigma_n(x)\,\dd x = (\log n + 2 - \gamma_{\mathrm{E}})/n$, and $\int_1^\infty x^{-\beta}\sigma_n(x)\,\dd x = 1/(n\beta)$,~\eqref{eq:ns74-loads} follows. All original atoms $\sigma_n$ lie in the closed tail space $\mathcal{T} = L^2(0,1) \oplus \operatorname{span}\{x^{-1}\mathbf{1}_{x>1}\}$. Projecting the exterior piece $-c_\beta x^{-\beta}\mathbf{1}_{x>1}$ of $U_\beta^*\tau$ onto the one-dimensional exterior tail $\operatorname{span}\{x^{-1}\mathbf{1}_{x>1}\}$ leaves squared distance
+\[
+  c_\beta^2\left(\frac{1}{2\beta - 1} - \frac{1}{\beta^2}\right) = \frac{(2\beta - 1)^2}{\beta^4}\cdot \frac{(1 - \beta)^2}{(2\beta - 1)\beta^2} = \frac{(2\beta - 1)(1 - \beta)^2}{\beta^6} = F_\beta.
+\]
+Since $\operatorname{span}\{\sigma_n\} \subset \mathcal{T}$ and $U_\beta$ is unitary,~\eqref{eq:ns74-floor} holds unconditionally. Finally, as $\beta \downarrow 1/2$, $b_n^{(\beta)} \to b_n$ entrywise while every finite Gram matrix $G_N \succ 0$ is fixed, so all finite-block solved coefficients, residuals, and gain fractions vary continuously with $\beta$, proving~(iv).
+\end{proof}
+
+\subsection{Critical-Zero Logarithmic Decay Floor at Every Fixed Smoothing Order (\texttt{NS-83})}
+We reproduce \texttt{prop:ns83-log-floor} and its dual-vector proof verbatim from \path{evidence/v166/ns83/proof.tex}. Let $\mathcal{Z}_c$ be the set of distinct zeros $\rho$ of $\zeta(s)$ on $\Re s = 1/2$ (including both signs of the ordinate), with multiplicity $m_\rho$.
+
+\begin{theorem}[Fixed-order critical-zero lower bound, \texttt{NS-83}, \texttt{prop:ns83-log-floor}]
+\label{thm:nb-log-floor}
+For every fixed integer $q \ge 1$, the smoothed squared distance~\eqref{eq:nb-smoothed-def} satisfies
+\begin{equation}\label{eq:ns83-log-floor}
+  \liminf_{N \to \infty} (\log N)\,E_N^{(q)} \ge C_q := \sum_{\rho \in \mathcal{Z}_c} \frac{m_\rho^2}{|\rho|^{2q}} > 0.
+\end{equation}
+The series is finite, and every finite subset of $\mathcal{Z}_c$ supplies the corresponding finite-sum lower bound. This is an asymptotic assertion with no numerical onset threshold; it does not assert $E_N^{(q)} \ge C_q/\log N$ at any specified finite $N$. At $q = 2$ ($E_N^{(2)} = E_N$):
+\begin{enumerate}[label=(\alph*)]
+  \item The first conjugate pair $\rho_1, \overline{\rho_1} = \tfrac{1}{2} \pm i\gamma_1$ contributes $\frac{2}{|\rho_1|^4} = \frac{2}{(\gamma_1^2 + 1/4)^2} = 4.9979778719377274 \times 10^{-5}$, the first $10$ conjugate pairs certify $C_2 \ge 2\sum_{j=1}^{10}(\gamma_j^2 + 1/4)^{-2} > 7.2332433 \times 10^{-5}$, and the first $50$ conjugate pairs give $C_{2,50} = 7.407941924932869 \times 10^{-5}$ ($256$ and $384$ bits, \path{evidence/v166/ns83/constants-256bits.json}).
+  \item Setting $\gamma_j = 1 - E_{2^{j+1}}/E_{2^j} = \Delta_{2^j}/E_{2^j}$, telescoping~\eqref{eq:ns83-log-floor} yields $\sum_{j=j_0}^{K-1} \gamma_j \le \log K + O(1)$, so $\liminf_{j\to\infty} \gamma_j = 0$; no eventual fixed-fraction contraction $\gamma_j \ge \theta > 0$ or $\gamma_j \ge a/j$ with $a > 1$ can hold.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+With $C = M - I$ and $W = I - J$ (unitary on $L^2(0,\infty;\dd x)$ with Mellin multipliers $s/(1-s)$ and $(s-1)/s$, commuting with normalized dilations $D_\theta f(x) = \theta^{-1/2}f(x/\theta)$), the transformed first atom $a_q = W\sigma_{q,1}$ and target $h_q = W\tau_q$ are supported in $(0,1]$ because $W$ cancels the exterior $1/x$ tail while $J$ preserves support in $(0,1]$. Their Mellin transforms $\widehat{f}(s) = \int_0^\infty f(x)x^{s-1}\,\dd x$ are
+\begin{equation}\label{eq:ns83-transforms}
+  \widehat{a}_q(s) = \frac{(1-s)\zeta(s)}{s^{q+1}}, \qquad T_q(s) := \widehat{h}_q(s) = \frac{s - 1}{s^{q+1}}.
+\end{equation}
+Let $\gamma_+(s) = \pi^{1/2-s}\Gamma(s/2)/\Gamma((1-s)/2)$, $U(s) = \frac{s}{1-s}\gamma_+(s)$, and $V_q(s) = \bigl(\frac{s}{1-s}\bigr)^{q+2}\gamma_+(s) = C^{q+1}U(s)$. Since $\widehat{a}_q(1-s) = V_q(s)\widehat{a}_q(s)$, $V_q D_\theta a_q$ is supported in $[\theta, \infty)$. By Burnol's oscillatory-integral expansion~\cite[Section~4]{BurnolLower2002} and $V_q = C^{q+1}U$, for $\psi_{z,k}(x) = \log^k(1/x)x^{-z}\chi(x)$ ($0 < \Re z < 1$) one has $V_q\psi_{z,k}(x) = \partial_z^k\{V_q(z)x^{-z}\} + O(x^2)$ on $(0,1]$ and $O((1+\log x)^{q+1}/x)$ on $[1,\infty)$. Hence for $k_{w,k}(x) = \log^k(1/x)x^{\overline{w}-1}\chi(x)$ and $Q_\lambda = \mathbf{1}_{[\lambda,\infty)}$, $Y_{w,k}^{\lambda,q} = V_q^{-1}Q_\lambda V_q k_{w,k}$ has an $L^2$-norm limit $Y_{\rho,k}^{\lambda,q}$ as $w \to \rho \in \mathcal{Z}_c$ from the right, which for $0 \le k < m_\rho$ and $\lambda = 1/N$ is orthogonal to $D_\theta a_q$ for all $\theta \in [\lambda, 1]$ (in particular to the first $N$ transformed atoms). Normalizing by $X_{\rho,k}^{\lambda,q} = L^{-k-1/2}Y_{\rho,k}^{\lambda,q}$ with $L = \log(1/\lambda) = \log N$, as $\lambda \downarrow 0$ their Gram matrix converges to $\bigoplus_\rho \mathcal{H}_{m_\rho}$ with Cauchy--Hilbert blocks $\mathcal{H}_{m_\rho} = \bigl(\frac{1}{k+l+1}\bigr)_{0 \le k,l < m_\rho}$ satisfying $(\mathcal{H}_{m_\rho}^{-1})_{00} = m_\rho^2$, while $\sqrt{L}\,\ip{h_q}{X_{\rho,k}^{\lambda,q}} \to T_q(\rho)\,\delta_{k,0}$ by~\cite[Theorem~5.4]{BurnolLower2002}. Since $|\rho - 1| = |\rho|$ on $\Re s = 1/2$, $|T_q(\rho)|^2 = |\rho|^{-2q}$, and projecting $h_q$ onto the dual span yields $\liminf_{N\to\infty}(\log N)E_N^{(q)} \ge \sum_\rho m_\rho^2|T_q(\rho)|^2 = \sum_\rho m_\rho^2/|\rho|^{2q}$.
+\end{proof}
+
+\section{Surviving Cofinal Open Problems and Claim-by-Claim Provenance Ledger}
+\label{sec:open-problems}
+
+\subsection{The Surviving Cofinal Open Problems}
+All five continuation lanes in \path{RESEARCH_MAP.md} remain paused at two open cofinal arithmetic targets:
+
+\begin{openproblem}[Uniform Cofinal Semilocal Weil Floor on the Source Complement, \texttt{WEIL-FLOOR}]
+\label{prob:weil-floor}
+Let $P_a$ be either the repaired rank-one even source projection or the growing radical projection of Theorem~\ref{thm:bounded-floor} (\texttt{cor:v136-complement-floor}), satisfying $\norm{\mathsf{W}_{e^a}P_a} \to 0$. Prove that there exist a finite constant $C_* < \infty$ and a cofinal sequence $a_j = \log\lambda_j \to \infty$ such that
+\begin{equation}
+  q_{a_j}[f] \ge -C_*\norm{f}_{L^2(-a_j,a_j)}^2 \qquad \text{for all } f \in \mathcal{D}(q_{a_j}) \cap \operatorname{Ran}(I - P_{a_j}),
+\end{equation}
+including both the even source-orthogonal sector and the complete odd sector, retaining all prime-power shifts $m < e^{2a_j}$, both poles, exterior edges, and cross terms.
+\end{openproblem}
+
+\begin{openproblem}[Nonsummable Residualized Dyadic Block Gain, \texttt{NB-GAIN}]
+\label{prob:nb-gain}
+At fixed Mellin smoothing order $q = 2$ ($E_N = E_N^{(2)}$), prove that the actual optimized residual $r_N = \tau - \sum_{n\le N} c_n^*\sigma_n$ satisfies
+\begin{equation}
+  \sum_{j=1}^\infty \frac{\Delta_{2^j}}{E_{2^j}} = +\infty, \qquad \Delta_N = E_N - E_{2N} = h_N^\top H_N^{-1} h_N,
+\end{equation}
+at a rate compatible with the critical-zero bound $\sum_{j=j_0}^{K-1} \Delta_{2^j}/E_{2^j} \le \log K + O(1)$ of Theorem~\ref{thm:nb-log-floor} (for instance $\Delta_{2^j}/E_{2^j} \ge a/j$ with $0 < a \le 1$).
+\end{openproblem}
+
+\subsection{Claim-by-Claim Provenance and Verification Ledger}
+Table~\ref{tab:provenance} maps each theorem and numerical constant in this standalone paper to its exact source proposition in \path{manuscript/fixed_space_prime_action_v1.tex}, its archived verification directory, verifier script/artifact, and precision. As documented in \path{evidence/MISSING.md}, the two unrecovered historical \texttt{v1.27--v1.34} diagnostic groups remain \textbf{OPEN} as historical recovery items and are omitted from this scoped paper; where replacement certificates are used (\texttt{NS-44}, \texttt{NS-45}, \texttt{bounds-six-agent-2026-09-30-v1}), they are identified explicitly below.
+
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.25\textwidth}@{}}
+\caption{Claim-by-claim mapping to source propositions, archived verifiers, outputs, and precisions.}\label{tab:provenance}\\
+\toprule
+\textbf{Standalone Claim} & \textbf{Source Proposition} & \textbf{Method \& Precision} & \textbf{Archived Verifier \& Output Artifact} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Standalone Claim} & \textbf{Source Proposition} & \textbf{Method \& Precision} & \textbf{Archived Verifier \& Output Artifact} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Lemma~\ref{lem:v136-total-radicals}, Prop.~\ref{prop:v136-resolvent-collapse}, Lemma~\ref{lem:v118-gap-free}, Thm.~\ref{thm:bounded-floor} (Bounded floor $\iff$ RH) & \texttt{lem:v136-\allowbreak total-\allowbreak radicals}, \texttt{prop:v136-\allowbreak resolvent-\allowbreak collapse}, \texttt{prop:v118-\allowbreak gap-\allowbreak free}, \texttt{prop:v136-\allowbreak bounded-\allowbreak floor}, \texttt{cor:v136-\allowbreak complement-\allowbreak floor} & Analytic proof + exact rational (\texttt{Fraction}) countermodel check & \path{evidence/v136/new_section.tex}, \path{evidence/v136/check_topology_countermodels.py}, \path{evidence/v136/countermodel_results.json} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:lambda4-positivity} ($\lambda=3$ complete $\mathsf W_3 \succeq 0$ \& ground order) & \texttt{prop:v114-\allowbreak weil-\allowbreak core}, \texttt{prop:v116-\allowbreak weighted-\allowbreak prime}, \texttt{prop:v116-\allowbreak window-\allowbreak positive}, \texttt{prop:v117-\allowbreak ground-\allowbreak order} & $256$-bit $\mathfrak m_3$; $512/768$-bit $N=64$; $768/896$-bit Arb complete Schur \& ground order & \path{evidence/v124/g2_certificate/}, \path{evidence/v126/g2_weighted_signed/}, \path{evidence/v126/g2_schur_directional/}, \path{evidence/v126/g2_ground_order/} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:lambda4-positivity}(a) ($\lambda=4$ even $\mathsf W_4^{\mathrm{ev}} \succeq 0$, $\kappa_{\mathrm{ev}}=62629/100000$) & \texttt{prop:v120-\allowbreak lambda4-\allowbreak tail}, \texttt{prop:v125-\allowbreak even-\allowbreak complete} & $768/896$-bit Arb ($M=4096$, $s=16$); tail floor $\delta$ at $320$ bits & \path{evidence/v126/g2_simultaneous/simultaneous_trial.py}, \path{complete_even_relative_margin_b768.json} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:lambda4-positivity}(b) ($\lambda=4$ odd $\mathsf W_4^{\mathrm{odd}} \succeq 0$, $\kappa_{\mathrm{od}}=428/1000$) & \texttt{prop:v126-\allowbreak odd-\allowbreak complement}, \texttt{prop:v126-\allowbreak full-\allowbreak window} & $768$-bit Arb complement ($768/896$-bit gate) + $1024/1280$-bit directional ($M=8192$, $s=24$) + exact rational head & \path{evidence/v126/g2_odd_complement/certify_odd_full_window.py}, \path{complete_lambda4_v126_certificate.json} \\
+\addlinespace[3pt]
+Lemma~\ref{lem:v140-shifted-schur}, Thm.~\ref{thm:lambda4-ground} ($\lambda=4$ simple ground, $\mu_0 < 2.454\times 10^{-75}$, $\mu_1 > 10^{-73}$, real zeros) & \texttt{lem:v140-\allowbreak shifted-\allowbreak schur}, \texttt{prop:v140-\allowbreak ground4}, \texttt{cor:v140-\allowbreak real-\allowbreak zeros} & $1024/1280$-bit Arb shifted LDL gates (reusing saved $768/896$-bit, $768$-bit \& $1024/1280$-bit enclosures) + CvS~\cite{ConnesVanSuijlekom2025} Thm.~6.1 & \path{evidence/v140/new_section.tex}, \path{evidence/v140/certify_ground4.py}, \path{evidence/v140/ground4_b1024_shift1e-73.json} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:first-zero-enclosure}(a)--(b) ($|z_1(4)-\gamma_1| < 8.752082\times 10^{-33}$) & \texttt{lem:v142-\allowbreak energy-\allowbreak projection}, \texttt{prop:v142-\allowbreak ground-\allowbreak zero}, \texttt{lem:v143-\allowbreak evaluator-\allowbreak dual}, \texttt{prop:v143-\allowbreak first-\allowbreak zero-\allowbreak bound} & $1024/1280$-bit Arb evaluator \& derivative gates (inheriting $320$-bit $\delta$ \& $768/896$-bit $K_{\mathrm{ev}},\kappa_{\mathrm{ev}}$) & \path{evidence/v142/certify_ground_zero.py}, \path{evidence/v143/certify_discrepancy_budget.py} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:first-zero-enclosure}(c) (CCM $\lambda=3, N=120$ first root diff $1.5823\times 10^{-34}$) & \texttt{prop:v141-\allowbreak ccm-\allowbreak lock} & $768/1024$-bit Arb finite-compression root enclosure & \path{evidence/v141/certify_ccm_semantic_lock.py} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:lambda5-failures}(a)--(b) ($\lambda=5$ tail \& $N=25$ dyadic block failures, \texttt{NS-44/45}) & \texttt{prop:v152-\allowbreak tail-\allowbreak comparison}, \texttt{prop:v152-\allowbreak block-\allowbreak comparison} & $320/448$-bit Arb + exact rational dyadic witnesses (replacement certificates) & \path{evidence/ns44_metric_replay/}, \path{evidence/ns45_block_replay/}, \path{evidence/v152/} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:lambda5-failures}(c) (Exponential cutoff barrier) & \texttt{prop:v125-\allowbreak cutoff-\allowbreak cost}, \texttt{prop:v138-\allowbreak shifted-\allowbreak floor} & Analytic proof + $320/384$-bit (\path{v126}) \& $160/256$-bit (\path{v138}) Arb checks & \path{evidence/v126/g2_window_resolution/}, \path{evidence/v138/replay_b256.json} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:rank-barrier}(a)--(b) (Spaced radical $\varepsilon_a = Ca e^{-e^a/100}$ \& \texttt{NS-46} fine rank $2J+1 \sim \lambda^2/(20000\log\lambda)$) & \texttt{prop:v135-\allowbreak growing-\allowbreak radical}, \texttt{cor:ns46-\allowbreak a2-\allowbreak cor-\allowbreak rank} & Analytic proof (eventual threshold in $a$; no numerical threshold certificate in \texttt{v153}) & \path{evidence/v135/}, \path{evidence/v153/new_section.tex}, \path{evidence/v153/README.md} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:concentration-obstructions}(a) (Local PNT $6$-bump no-go $> \log 2/\sqrt{2}$) & \texttt{prop:v130-\allowbreak local-\allowbreak no-\allowbreak go} & Analytic proof & \path{manuscript/fixed_space_prime_action_v1.tex} (lines 9855--9918) \\
+\addlinespace[3pt]
+Thm.~\ref{thm:concentration-obstructions}(b) ($\beta_{\log 4}(1) = -0.640027118\dots < -3/5$ global negative index) & \texttt{prop:v132-\allowbreak global-\allowbreak index} & $192/320$-bit direct Arb + $128/256$-bit digamma series (replacement certificate) & \texttt{audits/bounds-\allowbreak six-\allowbreak agent-\allowbreak 2026-\allowbreak 09-\allowbreak 30-\allowbreak v1/\allowbreak certificate/} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:concentration-obstructions}(c)--(d) (Reciprocal commutator $>9\times 10^{-6}$ \& Cotlar cross term $\ge 73/(375\pi)$) & \texttt{prop:v133-\allowbreak noncommute}, \texttt{prop:v134-\allowbreak disjoint} & Analytic proof (degree-two Taylor comparison) & \path{manuscript/fixed_space_prime_action_v1.tex} (lines 12196--12374) \\
+\addlinespace[3pt]
+Thm.~\ref{thm:concentration-obstructions}(e)--(f) (Bernstein drawdown $a\Delta(\beta_a)\to\infty$ \& Gaussian Picone slack blowup) & \texttt{prop:v134-\allowbreak primitive}, \texttt{lem:v137-\allowbreak probe}, \texttt{prop:v137-\allowbreak conditional-\allowbreak mass}, \texttt{cor:v137-\allowbreak scalar-\allowbreak no-\allowbreak go}, \texttt{NS-34} & Analytic proof + exact rational gate $6(22/7)^2<100$ (\path{v137}); analytic proof (\path{v150}) & \path{evidence/v137/new_section.tex}, \path{evidence/v137/check_probe.py}, \path{evidence/v150/capacity_weight.tex} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:ucp-and-dual-pole}(a) (Local open-set UCP failure, \texttt{NS-55}) & \texttt{prop:ns55-\allowbreak local-\allowbreak ucp-\allowbreak counterexample}, \texttt{prop:ns55-\allowbreak parity-\allowbreak ucp-\allowbreak counterexample} & Purely analytic proof & \path{evidence/v155/proof.tex} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:ucp-and-dual-pole}(b)--(c) (Dual-pole Stieltjes identity \& $x\,h(x)$ moment $+0.0133343\dots$) & \path{derivation.md} Thms.~1 \& 2 & Analytic proof + $256/384$-bit Arb quadrature \& Cholesky checks ($\lambda\in\{2,3,5,8\}$) & \texttt{audits/cofinal-\allowbreak candidate-\allowbreak mechanisms-\allowbreak screen-\allowbreak 2026-10-16-v1/} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:nb-same-gram} (\texttt{NS-74} same-Gram control $\sigma_n^{(\beta)} = U_\beta\sigma_n$, $F_\beta = (2\beta-1)(1-\beta)^2/\beta^6$) & \texttt{prop:ns74-\allowbreak same-\allowbreak gram}, \texttt{cor:ns74-\allowbreak finite-\allowbreak indistinguishability} & Analytic proof + $256/384$-bit Arb control at $N=256$, $\beta=1/2+10^{-6}$ & \path{manuscript/fixed_space_prime_action_v1.tex} (lines 22735--22880), \path{evidence/v161/ns74/} \\
+\addlinespace[3pt]
+Thm.~\ref{thm:nb-log-floor} (\texttt{NS-83} $\liminf(\log N)E_N^{(q)} \ge \sum m_\rho^2/|\rho|^{2q}$, $C_2 > 7.2332\times 10^{-5}$) & \texttt{prop:ns83-\allowbreak log-\allowbreak floor} & Analytic proof + $256/384$-bit Arb $10$-pair \& $50$-pair zero sums & \path{evidence/v166/ns83/proof.tex}, \path{evidence/v166/ns83/constants-256bits.json} \\
+\end{longtable}
+}
+
+\begin{thebibliography}{99}
+
+\bibitem{BaezDuarteStrong}
+L. B\'aez-Duarte,
+\emph{A strengthening of the Nyman--Beurling criterion for the Riemann Hypothesis},
+Atti Accad. Naz. Lincei Cl. Sci. Fis. Mat. Natur. Rend. Lincei (9) Mat. Appl. \textbf{14} (2003), 5--11;
+\url{https://arxiv.org/abs/math/0202141v2}.
+
+\bibitem{BurnolExplicit2000}
+J.-F. Burnol,
+\emph{An invariant subspace of functions related to the zeros of the Riemann zeta function},
+Math. Nachr. \textbf{198} (1999), 29--59; and \emph{Scattering on the $p$-adic line and a trace formula}, Int. Math. Res. Not. \textbf{2000}, no.~2, 57--70.
+
+\bibitem{BurnolLower2002}
+J.-F. Burnol,
+\emph{A lower bound in an approximation problem involving the zeros of the Riemann zeta function},
+Adv. Math. \textbf{170} (2002), 56--70;
+\url{https://arxiv.org/abs/math/0103058}.
+
+\bibitem{ConnesConsani2023}
+A. Connes and C. Consani,
+\emph{Weil positivity and trace formula: the archimedean place},
+Selecta Math. (N.S.) \textbf{27} (2021), Paper No.~77;
+\url{https://arxiv.org/abs/2006.16771}.
+
+\bibitem{ConnesConsaniMoscovici2025}
+A. Connes, C. Consani, and H. Moscovici,
+\emph{Zeta Spectral Triples},
+arXiv:2511.22755 (2025);
+\url{https://arxiv.org/abs/2511.22755}.
+
+\bibitem{ConnesVanSuijlekom2021}
+A. Connes and W. D. van Suijlekom,
+\emph{Spectral truncations in noncommutative geometry and operator systems},
+Comm. Math. Phys. \textbf{383} (2021), 2021--2067;
+\url{https://arxiv.org/abs/2004.14115}.
+
+\bibitem{ConnesVanSuijlekom2025}
+A. Connes and W. D. van Suijlekom,
+\emph{Quadratic Forms, Real Zeros and Echoes of the Spectral Action},
+arXiv:2511.23257v1 (2025);
+\url{https://arxiv.org/abs/2511.23257v1}.
+
+\bibitem{HasanalizadeShenWong2022}
+E. Hasanalizade, Q. Shen, and P.-J. Wong,
+\emph{Counting zeros of the Riemann zeta function},
+J. Number Theory \textbf{235} (2022), 219--241.
+
+\bibitem{Kovrijkine2000}
+O. Kovrijkine,
+\emph{Some results related to the Logvinenko--Sereda theorem},
+Proc. Amer. Math. Soc. \textbf{129} (2001), 3037--3047.
+
+\bibitem{LandauPollak1961}
+H. J. Landau and H. O. Pollak,
+\emph{Prolate spheroidal wave functions, Fourier analysis and uncertainty---II},
+Bell System Tech. J. \textbf{40} (1961), 65--84.
+
+\bibitem{Nazarov1994}
+F. L. Nazarov,
+\emph{Local estimates for exponential polynomials and their applications to inequalities of the uncertainty principle type},
+St. Petersburg Math. J. \textbf{5} (1994), 663--717.
+
+\bibitem{Suzuki2026Screw}
+M. Suzuki,
+\emph{Screw functions and the Weil positivity criterion},
+preprint (2026).
+
+\bibitem{Wiener1932}
+N. Wiener,
+\emph{Tauberian theorems},
+Ann. of Math. (2) \textbf{33} (1932), 1--100.
+
+\end{thebibliography}
+
+\end{document}

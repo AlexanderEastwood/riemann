@@ -1,0 +1,454 @@
+{
+  "total_checks": 61,
+  "passed": 61,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_v1.tex",
+      "passed": true,
+      "detail": 34889
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_v1.pdf",
+      "passed": true,
+      "detail": 588966
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_v2.tex",
+      "passed": true,
+      "detail": 916258
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_v2.pdf",
+      "passed": true,
+      "detail": 1961749
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_v3.tex",
+      "passed": true,
+      "detail": 67401
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_v3.pdf",
+      "passed": true,
+      "detail": 724110
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_monograph_v3.tex",
+      "passed": true,
+      "detail": 916783
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_monograph_v3.pdf",
+      "passed": true,
+      "detail": 1969703
+    },
+    {
+      "name": "preserved_file_exists:manuscript/webster-outreach-and-v3-repair-brief-2026-10-18-v1.html",
+      "passed": true,
+      "detail": 23406
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_v4.tex",
+      "passed": true,
+      "detail": 101354
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_v4.pdf",
+      "passed": true,
+      "detail": 810737
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_monograph_v4.tex",
+      "passed": true,
+      "detail": 921203
+    },
+    {
+      "name": "preserved_file_exists:manuscript/standalone_weil_certificates_and_obstructions_monograph_v4.pdf",
+      "passed": true,
+      "detail": 1980318
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_v4:missing_refs_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_v4:missing_cites_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_v4:uncited_bibitems_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_v4:overfull_hbox_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_v4:undefined_refs_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_v4:multiply_defined_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_v4:all_repo_paths_exist",
+      "passed": true,
+      "detail": {
+        "verified_paths": 58,
+        "missing": []
+      }
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_monograph_v4:missing_refs_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_monograph_v4:missing_cites_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_monograph_v4:uncited_bibitems_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_monograph_v4:overfull_hbox_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_monograph_v4:undefined_refs_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_monograph_v4:multiply_defined_zero",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "standalone_weil_certificates_and_obstructions_monograph_v4:all_repo_paths_exist",
+      "passed": true,
+      "detail": {
+        "verified_paths": 87,
+        "missing": []
+      }
+    },
+    {
+      "name": "monograph_v4:zero_not_archived",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "v136:countermodel_status",
+      "passed": true,
+      "detail": "all exact rational identities passed"
+    },
+    {
+      "name": "v136:resolvent_error_m2",
+      "passed": true,
+      "detail": {
+        "m": 2,
+        "radical_sum": "0",
+        "approximation_error_squared": "1/2",
+        "negative_form": "-1",
+        "negative_rayleigh": "-2",
+        "matrix_dimension": 3,
+        "lower_edge": -3,
+        "resolvent_error_on_e1_squared": "3/10"
+      }
+    },
+    {
+      "name": "v136:resolvent_error_m4",
+      "passed": true,
+      "detail": {
+        "m": 4,
+        "radical_sum": "0",
+        "approximation_error_squared": "1/4",
+        "negative_form": "-1",
+        "negative_rayleigh": "-4",
+        "matrix_dimension": 5,
+        "lower_edge": -5,
+        "resolvent_error_on_e1_squared": "5/26"
+      }
+    },
+    {
+      "name": "v136:resolvent_error_m16",
+      "passed": true,
+      "detail": {
+        "m": 16,
+        "radical_sum": "0",
+        "approximation_error_squared": "1/16",
+        "negative_form": "-1",
+        "negative_rayleigh": "-16",
+        "matrix_dimension": 17,
+        "lower_edge": -17,
+        "resolvent_error_on_e1_squared": "17/290"
+      }
+    },
+    {
+      "name": "v136:resolvent_error_m64",
+      "passed": true,
+      "detail": {
+        "m": 64,
+        "radical_sum": "0",
+        "approximation_error_squared": "1/64",
+        "negative_form": "-1",
+        "negative_rayleigh": "-64",
+        "matrix_dimension": 65,
+        "lower_edge": -65,
+        "resolvent_error_on_e1_squared": "65/4226"
+      }
+    },
+    {
+      "name": "v136:resolvent_error_m256",
+      "passed": true,
+      "detail": {
+        "m": 256,
+        "radical_sum": "0",
+        "approximation_error_squared": "1/256",
+        "negative_form": "-1",
+        "negative_rayleigh": "-256",
+        "matrix_dimension": 257,
+        "lower_edge": -257,
+        "resolvent_error_on_e1_squared": "257/66050"
+      }
+    },
+    {
+      "name": "v120:lambda4_tail_even_320bit",
+      "passed": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "v120:lambda4_tail_odd_320bit",
+      "passed": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "v126:complete_lambda4_positivity",
+      "passed": true,
+      "detail": {
+        "status": "PASS_COMPLETE_ODD_AND_FULL_LAMBDA4",
+        "error": 0,
+        "kappa_odd": "107/250"
+      }
+    },
+    {
+      "name": "v140:ground4_b1024",
+      "passed": true,
+      "detail": {
+        "bits": 1024,
+        "status": "PASS_COMPLETE_SIMPLE_EVEN_GROUND",
+        "even_inertia": [
+          16,
+          1
+        ],
+        "odd_inertia": [
+          16,
+          0
+        ]
+      }
+    },
+    {
+      "name": "v140:ground4_b1280",
+      "passed": true,
+      "detail": {
+        "bits": 1280,
+        "status": "PASS_COMPLETE_SIMPLE_EVEN_GROUND",
+        "even_inertia": [
+          16,
+          1
+        ],
+        "odd_inertia": [
+          16,
+          0
+        ]
+      }
+    },
+    {
+      "name": "v141:ccm_lambda3_N120_b768",
+      "passed": true,
+      "detail": {
+        "bits": 768,
+        "ground": "[2.95405809255856874339923470077105666911287696656640828984899442787088340001524839813510985253658262682548326113847201344e-38 +/- 2.92e-158]"
+      }
+    },
+    {
+      "name": "v141:ccm_lambda3_N120_b1024",
+      "passed": true,
+      "detail": {
+        "bits": 1024,
+        "ground": "[2.95405809255856874339923470077105666911287696656640828984899442787088340001524839813510985253658262682548326113847201344e-38 +/- 2.92e-158]"
+      }
+    },
+    {
+      "name": "v142_v143:first_zero_b1024",
+      "passed": true,
+      "detail": {
+        "bits": 1024,
+        "outward_radius_exact": "8.752082e-33",
+        "radius": "[8.75208157392882826134926077656034276753021405526300873879192811185756632521097590419602755686687201e-33 +/- 2.04e-132]"
+      }
+    },
+    {
+      "name": "v142_v143:first_zero_b1280",
+      "passed": true,
+      "detail": {
+        "bits": 1280,
+        "outward_radius_exact": "8.752082e-33",
+        "radius": "[8.75208157392882826134926077656034276753021405526300873879192811185756632521097590419602755686687201e-33 +/- 2.04e-132]"
+      }
+    },
+    {
+      "name": "ns44:tail_comparison_replay",
+      "passed": true,
+      "detail": [
+        320,
+        320,
+        448,
+        448
+      ]
+    },
+    {
+      "name": "ns45:block_comparison_replay",
+      "passed": true,
+      "detail": [
+        320,
+        320,
+        448,
+        448
+      ]
+    },
+    {
+      "name": "v138:shifted_floor_lambda5_even",
+      "passed": true,
+      "detail": {
+        "lambda": 5,
+        "parity": "even",
+        "margin_lower": "[0.843037974683544303797468354430379746835443038 +/- 2.54e-47]"
+      }
+    },
+    {
+      "name": "v138:shifted_floor_lambda5_odd",
+      "passed": true,
+      "detail": {
+        "lambda": 5,
+        "parity": "odd",
+        "margin_lower": "[0.919043238270469181232750689972401103955841766 +/- 3.30e-46]"
+      }
+    },
+    {
+      "name": "v138:shifted_floor_lambda6_even",
+      "passed": true,
+      "detail": {
+        "lambda": 6,
+        "parity": "even",
+        "margin_lower": "[0.716642754662840746054519368723098995695839311 +/- 3.35e-46]"
+      }
+    },
+    {
+      "name": "v138:shifted_floor_lambda6_odd",
+      "passed": true,
+      "detail": {
+        "lambda": 6,
+        "parity": "odd",
+        "margin_lower": "[0.762013729977116704805491990846681922196796339 +/- 3.28e-46]"
+      }
+    },
+    {
+      "name": "v138:shifted_floor_lambda8_even",
+      "passed": true,
+      "detail": {
+        "lambda": 8,
+        "parity": "even",
+        "margin_lower": "[0.247460985880604409214763438196680703492692594 +/- 4.90e-46]"
+      }
+    },
+    {
+      "name": "v138:shifted_floor_lambda8_odd",
+      "passed": true,
+      "detail": {
+        "lambda": 8,
+        "parity": "odd",
+        "margin_lower": "[0.102230863692181743757674989766680311092918543 +/- 2.25e-46]"
+      }
+    },
+    {
+      "name": "v132:beta_log4_at_1_arb320",
+      "passed": true,
+      "detail": "[-0.640027118160897146421661394744768547319369746749390061965239215509517300199540776496571971315 +/- 1.02e-94]"
+    },
+    {
+      "name": "v137:rational_gate",
+      "passed": true,
+      "detail": "2904/49"
+    },
+    {
+      "name": "v150:capacity_slack_constants_positive",
+      "passed": true,
+      "detail": {
+        "kappa": "[0.005659277817671373739414804270018437993772898613527688256043518108323608928119760810294900925241677401703578217310684 +/- 9.05e-118]",
+        "gamma": "[0.1350399921301843359961402242154617890756826129522742205802411699756177933720685320739247195043625651408677328967871 +/- 5.49e-116]"
+      }
+    },
+    {
+      "name": "cofinal_screen:odd_pole_moment_arb384",
+      "passed": true,
+      "detail": "[0.0133343137887152322288316208867088073653609563389652879941372370209157188639322992201770877480912918556944798146704 +/- 6.34e-116]"
+    },
+    {
+      "name": "cofinal_screen:all_176_checks_pass",
+      "passed": true,
+      "detail": {
+        "sha256_of_payload": "6ccc8fcb120ad5d3b4146c04d8ac03d737d14ba22b260d9edaa1e1d53c28f766"
+      }
+    },
+    {
+      "name": "ns74:exact_rational_floors",
+      "passed": true,
+      "detail": {
+        "beta_3_2": "32/729",
+        "beta_2": "3/64",
+        "beta_3": "20/729"
+      }
+    },
+    {
+      "name": "ns74:certificate_256bits",
+      "passed": true,
+      "detail": 5
+    },
+    {
+      "name": "ns74:certificate_384bits",
+      "passed": true,
+      "detail": 5
+    },
+    {
+      "name": "ns83:constants_256bits",
+      "passed": true,
+      "detail": {
+        "q1": "[0.027070399088464517642514409185554896898842859472377105401176813488 +/- 4.75e-68]",
+        "q2": "[7.2332433017529841325486461867061432634569595793245850791136864313e-5 +/- 4.06e-70]",
+        "q3": "[2.8696022754745054164683900901191867782455700728075955940118188317e-7 +/- 1.81e-72]"
+      }
+    },
+    {
+      "name": "ns83:constants_384bits",
+      "passed": true,
+      "detail": {
+        "q1": "[0.027070399088464517642514409185554896898842859472377105401176813488 +/- 4.75e-68]",
+        "q2": "[7.2332433017529841325486461867061432634569595793245850791136864313e-5 +/- 4.06e-70]",
+        "q3": "[2.8696022754745054164683900901191867782455700728075955940118188317e-7 +/- 1.81e-72]"
+      }
+    }
+  ]
+}

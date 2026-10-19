@@ -1,0 +1,380 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.02in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lmodern}
+\usepackage{mathrsfs}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{openproblem}[theorem]{Open Problem}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\dd}{\mathrm d}
+
+\setlength{\emergencystretch}{2em}
+
+\hypersetup{
+  pdftitle={Certified Semilocal Weil Positivity at lambda=4, Ground-State Zero Localization, and Cofinal Obstructions},
+  pdfauthor={Alexander Eastwood}
+}
+
+\title{\textbf{Certified Semilocal Weil Positivity at $\lambda = 4$, Ground-State Zero Localization, and Cofinal Obstructions for Fixed-Window and Nyman--Beurling Approximations}}
+\author{Alexander Eastwood}
+\date{October 18, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We establish unconditional computer-assisted spectral certificates and analytical cofinal obstruction theorems for two Hilbert-space approaches to the Riemann Hypothesis (RH): the semilocal Weil quadratic form $q_a[f] = \ip{W_\lambda f}{f}$ on $L^2(-a,a)$ ($a = \log\lambda$) and the smoothed Nyman--Beurling--B\'aez-Duarte approximation problem. First, using validated ball arithmetic (\texttt{flint.arb}) at up to $1024/1280$-bit precision, we prove complete positivity $W_3 \succeq 0$ and $W_4 \succeq 0$ across both parity sectors on the full physical form domain, certify that the complete $\lambda = 4$ even ground state $\psi_0$ is simple with $0 < \mu_0(4) < 2.454 \times 10^{-75}$ and $\mu_1^{\mathrm{ev}}(4) > 10^{-73}$, and deduce via the Connes--van Suijlekom theorem that its entire Fourier transform $\widehat{\widetilde{\psi_0}}$ has only real zeros, with its first positive zero enclosed within $8.752082 \times 10^{-33}$ of the first Riemann zeta ordinate $\gamma_1 \approx 14.13472514$. Second, we prove that the uniform bounded-floor condition $q_a[f] \ge -C_*\norm{f}^2$ along a cofinal sequence $a \to \infty$ is both necessary and sufficient for RH without a positive spectral gap, and we rule out a broad hierarchy of proposed cofinal mechanisms: at $\lambda = 5$ the unchanged tail comparison and $N = 25$ dyadic block-norm comparison fail in both parities; achieving a uniform positive spectral gap by finite subspace removal requires removing rank $\Omega(\lambda^2/\log\lambda)$; the optimal Bernstein signed-primitive drawdown diverges as $a\Delta(\beta_a) \ge \frac{\log 2}{3\sqrt{2}}a - C \to \infty$; any fixed relative slack $\delta_0 > 0$ or prime-$2$ channel deletion in the Gaussian positive-weight Picone identity forces an $\exp(\gamma\lambda^2)$ error blowup; and the prime-shift operator violates local open-set unique continuation and ordinary-cone semigroup positivity. Third, in the Nyman--Beurling lane, we construct an explicit inner-factor countermodel sharing the exact Nyman--Beurling Gram matrix while maintaining a strictly positive asymptotic error floor $E_\infty(\beta) > 0$, and we prove that any critical-line zero forces $E_N^{(q)} \ge \frac{C_q + o(1)}{\log N}$ at every fixed smoothing order $q \ge 0$, excluding eventual fixed-fraction contraction at every dyadic doubling. Every computational claim in this paper is backed by byte-verified, dual-precision interval certificates in the accompanying repository.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction and the Semilocal Weil Form}
+\label{sec:intro}
+
+Let $\lambda > 1$ and $a = \log\lambda$. On the finite logarithmic interval $I_a = (-a,a)$, decompose $L^2(I_a) = L^2_{\mathrm{ev}}(I_a) \oplus L^2_{\mathrm{odd}}(I_a)$ into even and odd parity sectors. For a test function $f \in L^2(I_a)$ with zero extension $\widetilde{f} \in L^2(\mathbb{R})$ and unitary Fourier transform $\widehat{\widetilde{f}}(\xi) = (2\pi)^{-1/2}\int_{-a}^a f(x)e^{-i\xi x}\,\dd x$, the canonical semilocal Weil quadratic form $q_a[f] = \ip{W_\lambda f}{f}$ is defined on its maximal closed form domain $\mathcal{D}(q_a) \subset L^2(I_a)$ by
+\begin{equation}\label{eq:weil-form}
+  q_a[f] = \int_{\mathbb{R}} \alpha(\xi)\bigl|\widehat{\widetilde{f}}(\xi)\bigr|^2\,\dd\xi - \sum_{2 \le m < \lambda^2} \frac{\Lambda(m)}{\sqrt{m}} \int_{-a}^a \bigl(\widetilde{f}(x + \log m) + \widetilde{f}(x - \log m)\bigr)\overline{f(x)}\,\dd x + \Pi[f],
+\end{equation}
+where $\alpha(\xi) = \Re\psi\!\left(\tfrac{1}{4} + \tfrac{i\xi}{2}\right) - \log\pi$ is the archimedean digamma multiplier, $\Lambda(m)$ is the von Mangoldt function, and the polar contribution at $s = 0, 1$ splits by parity as the rank-two form
+\begin{equation}\label{eq:pole-form}
+  \Pi[f] = 2\bigl|\ip{f}{c}\bigr|^2 - 2\bigl|\ip{f}{s}\bigr|^2, \qquad c(x) = \cosh(x/2), \quad s(x) = \sinh(x/2).
+\end{equation}
+Notice that $\Pi[f] = +2|\ip{f}{c}|^2 \ge 0$ on $L^2_{\mathrm{ev}}(I_a)$ whereas $\Pi[f] = -2|\ip{f}{s}|^2 \le 0$ on $L^2_{\mathrm{odd}}(I_a)$. By Weil's explicit-formula criterion~\cite{ConnesConsani2023,ConnesVanSuijlekom2021}, the Riemann Hypothesis (RH) is equivalent to the nonnegativity $q_a[f] \ge 0$ for all $a > 0$ and all $f \in \mathcal{D}(q_a)$.
+
+A central structural feature of $W_\lambda$ as $\lambda \to \infty$ is the presence of the classical Gaussian completed-zeta radical
+\begin{equation}\label{eq:gaussian-radical}
+  h(x) = e^{x/2}\sum_{n=1}^\infty H(ne^x), \qquad H(u) = \frac{4\pi}{\sqrt{3}}\,u^2(2\pi u^2 - 3)e^{-\pi u^2},
+\end{equation}
+which is smooth, even, strictly positive on $\mathbb{R}$, and satisfies $\int_{\mathbb{R}} c(x)h(x)\,\dd x = 1/\sqrt{3}$ with super-exponential decay $A_- e^{9x/2 - \pi e^{2x}} \le h(x) \le A_+ e^{9x/2 - \pi e^{2x}}$ for $x \ge 0$. When restricted and boundary-repaired to form the normalized even source vector $u_a \in \mathcal{D}(q_a) \cap L^2_{\mathrm{ev}}(I_a)$, the operator residual $\norm{W_\lambda u_a}_{L^2(I_a)}$ decays super-exponentially as $a \to \infty$. Consequently, $W_\lambda$ cannot possess a uniform positive spectral gap on $L^2(I_a)$, nor even on the orthogonal complement $u_a^\perp$, because translates of $h$ generate an expanding subspace of near-null vectors.
+
+Nevertheless, positivity at every finite window is not required to deduce RH; a uniform finite lower floor along a cofinal sequence suffices.
+
+\begin{theorem}[Cofinal Bounded-Floor Equivalence and Source-Complement Reduction]
+\label{thm:bounded-floor}
+The following statements are equivalent:
+\begin{enumerate}[label=(\roman*)]
+  \item The Riemann Hypothesis holds.
+  \item For every $a > 0$ and every $f \in \mathcal{D}(q_a)$, $q_a[f] \ge 0$.
+  \item (\textbf{Cofinal bounded floor, \texttt{WEIL-FLOOR}}) There exist a constant $C_* < \infty$ and an unbounded sequence $a_k \to \infty$ such that
+  \begin{equation}\label{eq:bounded-floor}
+    q_{a_k}[f] \ge -C_*\norm{f}_{L^2(I_{a_k})}^2 \qquad \text{for all } f \in \mathcal{D}(q_{a_k}).
+  \end{equation}
+  \item Put $P_a = I - |u_a\rangle\langle u_a|$ on $L^2_{\mathrm{ev}}(I_a)$, where $u_a$ is the normalized repaired source satisfying $\norm{W_\lambda u_a} \to 0$. There exist $C_* < \infty$ and $a_k \to \infty$ such that $q_{a_k}[f] \ge -C_*\norm{f}^2$ for all even $f \in P_{a_k}\mathcal{D}(q_{a_k})$ and all odd $f \in \mathcal{D}(q_{a_k}) \cap L^2_{\mathrm{odd}}(I_{a_k})$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Implications (i) $\implies$ (ii) $\implies$ (iii) $\implies$ (iv) are immediate. For (iv) $\implies$ (iii), decompose any $f = f_{\mathrm{ev}} + f_{\mathrm{odd}}$ with $f_{\mathrm{ev}} = \alpha u_a + g$, $g \perp u_a$, and $|\alpha|^2 + \norm{g}^2 = \norm{f_{\mathrm{ev}}}^2$. Since $\Re\ip{W_\lambda u_a}{g} \ge -\norm{W_\lambda u_a}\norm{g}$ and $q_a[u_a] \ge -\norm{W_\lambda u_a}$, Cauchy--Schwarz shifts the lower floor by at most $2\norm{W_\lambda u_a} = o(1)$. Finally, for (iii) $\implies$ (i), suppose $\zeta(\rho_0) = 0$ with $\Re(\rho_0) = \tfrac{1}{2} + \sigma_0$, $\sigma_0 > 0$. Choosing a fixed smooth compactly supported base profile $\phi$ whose Mellin transform does not vanish at $\rho_0$ and translating its support inside $I_{a_k}$ produces normalized test functions $f_k \in \mathcal{D}(q_{a_k})$ whose explicit-formula pairing grows as $-c_0 e^{2\sigma_0 a_k} + O(1) \to -\infty$, contradicting~\eqref{eq:bounded-floor}. (Full details and verified artifacts are archived in \path{evidence/v136/}.)
+\end{proof}
+
+\section{Certified Positivity and First-Zero Localization at \texorpdfstring{$\lambda = 3, 4$}{lambda = 3, 4}}
+\label{sec:lambda4}
+
+On any fixed window $I_a = (-a,a)$, the unbounded archimedean operator dominates the bounded prime-shift and polar perturbations on high Fourier modes $|n| > N$, permitting a rigorous finite-plus-tail Schur reduction. At $\lambda = 4$ ($a = \log 4$), however, naive diagonal majorants fail because low-mode cancellation is delicate and the lowest even eigenvalue sits near $10^{-75}$. By combining a simultaneous multi-trial Schur complement on the even sector with a directional complement certificate on the odd sector, we obtain an exact fixed-window positivity proof.
+
+\begin{theorem}[Complete Interval-Certified Positivity at $\lambda = 3$ and $\lambda = 4$]
+\label{thm:lambda4-positivity}
+For $\lambda \in \{3, 4\}$ ($a \in \{\log 3, \log 4\}$), the complete semilocal Weil form satisfies
+\begin{equation}
+  q_a[f] \ge 0 \qquad \text{for all } f \in \mathcal{D}(q_a) = \mathcal{D}(q_a^{\mathrm{ev}}) \oplus \mathcal{D}(q_a^{\mathrm{odd}}),
+\end{equation}
+with exact fixed-window lower-floor error $\varepsilon_3 = \varepsilon_4 = 0$. Specifically, at $\lambda = 4$:
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Even sector (\path{evidence/v126/g2_simultaneous/}):} On the tail $|n| > 16$, $Q_{16}W_4^{\mathrm{ev}}Q_{16}$ dominates its positive archimedean reference metric $\mathcal{D}_{\mathrm{tail}}$. Retaining all mixed head--tail cross-Grams and remote rows through a frozen rational trial subspace, outward ball arithmetic in \texttt{flint.arb} at $320$ and $448$ bits certifies $W_4^{\mathrm{ev}} \succeq 0$.
+  \item \textbf{Odd sector (\path{evidence/v126/g2_odd_complement/}):} The odd complement above the single repaired odd direction is strictly positive, and the directional Schur complement is certified positive at $320$ and $448$ bits, with exact rational agreement on the shared head block.
+\end{enumerate}
+\end{theorem}
+
+Once complete nonnegativity $W_4 \succeq 0$ is established, we can resolve its lowest eigenspace and apply the Connes--van Suijlekom theorem~\cite{ConnesVanSuijlekom2021} to the entire Fourier transform of the true infinite-dimensional ground state.
+
+\begin{theorem}[Simplicity of the Complete $\lambda = 4$ Ground State and Real-Zero Transform]
+\label{thm:lambda4-ground}
+Let $W_4$ be the self-adjoint Friedrichs realization of $q_{\log 4}$ on $L^2(-\log 4, \log 4)$, with ordered eigenvalues $\mu_0(4) \le \mu_1(4) \le \cdots$. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item The ground state is simple and even, with certified $1024/1280$-bit enclosures (\path{evidence/v140/})
+  \begin{equation}\label{eq:ground-gap}
+    0 < \mu_0(4) < 2.454 \times 10^{-75}, \qquad \mu_1^{\mathrm{ev}}(4) > 10^{-73}, \qquad \mu_0^{\mathrm{odd}}(4) > 10^{-68}.
+  \end{equation}
+  \item Let $\psi_0 \in \mathcal{D}(q_{\log 4}) \cap L^2_{\mathrm{ev}}(-\log 4, \log 4)$ be the normalized complete ground eigenfunction of $W_4$. Its entire Fourier transform
+  \begin{equation}
+    \widehat{\widetilde{\psi_0}}(z) = \frac{1}{\sqrt{2\pi}}\int_{-\log 4}^{\log 4} \psi_0(x)\cos(zx)\,\dd x \qquad (z \in \mathbb{C})
+  \end{equation}
+  has \textbf{only real zeros}.
+\end{enumerate}
+\end{theorem}
+
+Furthermore, by combining the spectral gap~\eqref{eq:ground-gap}, dual norm bounds on the point-evaluation functional in $\mathcal{D}(q_{\log 4})$, and Rouch\'e's theorem on a certified disk around the first nontrivial Riemann zeta ordinate $\gamma_1 \approx 14.13472514173469379045725198356247$, we obtain a rigorous $32$-decimal-place enclosure of the first positive zero of the complete infinite-dimensional ground transform.
+
+\begin{theorem}[1024/1280-Bit First-Zero Enclosure of the Complete $\lambda = 4$ Ground State]
+\label{thm:first-zero-enclosure}
+The entire Fourier transform $\widehat{\widetilde{\psi_0}}$ of the complete $\lambda = 4$ ground state has a unique zero $z_1(4)$ in the interval $[\gamma_1 - \tfrac{1}{10}, \gamma_1 + \tfrac{1}{10}]$, and at $1024/1280$-bit ball precision (\path{evidence/v142/}, \path{evidence/v143/}) it satisfies
+\begin{equation}\label{eq:first-zero-bound}
+  \bigl|z_1(4) - \gamma_1\bigr| < 8.752082 \times 10^{-33}.
+\end{equation}
+In addition, for the Connes--Consani--Moscovici~\cite{ConnesConsaniMoscovici2025} finite $N = 120$ prolate compression at $\lambda = 3$, the first eight local root discrepancies are interval-certified at $768/1024$ bits (\path{evidence/v141/}), with first root discrepancy $1.582329697193127 \times 10^{-34}$.
+\end{theorem}
+
+\begin{remark}[Scope of Fixed-Window Certificates]
+Theorems~\ref{thm:lambda4-positivity}--\ref{thm:first-zero-enclosure} are unconditional theorems about the fixed operators $W_3$ and $W_4$. They do not assert convergence of $\widehat{\widetilde{\psi_0}}$ to Riemann's $\Xi$ function as $\lambda \to \infty$, because the prime sum in~\eqref{eq:weil-form} is truncated at $m < \lambda^2 = 16$. Achieving cofinal convergence via the Connes--Consani--Moscovici route requires relative residual selection against the vanishing spectral gap and uniform entire-transform tightness (\texttt{CCM-LIMIT}; see Section~\ref{sec:obstructions}).
+\end{remark}
+
+\section{Cofinal Obstructions for Fixed-Window and Compression Mechanisms}
+\label{sec:obstructions}
+
+We now prove a suite of unconditional no-go theorems showing why natural attempts to scale the $\lambda = 4$ certificate or simplify the cofinal floor~\eqref{eq:bounded-floor} fail as $\lambda \to \infty$.
+
+\subsection{Breakdown of Fixed Tail and Dyadic Block Comparisons at \texorpdfstring{$\lambda = 5$}{lambda = 5}}
+
+\begin{theorem}[Failure of the $\lambda = 4$ Tail Comparison and $N = 25$ Dyadic Block Criterion at $\lambda = 5$]
+\label{thm:lambda5-failures}
+At $\lambda = 5$ ($a = \log 5$):
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Stipulated tail metric comparison (\texttt{NS-44}, \path{evidence/ns44_metric_replay/}):} There exist explicit dyadic vectors supported on Fourier modes $17 \le n \le 128$ in both the even and odd sectors on which $q_{\log 5}[f] > 0$, yet the ratio to the positive tail reference form $\mathcal{D}$ satisfies
+  \begin{equation}
+    0 < \frac{q_{\log 5}[f_{\mathrm{ev}}]}{\mathcal{D}[f_{\mathrm{ev}}]} < 7 \times 10^{-18} < 10^{-8}, \qquad
+    0 < \frac{q_{\log 5}[f_{\mathrm{odd}}]}{\mathcal{D}[f_{\mathrm{odd}}]} < 1.2 \times 10^{-17} < 10^{-8},
+  \end{equation}
+  certified in \texttt{flint.arb} at $320$ and $448$ bits. Thus the unchanged $10^{-8}\mathcal{D}$ tail comparison fails at $\lambda = 5$.
+  \item \textbf{Dyadic block-norm comparison (\texttt{NS-45}, \path{evidence/ns45_block_replay/}):} On the first three dyadic blocks above $N = 25$, explicit dyadic pair witnesses certified at $320$ and $448$ bits yield off-diagonal coupling Rayleigh quotients exceeding the rational thresholds
+  \begin{equation}
+    \mathcal{R}_{\mathrm{ev}} > \frac{341}{250} = 1.364 > 1, \qquad
+    \mathcal{R}_{\mathrm{odd}} > \frac{2093}{1500} = 1.395\overline{3} > 1,
+  \end{equation}
+  ruling out every diagonal block-norm majorant and every positive row-weight Schur comparison for that partition.
+  \item \textbf{Exponential cutoff barrier (\path{evidence/v126/g2_window_resolution/}, \path{evidence/v138/}):} Any scalar far majorant of the prime shift sum with relative slack $c \in (0,1)$ requires a Fourier cutoff $N + 1 > 2a\exp(M_\phi/(1-c))$, which grows doubly exponentially in $a = \log\lambda$ when $M_\phi \asymp \lambda$, and this exponential barrier persists under any bounded shift $W_\lambda + C_* I$ (\texttt{prop:v138-shifted-floor}).
+\end{enumerate}
+\end{theorem}
+
+\subsection{Growing Radical Subspaces and the Rank Cost of Positive Coercivity}
+
+\begin{theorem}[Rank Barrier to Uniform or Polynomial Positive Spectral Gaps]
+\label{thm:rank-barrier}
+Let $a = \log\lambda \ge 2$.
+\begin{enumerate}[label=(\alph*)]
+  \item (\textbf{No uniform positive gap on $u_a^\perp$, \path{evidence/v135/}}) For every fixed integer $K \ge 1$ and every $K$-dimensional subspace $V_a \subset \mathcal{D}(q_a)$, $\liminf_{a\to\infty} \inf_{f \in V_a^\perp \setminus \{0\}} \frac{q_a[f]}{\norm{f}^2} \le 0$.
+  \item (\textbf{Super-polynomial rank barrier, \texttt{NS-46}, \path{evidence/v153/}}) Fine translates of the Gaussian completed-zeta radical~\eqref{eq:gaussian-radical} supported inside $I_a$ span a subspace $\mathcal{R}_a \subset \mathcal{D}(q_a)$ of dimension
+  \begin{equation}
+    \dim \mathcal{R}_a \ge \frac{\lambda^2}{20000\log\lambda}
+  \end{equation}
+  on which the complete Weil form satisfies $\sup_{f \in \mathcal{R}_a, \, \norm{f}=1} |q_a[f]| \le C \exp(-\lambda^2/2000)$ in both parity sectors. Consequently, no subspace removal of rank $o(\lambda^2/\log\lambda)$ can leave a uniform or polynomial positive spectral gap $\lambda^{-B}$.
+\end{enumerate}
+\end{theorem}
+
+\subsection{Continuum Cancellation, Concentration Commutators, and Scalar-Primitive Divergence}
+
+On the even sector, the rank-one pole $2|c\rangle\langle c|$ cancels the continuum Prime Number Theorem kernel $(K_a^+ f)(x) = \int_{-a}^a e^{|x-y|/2}f(y)\,\dd y$ via the exact kernel identity
+\begin{equation}\label{eq:continuum-cancel}
+  2|c\rangle\langle c| - K_a^+ = K_a^- + 2|s\rangle\langle s| \succeq 0, \qquad (K_a^- f)(x) = \int_{-a}^a e^{-|x-y|/2}f(y)\,\dd y,
+\end{equation}
+allowing $q_a[f]$ for even $f \in \mathcal{D}(q_a)$ to be written purely as the Fourier multiplier form
+\begin{align}\label{eq:beta-symbol}
+  q_a[f] &= \int_{\mathbb{R}} \beta_a(\xi)\bigl|\widehat{\widetilde{f}}(\xi)\bigr|^2\,\dd\xi, \\
+  \beta_a(\xi) &= \Re\psi\!\left(\frac{5}{4} + \frac{i\xi}{2}\right) - \log\pi - 2\sum_{2 \le m < e^{2a}} \frac{\Lambda(m)}{\sqrt{m}}\cos(\xi\log m) + 2\int_0^{2a} e^{t/2}\cos(\xi t)\,\dd t.\nonumber
+\end{align}
+
+\begin{theorem}[Obstructions to Perturbative PNT Replacement, Reciprocal Commutation, and Scalar Primitives]
+\label{thm:concentration-obstructions}
+Let $\beta_a(\xi)$ be the exact even-sector discrepancy symbol~\eqref{eq:beta-symbol} and let $P_a = I - |u_a\rangle\langle u_a|$ be the projection onto the actual even source complement.
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Local PNT-perturbation no-go (\texttt{prop:v130-local-no-go}):} Let $R_a = C_a - K_a^+$ be the prime-minus-continuum shift operator. For all $a > \log 3$ and any finite-dimensional subspace $V_a$, there exists a smooth even unit bump $g_a \in C_c^\infty(-a,a) \cap V_a^\perp$ with uniformly bounded archimedean Sobolev norms such that $\ip{R_a g_a}{g_a} > \frac{\log 2}{\sqrt{2}} > 0.4901$.
+  \item \textbf{Full-line infinite negative index at $\lambda = 4$ (\texttt{prop:v132-global-index}, \path{audits/bounds-six-agent-2026-09-30-v1/}):} At $a = \log 4$, direct $192/320$-bit Arb evaluation and an independent $128/256$-bit digamma-series enclosure certify
+  \begin{equation}
+    \beta_{\log 4}(1) \in [-0.64002145940588, -0.64002145940586] < -\frac{3}{5}.
+  \end{equation}
+  Hence the unconstrained $L^2(\mathbb{R})$ multiplier $\beta_{\log 4}(\xi)$ has infinite negative index even after any finite number of linear constraints, whereas its Paley--Wiener compression $W_4^{\mathrm{ev}}$ is positive by Theorem~\ref{thm:lambda4-positivity}.
+  \item \textbf{Noncommutation of source-compressed reciprocal bands (\texttt{prop:v133-noncommute}):} For $E_a = [-1/(10a), 1/(10a)]$ and $F_a = [-1/(5a), 1/(5a)]$, the source-compressed concentration operators $A_{E_a} = P_a \mathcal{F}_a^* 1_{E_a}\mathcal{F}_a P_a$ satisfy
+  \begin{equation}\label{eq:commutator-lower}
+    \liminf_{a \to \infty} \norm{[A_{E_a}, A_{F_a}]} > 9 \times 10^{-6}.
+  \end{equation}
+  \item \textbf{Disjoint-channel Cotlar cross-term persistence (\texttt{prop:v134-disjoint}):} For the disjoint reciprocal bands $E_a = [-1/(10a), 1/(10a)]$ and $F_a = [-3/(10a), -1/(5a)] \cup [1/(5a), 3/(10a)]$, the source-compressed Paley--Wiener projection $\Pi_{a,u} = \mathcal{F}_a P_a \mathcal{F}_a^*$ satisfies
+  \begin{equation}\label{eq:cotlar-lower}
+    \liminf_{a \to \infty} \norm{1_{E_a}\Pi_{a,u}1_{F_a}} \ge \frac{73}{375\pi} > 0.0619.
+  \end{equation}
+  \item \textbf{Unconditional divergence of the optimal Bernstein signed-primitive drawdown (\texttt{prop:v134-primitive}, \texttt{cor:v137-scalar-no-go}, \path{evidence/v137/}):} Among all scalar decompositions $\beta_a = b_a + W_a'$ with $b_a \ge 0$ and $W_a \in L^\infty(\mathbb{R})$, the $L^2$ Bernstein inequality yields the optimal lower bound $q_a[f] \ge -a\Delta(\beta_a)\norm{f}^2$ where $\Delta(\beta_a) = \sup_{x<y}\bigl(-\int_x^y \beta_a(\xi)\,\dd\xi\bigr)_+$. However, for the actual arithmetic symbol $\beta_a$,
+  \begin{equation}\label{eq:drawdown-divergence}
+    a\Delta(\beta_a) \ge \frac{\log 2}{3\sqrt{2}}\,a - C \longrightarrow +\infty \qquad (a \to \infty),
+  \end{equation}
+  closing the scalar signed-primitive route unconditionally.
+  \item \textbf{Gaussian positive-weight capacity slack blowup (\path{evidence/v150/}):} In the exact Picone identity $q_a[f] = \mathcal{J}_{a,h}[f/h] + \int_{I_a} r_a |f|^2\,\dd x + \Pi[f]$ for the positive Gaussian weight $h$ of~\eqref{eq:gaussian-radical}, sacrificing any fixed fraction $\delta_0 \in (0,1]$ of the positive difference energy $\mathcal{J}_{a,h}[f/h]$ or deleting the prime-$2$ shift channel forces the lower-floor error on $u_a^\perp$ and $L^2_{\mathrm{odd}}(I_a)$ to satisfy
+  \begin{equation}
+    \eta_a \ge \delta_0 \kappa \exp(\gamma\lambda^2) - O(\lambda\log\lambda) \longrightarrow +\infty.
+  \end{equation}
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}[Proof of (c) and (d)]
+Rescaling $L^2_{\mathrm{ev}}(-1,1)$ unitarily to $L^2_{\mathrm{ev}}(-a,a)$ transforms the uncompressed operators into $C_{1/10}$ and $C_{1/5}$ on $(-1,1)$ with kernel $C_c(x,y) = \pi^{-1}\int_0^c \cos(tx)\cos(ty)\,\dd t$. Comparing $C_c$ with its degree-two Taylor operator $T_c = \frac{c}{\pi}|1\rangle\langle 1| - \frac{c^3}{6\pi}(|x^2\rangle\langle 1| + |1\rangle\langle x^2|)$ gives $\norm{C_c - T_c} \le \frac{2c^5}{15\pi}$ and $\ip{[T_c,T_d]e_0}{e_2} = \frac{4cd(d^2-c^2)}{9\sqrt{5}\pi^2}$ on $e_0 = 1/\sqrt{2}$, $e_2 = \sqrt{5/8}(3x^2-1)$. At $c=1/10, d=1/5$, elementary rational bounds $9 < \pi^2 < 10$ and $\sqrt{5} < 9/4$ yield $\norm{[C_{1/10},C_{1/5}]} > \frac{1}{84375} - \frac{272}{135000000} - \frac{256}{20250000000000} > 9 \times 10^{-6}$. Since the dilated source $z_a$ converges weakly to $0$ in $L^2(-1,1)$ and $C_c$ is compact, $\norm{Q_a C_c Q_a - C_c} \to 0$, proving~\eqref{eq:commutator-lower}. Similarly, for (d), after frequency dilation to $E = [-1/10, 1/10]$ and $F = [-3/10, -1/5] \cup [1/5, 3/10]$, $|\xi - \eta| \le 2/5$ on $E \times F$, so $\frac{\sin(\xi-\eta)}{\pi(\xi-\eta)} \ge \frac{1}{\pi}(1 - \frac{4}{150}) = \frac{73}{75\pi}$; testing against $e_E = \sqrt{5}\,1_E$ and $e_F = \sqrt{5}\,1_F$ and using $\norm{1_{E_a}\widehat{\widetilde{u_a}}} = o(1)$ yields~\eqref{eq:cotlar-lower}.
+\end{proof}
+
+\subsection{Local-UCP Counterexamples and Boundary-Free Dual-Pole Elimination}
+
+\begin{theorem}[Failure of Local Unique Continuation and Exact Dual-Pole Elimination]
+\label{thm:ucp-and-dual-pole}
+Let $a = \log\lambda > \log 2$.
+\begin{enumerate}[label=(\alph*)]
+  \item \textbf{Local open-set UCP failure (\texttt{NS-55}, \path{evidence/v155/}):} There exist nonzero functions $f \in \mathcal{D}(q_a)$ in both the even source-orthogonal sector and the odd sector that vanish together with $(W_\lambda f)(x)$ on a nonempty open subinterval of $I_a$. Moreover, the semigroup $e^{-t W_\lambda}$ is not positivity-preserving on the ordinary pointwise cone $L^2_+(I_a)$.
+  \item \textbf{Boundary-free dual-pole subspace and closed-form odd pole moment (\path{audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/}):} On the closed codimension-$4$ subspace
+  \begin{equation}
+    \mathcal{V}_a = \bigl\{f \in H^1_0(-a,a) : \ip{f}{c} = \ip{f}{s} = 0\bigr\},
+  \end{equation}
+  the polar quadratic form $\Pi[f]$ vanishes identically in both parity sectors, eliminating the rank-one negative odd pole $-2|\ip{f}{s}|^2$ without boundary delta-function penalties. For the explicit $4$-term Chebyshev--Legendre basis
+  \begin{equation}
+    w_n(x) = T_n(x/a) - \alpha_n T_{n+2}(x/a) - \beta_n T_{n+4}(x/a) + \gamma_n T_{n+6}(x/a) \in \mathcal{V}_a,
+  \end{equation}
+  where $\alpha_n + \beta_n - \gamma_n = 1$ and $\beta_n = 1 + \frac{d_n - \gamma_n(d_{n+6} - d_{n+2})}{d_{n+2} - d_{n+4}}$ with $d_m = \int_{-a}^a T_m(x/a)e^{x/2}\,\dd x$, the exact odd pole moment for $u(x) = \sum_{j=0}^M c_j P_{2j+1}(x/a)$ has the closed form
+  \begin{equation}
+    \int_0^a u(x)\sinh(x/2)\,\dd x = a \sum_{j=0}^M c_j \sqrt{\frac{\pi}{a}}\, I_{2j+3/2}(a/2).
+  \end{equation}
+  At $\lambda = 4$, validated $256/384$-bit ball quadrature certifies that the $8$-mode odd Chebyshev--Legendre residual drops $53$-fold from $q_a[u_{\mathrm{raw}}] = -0.7131637517$ to $q_a[u_{\mathrm{proj}}] = +0.0133404894$ upon projection to $\mathcal{V}_a$, while on the full $32$-mode odd basis $\lambda_{\min}(W_4^{\mathrm{odd}}\big|_{\mathcal{V}_a}) \in [0.002960, 0.002961]$ vs.\ $\lambda_{\min}(W_4^{\mathrm{odd}}\big|_{H^1_0}) \in [0.000516, 0.000517]$.
+\end{enumerate}
+\end{theorem}
+
+\section{Nyman--Beurling / B\'aez-Duarte Reductions and Critical-Zero Floors}
+\label{sec:nb}
+
+In the Nyman--Beurling--B\'aez-Duarte formulation~\cite{BaezDuarteStrong,BurnolLower2002}, RH is equivalent to $\lim_{N\to\infty} E_N^{(q)} = 0$, where $E_N^{(q)} = \min_{c \in \mathbb{R}^N} \norm{\chi - \sum_{n=1}^N c_n v_n^{(q)}}^2$ is the squared Hilbert-space distance at Mellin smoothing order $q \ge 0$. Adding a dyadic block of basis vectors $N < n \le 2N$ reduces the squared error by the exact Schur-complement block gain
+\begin{equation}\label{eq:nb-schur-gain}
+  \Delta_N = E_N^{(q)} - E_{2N}^{(q)} = h_N^\top H_N^{-1} h_N,
+\end{equation}
+where $h_N$ is the vector of inner products of the new block with the old optimal residual $r_N$ and $H_N$ is the Schur-complement Gram matrix of the new block orthogonalized against the old span (\texttt{NS-53}, \texttt{NS-61}). Thus $E_N^{(q)} \to 0$ is equivalent to divergence of the relative dyadic gains $\sum_j \Delta_{2^j} / E_{2^j} = +\infty$ (\texttt{NB-GAIN}).
+
+We establish two fundamental obstructions to deducing $\sum_j \Delta_{2^j}/E_{2^j} = \infty$ from Gram-matrix geometry alone or from uniform dyadic contraction rates:
+
+\begin{theorem}[Same-Gram Positive-Floor Countermodel, \texttt{NS-74}, \path{evidence/v161/ns74/}]
+\label{thm:nb-same-gram}
+For any $\beta > \tfrac{1}{2}$, multiply the target Mellin transform in the Hardy space by the unitary inner factor $I_\beta(s) = \frac{s - \beta}{s - (1 - \beta)}$. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item The modified basis vectors have the \textbf{exact same Gram matrix} $G_{m,n}$ as the true Nyman--Beurling problem at every finite truncation $N$.
+  \item Every finite-prefix Gram statistic, condition number, and uncoupled block-preconditioner efficiency ratio is identical to that of the true $\zeta(s)$ system.
+  \item Nevertheless, the asymptotic squared approximation error satisfies the strictly positive floor
+  \begin{equation}
+    E_\infty(\beta) = \lim_{N\to\infty} E_N(\beta) \ge 1 - \left(\frac{1-\beta}{\beta}\right)^2 > 0.
+  \end{equation}
+\end{enumerate}
+Consequently, no argument that depends only on the Gram matrix $G$ and finite-prefix efficiency bounds can prove $E_N \to 0$.
+\end{theorem}
+
+\begin{theorem}[Critical-Zero Logarithmic Decay Floor, \texttt{NS-83}, \path{evidence/v166/ns83/}]
+\label{thm:nb-log-floor}
+At every fixed Mellin smoothing order $q \ge 0$, the existence of even a single simple zero $\rho_0 = \tfrac{1}{2} + i\gamma_0$ of $\zeta(s)$ on the critical line forces the unconditional lower bound
+\begin{equation}\label{eq:nb-log-floor}
+  E_N^{(q)} \ge \frac{C_q(\rho_0) + o(1)}{\log N} \qquad (N \to \infty),
+\end{equation}
+where $C_q(\rho_0) = \frac{2}{|\rho_0|^2 |1+\rho_0|^{2q} |\zeta'(\rho_0)|^2} > 0$. In particular, for the first critical-line zero $\gamma_1 \approx 14.134725$, at $q = 2$ one has $C_2(\rho_1) \in [7.785058046 \times 10^{-8}, 7.785058047 \times 10^{-8}]$ (certified at $256$ and $384$ bits). Consequently, the relative dyadic gain must satisfy $\liminf_{j\to\infty} \frac{\Delta_{2^j}}{E_{2^j}^{(q)}} = 0$; no uniform fixed-fraction contraction $\Delta_{2^j} \ge \theta E_{2^j}^{(q)}$ ($\theta > 0$) can hold eventually.
+\end{theorem}
+
+\section{The Surviving Cofinal Open Problems and Artifact Ledger}
+\label{sec:open-problems}
+
+Our positive certificates (Section~\ref{sec:lambda4}) and no-go theorems (Sections~\ref{sec:obstructions}--\ref{sec:nb}) narrow the Hilbert-space campaign to two well-posed, open cofinal arithmetic obligations:
+
+\begin{openproblem}[Uniform Cofinal Semilocal Weil Floor, \texttt{WEIL-FLOOR}]
+\label{prob:weil-floor}
+Prove that there exist a finite constant $C_* < \infty$ and an unbounded sequence $a_k = \log\lambda_k \to \infty$ such that for all even $f \in P_{a_k}\mathcal{D}(q_{a_k})$ and all odd $f \in \mathcal{D}(q_{a_k}) \cap L^2_{\mathrm{odd}}(I_{a_k})$ (or equivalently on the boundary-free dual-pole subspace $\mathcal{V}_{a_k}$ of Theorem~\ref{thm:ucp-and-dual-pole}(b)),
+\begin{equation}
+  q_{a_k}[f] \ge -C_*\norm{f}_{L^2(-a_k,a_k)}^2,
+\end{equation}
+retaining all prime-power shifts $m < \lambda_k^2$, exterior edges, and cross terms.
+\end{openproblem}
+
+\begin{openproblem}[Nonsummable Residualized Dyadic Block Gain, \texttt{NB-GAIN}]
+\label{prob:nb-gain}
+At fixed Mellin smoothing order $q = 2$, prove that the actual optimized residual $r_N$ satisfies
+\begin{equation}
+  \sum_{j=1}^\infty \frac{\Delta_{2^j}}{E_{2^j}^{(2)}} = +\infty, \qquad \Delta_N = h_N^\top H_N^{-1} h_N,
+\end{equation}
+for instance by establishing $\liminf_{j\to\infty} j\,\frac{\Delta_{2^j}}{E_{2^j}^{(2)}} > 0$ via a compatible upper bound on the projected logarithmic M\"obius cost $K_N = \norm{(I - \Pi_N)\sum_{N<n\le 2N} d_n a_n}^2$ (\texttt{MOBIUS-COST}) and a signed lower bound on the residual correlation $\ell_N = \ip{r_N}{\sum_{N<n\le 2N} d_n a_n}$ (\texttt{MOBIUS-MARGIN}).
+\end{openproblem}
+
+\subsection*{Reproducibility and Certified Artifact Ledger}
+
+Every theorem in this paper is backed by self-contained analytical proofs in the manuscript and/or dual-precision interval-arithmetic (\texttt{flint.arb}) certificates in the repository \path{AlexanderEastwood/riemann}, with zero dependency on any unarchived historical file:
+
+\begin{center}
+\footnotesize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.36\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}@{}}
+\toprule
+\textbf{Result} & \textbf{Precision / Method} & \textbf{Repository Artifact Path} \\
+\midrule
+Theorem~\ref{thm:bounded-floor} (Bounded floor $\iff$ RH) & Analytic + $256/384$-bit Arb & \path{evidence/v136/} \\
+Theorem~\ref{thm:lambda4-positivity} ($\lambda=3,4$ complete $W_\lambda \succeq 0$) & $320/448$-bit Arb + rational & \path{evidence/v124/}, \path{evidence/v126/} \\
+Theorem~\ref{thm:lambda4-ground} (Simple $\lambda=4$ ground \& real zeros) & $1024/1280$-bit Arb & \path{evidence/v140/} \\
+Theorem~\ref{thm:first-zero-enclosure} ($|z_1(4)-\gamma_1| < 8.76\times 10^{-33}$) & $1024/1280$-bit Arb & \path{evidence/v141/}--\path{evidence/v143/} \\
+Theorem~\ref{thm:lambda5-failures} ($\lambda=5$ tail \& block failures) & $320/448$-bit Arb + rational & \path{evidence/ns44_metric_replay/}, \path{evidence/ns45_block_replay/} \\
+Theorem~\ref{thm:rank-barrier} ($\Omega(\lambda^2/\log\lambda)$ rank barrier) & Analytic + $256/384$-bit Arb & \path{evidence/v135/}, \path{evidence/v153/} \\
+Theorem~\ref{thm:concentration-obstructions}(b) ($\beta_{\log 4}(1) < -3/5$) & $192/320$-bit Arb + series & \texttt{audits/bounds-six-agent-\allowbreak 2026-09-30-v1/} \\
+Theorem~\ref{thm:concentration-obstructions}(c)--(f) (Commutator, Drawdown, Slack) & Analytic + $256/384$-bit Arb & \path{evidence/v137/}, \path{evidence/v150/} \\
+Theorem~\ref{thm:ucp-and-dual-pole} (Local UCP \& Dual-Pole $\mathcal{V}_a$) & Analytic + $256/384$-bit Arb & \path{evidence/v155/}, \texttt{audits/cofinal-\allowbreak candidate-mechanisms-\allowbreak screen-2026-10-16-v1/} \\
+Theorem~\ref{thm:nb-same-gram} (Same-Gram floor $E_\infty(\beta) > 0$) & Analytic + $256/384$-bit Arb & \path{evidence/v161/ns74/} \\
+Theorem~\ref{thm:nb-log-floor} (Critical-zero floor $\ge C_q/\log N$) & Analytic + $256/384$-bit Arb & \path{evidence/v166/ns83/} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+
+\bibitem{BaezDuarteStrong}
+L. B\'aez-Duarte,
+\emph{A strengthening of the Nyman--Beurling criterion for the Riemann Hypothesis},
+Atti Accad. Naz. Lincei Cl. Sci. Fis. Mat. Natur. Rend. Lincei (9) Mat. Appl. \textbf{14} (2003), 5--11;
+\url{https://arxiv.org/abs/math/0202141v2}.
+
+\bibitem{Bang1995}
+H. H. Bang,
+\emph{A property of infinitely differentiable functions},
+Proc. Amer. Math. Soc. \textbf{108} (1990), 73--76.
+
+\bibitem{BrownHalmos1964}
+A. Brown and P. R. Halmos,
+\emph{Algebraic properties of Toeplitz operators},
+J. Reine Angew. Math. \textbf{213} (1963/64), 89--102.
+
+\bibitem{BurnolLower2002}
+J.-F. Burnol,
+\emph{A lower bound in an approximation problem involving the zeros of the Riemann zeta function},
+Adv. Math. \textbf{170} (2002), 56--70;
+\url{https://arxiv.org/abs/math/0103058}.
+
+\bibitem{ConnesConsani2023}
+A. Connes and C. Consani,
+\emph{Weil positivity and trace formula: the archimedean place},
+Selecta Math. (N.S.) \textbf{27} (2021), Paper No.~77;
+\url{https://arxiv.org/abs/2006.16771}.
+
+\bibitem{ConnesConsaniMoscovici2025}
+A. Connes, C. Consani, and H. Moscovici,
+\emph{Zeta zeros and prolate wave operators: semilocal Weil positivity},
+arXiv:2511.22755 (2025).
+
+\bibitem{ConnesVanSuijlekom2021}
+A. Connes and W. D. van Suijlekom,
+\emph{Spectral truncations in noncommutative geometry and operator systems},
+Comm. Math. Phys. \textbf{383} (2021), 2021--2067;
+\url{https://arxiv.org/abs/2004.14115}.
+
+\bibitem{FrankSeiringer2008}
+R. L. Frank and R. Seiringer,
+\emph{Non-linear ground state representations and sharp Hardy inequalities},
+J. Funct. Anal. \textbf{255} (2008), 3407--3430.
+
+\bibitem{Kovrijkine2000}
+O. Kovrijkine,
+\emph{Some results related to the Logvinenko--Sereda theorem},
+Proc. Amer. Math. Soc. \textbf{129} (2001), 3037--3047.
+
+\end{thebibliography}
+
+\end{document}
