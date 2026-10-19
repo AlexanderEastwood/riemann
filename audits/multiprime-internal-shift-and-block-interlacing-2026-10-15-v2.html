@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milestone 10 Report (v2) — Crossing the Internal log 2 Shift Barrier &amp; Block Interlacing (2026-10-15 v2)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 36px auto; padding: 0 20px; line-height: 1.62; color: #1a1a1a; background-color: #ffffff;">
+
+  <div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-bottom: 26px;">
+    <p style="margin: 0 0 8px 0; font-weight: bold; color: #8b0000; font-size: 1.02em;">
+      Wall Check &amp; Open Obligations Disclosure (Top of Report)
+    </p>
+    <p style="margin: 0; font-size: 0.95em;">
+      <strong>Does this audit prove the Riemann Hypothesis (RH), complete the global archimedean completion (G2), establish the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin;, or recover the missing historical raw outputs in <code>evidence/MISSING.md</code>? No.</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups in <code>evidence/MISSING.md</code></strong> (<code>stage4_run_summary.json</code> / <code>stage4_Ticks.json</code> and <code>certificate.json</code> / <code>verify_log.txt</code>) remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h1 style="font-size: 1.48em; line-height: 1.3; margin-bottom: 6px; color: #111111;">
+    Milestone 10: Block-Invariant Cauchy&ndash;Poincar&eacute; Step-Subspace Interlacing &amp; Crossing the Internal log 2 Shift Barrier (<code>KERNEL-API</code>)
+  </h1>
+  <p style="margin: 0 0 22px 0; font-size: 0.92em; color: #555555;">
+    <strong>Date:</strong> 2026-10-15 &bull; <strong>Version:</strong> v2 (Pure-<code>flint</code> Bounded Repair) &bull; <strong>Audit Directory:</strong> <code>audits/multiprime-internal-shift-and-block-interlacing-2026-10-15-v1/</code> &bull; Prior HTML preserved at <code>multiprime-internal-shift-and-block-interlacing-2026-10-15-v1.html</code>
+  </p>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    1. Executive Summary: Breaking the <em>a</em> = &frac12; log 12 Internal log 2 Shift Wall
+  </h2>
+  <p>
+    In Milestone 8 (<code>audits/multiprime-three-prime-and-scaling-2026-10-15-v1/</code>), the 2-prime Euler preconditioner certification stopped at the exact entry point of the internal shift &tau;<sub>2</sub> = log 2 of <em>L</em><sub>2,3</sub> at <em>a</em> = &frac12; log 12 = log(2&radic;3) &approx; 1.242453 (2<em>b</em> = log 2 &approx; 0.693147), where two mathematical barriers collided:
+  </p>
+  <ol>
+    <li style="margin-bottom: 8px;">
+      <strong>Right-Endpoint Shift Crowding under Symmetric Schur Weights:</strong>
+      When &tau;<sub>2</sub> = log 2 enters (&minus;<em>b</em>, <em>b</em>), all six active shifts (&tau;<sub>7/6</sub>, &tau;<sub>6/5</sub>, &tau;<sub>3/2</sub>, &tau;<sub>5/3</sub>, &tau;<sub>11/6</sub>, &tau;<sub>2</sub>) simultaneously overlap on the right endpoint [log 2 &minus; <em>b</em>, <em>b</em>], driving the symmetric Schur floor <em>V</em>(<em>x</em>) negative unless &Delta;<sub>&alpha;</sub> &ge; 2.0.
+    </li>
+    <li>
+      <strong>Multi-Mode Spectral Leakage beyond 2-Mode Trace Subtraction:</strong>
+      For <em>b</em>&xi;<sub>0</sub> &gt; 6, the Birman&ndash;Schwinger operator <em>K</em> = <em>P</em><sub>0</sub><sup>&minus;1/2</sup> <em>A</em><sub>&minus;</sub><sup>(&Delta;<sub>&alpha;</sub>)</sup> <em>P</em><sub>0</sub><sup>&minus;1/2</sup> develops <strong>four</strong> active even modes (&mu;<sub>1</sub>, &mu;<sub>2</sub>, &mu;<sub>3</sub>, &mu;<sub>4</sub>) and <strong>three</strong> active odd modes (&mu;<sub>1,odd</sub>, &mu;<sub>2,odd</sub>, &mu;<sub>3,odd</sub>), causing both the 2-mode and 3-mode even bounds (<code>1.051589</code> and <code>1.000319</code> at <em>a</em> = &frac12; log 13) and the 2-mode odd bound (<code>1.003276</code> at <em>a</em> = &frac12; log 13) to exceed 1.
+    </li>
+  </ol>
+  <p>
+    This milestone breaks both barriers and certifies <em>B</em><sub>2,3</sub> across the internal log 2 shift barrier all the way to the &tau;<sub>13/6</sub> = log(13/6) entry horizon <strong><em>a</em> = &frac12; log 13 &approx; 1.282475</strong>:
+  </p>
+  <ul>
+    <li style="margin-bottom: 8px;">
+      <strong>Theorem 1 (Block-Invariant Step-Subspace Decomposition &amp; <em>d</em>-Mode Cauchy&ndash;Poincar&eacute; Interlacing):</strong>
+      Because <em>P</em><sub>0</sub> commutes with the orthogonal projection &Pi;<sub>step</sub> onto the elementary step subspace <em>S</em><sub>step</sub> and acts as scalar multiplication by <em>v</em><sub><em>k</em></sub> on <em>S</em><sub>step</sub><sup>&perp;</sup>, Cauchy&ndash;Poincar&eacute; interlacing on a <em>d</em>-dimensional <em>P</em><sub>0</sub>-orthonormal step basis yields
+      &Vert;<em>K</em>&Vert;<sub>op</sub> &le; Tr(<em>K</em>) &minus; Tr(<em>G</em><sup>(<em>d</em>)</sup>) + &Lambda;<sub>1</sub>. At <em>a</em> = &frac12; log 12, moving from <em>d</em> = 2 to <em>d</em> = 4 increases the certified margin 1 &minus; &Vert;<em>K</em><sub>even</sub>&Vert;<sub>op</sub> by <strong>6.7&times;</strong> (<code>0.000354</code> vs <code>0.000053</code>).
+    </li>
+    <li>
+      <strong>Theorem 2 (Step-Subspace Gauge-Invariant Asymmetric Schur Weights):</strong>
+      Introducing positive rational gauge weights &gamma; = (1, 1, 18/25, 39/50, 17/20, 1) and &eta; = (41/50, 41/50, 1, 1, 1, 1) leaves the quadratic form on subinterval-constant step pairs <strong>identically invariant</strong> while shifting the scalar floor penalty from the crowded right endpoint onto the uncrowded left interior, keeping min<sub><em>k</em></sub> <em>v</em><sub><em>k</em></sub> &ge; 0.122693 &gt; 0 at &Delta;<sub>&alpha;</sub> = 1.0 across (&frac12; log 12, &frac12; log 13].
+    </li>
+  </ul>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    2. Certified 384-Bit &amp; 256-Bit <code>flint.arb</code> Table Across <em>a</em> &isin; [&frac12; log 12, &frac12; log 13]
+  </h2>
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.82em; margin: 14px 0;">
+    <thead>
+      <tr style="background-color: #f0f0f0; border-bottom: 2px solid #333333;">
+        <th style="padding: 5px; text-align: left;">Checkpoint</th>
+        <th style="padding: 5px; text-align: right;"><em>a</em></th>
+        <th style="padding: 5px; text-align: right;">&Delta;<sub>&alpha;</sub></th>
+        <th style="padding: 5px; text-align: right;"><em>n</em><sub>sub</sub></th>
+        <th style="padding: 5px; text-align: right;">min <em>v</em><sub><em>k</em></sub></th>
+        <th style="padding: 5px; text-align: right;">Even 2-Mode</th>
+        <th style="padding: 5px; text-align: right;">Even 3-Mode</th>
+        <th style="padding: 5px; text-align: right;">Even 4-Mode</th>
+        <th style="padding: 5px; text-align: right;">Odd 2-Mode</th>
+        <th style="padding: 5px; text-align: right;">Odd 3-Mode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 5px;">&frac12; log 12.00 (log 2 entry)</td>
+        <td style="padding: 5px; text-align: right;">1.242453</td>
+        <td style="padding: 5px; text-align: right;">0.6</td>
+        <td style="padding: 5px; text-align: right;">5</td>
+        <td style="padding: 5px; text-align: right;">0.728681</td>
+        <td style="padding: 5px; text-align: right;">0.999947</td>
+        <td style="padding: 5px; text-align: right;">0.999647</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.999646 &lt; 1</td>
+        <td style="padding: 5px; text-align: right;">0.925722</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.925701 &lt; 1</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 5px;">&frac12; log 12.25 = log(7/2)</td>
+        <td style="padding: 5px; text-align: right;">1.252763</td>
+        <td style="padding: 5px; text-align: right;">1.0</td>
+        <td style="padding: 5px; text-align: right;">7</td>
+        <td style="padding: 5px; text-align: right;">0.122693</td>
+        <td style="padding: 5px; text-align: right; color: #8b0000;">1.035306</td>
+        <td style="padding: 5px; text-align: right; color: #8b0000;">1.000014</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.999809 &lt; 1</td>
+        <td style="padding: 5px; text-align: right;">0.953672</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.950800 &lt; 1</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 5px;">&frac12; log 12.50 = &frac12; log(25/2)</td>
+        <td style="padding: 5px; text-align: right;">1.262864</td>
+        <td style="padding: 5px; text-align: right;">1.0</td>
+        <td style="padding: 5px; text-align: right;">9</td>
+        <td style="padding: 5px; text-align: right;">0.122693</td>
+        <td style="padding: 5px; text-align: right; color: #8b0000;">1.042455</td>
+        <td style="padding: 5px; text-align: right; color: #8b0000;">1.000071</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.999812 &lt; 1</td>
+        <td style="padding: 5px; text-align: right;">0.970600</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.966662 &lt; 1</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 5px;">&frac12; log 12.75 = &frac12; log(51/4)</td>
+        <td style="padding: 5px; text-align: right;">1.272766</td>
+        <td style="padding: 5px; text-align: right;">1.0</td>
+        <td style="padding: 5px; text-align: right;">11</td>
+        <td style="padding: 5px; text-align: right;">0.122693</td>
+        <td style="padding: 5px; text-align: right; color: #8b0000;">1.047547</td>
+        <td style="padding: 5px; text-align: right; color: #8b0000;">1.000194</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.999871 &lt; 1</td>
+        <td style="padding: 5px; text-align: right;">0.987955</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.982400 &lt; 1</td>
+      </tr>
+      <tr style="border-bottom: 2px solid #333333; background-color: #f4fbf4;">
+        <td style="padding: 5px;"><strong>&frac12; log 13.00 (&tau;<sub>13/6</sub> horizon)</strong></td>
+        <td style="padding: 5px; text-align: right;"><strong>1.282475</strong></td>
+        <td style="padding: 5px; text-align: right;">1.0</td>
+        <td style="padding: 5px; text-align: right;">13</td>
+        <td style="padding: 5px; text-align: right;">0.122693</td>
+        <td style="padding: 5px; text-align: right; color: #8b0000;">1.051589</td>
+        <td style="padding: 5px; text-align: right; color: #8b0000;">1.000319</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.999906 &lt; 1</td>
+        <td style="padding: 5px; text-align: right; color: #8b0000;">1.003276</td>
+        <td style="padding: 5px; text-align: right; color: #1b5e20; font-weight: bold;">0.995507 &lt; 1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    3. Verification Artifacts &amp; SHA-256 Hashes (Version 2 Bounded Repair)
+  </h2>
+  <ul>
+    <li><strong>Derivations:</strong> <code>audits/multiprime-internal-shift-and-block-interlacing-2026-10-15-v1/derivation.md</code></li>
+    <li><strong>Verifier Script:</strong> <code>audits/multiprime-internal-shift-and-block-interlacing-2026-10-15-v1/verify_block_interlacing_and_internal_shift.py</code> (256-bit and 384-bit two-precision pure-<code>flint</code> replay; zero <code>numpy</code>/<code>scipy</code>/<code>mpmath</code> dependencies; exact <code>SymReal</code> shift algebra with zero decimal tolerances; 30/30 ball overlap checks PASS; <code>pyright</code>: <code>0 errors, 0 warnings, 0 informations</code>)</li>
+    <li><strong>Certificate JSON:</strong> <code>audits/multiprime-internal-shift-and-block-interlacing-2026-10-15-v1/verification.json</code>
+      <ul>
+        <li><code>payload.sha256</code>: <code>0bd6e9efedbc08baed0629410bad5cf968073133090c310443fbb36af246d4c8</code></li>
+        <li><code>file_sha256</code>: <code>eea47f75626fed1d4b433d33edbffe44eb3b6d4b9adc4600c7151fb6dbc571c2</code></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-top: 30px;">
+    <p style="margin: 0 0 8px 0; font-weight: bold; color: #8b0000; font-size: 1.02em;">
+      Wall Check &amp; Open Obligations Disclosure (Bottom of Report)
+    </p>
+    <p style="margin: 0; font-size: 0.95em;">
+      <strong>Does this audit prove RH, complete G2, establish the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin;, or recover the missing historical evidence in <code>evidence/MISSING.md</code>? No.</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups in <code>evidence/MISSING.md</code></strong> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</body>
+</html>

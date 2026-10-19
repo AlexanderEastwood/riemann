@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All-Vector Positivity Beyond 1/2 log 7 up to 1/2 log(15/2) — 2026-10-15-v1</title>
+</head>
+<body style="margin:0;padding:24px 16px;background-color:#f6f5f0;color:#1e2426;font-family:Georgia,'Times New Roman',serif;line-height:1.62;">
+<main style="max-width:680px;margin:0 auto;background-color:#ffffff;padding:36px 34px;border-top:5px solid #1d4e56;box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+
+<p style="margin:0 0 6px 0;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;color:#4a666b;">
+RIEMANN PROJECT · KERNEL-API LANE · 15 OCTOBER 2026 · V1
+</p>
+<h1 style="margin:0 0 16px 0;font-size:26px;line-height:1.24;color:#132b30;font-weight:normal;">
+All-Vector Weil Positivity Beyond <em>a</em> = ½ log 7 Across the Unit Landmark <em>a</em> = 1.0 up to the 3-Point Fiber Closure Horizon <em>a</em><sub>★★★★</sub> = ½ log(15/2) ≈ 1.007452
+</h1>
+
+<div style="margin:18px 0 24px 0;padding:14px 16px;background-color:#eef4f5;border-left:4px solid #1d4e56;font-size:14.5px;">
+<strong>Wall check (mandatory disclosure):</strong> The Riemann Hypothesis (<strong>RH</strong>), global Weil positivity across all test functions (<strong>G2</strong>), the <strong>cofinal signed-arithmetic lower bound</strong> in the <em>B</em><sub>2</sub>/Stieltjes lane, and <strong>both historical missing-original evidence groups</strong> in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. This report certifies finite-<em>a</em> operator-theoretic Weil positivity on the preconditioned subspace <em>L</em><sub>2</sub>(<em>V</em><sub><em>a</em>−log 2</sub>) ⊂ <em>V</em><sub><em>a</em></sub> up to the exact 3-point fiber closure horizon <em>a</em><sub>★★★★</sub> = ½ log(15/2) ≈ 1.0074515103 in 384-bit ball arithmetic (<code>flint.arb</code>). It does not claim a proof of RH or global Weil positivity.
+</div>
+
+<h2 style="font-size:19px;color:#183a40;border-bottom:1px solid #dde5e6;padding-bottom:6px;margin-top:28px;">
+1. Executive Summary &amp; Cumulative Frontier Progression
+</h2>
+<p style="margin:10px 0;">
+In our previous audit (<code>all-vector-positivity-beyond-log6-2026-10-15-v1</code>), we extended the <code>KERNEL-API</code> all-vector positivity certificate from <em>a</em><sub>★</sub> = ½ log 6 ≈ 0.895880 to the prime-7 entry threshold <em>a</em><sub>★★★</sub> = ½ log 7 ≈ 0.9729550745. Above ½ log 7, two new structural transitions occur on <em>V</em><sub><em>b</em></sub> = <em>L</em><sup>2</sup>(−<em>b</em>, <em>b</em>) (<em>b</em> = <em>a</em> − log 2):
+</p>
+<ol style="margin:10px 0;padding-left:22px;">
+<li style="margin-bottom:8px;">
+<strong>Entry of the <em>m</em> = 7 prime shift (<em>τ</em><sub>7</sub> = log(7/4) ≈ 0.559616):</strong> Since <em>b</em> &lt; <em>τ</em><sub>7</sub> &lt; 2<em>b</em> for all <em>a</em> ∈ (½ log 7, ½ log(15/2)], the shift <em>S</em><sub><em>τ</em><sub>7</sub></sub> has zero positive-half shift overlap on (0, <em>b</em>) and acts purely as the reflection ∓<em>c</em><sub>7</sub><em>R</em><sub><em>τ</em><sub>7</sub></sub> supported on [<em>x</em><sub>7</sub>, <em>b</em>] = [<em>τ</em><sub>7</sub> − <em>b</em>, <em>b</em>] (<em>c</em><sub>7</sub> = log 7 / (2√7)).
+</li>
+<li style="margin-bottom:8px;">
+<strong>Full reflection saturation and positive-half shift entry for <em>m</em> = 3 (<em>τ</em><sub>3</sub> = log(4/3) ≈ 0.287682):</strong> At <em>a</em> = log(8/3) = 3 log 2 − log 3 ≈ 0.98082925, <em>b</em> = <em>τ</em><sub>3</sub> so the <em>m</em> = 3 reflection saturates all of [0, <em>b</em>] (<em>x</em><sub>3</sub> = 0). For <em>a</em> &gt; log(8/3), a positive-half shift overlap <em>s</em><sub>3</sub> := <em>b</em> − <em>τ</em><sub>3</sub> &gt; 0 opens on [0, <em>s</em><sub>3</sub>] ↔ [<em>τ</em><sub>3</sub>, <em>b</em>] and decomposes into −<em>c</em><sub>3</sub><strong>1</strong><sub>[0,<em>s</em><sub>3</sub>]∪[<em>τ</em><sub>3</sub>,<em>b</em>]</sub> + 2<em>c</em><sub>3</sub><em>P</em><sub>diff</sub><sup>(3,shift)</sup>.
+</li>
+<li style="margin-bottom:8px;">
+<strong>Exact 3-Point Fiber Closure Horizon at <em>a</em><sub>★★★★</sub> = ½ log(15/2) ≈ 1.0074515103:</strong> The <em>m</em> = 5 shift support [0, <em>d</em><sub>5</sub>] (<em>d</em><sub>5</sub> = <em>a</em> + log 2 − log 5) and <em>m</em> = 6 reflection support [<em>x</em><sub>6</sub>, <em>b</em>] (<em>x</em><sub>6</sub> = log 3 − <em>a</em>) satisfy
+<div style="margin:8px 0;padding:10px 14px;background-color:#f6f8f8;font-family:'Courier New',monospace;font-size:13.5px;">
+x_6 − d_5 = log 3 + log 5 − log 2 − 2a = log(15/2) − 2a ≥ 0 &nbsp;⟺&nbsp; a ≤ ½ log(15/2) ≈ 1.0074515103.
+</div>
+Thus <em>P</em><sub>0</sub>(<em>a</em>) remains an exact direct sum of 1×1, 2×2, and 3×3 tridiagonal fiber blocks all the way across the unit-length landmark <strong><em>a</em> = 1.000000</strong> up to exact saturation <em>d</em><sub>5</sub> = <em>x</em><sub>6</sub> = ½ log(27/20) at <strong><em>a</em><sub>★★★★</sub> = ½ log(15/2) ≈ 1.0074515103</strong>.
+</li>
+</ol>
+
+<h2 style="font-size:19px;color:#183a40;border-bottom:1px solid #dde5e6;padding-bottom:6px;margin-top:28px;">
+2. 2-Mode Loewner Plancherel Minorant in 384-Bit Ball Arithmetic
+</h2>
+<p style="margin:10px 0;">
+As <em>a</em> crosses 0.98 toward 1.007452, a single Plancherel step vector leaves the even-sector trace slightly above 1. We introduce a 2-mode step subspace <em>W</em> = span(<em>w</em><sub>1</sub>, <em>w</em><sub>2</sub>) on (0, <em>b</em>) aligned with the high-energy fibers of <em>P</em><sub>0</sub>(<em>a</em>)<sup>−1</sup>. Because the outer-product integrand
+</p>
+<div style="margin:10px 0;padding:10px 14px;background-color:#f6f8f8;font-family:'Courier New',monospace;font-size:13.5px;">
+M(ω) := (2/π) σ(L_2)(ω)² [ c_r(ω) c_s(ω) ]_{r,s=1}^2 ⪰ 0
+</div>
+<p style="margin:10px 0;">
+is rank-1 positive semidefinite at every frequency <em>ω</em>, piecewise monotonicity of 1/(<em>α</em>(<em>ω</em>) − Δ<sub><em>α</em></sub>) on the 9 monotone subintervals of [<em>ξ</em><sub>1</sub>, Ξ] = [2.6, 50.0] together with Plancherel's identity on [Ξ, ∞) yields a certified 2×2 Loewner upper-bound matrix 0 ≺ <em>D</em><sub>pl</sub> ⪯ <em>D</em><sub>pl</sub><sup>upper</sup> in 384-bit ball arithmetic without dividing by <em>α</em>(<em>ω</em>) − Δ<sub><em>α</em></sub> inside <code>acb.integral</code>.
+</p>
+
+<h2 style="font-size:19px;color:#183a40;border-bottom:1px solid #dde5e6;padding-bottom:6px;margin-top:28px;">
+3. Certified 384-Bit Results Across (½ log 7, ½ log(15/2)]
+</h2>
+<p style="margin:10px 0;">
+All four landmarks are certified in 384-bit <code>flint.arb</code> (<code>verify_beyond_log7.py</code>, <code>sha256=e21949ff5eac3744ede5e8df929a3a25ab8a1429021134322e5c93f472ae38e8</code>, <code>all_certified=True</code> in 219.569s, <code>pyright</code>: 0 errors, 0 warnings):
+</p>
+
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:13px;">
+<thead>
+<tr style="background-color:#1d4e56;color:#ffffff;text-align:left;">
+<th style="padding:8px 9px;border:1px solid #cfd8da;">Landmark / Threshold</th>
+<th style="padding:8px 9px;border:1px solid #cfd8da;text-align:right;"><em>a</em></th>
+<th style="padding:8px 9px;border:1px solid #cfd8da;text-align:right;"><em>b</em> = <em>a</em> − log 2</th>
+<th style="padding:8px 9px;border:1px solid #cfd8da;text-align:right;">(<em>K</em>, <em>M</em><sub>p</sub>, <em>M</em><sub>pl</sub>)</th>
+<th style="padding:8px 9px;border:1px solid #cfd8da;text-align:right;"><em>𝒯</em><sub>even</sub> (384-bit)</th>
+<th style="padding:8px 9px;border:1px solid #cfd8da;text-align:right;"><em>𝒯</em><sub>odd</sub> (384-bit)</th>
+<th style="padding:8px 9px;border:1px solid #cfd8da;text-align:right;">Margin 1 − <em>𝒯</em><sub>even</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr style="background-color:#ffffff;">
+<td style="padding:7px 9px;border:1px solid #dde5e6;"><em>τ</em><sub>3</sub> = log(4/3) saturation</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">log(8/3) ≈ 0.980829</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.287682</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">(28, 7, 2)</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.97651233 ± 5.10e-21</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.70806443 ± 1.63e-64</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;"><strong>+0.02348767 &gt; 0</strong></td>
+</tr>
+<tr style="background-color:#f9fbfb;">
+<td style="padding:7px 9px;border:1px solid #dde5e6;"><em>m</em> = 3 shift + <em>m</em> = 7 refl</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.990000</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.296853</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">(41, 10, 2)</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.98637806 ± 4.62e-21</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.75040320 ± 1.67e-64</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;"><strong>+0.01362194 &gt; 0</strong></td>
+</tr>
+<tr style="background-color:#ffffff;">
+<td style="padding:7px 9px;border:1px solid #dde5e6;"><strong>Unit Landmark (2<em>a</em> = 2.0)</strong></td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;"><strong>1.000000</strong></td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.306853</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">(40, 10, 2)</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.99363117 ± 9.90e-20</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.79428334 ± 1.71e-64</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;"><strong>+0.00636883 &gt; 0</strong></td>
+</tr>
+<tr style="background-color:#eef6f1;">
+<td style="padding:7px 9px;border:1px solid #dde5e6;"><strong>3-Point Fiber Horizon (<em>d</em><sub>5</sub> = <em>x</em><sub>6</sub>)</strong></td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;"><strong>½ log(15/2) ≈ 1.007452</strong></td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.314304</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">(46, 11, 2)</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.99351466 ± 2.88e-19</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.82138634 ± 1.72e-64</td>
+<td style="padding:7px 9px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;"><strong>+0.00648534 &gt; 0</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p style="margin:10px 0;">
+Together with the prior audits on this branch, the certified all-vector positivity frontier for <em>L</em><sub>2</sub>(<em>V</em><sub><em>a</em>−log 2</sub>) ⊂ <em>V</em><sub><em>a</em></sub> has advanced from <em>a</em> = ½ log 5 ≈ 0.804719 → ½ log 6 ≈ 0.895880 → log(5/2) ≈ 0.916291 → ½ log 7 ≈ 0.972955 → log(8/3) ≈ 0.980829 → 1.000000 → <strong><em>a</em><sub>★★★★</sub> = ½ log(15/2) ≈ 1.0074515103</strong>.
+</p>
+
+<h2 style="font-size:19px;color:#183a40;border-bottom:1px solid #dde5e6;padding-bottom:6px;margin-top:28px;">
+4. Artifacts &amp; Verification Record
+</h2>
+<ul style="margin:10px 0;padding-left:22px;font-size:14.5px;">
+<li><a href="all-vector-positivity-beyond-log7-2026-10-15-v1/PROPOSAL.md" style="color:#1d4e56;"><code>PROPOSAL.md</code></a> — Scope, landmarks, and falsifiability criteria.</li>
+<li><a href="all-vector-positivity-beyond-log7-2026-10-15-v1/derivation.md" style="color:#1d4e56;"><code>derivation.md</code></a> — Proof of Theorem 1 (3-Point Fiber Closure up to ½ log(15/2)) and Theorem 2 (2-Mode PSD Loewner Plancherel Minorant).</li>
+<li><a href="all-vector-positivity-beyond-log7-2026-10-15-v1/verify_beyond_log7.py" style="color:#1d4e56;"><code>verify_beyond_log7.py</code></a> — 384-bit <code>flint.arb</code> verification script (<code>pyright</code>: 0 errors, 0 warnings).</li>
+<li><a href="all-vector-positivity-beyond-log7-2026-10-15-v1/verification.json" style="color:#1d4e56;"><code>verification.json</code></a> — Deterministic 384-bit ball arithmetic certificate (<code>sha256=e21949ff5eac3744ede5e8df929a3a25ab8a1429021134322e5c93f472ae38e8</code>).</li>
+</ul>
+
+<div style="margin:26px 0 0 0;padding:14px 16px;background-color:#eef4f5;border-left:4px solid #1d4e56;font-size:14px;">
+<strong>Wall check (closing disclosure):</strong> The Riemann Hypothesis (<strong>RH</strong>), global Weil positivity (<strong>G2</strong>), the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+</div>
+
+</main>
+</body>
+</html>

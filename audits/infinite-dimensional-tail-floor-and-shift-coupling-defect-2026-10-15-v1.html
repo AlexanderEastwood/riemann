@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Milestone 17 Audit Report — Infinite-Dimensional Tail Floor, Two-Shift Defect Algebra, &amp; Full-Space Block-Schur Positivity (2026-10-15 v1)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #fbfaf7; color: #1f2328; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #d8d4c8; padding: 36px 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-bottom: 24px; font-size: 14px;">
+      <strong>Wall Check &amp; Open-Status Disclosure:</strong> This package does <strong>NOT</strong> prove the Riemann Hypothesis (<code>RH</code>), Goal 2 (<code>G2</code>), or the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin; (or <em>K</em> &rarr; &infin;). Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <h1 style="font-size: 24px; line-height: 1.3; margin-top: 0; margin-bottom: 8px; color: #111827;">
+      Milestone 17: Infinite-Dimensional High-Mode Operator Lower Bound, Exact Two-Shift Product Defect Algebra, and Full-Space Block-Schur Positivity on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>)
+    </h1>
+    <p style="font-size: 14px; color: #4b5563; margin-top: 0; margin-bottom: 24px;">
+      <strong>Date:</strong> 2026-10-15 &nbsp;|&nbsp; <strong>Version:</strong> v1 &nbsp;|&nbsp; <strong>Lanes:</strong> <code>WEIL-FLOOR</code>, <code>NB-GAIN / COEFF</code>, <code>KERNEL-API</code>
+    </p>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      1. Executive Summary &amp; Audit Requirement Addressed
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 14px;">
+      Following the complete repairs of Milestones 7, 8, 9, and 16 under the external reviews <code>argon-m9-campaign-review-2026-10-15-v1</code> and <code>argon-m16-review-2026-10-15-v1</code>, this package directly fulfills the reviewer&rsquo;s mathematical requirement for the next step:
+    </p>
+    <blockquote style="margin: 14px 0; padding: 10px 16px; border-left: 3px solid #6b7280; background-color: #f9fafb; font-style: italic; font-size: 14px; color: #374151;">
+      &ldquo;Any next RH-oriented proposal must specify a complete high-mode lower bound plus coupling estimate (or a uniform signed floor) with its dependency edge and matched controls. Do not replace these by another finite table.&rdquo;
+    </blockquote>
+    <p style="font-size: 15px; margin-bottom: 14px;">
+      When multiple shifts 0 &lt; <em>&tau;</em><sub>1</sub> &lt; &hellip; &lt; <em>&tau;<sub>M</sub></em> &lt; 2<em>b</em> are simultaneously active (such as <em>&tau;</em><sub>7/6</sub> = log(7/6), <em>&tau;</em><sub>6/5</sub> = log(6/5), and <em>&tau;</em><sub>3/2</sub> = log(3/2) for <em>K</em> = 2, <em>P</em><sub>2</sub> = {2, 3}), certifying the untruncated infinite-dimensional operator <em>W</em><sub><em>P</em><sub>2</sub></sub><sup>full</sup>(<em>b</em>) on all of <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) requires controlling both the infinite-dimensional high-mode tail <em>H</em><sub>&gt;</sub><sup>sector</sup> and the low-to-high off-diagonal coupling <em>B</em> = <em>P</em><sub>&gt;</sub><sup>sector</sup> <em>W</em><sub><em>P</em><sub>2</sub></sub><sup>full</sup>(<em>b</em>) <em>P</em><sub>&le;</sub><sup>sector</sup> without finite-mode tail truncation.
+    </p>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      2. Theorem 1: Exact Two-Shift Product Identity &amp; Multi-Shift Coupling Gram Matrix
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      Because <em>S</em><sub><em>&tau;</em></sub><sup>(<em>b</em>)</sup> <em>e<sub>n</sub></em>(<em>x</em>) has jump discontinuities at <em>x</em> = &plusmn;(<em>b</em> &minus; <em>&tau;</em>), its Legendre entries (<em>S</em><sub><em>&tau;</em></sub><sup>(<em>b</em>)</sup>)<sub><em>m</em>, <em>n</em></sub> decay slowly as <em>O</em>(<em>m</em><sup>&minus;1</sup>), so any finite-cutoff sum &Sigma;<sub><em>k</em> &le; <em>M</em><sub>cut</sub></sub> misses <em>O</em>(1/<em>M</em><sub>cut</sub>) of the norm. We prove that for any 0 &le; <em>&tau;</em><sub>1</sub> &le; <em>&tau;</em><sub>2</sub> &lt; 2<em>b</em> (<em>u</em><sub>1</sub> = <em>&tau;</em><sub>1</sub>/<em>b</em>, <em>u</em><sub>2</sub> = <em>&tau;</em><sub>2</sub>/<em>b</em> &in; [0, 2)), on <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>):
+    </p>
+    <p style="font-size: 15px; text-align: center; background-color: #f3f4f6; padding: 10px 12px; border-radius: 4px; font-family: 'Times New Roman', Georgia, serif;">
+      <em>S</em><sub><em>&tau;</em><sub>1</sub></sub><sup>(<em>b</em>)</sup> <em>S</em><sub><em>&tau;</em><sub>2</sub></sub><sup>(<em>b</em>)</sup> = <em>S</em><sub><em>&tau;</em><sub>1</sub> + <em>&tau;</em><sub>2</sub></sub><sup>(<em>b</em>)</sup> + <em>S</em><sub><em>&tau;</em><sub>2</sub> &minus; <em>&tau;</em><sub>1</sub></sub><sup>(<em>b</em>)</sup> &minus; <em>D</em><sub><em>&tau;</em><sub>1</sub>, <em>&tau;</em><sub>2</sub></sub>(<em>b</em>),
+    </p>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      where for <em>m</em> + <em>n</em> even, (<em>D</em><sub><em>&tau;</em><sub>1</sub>, <em>&tau;</em><sub>2</sub></sub>(<em>b</em>))<sub><em>m</em>, <em>n</em></sub> = &radic;((2<em>m</em>+1)(2<em>n</em>+1)) &int;<sub>max(&minus;1+&Delta;<em>u</em>, 1&minus;<em>u</em><sub>1</sub>)</sub><sup>1</sup> <em>P<sub>m</sub></em>(<em>x</em>) <em>P<sub>n</sub></em>(<em>x</em> &minus; &Delta;<em>u</em>) <em>dx</em> (&Delta;<em>u</em> = <em>u</em><sub>2</sub> &minus; <em>u</em><sub>1</sub>) is an <strong>exact bivariate rational polynomial</strong> in (<em>u</em><sub>1</sub>, <em>u</em><sub>2</sub>). Consequently, the infinite-dimensional multi-shift coupling Gram matrix
+      <em>G</em><sub>multi</sub><sup>(<em>N</em><sub>leg</sub>, sector)</sup>(<em>b</em>) = <em>B</em><sub>sh</sub><sup>*</sup> <em>B</em><sub>sh</sub> = <em>P</em><sub>&le;</sub> <em>W</em><sub>sh</sub>(<em>b</em>)<sup>2</sup> <em>P</em><sub>&le;</sub> &minus; (<em>P</em><sub>&le;</sub> <em>W</em><sub>sh</sub>(<em>b</em>) <em>P</em><sub>&le;</sub>)<sup>2</sup>
+      is an <strong>exact <em>N</em><sub>leg</sub> &times; <em>N</em><sub>leg</sub> matrix</strong> with zero tail truncation error and full signed cancellation between positive and negative shifts:
+    </p>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f3f4f6; border-bottom: 2px solid #d1d5db;">
+          <th style="padding: 8px; text-align: left;">Mode (<em>m</em>, <em>n</em>)</th>
+          <th style="padding: 8px; text-align: right;">Exact (<em>S</em><sub><em>&tau;</em><sub>1</sub></sub><em>S</em><sub><em>&tau;</em><sub>2</sub></sub>)<sub><em>m</em>,<em>n</em></sub></th>
+          <th style="padding: 8px; text-align: right;">Defect (<em>D</em><sub><em>&tau;</em><sub>1</sub>,<em>&tau;</em><sub>2</sub></sub>)<sub><em>m</em>,<em>n</em></sub></th>
+          <th style="padding: 8px; text-align: right;">Quadrature Diff</th>
+          <th style="padding: 8px; text-align: right;">Trunc Error (<em>M</em>=20)</th>
+          <th style="padding: 8px; text-align: right;">Trunc Error (<em>M</em>=80)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px 8px;">(0, 0)</td>
+          <td style="padding: 6px 8px; text-align: right;">+1.92482483</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.61660272</td>
+          <td style="padding: 6px 8px; text-align: right;">1.93 &times; 10<sup>&minus;75</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">2.72 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">2.05 &times; 10<sup>&minus;5</sup></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px 8px;">(2, 2)</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.75067966</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.39887868</td>
+          <td style="padding: 6px 8px; text-align: right;">4.09 &times; 10<sup>&minus;23</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">1.40 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">1.19 &times; 10<sup>&minus;4</sup></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px 8px;">(2, 4)</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.56974808</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.31716505</td>
+          <td style="padding: 6px 8px; text-align: right;">1.19 &times; 10<sup>&minus;22</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">2.09 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">3.77 &times; 10<sup>&minus;4</sup></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px 8px;">(1, 1)</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.04451769</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.79946345</td>
+          <td style="padding: 6px 8px; text-align: right;">1.10 &times; 10<sup>&minus;23</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">1.59 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">5.61 &times; 10<sup>&minus;5</sup></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px 8px;">(3, 3)</td>
+          <td style="padding: 6px 8px; text-align: right;">+1.29292939</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.48019303</td>
+          <td style="padding: 6px 8px; text-align: right;">1.18 &times; 10<sup>&minus;22</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">3.91 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 8px; text-align: right;">1.82 &times; 10<sup>&minus;4</sup></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      3. Theorems 2 &amp; 3: Window-Localized Tail Floor &amp; Full-Space Matrix Block-Schur Certificates
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      Decomposing <em>&sigma;</em><sub><em>L</em><sub><em>P</em><sub>2</sub></sub></sub>(<em>&xi;</em>) = <em>&sigma;</em><sub>loc</sub>(<em>&xi;</em>) + <em>&sigma;</em><sub>ext</sub>(<em>&xi;</em>) into the window-localized part <em>&sigma;</em><sub>loc</sub>(<em>&xi;</em>) = 2 + (2/&radic;6) cos(<em>&xi;</em> log(3/2)) &ge; 2 &minus; 2/&radic;6 &approx; 1.183503 and the external shifts <em>&lambda;<sub>r</sub></em> &in; {log 2, log 3, log 6} &gt; 2<em>b</em>, we bound the localized low-frequency defect <em>D</em><sub>loc, <em>R</em></sub>(<em>b</em>) on <em>H</em><sub>&gt;</sub><sup>sector</sup> via the closed-form Poisson&ndash;Bessel trace enclosure and the smooth external kernels via the Laplace&ndash;Bessel double-factorial series. Combining the tail floor <em>&mu;</em><sub>tail</sub><sup>sector</sup>(<em>b</em>, <em>R</em>, <em>N</em><sub>leg</sub>) &gt; 0 with the exact coupling Gram matrix <em>G</em><sub>multi</sub><sup>(<em>N</em><sub>leg</sub>, sector)</sup>(<em>b</em>) into the <em>N</em><sub>leg</sub> &times; <em>N</em><sub>leg</sub> Matrix Schur Complement <em>S</em><sub>mat</sub><sup>(<em>N</em><sub>leg</sub>, sector)</sup>(<em>b</em>) certifies full-space positivity on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>):
+    </p>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f3f4f6; border-bottom: 2px solid #d1d5db;">
+          <th style="padding: 7px 6px; text-align: left;">2<em>b</em> (Parity)</th>
+          <th style="padding: 7px 6px; text-align: center;">(<em>N</em>, <em>R</em>, <em>M</em><sub>sh</sub>)</th>
+          <th style="padding: 7px 6px; text-align: right;">Tail Floor <em>&mu;</em><sub>tail</sub></th>
+          <th style="padding: 7px 6px; text-align: right;">&Vert;<em>B</em><sub>sh</sub>&Vert;<sub><em>F</em></sub><sup>1/2</sup> (vs Tri)</th>
+          <th style="padding: 7px 6px; text-align: right;">&lambda;<sub>min</sub>(<em>A</em><sub>&le;</sub>)</th>
+          <th style="padding: 7px 6px; text-align: right;">&lambda;<sub>min</sub>(<em>S</em><sub>mat</sub>)</th>
+          <th style="padding: 7px 6px; text-align: right;">Min Piv <em>L</em><sub><em>i</em>,<em>i</em></sub><sup>2</sup></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.40 (Even)</td>
+          <td style="padding: 6px; text-align: center;">(4, 9, 2)</td>
+          <td style="padding: 6px; text-align: right;">+1.550975</td>
+          <td style="padding: 6px; text-align: right;">0.3817 (0.6211)</td>
+          <td style="padding: 6px; text-align: right;">+0.462249</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+0.459296</td>
+          <td style="padding: 6px; text-align: right;">+0.580378</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.40 (Odd)</td>
+          <td style="padding: 6px; text-align: center;">(4, 9, 2)</td>
+          <td style="padding: 6px; text-align: right;">+1.550976</td>
+          <td style="padding: 6px; text-align: right;">0.4106 (0.6565)</td>
+          <td style="padding: 6px; text-align: right;">+3.683660</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+3.681355</td>
+          <td style="padding: 6px; text-align: right;">+3.973773</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.42 (Even)</td>
+          <td style="padding: 6px; text-align: center;">(5, 11, 3)</td>
+          <td style="padding: 6px; text-align: right;">+0.991648</td>
+          <td style="padding: 6px; text-align: right;">0.6543 (1.1606)</td>
+          <td style="padding: 6px; text-align: right;">+0.362670</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+0.358869</td>
+          <td style="padding: 6px; text-align: right;">+0.552153</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.42 (Odd)</td>
+          <td style="padding: 6px; text-align: center;">(5, 11, 3)</td>
+          <td style="padding: 6px; text-align: right;">+0.991648</td>
+          <td style="padding: 6px; text-align: right;">0.6440 (1.2042)</td>
+          <td style="padding: 6px; text-align: right;">+3.478759</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+3.464872</td>
+          <td style="padding: 6px; text-align: right;">+3.538637</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.45 (Even)</td>
+          <td style="padding: 6px; text-align: center;">(5, 11, 3)</td>
+          <td style="padding: 6px; text-align: right;">+0.988281</td>
+          <td style="padding: 6px; text-align: right;">0.7179 (1.2746)</td>
+          <td style="padding: 6px; text-align: right;">+0.266128</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+0.263732</td>
+          <td style="padding: 6px; text-align: right;">+0.550846</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.45 (Odd)</td>
+          <td style="padding: 6px; text-align: center;">(5, 11, 3)</td>
+          <td style="padding: 6px; text-align: right;">+0.988281</td>
+          <td style="padding: 6px; text-align: right;">0.7684 (1.3174)</td>
+          <td style="padding: 6px; text-align: right;">+2.910448</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+2.868255</td>
+          <td style="padding: 6px; text-align: right;">+2.964723</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.48 (Even)</td>
+          <td style="padding: 6px; text-align: center;">(5, 11, 3)</td>
+          <td style="padding: 6px; text-align: right;">+0.979910</td>
+          <td style="padding: 6px; text-align: right;">0.7030 (1.2996)</td>
+          <td style="padding: 6px; text-align: right;">+0.189287</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+0.181551</td>
+          <td style="padding: 6px; text-align: right;">+0.521746</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.48 (Odd)</td>
+          <td style="padding: 6px; text-align: center;">(5, 11, 3)</td>
+          <td style="padding: 6px; text-align: right;">+0.979910</td>
+          <td style="padding: 6px; text-align: right;">0.7781 (1.3495)</td>
+          <td style="padding: 6px; text-align: right;">+2.437210</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+2.416189</td>
+          <td style="padding: 6px; text-align: right;">+2.584986</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.50 (Even)</td>
+          <td style="padding: 6px; text-align: center;">(6, 11, 3)</td>
+          <td style="padding: 6px; text-align: right;">+0.968066</td>
+          <td style="padding: 6px; text-align: right;">0.8139 (1.4107)</td>
+          <td style="padding: 6px; text-align: right;">+0.143153</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+0.125927</td>
+          <td style="padding: 6px; text-align: right;">+0.502041</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;">0.50 (Odd)</td>
+          <td style="padding: 6px; text-align: center;">(6, 11, 3)</td>
+          <td style="padding: 6px; text-align: right;">+0.968066</td>
+          <td style="padding: 6px; text-align: right;">0.8884 (1.4405)</td>
+          <td style="padding: 6px; text-align: right;">+2.193880</td>
+          <td style="padding: 6px; text-align: right; font-weight: bold; color: #065f46;">+2.170019</td>
+          <td style="padding: 6px; text-align: right;">+2.369102</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      4. Theorem 4: Dependency Edge (<code>WEIL-FLOOR &rarr; G2</code>) &amp; Matched Davenport&ndash;Heilbronn Control
+    </h2>
+    <ul style="font-size: 15px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Dependency Edge (<code>WEIL-FLOOR &rarr; G2</code>):</strong> For every fixed (<em>K</em>, <em>b</em>), choosing <em>R<sub>N</sub></em> = (2<em>N</em>+1)/(<em>eb</em>) drives <em>&mu;</em><sub>tail</sub><sup>sector</sup>(<em>b</em>, <em>R<sub>N</sub></em>, <em>N</em>) &rarr; +&infin; logarithmically as <em>N</em> &rarr; &infin;. However, as <em>K</em> &rarr; &infin;, the global multiplier floor <em>&sigma;</em><sub>min</sub>(<em>L</em><sub><em>P<sub>K</sub></em></sub>) = &Pi;<sub><em>p</em> &le; <em>p<sub>K</sub></em></sub>(1 &minus; <em>p</em><sup>&minus;1/2</sup>)<sup>2</sup> decays from 8.58 &times; 10<sup>&minus;2</sup> (<em>K</em> = 1) to 4.62 &times; 10<sup>&minus;4</sup> (<em>K</em> = 6), and the active shift sum grows with <em>b</em>. Thus fixed-(<em>K</em>, <em>b</em>) Block-Schur certificates close the infinite-dimensional high-mode tail on [-<em>b</em>, <em>b</em>] without closing the cofinal limit <em>b</em> &rarr; &infin; (<code>G2</code>).
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Matched Davenport&ndash;Heilbronn Control Separation:</strong> On the matched Davenport&ndash;Heilbronn control (where <em>&chi;</em><sub>5</sub>(2) = <em>&chi;</em><sub>5</sub>(3) = &minus;1), the diagonal constant flips sign to <em>C</em><sub>diag, DH</sub>({2, 3}) = &minus;2.022809 &lt; 0, driving the infinite-dimensional tail floor <em>&mu;</em><sub>tail, DH</sub> = &minus;2.017310 &lt; 0 and the low-mode entry (<em>A</em><sub>&le;, DH</sub>)<sub>0, 0</sub> &in; [&minus;3.0003, &minus;2.7698] strictly negative across 2<em>b</em> &in; {0.40, 0.45, 0.50}.
+      </li>
+    </ul>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      5. Reproducibility &amp; Cryptographic Hashes
+    </h2>
+    <p style="font-size: 14px; background-color: #f3f4f6; padding: 12px 14px; border-radius: 4px; font-family: monospace; word-break: break-all;">
+      Overlap checks (256-bit vs 384-bit flint.arb): 395 / 395 PASS (pyright: 0 errors, 0 warnings)<br/>
+      payload.sha256: f08a3e6c345b3404d5dede56911016ef63c3ef661d37571c4be39dd13b853d39<br/>
+      file_sha256: &nbsp;&nbsp;&nbsp;069db48c9b9738c33aabe031eeb09ea29865da488b4ce85002f80b75eb0f0ef1
+    </p>
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-top: 28px; font-size: 14px;">
+      <strong>Wall Check:</strong> This package does <strong>NOT</strong> prove <code>RH</code>, <code>G2</code>, or the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin; (or <em>K</em> &rarr; &infin;). Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

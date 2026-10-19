@@ -1,0 +1,31 @@
+# Milestone 8 Proposal: Möbius Parity Coherence, Primorial Balanced-Partition Isometric Horizons ($K = 2, 3, 4$), Certified Extension of $B_{2,3}$ up to $a = \frac{1}{2}\log 12$, Multi-Order Hankel Blind-Cone Elimination, and Gegenbauer–Bessel Finite-$N$ Mellin–Jacobi Completeness
+
+**Date:** 2026-10-15  
+**Lanes:** `KERNEL-API`, `ZERO-GEOMETRY`, and `COEFF` / `NB-GAIN` (`NS-61`)  
+**Status:** 384-bit `flint.arb` Certified Audit Package (`multiprime-three-prime-and-scaling-2026-10-15-v1`)
+
+---
+
+## Mandatory Wall Check & Open-Status Disclosure
+
+**Wall check: `KERNEL-API`, `NB-GAIN` / `COEFF`, `ZERO-GEOMETRY`.**
+Closest results: `NS-61`, `NS-71`–`NS-74`, `multiprime-euler-preconditioner-2026-10-15-v1` (Audit-Repaired v2), and `coeff-specialist-brief-2026-10-15-v8.html`.
+What changes in Milestone 8 (executing the sequential roadmap across all three lanes + enforcing all 7 audit repairs from `argon-multiprime-review-2026-10-15-v1/verification.json`):
+1. **Theorem 1 (`KERNEL-API` — Möbius Parity Coherence & Complete Multi-Prime Tower Collapse):** Proves that for any finite set of primes $\mathcal{P}$ and split-pole preconditioner $B_{\mathcal{P}_+, \mathcal{P}_-}$, $L_{\mathcal{P}} = \prod_{p \in \mathcal{P}} L_p$ expands strictly over coprime squarefree divisors $d_1, d_2 \mid \prod_{p \in \mathcal{P}} p$, annihilating every prime-power tower $p^k$ ($p \in \mathcal{P}, k \ge 2$) and every non-squarefree internal composite ratio, while external primes $q \notin \mathcal{P}$ induce cross-shifts $S_{|\log(q^k d_2 / d_1)|}$ with sign governed by the Möbius parity law
+   $$\operatorname{sgn}(c_{q^k; d_1, d_2}) = -\mu(d_1 d_2) = (-1)^{\omega(d_1 d_2) - 1}.$$
+   In particular, every odd-order divisor product ($\omega(d_1 d_2)$ odd, such as $\tau_{5/3} = \log(5/3)$ for $\mathcal{P}=\{2,3\}$) contributes a **strictly positive** reflection shift $+|c_\tau| R_\tau$ in the even sector.
+2. **Theorem 2 (`KERNEL-API` — Primorial Balanced-Partition Isometric Horizons for $K = 2, 3, 4$):** Proves and certifies in 384-bit `flint.arb` ball arithmetic that when the $K$-th primorial $P_K^\# = \prod_{k=1}^K p_k$ is factored into its closest balanced 2-partition $P_K^\# = d_+(K) d_-(K)$ ($d_+(K) > d_-(K)$, namely $6 = 3 \times 2$, $30 = 6 \times 5$, $210 = 15 \times 14$), the exact isometric compression $P_b B_{\mathcal{P}_{K,+}, \mathcal{P}_{K,-}}^* B_{\mathcal{P}_{K,+}, \mathcal{P}_{K,-}} P_b = C_{\mathrm{zero}}(\mathcal{P}_K) I$ holds across the entire continuum window
+   $$a \in \left(\frac{1}{2}\log P_K^\#,\, \log d_+(K)\right] = \left(a_{\min}(K),\, a_{\mathrm{iso}}(K)\right],$$
+   on the filtered subspace $\operatorname{Ran}(B_{\mathcal{P}_{K,+}, \mathcal{P}_{K,-}}) \subsetneq L^2_{\mathrm{pole\text{-}free}}(-a, a)$, and the **zero-minorant** pure-diagonal Schur trace $\mathcal{T}_{\mathrm{even}}(a_{\mathrm{iso}}(K))$ decreases monotonically toward zero as $K$ increases:
+   - $K = 2$ ($(\frac{1}{2}\log 6, \log 3] \approx (0.895880, 1.098612]$): $\mathcal{T}_{\mathrm{even}}(\log 3) = 0.915035 < 1$, $\mathcal{T}_{\mathrm{odd}}(\log 3) = 0.103692 < 1$.
+   - $K = 3$ ($(\frac{1}{2}\log 30, \log 6] \approx (1.700599, 1.791759]$): $\mathcal{T}_{\mathrm{even}}(\log 6) = 0.289114 < 1$, $\mathcal{T}_{\mathrm{odd}}(\log 6) = 0.006216 < 1$ (surpassing the fixed-window complete $\lambda = 4$ horizon $a = \log 4 \approx 1.386294$ on the 3-prime filtered subspace).
+   - $K = 4$ ($(\frac{1}{2}\log 210, \log 15] \approx (2.673554, 2.708050]$): $\mathcal{T}_{\mathrm{even}}(\log 15) = 0.084182 < 1$, $\mathcal{T}_{\mathrm{odd}}(\log 15) = 0.000215 < 1$.
+3. **Theorem 3 (`KERNEL-API` — Certified Extension of $B_{2,3}$ up to $a = \frac{1}{2}\log 12$):** Extends certified 384-bit all-vector Weil positivity on $\operatorname{Ran}(B_{2,3})$ across $(\frac{1}{2}\log 10, \frac{1}{2}\log 12] = (\frac{1}{2}\log 10, \log(2\sqrt{3})] \approx (1.151293, 1.242453]$ up to the exact internal $\log 2$-shift horizon $a = \frac{1}{2}\log 12 \approx 1.2424533249$ at $\Delta_\alpha = 3/5 = 0.60$ using a **Pure-Diagonal + Symmetric/Antisymmetric Reflection Step-Minorant Preconditioner** and the **2-Mode Cauchy–Poincaré Second-Eigenvalue Defect Bound** $\|K_{\mathrm{even}}\|_{\mathrm{op}} \le \operatorname{Tr}(K_{\mathrm{even}}) - \mu_2 \le 0.999947 < 1$ with **zero Plancherel vectors** and **zero Taylor expansions**.
+4. **Theorem 4 (`ZERO-GEOMETRY` — Multi-Order Stieltjes–Hankel Defect & Angle Blind-Cone Elimination):** Eliminates the order-2 Turán angle blind cone $\phi \in [\pi/6, \pi/2]$ ($\beta \le \sqrt{3}\alpha$) via consecutive Stieltjes–Hankel moments $c_m^{\mathrm{quad}}(r, \phi) = \frac{2(2m+1)}{r^{2m+2}}\cos((2m+2)\phi)$, proving in 384-bit ball arithmetic across 2048 covering balls that
+   $$\min_{\phi \in [\pi/6, \pi/2]} \max_{m \in \{1, 2, 3\}} \bigl(-\cos((2m+2)\phi)\bigr) = \sin\!\left(\frac{\pi}{14}\right) \approx 0.222520934 > 0 \quad (\text{attained at } \phi^* = 3\pi/7),$$
+   $$\min_{\phi \in [\pi/6, \pi/2]} \max_{m \in \{1, 2, 3, 4\}} \bigl(-\cos((2m+2)\phi)\bigr) = \frac{1}{2} > 0.$$
+5. **Theorem 5 (`COEFF` / `NB-GAIN` (`NS-61`) — Gegenbauer–Bessel Finite-$N$ Mellin–Jacobi Completeness & Super-Exponential Tail Decay Bound):** Proves and certifies in 384-bit ball arithmetic that projecting $A_-^{(\Delta_\alpha)}(a)$ onto the first $N$ even/odd orthonormal Legendre–Jacobi polynomials on $L^2(0, b)$ yields the exact closed-form Gegenbauer–Bessel tail identity
+   $$\operatorname{Tr}\!\bigl((I - \Pi_N) A_-^{(\Delta_\alpha)}(a) (I - \Pi_N)\bigr) = \frac{2b}{\pi}\int_0^{\xi_0} \sigma_{L_{\mathcal{P}}}(\xi)\bigl(\Delta_\alpha - \alpha(\xi)\bigr)\left[\frac{1 \pm \operatorname{sinc}(2b\xi)}{2} - \sum_{n=0}^{N-1} (4n + 1 + 2\varepsilon) j_{2n+\varepsilon}(b\xi)^2\right]d\xi,$$
+   with preconditioned operator-norm defect $\delta_N^{\mathrm{even}}(a_{\mathrm{iso}}(K))$ decaying super-exponentially to $\le 1.19 \times 10^{-15}$ at $N = 4$ ($K = 2$), $\le 3.55 \times 10^{-19}$ at $N = 4$ ($K = 3$), and $\le 1.15 \times 10^{-22}$ at $N = 4$ ($K = 4$).
+
+**Open-status disclosure:** **RH**, **G2** (global Weil positivity across all test functions), the **cofinal signed-arithmetic lower bound**, and **both historical missing-original evidence groups** in `evidence/MISSING.md` remain **OPEN**.

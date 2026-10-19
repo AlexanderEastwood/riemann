@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specialist Brief (v8) — Multi-Prime Split-Pole Causal Euler Preconditioner, Mertens Diagonal Gain Theorem, and All-Vector Weil Positivity up to a = (1/2) log 10 (2026-10-15)</title>
+</head>
+<body style="margin:0; padding:28px 16px; background-color:#f8f9fa; color:#1f2328; font-family:Georgia, 'Times New Roman', Times, serif; line-height:1.62; font-size:16px;">
+<div style="max-width:680px; margin:0 auto; background-color:#ffffff; border:1px solid #d0d7de; border-radius:6px; padding:32px 36px; box-sizing:border-box;">
+
+  <div style="border-bottom:2px solid #1f2328; padding-bottom:14px; margin-bottom:22px;">
+    <div style="font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#57606a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin-bottom:6px;">
+      External Specialist Brief &bull; 2026-10-15 &bull; Version 8 (Supersedes v7 with Multi-Prime Split-Pole Causal Euler Preconditioner &amp; Horizon <em>a</em> = &frac12;&thinsp;log&thinsp;10)
+    </div>
+    <h1 style="margin:0 0 8px 0; font-size:22px; line-height:1.32; font-weight:normal; color:#111111;">
+      Multi-Prime Split-Pole Causal Euler Preconditioner <em>B</em><sub>&mathcal;P;<sub>+</sub>,&mathcal;P;<sub>&minus;</sub></sub>, Mertens Diagonal Gain Theorem (&gamma;(&mathcal;P;) &sim; 2&thinsp;log&thinsp;<em>X</em> &rarr; +&infin;), and Certified All-Vector Weil Positivity up to <em>a</em> = &frac12;&thinsp;log&thinsp;10
+    </h1>
+    <div style="font-size:13px; color:#57606a;">
+      Prepared for: External Analytic Number Theory / Spectral &amp; Harmonic Analysis Specialist (<span style="background-color:#fff3a3; padding:1px 4px; border-radius:2px;">[Recipient Name / Institution]</span>)
+    </div>
+  </div>
+
+  <div style="background-color:#f6f8fa; border-left:4px solid #0969da; padding:14px 16px; margin-bottom:24px; font-size:14px;">
+    <p style="margin:0 0 8px 0;">
+      <strong>Wall check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">ZERO-GEOMETRY</code>.</strong>
+      Closest results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-61</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-71</code>&ndash;<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-74</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">coeff-specialist-brief-2026-10-15-v7.html</code>, and <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">multiprime-euler-preconditioner-2026-10-15-v1.html</code>.
+      What changes in v8: Introduces and certifies in 384-bit <code>flint.arb</code> ball arithmetic the <strong>Multi-Prime Split-Pole Causal Euler Preconditioner <em>B</em><sub>&mathcal;P;<sub>+</sub>,&mathcal;P;<sub>&minus;</sub></sub></strong> and the <strong>Mertens Diagonal Gain Theorem</strong>. Whereas any single-prime preconditioner built solely from <em>p</em> = 2 has a bounded normalized prime-diagonal gain (&gamma;<sub>2</sub> = &frac{10}{13}&thinsp;log&thinsp;2 &approx; 0.533190 for <em>L</em><sub>2</sub><sup>2</sup>), incorporating primes <em>p</em> &isin; &mathcal;P;<sub>&le;<em>X</em></sub> via the exact Euler operator identity <em>E&#771;</em><sub><em>p</em></sub><sup>*</sup><em>W</em><sub><em>p</em></sub><em>E&#771;</em><sub><em>p</em></sub> = (log&thinsp;<em>p</em>)((2/<em>p</em>)<em>I</em> &minus; <em>p</em><sup>&minus;1/2</sup><em>S</em><sub>log&thinsp;<em>p</em></sub>) simultaneously collapses every prime-power tower <em>p</em><sup><em>k</em></sup> (<em>p</em> &isin; &mathcal;P;, <em>k</em> &ge; 2) and drives the normalized diagonal gain to <strong>&gamma;(&mathcal;P;<sub>&le;<em>X</em></sub>) = &sum;<sub><em>p</em>&le;<em>X</em></sub> &frac{2&thinsp;log&thinsp;<em>p</em>}{<em>p</em>+1} &sim; 2&thinsp;log&thinsp;<em>X</em> &rarr; +&infin;</strong>. Already at &mathcal;P; = {2, 3}, <em>B</em><sub>2,3</sub> = <em>E&#771;</em><sub>2</sub><em>E&#771;</em><sub>3</sub><sup>*</sup> boosts &gamma; by <strong>1.8969&times;</strong> to &frac23;&thinsp;log&thinsp;2 + &frac12;&thinsp;log&thinsp;3 &approx; 1.011404, certifying the entire continuum (&frac12;&thinsp;log&thinsp;6, log&thinsp;3] in one shot with <strong>zero</strong> rank-1 minorants and extending certified all-vector Weil positivity to <strong><em>a</em> = &frac12;&thinsp;log&thinsp;10 &approx; 1.151293</strong>.
+    </p>
+    <p style="margin:0;">
+      <strong>Open-status disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong> (global Weil positivity across all test functions), the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    1. Lane II Breakthrough (<code>KERNEL-API</code>): Multi-Prime Split-Pole Preconditioner &amp; Mertens Diagonal Gain Theorem
+  </h2>
+
+  <p style="margin:0 0 10px 0;">
+    For every prime <em>p</em> &ge; 2, define the centered first-order prime-<em>p</em> Euler factor <em>E&#771;</em><sub><em>p</em></sub> := <em>T</em><sub>&minus;&frac12;&thinsp;log&thinsp;<em>p</em></sub> &minus; <em>p</em><sup>&minus;1/2</sup><em>T</em><sub>+&frac12;&thinsp;log&thinsp;<em>p</em></sub> and self-adjoint multiplier <em>L</em><sub><em>p</em></sub> := <em>E&#771;</em><sub><em>p</em></sub><sup>*</sup><em>E&#771;</em><sub><em>p</em></sub> = (1 + <em>p</em><sup>&minus;1</sup>)<em>I</em> &minus; <em>p</em><sup>&minus;1/2</sup><em>S</em><sub>log&thinsp;<em>p</em></sub>. On the full prime-<em>p</em> Weil sum <em>W</em><sub><em>p</em></sub> = &minus;(log&thinsp;<em>p</em>)&sum;<sub><em>k</em>=1</sub><sup>&infin;</sup> <em>p</em><sup>&minus;<em>k</em>/2</sup><em>S</em><sub><em>k</em>&thinsp;log&thinsp;<em>p</em></sub>, telescoping cancels all higher prime powers <em>p</em><sup>2</sup>, <em>p</em><sup>3</sup>, &hellip; identically:
+  </p>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 12px 0; font-size:14px; text-align:center;">
+    <em>E&#771;</em><sub><em>p</em></sub><sup>*</sup><em>W</em><sub><em>p</em></sub><em>E&#771;</em><sub><em>p</em></sub> = <em>L</em><sub><em>p</em></sub><em>W</em><sub><em>p</em></sub> = (log&thinsp;<em>p</em>)&thinsp;<em>L</em><sub><em>p</em></sub> &minus; (log&thinsp;<em>p</em>)(1 &minus; <em>p</em><sup>&minus;1</sup>)<em>I</em> = (log&thinsp;<em>p</em>)&Bigl(&frac{2}{<em>p</em>}&thinsp;<em>I</em> &minus; &frac{1}{&radic;<em>p</em>}&thinsp;<em>S</em><sub>log&thinsp;<em>p</em></sub>&Bigr).
+  </div>
+
+  <p style="margin:0 0 10px 0;">
+    Partitioning any finite prime set &mathcal;P; = &mathcal;P;<sub>+</sub> &sqcup; &mathcal;P;<sub>&minus;</sub> (&mathcal;P;<sub>+</sub> &ne; &empty;, &mathcal;P;<sub>&minus;</sub> &ne; &empty;), the <strong>Multi-Prime Split-Pole Preconditioner</strong> <em>B</em><sub>&mathcal;P;<sub>+</sub>,&mathcal;P;<sub>&minus;</sub></sub> := (&prod;<sub><em>p</em>&isin;&mathcal;P;<sub>+</sub></sub> <em>E&#771;</em><sub><em>p</em></sub>)(&prod;<sub><em>q</em>&isin;&mathcal;P;<sub>&minus;</sub></sub> <em>E&#771;</em><sub><em>q</em></sub><sup>*</sup>) : <em>L</em><sup>2</sup>(&minus;<em>b</em><sub>&mathcal;P;</sub>, <em>b</em><sub>&mathcal;P;</sub>) &rarr; <em>L</em><sup>2</sup>(&minus;<em>a</em>, <em>a</em>) (<em>b</em><sub>&mathcal;P;</sub> = <em>a</em> &minus; &frac12;&sum;<sub><em>p</em>&isin;&mathcal;P;</sub> log&thinsp;<em>p</em>) annihilates both pole modes <em>e</em><sup>&pm;<em>x</em>/2</sup> identically (<em>K</em><sub>pole</sub><em>B</em><sub>&mathcal;P;<sub>+</sub>,&mathcal;P;<sub>&minus;</sub></sub> = 0), has self-adjoint parity-preserving pullback <em>L</em><sub>&mathcal;P;</sub> = &prod;<sub><em>p</em>&isin;&mathcal;P;</sub> <em>L</em><sub><em>p</em></sub>, and by unique prime factorization achieves the normalized prime-diagonal gain:
+  </p>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 12px 0; font-size:14px; text-align:center;">
+    &gamma;(&mathcal;P;) := &frac{<em>C</em><sub>diag</sub>(&mathcal;P;)}{<em>C</em><sub>iso</sub>(&mathcal;P;)} = &sum;<sub><em>p</em>&isin;&mathcal;P;</sub> &frac{2&thinsp;log&thinsp;<em>p</em>}{<em>p</em> + 1},
+    &qquad;
+    &gamma;(&mathcal;P;<sub>&le;<em>X</em></sub>) = 2&thinsp;log&thinsp;<em>X</em> + <em>O</em>(1) &xrightarrow{<em>X</em>&rarr;&infin;} +&infin;.
+  </div>
+
+  <ul style="margin:0 0 12px 0; padding-left:22px;">
+    <li style="margin-bottom:6px;">
+      <strong>One-Shot Continuum Certificate on (&frac12;&thinsp;log&thinsp;6, log&thinsp;3] &approx; (0.895880, 1.098612]:</strong>
+      For &mathcal;P; = {2, 3}, <em>B</em><sub>2,3</sub> = <em>E&#771;</em><sub>2</sub><em>E&#771;</em><sub>3</sub><sup>*</sup> has exact isometric identity <em>P</em><sub><em>b</em></sub><em>B</em><sub>2,3</sub><sup>*</sup><em>B</em><sub>2,3</sub><em>P</em><sub><em>b</em></sub> = 2<em>I</em> on (&frac12;&thinsp;log&thinsp;6, log&thinsp;3], positive prime diagonal <em>c</em><sub>0</sub><sup>(2,3)</sup> = &frac43;&thinsp;log&thinsp;2 + log&thinsp;3 &approx; 2.022809, and only two active composite-ratio shifts &tau;<sub>7/6</sub> = log(7/6) and &tau;<sub>6/5</sub> = log(6/5) with zero omitted tail. At <em>a</em> = log&thinsp;3 = &frac12;&thinsp;log&thinsp;9, the Schur multiplication preconditioner with <strong>zero</strong> rank-1 minorants yields <strong>&mathcal;T;<sub>even</sub>(log&thinsp;3) = 0.915035 &lt; 1</strong> and <strong>&mathcal;T;<sub>odd</sub>(log&thinsp;3) = 0.103692 &lt; 1</strong>, certifying the entire continuum (&frac12;&thinsp;log&thinsp;6, log&thinsp;3] in one shot.
+    </li>
+    <li style="margin-bottom:4px;">
+      <strong>Certified Extension across (log&thinsp;3, &frac12;&thinsp;log&thinsp;10] &approx; (1.098612, 1.151293]:</strong>
+      On (log&thinsp;3, &frac12;&thinsp;log&thinsp;10], &tau;<sub>3/2</sub> = log(3/2) enters with a <strong>positive</strong> coefficient +<em>c</em><sub>3/2</sub> = +(log&thinsp;6)/&radic;6 &gt; 0 on [<em>x</em><sub>3/2</sub>, <em>b</em>] disjoint from [0, <em>b</em> &minus; &tau;<sub>7/6</sub>]. Combining 2-piece prime step Woodbury minorants with the Cauchy&ndash;Poincar&eacute; second-eigenvalue defect bound &Vert;<em>K</em><sub>even</sub>&Vert;<sub>op</sub> &le; Tr(<em>K</em><sub>even</sub>) &minus; &mu;<sub>2</sub> certifies (log&thinsp;3, &frac12;&thinsp;log&thinsp;10] with <strong>zero</strong> Plancherel vectors and <strong>zero</strong> Taylor expansions: at <em>a</em> = &frac12;&thinsp;log&thinsp;10, <strong>Tr(<em>K</em><sub>even</sub>) = 0.980107 &lt; 1</strong>, <strong>&Vert;<em>K</em><sub>even</sub>&Vert;<sub>op</sub> &le; 0.976071 &lt; 1</strong>, and <strong>&mathcal;T;<sub>odd</sub> = 0.370714 &lt; 1</strong>.
+    </li>
+  </ul>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    2. Lane I (<code>COEFF</code> / <code>NB-GAIN</code>): Multi-Mode Jacobi&ndash;Stieltjes&ndash;Divisor Extractors &amp; Phase-Robust Target B
+  </h2>
+
+  <p style="margin:0 0 12px 0;">
+    In the <code>NS-61</code> smoothed Hilbert space <em>H</em> = <em>L</em><sup>2</sup>(0,&infin;; <em>dx</em>), the symmetric Jacobi polynomial hierarchy &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(<em>u</em>) = (<em>u</em>&minus;1)<sup>&nu;</sup>(2&minus;<em>u</em>)<sup>&nu;</sup><em>P&#771;</em><sub><em>m</em></sub><sup>(&nu;,&nu;)</sup>(2<em>u</em>&minus;3) &isin; <em>H</em><sub>0</sub><sup>&nu;</sup>([1, 2]) has exact rational <em>LDL</em><sup><em>T</em></sup> Euler&ndash;Mellin factorization <em>G&#770;</em><sup>(&nu;,<em>K</em>)</sup> = <em>L</em><sub>&nu;</sub><em>D</em><sub>&nu;</sub><em>L</em><sub>&nu;</sub><sup><em>T</em></sup> over &mathbb;Q, yielding the unconditional diagonal sum-of-squares lower bound &Delta;<sub><em>N</em></sub> &ge; <em>N</em><sup>&minus;1</sup>&sum;<sub><em>k</em>=1</sub><sup><em>K</em></sup> |<em>M&#771;</em><sub><em>N</em>,&nu;</sub><sup>(<em>k</em>)</sup>(<em>u</em>, <em>y</em>)|<sup>2</sup> / <em>d</em><sub>&nu;,<em>k</em></sub> and recovering <strong>1,306.9&times; Rayleigh / 1,339.9&times; Bessel</strong> at the <em>N</em> = 16 dipolar phase transition.<br>
+    <strong>Open Specialist Question (Target B):</strong> Can one prove &sum;<sub><em>k</em>=1</sub><sup><em>K</em></sup> |<em>M&#771;</em><sub><em>N</em>,&nu;</sub><sup>(<em>k</em>)</sup>(<em>u</em>, <em>y</em>)|<sup>2</sup> / <em>d</em><sub>&nu;,<em>k</em></sub> &ge; <em>c</em><sup>2</sup> <em>N</em> (<em>E</em><sub><em>N</em></sub><sup>(2)</sup>)<sup>2</sup> along a cofinal subsequence for a fixed finite <em>K</em> &ge; 2 relative to the unsplit residual <em>E</em><sub><em>N</em></sub><sup>(2)</sup> = 2 &minus; (<em>b</em><sub>old</sub><sup>(2)</sup>)<sup><em>T</em></sup><em>c</em><sup>(<em>N</em>)</sup>?
+  </p>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    3. Lane III (<code>ZERO-GEOMETRY</code>): Higher-Order Wronskian&ndash;Hankel Hierarchy &amp; Exact <em>S</em><sub>max</sub> = 1/4 Identity
+  </h2>
+
+  <p style="margin:0 0 10px 0;">
+    Under real zeros of the backward heat flow &Phi;<sub><em>t</em></sub>(<em>z</em>), the Stieltjes&ndash;Hankel matrices <em>H</em><sub><em>r</em></sub>(<em>t</em>) = [<em>c</em><sub><em>i</em>+<em>j</em></sub>(<em>t</em>)]<sub>0&le;<em>i</em>,<em>j</em>&le;<em>r</em>&minus;1</sub> &succ; 0 of &minus;(&Phi;<sub><em>t</em></sub>&prime;/&Phi;<sub><em>t</em></sub>)&prime;(<em>x</em>) are strictly positive definite for all <em>r</em> &ge; 1 (certified in 384-bit ball arithmetic for <em>r</em> &isin; {2, 3, 4}), and every complex conjugate quadruple &rho; = 1/2 &pm; &alpha; &pm; <em>i</em>&beta; injects the exact log-concavity defect <em>D</em>(<em>t</em><sub>0</sub>; &alpha; + <em>i</em>&beta;) = 8&alpha;<sup>2</sup>&beta;<sup>2</sup>(&beta;<sup>2</sup> &minus; 3&alpha;<sup>2</sup>)/(&alpha;<sup>2</sup> + &beta;<sup>2</sup>)<sup>4</sup> with critical threshold <em>S</em><sub>max</sub> = 1/4 at &beta; = &radic;3&alpha;.
+  </p>
+
+  <div style="background-color:#f6f8fa; border-top:2px solid #1f2328; padding:14px 16px; margin-top:24px; font-size:13px; color:#24292f;">
+    <p style="margin:0 0 6px 0;">
+      <strong>Closing Wall Check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">ZERO-GEOMETRY</code>.</strong>
+      Closest results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-61</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-71</code>&ndash;<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-74</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">coeff-specialist-brief-2026-10-15-v7.html</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">multiprime-euler-preconditioner-2026-10-15-v1.html</code>.
+      What changes in v8: Incorporates the Multi-Prime Split-Pole Causal Euler Preconditioner <em>B</em><sub>&mathcal;P;<sub>+</sub>,&mathcal;P;<sub>&minus;</sub></sub>, the Mertens Diagonal Gain Theorem &gamma;(&mathcal;P;<sub>&le;<em>X</em></sub>) &sim; 2&thinsp;log&thinsp;<em>X</em> &rarr; +&infin;, and certified all-vector Weil positivity up to <em>a</em> = &frac12;&thinsp;log&thinsp;10 &approx; 1.151293.
+    </p>
+    <p style="margin:0;">
+      <strong>Open Problems Disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

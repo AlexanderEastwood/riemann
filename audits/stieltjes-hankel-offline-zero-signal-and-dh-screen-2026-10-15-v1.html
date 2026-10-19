@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milestone 12 Report — Ordinate-Centered Stieltjes–Hankel Off-Line Zero Screen (2026-10-15 v1)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 36px auto; padding: 0 20px; line-height: 1.62; color: #1a1a1a; background-color: #ffffff;">
+
+  <div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-bottom: 26px;">
+    <p style="margin: 0 0 8px 0; font-weight: bold; color: #8b0000; font-size: 1.02em;">
+      Wall Check &amp; Open Obligations Disclosure (Top of Report)
+    </p>
+    <p style="margin: 0; font-size: 0.95em;">
+      <strong>Does this audit prove the Riemann Hypothesis (RH), complete the global archimedean completion (G2), establish the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin;, or recover the missing historical raw outputs in <code>evidence/MISSING.md</code>? No.</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups in <code>evidence/MISSING.md</code></strong> (<code>stage4_run_summary.json</code> / <code>stage4_Ticks.json</code> and <code>certificate.json</code> / <code>verify_log.txt</code>) remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h1 style="font-size: 1.48em; line-height: 1.3; margin-bottom: 6px; color: #111111;">
+    Milestone 12: Ordinate-Centered Stieltjes&ndash;Hankel Parity Separation &amp; Davenport&ndash;Heilbronn Off-Line Zero Screen (<code>ZERO-GEOMETRY</code>)
+  </h1>
+  <p style="margin: 0 0 22px 0; font-size: 0.92em; color: #555555;">
+    <strong>Date:</strong> 2026-10-15 &bull; <strong>Version:</strong> v1 &bull; <strong>Audit Directory:</strong> <code>audits/stieltjes-hankel-offline-zero-signal-and-dh-screen-2026-10-15-v1/</code>
+  </p>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    1. Executive Summary: Breaking the High-Ordinate Damping Barrier in <code>ZERO-GEOMETRY</code>
+  </h2>
+  <p>
+    In the earlier <code>ZERO-GEOMETRY</code> Hilbert&ndash;Hankel audit (<code>audits/zero-geometry-hilbert-hankel-2026-10-15-v1/</code>), centering the Stieltjes&ndash;Laplace moment functional at the real axis (<em>t</em><sub>0</sub> = 0) caused high-ordinate zeros &rho;<sub><em>n</em></sub> = &beta;<sub><em>n</em></sub> + <em>i</em>&gamma;<sub><em>n</em></sub> to decay exponentially as <em>e</em><sup>&minus;&pi;&gamma;<sub><em>n</em></sub>/2</sup>, hiding off-line zeros at heights &gamma;<sub>&starf;</sub> &gt; 80 beneath the pole/archimedean background.
+  </p>
+  <p>
+    This milestone eliminates that obstruction by proving the <strong>Ordinate-Centered Stieltjes&ndash;Hankel Parity Separation &amp; Cauchy&ndash;Binet Off-Line Zero Dipole Theorem</strong> at general center ordinate <em>t</em><sub>0</sub> &isin; &#8477;:
+  </p>
+  <ol>
+    <li style="margin-bottom: 10px;">
+      <strong>Theorem 1 (Ordinate-Centered Hamburger Positivity vs. Off-Line Dipole Amplification):</strong>
+      For the Hermite&ndash;Gaussian moment sequence &mu;<sub><em>m</em></sub><sup>(&sigma;)</sup>(<em>t</em><sub>0</sub>) = &Sigma;<sub>&rho;</sub> (&xi;<sub>&rho;</sub> &minus; <em>t</em><sub>0</sub>)<sup><em>m</em></sup> <em>e</em><sup>&minus;&frac12;&sigma;<sup>2</sup>(&xi;<sub>&rho;</sub> &minus; <em>t</em><sub>0</sub>)<sup>2</sup></sup> where &xi;<sub>&rho;</sub> = &minus;<em>i</em>(&rho; &minus; &frac12;) = &gamma; &minus; <em>i</em>(&beta; &minus; &frac12;):
+      <ul>
+        <li>Every <strong>on-line zero</strong> (&beta; = &frac12;) has &xi;<sub>&rho;</sub> &minus; <em>t</em><sub>0</sub> = &gamma; &minus; <em>t</em><sub>0</sub> &isin; &#8477;, contributing a positive rank-1 Hankel matrix <em>e</em><sup>&minus;&frac12;&sigma;<sup>2</sup>(&gamma; &minus; <em>t</em><sub>0</sub>)<sup>2</sup></sup> |<em>v</em>(&gamma; &minus; <em>t</em><sub>0</sub>)&rang;&lang;<em>v</em>(&gamma; &minus; <em>t</em><sub>0</sub>)| &succeq; 0.</li>
+        <li>Every <strong>off-line zero twin pair</strong> &rho;<sub>&starf;,&plusmn;</sub> = &frac12; &plusmn; &delta;<sub>&starf;</sub> + <em>i</em>&gamma;<sub>&starf;</sub> (&delta;<sub>&starf;</sub> = &beta;<sub>&starf;</sub> &minus; &frac12; &gt; 0) at <em>t</em><sub>0</sub> = &gamma;<sub>&starf;</sub> has &xi;<sub>&starf;,&plusmn;</sub> &minus; &gamma;<sub>&starf;</sub> = &#8723;<em>i</em>&delta;<sub>&starf;</sub> &isin; <em>i</em>&#8477; \ {0} and (&xi;<sub>&starf;,&plusmn;</sub> &minus; &gamma;<sub>&starf;</sub>)<sup>2</sup> = &minus;&delta;<sub>&starf;</sub><sup>2</sup> &lt; 0, so its Gaussian weight is <strong>exponentially amplified</strong> by <em>e</em><sup>+&frac12;&sigma;<sup>2</sup>&delta;<sub>&starf;</sub><sup>2</sup></sup> &gt; 1 (while neighboring on-line zeros at distance |&Delta;&gamma;| are exponentially damped by <em>e</em><sup>&minus;&frac12;&sigma;<sup>2</sup>(&Delta;&gamma;)<sup>2</sup></sup>), its contribution to &mu;<sub>2</sub><sup>(&sigma;)</sup>(&gamma;<sub>&starf;</sub>) is <strong>&minus;2&delta;<sub>&starf;</sub><sup>2</sup> <em>e</em><sup>+&frac12;&sigma;<sup>2</sup>&delta;<sub>&starf;</sub><sup>2</sup></sup> &lt; 0</strong>, and its intrinsic Cauchy&ndash;Binet 2&times;2 Hankel minor is <strong>&minus;4&delta;<sub>&starf;</sub><sup>2</sup> <em>e</em><sup>+&sigma;<sup>2</sup>&delta;<sub>&starf;</sub><sup>2</sup></sup> &lt; 0</strong>.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Theorem 2 (100-Digit Complex Interval Newton Isolation of &rho;<sub><em>DH</em>,&plusmn;</sub> &amp; Certified Screen Separating &zeta;(<em>s</em>) from <em>f</em><sub><em>DH</em></sub>(<em>s</em>)):</strong>
+      Using 256-bit and 384-bit <code>flint.acb_series</code> Hurwitz zeta derivative jets, we isolate and certify the first off-line zero pair &rho;<sub><em>DH</em>,&plusmn;</sub> of Davenport&ndash;Heilbronn <em>f</em><sub><em>DH</em></sub>(<em>s</em>) inside complex boxes of radius 10<sup>&minus;100</sup>:
+      <div style="background-color: #f7f7f7; padding: 10px 14px; margin: 8px 0; font-size: 0.92em; border-left: 3px solid #333333;">
+        &beta;<sub><em>DH</em>,+</sub> = 0.808517182456637385553351960606844127850670268305&hellip; &plusmn; 10<sup>&minus;100</sup>,<br>
+        &delta;<sub><em>DH</em></sub> = &beta;<sub><em>DH</em>,+</sub> &minus; &frac12; = 0.308517182456637385553351960606844127850670268305&hellip; &gt; 0,<br>
+        &gamma;<sub><em>DH</em></sub> = 85.6993484853775921719292677089417290379878294234&hellip; &plusmn; 10<sup>&minus;100</sup>,
+      </div>
+      with Complex Interval Newton step bound 6.71 &times; 10<sup>&minus;114</sup> &lt; 10<sup>&minus;100</sup>.
+    </li>
+  </ol>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    2. Certified Stieltjes&ndash;Hankel Screen at <em>t</em><sub>0</sub> = &gamma;<sub><em>DH</em></sub> &approx; 85.6993484854 (384-Bit &amp; 256-Bit <code>flint.arb</code>)
+  </h2>
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.85em; margin: 14px 0;">
+    <thead>
+      <tr style="background-color: #f0f0f0; border-bottom: 2px solid #333333;">
+        <th style="padding: 6px; text-align: right;">&sigma;</th>
+        <th style="padding: 6px; text-align: right;">Dipole Amp <em>e</em><sup>+&frac12;&sigma;<sup>2</sup>&delta;<sup>2</sup></sup></th>
+        <th style="padding: 6px; text-align: right;"><em>f</em><sub><em>DH</em></sub>: &mu;<sub>2</sub>(&gamma;<sub><em>DH</em></sub>)</th>
+        <th style="padding: 6px; text-align: right;"><em>f</em><sub><em>DH</em></sub>: det <em>H</em><sub>2</sub>(&gamma;<sub><em>DH</em></sub>)</th>
+        <th style="padding: 6px; text-align: right;">&zeta;: &mu;<sub>2</sub>(&gamma;<sub><em>DH</em></sub>)</th>
+        <th style="padding: 6px; text-align: right;">&zeta;: det <em>H</em><sub>2</sub>(&gamma;<sub><em>DH</em></sub>)</th>
+        <th style="padding: 6px; text-align: center;">&zeta;: <em>H</em><sub>3</sub> &succ; 0</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 6px; text-align: right;">1.5</td>
+        <td style="padding: 6px; text-align: right;">1.113022</td>
+        <td style="padding: 6px; text-align: right; color: #8b0000; font-weight: bold;">&minus;0.155261 &lt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #8b0000; font-weight: bold;">&minus;0.348542 &lt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #1b5e20;">+0.432482 &gt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #1b5e20;">+0.089563 &gt; 0</td>
+        <td style="padding: 6px; text-align: center; color: #1b5e20; font-weight: bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 6px; text-align: right;">2.0</td>
+        <td style="padding: 6px; text-align: right;">1.209876</td>
+        <td style="padding: 6px; text-align: right; color: #8b0000; font-weight: bold;">&minus;0.228356 &lt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #8b0000; font-weight: bold;">&minus;0.552598 &lt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #1b5e20;">+0.152612 &gt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #1b5e20;">+0.002918 &gt; 0</td>
+        <td style="padding: 6px; text-align: center; color: #1b5e20; font-weight: bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 6px; text-align: right;">2.5</td>
+        <td style="padding: 6px; text-align: right;">1.346416</td>
+        <td style="padding: 6px; text-align: right; color: #8b0000; font-weight: bold;">&minus;0.256285 &lt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #8b0000; font-weight: bold;">&minus;0.690133 &lt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #1b5e20;">+0.051225 &gt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #1b5e20;">+0.000036 &gt; 0</td>
+        <td style="padding: 6px; text-align: center; color: #1b5e20; font-weight: bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom: 2px solid #333333; background-color: #fff4f4;">
+        <td style="padding: 6px; text-align: right;">3.0</td>
+        <td style="padding: 6px; text-align: right;">1.534681</td>
+        <td style="padding: 6px; text-align: right; color: #8b0000; font-weight: bold;">&minus;0.292151 &lt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #8b0000; font-weight: bold;">&minus;0.896716 &lt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #1b5e20;">+0.014209 &gt; 0</td>
+        <td style="padding: 6px; text-align: right; color: #1b5e20;">+8.299 &times; 10<sup>&minus;8</sup> &gt; 0</td>
+        <td style="padding: 6px; text-align: center; color: #1b5e20; font-weight: bold;">PASS</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    3. Verification Artifacts &amp; SHA-256 Hashes
+  </h2>
+  <ul>
+    <li><strong>Derivations:</strong> <code>audits/stieltjes-hankel-offline-zero-signal-and-dh-screen-2026-10-15-v1/derivation.md</code></li>
+    <li><strong>Verifier Script:</strong> <code>audits/stieltjes-hankel-offline-zero-signal-and-dh-screen-2026-10-15-v1/verify_stieltjes_hankel_offline_screen.py</code> (256-bit and 384-bit two-precision replay, 86/86 ball overlap checks PASS, <code>pyright</code>: <code>0 errors, 0 warnings, 0 informations</code>)</li>
+    <li><strong>Certificate JSON:</strong> <code>audits/stieltjes-hankel-offline-zero-signal-and-dh-screen-2026-10-15-v1/verification.json</code>
+      <ul>
+        <li><code>payload.sha256</code>: <code>5f92799ba267db25456dec483411fc1c3c877840e5395ad01b89656dd02bad59</code></li>
+        <li><code>file_sha256</code>: <code>f293bb6fb79e01bf5a3c27c1dfdcfe3b3d78efb8aaf1d7879797db284d288deb</code></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-top: 30px;">
+    <p style="margin: 0 0 8px 0; font-weight: bold; color: #8b0000; font-size: 1.02em;">
+      Wall Check &amp; Open Obligations Disclosure (Bottom of Report)
+    </p>
+    <p style="margin: 0; font-size: 0.95em;">
+      <strong>Does this audit prove RH, complete G2, establish the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin;, or recover the missing historical evidence in <code>evidence/MISSING.md</code>? No.</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups in <code>evidence/MISSING.md</code></strong> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</body>
+</html>

@@ -31,4 +31,4 @@
 
 ### Target 3 (`ZERO-GEOMETRY`): Single-Point Wronskian & Cubic Integrating-Factor Obstruction
 1. Prove the gauge-invariant Parseval identity $\int_{\mathbb{R}} 4\phi(u)^2 P_1(u)e^{2xu}\,du = -\frac{1}{\pi}\int_{\mathbb{R}}\tau^2|f(x+i\tau)|^2\,d\tau < 0$ and the exact cubic jet-ring normal form $8\phi^3\mathcal{J}_{\mathrm{PS}} = (\frac{1}{3}\partial_u^3 - \frac{8c_1}{3}\partial_u^2 + \frac{4c_2}{3}\partial_u + 8c_3)(\phi^3) + \frac{3}{2}\partial_u((\phi')^2\phi) - \frac{19}{2}(\phi')^3$.
-2. Verify numerically to 50 digits on Gaussian/cosh kernels, the `NS-101` reciprocal-dilation control, and the `Davenport–Heilbronn` control (`controls/davenport_heilbronn.py::screen`).
+2. Certify in 256-bit rigorous `flint.arb` / `flint.acb.integral` ball arithmetic (with zero `mpmath` dependency) on Gaussian/cosh kernels, the `NS-101` reciprocal-dilation control, and the `Davenport–Heilbronn` control (`file_sha256 = 4fc3060e2784270cec004dffb9f737ff068876cb5c2712d7c475d119a2ed73a6`).

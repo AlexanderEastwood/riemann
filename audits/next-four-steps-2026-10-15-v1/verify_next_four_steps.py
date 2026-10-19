@@ -43,7 +43,6 @@ import time
 from typing import Any
 
 from flint import acb, arb, arb_mat, ctx
-import mpmath as mp
 
 ROOT = Path(__file__).resolve().parents[2]
 NS61_DIR = ROOT / "evidence" / "v159" / "ns61"
@@ -606,74 +605,99 @@ def verify_part3_zero_geometry_wronskian() -> dict[str, Any]:
     rhs_c2 = {k: v * Fraction(4, 3) for k, v in d1_phi_cu.items()}
     assert lhs_c2 == rhs_c2
 
-    # 2. High-precision (50-digit) verification of Theorem 3A (Single-Point Wronskian Parseval)
-    # on both an RH-true kernel (Gaussian-cosh) and an RH-violating NS-101 kernel.
-    mp.mp.dps = 50
+    # 2. High-precision (256-bit flint.arb / flint.acb.integral) verification of Theorem 3A
+    # (Single-Point Wronskian Parseval) on both an RH-true kernel (Gaussian-cosh) and an
+    # RH-violating NS-101 kernel.
+    ctx.prec = 256
+    pi_b = arb.pi()
+    pi_c = acb(pi_b)
+    sqrt_pi_c = pi_c.sqrt()
+    half_c = acb(arb(1) / 2)
+    qtr_c = acb(arb(1) / 4)
 
-    def phi_rh_true(u: Any) -> Any:
-        return mp.exp(-u * u) * mp.cosh(u / 2)
+    def jet_rh_true(u: acb) -> tuple[acb, acb, acb]:
+        eu2 = (-u * u).exp()
+        g0 = (u * half_c).cosh()
+        g1 = half_c * (u * half_c).sinh()
+        g2 = qtr_c * g0
+        p0 = eu2 * g0
+        p1 = eu2 * (g1 - acb(2) * u * g0)
+        p2 = eu2 * (g2 - acb(4) * u * g1 + (acb(4) * u * u - acb(2)) * g0)
+        return p0, p1, p2
 
-    def f_rh_true(z: Any) -> Any:
-        return (mp.sqrt(mp.pi) / 2) * (
-            mp.exp((z + mp.mpf("0.5")) ** 2 / 4)
-            + mp.exp((z - mp.mpf("0.5")) ** 2 / 4)
+    def f_rh_true(z: acb) -> acb:
+        return (sqrt_pi_c * half_c) * (
+            (((z + half_c) ** 2) * qtr_c).exp()
+            + (((z - half_c) ** 2) * qtr_c).exp()
         )
 
-    def phi_ns101(u: Any) -> Any:
-        # Admissible real-even kernel whose Laplace transform has off-line zeros
-        return mp.exp(-u * u) * (mp.cosh(u / 2) + mp.mpf("0.5") * mp.cos(2 * u))
+    def jet_ns101(u: acb) -> tuple[acb, acb, acb]:
+        eu2 = (-u * u).exp()
+        ch = (u * half_c).cosh()
+        sh = (u * half_c).sinh()
+        c2 = (acb(2) * u).cos()
+        s2 = (acb(2) * u).sin()
+        g0 = ch + half_c * c2
+        g1 = half_c * sh - s2
+        g2 = qtr_c * ch - acb(2) * c2
+        p0 = eu2 * g0
+        p1 = eu2 * (g1 - acb(2) * u * g0)
+        p2 = eu2 * (g2 - acb(4) * u * g1 + (acb(4) * u * u - acb(2)) * g0)
+        return p0, p1, p2
 
-    def f_ns101(z: Any) -> Any:
+    def f_ns101(z: acb) -> acb:
         base = f_rh_true(z)
-        pert = (mp.sqrt(mp.pi) / 4) * (
-            mp.exp((z + 2 * mp.j) ** 2 / 4) + mp.exp((z - 2 * mp.j) ** 2 / 4)
+        two_i = acb(0, 2)
+        pert = (sqrt_pi_c * qtr_c) * (
+            (((z + two_i) ** 2) * qtr_c).exp()
+            + (((z - two_i) ** 2) * qtr_c).exp()
         )
         return base + pert
 
-    def quad_val(fn: Any, pts: list[Any]) -> Any:
-        res: Any = mp.quad(fn, pts)
-        return res
-
-    x_slice = mp.mpf("0.30")
+    x_slice_b = arb(3) / arb(10)
+    x_slice_c = acb(x_slice_b)
+    tol_int = 2 ** (-180)
     wronskian_checks: dict[str, Any] = {}
-    for name, phi_fn, f_fn in (
-        ("rh_true_gaussian_cosh", phi_rh_true, f_rh_true),
-        ("rh_false_ns101_control", phi_ns101, f_ns101),
+    for name, jet_fn, f_fn in (
+        ("rh_true_gaussian_cosh", jet_rh_true, f_rh_true),
+        ("rh_false_ns101_control", jet_ns101, f_ns101),
     ):
-        def w2_integrand(u: Any, p_fn: Any = phi_fn) -> Any:
-            p0 = p_fn(u)
-            p1 = mp.diff(p_fn, u, 1)
-            p2 = mp.diff(p_fn, u, 2)
-            return (p2 * p0 - p1 * p1) * mp.exp(2 * x_slice * u)
+        def w2_integrand(u: acb, _analytic: bool = False, jf: Any = jet_fn) -> acb:
+            p0, p1, p2 = jf(u)
+            return (p2 * p0 - p1 * p1) * (acb(2) * x_slice_c * u).exp()
 
-        def psi_deriv_sq(u: Any, p_fn: Any = phi_fn) -> Any:
-            p0 = p_fn(u)
-            p1 = mp.diff(p_fn, u, 1)
-            return ((p1 + x_slice * p0) * mp.exp(x_slice * u)) ** 2
+        def psi_deriv_sq(u: acb, _analytic: bool = False, jf: Any = jet_fn) -> acb:
+            p0, p1, _ = jf(u)
+            val = (p1 + x_slice_c * p0) * (x_slice_c * u).exp()
+            return val * val
 
-        lhs_w2 = quad_val(w2_integrand, [-12, 12])
-        mid_spatial = -2 * quad_val(psi_deriv_sq, [-12, 12])
-        rhs_freq = -(1 / mp.pi) * quad_val(
-            lambda tau, ff=f_fn: (tau ** 2) * abs(ff(x_slice + mp.j * tau)) ** 2,
-            [-20, 20],
-        )
+        def freq_integrand(tau: acb, _analytic: bool = False, ff: Any = f_fn) -> acb:
+            z_p = x_slice_c + acb(0, 1) * tau
+            z_m = x_slice_c - acb(0, 1) * tau
+            return (tau * tau) * ff(z_p) * ff(z_m)
+
+        lhs_w2 = acb.integral(w2_integrand, acb(-12), acb(12), rel_tol=tol_int, abs_tol=tol_int, eval_limit=200000).real
+        mid_spatial = -arb(2) * acb.integral(psi_deriv_sq, acb(-12), acb(12), rel_tol=tol_int, abs_tol=tol_int, eval_limit=200000).real
+        rhs_freq = -(arb(1) / pi_b) * acb.integral(freq_integrand, acb(-20), acb(20), rel_tol=tol_int, abs_tol=tol_int, eval_limit=200000).real
         err_spatial = abs(lhs_w2 - mid_spatial)
         err_freq = abs(lhs_w2 - rhs_freq)
-        assert lhs_w2 < 0 and err_spatial < mp.mpf("1e-42") and err_freq < mp.mpf("1e-42")
+        assert lhs_w2 < 0 and err_spatial < arb("1e-42") and err_freq < arb("1e-42"), (lhs_w2, err_spatial, err_freq)
         wronskian_checks[name] = {
-            "x_slice": mp.nstr(x_slice, 10),
-            "single_point_wronskian_transform": mp.nstr(lhs_w2, 25),
-            "spatial_energy_identity_error": mp.nstr(err_spatial, 12),
-            "vertical_line_parseval_error": mp.nstr(err_freq, 12),
+            "x_slice": "0.3",
+            "single_point_wronskian_transform": lhs_w2.str(25),
+            "spatial_energy_identity_error": err_spatial.str(12),
+            "vertical_line_parseval_error": err_freq.str(12),
             "strictly_negative": bool(lhs_w2 < 0),
         }
 
     def dh_candidate(_f_ctrl: Any, phi_ctrl: Any) -> bool:
-        u0 = mp.mpf("0.5")
-        p0 = phi_ctrl(u0)
-        p1 = mp.diff(phi_ctrl, u0, 1)
-        integrand_val = -2 * (((p1 + x_slice * p0) * mp.exp(x_slice * u0)) ** 2)
-        return bool(integrand_val < 0)
+        u0 = 0.5
+        h_fd = 1e-6
+        p0 = float(phi_ctrl(u0))
+        p1 = (float(phi_ctrl(u0 + h_fd)) - float(phi_ctrl(u0 - h_fd))) / (2.0 * h_fd)
+        x_f = 0.3
+        integrand_val = -2.0 * (((p1 + x_f * p0) * (2.718281828459045 ** (x_f * u0))) ** 2)
+        return bool(integrand_val < 0.0)
 
     dh_screen = screen(
         dh_candidate,

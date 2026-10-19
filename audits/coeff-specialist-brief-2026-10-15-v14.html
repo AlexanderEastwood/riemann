@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Coefficient &amp; Weil-Floor Campaign Brief (v14) — M7–M17 Closure &amp; One-Estimate Go/No-Go Gate (2026-10-15 v14)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #fbfaf7; color: #1f2328; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #d8d4c8; padding: 36px 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-bottom: 24px; font-size: 14px;">
+      <strong>Wall Check &amp; Open-Status Disclosure:</strong> Same open gap. Closest results: <code>WEIL-FLOOR</code>, <code>NS24/39/43</code>. We still need a bound that remains valid as the window grows (<em>b</em> &rarr; &infin;), retaining every signed arithmetic contribution and coupling. None of the packages in this campaign (Milestones 7 through 17) prove the Riemann Hypothesis (<code>RH</code>) or Goal 2 (<code>G2</code>). Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <h1 style="font-size: 23px; line-height: 1.3; margin-top: 0; margin-bottom: 8px; color: #111827;">
+      Master Campaign Brief (v14): M7&ndash;M17 Fixed-Window Sequence Closure &amp; Standing One-Estimate Go/No-Go Methodology Gate
+    </h1>
+    <p style="font-size: 14px; color: #4b5563; margin-top: 0; margin-bottom: 24px;">
+      <strong>Date:</strong> 2026-10-15 &nbsp;|&nbsp; <strong>Version:</strong> v14 (preserves v3&ndash;v13 intact) &nbsp;|&nbsp; <strong>Lanes:</strong> <code>WEIL-FLOOR</code>, <code>NB-GAIN / COEFF</code>, <code>KERNEL-API</code> &nbsp;|&nbsp; <strong>Family Status:</strong> <strong>PAUSED AT M17 v2 (BOUNDED CLOSURE)</strong>
+    </p>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      1. Standing Methodology Gate (Effective Immediately)
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      Following the bounded audit repair of Milestone 17 v2, the M7&ndash;M17 fixed-window Euler-preconditioned / Block-Schur milestone sequence is <strong>formally closed and paused</strong>. Going forward, the following methodology rules govern all work in this lane:
+    </p>
+    <ol style="font-size: 15px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 10px;">
+        <strong>No Incremental Milestone Expansion (No M18+ Reformulations):</strong> We will not launch new milestones that merely vary the basis, widen fixed-bandwidth tables, raise finite Legendre cutoffs <em>N</em><sub>leg</sub>, or increase finite prime-depletion counts <em>K</em> while leaving the asymptotic <em>b</em> &rarr; &infin; gap open.
+      </li>
+      <li style="margin-bottom: 10px;">
+        <strong>Mandatory One-Estimate Gate Before Any New Proposal:</strong> Any future proposal in this family must first state—up front and before writing verification code—<strong>one specific arithmetic estimate</strong>, explain mathematically why it escapes the two structural obstructions below, and show exactly what theorem it proves:
+        <ul style="margin-top: 6px; padding-left: 20px;">
+          <li style="margin-bottom: 6px;">
+            <em>Obstruction A (Slepian Zero-Gap Ceiling):</em> Because &zeta;(1/2 + <em>i</em>&xi;) has no zeros in (&minus;&gamma;<sub>1</sub>, &gamma;<sub>1</sub>) (&gamma;<sub>1</sub> &approx; 14.1347), the minimum eigenvalue &lambda;<sub>min</sub>(<em>W</em><sub>full</sub>(<em>b</em>)) on <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) decays exponentially like the Slepian exterior frequency leakage 1 &minus; &lambda;<sub>0</sub>(<em>b</em>&gamma;<sub>1</sub>) &asymp; <em>e</em><sup>&minus;2<em>b</em>&gamma;<sub>1</sub></sup> as <em>b</em> &rarr; &infin;. Any Block-Schur or scalar-floor argument against &mu;<em>I</em> requires controlling infinite-tail coupling to within <em>O</em>(<em>e</em><sup>&minus;2<em>b</em>&gamma;<sub>1</sub></sup>).
+          </li>
+          <li style="margin-bottom: 6px;">
+            <em>Obstruction B (Triangle-Inequality Loss vs. Signed Prime Cancellation):</em> Bounding active prime shifts via absolute values (&sum;<sub><em>n</em> &le; <em>e</em><sup>2<em>b</em></sup></sub> &Lambda;(<em>n</em>)<em>n</em><sup>&minus;1/2</sup> &sim; 2<em>e<sup>b</sup></em>) destroys the phase cancellation between <em>A</em><sub>arch</sub>(<em>b</em>) and &minus;&sum;<sub><em>n</em> &le; <em>e</em><sup>2<em>b</em></sup></sub> &Lambda;(<em>n</em>)<em>n</em><sup>&minus;1/2</sup> <em>S</em><sub>log <em>n</em></sub><sup>(<em>b</em>)</sup> on the low-frequency Slepian modes |&xi;| &lt; &gamma;<sub>1</sub>. Escaping this requires proving a <strong>signed operator cancellation bound</strong> relative to the positive Slepian exterior operator <em>E</em><sub>Slep</sub>(<em>b</em>; &gamma;<sub>1</sub>) without circular appeal to the explicit formula over critical-line zeros.
+          </li>
+        </ul>
+      </li>
+      <li style="margin-bottom: 10px;">
+        <strong>Pause Default:</strong> If no non-circular candidate for that single signed arithmetic estimate can be supplied, this family stays paused and no further variations are funded or executed.
+      </li>
+    </ol>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      2. Final Audited State of the Completed M7&ndash;M17 Groundwork
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      All audit repairs across Milestones 7, 8, 9, 16, and 17 (<code>argon-m9-campaign-review-2026-10-15-v1</code>, <code>argon-m16-review-2026-10-15-v1</code>, and <code>argon-m17-review-2026-10-15-v1</code>) are complete and preserved as reusable fixed-window groundwork at <code>256</code>-bit and <code>384</code>-bit <code>flint.arb</code> (<code>pyright</code>: <code>0 errors, 0 warnings, 0 informations</code>):
+    </p>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f3f4f6; border-bottom: 2px solid #d1d5db;">
+          <th style="padding: 7px 6px; text-align: left;">Milestone</th>
+          <th style="padding: 7px 6px; text-align: left;">Audited Groundwork Scope (Fixed-Window / Exact Identities)</th>
+          <th style="padding: 7px 6px; text-align: center;">Overlaps</th>
+          <th style="padding: 7px 6px; text-align: left;"><code>payload.sha256</code> (prefix)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M7</strong> (Multiprime Euler)</td>
+          <td style="padding: 6px;">Exact symbolic <code>SymReal</code> in <strong>Q</strong> &oplus; &bigoplus;<sub><em>p</em></sub> <strong>Q</strong> log <em>p</em>; 2-prime pole cancellation &amp; zero preservation.</td>
+          <td style="padding: 6px; text-align: center;">110 / 110</td>
+          <td style="padding: 6px; font-family: monospace;">8936cf81aed7b157&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M8</strong> (3-Prime &amp; Scaling)</td>
+          <td style="padding: 6px;">Exact symbolic <code>SymReal</code> cancellation verification for <em>K</em> = 3, 4.</td>
+          <td style="padding: 6px; text-align: center;">64 / 64</td>
+          <td style="padding: 6px; font-family: monospace;">ecc9ec645b955809&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M9</strong> (Weil Equiv &amp; DH)</td>
+          <td style="padding: 6px;">Certified <code>flint.acb.zeta_zero(1)</code>; Paley&ndash;Wiener equivalence; DH counterexample <em>Q</em><sub>{2,3},DH</sub>(<em>g<sub>b</sub></em>) &lt; 0 at <em>b</em> &in; {2, 5/2, 3}.</td>
+          <td style="padding: 6px; text-align: center;">70 / 70</td>
+          <td style="padding: 6px; font-family: monospace;">0d81262363891d91&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M16</strong> (Spatial &amp; Slepian, v3)</td>
+          <td style="padding: 6px;">Exact compact spatial archimedean Legendre blocks, rational harmonic growth, and Slepian zero-gap decay diagnosis.</td>
+          <td style="padding: 6px; text-align: center;">80 / 80</td>
+          <td style="padding: 6px; font-family: monospace;">4592cff3eb909f0b&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb; background-color: #f0fdf4;">
+          <td style="padding: 6px;"><strong>M17</strong> (Infinite Tail &amp; 2-Shift, v2)</td>
+          <td style="padding: 6px;">Full-space positivity on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) via global subtraction <em>R<sub>R</sub></em>(<em>b</em>) = <em>W</em><sub><em>P</em><sub>2</sub></sub><sup>full</sup> &minus; <em>A</em><sub>loc,+,<em>R</em></sub> &succ; 0 at five fixed bandwidths 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50}.</td>
+          <td style="padding: 6px; text-align: center;"><strong>446 / 446</strong></td>
+          <td style="padding: 6px; font-family: monospace;">ab4ce05962a1692e&hellip;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-top: 28px; font-size: 14px;">
+      <strong>Wall Check:</strong> Same open gap. Closest results: <code>WEIL-FLOOR</code>, <code>NS24/39/43</code>. We still need a bound that remains valid as the window grows (<em>b</em> &rarr; &infin;), retaining every signed arithmetic contribution and coupling. Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Milestone 17 Audit Report (v2) — Infinite-Dimensional Tail Floor, Two-Shift Defect Algebra, Global Remainder Block-Schur Positivity, &amp; Matched DH Control (2026-10-15 v2)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #fbfaf7; color: #1f2328; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #d8d4c8; padding: 36px 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-bottom: 24px; font-size: 14px;">
+      <strong>Wall Check &amp; Open-Status Disclosure:</strong> This package does <strong>NOT</strong> prove the Riemann Hypothesis (<code>RH</code>), Goal 2 (<code>G2</code>), or the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin; (or <em>K</em> &rarr; &infin;). It certifies full-space infinite-dimensional positivity on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) for <em>K</em> = 2 (<em>P</em><sub>2</sub> = {2, 3}) at the <strong>five discrete rational bandwidths</strong> 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50}. Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <h1 style="font-size: 23px; line-height: 1.3; margin-top: 0; margin-bottom: 8px; color: #111827;">
+      Milestone 17 (v2): Infinite-Dimensional High-Mode Operator Lower Bound, Exact Two-Shift Product Defect Algebra, Global Remainder Block-Schur Positivity on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>), and Matched Davenport&ndash;Heilbronn Control Separation
+    </h1>
+    <p style="font-size: 14px; color: #4b5563; margin-top: 0; margin-bottom: 24px;">
+      <strong>Date:</strong> 2026-10-15 &nbsp;|&nbsp; <strong>Version:</strong> v2 (Repaired per <code>argon-m17-review-2026-10-15-v1</code>; preserves v1 intact) &nbsp;|&nbsp; <strong>Lanes:</strong> <code>WEIL-FLOOR</code>, <code>NB-GAIN / COEFF</code>, <code>KERNEL-API</code>
+    </p>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      1. Summary of All 7 Audit Repairs (<code>argon-m17-review-2026-10-15-v1</code>)
+    </h2>
+    <ol style="font-size: 14.5px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Global Subtraction of <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) &succeq; 0 Across All Blocks (Findings 1 &amp; 2):</strong> Writing <em>W</em><sub><em>P</em><sub>2</sub></sub><sup>full</sup>(<em>b</em>) = <em>R<sub>R</sub></em>(<em>b</em>) + <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) with <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) &succeq; 0 yields the global quadratic-form inequality <em>W</em><sub><em>P</em><sub>2</sub></sub><sup>full</sup>(<em>b</em>) &succeq; <em>R<sub>R</sub></em>(<em>b</em>) on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>), <strong>not</strong> <em>W</em><sub><em>P</em><sub>2</sub></sub><sup>full</sup>(<em>b</em>) &succeq; <em>R<sub>R</sub></em>(<em>b</em>) + diag(<em>P</em><sub>&le;</sub><em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>)<em>P</em><sub>&le;</sub>, 0). In v2 we subtract <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) from <strong>all blocks</strong> (including the low-low block), combine <em>&alpha;</em>(<em>R</em>)<em>L</em><sub>loc</sub>(<em>b</em>) + <em>W</em><sub>sh</sub>(<em>b</em>) into <em>W</em><sub>comb,<em>R</em></sub>(<em>b</em>) so that the low-to-high shift coupling of <em>&alpha;</em>(<em>R</em>)<em>L</em><sub>loc</sub>(<em>b</em>) when log(3/2) &lt; 2<em>b</em> is included inside the exact two-shift Gram matrix <em>G</em><sub>comb,<em>R</em></sub><sup>(<em>N</em><sub>leg</sub>,sector)</sup>(<em>b</em>), and certify the bounded remainder operator <em>R<sub>R</sub></em>(<em>b</em>) &succ; 0 across all 5 rational bandwidths 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50} (even &amp; odd). Subtracting <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) removes the &minus;log|<em>x</em>&minus;<em>y</em>| singularity globally: at 2<em>b</em> = 0.50, <em>N</em><sub>leg</sub> = 6, <em>R</em> = 18, whereas the unsubtracted operator has &langle;<em>e</em><sub>12</sub>, <em>A</em><sub><em>P</em><sub>2</sub></sub>(<em>b</em>)<em>e</em><sub>10</sub>&rangle; = +1.252539, the remainder archimedean block has |&langle;<em>e</em><sub>12</sub>, (&minus;<em>D</em><sub>loc,<em>R</em></sub>(<em>b</em>) + <em>A</em><sub>ext</sub>(<em>b</em>))<em>e</em><sub>10</sub>&rangle;| = <strong>1.526734 &times; 10<sup>&minus;9</sup></strong> &lt; <em>&beta;</em><sub>rem,arch</sub><sup>even</sup> = 2.619743 &times; 10<sup>&minus;2</sup>.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Matched Repository Davenport&ndash;Heilbronn Control (Finding 3):</strong> Uses the exact repository definition (<code>controls/davenport_heilbronn.py</code>) with <em>&kappa;</em> = (&radic;(10 &minus; 2&radic;5) &minus; 2)/(&radic;5 &minus; 1) &approx; 0.284079, Dirichlet convolution recurrence <em>a</em><sub>DH</sub> * &Lambda;<sub>DH</sub> = (<em>a</em><sub>DH</sub> log <em>n</em>), <em>C</em><sub>diag,DH</sub>({2, 3}) = (4/3)&Lambda;<sub>DH</sub>(2) + &Lambda;<sub>DH</sub>(3) &minus; (1/3)&Lambda;<sub>DH</sub>(6) = <strong>&minus;0.6949999697 &lt; 0</strong>, non-collapsing prime-2 tower shift <em>r</em> = 4/3 (<em>c</em><sub>4/3,DH</sub> = &minus;0.683641), and odd-character completion <em>&alpha;</em><sub>DH</sub>(&xi;) = Re &psi;(3/4 + <em>i</em>&xi;/2) + log(5/&pi;), explicitly qualifying that a negative lower-bound budget certifies failure of the sufficient tail positivity certificate (while actual negative Rayleigh quotients <em>Q</em><sub>{2,3},DH</sub>(<em>g<sub>b</sub></em>) &lt; 0 are certified at <em>b</em> &in; {2, 5/2, 3} in Milestone 9).
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Exact Holomorphic Digamma Extension (Finding 4):</strong> <code>alpha_arch_acb(xi)</code> evaluates &frac12;(&psi;(1/4 + <em>i</em>&xi;/2) + &psi;(1/4 &minus; <em>i</em>&xi;/2)) &minus; log &pi; with factor <em>i</em>/2, verified by self-test against <code>alpha_arch_arb(9) = 0.35883198893599235...</code>.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Full-Precision String Ball Overlap Checker (Finding 5):</strong> <code>verify_overlap</code> reconstructs balls via <code>flint.arb(a["str"])</code> and includes a mandatory self-test confirming that 1 + 2<sup>&minus;100</sup> and 1 + 2<sup>&minus;101</sup> do <strong>not</strong> overlap (<code>446/446</code> checks PASS).
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>External Kernel Normalization &amp; Stirling Rate in <em>M</em><sub>0</sub> (Findings 6 &amp; 7):</strong> Uses exact cosine weights |2<em>w</em><sub>2</sub>| = 8/(3&radic;2), |2<em>w</em><sub>3</sub>| = &radic;3, |2<em>w</em><sub>6</sub>| = 2/&radic;6 and exact rank-1 norm factor 2<em>b</em> (instead of 4<em>b</em>) in <code>ext_laplace_bessel_bounds</code>, and distinguishes parity-block dimension <em>N</em><sub>leg</sub> from the first omitted Legendre degree <em>M</em><sub>0</sub> = 2<em>N</em><sub>leg</sub> (even) or 2<em>N</em><sub>leg</sub>+1 (odd) in the Stirling cutoff rate analysis.
+      </li>
+    </ol>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      2. Theorem 1: Exact Two-Shift Product Identity &amp; Combined-Shift Coupling Gram Matrix
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      For any 0 &le; <em>&tau;</em><sub>1</sub> &le; <em>&tau;</em><sub>2</sub> &lt; 2<em>b</em> (<em>u</em><sub>1</sub> = <em>&tau;</em><sub>1</sub>/<em>b</em>, <em>u</em><sub>2</sub> = <em>&tau;</em><sub>2</sub>/<em>b</em> &in; [0, 2)), on <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>):
+    </p>
+    <p style="font-size: 15px; text-align: center; background-color: #f3f4f6; padding: 10px 12px; border-radius: 4px; font-family: 'Times New Roman', Georgia, serif;">
+      <em>S</em><sub><em>&tau;</em><sub>1</sub></sub><sup>(<em>b</em>)</sup> <em>S</em><sub><em>&tau;</em><sub>2</sub></sub><sup>(<em>b</em>)</sup> = <em>S</em><sub><em>&tau;</em><sub>1</sub> + <em>&tau;</em><sub>2</sub></sub><sup>(<em>b</em>)</sup> + <em>S</em><sub><em>&tau;</em><sub>2</sub> &minus; <em>&tau;</em><sub>1</sub></sub><sup>(<em>b</em>)</sup> &minus; <em>D</em><sub><em>&tau;</em><sub>1</sub>, <em>&tau;</em><sub>2</sub></sub>(<em>b</em>),
+    </p>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      where for <em>m</em> + <em>n</em> even, (<em>D</em><sub><em>&tau;</em><sub>1</sub>, <em>&tau;</em><sub>2</sub></sub>(<em>b</em>))<sub><em>m</em>, <em>n</em></sub> = &radic;((2<em>m</em>+1)(2<em>n</em>+1)) &int;<sub>max(&minus;1+&Delta;<em>u</em>, 1&minus;<em>u</em><sub>1</sub>)</sub><sup>1</sup> <em>P<sub>m</sub></em>(<em>x</em>) <em>P<sub>n</sub></em>(<em>x</em> &minus; &Delta;<em>u</em>) <em>dx</em> (&Delta;<em>u</em> = <em>u</em><sub>2</sub> &minus; <em>u</em><sub>1</sub>). Applied to <em>W</em><sub>comb,<em>R</em></sub><sup>off</sup>(<em>b</em>) = &Sigma;<sub>0&lt;<em>&tau;<sub>r</sub></em>&lt;2<em>b</em></sub> <em>d<sub>r</sub></em>(<em>R</em>) <em>S</em><sub><em>&tau;<sub>r</sub></em></sub><sup>(<em>b</em>)</sup> (where <em>d</em><sub>3/2</sub>(<em>R</em>) = <em>c</em><sub>3/2</sub> + <em>&alpha;</em>(<em>R</em>)/&radic;6), the low-to-high coupling Gram matrix <em>G</em><sub>comb,<em>R</em></sub><sup>(<em>N</em><sub>leg</sub>,sector)</sup>(<em>b</em>) = <em>B</em><sub>comb,<em>R</em></sub><sup>*</sup><em>B</em><sub>comb,<em>R</em></sub> is an <strong>exact <em>N</em><sub>leg</sub> &times; <em>N</em><sub>leg</sub> matrix</strong> with zero tail truncation error.
+    </p>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      3. Theorems 2 &amp; 3: Global Remainder Subtraction &amp; Full-Space Matrix Block-Schur Certificates
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      Subtracting <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) &succeq; 0 globally across all blocks leaves the bounded self-adjoint remainder operator <em>R<sub>R</sub></em>(<em>b</em>) = <em>W</em><sub>comb,<em>R</em></sub>(<em>b</em>) + <em>C</em><sub>diag</sub>(<em>P</em><sub>2</sub>)<em>I</em> &minus; <em>D</em><sub>loc,<em>R</em></sub>(<em>b</em>) + <em>A</em><sub>ext</sub>(<em>b</em>). Across all 5 discrete rational bandwidths 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50} (even and odd sectors), both the tail floor <em>&mu;</em><sub>tail</sub><sup>sector</sup>(<em>b</em>, <em>R</em>, <em>N</em><sub>leg</sub>) &gt; 0 and the <em>N</em><sub>leg</sub> &times; <em>N</em><sub>leg</sub> Remainder Matrix Schur Complement <em>S</em><sub>mat</sub><sup>(<em>N</em><sub>leg</sub>,sector)</sup>(<em>b</em>) &succ; 0 are certified via rigorous <code>flint.arb</code> Cholesky decomposition:
+    </p>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 12px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f3f4f6; border-bottom: 2px solid #d1d5db;">
+          <th style="padding: 6px 4px; text-align: left;">2<em>b</em> (Parity)</th>
+          <th style="padding: 6px 4px; text-align: center;">(<em>N</em>, <em>M</em><sub>0</sub>, <em>R</em>)</th>
+          <th style="padding: 6px 4px; text-align: right;">Tail <em>&mu;</em><sub>tail</sub></th>
+          <th style="padding: 6px 4px; text-align: right;">&Vert;<em>B</em><sub>comb,<em>R</em></sub>&Vert;<sub><em>F</em></sub><sup>1/2</sup></th>
+          <th style="padding: 6px 4px; text-align: right;">&lambda;<sub>min</sub>(<em>W</em><sub>&le;</sub><sup>full</sup>)</th>
+          <th style="padding: 6px 4px; text-align: right;">&lambda;<sub>min</sub>(<em>R</em><sub>&le;</sub>)</th>
+          <th style="padding: 6px 4px; text-align: right;">&lambda;<sub>min</sub>(<em>S</em><sub>mat</sub>)</th>
+          <th style="padding: 6px 4px; text-align: right;">Min Piv <em>L</em><sub><em>i</em>,<em>i</em></sub><sup>2</sup></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.40 (Even)</td>
+          <td style="padding: 5px 4px; text-align: center;">(4, 8, 9)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.550975</td>
+          <td style="padding: 5px 4px; text-align: right;">0.381662</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.462249</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.275328</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+0.268994</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.287324</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.40 (Odd)</td>
+          <td style="padding: 5px 4px; text-align: center;">(4, 9, 9)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.550976</td>
+          <td style="padding: 5px 4px; text-align: right;">0.410572</td>
+          <td style="padding: 5px 4px; text-align: right;">+3.683660</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.200014</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+2.170277</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.415762</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.42 (Even)</td>
+          <td style="padding: 5px 4px; text-align: center;">(5, 10, 14)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.375728</td>
+          <td style="padding: 5px 4px; text-align: right;">0.839539</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.362670</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.286754</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+0.280699</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.346734</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.42 (Odd)</td>
+          <td style="padding: 5px 4px; text-align: center;">(5, 11, 14)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.375728</td>
+          <td style="padding: 5px 4px; text-align: right;">0.845192</td>
+          <td style="padding: 5px 4px; text-align: right;">+3.478759</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.519032</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+2.211525</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.860255</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.45 (Even)</td>
+          <td style="padding: 5px 4px; text-align: center;">(5, 10, 14)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.372361</td>
+          <td style="padding: 5px 4px; text-align: right;">0.958493</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.266128</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.211137</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+0.204659</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.338867</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.45 (Odd)</td>
+          <td style="padding: 5px 4px; text-align: center;">(5, 11, 14)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.372361</td>
+          <td style="padding: 5px 4px; text-align: right;">1.018361</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.910448</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.118756</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+2.010450</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.379543</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.48 (Even)</td>
+          <td style="padding: 5px 4px; text-align: center;">(5, 10, 14)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.363990</td>
+          <td style="padding: 5px 4px; text-align: right;">0.960246</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.189287</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.146465</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+0.133707</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.317252</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.48 (Odd)</td>
+          <td style="padding: 5px 4px; text-align: center;">(5, 11, 14)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.363991</td>
+          <td style="padding: 5px 4px; text-align: right;">1.049444</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.437210</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.871996</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+1.828035</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.036742</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.50 (Even)</td>
+          <td style="padding: 5px 4px; text-align: center;">(6, 12, 18)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.752310</td>
+          <td style="padding: 5px 4px; text-align: right;">1.194467</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.143153</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.117019</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+0.102995</td>
+          <td style="padding: 5px 4px; text-align: right;">+0.362092</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;">0.50 (Odd)</td>
+          <td style="padding: 5px 4px; text-align: center;">(6, 13, 18)</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.752310</td>
+          <td style="padding: 5px 4px; text-align: right;">1.277561</td>
+          <td style="padding: 5px 4px; text-align: right;">+2.193880</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.891973</td>
+          <td style="padding: 5px 4px; text-align: right; font-weight: bold; color: #065f46;">+1.853019</td>
+          <td style="padding: 5px 4px; text-align: right;">+1.945586</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      4. Theorem 4: Dependency Edge (<code>WEIL-FLOOR &rarr; G2</code>) &amp; Matched Davenport&ndash;Heilbronn Control
+    </h2>
+    <ul style="font-size: 15px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Dependency Edge (<code>WEIL-FLOOR &rarr; G2</code>) &amp; Stirling Rate in <em>M</em><sub>0</sub>:</strong> For every fixed (<em>K</em>, <em>b</em>) and first omitted Legendre degree <em>M</em><sub>0</sub>, choosing <em>R</em><sub><em>M</em><sub>0</sub></sub> = (2<em>M</em><sub>0</sub>+1)/(<em>eb</em>) gives (<em>bR</em><sub><em>M</em><sub>0</sub></sub>)<sup>2<em>M</em><sub>0</sub>+1</sup>/((2<em>M</em><sub>0</sub>+1)!!)<sup>2</sup> &sim; 1/[2<em>e</em>(2<em>M</em><sub>0</sub>+1)] = <em>O</em>(<em>M</em><sub>0</sub><sup>&minus;1</sup>), while choosing <em>R</em><sub><em>M</em><sub>0</sub></sub> = (2<em>M</em><sub>0</sub>+1)/(2<em>eb</em>) gives exponential decay <em>O</em>(2<sup>&minus;(2<em>M</em><sub>0</sub>+1)</sup><em>M</em><sub>0</sub><sup>&minus;1</sup>) &rarr; 0 as <em>M</em><sub>0</sub> &rarr; &infin;. However, as <em>K</em> &rarr; &infin;, <em>&sigma;</em><sub>min</sub>(<em>L</em><sub><em>P<sub>K</sub></em></sub>) decays from 8.58 &times; 10<sup>&minus;2</sup> (<em>K</em> = 1) to 4.62 &times; 10<sup>&minus;4</sup> (<em>K</em> = 6), and the active shift sum grows with <em>b</em>. Thus fixed-(<em>K</em>, <em>b</em>) Block-Schur certificates close the infinite-dimensional high-mode tail without closing the cofinal limit <em>b</em> &rarr; &infin; (<code>G2</code>).
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Matched Davenport&ndash;Heilbronn Control (<code>controls/davenport_heilbronn.py</code>):</strong> On <em>f</em><sub>DH</sub>(<em>s</em>), <em>C</em><sub>diag,DH</sub>({2, 3}) = &minus;0.6949999697 &lt; 0 and the non-collapsing prime-2 tower shift <em>r</em> = 4/3 (<em>c</em><sub>4/3,DH</sub> = &minus;0.683641) make both the global-multiplier sufficient tail lower-bound budget (&minus;0.687957 before shifts; &minus;1.542193 to &minus;2.098356 with shifts &amp; Poisson&ndash;Bessel defect) and the localized sufficient tail lower-bound budget (&minus;0.630008 to &minus;1.373808) <strong>strictly negative</strong> across 2<em>b</em> &in; {0.40, 0.45, 0.50}.
+      </li>
+    </ul>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      5. Reproducibility &amp; Cryptographic Hashes
+    </h2>
+    <p style="font-size: 14px; background-color: #f3f4f6; padding: 12px 14px; border-radius: 4px; font-family: monospace; word-break: break-all;">
+      Full-precision string ball overlap checks (256-bit vs 384-bit flint.arb): 446 / 446 PASS (pyright: 0 errors, 0 warnings)<br/>
+      payload.sha256: ab4ce05962a1692e1c8c967a16b83a4b5f77f707fd1e1e73bdb62a178bd7d1a6<br/>
+      file_sha256: &nbsp;&nbsp;&nbsp;42d1598db4bafc438f0e5a4654327fb5fdb5b6cc1d0ecee91c813677816736aa
+    </p>
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-top: 28px; font-size: 14px;">
+      <strong>Wall Check:</strong> This package does <strong>NOT</strong> prove <code>RH</code>, <code>G2</code>, or the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin; (or <em>K</em> &rarr; &infin;). Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>All-Vector Weil Positivity up to the Three-Island Isometric Horizon a = (3/2) log 2 = (1/2) log 8 (2026-10-15-v3)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 32px auto; padding: 0 16px; line-height: 1.58; color: #1a1a1a; background-color: #ffffff;">
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-bottom: 24px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. Nothing in this report claims a proof of RH or global Weil positivity.
+</div>
+
+<h1 style="font-size: 1.52em; line-height: 1.28; margin-bottom: 6px; color: #111111;">All-Vector Weil Positivity Beyond <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;</sub> = &frac12;&thinsp;log(15/2) up to the Three-Island Isometric Horizon <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8 &approx; 1.039721 (v3)</h1>
+<p style="margin-top: 0; color: #555555; font-size: 0.92em;">
+<strong>Date:</strong> 2026-10-16 &middot; <strong>Version:</strong> v3 (Pure-<code>flint</code> &amp; Exact <code>SymReal</code> Cut-Point Algebra; preserves <code>v1</code> and <code>v2</code> untouched) &middot; <strong>Lane:</strong> <code>KERNEL-API</code> &middot; <strong>Audit Package:</strong> <code>audits/all-vector-positivity-three-island-horizon-2026-10-15-v1/</code>
+</p>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">1. Executive Summary &amp; Version 3 Symbolic Cut-Point Repair</h2>
+<p>
+This audit completes the finite-<em>a</em> all-vector certification of the 3-island prime-2 preconditioner <em>L</em><sub>2</sub> = <em>I</em> + <em>c</em><sub>2</sub><em>S</em><sub>2</sub> + <em>c</em><sub>4</sub><em>S</em><sub>4</sub> across the entire interval <em>a</em> &isin; (&frac12;&thinsp;log(15/2), &frac32;&thinsp;log&thinsp;2] &approx; (1.0074515103, 1.0397207708] up to the exact <strong>Three-Island Isometric Horizon</strong>
+</p>
+<p style="text-align: center; font-size: 1.04em; margin: 14px 0;">
+<em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8 &approx; 1.0397207708, &qquad; 2<em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = log&thinsp;8 &approx; 2.0794415417.
+</p>
+<p>
+Version 3 upgrades <code>verify_three_island_horizon.py</code> so that the Klein 4-group fiber-bundle partition builder <code>build_klein4_partition_arb</code> operates on exact symbolic elements of &Qopf; + &sum;<sub><em>p</em>&isin;{2,3,5,7}</sub>&Qopf;&thinsp;log&thinsp;<em>p</em> (<code>class SymReal</code>) with zero decimal tolerances (<code>1e-15</code>, <code>1e-13</code>, <code>1e-12</code>, <code>1e-11</code>, <code>1e-10</code>, <code>1e-90</code> removed), exact <code>.contains(0)</code> identity verification for the triple structural coincidence at <em>a</em> = &frac32;&thinsp;log&thinsp;2, and certified endpoint ball-radius quadrature remainders.
+</p>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">2. 384-Bit <code>flint.arb</code> Certified Checkpoints</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.86em;">
+<thead>
+<tr style="background-color: #f2f2f2; border-bottom: 2px solid #cccccc;">
+<th style="padding: 7px 6px; text-align: left;">Checkpoint</th>
+<th style="padding: 7px 6px; text-align: right;"><em>a</em></th>
+<th style="padding: 7px 6px; text-align: right;">&Delta;&alpha;</th>
+<th style="padding: 7px 6px; text-align: right;"><em>K</em></th>
+<th style="padding: 7px 6px; text-align: right;"><em>M</em><sub>p</sub></th>
+<th style="padding: 7px 6px; text-align: right;">Tr(<em>T</em><sub>even</sub>)</th>
+<th style="padding: 7px 6px; text-align: right;">&mu;<sub>2</sub>(<em>C</em><sub>2</sub>)</th>
+<th style="padding: 7px 6px; text-align: right;">&mathcal;T;<sub>even</sub><sup>defl</sup></th>
+<th style="padding: 7px 6px; text-align: right;">&mathcal;T;<sub>odd</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>a = 1.015</code></td>
+<td style="padding: 6px; text-align: right;">1.0150000000</td>
+<td style="padding: 6px; text-align: right;">0.30</td>
+<td style="padding: 6px; text-align: right;">51</td>
+<td style="padding: 6px; text-align: right;">13</td>
+<td style="padding: 6px; text-align: right;">1.0157811440</td>
+<td style="padding: 6px; text-align: right;">0.0208868911</td>
+<td style="padding: 6px; text-align: right;"><strong>0.9948942529</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.8686815881</strong></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>a = 1.025</code></td>
+<td style="padding: 6px; text-align: right;">1.0250000000</td>
+<td style="padding: 6px; text-align: right;">0.30</td>
+<td style="padding: 6px; text-align: right;">52</td>
+<td style="padding: 6px; text-align: right;">13</td>
+<td style="padding: 6px; text-align: right;">1.0201039754</td>
+<td style="padding: 6px; text-align: right;">0.0241042493</td>
+<td style="padding: 6px; text-align: right;"><strong>0.9959997261</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.9244456663</strong></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>a = 1.032</code></td>
+<td style="padding: 6px; text-align: right;">1.0320000000</td>
+<td style="padding: 6px; text-align: right;">0.35</td>
+<td style="padding: 6px; text-align: right;">53</td>
+<td style="padding: 6px; text-align: right;">13</td>
+<td style="padding: 6px; text-align: right;">1.0255919138</td>
+<td style="padding: 6px; text-align: right;">0.0293312953</td>
+<td style="padding: 6px; text-align: right;"><strong>0.9962606185</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.9538547120</strong></td>
+</tr>
+<tr style="border-bottom: 1px solid #cccccc;">
+<td style="padding: 6px;"><code>a = (3/2) log 2</code></td>
+<td style="padding: 6px; text-align: right;">1.0397207708</td>
+<td style="padding: 6px; text-align: right;">0.35</td>
+<td style="padding: 6px; text-align: right;">46</td>
+<td style="padding: 6px; text-align: right;">11</td>
+<td style="padding: 6px; text-align: right;">1.0300268903</td>
+<td style="padding: 6px; text-align: right;">0.0320721764</td>
+<td style="padding: 6px; text-align: right;"><strong>0.9979547138</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.9991578524</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 0.92em; color: #333333;">
+<strong>Verification Artifact (Version 3 Pure-<code>flint</code> &amp; <code>SymReal</code> Cut-Point Algebra):</strong> <code>audits/all-vector-positivity-three-island-horizon-2026-10-15-v1/verification.json</code><br>
+<strong>SHA-256:</strong> <code>3f8c384812d748cb84adea492600859022c74ebc647f68ee172e1eee8ebf2cc3</code><br>
+<strong>Typecheck:</strong> <code>pyright</code> clean (<code>0 errors, 0 warnings, 0 informations</code>).
+</p>
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-top: 28px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+</div>
+
+</body>
+</html>

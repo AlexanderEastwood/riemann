@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Full Optimized NB Residual: Pre-Computation Arithmetic-Lemma Assessment &amp; Stop Report (2026-10-16 v1)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #fbfaf7; color: #1f2328; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #d8d4c8; padding: 36px 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-bottom: 24px; font-size: 14px;">
+      <strong>Wall Check:</strong> Same open gap. Closest: <code>NS87/98</code> and <code>PR66/68</code>. No new arithmetic input has yet been supplied. This bounded pre-computation assessment does not prove or disprove <code>RH</code>, <code>G2</code>, <code>NB-GAIN</code>, or <code>MOBIUS-COST</code> / <code>MOBIUS-MARGIN</code>. Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <p style="margin: 0 0 6px 0; font-family: Arial, sans-serif; font-size: 12px; letter-spacing: 1.1px; color: #596973;">
+      RH PROJECT &middot; BOUNDED PRE-COMPUTATION ARITHMETIC-LEMMA ASSESSMENT &middot; 2026-10-16 &middot; V1
+    </p>
+    <h1 style="font-size: 24px; line-height: 1.25; margin-top: 0; margin-bottom: 10px; color: #111827;">
+      Full Optimized NB Residual: Five-Point Arithmetic-Lemma Assessment &amp; Stop Report
+    </h1>
+    <p style="font-size: 15px; color: #374151; margin-top: 0; margin-bottom: 22px;">
+      <strong>Outcome:</strong> Completed within the hard pre-computation decision budget (&le; 90 minutes, <strong>zero new numerical computation</strong>). No previously unassessed unconditional theorem or concrete non-circular arithmetic hypothesis satisfies all five required transfer items for the full optimized <em>q</em> = 2 Nyman&ndash;Beurling residual while surviving the <code>NS74</code> same-Gram control and the <code>NS83</code> rate restriction. <strong>Disposition:</strong> precise stop report and continued pause—no larger tables, no new certificate runs, and no adjacent variations.
+    </p>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      1. Fixed Target &amp; Preserved Structural Obligations (<code>NS87</code> / <code>PR66</code>)
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      Following the existing Nyman&ndash;Beurling specialist brief (<a href="nb-arithmetic-bottleneck-2026-09-29-v1.html" style="color: #24576d;"><code>nb-arithmetic-bottleneck-2026-09-29-v1.html</code></a> and <a href="nb-bottleneck-team-2026-09-29-v1/exact-target.md" style="color: #24576d;"><code>exact-target.md</code></a>), we fix <em>q</em> = 2 once and for all in <em>H</em> = <em>L</em><sup>2</sup>((0, &infin;), <em>dt</em>/<em>t</em><sup>2</sup>) with target &tau;(<em>t</em>) = <strong>1</strong><sub><em>t</em>&ge;1</sub> log <em>t</em> and atoms <em>a<sub>n</sub></em>(<em>t</em>) = <em>A</em>(<em>t</em>/<em>n</em>), <em>A</em>(<em>z</em>) = &int;<sub>0</sub><sup><em>z</em></sup> {<em>u</em>} <em>du</em>/<em>u</em>. This lane has an exact remaining expression and a controlled physical tail, which makes candidate inputs easier to assess precisely; <em>that precision does not establish that this lane is more likely to solve RH</em>. Every candidate assessment must preserve all four structural components:
+    </p>
+    <ol style="font-size: 15px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Corrected Target Loads:</strong>
+        <em>b<sub>n</sub></em> = &langle;&tau;, <em>a<sub>n</sub></em>&rangle;<sub><em>H</em></sub> = <em>P</em>(log <em>n</em>)/<em>n</em>, where
+        <em>P</em>(<em>v</em>) = (1/2)<em>v</em><sup>2</sup> + (2 &minus; &gamma;)<em>v</em> + 3 &minus; 2&gamma; &minus; &gamma;<sub>1</sub>.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Full Projected Gram (Schur Complement):</strong>
+        With <em>G<sub>N</sub></em> = (&langle;<em>a<sub>i</sub></em>, <em>a<sub>j</sub></em>&rangle;)<sub>1&le;<em>i</em>,<em>j</em>&le;<em>N</em></sub>, <em>C<sub>N</sub></em> = (&langle;<em>a<sub>i</sub></em>, <em>a<sub>n</sub></em>&rangle;)<sub>1&le;<em>i</em>&le;<em>N</em>&lt;<em>n</em>&le;2<em>N</em></sub>, and <em>D<sub>N</sub></em> = (&langle;<em>a<sub>m</sub></em>, <em>a<sub>n</sub></em>&rangle;)<sub><em>N</em>&lt;<em>m</em>,<em>n</em>&le;2<em>N</em></sub>, the complete projected new-block metric is
+        <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 8px 12px; margin: 6px 0; text-align: center;">
+          <em>H<sub>N</sub></em> = <em>D<sub>N</sub></em> &minus; <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>C<sub>N</sub></em> &succ; 0.
+        </div>
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Old-Space Refit &amp; Actual Residualized Correlations:</strong>
+        For the actual residual <em>r<sub>N</sub></em> = (<em>I</em> &minus; &Pi;<sub><em>N</em></sub>)&tau; = &tau; &minus; &sum;<sub><em>m</em>=1</sub><sup><em>N</em></sup> (<em>c<sub>N</sub></em>)<sub><em>m</em></sub> <em>a<sub>m</sub></em> with <em>c<sub>N</sub></em> = <em>G<sub>N</sub></em><sup>&minus;1</sup> <em>b</em><sub>old</sub> and squared error <em>E<sub>N</sub></em> = &Vert;<em>r<sub>N</sub></em>&Vert;<sub><em>H</em></sub><sup>2</sup>, the exact dyadic gain is &Delta;<sub><em>N</em></sub> = <em>E<sub>N</sub></em> &minus; <em>E</em><sub>2<em>N</em></sub> = <em>h<sub>N</sub><sup>T</sup> H<sub>N</sub></em><sup>&minus;1</sup> <em>h<sub>N</sub></em> with <em>h<sub>N</sub></em> = <em>b</em><sub>new</sub> &minus; <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>b</em><sub>old</sub>. At finite physical cutoff <em>T</em>, with <em>P<sub>T</sub></em>(<em>t</em>) = &int;<sub><em>t</em></sub><sup><em>T</em></sup> log(<em>u</em>/<em>t</em>) <em>r<sub>N</sub></em>(<em>u</em>) <em>du</em>/<em>u</em><sup>2</sup> and <em>q<sub>n</sub></em>(<em>T</em>) = <em>n</em><sup>&minus;1</sup> &int;<sub>0</sub><sup><em>T</em></sup> <em>P<sub>T</sub></em>(<em>t</em>) <em>dt</em> &minus; &sum;<sub>1&le;<em>k</em>&le;<em>T</em>/<em>n</em></sub> <em>P<sub>T</sub></em>(<em>kn</em>), the refitted finite observation vector is
+        <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 8px 12px; margin: 6px 0; text-align: center;">
+          <em>h&#770;</em><sub><em>N</em>,<em>T</em></sub> = <em>q</em><sub>new</sub>(<em>T</em>) &minus; <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>q</em><sub>old</sub>(<em>T</em>), &nbsp;&nbsp; <em>A<sub>N</sub></em>(<em>T</em>) := <em>h&#770;</em><sub><em>N</em>,<em>T</em></sub><sup><em>T</em></sup> <em>H<sub>N</sub></em><sup>&minus;1</sup> <em>h&#770;</em><sub><em>N</em>,<em>T</em></sub>.
+        </div>
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Complete <em>T</em> = <em>N</em><sup>6</sup> Tail Control (<code>NS87</code>):</strong>
+        At <em>T</em> = <em>N</em><sup>6</sup>, <em>A<sub>N</sub></em> := <em>A<sub>N</sub></em>(<em>N</em><sup>6</sup>) satisfies the proved complete-tail transfer
+        <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 8px 12px; margin: 6px 0; text-align: center;">
+          |<em>A<sub>N</sub></em> / <em>E<sub>N</sub></em> &minus; &Delta;<sub><em>N</em></sub> / <em>E<sub>N</sub></em>| &le; (988&radic;2 log <em>N</em> / <em>N</em><sup>1/2</sup>) &radic;(&Delta;<sub><em>N</em></sub> / <em>E<sub>N</sub></em>) + 976144 (log<sup>2</sup> <em>N</em>) / <em>N</em>,
+        </div>
+        so along <em>N</em> = 2<sup><em>j</em></sup>, &sum;<sub><em>j</em></sub> <em>A</em><sub>2<sup><em>j</em></sup></sub> / <em>E</em><sub>2<sup><em>j</em></sup></sub> = &infin; &hArr; &sum;<sub><em>j</em></sub> &Delta;<sub>2<sup><em>j</em></sup></sub> / <em>E</em><sub>2<sup><em>j</em></sup></sub> = &infin; &hArr; lim<sub><em>N</em>&rarr;&infin;</sub> <em>E<sub>N</sub></em> = 0 &hArr; <code>RH</code>.
+      </li>
+    </ol>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      2. Baseline Rejections Already Covered by <code>PR66/68</code>, Sept 30 Audits &amp; <code>NS74/83</code>
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      Per Step 2 of the directive, any mechanism already covered by <code>PR66/68</code>, the September 30 six-agent round, or <code>NS74/83</code> is rejected at the gate without re-running:
+    </p>
+    <ul style="font-size: 14.5px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 6px;">
+        <strong>Maier&ndash;Rassias / Bettin&ndash;Conrey Cotangent &amp; Estermann Bounds (<a href="mobius-estermann-transfer-2026-09-29-v1.html" style="color: #24576d;"><code>PR68</code> Estermann audit</a>):</strong>
+        Published theorems require 0 &lt; &delta; &lt; <em>D</em>/2 (<em>B</em> &ge; <em>k</em><sup>2&delta;</sup>) or <em>k<sup>D</sup></em> &le; <em>n</em> &lt; 2<em>k<sup>D</sup></em> (<em>D</em> &ge; 2), leaving the comparable-index block <em>N</em> &lt; <em>m</em>, <em>n</em> &le; 2<em>N</em> (ratio <em>m</em>/<em>n</em> &in; (1/2, 2)) untreated.
+      </li>
+      <li style="margin-bottom: 6px;">
+        <strong>Tao Logarithmic Chowla &amp; Matom&auml;ki&ndash;Radziwi&#322;&#322; Short Intervals (<a href="mobius-cancellation-transfer-2026-09-29-v1.html" style="color: #24576d;"><code>PR68</code> Cancellation audit</a>):</strong>
+        Fixed finite shifts 1 &le; <em>h</em> &le; <em>L</em> are already bounded by elementary diagonal Cauchy&ndash;Schwarz, while summing growing shifts <em>h</em> &lt; <em>N</em> with changing projection weights <em>H<sub>N</sub></em>(<em>m</em>, <em>m</em>+<em>h</em>) is unproved; M&ndash;R logarithmic savings leave an <em>O</em>(<em>N</em> / (log <em>N</em>)<sup><em>c</em></sup>) allowance instead of <em>O</em>(1).
+      </li>
+      <li style="margin-bottom: 6px;">
+        <strong>Prime-Scaling Subspace Decomposition (<a href="prime-scaling-admission-2026-09-29-v1.html" style="color: #24576d;"><code>PR68</code> Prime-scaling audit</a>):</strong>
+        Splitting <em>q<sub>pN</sub></em> = <em>q<sub>pN</sub></em><sup>(0)</sup> &minus; <em>D<sub>p</sub> q<sub>N</sub></em><sup>(0)</sup> leaves the <em>p</em>-coprime new-size cost <em>A</em> = &Vert;<em>u</em>&Vert;<sup>2</sup>, the masked cost <em>K<sub>N</sub></em><sup>(0)</sup>, and the signed cross term &minus;2&langle;<em>u</em>, <em>v</em>&rangle; unestimated.
+      </li>
+      <li style="margin-bottom: 6px;">
+        <strong>Weighted <em>n</em><sup>&minus;4</sup> Coefficient Coercivity &amp; Nilsequence Phase Imports (<a href="bounds-six-agent-2026-09-30-v1/README.md" style="color: #24576d;">Sept 30 <code>gain01</code> / <code>gain02</code></a>):</strong>
+        In <code>gain01</code>, <em>S</em> &succeq; <em>B</em><sup>&minus;1</sup> <em>L</em> inverts to <em>S</em><sup>&minus;1</sup> &preceq; <em>B L</em><sup>&minus;1</sup> (an <em>upper</em> bound in <em>h<sub>N</sub></em> coordinates), while in <em>y<sub>N</sub></em> = <em>S</em><sup>&minus;1</sup> <em>h<sub>N</sub></em> coordinates a M&ouml;bius-sized new block yields only <em>O</em>(<em>N</em><sup>&minus;3</sup>), whose normalized dyadic sum converges. In <code>gain02</code>, Davenport / Green&ndash;Tao phase bounds still lose a factor of <em>N</em>.
+      </li>
+      <li style="margin-bottom: 6px;">
+        <strong>Mandatory <code>NS74</code> &amp; <code>NS83</code> Safeguards:</strong>
+        By <code>NS74</code>, a unitary Blaschke deformation preserves the entire Gram matrix (<em>G<sub>N</sub></em>, <em>C<sub>N</sub></em>, <em>D<sub>N</sub></em>, <em>H<sub>N</sub></em>) while changing the target loads to produce a positive approximation floor (2&beta;&minus;1)(1&minus;&beta;)<sup>2</sup>/&beta;<sup>6</sup> &gt; 0; thus no Gram-only or target-blind identity can suffice. By <code>NS83</code>, critical-line zeros force <em>E<sub>N</sub></em> &ge; <em>c</em> / log <em>N</em> and exclude eventual constant relative contraction (&Delta;<sub>2<sup><em>j</em></sup></sub> / <em>E</em><sub>2<sup><em>j</em></sup></sub> &ge; &delta; &gt; 0) or eventual <em>a</em>/<em>j</em> contraction with <em>a</em> &gt; 1.
+      </li>
+    </ul>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      3. Five-Point Assessment of Post-<code>PR66/68</code> Candidate Arithmetic Inputs
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      We now test the remaining candidate mechanisms proposed since <code>PR66/68</code> against all five required criteria: <strong>(i) exact expression</strong>, <strong>(ii) coefficient hypotheses</strong>, <strong>(iii) uniform range</strong>, <strong>(iv) estimating method</strong>, and <strong>(v) remaining transfer</strong>.
+    </p>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f3f4f6; border-bottom: 2px solid #d1d5db;">
+          <th style="padding: 8px 6px; text-align: left; width: 22%;">Candidate Input</th>
+          <th style="padding: 8px 6px; text-align: left; width: 39%;">Items (i)&ndash;(iv): Expression, Coefficients, Range &amp; Method</th>
+          <th style="padding: 8px 6px; text-align: left; width: 39%;">Item (v): Remaining Transfer &amp; Gate Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e7eb; vertical-align: top;">
+          <td style="padding: 8px 6px;">
+            <strong>Candidate A</strong><br/>
+            Dual Stieltjes&ndash;Divisor Smooth Extractor<br/>
+            (<code>M1</code> Thm 2A / <code>M6a</code>)
+          </td>
+          <td style="padding: 8px 6px;">
+            <strong>(i) Exact expression:</strong> For &psi;&#771; &in; <em>H</em><sub>0</sub><sup>&nu;</sup>([1, 2]) with &int;<sub>1</sub><sup>2</sup> &psi;&#771;(<em>u</em>) <em>du</em> = 0 and <em>w<sub>n</sub></em> = &psi;&#771;(<em>n</em>/<em>N</em>) (<em>N</em> &lt; <em>n</em> &le; 2<em>N</em>),<br/>
+            <em>w<sup>T</sup> h<sub>N</sub></em> = &sum;<sub><em>n</em>=<em>N</em>+1</sub><sup>2<em>N</em>&minus;1</sup> &psi;&#771;(<em>n</em>/<em>N</em>)(1 &lowast; &Delta;<em>c<sub>N</sub></em>)(<em>n</em>),<br/>
+            with projected cost <em>w<sup>T</sup> H<sub>N</sub> w</em> = &Vert;(&Pi;<sub>2<em>N</em></sub> &minus; &Pi;<sub><em>N</em></sub>)&Lambda;<sub><em>b</em></sub>&Vert;<sub><em>H</em></sub><sup>2</sup> &le; <em>C</em><sub>&psi;&#771;</sub> <em>N</em><sup>3</sup>.<br/>
+            <strong>(ii) Coefficient hypotheses:</strong> Applies to the actual optimizer increment &Delta;<em>c<sub>N</sub></em> = <em>c</em><sub>2<em>N</em></sub> &minus; <em>c<sub>N</sub></em> (<em>c<sub>N</sub></em> = <em>G<sub>N</sub></em><sup>&minus;1</sup> <em>b</em><sub>old</sub>).<br/>
+            <strong>(iii) Uniform range:</strong> <em>N</em> &lt; <em>n</em> &lt; 2<em>N</em>, all dyadic <em>N</em> = 2<sup><em>j</em></sup>.<br/>
+            <strong>(iv) Estimating method:</strong> Algebraic elimination of <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> via &langle;&Lambda;<sub><em>b</em></sub>, <em>a<sub>m</sub></em>&rangle; = 0 (<em>m</em> &le; <em>N</em>) and &langle;&Lambda;<sub><em>b</em></sub>, &tau;&rangle; = 0.
+          </td>
+          <td style="padding: 8px 6px;">
+            <strong>Transfer failure 1 (Circularity):</strong> Since <em>w<sup>T</sup> h<sub>N</sub></em> = &langle;&Lambda;<sub><em>b</em></sub>, <em>r<sub>N</sub></em> &minus; <em>r</em><sub>2<em>N</em></sub>&rangle;<sub><em>H</em></sub>, lower-bounding |<em>w<sup>T</sup> h<sub>N</sub></em>| &ge; <em>c N</em><sup>3/2</sup> &radic;(<em>E<sub>N</sub></em> / log <em>N</em>) requires an independent signed lower bound on &Delta;<em>c<sub>N</sub></em> = <em>c</em><sub>2<em>N</em></sub> &minus; <em>c<sub>N</sub></em> that the identity does not supply.<br/>
+            <strong>Transfer failure 2 (<code>NS74</code> Control):</strong> Under <code>NS74</code>&rsquo;s unitary Blaschke deformation <em>U<sub>&beta;</sub></em><sup>&lowast;</sup>&tau;, the orthogonal defect (<em>I</em> &minus; <em>P<sub>T</sub></em>)(<em>U<sub>&beta;</sub></em><sup>&lowast;</sup>&tau;) &perp; <em>V</em><sub>2<em>N</em></sub> has zero pairing with every atom <em>a<sub>n</sub></em>, so the exact same algebraic identity holds on the removable component while <em>E<sub>N</sub></em>(&beta;) &rarr; (2&beta;&minus;1)(1&minus;&beta;)<sup>2</sup>/&beta;<sup>6</sup> &gt; 0.<br/>
+            <span style="color: #b91c1c; font-weight: bold;">Verdict: REJECTED (algebraic identity only; no arithmetic lower bound).</span>
+          </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb; vertical-align: top;">
+          <td style="padding: 8px 6px;">
+            <strong>Candidate B</strong><br/>
+            Bettin&ndash;Conrey / B&aacute;ez-Duarte Mellin Reciprocity &amp; Contour Shift on <em>h<sub>N</sub></em>
+          </td>
+          <td style="padding: 8px 6px;">
+            <strong>(i) Exact expression:</strong> Mellin representation<br/>
+            <em>h<sub>n</sub></em> = (2&pi;<em>i</em>)<sup>&minus;1</sup> &int;<sub>(1/2)</sub> [&zeta;(1&minus;<em>s</em>)/(1&minus;<em>s</em>)<sup>2</sup>] <em>n</em><sup>&minus;(1&minus;<em>s</em>)</sup> <em>F<sub>N</sub></em>(<em>s</em>) <em>ds</em>,<br/>
+            where <em>F<sub>N</sub></em>(<em>s</em>) = 1 &minus; &sum;<sub><em>m</em>&le;<em>N</em></sub> (<em>c<sub>N</sub></em>)<sub><em>m</em></sub> <em>m</em><sup>&minus;<em>s</em></sup> &zeta;(<em>s</em>) satisfies the normal equations &langle;<em>r<sub>N</sub></em>, <em>a<sub>m</sub></em>&rangle; = 0 (1 &le; <em>m</em> &le; <em>N</em>).<br/>
+            <strong>(ii) Coefficient hypotheses:</strong> Normal-equation orthogonality on 1 &le; <em>m</em> &le; <em>N</em>.<br/>
+            <strong>(iii) Uniform range:</strong> <em>N</em> &lt; <em>n</em> &le; 2<em>N</em>.<br/>
+            <strong>(iv) Estimating method:</strong> Residue shift left of Re(<em>s</em>) = 1/2 (reciprocal-knot series) or critical-zero evaluation at &rho; = 1/2 + <em>i</em>&gamma;.
+          </td>
+          <td style="padding: 8px 6px;">
+            <strong>Transfer failure 1 (<code>NS83</code> Direction):</strong> Evaluating <em>F<sub>N</sub></em>(&rho;) = 1 at critical-line zeros bounds the <em>total</em> remaining error <em>E<sub>N</sub></em> &ge; <em>c</em> / log <em>N</em> from below (<code>NS83</code>), not the single dyadic step &Delta;<sub><em>N</em></sub> = <em>E<sub>N</sub></em> &minus; <em>E</em><sub>2<em>N</em></sub>, because tail atoms <em>n</em> &gt; 2<em>N</em> also carry the zero residue.<br/>
+            <strong>Transfer failure 2 (<code>NS78/87</code> Identity):</strong> Shifting left of Re(<em>s</em>) = 1/2 reproduces the exact divisor-cell / reciprocal-knot expansion whose truncation at <em>T</em> = <em>N</em><sup>6</sup> is already <em>h&#770;</em><sub><em>N</em>,<em>N</em><sup>6</sup></sub>, leaving the signs of <em>c<sub>N</sub></em> = <em>G<sub>N</sub></em><sup>&minus;1</sup> <em>b</em><sub>old</sub> unestimated.<br/>
+            <span style="color: #b91c1c; font-weight: bold;">Verdict: REJECTED (reduces to <code>NS78/83/87</code> without a new step bound).</span>
+          </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb; vertical-align: top;">
+          <td style="padding: 8px 6px;">
+            <strong>Candidate C</strong><br/>
+            Bilinear Kloosterman / Cotangent Dispersion on Comparable Ranges<br/>
+            (Bettin&ndash;Chandee 2018; Fouvry&ndash;Radziwi&#322;&#322; 2022)
+          </td>
+          <td style="padding: 8px 6px;">
+            <strong>(i) Exact expression:</strong> Off-diagonal projected bilinear form<br/>
+            &sum;<sub><em>N</em>&lt;<em>m</em>&ne;<em>n</em>&le;2<em>N</em></sub> <em>d<sub>m</sub> d<sub>n</sub> H<sub>N</sub></em>(<em>m</em>, <em>n</em>)<br/>
+            for <em>d<sub>n</sub></em> = &minus;&mu;(<em>n</em>) log(2<em>N</em>/<em>n</em>) (<code>NS98</code>).<br/>
+            <strong>(ii) Coefficient hypotheses:</strong> Prescribed M&ouml;bius/log-taper weights <em>d<sub>n</sub></em>.<br/>
+            <strong>(iii) Uniform range:</strong> Comparable indices <em>N</em> &lt; <em>m</em>, <em>n</em> &le; 2<em>N</em> (<em>m</em>/<em>n</em> &in; (1/2, 2)).<br/>
+            <strong>(iv) Estimating method:</strong> Bilinear Kloosterman/Estermann reciprocity in the comparable-index range left open by Maier&ndash;Rassias (<code>PR68</code>).
+          </td>
+          <td style="padding: 8px 6px;">
+            <strong>Transfer failure 1 (Inverse-Gram Kernel <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>C<sub>N</sub></em>):</strong> Bilinear Kloosterman dispersion bounds oscillatory fractions <em>e</em>(<em>a m&#772;</em>/<em>n</em>), whereas <em>H<sub>N</sub></em> = <em>D<sub>N</sub></em> &minus; <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>C<sub>N</sub></em> requires cancelling the smooth elementary main term of <em>D<sub>N</sub></em> against the non-explicit inverse-Gram subtraction <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>C<sub>N</sub></em>.<br/>
+            <strong>Transfer failure 2 (Missing Numerator):</strong> Supplies no lower bound on the companion numerator <em>d<sup>T</sup> h&#770;</em><sub><em>N</em>,<em>N</em><sup>6</sup></sub> required by <code>MOBIUS-MARGIN</code> and <code>NS74</code>.<br/>
+            <span style="color: #b91c1c; font-weight: bold;">Verdict: REJECTED (does not transfer through <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>C<sub>N</sub></em> or supply <code>MOBIUS-MARGIN</code>).</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      4. Hard Decision Budget Outcome &amp; Stop Report
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      In compliance with Step 3 of the directive:
+    </p>
+    <ul style="font-size: 15px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 8px;">
+        <strong>No Admissible New Estimate Identified:</strong> Neither the internal campaign&rsquo;s dual Stieltjes&ndash;divisor extractor (<code>M1</code> Thm 2A / <code>M6a</code>) nor the checked external Mellin-reciprocity and bilinear-dispersion theorems supply a previously unassessed theorem or concrete non-circular arithmetic hypothesis that meets all five transfer requirements on <em>h&#770;</em><sub><em>N</em>,<em>N</em><sup>6</sup></sub> = <em>q</em><sub>new</sub>(<em>N</em><sup>6</sup>) &minus; <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>q</em><sub>old</sub>(<em>N</em><sup>6</sup>) and <em>H<sub>N</sub></em> = <em>D<sub>N</sub></em> &minus; <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>C<sub>N</sub></em>.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Precise Stop &amp; Continued Pause:</strong> We issue this stop report and maintain the pause across both <code>M1</code>&ndash;<code>M17</code> and <code>NB-GAIN</code> / <code>MOBIUS-COST</code>. No new numerical tables, larger <em>N</em> scans, interval certificates, research rows, theorem nodes, thaws, or manuscript versions are produced.
+      </li>
+    </ul>
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-top: 28px; font-size: 14px;">
+      <strong>Wall Check:</strong> Same open gap. Closest: <code>NS87/98</code> and <code>PR66/68</code>. No new arithmetic input has yet been supplied. Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

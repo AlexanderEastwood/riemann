@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Overnight Autonomous RH Research Synthesis — Four-Lane 384-Bit Certified Progress Report (2026-10-15-v1)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 32px auto; padding: 0 16px; line-height: 1.58; color: #1a1a1a; background-color: #ffffff;">
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-bottom: 24px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. Nothing in this report claims a proof of RH or global Weil positivity.
+</div>
+
+<h1 style="font-size: 1.52em; line-height: 1.28; margin-bottom: 6px; color: #111111;">Overnight Autonomous RH Research Synthesis (Until 07:00 AM PDT): Six New 384-Bit Certified Audit Packages Across All Active Lanes</h1>
+<p style="margin-top: 0; color: #555555; font-size: 0.92em;">
+<strong>Date:</strong> 2026-10-15 (Completed before 07:00 AM PDT) &middot; <strong>Version:</strong> v1 &middot; <strong>Branch:</strong> <code>codex/four-lane-audit-20261014</code> (PR #82) &middot; <strong>Worktree:</strong> <code>/Users/alex/riemann-worktrees/origin-main-review</code> (<code>/Users/alex/Documents/ChatGPT/riemann</code> untouched at <code>50f6f21</code>)
+</p>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">1. Executive Summary of Overnight Advances</h2>
+<p>
+Following the CODEX audit reviews (<code>argon-next-four-review-2026-10-15-v1</code> and <code>argon-audit-review-2026-10-15-v1</code>), we resolved every mathematical and precision item raised by CODEX and executed six sequential, self-contained 384-bit ball arithmetic (<code>flint.ctx.prec = 384</code>) research packages across the active mathematical lanes (<code>KERNEL-API</code>, <code>COEFF</code> / <code>NB-GAIN</code>, <code>ZERO-GEOMETRY</code>, and <code>EVIDENCE</code>):
+</p>
+<ol style="margin-top: 6px; padding-left: 22px;">
+<li style="margin-bottom: 8px;">
+<strong>Lane I (<code>KERNEL-API</code> — Finite-<em>a</em> All-Vector Weil Positivity Extended from <em>a</em> = &frac12;&thinsp;log&thinsp;6 &approx; 0.895880 all the way to the Three-Island Isometric Horizon <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8 &approx; 1.039721):</strong>
+Across four progressive audit packages, we pushed certified all-vector Weil positivity <em>Q</em><sub><em>a</em></sub>(<em>L</em><sub>2</sub><em>h</em>) &ge; &mu;<sub>min</sub>(<em>a</em>)&Vert;<em>h</em>&Vert;<sub>2</sub><sup>2</sup> (&mu;<sub>min</sub>(<em>a</em>) &gt; 0) through five structural regimes:
+<ul style="margin-top: 4px; padding-left: 18px;">
+<li><em>a</em> &isin; (&frac12;&thinsp;log&thinsp;5, &frac12;&thinsp;log&thinsp;6] &approx; (0.804719, 0.895880] (<em>m</em> = 5 prime reflection regime),</li>
+<li><em>a</em> &isin; (&frac12;&thinsp;log&thinsp;6, log(5/2)] &approx; (0.895880, 0.916291] (coupled 2 &times; 2 <em>m</em> = 6 reflection fiber regime),</li>
+<li><em>a</em> &isin; (log(5/2), &frac12;&thinsp;log&thinsp;7] &approx; (0.916291, 0.972955] (coupled 3 &times; 3 tridiagonal (&tau;<sub>5</sub>, &tau;<sub>6</sub>) fiber regime up to the <em>m</em> = 7 prime entry),</li>
+<li><em>a</em> &isin; (&frac12;&thinsp;log&thinsp;7, &frac12;&thinsp;log(15/2)] &approx; (0.972955, 1.007452] (<em>m</em> = 7 prime reflection + <em>m</em> = 3 shift-difference regime across unit support <em>a</em> = 1.000 up to the 3-point fiber closure saturation <em>d</em><sub>5</sub> = <em>x</em><sub>6</sub>), and</li>
+<li><em>a</em> &isin; (&frac12;&thinsp;log(15/2), &frac32;&thinsp;log&thinsp;2] &approx; (1.007452, 1.039721] (4-point Klein 4-group <em>V</em><sub>4</sub> &cong; &#8484;<sub>2</sub> &times; &#8484;<sub>2</sub> fiber closure up to the exact <strong>Three-Island Isometric Horizon</strong> <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8), plus the <strong>Universal Prime-2 Dyadic Poisson Kernel Collapse Theorem</strong> for all <em>a</em> &gt; 0.</li>
+</ul>
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Lane II (<code>COEFF</code> / <code>NB-GAIN</code> — Multi-Mode Jacobi&ndash;Stieltjes&ndash;Divisor Extractors in <code>NS-61</code> Hilbert Space):</strong>
+Upgraded the rank-1 degree-7 extractor &psi;&#771;<sub>7</sub>(<em>u</em>) to the complete <strong><em>K</em>-Mode Jacobi&ndash;Stieltjes&ndash;Divisor Hierarchy</strong> &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(<em>u</em>) = (<em>u</em>&minus;1)<sup>&nu;</sup>(2&minus;<em>u</em>)<sup>&nu;</sup><em>P&#771;</em><sub><em>m</em></sub><sup>(&nu;,&nu;)</sup>(2<em>u</em>&minus;3) (&nu; &isin; {2, 3}, <em>m</em> &ge; 1), proved the unconditional <strong>Loewner Matrix Bessel Inequality</strong> 0 &prec; <em>G&#771;</em><sub>proj,<em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup> &preceq; <em>N</em><em>G&#770;</em><sup>(&nu;,<em>K</em>)</sup>, computed the exact rational <em>LDL</em><sup><em>T</em></sup> diagonalization over &mathbb;Q, and eliminated the <em>N</em> = 16 single-mode phase-cancellation dip (a <strong>1,339.9&times;</strong> improvement in the unconditional Bessel bound at <em>N</em> = 16).
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Lane III (<code>ZERO-GEOMETRY</code> — Higher-Order Wronskian&ndash;Hankel Tur&aacute;n Hierarchy &amp; Exact <em>S</em><sub>max</sub> = 1/4 Defect Identity):</strong>
+Proved and certified in exact rational arithmetic (<code>fractions.Fraction</code>) and 384-bit ball arithmetic that the reciprocal power sums <em>s</em><sub>2<em>m</em>+2</sub>(<em>t</em>) of backward heat-flow zeros form a strictly positive definite Stieltjes&ndash;Hankel moment hierarchy <em>H</em><sub><em>r</em></sub>(<em>t</em>) = [<em>c</em><sub><em>i</em>+<em>j</em></sub>(<em>t</em>)]<sub>0&le;<em>i</em>,<em>j</em>&le;<em>r</em>&minus;1</sub> &succ; 0 for all <em>r</em> &ge; 1 under real zeros (certified for <em>r</em> &isin; {2, 3, 4}), and proved the exact log-concavity defect identity <em>D</em>(<em>t</em><sub>0</sub>; &alpha; + <em>i</em>&beta;) = 8&alpha;<sup>2</sup>&beta;<sup>2</sup>(&beta;<sup>2</sup> &minus; 3&alpha;<sup>2</sup>)/(&alpha;<sup>2</sup> + &beta;<sup>2</sup>)<sup>4</sup> establishing <em>S</em><sub>max</sub> = 1/4 at &beta; = &radic;3&alpha;.
+</li>
+</ol>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">2. Complete Inventory of Certified Audit Packages &amp; SHA-256 Hashes</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.82em;">
+<thead>
+<tr style="background-color: #f2f2f2; border-bottom: 2px solid #cccccc;">
+<th style="padding: 6px; text-align: left;">Audit Directory &amp; HTML Report</th>
+<th style="padding: 6px; text-align: left;">Lane</th>
+<th style="padding: 6px; text-align: left;">Key Certified Result (384-Bit <code>flint.arb</code>)</th>
+<th style="padding: 6px; text-align: left;"><code>verification.json</code> SHA-256 Prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>codex-review-and-all-vector-extension-2026-10-15-v1</code></td>
+<td style="padding: 6px;"><code>KERNEL-API</code> / <code>COEFF</code></td>
+<td style="padding: 6px;">Resolves all CODEX review items; certifies <em>a</em> = 0.875 and <em>a</em><sub>&#9733;&#9733;</sub> = &frac12;&thinsp;log&thinsp;6 &approx; 0.895880 (&mathcal;T;<sub>even</sub> = 0.975657 &lt; 1).</td>
+<td style="padding: 6px;"><code>c94e4dfe64137316...</code></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>all-vector-positivity-beyond-log6-2026-10-15-v1</code></td>
+<td style="padding: 6px;"><code>KERNEL-API</code></td>
+<td style="padding: 6px;">2&times;2 and 3&times;3 fiber preconditioners; certifies <em>a</em> = log(5/2), 0.940, 0.960, and <em>a</em><sub>&#9733;&#9733;&#9733;</sub> = &frac12;&thinsp;log&thinsp;7 &approx; 0.972955 (&mathcal;T;<sub>even</sub> = 0.985566 &lt; 1).</td>
+<td style="padding: 6px;"><code>342cd8b88c755cc5...</code></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>multimode-dyadic-extractor-2026-10-15-v1</code></td>
+<td style="padding: 6px;"><code>COEFF</code> / <code>NB-GAIN</code></td>
+<td style="padding: 6px;"><em>K</em>-mode Jacobi&ndash;Stieltjes&ndash;Divisor hierarchy (&nu; &isin; {2, 3}, <em>K</em> &le; 4), exact rational <em>LDL</em><sup><em>T</em></sup> Bessel bound, 1,339.9&times; boost at <em>N</em> = 16.</td>
+<td style="padding: 6px;"><code>51fb88c333ade417...</code></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>all-vector-positivity-beyond-log7-2026-10-15-v1</code> (HTML <code>-v1</code>, <code>-v2</code>)</td>
+<td style="padding: 6px;"><code>KERNEL-API</code></td>
+<td style="padding: 6px;">3-point fiber closure on (&frac12;&thinsp;log&thinsp;7, &frac12;&thinsp;log(15/2)]; certifies <em>a</em> = log(8/3), 0.990, 1.000, and &frac12;&thinsp;log(15/2) &approx; 1.007452 (&mathcal;T;<sub>even</sub><sup>defl</sup> &le; 0.995110 &lt; 1).</td>
+<td style="padding: 6px;"><code>d8b08ce41b64216c...</code></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>all-vector-positivity-three-island-horizon-2026-10-15-v1</code></td>
+<td style="padding: 6px;"><code>KERNEL-API</code></td>
+<td style="padding: 6px;">Klein 4-group <em>V</em><sub>4</sub> fiber closure on (&frac12;&thinsp;log(15/2), &frac32;&thinsp;log&thinsp;2]; certifies <em>a</em> = 1.015, 1.025, 1.032, and &frac32;&thinsp;log&thinsp;2 &approx; 1.039721 (&mathcal;T;<sub>even</sub><sup>defl</sup> = 0.997955 &lt; 1).</td>
+<td style="padding: 6px;"><code>8c67c94001661a18...</code></td>
+</tr>
+<tr style="border-bottom: 1px solid #cccccc;">
+<td style="padding: 6px;"><code>higher-order-wronskian-hankel-hierarchy-2026-10-15-v1</code></td>
+<td style="padding: 6px;"><code>ZERO-GEOMETRY</code></td>
+<td style="padding: 6px;">Exact rational &amp; 384-bit certification of Stieltjes&ndash;Hankel determinants det&thinsp;<em>H</em><sub><em>r</em></sub>(<em>t</em>) &gt; 0 (<em>r</em> &isin; {2, 3, 4}) and exact critical defect <em>S</em><sub>max</sub> = 1/4.</td>
+<td style="padding: 6px;"><code>3b08c963df344db8...</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">3. Separately Versioned Specialist Briefs Preserved</h2>
+<p>
+In compliance with the document versioning rule, every specialist brief revision is preserved as a distinct file in <code>audits/</code>:
+</p>
+<ul style="margin-top: 6px; padding-left: 22px;">
+<li><code>audits/coeff-specialist-brief-2026-10-15-v1.html</code> through <code>-v4.html</code> (earlier session versions, untouched),</li>
+<li><code>audits/coeff-specialist-brief-2026-10-15-v5.html</code> (CODEX review updates: exact <code>NS-61</code> symbols, unsplit residual <em>E</em><sub><em>N</em></sub><sup>(2)</sup>, and Target A vs Target B separation),</li>
+<li><code>audits/coeff-specialist-brief-2026-10-15-v6.html</code> (<em>K</em>-Mode Jacobi&ndash;Stieltjes&ndash;Divisor Hierarchy, Loewner matrix Bessel inequality, exact rational <em>LDL</em><sup><em>T</em></sup> diagonalization, and phase-robust Target B),</li>
+<li><code>audits/coeff-specialist-brief-2026-10-15-v7.html</code> (Cross-lane synthesis incorporating the 3-island horizon certificate at <em>a</em> = &frac32;&thinsp;log&thinsp;2 and the higher-order Wronskian&ndash;Hankel hierarchy).</li>
+</ul>
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-top: 28px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+</div>
+
+</body>
+</html>

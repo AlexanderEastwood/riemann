@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>All-Vector Positivity Beyond a = (1/2) log 7 up to the 3-Point Fiber Closure Horizon a = (1/2) log(15/2) (2026-10-15-v2)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 32px auto; padding: 0 16px; line-height: 1.58; color: #1a1a1a; background-color: #ffffff;">
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-bottom: 24px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. Nothing in this report claims a proof of RH or global Weil positivity.
+</div>
+
+<h1 style="font-size: 1.52em; line-height: 1.28; margin-bottom: 6px; color: #111111;">All-Vector Weil Positivity Beyond <em>a</em> = &frac12;&thinsp;log&thinsp;7 up to the 3-Point Fiber Closure Horizon <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;</sub> = &frac12;&thinsp;log(15/2) &approx; 1.007452 (v2)</h1>
+<p style="margin-top: 0; color: #555555; font-size: 0.92em;">
+<strong>Date:</strong> 2026-10-15 &middot; <strong>Version:</strong> v2 (preserves v1 untouched; incorporates exact &xi;<sub>&Delta;&alpha;</sub> root, exact [0, &tau;<sub>3</sub>] reflection support, smooth <em>w</em><sub>2</sub>(<em>x</em>) = 1 &minus; 2(<em>x</em>/<em>b</em>), and Courant&ndash;Fischer 2-Mode Deflated Trace Theorem) &middot; <strong>Lane:</strong> <code>KERNEL-API</code>
+</p>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">1. Executive Summary</h2>
+<p>
+This audit extends deterministic 384-bit <code>flint.arb</code> all-vector Weil positivity <em>Q</em><sub><em>a</em></sub>(<em>L</em><sub>2</sub><em>h</em>) &ge; &mu;<sub>min</sub>(<em>a</em>)&Vert;<em>h</em>&Vert;<sub>2</sub><sup>2</sup> (&mu;<sub>min</sub>(<em>a</em>) &gt; 0) beyond the <em>m</em> = 7 prime-pair entry threshold <em>a</em><sub>&#9733;&#9733;&#9733;</sub> = &frac12;&thinsp;log&thinsp;7 &approx; 0.9729550745 across the unit-support landmark <em>a</em> = 1.0000000000 up to the exact <strong>3-Point Fiber Closure Horizon</strong>
+</p>
+<p style="text-align: center; font-size: 1.04em; margin: 14px 0;">
+<em>a</em><sub>&#9733;&#9733;&#9733;&#9733;</sub> = &frac12;&thinsp;log(15/2) = &frac12;(log&thinsp;3 + log&thinsp;5 &minus; log&thinsp;2) &approx; 1.0074515103, &qquad; <em>d</em><sub>5</sub> = <em>x</em><sub>6</sub> = &frac12;&thinsp;log(27/20) &approx; 0.1500522962.
+</p>
+<p>
+Version 2 upgrades the verification script <code>verify_beyond_log7.py</code> so that:
+</p>
+<ol style="margin-top: 6px; padding-left: 22px;">
+<li style="margin-bottom: 6px;">
+The negative-weight operator <em>A</em><sub>&minus;</sub>(&Delta;&alpha;) is integrated over its exact support [0, &xi;<sub>&Delta;&alpha;</sub>] where &alpha;(&xi;<sub>&Delta;&alpha;</sub>) = &Delta;&alpha; = 0.25 (&xi;<sub>&Delta;&alpha;</sub> &approx; 8.0372408860),
+</li>
+<li style="margin-bottom: 6px;">
+For <em>a</em> &gt; log(8/3), the <em>m</em> = 3 reflection <em>R</em><sub>&tau;<sub>3</sub></sub> diagonal term &minus;<em>c</em><sub>3</sub> is applied on its exact reflection domain [0, &tau;<sub>3</sub>] and the <em>m</em> = 3 shift term &minus;<em>c</em><sub>3</sub> on [0, <em>s</em><sub>3</sub>] &cup; [&tau;<sub>3</sub>, <em>b</em>],
+</li>
+<li style="margin-bottom: 6px;">
+The second Plancherel mode uses the smooth linear profile <em>w</em><sub>2</sub>(<em>x</em>) = 1 &minus; 2(<em>x</em>/<em>b</em>) on [0, <em>b</em>] (with &xi;<sub>1</sub> = 8.8 &gt; &xi;<sub>&Delta;&alpha;</sub>), and
+</li>
+<li style="margin-bottom: 6px;">
+The <strong>Courant&ndash;Fischer 2-Mode Deflated Trace Theorem</strong> certifies &lambda;<sub>max</sub>(<em>T</em><sub>even</sub>) &le; &mathcal;T;<sub>even</sub><sup>defl</sup>(<em>a</em>) := Tr(<em>T</em><sub>even</sub>) &minus; &mu;<sub>2</sub>(<em>G</em><sub>2</sub><sup>&minus;1</sup><em>M</em><sub>2</sub>) &lt; 1 and &mathcal;T;<sub>odd</sub>(<em>a</em>) &lt; 1 in 384-bit ball arithmetic.
+</li>
+</ol>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">2. 384-Bit <code>flint.arb</code> Certified Checkpoints (&Delta;&alpha; = 0.250, &xi;<sub>&Delta;&alpha;</sub> &approx; 8.037241)</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.86em;">
+<thead>
+<tr style="background-color: #f2f2f2; border-bottom: 2px solid #cccccc;">
+<th style="padding: 7px 6px; text-align: left;">Checkpoint</th>
+<th style="padding: 7px 6px; text-align: right;"><em>a</em></th>
+<th style="padding: 7px 6px; text-align: right;"><em>K</em></th>
+<th style="padding: 7px 6px; text-align: right;"><em>M</em><sub>p</sub></th>
+<th style="padding: 7px 6px; text-align: right;">Tr(<em>T</em><sub>even</sub>)</th>
+<th style="padding: 7px 6px; text-align: right;">&mu;<sub>2</sub>(<em>G</em><sub>2</sub><sup>&minus;1</sup><em>M</em><sub>2</sub>)</th>
+<th style="padding: 7px 6px; text-align: right;">&mathcal;T;<sub>even</sub><sup>defl</sup></th>
+<th style="padding: 7px 6px; text-align: right;">&mathcal;T;<sub>odd</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>a = log(8/3)</code></td>
+<td style="padding: 6px; text-align: right;">0.9808292530</td>
+<td style="padding: 6px; text-align: right;">28</td>
+<td style="padding: 6px; text-align: right;">7</td>
+<td style="padding: 6px; text-align: right;">1.00252576</td>
+<td style="padding: 6px; text-align: right;">0.01095257</td>
+<td style="padding: 6px; text-align: right;"><strong>0.99157318</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.74217857</strong></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>a = 0.990</code></td>
+<td style="padding: 6px; text-align: right;">0.9900000000</td>
+<td style="padding: 6px; text-align: right;">41</td>
+<td style="padding: 6px; text-align: right;">10</td>
+<td style="padding: 6px; text-align: right;">1.00679590</td>
+<td style="padding: 6px; text-align: right;">0.01279308</td>
+<td style="padding: 6px; text-align: right;"><strong>0.99400282</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.77622783</strong></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>a = 1.000</code></td>
+<td style="padding: 6px; text-align: right;">1.0000000000</td>
+<td style="padding: 6px; text-align: right;">40</td>
+<td style="padding: 6px; text-align: right;">10</td>
+<td style="padding: 6px; text-align: right;">1.01004310</td>
+<td style="padding: 6px; text-align: right;">0.01493306</td>
+<td style="padding: 6px; text-align: right;"><strong>0.99511004</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.81236072</strong></td>
+</tr>
+<tr style="border-bottom: 1px solid #cccccc;">
+<td style="padding: 6px;"><code>a = (1/2) log(15/2)</code></td>
+<td style="padding: 6px; text-align: right;">1.0074515103</td>
+<td style="padding: 6px; text-align: right;">46</td>
+<td style="padding: 6px; text-align: right;">11</td>
+<td style="padding: 6px; text-align: right;">1.00942901</td>
+<td style="padding: 6px; text-align: right;">0.01665326</td>
+<td style="padding: 6px; text-align: right;"><strong>0.99277575</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.83529956</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 0.92em; color: #333333;">
+<strong>Verification Artifact:</strong> <code>audits/all-vector-positivity-beyond-log7-2026-10-15-v1/verification.json</code><br>
+<strong>SHA-256:</strong> <code>d8b08ce41b64216c4e2cf72d385d1549ef2c32944d339048ec5861f8257801d4</code><br>
+<strong>Typecheck:</strong> <code>pyright</code> clean (<code>0 errors, 0 warnings</code>).
+</p>
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-top: 28px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+</div>
+
+</body>
+</html>

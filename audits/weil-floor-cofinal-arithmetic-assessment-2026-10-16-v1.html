@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cofinal Shifted Weil Floor &amp; Kernel-API Arithmetic-Lemma Assessment — 2026-10-16 v1</title>
+</head>
+<body style="margin:0;padding:32px 20px;background-color:#fbfaf7;color:#1f2328;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;">
+<div style="max-width:680px;margin:0 auto;background-color:#ffffff;border:1px solid #d8d3c8;padding:36px 40px;box-sizing:border-box;">
+
+  <div style="padding:12px 16px;background-color:#f4f1ea;border-left:4px solid #5c4b37;margin-bottom:24px;font-size:14px;line-height:1.5;">
+    <strong>Wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR</code> (<code>NS24/34/39/43/47/49/50</code>, <code>v1.36/v1.38/v1.53</code>) and <code>KERNEL-API</code> (<code>NS51/55/57/58</code>). No new arithmetic input has yet been supplied.
+  </div>
+
+  <div style="border-bottom:2px solid #2c3e50;padding-bottom:16px;margin-bottom:24px;">
+    <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#5c6670;margin-bottom:6px;">
+      TSG Global &middot; Riemann Hypothesis Research Campaign &middot; Pre-Computation Arithmetic Assessment (v1)
+    </div>
+    <h1 style="margin:0 0 8px 0;font-size:23px;line-height:1.3;color:#111827;font-weight:normal;">
+      Tightly Scoped Arithmetic-Lemma Assessment for the Cofinal Shifted Weil Floor (<code>WEIL-FLOOR</code>) and <code>KERNEL-API</code>
+    </h1>
+    <div style="font-size:13px;color:#4b5563;">
+      <strong>Date:</strong> October 16, 2026 &middot;
+      <strong>Version:</strong> v1 (companion to <a href="nb-full-residual-arithmetic-assessment-2026-10-16-v1.html" style="color:#1d4ed8;">nb-full-residual-arithmetic-assessment-2026-10-16-v1.html</a> and <a href="coeff-specialist-brief-2026-10-16-v18.html" style="color:#1d4ed8;">coeff-specialist-brief-2026-10-16-v18.html</a>) &middot;
+      <strong>Decision Budget:</strong> &le; 90 minutes pre-computation &middot;
+      <strong>Disposition:</strong> Stop report &amp; continued pause (0 new computations)
+    </div>
+  </div>
+
+  <h2 style="font-size:18px;color:#111827;border-bottom:1px solid #e5e7eb;padding-bottom:6px;margin-top:28px;">
+    1. Scope, Corrected Synthesis Baseline, and the Retained Sufficient Target
+  </h2>
+  <p style="margin:10px 0;">
+    In <a href="coeff-specialist-brief-2026-10-16-v17.html" style="color:#1d4ed8;">coeff-specialist-brief-2026-10-16-v17.html</a> (and <a href="coeff-specialist-brief-2026-10-16-v18.html" style="color:#1d4ed8;">v18</a>), we corrected <a href="coeff-specialist-brief-2026-10-15-v16.html" style="color:#1d4ed8;">v16</a> by withdrawing its unestablished &ldquo;Slepian ceiling&rdquo; exclusion for the complete Weil operator: continuous Plancherel Fourier leakage above $\gamma_1$ in <a href="untruncated-spatial-archimedean-slepian-gap-and-harmonic-growth-2026-10-15-v3.html" style="color:#1d4ed8;">M16 v3</a> does not automatically bound the complete weighted discrete zero sum (plus polar terms). Removing that overstatement requires assessing the <code>WEIL-FLOOR</code> and <code>KERNEL-API</code> lanes directly against the actual sufficient cofinal target (<code>prop:v121-cofinal-rh</code>, <code>prop:v136-bounded-floor</code>, <code>cor:v136-complement-floor</code>, <code>prop:v138-shifted-floor</code>):
+  </p>
+
+  <div style="background-color:#f8fafc;border:1px solid #cbd5e1;padding:14px 16px;margin:14px 0;font-size:14px;">
+    <p style="margin:0 0 8px 0;">
+      <strong>Sufficient Cofinal Shift-Floor Target (<code>prop:v136-bounded-floor</code> &amp; <code>cor:v136-complement-floor</code>):</strong>
+      For $a = \log\lambda &gt; 0$ and $I_a = (-a,a)$, let $q_a[f]$ be the complete fixed-window Weil quadratic form on its logarithmic form domain $\mathcal{D}(q_a) = \{f \in L^2(I_a) : \int_{\mathbb{R}} \log(2+|\xi|)\,|\mathcal{F}_a f(\xi)|^2\,d\xi &lt; \infty\}$, retaining the untruncated archimedean term, both pole terms $2\cosh((x-y)/2)$, and all prime-power shifts $w_n = \Lambda(n)/\sqrt{n}$ with $\ell_n = \log n &lt; 2a$. To prove RH via the Weil criterion, it suffices to establish along one cofinal sequence $a_j \to \infty$ a single finite constant $C_* \ge 0$ <em>independent of $j$</em> such that
+      $$q_{a_j}[f] \ge -C_*\,\|f\|_{L^2(I_{a_j})}^2 \qquad \forall\, f \in \mathcal{D}(q_{a_j}),$$
+      or equivalently on $\mathcal{D}(q_{a_j}) \cap \operatorname{Ran}(I - P_{a_j})$ in both even and odd reflection sectors for any projection $P_a$ satisfying $\|\mathsf{W}_{e^a} P_a\| \to 0$ (such as the rank-$1$ repaired source projection or the growing fine-radical block $P_G$ of <code>v1.53</code>).
+    </p>
+    <p style="margin:0;">
+      <strong>Structural Dichotomy with <code>KERNEL-API</code> (<code>v1.56</code> / <code>NS57</code>):</strong>
+      Neither a uniform positive spectral gap ($q_a[f] \ge c_0\|f\|^2 &gt; 0$) nor exponentially accurate resolution of every small eigenvalue is required. Moreover, by Theorem <code>thm:ns57-bounded-floor-stability</code> (<code>v1.56</code>), the cofinal floor $q_a[f] \ge -C_*\|f\|^2$ is <strong>invariant under any fixed bounded self-adjoint perturbation $B$</strong> (including any finite prime-weight modification $B_\delta = -\sum_{n \in S} \delta_n(T_{\ell_n} + T_{-\ell_n})$, which shifts $C_*$ by at most $2\sum_{n\in S}|\delta_n|$). By contrast, finite-window nullvector exclusion (<code>KERNEL-API</code>, <code>thm:ns57-first-zero-controls</code>) is <strong>broken</strong> by any nonzero finite perturbation $\delta \ne 0$, which creates a finite first-zero window $a_*(\delta) &lt; \infty$.
+    </p>
+  </div>
+
+  <p style="margin:10px 0;">
+    Under the same discipline applied to the Nyman&ndash;Beurling lane in <a href="nb-full-residual-arithmetic-assessment-2026-10-16-v1.html" style="color:#1d4ed8;">nb-full-residual-arithmetic-assessment-2026-10-16-v1.html</a>, we enforce a hard pre-computation decision budget (&le; 90 minutes, zero new tables or adjacent scans), reject everything already covered by <code>NS19&ndash;NS50</code>, <code>NS51&ndash;NS58</code>, and <code>M1&ndash;M17</code>, and require all five mandatory items for each candidate mechanism: (1) <strong>exact expression</strong>, (2) <strong>coefficient hypotheses</strong>, (3) <strong>uniform range</strong>, (4) <strong>estimating method</strong>, and (5) <strong>remaining transfer</strong>.
+  </p>
+
+  <h2 style="font-size:18px;color:#111827;border-bottom:1px solid #e5e7eb;padding-bottom:6px;margin-top:28px;">
+    2. Five-Item Assessment of Post-<code>v18</code> Candidate Mechanisms
+  </h2>
+
+  <h3 style="font-size:15px;color:#1e293b;margin:18px 0 6px 0;">
+    Candidate I &mdash; Shifted Block-Schur / Fourier-Tail Relative Form Comparison (<code>prop:v138-shifted-floor</code> + <code>M17 v2</code>)
+  </h3>
+  <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:14px;">
+    <tbody>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;width:26%;background-color:#f8fafc;font-weight:bold;vertical-align:top;">1. Exact expression</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          For a fixed finite shift $\delta = C_* \ge 0$, either the shifted Fourier Schur lower matrix (<code>prop:v138-shifted-floor</code>, Eq. <code>eq:v138-shifted-lower</code>)
+          $$\mathcal{L}_\delta := K_\delta - \sum_{N &lt; n \le J} \frac{R_{\delta,n}^* R_{\delta,n}}{g_n + \delta} - \frac{U_J}{g_{J+1}+\delta} \succeq 0 \implies \mathsf{W}_\lambda \succeq -\delta I,$$
+          or the spatial Legendre Block-Schur decomposition (<a href="infinite-dimensional-tail-floor-and-shift-coupling-defect-2026-10-15-v2.html" style="color:#1d4ed8;">M17 v2</a>) on $L^2(-a,a) = V_K(a) \oplus V_K(a)^\perp$:
+          $$(\mathsf{W}_{e^a} + C_* I)\big|_{V_K(a)^\perp} = P_{V_K}^\perp\bigl(A_{\mathrm{arch}}^{\mathrm{full}}(a) + T_{\mathrm{pole}}(a) - T_{\mathrm{arith}}(a) + C_* I\bigr)P_{V_K}^\perp.$$
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">2. Coefficient hypotheses</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Exact von Mangoldt prime-power weights $w_n = \Lambda(n)/\sqrt{n}$ for $\ell_n = \log n &lt; 2a$, untruncated archimedean digamma symbol $\alpha(\xi) = \operatorname{Re}\psi(\tfrac{1}{4}+\tfrac{i\xi}{2}) - \log\pi$, and exact polar rank-two kernel $2\cosh((x-y)/2)$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">3. Uniform range</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Cofinal windows $a_j \to \infty$ ($\lambda_j = e^{a_j} \to \infty$) in both even and odd reflection sectors with a single window-independent shift $\delta = C_* &lt; \infty$ and tractable head dimension $N(a), K(a) \le a^{O(1)}$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">4. Estimating method</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Replace the scalar tail comparison $g_{N+1} + \delta &gt; 0$ (which uses only the triangle-inequality envelope $M_{\phi,\lambda} \ge \|\mathsf{T}_{\mathrm{pr},\lambda}\| \asymp \lambda/\log\lambda$) by a <strong>signed relative form bound</strong> on the high-degree complement $y \in V_K(a)^\perp \cap \mathcal{D}(q_a)$:
+          $$\bigl|\langle T_{\mathrm{arith}}(a) y, y\rangle_{L^2(-a,a)}\bigr| \le \theta\,\langle A_{\mathrm{arch}}^{\mathrm{full}}(a) y, y\rangle_{L^2(-a,a)} + C_*\,\|y\|_{L^2(-a,a)}^2$$
+          with $\theta \le 1$ and $C_* &lt; \infty$ independent of $a$ for $K(a) \le a^{O(1)}$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">5. Remaining transfer &amp; verdict</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          <strong>Rejected (no estimating lemma for the relative form bound).</strong>
+          In <code>prop:v138-shifted-floor</code> (Eq. <code>eq:v138-shifted-cost</code>), any scalar comparison with bounded $\delta = C_*$ forces $N+1 &gt; 2a\exp(M_{\phi,\lambda} - \delta) = \exp(\Omega(e^a/a))$; similarly, in <code>M17 v2</code>, bounding $T_{\mathrm{arith}}(a)$ on $V_K(a)^\perp$ by its operator norm $\|T_{\mathrm{arith}}(a)\| \asymp e^a/a$ against the harmonic floor $\inf_{V_K(a)^\perp} A_{\mathrm{arch}}^{\mathrm{full}}(a) = \log K - \log a + O(1)$ forces $K(a) \ge a\exp(\Omega(e^a/a))$. Proving the non-scalar relative form bound on $V_K(a)^\perp$ for $\theta = 1$ is equivalent to bounding $\int_{\mathbb{R}} \beta_a(\xi)\,|\mathcal{F}_a y(\xi)|^2\,d\xi \ge -C_*\|y\|_2^2$ on $V_K(a)^\perp$. By Corollary <code>cor:v137-scalar-no-go</code> and Theorem <code>thm:v139-probe-relaxation</code>, neither pointwise bounds on $\beta_a(\xi)$ nor scalar primitive / total-variation bounds can supply this inequality, because $\inf_\xi \beta_a(\xi) \to -\infty$ and $a\Delta(\beta_a) \to +\infty$. Neither <code>M13&ndash;M14</code> (exact Legendre shift matrices) nor <code>M17</code> supplies an oscillation mechanism that cancels the negative spikes of $\beta_a(\xi)$ near critical zeros on $V_K(a)^\perp$.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:15px;color:#1e293b;margin:18px 0 6px 0;">
+    Candidate II &mdash; Fine Translated-Radical Block Complement &amp; Paley&ndash;Wiener Zero-Neighborhood Exclusion (<code>v1.53</code> / <code>NS46/49</code> + <code>v1.39</code>)
+  </h3>
+  <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:14px;">
+    <tbody>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;width:26%;background-color:#f8fafc;font-weight:bold;vertical-align:top;">1. Exact expression</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          In <code>v1.53</code> (Corollary <code>ns46-a2-cor-large-block</code>), let $J_a = \lfloor e^{2a}/(40000a)\rfloor$, $m_a = 2J_a+1$, $t_j = j/J_a \in [-1,1]$, and $g_{a,t_j} = \chi_a \phi(\cdot - t_j)$, where $\phi = h/\|h\|_2$ is the normalized even Gaussian arithmetic radical ($\mathcal{W}\phi_t = 0$). The orthogonal projection $P_G = G\Gamma^{-1}G^*$ onto $\operatorname{Ran} G \subset L^2(-a,a)$ satisfies $\|\mathsf{W}_{e^a} P_G\| \le C\exp(-e^{2a}/2000) \to 0$. By Corollary <code>cor:v136-complement-floor</code>, the full cofinal floor reduces exactly to
+          $$q_a[y] = \int_{\mathbb{R}} \beta_a(\xi)\,|\mathcal{F}_a y(\xi)|^2\,d\xi \ge -C_*\,\|y\|_2^2 \qquad \forall\, y \in \mathcal{D}(q_a) \cap \operatorname{Ran}(I - P_G).$$
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">2. Coefficient hypotheses</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Exact global radical identity $\mathcal{W}\phi_t = 0$, Mellin/Fourier identification $\widehat{\phi}(\xi) = \frac{2}{\sqrt{6\pi}\|h\|_2}\Xi(\xi)$ (Eq. <code>eq:v150-mellin</code>), double-exponential spatial tail $\|\mathsf{W}_{e^a} g_{a,t_j}\|_2 \le C_1\sqrt{a}\,e^{2a}e^{-c_1 e^{2a}}$, and finite-arc Lagrange interpolation Gram bound $\Gamma \succeq \frac{1}{2}\gamma_{m_a} I$ (Lemma <code>lem:ns46-finite-arc</code>).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">3. Uniform range</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          All unit vectors $y \in \mathcal{D}(q_a) \cap \operatorname{Ran}(I - P_G)$ in both reflection sectors along a cofinal sequence $a_j \to \infty$, with one finite $C_*$ independent of $j$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">4. Estimating method</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Exploit the $m_a = 2J_a+1 \asymp e^{2a}/a$ orthogonality constraints $\langle y, \chi_a \phi(\cdot - t_j)\rangle = 0$ ($-J_a \le j \le J_a$) in Fourier space:
+          $$\int_{\mathbb{R}} \mathcal{F}_a y(\xi)\,\overline{\widehat{\phi}(\xi)}\,e^{-it_j\xi}\,d\xi = -\langle y, (1-\chi_a)\phi(\cdot - t_j)\rangle = O\bigl(e^{-c_1 e^{2a}}\bigr),$$
+          and attempt to use fine-lattice sampling on $t_j \in [-1,1]$ to prevent $|\mathcal{F}_a y(\xi)|^2$ from concentrating in the negative sublevel sets of $\beta_a(\xi)$ near critical-zero ordinates $\gamma_0$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">5. Remaining transfer &amp; verdict</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          <strong>Rejected (vanishing of $\widehat{\phi}(\gamma_0) \propto \Xi(\gamma_0) = 0$ screens critical-zero wavepackets from $P_G$).</strong>
+          By Proposition <code>prop:v137-conditional-mass</code> and Theorem <code>thm:v139-probe-relaxation</code>, the negative spikes of $\beta_a(\xi)$ that obstruct a bounded floor occur inside $O(1/a)$ neighborhoods of nontrivial zero ordinates $\gamma_0$ of $\Xi(\xi)$, where $\beta_a(\xi)$ has negative side lobes of depth $\asymp -a$. However, at every such ordinate $\gamma_0$, the radical multiplier $\widehat{\phi}(\xi) = \frac{2}{\sqrt{6\pi}\|h\|_2}\Xi(\xi)$ vanishes ($\widehat{\phi}(\gamma_0) = 0$, so $|\widehat{\phi}(\xi)| = O(|\xi - \gamma_0|) = O(1/a)$ on $|\xi - \gamma_0| \le 3\pi/(2a)$). Consequently, the sampling functional $\xi \mapsto \mathcal{F}_a y(\xi)\,\overline{\widehat{\phi}(\xi)}$ is automatically suppressed by $O(1/a)$ near every zero $\gamma_0$. As already recorded in <code>v1.53</code> (lines 17946&ndash;17962), the fine-lattice Gram bound in Lemma <code>lem:ns46-finite-arc</code> controls $P_G$ via $|\widehat{\phi}(\xi)|^2 \ge c_0 &gt; 0$ on the zero-free interval $[-r,r]$, and supplies <em>no</em> lower bound on $\operatorname{Ran}(I - P_G)$ near the zeros of $\Xi$.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:15px;color:#1e293b;margin:18px 0 6px 0;">
+    Candidate III &mdash; Multiprime Euler Preconditioning &amp; Boundary-Pairing Depletion (<code>M6b</code> + <code>M7&ndash;M10</code> + <code>NS57/58</code>)
+  </h3>
+  <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:14px;">
+    <tbody>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;width:26%;background-color:#f8fafc;font-weight:bold;vertical-align:top;">1. Exact expression</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          For a finite prime set $S \subset \mathbb{P}$ with shift sum $L_S = \sum_{p \in S} \log p &lt; a$, either the multiprime Euler preconditioner $E_S(-i\partial_x) = \prod_{p \in S}(I - p^{-1/2}T_{\log p}) : L^2(I_{a-L_S}) \to L^2(I_a)$ (<a href="multiprime-euler-preconditioner-2026-10-15-v1/README.md" style="color:#1d4ed8;">M7</a>&ndash;<a href="three-prime-complete-shift-spectrum-and-horizon-2026-10-15-v2.html" style="color:#1d4ed8;">M13</a>, <a href="euler-depleted-weil-equivalence-and-dh-control-2026-10-15-v1/README.md" style="color:#1d4ed8;">M6b</a>) or the translated-radical boundary pairing $\mathcal{B}_a f(t) = \langle f, R_{a,t}\rangle = -q_a(f, u_t)$ of Proposition <code>prop:ns58-boundary-identity</code> (<code>NS58</code>).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">2. Coefficient hypotheses</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Exact multiplicative Euler product factors $\prod_{p \in S}(1 - p^{-1/2-i\xi})^{-1}$ versus additive von Mangoldt shifts $w_n = \Lambda(n)/\sqrt{n}$, or exact exterior radical row $R_{a,t}$ with infinite prime sum $\sum_{n \ge 2} w_n\{r_t(x-\ell_n)+r_t(x+\ell_n)\}$ retained.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">3. Uniform range</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Full space $L^2(-a,a)$ across cofinal windows $a \to \infty$ (for <code>WEIL-FLOOR</code>) or arbitrary fixed window $a &gt; 0$ (for <code>KERNEL-API</code>).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">4. Estimating method</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Cancel the dominant small-prime shifts $p \in S$ via the congruence $E_S^* \mathsf{W}_{e^a} E_S$ on $L^2(I_{a-L_S})$, or test $f \in \ker A_a$ against the exterior radical rows $R_{a,t}$ across $t \in \mathbb{R}$ to force $f = 0$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">5. Remaining transfer &amp; verdict</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          <strong>Rejected (infinite codimension of $\operatorname{Ran} E_S \subset L^2(I_a)$, bounded-floor redundancy of finite $S$, and <code>NS58</code> kernel equivalence).</strong>
+          <ul style="margin:4px 0 0 0;padding-left:18px;">
+            <li style="margin-bottom:4px;">
+              <em>For <code>WEIL-FLOOR</code> ($q_a[f] \ge -C_*\|f\|^2$ as $a \to \infty$):</em> By Theorem <code>thm:ns57-bounded-floor-stability</code>, any finite set of prime-power shifts up to a fixed cutoff already forms a bounded operator on $L^2(\mathbb{R})$, so depleting finitely many primes $S$ cannot resolve the cofinal $a \to \infty$ divergence problem. Moreover, $E_S(L^2(I_{a-L_S})) \subsetneq L^2(I_a)$ has infinite codimension (missing the boundary fiber coordinates on $(-a, a) \setminus (-a+L_S, a-L_S)$), and if $S(a)$ grows with $a$, the constraint $\sum_{p \in S(a)} \log p &lt; a$ forces $\max S(a) \lesssim a$, leaving all prime shifts in $(a, e^{2a}]$ uncancelled.
+            </li>
+            <li>
+              <em>For <code>KERNEL-API</code> ($f \in \ker A_a \implies f = 0$):</em> Proposition <code>prop:ns58-equivalence</code> (<code>NS58</code>) already proves that vanishing of the boundary pairing $\mathcal{B}_a f(t) = 0$ for all $t \in \mathbb{R}$ is an exact reformulation of $A_a f = 0$, while Proposition <code>prop:ns58-forced-pairing</code> proves that the <code>NS57</code> forcing operator $F_\delta$ is Hilbert&ndash;Schmidt (compact) and therefore has no positive $L^2$ lower bound on the unit sphere of $L^2(I_a)$.
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size:18px;color:#111827;border-bottom:1px solid #e5e7eb;padding-bottom:6px;margin-top:28px;">
+    3. Precise Stop Report and Continued Pause Disposition
+  </h2>
+  <p style="margin:10px 0;">
+    Having withdrawn the unestablished &ldquo;Slepian ceiling&rdquo; phrasing in <a href="coeff-specialist-brief-2026-10-16-v17.html" style="color:#1d4ed8;">v17</a>/<a href="coeff-specialist-brief-2026-10-16-v18.html" style="color:#1d4ed8;">v18</a> and evaluated the remaining post-<code>v18</code> candidate formulations directly against the retained sufficient cofinal target $q_a[f] \ge -C_*\,\|f\|^2$ (<code>prop:v121-cofinal-rh</code>, <code>prop:v136-bounded-floor</code>, <code>cor:v136-complement-floor</code>, <code>prop:v138-shifted-floor</code>), we conclude:
+  </p>
+  <ol style="margin:8px 0 14px 0;padding-left:22px;">
+    <li style="margin-bottom:6px;">
+      <strong>No Admissible New Estimate Identified:</strong> None of the three candidate mechanisms (shifted Block-Schur / Fourier-tail relative form comparison, fine translated-radical complement sampling on $\operatorname{Ran}(I-P_G)$, or multiprime Euler preconditioning / boundary-pairing depletion) supplies a previously unassessed theorem or concrete arithmetic hypothesis that overcomes the proved <code>v1.37&ndash;v1.39</code>, <code>v1.53</code>, and <code>v1.56&ndash;v1.57</code> (<code>NS57/58</code>) barriers.
+    </li>
+    <li style="margin-bottom:6px;">
+      <strong>Exact Missing Input for Any Future Thaw:</strong>
+      <ul style="margin:4px 0 0 0;padding-left:18px;">
+        <li>
+          To thaw <code>WEIL-FLOOR</code>: an explicit <strong>joint signed concentration or relative form bound</strong> on $\mathcal{D}(q_a) \cap \operatorname{Ran}(I - P_a)$ in both parities that uses the Paley&ndash;Wiener support constraint $\operatorname{supp} f \subseteq [-a,a]$ to bound the negative side-lobe pairing of $\beta_a(\xi)$ near critical zeros by $-C_*\|f\|_2^2$ with one window-independent finite $C_*$, escaping the <code>thm:v139-probe-relaxation</code> density relaxations and the $\exp(\Omega(e^a/a))$ scalar cutoff cost of <code>prop:v138-shifted-floor</code> / <code>M17 v2</code>.
+        </li>
+        <li>
+          To thaw <code>KERNEL-API</code>: a full-window arithmetic injectivity or positivity inequality on $L^2(-a,a)$ that explicitly fails when a single prime shift weight $w_2 = \Lambda(2)/\sqrt{2}$ is perturbed by $\delta_2 = -\frac{\log 2}{100}$ (<code>thm:ns57-first-zero-controls</code>) and is not a restatement of the homogeneous exterior pairing $\mathcal{B}_a f(t) = 0$ (<code>prop:ns58-equivalence</code>).
+        </li>
+      </ul>
+    </li>
+    <li>
+      <strong>Continued Pause Without Computation:</strong> In compliance with the hard 90-minute pre-computation decision budget and <code>AGENTS.md</code> &sect;0, we issue this stop report and keep <code>WEIL-FLOOR</code>, <code>KERNEL-API</code>, and the <code>M1&ndash;M17</code> sequence paused—with zero new computations, zero larger Legendre/Fourier tables, and zero adjacent variations.
+    </li>
+  </ol>
+
+  <div style="padding:12px 16px;background-color:#f4f1ea;border-left:4px solid #5c4b37;margin-top:24px;font-size:14px;line-height:1.5;">
+    <strong>Final wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR</code> (<code>NS24/34/39/43/47/49/50</code>, <code>v1.36/v1.38/v1.53</code>) and <code>KERNEL-API</code> (<code>NS51/55/57/58</code>). No new arithmetic input has yet been supplied.
+  </div>
+
+  <div style="margin-top:24px;padding-top:12px;border-top:1px solid #e5e7eb;font-size:12px;color:#6b7280;text-align:center;">
+    Prepared by the TSG team &middot; <a href="https://tsgglobal.com" style="color:#4b5563;">tsgglobal.com</a>
+  </div>
+
+</div>
+</body>
+</html>

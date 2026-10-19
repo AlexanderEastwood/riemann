@@ -14,8 +14,8 @@
 
 - [`PROPOSAL.md`](./PROPOSAL.md) — Audit scope, wall check, and mathematical targets.
 - [`derivation.md`](./derivation.md) — Full self-contained proofs of Theorems 1A, 1B, 2A, 2B, 3A, and 3B.
-- [`verify_next_four_steps.py`](./verify_next_four_steps.py) — Deterministic 256-bit `flint.arb` + 50-digit `mpmath` verification script (`pyright`: 0 errors, 0 warnings).
-- [`verification.json`](./verification.json) — Machine-checkable JSON verification output.
+- [`verify_next_four_steps.py`](./verify_next_four_steps.py) — Deterministic pure-`flint.arb` / `flint.acb` 256-bit verification script (`pyright`: 0 errors, 0 warnings; zero `numpy`/`scipy`/`mpmath` dependencies).
+- [`verification.json`](./verification.json) — Machine-checkable JSON verification output (`file_sha256 = 4fc3060e2784270cec004dffb9f737ff068876cb5c2712d7c475d119a2ed73a6`).
 - [`../next-four-steps-2026-10-15-v1.html`](../next-four-steps-2026-10-15-v1.html) — Companion styled HTML report (inline CSS, Georgia serif, email-paste-ready).
 - [`../coeff-specialist-brief-2026-10-15-v4.html`](../coeff-specialist-brief-2026-10-15-v4.html) — Version 4 update of the `COEFF`/`NB-GAIN` Specialist Brief incorporating Theorems 2A and 2B and the 256-bit `flint.arb` diagnostic table.
 

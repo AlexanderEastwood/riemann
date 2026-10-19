@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Higher-Order Wronskian-Transvectant Parseval Hierarchy &amp; Quartic Log-Derivative Obstruction — 2026-10-15-v1</title>
+</head>
+<body style="margin:0;padding:24px 16px;background-color:#f6f5f0;color:#1e2426;font-family:Georgia,'Times New Roman',serif;line-height:1.62;">
+<main style="max-width:680px;margin:0 auto;background-color:#ffffff;padding:36px 34px;border-top:5px solid #2b4c59;box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+
+<p style="margin:0 0 6px 0;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;letter-spacing:1.2px;text-transform:uppercase;color:#4a666b;">
+RIEMANN PROJECT · ZERO-GEOMETRY LANE · 15 OCTOBER 2026 · V1
+</p>
+<h1 style="margin:0 0 16px 0;font-size:25px;line-height:1.25;color:#132b30;font-weight:normal;">
+Higher-Order Wronskian–Transvectant Parseval Hierarchy, Hamburger–Stieltjes Hankel Positivity, and the Quartic Log-Derivative Jet-Ring Obstruction
+</h1>
+
+<div style="margin:18px 0 24px 0;padding:14px 16px;background-color:#eef4f5;border-left:4px solid #2b4c59;font-size:14.5px;">
+<strong>Wall check (mandatory disclosure):</strong> The Riemann Hypothesis (<strong>RH</strong>), global Weil positivity across all test functions (<strong>G2</strong>), the <strong>cofinal signed-arithmetic lower bound</strong> in the <em>B</em><sub>2</sub>/Stieltjes lane, and <strong>both historical missing-original evidence groups</strong> in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. This report establishes exact jet-ring and 384-bit ball-arithmetic results in the <code>ZERO-GEOMETRY</code> lane showing why the entire hierarchy of quadratic gauge-invariant single-point Wronskian transforms and their Hankel determinants are strictly positive on real slices for both RH and off-line zero controls, and identifies the exact quartic non-divergence obstruction for <em>ϕ</em>(<em>u</em>)<sup>4</sup>(log <em>ϕ</em>)<sup>(4)</sup>(<em>u</em>). It does not claim a proof of RH or global Weil positivity.
+</div>
+
+<h2 style="font-size:19px;color:#183a40;border-bottom:1px solid #dde5e6;padding-bottom:6px;margin-top:28px;">
+1. Theorem 1 — The Order-2<em>m</em> Gauge-Invariant Transvectant / Wronskian Hierarchy
+</h2>
+<p style="margin:10px 0;">
+In <code>next-four-steps-2026-10-15-v1</code> (Theorem 3A), we showed that clearing the quadratic denominator of <em>P</em><sub>1</sub>(<em>u</em>) = ¼(log <em>ϕ</em>)′′(<em>u</em>) at a single coordinate <em>u</em> yields the Wronskian <em>W</em><sub>2</sub>[<em>ϕ</em>](<em>u</em>) = <em>ϕ</em>′′<em>ϕ</em> − (<em>ϕ</em>′)<sup>2</sup>, whose Laplace transform at 2<em>x</em> is −(1/<em>π</em>)∫ <em>τ</em><sup>2</sup>|<em>f</em>(<em>x</em> + <em>iτ</em>)|<sup>2</sup> <em>dτ</em> &lt; 0 for every non-zero real kernel <em>ϕ</em>. Here we classify the complete higher-order hierarchy:
+</p>
+<p style="margin:10px 0;">
+For every integer <em>m</em> ≥ 0, the unique (up to scaling) homogeneous degree-2, weight-2<em>m</em> differential polynomial in <em>ϕ</em> that is gauge-invariant under <em>ϕ</em>(<em>u</em>) ↦ <em>ψ</em><sub><em>z</em></sub>(<em>u</em>) := <em>ϕ</em>(<em>u</em>)<em>e</em><sup><em>zu</em></sup> is the order-2<em>m</em> Cohen–Rankin transvectant
+</p>
+<div style="margin:10px 0;padding:10px 14px;background-color:#f6f8f8;font-family:'Courier New',monospace;font-size:13px;">
+𝒲_{2m}[ϕ](u) := (∂_{u_1} − ∂_{u_2})^{2m} (ϕ(u_1)ϕ(u_2))|_{u_1=u_2=u} = Σ_{k=0}^{2m} (−1)^k C(2m, k) ϕ^{(k)}(u) ϕ^{(2m−k)}(u).
+</div>
+<p style="margin:10px 0;">
+Writing <em>D</em><sub>+</sub> = ∂<sub><em>u</em><sub>1</sub></sub> + ∂<sub><em>u</em><sub>2</sub></sub> and <em>D</em><sub>−</sub> = ∂<sub><em>u</em><sub>1</sub></sub> − ∂<sub><em>u</em><sub>2</sub></sub> gives <em>D</em><sub>−</sub><sup>2</sup> = <em>D</em><sub>+</sub><sup>2</sup> − 4∂<sub><em>u</em><sub>1</sub></sub>∂<sub><em>u</em><sub>2</sub></sub>, which yields the exact integration-by-parts divergence normal form:
+</p>
+<div style="margin:10px 0;padding:10px 14px;background-color:#f6f8f8;font-family:'Courier New',monospace;font-size:13px;">
+𝒲_{2m}[ϕ](u) e^{2zu} = 𝒲_{2m}[ψ_z](u) = (−1)^m 2^{2m} (ψ_z^{(m)}(u))² + (d/du) 𝒟_{2m}[ψ_z](u),<br>
+𝒟_{2m}[ψ](u) = Σ_{r=1}^m C(m, r) (−1)^{m−r} 2^{2(m−r)} (d/du)^{2r−1} ((ψ^{(m−r)}(u))²).
+</div>
+<p style="margin:10px 0;">
+Integrating over <em>u</em> ∈ ℝ and applying Plancherel's theorem yields the three-way identity for every <em>m</em> ≥ 0 and <em>z</em> ∈ ℂ:
+</p>
+<div style="margin:10px 0;padding:10px 14px;background-color:#f6f8f8;font-family:'Courier New',monospace;font-size:13px;">
+μ_{2m}[ϕ](z) := ((−1)^m / 2^{2m−1}) ∫_ℝ 𝒲_{2m}[ϕ](u) e^{2zu} du = 2 ∫_ℝ (ψ_z^{(m)}(u))² du = (1/π) ∫_ℝ τ^{2m} f(z+iτ) f(z−iτ) dτ.
+</div>
+<p style="margin:10px 0;">
+Consequently, on every real slice <em>z</em> = <em>x</em> ∈ ℝ, the (<em>M</em> + 1) × (<em>M</em> + 1) <strong>Wronskian–Hankel Matrix</strong> <em>ℋ</em><sub><em>M</em></sub>[<em>ϕ</em>](<em>x</em>) := (<em>μ</em><sub>2(<em>j</em>+<em>k</em>)</sub>[<em>ϕ</em>](<em>x</em>))<sub><em>j</em>,<em>k</em>=0</sub><sup><em>M</em></sup> is the Hamburger–Stieltjes moment matrix of the strictly positive measure <em>dν</em><sub><em>x</em></sub>(<em>τ</em>) = (1/<em>π</em>)|<em>f</em>(<em>x</em> + <em>iτ</em>)|<sup>2</sup> <em>dτ</em>, so <strong><em>ℋ</em><sub><em>M</em></sub>[<em>ϕ</em>](<em>x</em>) ≻ 0 (and every Turán–Hankel minor Δ<sub><em>k</em></sub> &gt; 0) for every non-zero real kernel <em>ϕ</em></strong>, whether <em>f</em>(<em>z</em>) satisfies RH or has off-line zeros (<code>NS-101</code>, <code>Davenport–Heilbronn</code>).
+</p>
+
+<h2 style="font-size:19px;color:#183a40;border-bottom:1px solid #dde5e6;padding-bottom:6px;margin-top:28px;">
+2. Theorem 2 — Exact Quartic Jet-Ring Decomposition of <em>ϕ</em>(<em>u</em>)<sup>4</sup>(log <em>ϕ</em>)<sup>(4)</sup>(<em>u</em>)
+</h2>
+<p style="margin:10px 0;">
+For the 4th log-derivative cumulant <em>P</em><sub>3</sub>(<em>u</em>) := (1/16)(log <em>ϕ</em>)<sup>(4)</sup>(<em>u</em>), clearing the minimal single-point denominator <em>ϕ</em>(<em>u</em>)<sup>4</sup> in ℚ[<em>ϕ</em>, <em>ϕ</em>′, <em>ϕ</em>′′, <em>ϕ</em>′′′, <em>ϕ</em><sup>(4)</sup>] yields two exact algebraic identities:
+</p>
+<ol style="margin:10px 0;padding-left:22px;">
+<li style="margin-bottom:8px;">
+<strong>Exact Transvectant Decomposition:</strong>
+<div style="margin:6px 0;padding:9px 12px;background-color:#f6f8f8;font-family:'Courier New',monospace;font-size:13px;">
+16 ϕ(u)⁴ P_3(u) = ϕ(u)⁴ (log ϕ)^{(4)}(u) = ½ ϕ(u)² 𝒲_4[ϕ](u) − (3/2)(𝒲_2[ϕ](u))² = ½ ϕ(u)² 𝒲_4[ϕ](u) − 6(W_2[ϕ](u))².
+</div>
+Dividing by <em>ϕ</em>(<em>u</em>)<sup>2</sup> shows that clearing only <em>ϕ</em>(<em>u</em>)<sup>2</sup> forces the combination ½𝒲<sub>4</sub>[<em>ϕ</em>] = 16<em>ϕ</em><sup>2</sup>(<em>P</em><sub>3</sub> + 3<em>P</em><sub>1</sub><sup>2</sup>), whose Laplace transform is +(4/<em>π</em>)∫ <em>τ</em><sup>4</sup>|<em>f</em>(<em>x</em> + <em>iτ</em>)|<sup>2</sup> <em>dτ</em> &gt; 0 for all kernels.
+</li>
+<li style="margin-bottom:8px;">
+<strong>Exact Quartic Divergence Normal Form:</strong>
+<div style="margin:6px 0;padding:9px 12px;background-color:#f6f8f8;font-family:'Courier New',monospace;font-size:13px;">
+ϕ(u)⁴ (log ϕ)^{(4)}(u) = ¼ (ϕ⁴)^{(4)} − 8 (ϕ² (ϕ′)²)′′ + (56/3) (ϕ (ϕ′)³)′ + 4 ϕ² (ϕ′′)² − (44/3) (ϕ′)⁴.
+</div>
+Because (log <em>ϕ</em>)<sup>(4)</sup>(<em>u</em>) = (log <em>ψ</em><sub><em>z</em></sub>)<sup>(4)</sup>(<em>u</em>) is gauge-invariant, for every <em>z</em> ∈ ℂ:
+<div style="margin:6px 0;padding:9px 12px;background-color:#f6f8f8;font-family:'Courier New',monospace;font-size:13px;">
+∫_ℝ ϕ(u)⁴ (log ϕ)^{(4)}(u) e^{4zu} du = ∫_ℝ [ 4 ψ_z(u)² (ψ_z′′(u))² − (44/3) (ψ_z′(u))⁴ ] du,
+</div>
+exhibiting the irreducible 2-dimensional quartic non-divergence remainder span{<em>ψ</em><sup>2</sup>(<em>ψ</em>′′)<sup>2</sup>, (<em>ψ</em>′)<sup>4</sup>}.
+</li>
+</ol>
+
+<h2 style="font-size:19px;color:#183a40;border-bottom:1px solid #dde5e6;padding-bottom:6px;margin-top:28px;">
+3. Certified 384-Bit Ball Arithmetic Results Across RH and Off-Line Controls
+</h2>
+<p style="margin:10px 0;">
+Verified by <code>verify_wronskian_hankel_hierarchy.py</code> in 384-bit <code>flint.arb</code> (<code>sha256=3b08c963df344db89162dd9c7fc156b110c952167d4ae1db8eb92a30e4bb4caf</code>, <code>all_certified=True</code> in 0.203s, <code>pyright</code>: 0 errors, 0 warnings):
+</p>
+
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:12.5px;">
+<thead>
+<tr style="background-color:#2b4c59;color:#ffffff;text-align:left;">
+<th style="padding:7px 8px;border:1px solid #cfd8da;">Kernel Control</th>
+<th style="padding:7px 8px;border:1px solid #cfd8da;text-align:right;"><em>x</em></th>
+<th style="padding:7px 8px;border:1px solid #cfd8da;text-align:right;">Turán Δ<sub>2</sub> = <em>μ</em><sub>0</sub><em>μ</em><sub>4</sub>−<em>μ</em><sub>2</sub><sup>2</sup></th>
+<th style="padding:7px 8px;border:1px solid #cfd8da;text-align:right;">Hankel Δ<sub>3</sub></th>
+<th style="padding:7px 8px;border:1px solid #cfd8da;text-align:right;">Hankel Δ<sub>4</sub></th>
+<th style="padding:7px 8px;border:1px solid #cfd8da;text-align:right;">∫ <em>ϕ</em><sup>4</sup>(log <em>ϕ</em>)<sup>(4)</sup><em>e</em><sup>4<em>xu</em></sup><em>du</em></th>
+<th style="padding:7px 8px;border:1px solid #cfd8da;text-align:right;">Max 3-Way Err</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background-color:#ffffff;">
+<td style="padding:6px 8px;border:1px solid #dde5e6;"><code>phi_RH</code> (Laguerre–Pólya)</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.00</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+19.222883 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+2413.836 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+7.1398e6 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">−21.259835</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">8.47e-113</td>
+</tr>
+<tr style="background-color:#f9fbfb;">
+<td style="padding:6px 8px;border:1px solid #dde5e6;"><code>phi_RH</code> (Laguerre–Pólya)</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.25</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+20.709835 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+2713.703 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+8.4069e6 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">−25.343111</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">1.16e-112</td>
+</tr>
+<tr style="background-color:#ffffff;">
+<td style="padding:6px 8px;border:1px solid #dde5e6;"><code>phi_NS101</code> (Off-Line Zero)</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.00</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+57.456014 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+10221.55 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+4.0330e7 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">−40.784160</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">1.64e-110</td>
+</tr>
+<tr style="background-color:#f9fbfb;">
+<td style="padding:6px 8px;border:1px solid #dde5e6;"><code>phi_NS101</code> (Off-Line Zero)</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.25</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+61.434111 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+11420.70 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+4.7251e7 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">−48.391685</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">1.81e-110</td>
+</tr>
+<tr style="background-color:#ffffff;">
+<td style="padding:6px 8px;border:1px solid #dde5e6;"><code>phi_DH</code> (Davenport–Heilbronn)</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.00</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+34.464888 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+2902.383 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+4.3530e6 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">−12.709928</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">1.65e-111</td>
+</tr>
+<tr style="background-color:#f9fbfb;">
+<td style="padding:6px 8px;border:1px solid #dde5e6;"><code>phi_DH</code> (Davenport–Heilbronn)</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">0.25</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+37.745720 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+3346.061 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;color:#176334;">+5.2861e6 &gt; 0</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">−14.994979</td>
+<td style="padding:6px 8px;border:1px solid #dde5e6;text-align:right;font-family:monospace;">1.94e-111</td>
+</tr>
+</tbody>
+</table>
+
+<h2 style="font-size:19px;color:#183a40;border-bottom:1px solid #dde5e6;padding-bottom:6px;margin-top:28px;">
+4. Artifacts &amp; Verification Record
+</h2>
+<ul style="margin:10px 0;padding-left:22px;font-size:14.5px;">
+<li><a href="higher-order-wronskian-hankel-hierarchy-2026-10-15-v1/PROPOSAL.md" style="color:#2b4c59;"><code>PROPOSAL.md</code></a> — Scope, theorems, and falsifiability criteria.</li>
+<li><a href="higher-order-wronskian-hankel-hierarchy-2026-10-15-v1/derivation.md" style="color:#2b4c59;"><code>derivation.md</code></a> — Proofs of Theorem 1 (Order-2<em>m</em> Transvectant Hierarchy &amp; Hankel Positivity) and Theorem 2 (Quartic Log-Derivative Jet-Ring Decomposition).</li>
+<li><a href="higher-order-wronskian-hankel-hierarchy-2026-10-15-v1/verify_wronskian_hankel_hierarchy.py" style="color:#2b4c59;"><code>verify_wronskian_hankel_hierarchy.py</code></a> — Exact rational jet-ring and 384-bit <code>flint.arb</code> verification script (<code>pyright</code>: 0 errors, 0 warnings).</li>
+<li><a href="higher-order-wronskian-hankel-hierarchy-2026-10-15-v1/verification.json" style="color:#2b4c59;"><code>verification.json</code></a> — Deterministic 384-bit ball arithmetic certificate (<code>sha256=3b08c963df344db89162dd9c7fc156b110c952167d4ae1db8eb92a30e4bb4caf</code>).</li>
+</ul>
+
+<div style="margin:26px 0 0 0;padding:14px 16px;background-color:#eef4f5;border-left:4px solid #2b4c59;font-size:14px;">
+<strong>Wall check (closing disclosure):</strong> The Riemann Hypothesis (<strong>RH</strong>), global Weil positivity (<strong>G2</strong>), the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+</div>
+
+</main>
+</body>
+</html>

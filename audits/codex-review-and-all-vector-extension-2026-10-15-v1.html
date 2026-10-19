@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CODEX Review Resolution &amp; Extended All-Vector Positivity Certificate (2026-10-15 v1)</title>
+</head>
+<body style="margin:0;padding:28px 16px;background-color:#faf9f6;color:#1f2328;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;">
+<div style="max-width:680px;margin:0 auto;background-color:#ffffff;border:1px solid #d8dee4;border-radius:6px;padding:32px 36px;box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+
+  <h1 style="margin:0 0 8px 0;font-size:24px;line-height:1.3;color:#111827;font-weight:bold;">
+    CODEX Review Resolution &amp; Extended 384-Bit <code>flint.arb</code> All-Vector Positivity Certificate on $\log 2 &lt; a \le \frac{1}{2}\log 6$
+  </h1>
+  <p style="margin:0 0 20px 0;font-size:13px;color:#57606a;">
+    <strong>Date:</strong> 2026-10-15 &nbsp;|&nbsp; <strong>Version:</strong> v1 &nbsp;|&nbsp;
+    <strong>Branch:</strong> <code>codex/four-lane-audit-20261014</code> &nbsp;|&nbsp;
+    <strong>Package:</strong> <code>audits/codex-review-and-all-vector-extension-2026-10-15-v1/</code>
+  </p>
+
+  <div style="background-color:#f0f6fc;border-left:4px solid #0969da;padding:14px 16px;margin:0 0 24px 0;font-size:14px;">
+    <strong>Wall check (Opening):</strong> Closest existing results are <code>NS-57</code> / <code>NS-92</code> (<code>KERNEL-API</code>),
+    <code>NS-61</code> / <code>NS-71</code> / <code>NS-72</code> / <code>NS-74</code> (<code>NB-GAIN</code> / <code>COEFF</code>), and
+    <code>NS-98</code> / <code>NS-101</code> (<code>ZERO-GEOMETRY</code>). What changes in this step:
+    <ol style="margin:8px 0 8px 20px;padding:0;">
+      <li style="margin-bottom:6px;">
+        <strong>Complete Resolution of CODEX Feedback:</strong> Resolves every finding in
+        <code>research-updates/argon-next-four-review-2026-10-15-v1/verification.json</code> (<code>M1</code>&ndash;<code>M5</code>, <code>S1</code>&ndash;<code>S2</code>)
+        and <code>research-updates/argon-audit-review-2026-10-15-v1/argon-audit-review-2026-10-15-v1.html</code> (Findings 1&ndash;4).
+      </li>
+      <li style="margin-bottom:6px;">
+        <strong><code>KERNEL-API</code> &mdash; Extended All-Vector Positivity Certificate on $\log 2 &lt; a \le \frac{1}{2}\log 6 \approx 0.895880$:</strong>
+        Proves the <em>Pointwise Boundary-Strip Multiplication Minorant</em> $V_{\mathrm{prime}}(x) &gt; 0$ and the
+        <em>1D Plancherel&ndash;Sherman&ndash;Morrison Rank-1 Archimedean Minorant</em>, extending the 384-bit <code>flint.arb</code>
+        all-vector coercivity certificate on $V_{a-\log 2}$ beyond the Three-Island window $\frac{1}{2}\log 5 \approx 0.804719$
+        across both the $\tau_5 = \log(5/4)$ and $\tau_3 = \log(4/3)$ prime-shift thresholds up to $a_\star = \frac{1}{2}\log 6 \approx 0.895880$:
+        $q[L_2 g] \ge [0.129335212270\dots]\,\|g\|_2^2 = [0.039795449929\dots]\,\|L_2 g\|_2^2 &gt; 0$ for all $g \in V_{a-\log 2}\setminus\{0\}$.
+      </li>
+      <li style="margin-bottom:6px;">
+        <strong><code>NB-GAIN</code> / <code>COEFF</code> &mdash; Unconditional Bessel Proof of Proposed Open Target (A):</strong>
+        Corrects the first-derivative factor in $x F_N'(x) = -u\,\widetilde{\psi}'(u)$ ($u = \frac{1}{Nx}$) and defines the minus-signed extractor
+        $\Lambda_N(x) := -\frac{d}{dx}(x F_N'(x))\mathbf{1}_{[1/(2N),1/N]}(x)$, proving $\|\Lambda_N\|_H^2 = C_b N$ with
+        $C_b(\widetilde{\psi}_7) = \frac{6904}{45045}$ and $C_b(\widetilde{\psi}_5) = \frac{2231}{2310}$. By Bessel's inequality in $H = L^2(0,\infty;dx)$,
+        $\|(\Pi_{2N}-\Pi_N)\Lambda_N\|_H^2 \le \frac{6904}{45045}N$ holds <strong>unconditionally</strong>, closing Proposed Open Target (A)
+        and isolating Proposed Open Target (B) ($\liminf \frac{|M_N(u,y)|}{\sqrt{N}\,E_N^{(2)}} &gt; 0$) as the sole remaining open arithmetic step.
+      </li>
+      <li>
+        <strong><code>ZERO-GEOMETRY</code> &mdash; Symmetrized Half-Strip Identity &amp; Recorded <code>NS-101</code> / <code>Davenport&ndash;Heilbronn</code> Controls:</strong>
+        Proves the symmetrized half-strip Parseval identity on $(p,t) \in \mathbb{R}\times[0,\infty)$ under exponential decay $|\operatorname{Re} z| &lt; A$
+        and certifies single-point Wronskian negativity on the recorded <code>NS-101</code> reciprocal-dilation kernel and <code>controls.davenport_heilbronn.phi</code>.
+      </li>
+    </ol>
+    <strong>Mandatory Open-Status Disclosure:</strong> The <strong>Riemann Hypothesis (RH)</strong>, <strong>G2</strong>,
+    the <strong>cofinal signed-arithmetic lower bound</strong> (Proposed Open Target B), and <strong>both historical missing-original evidence groups</strong>
+    in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+  </div>
+
+  <h2 style="font-size:19px;color:#111827;border-bottom:1px solid #d8dee4;padding-bottom:6px;margin:26px 0 12px 0;">
+    1. Item-by-Item Resolution of CODEX Reviews
+  </h2>
+
+  <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 22px 0;">
+    <thead>
+      <tr style="background-color:#f6f8fa;text-align:left;">
+        <th style="border:1px solid #d0d7de;padding:8px 10px;width:18%;">CODEX ID</th>
+        <th style="border:1px solid #d0d7de;padding:8px 10px;width:36%;">Feedback Summary</th>
+        <th style="border:1px solid #d0d7de;padding:8px 10px;width:46%;">Resolution &amp; Mathematical Consequence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;"><code>M1</code>, <code>M2</code><br>(<code>next-four</code>)</td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          With $u=\frac{1}{Nx}$, $x F_N'(x) = -u\,\widetilde{\psi}'(u)$, so $\Lambda_N = -(x F_N'(x))' = -Nu^2(u\widetilde{\psi}')'$ has
+          $\|\Lambda_N\|_H^2 = C_b N$ ($C_b = \frac{6904}{45045}$ for $\widetilde{\psi}_7$) and positive divisor-sum moments.
+        </td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          Fixed in <strong>Theorem 2A</strong>. Because $\|\Lambda_N\|_H^2 = \frac{6904}{45045}N$ is already $O(N)$,
+          <strong>Proposed Open Target (A) is unconditionally proved by Bessel's inequality in $H$</strong>:
+          $\Delta_N \ge \frac{M_N(u,y)^2}{(6904/45045)N}$ with zero $N^2$ loss.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;"><code>M3</code><br>(<code>next-four</code>)</td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          Independently integrate $\langle \Lambda_N, \sigma_r \rangle_H$ from $\sigma_r(x) = A(1/(rx))$ across the floor jump inside $[1/(2N), 1/N]$.
+        </td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          Certified at $N=4, r=5$: piecewise 384-bit <code>flint.acb.integral</code> on $[1/8, 1/5]$ and $[1/5, 1/4]$ gives
+          $\langle \Lambda_4, \sigma_5 \rangle_H = -\frac{27}{8192} = +\widetilde{\psi}_7(\frac{5}{4})$ (radius $&lt; 1.5\times 10^{-112}$).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;"><code>M4</code><br>(<code>next-four</code>)</td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          $P_{\mathcal{T}}(U_\beta^*\tau)$ includes the in-space perturbation $-c_\beta(\mathbf{1}_{(0,1)}(x) + \beta^{-1}x^{-1}\mathbf{1}_{x&gt;1})$.
+        </td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          Proved in <strong>Theorem 2B</strong>: $P_{\mathcal{T}}(U_\beta^*\tau) = b_\beta\tau - c_\beta\tau_{\mathrm{pert}}^{(\beta)}$ with
+          $\langle \tau_{\mathrm{pert}}^{(\beta)}, \sigma_n \rangle_H = \frac{1}{n}(\log n + 2 - \gamma + \beta^{-1})$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">Finding 1, <code>M5</code>, <code>S1</code></td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          Half-strip $t \ge 0$ requires $(m,n)$ symmetrization; evaluate cleared Wronskian on actual <code>NS-101</code> reciprocal-dilation kernel and <code>DH</code> $u$-integral.
+        </td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          Proved in <strong>Theorem 3A</strong> and certified in 384-bit <code>flint.arb</code> on $\phi_{\mathrm{NS101}}(u) = \operatorname{sech}(u) + \frac{2}{5}(\operatorname{sech}(u+\log 2)+\operatorname{sech}(u-\log 2))$ at $x=\frac{1}{4}$ ($-3.5347861196 &lt; 0$) and on <code>controls.davenport_heilbronn.phi</code> ($-5.622869 &lt; 0$).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">Findings 2&ndash;4, <code>S2</code></td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          Correct prose $\alpha(0)$; state $P \ne \emptyset, \max_{p\in P}\log p &lt; 2a-\ell_P$; clarify upper-bound scope of 2-mode witness; extend all-vector positivity past $\frac{1}{2}\log 5$.
+        </td>
+        <td style="border:1px solid #d0d7de;padding:8px 10px;vertical-align:top;">
+          Fixed $\alpha(0) = -\gamma - \frac{\pi}{2} - 3\log 2 - \log\pi$; added exact hypotheses and scope note; and proved <strong>Theorem 1A &amp; 1B</strong>, extending all-vector positivity to $\log 2 &lt; a \le \frac{1}{2}\log 6$.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size:19px;color:#111827;border-bottom:1px solid #d8dee4;padding-bottom:6px;margin:26px 0 12px 0;">
+    2. Extended All-Vector Positivity on $\log 2 &lt; a \le \frac{1}{2}\log 6$ (<code>KERNEL-API</code>)
+  </h2>
+
+  <p style="margin:0 0 12px 0;">
+    On $\log 2 &lt; a \le \frac{1}{2}\log 6 \approx 0.8958797346$ ($0 &lt; b = a - \log 2 \le \frac{1}{2}\log(3/2) \approx 0.2027325541$),
+    the only off-diagonal prime-power shifts entering $(-2b, 2b)$ in $q_{\mathrm{prime}}[L_2 g]$ are
+    $\tau_5 = \log(5/4) \approx 0.22314355 &gt; b$ and $\tau_3 = \log(4/3) \approx 0.28768207 &gt; b$.
+    Because $\tau \ge b$ implies $[-b, b-\tau] \cap [\tau-b, b] \subset \{0\}$, Cauchy&ndash;Schwarz gives
+    $|\langle (T_\tau + T_{-\tau})g, g \rangle| \le \int_{|x|\in[\tau-b,b]} |g(x)|^2\,dx$, so
+    $q_{\mathrm{prime}}[L_2 g] \ge \int_{-b}^b V_{\mathrm{prime}}(x)|g(x)|^2\,dx$ with piecewise-constant potential
+  </p>
+  <p style="margin:0 0 14px 0;text-align:center;font-style:italic;">
+    $V_{\mathrm{prime}}(x) = \frac{5\log 2}{2} - \frac{\log 5}{2\sqrt{5}}\mathbf{1}_{[\tau_5-b,b]}(|x|) - \frac{\log 3}{2\sqrt{3}}\mathbf{1}_{[\tau_3-b,b]}(|x|) \ge V_{\min} \approx 1.0558446433 &gt; 1.$
+  </p>
+  <p style="margin:0 0 12px 0;">
+    Conjugating $A_-$ by $V_{\mathrm{prime}}^{-1/2}$ on $V_b^{\mathrm{even}}$ and $V_b^{\mathrm{odd}}$:
+  </p>
+  <ul style="margin:0 0 16px 20px;padding:0;">
+    <li style="margin-bottom:6px;">
+      <strong>Pure Similarity-Weighted Trace Certificate ($\log 2 &lt; a \le 0.890$):</strong>
+      At $a_1 = 0.890$, $\mathcal{T}_{\mathrm{even}}(0.890) \in [0.9836429176 \pm 10^{-48}] &lt; 1$, certifying
+      $q[L_2 g] \ge [0.0172705378\dots]\,\|g\|_2^2 &gt; 0$ for all $g \in V_{a-\log 2}\setminus\{0\}$ on $\log 2 &lt; a \le 0.890$ without using $A_+$.
+    </li>
+    <li>
+      <strong>1D Plancherel&ndash;Sherman&ndash;Morrison Certificate ($\log 2 &lt; a \le \frac{1}{2}\log 6$):</strong>
+      At $a_\star = \frac{1}{2}\log 6$, combining $V_{\mathrm{prime}}(x)$ with the Plancherel rank-1 archimedean minorant
+      $\Psi_w(x) = \frac{13}{4} - \frac{1}{\pi}\int_0^{7.5} \sigma(L_2)(\omega)^2 \widehat{w}(\omega)\cos(\omega x)\,d\omega$ ($w = \mathbf{1}_{[-b_\star,b_\star]}$)
+      gives $\operatorname{Tr}(P^{-1}T_{\mathrm{even}}) \in [0.8775054521 \pm 10^{-48}] &lt; 1$ on $V_{b_\star}^{\mathrm{even}}$ and
+      $\mathcal{T}_{\mathrm{odd}}(a_\star) \in [0.2162305965 \pm 10^{-48}] &lt; 1$ on $V_{b_\star}^{\mathrm{odd}}$, certifying by zero-extension
+      $V_{a-\log 2} \subset V_{a_\star-\log 2}$ that for all $a \in (\log 2, \frac{1}{2}\log 6]$ and all $g \in V_{a-\log 2}\setminus\{0\}$:
+      <br>
+      <span style="display:block;text-align:center;margin-top:6px;font-weight:bold;">
+        $q[L_2 g] \ge [0.129335212270\dots]\,\|g\|_{L^2(-b,b)}^2 = [0.039795449929\dots]\,\|L_2 g\|_{L^2(-a,a)}^2 &gt; 0.$
+      </span>
+    </li>
+  </ul>
+
+  <h2 style="font-size:19px;color:#111827;border-bottom:1px solid #d8dee4;padding-bottom:6px;margin:26px 0 12px 0;">
+    3. Unconditional Bessel Proof of Open Target (A) (<code>NB-GAIN</code> / <code>COEFF</code>)
+  </h2>
+
+  <p style="margin:0 0 12px 0;">
+    For $F_N(x) = \widetilde{\psi}(\frac{1}{Nx})\mathbf{1}_{[1/(2N),1/N]}(x)$ ($u = \frac{1}{Nx}$) and
+    $\Lambda_N(x) := -\frac{d}{dx}(x F_N'(x))\mathbf{1}_{[1/(2N),1/N]}(x) = -Nu^2\frac{d}{du}(u\widetilde{\psi}'(u))\mathbf{1}_{[1,2]}(u)$,
+    the exact $H = L^2(0,\infty;dx)$ norm squared is $\|\Lambda_N\|_H^2 = \frac{6904}{45045}N \approx 0.15326895\,N$ for $\widetilde{\psi}_7(u) = (u-1)^3(2-u)^3(2u-3)$.
+    By Bessel's inequality for the orthogonal projection $\Pi_{2N}-\Pi_N$ in $H$:
+  </p>
+  <p style="margin:0 0 14px 0;text-align:center;font-weight:bold;">
+    $\tilde{\lambda}_{\mathrm{proj}}^T (S^{(2)})^{-1} \tilde{\lambda}_{\mathrm{proj}} = \|(\Pi_{2N}-\Pi_N)\Lambda_N\|_H^2 \le \|\Lambda_N\|_H^2 = \frac{6904}{45045}N,$
+    &qquad
+    $\Delta_N \ge \frac{M_N(u,y)^2}{\frac{6904}{45045}N}.$
+  </p>
+
+  <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 22px 0;">
+    <thead>
+      <tr style="background-color:#f6f8fa;text-align:left;">
+        <th style="border:1px solid #d0d7de;padding:6px 10px;">$N$</th>
+        <th style="border:1px solid #d0d7de;padding:6px 10px;">$\|(\Pi_{2N}-\Pi_N)\Lambda_N\|_H^2$</th>
+        <th style="border:1px solid #d0d7de;padding:6px 10px;">Bessel Cap $\frac{6904}{45045}N$</th>
+        <th style="border:1px solid #d0d7de;padding:6px 10px;">Ratio to Cap</th>
+        <th style="border:1px solid #d0d7de;padding:6px 10px;">Certified $\le \frac{6904}{45045}N$</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;">4</td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.1438193472</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.6130758131</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.234587</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;color:#1a7f37;font-weight:bold;">PASS (384-bit)</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;">8</td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.4439620556</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>1.2261516262</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.362078</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;color:#1a7f37;font-weight:bold;">PASS (384-bit)</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;">16</td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.4825184724</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>2.4523032523</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.196761</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;color:#1a7f37;font-weight:bold;">PASS (384-bit)</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;">32</td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.5392923415</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>4.9046065046</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.109956</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;color:#1a7f37;font-weight:bold;">PASS (384-bit)</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;">64</td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.8118292044</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>9.8092130092</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;"><code>0.082762</code></td>
+        <td style="border:1px solid #d0d7de;padding:6px 10px;color:#1a7f37;font-weight:bold;">PASS (384-bit)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background-color:#fff8c5;border-left:4px solid #9a6700;padding:14px 16px;margin:24px 0 0 0;font-size:14px;">
+    <strong>Wall check (Closing):</strong> Closest results remain <code>NS-57</code> / <code>NS-92</code>, <code>NS-61</code> / <code>NS-71</code> / <code>NS-72</code> / <code>NS-74</code>,
+    and <code>NS-98</code> / <code>NS-101</code>. All CODEX review findings (<code>M1</code>&ndash;<code>M5</code>, <code>S1</code>&ndash;<code>S2</code>, Findings 1&ndash;4) are resolved,
+    Proposed Open Target (A) is proved unconditionally by Bessel's inequality in $H$, and the 384-bit <code>flint.arb</code> all-vector positivity certificate on $V_{a-\log 2}$
+    is extended to $\log 2 &lt; a \le \frac{1}{2}\log 6$.
+    <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound</strong> (Proposed Open Target B), and
+    <strong>both historical missing-original evidence groups</strong> in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+  </div>
+
+</div>
+</body>
+</html>

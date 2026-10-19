@@ -908,3 +908,183 @@ signed lower bound. Stop this screen; shelve further quotient falsification
 screens until independent analytic input appears. No stencil enlargement,
 row, node, thaw or manuscript version. Both recovery groups remain OPEN.
 **Final wall check: Distinct test — closest PR78–80, NS100/101.**
+
+## October 15–16 bounded repair audit, synthesis correction, and pause disposition (M1–M17; no research row)
+
+Owner: Antigravity / Codex review branch `codex/four-lane-audit-20261014`.
+Status: complete (bounded repair audit, synthesis correction, and fixed-window
+groundwork archive; no NS research row).
+Master brief: [coeff-specialist-brief-2026-10-16-v20.html](audits/coeff-specialist-brief-2026-10-16-v20.html)
+(superseding [v19](audits/coeff-specialist-brief-2026-10-16-v19.html),
+[v18](audits/coeff-specialist-brief-2026-10-16-v18.html),
+[v17](audits/coeff-specialist-brief-2026-10-16-v17.html), and
+correcting [v16](audits/coeff-specialist-brief-2026-10-15-v16.html));
+terminal package: [M17 v2](audits/infinite-dimensional-tail-floor-and-shift-coupling-defect-2026-10-15-v1/README.md)
+([report v2](audits/infinite-dimensional-tail-floor-and-shift-coupling-defect-2026-10-15-v2.html)),
+[M16 v3](audits/untruncated-spatial-archimedean-slepian-gap-and-harmonic-growth-2026-10-15-v1/README.md)
+([report v3](audits/untruncated-spatial-archimedean-slepian-gap-and-harmonic-growth-2026-10-15-v3.html)),
+[M3 v2](audits/all-vector-positivity-beyond-log6-2026-10-15-v2.html),
+[M4 v3](audits/all-vector-positivity-beyond-log7-2026-10-15-v3.html), and
+[M5 v3](audits/all-vector-positivity-three-island-horizon-2026-10-15-v3.html).
+All 18 `2026-10-15` verifiers (`M1` through `M17`) have been repaired to
+pure `flint.arb`/`flint.acb` ball arithmetic (zero `numpy`, `scipy`, or
+`mpmath` imports; zero `deduplicate_and_sort_arb` or decimal tolerances across
+all 9 spatial/multiprime fiber-bundle partition verifiers via exact symbolic
+algebra in `SymReal` and exact `Fraction` shift comparisons; guarded by
+[test_oct15_bounded_repair_audit.py](tests/test_oct15_bounded_repair_audit.py);
+`pyright`: `0 errors, 0 warnings, 0 informations` across all 18 scripts).
+Scope disclosures in `M11`, `M12` ([v2](audits/signed-legendre-weil-positivity-beyond-schur-horizon-2026-10-15-v2.html)),
+`M13` ([v2](audits/three-prime-complete-shift-spectrum-and-horizon-2026-10-15-v2.html)),
+`M14` ([v2](audits/universal-legendre-shift-algebra-and-k4-horizon-2026-10-15-v2.html)),
+`M16`, and `M17` explicitly distinguish finite-rank Legendre polynomial blocks
+and artificial archimedean shifts from full-space $L^2(-b,b)$ certificates on
+the form domain $\mathcal{Q}(A_{\mathrm{arch}}^{\mathrm{full}}(b))$.
+Synthesis correction (`v17`): `v16`'s "Slepian ceiling" phrasing for the
+complete Weil operator is withdrawn as unestablished—`M16 v3` certifies only
+continuous Plancherel Fourier leakage above $\gamma_1$, which does not
+automatically bound the complete weighted discrete zero sum (plus polar terms).
+Moreover, the actual sufficient cofinal target in `WEIL-FLOOR`
+(`prop:v121-cofinal-rh`, `prop:v138-shifted-floor`, `v1.36`) remains
+$q_a[f] \ge -C\,\|f\|^2$ with one finite $C$ independent of the growing window
+on the required parity/source domains; neither a uniform positive spectral gap
+nor exponential resolution of every small eigenvalue is required. Stop
+expanding the `M1`–`M17` milestone sequence and keep `M17` paused until a
+proposal supplies a concrete signed arithmetic estimate toward that target.
+
+## October 16 full-residual NB arithmetic-lemma assessment and stop report (no research row)
+
+Owner: Antigravity / Codex review branch `codex/four-lane-audit-20261014`.
+Status: complete (pre-computation arithmetic-lemma assessment within hard 90-minute
+budget; zero new computation; no NS research row).
+Report: [nb-full-residual-arithmetic-assessment-2026-10-16-v1.html](audits/nb-full-residual-arithmetic-assessment-2026-10-16-v1.html);
+baseline brief: [nb-arithmetic-bottleneck-2026-09-29-v1.html](audits/nb-arithmetic-bottleneck-2026-09-29-v1.html).
+Preserving the corrected loads $b_n = P(\log n)/n$, full projected Gram
+$H_N = D_N - C_N^T G_N^{-1} C_N$, old-space refit
+$\widehat{h}_{N,T} = q_{\mathrm{new}}(T) - C_N^T G_N^{-1} q_{\mathrm{old}}(T)$,
+and complete $T = N^6$ tail (`NS87`), and rejecting everything already covered
+by `PR66/68`, Sept 30 `gain01/02/03`, and `NS74/83`, we evaluated three
+remaining post-`PR66/68` candidate inputs against all five required criteria
+(exact expression, coefficient hypotheses, uniform range, estimating method,
+and remaining transfer): (A) the `M1` Thm 2A / `M6a` dual Stieltjes–divisor
+extractor $w^T h_N = \sum_{n=N+1}^{2N-1} \widetilde{\psi}(n/N)(1 * \Delta c_N)(n)$
+(rejected: algebraic duality identity only; holds identically on the `NS74`
+removable component and requires a circular lower bound on $\Delta c_N$);
+(B) Bettin–Conrey / Báez-Duarte Mellin reciprocity and contour shifts on $h_N$
+(rejected: critical-zero evaluation gives `NS83`'s total-error floor rather
+than a single-step lower bound, and left contour shifts reproduce `NS78/87`
+divisor cells with unestimated $c_N = G_N^{-1} b_{\mathrm{old}}$ signs); and
+(C) bilinear Kloosterman/Estermann dispersion on comparable ranges $N < m,n \le 2N$
+(rejected: does not transfer through the non-explicit inverse-Gram subtraction
+$C_N^T G_N^{-1} C_N$ or supply `MOBIUS-MARGIN`). No admissible new estimate
+was found; pause maintained with zero new tables or adjacent variations.
+Both recovery groups in `evidence/MISSING.md` remain OPEN.
+**Final wall check: Same open gap. Closest: NS87/98 and PR66/68. No new arithmetic input has yet been supplied.**
+
+## October 16 cofinal shifted Weil floor and Kernel-API arithmetic-lemma assessment and stop report (no research row)
+
+Owner: Antigravity / Codex review branch `codex/four-lane-audit-20261014`.
+Status: complete (pre-computation arithmetic-lemma assessment within hard 90-minute
+budget; zero new computation; no NS research row).
+Report: [weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html](audits/weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html);
+synthesis baseline: [coeff-specialist-brief-2026-10-16-v18.html](audits/coeff-specialist-brief-2026-10-16-v18.html).
+Having withdrawn `v16`'s unestablished "Slepian ceiling" exclusion in `v17`/`v18`
+and retained the actual sufficient cofinal target $q_a[f] \ge -C_*\,\|f\|^2$
+with one finite $C_*$ independent of $a$ (`prop:v121-cofinal-rh`,
+`prop:v136-bounded-floor`, `cor:v136-complement-floor`, `prop:v138-shifted-floor`),
+we evaluated the three remaining post-`v18` candidate mechanisms against all five
+required criteria (exact expression, coefficient hypotheses, uniform range,
+estimating method, and remaining transfer), rejecting everything already covered
+by `NS19–NS50`, `NS51–NS58`, and `M1–M17`: (I) shifted Block-Schur / Fourier-tail
+relative form comparison on $V_K(a)^\perp$ (`prop:v138-shifted-floor` + `M17 v2`)
+(rejected: scalar comparisons at fixed $\delta = C_*$ force $N(a), K(a) \ge \exp(\Omega(e^a/a))$,
+and no non-scalar relative form bound on $V_K(a)^\perp$ is supplied that escapes
+`cor:v137-scalar-no-go` and `thm:v139-probe-relaxation`); (II) fine translated-radical
+complement sampling on $\operatorname{Ran}(I - P_G)$ (`v1.53` / `NS46/49` + `v1.39`)
+(rejected: $\widehat{\phi}(\gamma_0) \propto \Xi(\gamma_0) = 0$ vanishes at every
+critical zero $\gamma_0$ where $\beta_a(\xi)$ has its $-O(a)$ side lobes, so
+orthogonality to $P_G$ is suppressed by $O(1/a)$ near $\gamma_0$ and does not
+exclude the `v1.37` cutoff probe); and (III) multiprime Euler preconditioning and
+boundary-pairing depletion (`M6b` + `M7–M10` + `NS57/58`) (rejected: any finite
+prime set $S$ is a bounded whole-line perturbation that leaves the cofinal floor
+question invariant by `thm:ns57-bounded-floor-stability`, $\operatorname{Ran} E_S$
+has infinite codimension in $L^2(-a,a)$, and `NS58` proves the homogeneous boundary
+pairing is equivalent to $\ker A_a$). No admissible new estimate was found; pause
+maintained with zero new tables or adjacent variations. Both recovery groups in
+`evidence/MISSING.md` remain OPEN.
+**Final wall check: Same open gap. Closest: WEIL-FLOOR (NS24/34/39/43/47/49/50, v1.36/v1.38/v1.53) and KERNEL-API (NS51/55/57/58). No new arithmetic input has yet been supplied.**
+
+## October 16 two-precision candidate-mechanism screen, Theorem 1/2 identities, and repaired tail/kernel enclosures (`cofinal-candidate-mechanisms-screen-2026-10-16-v1` / `v2.html`–`v5.html`; no research row)
+
+Owner: Antigravity / Codex review branch `codex/four-lane-audit-20261014`.
+Status: complete (two-precision `256`-bit and `384`-bit `flint.arb`/`flint.acb`
+candidate-testing diagnostic; `176/176` ball overlaps verified; repaired per review
+with valid `lem:v150-weight` $[3.5,\infty)$ tail bounds, split-contour/reflected
+complex-box kernel enclosures, explicit scope notes, and all lanes kept PAUSED; no NS research row).
+Report: [cofinal-candidate-mechanisms-screen-2026-10-16-v5.html](audits/cofinal-candidate-mechanisms-screen-2026-10-16-v5.html)
+(superseding [cofinal-candidate-mechanisms-screen-2026-10-16-v4.html](audits/cofinal-candidate-mechanisms-screen-2026-10-16-v4.html), [cofinal-candidate-mechanisms-screen-2026-10-16-v3.html](audits/cofinal-candidate-mechanisms-screen-2026-10-16-v3.html), [cofinal-candidate-mechanisms-screen-2026-10-16-v2.html](audits/cofinal-candidate-mechanisms-screen-2026-10-16-v2.html), and [cofinal-candidate-mechanisms-screen-2026-10-16-v1.html](audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1.html), all preserved at their paths);
+package: [audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/](audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/)
+([verify_cofinal_candidate_mechanisms.py](audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/verify_cofinal_candidate_mechanisms.py),
+[verification.json](audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/verification.json),
+`payload_sha256=6ccc8fcb120ad5d3b4146c04d8ac03d737d14ba22b260d9edaa1e1d53c28f766`,
+`file_sha256=800004ef7eb9578617a6a4895108b33ba6cc749a4a6cd8b3dab5db93885dc190`).
+Incorporates all review corrections (`v2`–`v5`): (1) uses the exact `NS83` $q = 2$
+transformed target Mellin functional $T_2(\rho_1) = (\rho_1 - 1)/\rho_1^3$ with
+$|T_2(\rho_1)| = 1/|\rho_1|^2 = 0.004998988833723\dots$ and conjugate-pair weight
+$2/|\rho_1|^4 = 4.9979778719\times 10^{-5}$ (`eq:ns83-transforms`); (2) scopes the
+$53.16\times$ Frobenius cancellation to the finite 4-mode Legendre shell
+$V_{[4,8]}^{\mathrm{even}}$ and radical residuals to the 8-mode Legendre compression
+$P_8\mathsf{W}_\lambda P_8$, and encloses for the two specific functions $h$ and $xh$
+at four finite windows $\lambda \in \{2, 3, 5, 8\}$ the Parseval tail fractions
+$\|(I-P_8)h\|_2/\|h\|_2$ ($1.795\times 10^{-5} \to 0.1317$) and
+$\|(I-P_8)(xh)\|_2/\|xh\|_2$ ($3.300\times 10^{-5} \to 0.3323$), the omitted
+$V_8(a)^\perp$ arithmetic-plus-pole couplings $\Delta_{\mathrm{AP},\perp}(h;a)$
+($+9.509\times 10^{-10} \to -2.007\times 10^{-3}$) and $\Delta_{\mathrm{AP},\perp}(xh;a)$
+($-8.019\times 10^{-10} \to -4.322\times 10^{-4}$) via a repaired split-contour
+($u_{\mathrm{split}} = \min(a - \frac{1}{2}\log k, \frac{1}{2}\log k)$), Poisson-reflected
+($h(-1.7) = +1.23565\times 10^{-36} > 0$), and complex-box-guarded (`Re(e^{2z}) > 0.5`)
+`h_and_dh_acb` evaluator, and the `lem:v150-weight` exterior pole-leakage bound
+$2\int_a^\infty \cosh(x/2)h(x)\,dx \le 7.200\times 10^{-84}$ at $\lambda = 8$
+(explicitly noting that these cover only $T_{\mathrm{pole}} - T_{\mathrm{arith}}$ on
+two functions at four windows and do not establish the uniform Weil bound); (3) drops
+unsupported convergence claims on $N \in \{4, 8, 16, 32\}$ (`prop:ns83-log-floor`);
+(4) fixes the Fourier phase $\widehat{f_{\mathrm{pos}}}(\gamma_k) = +\frac{2i}{\sqrt{3}}\Xi'(\gamma_k)$,
+odd pole moment normalization $M'(1) = \frac{2}{\sqrt{3}}\xi'(1) = \frac{1}{\sqrt{3}}(1 + \frac{\gamma_E - \log(4\pi)}{2})$
+($\xi(1) = 1/2$), and `PROPOSAL.md` NB table formulas; and (5) replaces the false
+`1.65e-2991` $[3.5,\infty)$ tail bound with the valid two-sided `lem:v150-weight`
+enclosure $[2.81357\times 10^{-1491},\,1.11095\times 10^{-1490}]$ ($> 8.53\times 10^{-1492}$)
+and certifies the `NS57` Weyl bound via Cholesky positivity of
+$(2|\delta_2|)I_8 \pm B_{\delta_2} \succ 0$. All audited lanes, `M17 v2`, `RH`, `G2`,
+and both recovery groups in `evidence/MISSING.md` remain PAUSED / OPEN.
+**Final wall check: Same open gap. Closest: WEIL-FLOOR, NS24/39/43, NB-GAIN (NS53/61/83/87/98), and ZERO-GEOMETRY (NS100/101).**
+
+## October 16 `ZERO-GEOMETRY` (`NS94/100/101`) & `OPERATOR-BRIDGES` arithmetic-lemma assessment and stop report (no research row)
+
+Owner: Antigravity / Codex review branch `codex/four-lane-audit-20261014`.
+Status: complete (pre-computation 5-item feasibility assessment and stop report;
+0 new computations; pause maintained; no NS research row).
+Report: [zero-geometry-arithmetic-assessment-2026-10-16-v1.html](audits/zero-geometry-arithmetic-assessment-2026-10-16-v1.html)
+(companion to [nb-full-residual-arithmetic-assessment-2026-10-16-v1.html](audits/nb-full-residual-arithmetic-assessment-2026-10-16-v1.html) and [weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html](audits/weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html)).
+Assessed the three remaining candidate mechanisms in `ZERO-GEOMETRY` and
+`OPERATOR-BRIDGES` against all five mandatory items (exact expression, coefficient
+hypotheses, uniform range, estimating method, and remaining transfer):
+(I) integrated theta-kernel polarization $K_x = \frac{1}{8}(\mathcal{A}[f_x+b_x] - \mathcal{A}[f_x-b_x])$
+and autocorrelation domination (`NS100/101`) (rejected: Fourier domination is
+algebraically identical to $|F+F'|^2 > |F-F'|^2 \iff \operatorname{Re}(F'\overline{F}) > 0$;
+slicewise positivity fails at $A_0(20) < 0$; generic log-concavity and reciprocal
+positive-Gaussian mixtures fail on the `NS100` and `NS101` controls; and termwise
+Gaussian unfolding diverges for $0 < x \le 1/2$); (II) tangent-circle power-product
+zero sum $\mathcal{P}_{p,q}(H)$ and Cayley disk contraction (`NS94/100`) (rejected:
+the homothety center $e = \frac{1}{2} + \frac{pq}{p-q}$ and successive-inversion
+Möbius map are zero-independent, and the symmetric real polynomial quadruplet
+control in `NS94` preserves equal inverted-disc counts while violating RH); and
+(III) connected contact Reeb transport and local multi-prime operator bridges
+(`two-prime-contact-2026-09-29-v1`, `geometric-swarm-2026-09-29-v1`) (rejected:
+arbitrary distinct positive periods $(T_0,T_1)$ yield the identical geometry;
+the straightened scalar $L^2$ Koopman generator $D = -i\partial_u$ has purely
+absolutely continuous spectrum $\mathbb{R}$ and zero eigenvalues; conserved $\tau$
+prevents full cotangent heteroclinic lifts while positive scalar bidirectional
+coupling creates a mixed $\log 6$ cycle; and independent passive ports fail
+contractivity at $7/6 > 1$). No admissible new estimate was identified; pause
+maintained with zero new computations.
+**Final wall check: Same open gap. Closest: WEIL-FLOOR (NS24/39/43), NB-GAIN (NS53/61/83/87/98), and ZERO-GEOMETRY / OPERATOR-BRIDGES (NS94/100/101, two-prime-contact, geometric-swarm). No new uniform arithmetic estimate is supplied.**
+

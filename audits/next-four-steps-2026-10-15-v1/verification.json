@@ -1,7 +1,7 @@
 {
   "audit": "next-four-steps-2026-10-15-v1",
   "date": "2026-10-15",
-  "script_sha256": "c37192f3de955808a5679090f05da428d4f519c121891850ba32530c58170142",
+  "script_sha256": "f5bf5aba9c86cd80e282dd5f9d12b5bc8048a39c6015cb05a5b327d771a6bcac",
   "part1_kernel_api_arb_certificate": {
     "precision_bits": 256,
     "xi_0_ball": "[6.28983598883690277966509010082 +/- 1.86e-30]",
@@ -100,7 +100,7 @@
   "part2_nb_gain_stieltjes_divisor_vs_ns74": {
     "C_psi_deg5_H02": "46183/15015",
     "C_psi_deg7_brief_v3": "5132/12155",
-    "elapsed_seconds": 10.551,
+    "elapsed_seconds": 10.192,
     "families": {
       "original_beta_0.5": {
         "beta": "0.5000000000000000000000000",
@@ -387,16 +387,16 @@
     "single_point_wronskian_parseval_checks": {
       "rh_true_gaussian_cosh": {
         "x_slice": "0.3",
-        "single_point_wronskian_transform": "-2.485554357784951585423283",
-        "spatial_energy_identity_error": "0.0",
-        "vertical_line_parseval_error": "0.0",
+        "single_point_wronskian_transform": "[-2.485554357784951585423283 +/- 3.28e-25]",
+        "spatial_energy_identity_error": "[+/- 1.40e-55]",
+        "vertical_line_parseval_error": "[+/- 6.57e-56]",
         "strictly_negative": true
       },
       "rh_false_ns101_control": {
         "x_slice": "0.3",
-        "single_point_wronskian_transform": "-6.882321520639325620463253",
-        "spatial_energy_identity_error": "0.0",
-        "vertical_line_parseval_error": "1.06910588404e-50",
+        "single_point_wronskian_transform": "[-6.882321520639325620463253 +/- 3.66e-25]",
+        "spatial_energy_identity_error": "[+/- 4.64e-55]",
+        "vertical_line_parseval_error": "[+/- 1.73e-55]",
         "strictly_negative": true
       }
     },
@@ -404,11 +404,11 @@
       "name": "Single-point quadratic Wronskian W_2[phi] = 4 phi^2 P_1 and cubic cleared 8 phi^3 J_PS",
       "classification": "diagnostic, not a certificate",
       "sample_domain": "x in R vertical-line Parseval slice and jet ring Q[phi, phi', phi'', phi''']",
-      "dps": 50,
+      "dps": 15,
       "applicability": "Applicable to any real-even kernel phi(u), including NS-101 and Davenport-Heilbronn: Theorem 3A proves int_R 4 phi(u)^2 P_1(u) e^{2xu} du = -(1/pi) int_R tau^2 |f(x+i tau)|^2 dtau < 0 for ALL non-zero real kernels regardless of off-line zeros, so single-point Wronskian clearing cannot separate RH-true kernels from NS-101 or Davenport-Heilbronn.",
       "observations": {
-        "rh_true_wronskian_transform": "-2.485554357784951585423283",
-        "ns101_wronskian_transform": "-6.882321520639325620463253"
+        "rh_true_wronskian_transform": "[-2.485554357784951585423283 +/- 3.28e-25]",
+        "ns101_wronskian_transform": "[-6.882321520639325620463253 +/- 3.66e-25]"
       },
       "proved_control_obstruction": false,
       "outcome": "sampled-pass"
