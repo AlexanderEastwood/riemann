@@ -5,19 +5,28 @@ Alexander Eastwood's complete working manuscript, **v1.66**.
 **G2 and the Riemann Hypothesis remain open.** Nothing in this repository
 claims otherwise.
 
-## Status in one page (2026-09-29)
+## Status in one page (2026-10-18)
 
 Read this before any dated section below. Dated sections are preserved as
 written; this page states what the record supports now.
+
+**Standalone extractions (`v4` and `monograph_v4`, verified `61/61`).** For
+self-contained reading and external refereeing without any dependency on
+unrecovered historical `v1.27–v1.34` files:
+- **24-page standalone paper:** [`manuscript/standalone_weil_certificates_and_obstructions_v4.tex`](manuscript/standalone_weil_certificates_and_obstructions_v4.tex) — complete self-contained statements and verbatim proofs across all four pillars: (I) total translated radicals, ordinary resolvent collapse, and the cofinal bounded-floor equivalence (`v1.35–v1.36`), (II) complete $\lambda=3,4$ semilocal Weil positivity, simple even ground state $\xi_4$, and first-zero enclosure $|z_1(4)-\gamma_1| < 8.752082\times 10^{-33}$ (`v1.20–v1.26`, `v1.40–v1.43`), (III) ten unconditional operator/analytic obstructions (`NS-34`, `NS-44`, `NS-45`, `NS-46`, `NS-55`, `v1.30–v1.38`, `v1.50`, `v1.52–v1.55`) plus the dual-pole Chebyshev–Legendre Stieltjes identity and closed-form odd pole moment $\frac{2}{\sqrt{3}}\xi'(1) = +0.0133343\dots$, and (IV) smoothed Nyman–Beurling / Báez-Duarte reductions, same-Gram positive-floor countermodels (`NS-74`, `v1.61`), and critical-zero logarithmic decay floors (`NS-83`, `v1.66`).
+- **274-page standalone monograph:** [`manuscript/standalone_weil_certificates_and_obstructions_monograph_v4.tex`](manuscript/standalone_weil_certificates_and_obstructions_monograph_v4.tex) — full-length standalone monograph edition of the proved core (`0` undefined references, `0` warnings, `0` overfull boxes, `0` uncited bibitems, `0` occurrences of `"not archived"` / `"unarchived"`, and a complete Appendix B Claim-by-Claim Provenance Ledger).
+- **Automated verification suite:** [`audits/standalone-paper-v4-verification-2026-10-18-v1/verify_standalone_v4.py`](audits/standalone-paper-v4-verification-2026-10-18-v1/verify_standalone_v4.py) (`61/61` checks passing; [`verification_results.json`](audits/standalone-paper-v4-verification-2026-10-18-v1/verification_results.json)) and audit report [`manuscript/standalone-v4-audit-and-verification-report-2026-10-18-v1.html`](manuscript/standalone-v4-audit-and-verification-report-2026-10-18-v1.html). Prior versioned drafts (`v1`–`v3`, `monograph_v3`) remain preserved at their existing paths.
 
 **Certified (interval arithmetic, two precisions).** The complete semilocal
 Weil form at multiplicative window lambda=4 (support [-log 4, log 4]) is
 nonnegative in both parity sectors; its ground is simple and even with
 0 < mu_0 < 2.454e-75; the ground's entire transform has only real zeros
-(v1.40); its first positive zero lies within 9e-33 of gamma_1 (v1.43, an
+(v1.40); its first positive zero lies within 8.752082e-33 of gamma_1 (v1.43, an
 energy/evaluator upper bound). Fresh lambda=5 comparison certificates
-(v1.52) and finite Nyman-Beurling block certificates (v1.58 to v1.66) are
-listed in `RESEARCH_MAP.md`.
+(v1.52), the 192/320-bit direct Arb and 128/256-bit series replacement certificates for
+`beta_{log 4}(1) < -3/5` (`audits/bounds-six-agent-2026-09-30-v1/`), finite Nyman-Beurling
+block certificates (v1.58 to v1.66), and the 256/384-bit `176/176` candidate-mechanism screen
+(`audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/`) are listed in `RESEARCH_MAP.md`.
 
 **What the certificates do not say.** They verify no zero of zeta beyond
 the numerically verified range and establish no convergence to Xi. The
@@ -43,12 +52,35 @@ on the board with per-group thaw conditions (`NEXT_STEPS.md`, "Frozen
 input groups"). The groups have distinct missing estimates and constructions;
 RH equivalence does not identify their proof obligations. None supplies its
 required cofinal arithmetic input. Two historical evidence groups remain unarchived
-(`evidence/MISSING.md`).
+in the full working log (`evidence/MISSING.md`), while their unrecovered files are
+omitted from the scoped standalone `v4` / `monograph_v4` editions in favor of the
+archived replacement certificates and analytical proofs.
 
 **How work proceeds.** `AGENTS.md`: review before every turn, per-turn wall
 check, proposal gate with a control screen (`controls/`), no manuscript
 version for failure-only work. `PROPOSAL_TEMPLATE.md` is filled in a draft
 PR before a research row is claimed.
+
+## October 18 standalone paper (`v4`), 274-page monograph (`monograph_v4`), and 61/61 verification suite
+
+Following an adversarial referee audit of the initial standalone extraction (`v1`–`v3`)
+and the repository evidence ledgers, the self-contained 24-page standalone paper
+[`manuscript/standalone_weil_certificates_and_obstructions_v4.tex`](manuscript/standalone_weil_certificates_and_obstructions_v4.tex)
+and the 274-page standalone monograph
+[`manuscript/standalone_weil_certificates_and_obstructions_monograph_v4.tex`](manuscript/standalone_weil_certificates_and_obstructions_monograph_v4.tex)
+consolidate all proved results, finite-window interval certificates, unconditional
+operator obstructions, and smoothed Nyman–Beurling / Báez-Duarte reductions using
+exclusively archived certificates and complete analytical proofs (`0` undefined
+references, `0` LaTeX warnings, `0` overfull boxes, `0` uncited bibitems, and `0`
+references to unarchived files). The automated verifier
+[`audits/standalone-paper-v4-verification-2026-10-18-v1/verify_standalone_v4.py`](audits/standalone-paper-v4-verification-2026-10-18-v1/verify_standalone_v4.py)
+passes `61/61` checks across all four pillars and LaTeX build logs; the companion two-precision
+(`256/384`-bit `flint.arb`) candidate-mechanism screen in
+[`audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/`](audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/PROPOSAL.md)
+passes `176/176` string-reconstructed `.overlaps()` checks. Neither `RH` nor `G2` is
+proved, both historical original-recovery groups in [`evidence/MISSING.md`](evidence/MISSING.md)
+remain `OPEN`, and all five continuation lanes remain `PAUSED`.
+**Wall check: Same open gap — `WEIL-FLOOR`, `KERNEL-API`, `NB-GAIN`, `OPERATOR-BRIDGES`, `ZERO-GEOMETRY`.**
 
 ## October 6 fixed six-point quotient screen
 
