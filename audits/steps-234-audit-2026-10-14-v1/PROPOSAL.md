@@ -1,0 +1,17 @@
+# Proposal & Pre-Verification Control Gate: Tasks 2, 3, and 4 (2026-10-14, v1)
+
+**Wall check: Known wall** for the general single-power bilinear logarithmic-derivative hierarchy in `ZERO-GEOMETRY` (`PR #72`, `NS-101`) and for universal $n^{-3}$-weighted recovery on $V_{2N}\cap V_N^\perp$ in `NB-GAIN`/`COEFF` (`NS-61`); **Same open gap** for `KERNEL-API` / `WEIL-FLOOR` (`NS-50/51/55/57/58`, `PR #63`) and for the actual `NB-GAIN` optimizer (`NS-53/61/78/80/87`). What changes:
+1. In `ZERO-GEOMETRY`, we prove the **General Bilinear Single-Power Obstruction Theorem** via the Bell-polynomial triangular isomorphism $\Phi_M$, showing that *every* polynomial in $(P_0(2u), \dots, P_{M-1}(2u); P_0(2v), \dots, P_{N-1}(2v))$ whose denominator is cleared by a single power of $K(p,t) = \phi(u)\phi(v)$ lies in the Bell subspace $\operatorname{span}\{Y_m(\mathbf{P}(u))Y_n(\mathbf{P}(v))\}$ and collapses identically to a linear-derivative form $\sum_{m,n} c_{mn}\phi^{(m)}(u)\phi^{(n)}(v)$, while the Planat–Solé Jacobi ODE operator $\mathcal{J}_{\mathrm{PS}}(P_0, P_1, P_2)$ has an irreducible degree-3 non-Bell remainder $\frac{9}{8}D_1 D_2 - \frac{3}{4}D_1^3 - 2c_1 D_1^2$ (pole order $\phi^{-3}$).
+2. In `NB-GAIN`/`COEFF`, we deliver the separately versioned specialist brief `audits/coeff-specialist-brief-2026-10-14-v3.html`, incorporating the `NS-61` refutation of universal $n^{-3}$ recovery and the exact untruncated Schur–Rayleigh reduction for $\psi_N(t) = -t^2(t\beta_N'(t))'$.
+3. In `KERNEL-API`, we execute the **Single-Prime $p=2$ Interior Archimedean Dominance Screen** on $V_{a-\log 2}$ for $\log 2 < a \le \log 3$, proving the **Three-Island Gap and Exact Prime Diagonalization** $q_{\mathrm{prime}}[L_2 g] \equiv \frac{5\log 2}{2}\|g\|_2^2$ on $\log 2 < a \le \frac{1}{2}\log 5$, low-frequency indefiniteness of the unrestricted symbol $M_a(0) < 0$, and **explicit separation of the `NS-57` control ($\delta_2 = -\frac{\log 2}{100}$) at $a = \log 3$** on the 2D even interior subspace $\operatorname{span}\{L_2 g_1^+, L_2 g_2^+\} \subset V_{\log 3}$ ($\lambda_{\min}^{\mathrm{NS57}}(\log 3) = -0.02687959 < 0$ vs. $\lambda_{\min}^{\mathrm{orig}}(\log 3) = +0.00230395 > 0$, locating $a_*^+(\mathrm{NS57}) \in (\frac{1}{2}\log 7, \log 3)$).
+**RH**, **G2**, the **cofinal signed-arithmetic lower bound**, and **both historical missing-original evidence groups** in `evidence/MISSING.md` remain **OPEN**.
+
+## Pre-Verification Control Plan
+
+1. **Task 2 (`ZERO-GEOMETRY`)**:
+   - Verify the two-sided polynomial inverse $\Phi_4 : (P_0, P_1, P_2, P_3) \leftrightarrow (D_1, D_2, D_3, D_4)$ and the exact Bell-basis decomposition of $\mathcal{J}_{\mathrm{PS}}(P_0, P_1, P_2)$ in exact `fractions.Fraction` arithmetic.
+   - Verify higher-order Bell bilinear collapse $(m,n) \in \{(1,1), (2,1), (2,2), (3,1)\}$ and the universal strip Laplace–Fourier identity to `< 1e-50` at 60 decimal digits.
+2. **Task 3 (`NB-GAIN` / `COEFF`)**:
+   - Verify exact rational constants $C_b = 6904/45045$, $\operatorname{Var}_{\mathbb{R}}(b''') = 543/14$, $A_b = 181/3360$, $I_{\mathrm{diag}} = 1219/38798760$ and the `NS-61` adjacent second-difference scaling $n^3 \sum |y_k|^2/k^3 \to 6$ vs. $n^3 \|W_n\|_{\mathcal{H}}^2 \to 0$.
+3. **Task 4 (`KERNEL-API`)**:
+   - Screen the interior operator $P_{a-\log 2} L_2 W_0 L_2 P_{a-\log 2}$ across $a \in \{0.75, \frac{1}{2}\log 5, 0.90, \frac{1}{2}\log 7, \log 3\}$ against the matched `NS-57` control ($\delta_2 = -\frac{\log 2}{100}$) and record the `controls/davenport_heilbronn.py::screen` metadata.

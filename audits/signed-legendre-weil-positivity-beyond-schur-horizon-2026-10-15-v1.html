@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milestone 15 Report — Exact Signed Legendre Weil Positivity Beyond the Unsigned Schur Horizon &amp; Universal Reflection Kernel Strictness (2026-10-15)</title>
+</head>
+<body style="margin:0; padding:28px 16px; background-color:#f8f9fa; color:#1f2328; font-family:Georgia, 'Times New Roman', Times, serif; line-height:1.62; font-size:16px;">
+<div style="max-width:680px; margin:0 auto; background-color:#ffffff; border:1px solid #d0d7de; border-radius:6px; padding:32px 36px; box-sizing:border-box;">
+
+  <div style="border-bottom:2px solid #1f2328; padding-bottom:14px; margin-bottom:22px;">
+    <div style="font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#57606a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin-bottom:6px;">
+      Milestone 15 Technical Report &bull; 2026-10-15 &bull; Version 1 (<code>WEIL-FLOOR</code> &amp; <code>NB-GAIN</code> / <code>COEFF</code>)
+    </div>
+    <h1 style="margin:0 0 8px 0; font-size:22px; line-height:1.32; font-weight:normal; color:#111111;">
+      Exact Signed Legendre Weil Positivity Beyond the Unsigned Schur Horizon &amp; Universal All-Degree Reflection Kernel Strictness
+    </h1>
+    <div style="font-size:13px; color:#57606a;">
+      Audit Package: <code>audits/signed-legendre-weil-positivity-beyond-schur-horizon-2026-10-15-v1/</code>
+    </div>
+  </div>
+
+  <div style="background-color:#f6f8fa; border-left:4px solid #0969da; padding:14px 16px; margin-bottom:24px; font-size:14px;">
+    <p style="margin:0 0 8px 0;">
+      <strong>Wall check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">WEIL-FLOOR</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>.</strong>
+      Closest results: Milestone 11 (<code>mellin-jacobi-finite-rank-schur-reduction-2026-10-15-v1</code>), Milestone 13 (<code>three-prime-complete-shift-spectrum-and-horizon-2026-10-15-v1</code>), and Milestone 14 (<code>universal-legendre-shift-algebra-and-k4-horizon-2026-10-15-v1</code>).
+      What changes in Milestone 15: Proves the <strong>Universal Indicator Completion-of-the-Square Identity Across <em>u</em> = 1</strong> and the <strong>All-Degree Polynomial Reflection Strictness Theorem</strong> (Theorem 1), establishing that <em>W</em><sub>signed</sub><sup>(<em>N</em>)</sup>(<em>b</em>) &minus; <em>W</em><sub>unsigned</sub><sup>(<em>N</em>)</sup>(<em>b</em>) = &Delta;<sub>Schur</sub><sup>(<em>N</em>)</sup>(<em>b</em>) = &sum; |<em>c</em><sub><em>r</em></sub>| <em>Q</em><sub>&tau;<sub><em>r</em></sub>,sgn(<em>c</em><sub><em>r</em></sub>)</sub><sup>(<em>N</em>)</sup> &succ; 0 is strictly positive definite for all finite Legendre dimensions <em>N</em> &ge; 1. Certifies in two-precision (256-bit and 384-bit) <code>flint.arb</code> ball arithmetic (Theorem 2) that at <strong>&Delta;<sub>&alpha;</sub> = 0</strong> (zero archimedean shift), both tail-corrected signed Legendre Weil matrices <em>W</em><sub>signed,tail</sub><sup>(4,even)</sup>(<em>b</em>) &succ; 0 and <em>W</em><sub>signed,tail</sub><sup>(4,odd)</sup>(<em>b</em>) &succ; 0 remain <strong>strictly positive definite</strong> up to <strong><em>N</em> = 50</strong> for <em>K</em> = 3 (23 active shifts) and <strong><em>N</em> = 380</strong> for <em>K</em> = 4 (<strong>175 active shifts</strong>, where <em>W</em><sub>unsigned</sub><sup>(4,even)</sup> plunges to &minus;21.1335), while the Davenport&ndash;Heilbronn counterexample <em>W</em><sub>arith,DH</sub><sup>(4)</sup>(<em>b</em>) is certified strictly indefinite (&lambda;<sub>min</sub> &lt; 0).
+    </p>
+    <p style="margin:0;">
+      <strong>Open-status disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong> (global Weil positivity across all test functions), the <strong>cofinal signed-arithmetic lower bound as <em>K</em> &rarr; &infin; and <em>N</em><sub>leg</sub> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    1. Theorem 1: Universal Indicator Completion of the Square Across <em>u</em> = 1 &amp; All-Degree Reflection Strictness
+  </h2>
+
+  <p style="margin:0 0 10px 0;">
+    For every shift &tau; &isin; (0, 2<em>b</em>) with normalized parameter <em>u</em> = &tau;/<em>b</em> &isin; (0, 2), the support multiplicity weight of <em>S</em><sub>&tau;</sub> + <em>S</em><sub>&minus;&tau;</sub> on (&minus;<em>b</em>, <em>b</em>) is given globally across both the two-sided regime <em>u</em> &isin; (0, 1) and the single-reflection regime <em>u</em> &isin; [1, 2) by the sum of two indicator functions:
+  </p>
+
+  <div style="background-color:#f6f8fa; padding:10px 14px; border-radius:4px; margin:10px 0 12px 0; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">
+    w_&tau;(t) = 1_{(&minus;b, b&minus;&tau;)}(t) + 1_{(&minus;b+&tau;, b)}(t), &nbsp;&nbsp; &langle;f, (D_&tau; + &sigma;(S_&tau; + S_{&minus;&tau;}))f&rangle; = &int;_{&minus;b}^{b&minus;&tau;} (f(t) + &sigma;f(t+&tau;))<sup>2</sup> dt &ge; 0.
+  </div>
+
+  <ul style="margin:0 0 14px 0; padding-left:22px;">
+    <li style="margin-bottom:6px;">
+      <strong>Why <em>D</em><sub>&tau;</sub><sup>(<em>N</em>)</sup> and <em>Q</em><sub>&tau;,&sigma;</sub><sup>(<em>N</em>)</sup> Have Zero Piecewise Branching at <em>u</em> = 1:</strong>
+      When <em>u</em> &isin; (0, 1), (&minus;<em>b</em>, <em>b</em>&minus;&tau;) and (&minus;<em>b</em>+&tau;, <em>b</em>) overlap on (&minus;<em>b</em>+&tau;, <em>b</em>&minus;&tau;) to give weight {1, 2, 1}; when <em>u</em> &isin; [1, 2), they are disjoint and give weight {1, 0, 1}. Because the indicator sum is a single expression for all <em>u</em> &isin; (0, 2), completing the square inside &int;<sub>&minus;<em>b</em></sub><sup><em>b</em>&minus;&tau;</sup> produces a single polynomial integral on [&minus;1, 1&minus;<em>u</em>] with zero branching at <em>u</em> = 1.
+    </li>
+    <li style="margin-bottom:6px;">
+      <strong>All-Degree Polynomial Kernel Proof:</strong>
+      Since (&minus;<em>b</em>, <em>b</em>&minus;&tau;) has strictly positive length 2<em>b</em> &minus; &tau; &gt; 0 for all <em>u</em> &isin; (0, 2), a polynomial <em>f</em> satisfies &int;<sub>&minus;<em>b</em></sub><sup><em>b</em>&minus;&tau;</sup> (<em>f</em>(<em>t</em>) + &sigma;<em>f</em>(<em>t</em>+&tau;))<sup>2</sup> d<em>t</em> = 0 if and only if <em>f</em>(<em>t</em>+&tau;) = &minus;&sigma;<em>f</em>(<em>t</em>) for all <em>t</em> &isin; &#8477;. Since the only periodic/anti-periodic polynomials on &#8477; are <em>f</em> &equiv; 0 (for &sigma; = +1) and <em>f</em> &equiv; const &isin; span{<em>e</em><sub>0</sub>} (for &sigma; = &minus;1), for <strong>every</strong> finite dimension <em>N</em> &ge; 1 and <strong>every</strong> <em>u</em> &isin; (0, 2):
+      <em>Q</em><sub>&tau;,+1</sub><sup>(<em>N</em>,even)</sup> &succ; 0 on &#8477;<sup><em>N</em></sup>, <em>Q</em><sub>&tau;,+1</sub><sup>(<em>N</em>,odd)</sup> &succ; 0 on &#8477;<sup><em>N</em></sup>, <em>Q&#771;</em><sub>&tau;,&minus;1</sub><sup>(<em>N</em>,even)</sup> &succ; 0 on &#8477;<sup><em>N</em>&minus;1</sup> (with ker = &#8477;<em>e</em><sub>0</sub>), and <em>Q</em><sub>&tau;,&minus;1</sub><sup>(<em>N</em>,odd)</sup> &succ; 0 on &#8477;<sup><em>N</em></sup>.
+    </li>
+    <li style="margin-bottom:4px;">
+      <strong>Exact Signed-vs-Unsigned Legendre Decomposition:</strong>
+      <em>W</em><sub>signed</sub><sup>(<em>N</em>,sector)</sup>(<em>b</em>) &minus; <em>W</em><sub>unsigned</sub><sup>(<em>N</em>,sector)</sup>(<em>b</em>) = &Delta;<sub>Schur</sub><sup>(<em>N</em>,sector)</sup>(<em>b</em>) := &sum;<sub>0&lt;&tau;<sub><em>r</em></sub>&lt;2<em>b</em></sub> |<em>c</em><sub><em>r</em></sub>| <em>Q</em><sub>&tau;<sub><em>r</em></sub>,sgn(<em>c</em><sub><em>r</em></sub>)</sub><sup>(<em>N</em>,sector)</sup> &succ; 0.
+    </li>
+  </ul>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    2. Theorem 2: Certified Signed Legendre Positivity at &Delta;<sub>&alpha;</sub> = 0 Across 175 Active Shifts vs. Unsigned Schur Breakdown &amp; Davenport&ndash;Heilbronn Indefiniteness
+  </h2>
+
+  <table style="width:100%; border-collapse:collapse; font-size:12.5px; margin:12px 0 16px 0;">
+    <thead>
+      <tr style="background-color:#f6f8fa; border-bottom:2px solid #d0d7de;">
+        <th style="padding:6px 6px; text-align:left;">Family</th>
+        <th style="padding:6px 6px; text-align:right;"><em>N</em></th>
+        <th style="padding:6px 6px; text-align:right;">2<em>b</em></th>
+        <th style="padding:6px 6px; text-align:right;">Shifts</th>
+        <th style="padding:6px 6px; text-align:right;">&lambda;<sub>min</sub><sup>cert</sup>(<em>W</em><sub>sig,tail</sub><sup>even</sup>)</th>
+        <th style="padding:6px 6px; text-align:right;"><em>R</em><sub>uns</sub><sup>even</sup>(<em>v</em>)</th>
+        <th style="padding:6px 6px; text-align:right;">&lambda;<sub>min</sub><sup>cert</sup>(<em>W</em><sub>sig,tail</sub><sup>odd</sup>)</th>
+        <th style="padding:6px 6px; text-align:right;"><em>R</em><sub>uns</sub><sup>odd</sup>(<em>v</em>)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 (<em>P</em><sub>3</sub> = 30)</td>
+        <td style="padding:5px 6px; text-align:right;">36</td>
+        <td style="padding:5px 6px; text-align:right;">0.182322</td>
+        <td style="padding:5px 6px; text-align:right;">7</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+2.584013 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right;">+1.691547</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+3.269253 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right;">+2.140174</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 (<em>P</em><sub>3</sub> = 30)</td>
+        <td style="padding:5px 6px; text-align:right;">40</td>
+        <td style="padding:5px 6px; text-align:right;">0.287682</td>
+        <td style="padding:5px 6px; text-align:right;">12</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.357143 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;0.011343 &lt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+3.014174 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right;">+0.719500</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 (<em>P</em><sub>3</sub> = 30)</td>
+        <td style="padding:5px 6px; text-align:right;">42</td>
+        <td style="padding:5px 6px; text-align:right;">0.336472</td>
+        <td style="padding:5px 6px; text-align:right;">14</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+0.831861 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;0.693008 &lt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+2.905092 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right;">+0.321614</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 (<em>P</em><sub>3</sub> = 30)</td>
+        <td style="padding:5px 6px; text-align:right;">45</td>
+        <td style="padding:5px 6px; text-align:right;">0.405465</td>
+        <td style="padding:5px 6px; text-align:right;">18</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+0.376325 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;1.903737 &lt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+2.810945 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;0.919393 &lt; 0</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 (<em>P</em><sub>3</sub> = 30)</td>
+        <td style="padding:5px 6px; text-align:right;">50</td>
+        <td style="padding:5px 6px; text-align:right;">0.510826</td>
+        <td style="padding:5px 6px; text-align:right;">23</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+0.058958 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;3.834124 &lt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+2.274184 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;2.778879 &lt; 0</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 4 (<em>P</em><sub>4</sub> = 210)</td>
+        <td style="padding:5px 6px; text-align:right;">225</td>
+        <td style="padding:5px 6px; text-align:right;">0.068993</td>
+        <td style="padding:5px 6px; text-align:right;">21</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+4.581554 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right;">+3.600956</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+4.734935 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right;">+3.863205</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 4 (<em>P</em><sub>4</sub> = 210)</td>
+        <td style="padding:5px 6px; text-align:right;">240</td>
+        <td style="padding:5px 6px; text-align:right;">0.133531</td>
+        <td style="padding:5px 6px; text-align:right;">43</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+4.305897 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right;">+0.717696</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+4.265159 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right;">+0.950830</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 4 (<em>P</em><sub>4</sub> = 210)</td>
+        <td style="padding:5px 6px; text-align:right;">252</td>
+        <td style="padding:5px 6px; text-align:right;">0.182322</td>
+        <td style="padding:5px 6px; text-align:right;">56</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+3.809973 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;1.404556 &lt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+3.998782 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;0.847349 &lt; 0</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 4 (<em>P</em><sub>4</sub> = 210)</td>
+        <td style="padding:5px 6px; text-align:right;">260</td>
+        <td style="padding:5px 6px; text-align:right;">0.213574</td>
+        <td style="padding:5px 6px; text-align:right;">66</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+3.529680 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;3.045963 &lt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+4.051477 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;2.741856 &lt; 0</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 4 (<em>P</em><sub>4</sub> = 210)</td>
+        <td style="padding:5px 6px; text-align:right;">300</td>
+        <td style="padding:5px 6px; text-align:right;">0.356675</td>
+        <td style="padding:5px 6px; text-align:right;">107</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.369546 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;9.357305 &lt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+4.164396 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;8.537835 &lt; 0</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 4 (<em>P</em><sub>4</sub> = 210)</td>
+        <td style="padding:5px 6px; text-align:right;">350</td>
+        <td style="padding:5px 6px; text-align:right;">0.510826</td>
+        <td style="padding:5px 6px; text-align:right;">152</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+0.330079 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;17.009403 &lt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+3.682829 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;15.823886 &lt; 0</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 4 (<em>P</em><sub>4</sub> = 210)</td>
+        <td style="padding:5px 6px; text-align:right;">380</td>
+        <td style="padding:5px 6px; text-align:right;">0.593064</td>
+        <td style="padding:5px 6px; text-align:right;"><strong>175</strong></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+0.234077 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;21.133548 &lt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.594494 &gt; 0</td>
+        <td style="padding:5px 6px; text-align:right; color:#cf222e;">&minus;19.900394 &lt; 0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin:0 0 12px 0;">
+    <strong>Davenport&ndash;Heilbronn Control Separation (<em>K</em> = 3, &#8473;<sub>3</sub> = {2, 3, 5}):</strong>
+    Using the exact truncated Dirichlet convolution <em>Q</em><sub><em>D</em></sub>(<em>q</em>) = &minus;&sum;<sub><em>r</em></sub> &sum;<sub><em>n</em>=2</sub><sup>60</sup> &ell;<sub><em>r</em></sub> (&Lambda;<sub><em>D</em></sub>(<em>n</em>)/&radic;<em>n</em>)(&delta;<sub><em>q</em>,<em>rn</em></sub> + &delta;<sub><em>q</em>,<em>r</em>/<em>n</em></sub>) (certified identical to the infinite-tower Euler collapse formula on &zeta;(<em>s</em>) for all <em>q</em> &isin; [1, 2)), the Davenport&ndash;Heilbronn zero-shift diagonal is <strong><em>C</em><sub>diag,DH</sub>({2,3,5}) = (6/5)<em>C</em><sub>diag,DH</sub>({2,3}) &approx; &minus;0.834000 &lt; 0</strong>, and across all <em>N</em> &isin; {36, 40, 42, 45, 50} both <em>W</em><sub>arith,DH</sub><sup>(4,even)</sup>(<em>b</em>) and <em>W</em><sub>arith,DH</sub><sup>(4,odd)</sup>(<em>b</em>) are certified strictly indefinite (<em>R</em><sub>even</sub> &isin; [&minus;2.2532, &minus;1.0572] &lt; 0, <em>R</em><sub>odd</sub> &isin; [&minus;2.5105, &minus;1.0558] &lt; 0).
+  </p>
+
+  <div style="background-color:#f6f8fa; border-top:2px solid #1f2328; padding:14px 16px; margin-top:24px; font-size:13px; color:#24292f;">
+    <p style="margin:0 0 6px 0;">
+      <strong>Closing Wall Check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">WEIL-FLOOR</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>.</strong>
+      Two-precision (256-bit and 384-bit) <code>flint.arb</code> certificate: <code>audits/signed-legendre-weil-positivity-beyond-schur-horizon-2026-10-15-v1/verification.json</code>.
+    </p>
+    <p style="margin:0;">
+      <strong>Open Problems Disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound as <em>K</em> &rarr; &infin; and <em>N</em><sub>leg</sub> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zero-Geometry &amp; Operator-Bridges Arithmetic-Lemma Assessment — 2026-10-16 v1</title>
+</head>
+<body style="margin:0;padding:32px 20px;background-color:#fbfaf7;color:#1f2328;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;">
+<div style="max-width:680px;margin:0 auto;background-color:#ffffff;border:1px solid #d8d3c8;padding:36px 40px;box-sizing:border-box;">
+
+  <div style="padding:12px 16px;background-color:#f4f1ea;border-left:4px solid #5c4b37;margin-bottom:24px;font-size:14px;line-height:1.5;">
+    <strong>Wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR</code> (<code>NS24/39/43</code>), <code>NB-GAIN</code> (<code>NS53/61/83/87/98</code>), and <code>ZERO-GEOMETRY</code> / <code>OPERATOR-BRIDGES</code> (<code>NS94/100/101</code>, <code>two-prime-contact</code>, <code>geometric-swarm</code>). No new uniform arithmetic estimate is supplied.
+  </div>
+
+  <div style="border-bottom:2px solid #2c3e50;padding-bottom:16px;margin-bottom:24px;">
+    <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#5c6670;margin-bottom:6px;">
+      TSG Global &middot; Riemann Hypothesis Research Campaign &middot; Pre-Computation Arithmetic Assessment (v1)
+    </div>
+    <h1 style="margin:0 0 8px 0;font-size:23px;line-height:1.3;color:#111827;font-weight:normal;">
+      Tightly Scoped Arithmetic-Lemma Assessment for <code>ZERO-GEOMETRY</code> (<code>NS94/100/101</code>) and <code>OPERATOR-BRIDGES</code>
+    </h1>
+    <div style="font-size:13px;color:#4b5563;">
+      <strong>Date:</strong> October 16, 2026 &middot;
+      <strong>Version:</strong> v1 (companion to <a href="nb-full-residual-arithmetic-assessment-2026-10-16-v1.html" style="color:#1d4ed8;">nb-full-residual-arithmetic-assessment-2026-10-16-v1.html</a> and <a href="weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html" style="color:#1d4ed8;">weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html</a>) &middot;
+      <strong>Decision Budget:</strong> &le; 90 minutes pre-computation &middot;
+      <strong>Disposition:</strong> Stop report &amp; continued pause (0 new computations)
+    </div>
+  </div>
+
+  <h2 style="font-size:18px;color:#111827;border-bottom:1px solid #e5e7eb;padding-bottom:6px;margin-top:28px;">
+    1. Scope, Thaw Conditions, and Retained Analytical Targets
+  </h2>
+  <p style="margin:10px 0;">
+    Alongside <code>NB-GAIN</code> (<a href="nb-full-residual-arithmetic-assessment-2026-10-16-v1.html" style="color:#1d4ed8;">assessed here</a>) and <code>WEIL-FLOOR</code> / <code>KERNEL-API</code> (<a href="weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html" style="color:#1d4ed8;">assessed here</a>), the campaign wall check names <code>ZERO-GEOMETRY</code> (<code>NS94/100/101</code>) and its companion subgroup <code>OPERATOR-BRIDGES</code> (<a href="two-prime-contact-2026-09-29-v1.html" style="color:#1d4ed8;">two-prime-contact-2026-09-29-v1</a>, <a href="geometric-swarm-2026-09-29-v1.html" style="color:#1d4ed8;">geometric-swarm-2026-09-29-v1</a>) among the closest audited boundaries. In <code>NEXT_STEPS.md</code> (&sect;&ldquo;Frozen input groups, proposal gate, NS-102&rdquo;), their subgroup thaw gates are defined as follows:
+  </p>
+
+  <div style="background-color:#f8fafc;border:1px solid #cbd5e1;padding:14px 16px;margin:14px 0;font-size:14px;">
+    <p style="margin:0 0 8px 0;">
+      <strong><code>ZERO-GEOMETRY</code> Thaw Gate (<code>NS94/100/101</code>):</strong>
+      For $F(z) = \tfrac{1}{2}\xi(\tfrac{1}{2}+z) = \int_{\mathbb{R}} \phi(t)e^{zt}\,dt$ with $\phi(t) = \tfrac{1}{4}(\partial_t^2 - \tfrac{1}{4})\bigl(e^{t/2}\Theta(e^{2t})\bigr)$ and $\Theta(r) = \sum_{n\in\mathbb{Z}} e^{-\pi n^2 r}$, Lagarias&rsquo;s half-plane logarithmic-derivative positivity criterion is
+      $$\operatorname{Re}\bigl\{F'(x+iy)\overline{F(x+iy)}\bigr\} = 8\int_0^\infty p\sinh(2xp)\,A_p(y)\,dp = 4\int_{\mathbb{R}} K_x(t)e^{2iyt}\,dt &gt; 0 \qquad (\forall\,x &gt; 0,\,y \in \mathbb{R}),$$
+      where $A_p(y) = \int_0^\infty \phi(p+t)\phi(p-t)\cos(2yt)\,dt$ and $K_x(t) = \int_0^\infty p\sinh(2xp)\phi(p+t)\phi(p-t)\,dp$. A thaw requires a <strong>specific original arithmetic identity or signed lower bound absent from the <code>NS94</code>, <code>NS100</code>, and <code>NS101</code> controls</strong>; generic theta-factorization reruns, slicewise positivity claims, or circle-inversion coordinate rewrites are frozen.
+    </p>
+    <p style="margin:0;">
+      <strong><code>OPERATOR-BRIDGES</code> Thaw Gate (<code>two-prime-contact</code> &amp; <code>geometric-swarm</code>):</strong>
+      Name and construct the missing route-specific completed global operator, Hilbert-space inner product, archimedean/pole completion, and conditional transfer to the complete signed Weil form $q_a[f] \ge -C_*\|f\|_{L^2(-a,a)}^2$; mere finite Euler-factor determinant identities, connected contact manifolds with arbitrary prescribed periods, or local LLM proposal batches are frozen.
+    </p>
+  </div>
+
+  <p style="margin:10px 0;">
+    Under the same pre-computation protocol applied to <code>NB-GAIN</code> and <code>WEIL-FLOOR</code> (&le; 90 minutes, zero new tables or parameter scans), we evaluate the three candidate mechanisms in <code>ZERO-GEOMETRY</code> and <code>OPERATOR-BRIDGES</code> against all five mandatory items: (1) <strong>exact expression</strong>, (2) <strong>coefficient hypotheses</strong>, (3) <strong>uniform range</strong>, (4) <strong>estimating method</strong>, and (5) <strong>remaining transfer</strong>.
+  </p>
+
+  <h2 style="font-size:18px;color:#111827;border-bottom:1px solid #e5e7eb;padding-bottom:6px;margin-top:28px;">
+    2. Five-Item Assessment of Candidate Mechanisms
+  </h2>
+
+  <h3 style="font-size:15px;color:#1e293b;margin:18px 0 6px 0;">
+    Candidate I &mdash; Integrated Theta-Kernel Polarization &amp; Autocorrelation Domination (<code>NS100/101</code>)
+  </h3>
+  <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:14px;">
+    <tbody>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;width:26%;background-color:#f8fafc;font-weight:bold;vertical-align:top;">1. Exact expression</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          With $f_x(u) = e^{xu}\phi(u)$, $b_x(u) = u\,f_x(u)$, and autocorrelation $\mathcal{A}[q](t) := \int_{\mathbb{R}} q(p+t)q(p-t)\,dp$, the integrated kernel $K_x(t) = \tfrac{1}{4}\partial_x J_x(t)$ ($J_x = \mathcal{A}[f_x]$) admits the exact polarization decomposition (<code>NS101</code> Eq. (4)):
+          $$K_x(t) = \frac{1}{8}\bigl\{\mathcal{A}[f_x + b_x](t) - \mathcal{A}[f_x - b_x](t)\bigr\}, \qquad \int_{\mathbb{R}} K_x(t)e^{2iyt}\,dt = \frac{1}{4}\operatorname{Re}\bigl\{F'(x+iy)\overline{F(x+iy)}\bigr\}.$$
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">2. Coefficient hypotheses</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Exact one-lattice Jacobi theta series $\Theta(r) = \sum_{n\in\mathbb{Z}} e^{-\pi n^2 r}$, modular reciprocity $h(t) = e^{t/2}\Theta(e^{2t}) = h(-t)$, differential annihilation of the $n=0$ mode via $\phi(t) = \tfrac{1}{4}(\partial_t^2 - \tfrac{1}{4})h(t) &gt; 0$, and double-exponential decay $0 &lt; \phi(t) \le \frac{2\pi^2}{1 - 16e^{-3\pi}}e^{9t/2 - \pi e^{2t}}$ ($t \ge 0$).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">3. Uniform range</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          All $0 &lt; x &lt; 1/2$ and all vertical heights $y \in \mathbb{R}$ inside the critical strip (with $y \to \infty$).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">4. Estimating method</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Either (a) establish Fourier-side domination $\widehat{\mathcal{A}[f_x+b_x]}(2y) &gt; \widehat{\mathcal{A}[f_x-b_x]}(2y)$ from the modular completion $g(t) = h(t) - 2\cosh(t/2)$ (<code>NS101</code> Eq. (2): $F(z) = \tfrac{1}{4}(z^2 - \tfrac{1}{4})\int_{\mathbb{R}} g(t)e^{zt}\,dt$ for $|\operatorname{Re} z| &lt; 1/2$), or (b) integrate by parts in $p$ across the slice integrals $A_p(y)$ to dominate the negative slices.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">5. Remaining transfer &amp; verdict</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          <strong>Rejected (Fourier polarization tautology and three independent <code>NS100/101</code> obstructions).</strong>
+          <ul style="margin:4px 0 0 0;padding-left:18px;">
+            <li style="margin-bottom:4px;">
+              <em>Polarization tautology:</em> Because $\int_{\mathbb{R}} \mathcal{A}[f_x \pm b_x](t)e^{2iyt}\,dt = \tfrac{1}{2}|F(x+iy) \pm F'(x+iy)|^2$, the domination $\widehat{\mathcal{A}[f_x+b_x]}(2y) &gt; \widehat{\mathcal{A}[f_x-b_x]}(2y)$ is algebraically identical to $|F + F'|^2 - |F - F'|^2 = 4\operatorname{Re}(F'\overline{F}) &gt; 0$; it supplies no intermediate bound.
+            </li>
+            <li style="margin-bottom:4px;">
+              <em>Slicewise positivity falsified (<code>NS100</code> Eq. (2)):</em> The 256/384-bit Arb certificate encloses $A_0(20) = \int_0^\infty \phi(t)^2\cos(40t)\,dt \in [-5.4320\times 10^{-10}, -5.4319\times 10^{-10}] &lt; 0$, and dominated convergence forces $A_p(20) &lt; 0$ for all sufficiently small $p &gt; 0$.
+            </li>
+            <li style="margin-bottom:4px;">
+              <em>General-property controls (<code>NS100</code> &amp; <code>NS101</code> Eqs. (5)&ndash;(8)):</em> Positivity, evenness, and strong log-concavity ($\partial_t^2 \log k \le -1/4$) fail on $k(t) = \frac{1}{2\sqrt{\pi}}\{3e^{-t^2/4}+e^{-(t-1)^2/4}+e^{-(t+1)^2/4}\}$ ($\operatorname{Re}(F_k'\overline{F_k})(\log 2 + i\pi) &lt; 0$). Likewise, Jacobi reciprocity $\Theta_a(r) = r^{-1/2}\Theta_a(1/r)$, positive Gaussian weights, positive even kernel $\phi_a(t) &gt; 0$, and order-one entire growth fail on the dilated theta control $\Theta_a(r) = [3\Theta(r) + e^{-a/2}\Theta(e^{-2a}r) + e^{a/2}\Theta(e^{2a}r)]/B_a$ at $a=2$, which has explicit off-axis critical-strip zeros $z = \pm\tfrac{1}{2}\operatorname{arcosh}(3/2) + i(m+\tfrac{1}{2})\pi \in \{|\operatorname{Re} z| &lt; 1/2\}$.
+            </li>
+            <li>
+              <em>Absolute unfolding boundary (<code>NS101</code> Eqs. (9)&ndash;(11)):</em> Termwise Mellin unfolding of $q_n(t)$ has $\int_{\mathbb{R}} |q_n(t)|e^{xt}\,dt = c(x)n^{-(x+1/2)}$, converging absolutely only for $x &gt; 1/2$ outside the open critical strip, with an exact interchange failure at $z = 1/2$ ($\int_{\mathbb{R}} (\sum_{n\ge 1} q_n(t))e^{t/2}\,dt = 1/4 \ne 0 = \sum_{n\ge 1} \int_{\mathbb{R}} q_n(t)e^{t/2}\,dt$).
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:15px;color:#1e293b;margin:18px 0 6px 0;">
+    Candidate II &mdash; Tangent-Circle Power-Product Zero Statistic &amp; Cayley Disk Contraction (<code>NS94/100</code>)
+  </h3>
+  <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:14px;">
+    <tbody>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;width:26%;background-color:#f8fafc;font-weight:bold;vertical-align:top;">1. Exact expression</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          For inversion circles of radii $p, q &gt; 0$ externally tangent to the critical line $\operatorname{Re} s = 1/2$ at $1/2$ (centres $1/2 - p$ and $1/2 + q$), the nonnegative power-product sum over nontrivial zeros $\rho = x + iy$ up to height $H$ (<code>NS94</code> Eqs. (89)&ndash;(91)):
+          $$\mathcal{P}_{p,q}(H) := \sum_{\substack{\rho = x+iy \\ |y| \le H}} -\frac{P_L(I_L\rho)\,P_R(I_R\rho)}{p^3 q^3} = \sum_{\substack{\rho = x+iy \\ |y| \le H}} \frac{(x - 1/2)^2}{\bigl[(x - 1/2 + p)^2 + y^2\bigr]\bigl[(x - 1/2 - q)^2 + y^2\bigr]} \ge 0,$$
+          together with the Cayley logarithmic-derivative disk observable $1 - |S(z)|^2 = \frac{4\operatorname{Re} L(z)}{|L(z)+1|^2}$ ($L = F'/F$, $S = (L-1)/(L+1)$; <code>NS100</code>).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">2. Coefficient hypotheses</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Functional equation $\xi(1-s) = \xi(s)$, conjugation symmetry $\overline{\xi(s)} = \xi(\bar{s})$, and Hadamard product convergence over symmetric zero sets.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">3. Uniform range</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          All finite height cutoffs $H \to \infty$ (requiring $\mathcal{P}_{p,q}(H) = 0$) or all $\operatorname{Re} z &gt; 0$ (requiring $|S(z)| &lt; 1$).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">4. Estimating method</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Use separate or successive circle inversions $I_{c,r}(z) = c + r^2/(\bar{z}-c)$, the exterior homothety center $e = \tfrac{1}{2} + \frac{pq}{p-q}$, or inverted-disc zero-count comparisons to force $\mathcal{P}_{p,q}(H) = 0$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">5. Remaining transfer &amp; verdict</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          <strong>Rejected (zero-free coordinate dependence and <code>NS94</code> symmetric quadruplet control).</strong>
+          <ul style="margin:4px 0 0 0;padding-left:18px;">
+            <li style="margin-bottom:4px;">
+              <em>Zero-independent geometry (<code>NS94</code> Eqs. (30), (48)):</em> Both the exterior homothety center $e = \tfrac{1}{2} + \frac{pq}{p-q}$ and the successive inversion M&ouml;bius map $I_R I_L(z) - \tfrac{1}{2} = \frac{z - 1/2}{1 + (p^{-1}+q^{-1})(z - 1/2)}$ depend exclusively on the circle radii $(p,q)$ and are completely independent of the zeros of $\xi$.
+            </li>
+            <li style="margin-bottom:4px;">
+              <em>Symmetric off-line control (<code>NS94</code> Eq. (75)):</em> The real functional-equation polynomial $P(s) = ((s - \tfrac{1}{2} - \delta)^2 + t^2)((s - \tfrac{1}{2} + \delta)^2 + t^2)$ at $\delta = 1/4, t = 1$ satisfies $P(1-s) = P(s)$ and $\overline{P(s)} = P(\bar{s})$, places exactly two roots inside each image disc for $p = q = 1/2$ with zero roots on either boundary, and has the same homothety center at infinity, yet has $\mathcal{P}_{1/2,1/2} &gt; 0$.
+            </li>
+            <li>
+              <em>No arithmetic upper bound on $\mathcal{P}_{p,q}(\infty)$:</em> While $\mathcal{P}_{p,q}(H) \ge 0$ avoids cancellation between reflected partners $\rho$ and $1-\bar{\rho}$, proving $\mathcal{P}_{p,q}(H) = 0$ for all $H$ is an unestimated RH-equivalent statement, not a consequence of inversion geometry or functional-equation symmetry.
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:15px;color:#1e293b;margin:18px 0 6px 0;">
+    Candidate III &mdash; Connected Contact Reeb Transport &amp; Local Multi-Prime Operator Bridges (<code>OPERATOR-BRIDGES</code>: <a href="two-prime-contact-2026-09-29-v1.html" style="color:#1d4ed8;">two-prime-contact</a> &amp; <a href="geometric-swarm-2026-09-29-v1.html" style="color:#1d4ed8;">geometric-swarm</a>)
+  </h3>
+  <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin-bottom:14px;">
+    <tbody>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;width:26%;background-color:#f8fafc;font-weight:bold;vertical-align:top;">1. Exact expression</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          On the connected contact 3-manifold $Y = \{H=1\} \subset T^*(S^1 \times \mathbb{R})$ with $H = v(x)\tau + b(x)y$, $b(x) = \frac{x(1-x)}{x^2-x+1}$, $v(x) = \frac{a+c}{2} + \frac{a-c}{2}\cos(\pi x)$ ($a = 1/\log 2, c = 1/\log 3$), $\alpha = A\,dt + y\,dx$, and Reeb field $R = v\partial_t + b\partial_x - (v'A + b'y)\partial_y$, the damped horizontal-form transport $U_s = e^{-s/2}\varphi_{-s}^*$ on $\Omega_{\mathrm{hor},c}^\infty(Y)$ has local flat trace (<a href="two-prime-contact-2026-09-29-v1/README.md" style="color:#1d4ed8;">two-prime-contact</a> &sect;2):
+          $$\operatorname{Tr}^\flat(\chi U_s) = -\sum_{p \in \{2,3\}} \sum_{m \ge 1} (\log p)\,p^{-m/2}\,\delta(s - m\log p),$$
+          alongside the three local <a href="geometric-swarm-2026-09-29-v1/README.md" style="color:#1d4ed8;">geometric-swarm</a> constructions (hyperbolic $2n$-dimensional prime blocks, adelically metrized $\mathbb{P}^1 \times \mathbb{P}^1$ intersection pairings, and 4D oscillator / passive Euler ports).
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">2. Coefficient hypotheses</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Prescribed closed-orbit periods $T_p = \log p$ with transverse return eigenvalues $(p, p^{-1})$ and local unstable half-density weights $p^{-m/2}$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">3. Uniform range</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          All primes $p \le e^{2a}$ across growing windows $a \to \infty$, realized on a completed Hilbert space that transfers to the full signed Weil quadratic form $q_a[f] \ge -C_*\|f\|_{L^2(-a,a)}^2$.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">4. Estimating method</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          Identify the Dyatlov&ndash;Zworski local flat trace of the Reeb transport (or local prime-block determinants) with a self-adjoint or contractive Hilbert-space operator whose spectral positivity implies the Weil floor.
+        </td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;background-color:#f8fafc;font-weight:bold;vertical-align:top;">5. Remaining transfer &amp; verdict</td>
+        <td style="border:1px solid #cbd5e1;padding:8px 10px;vertical-align:top;">
+          <strong>Rejected (arbitrary-period geometric control, purely continuous scalar $L^2$ spectrum, conserved-$\tau$ isolation vs. mixed-cycle determinant, and <code>NS47</code> barrier).</strong>
+          <ul style="margin:4px 0 0 0;padding-left:18px;">
+            <li style="margin-bottom:4px;">
+              <em>Arbitrary-period control (<a href="two-prime-contact-2026-09-29-v1/README.md" style="color:#1d4ed8;">two-prime-contact</a> &sect;&sect;1, 5):</em> Replacing $(\log 2, \log 3)$ by any distinct positive reals $(T_0, T_1)$ yields the exact same contact manifold, transverse return eigenvalues, and two-orbit local flat trace; primality is inserted as a parameter label, not derived or constrained by the geometry.
+            </li>
+            <li style="margin-bottom:4px;">
+              <em>Wrong scalar $L^2$ spectrum (<a href="two-prime-contact-2026-09-29-v1/README.md" style="color:#1d4ed8;">two-prime-contact</a> &sect;3):</em> Under the exact straightening coordinates $u = \log|x/(1-x)| - x$, $\theta = t - F(x) \bmod 1$, $\tau = (1 - by)/v$, the contact form is $\alpha = du + \tau\,d\theta$ with volume $|\alpha \wedge d\alpha| = d\theta\,d\tau\,du$ and Reeb vector field $R = \partial_u$. The scalar Hilbert space $L^2(Y, |\alpha \wedge d\alpha|)$ is unitarily equivalent to $\bigoplus_{j=1}^3 L^2(S^1 \times \mathbb{R}_\tau \times \mathbb{R}_u)$, on which the Koopman generator $D = -i\partial_u$ has <strong>purely absolutely continuous spectrum $\mathbb{R}$ and zero eigenvalues</strong>. The distributional flat trace on compactly supported forms is not a positive Hilbert-space trace.
+            </li>
+            <li style="margin-bottom:4px;">
+              <em>Isolation vs. mixed-orbit dichotomy (<a href="two-prime-contact-2026-09-29-v1/README.md" style="color:#1d4ed8;">two-prime-contact</a> &sect;&sect;2, 4):</em> Conserved momentum $\tau$ prevents any full cotangent trajectory from connecting the $x=0$ ($\tau = \log 2$) and $x=1$ ($\tau = \log 3$) periodic orbits at both ends ($y = (1-\tau v(x))/b(x)$ blows up at one endpoint). Conversely, bidirectional positive scalar coupling $M = \bigl(\begin{smallmatrix} X &amp; uX \\ vY &amp; Y \end{smallmatrix}\bigr)$ gives $\det(I - M) = (1-X)(1-Y) - uvXY$, introducing a spurious mixed cycle at period $\log 6$ whenever $uv \ne 0$.
+            </li>
+            <li>
+              <em>Local-swarm companion gaps (<a href="geometric-swarm-2026-09-29-v1/README.md" style="color:#1d4ed8;">geometric-swarm</a> &sect;1 &amp; <code>NS47</code>):</em> Independent passive prime ports fail contractivity (explicit counterexample $7/6 &gt; 1$), elliptic prime-power deck maps collapse to identities, adelic valuations on $\mathbb{P}^1 \times \mathbb{P}^1$ lack a global test-to-metric identification with $q_a[f]$, and any single ordinary-$L^2$-closable positive square plus bounded remainder is barred by Theorem <code>thm:ns47-single-square</code>.
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size:18px;color:#111827;border-bottom:1px solid #e5e7eb;padding-bottom:6px;margin-top:28px;">
+    3. Precise Stop Report and Continued Pause Disposition
+  </h2>
+  <p style="margin:10px 0;">
+    Combining this assessment with <a href="nb-full-residual-arithmetic-assessment-2026-10-16-v1.html" style="color:#1d4ed8;">nb-full-residual-arithmetic-assessment-2026-10-16-v1.html</a> and <a href="weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html" style="color:#1d4ed8;">weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html</a> completes the pre-computation 5-item audit across all four active frontier families named in the campaign wall check (<code>WEIL-FLOOR</code>, <code>KERNEL-API</code>, <code>NB-GAIN</code>, and <code>ZERO-GEOMETRY</code> / <code>OPERATOR-BRIDGES</code>):
+  </p>
+  <ol style="margin:8px 0 14px 0;padding-left:22px;">
+    <li style="margin-bottom:6px;">
+      <strong>No Admissible New Estimate Identified:</strong> None of the three geometric/operator candidate mechanisms (theta-kernel polarization and autocorrelation domination, tangent-circle power-product / Cayley disk observables, or connected contact Reeb transport / local multi-prime blocks) supplies a previously unassessed theorem or concrete arithmetic hypothesis that escapes the <code>NS94</code>, <code>NS100</code>, <code>NS101</code>, and September 29 <code>OPERATOR-BRIDGES</code> controls.
+    </li>
+    <li style="margin-bottom:6px;">
+      <strong>Exact Missing Input for Any Future Thaw:</strong>
+      <ul style="margin:4px 0 0 0;padding-left:18px;">
+        <li style="margin-bottom:4px;">
+          To thaw <code>ZERO-GEOMETRY</code>: a coefficient-explicit arithmetic identity or lower bound for the integrated kernel $K_x(t) = \int_0^\infty p\sinh(2xp)\phi(p+t)\phi(p-t)\,dp$ inside the critical strip $0 &lt; x &lt; 1/2$ that explicitly uses the single-lattice Jacobi theta frequencies $n^2$ and fails on both the <code>NS100</code> log-concave Gaussian mixture control and the <code>NS101</code> reciprocal dilated-theta control $\Theta_a(r)$.
+        </li>
+        <li>
+          To thaw <code>OPERATOR-BRIDGES</code>: a concrete global Hilbert-space operator construction that incorporates the archimedean digamma symbol, both polar terms $2\cosh((x-y)/2)$, and all prime-power shifts up to $e^{2a}$ without uncancelled composite/mixed primitive cycles, together with an explicit quadratic-form transfer to $q_a[f] \ge -C_*\|f\|_{L^2(-a,a)}^2$ that escapes Theorem <code>thm:ns47-single-square</code>.
+        </li>
+      </ul>
+    </li>
+    <li>
+      <strong>Continued Pause Without Computation:</strong> In compliance with the hard 90-minute pre-computation decision budget and the <code>NS102</code> proposal gate, we issue this stop report and keep <code>ZERO-GEOMETRY</code> and <code>OPERATOR-BRIDGES</code> paused—with zero new computations, zero generic theta-factorization reruns, zero larger prime-list contact constructions, and zero local-model batches.
+    </li>
+  </ol>
+
+  <div style="padding:12px 16px;background-color:#f4f1ea;border-left:4px solid #5c4b37;margin-top:24px;font-size:14px;line-height:1.5;">
+    <strong>Final wall check:</strong> Same open gap. Closest: <code>WEIL-FLOOR</code> (<code>NS24/39/43</code>), <code>NB-GAIN</code> (<code>NS53/61/83/87/98</code>), and <code>ZERO-GEOMETRY</code> / <code>OPERATOR-BRIDGES</code> (<code>NS94/100/101</code>, <code>two-prime-contact</code>, <code>geometric-swarm</code>). No new uniform arithmetic estimate is supplied.
+  </div>
+
+  <div style="margin-top:24px;padding-top:12px;border-top:1px solid #e5e7eb;font-size:12px;color:#6b7280;text-align:center;">
+    Prepared by the TSG team &middot; <a href="https://tsgglobal.com" style="color:#4b5563;">tsgglobal.com</a>
+  </div>
+
+</div>
+</body>
+</html>

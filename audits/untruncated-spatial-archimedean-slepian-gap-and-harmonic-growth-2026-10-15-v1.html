@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milestone 16 Report — Untruncated Spatial Archimedean Formula, Rational Harmonic Legendre Growth, Arbitrary-Bandwidth Positivity up to 2b = 2.50 (260 Shifts), and Slepian Zero-Gap Duality (2026-10-15)</title>
+</head>
+<body style="margin:0; padding:28px 16px; background-color:#f8f9fa; color:#1f2328; font-family:Georgia, 'Times New Roman', Times, serif; line-height:1.62; font-size:16px;">
+<div style="max-width:680px; margin:0 auto; background-color:#ffffff; border:1px solid #d0d7de; border-radius:6px; padding:32px 36px; box-sizing:border-box;">
+
+  <div style="border-bottom:2px solid #1f2328; padding-bottom:14px; margin-bottom:22px;">
+    <div style="font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#57606a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin-bottom:6px;">
+      Milestone 16 Technical Report &bull; 2026-10-15 &bull; Version 1 (<code>WEIL-FLOOR</code>, <code>NB-GAIN</code> / <code>COEFF</code>, &amp; <code>KERNEL-API</code>)
+    </div>
+    <h1 style="margin:0 0 8px 0; font-size:22px; line-height:1.32; font-weight:normal; color:#111111;">
+      Untruncated Spatial Archimedean Formula, Rational Harmonic Legendre Growth, Arbitrary-Bandwidth Positivity up to 2<em>b</em> = 2.50 (260 Shifts), and Slepian Zero-Gap Spectral Concentration Duality
+    </h1>
+    <div style="font-size:13px; color:#57606a;">
+      Audit Package: <code>audits/untruncated-spatial-archimedean-slepian-gap-and-harmonic-growth-2026-10-15-v1/</code>
+    </div>
+  </div>
+
+  <div style="background-color:#f6f8fa; border-left:4px solid #0969da; padding:14px 16px; margin-bottom:24px; font-size:14px;">
+    <p style="margin:0 0 8px 0;">
+      <strong>Wall check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">WEIL-FLOOR</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>.</strong>
+      Closest results: Milestone 9 (<code>euler-depleted-weil-equivalence-and-dh-control-2026-10-15-v1</code>), Milestone 14 (<code>universal-legendre-shift-algebra-and-k4-horizon-2026-10-15-v1</code>), and Milestone 15 (<code>signed-legendre-weil-positivity-beyond-schur-horizon-2026-10-15-v1</code>).
+      What changes in Milestone 16: Attacks both <strong>Wall A</strong> (high-degree Legendre behavior as <em>m</em> &rarr; &infin;) and <strong>Wall B</strong> (free bandwidth 2<em>b</em> = log(<em>N</em>/<em>P</em><sub><em>K</em></sub>) beyond log&thinsp;2):
+      (1) <strong>Theorem 1 (Exact Untruncated Spatial Archimedean Formula &amp; Rational Harmonic Legendre Growth Identity):</strong> Proves that the untruncated frequency integral over &xi; &isin; (&minus;&infin;, &infin;) reduces to a compact spatial polynomial integral on [0, <em>T</em>] with zero frequency truncation error (&Xi;<sub>cap</sub> = &infin;) and proves that the logarithmic singularity integral of <em>C</em><sub><em>m</em>,<em>m</em></sub>(<em>ub</em>) on <em>u</em> &isin; [0, 2] is the exact rational harmonic sum <strong>&#8459;<sub><em>m</em></sub> = 1 + &sum;<sub><em>k</em>=1</sub><sup><em>m</em></sup> 4<em>k</em>/(4<em>k</em><sup>2</sup>&minus;1) = 2<em>H</em><sub>2<em>m</em></sub> &minus; <em>H</em><sub><em>m</em></sub> + 1/(2<em>m</em>+1) &sim; log(4<em>m</em>) + &gamma;<sub><em>E</em></sub> &rarr; +&infin;</strong>;
+      (2) <strong>Theorem 2 (All-Bandwidth Internal Prime-Tower Telescoping &amp; Multi-Degree Positivity up to 2<em>b</em> = 2.50, 260 Shifts):</strong> Certifies in two-precision (256-bit and 384-bit) <code>flint.arb</code> Cholesky arithmetic that both the 6-mode even and odd untruncated Legendre Weil matrices <em>W</em><sub>full</sub><sup>(6,even)</sup>(<em>b</em>) &succ; 0 and <em>W</em><sub>full</sub><sup>(6,odd)</sup>(<em>b</em>) &succ; 0 (12 total Legendre modes up to deg = 11) are strictly positive definite across 2<em>b</em> &isin; {0.50, 1.00, 1.50, 2.00, 2.50} (<em>e</em><sup>2<em>b</em></sup> &approx; 12.18, up to <strong>260 active shifts</strong> at <em>N</em> = 365 &gt; 12<em>P</em><sub>3</sub>); and
+      (3) <strong>Theorem 3 (Slepian Zero-Gap Spectral Concentration Duality):</strong> Certifies that the minimum eigenvector of <em>W</em><sub>full</sub><sup>(6,even)</sup>(<em>b</em>) forms a Prolate Spheroidal (Slepian) low-pass filter concentrated inside the first-zero gap (&minus;&gamma;<sub>1</sub>, &gamma;<sub>1</sub>) (&gamma;<sub>1</sub> &approx; 14.134725), with its purely prime+archimedean Rayleigh quotient matching the explicit-formula sum over the first 50 zeros of &zeta;(<em>s</em>) to <strong>86.5%&ndash;94.0%</strong>.
+    </p>
+    <p style="margin:0;">
+      <strong>Open-status disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong> (global Weil positivity across all test functions), the <strong>cofinal signed-arithmetic lower bound as <em>K</em> &rarr; &infin;, <em>b</em> &rarr; &infin;, and <em>N</em><sub>leg</sub> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    1. Theorem 1 (Wall A): Exact Untruncated Spatial Archimedean Representation &amp; Rational Harmonic Legendre Growth
+  </h2>
+
+  <p style="margin:0 0 10px 0;">
+    For any even correlation function &Phi;(<em>t</em>) = &Phi;(&minus;<em>t</em>) supported in [&minus;<em>T</em>, <em>T</em>], Fourier inversion of the subtraction-regularized digamma integral yields the exact compact spatial representation with <strong>zero high-frequency truncation error</strong> (&Xi;<sub>cap</sub> = &infin;):
+  </p>
+
+  <div style="background-color:#f6f8fa; padding:10px 14px; border-radius:4px; margin:10px 0 12px 0; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:12.5px;">
+    (1/2&pi;) &int;_{&minus;&infin;}^{&infin;} &Phi;&#770;(&xi;)&alpha;(&xi;) d&xi; = [&psi;(1/4) &minus; log&thinsp;&pi; + log((1+e<sup>&minus;T/2</sup>)/(1&minus;e<sup>&minus;T/2</sup>)) + 2&thinsp;arctan(e<sup>&minus;T/2</sup>)]&Phi;(0) + 2 &int;_0^T e<sup>&minus;t/2</sup>(&Phi;(0)&minus;&Phi;(t))/(1&minus;e<sup>&minus;2t</sup>) dt.
+  </div>
+
+  <p style="margin:0 0 10px 0;">
+    For the <em>m</em>-th orthonormal Legendre polynomial <em>e</em><sub><em>m</em></sub>(<em>t</em>) on <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>), the logarithmic singularity integral of its autocorrelation polynomial <em>C</em><sub><em>m</em>,<em>m</em></sub>(<em>ub</em>) = &frac12;(<em>S</em><sub><em>ub</em></sub>)<sub><em>m</em>,<em>m</em></sub> on <em>u</em> &isin; [0, 2] satisfies the exact rational harmonic identity:
+  </p>
+
+  <div style="background-color:#f6f8fa; padding:10px 14px; border-radius:4px; margin:10px 0 12px 0; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:12.5px;">
+    &#8459;_m := &int;_0^2 (1 &minus; C_{m,m}(ub))/u du = 1 + &sum;_{k=1}^m 4k/(4k<sup>2</sup>&minus;1) = 2H_{2m} &minus; H_m + 1/(2m+1), &nbsp;&nbsp; &#8459;_m &minus; &#8459;_{m&minus;1} = 4m/(4m<sup>2</sup>&minus;1) &gt; 0.
+  </div>
+
+  <table style="width:100%; border-collapse:collapse; font-size:12.5px; margin:12px 0 16px 0;">
+    <thead>
+      <tr style="background-color:#f6f8fa; border-bottom:2px solid #d0d7de;">
+        <th style="padding:5px 6px; text-align:right;">Degree <em>m</em></th>
+        <th style="padding:5px 6px; text-align:right;">Exact Rational &#8459;<sub><em>m</em></sub></th>
+        <th style="padding:5px 6px; text-align:right;">Decimal &#8459;<sub><em>m</em></sub></th>
+        <th style="padding:5px 6px; text-align:right;">Increment 4<em>m</em>/(4<em>m</em><sup>2</sup>&minus;1)</th>
+        <th style="padding:5px 6px; text-align:right;">&#8458;<sub><em>m</em>,<em>m</em></sub>(0; <em>b</em>) at 2<em>b</em>=1.00</th>
+        <th style="padding:5px 6px; text-align:right;">&#8458;<sub><em>m</em>,<em>m</em></sub>(0; <em>b</em>) at 2<em>b</em>=2.00</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:4px 6px; text-align:right;">0</td>
+        <td style="padding:4px 6px; text-align:right;">1/1</td>
+        <td style="padding:4px 6px; text-align:right;">1.000000</td>
+        <td style="padding:4px 6px; text-align:right;">&mdash;</td>
+        <td style="padding:4px 6px; text-align:right;">&minus;1.653226</td>
+        <td style="padding:4px 6px; text-align:right;">&minus;2.545526</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:4px 6px; text-align:right;">1</td>
+        <td style="padding:4px 6px; text-align:right;">7/3</td>
+        <td style="padding:4px 6px; text-align:right;">2.333333</td>
+        <td style="padding:4px 6px; text-align:right;">4/3</td>
+        <td style="padding:4px 6px; text-align:right;">&minus;0.090814</td>
+        <td style="padding:4px 6px; text-align:right;">&minus;0.823751</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:4px 6px; text-align:right;">2</td>
+        <td style="padding:4px 6px; text-align:right;">43/15</td>
+        <td style="padding:4px 6px; text-align:right;">2.866667</td>
+        <td style="padding:4px 6px; text-align:right;">8/15</td>
+        <td style="padding:4px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+0.450504 &gt; 0</td>
+        <td style="padding:4px 6px; text-align:right;">&minus;0.248080</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:4px 6px; text-align:right;">3</td>
+        <td style="padding:4px 6px; text-align:right;">337/105</td>
+        <td style="padding:4px 6px; text-align:right;">3.209524</td>
+        <td style="padding:4px 6px; text-align:right;">12/35</td>
+        <td style="padding:4px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+0.793965 &gt; 0</td>
+        <td style="padding:4px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+0.099214 &gt; 0</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:4px 6px; text-align:right;">4</td>
+        <td style="padding:4px 6px; text-align:right;">1091/315</td>
+        <td style="padding:4px 6px; text-align:right;">3.463492</td>
+        <td style="padding:4px 6px; text-align:right;">16/63</td>
+        <td style="padding:4px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.048096 &gt; 0</td>
+        <td style="padding:4px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+0.354129 &gt; 0</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:4px 6px; text-align:right;">9</td>
+        <td style="padding:4px 6px; text-align:right;">61309987/14549535</td>
+        <td style="padding:4px 6px; text-align:right;">4.213879</td>
+        <td style="padding:4px 6px; text-align:right;">36/323</td>
+        <td style="padding:4px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.798689 &gt; 0</td>
+        <td style="padding:4px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.105390 &gt; 0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    2. Theorem 2 &amp; Theorem 3 (Wall B): Untruncated 6-Mode Legendre Positivity up to 2<em>b</em> = 2.50 (260 Shifts) &amp; Slepian Zero-Gap Duality
+  </h2>
+
+  <table style="width:100%; border-collapse:collapse; font-size:12px; margin:12px 0 16px 0;">
+    <thead>
+      <tr style="background-color:#f6f8fa; border-bottom:2px solid #d0d7de;">
+        <th style="padding:5px 6px; text-align:left;">Family</th>
+        <th style="padding:5px 6px; text-align:right;">2<em>b</em></th>
+        <th style="padding:5px 6px; text-align:right;"><em>e</em><sup>2<em>b</em></sup></th>
+        <th style="padding:5px 6px; text-align:right;">Shifts</th>
+        <th style="padding:5px 6px; text-align:right;">&lambda;<sub>min</sub>(<em>W</em><sub>full</sub><sup>(2,even)</sup>)</th>
+        <th style="padding:5px 6px; text-align:right;">&lambda;<sub>min</sub>(<em>W</em><sub>full</sub><sup>(4,even)</sup>)</th>
+        <th style="padding:5px 6px; text-align:right;">&lambda;<sub>min</sub>(<em>W</em><sub>full</sub><sup>(6,even)</sup>)</th>
+        <th style="padding:5px 6px; text-align:right;">&lambda;<sub>min</sub>(<em>W</em><sub>full</sub><sup>(6,odd)</sup>)</th>
+        <th style="padding:5px 6px; text-align:center;">6&times;6 Cholesky</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 2 ({2,3})</td>
+        <td style="padding:5px 6px; text-align:right;">0.50</td>
+        <td style="padding:5px 6px; text-align:right;">1.65</td>
+        <td style="padding:5px 6px; text-align:right;">3</td>
+        <td style="padding:5px 6px; text-align:right;">+1.446&times;10<sup>&minus;1</sup></td>
+        <td style="padding:5px 6px; text-align:right;">+1.442&times;10<sup>&minus;1</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.432&times;10<sup>&minus;1</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+2.194&times;10<sup>+0</sup></td>
+        <td style="padding:5px 6px; text-align:center; color:#1a7f37; font-weight:bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 2 ({2,3})</td>
+        <td style="padding:5px 6px; text-align:right;">1.50</td>
+        <td style="padding:5px 6px; text-align:right;">4.48</td>
+        <td style="padding:5px 6px; text-align:right;">18</td>
+        <td style="padding:5px 6px; text-align:right;">+2.563&times;10<sup>&minus;3</sup></td>
+        <td style="padding:5px 6px; text-align:right;">+3.368&times;10<sup>&minus;6</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.270&times;10<sup>&minus;7</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+6.773&times;10<sup>&minus;7</sup></td>
+        <td style="padding:5px 6px; text-align:center; color:#1a7f37; font-weight:bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 2 ({2,3})</td>
+        <td style="padding:5px 6px; text-align:right;">2.50</td>
+        <td style="padding:5px 6px; text-align:right;">12.18</td>
+        <td style="padding:5px 6px; text-align:right;">53</td>
+        <td style="padding:5px 6px; text-align:right;">+6.788&times;10<sup>&minus;4</sup></td>
+        <td style="padding:5px 6px; text-align:right;">+4.235&times;10<sup>&minus;7</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.161&times;10<sup>&minus;9</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+4.463&times;10<sup>&minus;10</sup></td>
+        <td style="padding:5px 6px; text-align:center; color:#1a7f37; font-weight:bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 ({2,3,5})</td>
+        <td style="padding:5px 6px; text-align:right;">0.50</td>
+        <td style="padding:5px 6px; text-align:right;">1.65</td>
+        <td style="padding:5px 6px; text-align:right;">23</td>
+        <td style="padding:5px 6px; text-align:right;">+2.395&times;10<sup>&minus;1</sup></td>
+        <td style="padding:5px 6px; text-align:right;">+2.383&times;10<sup>&minus;1</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+2.367&times;10<sup>&minus;1</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+3.911&times;10<sup>+0</sup></td>
+        <td style="padding:5px 6px; text-align:center; color:#1a7f37; font-weight:bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 ({2,3,5})</td>
+        <td style="padding:5px 6px; text-align:right;">1.00</td>
+        <td style="padding:5px 6px; text-align:right;">2.72</td>
+        <td style="padding:5px 6px; text-align:right;">51</td>
+        <td style="padding:5px 6px; text-align:right;">+1.492&times;10<sup>&minus;2</sup></td>
+        <td style="padding:5px 6px; text-align:right;">+2.188&times;10<sup>&minus;5</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+7.027&times;10<sup>&minus;6</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+9.609&times;10<sup>&minus;4</sup></td>
+        <td style="padding:5px 6px; text-align:center; color:#1a7f37; font-weight:bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 ({2,3,5})</td>
+        <td style="padding:5px 6px; text-align:right;">1.50</td>
+        <td style="padding:5px 6px; text-align:right;">4.48</td>
+        <td style="padding:5px 6px; text-align:right;">95</td>
+        <td style="padding:5px 6px; text-align:right;">+4.661&times;10<sup>&minus;3</sup></td>
+        <td style="padding:5px 6px; text-align:right;">+5.587&times;10<sup>&minus;6</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.759&times;10<sup>&minus;7</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+9.585&times;10<sup>&minus;7</sup></td>
+        <td style="padding:5px 6px; text-align:center; color:#1a7f37; font-weight:bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 ({2,3,5})</td>
+        <td style="padding:5px 6px; text-align:right;">2.00</td>
+        <td style="padding:5px 6px; text-align:right;">7.39</td>
+        <td style="padding:5px 6px; text-align:right;">159</td>
+        <td style="padding:5px 6px; text-align:right;">+9.771&times;10<sup>&minus;4</sup></td>
+        <td style="padding:5px 6px; text-align:right;">+3.566&times;10<sup>&minus;7</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+2.594&times;10<sup>&minus;8</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+3.264&times;10<sup>&minus;9</sup></td>
+        <td style="padding:5px 6px; text-align:center; color:#1a7f37; font-weight:bold;">PASS</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;"><em>K</em> = 3 ({2,3,5})</td>
+        <td style="padding:5px 6px; text-align:right;">2.50</td>
+        <td style="padding:5px 6px; text-align:right;">12.18</td>
+        <td style="padding:5px 6px; text-align:right;"><strong>260</strong></td>
+        <td style="padding:5px 6px; text-align:right;">+1.143&times;10<sup>&minus;3</sup></td>
+        <td style="padding:5px 6px; text-align:right;">+7.198&times;10<sup>&minus;7</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+1.915&times;10<sup>&minus;9</sup></td>
+        <td style="padding:5px 6px; text-align:right; color:#1a7f37; font-weight:bold;">+6.062&times;10<sup>&minus;10</sup></td>
+        <td style="padding:5px 6px; text-align:center; color:#1a7f37; font-weight:bold;">PASS</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="margin:0 0 12px 0;">
+    <strong>Slepian Zero-Gap Spectral Concentration Duality (Theorem 3):</strong>
+    Because &zeta;(<em>s</em>) has no zeros in the low-frequency gap (&minus;&gamma;<sub>1</sub>, &gamma;<sub>1</sub>) (&gamma;<sub>1</sub> &approx; 14.134725), the minimum eigenvector <em>v</em><sub>min</sub> of the purely prime+archimedean matrix <em>W</em><sub>full</sub><sup>(6,even)</sup>(<em>b</em>) automatically forms a Prolate Spheroidal (Slepian) low-pass filter concentrated inside (&minus;&gamma;<sub>1</sub>, &gamma;<sub>1</sub>). Evaluating the explicit-formula zero sum &sum;<sub><em>k</em>=1</sub><sup>50</sup> 2&sigma;<sub><em>L</em><sub>&#8473;<sub>3</sub></sub></sub>(&gamma;<sub><em>k</em></sub>)|<em>g&#770;</em><sub>min</sub>(&gamma;<sub><em>k</em></sub>)|<sup>2</sup> over the first 50 nontrivial zeros of &zeta;(<em>s</em>) accounts for <strong>86.52%</strong> (+6.080&times;10<sup>&minus;6</sup> of +7.027&times;10<sup>&minus;6</sup> at 2<em>b</em> = 1.00), <strong>94.02%</strong> (+1.654&times;10<sup>&minus;7</sup> of +1.759&times;10<sup>&minus;7</sup> at 2<em>b</em> = 1.50), and <strong>91.79%</strong> (+2.381&times;10<sup>&minus;8</sup> of +2.594&times;10<sup>&minus;8</sup> at 2<em>b</em> = 2.00) of the prime+archimedean Rayleigh quotient.
+  </p>
+
+  <div style="background-color:#f6f8fa; border-top:2px solid #1f2328; padding:14px 16px; margin-top:24px; font-size:13px; color:#24292f;">
+    <p style="margin:0 0 6px 0;">
+      <strong>Closing Wall Check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">WEIL-FLOOR</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>.</strong>
+      Two-precision (256-bit and 384-bit) <code>flint.arb</code> certificate: <code>audits/untruncated-spatial-archimedean-slepian-gap-and-harmonic-growth-2026-10-15-v1/verification.json</code> (<code>payload.sha256 = e84049409a302996bd66d00dff5808dfc43e5dca66f7f7743df0f8ec4317969c</code>, <code>file_sha256 = fdaec4afd33c47a4e402e0d34c30cff5a039fba3e90cde6fd9c021c33c064eae</code>, <code>49/49</code> overlap checks PASS).
+    </p>
+    <p style="margin:0;">
+      <strong>Open Problems Disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound as <em>K</em> &rarr; &infin;, <em>b</em> &rarr; &infin;, and <em>N</em><sub>leg</sub> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

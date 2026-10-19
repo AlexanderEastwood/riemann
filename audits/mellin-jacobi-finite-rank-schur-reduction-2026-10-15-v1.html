@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milestone 11 Report — Mellin–Jacobi–Legendre Finite-Rank Gram–Schur Reduction (2026-10-15 v1)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 36px auto; padding: 0 20px; line-height: 1.62; color: #1a1a1a; background-color: #ffffff;">
+
+  <div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-bottom: 26px;">
+    <p style="margin: 0 0 8px 0; font-weight: bold; color: #8b0000; font-size: 1.02em;">
+      Wall Check &amp; Open Obligations Disclosure (Top of Report)
+    </p>
+    <p style="margin: 0; font-size: 0.95em;">
+      <strong>Does this audit prove the Riemann Hypothesis (RH), complete the global archimedean completion (G2), establish the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin;, or recover the missing historical raw outputs in <code>evidence/MISSING.md</code>? No.</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups in <code>evidence/MISSING.md</code></strong> (<code>stage4_run_summary.json</code> / <code>stage4_Ticks.json</code> and <code>certificate.json</code> / <code>verify_log.txt</code>) remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h1 style="font-size: 1.48em; line-height: 1.3; margin-bottom: 6px; color: #111111;">
+    Milestone 11: Mellin&ndash;Jacobi&ndash;Legendre Finite-Rank Gram&ndash;Schur Reduction &amp; Exact Polynomial Shift Matrices (<code>NB-GAIN</code> / <code>COEFF</code> &amp; <code>NS-61</code>)
+  </h1>
+  <p style="margin: 0 0 22px 0; font-size: 0.92em; color: #555555;">
+    <strong>Date:</strong> 2026-10-15 &bull; <strong>Version:</strong> v1 &bull; <strong>Audit Directory:</strong> <code>audits/mellin-jacobi-finite-rank-schur-reduction-2026-10-15-v1/</code>
+  </p>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    1. Executive Summary: Bridging Mellin&ndash;Jacobi (<code>NB-GAIN</code> / <code>COEFF</code>) and Continuum Positivity
+  </h2>
+  <p>
+    In the Mellin&ndash;Jacobi framework (<code>NB-GAIN</code> / <code>COEFF</code> and <code>NS-61</code>), finite-dimensional Gram matrices are evaluated in orthonormal polynomial bases, raising the structural question: how does a small 3&times;3 or 4&times;4 polynomial matrix rigorously control the infinite-dimensional continuum Weil operator on <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) without uncertified truncation error?
+  </p>
+  <p>
+    This milestone resolves that gap via two theorems certified in 256-bit and 384-bit <code>flint.arb</code> ball arithmetic:
+  </p>
+  <ol>
+    <li style="margin-bottom: 10px;">
+      <strong>Theorem 1 (Gegenbauer&ndash;Spherical-Bessel Parseval Identity &amp; Finite-<em>N</em> Archimedean Tail Reduction):</strong>
+      In the orthonormal Legendre basis &phi;<sub><em>m</em></sub>(<em>x</em>) = &radic;((2<em>m</em>+1)/(2<em>b</em>)) <em>P</em><sub><em>m</em></sub>(<em>x</em>/<em>b</em>), the Fourier transforms &phi;&#770;<sub><em>m</em></sub>(&xi;) = (&minus;<em>i</em>)<sup><em>m</em></sup> &radic;(2<em>b</em>(2<em>m</em>+1)) <em>j</em><sub><em>m</em></sub>(<em>b</em>&xi;) diagonalize the Paley&ndash;Wiener Plancherel measure via the exact parity-split Gegenbauer identities
+      <div style="background-color: #f7f7f7; padding: 10px 14px; margin: 8px 0; font-size: 0.94em; border-left: 3px solid #333333;">
+        &Sigma;<sub><em>r</em>=0</sub><sup>&infin;</sup> (4<em>r</em> + 1) <em>j</em><sub>2<em>r</em></sub>(<em>z</em>)<sup>2</sup> = &frac12;(1 + sinc(2<em>z</em>)), &nbsp;&nbsp;&nbsp;
+        &Sigma;<sub><em>r</em>=0</sub><sup>&infin;</sup> (4<em>r</em> + 3) <em>j</em><sub>2<em>r</em>+1</sub>(<em>z</em>)<sup>2</sup> = &frac12;(1 &minus; sinc(2<em>z</em>)).
+      </div>
+      Consequently, the infinite-dimensional tail trace &epsilon;<sub><em>N</em></sub>(<em>b</em>, &Delta;<sub>&alpha;</sub>) outside the <em>N</em>-dimensional Legendre subspace is given by an exact finite-sum integral and decays as (<em>b</em>&xi;<sub>0</sub>)<sup>4<em>N</em></sup> / ((4<em>N</em>+1)!!)<sup>2</sup>. At <em>N</em> = 4 (a 4&times;4 matrix), the Legendre basis captures <strong>99.999996%</strong> of the archimedean trace even at <em>a</em> = &frac12; log 12, and leaves a tail defect of <strong>1.47 &times; 10<sup>&minus;15</sup></strong> (<em>K</em>=2), <strong>3.05 &times; 10<sup>&minus;21</sup></strong> (<em>K</em>=3), and <strong>&le; 6.92 &times; 10<sup>&minus;24</sup></strong> (<em>K</em>=4) at the primorial horizons.
+    </li>
+    <li>
+      <strong>Theorem 2 (Exact Rational Polynomial Shift Matrices <em>S</em><sub>&tau;</sub><sup>(<em>N</em>)</sup> &amp; Legendre&ndash;Schur Reflection Minorant):</strong>
+      Every shift matrix entry (<em>S</em><sub>&tau;</sub>)<sub><em>mn</em></sub> = &lang;&phi;<sub><em>m</em></sub>, (<em>T</em><sub>&tau;</sub> + <em>T</em><sub>&minus;&tau;</sub>)&phi;<sub><em>n</em></sub>&rang;<sub><em>L</em><sup>2</sup>(&minus;<em>b</em>,<em>b</em>)</sub> is an exact polynomial in <em>u</em> = &tau;/<em>b</em> &isin; [0, 2] of degree <em>m</em> + <em>n</em> + 1 with rational coefficients, and for all diagonal entries <em>m</em> = <em>n</em>, all positive even powers <em>u</em><sup>2<em>k</em></sup> vanish identically. On single-overlap reflection regimes &tau; &isin; [<em>b</em>, 2<em>b</em>), <em>Q</em><sub>&tau;,<em>s</em></sub> = &frac12;(<strong>1</strong><sub>[&tau;&minus;<em>b</em>,<em>b</em>]</sub> + &frac12; <em>s</em> <em>S</em><sub>&tau;</sub>) is an orthogonal projection whose rank-<em>N</em> Legendre&ndash;Schur minorant <em>Q</em><sub>&tau;,<em>s</em></sub> &Pi;<sub><em>N</em></sub> (<em>Q</em><sub>&tau;,<em>s</em></sub><sup>(<em>N</em>)</sup>)<sup>&minus;1</sup> &Pi;<sub><em>N</em></sub> <em>Q</em><sub>&tau;,<em>s</em></sub> is globally valid on <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) and exact on the entire Legendre subspace <em>V</em><sub><em>N</em></sub>.
+    </li>
+  </ol>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    2. Certified 4&times;4 Legendre&ndash;Gegenbauer Archimedean Table (384-Bit &amp; 256-Bit <code>flint.arb</code>)
+  </h2>
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.85em; margin: 14px 0;">
+    <thead>
+      <tr style="background-color: #f0f0f0; border-bottom: 2px solid #333333;">
+        <th style="padding: 6px; text-align: left;">Checkpoint</th>
+        <th style="padding: 6px; text-align: right;"><em>b</em></th>
+        <th style="padding: 6px; text-align: right;">&epsilon;<sub>2</sub><sup>even</sup> (<em>N</em>=2)</th>
+        <th style="padding: 6px; text-align: right;">&epsilon;<sub>3</sub><sup>even</sup> (<em>N</em>=3)</th>
+        <th style="padding: 6px; text-align: right;">&epsilon;<sub>4</sub><sup>even</sup> (<em>N</em>=4)</th>
+        <th style="padding: 6px; text-align: right;">&Vert;<em>K</em><sub>even</sub>&Vert;<sub>op</sub> (<em>N</em>=4)</th>
+        <th style="padding: 6px; text-align: right;">Trace Bound</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 6px;"><em>K</em>=2 (<em>b</em><sub>iso</sub>(2) = &frac12; log(3/2))</td>
+        <td style="padding: 6px; text-align: right;">0.202733</td>
+        <td style="padding: 6px; text-align: right;">1.133 &times; 10<sup>&minus;6</sup></td>
+        <td style="padding: 6px; text-align: right;">6.431 &times; 10<sup>&minus;11</sup></td>
+        <td style="padding: 6px; text-align: right;">1.472 &times; 10<sup>&minus;15</sup></td>
+        <td style="padding: 6px; text-align: right; font-weight: bold;">0.575342</td>
+        <td style="padding: 6px; text-align: right;">0.576109</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 6px;"><em>K</em>=3 (<em>b</em><sub>iso</sub>(3) = &frac12; log(6/5))</td>
+        <td style="padding: 6px; text-align: right;">0.091161</td>
+        <td style="padding: 6px; text-align: right;">8.560 &times; 10<sup>&minus;10</sup></td>
+        <td style="padding: 6px; text-align: right;">2.644 &times; 10<sup>&minus;15</sup></td>
+        <td style="padding: 6px; text-align: right;">3.054 &times; 10<sup>&minus;21</sup></td>
+        <td style="padding: 6px; text-align: right; font-weight: bold;">0.171908</td>
+        <td style="padding: 6px; text-align: right;">0.171915</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #dddddd;">
+        <td style="padding: 6px;"><em>K</em>=4 (<em>b</em><sub>iso</sub>(4) = &frac12; log(15/14))</td>
+        <td style="padding: 6px; text-align: right;">0.034496</td>
+        <td style="padding: 6px; text-align: right;">1.908 &times; 10<sup>&minus;13</sup></td>
+        <td style="padding: 6px; text-align: right;">1.185 &times; 10<sup>&minus;20</sup></td>
+        <td style="padding: 6px; text-align: right;">&le; 6.924 &times; 10<sup>&minus;24</sup></td>
+        <td style="padding: 6px; text-align: right; font-weight: bold;">0.050907</td>
+        <td style="padding: 6px; text-align: right;">0.050907</td>
+      </tr>
+      <tr style="border-bottom: 2px solid #333333; background-color: #f4fbf4;">
+        <td style="padding: 6px;"><em>K</em>=2 (<em>a</em> = &frac12; log 12, &Delta;<sub>&alpha;</sub> = 0.6)</td>
+        <td style="padding: 6px; text-align: right;">0.346574</td>
+        <td style="padding: 6px; text-align: right;">4.813 &times; 10<sup>&minus;3</sup></td>
+        <td style="padding: 6px; text-align: right;">3.610 &times; 10<sup>&minus;5</sup></td>
+        <td style="padding: 6px; text-align: right;">1.086 &times; 10<sup>&minus;7</sup></td>
+        <td style="padding: 6px; text-align: right; font-weight: bold;">0.904612</td>
+        <td style="padding: 6px; text-align: right;">0.949587</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    3. Exact Polynomial Shift Formulas in <em>u</em> = &tau; / <em>b</em> &isin; [0, 2]
+  </h2>
+  <p>
+    Verified to 113 decimal places in 384-bit <code>flint.arb</code> against symbolic Bonnet&ndash;Legendre polynomial integration across <em>u</em> &isin; {1/5, 1/2, 1, 7/5, 9/5}:
+  </p>
+  <ul>
+    <li>(<em>S</em><sub>&tau;</sub>)<sub>0,0</sub> = 2 &minus; <em>u</em></li>
+    <li>(<em>S</em><sub>&tau;</sub>)<sub>0,2</sub> = (<em>S</em><sub>&tau;</sub>)<sub>2,0</sub> = &minus;(&radic;5 / 2) <em>u</em>(<em>u</em> &minus; 1)(<em>u</em> &minus; 2) = &radic;5 (&minus;<em>u</em> + &frac32; <em>u</em><sup>2</sup> &minus; &frac12; <em>u</em><sup>3</sup>)</li>
+    <li>(<em>S</em><sub>&tau;</sub>)<sub>2,2</sub> = 2 &minus; 5<em>u</em> + &frac52; <em>u</em><sup>3</sup> &minus; &#8540; <em>u</em><sup>5</sup></li>
+    <li>(<em>S</em><sub>&tau;</sub>)<sub>1,1</sub> = 2 &minus; 3<em>u</em> + &frac12; <em>u</em><sup>3</sup></li>
+    <li>(<em>S</em><sub>&tau;</sub>)<sub>1,3</sub> = (<em>S</em><sub>&tau;</sub>)<sub>3,1</sub> = &radic;21 (&minus;<em>u</em> + &frac52; <em>u</em><sup>2</sup> &minus; &frac32; <em>u</em><sup>3</sup> + &frac18; <em>u</em><sup>5</sup>)</li>
+    <li>(<em>S</em><sub>&tau;</sub>)<sub>3,3</sub> = 2 &minus; 7<em>u</em> + 7<em>u</em><sup>3</sup> &minus; (21/8)<em>u</em><sup>5</sup> + (5/16)<em>u</em><sup>7</sup></li>
+  </ul>
+
+  <h2 style="font-size: 1.18em; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">
+    4. Verification Artifacts &amp; SHA-256 Hashes
+  </h2>
+  <ul>
+    <li><strong>Derivations:</strong> <code>audits/mellin-jacobi-finite-rank-schur-reduction-2026-10-15-v1/derivation.md</code></li>
+    <li><strong>Verifier Script:</strong> <code>audits/mellin-jacobi-finite-rank-schur-reduction-2026-10-15-v1/verify_mellin_jacobi_schur_reduction.py</code> (256-bit and 384-bit two-precision replay, 40/40 ball overlap checks PASS, <code>pyright</code>: <code>0 errors, 0 warnings, 0 informations</code>)</li>
+    <li><strong>Certificate JSON:</strong> <code>audits/mellin-jacobi-finite-rank-schur-reduction-2026-10-15-v1/verification.json</code>
+      <ul>
+        <li><code>payload.sha256</code>: <code>edb5d1b3c6df2e7707224a992e0e1f06de23f841a6144314d96ed72dd9af61a3</code></li>
+        <li><code>file_sha256</code>: <code>fd4223f9b73ebbc0b1b2df0cd3340edcf34b9b7ecc45d9f20aebe5f18c8a0654</code></li>
+      </ul>
+    </li>
+  </ul>
+
+  <div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-top: 30px;">
+    <p style="margin: 0 0 8px 0; font-weight: bold; color: #8b0000; font-size: 1.02em;">
+      Wall Check &amp; Open Obligations Disclosure (Bottom of Report)
+    </p>
+    <p style="margin: 0; font-size: 0.95em;">
+      <strong>Does this audit prove RH, complete G2, establish the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin;, or recover the missing historical evidence in <code>evidence/MISSING.md</code>? No.</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups in <code>evidence/MISSING.md</code></strong> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</body>
+</html>

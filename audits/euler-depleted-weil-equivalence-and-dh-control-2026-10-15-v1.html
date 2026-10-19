@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 9 Report — Euler-Depleted Weil Equivalence, Free-Bandwidth Dichotomy &amp; Davenport–Heilbronn Control Separation (2026-10-15 v1)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 32px auto; padding: 0 16px; color: #1a1a1a; line-height: 1.6; background-color: #ffffff;">
+
+<div style="border-bottom: 2px solid #1a1a1a; padding-bottom: 12px; margin-bottom: 24px;">
+  <h1 style="font-size: 22px; margin: 0 0 6px 0; font-weight: bold;">Milestone 9 Report: Euler-Depleted Weil Explicit Formula Equivalence, Free-Bandwidth Dichotomy &amp; Davenport–Heilbronn Control Separation</h1>
+  <p style="margin: 0; font-size: 13px; color: #555555;">
+    <strong>Date:</strong> 2026-10-15 &nbsp;|&nbsp; <strong>Version:</strong> v1 &nbsp;|&nbsp; <strong>Lanes:</strong> <code>KERNEL-API</code> &amp; <code>WEIL-FLOOR</code><br>
+    <strong>Audit Package:</strong> <code>audits/euler-depleted-weil-equivalence-and-dh-control-2026-10-15-v1/</code><br>
+    <strong>Payload SHA-256:</strong> <code>ac4da5d378becd5c2d2741c5ef8075d458a5b5ff9cf0a200e62c4de219bcc063</code><br>
+    <strong>File SHA-256:</strong> <code>492c5bed8eef1ef4aedba6441198fe4b6ae2d1c2cf0948cdfa4037441a97793c</code>
+  </p>
+</div>
+
+<div style="background-color: #fdf6e3; border-left: 4px solid #b58900; padding: 12px 16px; margin-bottom: 24px; font-size: 14px;">
+  <strong>Wall Check (Top of Deliverable):</strong> Does this milestone prove the Riemann Hypothesis (RH), complete the global archimedean completion (G2), establish the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin;, or recover the missing historical raw outputs in <code>evidence/MISSING.md</code>?
+  <strong>No.</strong> RH, G2, the cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> (<code>stage4_run_summary.json</code> / <code>stage4_Ticks.json</code> and <code>certificate.json</code> / <code>verify_log.txt</code>) remain <strong>OPEN</strong>.
+</div>
+
+<h2 style="font-size: 18px; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">1. Theorem 1: Euler-Depleted Weil Explicit Formula &amp; Critical-Strip Zero Preservation</h2>
+
+<p>
+  Let <em>P</em> = <em>P</em><sub>+</sub> &sqcup; <em>P</em><sub>&minus;</sub> be any non-empty balanced partition of a finite set of primes (<em>P</em><sub>+</sub> &ne; &empty;, <em>P</em><sub>&minus;</sub> &ne; &empty;), with <em>B</em><sub><em>P</em><sub>+</sub>, <em>P</em><sub>&minus;</sub></sub> mapping <em>g</em> &isin; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) into <em>h</em> = <em>B</em><sub><em>P</em><sub>+</sub>, <em>P</em><sub>&minus;</sub></sub><em>g</em> &isin; <em>L</em><sup>2</sup>(&minus;<em>a</em>, <em>a</em>) where <em>a</em> = <em>b</em> + &frac12; log <em>P</em><sub><em>P</em></sub>. We prove and certify in <strong>both 256-bit and 384-bit <code>flint.arb</code> ball arithmetic</strong>:
+</p>
+
+<ul style="padding-left: 20px;">
+  <li style="margin-bottom: 8px;">
+    <strong>Automatic Pole Cancellation on Unrestricted <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>):</strong> Because 1 &minus; <em>p</em><sup>&minus;1/2 &minus; <em>i&xi;</em></sup> vanishes at <em>&xi;</em> = +<em>i</em>/2 for <em>p</em> &isin; <em>P</em><sub>+</sub> and 1 &minus; <em>q</em><sup>&minus;1/2 + <em>i&xi;</em></sup> vanishes at <em>&xi;</em> = &minus;<em>i</em>/2 for <em>q</em> &isin; <em>P</em><sub>&minus;</sub>, every <em>g</em> &isin; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) automatically satisfies <span style="white-space: nowrap;"><em>h&#770;</em>(+<em>i</em>/2) = <em>h&#770;</em>(&minus;<em>i</em>/2) = 0</span> with zero codimension-1 side conditions.
+  </li>
+  <li style="margin-bottom: 8px;">
+    <strong>Zero Preservation Across the Open Critical Strip |Im(<em>&xi;</em>)| &lt; 1/2:</strong> All zeros of <em>&sigma;</em><sub><em>L</em><sub><em>P</em></sub></sub>(<em>&xi;</em>) lie strictly on the critical-strip boundary lines Im(<em>&xi;</em>) = &plusmn;1/2 (Re(<em>s</em>) &isin; {0, 1}), where <em>&zeta;</em>(<em>s</em>) &ne; 0. For |Im(<em>&xi;</em>)| = <em>&delta;</em> &isin; [0, 1/2),
+    <div style="text-align: center; margin: 10px 0; font-style: italic;">
+      &prod;<sub><em>p</em> &isin; <em>P</em></sub> (1 &minus; <em>p</em><sup>&minus;1/2 &minus; <em>&delta;</em></sup>)(1 &minus; <em>p</em><sup>&minus;1/2 + <em>&delta;</em></sup>) &le; |<em>&sigma;</em><sub><em>L</em><sub><em>P</em></sub></sub>(<em>&xi;</em>)| &le; &prod;<sub><em>p</em> &isin; <em>P</em></sub> (1 + <em>p</em><sup>&minus;1/2 &minus; <em>&delta;</em></sup>)(1 + <em>p</em><sup>&minus;1/2 + <em>&delta;</em></sup>).
+    </div>
+    Consequently, positivity of the compressed operator <em>W</em><sub><em>P</em></sub>(<em>b</em>) = <em>P</em><sub><em>b</em></sub> <em>B</em><sub><em>P</em><sub>+</sub>, <em>P</em><sub>&minus;</sub></sub><sup>*</sup> <em>W</em> <em>B</em><sub><em>P</em><sub>+</sub>, <em>P</em><sub>&minus;</sub></sub> <em>P</em><sub><em>b</em></sub> on <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) for all <em>b</em> &gt; 0 is <strong>logically equivalent to RH</strong> and never hides off-line zeros.
+  </li>
+</ul>
+
+<h2 style="font-size: 18px; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">2. Theorem 2: The Free-Bandwidth vs. Zero-Shift Isometric Horizon Dichotomy</h2>
+
+<p>
+  At the zero-shift isometric horizon <em>a</em><sub>iso</sub>(<em>K</em>) = log <em>d</em><sub>+</sub>(<em>K</em>), the free Paley–Wiener half-width satisfies the exact identity
+  <strong><em>b</em><sub>iso</sub>(<em>K</em>) = <em>a</em><sub>iso</sub>(<em>K</em>) &minus; <em>c</em>(<em>P</em><sub><em>K</em></sub>) = &frac12; log(<em>d</em><sub>+</sub>(<em>K</em>)/<em>d</em><sub>&minus;</sub>(<em>K</em>)) = &frac12; <em>&tau;</em><sub>iso</sub>(<em>P</em><sub><em>K</em></sub>)</strong>:
+</p>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0;">
+  <thead>
+    <tr style="background-color: #f2f2f2; border-bottom: 2px solid #1a1a1a;">
+      <th style="padding: 6px; text-align: left;"><em>K</em></th>
+      <th style="padding: 6px; text-align: left;">Partition (<em>d</em><sub>+</sub>, <em>d</em><sub>&minus;</sub>)</th>
+      <th style="padding: 6px; text-align: right;"><em>a</em><sub>iso</sub>(<em>K</em>)</th>
+      <th style="padding: 6px; text-align: right;">Free Bandwidth <em>b</em><sub>iso</sub>(<em>K</em>)</th>
+      <th style="padding: 6px; text-align: right;">Min &Delta;<em>&xi;</em> (50% mass)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #dddddd;">
+      <td style="padding: 6px;">2</td>
+      <td style="padding: 6px;">(3, 2), <em>P</em><sub>2</sub><sup>#</sup> = 6</td>
+      <td style="padding: 6px; text-align: right;">1.098612</td>
+      <td style="padding: 6px; text-align: right;">0.202733</td>
+      <td style="padding: 6px; text-align: right;">3.874</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #dddddd;">
+      <td style="padding: 6px;">3</td>
+      <td style="padding: 6px;">(6, 5), <em>P</em><sub>3</sub><sup>#</sup> = 30</td>
+      <td style="padding: 6px; text-align: right;">1.791759</td>
+      <td style="padding: 6px; text-align: right;">0.091161</td>
+      <td style="padding: 6px; text-align: right;">8.616</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #dddddd;">
+      <td style="padding: 6px;">4</td>
+      <td style="padding: 6px;">(15, 14), <em>P</em><sub>4</sub><sup>#</sup> = 210</td>
+      <td style="padding: 6px; text-align: right;">2.708050</td>
+      <td style="padding: 6px; text-align: right;">0.034496</td>
+      <td style="padding: 6px; text-align: right;">22.768</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #dddddd;">
+      <td style="padding: 6px;">7</td>
+      <td style="padding: 6px;">(715, 714), <em>P</em><sub>7</sub><sup>#</sup> = 510510</td>
+      <td style="padding: 6px; text-align: right;">6.572283</td>
+      <td style="padding: 6px; text-align: right;">0.000700</td>
+      <td style="padding: 6px; text-align: right;">1122.349</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #1a1a1a;">
+      <td style="padding: 6px;">8</td>
+      <td style="padding: 6px;">(3135, 3094), <em>P</em><sub>8</sub><sup>#</sup> = 9699690</td>
+      <td style="padding: 6px; text-align: right;">8.050384</td>
+      <td style="padding: 6px; text-align: right;">0.006582</td>
+      <td style="padding: 6px; text-align: right;">119.327</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  Growing the free bandwidth <em>b</em> = <em>a</em> &minus; <em>c</em>(<em>P</em>) &rarr; &infin; (which requires crossing internal shifts <em>&tau;</em><sub><em>d</em><sub>1</sub>/<em>d</em><sub>2</sub></sub> &lt; 2<em>b</em> of <em>L</em><sub><em>P</em></sub>) is therefore essential for cofinal spectral resolution.
+</p>
+
+<h2 style="font-size: 18px; border-bottom: 1px solid #cccccc; padding-bottom: 4px; margin-top: 28px;">3. Theorem 3: Euler-Product Rigidity &amp; Davenport–Heilbronn Control Separation</h2>
+
+<p>
+  On the Davenport–Heilbronn counterexample <em>f</em><sub>DH</sub>(<em>s</em>) (<code>controls/davenport_heilbronn.py</code> and <code>evidence/diag_ns103_window_calibration/weil_window.py</code>), which satisfies the functional equation and has critical-line zeros but lacks an Euler product and has off-line zeros (e.g. <em>&rho;</em><sub>DH</sub> &approx; 0.808517 + 85.699348<em>i</em>):
+</p>
+
+<ul style="padding-left: 20px;">
+  <li style="margin-bottom: 8px;">
+    <strong>Failure of Prime-Tower Collapse:</strong> &Lambda;<sub>DH</sub>(4) = &minus;(2 + <em>&kappa;</em><sup>2</sup>) log 2 &approx; &minus;1.442232 &ne; &Lambda;<sub>DH</sub>(2) = +<em>&kappa;</em> log 2 &approx; +0.196909, &Lambda;<sub>DH</sub>(8) = +<em>&kappa;</em><sup>3</sup> log 2 &approx; +0.015891, and &Lambda;<sub>DH</sub>(9) = &minus;(2 + <em>&kappa;</em><sup>2</sup>) log 3 &approx; &minus;2.285884 &ne; &Lambda;<sub>DH</sub>(3) = &minus;<em>&kappa;</em> log 3 &approx; &minus;0.312093.
+  </li>
+  <li style="margin-bottom: 8px;">
+    <strong>Failure of Composite Vanishing at <em>n</em> = 6:</strong> Because <em>&chi;</em><sub>5</sub>(6) = <em>&chi;</em><sub>5</sub>(1) = +1 while <em>a</em><sub>2</sub><em>a</em><sub>3</sub> = &minus;<em>&kappa;</em><sup>2</sup>, multiplicativity fails at <em>n</em> = 6 and &Lambda;<sub>DH</sub>(6) = (1 + <em>&kappa;</em><sup>2</sup>) log 6 &approx; <strong>+1.936356 &ne; 0</strong>.
+  </li>
+  <li style="margin-bottom: 8px;">
+    <strong>Strict Sign Reversal of the <em>K</em> = 2 Zero-Shift Diagonal:</strong>
+    <div style="text-align: center; margin: 8px 0;">
+      <em>C</em><sub>diag, DH</sub>({2, 3}) = (4/3)&Lambda;<sub>DH</sub>(2) + &Lambda;<sub>DH</sub>(3) &minus; (1/3)&Lambda;<sub>DH</sub>(6) &approx; <strong>&minus;0.695000 &lt; 0</strong>
+      &nbsp;&nbsp;vs.&nbsp;&nbsp;
+      <em>C</em><sub>diag, &zeta;</sub>({2, 3}) &approx; <strong>+2.022809 &gt; 0</strong>.
+    </div>
+  </li>
+  <li style="margin-bottom: 8px;">
+    <strong>Off-Line Zero Detection by the Preconditioned Weil Operator <em>W</em><sub>{2,3}, DH</sub>(<em>b</em>):</strong> On <code>weil_window.py</code> (<code>FMAX = 130</code>), <em>W</em><sub>{2,3}, &zeta;</sub>(<em>b</em>) remains &ge; 0 for all <em>b</em> &isin; [0.202733, 3.0], whereas <em>W</em><sub>{2,3}, DH</sub>(<em>b</em>) turns strictly negative for <em>b</em> &ge; 2.0 (<code>min_eig = -0.227206</code> at <em>b</em> = 2.0, <code>-0.670258</code> at <em>b</em> = 2.5, <code>-1.304462</code> at <em>b</em> = 3.0).
+  </li>
+</ul>
+
+<div style="background-color: #fdf6e3; border-left: 4px solid #b58900; padding: 12px 16px; margin-top: 28px; font-size: 14px;">
+  <strong>Wall Check (Bottom of Deliverable):</strong> RH, G2, the cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;, and both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+</div>
+
+</body>
+</html>

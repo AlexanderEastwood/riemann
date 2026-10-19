@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two-Precision Candidate-Mechanism Screen Across WEIL-FLOOR, KERNEL-API &amp; NB-GAIN (2026-10-16 v2 — Repaired per Review)</title>
+</head>
+<body style="margin: 0; padding: 32px 18px 64px 18px; background-color: #fbfaf7; color: #1f1f1c; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px; line-height: 1.62;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #dfd9cd; border-radius: 6px; padding: 32px 34px; box-sizing: border-box;">
+
+    <!-- Mandatory Top Wall Check -->
+    <div style="background-color: #fdf6e9; border-left: 4px solid #b5651d; padding: 14px 16px; margin-bottom: 24px; font-size: 14.5px; line-height: 1.55;">
+      <strong>Wall check:</strong> Same open gap. Closest results: <code>WEIL-FLOOR</code>, <code>NS24/39/43</code>, <code>NB-GAIN</code> (<code>NS53/61/83/87/98</code>), and <code>ZERO-GEOMETRY</code> (<code>NS100/101</code>). We still need a bound that remains valid as the window grows (<i>b</i> &rarr; &infin; or <i>N</i> &rarr; &infin;), retaining every signed arithmetic contribution and coupling. <code>RH</code>, <code>G2</code>, and both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. <code>M17 v2</code> and all audited lanes remain <strong>PAUSED</strong>.
+    </div>
+
+    <div style="font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.08em; color: #6a665d; margin-bottom: 6px;">
+      Bounded Two-Precision Candidate Screen &bull; WEIL-FLOOR / KERNEL-API / NB-GAIN &bull; 2026-10-16 &bull; Version 2 (Repaired per Review)
+    </div>
+    <h1 style="font-size: 23px; line-height: 1.28; margin: 0 0 10px 0; font-weight: bold; color: #161614;">
+      Two-Precision (<code>256</code>-Bit &amp; <code>384</code>-Bit <code>flint.arb</code>/<code>flint.acb</code>) Candidate-Mechanism Screen &amp; Exact Analytic Identities (<code>v2</code>)
+    </h1>
+    <p style="margin: 0 0 18px 0; font-size: 14px; color: #545149;">
+      Package: <code>audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/</code> &bull;
+      Verifier: <code>verify_cofinal_candidate_mechanisms.py</code> &bull;
+      <code>payload_sha256</code>: <code>cc45f91788dd3b8109942c9b7b9110a18e0489301a20500b7465a9359f8247d4</code> &bull;
+      <code>file_sha256</code>: <code>12dc89fef565a87f5039bd8bbba22b7ff9fba5b4ebde44008a24e231dcd23996</code> &bull;
+      Ball overlaps: <code>129 / 129</code> passed &bull;
+      Supersedes <code>cofinal-candidate-mechanisms-screen-2026-10-16-v1.html</code> (preserved at its path)
+    </p>
+
+    <hr style="border: none; border-top: 1px solid #e3ded3; margin: 20px 0;" />
+
+    <!-- Section 1: Review Repairs -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      1. Summary of Review Corrections Incorporated in <code>v2</code>
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      This <code>v2</code> revision incorporates all five technical corrections from the October 16 audit review while retaining the pause across all lanes:
+    </p>
+    <ol style="margin: 0 0 16px 0; padding-left: 22px; font-size: 15px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Exact <code>NS83</code> <i>q</i> = 2 Target Mellin Functional (Candidate B):</strong>
+        Replaces the mismatched (1&minus;<i>x</i>)<sup>2</sup> expression (0.00035169&hellip; in <code>v1</code>) with the exact <code>NS83</code> transformed target Mellin functional
+        <i>T</i><sub>2</sub>(<i>s</i>) = (<i>s</i> &minus; 1)/<i>s</i><sup>3</sup> (<code>eq:ns83-transforms</code> in <code>evidence/v166/ns83/proof.tex</code>), certifying
+        |<i>T</i><sub>2</sub>(&rho;<sub>1</sub>)| = 1/|&rho;<sub>1</sub>|<sup>2</sup> = 1/(&gamma;<sub>1</sub><sup>2</sup> + 1/4) = <strong>0.004998988833723&hellip;</strong> and first conjugate-pair weight
+        2/|&rho;<sub>1</sub>|<sup>4</sup> = <strong>4.9979778719 &times; 10<sup>&minus;5</sup></strong> inside <i>C</i><sub>2,50</sub> = 7.4079419249 &times; 10<sup>&minus;5</sup>.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Explicit Compressed &amp; Finite-Shell Scope (Candidates I &amp; II/IIb):</strong>
+        Explicitly scopes the 53.16&times; Frobenius cancellation to the <strong>finite 4-mode Legendre shell</strong> <i>V</i><sub>[4,8]</sub><sup>even</sup> (<i>m</i> &isin; {8, 10, 12, 14}) and scopes the radical Rayleigh quotients and residuals to the <strong>8-mode Legendre compression</strong> <i>P</i><sub>8</sub>W<sub>&lambda;</sub><i>P</i><sub>8</sub> (which does not enclose <i>V</i><sub>8</sub>(&minus;<i>a</i>,<i>a</i>)<sup>&perp;</sup> or omitted cross-couplings).
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Removal of Unsupported Convergence Claims (Candidate B):</strong>
+        Four finite dyadic sizes <i>N</i> &isin; {4, 8, 16, 32} are reported strictly as finite-block observations; they cannot establish asymptotic convergence of (log <i>N</i>)<i>E<sub>N</sub></i><sup>(2)</sup> or persistent relative gain (<code>prop:ns83-log-floor</code> has no finite-<i>N</i> onset threshold).
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Corrected Intermediate Formulas in Theorem 2 &amp; <code>PROPOSAL.md</code>:</strong>
+        Fixes the Fourier phase <i>f&#770;</i><sub>pos</sub>(&gamma;<sub><i>k</i></sub>) = +(2<i>i</i>/&radic;3)&Xi;&prime;(&gamma;<sub><i>k</i></sub>) (purely imaginary for real odd <i>x h</i>(<i>x</i>)), the odd pole moment chain
+        &int;<sub>&real;</sub> <i>x</i> sinh(<i>x</i>/2) <i>h</i>(<i>x</i>) <i>dx</i> = <i>M</i>&prime;(1) = (2/&radic;3)&xi;&prime;(1) = (1/&radic;3)(1 + (&gamma;<sub><i>E</i></sub> &minus; log(4&pi;))/2) with &xi;(1) = 1/2, and the <code>PROPOSAL.md</code> NB formulas
+        (<i>E<sub>N</sub></i><sup>(2)</sup> = 2 &minus; <i>b</i><sub>old</sub><sup>&top;</sup><i>G<sub>N</sub></i><sup>&minus;1</sup><i>b</i><sub>old</sub>, <i>h<sub>N</sub></i> = <i>b</i><sub>new</sub> &minus; <i>C<sub>N</sub></i><sup>&top;</sup><i>G<sub>N</sub></i><sup>&minus;1</sup><i>b</i><sub>old</sub>, &Delta;<sub><i>N</i></sub> = <i>h<sub>N</sub></i><sup>&top;</sup><i>H<sub>N</sub></i><sup>&minus;1</sup><i>h<sub>N</sub></i>).
+      </li>
+      <li style="margin-bottom: 6px;">
+        <strong>Complete <code>flint.arb</code> Tail Enclosures &amp; Ball Cholesky Weyl Certificate (Theorem 2 &amp; Candidate III):</strong>
+        Adds rigorous <code>lem:v150-weight</code> tail enclosures (<code>evidence/v150/capacity_weight.tex</code>) for the omitted <i>n</i> &ge; 12 theta sum and [3.5, &infin;) integral tail, and replaces the midpoint eigenvalue diagnostic for <code>NS57</code> with a pure <code>flint.arb</code> Cholesky certificate of (2|&delta;<sub>2</sub>|)<i>I</i><sub>8</sub> &plusmn; <i>B</i><sub>&delta;<sub>2</sub></sub> &succ; 0.
+      </li>
+    </ol>
+
+    <!-- Section 2 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      2. Certified Verification of Theorem 1 (<code>.contains(0)</code> at <code>256</code>-Bit &amp; <code>384</code>-Bit)
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      For all Legendre indices <i>m</i> &equiv; <i>n</i> (mod 2) (both even and odd parities simultaneously) and every <i>a</i> &gt; 0, subtracting (<i>T</i><sub>pole</sub>(<i>a</i>))<sub><i>m</i>,<i>n</i></sub> from (<i>T</i><sub>arith</sub>(<i>a</i>))<sub><i>m</i>,<i>n</i></sub> has identically zero Stieltjes integration-by-parts boundary terms at both <i>u</i> = 0 and <i>u</i> = 2:
+    </p>
+    <div style="background-color: #f7f4ec; border: 1px solid #e1dbce; border-radius: 4px; padding: 10px 12px; margin: 8px 0 14px 0; font-size: 14.5px; text-align: center;">
+      (<i>T</i><sub>arith</sub>(<i>a</i>) &minus; <i>T</i><sub>pole</sub>(<i>a</i>))<sub><i>m</i>,<i>n</i></sub>
+      &nbsp;=&nbsp;
+      &int;<sub>0</sub><sup>2</sup>
+      [(&psi;(<i>e</i><sup><i>au</i></sup>) &minus; <i>e</i><sup><i>au</i></sup> &minus; <i>au</i> + 1) / <i>e</i><sup><i>au</i>/2</sup>]
+      &middot;
+      (<i>a</i> <i>C&#771;</i><sub><i>m</i>,<i>n</i></sub>(<i>u</i>) &minus; 2 <i>C&#771;</i>&prime;<sub><i>m</i>,<i>n</i></sub>(<i>u</i>)) <i>du</i>.
+    </div>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 7px 8px; text-align: left;">Pair (<i>m</i>,<i>n</i>)</th>
+          <th style="padding: 7px 8px; text-align: left;">Parity</th>
+          <th style="padding: 7px 8px; text-align: right;">Direct LHS = (<i>T</i><sub>arith</sub> &minus; <i>T</i><sub>pole</sub>)<sub><i>m</i>,<i>n</i></sub></th>
+          <th style="padding: 7px 8px; text-align: right;">Boundary-Free Integral RHS</th>
+          <th style="padding: 7px 8px; text-align: right;">256-Bit |LHS &minus; RHS| Rad</th>
+          <th style="padding: 7px 8px; text-align: center;"><code>.contains(0)</code></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(0,0)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;3.226631998261226</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;3.226631998261226</td>
+          <td style="padding: 6px 8px; text-align: right;">4.04 &times; 10<sup>&minus;74</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(0,2)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.363351778191214</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.363351778191214</td>
+          <td style="padding: 6px 8px; text-align: right;">1.21 &times; 10<sup>&minus;72</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(2,4)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.281211159163931</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.281211159163931</td>
+          <td style="padding: 6px 8px; text-align: right;">7.54 &times; 10<sup>&minus;70</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(4,4)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.406447338097766</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.406447338097766</td>
+          <td style="padding: 6px 8px; text-align: right;">1.31 &times; 10<sup>&minus;65</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(1,1)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;1.478069459373286</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;1.478069459373286</td>
+          <td style="padding: 6px 8px; text-align: right;">6.95 &times; 10<sup>&minus;73</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(1,3)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.346721558001673</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.346721558001673</td>
+          <td style="padding: 6px 8px; text-align: right;">1.93 &times; 10<sup>&minus;71</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(3,3)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.572549218687149</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.572549218687149</td>
+          <td style="padding: 6px 8px; text-align: right;">6.70 &times; 10<sup>&minus;69</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 8px;"><code>(3,5)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.264731248954138</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.264731248954138</td>
+          <td style="padding: 6px 8px; text-align: right;">8.80 &times; 10<sup>&minus;68</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 3 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      3. Candidates I, II/IIb &amp; III on 8-Mode Legendre Compressions Across &lambda; &isin; {2, 3, 5, 8}
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      Table 2 reports the unshifted 8&times;8 Cholesky minimum pivots on <i>V</i><sub>8</sub><sup>even</sup>(&minus;<i>a</i>,<i>a</i>) and <i>V</i><sub>8</sub><sup>odd</sup>(&minus;<i>a</i>,<i>a</i>), the 4&times;4 shifted Schur pivot at <i>C</i><sub>*</sub> = 8, and the <strong>finite 4-mode Legendre shell</strong> (<i>V</i><sub>[4,8]</sub><sup>even</sup>, <i>m</i> &isin; {8, 10, 12, 14}) Frobenius norm vs. the M17 triangle-inequality sum (finite shell only; does not enclose <i>V</i><sub>4</sub>(<i>a</i>)<sup>&perp;</sup>):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 6px; text-align: left;">&lambda; (<i>a</i> = log &lambda;)</th>
+          <th style="padding: 6px 6px; text-align: right;">Shifts</th>
+          <th style="padding: 6px 6px; text-align: right;">Unshifted Even 8&times;8 Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">Unshifted Odd 8&times;8 Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">Shifted Schur 4&times;4 (<i>C</i><sub>*</sub>=8) Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">M17 Triangle Bound &Sigma;2&Lambda;/&radic;<i>k</i></th>
+          <th style="padding: 6px 6px; text-align: right;">Finite Shell &Vert;<i>T</i><sub>arith</sub><sup>[4,7]</sup>&Vert;<sub><i>F</i></sub></th>
+          <th style="padding: 6px 6px; text-align: right;">Shell Ratio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=2</code> (0.6931)</td>
+          <td style="padding: 6px 6px; text-align: right;">2</td>
+          <td style="padding: 6px 6px; text-align: right;">5.0647 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">7.7286 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.93784</td>
+          <td style="padding: 6px 6px; text-align: right;">2.24883</td>
+          <td style="padding: 6px 6px; text-align: right;">0.62642</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">3.59&times;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=3</code> (1.0986)</td>
+          <td style="padding: 6px 6px; text-align: right;">6</td>
+          <td style="padding: 6px 6px; text-align: right;">1.4512 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">4.3598 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.92830</td>
+          <td style="padding: 6px 6px; text-align: right;">6.34260</td>
+          <td style="padding: 6px 6px; text-align: right;">1.31326</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">4.83&times;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=5</code> (1.6094)</td>
+          <td style="padding: 6px 6px; text-align: right;">13</td>
+          <td style="padding: 6px 6px; text-align: right;">2.5785 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">5.4353 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.89252</td>
+          <td style="padding: 6px 6px; text-align: right;">14.32325</td>
+          <td style="padding: 6px 6px; text-align: right;">0.90492</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">15.83&times;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 6px;"><code>&lambda;=8</code> (2.0794)</td>
+          <td style="padding: 6px 6px; text-align: right;">26</td>
+          <td style="padding: 6px 6px; text-align: right;">3.0705 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">9.1999 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.87591</td>
+          <td style="padding: 6px 6px; text-align: right;">26.49768</td>
+          <td style="padding: 6px 6px; text-align: right;">0.49848</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">53.16&times;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin: 0 0 10px 0;">
+      Table 3 reports the <strong>compressed 8-mode Legendre</strong> Rayleigh quotients and residuals for <i>h</i>(<i>x</i>), <i>h</i>&prime;(<i>x</i>), and <i>x h</i>(<i>x</i>) (with certified <i>n</i> &ge; 12 tail enclosure) alongside the <strong>pure <code>flint.arb</code> Cholesky Weyl certificate</strong> of (2|&delta;<sub>2</sub>|)<i>I</i><sub>8</sub> &plusmn; <i>B</i><sub>&delta;<sub>2</sub></sub> &succ; 0 for <code>NS57</code> (&delta;<sub>2</sub> = &minus;(log 2)/100, 2|&delta;<sub>2</sub>| = 0.01386294):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 6px; text-align: left;">&lambda;</th>
+          <th style="padding: 6px 6px; text-align: right;">Compressed <i>h</i> RQ</th>
+          <th style="padding: 6px 6px; text-align: right;">Compressed <i>h</i>&prime; RQ</th>
+          <th style="padding: 6px 6px; text-align: right;">Compressed <i>xh</i> RQ</th>
+          <th style="padding: 6px 6px; text-align: right;">Compressed &Vert;W<sup>(8)</sup><i>P</i><sub>8</sub>(<i>xh</i>)&Vert;/&Vert;<i>P</i><sub>8</sub>(<i>xh</i>)&Vert;</th>
+          <th style="padding: 6px 6px; text-align: right;">Weyl (+) Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">Weyl (&minus;) Min Piv</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=2</code></td>
+          <td style="padding: 6px 6px; text-align: right;">1.722 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">5.977 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">6.029 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.02803</td>
+          <td style="padding: 6px 6px; text-align: right;">0.08326</td>
+          <td style="padding: 6px 6px; text-align: right;">0.08831</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=3</code></td>
+          <td style="padding: 6px 6px; text-align: right;">1.105 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">3.172 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">4.625 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.03181</td>
+          <td style="padding: 6px 6px; text-align: right;">0.06613</td>
+          <td style="padding: 6px 6px; text-align: right;">0.08310</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=5</code></td>
+          <td style="padding: 6px 6px; text-align: right;">4.519 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">4.733 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">7.630 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.11185</td>
+          <td style="padding: 6px 6px; text-align: right;">0.05464</td>
+          <td style="padding: 6px 6px; text-align: right;">0.07515</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 6px;"><code>&lambda;=8</code></td>
+          <td style="padding: 6px 6px; text-align: right;">3.755 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">1.887 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.223 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.11555</td>
+          <td style="padding: 6px 6px; text-align: right;">0.04807</td>
+          <td style="padding: 6px 6px; text-align: right;">0.07385</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 4 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      4. Candidates A, B &amp; C Across Finite Dyadic Blocks <i>N</i> &isin; {4, 8, 16, 32} (<code>NB-GAIN</code>)
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      For the actual <i>q</i> = 2 smoothed Nyman&ndash;Beurling target <i>h</i><sub>2</sub> = <i>W</i>&tau;<sub>2</sub> in <code>NS83</code> (<code>evidence/v166/ns83/proof.tex</code>, <code>eq:ns83-transforms</code>), the transformed target Mellin value at &rho;<sub>1</sub> = 1/2 + <i>i</i>&gamma;<sub>1</sub> is
+      <i>T</i><sub>2</sub>(&rho;<sub>1</sub>) = (&rho;<sub>1</sub> &minus; 1)/&rho;<sub>1</sub><sup>3</sup> with magnitude
+      |<i>T</i><sub>2</sub>(&rho;<sub>1</sub>)| = 1/|&rho;<sub>1</sub>|<sup>2</sup> = <strong>0.004998988833723&hellip;</strong>, first conjugate-pair weight
+      2/|&rho;<sub>1</sub>|<sup>4</sup> = <strong>4.9979778719 &times; 10<sup>&minus;5</sup></strong>, and 50-pair floor
+      <i>C</i><sub>2,50</sub> = <strong>7.4079419249 &times; 10<sup>&minus;5</sup></strong>. Table 4 records the finite-block values across <i>N</i> &isin; {4, 8, 16, 32} (finite-block observations only; does not establish convergence):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 6px; text-align: left;"><i>N</i></th>
+          <th style="padding: 6px 6px; text-align: right;"><i>E<sub>N</sub></i><sup>(2)</sup></th>
+          <th style="padding: 6px 6px; text-align: right;">(log <i>N</i>) <i>E<sub>N</sub></i><sup>(2)</sup></th>
+          <th style="padding: 6px 6px; text-align: right;">Finite Ratio (log <i>N</i>/log 2)(&Delta;<sub><i>N</i></sub>/<i>E<sub>N</sub></i><sup>(2)</sup>)</th>
+          <th style="padding: 6px 6px; text-align: right;">tr(<i>H<sub>N</sub></i>) / tr(<i>D<sub>N</sub></i>)</th>
+          <th style="padding: 6px 6px; text-align: right;">&Vert;<i>h<sub>N</sub></i>&Vert;<sub>2</sub><sup>2</sup> / &Vert;<i>b</i><sub>new</sub>&Vert;<sub>2</sub><sup>2</sup></th>
+          <th style="padding: 6px 6px; text-align: center;">Cand A (&beta;=1/2 &amp; NS74)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>4</code></td>
+          <td style="padding: 6px 6px; text-align: right;">2.12969 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.95238 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">1.8975</td>
+          <td style="padding: 6px 6px; text-align: right;">6.835 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">6.656 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>8</code></td>
+          <td style="padding: 6px 6px; text-align: right;">1.09109 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.26886 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.1216</td>
+          <td style="padding: 6px 6px; text-align: right;">5.463 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">1.746 &times; 10<sup>&minus;7</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>16</code></td>
+          <td style="padding: 6px 6px; text-align: right;">3.19477 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">8.85778 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.9491</td>
+          <td style="padding: 6px 6px; text-align: right;">4.721 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.365 &times; 10<sup>&minus;9</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 6px;"><code>32</code></td>
+          <td style="padding: 6px 6px; text-align: right;">2.43670 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">8.44495 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.9456</td>
+          <td style="padding: 6px 6px; text-align: right;">4.307 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.051 &times; 10<sup>&minus;9</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Mandatory Bottom Wall Check -->
+    <div style="background-color: #fdf6e9; border-left: 4px solid #b5651d; padding: 14px 16px; margin-top: 24px; font-size: 14.5px; line-height: 1.55;">
+      <strong>Wall check:</strong> Same open gap. Closest results: <code>WEIL-FLOOR</code>, <code>NS24/39/43</code>, <code>NB-GAIN</code> (<code>NS53/61/83/87/98</code>), and <code>ZERO-GEOMETRY</code> (<code>NS100/101</code>). We still need a bound that remains valid as the window grows (<i>b</i> &rarr; &infin; or <i>N</i> &rarr; &infin;), retaining every signed arithmetic contribution and coupling. <code>RH</code>, <code>G2</code>, and both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. All audited lanes remain <strong>PAUSED</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

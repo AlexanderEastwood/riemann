@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 16 Audit Report (v3) — Untruncated Spatial Archimedean Formula, Rational Harmonic &amp; Weber–Schafheitlin Legendre Asymptotics, and Certified Slepian Leakage</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 36px auto; padding: 0 20px; line-height: 1.62; color: #1b1f23; background-color: #ffffff;">
+
+<div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-bottom: 26px; border-radius: 4px;">
+  <p style="margin: 0 0 8px 0; font-weight: bold; color: #8b0000; font-size: 1.02em;">Wall Check &amp; Open-Status Disclosure (Top of Deliverable)</p>
+  <p style="margin: 0; font-size: 0.94em;">
+    <strong>Does this deliverable prove the Riemann Hypothesis (RH), complete the global archimedean completion (G2), establish the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin;, or recover the missing historical raw outputs in <code>evidence/MISSING.md</code>?</strong><br>
+    <strong>No.</strong> RH, G2, the cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> (<code>src/verify_phase2.py</code> and <code>final_weil_check.py</code>) remain <strong>OPEN</strong>. Theorem 1.2 is a diagonal growth identity on <em>J<sub>m,m</sub></em>(0; <em>b</em>) and does not by itself bound the infinite high-degree block <em>H</em><sub>&gt;<em>N</em></sub> without an infinite-dimensional tail operator lower bound and off-diagonal block coupling control (established for the five discrete rational bandwidths 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50} in Milestone 17).
+  </p>
+</div>
+
+<h1 style="font-size: 1.52em; line-height: 1.28; margin-bottom: 6px; color: #111111;">Milestone 16 Audit Report (v3): Untruncated Spatial Archimedean Formula, Rational Harmonic &amp; Weber&ndash;Schafheitlin Legendre Asymptotics, and Certified Slepian Leakage</h1>
+<p style="margin: 0 0 18px 0; font-size: 0.92em; color: #555555;">
+  <strong>Date:</strong> 2026-10-15 &nbsp;|&nbsp;
+  <strong>Revision:</strong> v3 (Repaired per <code>argon-m16-review-2026-10-15-v1</code> and <code>argon-m17-review-2026-10-15-v1</code>) &nbsp;|&nbsp;
+  <strong>Lanes:</strong> <code>WEIL-FLOOR</code>, <code>NB-GAIN</code> / <code>COEFF</code>, &amp; <code>KERNEL-API</code><br>
+  <strong>Audit Package:</strong> <code>audits/untruncated-spatial-archimedean-slepian-gap-and-harmonic-growth-2026-10-15-v1/</code><br>
+  <strong>Verification Hashes:</strong> <code>payload.sha256 = 4592cff3eb909f0b3b6ef6dafc56c29aba2e079c344a45c319d49de56ab90a2f</code>, <code>file_sha256 = f049fdb0183e87e6b4da552376a19b517c70180f59508db9e76abc667e233804</code> (<code>80/80</code> two-precision 256-bit and 384-bit <code>flint.arb</code> overlap checks PASS; <code>pyright</code> 0 errors, 0 warnings, 0 informations; zero <code>numpy</code>/<code>mpmath</code> imports).
+</p>
+
+<h2 style="font-size: 1.22em; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; margin-top: 26px;">1. Summary of Audit Repairs (Resolving All Findings of <code>argon-m16-review</code> &amp; Proof-Text Typos Noted in <code>argon-m17-review</code>)</h2>
+
+<ol style="padding-left: 20px; font-size: 0.96em;">
+  <li style="margin-bottom: 10px;">
+    <strong>Exact &minus;log(4&pi;<em>b</em>) Constant, Rational Weber&ndash;Schafheitlin <em>O</em>(<em>b</em><sup>2</sup>/<em>m</em><sup>2</sup>) Refinement, &amp; Proof-Text Taylor/Digamma Corrections:</strong> Corrected the digamma constant in <em>&mu;<sub>m</sub></em><sup>Bessel</sup> = <em>H<sub>m</sub></em> &minus; <em>&gamma;<sub>E</sub></em> &minus; log 2, yielding
+    <em>J<sub>m,m</sub></em>(0; <em>b</em>) = <em>H<sub>m</sub></em> &minus; <em>&gamma;<sub>E</sub></em> &minus; log(4&pi;<em>b</em>) &minus; <em>b</em><sup>2</sup>/[12(2<em>m</em>&minus;1)(2<em>m</em>+3)] + <em>O</em>(<em>b</em><sup>4</sup>/<em>m</em><sup>4</sup>) &sim; log(<em>m</em>/(&pi;<em>b</em>)),
+    where &minus;&int;<sub>0</sub><sup>2</sup> <em>u C<sub>m,m</sub></em>(<em>ub</em>) <em>du</em> = 2/[(2<em>m</em>&minus;1)(2<em>m</em>+3)] is the exact Weber&ndash;Schafheitlin inverse-square Bessel moment (certified at <em>m</em> = 9, 2<em>b</em> = 1.00 to <strong>2.22 &times; 10<sup>&minus;8</sup></strong>). Also fixed the two proof-text typos in <code>derivation.md</code>: wrote the exact Taylor expansion <em>K</em><sub>reg</sub>(<em>t</em>) = 2<em>e</em><sup>&minus;<em>t</em>/2</sup>/(1 &minus; <em>e</em><sup>&minus;2<em>t</em></sup>) &minus; 1/<em>t</em> = 1/2 &minus; <em>t</em>/24 &minus; <em>t</em><sup>2</sup>/16 + 7<em>t</em><sup>3</sup>/5760 + 5<em>t</em><sup>4</sup>/768 &minus; &hellip; and the exact digamma remainder <em>R<sub>&alpha;</sub></em>(&xi;) = &minus;1/(24&xi;<sup>2</sup>) + <em>O</em>(&xi;<sup>&minus;4</sup>).
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Unconditional Off-Line Zero Pairing (Finding 1):</strong> Wrote the unconditional explicit formula with complex-conjugate pairing &sum;<sub>&rho;</sub> <em>&sigma;<sub>L<sub>P</sub></sub></em>(<em>z<sub>&rho;</sub></em>) <em>&#285;</em>(<em>z<sub>&rho;</sub></em>) <span style="text-decoration: overline;"><em>&#285;</em>(<span style="text-decoration: overline;"><em>z<sub>&rho;</sub></em></span>)</span> (<em>z<sub>&rho;</sub></em> = (&rho; &minus; 1/2)/<em>i</em>), noting that it reduces to <em>&sigma;<sub>L<sub>P</sub></sub></em>(<em>&gamma;<sub>k</sub></em>)|<em>&#285;</em>(<em>&gamma;<sub>k</sub></em>)|<sup>2</sup> on verified critical-line zeros.
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Certified <code>flint.acb.zeta_zero(k)</code> Enclosures &amp; Direct <code>flint.arb</code> Slepian Exterior Matrix (Findings 2 &amp; 4):</strong> Replaced <code>mpmath.zetazero(k)</code> with FLINT's certified interval enclosure <code>flint.acb.zeta_zero(k).imag</code> at 256 and 384 bits, computed the continuous Slepian exterior-frequency matrix <em>E</em><sub>Slep</sub><sup>(6,even)</sup>(<em>b</em>; <em>&gamma;</em><sub>1</sub>) directly in <code>flint.arb</code>, and classified the 50-zero comparison as a conditional finite-prefix spectral concentration diagnostic.
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Logarithmic Sobolev Form Domain &amp; Diagonal-vs-Block Scope (Findings 5 &amp; 6):</strong> Specified the logarithmic Sobolev form domain <em>Q</em>(<em>A</em><sub>arch</sub>) = {<em>g</em> &in; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) : &int; log(2 + |&xi;|)|<em>&#285;</em>(&xi;)|<sup>2</sup> <em>d&xi;</em> &lt; &infin;} and distinguished diagonal growth from the full infinite-dimensional tail operator bound on <em>H</em><sub>&gt;<em>N</em></sub> (certified for the five discrete rational bandwidths 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50} in Milestone 17).
+  </li>
+</ol>
+
+<h2 style="font-size: 1.22em; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; margin-top: 26px;">2. Certified Harmonic &amp; Weber&ndash;Schafheitlin Diagonal Table (<em>m</em> = 0, &hellip;, 9)</h2>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 0.86em; margin: 14px 0;">
+  <thead>
+    <tr style="background-color: #f6f8fa; border-bottom: 2px solid #d0d7de;">
+      <th style="padding: 5px 6px; text-align: center;"><em>m</em></th>
+      <th style="padding: 5px 6px; text-align: center;">Exact <em>H<sub>m</sub></em></th>
+      <th style="padding: 5px 6px; text-align: center;">Weber&ndash;Schafheitlin <em>M<sub>m</sub></em><sup>(&minus;2)</sup></th>
+      <th style="padding: 5px 6px; text-align: center;"><em>J<sub>m,m</sub></em> (2<em>b</em>=0.50)</th>
+      <th style="padding: 5px 6px; text-align: center;"><em>J<sub>m,m</sub></em> (2<em>b</em>=1.00)</th>
+      <th style="padding: 5px 6px; text-align: center;"><em>J<sub>m,m</sub></em> (2<em>b</em>=2.00)</th>
+      <th style="padding: 5px 6px; text-align: center;">Refined Asymp Error (2<em>b</em>=1.00)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">0</td><td style="padding: 4px 6px; text-align: center;">1</td><td style="padding: 4px 6px; text-align: center;">&mdash;</td><td style="padding: 4px 6px; text-align: center;">&minus;0.8446</td><td style="padding: 4px 6px; text-align: center;">&minus;1.6532</td><td style="padding: 4px 6px; text-align: center;">&minus;2.5455</td><td style="padding: 4px 6px; text-align: center;">&minus;2.381 &times; 10<sup>&minus;1</sup></td></tr>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">1</td><td style="padding: 4px 6px; text-align: center;">7/3</td><td style="padding: 4px 6px; text-align: center;">2/5</td><td style="padding: 4px 6px; text-align: center;">+0.6097</td><td style="padding: 4px 6px; text-align: center;">&minus;0.0908</td><td style="padding: 4px 6px; text-align: center;">&minus;0.8238</td><td style="padding: 4px 6px; text-align: center;">&minus;4.826 &times; 10<sup>&minus;3</sup></td></tr>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">2</td><td style="padding: 4px 6px; text-align: center;">43/15</td><td style="padding: 4px 6px; text-align: center;">2/21</td><td style="padding: 4px 6px; text-align: center;">+1.1445</td><td style="padding: 4px 6px; text-align: center;">+0.4505</td><td style="padding: 4px 6px; text-align: center;">&minus;0.2481</td><td style="padding: 4px 6px; text-align: center;">&minus;1.116 &times; 10<sup>&minus;4</sup></td></tr>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">3</td><td style="padding: 4px 6px; text-align: center;">337/105</td><td style="padding: 4px 6px; text-align: center;">2/45</td><td style="padding: 4px 6px; text-align: center;">+1.4875</td><td style="padding: 4px 6px; text-align: center;">+0.7940</td><td style="padding: 4px 6px; text-align: center;">+0.0992</td><td style="padding: 4px 6px; text-align: center;">&minus;3.930 &times; 10<sup>&minus;6</sup></td></tr>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">4</td><td style="padding: 4px 6px; text-align: center;">1091/315</td><td style="padding: 4px 6px; text-align: center;">2/77</td><td style="padding: 4px 6px; text-align: center;">+1.7415</td><td style="padding: 4px 6px; text-align: center;">+1.0481</td><td style="padding: 4px 6px; text-align: center;">+0.3541</td><td style="padding: 4px 6px; text-align: center;">&minus;5.955 &times; 10<sup>&minus;7</sup></td></tr>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">5</td><td style="padding: 4px 6px; text-align: center;">12701/3465</td><td style="padding: 4px 6px; text-align: center;">2/117</td><td style="padding: 4px 6px; text-align: center;">+1.9435</td><td style="padding: 4px 6px; text-align: center;">+1.2502</td><td style="padding: 4px 6px; text-align: center;">+0.5566</td><td style="padding: 4px 6px; text-align: center;">&minus;2.247 &times; 10<sup>&minus;7</sup></td></tr>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">6</td><td style="padding: 4px 6px; text-align: center;">172673/45045</td><td style="padding: 4px 6px; text-align: center;">2/165</td><td style="padding: 4px 6px; text-align: center;">+2.1114</td><td style="padding: 4px 6px; text-align: center;">+1.4181</td><td style="padding: 4px 6px; text-align: center;">+0.7246</td><td style="padding: 4px 6px; text-align: center;">&minus;1.087 &times; 10<sup>&minus;7</sup></td></tr>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">7</td><td style="padding: 4px 6px; text-align: center;">179141/45045</td><td style="padding: 4px 6px; text-align: center;">2/221</td><td style="padding: 4px 6px; text-align: center;">+2.2550</td><td style="padding: 4px 6px; text-align: center;">+1.5617</td><td style="padding: 4px 6px; text-align: center;">+0.8683</td><td style="padding: 4px 6px; text-align: center;">&minus;5.934 &times; 10<sup>&minus;8</sup></td></tr>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">8</td><td style="padding: 4px 6px; text-align: center;">3141493/765765</td><td style="padding: 4px 6px; text-align: center;">2/285</td><td style="padding: 4px 6px; text-align: center;">+2.3805</td><td style="padding: 4px 6px; text-align: center;">+1.6873</td><td style="padding: 4px 6px; text-align: center;">+0.9939</td><td style="padding: 4px 6px; text-align: center;">&minus;3.521 &times; 10<sup>&minus;8</sup></td></tr>
+    <tr style="border-bottom: 1px solid #eaecef;"><td style="padding: 4px 6px; text-align: center;">9</td><td style="padding: 4px 6px; text-align: center;">61309987/14549535</td><td style="padding: 4px 6px; text-align: center;">2/357</td><td style="padding: 4px 6px; text-align: center;">+2.4919</td><td style="padding: 4px 6px; text-align: center;">+1.7987</td><td style="padding: 4px 6px; text-align: center;">+1.1054</td><td style="padding: 4px 6px; text-align: center;"><strong>&minus;2.223 &times; 10<sup>&minus;8</sup></strong></td></tr>
+  </tbody>
+</table>
+
+<h2 style="font-size: 1.22em; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; margin-top: 26px;">3. Certified Slepian Exterior-Frequency Leakage &amp; Conditional 50-Zero Prefix Diagnostic</h2>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 0.86em; margin: 14px 0;">
+  <thead>
+    <tr style="background-color: #f6f8fa; border-bottom: 2px solid #d0d7de;">
+      <th style="padding: 5px 6px; text-align: center;">2<em>b</em></th>
+      <th style="padding: 5px 6px; text-align: center;"><em>c</em> = <em>b&gamma;</em><sub>1</sub></th>
+      <th style="padding: 5px 6px; text-align: center;">Slepian Min RQ 1 &minus; <em>&lambda;</em><sub>0</sub>(<em>b&gamma;</em><sub>1</sub>)</th>
+      <th style="padding: 5px 6px; text-align: center;">Slepian Leakage on <em>v</em><sub>min</sub></th>
+      <th style="padding: 5px 6px; text-align: center;">Prime+Arch RQ on <em>v</em><sub>min</sub></th>
+      <th style="padding: 5px 6px; text-align: center;">50-Zero Prefix Sum (<code>flint.acb</code>)</th>
+      <th style="padding: 5px 6px; text-align: center;">Capture Ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 6px; text-align: center;">1.00</td>
+      <td style="padding: 5px 6px; text-align: center;">7.07</td>
+      <td style="padding: 5px 6px; text-align: center;">1.2783 &times; 10<sup>&minus;5</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">1.2019 &times; 10<sup>&minus;4</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">+7.0273 &times; 10<sup>&minus;6</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">+6.0804 &times; 10<sup>&minus;6</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">86.52%</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 6px; text-align: center;">1.50</td>
+      <td style="padding: 5px 6px; text-align: center;">10.60</td>
+      <td style="padding: 5px 6px; text-align: center;">1.6788 &times; 10<sup>&minus;7</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">5.4098 &times; 10<sup>&minus;7</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">+1.7589 &times; 10<sup>&minus;7</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">+1.6537 &times; 10<sup>&minus;7</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">94.02%</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 6px; text-align: center;">2.00</td>
+      <td style="padding: 5px 6px; text-align: center;">14.13</td>
+      <td style="padding: 5px 6px; text-align: center;">7.0847 &times; 10<sup>&minus;9</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">2.2033 &times; 10<sup>&minus;6</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">+2.5939 &times; 10<sup>&minus;8</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">+2.3809 &times; 10<sup>&minus;8</sup></td>
+      <td style="padding: 5px 6px; text-align: center;">91.79%</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-top: 28px; border-radius: 4px;">
+  <p style="margin: 0 0 6px 0; font-weight: bold; color: #8b0000; font-size: 1.0em;">Wall Check &amp; Open-Status Disclosure (Bottom of Deliverable)</p>
+  <p style="margin: 0; font-size: 0.93em;">
+    RH, G2, the cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+  </p>
+</div>
+
+</body>
+</html>

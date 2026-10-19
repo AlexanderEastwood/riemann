@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specialist Brief (v11) — Complete Campaign Synthesis: Milestones 9–16 Across KERNEL-API, WEIL-FLOOR, NB-GAIN / COEFF, and ZERO-GEOMETRY (2026-10-15)</title>
+</head>
+<body style="margin:0; padding:28px 16px; background-color:#f8f9fa; color:#1f2328; font-family:Georgia, 'Times New Roman', Times, serif; line-height:1.62; font-size:16px;">
+<div style="max-width:680px; margin:0 auto; background-color:#ffffff; border:1px solid #d0d7de; border-radius:6px; padding:32px 36px; box-sizing:border-box;">
+
+  <div style="border-bottom:2px solid #1f2328; padding-bottom:14px; margin-bottom:22px;">
+    <div style="font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#57606a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin-bottom:6px;">
+      External Specialist Brief &bull; 2026-10-15 &bull; Version 11 (Supersedes v10 with Milestone 16: Untruncated Spatial Archimedean Formula, Rational Harmonic Legendre Growth, Arbitrary-Bandwidth Positivity up to 2<em>b</em> = 2.50, &amp; Slepian Zero-Gap Duality)
+    </div>
+    <h1 style="margin:0 0 8px 0; font-size:22px; line-height:1.32; font-weight:normal; color:#111111;">
+      Euler-Depleted Weil Equivalence, Multi-Prime Horizons (<em>K</em> = 2, 3, 4), Universal Legendre Shift Algebra, Signed Positivity at &Delta;<sub>&alpha;</sub> = 0, Untruncated Spatial Archimedean Harmonic Growth up to 2<em>b</em> = 2.50 (260 Shifts) &amp; Slepian Zero-Gap Duality, and Stieltjes&ndash;Hankel Off-Line Zero Screen
+    </h1>
+    <div style="font-size:13px; color:#57606a;">
+      Prepared for: External Analytic Number Theory / Spectral &amp; Harmonic Analysis Specialist (<span style="background-color:#fff3a3; padding:1px 4px; border-radius:2px;">[Recipient Name / Institution]</span>)
+    </div>
+  </div>
+
+  <div style="background-color:#f6f8fa; border-left:4px solid #0969da; padding:14px 16px; margin-bottom:24px; font-size:14px;">
+    <p style="margin:0 0 8px 0;">
+      <strong>Wall check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">WEIL-FLOOR</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">ZERO-GEOMETRY</code>.</strong>
+      Closest results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">coeff-specialist-brief-2026-10-15-v10.html</code> and Milestones 9&ndash;16 (<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">618/618</code> total two-precision 256-bit and 384-bit <code>flint.arb</code> / <code>flint.acb</code> ball-overlap checks passing across M6/M7 repairs and M9&ndash;M16 with zero float tolerances).
+      What changes in v11: Adds <strong>Milestone 16</strong> attacking both <strong>Wall A</strong> (high-degree Legendre behavior as <em>m</em> &rarr; &infin;) and <strong>Wall B</strong> (free bandwidth 2<em>b</em> = log(<em>N</em>/<em>P</em><sub><em>K</em></sub>) beyond log&thinsp;2):
+      (1) proves the <strong>Exact Untruncated Spatial Archimedean Representation</strong> (&Xi;<sub>cap</sub> = &infin;) and the <strong>Exact Rational Frullani&ndash;Legendre Harmonic Identity</strong> &#8459;<sub><em>m</em></sub> = 1 + &sum;<sub><em>k</em>=1</sub><sup><em>m</em></sup> 4<em>k</em>/(4<em>k</em><sup>2</sup>&minus;1) = 2<em>H</em><sub>2<em>m</em></sub> &minus; <em>H</em><sub><em>m</em></sub> + 1/(2<em>m</em>+1) &sim; log(4<em>m</em>) + &gamma;<sub><em>E</em></sub> &rarr; +&infin;;
+      (2) certifies via two-precision Cholesky factorization that both the 6-mode even and odd untruncated Legendre Weil matrices <em>W</em><sub>full</sub><sup>(6,even)</sup>(<em>b</em>) &succ; 0 and <em>W</em><sub>full</sub><sup>(6,odd)</sup>(<em>b</em>) &succ; 0 (12 total Legendre modes up to deg = 11) are strictly positive definite across <strong>2<em>b</em> &isin; {0.50, 1.00, 1.50, 2.00, 2.50}</strong> (<em>e</em><sup>2<em>b</em></sup> &approx; 12.18, up to <strong>260 active shifts</strong> at <em>N</em> = 365 &gt; 12<em>P</em><sub>3</sub>); and
+      (3) proves the <strong>Slepian Zero-Gap Spectral Concentration Duality</strong> showing that the purely prime+archimedean minimum eigenvalue matches the explicit-formula sum over the first 50 nontrivial zeros of &zeta;(<em>s</em>) to <strong>86.5%&ndash;94.0%</strong>.
+    </p>
+    <p style="margin:0;">
+      <strong>Open-status disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong> (global Weil positivity across all test functions), the <strong>cofinal signed-arithmetic lower bound as <em>K</em> &rarr; &infin;, <em>b</em> &rarr; &infin;, and <em>N</em><sub>leg</sub> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    1. Lanes <code>WEIL-FLOOR</code> &amp; <code>NB-GAIN</code> / <code>COEFF</code> (Milestone 16): Untruncated Spatial Archimedean Harmonic Growth, Arbitrary Bandwidth 2<em>b</em> = 2.50 (260 Shifts), &amp; Slepian Zero-Gap Duality
+  </h2>
+
+  <ul style="margin:0 0 14px 0; padding-left:22px;">
+    <li style="margin-bottom:6px;">
+      <strong>Wall A — Exact Untruncated Spatial Archimedean Formula &amp; Rational Harmonic Legendre Growth:</strong>
+      For any even correlation function &Phi;(<em>t</em>) supported in [&minus;<em>T</em>, <em>T</em>], Fourier inversion of the subtraction-regularized digamma integral gives the exact compact spatial integral on [0, <em>T</em>] with <strong>zero high-frequency truncation error</strong> (&Xi;<sub>cap</sub> = &infin;). On the <em>m</em>-th orthonormal Legendre mode <em>e</em><sub><em>m</em></sub>(<em>t</em>), the logarithmic singularity integral of <em>C</em><sub><em>m</em>,<em>m</em></sub>(<em>ub</em>) = &frac12;(<em>S</em><sub><em>ub</em></sub>)<sub><em>m</em>,<em>m</em></sub> on <em>u</em> &isin; [0, 2] satisfies the exact rational harmonic identity
+      <strong>&#8459;<sub><em>m</em></sub> = &int;<sub>0</sub><sup>2</sup> (1 &minus; <em>C</em><sub><em>m</em>,<em>m</em></sub>(<em>ub</em>))/<em>u</em> d<em>u</em> = 1 + &sum;<sub><em>k</em>=1</sub><sup><em>m</em></sup> 4<em>k</em>/(4<em>k</em><sup>2</sup>&minus;1) = 2<em>H</em><sub>2<em>m</em></sub> &minus; <em>H</em><sub><em>m</em></sub> + 1/(2<em>m</em>+1)</strong>,
+      with strictly positive rational increment &#8459;<sub><em>m</em></sub> &minus; &#8459;<sub><em>m</em>&minus;1</sub> = 4<em>m</em>/(4<em>m</em><sup>2</sup>&minus;1) &gt; 0, so the untruncated archimedean diagonal grows logarithmically as &#8458;<sub><em>m</em>,<em>m</em></sub>(0; <em>b</em>) = &#8459;<sub><em>m</em></sub> &minus; &gamma;<sub><em>E</em></sub> &minus; log(2&pi;<em>b</em>) + <em>O</em>(<em>b</em><sup>2</sup>/<em>m</em><sup>2</sup>) &rarr; +&infin; as <em>m</em> &rarr; &infin;.
+    </li>
+    <li style="margin-bottom:6px;">
+      <strong>Wall B — All-Bandwidth Internal Prime-Tower Telescoping &amp; Untruncated 6-Mode Legendre Positivity up to 2<em>b</em> = 2.50:</strong>
+      Because the internal prime-power tower telescopes identically on all of <em>L</em><sup>2</sup>(&#8477;) (<em>L</em><sub><em>p</em></sub>(&minus;&sum;<sub><em>k</em>&ge;1</sub> (log&thinsp;<em>p</em>/<em>p</em><sup><em>k</em>/2</sup>)(<em>S</em><sub><em>k</em>&thinsp;log&thinsp;<em>p</em></sub> + <em>S</em><sub>&minus;<em>k</em>&thinsp;log&thinsp;<em>p</em></sub>)) = (log&thinsp;<em>p</em>)<em>L</em><sub><em>p</em></sub> &minus; ((<em>p</em>&minus;1)/<em>p</em>)(log&thinsp;<em>p</em>)<em>I</em>, verified with 0 discrepancies across all 151 shifts in [1, 6)), two-precision (256-bit and 384-bit) <code>flint.arb</code> Cholesky factorization certifies that both <em>W</em><sub>full</sub><sup>(6,even)</sup>(<em>b</em>) &succ; 0 and <em>W</em><sub>full</sub><sup>(6,odd)</sup>(<em>b</em>) &succ; 0 (12 total Legendre modes up to deg = 11) are strictly positive definite across <strong>2<em>b</em> &isin; {0.50, 1.00, 1.50, 2.00, 2.50}</strong> for <em>K</em> = 2 (up to 53 shifts) and <em>K</em> = 3 (up to <strong>260 active shifts</strong>, <em>e</em><sup>2<em>b</em></sup> &approx; 12.18, <em>N</em> = 365 &gt; 12<em>P</em><sub>3</sub>).
+    </li>
+    <li style="margin-bottom:6px;">
+      <strong>Slepian Zero-Gap Spectral Concentration Duality:</strong>
+      Because &zeta;(<em>s</em>) has no zeros in the low-frequency gap (&minus;&gamma;<sub>1</sub>, &gamma;<sub>1</sub>) (&gamma;<sub>1</sub> &approx; 14.134725), the minimum eigenvector <em>v</em><sub>min</sub> of the purely prime+archimedean matrix <em>W</em><sub>full</sub><sup>(6,even)</sup>(<em>b</em>) automatically forms a Prolate Spheroidal (Slepian) low-pass filter concentrated inside (&minus;&gamma;<sub>1</sub>, &gamma;<sub>1</sub>), and the explicit-formula zero sum over the first 50 nontrivial zeros of &zeta;(<em>s</em>) accounts for <strong>86.52%</strong> (2<em>b</em> = 1.00), <strong>94.02%</strong> (2<em>b</em> = 1.50), and <strong>91.79%</strong> (2<em>b</em> = 2.00) of its Rayleigh quotient.
+    </li>
+  </ul>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    2. Master Index of Certified Campaign Deliverables (Milestones 9&ndash;16)
+  </h2>
+
+  <table style="width:100%; border-collapse:collapse; font-size:12px; margin:10px 0 16px 0;">
+    <thead>
+      <tr style="background-color:#f6f8fa; border-bottom:2px solid #d0d7de;">
+        <th style="padding:5px 6px; text-align:left;">Milestone / Package</th>
+        <th style="padding:5px 6px; text-align:left;">Lanes</th>
+        <th style="padding:5px 6px; text-align:right;">2-Prec Checks</th>
+        <th style="padding:5px 6px; text-align:left;"><code>verification.json</code> <code>file_sha256</code> (prefix)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;">Claude Audit Repairs (M6 &amp; M7)</td>
+        <td style="padding:5px 6px;"><code>KERNEL-API</code></td>
+        <td style="padding:5px 6px; text-align:right;">92 / 92</td>
+        <td style="padding:5px 6px; font-family:ui-monospace, monospace;"><code>df71494a15dc...</code> &amp; <code>294e1650317c...</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;">M9: <code>euler-depleted-weil-equivalence-and-dh-control</code></td>
+        <td style="padding:5px 6px;"><code>KERNEL-API</code>, <code>WEIL-FLOOR</code></td>
+        <td style="padding:5px 6px; text-align:right;">27 / 27</td>
+        <td style="padding:5px 6px; font-family:ui-monospace, monospace;"><code>492c5bed8eef1ef4...</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;">M10: <code>multiprime-internal-shift-and-block-interlacing</code></td>
+        <td style="padding:5px 6px;"><code>KERNEL-API</code></td>
+        <td style="padding:5px 6px; text-align:right;">30 / 30</td>
+        <td style="padding:5px 6px; font-family:ui-monospace, monospace;"><code>483372405b514f46...</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;">M11: <code>mellin-jacobi-finite-rank-schur-reduction</code></td>
+        <td style="padding:5px 6px;"><code>NB-GAIN</code> / <code>COEFF</code></td>
+        <td style="padding:5px 6px; text-align:right;">40 / 40</td>
+        <td style="padding:5px 6px; font-family:ui-monospace, monospace;"><code>fd4223f9b73ebbc0...</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;">M12: <code>stieltjes-hankel-offline-zero-signal-and-dh-screen</code></td>
+        <td style="padding:5px 6px;"><code>ZERO-GEOMETRY</code></td>
+        <td style="padding:5px 6px; text-align:right;">86 / 86</td>
+        <td style="padding:5px 6px; font-family:ui-monospace, monospace;"><code>f293bb6fb79e01bf...</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;">M13: <code>three-prime-complete-shift-spectrum-and-horizon</code></td>
+        <td style="padding:5px 6px;"><code>KERNEL-API</code></td>
+        <td style="padding:5px 6px; text-align:right;">91 / 91</td>
+        <td style="padding:5px 6px; font-family:ui-monospace, monospace;"><code>c63862a9bfe53af5...</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;">M14: <code>universal-legendre-shift-algebra-and-k4-horizon</code></td>
+        <td style="padding:5px 6px;"><code>NB-GAIN</code>, <code>KERNEL-API</code></td>
+        <td style="padding:5px 6px; text-align:right;">111 / 111</td>
+        <td style="padding:5px 6px; font-family:ui-monospace, monospace;"><code>6060979cecb68107...</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;">M15: <code>signed-legendre-weil-positivity-beyond-schur-horizon</code></td>
+        <td style="padding:5px 6px;"><code>WEIL-FLOOR</code>, <code>NB-GAIN</code></td>
+        <td style="padding:5px 6px; text-align:right;">92 / 92</td>
+        <td style="padding:5px 6px; font-family:ui-monospace, monospace;"><code>c94157255cbdef71...</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px 6px;">M16: <code>untruncated-spatial-archimedean-slepian-gap-and-harmonic-growth</code></td>
+        <td style="padding:5px 6px;"><code>WEIL-FLOOR</code>, <code>NB-GAIN</code>, <code>KERNEL-API</code></td>
+        <td style="padding:5px 6px; text-align:right;">49 / 49</td>
+        <td style="padding:5px 6px; font-family:ui-monospace, monospace;"><code>fdaec4afd33c47a4...</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background-color:#f6f8fa; border-top:2px solid #1f2328; padding:14px 16px; margin-top:24px; font-size:13px; color:#24292f;">
+    <p style="margin:0 0 6px 0;">
+      <strong>Closing Wall Check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">WEIL-FLOOR</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">ZERO-GEOMETRY</code>.</strong>
+      Closest results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">coeff-specialist-brief-2026-10-15-v10.html</code> and Milestones 9&ndash;16 (<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">618/618</code> total two-precision ball-overlap checks passing across M6/M7 repairs and M9&ndash;M16).
+    </p>
+    <p style="margin:0;">
+      <strong>Open Problems Disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound as <em>K</em> &rarr; &infin;, <em>b</em> &rarr; &infin;, and <em>N</em><sub>leg</sub> &rarr; &infin;</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

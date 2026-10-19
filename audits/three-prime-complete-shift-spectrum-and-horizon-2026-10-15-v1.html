@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Milestone 13 Report: Two-Sided Positive-Shift Step-Rank-1 Minorant &amp; Crossing the First Internal Primorial Horizons for K=3 and K=4 (2026-10-15 v1)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #f8f9fa; color: #1a1a1a; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; padding: 40px 44px; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+
+    <div style="padding: 12px 16px; background-color: #fff8e6; border-left: 4px solid #d97706; margin-bottom: 28px; font-size: 14px;">
+      <strong>Wall check:</strong> The Riemann Hypothesis (RH), G2, the cofinal signed-arithmetic lower bound, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; margin-bottom: 6px;">
+      Audit Package &bull; <code>three-prime-complete-shift-spectrum-and-horizon-2026-10-15-v1</code> &bull; Lane: <code>KERNEL-API</code>
+    </div>
+    <h1 style="font-size: 24px; line-height: 1.3; margin: 0 0 12px 0; color: #0f172a; font-weight: normal;">
+      Two-Sided Positive-Shift Step-Rank-1 Minorant &amp; Crossing the First Internal Primorial Horizons for <em>K</em> = 3 and <em>K</em> = 4
+    </h1>
+    <div style="font-size: 13px; color: #64748b; margin-bottom: 28px; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+      Certified in Two-Precision (<code>256</code>-bit &amp; <code>384</code>-bit) <code>flint.arb</code> Ball Arithmetic &bull; <code>91/91</code> Ball Overlaps PASS &bull; Zero Float Tolerances<br/>
+      <code>payload.sha256 = 61c9669597f4482288673ac4297081d3756f4e47e714148915d70c9608d3ff63</code><br/>
+      <code>file_sha256 = c63862a9bfe53af544c93f879ba3035602772290835617a176158a3d02024a16</code>
+    </div>
+
+    <h2 style="font-size: 18px; color: #0f172a; margin-top: 28px; margin-bottom: 10px; border-bottom: 1px solid #f1f5f9; padding-bottom: 6px;">
+      1. Executive Summary: Resolving the Two-Sided Overlap Obstacle
+    </h2>
+    <p style="margin: 0 0 14px 0; font-size: 15px;">
+      As the number of primes <em>K</em> in the Euler-factor preconditioner <em>L</em><sub>&#x1D4AB;<sub><em>K</em></sub></sub> increases, an increasing number of reduced-fraction combination shifts &tau;<sub><em>r</em></sub> = log <em>r</em> fall into the <strong>two-sided overlap regime</strong> 0 &lt; &tau;<sub><em>r</em></sub> &lt; <em>b</em> (where both <em>x</em> + &tau;<sub><em>r</em></sub> and <em>x</em> &minus; &tau;<sub><em>r</em></sub> remain inside [&minus;<em>b</em>, <em>b</em>] for |<em>x</em>| &lt; <em>b</em> &minus; &tau;<sub><em>r</em></sub>). Previously, single-reflection step minorants applied only to shifts in [<em>b</em>, 2<em>b</em>), forcing all two-sided shifts &tau;<sub><em>r</em></sub> &isin; (0, <em>b</em>) into the pure-diagonal Schur penalty <em>V<sub>a</sub></em>(<em>x</em>) &mdash; turning positive stabilizing shifts (<em>c<sub>r</sub></em> &gt; 0) into double negative penalties (&minus;2<em>c<sub>r</sub></em>) on [0, <em>b</em> &minus; &tau;<sub><em>r</em></sub>].
+    </p>
+    <p style="margin: 0 0 14px 0; font-size: 15px;">
+      In <strong>Theorem 1</strong>, we prove that for <em>every</em> positive shift <em>c<sub>r</sub></em> &gt; 0 across <strong>both</strong> regimes &tau;<sub><em>r</em></sub> &isin; (0, 2<em>b</em>), the positive semidefinite Schur operator <em>M</em><sub>&tau;<sub><em>r</em></sub></sub><sup>+</sup> maps the constant function <strong>1</strong><sub>[&minus;<em>b</em>, <em>b</em>]</sub> to 2<em>c<sub>r</sub></em>&psi;<sub><em>r</em></sub>(<em>x</em>), where &psi;<sub><em>r</em></sub>(<em>x</em>) = <strong>1</strong><sub>[0, <em>b</em>&minus;&tau;<sub><em>r</em></sub>]</sub>(<em>x</em>) + <strong>1</strong><sub>[&tau;<sub><em>r</em></sub>&minus;<em>b</em>, <em>b</em>]</sub>(<em>x</em>) lies inside the existing step subspace &#x1D4AE;<sub>step</sub> with <strong>zero additional cuts</strong>. Summing over all positive shifts and applying operator Cauchy&ndash;Schwarz yields the closed-form <strong>Sherman&ndash;Morrison trace reduction</strong>:
+    </p>
+    <div style="background-color: #f8fafc; border: 1px solid #cbd5e1; padding: 14px 18px; margin: 16px 0; font-size: 14px; text-align: center;">
+      Tr(<em>K</em><sub>sherman, even</sub>) = Tr(<em>K</em><sub>pure, even</sub>) &minus;
+      [ (2 / <em>S</em><sub>pos</sub>) <em>I</em><sub>pos</sub> ] / [ 1 + (2 / <em>S</em><sub>pos</sub>) <em>J</em><sub>pos</sub> ],
+    </div>
+    <p style="margin: 0 0 14px 0; font-size: 15px;">
+      which achieves <strong>zero loss on the constant mode 1<sub>[0, <em>b</em>]</sub></strong> and preserves the exact block-invariant step-subspace decomposition <em>P</em><sub>0</sub>&Pi;<sub>step</sub> = &Pi;<sub>step</sub><em>P</em><sub>0</sub>.
+    </p>
+
+    <h2 style="font-size: 18px; color: #0f172a; margin-top: 28px; margin-bottom: 10px; border-bottom: 1px solid #f1f5f9; padding-bottom: 6px;">
+      2. Certified Table: <em>K</em> = 3 (<em>B</em><sub>{2,3},{5}</sub>) at &Delta;<sub>&alpha;</sub> = 0 Across <em>N</em> &isin; {36, &hellip;, 42}
+    </h2>
+    <p style="margin: 0 0 12px 0; font-size: 15px;">
+      At &Delta;<sub>&alpha;</sub> = 0 (zero archimedean shift!), Theorem 1 pushes <em>K</em> = 3 across its first internal shift horizon <em>a</em><sub>iso</sub>(3) = &frac12; log 36 = log 6 &approx; 1.791759 all the way up to <em>a</em> = &frac12; log 42 &approx; 1.868835 (where the pure-diagonal trace fails by 2.40&times;):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+          <th style="padding: 8px 6px; text-align: left;"><em>N</em> (<em>a</em> = &frac12; log <em>N</em>)</th>
+          <th style="padding: 8px 6px; text-align: right;">2<em>b</em></th>
+          <th style="padding: 8px 6px; text-align: right;">Shifts (2S/1R/+)</th>
+          <th style="padding: 8px 6px; text-align: right;">min <em>V<sub>a</sub></em></th>
+          <th style="padding: 8px 6px; text-align: right;">Tr<sub>pure,even</sub></th>
+          <th style="padding: 8px 6px; text-align: right;">Tr<sub>sherman,even</sub></th>
+          <th style="padding: 8px 6px; text-align: right;">Tr<sub>pure,odd</sub></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;">36 (1.791759)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.182322</td>
+          <td style="padding: 7px 6px; text-align: right;">7 (3/4/3)</td>
+          <td style="padding: 7px 6px; text-align: right;">2.147066</td>
+          <td style="padding: 7px 6px; text-align: right;">0.289114</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.205724 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.006216 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;">37 (1.805459)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.209721</td>
+          <td style="padding: 7px 6px; text-align: right;">8 (4/4/3)</td>
+          <td style="padding: 7px 6px; text-align: right;">1.526095</td>
+          <td style="padding: 7px 6px; text-align: right;">0.405971</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.271459 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.012422 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;">38 (1.818793)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.236389</td>
+          <td style="padding: 7px 6px; text-align: right;">9 (4/5/4)</td>
+          <td style="padding: 7px 6px; text-align: right;">1.299329</td>
+          <td style="padding: 7px 6px; text-align: right;">0.543084</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.324811 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.020662 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;">39 (1.831781)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.262364</td>
+          <td style="padding: 7px 6px; text-align: right;">10 (5/5/4)</td>
+          <td style="padding: 7px 6px; text-align: right;">1.156093</td>
+          <td style="padding: 7px 6px; text-align: right;">0.725438</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.386132 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.033451 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;">40 (1.844440)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.287682</td>
+          <td style="padding: 7px 6px; text-align: right;">12 (6/6/5)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.736779</td>
+          <td style="padding: 7px 6px; text-align: right; color: #b91c1c;">1.030545 (&gt;1)</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.458404 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.059600 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;">41 (1.856786)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.312375</td>
+          <td style="padding: 7px 6px; text-align: right;">13 (7/6/5)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.456765</td>
+          <td style="padding: 7px 6px; text-align: right; color: #b91c1c;">1.467972 (&gt;1)</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.530367 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.095287 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;">42 (1.868835)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.336472</td>
+          <td style="padding: 7px 6px; text-align: right;">14 (7/7/6)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.318554</td>
+          <td style="padding: 7px 6px; text-align: right; color: #b91c1c;">2.400252 (&gt;1)</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.626834 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.181220 &lt; 1</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size: 18px; color: #0f172a; margin-top: 28px; margin-bottom: 10px; border-bottom: 1px solid #f1f5f9; padding-bottom: 6px;">
+      3. Certified Table: <em>K</em> = 3 at &Delta;<sub>&alpha;</sub> = 0.60 up to <em>a</em> = &frac12; log 45 &amp; <em>K</em> = 4 at &Delta;<sub>&alpha;</sub> = 0 up to <em>a</em> = &frac12; log 240
+    </h2>
+    <p style="margin: 0 0 12px 0; font-size: 15px;">
+      At &Delta;<sub>&alpha;</sub> = 3/5 = 0.60, <em>K</em> = 3 reaches its <strong>second internal shift horizon</strong> <em>a</em> = &frac12; log 45 = log(3&radic;5) &approx; 1.903331 (2<em>b</em> = log(3/2), 18 active shifts). For <em>K</em> = 4 (<em>B</em><sub>{2,3,5},{7}</sub>, <em>P</em><sub>4</sub> = 210) at &Delta;<sub>&alpha;</sub> = 0, Theorem 1 reaches its <strong>second internal shift horizon</strong> <em>a</em> = &frac12; log 240 = log(4&radic;15) &approx; 2.740319 (2<em>b</em> = log(8/7), 43 active shifts):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+          <th style="padding: 8px 6px; text-align: left;"><em>K</em>, &Delta;<sub>&alpha;</sub>, <em>N</em></th>
+          <th style="padding: 8px 6px; text-align: right;"><em>a</em></th>
+          <th style="padding: 8px 6px; text-align: right;">Shifts (2S/1R/+)</th>
+          <th style="padding: 8px 6px; text-align: right;">min <em>V<sub>a</sub></em></th>
+          <th style="padding: 8px 6px; text-align: right;">Tr<sub>pure,even</sub></th>
+          <th style="padding: 8px 6px; text-align: right;">Tr<sub>sherman,even</sub></th>
+          <th style="padding: 8px 6px; text-align: right;">Tr<sub>pure,odd</sub></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;"><em>K</em>=3, &Delta;<sub>&alpha;</sub>=0.6, <em>N</em>=42</td>
+          <td style="padding: 7px 6px; text-align: right;">1.868835</td>
+          <td style="padding: 7px 6px; text-align: right;">14 (7/7/6)</td>
+          <td style="padding: 7px 6px; text-align: right;">1.758554</td>
+          <td style="padding: 7px 6px; text-align: right; color: #b91c1c;">1.131822 (&gt;1)</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.643630 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.119677 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;"><em>K</em>=3, &Delta;<sub>&alpha;</sub>=0.6, <em>N</em>=43</td>
+          <td style="padding: 7px 6px; text-align: right;">1.880600</td>
+          <td style="padding: 7px 6px; text-align: right;">16 (7/9/7)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.822934</td>
+          <td style="padding: 7px 6px; text-align: right; color: #b91c1c;">1.465187 (&gt;1)</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.715016 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.189324 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;"><em>K</em>=3, &Delta;<sub>&alpha;</sub>=0.6, <em>N</em>=44</td>
+          <td style="padding: 7px 6px; text-align: right;">1.892095</td>
+          <td style="padding: 7px 6px; text-align: right;">17 (8/9/8)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.718213</td>
+          <td style="padding: 7px 6px; text-align: right; color: #b91c1c;">2.002820 (&gt;1)</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.812353 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.311833 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 7px 6px;"><em>K</em>=3, &Delta;<sub>&alpha;</sub>=0.6, <em>N</em>=45</td>
+          <td style="padding: 7px 6px; text-align: right;">1.903331</td>
+          <td style="padding: 7px 6px; text-align: right;">18 (8/10/9)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.491447</td>
+          <td style="padding: 7px 6px; text-align: right; color: #b91c1c;">2.768965 (&gt;1)</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.931891 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.494288 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0; background-color: #f8fafc;">
+          <td style="padding: 7px 6px;"><em>K</em>=4, &Delta;<sub>&alpha;</sub>=0.0, <em>N</em>=225</td>
+          <td style="padding: 7px 6px; text-align: right;">2.708050</td>
+          <td style="padding: 7px 6px; text-align: right;">21 (11/10/14)</td>
+          <td style="padding: 7px 6px; text-align: right;">3.771889</td>
+          <td style="padding: 7px 6px; text-align: right;">0.084182</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.049900 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.000215 &lt; 1</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e2e8f0; background-color: #f8fafc;">
+          <td style="padding: 7px 6px;"><em>K</em>=4, &Delta;<sub>&alpha;</sub>=0.0, <em>N</em>=240</td>
+          <td style="padding: 7px 6px; text-align: right;">2.740319</td>
+          <td style="padding: 7px 6px; text-align: right;">43 (21/22/22)</td>
+          <td style="padding: 7px 6px; text-align: right;">0.942840</td>
+          <td style="padding: 7px 6px; text-align: right;">0.448470</td>
+          <td style="padding: 7px 6px; text-align: right; font-weight: bold; color: #15803d;">0.101574 &lt; 1</td>
+          <td style="padding: 7px 6px; text-align: right;">0.004897 &lt; 1</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="padding: 12px 16px; background-color: #fff8e6; border-left: 4px solid #d97706; margin-top: 28px; font-size: 14px;">
+      <strong>Wall check:</strong> The Riemann Hypothesis (RH), G2, the cofinal signed-arithmetic lower bound, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

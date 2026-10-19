@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specialist Brief (v7) — Multi-Mode Jacobi–Stieltjes–Divisor Extractors, Three-Island Isometric Horizon a = (3/2) log 2, and Higher-Order Wronskian–Hankel Hierarchy (2026-10-15)</title>
+</head>
+<body style="margin:0; padding:28px 16px; background-color:#f8f9fa; color:#1f2328; font-family:Georgia, 'Times New Roman', Times, serif; line-height:1.62; font-size:16px;">
+<div style="max-width:680px; margin:0 auto; background-color:#ffffff; border:1px solid #d0d7de; border-radius:6px; padding:32px 36px; box-sizing:border-box;">
+
+  <div style="border-bottom:2px solid #1f2328; padding-bottom:14px; margin-bottom:22px;">
+    <div style="font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#57606a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin-bottom:6px;">
+      External Specialist Brief &bull; 2026-10-15 &bull; Version 7 (Supersedes v6 with Cross-Lane Synthesis up to <em>a</em> = (3/2) log 2 &amp; Wronskian&ndash;Hankel Hierarchy)
+    </div>
+    <h1 style="margin:0 0 8px 0; font-size:22px; line-height:1.32; font-weight:normal; color:#111111;">
+      Multi-Mode Jacobi&ndash;Stieltjes&ndash;Divisor Extractors in <code style="font-size:18px;">NS-61</code>, All-Vector Weil Positivity up to the Three-Island Horizon <em>a</em> = &frac32;&thinsp;log&thinsp;2, and the Higher-Order Wronskian&ndash;Hankel Hierarchy
+    </h1>
+    <div style="font-size:13px; color:#57606a;">
+      Prepared for: External Analytic Number Theory / Spectral &amp; Harmonic Analysis Specialist (<span style="background-color:#fff3a3; padding:1px 4px; border-radius:2px;">[Recipient Name / Institution]</span>)
+    </div>
+  </div>
+
+  <div style="background-color:#f6f8fa; border-left:4px solid #0969da; padding:14px 16px; margin-bottom:24px; font-size:14px;">
+    <p style="margin:0 0 8px 0;">
+      <strong>Wall check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">ZERO-GEOMETRY</code>.</strong>
+      Closest results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-61</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-71</code>&ndash;<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-74</code>, and <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">coeff-specialist-brief-2026-10-15-v6.html</code>.
+      What changes in v7: Synthesizes the three certified 384-bit <code>flint.arb</code> advances from the 2026-10-15 session for external specialist collaboration: (1) the <strong><em>K</em>-Mode Jacobi&ndash;Stieltjes&ndash;Divisor Hierarchy</strong> with exact rational <em>LDL</em><sup><em>T</em></sup> Bessel lower bound in <code>NS-61</code>, (2) <strong>All-Vector Weil Positivity up to the Three-Island Isometric Horizon <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8 &approx; 1.039721</strong> via Klein 4-group <em>V</em><sub>4</sub> fiber closure, Courant&ndash;Fischer 2-mode trace deflation, and Universal Prime-2 Dyadic Poisson Collapse, and (3) the <strong>Higher-Order Wronskian&ndash;Hankel Tur&aacute;n Hierarchy <em>H</em><sub><em>r</em></sub>(<em>t</em>) &succ; 0 (<em>r</em> &le; 4)</strong> and exact critical-angle defect identity <em>S</em><sub>max</sub> = 1/4.
+    </p>
+    <p style="margin:0;">
+      <strong>Open-status disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong> (global Weil positivity across all test functions), the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    1. Lane I (<code>COEFF</code> / <code>NB-GAIN</code>): Multi-Mode Jacobi&ndash;Stieltjes&ndash;Divisor Extractors &amp; Phase-Robust Target B
+  </h2>
+
+  <p style="margin:0 0 10px 0;">
+    In the <code>NS-61</code> smoothed Hilbert space <em>H</em> = <em>L</em><sup>2</sup>(0,&infin;; <em>dx</em>) with &sigma;<sub><em>r</em></sub>(<em>x</em>) = (<em>J</em>&rho;<sub><em>r</em></sub>)(<em>x</em>) = <em>A</em>(1/(<em>rx</em>)) and dyadic step residual (&Pi;<sub>2<em>N</em></sub> &minus; &Pi;<sub><em>N</em></sub>)&tau; = &sum;<sub><em>d</em>=1</sub><sup><em>N</em></sup> <em>u</em><sub><em>d</em></sub>&sigma;<sub><em>d</em></sub> + &sum;<sub><em>n</em>=<em>N</em>+1</sub><sup>2<em>N</em></sup> <em>y</em><sub><em>n</em></sub>&sigma;<sub><em>n</em></sub>, define the symmetric Jacobi polynomial hierarchy &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(<em>u</em>) := (<em>u</em>&minus;1)<sup>&nu;</sup>(2&minus;<em>u</em>)<sup>&nu;</sup><em>P&#771;</em><sub><em>m</em></sub><sup>(&nu;,&nu;)</sup>(2<em>u</em>&minus;3) &isin; <em>H</em><sub>0</sub><sup>&nu;</sup>([1, 2]) (&nu; &isin; {2, 3}, <em>m</em> &ge; 1). Every mode has exact zero mean &int;<sub>1</sub><sup>2</sup> &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(<em>u</em>)&thinsp;<em>du</em> = 0, and its Euler&ndash;Mellin differential Gram matrix <em>G&#770;</em><sub><em>j</em>,<em>k</em></sub><sup>(&nu;,<em>K</em>)</sup> = &int;<sub>1</sub><sup>2</sup> <em>u</em><sup>2</sup><em>D</em>&psi;&#771;<sub>&nu;</sub><sup>(<em>j</em>)</sup>(<em>u</em>)<em>D</em>&psi;&#771;<sub>&nu;</sub><sup>(<em>k</em>)</sup>(<em>u</em>)&thinsp;<em>du</em> &isin; &mathbb;Q<sup><em>K</em>&times;<em>K</em></sup> factors exactly as <em>G&#770;</em><sup>(&nu;,<em>K</em>)</sup> = <em>L</em><sub>&nu;</sub><em>D</em><sub>&nu;</sub><em>L</em><sub>&nu;</sub><sup><em>T</em></sup> over &mathbb;Q. Setting &phi;&#771;<sub>&nu;</sub> := <em>L</em><sub>&nu;</sub><sup>&minus;1</sup>&psi;&#771;<sub>&nu;</sub> yields the unconditional diagonal sum-of-squares lower bound on the dyadic energy drop &Delta;<sub><em>N</em></sub> = <em>E</em><sub><em>N</em></sub><sup>(2)</sup> &minus; <em>E</em><sub>2<em>N</em></sub><sup>(2)</sup>:
+  </p>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 12px 0; font-size:14px; text-align:center;">
+    &Delta;<sub><em>N</em></sub> &ge; &frac{1}{<em>N</em>} &sum;<sub><em>k</em>=1</sub><sup><em>K</em></sup> &frac{|<em>M&#771;</em><sub><em>N</em>,&nu;</sub><sup>(<em>k</em>)</sup>(<em>u</em>, <em>y</em>)|<sup>2</sup>}{<em>d</em><sub>&nu;,<em>k</em></sub>},
+    &qquad;
+    <em>M&#771;</em><sub><em>N</em>,&nu;</sub><sup>(<em>k</em>)</sup>(<em>u</em>, <em>y</em>) := &sum;<sub><em>n</em>=<em>N</em>+1</sub><sup>2<em>N</em>&minus;1</sup> &phi;&#771;<sub>&nu;</sub><sup>(<em>k</em>)</sup>(<em>n</em>/<em>N</em>)&Bigl(<em>y</em><sub><em>n</em></sub> + &sum;<sub><em>d</em>|<em>n</em>, <em>d</em>&le;<em>N</em></sub> <em>u</em><sub><em>d</em></sub>&Bigr).
+  </div>
+
+  <p style="margin:0 0 12px 0;">
+    At <em>N</em> = 16, where single-mode <em>k</em> = 1 experiences dipolar phase cancellation (0.0265% Rayleigh / 0.0052% Bessel), the <em>K</em> = 4 multi-mode extractor recovers <strong>34.57% Rayleigh (1,306.9&times;)</strong> and <strong>6.97% Bessel (1,339.9&times;)</strong> for &nu; = 3 (and <strong>71.17% Rayleigh / 7.21% Bessel</strong> for &nu; = 2).<br>
+    <strong>Open Specialist Question (Target B):</strong> Can one prove &sum;<sub><em>k</em>=1</sub><sup><em>K</em></sup> |<em>M&#771;</em><sub><em>N</em>,&nu;</sub><sup>(<em>k</em>)</sup>(<em>u</em>, <em>y</em>)|<sup>2</sup> / <em>d</em><sub>&nu;,<em>k</em></sub> &ge; <em>c</em><sup>2</sup> <em>N</em> (<em>E</em><sub><em>N</em></sub><sup>(2)</sup>)<sup>2</sup> along a cofinal subsequence for a fixed finite <em>K</em> &ge; 2 relative to the unsplit residual <em>E</em><sub><em>N</em></sub><sup>(2)</sup> = 2 &minus; (<em>b</em><sub>old</sub><sup>(2)</sup>)<sup><em>T</em></sup><em>c</em><sup>(<em>N</em>)</sup>?
+  </p>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    2. Lane II (<code>KERNEL-API</code>): All-Vector Weil Positivity up to <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8 &approx; 1.039721
+  </h2>
+
+  <p style="margin:0 0 10px 0;">
+    Using the 3-island prime-2 preconditioner <em>L</em><sub>2</sub> = <em>I</em> + <em>c</em><sub>2</sub><em>S</em><sub>2</sub> + <em>c</em><sub>4</sub><em>S</em><sub>4</sub> on <em>V</em><sub><em>b</em></sub> = <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) (<em>b</em> = <em>a</em> &minus; log&thinsp;2), we have extended 384-bit certified all-vector Weil positivity <em>Q</em><sub><em>a</em></sub>(<em>L</em><sub>2</sub><em>h</em>) &ge; &mu;<sub>min</sub>(<em>a</em>)&Vert;<em>h</em>&Vert;<sub>2</sub><sup>2</sup> (&mu;<sub>min</sub>(<em>a</em>) &gt; 0) across five structural regimes from <em>a</em> = 0.896 up to the exact 3-island isometric horizon <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8 &approx; 1.0397207708:
+  </p>
+  <ul style="margin:0 0 12px 0; padding-left:22px;">
+    <li style="margin-bottom:6px;">
+      <strong>Klein 4-Group <em>V</em><sub>4</sub> Fiber Closure on (&frac12;&thinsp;log(15/2), &frac32;&thinsp;log&thinsp;2]:</strong>
+      Because <em>x</em><sub>6</sub> + <em>d</em><sub>5</sub> = &tau;<sub>6</sub> &minus; &tau;<sub>5</sub> = log(6/5) is independent of <em>a</em>, every 4-point fiber {<em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, <em>x</em><sub>3</sub>, <em>x</em><sub>4</sub>} on the overlap [<em>x</em><sub>6</sub>, <em>d</em><sub>5</sub>] closes in <em>V</em><sub>4</sub> &cong; &#8484;<sub>2</sub> &times; &#8484;<sub>2</sub> and block-diagonalizes into two 2 &times; 2 blocks <em>B</em><sub>&pm;</sub>(<em>a</em>) &succ; 0, with determinant-graded inverse (<em>P</em><sub>0,odd</sub><sup>&minus;1</sup>)<sub><em>ij</em></sub> = det(&gamma;<sub><em>ij</em></sub>)(<em>P</em><sub>0,even</sub><sup>&minus;1</sup>)<sub><em>ij</em></sub> on <em>O</em>(1) = &#8477; &rtimes; {&pm;1}.
+    </li>
+    <li style="margin-bottom:6px;">
+      <strong>Courant&ndash;Fischer 2-Mode Deflated Trace Contraction:</strong>
+      With the smooth linear Plancherel profile <em>w</em><sub>2</sub>(<em>x</em>) = 1 &minus; 2(<em>x</em>/<em>b</em>) and 2-mode Rayleigh matrix <em>C</em><sub>2</sub> = (&langle;<em>u</em><sub><em>m</em></sub>, <em>T</em><sub>even</sub><em>u</em><sub><em>n</em></sub>&rangle;)<sub><em>m</em>,<em>n</em>=1</sub><sup>2</sup> over [0, &xi;<sub>&Delta;&alpha;</sub>], the deflated trace &mathcal;T;<sub>even</sub><sup>defl</sup>(<em>a</em>) = Tr(<em>T</em><sub>even</sub>) &minus; &mu;<sub>2</sub>(<em>C</em><sub>2</sub>) is certified strictly below 1 up to <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 (&mathcal;T;<sub>even</sub><sup>defl</sup> = 0.997955 &lt; 1, &mathcal;T;<sub>odd</sub> = 0.999158 &lt; 1).
+    </li>
+    <li style="margin-bottom:4px;">
+      <strong>Universal Prime-2 Dyadic Poisson Collapse for <em>a</em> &gt; &frac32;&thinsp;log&thinsp;2:</strong>
+      The infinite dyadic preconditioner <em>L</em><sub>2,&infin;</sub> = <em>I</em> + 2&sum;<sub><em>k</em>=1</sub><sup>&infin;</sup> 2<sup>&minus;<em>k</em>/2</sup><em>T</em><sub><em>k</em>&thinsp;log&thinsp;2</sub> collapses the entire <em>p</em> = 2 prime-power series to (5&thinsp;log&thinsp;2 / 2)<em>I</em> + (&radic;2&thinsp;log&thinsp;2 / 2)<em>S</em><sub>log&thinsp;2</sub> for all <em>a</em> &gt; 0.
+    </li>
+  </ul>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    3. Lane III (<code>ZERO-GEOMETRY</code>): Higher-Order Wronskian&ndash;Hankel Hierarchy &amp; Exact <em>S</em><sub>max</sub> = 1/4 Identity
+  </h2>
+
+  <p style="margin:0 0 10px 0;">
+    For the backward heat flow &Phi;<sub><em>t</em></sub>(<em>z</em>) = &prod;<sub><em>j</em></sub> (1 &minus; <em>z</em><sup>2</sup>/&gamma;<sub><em>j</em></sub>(<em>t</em>)<sup>2</sup>), the logarithmic derivative &minus;(&Phi;<sub><em>t</em></sub>&prime;/&Phi;<sub><em>t</em></sub>)&prime;(<em>x</em>) = &sum;<sub><em>m</em>=0</sub><sup>&infin;</sup> (2<em>m</em>+1)<em>s</em><sub>2<em>m</em>+2</sub>(<em>t</em>)<em>x</em><sup>2<em>m</em></sup> has strictly positive Stieltjes&ndash;Hankel matrices <em>H</em><sub><em>r</em></sub>(<em>t</em>) = [<em>c</em><sub><em>i</em>+<em>j</em></sub>(<em>t</em>)]<sub>0&le;<em>i</em>,<em>j</em>&le;<em>r</em>&minus;1</sub> &succ; 0 for every <em>r</em> &ge; 1 under real zeros, certified in exact rational arithmetic and 384-bit ball arithmetic for <em>r</em> &isin; {2, 3, 4}. Every complex conjugate quadruple &rho; = 1/2 &pm; &alpha; &pm; <em>i</em>&beta; injects the exact log-concavity defect <em>D</em>(<em>t</em><sub>0</sub>; &alpha; + <em>i</em>&beta;) = 8&alpha;<sup>2</sup>&beta;<sup>2</sup>(&beta;<sup>2</sup> &minus; 3&alpha;<sup>2</sup>)/(&alpha;<sup>2</sup> + &beta;<sup>2</sup>)<sup>4</sup>, establishing <em>S</em><sub>max</sub> = max<sub>&phi;</sub>(&minus;cos&thinsp;4&phi; / (4&thinsp;cos<sup>4</sup>&phi;)) = 1/4 at &beta; = &radic;3&alpha; as the exact critical threshold of the order-2 Tur&aacute;n barrier.
+  </p>
+
+  <div style="background-color:#f6f8fa; border-top:2px solid #1f2328; padding:14px 16px; margin-top:24px; font-size:13px; color:#24292f;">
+    <p style="margin:0 0 6px 0;">
+      <strong>Closing Wall Check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">ZERO-GEOMETRY</code>.</strong>
+      Closest results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-61</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-71</code>&ndash;<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-74</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">coeff-specialist-brief-2026-10-15-v6.html</code>.
+      What changes in v7: Unified cross-lane specialist brief incorporating the <em>K</em>-mode Jacobi&ndash;Stieltjes&ndash;Divisor hierarchy, the 3-island horizon certificate at <em>a</em> = (3/2)&thinsp;log&thinsp;2, and the higher-order Wronskian&ndash;Hankel Tur&aacute;n hierarchy.
+    </p>
+    <p style="margin:0;">
+      <strong>Open Problems Disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

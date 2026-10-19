@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Coefficient &amp; Weil-Floor Campaign Brief (v13) — Complete M7/M8/M9/M16/M17 Audit Repairs (2026-10-15 v13)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #fbfaf7; color: #1f2328; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #d8d4c8; padding: 36px 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-bottom: 24px; font-size: 14px;">
+      <strong>Wall Check &amp; Open-Status Disclosure:</strong> None of the packages in this campaign (Milestones 7 through 17) prove the Riemann Hypothesis (<code>RH</code>), Goal 2 (<code>G2</code>), or the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin; (or <em>K</em> &rarr; &infin;). Milestone 17 certifies full-space infinite-dimensional positivity on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) for <em>K</em> = 2 (<em>P</em><sub>2</sub> = {2, 3}) at the five discrete rational bandwidths 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50}. Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <h1 style="font-size: 23px; line-height: 1.3; margin-top: 0; margin-bottom: 8px; color: #111827;">
+      Master Campaign Brief (v13): Complete Audit Repairs Across Milestones 7, 8, 9, 16, &amp; 17 (<code>argon-m9-campaign-review</code>, <code>argon-m16-review</code>, &amp; <code>argon-m17-review</code>)
+    </h1>
+    <p style="font-size: 14px; color: #4b5563; margin-top: 0; margin-bottom: 24px;">
+      <strong>Date:</strong> 2026-10-15 &nbsp;|&nbsp; <strong>Version:</strong> v13 (preserves v3&ndash;v12 intact) &nbsp;|&nbsp; <strong>Lanes:</strong> <code>WEIL-FLOOR</code>, <code>NB-GAIN / COEFF</code>, <code>KERNEL-API</code>
+    </p>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      1. Status of All Audited Campaign Packages (Milestones 7, 8, 9, 16, and 17)
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      All findings from <code>argon-m9-campaign-review-2026-10-15-v1</code>, <code>argon-m16-review-2026-10-15-v1</code>, and <code>argon-m17-review-2026-10-15-v1</code> have been resolved, re-verified at <code>256</code>-bit and <code>384</code>-bit <code>flint.arb</code> (with <code>pyright</code> reporting <code>0 errors, 0 warnings, 0 informations</code> and zero <code>numpy</code>/<code>mpmath</code> dependencies), and synchronized across prose, HTML reports, and JSON certificates:
+    </p>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f3f4f6; border-bottom: 2px solid #d1d5db;">
+          <th style="padding: 7px 6px; text-align: left;">Milestone</th>
+          <th style="padding: 7px 6px; text-align: left;">Key Audit Repairs Completed</th>
+          <th style="padding: 7px 6px; text-align: center;">Overlaps</th>
+          <th style="padding: 7px 6px; text-align: left;"><code>payload.sha256</code> (prefix)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M7</strong> (Multiprime Euler)</td>
+          <td style="padding: 6px;">Exact symbolic <code>SymReal</code> in <strong>Q</strong> &oplus; &bigoplus;<sub><em>p</em></sub> <strong>Q</strong> log <em>p</em>; removed <code>tiny = 1e-100</code>.</td>
+          <td style="padding: 6px; text-align: center;">110 / 110</td>
+          <td style="padding: 6px; font-family: monospace;">8936cf81aed7b157&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M8</strong> (3-Prime &amp; Scaling)</td>
+          <td style="padding: 6px;">Exact symbolic <code>SymReal</code> cancellation verification for <em>K</em> = 3, 4.</td>
+          <td style="padding: 6px; text-align: center;">64 / 64</td>
+          <td style="padding: 6px; font-family: monospace;">ecc9ec645b955809&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M9</strong> (Weil Equiv &amp; DH)</td>
+          <td style="padding: 6px;">Certified <code>flint.acb.zeta_zero(1)</code>; exact <code>SymReal</code>; unconditional zero pairing; Paley&ndash;Wiener closure; zero <code>numpy</code>/<code>mpmath</code>.</td>
+          <td style="padding: 6px; text-align: center;">70 / 70</td>
+          <td style="padding: 6px; font-family: monospace;">0d81262363891d91&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M16</strong> (Spatial &amp; Slepian, v3)</td>
+          <td style="padding: 6px;">Corrected &minus;log(4&pi;<em>b</em>), Weber&ndash;Schafheitlin 2/((2<em>m</em>&minus;1)(2<em>m</em>+3)), <em>K</em><sub>reg</sub>(<em>t</em>) Taylor series, &amp; &minus;1/(24&xi;<sup>2</sup>); <em>E</em><sub>Slep</sub><sup>(6,even)</sup> in <code>flint.arb</code>; <code>zeta_zero(k)</code> (<em>k</em>=1..50).</td>
+          <td style="padding: 6px; text-align: center;">80 / 80</td>
+          <td style="padding: 6px; font-family: monospace;">4592cff3eb909f0b&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb; background-color: #f0fdf4;">
+          <td style="padding: 6px;"><strong>M17</strong> (Infinite Tail &amp; 2-Shift, v2)</td>
+          <td style="padding: 6px;">Global subtraction <em>W</em><sub><em>P</em><sub>2</sub></sub><sup>full</sup> &succeq; <em>R<sub>R</sub></em>(<em>b</em>) = <em>W</em><sub><em>P</em><sub>2</sub></sub><sup>full</sup> &minus; <em>A</em><sub>loc,+,<em>R</em></sub> across all blocks; combined shift Gram <em>G</em><sub>comb,<em>R</em></sub>; matched repository DH control; full-precision string overlap checker.</td>
+          <td style="padding: 6px; text-align: center;"><strong>446 / 446</strong></td>
+          <td style="padding: 6px; font-family: monospace;">ab4ce05962a1692e&hellip;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      2. Milestone 17 (v2) Repairs: Resolving All 7 Findings of <code>argon-m17-review</code>
+    </h2>
+    <ol style="font-size: 15px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Global Subtraction of <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) &succeq; 0 Across All Blocks (Findings 1 &amp; 2):</strong> Instead of dropping <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) selectively on the tail and off-diagonal blocks while keeping it on the low-low block, we subtract <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) &succeq; 0 globally from the entire operator on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) and certify the bounded self-adjoint remainder operator <em>R<sub>R</sub></em>(<em>b</em>) := <em>W</em><sub>comb,<em>R</em></sub>(<em>b</em>) + <em>C</em><sub>diag</sub>(<em>P</em><sub>2</sub>)<em>I</em> &minus; <em>D</em><sub>loc,<em>R</em></sub>(<em>b</em>) + <em>A</em><sub>ext</sub>(<em>b</em>) &succ; 0 across all 5 discrete rational bandwidths 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50} (even &amp; odd sectors). Here <em>W</em><sub>comb,<em>R</em></sub>(<em>b</em>) = <em>&alpha;</em>(<em>R</em>)<em>L</em><sub>loc</sub>(<em>b</em>) + <em>W</em><sub>sh</sub>(<em>b</em>) includes the low-to-high shift coupling of <em>&alpha;</em>(<em>R</em>)<em>L</em><sub>loc</sub>(<em>b</em>) inside the exact two-shift Gram matrix <em>G</em><sub>comb,<em>R</em></sub><sup>(<em>N</em><sub>leg</sub>,sector)</sup>(<em>b</em>), and subtracting <em>A</em><sub>loc,+,<em>R</em></sub>(<em>b</em>) globally removes the &minus;log|<em>x</em>&minus;<em>y</em>| singularity from the off-diagonal block (reducing the (12, 10) archimedean entry at 2<em>b</em> = 0.50, <em>R</em> = 18 from +1.252539 to <strong>+1.526734 &times; 10<sup>&minus;9</sup></strong> &lt; <em>&beta;</em><sub>rem,arch</sub><sup>even</sup> = 2.619743 &times; 10<sup>&minus;2</sup>). At 2<em>b</em> = 0.50, &lambda;<sub>min</sub>(<em>S</em><sub>mat</sub><sup>even</sup>) = <strong>+0.102995</strong> and &lambda;<sub>min</sub>(<em>S</em><sub>mat</sub><sup>odd</sup>) = <strong>+1.853019</strong>.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Matched Repository Davenport&ndash;Heilbronn Control (Finding 3):</strong> Uses the exact repository DH coefficients &Lambda;<sub>DH</sub>(<em>n</em>) from <code>controls/davenport_heilbronn.py</code> (with <em>&kappa;</em> &approx; 0.284079, <em>C</em><sub>diag,DH</sub>({2, 3}) = &minus;0.6949999697 &lt; 0, non-collapsing prime-2 tower shift <em>r</em> = 4/3 with <em>c</em><sub>4/3,DH</sub> = &minus;0.683641, and odd-character completion <em>&alpha;</em><sub>DH</sub>(&xi;) = Re &psi;(3/4 + <em>i</em>&xi;/2) + log(5/&pi;)), qualifying that a negative lower-bound budget certifies failure of the sufficient tail positivity certificate (while actual negative Rayleigh quotients <em>Q</em><sub>{2,3},DH</sub>(<em>g<sub>b</sub></em>) &lt; 0 are certified at <em>b</em> &in; {2, 5/2, 3} in Milestone 9).
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Holomorphic Digamma Extension, Full-Precision String Overlap Checker, External Kernel Normalization, &amp; Stirling Rate in <em>M</em><sub>0</sub> (Findings 4&ndash;7):</strong> Fixed <code>alpha_arch_acb(xi)</code> to include factor <em>i</em>/2 (verified against <code>alpha_arch_arb(9) = 0.35883198893599235...</code>), updated <code>verify_overlap</code> to parse full-precision strings <code>flint.arb(a["str"])</code> with a self-test on 1 + 2<sup>&minus;100</sup> vs 1 + 2<sup>&minus;101</sup> (<code>446/446</code> checks PASS), corrected the external kernel normalization (2<em>b</em> instead of 4<em>b</em> and exact |2<em>w<sub>r</sub></em>|), and distinguished <em>N</em><sub>leg</sub> from <em>M</em><sub>0</sub> in the Stirling cutoff rate analysis.
+      </li>
+    </ol>
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-top: 28px; font-size: 14px;">
+      <strong>Wall Check:</strong> None of the packages in this campaign prove <code>RH</code>, <code>G2</code>, or the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin; (or <em>K</em> &rarr; &infin;). Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

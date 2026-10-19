@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-14",
+  "public_baseline": "2d5638ed3b56ab2375162bb072f4866ad5bdfe6d",
+  "preserved_dirty_workspace": "/Users/alex/Documents/ChatGPT/riemann",
+  "preserved_dirty_workspace_head": "50f6f21",
+  "isolated_worktree": "/Users/alex/riemann-worktrees/origin-main-review",
+  "isolated_branch": "codex/four-lane-audit-20261014",
+  "reconciled_local_deliverables": [
+    {
+      "id": "coeff-specialist-brief-v2",
+      "date": "2026-10-01",
+      "source_path": "/Users/alex/Documents/ChatGPT/riemann/coeff-specialist-brief-2026-10-01-v2.html",
+      "lane": "NB-GAIN / COEFF",
+      "classification": "Same open gap (NS53/61/78/80/87)",
+      "status": "Unsent external specialist feasibility brief v2; preserved at original path and superseded on dual-cost constants by four-lane-audit-2026-10-14-v1"
+    },
+    {
+      "id": "coeff-twelve-agent-review-v1",
+      "date": "2026-10-01",
+      "source_path": "/Users/alex/Documents/ChatGPT/riemann/coeff-twelve-agent-review-2026-10-01-v1.html",
+      "companion_dir": "/Users/alex/Documents/ChatGPT/riemann/audits/coeff-twelve-proposals-2026-10-01-v1",
+      "lane": "NB-GAIN / COEFF",
+      "classification": "Same open gap for actual optimizer; Known wall for universal n^-3 recovery over V_{2N} cap V_N^perp (NS61)",
+      "key_retained_results": [
+        "Pair 1 (01/07): Universal n^-3 recovery over all residualized directions is refuted by NS61 adjacent second-difference vectors W_N = eps_{n+1} - (n/(n+1)) eps_n with n^3 ||W_N||^2 -> 0",
+        "Pair 2 (02/08): Hedenmalm-Lindqvist-Seip multiplier norm on l^2(n^-4) is C_mu = zeta(2)/zeta(4); retaining squarefree support sharpens constant, signs give no further unrestricted operator saving",
+        "Pair 4 (04/10): Compact dual extractor psi_N(t) = -t^2(t beta_N'(t))' verified with <tau, psi_N> = 0; exact rational constants C_b = 6904/45045, Var_R(b''') = 543/14, A_b = 181/3360 and untruncated Schur-Rayleigh equivalence proved in four-lane-audit-2026-10-14-v1"
+      ]
+    },
+    {
+      "id": "pythagorean-quads-and-round2-review",
+      "date": "2026-10-04",
+      "source_paths": [
+        "/Users/alex/Documents/ChatGPT/riemann/pythagorean-quads-review-2026-10-04-v1.html",
+        "/Users/alex/Documents/ChatGPT/riemann/PyTriplesQuads-exact-2026-10-04-v1.mac",
+        "/Users/alex/Documents/ChatGPT/riemann/pythagorean-round2-ten-review-2026-10-04-v1.html"
+      ],
+      "lane": "Pythagorean / Triangle / Divisor Moment",
+      "classification": "Exact polynomial quadruple curves proved; Matomaki-Radziwill exceptional-set log refinement E << M Lambda(M) + H proved; full unconditional power saving beyond 3/8 divisor cutoff remains OPEN"
+    },
+    {
+      "id": "dad-conformal-geometry-v3",
+      "date": "2026-10-04",
+      "source_path": "/Users/alex/Documents/ChatGPT/riemann/research/context/dad-geometry-core-2026-10-04-v3.json",
+      "lane": "Geometric / Quaternion / Poincare Lift",
+      "classification": "Same open gap (NS94/100); fixed-q Euler factors lie in a single commutative slice"
+    },
+    {
+      "id": "qwen-calibration-v1",
+      "date": "2026-10-04",
+      "source_path": "/Users/alex/Documents/ChatGPT/riemann/kernel-api-qwen-calibration-2026-10-04-v1.html",
+      "lane": "Local Model Calibration",
+      "classification": "Diagnostic only; qwen3.8-27b requires reasoning-enabled mode and a fresh balanced benchmark before autonomous swarm use"
+    },
+    {
+      "id": "ten-agent-next-input-v1",
+      "date": "2026-10-05",
+      "source_path": "/Users/alex/Documents/ChatGPT/riemann/research-updates/ten-agent-next-input-2026-10-05-v1/next-input-review-2026-10-05-v1.html",
+      "companion_dir": "/Users/alex/Documents/ChatGPT/riemann/research-updates/ten-agent-next-input-2026-10-05-v1",
+      "lane": "Multi-lane method/transfer audit (HEAT-TRANSPORT, ZERO-GEOMETRY, NB-GAIN, MOBIUS-COST, KERNEL-API, WEIL-FLOOR, LI)",
+      "classification": "Same open gap; Reviewer 08 finite-cluster far-tail heat bound retained; Reviewer 01 B_p(r) lead closed by Tautological Collapse Theorem in four-lane-audit-2026-10-14-v1; Reviewer 05 Euler recurrence extended by Interior Adjoint Embedding and Multi-Prime Support Barrier in four-lane-audit-2026-10-14-v1"
+    }
+  ]
+}

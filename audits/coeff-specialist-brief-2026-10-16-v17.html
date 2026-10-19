@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Coefficient &amp; Weil-Floor Campaign Brief (v17) — Corrected Synthesis, Actual Sufficient Floor Criterion &amp; Continued Pause (2026-10-16 v17)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #fbfaf7; color: #1f2328; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #d8d4c8; padding: 36px 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-bottom: 24px; font-size: 14px;">
+      <strong>Wall Check:</strong> Same open gap. Closest: <code>NS87/98</code> and <code>PR66/68</code> (and <code>WEIL-FLOOR</code> <code>NS24/39/43</code>, <code>ZERO-GEOMETRY</code> <code>NS100/101</code>). No new arithmetic input has yet been supplied. None of the 18 packages in this campaign (Milestones 1 through 17) prove the Riemann Hypothesis (<code>RH</code>) or Goal 2 (<code>G2</code>). Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <h1 style="font-size: 22px; line-height: 1.3; margin-top: 0; margin-bottom: 8px; color: #111827;">
+      Master Campaign Brief (v17): Corrected Synthesis, Actual Sufficient Shifted-Floor Target &amp; Continued Pause at M17 v2
+    </h1>
+    <p style="font-size: 14px; color: #4b5563; margin-top: 0; margin-bottom: 24px;">
+      <strong>Date:</strong> 2026-10-16 &nbsp;|&nbsp; <strong>Version:</strong> v17 (corrects v16 synthesis; preserves v3&ndash;v16 intact) &nbsp;|&nbsp; <strong>Lanes:</strong> <code>WEIL-FLOOR</code>, <code>NB-GAIN / COEFF</code>, <code>KERNEL-API</code>, <code>ZERO-GEOMETRY</code> &nbsp;|&nbsp; <strong>Family Status:</strong> <strong>PAUSED AT M17 v2 (NO NEW COMPUTATION)</strong>
+    </p>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      1. Executive Summary &amp; Scope Corrections to v16
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      This version (<code>v17</code>) preserves the completed 18/18 pure-<code>flint</code> Bounded Repair Audit archive (<code>M1</code> through <code>M17</code>) while recording two essential mathematical corrections to the synthesis in <code>v16</code> before that synthesis is used to evaluate or exclude future approaches:
+    </p>
+    <ol style="font-size: 15px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 10px;">
+        <strong>Correction 1 — Continuous Slepian Fourier Leakage Does Not Automatically Bound the Complete Discrete Weil Zero Sum:</strong>
+        In <code>v16</code> Section 3, &ldquo;Obstruction 1&rdquo; wrote &lambda;<sub>min</sub>(<em>W</em><sub><em>P<sub>K</sub></em></sub><sup>full</sup>(<em>b</em>)) &le; <em>C<sub>K</sub></em>(1 &minus; &lambda;<sub>0</sub>(<em>b</em>&gamma;<sub>1</sub>)) &asymp; <em>b</em><sup>1/2</sup> <em>e</em><sup>&minus;2<em>b</em>&gamma;<sub>1</sub></sup> &rarr; 0. That statement is <strong>not established by the reviewed work</strong> and is withdrawn. As the underlying <code>M16 v3</code> derivation (<code>audits/untruncated-spatial-archimedean-slepian-gap-and-harmonic-growth-2026-10-15-v1/derivation.md</code>, Section 3) explicitly distinguishes, the certified Slepian matrix <em>E</em><sub>Slep</sub><sup>(6,even)</sup>(<em>b</em>; &gamma;<sub>1</sub>) measures the <em>continuous Plancherel exterior-frequency integral</em> (2&pi;)<sup>&minus;1</sup> &int;<sub>|&xi;|&ge;&gamma;<sub>1</sub></sub> |<em>g&#770;</em>(&xi;)|<sup>2</sup> <em>d</em>&xi;, whereas the explicit-formula quadratic form evaluates a <em>discrete weighted sum over the nontrivial zeros</em> (plus polar terms in the unpreconditioned Weil form). Continuous Fourier leakage above &gamma;<sub>1</sub> does not automatically upper-bound the complete weighted discrete zero sum.
+      </li>
+      <li style="margin-bottom: 10px;">
+        <strong>Correction 2 — Retention of the Actual Sufficient Cofinal Target (<em>q<sub>a</sub></em>[<em>f</em>] &ge; &minus;<em>C</em>&thinsp;&Vert;<em>f</em>&Vert;<sup>2</sup>):</strong>
+        The repository&rsquo;s actual sufficient cofinal criterion for RH in the Weil-floor lane (<code>prop:v121-cofinal-rh</code>, <code>prop:v138-shifted-floor</code>, <code>v1.36</code> reduction, and <code>NS24/39/43/104</code>) is a <strong>uniformly shifted lower floor</strong>:
+        <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 10px 14px; margin: 8px 0; font-family: Georgia, serif; text-align: center;">
+          <em>q<sub>a</sub></em>[<em>f</em>] &ge; &minus;<em>C</em>&thinsp;&Vert;<em>f</em>&Vert;<sup>2</sup>
+        </div>
+        with <strong>one finite constant <em>C</em> &ge; 0 independent of the growing window <em>a</em></strong>, on the required parity and source-admissible domains. We do <strong>not</strong> need a uniform positive spectral gap (&lambda;<sub>min</sub>(<em>b</em>) &ge; &mu; &gt; 0) or exponentially accurate resolution of every small finite-window eigenvalue. This is the existing sufficient criterion, not a new estimate.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Companion NB Specialist Assessment (<code>audits/nb-full-residual-arithmetic-assessment-2026-10-16-v1.html</code>):</strong>
+        In parallel with this synthesis correction, a tightly scoped pre-computation assessment of candidate arithmetic lemmas for the full optimized <em>q</em> = 2 Nyman&ndash;Beurling residual (preserving <em>b<sub>n</sub></em> = <em>P</em>(log <em>n</em>)/<em>n</em>, full projected Gram <em>H<sub>N</sub></em> = <em>D<sub>N</sub></em> &minus; <em>C<sub>N</sub><sup>T</sup> G<sub>N</sub></em><sup>&minus;1</sup> <em>C<sub>N</sub></em>, old-space refit, and complete <em>T</em> = <em>N</em><sup>6</sup> tail) found no previously unassessed theorem or non-circular arithmetic hypothesis supplying the missing input. Both families remain paused with zero new computation.
+      </li>
+    </ol>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      2. Complete 18/18 Bounded Repair Audit Table (M1&ndash;M17 Groundwork Archive)
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      Every verifier below has been executed in <code>.venv/bin/python</code> with zero <code>numpy</code>/<code>scipy</code>/<code>mpmath</code> imports, zero <code>deduplicate_and_sort_arb</code> calls, and <code>0</code> <code>pyright</code> diagnostics:
+    </p>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 11.5px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f3f4f6; border-bottom: 2px solid #d1d5db;">
+          <th style="padding: 6px 4px; text-align: left;">Pkg</th>
+          <th style="padding: 6px 4px; text-align: left;">Audited Scope, Latest Versioned HTML &amp; Bounded Repair Summary</th>
+          <th style="padding: 6px 4px; text-align: center;">Precision / Overlaps</th>
+          <th style="padding: 6px 4px; text-align: left;"><code>payload.sha256</code> / <code>file_sha256</code></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M1</strong></td>
+          <td style="padding: 5px 4px;"><code>next-four-steps-2026-10-15-v2.html</code>: Removed <code>mpmath</code>; fixed <code>jet_ns101</code> derivative coefficients; pure 256-bit <code>flint.arb</code>/<code>acb.integral</code>.</td>
+          <td style="padding: 5px 4px; text-align: center;">256-bit</td>
+          <td style="padding: 5px 4px; font-family: monospace;">file: 4fc3060e2784270c&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M2</strong></td>
+          <td style="padding: 5px 4px;"><code>codex-review-and-all-vector-extension-2026-10-15-v1.html</code>: 256-bit all-vector positivity up to <em>a</em> = (1/2)log 6, <em>c<sub>n</sub></em> &gt; 0, and 3&times;3 Hankel.</td>
+          <td style="padding: 5px 4px; text-align: center;">256-bit</td>
+          <td style="padding: 5px 4px; font-family: monospace;">file: c94e4dfe64137316&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M3</strong></td>
+          <td style="padding: 5px 4px;"><code>all-vector-positivity-beyond-log6-2026-10-15-v1.html</code>: 384-bit all-vector positivity on ((1/2)log 6, (1/2)log 7]; pure <code>flint.arb</code>.</td>
+          <td style="padding: 5px 4px; text-align: center;">384-bit</td>
+          <td style="padding: 5px 4px; font-family: monospace;">file: 342cd8b88c755cc5&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M4</strong></td>
+          <td style="padding: 5px 4px;"><code>all-vector-positivity-beyond-log7-2026-10-15-v2.html</code>: Removed <code>numpy</code> &amp; <code>1e-90</code> tolerances; cyclic Jacobi seed + 384-bit <code>flint.arb</code> up to (1/2)log(15/2).</td>
+          <td style="padding: 5px 4px; text-align: center;">384-bit</td>
+          <td style="padding: 5px 4px; font-family: monospace;">file: a05757d813574e1c&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M5</strong></td>
+          <td style="padding: 5px 4px;"><code>all-vector-positivity-three-island-horizon-2026-10-15-v2.html</code>: Removed <code>numpy</code>; cyclic Jacobi seed + 384-bit <code>flint.arb</code> up to <em>a</em> = (3/2)log 2 = (1/2)log 8.</td>
+          <td style="padding: 5px 4px; text-align: center;">384-bit</td>
+          <td style="padding: 5px 4px; font-family: monospace;">file: 51411060826c5487&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M6a</strong></td>
+          <td style="padding: 5px 4px;"><code>multimode-dyadic-extractor-2026-10-15-v1.html</code>: 4-mode Legendre&ndash;Sobolev dyadic extractor &amp; closed-form rationality in 384-bit <code>flint.arb</code>.</td>
+          <td style="padding: 5px 4px; text-align: center;">384-bit</td>
+          <td style="padding: 5px 4px; font-family: monospace;">file: 51fb88c333ade417&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M6b</strong></td>
+          <td style="padding: 5px 4px;"><code>higher-order-wronskian-hankel-hierarchy-2026-10-15-v1.html</code>: Higher-order Wronskian&ndash;Hankel hierarchy &amp; <code>NS-101</code> off-line zero detection in 384-bit <code>flint.arb</code>.</td>
+          <td style="padding: 5px 4px; text-align: center;">384-bit</td>
+          <td style="padding: 5px 4px; font-family: monospace;">file: 3b08c963df344db8&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M7</strong></td>
+          <td style="padding: 5px 4px;"><code>multiprime-euler-preconditioner-2026-10-15-v2.html</code>: Exact symbolic <code>SymReal</code> cut lattice; 2-prime pole cancellation &amp; zero preservation.</td>
+          <td style="padding: 5px 4px; text-align: center;">110 / 110</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: 8936cf81aed7b157&hellip;<br/>file: e9f1257bbc431d9d&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M8</strong></td>
+          <td style="padding: 5px 4px;"><code>multiprime-three-prime-and-scaling-2026-10-15-v2.html</code>: Removed <code>numpy</code>/<code>scipy</code>; exact <code>SymReal</code> cancellation for <em>K</em> = 3, 4; pure-Python 2-mode seed.</td>
+          <td style="padding: 5px 4px; text-align: center;">64 / 64</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: 3421d81e7effd58b&hellip;<br/>file: 532bb2c677aee87c&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M9</strong></td>
+          <td style="padding: 5px 4px;"><code>euler-depleted-weil-equivalence-and-dh-control-2026-10-15-v2.html</code>: Certified <code>flint.acb.zeta_zero(1)</code>; Paley&ndash;Wiener equivalence; DH counterexample at <em>b</em> &in; {2, 5/2, 3}.</td>
+          <td style="padding: 5px 4px; text-align: center;">70 / 70</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: 0d81262363891d91&hellip;<br/>file: c023183b5d603e56&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M9b</strong></td>
+          <td style="padding: 5px 4px;"><code>stieltjes-hankel-offline-zero-signal-and-dh-screen-2026-10-15-v1.html</code>: Offline zero-signal extraction &amp; DH screen in 256/384-bit <code>flint.arb</code>.</td>
+          <td style="padding: 5px 4px; text-align: center;">86 / 86</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: 5f92799ba267db25&hellip;<br/>file: f293bb6fb79e01bf&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M10</strong></td>
+          <td style="padding: 5px 4px;"><code>multiprime-internal-shift-and-block-interlacing-2026-10-15-v2.html</code>: Removed <code>numpy</code>/<code>scipy</code> &amp; <code>deduplicate_and_sort_arb</code>; exact <code>SymReal</code> cuts up to <em>a</em> = (1/2)log 13.</td>
+          <td style="padding: 5px 4px; text-align: center;">30 / 30</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: 0bd6e9efedbc08ba&hellip;<br/>file: eea47f75626fed1d&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M11</strong></td>
+          <td style="padding: 5px 4px;"><code>mellin-jacobi-finite-rank-schur-reduction-2026-10-15-v2.html</code>: Removed <code>numpy</code>; exact endpoint <code>arb_min</code>/<code>arb_max</code>; Gegenbauer&ndash;Bessel Parseval identity.</td>
+          <td style="padding: 5px 4px; text-align: center;">40 / 40</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: f9f077b3c599f4d7&hellip;<br/>file: 99d7b549efb7849f&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M12</strong></td>
+          <td style="padding: 5px 4px;"><code>signed-legendre-weil-positivity-beyond-schur-horizon-2026-10-15-v2.html</code>: Removed <code>numpy</code>; exact <code>Fraction</code> shift bounds; explicit <code>argon-m16-review</code> Finding 4 scope note.</td>
+          <td style="padding: 5px 4px; text-align: center;">92 / 92</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: 08530eb9ffdc4974&hellip;<br/>file: 651abf0f5009da23&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M13</strong></td>
+          <td style="padding: 5px 4px;"><code>three-prime-complete-shift-spectrum-and-horizon-2026-10-15-v2.html</code>: Replaced <code>deduplicate_and_sort_arb</code> &amp; <code>tiny</code> with exact <code>SymReal</code> cuts and <code>Fraction</code> horizons.</td>
+          <td style="padding: 5px 4px; text-align: center;">91 / 91</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: 18f48ec26ec50f1f&hellip;<br/>file: 868a9663bc975d6b&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M14</strong></td>
+          <td style="padding: 5px 4px;"><code>universal-legendre-shift-algebra-and-k4-horizon-2026-10-15-v2.html</code>: Replaced <code>deduplicate_and_sort_arb</code> &amp; <code>tiny</code> with exact <code>SymReal</code> cuts; <code>argon-m16-review</code> Finding 4 scope note.</td>
+          <td style="padding: 5px 4px; text-align: center;">243 / 243</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: 5b86a9fe9e5631fd&hellip;<br/>file: ecf82b46dffb1271&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 5px 4px;"><strong>M16</strong></td>
+          <td style="padding: 5px 4px;"><code>untruncated-spatial-archimedean-slepian-gap-and-harmonic-growth-2026-10-15-v3.html</code>: Exact spatial archimedean Legendre blocks, rational harmonic growth, and continuous Slepian exterior leakage vs. 50-zero prefix diagnostic.</td>
+          <td style="padding: 5px 4px; text-align: center;">80 / 80</td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: 4592cff3eb909f0b&hellip;<br/>file: f049fdb0183e87e6&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb; background-color: #f0fdf4;">
+          <td style="padding: 5px 4px;"><strong>M17</strong></td>
+          <td style="padding: 5px 4px;"><code>infinite-dimensional-tail-floor-and-shift-coupling-defect-2026-10-15-v2.html</code>: Full-space positivity on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) via global subtraction <em>R<sub>R</sub></em>(<em>b</em>) &succ; 0 at 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50}.</td>
+          <td style="padding: 5px 4px; text-align: center;"><strong>446 / 446</strong></td>
+          <td style="padding: 5px 4px; font-family: monospace;">pay: ab4ce05962a1692e&hellip;<br/>file: 42d1598db4bafc43&hellip;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      3. Corrected Synthesis of Fixed-Window Limitations &amp; Actual Sufficient Cofinal Criterion
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      Why did the specific finite-window block-Schur and triangle-inequality minorants in <code>M1</code>&ndash;<code>M17</code> terminate at finite bandwidth horizons, and what does (and does not) follow for the complete Weil operator?
+    </p>
+    <ol style="font-size: 15px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 10px;">
+        <strong>What <code>M16 v3</code> Actually Certified vs. What Is Not Established (No &ldquo;Slepian Ceiling&rdquo; Exclusion):</strong>
+        In <code>M16 v3</code> (Section 3), two distinct quantities were evaluated on the 6-mode even Legendre subspace <em>V</em><sub>6</sub><sup>even</sup>(&minus;<em>b</em>, <em>b</em>): (a) the continuous Plancherel exterior-frequency matrix <em>E</em><sub>Slep</sub><sup>(6,even)</sup>(<em>b</em>; &gamma;<sub>1</sub>) measuring (2&pi;)<sup>&minus;1</sup> &int;<sub>|&xi;|&ge;&gamma;<sub>1</sub></sub> |<em>g&#770;</em>(&xi;)|<sup>2</sup> <em>d</em>&xi;, whose minimum Rayleigh quotient is 1 &minus; &lambda;<sub>0</sub>(<em>b</em>&gamma;<sub>1</sub>) &asymp; (4&pi;<em>b</em>&gamma;<sub>1</sub>)<sup>1/2</sup> <em>e</em><sup>&minus;2<em>b</em>&gamma;<sub>1</sub></sup>, and (b) a conditional 50-zero prefix sum evaluated on a finite-rank rational near-minimizer vector <em>v</em><sub>min</sub> &in; &Qopf;<sup>6</sup>. Continuous Fourier leakage above &gamma;<sub>1</sub> does <strong>not</strong> automatically upper-bound the complete weighted discrete zero sum &sum;<sub>&rho;</sub> &sigma;<sub><em>L</em><sub><em>P<sub>K</sub></em></sub></sub>(<em>z<sub>&rho;</sub></em>) <em>g&#770;</em>(<em>z<sub>&rho;</sub></em>) <span style="text-decoration: overline;"><em>g&#770;</em>(<span style="text-decoration: overline;"><em>z<sub>&rho;</sub></em></span>)</span> (or the unpreconditioned complete Weil form <em>q<sub>a</sub></em>[<em>f</em>] with its polar terms). Accordingly, continuous Slepian leakage must not be cited as a proved spectral ceiling that excludes approaches.
+      </li>
+      <li style="margin-bottom: 10px;">
+        <strong>The Actual Sufficient Cofinal Criterion (<em>q<sub>a</sub></em>[<em>f</em>] &ge; &minus;<em>C</em>&thinsp;&Vert;<em>f</em>&Vert;<sup>2</sup>):</strong>
+        By the repository&rsquo;s established cofinal reduction (<code>prop:v121-cofinal-rh</code>, <code>prop:v138-shifted-floor</code>, <code>v1.36</code>, and <code>NS24/39/43/104</code>), proving RH along the Weil-floor lane requires only a <strong>uniformly bounded lower floor</strong>:
+        <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; padding: 10px 14px; margin: 8px 0; font-family: Georgia, serif; text-align: center;">
+          <em>q<sub>a</sub></em>[<em>f</em>] &ge; &minus;<em>C</em>&thinsp;&Vert;<em>f</em>&Vert;<sup>2</sup>
+        </div>
+        with <strong>one finite constant <em>C</em> &ge; 0 independent of the growing window <em>a</em></strong>, on the required parity and source-admissible domains. Neither a uniform positive spectral gap (&lambda;<sub>min</sub>(<em>a</em>) &ge; &mu; &gt; 0) nor exponentially accurate resolution of every small finite-window eigenvalue is required.
+      </li>
+      <li style="margin-bottom: 10px;">
+        <strong>Why Crude Absolute-Value / Block-Schur Tail Absorptions Stop at Finite Bandwidth:</strong>
+        In the prime-shift operator <em>B</em><sub>prime</sub>(<em>b</em>) = &sum;<sub><em>n</em> &le; <em>e</em><sup>2<em>b</em></sup></sub> &Lambda;(<em>n</em>)<em>n</em><sup>&minus;1/2</sup> <em>S</em><sub>log <em>n</em></sub><sup>(<em>b</em>)</sup>, the sum of absolute values of active shift weights grows exponentially like &sum;<sub><em>n</em> &le; <em>e</em><sup>2<em>b</em></sup></sub> &Lambda;(<em>n</em>)<em>n</em><sup>&minus;1/2</sup> &sim; 2<em>e<sup>b</sup></em>, whereas the archimedean digamma term grows only logarithmically on fixed low-degree modes. Any fixed-rank block-Schur method (such as <code>M17</code>&rsquo;s rank-<em>N</em> split <em>W</em><sub>full</sub>(<em>b</em>) = <em>R<sub>R</sub></em>(<em>b</em>) + <em>T<sub>R</sub></em>(<em>b</em>) with triangle-inequality coupling defect &Delta;<sub>def</sub>(<em>b</em>)) discards signed prime-shift cancellation outside the finite block and therefore ceases to certify positivity once the uncancelled shift sum exceeds the finite block horizon <em>b</em><sub>max</sub>.
+      </li>
+    </ol>
+
+    <div style="background-color: #f0f9ff; border-left: 4px solid #0284c7; padding: 14px 18px; margin: 20px 0; font-size: 14.5px;">
+      <strong>Corrected Standing Gate for Any Future Proposal in This Family:</strong><br/>
+      The <code>M1</code>&ndash;<code>M17</code> fixed-window sequence remains <strong>PAUSED at M17 v2</strong>. Reopening requires a pre-registered proposal (<code>PROPOSAL_TEMPLATE.md</code>) supplying one specific, non-circular signed arithmetic estimate that retains all signed prime, polar, and archimedean couplings as the window grows and establishes (or makes a concrete testable step toward) the actual sufficient cofinal target <em>q<sub>a</sub></em>[<em>f</em>] &ge; &minus;<em>C</em>&thinsp;&Vert;<em>f</em>&Vert;<sup>2</sup> with a single window-independent finite constant <em>C</em> on the required parity/source domains.
+    </div>
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-top: 28px; font-size: 14px;">
+      <strong>Wall Check:</strong> Same open gap. Closest: <code>NS87/98</code> and <code>PR66/68</code> (and <code>WEIL-FLOOR</code> <code>NS24/39/43</code>, <code>ZERO-GEOMETRY</code> <code>NS100/101</code>). No new arithmetic input has yet been supplied. Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 8 (v2): Möbius Parity Coherence, Primorial Balanced-Partition Isometric Horizons (K = 2, 3, 4), B_{2,3} Horizon a = (1/2) log 12, Multi-Order Hankel Blind-Cone Elimination, and Gegenbauer-Bessel Finite-N Mellin-Jacobi Completeness (2026-10-15-v2)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 32px auto; padding: 0 16px; line-height: 1.58; color: #1a1a1a; background-color: #ffffff;">
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-bottom: 24px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. Nothing in this report claims a proof of RH or global Weil positivity.
+</div>
+
+<h1 style="font-size: 1.44em; line-height: 1.28; margin-bottom: 6px; color: #111111;">Milestone 8: M&ouml;bius Parity Coherence, Primorial Balanced-Partition Isometric Horizons (<em>K</em> = 2, 3, 4), Certified Extension of <em>B</em><sub>2,3</sub> up to <em>a</em> = &frac12;&thinsp;log&thinsp;12, Multi-Order Hankel Blind-Cone Elimination, and Gegenbauer&ndash;Bessel Finite-<em>N</em> Mellin&ndash;Jacobi Completeness</h1>
+<p style="margin-top: 0; color: #555555; font-size: 0.92em;">
+<strong>Date:</strong> 2026-10-15 &middot; <strong>Version:</strong> v2 (Pure-<code>flint</code> Bounded Repair) &middot; <strong>Lanes:</strong> <code>KERNEL-API</code>, <code>ZERO-GEOMETRY</code>, <code>COEFF</code> / <code>NB-GAIN</code> (<code>NS-61</code>) &middot; <strong>Audit Package:</strong> <code>audits/multiprime-three-prime-and-scaling-2026-10-15-v1/</code> &middot; Prior HTML preserved at <code>multiprime-three-prime-and-scaling-2026-10-15-v1.html</code>
+</p>
+
+<h2 style="font-size: 1.18em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">1. Executive Summary &amp; Sequential Roadmap Execution</h2>
+<p>
+Executing our planned sequential roadmap across all three active lanes while enforcing all 7 audit repairs from <code>argon-multiprime-review-2026-10-15-v1/verification.json</code> and the Version 2 pure-<code>flint</code> bounded repair (eliminating all <code>numpy</code>/<code>scipy</code> imports, using pure-Python cyclic Jacobi generalized eigenseeding + 384-bit <code>flint.arb</code> Cholesky certification, exact 384-bit algebraic <code>arb_min</code>/<code>arb_max</code> without float conversion, zero float branching/tolerances in interval construction, rigorous ball root-tail integration, explicit filtered-subspace qualification Ran(<em>B</em><sub>&#8473;<sub>+</sub>,&#8473;<sub>&minus;</sub></sub>) &subsetneq; <em>L</em><sup>2</sup><sub>pole-free</sub>(&minus;<em>a</em>, <em>a</em>), <em>C</em><sub>zero</sub>(&#8473;) terminology, and horizon comparison against the fixed-window complete &lambda; = 4 horizon <em>a</em> = log&thinsp;4 &approx; 1.386294), this package establishes five 384-bit <code>flint.arb</code>-certified theorems:
+</p>
+<ol style="margin-top: 6px; padding-left: 22px; font-size: 0.95em;">
+<li style="margin-bottom: 8px;">
+<strong>Theorem 1 (<code>KERNEL-API</code> &mdash; M&ouml;bius Parity Coherence &amp; Complete Multi-Prime Tower Collapse):</strong>
+For any finite prime set &#8473; with squarefree product <em>P</em><sub>&#8473;</sub> = &prod;<sub><em>p</em>&isin;&#8473;</sub> <em>p</em>, expanding <em>L</em><sub>&#8473;</sub> = &prod;<sub><em>p</em>&isin;&#8473;</sub> <em>L</em><sub><em>p</em></sub> yields shifts strictly at coprime squarefree divisor ratios log(<em>d</em><sub>1</sub>/<em>d</em><sub>2</sub>) (<em>d</em><sub>1</sub><em>d</em><sub>2</sub> &mid; <em>P</em><sub>&#8473;</sub>), annihilating every prime-power tower <em>p</em><sup><em>k</em></sup> (<em>p</em> &isin; &#8473;, <em>k</em> &ge; 2) and every non-squarefree internal composite ratio, while external primes <em>q</em> &notin; &#8473; induce cross-shifts <em>S</em><sub>|log(<em>q</em><sup><em>k</em></sup><em>d</em><sub>2</sub>/<em>d</em><sub>1</sub>)|</sub> with sign governed by the M&ouml;bius parity law
+<div style="text-align: center; margin: 8px 0;">
+sgn(<em>c</em><sub><em>q</em><sup><em>k</em></sup>;<em>d</em><sub>1</sub>,<em>d</em><sub>2</sub></sub>) = &minus;&mu;(<em>d</em><sub>1</sub><em>d</em><sub>2</sub>) = (&minus;1)<sup>&omega;(<em>d</em><sub>1</sub><em>d</em><sub>2</sub>)&minus;1</sup>.
+</div>
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 2 (<code>KERNEL-API</code> &mdash; Primorial Balanced-Partition Isometric Horizons for <em>K</em> = 2, 3, 4):</strong>
+Factoring the <em>K</em>-th primorial <em>P</em><sub><em>K</em></sub><sup>#</sup> = &prod;<sub><em>k</em>=1</sub><sup><em>K</em></sup> <em>p</em><sub><em>k</em></sub> into its closest balanced 2-partition <em>P</em><sub><em>K</em></sub><sup>#</sup> = <em>d</em><sub>+</sub>(<em>K</em>)<em>d</em><sub>&minus;</sub>(<em>K</em>) (6 = 3&times;2, 30 = 6&times;5, 210 = 15&times;14), the exact isometric identity <em>P</em><sub><em>b</em></sub><em>B</em><sub>&#8473;<sub><em>K</em>,+</sub>,&#8473;<sub><em>K</em>,&minus;</sub></sub><sup>*</sup><em>B</em><sub>&#8473;<sub><em>K</em>,+</sub>,&#8473;<sub><em>K</em>,&minus;</sub></sub><em>P</em><sub><em>b</em></sub> = <em>C</em><sub>zero</sub>(&#8473;<sub><em>K</em></sub>)<em>I</em> holds on Ran(<em>B</em><sub>&#8473;<sub><em>K</em>,+</sub>,&#8473;<sub><em>K</em>,&minus;</sub></sub>) across the entire continuum window <em>a</em> &isin; (&frac12;&thinsp;log&thinsp;<em>P</em><sub><em>K</em></sub><sup>#</sup>, log&thinsp;<em>d</em><sub>+</sub>(<em>K</em>)], and the <strong>zero-minorant</strong> pure-diagonal Schur trace contracts rapidly toward zero as <em>K</em> grows (0.915035 &rarr; 0.289114 &rarr; 0.084182).
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 3 (<code>KERNEL-API</code> &mdash; Certified Extension of <em>B</em><sub>2,3</sub> up to <em>a</em> = &frac12;&thinsp;log&thinsp;12 = log(2&radic;3)):</strong>
+Across (&frac12;&thinsp;log&thinsp;10, &frac12;&thinsp;log&thinsp;12] &approx; (1.151293, 1.242453], where &tau;<sub>5/3</sub> = log(5/3) (&omega;(3) = 1 odd, positive coefficient) and &tau;<sub>11/6</sub> = log(11/6) (&omega;(6) = 2 even, negative coefficient) enter before the internal &log&thinsp;2 shift at <em>a</em> = &frac12;&thinsp;log&thinsp;12, the Pure-Diagonal + Symmetric/Antisymmetric Reflection Step-Minorant Preconditioner (at &Delta;&alpha; = 3/5 = 0.60) and 2-Mode Cauchy&ndash;Poincar&eacute; Defect Bound certify all-vector positivity on Ran(<em>B</em><sub>2,3</sub>) right up to <em>a</em> = &frac12;&thinsp;log&thinsp;12 (&Vert;<em>K</em><sub>even</sub>&Vert;<sub>op</sub> &le; 0.999947 &lt; 1, Tr(<em>K</em><sub>odd</sub>) = 0.930686 &lt; 1) with <strong>0 Plancherel vectors</strong> and <strong>0 Taylor expansions</strong>.
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 4 (<code>ZERO-GEOMETRY</code> &mdash; Multi-Order Stieltjes&ndash;Hankel Blind-Cone Elimination):</strong>
+Eliminates the order-2 Tur&aacute;n angle blind cone &phi; &isin; [&pi;/6, &pi;/2] (&beta; &le; &radic;3&alpha;) via consecutive Stieltjes&ndash;Hankel moments, certifying across 4096 covering 384-bit balls that min<sub>&phi;&isin;[&pi;/6,&pi;/2]</sub> max<sub><em>m</em>&isin;{1,2,3}</sub>(&minus;cos((2<em>m</em>+2)&phi;)) = sin(&pi;/14) &approx; 0.222521 &gt; 0 (attained at &phi;<sup>*</sup> = 3&pi;/7) and min<sub>&phi;&isin;[&pi;/6,&pi;/2]</sub> max<sub><em>m</em>&isin;{1,2,3,5}</sub>(&minus;cos((2<em>m</em>+2)&phi;)) = 1/2 &gt; 0.
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 5 (<code>COEFF</code> / <code>NB-GAIN</code> (<code>NS-61</code>) &mdash; Gegenbauer&ndash;Bessel Finite-<em>N</em> Mellin&ndash;Jacobi Completeness):</strong>
+Establishes the exact closed-form spherical-Bessel Parseval tail identity for <em>N</em>-mode Legendre&ndash;Jacobi projections on <em>L</em><sup>2</sup>(0, <em>b</em>), certifying super-exponential tail decay to 1.763&times;10<sup>&minus;15</sup> (<em>K</em> = 2), 1.421&times;10<sup>&minus;21</sup> (<em>K</em> = 3), and 6.654&times;10<sup>&minus;29</sup> (<em>K</em> = 4) already at <em>N</em> = 4 polynomial modes.
+</li>
+</ol>
+
+<h2 style="font-size: 1.18em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">2. Theorem 2: Primorial Balanced-Partition Isometric Horizons (<em>K</em> = 2, 3, 4)</h2>
+<table style="width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.84em;">
+<thead>
+<tr style="background-color: #f2f2f2; border-bottom: 2px solid #cccccc;">
+<th style="padding: 6px; text-align: left;">Primorial Window</th>
+<th style="padding: 6px; text-align: right;"><em>a</em><sub>min</sub> = &frac12;&thinsp;log&thinsp;<em>P</em><sub><em>K</em></sub><sup>#</sup></th>
+<th style="padding: 6px; text-align: right;"><em>a</em><sub>iso</sub> = log&thinsp;<em>d</em><sub>+</sub></th>
+<th style="padding: 6px; text-align: right;">&gamma;(&#8473;<sub><em>K</em></sub>)</th>
+<th style="padding: 6px; text-align: right;"><em>V</em><sub>min</sub>(<em>a</em><sub>iso</sub>)</th>
+<th style="padding: 6px; text-align: right;"><em>T</em><sub>even</sub>(<em>a</em><sub>iso</sub>)</th>
+<th style="padding: 6px; text-align: right;"><em>T</em><sub>odd</sub>(<em>a</em><sub>iso</sub>)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>K=2: P_2={2,3}, 6=3*2</code></td><td style="padding: 5px 6px; text-align: right;">0.895880</td><td style="padding: 5px 6px; text-align: right;"><code>log 3 = 1.098612</code></td><td style="padding: 5px 6px; text-align: right;">1.011404</td><td style="padding: 5px 6px; text-align: right;">0.834604</td><td style="padding: 5px 6px; text-align: right;"><strong>0.915035</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.103692</strong></td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5; background-color: #f9fbf9;"><td style="padding: 5px 6px;"><code>K=3: P_3={2,3,5}, 30=6*5</code></td><td style="padding: 5px 6px; text-align: right;">1.700599</td><td style="padding: 5px 6px; text-align: right;"><code>log 6 = 1.791759</code></td><td style="padding: 5px 6px; text-align: right;">1.547884</td><td style="padding: 5px 6px; text-align: right;">2.147066</td><td style="padding: 5px 6px; text-align: right;"><strong>0.289114</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.006216</strong></td></tr>
+<tr style="border-bottom: 1px solid #cccccc; background-color: #f9fbf9;"><td style="padding: 5px 6px;"><code>K=4: P_4={2,3,5,7}, 210=15*14</code></td><td style="padding: 5px 6px; text-align: right;">2.673554</td><td style="padding: 5px 6px; text-align: right;"><code>log 15 = 2.708050</code></td><td style="padding: 5px 6px; text-align: right;">2.034361</td><td style="padding: 5px 6px; text-align: right;">3.771889</td><td style="padding: 5px 6px; text-align: right;"><strong>0.084182</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.000215</strong></td></tr>
+</tbody>
+</table>
+
+<h2 style="font-size: 1.18em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">3. Theorem 3: Certified Extension of <em>B</em><sub>2,3</sub> Across (&frac12;&thinsp;log&thinsp;10, &frac12;&thinsp;log&thinsp;12] (&Delta;&alpha; = 0.60)</h2>
+<table style="width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.84em;">
+<thead>
+<tr style="background-color: #f2f2f2; border-bottom: 2px solid #cccccc;">
+<th style="padding: 6px; text-align: left;">Checkpoint</th>
+<th style="padding: 6px; text-align: right;"><em>a</em></th>
+<th style="padding: 6px; text-align: right;"><em>n</em><sub>sub</sub> / <em>M</em></th>
+<th style="padding: 6px; text-align: right;">Tr(<em>K</em><sub>even</sub>)</th>
+<th style="padding: 6px; text-align: right;">&mu;<sub>2</sub></th>
+<th style="padding: 6px; text-align: right;">&Vert;<em>K</em><sub>even</sub>&Vert;<sub>op</sub></th>
+<th style="padding: 6px; text-align: right;">Tr(<em>K</em><sub>odd</sub>)</th>
+<th style="padding: 6px; text-align: right;">Radius</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>1/2 log 10 (tau_{5/3} entry)</code></td><td style="padding: 5px 6px; text-align: right;">1.15129255</td><td style="padding: 5px 6px; text-align: right;">2 / 10</td><td style="padding: 5px 6px; text-align: right;">0.983586</td><td style="padding: 5px 6px; text-align: right;">0.010683</td><td style="padding: 5px 6px; text-align: right;"><strong>0.972902</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.310149</strong></td><td style="padding: 5px 6px; text-align: right;">8.07e-33</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>a = 1.175000</code></td><td style="padding: 5px 6px; text-align: right;">1.17500000</td><td style="padding: 5px 6px; text-align: right;">2 / 12</td><td style="padding: 5px 6px; text-align: right;">1.004852</td><td style="padding: 5px 6px; text-align: right;">0.015911</td><td style="padding: 5px 6px; text-align: right;"><strong>0.988941</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.458076</strong></td><td style="padding: 5px 6px; text-align: right;">7.27e-33</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>1/2 log 11 (tau_{11/6} entry)</code></td><td style="padding: 5px 6px; text-align: right;">1.19894764</td><td style="padding: 5px 6px; text-align: right;">2 / 12</td><td style="padding: 5px 6px; text-align: right;">1.020558</td><td style="padding: 5px 6px; text-align: right;">0.023794</td><td style="padding: 5px 6px; text-align: right;"><strong>0.996764</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.643513</strong></td><td style="padding: 5px 6px; text-align: right;">8.19e-33</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>a = 1.220000</code></td><td style="padding: 5px 6px; text-align: right;">1.22000000</td><td style="padding: 5px 6px; text-align: right;">3 / 21</td><td style="padding: 5px 6px; text-align: right;">1.035535</td><td style="padding: 5px 6px; text-align: right;">0.036304</td><td style="padding: 5px 6px; text-align: right;"><strong>0.999231</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.782209</strong></td><td style="padding: 5px 6px; text-align: right;">1.10e-32</td></tr>
+<tr style="border-bottom: 1px solid #cccccc; background-color: #f9fbf9;"><td style="padding: 5px 6px;"><code>1/2 log 12 = log(2*sqrt(3))</code></td><td style="padding: 5px 6px; text-align: right;">1.24245332</td><td style="padding: 5px 6px; text-align: right;">5 / 35</td><td style="padding: 5px 6px; text-align: right;">1.053444</td><td style="padding: 5px 6px; text-align: right;">0.053497</td><td style="padding: 5px 6px; text-align: right;"><strong>0.999947</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.930686</strong></td><td style="padding: 5px 6px; text-align: right;">1.13e-32</td></tr>
+</tbody>
+</table>
+
+<h2 style="font-size: 1.18em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">4. Theorem 5 (<code>NS-61</code>): Gegenbauer&ndash;Bessel Finite-<em>N</em> Mellin&ndash;Jacobi Tail Defects</h2>
+<table style="width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.84em;">
+<thead>
+<tr style="background-color: #f2f2f2; border-bottom: 2px solid #cccccc;">
+<th style="padding: 6px; text-align: left;">Primorial Horizon</th>
+<th style="padding: 6px; text-align: right;"><em>z</em><sub>max</sub> = <em>b</em><sub>iso</sub>&xi;<sub>0</sub></th>
+<th style="padding: 6px; text-align: right;"><em>N</em> = 1 (&le; deg 0)</th>
+<th style="padding: 6px; text-align: right;"><em>N</em> = 2 (&le; deg 2)</th>
+<th style="padding: 6px; text-align: right;"><em>N</em> = 3 (&le; deg 4)</th>
+<th style="padding: 6px; text-align: right;"><em>N</em> = 4 (&le; deg 6)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>K=2 (a_iso = log 3)</code></td><td style="padding: 5px 6px; text-align: right;">1.154812</td><td style="padding: 5px 6px; text-align: right;">6.171&times;10<sup>&minus;3</sup></td><td style="padding: 5px 6px; text-align: right;">1.273&times;10<sup>&minus;6</sup></td><td style="padding: 5px 6px; text-align: right;">6.405&times;10<sup>&minus;11</sup></td><td style="padding: 5px 6px; text-align: right;"><strong>1.763&times;10<sup>&minus;15</sup></strong></td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>K=3 (a_iso = log 6)</code></td><td style="padding: 5px 6px; text-align: right;">0.519273</td><td style="padding: 5px 6px; text-align: right;">3.944&times;10<sup>&minus;5</sup></td><td style="padding: 5px 6px; text-align: right;">3.541&times;10<sup>&minus;10</sup></td><td style="padding: 5px 6px; text-align: right;">7.568&times;10<sup>&minus;16</sup></td><td style="padding: 5px 6px; text-align: right;"><strong>1.421&times;10<sup>&minus;21</sup></strong></td></tr>
+<tr style="border-bottom: 1px solid #cccccc;"><td style="padding: 5px 6px;"><code>K=4 (a_iso = log 15)</code></td><td style="padding: 5px 6px; text-align: right;">0.196499</td><td style="padding: 5px 6px; text-align: right;">2.030&times;10<sup>&minus;7</sup></td><td style="padding: 5px 6px; text-align: right;">3.800&times;10<sup>&minus;14</sup></td><td style="padding: 5px 6px; text-align: right;">1.681&times;10<sup>&minus;21</sup></td><td style="padding: 5px 6px; text-align: right;"><strong>6.654&times;10<sup>&minus;29</sup></strong></td></tr>
+</tbody>
+</table>
+
+<p style="font-size: 0.92em; color: #333333;">
+<strong>Verification Artifact (Version 2 Pure-<code>flint</code> Bounded Repair):</strong> <code>audits/multiprime-three-prime-and-scaling-2026-10-15-v1/verification.json</code> (64/64 two-precision ball overlaps PASS; zero <code>numpy</code>/<code>scipy</code>/<code>mpmath</code> dependencies)<br>
+<strong>SHA-256 (payload / file):</strong> <code>3421d81e7effd58b3512e5e62695d243e6b9ed26e6edede22686b52fbb45b625</code> / <code>532bb2c677aee87cbaf71ba4f05db6289786a5a0f8aa69ed5e969b9fa07d4f1b</code><br>
+<strong>Typecheck:</strong> <code>pyright</code> clean (<code>0 errors, 0 warnings, 0 informations</code>).
+</p>
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-top: 28px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity), the cofinal signed-arithmetic lower bound, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+</div>
+
+</body>
+</html>

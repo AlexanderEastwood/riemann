@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Multi-Prime Split-Pole Causal Euler Preconditioner, Mertens Diagonal Gain Theorem, and All-Vector Weil Positivity up to a = (1/2) log 10 (2026-10-15-v1)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 32px auto; padding: 0 16px; line-height: 1.58; color: #1a1a1a; background-color: #ffffff;">
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-bottom: 24px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. Nothing in this report claims a proof of RH or global Weil positivity.
+</div>
+
+<h1 style="font-size: 1.48em; line-height: 1.28; margin-bottom: 6px; color: #111111;">Multi-Prime Split-Pole Causal Euler Preconditioner (<em>B</em><sub>&#8473;<sub>+</sub>,&#8473;<sub>&minus;</sub></sub> and <em>B</em><sub>2,3</sub>), the Mertens Diagonal Gain Theorem, and All-Vector Weil Positivity Up to <em>a</em> = &frac12;&thinsp;log&thinsp;10 &approx; 1.151293</h1>
+<p style="margin-top: 0; color: #555555; font-size: 0.92em;">
+<strong>Date:</strong> 2026-10-15 &middot; <strong>Version:</strong> v1 &middot; <strong>Lane:</strong> <code>KERNEL-API</code> &middot; <strong>Audit Package:</strong> <code>audits/multiprime-euler-preconditioner-2026-10-15-v1/</code>
+</p>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">1. Executive Summary</h2>
+<p>
+Prior finite-<em>a</em> certificates in the <code>KERNEL-API</code> lane relied on the single-prime (<em>p</em> = 2) Euler preconditioner <em>L</em><sub>2</sub> = <em>E&#771;</em><sub>2</sub><sup>*</sup><em>E&#771;</em><sub>2</sub> = (3/2)<em>I</em> &minus; 2<sup>&minus;1/2</sup><em>S</em><sub>log&thinsp;2</sub>, whose normalized prime-diagonal-to-isometric-core ratio is locked at (10/13)&thinsp;log&thinsp;2 &approx; 0.533190 and which leaves every odd prime tower (<em>p</em> = 3, 5, 7, &hellip;) uncollapsed.
+</p>
+<p>
+This audit establishes the general <strong>Multi-Prime Split-Pole Causal Euler Preconditioner</strong> <em>B</em><sub>&#8473;<sub>+</sub>,&#8473;<sub>&minus;</sub></sub> and proves four theorems certified in 384-bit <code>flint.arb</code> ball arithmetic:
+</p>
+<ol style="margin-top: 6px; padding-left: 22px;">
+<li style="margin-bottom: 8px;">
+<strong>Theorem 1 (Universal Single-Prime Causal Euler Identity for All Primes <em>p</em> &ge; 2):</strong>
+For every prime <em>p</em> &ge; 2, <em>E&#771;</em><sub><em>p</em></sub> := <em>T</em><sub>&minus;&frac12;log&thinsp;<em>p</em></sub> &minus; <em>p</em><sup>&minus;1/2</sup><em>T</em><sub>+&frac12;log&thinsp;<em>p</em></sub> and <em>L</em><sub><em>p</em></sub> := <em>E&#771;</em><sub><em>p</em></sub><sup>*</sup><em>E&#771;</em><sub><em>p</em></sub> = (1 + <em>p</em><sup>&minus;1</sup>)<em>I</em> &minus; <em>p</em><sup>&minus;1/2</sup><em>S</em><sub>log&thinsp;<em>p</em></sub> satisfy the exact operator identity on <em>L</em><sup>2</sup>(&#8477;):
+<div style="text-align: center; margin: 10px 0;">
+<em>E&#771;</em><sub><em>p</em></sub><sup>*</sup> <em>W</em><sub><em>p</em></sub> <em>E&#771;</em><sub><em>p</em></sub> = <em>L</em><sub><em>p</em></sub> <em>W</em><sub><em>p</em></sub> = (log&thinsp;<em>p</em>)<em>L</em><sub><em>p</em></sub> &minus; (log&thinsp;<em>p</em>)(1 &minus; 1/<em>p</em>)<em>I</em> = (log&thinsp;<em>p</em>)&bigl((2/<em>p</em>)<em>I</em> &minus; <em>p</em><sup>&minus;1/2</sup><em>S</em><sub>log&thinsp;<em>p</em></sub>&bigr),
+</div>
+identically annihilating all higher prime powers <em>p</em><sup>2</sup>, <em>p</em><sup>3</sup>, <em>p</em><sup>4</sup>, &hellip; (<em>k</em> &ge; 2) and converting the zero diagonal of <em>W</em><sub><em>p</em></sub> into +(2&thinsp;log&thinsp;<em>p</em> / <em>p</em>)<em>I</em> &gt; 0.
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 2 (Multi-Prime Split-Pole Preconditioner <em>B</em><sub>&#8473;<sub>+</sub>,&#8473;<sub>&minus;</sub></sub> &amp; Mertens Diagonal Gain Theorem):</strong>
+For any finite prime set &#8473; = &#8473;<sub>+</sub> &sqcup; &#8473;<sub>&minus;</sub> (&#8473;<sub>+</sub> &ne; &empty;, &#8473;<sub>&minus;</sub> &ne; &empty;), the split-pole operator
+<div style="text-align: center; margin: 10px 0;">
+<em>B</em><sub>&#8473;<sub>+</sub>,&#8473;<sub>&minus;</sub></sub> := (&prod;<sub><em>p</em>&isin;&#8473;<sub>+</sub></sub> <em>E&#771;</em><sub><em>p</em></sub>)(&prod;<sub><em>q</em>&isin;&#8473;<sub>&minus;</sub></sub> <em>E&#771;</em><sub><em>q</em></sub><sup>*</sup>) : <em>L</em><sup>2</sup>(&minus;<em>b</em><sub>&#8473;</sub>, <em>b</em><sub>&#8473;</sub>) &rarr; <em>L</em><sup>2</sup>(&minus;<em>a</em>, <em>a</em>), &qquad; <em>b</em><sub>&#8473;</sub> := <em>a</em> &minus; &frac12;&sum;<sub><em>p</em>&isin;&#8473;</sub> log&thinsp;<em>p</em>
+</div>
+annihilates both pole modes <em>e</em><sup>&pm;<em>x</em>/2</sup> identically (<em>K</em><sub>pole</sub><em>B</em><sub>&#8473;<sub>+</sub>,&#8473;<sub>&minus;</sub></sub> = 0), has self-adjoint parity-preserving pullback <em>L</em><sub>&#8473;</sub> = &prod;<sub><em>p</em>&isin;&#8473;</sub> <em>L</em><sub><em>p</em></sub>, collapses all prime-power towers <em>p</em><sup><em>k</em></sup> (<em>p</em> &isin; &#8473;, <em>k</em> &ge; 2) simultaneously, and by unique prime factorization achieves the normalized prime-diagonal gain
+<div style="text-align: center; margin: 10px 0;">
+&gamma;(&#8473;) := <em>C</em><sub>diag</sub>(&#8473;) / <em>C</em><sub>iso</sub>(&#8473;) = &sum;<sub><em>p</em>&isin;&#8473;</sub> (2&thinsp;log&thinsp;<em>p</em>) / (<em>p</em> + 1) &sim; 2&thinsp;log&thinsp;<em>X</em> &rarr; +&infin;.
+</div>
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 3 (One-Shot Continuum Certification Across (&frac12;&thinsp;log&thinsp;6, log&thinsp;3] = (&frac12;&thinsp;log&thinsp;6, &frac12;&thinsp;log&thinsp;9]):</strong>
+For &#8473; = {2, 3}, <em>B</em><sub>2,3</sub> = <em>E&#771;</em><sub>2</sub><em>E&#771;</em><sub>3</sub><sup>*</sup> increases the normalized prime-diagonal gain by <strong>1.896892&times;</strong> (from 0.533190 to 1.011404). On (&frac12;&thinsp;log&thinsp;6, log&thinsp;3] &approx; (0.895880, 1.098612], <em>P</em><sub><em>b</em></sub><em>B</em><sub>2,3</sub><sup>*</sup><em>B</em><sub>2,3</sub><em>P</em><sub><em>b</em></sub> = 2<em>I</em> and only two shifts (&tau;<sub>7/6</sub> = log(7/6) and &tau;<sub>6/5</sub> = log(6/5)) are active on <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>). Using the pointwise-monotone Schur multiplication preconditioner <em>P</em><sub>0</sub>(<em>a</em>) = <em>V</em><sub><em>a</em></sub>(<em>x</em>)<em>I</em> at &Delta;&alpha; = 0 with <strong>zero</strong> rank-1 minorants, a single endpoint evaluation at <em>a</em> = log&thinsp;3 = &frac12;&thinsp;log&thinsp;9 &approx; 1.098612 certifies the entire continuum interval (&frac12;&thinsp;log&thinsp;6, log&thinsp;3] (<em>T</em><sub>even</sub>(log&thinsp;3) = 0.915035 &lt; 1, <em>T</em><sub>odd</sub>(log&thinsp;3) = 0.103692 &lt; 1).
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 4 (Extension Across (log&thinsp;3, &frac12;&thinsp;log&thinsp;10] &approx; (1.098612, 1.151293]):</strong>
+On (log&thinsp;3, &frac12;&thinsp;log&thinsp;10], the shift &tau;<sub>3/2</sub> = log(3/2) enters with a <strong>positive</strong> coefficient +<em>c</em><sub>3/2</sub> = +(log&thinsp;6)/&radic;6 &gt; 0 on [<em>x</em><sub>3/2</sub>, <em>b</em>] disjoint from [0, <em>b</em> &minus; &tau;<sub>7/6</sub>]. Keeping (<em>v</em><sub>1</sub><em>I</em> &pm; <em>c</em><sub>3/2</sub>(&Delta;&alpha;)<em>R</em><sub>&tau;<sub>3/2</sub></sub>) in <em>P</em><sub>0</sub>(<em>a</em>) gives a closed-form inverse with sum-of-squares <em>a</em>-monotonicity certifying the continuum (log&thinsp;3, 1.135000] with <em>M</em> = 0 minorants, and certifying the prime-pair threshold <em>a</em> = &frac12;&thinsp;log&thinsp;10 &approx; 1.151293 in the exact continuum <em>L</em><sup>2</sup>(0, <em>b</em>) with <em>M</em> = 4 and <em>M</em> = 8 2-piece prime step vectors (0 Plancherel vectors, 0 Taylor expansions) and the Cauchy&ndash;Poincar&eacute; second-eigenvalue defect bound &Vert;<em>K</em><sub>even</sub>&Vert;<sub>op</sub> &le; 0.976071 &lt; 1.
+</li>
+</ol>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">2. Theorem 2: 384-Bit Certified Mertens Diagonal Gain Table</h2>
+<table style="width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.85em;">
+<thead>
+<tr style="background-color: #f2f2f2; border-bottom: 2px solid #cccccc;">
+<th style="padding: 6px; text-align: left;">Prime Cutoff <em>X</em></th>
+<th style="padding: 6px; text-align: right;">|&#8473;<sub>&le;<em>X</em></sub>|</th>
+<th style="padding: 6px; text-align: right;">Support Cost &frac12;&vartheta;(<em>X</em>)</th>
+<th style="padding: 6px; text-align: right;"><em>C</em><sub>iso</sub>(&#8473;<sub>&le;<em>X</em></sub>)</th>
+<th style="padding: 6px; text-align: right;"><em>C</em><sub>diag</sub>(&#8473;<sub>&le;<em>X</em></sub>)</th>
+<th style="padding: 6px; text-align: right;">Normalized Gain &gamma;(&#8473;<sub>&le;<em>X</em></sub>)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>X = 2</code></td><td style="padding: 5px 6px; text-align: right;">1</td><td style="padding: 5px 6px; text-align: right;">0.346574</td><td style="padding: 5px 6px; text-align: right;">1.500000</td><td style="padding: 5px 6px; text-align: right;">0.693147</td><td style="padding: 5px 6px; text-align: right;">0.462098</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5; background-color: #f9fbf9;"><td style="padding: 5px 6px;"><code>X = 3 (B_{2,3})</code></td><td style="padding: 5px 6px; text-align: right;">2</td><td style="padding: 5px 6px; text-align: right;">0.895880</td><td style="padding: 5px 6px; text-align: right;">2.000000</td><td style="padding: 5px 6px; text-align: right;">2.022809</td><td style="padding: 5px 6px; text-align: right;"><strong>1.011404</strong></td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>X = 5</code></td><td style="padding: 5px 6px; text-align: right;">3</td><td style="padding: 5px 6px; text-align: right;">1.700599</td><td style="padding: 5px 6px; text-align: right;">2.400000</td><td style="padding: 5px 6px; text-align: right;">3.714921</td><td style="padding: 5px 6px; text-align: right;">1.547884</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>X = 7</code></td><td style="padding: 5px 6px; text-align: right;">4</td><td style="padding: 5px 6px; text-align: right;">2.673554</td><td style="padding: 5px 6px; text-align: right;">2.742857</td><td style="padding: 5px 6px; text-align: right;">5.579962</td><td style="padding: 5px 6px; text-align: right;">2.034361</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>X = 11</code></td><td style="padding: 5px 6px; text-align: right;">5</td><td style="padding: 5px 6px; text-align: right;">3.872501</td><td style="padding: 5px 6px; text-align: right;">2.992208</td><td style="padding: 5px 6px; text-align: right;">7.283065</td><td style="padding: 5px 6px; text-align: right;">2.434010</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>X = 13</code></td><td style="padding: 5px 6px; text-align: right;">6</td><td style="padding: 5px 6px; text-align: right;">5.154976</td><td style="padding: 5px 6px; text-align: right;">3.222378</td><td style="padding: 5px 6px; text-align: right;">9.024048</td><td style="padding: 5px 6px; text-align: right;">2.800432</td></tr>
+<tr style="border-bottom: 1px solid #cccccc;"><td style="padding: 5px 6px;"><code>X = 31</code></td><td style="padding: 5px 6px; text-align: right;">11</td><td style="padding: 5px 6px; text-align: right;">13.012191</td><td style="padding: 5px 6px; text-align: right;">4.001947</td><td style="padding: 5px 6px; text-align: right;">16.448319</td><td style="padding: 5px 6px; text-align: right;"><strong>4.110079</strong></td></tr>
+</tbody>
+</table>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">3. Theorems 3 &amp; 4: 384-Bit Certified All-Vector Positivity Horizons</h2>
+<table style="width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.84em;">
+<thead>
+<tr style="background-color: #f2f2f2; border-bottom: 2px solid #cccccc;">
+<th style="padding: 6px; text-align: left;">Regime / Checkpoint</th>
+<th style="padding: 6px; text-align: right;"><em>a</em></th>
+<th style="padding: 6px; text-align: right;">&Delta;&alpha;</th>
+<th style="padding: 6px; text-align: right;"><em>M</em><sub>p</sub></th>
+<th style="padding: 6px; text-align: right;">Tr(<em>K</em><sub>even</sub>)</th>
+<th style="padding: 6px; text-align: right;">&Vert;<em>K</em><sub>even</sub>&Vert;<sub>op</sub></th>
+<th style="padding: 6px; text-align: right;">Tr(<em>K</em><sub>odd</sub>)</th>
+<th style="padding: 6px; text-align: right;">Margin</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>1/2 log 7 (3A continuum)</code></td><td style="padding: 5px 6px; text-align: right;">0.97295507</td><td style="padding: 5px 6px; text-align: right;">0.00</td><td style="padding: 5px 6px; text-align: right;">0</td><td style="padding: 5px 6px; text-align: right;">0.242371</td><td style="padding: 5px 6px; text-align: right;"><strong>0.242371</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.004373</strong></td><td style="padding: 5px 6px; text-align: right;">0.757629</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>a = 1.000000</code></td><td style="padding: 5px 6px; text-align: right;">1.00000000</td><td style="padding: 5px 6px; text-align: right;">0.00</td><td style="padding: 5px 6px; text-align: right;">0</td><td style="padding: 5px 6px; text-align: right;">0.369784</td><td style="padding: 5px 6px; text-align: right;"><strong>0.369784</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.013765</strong></td><td style="padding: 5px 6px; text-align: right;">0.630216</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>3/2 log 2 = 1/2 log 8</code></td><td style="padding: 5px 6px; text-align: right;">1.03972077</td><td style="padding: 5px 6px; text-align: right;">0.00</td><td style="padding: 5px 6px; text-align: right;">0</td><td style="padding: 5px 6px; text-align: right;">0.577811</td><td style="padding: 5px 6px; text-align: right;"><strong>0.577811</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.038652</strong></td><td style="padding: 5px 6px; text-align: right;">0.422189</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>1/2 log(49/6) (b = tau_{7/6})</code></td><td style="padding: 5px 6px; text-align: right;">1.05003042</td><td style="padding: 5px 6px; text-align: right;">0.00</td><td style="padding: 5px 6px; text-align: right;">0</td><td style="padding: 5px 6px; text-align: right;">0.629594</td><td style="padding: 5px 6px; text-align: right;"><strong>0.629594</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.047322</strong></td><td style="padding: 5px 6px; text-align: right;">0.370406</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>a = 1.070000</code></td><td style="padding: 5px 6px; text-align: right;">1.07000000</td><td style="padding: 5px 6px; text-align: right;">0.00</td><td style="padding: 5px 6px; text-align: right;">0</td><td style="padding: 5px 6px; text-align: right;">0.736376</td><td style="padding: 5px 6px; text-align: right;"><strong>0.736376</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.067196</strong></td><td style="padding: 5px 6px; text-align: right;">0.263624</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5; background-color: #f9fbf9;"><td style="padding: 5px 6px;"><code>log 3 = 1/2 log 9 (3B continuum)</code></td><td style="padding: 5px 6px; text-align: right;">1.09861229</td><td style="padding: 5px 6px; text-align: right;">0.00</td><td style="padding: 5px 6px; text-align: right;">0</td><td style="padding: 5px 6px; text-align: right;">0.915035</td><td style="padding: 5px 6px; text-align: right;"><strong>0.915035</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.103692</strong></td><td style="padding: 5px 6px; text-align: right;">0.084965</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>a = 1.120000 (4A continuum)</code></td><td style="padding: 5px 6px; text-align: right;">1.12000000</td><td style="padding: 5px 6px; text-align: right;">0.35</td><td style="padding: 5px 6px; text-align: right;">0</td><td style="padding: 5px 6px; text-align: right;">0.955522</td><td style="padding: 5px 6px; text-align: right;"><strong>0.955522</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.224569</strong></td><td style="padding: 5px 6px; text-align: right;">0.044478</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5; background-color: #f9fbf9;"><td style="padding: 5px 6px;"><code>a = 1.135000 (4A continuum)</code></td><td style="padding: 5px 6px; text-align: right;">1.13500000</td><td style="padding: 5px 6px; text-align: right;">0.35</td><td style="padding: 5px 6px; text-align: right;">0</td><td style="padding: 5px 6px; text-align: right;">0.996015</td><td style="padding: 5px 6px; text-align: right;"><strong>0.996015</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.293293</strong></td><td style="padding: 5px 6px; text-align: right;">0.003985</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>a = 1.135000 (4B Woodbury)</code></td><td style="padding: 5px 6px; text-align: right;">1.13500000</td><td style="padding: 5px 6px; text-align: right;">0.35</td><td style="padding: 5px 6px; text-align: right;">4</td><td style="padding: 5px 6px; text-align: right;">0.954674</td><td style="padding: 5px 6px; text-align: right;"><strong>0.951517</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.293293</strong></td><td style="padding: 5px 6px; text-align: right;">0.048483</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5;"><td style="padding: 5px 6px;"><code>a = 1.145000 (4B Woodbury)</code></td><td style="padding: 5px 6px; text-align: right;">1.14500000</td><td style="padding: 5px 6px; text-align: right;">0.35</td><td style="padding: 5px 6px; text-align: right;">4</td><td style="padding: 5px 6px; text-align: right;">0.971272</td><td style="padding: 5px 6px; text-align: right;"><strong>0.967518</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.340497</strong></td><td style="padding: 5px 6px; text-align: right;">0.032482</td></tr>
+<tr style="border-bottom: 1px solid #e5e5e5; background-color: #f9fbf9;"><td style="padding: 5px 6px;"><code>1/2 log 10 (M = 4 prime vecs)</code></td><td style="padding: 5px 6px; text-align: right;">1.15129255</td><td style="padding: 5px 6px; text-align: right;">0.35</td><td style="padding: 5px 6px; text-align: right;">4</td><td style="padding: 5px 6px; text-align: right;">0.981496</td><td style="padding: 5px 6px; text-align: right;"><strong>0.977330</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.370714</strong></td><td style="padding: 5px 6px; text-align: right;">0.022670</td></tr>
+<tr style="border-bottom: 1px solid #cccccc; background-color: #f9fbf9;"><td style="padding: 5px 6px;"><code>1/2 log 10 (M = 8 prime vecs)</code></td><td style="padding: 5px 6px; text-align: right;">1.15129255</td><td style="padding: 5px 6px; text-align: right;">0.35</td><td style="padding: 5px 6px; text-align: right;">8</td><td style="padding: 5px 6px; text-align: right;">0.980107</td><td style="padding: 5px 6px; text-align: right;"><strong>0.976071</strong></td><td style="padding: 5px 6px; text-align: right;"><strong>0.370714</strong></td><td style="padding: 5px 6px; text-align: right;">0.023929</td></tr>
+</tbody>
+</table>
+
+<p style="font-size: 0.92em; color: #333333;">
+<strong>Verification Artifact:</strong> <code>audits/multiprime-euler-preconditioner-2026-10-15-v1/verification.json</code><br>
+<strong>SHA-256:</strong> <code>02e057d1193086ba887aa06213cd6748aaa23f9515dc49c4b355e67d86f49253</code><br>
+<strong>Typecheck:</strong> <code>pyright</code> clean (<code>0 errors, 0 warnings, 0 informations</code>).
+</p>
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-top: 28px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity), the cofinal signed-arithmetic lower bound, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+</div>
+
+</body>
+</html>

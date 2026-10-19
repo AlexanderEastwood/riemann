@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two-Precision Candidate-Mechanism Screen, Repaired Tail &amp; Kernel Enclosures (2026-10-16 v5)</title>
+</head>
+<body style="margin: 0; padding: 32px 18px 64px 18px; background-color: #fbfaf7; color: #1f1f1c; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px; line-height: 1.62;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #dfd9cd; border-radius: 6px; padding: 32px 34px; box-sizing: border-box;">
+
+    <!-- Mandatory Top Wall Check -->
+    <div style="background-color: #fdf6e9; border-left: 4px solid #b5651d; padding: 14px 16px; margin-bottom: 24px; font-size: 14.5px; line-height: 1.55;">
+      <strong>Wall check:</strong> Same open gap. Closest results: <code>WEIL-FLOOR</code>, <code>NS24/39/43</code>, <code>NB-GAIN</code> (<code>NS53/61/83/87/98</code>), and <code>ZERO-GEOMETRY</code> (<code>NS94/100/101</code>). We still need a bound that remains valid as the window grows (<i>b</i> &rarr; &infin; or <i>N</i> &rarr; &infin;), retaining every signed arithmetic contribution and coupling. <code>RH</code>, <code>G2</code>, and both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. <code>M17 v2</code> and all audited lanes remain <strong>PAUSED</strong>.
+    </div>
+
+    <div style="font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.08em; color: #6a665d; margin-bottom: 6px;">
+      Bounded Two-Precision Candidate Screen &bull; WEIL-FLOOR / KERNEL-API / NB-GAIN &bull; 2026-10-16 &bull; Version 5 (Repaired [3.5, &infin;) Tail Bound &amp; Complex-Box Kernel Enclosure)
+    </div>
+    <h1 style="font-size: 23px; line-height: 1.28; margin: 0 0 10px 0; font-weight: bold; color: #161614;">
+      Two-Precision (<code>256</code>-Bit &amp; <code>384</code>-Bit <code>flint.arb</code>/<code>flint.acb</code>) Candidate-Mechanism Screen, Repaired Tail Bound &amp; Kernel Enclosures (<code>v5</code>)
+    </h1>
+    <p style="margin: 0 0 18px 0; font-size: 14px; color: #545149;">
+      Package: <code>audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/</code> &bull;
+      Verifier: <code>verify_cofinal_candidate_mechanisms.py</code> &bull;
+      <code>payload_sha256</code>: <code>6ccc8fcb120ad5d3b4146c04d8ac03d737d14ba22b260d9edaa1e1d53c28f766</code> &bull;
+      <code>file_sha256</code>: <code>800004ef7eb9578617a6a4895108b33ba6cc749a4a6cd8b3dab5db93885dc190</code> &bull;
+      Ball overlaps: <code>176 / 176</code> passed &bull;
+      Supersedes <a href="cofinal-candidate-mechanisms-screen-2026-10-16-v1.html" style="color: #1d4ed8;"><code>v1.html</code></a>, <a href="cofinal-candidate-mechanisms-screen-2026-10-16-v2.html" style="color: #1d4ed8;"><code>v2.html</code></a>, <a href="cofinal-candidate-mechanisms-screen-2026-10-16-v3.html" style="color: #1d4ed8;"><code>v3.html</code></a>, and <a href="cofinal-candidate-mechanisms-screen-2026-10-16-v4.html" style="color: #1d4ed8;"><code>v4.html</code></a> (all preserved untouched) &bull;
+      Companion 5-item assessments: <a href="nb-full-residual-arithmetic-assessment-2026-10-16-v1.html" style="color: #1d4ed8;"><code>NB-GAIN</code></a>, <a href="weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html" style="color: #1d4ed8;"><code>WEIL-FLOOR / KERNEL-API</code></a>, <a href="zero-geometry-arithmetic-assessment-2026-10-16-v1.html" style="color: #1d4ed8;"><code>ZERO-GEOMETRY / OPERATOR-BRIDGES</code></a>
+    </p>
+
+    <hr style="border: none; border-top: 1px solid #e3ded3; margin: 20px 0;" />
+
+    <!-- Section 1: v5 Repairs & Scope Note -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      1. Summary of <code>v5</code> Certification Repairs &amp; Explicit Scope Limitations
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      This <code>v5</code> revision repairs the two remaining certification defects identified in review of <code>v4</code>/<code>v19</code> and states the scope of the finite-window coupling calculations and two-precision overlap checks:
+    </p>
+    <ol style="margin: 0 0 16px 0; padding-left: 22px; font-size: 15px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Repaired [3.5, &infin;) Tail Bound for the Odd Pole Moment (Theorem 2):</strong>
+        In <code>v3</code>/<code>v4</code>, <code>tail_int_35</code> had an extraneous factor of 2 inside the outer exponential (<code>exp(-2*pi*exp(7)) &approx; 1.65 &times; 10<sup>&minus;2991</sup></code>), violating the rigorous lower bound &gt; 8.53 &times; 10<sup>&minus;1492</sup> for the omitted tail 2&int;<sub>3.5</sub><sup>&infin;</sup> <i>x</i> sinh(<i>x</i>/2) <i>h</i>(<i>x</i>) <i>dx</i>. In <code>v5</code>, this is replaced by the valid two-sided <code>lem:v150-weight</code> enclosure at <i>x</i><sub>0</sub> = 3.5 (<i>w</i><sub>0</sub> = <i>e</i><sup>7</sup>):
+        <div style="background-color: #f7f4ec; border: 1px solid #e1dbce; border-radius: 4px; padding: 8px 12px; margin: 6px 0; font-size: 14px;">
+          <i>T</i><sub>lower</sub>(3.5) = ((1 &minus; <i>e</i><sup>&minus;3.5</sup>)<i>A</i><sub>&minus;</sub> &middot; 3.5 &middot; <i>e</i><sup>10.5 &minus; &pi;<i>e</i><sup>7</sup></sup>) / (2&pi;) = <strong>2.81357192&hellip; &times; 10<sup>&minus;1491</sup></strong> &gt; 8.53 &times; 10<sup>&minus;1492</sup>,<br/>
+          <i>T</i><sub>upper</sub>(3.5) = (<i>A</i><sub>+</sub> &middot; 3.5 &middot; <i>e</i><sup>10.5 &minus; &pi;<i>e</i><sup>7</sup></sup>) / (2&pi; &minus; (3 + 1/3.5)<i>e</i><sup>&minus;7</sup>) = <strong>1.11095453&hellip; &times; 10<sup>&minus;1490</sup></strong>,
+        </div>
+        where <i>A</i><sub>&minus;</sub> = 4&pi;(2&pi; &minus; 3)/&radic;3 and <i>A</i><sub>+</sub> = 16&pi;<sup>2</sup>/&radic;3 (<code>eq:v150-weight-bounds</code>). The closed-form odd pole moment <strong>0.013334313788715232&hellip;</strong> survives unchanged with <code>.contains(0)</code> certified at both 256 and 384 bits.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Repaired <code>h_and_dh_acb</code> Kernel Enclosure on Negative &amp; Complex Quadrature Inputs:</strong>
+        In <code>v4</code>, the direct 1D convolution evaluated <i>h</i>((1/2)log <i>k</i> &minus; <i>u</i>) at negative arguments when <i>u</i> &gt; (1/2)log <i>k</i> (where the unreflected <i>n</i> &le; 15 theta truncation returned a negative value &minus;1.2486 &times; 10<sup>&minus;4</sup> at <i>x</i> = &minus;1.7 despite <i>h</i>(&minus;1.7) = <i>h</i>(1.7) &gt; 0) and used a static <i>z</i> = 0 tail radius that failed on complex quadrature boxes <i>z</i> = <i>x</i> + <i>iy</i> where Re(<i>e</i><sup>2<i>z</i></sup>) = <i>e</i><sup>2<i>x</i></sup> cos(2<i>y</i>) &lt; 1. In <code>v5</code>:
+        <ul style="margin: 4px 0 0 0; padding-left: 18px;">
+          <li>The convolution is split at <i>u</i><sub>split</sub> = min(<i>a</i> &minus; (1/2)log <i>k</i>, (1/2)log <i>k</i>) using <i>h</i>(&minus;<i>v</i>) = <i>h</i>(<i>v</i>) on <i>v</i> = <i>u</i> &minus; (1/2)log <i>k</i> &isin; [0, <i>a</i> &minus; log <i>k</i>] whenever <i>k</i> &lt; &lambda;, so all contour endpoints lie in [0, <i>a</i>].</li>
+          <li><code>h_and_dh_acb(z)</code> applies exact Poisson reflection <i>h</i>(<i>z</i>) = <i>h</i>(&minus;<i>z</i>), <i>h</i>&prime;(<i>z</i>) = &minus;<i>h</i>&prime;(&minus;<i>z</i>) whenever Re(<i>z</i>) &lt; 0, certifying <code>h_at_minus_1_7</code> = <strong>+1.235652355548313 &times; 10<sup>&minus;36</sup> &gt; 0</strong>.</li>
+          <li>On complex quadrature boxes <i>z</i> = <i>x</i> + <i>iy</i>, <code>h_and_dh_acb</code> requires Re(<i>z</i>) &gt; &minus;1/4 and &alpha; = Re(<i>e</i><sup>2<i>z</i></sup>) &gt; 1/2 (returning <code>nan</code> on wider boxes to force <code>acb.integral</code> bisection) and encloses the <i>n</i> &ge; 16 tail dynamically in <code>flint.arb</code> from <i>r</i> = |<i>e</i><sup><i>z</i></sup>| and &alpha; = Re(<i>e</i><sup>2<i>z</i></sup>) &gt; 1/2.</li>
+        </ul>
+      </li>
+      <li style="margin-bottom: 6px;">
+        <strong>Explicit Scope &amp; Two-Precision Overlap Limitations:</strong>
+        The coupling calculations &Delta;<sub>AP,&perp;</sub>(<i>f</i>; <i>a</i>) concern only <strong>two specific functions</strong> (<i>h</i> and <i>x h</i>) at <strong>four finite windows</strong> (&lambda; &isin; {2, 3, 5, 8}), cover only the <strong>arithmetic-plus-pole contribution</strong> <i>T</i><sub>pole</sub>(<i>a</i>) &minus; <i>T</i><sub>arith</sub>(<i>a</i>) (excluding the archimedean generator <i>A</i><sub>arch</sub>(<i>a</i>)), and <strong>do not establish the full uniform Weil bound</strong>. Furthermore, agreement between two precisions (<code>176 / 176</code> ball overlaps) verifies numerical stability of the evaluated expressions at 256 and 384 bits, but cannot detect an incorrect analytical bound or formula shared by both runs.
+      </li>
+    </ol>
+
+    <!-- Section 2 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      2. Certified Verification of Theorem 1 (<code>.contains(0)</code> at <code>256</code>-Bit &amp; <code>384</code>-Bit)
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      For all Legendre indices <i>m</i> &equiv; <i>n</i> (mod 2) (both even and odd parities simultaneously) and every <i>a</i> &gt; 0, subtracting (<i>T</i><sub>pole</sub>(<i>a</i>))<sub><i>m</i>,<i>n</i></sub> from (<i>T</i><sub>arith</sub>(<i>a</i>))<sub><i>m</i>,<i>n</i></sub> has identically zero Stieltjes integration-by-parts boundary terms at both <i>u</i> = 0 and <i>u</i> = 2:
+    </p>
+    <div style="background-color: #f7f4ec; border: 1px solid #e1dbce; border-radius: 4px; padding: 10px 12px; margin: 8px 0 14px 0; font-size: 14.5px; text-align: center;">
+      (<i>T</i><sub>arith</sub>(<i>a</i>) &minus; <i>T</i><sub>pole</sub>(<i>a</i>))<sub><i>m</i>,<i>n</i></sub>
+      &nbsp;=&nbsp;
+      &int;<sub>0</sub><sup>2</sup>
+      [(&psi;(<i>e</i><sup><i>au</i></sup>) &minus; <i>e</i><sup><i>au</i></sup> &minus; <i>au</i> + 1) / <i>e</i><sup><i>au</i>/2</sup>]
+      &middot;
+      (<i>a</i> <i>C&#771;</i><sub><i>m</i>,<i>n</i></sub>(<i>u</i>) &minus; 2 <i>C&#771;</i>&prime;<sub><i>m</i>,<i>n</i></sub>(<i>u</i>)) <i>du</i>.
+    </div>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 7px 8px; text-align: left;">Pair (<i>m</i>,<i>n</i>)</th>
+          <th style="padding: 7px 8px; text-align: left;">Parity</th>
+          <th style="padding: 7px 8px; text-align: right;">Direct LHS = (<i>T</i><sub>arith</sub> &minus; <i>T</i><sub>pole</sub>)<sub><i>m</i>,<i>n</i></sub></th>
+          <th style="padding: 7px 8px; text-align: right;">Boundary-Free Integral RHS</th>
+          <th style="padding: 7px 8px; text-align: right;">256-Bit |LHS &minus; RHS| Rad</th>
+          <th style="padding: 7px 8px; text-align: center;"><code>.contains(0)</code></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(0,0)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;3.226631998261226</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;3.226631998261226</td>
+          <td style="padding: 6px 8px; text-align: right;">4.04 &times; 10<sup>&minus;74</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(0,2)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.363351778191214</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.363351778191214</td>
+          <td style="padding: 6px 8px; text-align: right;">1.21 &times; 10<sup>&minus;72</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(2,4)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.281211159163931</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.281211159163931</td>
+          <td style="padding: 6px 8px; text-align: right;">7.54 &times; 10<sup>&minus;70</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(4,4)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.406447338097766</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.406447338097766</td>
+          <td style="padding: 6px 8px; text-align: right;">1.31 &times; 10<sup>&minus;65</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(1,1)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;1.478069459373286</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;1.478069459373286</td>
+          <td style="padding: 6px 8px; text-align: right;">6.95 &times; 10<sup>&minus;73</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(1,3)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.346721558001673</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.346721558001673</td>
+          <td style="padding: 6px 8px; text-align: right;">1.93 &times; 10<sup>&minus;71</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(3,3)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.572549218687149</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.572549218687149</td>
+          <td style="padding: 6px 8px; text-align: right;">6.70 &times; 10<sup>&minus;69</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 8px;"><code>(3,5)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.264731248954138</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.264731248954138</td>
+          <td style="padding: 6px 8px; text-align: right;">8.80 &times; 10<sup>&minus;68</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 3 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      3. Candidates I, II/IIb &amp; III: 8-Mode Compressions vs. Two-Function Finite-Window Coupling Enclosures
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      Table 2 reports the unshifted 8&times;8 Cholesky minimum pivots on <i>V</i><sub>8</sub><sup>even</sup>(&minus;<i>a</i>,<i>a</i>) and <i>V</i><sub>8</sub><sup>odd</sup>(&minus;<i>a</i>,<i>a</i>), the 4&times;4 shifted Schur pivot at <i>C</i><sub>*</sub> = 8, and the <strong>finite 4-mode Legendre shell</strong> (<i>V</i><sub>[4,8]</sub><sup>even</sup>, <i>m</i> &isin; {8, 10, 12, 14}) Frobenius norm vs. the M17 triangle-inequality sum (finite shell only; does not enclose <i>V</i><sub>4</sub>(<i>a</i>)<sup>&perp;</sup>):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 6px; text-align: left;">&lambda; (<i>a</i> = log &lambda;)</th>
+          <th style="padding: 6px 6px; text-align: right;">Shifts</th>
+          <th style="padding: 6px 6px; text-align: right;">Unshifted Even 8&times;8 Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">Unshifted Odd 8&times;8 Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">Shifted Schur 4&times;4 (<i>C</i><sub>*</sub>=8) Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">M17 Triangle Bound &Sigma;2&Lambda;/&radic;<i>k</i></th>
+          <th style="padding: 6px 6px; text-align: right;">Finite Shell &Vert;<i>T</i><sub>arith</sub><sup>[4,7]</sup>&Vert;<sub><i>F</i></sub></th>
+          <th style="padding: 6px 6px; text-align: right;">Shell Ratio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=2</code> (0.6931)</td>
+          <td style="padding: 6px 6px; text-align: right;">2</td>
+          <td style="padding: 6px 6px; text-align: right;">5.0647 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">7.7286 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.93784</td>
+          <td style="padding: 6px 6px; text-align: right;">2.24883</td>
+          <td style="padding: 6px 6px; text-align: right;">0.62642</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">3.59&times;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=3</code> (1.0986)</td>
+          <td style="padding: 6px 6px; text-align: right;">6</td>
+          <td style="padding: 6px 6px; text-align: right;">1.4512 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">4.3598 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.92830</td>
+          <td style="padding: 6px 6px; text-align: right;">6.34260</td>
+          <td style="padding: 6px 6px; text-align: right;">1.31326</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">4.83&times;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=5</code> (1.6094)</td>
+          <td style="padding: 6px 6px; text-align: right;">13</td>
+          <td style="padding: 6px 6px; text-align: right;">2.5785 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">5.4353 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.89252</td>
+          <td style="padding: 6px 6px; text-align: right;">14.32325</td>
+          <td style="padding: 6px 6px; text-align: right;">0.90492</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">15.83&times;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 6px;"><code>&lambda;=8</code> (2.0794)</td>
+          <td style="padding: 6px 6px; text-align: right;">26</td>
+          <td style="padding: 6px 6px; text-align: right;">3.0705 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">9.1999 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.87591</td>
+          <td style="padding: 6px 6px; text-align: right;">26.49768</td>
+          <td style="padding: 6px 6px; text-align: right;">0.49848</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">53.16&times;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin: 0 0 10px 0;">
+      Table 3a reports the <strong>compressed 8-mode Legendre</strong> Rayleigh quotients and residuals for <i>h</i>(<i>x</i>), <i>h</i>&prime;(<i>x</i>), and <i>x h</i>(<i>x</i>) alongside the <strong>pure <code>flint.arb</code> Cholesky Weyl certificate</strong> of (2|&delta;<sub>2</sub>|)<i>I</i><sub>8</sub> &plusmn; <i>B</i><sub>&delta;<sub>2</sub></sub> &succ; 0 for <code>NS57</code> (&delta;<sub>2</sub> = &minus;(log 2)/100, 2|&delta;<sub>2</sub>| = 0.01386294):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 6px; text-align: left;">&lambda;</th>
+          <th style="padding: 6px 6px; text-align: right;">Compressed <i>h</i> RQ</th>
+          <th style="padding: 6px 6px; text-align: right;">Compressed <i>h</i>&prime; RQ</th>
+          <th style="padding: 6px 6px; text-align: right;">Compressed <i>xh</i> RQ</th>
+          <th style="padding: 6px 6px; text-align: right;">Compressed &Vert;W<sup>(8)</sup><i>P</i><sub>8</sub>(<i>xh</i>)&Vert;/&Vert;<i>P</i><sub>8</sub>(<i>xh</i>)&Vert;</th>
+          <th style="padding: 6px 6px; text-align: right;">Weyl (+) Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">Weyl (&minus;) Min Piv</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=2</code></td>
+          <td style="padding: 6px 6px; text-align: right;">1.722 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">5.977 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">6.029 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.02803</td>
+          <td style="padding: 6px 6px; text-align: right;">0.08326</td>
+          <td style="padding: 6px 6px; text-align: right;">0.08831</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=3</code></td>
+          <td style="padding: 6px 6px; text-align: right;">1.105 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">3.172 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">4.625 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.03181</td>
+          <td style="padding: 6px 6px; text-align: right;">0.06613</td>
+          <td style="padding: 6px 6px; text-align: right;">0.08310</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=5</code></td>
+          <td style="padding: 6px 6px; text-align: right;">4.519 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">4.733 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">7.630 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.11185</td>
+          <td style="padding: 6px 6px; text-align: right;">0.05464</td>
+          <td style="padding: 6px 6px; text-align: right;">0.07515</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 6px;"><code>&lambda;=8</code></td>
+          <td style="padding: 6px 6px; text-align: right;">3.755 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">1.887 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.223 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.11555</td>
+          <td style="padding: 6px 6px; text-align: right;">0.04807</td>
+          <td style="padding: 6px 6px; text-align: right;">0.07385</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin: 0 0 10px 0;">
+      Table 3b reports, for the <strong>two specific functions</strong> <i>h</i> and <i>xh</i> at the <strong>four finite windows</strong> &lambda; &isin; {2, 3, 5, 8}, the Parseval orthogonal tail fractions &Vert;(<i>I</i> &minus; <i>P</i><sub>8</sub>)<i>f</i>&Vert;<sub><i>L</i><sup>2</sup>(&minus;<i>a</i>,<i>a</i>)</sub> / &Vert;<i>f</i>&Vert;<sub><i>L</i><sup>2</sup>(&minus;<i>a</i>,<i>a</i>)</sub>, the <strong>arithmetic-plus-pole quadratic form</strong> &langle;<i>h</i>, (<i>T</i><sub>pole</sub>(<i>a</i>) &minus; <i>T</i><sub>arith</sub>(<i>a</i>))<i>h</i>&rangle;<sub><i>L</i><sup>2</sup>(&minus;<i>a</i>,<i>a</i>)</sub> (computed via the repaired split-contour and complex-box kernel enclosure), the omitted <i>V</i><sub>8</sub>(<i>a</i>)<sup>&perp;</sup> arithmetic-plus-pole couplings &Delta;<sub>AP,&perp;</sub>(<i>h</i>; <i>a</i>) and &Delta;<sub>AP,&perp;</sub>(<i>xh</i>; <i>a</i>), and the <code>lem:v150-weight</code> exterior pole-mass leakage bound (note: covers only <i>T</i><sub>pole</sub> &minus; <i>T</i><sub>arith</sub> on <i>h</i> and <i>xh</i> at four windows and does not bound <i>A</i><sub>arch</sub> or establish the uniform Weil bound):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 5px; text-align: left;">&lambda;</th>
+          <th style="padding: 6px 5px; text-align: right;">Parseval Tail &Vert;(<i>I</i>&minus;<i>P</i><sub>8</sub>)<i>h</i>&Vert;/&Vert;<i>h</i>&Vert;</th>
+          <th style="padding: 6px 5px; text-align: right;">Parseval Tail &Vert;(<i>I</i>&minus;<i>P</i><sub>8</sub>)(<i>xh</i>)&Vert;/&Vert;<i>xh</i>&Vert;</th>
+          <th style="padding: 6px 5px; text-align: right;">Full-Space &langle;<i>h</i>, (<i>T</i><sub>pole</sub>&minus;<i>T</i><sub>arith</sub>)<i>h</i>&rangle;</th>
+          <th style="padding: 6px 5px; text-align: right;">Omitted Coupling &Delta;<sub>AP,&perp;</sub>(<i>h</i>)</th>
+          <th style="padding: 6px 5px; text-align: right;">Omitted Coupling &Delta;<sub>AP,&perp;</sub>(<i>xh</i>)</th>
+          <th style="padding: 6px 5px; text-align: right;">Exterior Pole Leakage Bound</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 5px;"><code>&lambda;=2</code></td>
+          <td style="padding: 6px 5px; text-align: right;">1.7946 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">3.3003 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">0.63429078</td>
+          <td style="padding: 6px 5px; text-align: right;">+9.5086 &times; 10<sup>&minus;10</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">&minus;8.0193 &times; 10<sup>&minus;10</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">1.0107 &times; 10<sup>&minus;3</sup></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 5px;"><code>&lambda;=3</code></td>
+          <td style="padding: 6px 5px; text-align: right;">7.0850 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">3.1701 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">0.63460744</td>
+          <td style="padding: 6px 5px; text-align: right;">&minus;2.7052 &times; 10<sup>&minus;7</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">+3.1053 &times; 10<sup>&minus;7</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">4.5174 &times; 10<sup>&minus;10</sup></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 5px;"><code>&lambda;=5</code></td>
+          <td style="padding: 6px 5px; text-align: right;">4.0591 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">1.2084 &times; 10<sup>&minus;1</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">0.63460744</td>
+          <td style="padding: 6px 5px; text-align: right;">&minus;2.4122 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">&minus;1.0765 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 5px; text-align: right;">2.9125 &times; 10<sup>&minus;31</sup></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 5px;"><code>&lambda;=8</code></td>
+          <td style="padding: 6px 5px; text-align: right; font-weight: bold;">0.13172</td>
+          <td style="padding: 6px 5px; text-align: right; font-weight: bold;">0.33228</td>
+          <td style="padding: 6px 5px; text-align: right; font-weight: bold;">0.63460744</td>
+          <td style="padding: 6px 5px; text-align: right; font-weight: bold;">&minus;2.0068 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 5px; text-align: right; font-weight: bold;">&minus;4.3222 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 5px; text-align: right; font-weight: bold;">7.1999 &times; 10<sup>&minus;84</sup></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 4 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      4. Candidates A, B &amp; C Across Finite Dyadic Blocks <i>N</i> &isin; {4, 8, 16, 32} (<code>NB-GAIN</code>)
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      For the actual <i>q</i> = 2 smoothed Nyman&ndash;Beurling target <i>h</i><sub>2</sub> = <i>W</i>&tau;<sub>2</sub> in <code>NS83</code> (<code>evidence/v166/ns83/proof.tex</code>, <code>eq:ns83-transforms</code>), the transformed target Mellin value at &rho;<sub>1</sub> = 1/2 + <i>i</i>&gamma;<sub>1</sub> is
+      <i>T</i><sub>2</sub>(&rho;<sub>1</sub>) = (&rho;<sub>1</sub> &minus; 1)/&rho;<sub>1</sub><sup>3</sup> with magnitude
+      |<i>T</i><sub>2</sub>(&rho;<sub>1</sub>)| = 1/|&rho;<sub>1</sub>|<sup>2</sup> = <strong>0.004998988833723&hellip;</strong>, first conjugate-pair weight
+      2/|&rho;<sub>1</sub>|<sup>4</sup> = <strong>4.9979778719 &times; 10<sup>&minus;5</sup></strong>, and 50-pair floor
+      <i>C</i><sub>2,50</sub> = <strong>7.4079419249 &times; 10<sup>&minus;5</sup></strong>. Table 4 records the finite-block values across <i>N</i> &isin; {4, 8, 16, 32} (finite-block observations only; does not establish convergence):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 6px; text-align: left;"><i>N</i></th>
+          <th style="padding: 6px 6px; text-align: right;"><i>E<sub>N</sub></i><sup>(2)</sup></th>
+          <th style="padding: 6px 6px; text-align: right;">(log <i>N</i>) <i>E<sub>N</sub></i><sup>(2)</sup></th>
+          <th style="padding: 6px 6px; text-align: right;">Finite Ratio (log <i>N</i>/log 2)(&Delta;<sub><i>N</i></sub>/<i>E<sub>N</sub></i><sup>(2)</sup>)</th>
+          <th style="padding: 6px 6px; text-align: right;">tr(<i>H<sub>N</sub></i>) / tr(<i>D<sub>N</sub></i>)</th>
+          <th style="padding: 6px 6px; text-align: right;">&Vert;<i>h<sub>N</sub></i>&Vert;<sub>2</sub><sup>2</sup> / &Vert;<i>b</i><sub>new</sub>&Vert;<sub>2</sub><sup>2</sup></th>
+          <th style="padding: 6px 6px; text-align: center;">Cand A (&beta;=1/2 &amp; NS74)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>4</code></td>
+          <td style="padding: 6px 6px; text-align: right;">2.12969 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.95238 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">1.8975</td>
+          <td style="padding: 6px 6px; text-align: right;">6.835 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">6.656 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>8</code></td>
+          <td style="padding: 6px 6px; text-align: right;">1.09109 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.26886 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.1216</td>
+          <td style="padding: 6px 6px; text-align: right;">5.463 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">1.746 &times; 10<sup>&minus;7</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>16</code></td>
+          <td style="padding: 6px 6px; text-align: right;">3.19477 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">8.85778 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.9491</td>
+          <td style="padding: 6px 6px; text-align: right;">4.721 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.365 &times; 10<sup>&minus;9</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 6px;"><code>32</code></td>
+          <td style="padding: 6px 6px; text-align: right;">2.43670 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">8.44495 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.9456</td>
+          <td style="padding: 6px 6px; text-align: right;">4.307 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.051 &times; 10<sup>&minus;9</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Mandatory Bottom Wall Check -->
+    <div style="background-color: #fdf6e9; border-left: 4px solid #b5651d; padding: 14px 16px; margin-top: 24px; font-size: 14.5px; line-height: 1.55;">
+      <strong>Wall check:</strong> Same open gap. Closest results: <code>WEIL-FLOOR</code>, <code>NS24/39/43</code>, <code>NB-GAIN</code> (<code>NS53/61/83/87/98</code>), and <code>ZERO-GEOMETRY</code> (<code>NS94/100/101</code>). We still need a bound that remains valid as the window grows (<i>b</i> &rarr; &infin; or <i>N</i> &rarr; &infin;), retaining every signed arithmetic contribution and coupling. <code>RH</code>, <code>G2</code>, and both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. This improves the research record; it supplies no new cofinal arithmetic estimate. All audited lanes remain <strong>PAUSED</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

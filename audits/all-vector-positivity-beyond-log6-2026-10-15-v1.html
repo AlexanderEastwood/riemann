@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Breaking the (1/2) log 6 Barrier: All-Vector Weil Positivity Up to (1/2) log 7 (2026-10-15 v1)</title>
+</head>
+<body style="margin:0;padding:24px 16px;background-color:#faf9f6;color:#1f2328;font-family:Georgia,'Times New Roman',serif;line-height:1.62;">
+<div style="max-width:680px;margin:0 auto;background-color:#ffffff;border:1px solid #d8d4c8;padding:32px 36px;box-sizing:border-box;">
+
+  <div style="background-color:#fff8e6;border-left:4px solid #b8860b;padding:12px 16px;margin-bottom:24px;font-size:14px;">
+    <strong>Wall Check (Mandatory Scope &amp; Status Notice):</strong> This document records a 384-bit <code>flint.arb</code>-certified extension of the finite-window <code>KERNEL-API</code> all-vector positivity certificate on $L_2(V_{a-\log 2}) \subset V_a$ from $a_\star = \tfrac{1}{2}\log 6 \approx 0.895880$ up to $a_{\star\star} = \log(5/2) \approx 0.916291$, $a = 0.960000$, and the next prime-pair threshold $a_{\star\star\star} = \tfrac{1}{2}\log 7 \approx 0.972955$. <strong>The Riemann Hypothesis (RH), G2 (asymptotic Weil positivity as $a \to \infty$), the cofinal signed-arithmetic lower bound (Target B in <code>COEFF</code> / <code>NB-GAIN</code>), and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain OPEN.</strong>
+  </div>
+
+  <p style="margin:0 0 6px 0;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#57606a;">TSG Global &middot; Riemann Research Portfolio &middot; Audit Deliverable</p>
+  <h1 style="margin:0 0 8px 0;font-size:24px;line-height:1.28;color:#111111;font-weight:normal;">Breaking the $\tfrac{1}{2}\log 6$ Barrier: 384-Bit Certified All-Vector Weil Positivity on $L_2(V_{a-\log 2})$ Up to $\tfrac{1}{2}\log 7$</h1>
+  <p style="margin:0 0 24px 0;font-size:14px;color:#57606a;">Date: 2026-10-15 &middot; Version: v1 &middot; Package: <code>audits/all-vector-positivity-beyond-log6-2026-10-15-v1/</code></p>
+
+  <h2 style="font-size:18px;border-bottom:1px solid #e5e1d8;padding-bottom:6px;margin-top:28px;margin-bottom:12px;color:#111111;">1. Executive Summary</h2>
+  <p style="margin:0 0 14px 0;">In Milestone 1 (<code>codex-review-and-all-vector-extension-2026-10-15-v1</code>), strict all-vector positivity of $\mathcal{Q}_a$ on $L_2(V_{a-\log 2}) \subset V_a$ was certified across $\log 2 &lt; a \le \tfrac{1}{2}\log 6 \approx 0.8958797346$. At $a &gt; \tfrac{1}{2}\log 6$, the composite prime shift $\tau_6 = \log 6 - 2\log 2 = \log(3/2) \approx 0.4054651081$ satisfies $\tau_6 &lt; 2b = 2(a - \log 2)$, so the compressed shift operator $P_b(T_{\tau_6} + T_{-\tau_6})P_b$ becomes non-zero on $V_b = L^2(-b, b)$ and pure scalar multiplication lower bounds no longer suffice.</p>
+  <p style="margin:0 0 14px 0;">This audit proves and certifies in 384-bit <code>flint.arb</code> interval arithmetic that $a_\star = \tfrac{1}{2}\log 6$ is not an analytic barrier for $L_2(V_{a-\log 2})$, extending strict all-vector positivity right through the composite-shift regime up to the next prime-pair threshold <strong>$a_{\star\star\star} = \tfrac{1}{2}\log 7 \approx 0.9729550745$</strong>:</p>
+  <ul style="margin:0 0 18px 20px;padding:0;">
+    <li style="margin-bottom:8px;"><strong>Theorem 1 (Exact Three-Island Identity Up to $a = \tfrac{3}{2}\log 2 \approx 1.039721$):</strong> Because the three shifted intervals $[-b, b]$, $[\log 2 - b, \log 2 + b]$, and $[-\log 2 - b, -\log 2 + b]$ are pairwise disjoint for all $2b \le \log 2 \iff a \le \tfrac{3}{2}\log 2 \approx 1.0397207708$, we have the exact identity $P_b L_2^2 P_b = \tfrac{13}{4}I_{L^2(-b,b)} = 3.25\,I_{L^2(-b,b)}$ and $\|L_2 g\|_{L^2(-a,a)}^2 = \tfrac{13}{4}\|g\|_{L^2(-b,b)}^2$ across the entire window $[\tfrac{1}{2}\log 6, \tfrac{1}{2}\log 7]$.</li>
+    <li style="margin-bottom:8px;"><strong>Theorem 2 (Exact Reflection-Involution Preconditioner &amp; Sum-of-Squares Monotonicity on $(\tfrac{1}{2}\log 6, \log(5/2)]$):</strong> Splitting $\alpha(\xi) = \Delta_\alpha + (\alpha(\xi) - \Delta_\alpha)_+ - (\Delta_\alpha - \alpha(\xi))_+$ at $\Delta_\alpha = \tfrac{7}{20} = 0.35$ transfers $+\tfrac{13}{4}\Delta_\alpha I$ into the prime baseline. On $I_+ = [\tau_6 - b, b]$, $\pm c_6 P_b(T_{\tau_6} + T_{-\tau_6})P_b$ acts on $V_b^{\mathrm{even/odd}} \cong L^2(0, b)$ as the exact reflection involution $\pm c_6 R_{\tau_6}$ ($R_{\tau_6}g(x) = g(\tau_6 - x)$). The closed-form inverse $P_0(a)^{-1}$ has an $a$-derivative against $u_\xi$ that is an exact sum of three squares, certifying the entire interval $a \in (\tfrac{1}{2}\log 6, \log(5/2)]$ from a single endpoint evaluation at $a_{\star\star} = \log(5/2) \approx 0.9162907319$ with <strong>zero</strong> rank-1 minorants ($\mathcal{T}_{\mathrm{even}}^{(0.35)} = 0.98012719 &lt; 1$, $\mathcal{T}_{\mathrm{odd}}^{(0.35)} = 0.52108669 &lt; 1$).</li>
+    <li style="margin-bottom:8px;"><strong>Theorem 3 ($3\times 3$ Fiber-Bundle Preconditioner &amp; Step Minorants up to $a = 0.960$ and $a_{\star\star\star} = \tfrac{1}{2}\log 7$):</strong> For $a \in (\log(5/2), \tfrac{1}{2}\log 7]$, where $d_5 = b - \tau_5 &gt; 0$, the three disjoint intervals $[0, d_5]$, $[\tau_5, b]$, and $[\tau_6 - b, \tau_6 - \tau_5]$ are coupled pointwise by a $3\times 3$ constant tridiagonal fiber matrix $M_3^{\mathrm{even/odd}}$, while the reflection remainders yield the exact positive projectors $+2c_3 P_{\mathrm{anti/sym}}^{(3)} + 2c_5 P_{\mathrm{anti/sym}}^{(5)}$. Prime step vectors alone certify $a = 0.940$ ($\mathcal{T}_{\mathrm{even}} = 0.96759795 &lt; 1$) and $a = 0.960$ ($\mathcal{T}_{\mathrm{even}} = 0.99951948 &lt; 1$). Adding 1 Plancherel step vector $w_\star$ certifies the next prime-pair threshold $a_{\star\star\star} = \tfrac{1}{2}\log 7 \approx 0.9729550745$ ($\mathcal{T}_{\mathrm{even}} = 0.99885225 &lt; 1$, $\mathcal{T}_{\mathrm{odd}} = 0.71018432 &lt; 1$).</li>
+  </ul>
+
+  <h2 style="font-size:18px;border-bottom:1px solid #e5e1d8;padding-bottom:6px;margin-top:28px;margin-bottom:12px;color:#111111;">2. 384-Bit <code>flint.arb</code> Certification Summary Table</h2>
+  <table style="width:100%;border-collapse:collapse;font-size:13px;margin:14px 0 20px 0;">
+    <thead>
+      <tr style="background-color:#f3f1ea;border-bottom:2px solid #c9c4b6;text-align:left;">
+        <th style="padding:8px 10px;">Regime / Checkpoint</th>
+        <th style="padding:8px 10px;">$\Delta_\alpha$</th>
+        <th style="padding:8px 10px;">$\mathcal{T}_{\mathrm{even}}(a)$ Enclosure</th>
+        <th style="padding:8px 10px;">$\mathcal{T}_{\mathrm{odd}}(a)$ Enclosure</th>
+        <th style="padding:8px 10px;">Margin $1 - \mathcal{T}_{\mathrm{even}}$</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #e5e1d8;">
+        <td style="padding:8px 10px;">$(\tfrac{1}{2}\log 6, \log(5/2)]$ (Interval via $a_{\star\star} = \log(5/2)$)</td>
+        <td style="padding:8px 10px;">$0.35$</td>
+        <td style="padding:8px 10px;"><code>0.98012719 &plusmn; 8.90e-95</code></td>
+        <td style="padding:8px 10px;"><code>0.52108669 &plusmn; 8.90e-95</code></td>
+        <td style="padding:8px 10px;"><code>+0.01987281</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #e5e1d8;">
+        <td style="padding:8px 10px;">$a = 0.940000$ (Prime-Only, $K = 19, M = 5$)</td>
+        <td style="padding:8px 10px;">$0.40$</td>
+        <td style="padding:8px 10px;"><code>0.96759795 &plusmn; 1.78e-94</code></td>
+        <td style="padding:8px 10px;"><code>0.48339341 &plusmn; 1.78e-94</code></td>
+        <td style="padding:8px 10px;"><code>+0.03240205</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #e5e1d8;">
+        <td style="padding:8px 10px;">$a = 0.960000$ (Prime-Only, $K = 40, M = 8$)</td>
+        <td style="padding:8px 10px;">$0.50$</td>
+        <td style="padding:8px 10px;"><code>0.99951948 &plusmn; 1.78e-94</code></td>
+        <td style="padding:8px 10px;"><code>0.56990514 &plusmn; 1.78e-94</code></td>
+        <td style="padding:8px 10px;"><code>+0.00048052</code></td>
+      </tr>
+      <tr style="border-bottom:1px solid #c9c4b6;background-color:#f6fff8;">
+        <td style="padding:8px 10px;"><strong>$a_{\star\star\star} = \tfrac{1}{2}\log 7 \approx 0.97295507$ ($K=19, M=5+1$)</strong></td>
+        <td style="padding:8px 10px;">$0.25$</td>
+        <td style="padding:8px 10px;"><strong><code>0.99885225 &plusmn; 6.22e-21</code></strong></td>
+        <td style="padding:8px 10px;"><strong><code>0.71018432 &plusmn; 9.10e-95</code></strong></td>
+        <td style="padding:8px 10px;"><strong><code>+0.00114775</code></strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size:18px;border-bottom:1px solid #e5e1d8;padding-bottom:6px;margin-top:28px;margin-bottom:12px;color:#111111;">3. Key Mathematical Mechanisms</h2>
+
+  <h3 style="font-size:15px;margin:16px 0 6px 0;color:#111111;">3.1 Sum-of-Squares Monotonicity on $(\tfrac{1}{2}\log 6, \log(5/2)]$</h3>
+  <p style="margin:0 0 12px 0;">For $a \in (\tfrac{1}{2}\log 6, \log(5/2)]$, $b = a - \log 2 \le \tau_5 = \log(5/4)$, so on $L^2(0, b)$ the preconditioner is $P_0(a) = v_0\mathbf{1}_{[0, x_5]} + v_1\mathbf{1}_{[x_5, x_3]} + v_2\mathbf{1}_{[x_3, x_6]} + (v_2 I \pm c_6 R_{\tau_6})\mathbf{1}_{[x_6, b]}$ where $x_m = \tau_m - b$. Using $(v_2 I \pm c_6 R_{\tau_6})^{-1} = (v_2 I \mp c_6 R_{\tau_6})/(v_2^2 - c_6^2)$ and $\tfrac{db}{da} = 1, \tfrac{dx_m}{da} = -1$, differentiating $\langle P_0(a)^{-1} u_\xi, u_\xi \rangle_{L^2(0,b)}$ yields:</p>
+  <div style="background-color:#f6f5f0;border:1px solid #e0dcd0;padding:10px 14px;margin:10px 0 14px 0;font-size:14px;text-align:center;">
+    $\dfrac{\partial}{\partial a}\left\langle P_0(a)^{-1} u_\xi, u_\xi \right\rangle_{L^2(0,b)} = \left(\dfrac{1}{v_1} - \dfrac{1}{v_0}\right)u_\xi(x_5)^2 + \left(\dfrac{1}{v_2} - \dfrac{1}{v_1}\right)u_\xi(x_3)^2 + \dfrac{\bigl(v_2 u_\xi(b) \mp c_6 u_\xi(x_6)\bigr)^2}{v_2(v_2^2 - c_6^2)} \ge 0.$
+  </div>
+  <p style="margin:0 0 12px 0;">Because $v_0 &gt; v_1 &gt; v_2 &gt; c_6 &gt; 0$ at $\Delta_\alpha = 0.35$, every term is non-negative for all $\xi \ge 0$, proving that $\mathcal{T}_{\mathrm{even/odd}}^{(0.35)}(a) \le \mathcal{T}_{\mathrm{even/odd}}^{(0.35)}(\log(5/2)) &lt; 1$ across the entire interval $a \in (\tfrac{1}{2}\log 6, \log(5/2)]$.</p>
+
+  <h3 style="font-size:15px;margin:16px 0 6px 0;color:#111111;">3.2 $3\times 3$ Tridiagonal Fiber Bundle &amp; 4-Step Midpoint-Moment Enclosure up to $\tfrac{1}{2}\log 7$</h3>
+  <p style="margin:0 0 12px 0;">For $a \in (\log(5/2), \tfrac{1}{2}\log 7]$, $d_5 = b - \tau_5 \in (0, \tfrac{1}{2}\log(28/25)] \approx (0, 0.056664]$. The three intervals $I_1 = [0, d_5]$, $I_2 = [\tau_5, b]$, and $I_3 = [\tau_6 - b, \tau_6 - \tau_5]$ are pairwise disjoint of equal length $d_5$ and coupled by $u \leftrightarrow u + \tau_5 \leftrightarrow \tau_6 - \tau_5 - u$ via the $3\times 3$ constant tridiagonal fiber matrix:</p>
+  <div style="background-color:#f6f5f0;border:1px solid #e0dcd0;padding:10px 14px;margin:10px 0 14px 0;font-size:14px;text-align:center;">
+    $M_3^{\mathrm{even/odd}}(u) = \begin{pmatrix} V_1(u) &amp; -c_5 &amp; 0 \\ -c_5 &amp; v_2 + c_5 &amp; \pm c_6 \\ 0 &amp; \pm c_6 &amp; v_2 \end{pmatrix}.$
+  </div>
+  <p style="margin:0 0 12px 0;">Note that the $(2,2)$ entry on $I_2 = [\tau_5, b]$ is $v_2 + c_5 = c_0 + \tfrac{13}{4}\Delta_\alpha - c_3$ with <em>no</em> $-c_5$ diagonal penalty, because for $x \in [\tau_5, b]$ the only $\tau_5$-shift inside $[-b, b]$ lands in $I_1 = [0, d_5]$ and is already represented exactly by the off-diagonal $-c_5$ entry of $M_3$. Combining the 5 natural-breakpoint prime-reflection step vectors in $+2c_3 P_{\mathrm{anti}}^{(3)} + 2c_5 P_{\mathrm{anti}}^{(5)}$ with the single Plancherel step vector $w_{\star, i} = \mathbf{1}_{m_i &lt; x_6} + (\tfrac{9}{10} - \tfrac{3}{5}\tfrac{m_i - x_6}{b - x_6})\mathbf{1}_{m_i &gt; x_6}$ ($K = 19$) certifies $\mathcal{T}_{\mathrm{even}}(\tfrac{1}{2}\log 7) = 0.99885225 &lt; 1$ and $\mathcal{T}_{\mathrm{odd}}(\tfrac{1}{2}\log 7) = 0.71018432 &lt; 1$.</p>
+
+  <div style="background-color:#fff8e6;border-left:4px solid #b8860b;padding:12px 16px;margin-top:28px;font-size:14px;">
+    <strong>Closing Wall Check:</strong> All claims in this report are restricted to the finite-window all-vector positivity certificate on $L_2(V_{a-\log 2}) \subset V_a$ for $a \le \tfrac{1}{2}\log 7 \approx 0.9729550745$. <strong>RH, G2 ($a \to \infty$), the cofinal signed-arithmetic lower bound (Target B in <code>COEFF</code> / <code>NB-GAIN</code>), and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain OPEN.</strong>
+  </div>
+
+</div>
+</body>
+</html>

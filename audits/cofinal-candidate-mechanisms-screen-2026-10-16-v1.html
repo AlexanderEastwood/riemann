@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two-Precision Candidate-Mechanism Screen Across WEIL-FLOOR, KERNEL-API &amp; NB-GAIN (2026-10-16 v1)</title>
+</head>
+<body style="margin: 0; padding: 32px 18px 64px 18px; background-color: #fbfaf7; color: #1f1f1c; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px; line-height: 1.62;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #dfd9cd; border-radius: 6px; padding: 32px 34px; box-sizing: border-box;">
+
+    <!-- Mandatory Top Wall Check -->
+    <div style="background-color: #fdf6e9; border-left: 4px solid #b5651d; padding: 14px 16px; margin-bottom: 24px; font-size: 14.5px; line-height: 1.55;">
+      <strong>Wall check:</strong> Same open gap. Closest results: <code>WEIL-FLOOR</code>, <code>NS24/39/43</code>, <code>NB-GAIN</code> (<code>NS53/61/87/98</code>), and <code>ZERO-GEOMETRY</code> (<code>NS100/101</code>). We still need a bound that remains valid as the window grows (<i>b</i> &rarr; &infin; or <i>N</i> &rarr; &infin;), retaining every signed arithmetic contribution and coupling. <code>RH</code>, <code>G2</code>, and both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. <code>M17 v2</code> remains <strong>PAUSED</strong>.
+    </div>
+
+    <div style="font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.08em; color: #6a665d; margin-bottom: 6px;">
+      Bounded Two-Precision Candidate Screen &bull; WEIL-FLOOR / KERNEL-API / NB-GAIN &bull; 2026-10-16 &bull; Version 1
+    </div>
+    <h1 style="font-size: 23px; line-height: 1.28; margin: 0 0 10px 0; font-weight: bold; color: #161614;">
+      Two-Precision (<code>256</code>-Bit &amp; <code>384</code>-Bit <code>flint.arb</code>/<code>flint.acb</code>) Candidate-Mechanism Screen &amp; Exact Analytic Identities
+    </h1>
+    <p style="margin: 0 0 18px 0; font-size: 14px; color: #545149;">
+      Package: <code>audits/cofinal-candidate-mechanisms-screen-2026-10-16-v1/</code> &bull;
+      Verifier: <code>verify_cofinal_candidate_mechanisms.py</code> &bull;
+      <code>payload_sha256</code>: <code>704a4ddb150737a74e4843a6828c51f1118dee84a18317fef7ab4e3798b16f3a</code> &bull;
+      <code>file_sha256</code>: <code>60c5eac8b991ada6185d6e60057aa57c8e6a6e19ddc834a4b9972292d6f4a303</code> &bull;
+      Ball overlaps: <code>120 / 120</code> passed
+    </p>
+
+    <hr style="border: none; border-top: 1px solid #e3ded3; margin: 20px 0;" />
+
+    <!-- Section 1 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      1. Executive Summary &amp; Two New Exact Analytic Identities
+    </h2>
+    <p style="margin: 0 0 12px 0;">
+      Following the two pre-computation 5-item arithmetic-lemma assessments
+      (<code>audits/nb-full-residual-arithmetic-assessment-2026-10-16-v1.html</code> for Candidates <strong>A</strong>, <strong>B</strong>, <strong>C</strong> in <code>NB-GAIN</code> and
+      <code>audits/weil-floor-cofinal-arithmetic-assessment-2026-10-16-v1.html</code> for Candidates <strong>I</strong>, <strong>II/IIb</strong>, <strong>III</strong> in <code>WEIL-FLOOR</code> and <code>KERNEL-API</code>),
+      this report documents a self-contained, deterministic two-precision (<code>256</code>-bit and <code>384</code>-bit <code>flint.arb</code>/<code>flint.acb</code>, zero <code>numpy</code>/<code>scipy</code>/<code>mpmath</code> imports) verification and diagnostic screen of all six candidate mechanisms.
+    </p>
+    <p style="margin: 0 0 12px 0;">
+      In addition to testing the six mechanisms against their exact remaining obstructions, we prove and certify at both precisions two new exact analytic identities in <code>WEIL-FLOOR</code>:
+    </p>
+    <ol style="margin: 0 0 16px 0; padding-left: 22px;">
+      <li style="margin-bottom: 10px;">
+        <strong>Theorem 1 (Boundary-Free Dual-Pole Chebyshev&ndash;Legendre Identity in Both Parities):</strong>
+        For all Legendre indices <i>m</i> &equiv; <i>n</i> (mod 2) (both even and odd parities simultaneously) and every half-width <i>a</i> &gt; 0, the polar operator entry
+        (<i>T</i><sub>pole</sub>(<i>a</i>))<sub><i>m</i>,<i>n</i></sub> (+2<i>c<sub>m</sub></i>(<i>a</i>)<i>c<sub>n</sub></i>(<i>a</i>) on <i>V</i><sup>even</sup>, &minus;2<i>s<sub>m</sub></i>(<i>a</i>)<i>s<sub>n</sub></i>(<i>a</i>) on <i>V</i><sup>odd</sup>) equals
+        &int;<sub>1</sub><sup><i>e</i><sup>2<i>a</i></sup></sup> <i>x</i><sup>&minus;1/2</sup> 2<i>C&#771;</i><sub><i>m</i>,<i>n</i></sub>((log <i>x</i>)/<i>a</i>) <i>d</i>(<i>x</i> + log <i>x</i> &minus; 1).
+        Because <i>R&#771;</i><sub>&psi;</sub>(1) := &psi;(1) &minus; 1 &minus; log 1 + 1 = 0 at <i>u</i> = 0 and <i>C&#771;</i><sub><i>m</i>,<i>n</i></sub>(2) = 0 at <i>u</i> = 2, Stieltjes integration by parts has <strong>identically zero boundary terms at both endpoints</strong>:
+        <div style="background-color: #f7f4ec; border: 1px solid #e1dbce; border-radius: 4px; padding: 10px 12px; margin: 8px 0; font-size: 14.5px; text-align: center;">
+          (<i>T</i><sub>arith</sub>(<i>a</i>) &minus; <i>T</i><sub>pole</sub>(<i>a</i>))<sub><i>m</i>,<i>n</i></sub>
+          &nbsp;=&nbsp;
+          &int;<sub>0</sub><sup>2</sup>
+          [(&psi;(<i>e</i><sup><i>au</i></sup>) &minus; <i>e</i><sup><i>au</i></sup> &minus; <i>au</i> + 1) / <i>e</i><sup><i>au</i>/2</sup>]
+          &middot;
+          (<i>a</i> <i>C&#771;</i><sub><i>m</i>,<i>n</i></sub>(<i>u</i>) &minus; 2 <i>C&#771;</i>&prime;<sub><i>m</i>,<i>n</i></sub>(<i>u</i>)) <i>du</i>.
+        </div>
+      </li>
+      <li style="margin-bottom: 6px;">
+        <strong>Theorem 2 (Closed-Form Odd Pole Moment of the Position-Weighted Radical <i>x h</i>(<i>x</i>) vs. Critical-Zero Derivative &Xi;&prime;(&gamma;<sub>1</sub>)):</strong>
+        While the even Gaussian arithmetic radical <i>h</i>(<i>x</i>) and all its spatial translates <i>h</i>(<i>x</i> &minus; &tau;) vanish identically at every critical-line zero &rho;<sub><i>k</i></sub> = 1/2 + <i>i</i>&gamma;<sub><i>k</i></sub> (&Xi;(&gamma;<sub><i>k</i></sub>) = 0), differentiating the Mellin identity <code>eq:v150-mellin</code> at <i>z</i> = 1/2 + <i>i</i>&gamma;<sub>1</sub> and <i>z</i> = 1 proves that the odd position-weighted radical <i>f</i><sub>pos</sub>(<i>x</i>) := <i>x h</i>(<i>x</i>) has non-zero critical-zero coupling &minus;(2/&radic;3)&Xi;&prime;(&gamma;<sub>1</sub>) (&Xi;&prime;(&gamma;<sub>1</sub>) = &minus;0.0013827190892&hellip; &ne; 0) and exact closed-form odd pole moment:
+        <div style="background-color: #f7f4ec; border: 1px solid #e1dbce; border-radius: 4px; padding: 10px 12px; margin: 8px 0; font-size: 14.5px; text-align: center;">
+          &int;<sub>&real;</sub> <i>x</i> sinh(<i>x</i>/2) <i>h</i>(<i>x</i>) <i>dx</i>
+          &nbsp;=&nbsp;
+          (1 / &radic;3) &middot; [1 + (&gamma;<sub><i>E</i></sub> &minus; log(4&pi;)) / 2]
+          &nbsp;=&nbsp;
+          +0.01333431378871523222883&hellip; &gt; 0.
+        </div>
+      </li>
+    </ol>
+
+    <!-- Section 2 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      2. Certified Verification of Theorem 1 (<code>.contains(0)</code> at <code>256</code>-Bit &amp; <code>384</code>-Bit)
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      Table 1 summarizes the 8 benchmark pairs (<i>m</i>, <i>n</i>) (4 even, 4 odd) at &lambda; = 5 (<i>a</i> = log 5, 13 active prime-power shifts <i>k</i> &le; 23), comparing the direct prime-power sum minus Bessel pole matrix entry (LHS) against the boundary-free Chebyshev&ndash;Legendre integral (RHS):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 7px 8px; text-align: left;">Pair (<i>m</i>,<i>n</i>)</th>
+          <th style="padding: 7px 8px; text-align: left;">Parity</th>
+          <th style="padding: 7px 8px; text-align: right;">Direct LHS = (<i>T</i><sub>arith</sub> &minus; <i>T</i><sub>pole</sub>)<sub><i>m</i>,<i>n</i></sub></th>
+          <th style="padding: 7px 8px; text-align: right;">Boundary-Free Integral RHS</th>
+          <th style="padding: 7px 8px; text-align: right;">256-Bit |LHS &minus; RHS| Rad</th>
+          <th style="padding: 7px 8px; text-align: center;"><code>.contains(0)</code></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(0,0)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;3.226631998261226</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;3.226631998261226</td>
+          <td style="padding: 6px 8px; text-align: right;">4.04 &times; 10<sup>&minus;74</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(0,2)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.363351778191214</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.363351778191214</td>
+          <td style="padding: 6px 8px; text-align: right;">1.21 &times; 10<sup>&minus;72</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(2,4)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.281211159163931</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.281211159163931</td>
+          <td style="padding: 6px 8px; text-align: right;">7.54 &times; 10<sup>&minus;70</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(4,4)</code></td>
+          <td style="padding: 6px 8px;">even</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.406447338097766</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.406447338097766</td>
+          <td style="padding: 6px 8px; text-align: right;">1.31 &times; 10<sup>&minus;65</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(1,1)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;1.478069459373286</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;1.478069459373286</td>
+          <td style="padding: 6px 8px; text-align: right;">6.95 &times; 10<sup>&minus;73</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(1,3)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.346721558001673</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.346721558001673</td>
+          <td style="padding: 6px 8px; text-align: right;">1.93 &times; 10<sup>&minus;71</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 8px;"><code>(3,3)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.572549218687149</td>
+          <td style="padding: 6px 8px; text-align: right;">&minus;0.572549218687149</td>
+          <td style="padding: 6px 8px; text-align: right;">6.70 &times; 10<sup>&minus;69</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 8px;"><code>(3,5)</code></td>
+          <td style="padding: 6px 8px;">odd</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.264731248954138</td>
+          <td style="padding: 6px 8px; text-align: right;">+0.264731248954138</td>
+          <td style="padding: 6px 8px; text-align: right;">8.80 &times; 10<sup>&minus;68</sup></td>
+          <td style="padding: 6px 8px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 3 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      3. Candidates I, II/IIb &amp; III Across Benchmark Windows &lambda; &isin; {2, 3, 5, 8} (<code>WEIL-FLOOR</code> &amp; <code>KERNEL-API</code>)
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      On the 8-mode even and odd Legendre subspaces <i>V</i><sub>8</sub><sup>even</sup>(&minus;<i>a</i>,<i>a</i>) (degrees 0, 2, &hellip;, 14) and <i>V</i><sub>8</sub><sup>odd</sup>(&minus;<i>a</i>,<i>a</i>) (degrees 1, 3, &hellip;, 15), the <strong>unpreconditioned, unshifted</strong> Weil operator
+      W<sub>&lambda;</sub> = <i>A</i><sub>arch</sub><sup>full</sup>(<i>a</i>) + <i>T</i><sub>pole</sub>(<i>a</i>) &minus; <i>T</i><sub>arith</sub>(<i>a</i>)
+      is certified strictly positive definite via ball Cholesky factorization across all four benchmark windows &lambda; &isin; {2, 3, 5, 8} (up to 26 prime-power shifts, <i>k</i> &le; 61):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 6px; text-align: left;">&lambda; (<i>a</i> = log &lambda;)</th>
+          <th style="padding: 6px 6px; text-align: right;">Shifts</th>
+          <th style="padding: 6px 6px; text-align: right;">Unshifted Even 8&times;8 Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">Unshifted Odd 8&times;8 Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">Shifted Schur 4&times;4 (<i>C</i><sub>*</sub>=8) Min Piv</th>
+          <th style="padding: 6px 6px; text-align: right;">M17 Triangle Bound &Sigma;2&Lambda;/&radic;<i>k</i></th>
+          <th style="padding: 6px 6px; text-align: right;">Actual Tail &Vert;<i>T</i><sub>arith</sub><sup>[4,7]</sup>&Vert;<sub><i>F</i></sub></th>
+          <th style="padding: 6px 6px; text-align: right;">Cancel Factor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=2</code> (0.6931)</td>
+          <td style="padding: 6px 6px; text-align: right;">2</td>
+          <td style="padding: 6px 6px; text-align: right;">5.0647 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">7.7286 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.93784</td>
+          <td style="padding: 6px 6px; text-align: right;">2.24883</td>
+          <td style="padding: 6px 6px; text-align: right;">0.62642</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">3.59&times;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=3</code> (1.0986)</td>
+          <td style="padding: 6px 6px; text-align: right;">6</td>
+          <td style="padding: 6px 6px; text-align: right;">1.4512 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">4.3598 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.92830</td>
+          <td style="padding: 6px 6px; text-align: right;">6.34260</td>
+          <td style="padding: 6px 6px; text-align: right;">1.31326</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">4.83&times;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=5</code> (1.6094)</td>
+          <td style="padding: 6px 6px; text-align: right;">13</td>
+          <td style="padding: 6px 6px; text-align: right;">2.5785 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">5.4353 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.89252</td>
+          <td style="padding: 6px 6px; text-align: right;">14.32325</td>
+          <td style="padding: 6px 6px; text-align: right;">0.90492</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">15.83&times;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 6px;"><code>&lambda;=8</code> (2.0794)</td>
+          <td style="padding: 6px 6px; text-align: right;">26</td>
+          <td style="padding: 6px 6px; text-align: right;">3.0705 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">9.1999 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.87591</td>
+          <td style="padding: 6px 6px; text-align: right;">26.49768</td>
+          <td style="padding: 6px 6px; text-align: right;">0.49848</td>
+          <td style="padding: 6px 6px; text-align: right; font-weight: bold;">53.16&times;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin: 0 0 10px 0;">
+      Table 3 summarizes the <strong>Candidate II / IIb</strong> radical test vectors (even radical <i>h</i>(<i>x</i>), odd derivative <i>h</i>&prime;(<i>x</i>), and odd position-weighted radical <i>x h</i>(<i>x</i>)) and the <strong>Candidate III</strong> <code>NS57</code> perturbation shift (&delta;<sub>2</sub> = &minus;(log 2)/100, stability ceiling 2|&delta;<sub>2</sub>| = 0.01386294):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 6px; text-align: left;">&lambda;</th>
+          <th style="padding: 6px 6px; text-align: right;"><i>h</i>(<i>x</i>) RQ</th>
+          <th style="padding: 6px 6px; text-align: right;"><i>h</i>&prime;(<i>x</i>) RQ</th>
+          <th style="padding: 6px 6px; text-align: right;"><i>x h</i>(<i>x</i>) RQ</th>
+          <th style="padding: 6px 6px; text-align: right;"><i>x h</i>(<i>x</i>) Rel Residual &Vert;W(<i>xh</i>)&Vert;/&Vert;<i>xh</i>&Vert;</th>
+          <th style="padding: 6px 6px; text-align: right;">NS57 Shift |&Delta;&lambda;<sub>min</sub>|</th>
+          <th style="padding: 6px 6px; text-align: right;">Ceiling 2|&delta;<sub>2</sub>|</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=2</code></td>
+          <td style="padding: 6px 6px; text-align: right;">1.722 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">5.977 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">6.029 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.02803</td>
+          <td style="padding: 6px 6px; text-align: right;">0.003793</td>
+          <td style="padding: 6px 6px; text-align: right;">0.013863</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=3</code></td>
+          <td style="padding: 6px 6px; text-align: right;">1.105 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">3.172 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">4.625 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.03181</td>
+          <td style="padding: 6px 6px; text-align: right;">0.009768</td>
+          <td style="padding: 6px 6px; text-align: right;">0.013863</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>&lambda;=5</code></td>
+          <td style="padding: 6px 6px; text-align: right;">4.519 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">4.733 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">7.630 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.11185</td>
+          <td style="padding: 6px 6px; text-align: right;">0.011386</td>
+          <td style="padding: 6px 6px; text-align: right;">0.013863</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 6px;"><code>&lambda;=8</code></td>
+          <td style="padding: 6px 6px; text-align: right;">3.755 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">1.887 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.223 &times; 10<sup>&minus;2</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.11555</td>
+          <td style="padding: 6px 6px; text-align: right;">0.012110</td>
+          <td style="padding: 6px 6px; text-align: right;">0.013863</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 4 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      4. Candidates A, B &amp; C Across Dyadic Steps <i>N</i> &isin; {4, 8, 16, 32} (<code>NB-GAIN</code>)
+    </h2>
+    <p style="margin: 0 0 10px 0;">
+      Using the exact <code>Kernel</code> from <code>evidence/v159/ns61/certify_smoothed.py</code> at <i>k</i> = 2 (degree-7 smooth cutoff &Psi;<sub>2</sub>), Table 4 certifies the three <code>NB-GAIN</code> candidate diagnostics across <i>N</i> &isin; {4, 8, 16, 32} (with invariant critical-zero Mellin modulus |<i>M</i><sub>2</sub>(&rho;<sub>1</sub>)| = 3.51692412 &times; 10<sup>&minus;4</sup> and 50-pair <code>NS83</code> floor <i>C</i><sub>2,50</sub> = 7.40794193 &times; 10<sup>&minus;5</sup>):
+    </p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0 18px 0;">
+      <thead>
+        <tr style="background-color: #f3efe4; border-bottom: 2px solid #cfc8b8;">
+          <th style="padding: 6px 6px; text-align: left;"><i>N</i></th>
+          <th style="padding: 6px 6px; text-align: right;"><i>E<sub>N</sub></i><sup>(2)</sup></th>
+          <th style="padding: 6px 6px; text-align: right;">(log <i>N</i>) <i>E<sub>N</sub></i><sup>(2)</sup></th>
+          <th style="padding: 6px 6px; text-align: right;">Step Rate (log <i>N</i>/log 2)(&Delta;<sub><i>N</i></sub>/<i>E<sub>N</sub></i><sup>(2)</sup>)</th>
+          <th style="padding: 6px 6px; text-align: right;">tr(<i>H<sub>N</sub></i>) / tr(<i>D<sub>N</sub></i>)</th>
+          <th style="padding: 6px 6px; text-align: right;">&Vert;<i>h<sub>N</sub></i>&Vert;<sub>2</sub><sup>2</sup> / &Vert;<i>b</i><sub>new</sub>&Vert;<sub>2</sub><sup>2</sup></th>
+          <th style="padding: 6px 6px; text-align: center;">Cand A (&beta;=1/2 &amp; NS74)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>4</code></td>
+          <td style="padding: 6px 6px; text-align: right;">2.12969 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.95238 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">1.8975</td>
+          <td style="padding: 6px 6px; text-align: right;">6.835 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">6.656 &times; 10<sup>&minus;6</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>8</code></td>
+          <td style="padding: 6px 6px; text-align: right;">1.09109 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.26886 &times; 10<sup>&minus;4</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.1216</td>
+          <td style="padding: 6px 6px; text-align: right;">5.463 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">1.746 &times; 10<sup>&minus;7</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e6e1d6;">
+          <td style="padding: 6px 6px;"><code>16</code></td>
+          <td style="padding: 6px 6px; text-align: right;">3.19477 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">8.85778 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.9491</td>
+          <td style="padding: 6px 6px; text-align: right;">4.721 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.365 &times; 10<sup>&minus;9</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #cfc8b8;">
+          <td style="padding: 6px 6px;"><code>32</code></td>
+          <td style="padding: 6px 6px; text-align: right;">2.43670 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">8.44495 &times; 10<sup>&minus;5</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">0.9456</td>
+          <td style="padding: 6px 6px; text-align: right;">4.307 &times; 10<sup>&minus;3</sup></td>
+          <td style="padding: 6px 6px; text-align: right;">2.051 &times; 10<sup>&minus;9</sup></td>
+          <td style="padding: 6px 6px; text-align: center; color: #1b6535; font-weight: bold;">PASS</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Section 5 -->
+    <h2 style="font-size: 18.5px; margin: 24px 0 10px 0; color: #1c1b18;">
+      5. Summary Disposition of the Six Screened Candidate Mechanisms
+    </h2>
+    <ul style="margin: 0 0 20px 0; padding-left: 22px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Candidate I (<code>WEIL-FLOOR</code> Legendre Tail Shell &amp; Boundary-Free Pole Cancellation):</strong>
+        <em>Exact finite-window identity &amp; 53.16&times; tail cancellation certified; cofinal transfer OPEN.</em>
+        Theorem 1 eliminates the dominant <i>e<sup>au</sup></i> pole and all boundary terms in both parities, and 8&times;8 unpreconditioned positivity holds through &lambda; = 8, but bounding the oscillatory Chebyshev remainder &psi;(<i>e<sup>au</sup></i>) &minus; <i>e<sup>au</sup></i> uniformly as <i>a</i> &rarr; &infin; still requires a non-circular prime-sum or zero-free region input.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Candidates II &amp; IIb (<code>WEIL-FLOOR</code> Radical Screening vs. Position-Weighted <i>x h</i>(<i>x</i>)):</strong>
+        <em>Closed-form odd pole moment (+0.01333431&hellip;) &amp; &Xi;&prime;(&gamma;<sub>1</sub>) coupling certified; commutator obstruction quantified.</em>
+        While <i>x h</i>(<i>x</i>) overcomes the &Xi;(&gamma;<sub><i>k</i></sub>) = 0 screening of translated radicals, the non-vanishing commutator [W, <i>x</i>] &ne; 0 produces a relative residual of 0.11555 at &lambda; = 8.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Candidate III (<code>WEIL-FLOOR</code> / <code>KERNEL-API</code> Multiprime Codimension &amp; <code>NS57</code> Stability):</strong>
+        <em>Stability ceiling |&Delta;&lambda;<sub>min</sub>| &le; 2|&delta;<sub>2</sub>| certified across &lambda; &isin; {2, 3, 5, 8}.</em>
+        Confirms that any cofinal proof must exploit the global joint rigid structure of {log <i>p</i>} rather than local single-shift inequalities.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Candidates A, B &amp; C (<code>NB-GAIN</code> Full Projected Residual):</strong>
+        <em>Exact Stieltjes&ndash;divisor identity, 1/log <i>N</i> envelope convergence toward <i>C</i><sub>2,50</sub>, 232&times; inverse-Gram trace suppression, and 4.88 &times; 10<sup>8</sup>&times; old-space refit cancellation certified across <i>N</i> &isin; {4, 8, 16, 32}; cofinal decrease to 0 remains OPEN.</em>
+      </li>
+    </ul>
+
+    <!-- Mandatory Bottom Wall Check -->
+    <div style="background-color: #fdf6e9; border-left: 4px solid #b5651d; padding: 14px 16px; margin-top: 24px; font-size: 14.5px; line-height: 1.55;">
+      <strong>Wall check:</strong> Same open gap. Closest results: <code>WEIL-FLOOR</code>, <code>NS24/39/43</code>, <code>NB-GAIN</code> (<code>NS53/61/87/98</code>), and <code>ZERO-GEOMETRY</code> (<code>NS100/101</code>). We still need a bound that remains valid as the window grows (<i>b</i> &rarr; &infin; or <i>N</i> &rarr; &infin;), retaining every signed arithmetic contribution and coupling. <code>RH</code>, <code>G2</code>, and both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Four Steps Audit (v2) — 256-Bit Pure-flint.arb Certificates, Stieltjes–Divisor Extractor vs. NS-74, and Single-Point Wronskian Obstruction (2026-10-15, v2)</title>
+</head>
+<body style="margin:0; padding:28px 16px; background-color:#f8f9fa; color:#1f2328; font-family:Georgia, 'Times New Roman', Times, serif; line-height:1.62; font-size:16px;">
+<div style="max-width:680px; margin:0 auto; background-color:#ffffff; border:1px solid #d0d7de; border-radius:6px; padding:32px 36px; box-sizing:border-box;">
+
+  <div style="border-bottom:2px solid #1f2328; padding-bottom:14px; margin-bottom:22px;">
+    <div style="font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#57606a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin-bottom:6px;">
+      Riemann Hypothesis Repository Audit &bull; 2026-10-15 &bull; Version 2 (Pure-<code>flint</code> Bounded Repair)
+    </div>
+    <h1 style="margin:0 0 8px 0; font-size:24px; line-height:1.28; font-weight:normal; color:#111111;">
+      Next Four Steps Audit: 256-Bit <code style="font-size:19px;">flint.arb</code> Interior Certificates, Exact Stieltjes&ndash;Divisor Dual Identity vs. <code style="font-size:19px;">NS-74</code>, and Single-Point Wronskian Obstruction
+    </h1>
+    <div style="font-size:13px; color:#57606a;">
+      Worktree: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:12px; background:#f6f8fa; padding:2px 5px; border-radius:3px;">/Users/alex/riemann-worktrees/origin-main-review</code>
+      (branch <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:12px; background:#f6f8fa; padding:2px 5px; border-radius:3px;">codex/four-lane-audit-20261014</code>) &bull; Prior HTML preserved at <code>next-four-steps-2026-10-15-v1.html</code>
+    </div>
+  </div>
+
+  <div style="background-color:#f6f8fa; border-left:4px solid #0969da; padding:14px 16px; margin-bottom:24px; font-size:14px;">
+    <p style="margin:0 0 8px 0;">
+      <strong>Wall check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, and <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">ZERO-GEOMETRY</code>.</strong>
+      Closest results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-57</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-92</code> (<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>),
+      <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-61</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-71</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-72</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-74</code> (<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>), and
+      <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-98</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-101</code> (<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">ZERO-GEOMETRY</code>).
+    </p>
+    <p style="margin:0 0 8px 0;">
+      <strong>What changes (including Version 2 Pure-<code>flint</code> Bounded Repair):</strong>
+      (1) Upgrades both the <em>infinite-dimensional all-vector positivity floor</em> on <em>V</em><sub><em>a</em>&minus;log 2</sub> across the Three-Island window log 2 &lt; <em>a</em> &le; &frac12; log 5 and the <em>2-mode even interior separation of <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-57</code></em> at <em>a</em> = log 3 to 256-bit rigorous <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">flint.arb</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">flint.acb.integral</code> ball certificates;
+      (2) proves an exact Stieltjes&ndash;Divisor dual identity in the <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-61</code> Hilbert space <em>H</em> = <em>L</em><sup>2</sup>(0,&infin;; <em>dx</em>) with an unconditional Bessel bound and an exact orthogonal splitting of the <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-74</code> control across <em>N</em> &isin; {4, 8, 16, 32, 64};
+      (3) proves in the jet ring &rationals;[&phi;, &phi;&prime;, &phi;&Prime;, &phi;&prime;&prime;&prime;] why single-point denominator clearing of &phi;(<em>u</em>)<sup>2</sup> in <em>P</em><sub>1</sub>(<em>u</em>) or &phi;(<em>u</em>)<sup>3</sup> in <em>J</em><sub>PS</sub>(<em>u</em>) yields a vertical-line frequency convolution with identical strict negativity on RH-true kernels and on <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-101</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">Davenport&ndash;Heilbronn</code>, now verified in 256-bit <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">flint.acb.integral</code> with zero <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">mpmath</code> dependencies (<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">file_sha256 = 4fc3060e2784270cec004dffb9f737ff068876cb5c2712d7c475d119a2ed73a6</code>).
+    </p>
+    <p style="margin:0;">
+      <strong>Explicit open-status disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h2 style="font-size:19px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:28px; margin-bottom:14px;">
+    1. Part 1 (<code style="font-size:16px;">KERNEL-API</code>): 256-Bit <code style="font-size:16px;">flint.arb</code> Certificate for the Three-Island All-Vector Floor &amp; <code style="font-size:16px;">NS-57</code> Separation at <em>a</em> = log 3
+  </h2>
+
+  <p style="margin:0 0 12px 0;">
+    Let <em>L</em><sub>2</sub> := &frac32; <em>I</em> &minus; 2<sup>&minus;1/2</sup>(<em>T</em><sub>log 2</sub> + <em>T</em><sub>&minus;log 2</sub>) : <em>V</em><sub><em>a</em>&minus;log 2</sub> &rarr; <em>V</em><sub><em>a</em></sub> with symbol &sigma;(<em>L</em><sub>2</sub>)(&xi;) = &frac32; &minus; &radic;2 cos(&xi; log 2). On the Three-Island window log 2 &lt; <em>a</em> &le; &frac12; log 5 (<em>b</em> = <em>a</em> &minus; log 2 &le; &frac12; log(5/4) &approx; 0.11157178 &lt; &frac12; log 2):
+  </p>
+
+  <ul style="margin:0 0 16px 0; padding-left:22px;">
+    <li style="margin-bottom:8px;">
+      <strong>Exact Three-Island Isometric Norm &amp; Prime Identities (Theorem 1A):</strong>
+      Because 2<em>b</em> &le; log(5/4) &lt; log 2, the three shifted supports [&minus;<em>b</em>, <em>b</em>] and &plusmn;log 2 + [&minus;<em>b</em>, <em>b</em>] are pairwise disjoint, and every odd prime power <em>q</em><sup><em>m</em></sup> &ge; 3 misses (&minus;2<em>b</em>, 2<em>b</em>) + {0, &plusmn;log 2, &plusmn;2 log 2}. Hence for <strong>every</strong> <em>g</em> &isin; <em>V</em><sub><em>a</em>&minus;log 2</sub>:
+      <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:9px 12px; margin:8px 0; font-size:14px; text-align:center;">
+        &Vert;<em>L</em><sub>2</sub> <em>g</em>&Vert;<sub><em>L</em><sup>2</sup>(&minus;<em>a</em>,<em>a</em>)</sub><sup>2</sup> &equiv; &frac{13}{4} &Vert;<em>g</em>&Vert;<sub><em>L</em><sup>2</sup>(&minus;<em>b</em>,<em>b</em>)</sub><sup>2</sup>,
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <em>q</em><sub>prime</sub>[<em>L</em><sub>2</sub> <em>g</em>] &equiv; &frac{5 log 2}{2} &Vert;<em>g</em>&Vert;<sub><em>L</em><sup>2</sup>(&minus;<em>b</em>,<em>b</em>)</sub><sup>2</sup>.
+      </div>
+    </li>
+    <li style="margin-bottom:8px;">
+      <strong>256-Bit <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">flint.arb</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">flint.acb.integral</code> All-Vector Coercivity Certificate:</strong>
+      Enclosing the unique positive root &xi;<sub>0</sub> of &alpha;(&xi;) = Re &psi;(&frac14; + <em>i</em>&xi;/2) &minus; log &pi; = 0 and the negative-lobe integral <em>I</em><sub>neg</sub> = &int;<sub>0</sub><sup>&xi;<sub>0</sub></sup> (&minus;&alpha;(&xi;)) &sigma;(<em>L</em><sub>2</sub>)(&xi;)<sup>2</sup> <em>d</em>&xi; gives:
+      <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 12px; margin:8px 0; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:12px;">
+        &xi;<sub>0</sub> &isin; [6.28983598883690277966509010082 &plusmn; 1.86e-30]<br>
+        <em>I</em><sub>neg</sub> &isin; [11.4184589828592816234524254312 &plusmn; 3.79e-29]<br>
+        <em>C</em><sub>low</sub> = (2/&pi;)<em>I</em><sub>neg</sub> &isin; [7.26921675845644026397839556004 &plusmn; 1.63e-30]
+      </div>
+      By Cauchy&ndash;Schwarz |<em>g&#770;</em>(&xi;)|<sup>2</sup> &le; 2<em>b</em> &Vert;<em>g</em>&Vert;<sub>2</sub><sup>2</sup>, <strong>every</strong> non-zero <em>g</em> &isin; <em>V</em><sub><em>a</em>&minus;log 2</sub> on log 2 &lt; <em>a</em> &le; &frac12; log 5 satisfies:
+      <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 12px; margin:8px 0; font-size:14px; text-align:center;">
+        <em>q</em>[<em>L</em><sub>2</sub> <em>g</em>] &ge; [0.921828530022494182737893324410 &plusmn; 3.17&times;10<sup>&minus;31</sup>] &Vert;<em>g</em>&Vert;<sub>2</sub><sup>2</sup>
+        = [0.283639547699228979303967176742 &plusmn; 3.65&times;10<sup>&minus;31</sup>] &Vert;<em>L</em><sub>2</sub> <em>g</em>&Vert;<sub>2</sub><sup>2</sup> &gt; 0.
+      </div>
+    </li>
+    <li style="margin-bottom:4px;">
+      <strong>256-Bit <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">flint.arb</code> Separation of <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">NS-57</code> at <em>a</em> = log 3 (Theorem 1B):</strong>
+      With the proved Plancherel short-interval bound (Lemma 1.1) on [0, 2<sup>&minus;60</sup>] and piecewise <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">flint.acb.integral</code> quadrature across all smooth subintervals of [2<sup>&minus;60</sup>, 2<em>a</em>], the 2&times;2 even interior matrices and rational witness <em>g</em><sub>&starf;</sub> = <em>g</em><sub>1</sub><sup>+</sup> + (3/25)<em>g</em><sub>2</sub><sup>+</sup> &isin; <em>H</em><sub>0</sub><sup>1</sup>(&minus;log(3/2), log(3/2)) are rigorously enclosed across all five checkpoints:
+    </li>
+  </ul>
+
+  <table style="width:100%; border-collapse:collapse; margin:12px 0 22px 0; font-size:12px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
+    <thead>
+      <tr style="background-color:#f6f8fa; border-bottom:2px solid #d0d7de;">
+        <th style="padding:7px 6px; text-align:left;">Checkpoint <em>a</em></th>
+        <th style="padding:7px 6px; text-align:right;">det <em>M</em><sub>orig</sub>(<em>a</em>)</th>
+        <th style="padding:7px 6px; text-align:right;">&lambda;<sub>min</sub>(<em>M</em><sub>orig</sub>)</th>
+        <th style="padding:7px 6px; text-align:right;">det <em>M</em><sub>NS57</sub>(<em>a</em>)</th>
+        <th style="padding:7px 6px; text-align:right;"><em>q</em><sub>orig</sub>[<em>L</em><sub>2</sub><em>g</em><sub>&starf;</sub>]</th>
+        <th style="padding:7px 6px; text-align:right;"><em>q&#771;</em><sub>NS57</sub>[<em>L</em><sub>2</sub><em>g</em><sub>&starf;</sub>]</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:6px;">0.75 (Sub-window I)</td>
+        <td style="padding:6px; text-align:right;">+43.345320</td>
+        <td style="padding:6px; text-align:right;">+4.468678</td>
+        <td style="padding:6px; text-align:right;">+42.929521</td>
+        <td style="padding:6px; text-align:right;">+4.994744</td>
+        <td style="padding:6px; text-align:right;">+4.964913</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:6px;">&frac12; log 5 &approx; 0.804719</td>
+        <td style="padding:6px; text-align:right;">+19.092382</td>
+        <td style="padding:6px; text-align:right;">+2.540472</td>
+        <td style="padding:6px; text-align:right;">+18.797530</td>
+        <td style="padding:6px; text-align:right;">+2.993094</td>
+        <td style="padding:6px; text-align:right;">+2.963263</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:6px;">0.90 (Sub-window II)</td>
+        <td style="padding:6px; text-align:right;">+3.567818</td>
+        <td style="padding:6px; text-align:right;">+0.660645</td>
+        <td style="padding:6px; text-align:right;">+3.390438</td>
+        <td style="padding:6px; text-align:right;">+1.197710</td>
+        <td style="padding:6px; text-align:right;">+1.167879</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:6px;">&frac12; log 7 &approx; 0.972955</td>
+        <td style="padding:6px; text-align:right;">+0.613096</td>
+        <td style="padding:6px; text-align:right;">+0.105789</td>
+        <td style="padding:6px; text-align:right;">+0.440419</td>
+        <td style="padding:6px; text-align:right;">+0.357070</td>
+        <td style="padding:6px; text-align:right;">+0.327239</td>
+      </tr>
+      <tr style="border-bottom:1px solid #d0d7de; background-color:#f0fdf4;">
+        <td style="padding:6px;"><strong>log 3 &approx; 1.098612</strong></td>
+        <td style="padding:6px; text-align:right;"><strong>+0.0087990</strong></td>
+        <td style="padding:6px; text-align:right;"><strong>+0.0023040</strong></td>
+        <td style="padding:6px; text-align:right; color:#b91c1c;"><strong>&minus;0.1019773</strong></td>
+        <td style="padding:6px; text-align:right;"><strong>+0.0023403</strong></td>
+        <td style="padding:6px; text-align:right; color:#b91c1c;"><strong>&minus;0.0272615</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size:19px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:28px; margin-bottom:14px;">
+    2. Part 2 (<code style="font-size:16px;">NB-GAIN</code> / <code style="font-size:16px;">COEFF</code>): Exact Stieltjes&ndash;Divisor Dual Identity in <code style="font-size:16px;">NS-61</code> Hilbert Space &amp; <code style="font-size:16px;">NS-74</code> Diagnostic
+  </h2>
+
+  <p style="margin:0 0 12px 0;">
+    In the <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">NS-61</code> Hilbert space <em>H</em> = <em>L</em><sup>2</sup>(0,&infin;; <em>dx</em>) with smoothed atoms &sigma;<sub><em>r</em></sub>(<em>x</em>) = (<em>J</em>&rho;<sub><em>r</em></sub>)(<em>x</em>) (satisfying &sigma;<sub><em>r</em></sub>&prime;(<em>x</em>) = &minus;&rho;<sub><em>r</em></sub>(<em>x</em>)/<em>x</em>) and target &tau;(<em>x</em>) = (&minus;log <em>x</em>)<strong>1</strong><sub>(0,1)</sub>(<em>x</em>), let &psi;&#771; &isin; <em>H</em><sub>0</sub><sup>2</sup>([1, 2]) satisfy &int;<sub>1</sub><sup>2</sup> &psi;&#771;(<em>u</em>) <em>du</em> = 0, set <em>F</em><sub><em>b</em></sub>(<em>x</em>) := &psi;&#771;(1/(<em>Nx</em>))<strong>1</strong><sub>[1/(2<em>N</em>), 1/<em>N</em>]</sub>(<em>x</em>), and define the compactly supported dual extractor:
+  </p>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 14px 0; font-size:14px; text-align:center;">
+    &Lambda;<sub><em>b</em></sub>(<em>x</em>) := &frac{d}{dx}\Bigl(x F<sub>b</sub>&prime;(x)\Bigr)\mathbf{1}_{[1/(2N), 1/N]}(x) &isin; H,
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &Vert;&Lambda;<sub><em>b</em></sub>&Vert;<sub><em>H</em></sub><sup>2</sup> = <em>C</em><sub>&psi;&#771;</sub> <em>N</em><sup>3</sup>,
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <em>C</em><sub>&psi;&#771;<sub>7</sub></sub> = &frac{5132}{12155} &approx; 0.42221308.
+  </div>
+
+  <p style="margin:0 0 12px 0;">
+    <strong>Theorem 2A (Three-Way Exact Identity &amp; Unconditional Bessel Bound):</strong>
+    Integrating by parts twice on [1/(2<em>N</em>), 1/<em>N</em>] proves &langle;&Lambda;<sub><em>b</em></sub>, &tau;&rangle;<sub><em>H</em></sub> = 0 and gives exact rational inner products &lambda;<sub>new,<em>n</em></sub> = &langle;&Lambda;<sub><em>b</em></sub>, &sigma;<sub><em>n</em></sub>&rangle;<sub><em>H</em></sub> = &psi;&#771;(<em>n</em>/<em>N</em>) (<em>N</em> &lt; <em>n</em> &lt; 2<em>N</em>), &lambda;<sub>new,2<em>N</em></sub> = 0, and &lambda;<sub>old,<em>m</em></sub> = &langle;&Lambda;<sub><em>b</em></sub>, &sigma;<sub><em>m</em></sub>&rangle;<sub><em>H</em></sub> = &sum;<sub><em>k</em>&ge;2, <em>N</em>&lt;<em>km</em>&lt;2<em>N</em></sub> &psi;&#771;(<em>km</em>/<em>N</em>). Consequently, the Schur-projected pairing, the block-update pairing, and the Dirichlet divisor-update sum are <strong>identically equal</strong>:
+  </p>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 14px 0; font-size:14px; text-align:center;">
+    <em>M</em><sub><em>N</em></sub>(<em>u</em>, <em>y</em>) := &lambda;&#771;<sub>proj</sub><sup><em>T</em></sup> (<em>S</em><sup>(2)</sup>)<sup>&minus;1</sup> <em>h</em><sup>(2)</sup>
+    = &lambda;<sub>new</sub><sup><em>T</em></sup> <em>y</em> + &lambda;<sub>old</sub><sup><em>T</em></sup> <em>u</em>
+    = &sum;<sub><em>n</em>=<em>N</em>+1</sub><sup>2<em>N</em>&minus;1</sup> &psi;&#771;(<em>n</em>/<em>N</em>) &Bigl(<em>y</em><sub><em>n</em></sub> + &sum;<sub><em>m</em>|<em>n</em>, <em>m</em>&le;<em>N</em></sub> <em>u</em><sub><em>m</em></sub>&Bigr)
+    = &sum;<sub><em>n</em>=<em>N</em>+1</sub><sup>2<em>N</em>&minus;1</sup> &psi;&#771;(<em>n</em>/<em>N</em>) (1 &lowast; &Delta;<em>c</em>)(<em>n</em>),
+  </div>
+
+  <p style="margin:0 0 12px 0;">
+    with unconditional Bessel inequality &lambda;&#771;<sub>proj</sub><sup><em>T</em></sup>(<em>S</em><sup>(2)</sup>)<sup>&minus;1</sup>&lambda;&#771;<sub>proj</sub> = &Vert;(&Pi;<sub>2<em>N</em></sub> &minus; &Pi;<sub><em>N</em></sub>)&Lambda;<sub><em>b</em></sub>&Vert;<sub><em>H</em></sub><sup>2</sup> &le; &Vert;&Lambda;<sub><em>b</em></sub>&Vert;<sub><em>H</em></sub><sup>2</sup> = <em>C</em><sub>&psi;&#771;</sub> <em>N</em><sup>3</sup> (empirically scaling only as &sim;0.0127 <em>N</em> at <em>N</em> = 64).
+  </p>
+
+  <p style="margin:0 0 12px 0;">
+    <strong>Theorem 2B (Exact Orthogonal Splitting of <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">NS-74</code>):</strong>
+    In <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">NS-74</code>, the altered target decomposes orthogonally as <em>U</em><sub>&beta;</sub><sup>&lowast;</sup>&tau; = <em>P</em><sub><em>T</em></sub>(<em>U</em><sub>&beta;</sub><sup>&lowast;</sup>&tau;) &oplus; &tau;<sub>&beta;</sub><sup>&perp;</sup> where &tau;<sub>&beta;</sub><sup>&perp;</sup>(<em>x</em>) = &minus;<em>c</em><sub>&beta;</sub>(<em>x</em><sup>&minus;&beta;</sup> &minus; &beta;<sup>&minus;1</sup><em>x</em><sup>&minus;1</sup>)<strong>1</strong><sub><em>x</em>&gt;1</sub> is orthogonal to <em>all</em> atoms &sigma;<sub><em>n</em></sub> (<em>n</em> &ge; 1) and carries the exact floor &Vert;&tau;<sub>&beta;</sub><sup>&perp;</sup>&Vert;<sub><em>H</em></sub><sup>2</sup> = <em>F</em><sub>&beta;</sub> = (2&beta;&minus;1)(1&minus;&beta;)<sup>2</sup>/&beta;<sup>6</sup> &gt; 0. Therefore, the solved coefficients (<em>u</em>, <em>y</em>) and <em>M</em><sub><em>N</em></sub>(<em>u</em>, <em>y</em>) depend only on the removable in-space projection <em>P</em><sub><em>T</em></sub>(<em>U</em><sub>&beta;</sub><sup>&lowast;</sup>&tau;), so <em>M</em><sub><em>N</em></sub><sup>2</sup>/(&Vert;(&Pi;<sub>2<em>N</em></sub>&minus;&Pi;<sub><em>N</em></sub>)&Lambda;<sub><em>b</em></sub>&Vert;<sub><em>H</em></sub><sup>2</sup> &Delta;<sub><em>N</em></sub>) stays near 31.03% at <em>N</em> = 64 across all three families, whereas the ratio against the <em>unsplit</em> residual <em>E</em><sub><em>N</em></sub><sup>(2)</sup>(&beta;) = <em>E</em><sub><em>N</em>,rem</sub><sup>(2)</sup>(&beta;) + <em>F</em><sub>&beta;</sub> collapses once <em>E</em><sub><em>N</em>,rem</sub><sup>(2)</sup>(&beta;) &ll; <em>F</em><sub>&beta;</sub>:
+  </p>
+
+  <table style="width:100%; border-collapse:collapse; margin:12px 0 22px 0; font-size:12px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
+    <thead>
+      <tr style="background-color:#f6f8fa; border-bottom:2px solid #d0d7de;">
+        <th style="padding:6px 5px; text-align:left;">Family</th>
+        <th style="padding:6px 5px; text-align:right;"><em>N</em></th>
+        <th style="padding:6px 5px; text-align:right;"><em>E</em><sub><em>N</em></sub><sup>(2)</sup></th>
+        <th style="padding:6px 5px; text-align:right;"><em>M</em><sub><em>N</em></sub>(<em>u</em>,<em>y</em>)</th>
+        <th style="padding:6px 5px; text-align:right;">Rayleigh / &Delta;<sub><em>N</em></sub></th>
+        <th style="padding:6px 5px; text-align:right;">Rayleigh / <em>E</em><sub><em>N</em>,rem</sub><sup>(2)</sup></th>
+        <th style="padding:6px 5px; text-align:right;">Rayleigh / <em>E</em><sub><em>N</em></sub><sup>(2)</sup></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px;">Original (&beta; = 1/2, <em>F</em><sub>&beta;</sub> = 0)</td>
+        <td style="padding:5px; text-align:right;">8</td>
+        <td style="padding:5px; text-align:right;">1.0911e-4</td>
+        <td style="padding:5px; text-align:right;">+6.1913e-4</td>
+        <td style="padding:5px; text-align:right;">0.011190</td>
+        <td style="padding:5px; text-align:right;">7.9133e-3</td>
+        <td style="padding:5px; text-align:right;">7.9133e-3</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px;">Original (&beta; = 1/2, <em>F</em><sub>&beta;</sub> = 0)</td>
+        <td style="padding:5px; text-align:right;">32</td>
+        <td style="padding:5px; text-align:right;">2.4367e-5</td>
+        <td style="padding:5px; text-align:right;">&minus;3.6077e-4</td>
+        <td style="padding:5px; text-align:right;">0.052369</td>
+        <td style="padding:5px; text-align:right;">9.9045e-3</td>
+        <td style="padding:5px; text-align:right;">9.9045e-3</td>
+      </tr>
+      <tr style="border-bottom:1px solid #d0d7de; background-color:#f0fdf4;">
+        <td style="padding:5px;"><strong>Original (&beta; = 1/2, <em>F</em><sub>&beta;</sub> = 0)</strong></td>
+        <td style="padding:5px; text-align:right;"><strong>64</strong></td>
+        <td style="padding:5px; text-align:right;"><strong>1.9758e-5</strong></td>
+        <td style="padding:5px; text-align:right;"><strong>+9.0678e-4</strong></td>
+        <td style="padding:5px; text-align:right;"><strong>0.310292</strong></td>
+        <td style="padding:5px; text-align:right;"><strong>5.1261e-2</strong></td>
+        <td style="padding:5px; text-align:right;"><strong>5.1261e-2</strong></td>
+      </tr>
+      <tr style="border-bottom:1px solid #eaeef2;">
+        <td style="padding:5px;"><code style="font-size:11px;">NS-74</code> (&beta; = 0.5 + 10<sup>&minus;6</sup>, <em>F</em><sub>&beta;</sub> = 3.20e-5)</td>
+        <td style="padding:5px; text-align:right;">64</td>
+        <td style="padding:5px; text-align:right;">5.1759e-5</td>
+        <td style="padding:5px; text-align:right;">+9.0679e-4</td>
+        <td style="padding:5px; text-align:right;">0.310289</td>
+        <td style="padding:5px; text-align:right;">5.1260e-2</td>
+        <td style="padding:5px; text-align:right; color:#9a3412;">1.9569e-2</td>
+      </tr>
+      <tr style="border-bottom:1px solid #d0d7de;">
+        <td style="padding:5px;"><code style="font-size:11px;">NS-74</code> (&beta; = 0.51, <em>F</em><sub>&beta;</sub> = 0.27290)</td>
+        <td style="padding:5px; text-align:right;">64</td>
+        <td style="padding:5px; text-align:right;">0.273546</td>
+        <td style="padding:5px; text-align:right;">+9.9276e-4</td>
+        <td style="padding:5px; text-align:right;">0.285080</td>
+        <td style="padding:5px; text-align:right;">1.8753e-3</td>
+        <td style="padding:5px; text-align:right; color:#b91c1c;"><strong>4.4381e-6</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 style="font-size:19px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:28px; margin-bottom:14px;">
+    3. Part 3 (<code style="font-size:16px;">ZERO-GEOMETRY</code>): Single-Point Wronskian &amp; Cubic Integrating-Factor Obstruction
+  </h2>
+
+  <p style="margin:0 0 12px 0;">
+    <strong>Theorem 3A (Gauge-Invariant Single-Point Wronskian Parseval Identity):</strong>
+    Clearing &phi;(<em>u</em>)<sup>2</sup> in <em>P</em><sub>1</sub>(<em>u</em>) = (&phi;&Prime;&phi; &minus; (&phi;&prime;)<sup>2</sup>)/(4&phi;<sup>2</sup>) at a <em>single coordinate</em> <em>u</em> produces the quadratic Wronskian <em>W</em><sub>2</sub>[&phi;](<em>u</em>) = 4&phi;(<em>u</em>)<sup>2</sup><em>P</em><sub>1</sub>(<em>u</em>) = &phi;&Prime;(<em>u</em>)&phi;(<em>u</em>) &minus; (&phi;&prime;(<em>u</em>))<sup>2</sup>. Because (log(&phi;(<em>u</em>)<em>e</em><sup><em>zu</em></sup>))&Prime; = (log &phi;)&Prime;(<em>u</em>), setting &psi;<sub><em>x</em></sub>(<em>u</em>) = &phi;(<em>u</em>)<em>e</em><sup><em>xu</em></sup> gives for every real <em>x</em> &isin; &reals;:
+  </p>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 14px 0; font-size:14px; text-align:center;">
+    &int;<sub>&reals;</sub> 4&phi;(<em>u</em>)<sup>2</sup><em>P</em><sub>1</sub>(<em>u</em>) <em>e</em><sup>2<em>xu</em></sup> <em>du</em>
+    = &minus;2 &int;<sub>&reals;</sub> |(&phi;(<em>u</em>)<em>e</em><sup><em>xu</em></sup>)&prime;|<sup>2</sup> <em>du</em>
+    = &minus;&frac{1}{&pi;} &int;<sub>&reals;</sub> &tau;<sup>2</sup> |<em>f</em>(<em>x</em> + <em>i</em>&tau;)|<sup>2</sup> <em>d</em>&tau; &lt; 0
+  </div>
+
+  <p style="margin:0 0 12px 0;">
+    for <strong>every</strong> non-zero real kernel &phi; (verified in 256-bit <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">flint.acb.integral</code>: &minus;2.48555436 on the RH-true Gaussian-cosh kernel, &minus;6.88232152 on the RH-false <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">NS-101</code> control, and <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">sampled-pass</code> on <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size:13px;">Davenport&ndash;Heilbronn</code>).
+  </p>
+
+  <p style="margin:0 0 16px 0;">
+    <strong>Theorem 3B (Cubic Jet-Ring Normal Form of 8&phi;(<em>u</em>)<sup>3</sup><em>J</em><sub>PS</sub>(<em>u</em>)):</strong>
+    In &rationals;[<em>c</em><sub>1</sub>,<em>c</em><sub>2</sub>,<em>c</em><sub>3</sub>][&phi;,&phi;&prime;,&phi;&Prime;,&phi;&prime;&prime;&prime;], multiplying the Planat&ndash;Sol&eacute; Jacobi polynomial <em>J</em><sub>PS</sub> by 8&phi;(<em>u</em>)<sup>3</sup> yields the exact decomposition:
+  </p>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 22px 0; font-size:14px; text-align:center;">
+    8&phi;(<em>u</em>)<sup>3</sup><em>J</em><sub>PS</sub>(<em>u</em>)
+    = &Bigl(&frac13; &part;<sub><em>u</em></sub><sup>3</sup> &minus; &frac{8<em>c</em><sub>1</sub>}{3} &part;<sub><em>u</em></sub><sup>2</sup> + &frac{4<em>c</em><sub>2</sub>}{3} &part;<sub><em>u</em></sub> + 8<em>c</em><sub>3</sub>&Bigr)(&phi;(<em>u</em>)<sup>3</sup>)
+    + &frac32; &part;<sub><em>u</em></sub>\Bigl((&phi;&prime;(<em>u</em>))<sup>2</sup>&phi;(<em>u</em>)\Bigr)
+    &minus; &frac{19}{2} (&phi;&prime;(<em>u</em>))<sup>3</sup>,
+  </div>
+
+  <p style="margin:0 0 18px 0;">
+    whose Laplace transform is a 3-fold frequency convolution (<em>f</em> &lowast; <em>f</em> &lowast; <em>f</em>) plus an irreducible cubic non-divergence remainder &minus;(19/2)(&phi;&prime;)<sup>3</sup>, never a pointwise functional of <em>f</em>(<em>z</em>).
+  </p>
+
+  <div style="background-color:#f6f8fa; border-top:2px solid #1f2328; padding:14px 16px; margin-top:28px; font-size:13px; color:#24292f;">
+    <p style="margin:0 0 6px 0;">
+      <strong>Closing Wall Check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">KERNEL-API</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>, and <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">ZERO-GEOMETRY</code>.</strong>
+      Closest results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-57</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-92</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-61</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-74</code>, and <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-98</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-101</code>.
+      Certificate: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">audits/next-four-steps-2026-10-15-v1/verification.json</code> (<code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">file_sha256 = 4fc3060e2784270cec004dffb9f737ff068876cb5c2712d7c475d119a2ed73a6</code>).
+    </p>
+    <p style="margin:0;">
+      <strong>Open Problems Disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

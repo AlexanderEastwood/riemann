@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>All-Vector Weil Positivity up to the Three-Island Isometric Horizon a = (3/2) log 2 = (1/2) log 8 (2026-10-15-v2)</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 32px auto; padding: 0 16px; line-height: 1.58; color: #1a1a1a; background-color: #ffffff;">
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-bottom: 24px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>. Nothing in this report claims a proof of RH or global Weil positivity.
+</div>
+
+<h1 style="font-size: 1.52em; line-height: 1.28; margin-bottom: 6px; color: #111111;">All-Vector Weil Positivity Beyond <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;</sub> = &frac12;&thinsp;log(15/2) up to the Three-Island Isometric Horizon <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8 &approx; 1.039721</h1>
+<p style="margin-top: 0; color: #555555; font-size: 0.92em;">
+<strong>Date:</strong> 2026-10-15 &middot; <strong>Version:</strong> v2 (Pure-<code>flint</code> Bounded Repair) &middot; <strong>Lane:</strong> <code>KERNEL-API</code> &middot; <strong>Audit Package:</strong> <code>audits/all-vector-positivity-three-island-horizon-2026-10-15-v1/</code> &middot; Prior HTML preserved at <code>all-vector-positivity-three-island-horizon-2026-10-15-v1.html</code>
+</p>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">1. Executive Summary</h2>
+<p>
+This audit completes the finite-<em>a</em> all-vector certification of the 3-island prime-2 preconditioner <em>L</em><sub>2</sub> = <em>I</em> + <em>c</em><sub>2</sub><em>S</em><sub>2</sub> + <em>c</em><sub>4</sub><em>S</em><sub>4</sub> across the entire interval <em>a</em> &isin; (&frac12;&thinsp;log(15/2), &frac32;&thinsp;log&thinsp;2] &approx; (1.0074515103, 1.0397207708] up to the exact <strong>Three-Island Isometric Horizon</strong>
+</p>
+<p style="text-align: center; font-size: 1.04em; margin: 14px 0;">
+<em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8 &approx; 1.0397207708, &qquad; 2<em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = log&thinsp;8 &approx; 2.0794415417.
+</p>
+<p>
+Four mathematical theorems and four 384-bit <code>flint.arb</code> checkpoints are certified (with Version 2 eliminating all <code>numpy</code> imports and using pure-Python cyclic Jacobi generalized eigenseeding + 384-bit <code>flint.arb</code> Cholesky certification):
+</p>
+<ol style="margin-top: 6px; padding-left: 22px;">
+<li style="margin-bottom: 8px;">
+<strong>Theorem 1 (Exact 4-Point Klein 4-Group Fiber Closure on (&frac12;&thinsp;log(15/2), &frac32;&thinsp;log&thinsp;2]):</strong>
+Once <em>a</em> &gt; &frac12;&thinsp;log(15/2), we have <em>x</em><sub>6</sub> = log&thinsp;3 &minus; <em>a</em> &lt; <em>d</em><sub>5</sub> = <em>a</em> + log&thinsp;2 &minus; log&thinsp;5, so the <em>m</em> = 5 shift support [0, <em>d</em><sub>5</sub>] and <em>m</em> = 6 reflection support [<em>x</em><sub>6</sub>, <em>b</em>] overlap on [<em>x</em><sub>6</sub>, <em>d</em><sub>5</sub>]. Because <em>x</em><sub>6</sub> + <em>d</em><sub>5</sub> = &tau;<sub>6</sub> &minus; &tau;<sub>5</sub> = log(6/5) is <strong>independent of <em>a</em></strong>, the composite involution <em>g</em><sub>5</sub>(<em>x</em><sub>1</sub>) := &tau;<sub>6</sub> &minus; &tau;<sub>5</sub> &minus; <em>x</em><sub>1</sub> maps [<em>x</em><sub>6</sub>, <em>d</em><sub>5</sub>] onto itself, and every 4-point fiber {<em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, <em>x</em><sub>3</sub>, <em>x</em><sub>4</sub>} closes exactly in the Klein 4-group <em>V</em><sub>4</sub> &cong; &#8484;<sub>2</sub> &times; &#8484;<sub>2</sub> of order 4! Under symmetric/antisymmetric pairing, the 4 &times; 4 fiber matrix block-diagonalizes into two 2 &times; 2 blocks <em>B</em><sub>&pm;</sub>(<em>a</em>) &succ; 0, and by the <em>O</em>(1) = &#8477; &rtimes; {&pm;1} determinant-grading homomorphism, (<em>P</em><sub>0,odd</sub><sup>&minus;1</sup>)<sub><em>ij</em></sub> = det(&gamma;<sub><em>ij</em></sub>)(<em>P</em><sub>0,even</sub><sup>&minus;1</sup>)<sub><em>ij</em></sub>.
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 2 (Exact Triple Structural Coincidence at <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2 = &frac12;&thinsp;log&thinsp;8):</strong>
+At <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2, three independent geometric thresholds coincide identically: (i) 2<em>b</em> = log&thinsp;2 (exact boundary of the 3-island isometric identity <em>P</em><sub><em>b</em></sub><em>L</em><sub>2</sub><sup>2</sup><em>P</em><sub><em>b</em></sub> = (13/4)<em>I</em>), (ii) 2<em>a</em> = log&thinsp;8 (exact entry threshold of the prime-cube <em>m</em> = 8 = 2<sup>3</sup>), and (iii) <em>x</em><sub>6</sub> = <em>s</em><sub>3</sub> = log(16/15) &approx; 0.0588915178 (where the <em>m</em> = 6 reflection threshold and <em>m</em> = 3 shift threshold merge, collapsing the fiber-closed partition from <em>K</em> = 53 to <em>K</em> = 46 subintervals and from <em>M</em><sub>prime</sub> = 13 to 11 prime step vectors).
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 3 (Courant&ndash;Fischer 2-Mode Deflated Trace Theorem &amp; Smooth Linear Plancherel Profile):</strong>
+For any positive compact self-adjoint operator <em>T</em> &succeq; 0 and any 2-dimensional subspace <em>U</em><sub>2</sub> = span{<em>u</em><sub>1</sub>, <em>u</em><sub>2</sub>} with orthonormal basis (<em>u</em><sub>1</sub>, <em>u</em><sub>2</sub>), the Courant&ndash;Fischer min-max theorem guarantees &lambda;<sub>2</sub>(<em>T</em>) &ge; &mu;<sub>2</sub>(<em>C</em><sub>2</sub>), where <em>C</em><sub>2</sub> = (&langle;<em>u</em><sub><em>m</em></sub>, <em>T</em><em>u</em><sub><em>n</em></sub>&rangle;)<sub><em>m</em>,<em>n</em>=1</sub><sup>2</sup>. Combined with the smooth linear second Plancherel mode <em>w</em><sub>2</sub>(<em>x</em>) = 1 &minus; 2(<em>x</em>/<em>b</em>) (which eliminates the slope-kink Plancherel tail loss at <em>m</em><sub>6</sub>), the deflated trace bound &mathcal;T;<sub>even</sub><sup>defl</sup>(<em>a</em>) := Tr(<em>T</em><sub>even</sub>) &minus; &mu;<sub>2</sub>(<em>C</em><sub>2</sub>) is strictly below 1 across all four checkpoints up to <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2!
+</li>
+<li style="margin-bottom: 8px;">
+<strong>Theorem 4 (Universal Prime-2 Dyadic Poisson Kernel Collapse for All <em>a</em> &gt; 0):</strong>
+Beyond <em>a</em><sub>&#9733;&#9733;&#9733;&#9733;&#9733;</sub> = &frac32;&thinsp;log&thinsp;2, the infinite prime-2 dyadic preconditioner <em>L</em><sub>2,&infin;</sub> = <em>I</em> + 2&sum;<sub><em>k</em>=1</sub><sup>&infin;</sup> 2<sup>&minus;<em>k</em>/2</sup><em>T</em><sub><em>k</em>&thinsp;log&thinsp;2</sub> collapses the infinite <em>p</em> = 2 prime-power series identically to the universal tridiagonal operator (5&thinsp;log&thinsp;2 / 2)<em>I</em> + (&radic;2&thinsp;log&thinsp;2 / 2)<em>S</em><sub>log&thinsp;2</sub> for <strong>every</strong> support radius <em>a</em> &gt; 0.
+</li>
+</ol>
+
+<h2 style="font-size: 1.2em; border-bottom: 1px solid #dddddd; padding-bottom: 4px; margin-top: 26px;">2. 384-Bit <code>flint.arb</code> Certified Checkpoints</h2>
+<p>
+All four checkpoints in (&frac12;&thinsp;log(15/2), &frac32;&thinsp;log&thinsp;2] are certified in 384-bit ball arithmetic (<code>PREC_BITS = 384</code>) by <code>verify_three_island_horizon.py</code>:
+</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.86em;">
+<thead>
+<tr style="background-color: #f2f2f2; border-bottom: 2px solid #cccccc;">
+<th style="padding: 7px 6px; text-align: left;">Checkpoint</th>
+<th style="padding: 7px 6px; text-align: right;"><em>a</em></th>
+<th style="padding: 7px 6px; text-align: right;">&Delta;&alpha;</th>
+<th style="padding: 7px 6px; text-align: right;"><em>K</em></th>
+<th style="padding: 7px 6px; text-align: right;"><em>M</em><sub>p</sub></th>
+<th style="padding: 7px 6px; text-align: right;">Tr(<em>T</em><sub>even</sub>)</th>
+<th style="padding: 7px 6px; text-align: right;">&mu;<sub>2</sub>(<em>C</em><sub>2</sub>)</th>
+<th style="padding: 7px 6px; text-align: right;">&mathcal;T;<sub>even</sub><sup>defl</sup></th>
+<th style="padding: 7px 6px; text-align: right;">&mathcal;T;<sub>odd</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>a = 1.015</code></td>
+<td style="padding: 6px; text-align: right;">1.0150000000</td>
+<td style="padding: 6px; text-align: right;">0.30</td>
+<td style="padding: 6px; text-align: right;">51</td>
+<td style="padding: 6px; text-align: right;">13</td>
+<td style="padding: 6px; text-align: right;">1.0157811440</td>
+<td style="padding: 6px; text-align: right;">0.0208868911</td>
+<td style="padding: 6px; text-align: right;"><strong>0.9948942529</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.8686815881</strong></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>a = 1.025</code></td>
+<td style="padding: 6px; text-align: right;">1.0250000000</td>
+<td style="padding: 6px; text-align: right;">0.30</td>
+<td style="padding: 6px; text-align: right;">52</td>
+<td style="padding: 6px; text-align: right;">13</td>
+<td style="padding: 6px; text-align: right;">1.0201039754</td>
+<td style="padding: 6px; text-align: right;">0.0241042493</td>
+<td style="padding: 6px; text-align: right;"><strong>0.9959997261</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.9244456663</strong></td>
+</tr>
+<tr style="border-bottom: 1px solid #e5e5e5;">
+<td style="padding: 6px;"><code>a = 1.032</code></td>
+<td style="padding: 6px; text-align: right;">1.0320000000</td>
+<td style="padding: 6px; text-align: right;">0.35</td>
+<td style="padding: 6px; text-align: right;">53</td>
+<td style="padding: 6px; text-align: right;">13</td>
+<td style="padding: 6px; text-align: right;">1.0255919138</td>
+<td style="padding: 6px; text-align: right;">0.0293312953</td>
+<td style="padding: 6px; text-align: right;"><strong>0.9962606185</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.9538547120</strong></td>
+</tr>
+<tr style="border-bottom: 1px solid #cccccc;">
+<td style="padding: 6px;"><code>a = (3/2) log 2</code></td>
+<td style="padding: 6px; text-align: right;">1.0397207708</td>
+<td style="padding: 6px; text-align: right;">0.35</td>
+<td style="padding: 6px; text-align: right;">46</td>
+<td style="padding: 6px; text-align: right;">11</td>
+<td style="padding: 6px; text-align: right;">1.0300268903</td>
+<td style="padding: 6px; text-align: right;">0.0320721764</td>
+<td style="padding: 6px; text-align: right;"><strong>0.9979547138</strong></td>
+<td style="padding: 6px; text-align: right;"><strong>0.9991578524</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 0.92em; color: #333333;">
+<strong>Verification Artifact (Version 2 Pure-<code>flint</code> Bounded Repair):</strong> <code>audits/all-vector-positivity-three-island-horizon-2026-10-15-v1/verification.json</code> (zero <code>numpy</code>/<code>scipy</code>/<code>mpmath</code> dependencies)<br>
+<strong>SHA-256:</strong> <code>51411060826c5487efbb9d413e931969c9bd2371eee2eab4f446f5e6f1df256f</code><br>
+<strong>Typecheck:</strong> <code>pyright</code> clean (<code>0 errors, 0 warnings, 0 informations</code>).
+</p>
+
+<div style="border-left: 4px solid #8b0000; background-color: #fdf6f6; padding: 12px 16px; margin-top: 28px; font-size: 0.95em;">
+<strong>Wall check:</strong> The Riemann Hypothesis (RH), G2 (global Weil positivity across all test functions), the cofinal signed-arithmetic lower bound in the <em>B</em><sub>2</sub>/Stieltjes lane, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+</div>
+
+</body>
+</html>

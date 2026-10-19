@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Mode Jacobi–Stieltjes–Divisor Extractors in NS-61 Hilbert Space &amp; Loewner Matrix Bessel Inequality (2026-10-15, v1)</title>
+</head>
+<body style="margin:0; padding:28px 16px; background-color:#f8f9fa; color:#1f2328; font-family:Georgia, 'Times New Roman', Times, serif; line-height:1.62; font-size:16px;">
+<div style="max-width:680px; margin:0 auto; background-color:#ffffff; border:1px solid #d0d7de; border-radius:6px; padding:32px 36px; box-sizing:border-box;">
+
+  <div style="border-bottom:2px solid #1f2328; padding-bottom:14px; margin-bottom:22px;">
+    <div style="font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#57606a; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin-bottom:6px;">
+      Certified Audit Report &bull; 2026-10-15 &bull; Version 1 (<code style="font-size:11px;">384-bit flint.arb + Exact Rational LDL<sup>T</sup></code>)
+    </div>
+    <h1 style="margin:0 0 8px 0; font-size:23px; line-height:1.3; font-weight:normal; color:#111111;">
+      Multi-Mode Jacobi&ndash;Stieltjes&ndash;Divisor Extractors in <code style="font-size:19px;">NS-61</code> Hilbert Space, Loewner Matrix Bessel Inequality, and Resolution of the <em>N</em> = 16 Phase-Cancellation Dip
+    </h1>
+    <div style="font-size:13px; color:#57606a;">
+      Audit directory: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">audits/multimode-dyadic-extractor-2026-10-15-v1/</code>
+    </div>
+  </div>
+
+  <div style="background-color:#f6f8fa; border-left:4px solid #0969da; padding:14px 16px; margin-bottom:24px; font-size:14px;">
+    <p style="margin:0 0 8px 0;">
+      <strong>Wall check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>.</strong>
+      Closest prior results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-61</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-71</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-72</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-74</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">codex-review-and-all-vector-extension-2026-10-15-v1</code>, and <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">coeff-specialist-brief-2026-10-15-v5.html</code>.
+      What changes in this audit:
+      (1) Constructs the complete Jacobi&ndash;Stieltjes&ndash;Divisor hierarchy &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(<em>u</em>) := (<em>u</em>&minus;1)<sup>&nu;</sup>(2&minus;<em>u</em>)<sup>&nu;</sup><em>P&#771;</em><sub><em>m</em></sub><sup>(&nu;,&nu;)</sup>(2<em>u</em>&minus;3) (&nu; &isin; {2, 3}, <em>m</em> &ge; 1), which satisfies &int;<sub>1</sub><sup>2</sup> &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(<em>u</em>) <em>du</em> = 0 <strong>identically</strong> by Jacobi orthogonality against <em>P&#771;</em><sub>0</sub><sup>(&nu;,&nu;)</sup>(<em>t</em>) = 1.
+      (2) Proves that the <em>K</em> &times; <em>K</em> full-space Gram matrix in <em>H</em> = <em>L</em><sup>2</sup>(0,&infin;; <em>dx</em>) scales <strong>purely linearly in <em>N</em></strong> (<em>G</em><sub><em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup> = <em>N</em> <em>G&#770;</em><sup>(&nu;,<em>K</em>)</sup> with exact rational entries), proves the unconditional Loewner matrix Bessel inequality 0 &prec; <em>G&#771;</em><sub>proj,<em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup> &preceq; <em>N</em> <em>G&#770;</em><sup>(&nu;,<em>K</em>)</sup>, and diagonalizes <em>G&#770;</em><sup>(&nu;,4)</sup> = <em>L</em><sub>&nu;</sub><em>D</em><sub>&nu;</sub><em>L</em><sub>&nu;</sub><sup><em>T</em></sup> over &mathbb;Q into a sum of <em>K</em> non-negative squares.
+      (3) Certifies in 384-bit <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">flint.arb</code> across <em>N</em> &isin; {4, 8, 16, 32, 64} that at <em>N</em> = 16 &mdash; where the single odd mode <em>K</em> = 1 dips to 0.0265% of &Delta;<sub>16</sub> (Rayleigh) and 0.0052% of &Delta;<sub>16</sub> (Bessel) &mdash; the 4-mode Jacobi basis increases the captured dyadic step gain by <strong>1,306.9&times; (Rayleigh: 34.57% of &Delta;<sub>16</sub>)</strong> and <strong>1,339.9&times; (Bessel: 6.97% of &Delta;<sub>16</sub>)</strong> in <em>H</em><sub>0,0</sub><sup>3</sup>([1,2]), and captures <strong>71.17% of &Delta;<sub>16</sub> (Rayleigh) / 7.21% (Bessel)</strong> in <em>H</em><sub>0,0</sub><sup>2</sup>([1,2]).
+    </p>
+    <p style="margin:0;">
+      <strong>Mandatory Open-Status Disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    1. Theorem 1: The Jacobi&ndash;Stieltjes&ndash;Divisor Hierarchy in <em>H</em><sub>0,0</sub><sup>&nu;</sup>([1, 2])
+  </h2>
+
+  <p style="margin:0 0 12px 0;">
+    Under the affine coordinate <em>t</em> := 2<em>u</em> &minus; 3 &isin; [&minus;1, 1] (<em>u</em> &isin; [1, 2]), the endpoint vanishing factor (<em>u</em> &minus; 1)<sup>&nu;</sup>(2 &minus; <em>u</em>)<sup>&nu;</sup> = 2<sup>&minus;2&nu;</sup>(1 &minus; <em>t</em><sup>2</sup>)<sup>&nu;</sup> is the exact weight of the symmetric Jacobi polynomials <em>P</em><sub><em>m</em></sub><sup>(&nu;,&nu;)</sup>(<em>t</em>). Since <em>P</em><sub>0</sub><sup>(&nu;,&nu;)</sup>(<em>t</em>) = 1, every mode <em>m</em> &ge; 1 satisfies the mean-zero condition automatically:
+  </p>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 14px 0; font-size:14px; text-align:center;">
+    &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(<em>u</em>) := (<em>u</em> &minus; 1)<sup>&nu;</sup>(2 &minus; <em>u</em>)<sup>&nu;</sup> <em>P&#771;</em><sub><em>m</em></sub><sup>(&nu;,&nu;)</sup>(2<em>u</em> &minus; 3),
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &int;<sub>1</sub><sup>2</sup> &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(<em>u</em>) <em>du</em> = 0 &nbsp;&nbsp;(&forall; <em>m</em> &ge; 1).
+  </div>
+
+  <p style="margin:0 0 12px 0;">
+    With <em>F</em><sub><em>N</em>,&nu;</sub><sup>(<em>m</em>)</sup>(<em>x</em>) := &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(1/(<em>Nx</em>))<strong>1</strong><sub>[1/(2<em>N</em>), 1/<em>N</em>]</sub>(<em>x</em>) and &Lambda;<sub><em>N</em>,&nu;</sub><sup>(<em>m</em>)</sup>(<em>x</em>) := &minus;(<em>d/dx</em>)(<em>x</em> (<em>F</em><sub><em>N</em>,&nu;</sub><sup>(<em>m</em>)</sup>)&prime;(<em>x</em>))<strong>1</strong><sub>[1/(2<em>N</em>), 1/<em>N</em>]</sub>(<em>x</em>) &isin; <em>H</em> = <em>L</em><sup>2</sup>(0,&infin;; <em>dx</em>), each mode <em>m</em> &ge; 1 satisfies &langle;&Lambda;<sub><em>N</em>,&nu;</sub><sup>(<em>m</em>)</sup>, &tau;&rangle;<sub><em>H</em></sub> = 0 and the exact three-way divisor-sum identity:
+  </p>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 14px 0; font-size:14px; text-align:center;">
+    <em>M</em><sub><em>N</em>,&nu;</sub><sup>(<em>m</em>)</sup>(<em>u</em>, <em>y</em>) := (&lambda;&#771;<sub>proj,&nu;</sub><sup>(<em>m</em>)</sup>)<sup><em>T</em></sup><em>y</em>
+    = (&lambda;<sub>new,&nu;</sub><sup>(<em>m</em>)</sup>)<sup><em>T</em></sup><em>y</em> + (&lambda;<sub>old,&nu;</sub><sup>(<em>m</em>)</sup>)<sup><em>T</em></sup><em>u</em>
+    = &sum;<sub><em>n</em>=<em>N</em>+1</sub><sup>2<em>N</em>&minus;1</sup> &psi;&#771;<sub>&nu;</sub><sup>(<em>m</em>)</sup>(<em>n</em>/<em>N</em>)&Bigl(<em>y</em><sub><em>n</em></sub> + &sum;<sub><em>d</em>|<em>n</em>, <em>d</em>&le;<em>N</em></sub> <em>u</em><sub><em>d</em></sub>&Bigr).
+  </div>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    2. Theorem 2: Exact Linear-in-<em>N</em> Rational Gram Matrix, Loewner Bessel Inequality &amp; <em>LDL</em><sup><em>T</em></sup> Diagonalization
+  </h2>
+
+  <p style="margin:0 0 12px 0;">
+    With <em>D</em><em>f</em>(<em>u</em>) := (<em>d/du</em>)(<em>u</em> <em>f</em>&prime;(<em>u</em>)), the full-space Gram matrix in <em>H</em> scales purely linearly in <em>N</em>: <em>G</em><sub><em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup> = <em>N</em> <em>G&#770;</em><sup>(&nu;,<em>K</em>)</sup>, where <em>G&#770;</em><sub><em>j</em>,<em>k</em></sub><sup>(&nu;,<em>K</em>)</sup> = &int;<sub>1</sub><sup>2</sup> <em>u</em><sup>2</sup> <em>D</em>&psi;&#771;<sub>&nu;</sub><sup>(<em>j</em>)</sup>(<em>u</em>) <em>D</em>&psi;&#771;<sub>&nu;</sub><sup>(<em>k</em>)</sup>(<em>u</em>) <em>du</em> &isin; &mathbb;Q. By Bessel&rsquo;s inequality for &Pi;<sub>2<em>N</em></sub> &minus; &Pi;<sub><em>N</em></sub>, 0 &prec; <em>G&#771;</em><sub>proj,<em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup> &preceq; <em>N</em> <em>G&#770;</em><sup>(&nu;,<em>K</em>)</sup> for all 1 &le; <em>K</em> &le; <em>N</em> &minus; 2. Exact rational Cholesky factorization <em>G&#770;</em><sup>(&nu;,4)</sup> = <em>L</em><sub>&nu;</sub><em>D</em><sub>&nu;</sub><em>L</em><sub>&nu;</sub><sup><em>T</em></sup> defines the <em>D</em>-orthogonal polynomials &phi;&#771;<sub>&nu;</sub> := <em>L</em><sub>&nu;</sub><sup>&minus;1</sup>&psi;&#771;<sub>&nu;</sub> &isin; &mathbb;Q[<em>u</em>]<sup>4</sup> with exact rational diagonal norms:
+  </p>
+
+  <ul style="margin:0 0 14px 0; padding-left:22px; font-size:14px;">
+    <li style="margin-bottom:6px;">
+      <strong><em>H</em><sub>0,0</sub><sup>3</sup>([1, 2]) (&nu; = 3):</strong>
+      <em>d</em><sub>3,1</sub> = 6904/45045 &approx; 0.153269,
+      <em>d</em><sub>3,2</sub> = 69877856/14685671 &approx; 4.758234,
+      <em>d</em><sub>3,3</sub> = 54811238229308/27278622628075 &approx; 2.009311,
+      <em>d</em><sub>3,4</sub> = 74321698811043079500/588658995773210593 &approx; 126.255947;
+      with &phi;&#771;<sub>3</sub><sup>(1)</sup> = &psi;&#771;<sub>3</sub><sup>(1)</sup> and &phi;&#771;<sub>3</sub><sup>(2)</sup> = &psi;&#771;<sub>3</sub><sup>(2)</sup> &minus; (1602/863)&psi;&#771;<sub>3</sub><sup>(1)</sup>.
+    </li>
+    <li>
+      <strong><em>H</em><sub>0,0</sub><sup>2</sup>([1, 2]) (&nu; = 2):</strong>
+      <em>d</em><sub>2,1</sub> = 4462/1155 &approx; 3.863203,
+      <em>d</em><sub>2,2</sub> = 850246088/11166155 &approx; 76.144930,
+      <em>d</em><sub>2,3</sub> = 136163193922736/20745473143395 &approx; 6.563514,
+      <em>d</em><sub>2,4</sub> = 13972789817205142528/39495836437213611 &approx; 353.778805;
+      with &phi;&#771;<sub>2</sub><sup>(1)</sup> = &psi;&#771;<sub>2</sub><sup>(1)</sup> and &phi;&#771;<sub>2</sub><sup>(2)</sup> = &psi;&#771;<sub>2</sub><sup>(2)</sup> &minus; (6432/2231)&psi;&#771;<sub>2</sub><sup>(1)</sup>.
+    </li>
+  </ul>
+
+  <div style="background:#f6f8fa; border:1px solid #d0d7de; border-radius:4px; padding:10px 14px; margin:0 0 16px 0; font-size:14px; text-align:center;">
+    &Delta;<sub><em>N</em></sub> &ge; <em>R</em><sub><em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup> := <strong>M</strong><sub><em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup>(<em>u</em>,<em>y</em>)<sup><em>T</em></sup> (<em>G&#771;</em><sub>proj,<em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup>)<sup>&minus;1</sup> <strong>M</strong><sub><em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup>(<em>u</em>,<em>y</em>)
+    &ge; <em>B</em><sub><em>N</em>,&nu;</sub><sup>(<em>K</em>)</sup> := &frac{1}{<em>N</em>} &sum;<sub><em>k</em>=1</sub><sup><em>K</em></sup> &frac{|<em>M&#771;</em><sub><em>N</em>,&nu;</sub><sup>(<em>k</em>)</sup>(<em>u</em>,<em>y</em>)|<sup>2</sup>}{<em>d</em><sub>&nu;,<em>k</em></sub>}.
+  </div>
+
+  <h2 style="font-size:18px; font-weight:normal; border-bottom:1px solid #d8dee4; padding-bottom:6px; margin-top:24px; margin-bottom:12px;">
+    3. 384-Bit <code style="font-size:15px;">flint.arb</code> Certification &amp; Resolution of the <em>N</em> = 16 Dip
+  </h2>
+
+  <table style="width:100%; border-collapse:collapse; font-size:13px; margin:0 0 16px 0;">
+    <thead>
+      <tr style="background-color:#f6f8fa; border-bottom:2px solid #d0d7de;">
+        <th style="padding:6px 6px; text-align:right;"><em>N</em></th>
+        <th style="padding:6px 6px; text-align:right;"><em>K</em></th>
+        <th style="padding:6px 6px; text-align:right;">&Delta;<sub><em>N</em></sub> / <em>E</em><sub><em>N</em></sub><sup>(2)</sup></th>
+        <th style="padding:6px 6px; text-align:right;"><em>H</em><sub>0,0</sub><sup>3</sup> <em>K</em>=1 <em>R</em>/&Delta;<sub><em>N</em></sub></th>
+        <th style="padding:6px 6px; text-align:right;"><em>H</em><sub>0,0</sub><sup>3</sup> <em>K</em>=<em>K</em><sub>max</sub> <em>R</em>/&Delta;<sub><em>N</em></sub></th>
+        <th style="padding:6px 6px; text-align:right;"><em>H</em><sub>0,0</sub><sup>3</sup> <em>K</em>=1 <em>B</em>/&Delta;<sub><em>N</em></sub></th>
+        <th style="padding:6px 6px; text-align:right;"><em>H</em><sub>0,0</sub><sup>3</sup> <em>K</em>=<em>K</em><sub>max</sub> <em>B</em>/&Delta;<sub><em>N</em></sub></th>
+        <th style="padding:6px 6px; text-align:right;"><em>H</em><sub>0,0</sub><sup>3</sup> <em>B</em><sup>(<em>K</em>)</sup>/<em>B</em><sup>(1)</sup></th>
+        <th style="padding:6px 6px; text-align:right;"><em>H</em><sub>0,0</sub><sup>2</sup> <em>K</em>=<em>K</em><sub>max</sub> <em>R</em>/&Delta;<sub><em>N</em></sub></th>
+        <th style="padding:6px 6px; text-align:right;"><em>H</em><sub>0,0</sub><sup>2</sup> <em>K</em>=<em>K</em><sub>max</sub> <em>B</em>/&Delta;<sub><em>N</em></sub></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #d8dee4;">
+        <td style="padding:6px 6px; text-align:right;">4</td>
+        <td style="padding:6px 6px; text-align:right;">2</td>
+        <td style="padding:6px 6px; text-align:right;">0.9488</td>
+        <td style="padding:6px 6px; text-align:right;">0.00475</td>
+        <td style="padding:6px 6px; text-align:right;">0.01071</td>
+        <td style="padding:6px 6px; text-align:right;">0.00112</td>
+        <td style="padding:6px 6px; text-align:right;">0.00247</td>
+        <td style="padding:6px 6px; text-align:right;"><strong>2.21&times;</strong></td>
+        <td style="padding:6px 6px; text-align:right;">0.00908</td>
+        <td style="padding:6px 6px; text-align:right;">0.00295</td>
+      </tr>
+      <tr style="border-bottom:1px solid #d8dee4;">
+        <td style="padding:6px 6px; text-align:right;">8</td>
+        <td style="padding:6px 6px; text-align:right;">4</td>
+        <td style="padding:6px 6px; text-align:right;">0.7072</td>
+        <td style="padding:6px 6px; text-align:right;">0.01119</td>
+        <td style="padding:6px 6px; text-align:right;">0.14633</td>
+        <td style="padding:6px 6px; text-align:right;">0.00405</td>
+        <td style="padding:6px 6px; text-align:right;">0.02892</td>
+        <td style="padding:6px 6px; text-align:right;"><strong>7.14&times;</strong></td>
+        <td style="padding:6px 6px; text-align:right;">0.12406</td>
+        <td style="padding:6px 6px; text-align:right;">0.02645</td>
+      </tr>
+      <tr style="border-bottom:1px solid #d8dee4; background-color:#fff8c5;">
+        <td style="padding:6px 6px; text-align:right;"><strong>16</strong></td>
+        <td style="padding:6px 6px; text-align:right;"><strong>4</strong></td>
+        <td style="padding:6px 6px; text-align:right;">0.2373</td>
+        <td style="padding:6px 6px; text-align:right;">0.00026</td>
+        <td style="padding:6px 6px; text-align:right;"><strong>0.34567</strong></td>
+        <td style="padding:6px 6px; text-align:right;">0.00005</td>
+        <td style="padding:6px 6px; text-align:right;"><strong>0.06973</strong></td>
+        <td style="padding:6px 6px; text-align:right;"><strong>1,339.9&times;</strong></td>
+        <td style="padding:6px 6px; text-align:right;"><strong>0.71167</strong></td>
+        <td style="padding:6px 6px; text-align:right;"><strong>0.07207</strong></td>
+      </tr>
+      <tr style="border-bottom:1px solid #d8dee4;">
+        <td style="padding:6px 6px; text-align:right;">32</td>
+        <td style="padding:6px 6px; text-align:right;">4</td>
+        <td style="padding:6px 6px; text-align:right;">0.1891</td>
+        <td style="padding:6px 6px; text-align:right;">0.05237</td>
+        <td style="padding:6px 6px; text-align:right;">0.11442</td>
+        <td style="padding:6px 6px; text-align:right;">0.00576</td>
+        <td style="padding:6px 6px; text-align:right;">0.01218</td>
+        <td style="padding:6px 6px; text-align:right;"><strong>2.12&times;</strong></td>
+        <td style="padding:6px 6px; text-align:right;">0.28858</td>
+        <td style="padding:6px 6px; text-align:right;">0.02633</td>
+      </tr>
+      <tr style="border-bottom:1px solid #d8dee4;">
+        <td style="padding:6px 6px; text-align:right;">64</td>
+        <td style="padding:6px 6px; text-align:right;">4</td>
+        <td style="padding:6px 6px; text-align:right;">0.1652</td>
+        <td style="padding:6px 6px; text-align:right;">0.31029</td>
+        <td style="padding:6px 6px; text-align:right;"><strong>0.59325</strong></td>
+        <td style="padding:6px 6px; text-align:right;">0.02568</td>
+        <td style="padding:6px 6px; text-align:right;"><strong>0.03762</strong></td>
+        <td style="padding:6px 6px; text-align:right;"><strong>1.46&times;</strong></td>
+        <td style="padding:6px 6px; text-align:right;"><strong>0.64864</strong></td>
+        <td style="padding:6px 6px; text-align:right;"><strong>0.03835</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="background-color:#f6f8fa; border-top:2px solid #1f2328; padding:14px 16px; margin-top:24px; font-size:13px; color:#24292f;">
+    <p style="margin:0 0 6px 0;">
+      <strong>Closing Wall Check: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NB-GAIN</code> / <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">COEFF</code>.</strong>
+      Closest prior results: <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-61</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-71</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-72</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">NS-74</code>, <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">coeff-specialist-brief-2026-10-15-v5.html</code>.
+      What changes: Exact <em>K</em>-mode Jacobi&ndash;Stieltjes&ndash;Divisor hierarchy, linear-in-<em>N</em> rational Gram matrix <em>N</em> <em>G&#770;</em><sup>(&nu;,<em>K</em>)</sup>, Loewner Bessel inequality, exact rational <em>LDL</em><sup><em>T</em></sup> sum-of-squares lower bound, and 1,339.9&times; resolution of the <em>N</em> = 16 single-mode phase dip.
+    </p>
+    <p style="margin:0;">
+      <strong>Open Problems Disclosure:</strong>
+      <strong>RH</strong>, <strong>G2</strong>, the <strong>cofinal signed-arithmetic lower bound</strong>, and <strong>both historical missing-original evidence groups</strong> in <code style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;">evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

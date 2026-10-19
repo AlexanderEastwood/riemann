@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Milestone 9 Audit Report (v2) — Euler-Depleted Weil Equivalence, Free-Bandwidth Dichotomy, and Pure flint.arb Davenport–Heilbronn Control Separation</title>
+</head>
+<body style="font-family: Georgia, 'Times New Roman', serif; max-width: 680px; margin: 36px auto; padding: 0 20px; line-height: 1.62; color: #1b1f23; background-color: #ffffff;">
+
+<div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-bottom: 26px; border-radius: 4px;">
+  <p style="margin: 0 0 8px 0; font-weight: bold; color: #8b0000; font-size: 1.02em;">Wall Check &amp; Open-Status Disclosure (Top of Deliverable)</p>
+  <p style="margin: 0; font-size: 0.94em;">
+    <strong>Does this deliverable prove the Riemann Hypothesis (RH), complete the global archimedean completion (G2), establish the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin;, or recover the missing historical raw outputs in <code>evidence/MISSING.md</code>?</strong><br>
+    <strong>No.</strong> RH, G2, the cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> (<code>stage4_run_summary.json</code> / <code>stage4_Ticks.json</code> and <code>certificate.json</code> / <code>verify_log.txt</code>) remain <strong>OPEN</strong>.
+  </p>
+</div>
+
+<h1 style="font-size: 1.52em; line-height: 1.28; margin-bottom: 6px; color: #111111;">Milestone 9 Audit Report (v2): Euler-Depleted Weil Equivalence, Free-Bandwidth Dichotomy, and Pure <code>flint.arb</code> Davenport&ndash;Heilbronn Control Separation</h1>
+<p style="margin: 0 0 18px 0; font-size: 0.92em; color: #555555;">
+  <strong>Date:</strong> 2026-10-15 &nbsp;|&nbsp;
+  <strong>Revision:</strong> v2 (Repaired per <code>argon-m9-campaign-review-2026-10-15-v1</code>) &nbsp;|&nbsp;
+  <strong>Lanes:</strong> <code>KERNEL-API</code> &amp; <code>WEIL-FLOOR</code><br>
+  <strong>Audit Package:</strong> <code>audits/euler-depleted-weil-equivalence-and-dh-control-2026-10-15-v1/</code><br>
+  <strong>Verification Hashes:</strong> <code>payload.sha256 = 0d81262363891d91e7edb459c085b5d4923298047f2e7a9850ce38af66cf5ab8</code>, <code>file_sha256 = c023183b5d603e56206dfb6c986744f89ae5cb805f4a9389342682c08409e570</code> (<code>70/70</code> two-precision 256-bit and 384-bit <code>flint.arb</code> overlap checks PASS; <code>pyright</code> 0 errors, 0 warnings, 0 informations; zero <code>numpy</code>/<code>mpmath</code> in verifier).
+</p>
+
+<h2 style="font-size: 1.22em; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; margin-top: 26px;">1. Summary of Audit Repairs (Resolving All 7 Findings of <code>argon-m9-campaign-review</code>)</h2>
+
+<ol style="padding-left: 20px; font-size: 0.96em;">
+  <li style="margin-bottom: 10px;">
+    <strong>Two-Sided Pole Cancellation &amp; Single-Subset Counterexample (Finding 1a):</strong> Corrected Theorem 1(1) to state and certify that <strong>both</strong> <em>P</em><sub>+</sub> &ne; &empty; and <em>P</em><sub>&minus;</sub> &ne; &empty; are necessary and sufficient for <em>B</em><sub><em>P</em><sub>+</sub>, <em>P</em><sub>&minus;</sub></sub> to annihilate both pole functionals <em>&#293;</em>(+<em>i</em>/2) = <em>&#293;</em>(&minus;<em>i</em>/2) = 0 on all of <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>). Certified by the explicit single-subset counterexample <em>P</em><sub>+</sub> = {2}, <em>P</em><sub>&minus;</sub> = &empty;, where <em>&sigma;</em>(+<em>i</em>/2) = 0 but <em>&sigma;</em>(&minus;<em>i</em>/2) = 1/2 &ne; 0.
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Quantitative Fixed-<em>P</em> Negative-Witness Transfer &amp; Varying-<em>P<sub>K</sub></em> Distortion (Finding 1b):</strong> Replaced the informal Paley&ndash;Wiener localization remark in Theorem 1(3) with an explicit quantitative transfer construction using the <em>C</em><sup>1</sup> base window <em>&psi;</em><sub>0</sub>(<em>t</em>) = (1 &minus; <em>t</em><sup>2</sup>)<sup>2</sup><strong>1</strong><sub>[&minus;1,1]</sub>(<em>t</em>) with positive-coefficient hypergeometric Fourier transform <em>R</em><sub>0</sub>(<em>&delta;</em><sub>0</sub>) = <sub>0</sub><em>F</em><sub>1</sub>(; 7/2; +<em>&delta;</em><sub>0</sub><sup>2</sup>/4) &gt; 1 + <em>&delta;</em><sub>0</sub><sup>2</sup>/14 &gt; 1, differential phase aligner (<em>c</em><sub>0</sub> + <em>c</em><sub>1</sub>&part;<sub><em>x</em></sub>), explicit zero-tail cutoff <em>R</em><sub>*</sub> = (120<em>e</em><sup>1/2</sup>)<sup>1/3</sup> &approx; 5.828485, and varying-<em>P<sub>K</sub></em> distortion ratio <em>&Upsilon;</em>(<em>P<sub>K</sub></em>, <em>&delta;</em><sub>0</sub>) = <em>M<sub>P<sub>K</sub></sub></em>(1/2)/<em>m<sub>P<sub>K</sub></sub></em>(<em>&delta;</em><sub>0</sub>).
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>True Minimum Nonzero Internal Shift <em>&tau;</em><sub>min</sub>(<em>P<sub>K</sub></em>) vs. Chosen Partition Shift <em>&tau;</em><sub>part</sub> (Finding 2):</strong> Exhaustively enumerated all (3<sup><em>K</em></sup> &minus; 1)/2 coprime squarefree divisor pairs (<em>m</em><sub>1</sub>, <em>m</em><sub>2</sub>) of <em>P<sub>K</sub></em><sup>#</sup> for <em>K</em> = 2, &hellip;, 8, certifying that at <em>K</em> = 5, 6, 8 intermediate coprime divisor pairs produce strictly smaller shifts than the balanced partition ratio:
+    <em>&tau;</em><sub>min</sub>(<em>P</em><sub>5</sub>) = log(22/21) &approx; 0.046520 &lt; log(15/14) &approx; 0.068993 &lt; <em>&tau;</em><sub>part</sub>(<em>P</em><sub>5</sub>) = log(55/42) &approx; 0.269664;
+    <em>&tau;</em><sub>min</sub>(<em>P</em><sub>6</sub>) = log(78/77) &approx; 0.012903 &lt; log(182/165) &approx; 0.098061;
+    <em>&tau;</em><sub>min</sub>(<em>P</em><sub>7</sub>) = <em>&tau;</em><sub>min</sub>(<em>P</em><sub>8</sub>) = log(715/714) &approx; 0.001400.
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Bernstein&ndash;Paley&ndash;Wiener Constant &pi;/4 vs. &pi;/2 &amp; Boxcar Counterexample (Finding 3):</strong> Unified Theorem 2(2) on the proved bound <em>b</em> &ge; &pi;/(4&Delta;&xi;) for concentrating half of the spectral mass inside [&xi;<sub>0</sub> &minus; &Delta;&xi;, &xi;<sub>0</sub> + &Delta;&xi;], and certified the explicit boxcar counterexample <em>g</em> = <strong>1</strong><sub>[&minus;1,1]</sub> (<em>b</em> = &Delta;&xi; = 1) whose spectral mass on [&minus;1, 1] is (2/&pi;)Si(2) &minus; 2 sin<sup>2</sup>(1)/&pi; &approx; 0.57126411 &gt; 1/2 while &pi;/4 &lt; 1 &lt; &pi;/2.
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Pure <code>flint.arb</code> Davenport&ndash;Heilbronn Negative-Witness Certificate (Finding 4):</strong> Removed all <code>numpy</code>/<code>mpmath</code> calls from <code>verify_euler_weil_equivalence_and_dh.py</code> and certified concrete 3-mode rational sine packets <em>g<sub>b</sub></em>(<em>x</em>) = &sum;<sub><em>m</em>=1</sub><sup>3</sup> <em>c<sub>m</sub></em><sup>(<em>b</em>)</sup> sin(<em>m&pi;x</em>/<em>b</em>) &in; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>) purely in 256-bit and 384-bit <code>flint.arb</code> at <em>b</em> &in; {2, 5/2, 3}.
+  </li>
+  <li style="margin-bottom: 10px;">
+    <strong>Exact Symbolic Prime-LogarithmIndependence in M7 &amp; M8 (Findings 5 &amp; 6):</strong> Upgraded <code>verify_multiprime_euler.py</code> (M7, <code>110/110</code> checks PASS, <code>payload.sha256 = 8936cf81...</code>) and <code>verify_multiprime_scaling.py</code> (M8, <code>64/64</code> checks PASS, <code>payload.sha256 = ecc9ec64...</code>) with <code>SymReal</code> in &mathbb;Q; &oplus; &bigoplus;<sub><em>p</em></sub> &mathbb;Q; log <em>p</em>, removing <code>tiny = 1e-100</code> and certifying that 0 and 10<sup>&minus;101</sup> log 2 are strictly separated.
+  </li>
+</ol>
+
+<h2 style="font-size: 1.22em; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; margin-top: 26px;">2. Certified Partition Horizon vs. True Minimum Internal Shift (<em>K</em> = 2, &hellip;, 8)</h2>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 0.88em; margin: 14px 0;">
+  <thead>
+    <tr style="background-color: #f6f8fa; border-bottom: 2px solid #d0d7de;">
+      <th style="padding: 6px 8px; text-align: center;"><em>K</em></th>
+      <th style="padding: 6px 8px; text-align: center;"><em>d</em><sub>+</sub> / <em>d</em><sub>&minus;</sub></th>
+      <th style="padding: 6px 8px; text-align: center;"><em>b</em><sub>part</sub>(<em>K</em>)</th>
+      <th style="padding: 6px 8px; text-align: center;">True Min Pair <em>m</em><sub>1</sub> / <em>m</em><sub>2</sub></th>
+      <th style="padding: 6px 8px; text-align: center;">True <em>b</em><sub>iso</sub>(<em>P<sub>K</sub></em>)</th>
+      <th style="padding: 6px 8px; text-align: center;">Distortion <em>&Upsilon;</em>(<em>P<sub>K</sub></em>, <em>&delta;<sub>DH</sub></em>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">2</td>
+      <td style="padding: 5px 8px; text-align: center;">3 / 2</td>
+      <td style="padding: 5px 8px; text-align: center;">0.202733</td>
+      <td style="padding: 5px 8px; text-align: center;">3 / 2</td>
+      <td style="padding: 5px 8px; text-align: center;">0.202733</td>
+      <td style="padding: 5px 8px; text-align: center;">178.97</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">3</td>
+      <td style="padding: 5px 8px; text-align: center;">6 / 5</td>
+      <td style="padding: 5px 8px; text-align: center;">0.091161</td>
+      <td style="padding: 5px 8px; text-align: center;">6 / 5</td>
+      <td style="padding: 5px 8px; text-align: center;">0.091161</td>
+      <td style="padding: 5px 8px; text-align: center;">1.483 &times; 10<sup>3</sup></td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">4</td>
+      <td style="padding: 5px 8px; text-align: center;">15 / 14</td>
+      <td style="padding: 5px 8px; text-align: center;">0.034496</td>
+      <td style="padding: 5px 8px; text-align: center;">15 / 14</td>
+      <td style="padding: 5px 8px; text-align: center;">0.034496</td>
+      <td style="padding: 5px 8px; text-align: center;">9.619 &times; 10<sup>3</sup></td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">5</td>
+      <td style="padding: 5px 8px; text-align: center;">55 / 42</td>
+      <td style="padding: 5px 8px; text-align: center;">0.134832</td>
+      <td style="padding: 5px 8px; text-align: center;"><strong>22 / 21</strong></td>
+      <td style="padding: 5px 8px; text-align: center;"><strong>0.023260</strong></td>
+      <td style="padding: 5px 8px; text-align: center;">4.630 &times; 10<sup>4</sup></td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">6</td>
+      <td style="padding: 5px 8px; text-align: center;">182 / 165</td>
+      <td style="padding: 5px 8px; text-align: center;">0.049030</td>
+      <td style="padding: 5px 8px; text-align: center;"><strong>78 / 77</strong></td>
+      <td style="padding: 5px 8px; text-align: center;"><strong>0.006452</strong></td>
+      <td style="padding: 5px 8px; text-align: center;">1.999 &times; 10<sup>5</sup></td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">7</td>
+      <td style="padding: 5px 8px; text-align: center;">715 / 714</td>
+      <td style="padding: 5px 8px; text-align: center;">0.000700</td>
+      <td style="padding: 5px 8px; text-align: center;">715 / 714</td>
+      <td style="padding: 5px 8px; text-align: center;">0.000700</td>
+      <td style="padding: 5px 8px; text-align: center;">7.614 &times; 10<sup>5</sup></td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">8</td>
+      <td style="padding: 5px 8px; text-align: center;">3135 / 3094</td>
+      <td style="padding: 5px 8px; text-align: center;">0.006582</td>
+      <td style="padding: 5px 8px; text-align: center;"><strong>715 / 714</strong></td>
+      <td style="padding: 5px 8px; text-align: center;"><strong>0.000700</strong></td>
+      <td style="padding: 5px 8px; text-align: center;">2.753 &times; 10<sup>6</sup></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 style="font-size: 1.22em; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; margin-top: 26px;">3. Pure <code>flint.arb</code> Davenport&ndash;Heilbronn Negative-Witness Table</h2>
+
+<table style="width: 100%; border-collapse: collapse; font-size: 0.90em; margin: 14px 0;">
+  <thead>
+    <tr style="background-color: #f6f8fa; border-bottom: 2px solid #d0d7de;">
+      <th style="padding: 6px 8px; text-align: center;">Bandwidth <em>b</em></th>
+      <th style="padding: 6px 8px; text-align: center;">Rational Packet (<em>c</em><sub>1</sub>, <em>c</em><sub>2</sub>, <em>c</em><sub>3</sub>) &times; 10<sup>4</sup></th>
+      <th style="padding: 6px 8px; text-align: center;"><em>Q</em><sub>{2,3}, &zeta;</sub>(<em>g<sub>b</sub></em>) (<code>flint.arb</code>)</th>
+      <th style="padding: 6px 8px; text-align: center;"><em>Q</em><sub>{2,3}, <em>DH</em></sub>(<em>g<sub>b</sub></em>) (<code>flint.arb</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">2.0</td>
+      <td style="padding: 5px 8px; text-align: center;">(3277, &minus;7648, 5547)</td>
+      <td style="padding: 5px 8px; text-align: center; color: #116329; font-weight: bold;">+6.8955954621 &gt; 0</td>
+      <td style="padding: 5px 8px; text-align: center; color: #8b0000; font-weight: bold;">&minus;0.0325224810 &lt; 0</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">2.5</td>
+      <td style="padding: 5px 8px; text-align: center;">(&minus;2725, 7458, &minus;6080)</td>
+      <td style="padding: 5px 8px; text-align: center; color: #116329; font-weight: bold;">+8.7494420069 &gt; 0</td>
+      <td style="padding: 5px 8px; text-align: center; color: #8b0000; font-weight: bold;">&minus;0.2189462666 &lt; 0</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #eaecef;">
+      <td style="padding: 5px 8px; text-align: center;">3.0</td>
+      <td style="padding: 5px 8px; text-align: center;">(&minus;1826, 6164, &minus;7660)</td>
+      <td style="padding: 5px 8px; text-align: center; color: #116329; font-weight: bold;">+5.5185873445 &gt; 0</td>
+      <td style="padding: 5px 8px; text-align: center; color: #8b0000; font-weight: bold;">&minus;0.5232379060 &lt; 0</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="border: 2px solid #8b0000; background-color: #fff8f8; padding: 14px 18px; margin-top: 28px; border-radius: 4px;">
+  <p style="margin: 0 0 6px 0; font-weight: bold; color: #8b0000; font-size: 1.0em;">Wall Check &amp; Open-Status Disclosure (Bottom of Deliverable)</p>
+  <p style="margin: 0; font-size: 0.93em;">
+    RH, G2, the cofinal signed-arithmetic lower bound as <em>a</em> &rarr; &infin;, and both historical missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+  </p>
+</div>
+
+</body>
+</html>

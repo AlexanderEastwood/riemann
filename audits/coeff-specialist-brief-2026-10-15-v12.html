@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Coefficient &amp; Weil-Floor Campaign Brief — M7/M8/M9/M16 Repairs &amp; Milestone 17 Infinite-Dimensional Tail Floor (2026-10-15 v12)</title>
+</head>
+<body style="margin: 0; padding: 32px 16px; background-color: #fbfaf7; color: #1f2328; font-family: Georgia, 'Times New Roman', serif; line-height: 1.6;">
+  <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border: 1px solid #d8d4c8; padding: 36px 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-bottom: 24px; font-size: 14px;">
+      <strong>Wall Check &amp; Open-Status Disclosure:</strong> None of the packages in this campaign (Milestones 7 through 17) prove the Riemann Hypothesis (<code>RH</code>), Goal 2 (<code>G2</code>), or the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin; (or <em>K</em> &rarr; &infin;). Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+    <h1 style="font-size: 23px; line-height: 1.3; margin-top: 0; margin-bottom: 8px; color: #111827;">
+      Master Campaign Brief (v12): Complete Audit Repairs of Milestones 7, 8, 9, &amp; 16 + Milestone 17 Infinite-Dimensional Tail Floor &amp; Two-Shift Product Defect Algebra
+    </h1>
+    <p style="font-size: 14px; color: #4b5563; margin-top: 0; margin-bottom: 24px;">
+      <strong>Date:</strong> 2026-10-15 &nbsp;|&nbsp; <strong>Version:</strong> v12 (preserves v3&ndash;v11 intact) &nbsp;|&nbsp; <strong>Lanes:</strong> <code>WEIL-FLOOR</code>, <code>NB-GAIN / COEFF</code>, <code>KERNEL-API</code>
+    </p>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      1. Complete Audit Repairs of Milestones 7, 8, 9, and 16
+    </h2>
+    <p style="font-size: 15px; margin-bottom: 12px;">
+      All findings from <code>argon-m9-campaign-review-2026-10-15-v1</code> (7 findings across M7, M8, M9) and <code>argon-m16-review-2026-10-15-v1</code> (6 findings on M16) have been resolved, re-verified at <code>256</code>-bit and <code>384</code>-bit <code>flint.arb</code> (with <code>pyright</code> reporting <code>0 errors, 0 warnings, 0 informations</code> and zero <code>numpy</code>/<code>mpmath</code> dependencies), and synchronized across prose and JSON certificates:
+    </p>
+
+    <table style="width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 16px 0;">
+      <thead>
+        <tr style="background-color: #f3f4f6; border-bottom: 2px solid #d1d5db;">
+          <th style="padding: 7px 6px; text-align: left;">Milestone</th>
+          <th style="padding: 7px 6px; text-align: left;">Key Audit Repairs Completed</th>
+          <th style="padding: 7px 6px; text-align: center;">Overlaps</th>
+          <th style="padding: 7px 6px; text-align: left;"><code>payload.sha256</code> (prefix)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M7</strong> (Multiprime Euler)</td>
+          <td style="padding: 6px;">Exact symbolic <code>SymReal</code> in <strong>Q</strong> &oplus; &bigoplus;<sub><em>p</em></sub> <strong>Q</strong> log <em>p</em>; removed <code>tiny = 1e-100</code>.</td>
+          <td style="padding: 6px; text-align: center;">110 / 110</td>
+          <td style="padding: 6px; font-family: monospace;">8936cf81aed7b157&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M8</strong> (3-Prime &amp; Scaling)</td>
+          <td style="padding: 6px;">Exact symbolic <code>SymReal</code> cancellation verification for <em>K</em> = 3, 4.</td>
+          <td style="padding: 6px; text-align: center;">64 / 64</td>
+          <td style="padding: 6px; font-family: monospace;">ecc9ec645b955809&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M9</strong> (Weil Equiv &amp; DH)</td>
+          <td style="padding: 6px;">Certified <code>flint.acb.zeta_zero(1)</code>; exact <code>SymReal</code>; unconditional zero pairing; Paley&ndash;Wiener closure; zero <code>numpy</code>/<code>mpmath</code>.</td>
+          <td style="padding: 6px; text-align: center;">70 / 70</td>
+          <td style="padding: 6px; font-family: monospace;">0d81262363891d91&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb;">
+          <td style="padding: 6px;"><strong>M16</strong> (Spatial &amp; Slepian)</td>
+          <td style="padding: 6px;">Corrected &minus;log(4&pi;<em>b</em>) &amp; Weber&ndash;Schafheitlin 2/((2<em>m</em>&minus;1)(2<em>m</em>+3)); continuous <em>E</em><sub>Slep</sub><sup>(6,even)</sup> in <code>flint.arb</code>; <code>zeta_zero(k)</code> (<em>k</em>=1..50).</td>
+          <td style="padding: 6px; text-align: center;">80 / 80</td>
+          <td style="padding: 6px; font-family: monospace;">4592cff3eb909f0b&hellip;</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #e5e7eb; background-color: #f0fdf4;">
+          <td style="padding: 6px;"><strong>M17</strong> (Infinite Tail &amp; 2-Shift)</td>
+          <td style="padding: 6px;">Exact 2-shift product <em>S</em><sub><em>&tau;</em><sub>1</sub></sub><em>S</em><sub><em>&tau;</em><sub>2</sub></sub> = <em>S</em><sub><em>&tau;</em><sub>1</sub>+<em>&tau;</em><sub>2</sub></sub> + <em>S</em><sub>|<em>&tau;</em><sub>2</sub>&minus;<em>&tau;</em><sub>1</sub>|</sub> &minus; <em>D</em><sub><em>&tau;</em><sub>1</sub>,<em>&tau;</em><sub>2</sub></sub>; full-space Matrix Schur certificates across 2<em>b</em> &in; [0.40, 0.50]; DH tail control.</td>
+          <td style="padding: 6px; text-align: center;"><strong>395 / 395</strong></td>
+          <td style="padding: 6px; font-family: monospace;">f08a3e6c345b3404&hellip;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 style="font-size: 18px; border-bottom: 1px solid #e5e7eb; padding-bottom: 6px; margin-top: 28px; color: #111827;">
+      2. Milestone 17 Highlights: Full-Space Positivity on <em>Q</em>(<em>A</em><sub>arch</sub>) &sub; <em>L</em><sup>2</sup>(&minus;<em>b</em>, <em>b</em>)
+    </h2>
+    <ol style="font-size: 15px; padding-left: 20px; margin-bottom: 16px;">
+      <li style="margin-bottom: 8px;">
+        <strong>Exact Two-Shift Product Algebra (Theorem 1):</strong> Proves <em>S</em><sub><em>&tau;</em><sub>1</sub></sub><sup>(<em>b</em>)</sup> <em>S</em><sub><em>&tau;</em><sub>2</sub></sub><sup>(<em>b</em>)</sup> = <em>S</em><sub><em>&tau;</em><sub>1</sub>+<em>&tau;</em><sub>2</sub></sub><sup>(<em>b</em>)</sup> + <em>S</em><sub>|<em>&tau;</em><sub>2</sub>&minus;<em>&tau;</em><sub>1</sub>|</sub><sup>(<em>b</em>)</sup> &minus; <em>D</em><sub><em>&tau;</em><sub>1</sub>, <em>&tau;</em><sub>2</sub></sub>(<em>b</em>), turning the infinite-dimensional low-to-high coupling Gram matrix <em>G</em><sub>multi</sub><sup>(<em>N</em><sub>leg</sub>, sector)</sup>(<em>b</em>) = <em>B</em><sub>sh</sub><sup>*</sup><em>B</em><sub>sh</sub> into an exact <em>N</em><sub>leg</sub> &times; <em>N</em><sub>leg</sub> rational-polynomial matrix with zero tail truncation error.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Window-Localized Archimedean &amp; Laplace&ndash;Bessel Tail Bounds (Theorem 2):</strong> Splits <em>&sigma;</em><sub><em>L</em><sub><em>P</em><sub>2</sub></sub></sub>(<em>&xi;</em>) = <em>&sigma;</em><sub>loc</sub>(<em>&xi;</em>) + <em>&sigma;</em><sub>ext</sub>(<em>&xi;</em>) and bounds the infinite high-mode tail via Poisson&ndash;Bessel and Laplace&ndash;Bessel double-factorial geometric series, giving a strictly positive infinite-dimensional tail floor <em>&mu;</em><sub>tail</sub><sup>sector</sup>(<em>b</em>) &in; [+0.9681, +1.5510] across 2<em>b</em> &in; [0.40, 0.50].
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Full-Space Matrix Block-Schur Certificates (Theorem 3):</strong> Because the ground state of <em>A</em><sub>&le;</sub><sup>even</sup>(<em>b</em>) lives on low Legendre modes (<em>m</em> = 0, 2) while <em>G</em><sub>multi</sub>(<em>b</em>) is concentrated on the top boundary mode <em>m</em> = 2(<em>N</em><sub>leg</sub> &minus; 1), the <em>N</em><sub>leg</sub> &times; <em>N</em><sub>leg</sub> Matrix Schur Complement <em>S</em><sub>mat</sub><sup>(<em>N</em><sub>leg</sub>, sector)</sup>(<em>b</em>) &succ; 0 passes rigorous <code>flint.arb</code> Cholesky certification across all 2<em>b</em> &in; {0.40, 0.42, 0.45, 0.48, 0.50} (even &amp; odd sectors, up to 3 active shifts), with &lambda;<sub>min</sub>(<em>S</em><sub>mat</sub><sup>even</sup>) = +0.125927 and &lambda;<sub>min</sub>(<em>S</em><sub>mat</sub><sup>odd</sup>) = +2.170019 at 2<em>b</em> = 0.50.
+      </li>
+      <li style="margin-bottom: 8px;">
+        <strong>Dependency Edge &amp; Matched DH Control (Theorem 4):</strong> Quantifies the decay of <em>&sigma;</em><sub>min</sub>(<em>L</em><sub><em>P<sub>K</sub></em></sub>) as <em>K</em> &rarr; &infin; (<code>WEIL-FLOOR &rarr; G2</code>) and proves that on the matched Davenport&ndash;Heilbronn control, <em>&mu;</em><sub>tail, DH</sub> = &minus;2.017310 &lt; 0 and (<em>A</em><sub>&le;, DH</sub>)<sub>0, 0</sub> &le; &minus;2.769771 &lt; 0 are strictly negative.
+      </li>
+    </ol>
+
+    <div style="background-color: #fff8e6; border-left: 4px solid #b45309; padding: 14px 18px; margin-top: 28px; font-size: 14px;">
+      <strong>Wall Check:</strong> None of the packages in this campaign prove <code>RH</code>, <code>G2</code>, or the cofinal prime-shift lower bound as <em>a</em> &rarr; &infin; (or <em>K</em> &rarr; &infin;). Both missing-original evidence groups in <code>evidence/MISSING.md</code> remain <strong>OPEN</strong>.
+    </div>
+
+  </div>
+</body>
+</html>
